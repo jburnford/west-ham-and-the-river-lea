@@ -57,7 +57,7 @@ The subsequent [lighting and infrastructure pass](scenes/channelsea-sewer-panora
 
 ## GitHub Pages
 
-The public website is the `docs/` folder. GitHub Pages publishes from branch **main**, folder **/docs**, at https://jburnford.github.io/west-ham-and-the-river-lea/. The `.nojekyll` marker serves the static assets without Jekyll processing. All runtime imports and asset URLs are relative, so the project URL works without a custom domain.
+The public website is the `docs/` folder, which now holds the redesigned front end (full-viewport scene, scroll-driven chapters, eased camera transitions, poster frame and self-hosted type; see `docs/README.md`). The previous front end is preserved unchanged in `docs0/` and can be served locally the same way. GitHub Pages publishes from branch **main**, folder **/docs**, at https://jimclifford.ca/west-ham-and-the-river-lea/ (the standard GitHub Pages address redirects to the account’s existing custom domain). The `.nojekyll` marker serves the static assets without Jekyll processing. All runtime imports and asset URLs are relative, so the project URL works without a custom domain.
 
 Generated scene data and the bundled Three.js renderer are committed: GitHub does not need to run Python or install packages to serve this site. After changing a generator, regenerate its outputs under `docs/data/` before committing. Browser rendering still requires WebGL2 and sufficient device memory; the detailed desktop scene has not been tuned for low-powered phones.
 

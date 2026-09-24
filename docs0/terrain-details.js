@@ -1,11 +1,12 @@
 // Inferred landform and working surfaces, based on Figure 2.4.
 // Original geometry only; source photograph is not used as a surface texture.
-export async function loadTerrain(load) {
-  // Optional loader lets the page report download progress; default keeps plain fetch.
-  const json=load?url=>load(url,'json'):async url=>{const r=await fetch(url);if(!r.ok) throw new Error('River terrain metadata unavailable');return r.json();};
-  const buffer=load?url=>load(url,'buffer'):async url=>{const r=await fetch(url);if(!r.ok) throw new Error(`Terrain asset unavailable: ${url}`);return r.arrayBuffer();};
-  const terrain=await json('./data/river-terrain.json');
-  const files=await Promise.all([terrain.heightFile,terrain.propertyFile,terrain.landcoverFile].map(file=>buffer(`./data/${file}`)));
+export async function loadTerrain() {
+  const response=await fetch('./data/river-terrain.json');
+  if(!response.ok) throw new Error('River terrain metadata unavailable');
+  const terrain=await response.json();
+  const files=await Promise.all([terrain.heightFile,terrain.propertyFile,terrain.landcoverFile].map(async file=>{
+    const r=await fetch(`./data/${file}`);if(!r.ok) throw new Error(`Terrain asset unavailable: ${file}`);return r.arrayBuffer();
+  }));
   terrain.levels=new Float32Array(files[0]);terrain.properties=new Uint8Array(files[1]);
   terrain.landcover=new Uint8Array(files[2]);
   if(terrain.levels.length!==terrain.width*terrain.height || terrain.properties.length!==terrain.levels.length*4 || terrain.landcover.length!==terrain.levels.length) throw new Error('Terrain dimensions do not match');

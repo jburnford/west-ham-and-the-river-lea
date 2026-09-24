@@ -1,0 +1,440 @@
+{
+  "source": "reference/author-map-extracts-2026-09-24/Screenshot 2026-09-24 112719c.png",
+  "transform": [
+    [
+      0.31527243916102077,
+      -0.005433898206940043
+    ],
+    [
+      0.011256604787396873,
+      0.31826730264295616
+    ],
+    [
+      -1170.8540681784002,
+      194.2149432001758
+    ]
+  ],
+  "controlResidualMetres": 1.135,
+  "registrationLimit": "Residual measures fit to the existing holder model only, not accuracy of historical sheet overlays. Historical building positions may differ by tens of metres.",
+  "rows": [
+    {
+      "id": "southwest-row-4",
+      "area": "Franklin Street vicinity",
+      "x": -917.92,
+      "z": 311.88,
+      "width": 95.81,
+      "depth": 8.15,
+      "rotation": 20.63,
+      "wallHeight": 6.4,
+      "bays": 18,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-5",
+      "area": "Washington Street vicinity",
+      "x": -909.1,
+      "z": 331.65,
+      "width": 94.62,
+      "depth": 8.15,
+      "rotation": 20.54,
+      "wallHeight": 6.4,
+      "bays": 18,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-6",
+      "area": "Washington Street vicinity",
+      "x": -901.05,
+      "z": 345.44,
+      "width": 95.81,
+      "depth": 8.15,
+      "rotation": 20.63,
+      "wallHeight": 6.4,
+      "bays": 18,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-7",
+      "area": "Jefferson Street vicinity",
+      "x": -887.18,
+      "z": 362.94,
+      "width": 94.11,
+      "depth": 8.15,
+      "rotation": 20.65,
+      "wallHeight": 6.4,
+      "bays": 18,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-8",
+      "area": "Jefferson Street vicinity",
+      "x": -879.1,
+      "z": 377.27,
+      "width": 95.3,
+      "depth": 8.15,
+      "rotation": 20.74,
+      "wallHeight": 6.4,
+      "bays": 18,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-9",
+      "area": "Sherman Street vicinity",
+      "x": -795.24,
+      "z": 324.5,
+      "width": 52.59,
+      "depth": 7.61,
+      "rotation": 21.02,
+      "wallHeight": 6.4,
+      "bays": 10,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-10",
+      "area": "Otis Street vicinity",
+      "x": -769.79,
+      "z": 348.36,
+      "width": 65.52,
+      "depth": 7.61,
+      "rotation": 20.46,
+      "wallHeight": 6.4,
+      "bays": 13,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-11",
+      "area": "Empson Street vicinity",
+      "x": -747.83,
+      "z": 411.31,
+      "width": 63.99,
+      "depth": 7.61,
+      "rotation": 20.94,
+      "wallHeight": 6.4,
+      "bays": 12,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-12",
+      "area": "Empson Street vicinity",
+      "x": -740.01,
+      "z": 425.92,
+      "width": 64.5,
+      "depth": 7.61,
+      "rotation": 20.78,
+      "wallHeight": 6.4,
+      "bays": 12,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-13",
+      "area": "Imperial Street vicinity",
+      "x": -786.99,
+      "z": 466.04,
+      "width": 58.2,
+      "depth": 7.61,
+      "rotation": 20.72,
+      "wallHeight": 6.4,
+      "bays": 11,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-14",
+      "area": "Imperial Street vicinity",
+      "x": -776.94,
+      "z": 482.79,
+      "width": 58.71,
+      "depth": 7.61,
+      "rotation": 20.54,
+      "wallHeight": 6.4,
+      "bays": 11,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-15",
+      "area": "Bromley western streets",
+      "x": -1021.13,
+      "z": 314.2,
+      "width": 63.83,
+      "depth": 7.61,
+      "rotation": -60.76,
+      "wallHeight": 6.4,
+      "bays": 12,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-16",
+      "area": "Bromley western streets",
+      "x": -1045.73,
+      "z": 383.14,
+      "width": 65.8,
+      "depth": 7.61,
+      "rotation": -60.59,
+      "wallHeight": 6.4,
+      "bays": 13,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-17",
+      "area": "Bromley western streets",
+      "x": -994.58,
+      "z": 407.38,
+      "width": 64.31,
+      "depth": 7.61,
+      "rotation": -60.99,
+      "wallHeight": 6.4,
+      "bays": 12,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    },
+    {
+      "id": "southwest-row-18",
+      "area": "Bromley western streets",
+      "x": -943.52,
+      "z": 436.52,
+      "width": 63.09,
+      "depth": 7.61,
+      "rotation": -60.97,
+      "wallHeight": 6.4,
+      "bays": 12,
+      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+    }
+  ],
+  "industrialRanges": [
+    {
+      "siteId": 230,
+      "name": "Imperial Works (washing chemicals)",
+      "x": -712.48,
+      "z": 455.11,
+      "width": 50.97,
+      "depth": 8.4,
+      "rotation": 40.87,
+      "height": 7,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 250,
+      "name": "Starch Works (rice)",
+      "x": -940.47,
+      "z": 535.09,
+      "width": 36.01,
+      "depth": 9.54,
+      "rotation": -67.6,
+      "height": 7,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 250,
+      "name": "Starch Works (rice)",
+      "x": -987.54,
+      "z": 554.48,
+      "width": 40.38,
+      "depth": 12.32,
+      "rotation": -67.6,
+      "height": 8,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 254,
+      "name": "Chemical Works",
+      "x": -788.04,
+      "z": 123.59,
+      "width": 20.83,
+      "depth": 2.2,
+      "rotation": -64.44,
+      "height": 11,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 255,
+      "name": "Lime Works",
+      "x": -883.45,
+      "z": 139.69,
+      "width": 57.93,
+      "depth": 8.92,
+      "rotation": 170.75,
+      "height": 7,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 419,
+      "name": "Three Mills Distillery",
+      "x": -403.17,
+      "z": 391.01,
+      "width": 44.86,
+      "depth": 7.39,
+      "rotation": -74.37,
+      "height": 12,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 419,
+      "name": "Three Mills Distillery",
+      "x": -532.08,
+      "z": 427.09,
+      "width": 57.93,
+      "depth": 9.54,
+      "rotation": -74.37,
+      "height": 12,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 420,
+      "name": "Ratner Safe Works",
+      "x": -899.06,
+      "z": 182.66,
+      "width": 56.6,
+      "depth": 8.66,
+      "rotation": -7.1,
+      "height": 7,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 514,
+      "name": "Imperial Spining Mills (Hemp and Jute)",
+      "x": -746.06,
+      "z": 599.81,
+      "width": 71.1,
+      "depth": 10.35,
+      "rotation": -154.57,
+      "height": 11,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 515,
+      "name": "Asbestos Works",
+      "x": -793.64,
+      "z": 545.93,
+      "width": 21.37,
+      "depth": 6.0,
+      "rotation": -147.25,
+      "height": 7,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 515,
+      "name": "Asbestos Works",
+      "x": -792.94,
+      "z": 547.01,
+      "width": 18.56,
+      "depth": 6.0,
+      "rotation": -147.25,
+      "height": 8,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 563,
+      "name": "London and Glasgow Foundry",
+      "x": -832.15,
+      "z": 298.64,
+      "width": 57.88,
+      "depth": 6.51,
+      "rotation": -151.22,
+      "height": 10,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 563,
+      "name": "London and Glasgow Foundry",
+      "x": -839.65,
+      "z": 284.98,
+      "width": 50.27,
+      "depth": 6.51,
+      "rotation": -151.22,
+      "height": 11,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 564,
+      "name": "Bow Bridge Soap Works",
+      "x": -767.29,
+      "z": 247.62,
+      "width": 37.31,
+      "depth": 7.31,
+      "rotation": 117.99,
+      "height": 11,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 564,
+      "name": "Bow Bridge Soap Works",
+      "x": -730.7,
+      "z": 228.17,
+      "width": 41.83,
+      "depth": 9.45,
+      "rotation": 117.99,
+      "height": 7,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 565,
+      "name": "Stone Works",
+      "x": -673.2,
+      "z": 223.83,
+      "width": 23.06,
+      "depth": 5.28,
+      "rotation": 24.42,
+      "height": 7,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 941,
+      "name": "Ornamental Moulding Works",
+      "x": -724.57,
+      "z": 374.54,
+      "width": 30.86,
+      "depth": 6.71,
+      "rotation": -122.92,
+      "height": 8,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 941,
+      "name": "Ornamental Moulding Works",
+      "x": -738.43,
+      "z": 365.57,
+      "width": 18.26,
+      "depth": 4.57,
+      "rotation": -122.92,
+      "height": 9,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 942,
+      "name": "Bow Pottery",
+      "x": -631.25,
+      "z": 581.48,
+      "width": 40.2,
+      "depth": 6.0,
+      "rotation": -163.91,
+      "height": 9,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    },
+    {
+      "siteId": 942,
+      "name": "Bow Pottery",
+      "x": -631.83,
+      "z": 579.45,
+      "width": 34.91,
+      "depth": 6.0,
+      "rotation": -163.91,
+      "height": 10,
+      "evidence": "Interpreted distant range contained in mapped industrial site; courtyard massing informed by southwest screenshot."
+    }
+  ],
+  "omittedRows": [
+    {
+      "row": 0,
+      "reason": "approximate trace overlaps mapped industrial land",
+      "overlapFraction": 0.231
+    },
+    {
+      "row": 1,
+      "reason": "approximate trace overlaps mapped industrial land",
+      "overlapFraction": 0.452
+    },
+    {
+      "row": 2,
+      "reason": "approximate trace overlaps mapped industrial land",
+      "overlapFraction": 0.229
+    }
+  ]
+}
