@@ -1,0 +1,1872 @@
+{
+  "description": "Manual tracing of main residential row envelopes and gas-holder circles, not individual rear extensions. Pixel coordinates refer to full scans resized to exactly 1888 pixels wide with aspect ratio preserved. Sheets revised 1893, published 1895.",
+  "sheets": {
+    "32": {
+      "file": "reference/neighbourhood-context/os-viii32.jpg",
+      "neatline": [
+        114,
+        135,
+        1738,
+        1228
+      ],
+      "bounds": [
+        -0.0079,
+        51.5282,
+        0.006,
+        51.534
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:London_Sheet_VIII.32_(IA_dr_london-sheet-viii32-101201748).jpg"
+    },
+    "22": {
+      "file": "reference/neighbourhood-context/os-viii22.jpg",
+      "neatline": [
+        120,
+        105,
+        1727,
+        1183
+      ],
+      "bounds": [
+        -0.0079,
+        51.534,
+        0.006,
+        51.5398
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:London_Sheet_VIII.22_(IA_dr_london-sheet-viii22-101201733).jpg"
+    },
+    "overview": {
+      "file": "reference/neighbourhood-context/northern-housing-overview.png",
+      "pixelWidth": 2048,
+      "source": "Author-supplied OS mosaic screenshot, 23 September 2026",
+      "registrationToSheet": "32",
+      "controls": [
+        {
+          "pixel": [
+            683,
+            472
+          ],
+          "target": [
+            897,
+            174
+          ]
+        },
+        {
+          "pixel": [
+            697,
+            570
+          ],
+          "target": [
+            913,
+            288
+          ]
+        },
+        {
+          "pixel": [
+            743,
+            613
+          ],
+          "target": [
+            966,
+            338
+          ]
+        },
+        {
+          "pixel": [
+            615,
+            690
+          ],
+          "target": [
+            819,
+            428
+          ]
+        },
+        {
+          "pixel": [
+            675,
+            737
+          ],
+          "target": [
+            888,
+            480
+          ]
+        }
+      ],
+      "note": "Similarity fit using five shared gas-holder circle centres. Extrapolation east inherits the approximate VIII.32 registration. Street names below are descriptive where labels are indistinct."
+    },
+    "42": {
+      "file": "reference/neighbourhood-context/os-viii42.jpg",
+      "neatline": [
+        132,
+        126,
+        1733,
+        1203
+      ],
+      "bounds": [
+        -0.0079,
+        51.5224,
+        0.006,
+        51.5282
+      ],
+      "source": "https://commons.wikimedia.org/wiki/File:London_Sheet_VIII.42_(IA_dr_london-sheet-viii42-101201763).jpg"
+    }
+  },
+  "registration": "First-pass registration using the rounded NLS WGS84 sheet bounds and manually read neatlines, then projection to EPSG:27700. Relative traces are map-based; absolute placement may be tens of metres out. Not a surveyed or control-point-fitted georeference.",
+  "abbeyPairs": [
+    {
+      "centre": [
+        937,
+        562
+      ],
+      "width": 22,
+      "depth": 29
+    },
+    {
+      "centre": [
+        963,
+        558
+      ],
+      "width": 22,
+      "depth": 29
+    },
+    {
+      "centre": [
+        990,
+        554
+      ],
+      "width": 22,
+      "depth": 29
+    },
+    {
+      "centre": [
+        1016,
+        550
+      ],
+      "width": 22,
+      "depth": 29
+    }
+  ],
+  "holders": [
+    {
+      "sheet": "32",
+      "centre": [
+        897,
+        174
+      ],
+      "radius": 29
+    },
+    {
+      "sheet": "32",
+      "centre": [
+        913,
+        288
+      ],
+      "radius": 34
+    },
+    {
+      "sheet": "32",
+      "centre": [
+        966,
+        338
+      ],
+      "radius": 35
+    },
+    {
+      "sheet": "32",
+      "centre": [
+        819,
+        428
+      ],
+      "radius": 41
+    },
+    {
+      "sheet": "32",
+      "centre": [
+        888,
+        480
+      ],
+      "radius": 42
+    },
+    {
+      "sheet": "22",
+      "centre": [
+        758,
+        1077
+      ],
+      "radius": 27
+    }
+  ],
+  "rows": [
+    {
+      "street": "Roberts Road",
+      "a": [
+        205,
+        374
+      ],
+      "b": [
+        266,
+        337
+      ],
+      "depth": 14
+    },
+    {
+      "street": "Roberts Road",
+      "a": [
+        221,
+        402
+      ],
+      "b": [
+        302,
+        357
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Beck Road",
+      "a": [
+        238,
+        428
+      ],
+      "b": [
+        323,
+        376
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Beck Road",
+      "a": [
+        257,
+        455
+      ],
+      "b": [
+        355,
+        391
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Lucas Road",
+      "a": [
+        282,
+        480
+      ],
+      "b": [
+        373,
+        421
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Lucas Road",
+      "a": [
+        316,
+        516
+      ],
+      "b": [
+        409,
+        453
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Godfrey Street",
+      "a": [
+        220,
+        267
+      ],
+      "b": [
+        263,
+        176
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Godfrey Street",
+      "a": [
+        249,
+        281
+      ],
+      "b": [
+        293,
+        190
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Marsh Road",
+      "a": [
+        337,
+        323
+      ],
+      "b": [
+        374,
+        254
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Marsh Road",
+      "a": [
+        365,
+        337
+      ],
+      "b": [
+        410,
+        284
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Ross Road",
+      "a": [
+        423,
+        370
+      ],
+      "b": [
+        459,
+        323
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Ross Road",
+      "a": [
+        443,
+        382
+      ],
+      "b": [
+        480,
+        342
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Allwyn Road",
+      "a": [
+        496,
+        416
+      ],
+      "b": [
+        521,
+        375
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Allwyn Road",
+      "a": [
+        519,
+        425
+      ],
+      "b": [
+        546,
+        392
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Abbey Lane",
+      "a": [
+        546,
+        439
+      ],
+      "b": [
+        589,
+        444
+      ],
+      "depth": 13
+    },
+    {
+      "street": "Livingstone Road",
+      "a": [
+        375,
+        148
+      ],
+      "b": [
+        619,
+        319
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Livingstone Road",
+      "a": [
+        467,
+        141
+      ],
+      "b": [
+        590,
+        218
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Stanley Road",
+      "a": [
+        621,
+        262
+      ],
+      "b": [
+        654,
+        145
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Abbey Road west side",
+      "a": [
+        1443,
+        365
+      ],
+      "b": [
+        1632,
+        238
+      ],
+      "depth": 16
+    },
+    {
+      "street": "Abbey Road east side",
+      "a": [
+        1516,
+        378
+      ],
+      "b": [
+        1656,
+        286
+      ],
+      "depth": 18
+    },
+    {
+      "street": "Abbey Road north",
+      "a": [
+        1600,
+        145
+      ],
+      "b": [
+        1660,
+        207
+      ],
+      "depth": 16
+    },
+    {
+      "sheet": "22",
+      "street": "Livingstone Road north",
+      "a": [
+        580,
+        1018
+      ],
+      "b": [
+        772,
+        899
+      ],
+      "depth": 16
+    },
+    {
+      "sheet": "22",
+      "street": "Stanley Road north",
+      "a": [
+        343,
+        1114
+      ],
+      "b": [
+        531,
+        1138
+      ],
+      "depth": 16
+    },
+    {
+      "sheet": "22",
+      "street": "Union Street",
+      "a": [
+        461,
+        991
+      ],
+      "b": [
+        538,
+        1049
+      ],
+      "depth": 16
+    },
+    {
+      "sheet": "22",
+      "street": "Leywick Street",
+      "a": [
+        1336,
+        1108
+      ],
+      "b": [
+        1465,
+        1066
+      ],
+      "depth": 16
+    },
+    {
+      "sheet": "22",
+      "street": "Leywick Street",
+      "a": [
+        1340,
+        1156
+      ],
+      "b": [
+        1468,
+        1115
+      ],
+      "depth": 16
+    },
+    {
+      "sheet": "22",
+      "street": "Leywick Street east",
+      "a": [
+        1482,
+        1060
+      ],
+      "b": [
+        1597,
+        1019
+      ],
+      "depth": 16
+    },
+    {
+      "sheet": "22",
+      "street": "Leywick Street east",
+      "a": [
+        1480,
+        1111
+      ],
+      "b": [
+        1598,
+        1071
+      ],
+      "depth": 16
+    },
+    {
+      "sheet": "22",
+      "street": "north-east, north of Paul Street",
+      "a": [
+        1248,
+        564
+      ],
+      "b": [
+        1597,
+        434
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Paul Street south side",
+      "a": [
+        1300,
+        618
+      ],
+      "b": [
+        1627,
+        495
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Barnby Street north side",
+      "a": [
+        1317,
+        657
+      ],
+      "b": [
+        1640,
+        534
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Barnby Street south side",
+      "a": [
+        1343,
+        706
+      ],
+      "b": [
+        1649,
+        589
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Hotham Street north side",
+      "a": [
+        1365,
+        747
+      ],
+      "b": [
+        1664,
+        634
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Hotham Street south side",
+      "a": [
+        1390,
+        795
+      ],
+      "b": [
+        1685,
+        683
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Randal Street north side",
+      "a": [
+        1410,
+        836
+      ],
+      "b": [
+        1700,
+        727
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Randal Street south side",
+      "a": [
+        1432,
+        882
+      ],
+      "b": [
+        1710,
+        782
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "southern block, north side",
+      "a": [
+        1447,
+        929
+      ],
+      "b": [
+        1715,
+        839
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "southern block, south side",
+      "a": [
+        1470,
+        974
+      ],
+      "b": [
+        1718,
+        891
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Abbey Road block A north",
+      "a": [
+        1190,
+        749
+      ],
+      "b": [
+        1330,
+        697
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Abbey Road block A south",
+      "a": [
+        1204,
+        789
+      ],
+      "b": [
+        1340,
+        744
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Abbey Road block B north",
+      "a": [
+        1221,
+        843
+      ],
+      "b": [
+        1360,
+        796
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Abbey Road block B south",
+      "a": [
+        1237,
+        881
+      ],
+      "b": [
+        1374,
+        834
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Abbey Road block C north",
+      "a": [
+        1255,
+        939
+      ],
+      "b": [
+        1389,
+        892
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Abbey Road block C south",
+      "a": [
+        1269,
+        978
+      ],
+      "b": [
+        1401,
+        931
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Abbey Road block D north",
+      "a": [
+        1287,
+        1029
+      ],
+      "b": [
+        1414,
+        987
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Abbey Road block D south",
+      "a": [
+        1299,
+        1067
+      ],
+      "b": [
+        1426,
+        1024
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Abbey Road western frontage",
+      "a": [
+        1173,
+        666
+      ],
+      "b": [
+        1196,
+        733
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Abbey Road western frontage",
+      "a": [
+        1187,
+        775
+      ],
+      "b": [
+        1208,
+        825
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Abbey Road western frontage",
+      "a": [
+        1220,
+        869
+      ],
+      "b": [
+        1235,
+        918
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Abbey Road western frontage",
+      "a": [
+        1253,
+        970
+      ],
+      "b": [
+        1268,
+        1013
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-east residential row",
+      "a": [
+        1204,
+        471
+      ],
+      "b": [
+        1530,
+        340
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-east residential row",
+      "a": [
+        1252,
+        501
+      ],
+      "b": [
+        1550,
+        383
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-east residential row",
+      "a": [
+        1240,
+        528
+      ],
+      "b": [
+        1563,
+        408
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Angel Lane block",
+      "a": [
+        1130,
+        526
+      ],
+      "b": [
+        1164,
+        605
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Angel Lane block",
+      "a": [
+        1164,
+        513
+      ],
+      "b": [
+        1198,
+        592
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "Angel Lane block",
+      "a": [
+        1223,
+        520
+      ],
+      "b": [
+        1248,
+        576
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, Ivanhoe Road block",
+      "a": [
+        508,
+        875
+      ],
+      "b": [
+        575,
+        979
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, Ivanhoe Road block",
+      "a": [
+        539,
+        856
+      ],
+      "b": [
+        607,
+        960
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, Ivanhoe Road block",
+      "a": [
+        570,
+        838
+      ],
+      "b": [
+        638,
+        942
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, Ivanhoe Road block",
+      "a": [
+        600,
+        819
+      ],
+      "b": [
+        667,
+        923
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, Ivanhoe Road block",
+      "a": [
+        659,
+        805
+      ],
+      "b": [
+        731,
+        910
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, Ivanhoe Road block",
+      "a": [
+        701,
+        797
+      ],
+      "b": [
+        773,
+        895
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, Channelsea bank",
+      "a": [
+        788,
+        788
+      ],
+      "b": [
+        797,
+        873
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, High Street frontage",
+      "a": [
+        622,
+        745
+      ],
+      "b": [
+        755,
+        653
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, High Street frontage",
+      "a": [
+        600,
+        717
+      ],
+      "b": [
+        744,
+        616
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, school frontage",
+      "a": [
+        374,
+        876
+      ],
+      "b": [
+        476,
+        773
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, William Street",
+      "a": [
+        454,
+        948
+      ],
+      "b": [
+        507,
+        989
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, south of school",
+      "a": [
+        289,
+        845
+      ],
+      "b": [
+        323,
+        798
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, Union Street",
+      "a": [
+        388,
+        1009
+      ],
+      "b": [
+        355,
+        1082
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, Great Eastern Road",
+      "a": [
+        280,
+        774
+      ],
+      "b": [
+        370,
+        635
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, Great Eastern Road",
+      "a": [
+        262,
+        749
+      ],
+      "b": [
+        353,
+        610
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "22",
+      "street": "north-west, Carpenters Road",
+      "a": [
+        337,
+        546
+      ],
+      "b": [
+        403,
+        625
+      ],
+      "depth": 14
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 1",
+      "a": [
+        1602,
+        352
+      ],
+      "b": [
+        1618,
+        494
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 2",
+      "a": [
+        1644,
+        356
+      ],
+      "b": [
+        1661,
+        484
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 3",
+      "a": [
+        1681,
+        358
+      ],
+      "b": [
+        1698,
+        482
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 4",
+      "a": [
+        1719,
+        367
+      ],
+      "b": [
+        1738,
+        480
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 5",
+      "a": [
+        1753,
+        364
+      ],
+      "b": [
+        1770,
+        470
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 6",
+      "a": [
+        1786,
+        299
+      ],
+      "b": [
+        1804,
+        455
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 7",
+      "a": [
+        1820,
+        299
+      ],
+      "b": [
+        1837,
+        447
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 8",
+      "a": [
+        1439,
+        632
+      ],
+      "b": [
+        1497,
+        727
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 9",
+      "a": [
+        1484,
+        622
+      ],
+      "b": [
+        1527,
+        710
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 10",
+      "a": [
+        1538,
+        602
+      ],
+      "b": [
+        1569,
+        675
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 11",
+      "a": [
+        1567,
+        594
+      ],
+      "b": [
+        1599,
+        665
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 12",
+      "a": [
+        1601,
+        678
+      ],
+      "b": [
+        1626,
+        749
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 13",
+      "a": [
+        1430,
+        688
+      ],
+      "b": [
+        1499,
+        803
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 14",
+      "a": [
+        1602,
+        589
+      ],
+      "b": [
+        1625,
+        649
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 15",
+      "a": [
+        1640,
+        578
+      ],
+      "b": [
+        1663,
+        638
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 16",
+      "a": [
+        1680,
+        560
+      ],
+      "b": [
+        1705,
+        626
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 17",
+      "a": [
+        1718,
+        550
+      ],
+      "b": [
+        1743,
+        616
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 18",
+      "a": [
+        1709,
+        631
+      ],
+      "b": [
+        1748,
+        742
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 19",
+      "a": [
+        1747,
+        620
+      ],
+      "b": [
+        1783,
+        733
+      ],
+      "depth": 13
+    },
+    {
+      "sheet": "overview",
+      "street": "East of Abbey Road, residential row 20",
+      "a": [
+        1790,
+        612
+      ],
+      "b": [
+        1820,
+        717
+      ],
+      "depth": 13
+    }
+  ],
+  "exclusions": [
+    {
+      "sheet": "22",
+      "name": "Railway goods and coal yard interior",
+      "polygon": [
+        [
+          899,
+          850
+        ],
+        [
+          1050,
+          805
+        ],
+        [
+          1160,
+          995
+        ],
+        [
+          1230,
+          1170
+        ],
+        [
+          924,
+          1170
+        ]
+      ]
+    },
+    {
+      "sheet": "overview",
+      "name": "Abbey Marsh open interior",
+      "polygon": [
+        [
+          1360,
+          850
+        ],
+        [
+          1950,
+          770
+        ],
+        [
+          1950,
+          1000
+        ],
+        [
+          1370,
+          1040
+        ]
+      ]
+    }
+  ],
+  "sewer": {
+    "sheet": "32",
+    "centreline": [
+      [
+        250,
+        135
+      ],
+      [
+        500,
+        314
+      ],
+      [
+        807,
+        536
+      ],
+      [
+        988,
+        679
+      ],
+      [
+        1106,
+        745
+      ],
+      [
+        1152,
+        762
+      ],
+      [
+        1344,
+        813
+      ],
+      [
+        1559,
+        866
+      ],
+      [
+        1738,
+        865
+      ]
+    ],
+    "anchorPixel": [
+      1152,
+      762
+    ],
+    "extensionMetres": 1400,
+    "crestWidth": 15,
+    "baseWidth": 44,
+    "height": 7.4,
+    "evidence": "Centreline read from OS VIII.32 and the supplied mosaic; translated to meet the existing listed bridge anchor. Height follows author guidance of roughly roof level. Beyond inspected coverage the two ends continue along their end bearings for skyline continuity; those extensions are inferred, not surveyed."
+  },
+  "railways": [
+    {
+      "name": "Great Eastern Railway, Woolwich branch",
+      "parts": [
+        {
+          "sheet": "32",
+          "points": [
+            [
+              1350,
+              137
+            ],
+            [
+              1410,
+              300
+            ],
+            [
+              1488,
+              510
+            ],
+            [
+              1544,
+              750
+            ],
+            [
+              1584,
+              1000
+            ],
+            [
+              1595,
+              1228
+            ]
+          ]
+        },
+        {
+          "sheet": "42",
+          "points": [
+            [
+              1593,
+              134
+            ],
+            [
+              1594,
+              350
+            ],
+            [
+              1590,
+              575
+            ],
+            [
+              1572,
+              805
+            ],
+            [
+              1515,
+              1198
+            ]
+          ]
+        }
+      ],
+      "tracks": 2
+    },
+    {
+      "name": "London, Tilbury and Southend Railway",
+      "parts": [
+        {
+          "sheet": "42",
+          "points": [
+            [
+              132,
+              643
+            ],
+            [
+              360,
+              555
+            ],
+            [
+              630,
+              457
+            ],
+            [
+              900,
+              352
+            ],
+            [
+              1120,
+              275
+            ],
+            [
+              1340,
+              209
+            ],
+            [
+              1540,
+              144
+            ]
+          ]
+        }
+      ],
+      "tracks": 2
+    },
+    {
+      "name": "Abbey Mills junction curve",
+      "parts": [
+        {
+          "sheet": "42",
+          "points": [
+            [
+              1120,
+              275
+            ],
+            [
+              1230,
+              277
+            ],
+            [
+              1320,
+              300
+            ],
+            [
+              1400,
+              347
+            ],
+            [
+              1465,
+              410
+            ],
+            [
+              1510,
+              479
+            ],
+            [
+              1541,
+              544
+            ],
+            [
+              1555,
+              603
+            ],
+            [
+              1555,
+              680
+            ]
+          ]
+        }
+      ],
+      "tracks": 2
+    }
+  ],
+  "garden": {
+    "sheet": "32",
+    "polygon": [
+      [
+        441.93,
+        946.53
+      ],
+      [
+        785.49,
+        863.24
+      ],
+      [
+        815.42,
+        880.66
+      ],
+      [
+        823.85,
+        1148.52
+      ],
+      [
+        856.41,
+        1148.88
+      ],
+      [
+        920.66,
+        1005.53
+      ],
+      [
+        965.67,
+        983.24
+      ],
+      [
+        929.58,
+        1082.14
+      ],
+      [
+        894.67,
+        1147.68
+      ],
+      [
+        853.99,
+        1220.48
+      ],
+      [
+        809.32,
+        1285.91
+      ],
+      [
+        774.63,
+        1331.1
+      ],
+      [
+        732.02,
+        1357.49
+      ],
+      [
+        695.27,
+        1369.29
+      ],
+      [
+        496.38,
+        1396.4
+      ],
+      [
+        450.33,
+        1217.65
+      ]
+    ],
+    "laterMapPixels": [
+      [
+        616,
+        425
+      ],
+      [
+        1037,
+        318
+      ],
+      [
+        1074,
+        339
+      ],
+      [
+        1088,
+        668
+      ],
+      [
+        1128,
+        668
+      ],
+      [
+        1205,
+        491
+      ],
+      [
+        1260,
+        463
+      ],
+      [
+        1217,
+        585
+      ],
+      [
+        1175,
+        666
+      ],
+      [
+        1126,
+        756
+      ],
+      [
+        1072,
+        837
+      ],
+      [
+        1030,
+        893
+      ],
+      [
+        978,
+        926
+      ],
+      [
+        933,
+        941
+      ],
+      [
+        689,
+        977
+      ],
+      [
+        630,
+        758
+      ]
+    ],
+    "laterMapPixelWidth": 2048,
+    "evidence": "Author identifies allotments in the 1900 south photograph. Extent enlarged using the central Allotment Gardens area on the supplied Essex later OS screenshot (viewer 1914), registered to VIII.32. The author-dated 1945 aerial informs landscape scale and patchwork only. Continuity of the broader extent into c1900 is inferred; individual beds, planting and sheds are interpreted. Earlier river courses retained; Prescott Cut excluded.",
+    "aerialReference": {
+      "file": "reference/author-map-extracts-2026-09-24/Screenshot 2026-09-24 123458.png",
+      "sha256": "7c65d3a24f320d6ab725a89156107a82be0c2f9f020db1fb355e1a9328c1f527",
+      "date": "1945, supplied by author",
+      "restriction": "Reference-only; visible GeoInformation Group copyright retained. Not a runtime texture."
+    }
+  },
+  "factoryFrontages": [
+    {
+      "sheet": "32",
+      "siteId": 512,
+      "name": "Phoenix Black Works, north range",
+      "a": [
+        1368,
+        876
+      ],
+      "b": [
+        1433,
+        891
+      ],
+      "depth": 25,
+      "height": 8
+    },
+    {
+      "sheet": "32",
+      "siteId": 512,
+      "name": "Phoenix Black Works, east range",
+      "a": [
+        1455,
+        892
+      ],
+      "b": [
+        1480,
+        899
+      ],
+      "depth": 45,
+      "height": 10
+    },
+    {
+      "sheet": "32",
+      "siteId": 513,
+      "name": "Printing Ink Works",
+      "a": [
+        1371,
+        976
+      ],
+      "b": [
+        1404,
+        987
+      ],
+      "depth": 28,
+      "height": 8
+    },
+    {
+      "sheet": "32",
+      "siteId": 875,
+      "name": "West Ham Chemical Works frontage",
+      "a": [
+        1139,
+        1090
+      ],
+      "b": [
+        1277,
+        1066
+      ],
+      "depth": 31,
+      "height": 10
+    },
+    {
+      "sheet": "32",
+      "siteId": 876,
+      "name": "Abbey Mills Chemical Works river range",
+      "a": [
+        1128,
+        1138
+      ],
+      "b": [
+        1128,
+        1186
+      ],
+      "depth": 20,
+      "height": 9
+    },
+    {
+      "sheet": "32",
+      "siteId": 876,
+      "name": "Abbey Mills Chemical Works southern range",
+      "a": [
+        1165,
+        1170
+      ],
+      "b": [
+        1232,
+        1164
+      ],
+      "depth": 25,
+      "height": 11
+    },
+    {
+      "sheet": "42",
+      "siteId": 1125,
+      "name": "Oil and Stearine Works",
+      "a": [
+        1056,
+        199
+      ],
+      "b": [
+        1095,
+        182
+      ],
+      "depth": 39,
+      "height": 10
+    }
+  ]
+}

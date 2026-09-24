@@ -1,0 +1,9 @@
+{
+  "asset": "tidal-mud-v1.png",
+  "created": "2026-09-24",
+  "method": "Built-in image_gen tool",
+  "purpose": "Original fine sediment colour texture; its intensity also drives small bump relief. Not a measured height map.",
+  "referencePolicy": "Generated from a text description only; no archive photograph provided or reproduced.",
+  "metresPerTile": 2,
+  "prompt": "Use case: photorealistic-natural. Asset type: seamless square material texture for a 3D historical tidal riverbank reconstruction. Generate ONE original 2048 x 2048 texture image, orthographic straight overhead, covering approximately 2 by 2 metres of densely churned wet estuarine silt and sticky industrial river mud. Entire frame is mud. Extremely rich irregular small-scale texture: hundreds of torn, compressed muddy clods only 1–8 cm across, wrinkled smeared silt, narrow sinuous wet fissures, thin slick films between clods, damp charcoal-brown sediment with grey highlights. Most clods are soft crushed irregular flakes merging into the ground, not separate stones. Subtle fine grit, variable moisture. Cool muted grey-brown, low colour saturation. Soft completely diffuse overcast lighting, evenly exposed edge to edge with no directional cast shadows and no vignette. Designed as a tileable base-colour surface texture with continuous matching edges, no perspective, no horizon, no objects. Avoid all regularity: absolutely no hexagons, polygonal cracked-earth plates, honeycomb, repeated geometric patches, round pebbles, large rocks, puddles reflecting sky, grass, plants, wood, waste, footprints, text, borders or labels. Original texture, not a reproduction of any archive image."
+}

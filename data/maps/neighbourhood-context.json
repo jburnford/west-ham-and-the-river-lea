@@ -1,0 +1,88 @@
+{
+  "sources": {
+    "houses": "https://historicengland.org.uk/listing/the-list/list-entry/1080983",
+    "historic_map": "https://www.tideway.london/media/1747/6225-environmental-statement-volume-25-appendices-a-to-n.pdf",
+    "bromley_plan": "https://docs.planning.org.uk/20250819/208/SZY233JYN2A00/e8i7iygvk9adx3ek.pdf",
+    "west_ham_photo_catalogue": "https://historicengland.org.uk/images-books/photos/item/AA100187"
+  },
+  "holders": [
+    {
+      "id": "bromley-1",
+      "siteId": 924,
+      "x": -342.7,
+      "z": 703.9,
+      "radius": 31,
+      "height": 23,
+      "columns": 28,
+      "bellHeight": 14,
+      "evidence": "Approximate relative centre from site-plan PDF page 72, registered at No.6 listed grid reference; pre-1900 two-tier study. Bell height interpreted."
+    },
+    {
+      "id": "bromley-2",
+      "siteId": 924,
+      "x": -400.1,
+      "z": 653.9,
+      "radius": 31,
+      "height": 23,
+      "columns": 28,
+      "bellHeight": 19,
+      "evidence": "Approximate relative centre from site-plan PDF page 72, registered at No.6 listed grid reference; pre-1900 two-tier study. Bell height interpreted."
+    },
+    {
+      "id": "bromley-4",
+      "siteId": 924,
+      "x": -268.9,
+      "z": 678.3,
+      "radius": 31,
+      "height": 23,
+      "columns": 28,
+      "bellHeight": 19,
+      "evidence": "Approximate relative centre from site-plan PDF page 72, registered at No.6 listed grid reference; pre-1900 two-tier study. Bell height interpreted."
+    },
+    {
+      "id": "bromley-6",
+      "siteId": 924,
+      "x": -311.0,
+      "z": 552.0,
+      "radius": 31,
+      "height": 23,
+      "columns": 24,
+      "bellHeight": 19,
+      "evidence": "Approximate relative centre from site-plan PDF page 72, registered at No.6 listed grid reference; pre-1900 two-tier study. Bell height interpreted."
+    },
+    {
+      "id": "bromley-7",
+      "siteId": 924,
+      "x": -252.4,
+      "z": 604.5,
+      "radius": 31,
+      "height": 23,
+      "columns": 24,
+      "bellHeight": 14,
+      "evidence": "Approximate relative centre from site-plan PDF page 72, registered at No.6 listed grid reference; pre-1900 two-tier study. Bell height interpreted."
+    },
+    {
+      "id": "bromley-8",
+      "siteId": 924,
+      "x": -196.9,
+      "z": 553.8,
+      "radius": 31,
+      "height": 23,
+      "columns": 24,
+      "bellHeight": 19,
+      "evidence": "Approximate relative centre from site-plan PDF page 72, registered at No.6 listed grid reference; pre-1900 two-tier study. Bell height interpreted."
+    },
+    {
+      "id": "bromley-9",
+      "siteId": 924,
+      "x": -251.8,
+      "z": 504.4,
+      "radius": 31,
+      "height": 23,
+      "columns": 24,
+      "bellHeight": 14,
+      "evidence": "Approximate relative centre from site-plan PDF page 72, registered at No.6 listed grid reference; pre-1900 two-tier study. Bell height interpreted."
+    }
+  ],
+  "notes": "Seven surviving Bromley holder locations interpreted in their pre-1900 form; lost Nos.3 and 5 remain unmodelled. West Ham holders and housing are generated from os-neighbourhood-traces.json."
+}

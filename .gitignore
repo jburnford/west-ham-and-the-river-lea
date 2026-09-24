@@ -1,0 +1,14 @@
+# Local research material and large original models are not publication assets.
+/reference/
+/assets/
+/*.pdf
+/MEMORY.md
+/WEBSITE_PLAN.md
+/scenes/*/review/
+/.agents/
+/.codex/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*

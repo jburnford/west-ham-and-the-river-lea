@@ -1,0 +1,1371 @@
+{
+  "description": "Approximate road and lane centreline traces from inspected OS sheets and author map extracts. Widths/materials/elevations interpreted. Pixel widths explicit per trace; registration inherited from housing maps. No modern road layout substituted.",
+  "roads": [
+    {
+      "name": "Abbey Lane",
+      "sheet": "32",
+      "points": [
+        [
+          128,
+          242
+        ],
+        [
+          217,
+          278
+        ],
+        [
+          284,
+          320
+        ],
+        [
+          349,
+          359
+        ],
+        [
+          408,
+          401
+        ],
+        [
+          458,
+          430
+        ],
+        [
+          552,
+          447
+        ],
+        [
+          575,
+          489
+        ],
+        [
+          591,
+          536
+        ],
+        [
+          663,
+          538
+        ],
+        [
+          760,
+          525
+        ],
+        [
+          964,
+          490
+        ],
+        [
+          982,
+          488
+        ],
+        [
+          1000,
+          493
+        ],
+        [
+          1012,
+          507
+        ],
+        [
+          1024,
+          535
+        ],
+        [
+          1036,
+          565
+        ],
+        [
+          1046,
+          591
+        ],
+        [
+          1053,
+          620
+        ],
+        [
+          1060,
+          642
+        ],
+        [
+          1068,
+          648.5
+        ],
+        [
+          1080,
+          647.5
+        ],
+        [
+          1130,
+          638.5
+        ],
+        [
+          1150,
+          631
+        ],
+        [
+          1190,
+          612
+        ],
+        [
+          1230,
+          589
+        ],
+        [
+          1258,
+          568
+        ]
+      ],
+      "width": 7,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked.",
+      "bridgeSpans": [
+        {
+          "id": "abbey-mill-crossing",
+          "points": [
+            [
+              1080,
+              647.5
+            ],
+            [
+              1130,
+              638.5
+            ]
+          ],
+          "height": 1.8,
+          "evidence": "Crossing and approach alignment re-read from enlarged OS VIII.32 alongside Abbey Mill. One continuous span across both channel cuts; independent river polygons omit the covered crossing. Width, deck height and construction remain interpreted."
+        }
+      ],
+      "alignmentEvidence": "West approach and mill crossing re-traced on enlarged VIII.32, 24 September 2026; replaces coarse bend and automatic road/water intersection fragments."
+    },
+    {
+      "name": "Abbey Road",
+      "sheet": "32",
+      "points": [
+        [
+          1258,
+          568
+        ],
+        [
+          1258,
+          446
+        ],
+        [
+          1328,
+          405
+        ],
+        [
+          1430,
+          324
+        ],
+        [
+          1510,
+          260
+        ],
+        [
+          1596,
+          184
+        ],
+        [
+          1634,
+          130
+        ]
+      ],
+      "width": 8,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Mill Meads works road",
+      "sheet": "32",
+      "points": [
+        [
+          1258,
+          568
+        ],
+        [
+          1296,
+          787
+        ],
+        [
+          1273,
+          851
+        ],
+        [
+          1221,
+          1077
+        ],
+        [
+          1203,
+          1168
+        ]
+      ],
+      "width": 6,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "setts",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Pumping station approach",
+      "sheet": "32",
+      "points": [
+        [
+          591,
+          536
+        ],
+        [
+          645,
+          557
+        ],
+        [
+          701,
+          600
+        ],
+        [
+          747,
+          645
+        ],
+        [
+          772,
+          663
+        ]
+      ],
+      "width": 5,
+      "kind": "lane",
+      "pixelWidth": 1800,
+      "surface": "cinder",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Three Mills Wall lane",
+      "sheet": "32",
+      "points": [
+        [
+          208,
+          730
+        ],
+        [
+          213,
+          832
+        ],
+        [
+          216,
+          951
+        ],
+        [
+          228,
+          1042
+        ],
+        [
+          217,
+          1122
+        ],
+        [
+          214,
+          1170
+        ]
+      ],
+      "width": 4,
+      "kind": "lane",
+      "pixelWidth": 1800,
+      "surface": "cinder",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Mill Mead riverbank path",
+      "sheet": "32",
+      "points": [
+        [
+          1059,
+          654
+        ],
+        [
+          1036,
+          740
+        ],
+        [
+          1040,
+          805
+        ],
+        [
+          1001,
+          870
+        ],
+        [
+          974,
+          953
+        ],
+        [
+          930,
+          1024
+        ],
+        [
+          886,
+          1125
+        ],
+        [
+          869,
+          1170
+        ]
+      ],
+      "width": 2,
+      "kind": "path",
+      "pixelWidth": 1800,
+      "surface": "cinder",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Roberts Road",
+      "sheet": "32",
+      "points": [
+        [
+          205,
+          383
+        ],
+        [
+          267,
+          339
+        ],
+        [
+          284,
+          320
+        ]
+      ],
+      "width": 5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Beck Road",
+      "sheet": "32",
+      "points": [
+        [
+          247,
+          442
+        ],
+        [
+          331,
+          380
+        ],
+        [
+          349,
+          359
+        ]
+      ],
+      "width": 5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Lucas Road",
+      "sheet": "32",
+      "points": [
+        [
+          294,
+          498
+        ],
+        [
+          396,
+          416
+        ],
+        [
+          408,
+          401
+        ]
+      ],
+      "width": 5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Godfrey Street",
+      "sheet": "32",
+      "points": [
+        [
+          217,
+          278
+        ],
+        [
+          278,
+          180
+        ]
+      ],
+      "width": 5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Marsh Road",
+      "sheet": "32",
+      "points": [
+        [
+          284,
+          320
+        ],
+        [
+          332,
+          236
+        ]
+      ],
+      "width": 5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Ross Road",
+      "sheet": "32",
+      "points": [
+        [
+          349,
+          359
+        ],
+        [
+          397,
+          290
+        ]
+      ],
+      "width": 5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Allwyn Road",
+      "sheet": "32",
+      "points": [
+        [
+          458,
+          430
+        ],
+        [
+          498,
+          363
+        ]
+      ],
+      "width": 5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Livingstone Road",
+      "sheet": "32",
+      "points": [
+        [
+          374,
+          130
+        ],
+        [
+          559,
+          262
+        ],
+        [
+          612,
+          294
+        ]
+      ],
+      "width": 5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Stanley Road",
+      "sheet": "32",
+      "points": [
+        [
+          559,
+          262
+        ],
+        [
+          586,
+          130
+        ]
+      ],
+      "width": 5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Abbey Road eastern continuation",
+      "sheet": "overview",
+      "points": [
+        [
+          1167,
+          482
+        ],
+        [
+          1245,
+          310
+        ],
+        [
+          1300,
+          210
+        ],
+        [
+          1354,
+          100
+        ],
+        [
+          1390,
+          80
+        ],
+        [
+          1602,
+          77
+        ],
+        [
+          1764,
+          104
+        ]
+      ],
+      "width": 8,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Abbey Road eastern bend",
+      "sheet": "overview",
+      "points": [
+        [
+          1167,
+          482
+        ],
+        [
+          1250,
+          641
+        ],
+        [
+          1338,
+          770
+        ],
+        [
+          1138,
+          944
+        ]
+      ],
+      "width": 7,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Goods-yard eastern street",
+      "sheet": "overview",
+      "points": [
+        [
+          820,
+          64
+        ],
+        [
+          853,
+          141
+        ],
+        [
+          885,
+          215
+        ],
+        [
+          914,
+          285
+        ],
+        [
+          940,
+          361
+        ],
+        [
+          957,
+          406
+        ]
+      ],
+      "width": 6,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Northeastern cross street",
+      "sheet": "overview",
+      "points": [
+        [
+          1081,
+          315
+        ],
+        [
+          1183,
+          424
+        ]
+      ],
+      "width": 6,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Street along eastern works",
+      "sheet": "overview",
+      "points": [
+        [
+          1204,
+          0
+        ],
+        [
+          1230,
+          86
+        ],
+        [
+          1264,
+          170
+        ],
+        [
+          1324,
+          194
+        ]
+      ],
+      "width": 6,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Northern grid west side",
+      "sheet": "overview",
+      "points": [
+        [
+          937,
+          0
+        ],
+        [
+          971,
+          95
+        ],
+        [
+          1008,
+          168
+        ],
+        [
+          1040,
+          245
+        ],
+        [
+          1081,
+          315
+        ]
+      ],
+      "width": 6,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern terrace street 1",
+      "sheet": "overview",
+      "points": [
+        [
+          820,
+          64
+        ],
+        [
+          1034,
+          0
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern terrace street 2",
+      "sheet": "overview",
+      "points": [
+        [
+          853,
+          141
+        ],
+        [
+          971,
+          95
+        ],
+        [
+          1220,
+          0
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern terrace street 3",
+      "sheet": "overview",
+      "points": [
+        [
+          885,
+          215
+        ],
+        [
+          1008,
+          168
+        ],
+        [
+          1230,
+          86
+        ],
+        [
+          1290,
+          79
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern terrace street 4",
+      "sheet": "overview",
+      "points": [
+        [
+          914,
+          285
+        ],
+        [
+          1040,
+          245
+        ],
+        [
+          1264,
+          170
+        ],
+        [
+          1324,
+          194
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern terrace street 5",
+      "sheet": "overview",
+      "points": [
+        [
+          940,
+          361
+        ],
+        [
+          1081,
+          315
+        ],
+        [
+          1253,
+          249
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern block west street",
+      "sheet": "overview",
+      "points": [
+        [
+          1380,
+          276
+        ],
+        [
+          1410,
+          456
+        ],
+        [
+          1393,
+          482
+        ],
+        [
+          1429,
+          689
+        ]
+      ],
+      "width": 6,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern block centre street",
+      "sheet": "overview",
+      "points": [
+        [
+          1490,
+          290
+        ],
+        [
+          1510,
+          433
+        ],
+        [
+          1520,
+          446
+        ],
+        [
+          1579,
+          649
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern block east street",
+      "sheet": "overview",
+      "points": [
+        [
+          1602,
+          77
+        ],
+        [
+          1615,
+          265
+        ],
+        [
+          1625,
+          389
+        ]
+      ],
+      "width": 6,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern block north street",
+      "sheet": "overview",
+      "points": [
+        [
+          1281,
+          244
+        ],
+        [
+          1400,
+          281
+        ],
+        [
+          1480,
+          284
+        ],
+        [
+          1615,
+          265
+        ],
+        [
+          1769,
+          292
+        ]
+      ],
+      "width": 6,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern block mid street",
+      "sheet": "overview",
+      "points": [
+        [
+          1625,
+          389
+        ],
+        [
+          1775,
+          390
+        ]
+      ],
+      "width": 6,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern block southern street",
+      "sheet": "overview",
+      "points": [
+        [
+          1265,
+          512
+        ],
+        [
+          1393,
+          482
+        ],
+        [
+          1510,
+          446
+        ],
+        [
+          1625,
+          410
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern outer north south street",
+      "sheet": "overview",
+      "points": [
+        [
+          1705,
+          102
+        ],
+        [
+          1685,
+          270
+        ],
+        [
+          1675,
+          390
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 1800,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "St Leonard Street",
+      "sheet": "southwest",
+      "points": [
+        [
+          302,
+          40
+        ],
+        [
+          358,
+          194
+        ],
+        [
+          424,
+          393
+        ],
+        [
+          514,
+          640
+        ],
+        [
+          571,
+          777
+        ]
+      ],
+      "width": 8,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Blackwall Road",
+      "sheet": "southwest",
+      "points": [
+        [
+          496,
+          20
+        ],
+        [
+          564,
+          178
+        ],
+        [
+          637,
+          346
+        ],
+        [
+          676,
+          425
+        ]
+      ],
+      "width": 7,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Three Mills Lane",
+      "sheet": "southwest",
+      "points": [
+        [
+          434,
+          478
+        ],
+        [
+          676,
+          425
+        ],
+        [
+          844,
+          354
+        ],
+        [
+          938,
+          330
+        ],
+        [
+          1020,
+          303
+        ],
+        [
+          1115,
+          298
+        ]
+      ],
+      "width": 7,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "setts",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Barry Street",
+      "sheet": "southwest",
+      "points": [
+        [
+          338,
+          143
+        ],
+        [
+          553,
+          65
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Franklin Street",
+      "sheet": "southwest",
+      "points": [
+        [
+          370,
+          241
+        ],
+        [
+          592,
+          162
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Washington Street",
+      "sheet": "southwest",
+      "points": [
+        [
+          399,
+          302
+        ],
+        [
+          617,
+          224
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Jefferson Street",
+      "sheet": "southwest",
+      "points": [
+        [
+          440,
+          361
+        ],
+        [
+          637,
+          289
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Sherman Street",
+      "sheet": "southwest",
+      "points": [
+        [
+          628,
+          302
+        ],
+        [
+          738,
+          247
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Otis Street",
+      "sheet": "southwest",
+      "points": [
+        [
+          651,
+          359
+        ],
+        [
+          796,
+          287
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Empson Street",
+      "sheet": "southwest",
+      "points": [
+        [
+          446,
+          495
+        ],
+        [
+          845,
+          404
+        ]
+      ],
+      "width": 6,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Imperial Street",
+      "sheet": "southwest",
+      "points": [
+        [
+          500,
+          637
+        ],
+        [
+          777,
+          529
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Bromley High Street",
+      "sheet": "southwest",
+      "points": [
+        [
+          0,
+          195
+        ],
+        [
+          302,
+          40
+        ],
+        [
+          395,
+          0
+        ]
+      ],
+      "width": 8,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Devons Road",
+      "sheet": "southwest",
+      "points": [
+        [
+          102,
+          170
+        ],
+        [
+          153,
+          394
+        ],
+        [
+          233,
+          670
+        ],
+        [
+          299,
+          827
+        ]
+      ],
+      "width": 7,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Bruce Road",
+      "sheet": "southwest",
+      "points": [
+        [
+          0,
+          399
+        ],
+        [
+          372,
+          253
+        ]
+      ],
+      "width": 6,
+      "kind": "street",
+      "pixelWidth": 2048,
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Three Mills Lane beside distillery",
+      "sheet": "42",
+      "points": [
+        [
+          198,
+          122
+        ],
+        [
+          193,
+          175
+        ],
+        [
+          212,
+          247
+        ],
+        [
+          222,
+          285
+        ]
+      ],
+      "width": 4.5,
+      "kind": "lane",
+      "pixelWidth": 1800,
+      "surface": "cinder",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Three Mills entrance",
+      "sheet": "42",
+      "points": [
+        [
+          130,
+          288
+        ],
+        [
+          222,
+          285
+        ],
+        [
+          281,
+          282
+        ]
+      ],
+      "width": 6,
+      "kind": "lane",
+      "pixelWidth": 1800,
+      "surface": "setts",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    },
+    {
+      "name": "Eastern residential cross street",
+      "sheet": "overview",
+      "pixelWidth": 1800,
+      "points": [
+        [
+          1420,
+          541
+        ],
+        [
+          1532,
+          505
+        ],
+        [
+          1570,
+          505
+        ]
+      ],
+      "width": 5.5,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+    }
+  ],
+  "review": "Centreline overlays checked against enlarged street spaces, 24 September 2026. Removed provisional diagonals and back-of-plot lines that were not mapped roads. Names descriptive where source labels are indistinct.",
+  "surfacePolicy": "Macadam for residential streets; clinker/earth for working lanes and paths; selected cartage/works approaches modelled with granite setts. No wood-block street identified, no modern tarmac, no electrified tram infrastructure. Assignments do not establish council adoption status."
+}

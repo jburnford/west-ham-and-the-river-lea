@@ -1,0 +1,34 @@
+{
+  "sourceAccessed": "2026-09-24",
+  "authorClarification": "Three Mills is a distinct landmark at the far edge of Mill Meads, not Abbey Mill near the sewer crossing.",
+  "landmarks": [
+    {
+      "name": "House Mill",
+      "source": "https://historicengland.org.uk/listing/the-list/list-entry/1080970",
+      "gridReference": "TQ 38285 82826",
+      "x": -615,
+      "z": 383,
+      "width": 36,
+      "depth": 16,
+      "wallHeight": 10,
+      "ridgeHeight": 16,
+      "rotation": -16.04,
+      "evidence": "Listed anchor and description: brick and partly weatherboarded north frontage, steep roof and two dormer levels. Dimensions/rotation are distant study estimates."
+    },
+    {
+      "name": "Clock Mill",
+      "source": "https://historicengland.org.uk/listing/the-list/list-entry/1191269",
+      "gridReference": "TQ 38334 82799",
+      "x": -566,
+      "z": 410,
+      "width": 32,
+      "depth": 14,
+      "wallHeight": 13.5,
+      "ridgeHeight": 17,
+      "rotation": -16.04,
+      "evidence": "Listed anchor and description: multi-storey brick range, twin conical kiln roofs and staged clock turret. Dimensions and subsidiary offsets estimated; recent replacement cowls omitted."
+    }
+  ],
+  "secondaryReference": "https://en.wikipedia.org/wiki/Three_Mills",
+  "limits": "Listed anchors are not surveyed footprint centres. These are separate landmarks from the existing site-419 distillery range studies. No modern photograph is published or used as a texture."
+}

@@ -1,0 +1,2178 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "os_london_1056.598",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0357,
+                51.5514
+              ],
+              [
+                -0.0357,
+                51.5572
+              ],
+              [
+                -0.0218,
+                51.5572
+              ],
+              [
+                -0.0218,
+                51.5514
+              ],
+              [
+                -0.0357,
+                51.5514
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201061",
+        "WFS_TITLE": "London III.100, Revised: 1893, Published: 1895",
+        "IMAGE": "101201061",
+        "overlaps_west_ham": false,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.618",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0496,
+                51.5572
+              ],
+              [
+                -0.0496,
+                51.563
+              ],
+              [
+                -0.0357,
+                51.5629
+              ],
+              [
+                -0.0357,
+                51.5572
+              ],
+              [
+                -0.0496,
+                51.5572
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201028",
+        "WFS_TITLE": "London III.89, Revised: 1893, Published: 1895",
+        "IMAGE": "101201028",
+        "overlaps_west_ham": false,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.619",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0357,
+                51.5572
+              ],
+              [
+                -0.0357,
+                51.5629
+              ],
+              [
+                -0.0218,
+                51.5629
+              ],
+              [
+                -0.0218,
+                51.5572
+              ],
+              [
+                -0.0357,
+                51.5572
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201031",
+        "WFS_TITLE": "London III.90, Revised: 1893, Published: 1894 to 1896",
+        "IMAGE": "101201031",
+        "overlaps_west_ham": false,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.599",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0218,
+                51.5514
+              ],
+              [
+                -0.0218,
+                51.5572
+              ],
+              [
+                -0.0079,
+                51.5571
+              ],
+              [
+                -0.0079,
+                51.5514
+              ],
+              [
+                -0.0218,
+                51.5514
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201124",
+        "WFS_TITLE": "London IV.91, Revised: 1893, Published: 1895",
+        "IMAGE": "101201124",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.600",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0079,
+                51.5514
+              ],
+              [
+                -0.0079,
+                51.5571
+              ],
+              [
+                0.006,
+                51.5571
+              ],
+              [
+                0.006,
+                51.5513
+              ],
+              [
+                -0.0079,
+                51.5514
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201127",
+        "WFS_TITLE": "London IV.92, Revised: 1893, Published: 1895",
+        "IMAGE": "101201127",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.601",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.006,
+                51.5513
+              ],
+              [
+                0.006,
+                51.5571
+              ],
+              [
+                0.02,
+                51.5571
+              ],
+              [
+                0.0199,
+                51.5513
+              ],
+              [
+                0.006,
+                51.5513
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201130",
+        "WFS_TITLE": "London IV.93, Revised: 1893, Published: 1895",
+        "IMAGE": "101201130",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.602",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0199,
+                51.5513
+              ],
+              [
+                0.02,
+                51.5571
+              ],
+              [
+                0.0339,
+                51.5571
+              ],
+              [
+                0.0339,
+                51.5513
+              ],
+              [
+                0.0199,
+                51.5513
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201133",
+        "WFS_TITLE": "London IV.94, Revised: 1893, Published: 1895",
+        "IMAGE": "101201133",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.603",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0339,
+                51.5513
+              ],
+              [
+                0.0339,
+                51.5571
+              ],
+              [
+                0.0478,
+                51.5571
+              ],
+              [
+                0.0478,
+                51.5513
+              ],
+              [
+                0.0339,
+                51.5513
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201136",
+        "WFS_TITLE": "London IV.95, Revised: 1893, Published: 1895",
+        "IMAGE": "101201136",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.531",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0358,
+                51.534
+              ],
+              [
+                -0.0357,
+                51.5398
+              ],
+              [
+                -0.0218,
+                51.5398
+              ],
+              [
+                -0.0218,
+                51.534
+              ],
+              [
+                -0.0358,
+                51.534
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201487",
+        "WFS_TITLE": "London VII.30, Revised: 1893, Published: 1895",
+        "IMAGE": "101201487",
+        "overlaps_west_ham": false,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.576",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0218,
+                51.5456
+              ],
+              [
+                -0.0218,
+                51.5514
+              ],
+              [
+                -0.0079,
+                51.5514
+              ],
+              [
+                -0.0079,
+                51.5456
+              ],
+              [
+                -0.0218,
+                51.5456
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201697",
+        "WFS_TITLE": "London VIII.1, Revised: 1893, Published: 1895",
+        "IMAGE": "101201697",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.554",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0218,
+                51.5398
+              ],
+              [
+                -0.0218,
+                51.5456
+              ],
+              [
+                -0.0079,
+                51.5456
+              ],
+              [
+                -0.0079,
+                51.5398
+              ],
+              [
+                -0.0218,
+                51.5398
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201715",
+        "WFS_TITLE": "London VIII.11, Revised: 1893, Published: 1895",
+        "IMAGE": "101201715",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.555",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0079,
+                51.5398
+              ],
+              [
+                -0.0079,
+                51.5456
+              ],
+              [
+                0.006,
+                51.5456
+              ],
+              [
+                0.006,
+                51.5398
+              ],
+              [
+                -0.0079,
+                51.5398
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201718",
+        "WFS_TITLE": "London VIII.12, Revised: 1893, Published: 1895",
+        "IMAGE": "101201718",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.556",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.006,
+                51.5398
+              ],
+              [
+                0.006,
+                51.5456
+              ],
+              [
+                0.0199,
+                51.5455
+              ],
+              [
+                0.0199,
+                51.5398
+              ],
+              [
+                0.006,
+                51.5398
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201721",
+        "WFS_TITLE": "London VIII.13, Revised: 1893, Published: 1895",
+        "IMAGE": "101201721",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.557",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0199,
+                51.5398
+              ],
+              [
+                0.0199,
+                51.5455
+              ],
+              [
+                0.0339,
+                51.5455
+              ],
+              [
+                0.0338,
+                51.5397
+              ],
+              [
+                0.0199,
+                51.5398
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201724",
+        "WFS_TITLE": "London VIII.14, Revised: 1893, Published: 1895",
+        "IMAGE": "101201724",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.577",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0079,
+                51.5456
+              ],
+              [
+                -0.0079,
+                51.5514
+              ],
+              [
+                0.006,
+                51.5513
+              ],
+              [
+                0.006,
+                51.5456
+              ],
+              [
+                -0.0079,
+                51.5456
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201700",
+        "WFS_TITLE": "London VIII.2, Revised: 1893, Published: 1895",
+        "IMAGE": "101201700",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.532",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0218,
+                51.534
+              ],
+              [
+                -0.0218,
+                51.5398
+              ],
+              [
+                -0.0079,
+                51.5398
+              ],
+              [
+                -0.0079,
+                51.534
+              ],
+              [
+                -0.0218,
+                51.534
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201730",
+        "WFS_TITLE": "London VIII.21, Revised: 1893, Published: 1895",
+        "IMAGE": "101201730",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.533",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0079,
+                51.534
+              ],
+              [
+                -0.0079,
+                51.5398
+              ],
+              [
+                0.006,
+                51.5398
+              ],
+              [
+                0.006,
+                51.534
+              ],
+              [
+                -0.0079,
+                51.534
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201733",
+        "WFS_TITLE": "London VIII.22, Revised: 1893, Published: 1895",
+        "IMAGE": "101201733",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.534",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.006,
+                51.534
+              ],
+              [
+                0.006,
+                51.5398
+              ],
+              [
+                0.0199,
+                51.5398
+              ],
+              [
+                0.0199,
+                51.534
+              ],
+              [
+                0.006,
+                51.534
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201736",
+        "WFS_TITLE": "London VIII.23, Revised: 1893, Published: 1895",
+        "IMAGE": "101201736",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.535",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0199,
+                51.534
+              ],
+              [
+                0.0199,
+                51.5398
+              ],
+              [
+                0.0338,
+                51.5397
+              ],
+              [
+                0.0338,
+                51.534
+              ],
+              [
+                0.0199,
+                51.534
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201739",
+        "WFS_TITLE": "London VIII.24, Revised: 1893, Published: 1895",
+        "IMAGE": "101201739",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.536",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0338,
+                51.534
+              ],
+              [
+                0.0338,
+                51.5397
+              ],
+              [
+                0.0478,
+                51.5397
+              ],
+              [
+                0.0477,
+                51.5339
+              ],
+              [
+                0.0338,
+                51.534
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201742",
+        "WFS_TITLE": "London VIII.25, Revised: 1893, Published: 1895",
+        "IMAGE": "101201742",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.578",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.006,
+                51.5456
+              ],
+              [
+                0.006,
+                51.5513
+              ],
+              [
+                0.0199,
+                51.5513
+              ],
+              [
+                0.0199,
+                51.5455
+              ],
+              [
+                0.006,
+                51.5456
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201703",
+        "WFS_TITLE": "London VIII.3, Revised: 1893, Published: 1895",
+        "IMAGE": "101201703",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.510",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0218,
+                51.5282
+              ],
+              [
+                -0.0218,
+                51.534
+              ],
+              [
+                -0.0079,
+                51.534
+              ],
+              [
+                -0.0079,
+                51.5282
+              ],
+              [
+                -0.0218,
+                51.5282
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201745",
+        "WFS_TITLE": "London VIII.31, Revised: 1893, Published: 1894",
+        "IMAGE": "101201745",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.511",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0079,
+                51.5282
+              ],
+              [
+                -0.0079,
+                51.534
+              ],
+              [
+                0.006,
+                51.534
+              ],
+              [
+                0.006,
+                51.5282
+              ],
+              [
+                -0.0079,
+                51.5282
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201748",
+        "WFS_TITLE": "London VIII.32, Revised: 1893, Published: 1895",
+        "IMAGE": "101201748",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.512",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.006,
+                51.5282
+              ],
+              [
+                0.006,
+                51.534
+              ],
+              [
+                0.0199,
+                51.534
+              ],
+              [
+                0.0199,
+                51.5282
+              ],
+              [
+                0.006,
+                51.5282
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201751",
+        "WFS_TITLE": "London VIII.33, Revised: 1893, Published: 1895",
+        "IMAGE": "101201751",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.513",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0199,
+                51.5282
+              ],
+              [
+                0.0199,
+                51.534
+              ],
+              [
+                0.0338,
+                51.534
+              ],
+              [
+                0.0338,
+                51.5282
+              ],
+              [
+                0.0199,
+                51.5282
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201754",
+        "WFS_TITLE": "London VIII.34, Revised: 1893, Published: 1895",
+        "IMAGE": "101201754",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.514",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0338,
+                51.5282
+              ],
+              [
+                0.0338,
+                51.534
+              ],
+              [
+                0.0477,
+                51.5339
+              ],
+              [
+                0.0477,
+                51.5282
+              ],
+              [
+                0.0338,
+                51.5282
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201757",
+        "WFS_TITLE": "London VIII.35, Revised: 1893, Published: 1895",
+        "IMAGE": "101201757",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.579",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0199,
+                51.5455
+              ],
+              [
+                0.0199,
+                51.5513
+              ],
+              [
+                0.0339,
+                51.5513
+              ],
+              [
+                0.0339,
+                51.5455
+              ],
+              [
+                0.0199,
+                51.5455
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201706",
+        "WFS_TITLE": "London VIII.4, Revised: 1893, Published: 1895",
+        "IMAGE": "101201706",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.490",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0219,
+                51.5224
+              ],
+              [
+                -0.0218,
+                51.5282
+              ],
+              [
+                -0.0079,
+                51.5282
+              ],
+              [
+                -0.0079,
+                51.5224
+              ],
+              [
+                -0.0219,
+                51.5224
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201760",
+        "WFS_TITLE": "London VIII.41, Revised: 1893, Published: 1895",
+        "IMAGE": "101201760",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.491",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0079,
+                51.5224
+              ],
+              [
+                -0.0079,
+                51.5282
+              ],
+              [
+                0.006,
+                51.5282
+              ],
+              [
+                0.006,
+                51.5224
+              ],
+              [
+                -0.0079,
+                51.5224
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201763",
+        "WFS_TITLE": "London VIII.42, Revised: 1893, Published: 1895",
+        "IMAGE": "101201763",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.492",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.006,
+                51.5224
+              ],
+              [
+                0.006,
+                51.5282
+              ],
+              [
+                0.0199,
+                51.5282
+              ],
+              [
+                0.0199,
+                51.5224
+              ],
+              [
+                0.006,
+                51.5224
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201766",
+        "WFS_TITLE": "London VIII.43, Revised: 1893, Published: 1895",
+        "IMAGE": "101201766",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.493",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0199,
+                51.5224
+              ],
+              [
+                0.0199,
+                51.5282
+              ],
+              [
+                0.0338,
+                51.5282
+              ],
+              [
+                0.0338,
+                51.5224
+              ],
+              [
+                0.0199,
+                51.5224
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201769",
+        "WFS_TITLE": "London VIII.44, Revised: 1893, Published: 1895",
+        "IMAGE": "101201769",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.580",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0339,
+                51.5455
+              ],
+              [
+                0.0339,
+                51.5513
+              ],
+              [
+                0.0478,
+                51.5513
+              ],
+              [
+                0.0478,
+                51.5455
+              ],
+              [
+                0.0339,
+                51.5455
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201709",
+        "WFS_TITLE": "London VIII.5, Revised: 1893, Published: 1895",
+        "IMAGE": "101201709",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.469",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.0219,
+                51.5167
+              ],
+              [
+                -0.0219,
+                51.5224
+              ],
+              [
+                -0.0079,
+                51.5224
+              ],
+              [
+                -0.008,
+                51.5166
+              ],
+              [
+                -0.0219,
+                51.5167
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201772",
+        "WFS_TITLE": "London VIII.51, Revised: 1893 - 1895, Published: 1895",
+        "IMAGE": "101201772",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.470",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.008,
+                51.5166
+              ],
+              [
+                -0.0079,
+                51.5224
+              ],
+              [
+                0.006,
+                51.5224
+              ],
+              [
+                0.006,
+                51.5166
+              ],
+              [
+                -0.008,
+                51.5166
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201775",
+        "WFS_TITLE": "London VIII.52, Revised: 1893, Published: 1895",
+        "IMAGE": "101201775",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.471",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.006,
+                51.5166
+              ],
+              [
+                0.006,
+                51.5224
+              ],
+              [
+                0.0199,
+                51.5224
+              ],
+              [
+                0.0199,
+                51.5166
+              ],
+              [
+                0.006,
+                51.5166
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201778",
+        "WFS_TITLE": "London VIII.53, Revised: 1893, Published: 1894",
+        "IMAGE": "101201778",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.472",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0199,
+                51.5166
+              ],
+              [
+                0.0199,
+                51.5224
+              ],
+              [
+                0.0338,
+                51.5224
+              ],
+              [
+                0.0338,
+                51.5166
+              ],
+              [
+                0.0199,
+                51.5166
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201781",
+        "WFS_TITLE": "London VIII.54, Revised: ca. 1893 - 1894, Published: 1895",
+        "IMAGE": "101201781",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.447",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.008,
+                51.5109
+              ],
+              [
+                -0.008,
+                51.5166
+              ],
+              [
+                0.006,
+                51.5166
+              ],
+              [
+                0.0059,
+                51.5108
+              ],
+              [
+                -0.008,
+                51.5109
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201787",
+        "WFS_TITLE": "London VIII.62, Revised: 1893, Published: 1895",
+        "IMAGE": "101201787",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.448",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0059,
+                51.5108
+              ],
+              [
+                0.006,
+                51.5166
+              ],
+              [
+                0.0199,
+                51.5166
+              ],
+              [
+                0.0198,
+                51.5108
+              ],
+              [
+                0.0059,
+                51.5108
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201790",
+        "WFS_TITLE": "London VIII.63, Revised: 1893, Published: 1895",
+        "IMAGE": "101201790",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.449",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0198,
+                51.5108
+              ],
+              [
+                0.0199,
+                51.5166
+              ],
+              [
+                0.0338,
+                51.5166
+              ],
+              [
+                0.0338,
+                51.5108
+              ],
+              [
+                0.0198,
+                51.5108
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201793",
+        "WFS_TITLE": "London VIII.64, Revised: 1893, Published: 1895",
+        "IMAGE": "101201793",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.450",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0338,
+                51.5108
+              ],
+              [
+                0.0338,
+                51.5166
+              ],
+              [
+                0.0477,
+                51.5166
+              ],
+              [
+                0.0477,
+                51.5108
+              ],
+              [
+                0.0338,
+                51.5108
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201796",
+        "WFS_TITLE": "London VIII.65, Revised: 1893, Published: 1895",
+        "IMAGE": "101201796",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.420",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -0.008,
+                51.5051
+              ],
+              [
+                -0.008,
+                51.5109
+              ],
+              [
+                0.0059,
+                51.5108
+              ],
+              [
+                0.0059,
+                51.5051
+              ],
+              [
+                -0.008,
+                51.5051
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201802",
+        "WFS_TITLE": "London VIII.72, Revised: 1893, Published: 1895",
+        "IMAGE": "101201802",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.421",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0059,
+                51.5051
+              ],
+              [
+                0.0059,
+                51.5108
+              ],
+              [
+                0.0198,
+                51.5108
+              ],
+              [
+                0.0198,
+                51.505
+              ],
+              [
+                0.0059,
+                51.5051
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201805",
+        "WFS_TITLE": "London VIII.73, Revised: 1893, Published: 1895",
+        "IMAGE": "101201805",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": true
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.422",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0198,
+                51.505
+              ],
+              [
+                0.0198,
+                51.5108
+              ],
+              [
+                0.0338,
+                51.5108
+              ],
+              [
+                0.0337,
+                51.505
+              ],
+              [
+                0.0198,
+                51.505
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201808",
+        "WFS_TITLE": "London VIII.74, Revised: 1893, Published: 1895",
+        "IMAGE": "101201808",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.423",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0337,
+                51.505
+              ],
+              [
+                0.0338,
+                51.5108
+              ],
+              [
+                0.0477,
+                51.5108
+              ],
+              [
+                0.0476,
+                51.505
+              ],
+              [
+                0.0337,
+                51.505
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201811",
+        "WFS_TITLE": "London VIII.75, Revised: 1893, Published: 1895",
+        "IMAGE": "101201811",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.424",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0476,
+                51.505
+              ],
+              [
+                0.0477,
+                51.5108
+              ],
+              [
+                0.0616,
+                51.5108
+              ],
+              [
+                0.0615,
+                51.505
+              ],
+              [
+                0.0476,
+                51.505
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201814",
+        "WFS_TITLE": "London VIII.76, Revised: 1893, Published: 1895",
+        "IMAGE": "101201814",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.390",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0059,
+                51.4993
+              ],
+              [
+                0.0059,
+                51.5051
+              ],
+              [
+                0.0198,
+                51.505
+              ],
+              [
+                0.0198,
+                51.4993
+              ],
+              [
+                0.0059,
+                51.4993
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201829",
+        "WFS_TITLE": "London VIII.83, Revised: 1893, Published: 1895",
+        "IMAGE": "101201829",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.391",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0198,
+                51.4993
+              ],
+              [
+                0.0198,
+                51.505
+              ],
+              [
+                0.0337,
+                51.505
+              ],
+              [
+                0.0337,
+                51.4992
+              ],
+              [
+                0.0198,
+                51.4993
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201832",
+        "WFS_TITLE": "London VIII.84, Revised: 1893 - 1895, Published: 1895",
+        "IMAGE": "101201832",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.392",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0337,
+                51.4992
+              ],
+              [
+                0.0337,
+                51.505
+              ],
+              [
+                0.0476,
+                51.505
+              ],
+              [
+                0.0476,
+                51.4992
+              ],
+              [
+                0.0337,
+                51.4992
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201835",
+        "WFS_TITLE": "London VIII.85, Revised: 1893, Published: 1895",
+        "IMAGE": "101201835",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.393",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0476,
+                51.4992
+              ],
+              [
+                0.0476,
+                51.505
+              ],
+              [
+                0.0615,
+                51.505
+              ],
+              [
+                0.0615,
+                51.4992
+              ],
+              [
+                0.0476,
+                51.4992
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201838",
+        "WFS_TITLE": "London VIII.86, Revised: 1893, Published: 1895",
+        "IMAGE": "101201838",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.361",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0059,
+                51.4935
+              ],
+              [
+                0.0059,
+                51.4993
+              ],
+              [
+                0.0198,
+                51.4993
+              ],
+              [
+                0.0198,
+                51.4935
+              ],
+              [
+                0.0059,
+                51.4935
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201853",
+        "WFS_TITLE": "London VIII.93, Revised: 1893, Published: 1895",
+        "IMAGE": "101201853",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.362",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0198,
+                51.4935
+              ],
+              [
+                0.0198,
+                51.4993
+              ],
+              [
+                0.0337,
+                51.4992
+              ],
+              [
+                0.0337,
+                51.4935
+              ],
+              [
+                0.0198,
+                51.4935
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201856",
+        "WFS_TITLE": "London VIII.94, Revised: 1894, Published: 1895",
+        "IMAGE": "101201856",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.363",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0337,
+                51.4935
+              ],
+              [
+                0.0337,
+                51.4992
+              ],
+              [
+                0.0476,
+                51.4992
+              ],
+              [
+                0.0476,
+                51.4934
+              ],
+              [
+                0.0337,
+                51.4935
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201859",
+        "WFS_TITLE": "London VIII.95, Revised: 1893, Published: 1896",
+        "IMAGE": "101201859",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "os_london_1056.364",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                0.0476,
+                51.4934
+              ],
+              [
+                0.0476,
+                51.4992
+              ],
+              [
+                0.0615,
+                51.4992
+              ],
+              [
+                0.0615,
+                51.4934
+              ],
+              [
+                0.0476,
+                51.4934
+              ]
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "the_geom",
+      "properties": {
+        "IMAGEURL": "https://maps.nls.uk/view/101201862",
+        "WFS_TITLE": "London VIII.96, Revised: 1893, Published: 1896",
+        "IMAGE": "101201862",
+        "overlaps_west_ham": true,
+        "overlaps_lower_lea": false
+      }
+    }
+  ]
+}

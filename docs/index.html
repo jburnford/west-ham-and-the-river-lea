@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#233d3b">
+  <title>Above the Channelsea · West Ham & the River Lea</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#stories">Skip to the stories</a>
+  <header><a class="brand" href="./">WEST HAM <span>& THE RIVER LEA</span></a><span class="edition">A landscape in progress</span></header>
+  <main>
+    <div class="intro"><div><p class="eyebrow">ONE PLACE, MANY STORIES · ABOUT 1900</p><h1>Above the Channelsea</h1></div><p>Stand on the sewer. Look around a landscape that kept London working.</p></div>
+    <div class="experience">
+      <div class="viewer-column">
+      <section class="view" aria-label="Interactive reconstruction">
+        <div id="panorama" tabindex="0" role="region" aria-label="Panorama. Drag or use arrow keys to look. W A S D moves on the bridge. Plus and minus zoom; Home resets position and view." aria-describedby="controls-help"><p id="loading">Preparing the landscape…</p></div>
+        <div class="view-top"><span class="badge">FIRST SPATIAL SKETCH</span><output id="bearing" aria-label="Viewing direction">S · 180°</output></div>
+        <div class="view-bottom"><p id="controls-help">Drag / arrows to look · WASD to move</p><div class="tools"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="reset">Reset position & view</button><button id="map-open">Location map ↗</button></div></div>
+      </section>
+      <div class="bridge-controls" id="bridge-controls" aria-label="Move on the bridge">
+        <div class="walk-heading"><strong>Move on the bridge</strong><output id="walk-position">South side</output><span>Hold a direction, or use WASD. Movement stays within the walkway.</span></div>
+        <div class="walk-buttons" role="group" aria-label="Move relative to your view">
+          <button data-walk="left" aria-label="Step left" title="Step left (A)" disabled>←</button>
+          <button data-walk="forward" aria-label="Step forward" title="Step forward (W)" disabled>↑</button>
+          <button data-walk="back" aria-label="Step backward" title="Step backward (S)" disabled>↓</button>
+          <button data-walk="right" aria-label="Step right" title="Step right (D)" disabled>→</button>
+        </div>
+        <div class="side-buttons" role="group" aria-label="Cross to the other side">
+          <button data-side="north" disabled>North side</button><button data-side="south" disabled>South side</button>
+        </div>
+      </div>
+      </div>
+      <aside id="stories" tabindex="-1">
+        <p class="eyebrow">LOOK AROUND</p>
+        <nav class="stops" aria-label="Choose a view">
+          <button data-stop="river" aria-pressed="true"><span>01</span>The working river <b>↗</b></button>
+          <button data-stop="pumping" aria-pressed="false"><span>02</span>London’s sewage <b>↗</b></button>
+          <button data-stop="gas" aria-pressed="false"><span>03</span>Making gas <b>↗</b></button>
+          <button data-stop="homes" aria-pressed="false"><span>04</span>Homes & gasworks <b>↗</b></button>
+          <button data-stop="north" aria-pressed="false"><span>05</span>The northern streets <b>↗</b></button>
+          <button data-stop="mill" aria-pressed="false"><span>06</span>The corn mill <b>↗</b></button>
+        </nav>
+        <article id="story" aria-live="polite"></article>
+      </aside>
+    </div>
+    <div class="caption"><p><strong>You are on the Northern Outfall Sewer crossing.</strong> River edges and factory plots come from the supplied historical GIS. Building shapes, heights and the bridge deck are provisional.</p><button id="evidence-open">How do we know? <span>↗</span></button></div>
+    <section class="boulevard"><p class="eyebrow">A PLACE TO WALK. A PLACE OF WORK.</p><h2>West Ham’s “boulevard”</h2><p>In 1902, J. J. Terrett mocked the idea of this sewer-top walk as a grand promenade. His description brought gasworks, chemical works and the pumping station into one uncomfortable view. This landscape asks a question that runs through Jim Clifford’s book: how did the industries serving a growing city shape life beside the river?</p><p class="small">Based on <cite>West Ham and the River Lea</cite>, chapter 3. Terrett’s description was a political criticism, not the voice of every resident.</p></section>
+    <footer>A working adaptation of Jim Clifford’s <cite>West Ham and the River Lea</cite>.<br>Local review prototype · No archive photographs are displayed.</footer>
+  </main>
+  <dialog id="map-dialog" aria-labelledby="map-title"><div class="dialog-head"><div><p class="eyebrow">FIND YOUR BEARINGS</p><h2 id="map-title">Your position on the bridge</h2></div><button data-close aria-label="Close location map">✕</button></div><div id="plan"></div><p class="small">North is up. The dot follows your position and the gold cone shows your current view. The small outlined rectangle marks where you can move. Coloured plots are industrial sites, not individual buildings. The crossing’s listed location anchors the camera; its exact position and the photograph bearings still need to be matched.</p><div class="legend"><span>● Water</span><span>■ Industrial sites</span><span>▬ Housing rows</span><span>┄ Railway</span><span>■ Garden beds</span><span>◆ Camera</span></div></dialog>
+  <dialog id="evidence-dialog" aria-labelledby="evidence-title"><div class="dialog-head"><div><p class="eyebrow">THE EVIDENCE & THE GAPS</p><h2 id="evidence-title">Building the view</h2></div><button data-close aria-label="Close source notes">✕</button></div><div class="evidence-text">
+    <h3>A location, not yet a photograph match</h3><p>The bridge’s approximate listed grid reference, TQ 38900 83209, anchors the scene. You can move within a 48 × 11 metre rectangle inside the bridge walkway, starting near its south side. This is an exploration limit, not a measured historical bridge boundary. Its eye level, the deck alignment and all building dimensions are estimates for this sketch. We have not yet fitted the historic photographs to this camera.</p>
+    <h3>A changing crossing</h3><p>The bridge was rebuilt and widened in 1900–1902. Our working period spans that change; the simple deck shown here does not claim to depict either version precisely. <a href="https://historicengland.org.uk/listing/the-list/list-entry/1392549">Historic England: sewer bridge</a>.</p>
+    <h3>Maps give us the ground plan</h3><p>River and industrial-site outlines come from the author’s supplied GIS. Housing rows and six West Ham gas-holder circles are traced from inspected scans of <a href="https://maps.nls.uk/view/101201748">London VIII.32</a> and <a href="https://maps.nls.uk/view/101201733">VIII.22</a>, revised 1893 and published 1895. Their alignment uses approximate sheet bounds and still needs refinement. Mill Meads remains open, as the map shows. The brown river surface interprets exposed bed; it is not a measured low-water shoreline.</p>
+    <h3>Buildings are still study models</h3><p>The housing follows mapped row envelopes; its heights, repeated windows, chimneys and household divisions are interpretations informed by local photographs. Abbey Mills’ architecture draws on modern and period views. Factory buildings still need individual identification. Seven Bromley holders form the southern group; two lost holders are not yet modelled. Gas-bell levels, frame detail and colours remain estimates. <a href="https://historicengland.org.uk/listing/the-list/list-entry/1080983">Abbey Lane houses</a> · <a href="https://historicengland.org.uk/listing/the-list/list-entry/1190476">Abbey Mills</a> · <a href="https://historicengland.org.uk/listing/the-list/list-entry/1190911">Bromley gas holders</a>.</p>
+    <h3>The raised sewer, gardens and railways</h3><p>The sewer follows mapped bends and continues in both directions. Its height follows the author’s description of a walkway near roof level; the bank profile and distant continuations are estimates. Rail routes follow sheets VIII.32 and VIII.42. The author identifies gardens south of the pumping station; individual beds and sheds are interpreted. Abbey Mill is shown at its mapped site, without assuming that the windmill pictured around 1800 survived into this scene.</p>
+    <h3>Photographs guide the model</h3><p>The author identifies different gasworks in the two views: the 1902 close-up looks toward West Ham Gas Works to the north; the wide 1900 view shows Bromley to the south. The exact photograph viewpoints remain to be matched. Barges, timber retaining edges, exposed mud, factory windows and surface colours in this study interpret the photographs; individual positions, dimensions and colours remain estimates. Modern photographs help with surviving details. No photograph textures are used in this sketch. The overcast light, industrial haze, weathered brick and discoloured water interpret the bleakness of the photographs and the book’s account of sewage and chemical industry; exact colours and pollution levels cannot be recovered from these views.</p>
+    <p class="small">This prototype is for local review. Publication rights for the supplied GIS still need to be recorded. Historic England listing information: Open Government Licence v3.0. Renderer: Three.js 0.180.0, MIT licence.</p>
+  </div></dialog>
+  <noscript><p class="no-script">The panorama needs JavaScript. The story of the sewer-top walk is available below; source notes are also in the project README.</p></noscript>
+  <script src="bootstrap.js"></script>
+</body>
+</html>

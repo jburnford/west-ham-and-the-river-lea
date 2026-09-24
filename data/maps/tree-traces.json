@@ -1,0 +1,236 @@
+{
+  "source": [
+    {
+      "file": "reference/author-map-extracts-2026-09-24/Screenshot 2026-09-24 122212.png",
+      "sha256": "4c04249b6ac5e145eba02afe4e08fe9b616889023e92b6bed6baf83c84d0a27e"
+    },
+    {
+      "file": "reference/author-map-extracts-2026-09-24/Screenshot 2026-09-24 122347a.png",
+      "sha256": "3c222e8cc9ccbb9bb78cf0608d5d28c74733f9747b1d46bc60e778024cb09397"
+    }
+  ],
+  "sheet": "Essex (New Series 1913-) n LXXXVI, as supplied by author; viewer shows LXXXVI.5 and 1914. Exact revision/publication date not independently established.",
+  "pixelWidth": 2048,
+  "targetSheet": "32",
+  "targetPixelWidth": 1800,
+  "datePolicy": "Later evidence used as explicit continuity hypothesis for c1900. Earlier VIII.32 has no equivalent tree symbols here; absence is not proof of treelessness. Species, age, height and exact crown form unknown.",
+  "controls": [
+    {
+      "pixel": [
+        1228,
+        218
+      ],
+      "target": [
+        898,
+        747
+      ],
+      "feature": "eastern detached square building"
+    },
+    {
+      "pixel": [
+        1198,
+        199
+      ],
+      "target": [
+        875,
+        732
+      ],
+      "feature": "small building adjoining southeast station arm"
+    },
+    {
+      "pixel": [
+        1054,
+        244
+      ],
+      "target": [
+        764,
+        766
+      ],
+      "feature": "western square building"
+    },
+    {
+      "pixel": [
+        1164,
+        242
+      ],
+      "target": [
+        846,
+        765
+      ],
+      "feature": "southern detached range"
+    },
+    {
+      "pixel": [
+        1410,
+        176
+      ],
+      "target": [
+        1040,
+        716
+      ],
+      "feature": "sewer-side footbridge approach"
+    }
+  ],
+  "trees": [
+    {
+      "id": "tree-01",
+      "pixel": [
+        987,
+        134
+      ],
+      "group": "west grounds",
+      "height": 8.5,
+      "crownRadius": 2.8
+    },
+    {
+      "id": "tree-02",
+      "pixel": [
+        1006,
+        134
+      ],
+      "group": "west grounds",
+      "height": 9.2,
+      "crownRadius": 3.55
+    },
+    {
+      "id": "tree-03",
+      "pixel": [
+        1002,
+        154
+      ],
+      "group": "west grounds",
+      "height": 9.9,
+      "crownRadius": 3.05
+    },
+    {
+      "id": "tree-04",
+      "pixel": [
+        1014,
+        177
+      ],
+      "group": "west grounds",
+      "height": 10.6,
+      "crownRadius": 3.8
+    },
+    {
+      "id": "tree-05",
+      "pixel": [
+        1090,
+        244
+      ],
+      "group": "southern grounds",
+      "height": 11.3,
+      "crownRadius": 3.3
+    },
+    {
+      "id": "tree-06",
+      "pixel": [
+        1260,
+        187
+      ],
+      "group": "east grounds below sewer",
+      "height": 12.0,
+      "crownRadius": 2.8
+    },
+    {
+      "id": "tree-07",
+      "pixel": [
+        1280,
+        187
+      ],
+      "group": "east grounds below sewer",
+      "height": 8.5,
+      "crownRadius": 3.55
+    },
+    {
+      "id": "tree-08",
+      "pixel": [
+        1303,
+        187
+      ],
+      "group": "east grounds below sewer",
+      "height": 9.2,
+      "crownRadius": 3.05
+    },
+    {
+      "id": "tree-09",
+      "pixel": [
+        1265,
+        213
+      ],
+      "group": "east grounds below sewer",
+      "height": 9.9,
+      "crownRadius": 3.8
+    },
+    {
+      "id": "tree-10",
+      "pixel": [
+        1285,
+        206
+      ],
+      "group": "east grounds below sewer",
+      "height": 10.6,
+      "crownRadius": 3.3
+    },
+    {
+      "id": "tree-11",
+      "pixel": [
+        1314,
+        205
+      ],
+      "group": "east grounds below sewer",
+      "height": 11.3,
+      "crownRadius": 2.8
+    },
+    {
+      "id": "tree-12",
+      "pixel": [
+        1329,
+        197
+      ],
+      "group": "east grounds below sewer",
+      "height": 12.0,
+      "crownRadius": 3.55
+    },
+    {
+      "id": "tree-13",
+      "pixel": [
+        1349,
+        198
+      ],
+      "group": "east grounds below sewer",
+      "height": 8.5,
+      "crownRadius": 3.05
+    },
+    {
+      "id": "tree-14",
+      "pixel": [
+        1317,
+        228
+      ],
+      "group": "east grounds below sewer",
+      "height": 9.2,
+      "crownRadius": 3.8
+    },
+    {
+      "id": "tree-15",
+      "pixel": [
+        1343,
+        220
+      ],
+      "group": "east grounds below sewer",
+      "height": 9.9,
+      "crownRadius": 3.3
+    },
+    {
+      "id": "tree-16",
+      "pixel": [
+        1370,
+        216
+      ],
+      "group": "east grounds below sewer",
+      "height": 10.6,
+      "crownRadius": 2.8
+    }
+  ]
+}

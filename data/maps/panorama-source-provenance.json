@@ -1,0 +1,27 @@
+{
+  "sources": [
+    {
+      "file": "/home/jic823/swipe_map/site/data/Lower_River_Lea.geojson",
+      "sha256": "30c5d32e8bc4194d1c2a95827f7d598dac17043f9c9513857bccf6b2c78621ff",
+      "invalid_features_repaired_before_clip": [
+        0,
+        5
+      ]
+    },
+    {
+      "file": "/home/jic823/swipe_map/site/data/Industry_1893-95.geojson",
+      "sha256": "ab44155a15d0942674ae2838fed1cefb48131d325fff693236c548ff75614bd8",
+      "invalid_features_repaired_before_clip": [
+        185,
+        977
+      ]
+    }
+  ],
+  "clip_bounds_epsg27700": [
+    537850.0,
+    181850.0,
+    539850.0,
+    184150.0
+  ],
+  "method": "Reproject to EPSG:27700, repair invalid geometry with buffer(0), clip, reproject to EPSG:4326. Industrial polygons are sites, not building footprints. Publication rights of supplied GIS remain to be confirmed."
+}

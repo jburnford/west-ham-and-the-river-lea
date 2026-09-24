@@ -1,0 +1,210 @@
+{
+  "source": "data/maps/tree-traces.json",
+  "datePolicy": "Later evidence used as explicit continuity hypothesis for c1900. Earlier VIII.32 has no equivalent tree symbols here; absence is not proof of treelessness. Species, age, height and exact crown form unknown.",
+  "registration": {
+    "scale": [
+      0.7758518619716065,
+      0.00856131243098011
+    ],
+    "offset": [
+      -52.95390325261553,
+      567.4051310950966
+    ],
+    "rmsTargetPixels": 1.1257905652386884,
+    "limits": "Internal fit only; inherited OS registration is approximate."
+  },
+  "trees": [
+    {
+      "id": "tree-01",
+      "pixel": [
+        987,
+        134
+      ],
+      "group": "west grounds",
+      "height": 8.5,
+      "crownRadius": 2.8,
+      "x": -246.619,
+      "z": -17.857
+    },
+    {
+      "id": "tree-02",
+      "pixel": [
+        1006,
+        134
+      ],
+      "group": "west grounds",
+      "height": 9.2,
+      "crownRadius": 3.55,
+      "x": -237.437,
+      "z": -18.007
+    },
+    {
+      "id": "tree-03",
+      "pixel": [
+        1002,
+        154
+      ],
+      "group": "west grounds",
+      "height": 9.9,
+      "crownRadius": 3.05,
+      "x": -239.215,
+      "z": -8.368
+    },
+    {
+      "id": "tree-04",
+      "pixel": [
+        1014,
+        177
+      ],
+      "group": "west grounds",
+      "height": 10.6,
+      "crownRadius": 3.8,
+      "x": -233.237,
+      "z": 2.585
+    },
+    {
+      "id": "tree-05",
+      "pixel": [
+        1090,
+        244
+      ],
+      "group": "southern grounds",
+      "height": 11.3,
+      "crownRadius": 3.3,
+      "x": -195.988,
+      "z": 34.169
+    },
+    {
+      "id": "tree-06",
+      "pixel": [
+        1260,
+        187
+      ],
+      "group": "east grounds below sewer",
+      "height": 12.0,
+      "crownRadius": 2.8,
+      "x": -114.28,
+      "z": 5.446
+    },
+    {
+      "id": "tree-07",
+      "pixel": [
+        1280,
+        187
+      ],
+      "group": "east grounds below sewer",
+      "height": 8.5,
+      "crownRadius": 3.55,
+      "x": -104.616,
+      "z": 5.288
+    },
+    {
+      "id": "tree-08",
+      "pixel": [
+        1303,
+        187
+      ],
+      "group": "east grounds below sewer",
+      "height": 9.2,
+      "crownRadius": 3.05,
+      "x": -93.501,
+      "z": 5.106
+    },
+    {
+      "id": "tree-09",
+      "pixel": [
+        1265,
+        213
+      ],
+      "group": "east grounds below sewer",
+      "height": 9.9,
+      "crownRadius": 3.8,
+      "x": -111.662,
+      "z": 17.895
+    },
+    {
+      "id": "tree-10",
+      "pixel": [
+        1285,
+        206
+      ],
+      "group": "east grounds below sewer",
+      "height": 10.6,
+      "crownRadius": 3.3,
+      "x": -102.051,
+      "z": 14.375
+    },
+    {
+      "id": "tree-11",
+      "pixel": [
+        1314,
+        205
+      ],
+      "group": "east grounds below sewer",
+      "height": 11.3,
+      "crownRadius": 2.8,
+      "x": -88.045,
+      "z": 13.665
+    },
+    {
+      "id": "tree-12",
+      "pixel": [
+        1329,
+        197
+      ],
+      "group": "east grounds below sewer",
+      "height": 12.0,
+      "crownRadius": 3.55,
+      "x": -80.859,
+      "z": 9.704
+    },
+    {
+      "id": "tree-13",
+      "pixel": [
+        1349,
+        198
+      ],
+      "group": "east grounds below sewer",
+      "height": 8.5,
+      "crownRadius": 3.05,
+      "x": -71.186,
+      "z": 10.026
+    },
+    {
+      "id": "tree-14",
+      "pixel": [
+        1317,
+        228
+      ],
+      "group": "east grounds below sewer",
+      "height": 9.2,
+      "crownRadius": 3.8,
+      "x": -86.416,
+      "z": 24.689
+    },
+    {
+      "id": "tree-15",
+      "pixel": [
+        1343,
+        220
+      ],
+      "group": "east grounds below sewer",
+      "height": 9.9,
+      "crownRadius": 3.3,
+      "x": -73.914,
+      "z": 20.641
+    },
+    {
+      "id": "tree-16",
+      "pixel": [
+        1370,
+        216
+      ],
+      "group": "east grounds below sewer",
+      "height": 10.6,
+      "crownRadius": 2.8,
+      "x": -60.897,
+      "z": 18.506
+    }
+  ]
+}

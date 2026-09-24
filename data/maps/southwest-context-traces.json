@@ -1,0 +1,37 @@
+{
+  "source": "reference/author-map-extracts-2026-09-24/Screenshot 2026-09-24 112719c.png",
+  "sourceSize": [3511, 1834],
+  "tracePixelWidth": 2048,
+  "description": "Approximate main terrace-row axes read from the author's southwest extract for distant massing. Widths are in the same 2048-pixel-wide review space. Not individual house footprints. Historical overlay registration may differ from the modern base by tens of metres.",
+  "holderControls": [
+    {"id":"bromley-1", "pixel":[2565.8,1643.2]},
+    {"id":"bromley-2", "pixel":[2393.2,1484.2]},
+    {"id":"bromley-4", "pixel":[2804.2,1574.2]},
+    {"id":"bromley-6", "pixel":[2687.2,1172.2]},
+    {"id":"bromley-7", "pixel":[2867.2,1334.2]},
+    {"id":"bromley-8", "pixel":[3048.8,1179.8]},
+    {"id":"bromley-9", "pixel":[2874.8,1025.2]}
+  ],
+  "rows": [
+    {"area":"Barry Street vicinity", "axis":[[334,130],[472,82]], "width":13},
+    {"area":"Barry Street vicinity", "axis":[[350,157],[487,109]], "width":13},
+    {"area":"Franklin Street vicinity", "axis":[[364,227],[529,169]], "width":15},
+    {"area":"Franklin Street vicinity", "axis":[[376,253],[544,194]], "width":15},
+    {"area":"Washington Street vicinity", "axis":[[392,289],[558,231]], "width":15},
+    {"area":"Washington Street vicinity", "axis":[[405,315],[573,256]], "width":15},
+    {"area":"Jefferson Street vicinity", "axis":[[431,347],[596,289]], "width":15},
+    {"area":"Jefferson Street vicinity", "axis":[[444,374],[611,315]], "width":15},
+    {"area":"Sherman Street vicinity", "axis":[[640,267],[732,234]], "width":14},
+    {"area":"Otis Street vicinity", "axis":[[674,315],[789,275]], "width":14},
+    {"area":"Empson Street vicinity", "axis":[[712,431],[824,391]], "width":14},
+    {"area":"Empson Street vicinity", "axis":[[725,458],[838,418]], "width":14},
+    {"area":"Imperial Street vicinity", "axis":[[641,528],[743,492]], "width":14},
+    {"area":"Imperial Street vicinity", "axis":[[658,559],[761,523]], "width":14},
+    {"area":"Bromley western streets", "axis":[[242,173],[296,276]], "width":14},
+    {"area":"Bromley western streets", "axis":[[191,297],[247,403]], "width":14},
+    {"area":"Bromley western streets", "axis":[[285,344],[339,448]], "width":14},
+    {"area":"Bromley western streets", "axis":[[378,400],[431,502]], "width":14}
+  ],
+  "industrialSites": [230,250,254,255,419,420,421,514,515,516,563,564,565,566,941,942,983],
+  "industrialMethod": "Contained, interpreted edge ranges and courtyard masses within existing GIS industrial sites, informed by the southwest map's pattern of works and yards. These are not freshly traced individual factory footprints."
+}
