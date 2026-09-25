@@ -13,6 +13,13 @@ const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 const rad = Math.PI / 180;
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Quality tier. Phones and small tablets get a lighter scene: the full build holds
+// several hundred megabytes of geometry, which mobile browsers will not tolerate.
+// Override for testing with ?quality=lite or ?quality=full.
+const requestedQuality = new URLSearchParams(location.search).get('quality');
+const lite = requestedQuality ? requestedQuality === 'lite'
+  : (matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 900)
+    || (navigator.deviceMemory !== undefined && navigator.deviceMemory <= 4);
 
 // Camera poses. `hero` is the arrival view; the poster frame was rendered at `arrival`.
 const poses = {
@@ -49,8 +56,9 @@ function goTo(pose, duration = 1500) {
     state.yaw = from.yaw + dyaw * k;
     state.pitch = from.pitch + (pose.pitch - from.pitch) * k;
     state.fov = from.fov + (pose.fov - from.fov) * k;
-    update();
+    // Schedule (or clear) before rendering so the diagnostic sees the final state.
     tweenFrame = t < 1 ? requestAnimationFrame(frame) : 0;
+    update();
   };
   tweenFrame = requestAnimationFrame(frame);
 }
@@ -205,7 +213,7 @@ function update() {
     $$('[data-side]').forEach(b => b.setAttribute('aria-pressed', String(Math.abs(p.across - (b.dataset.side === 'north' ? -p.limits.across : p.limits.across)) < .01)));
   }
   // Read-only diagnostic for browser checks (same shape as the docs/ build, plus narrative state).
-  window.panoramaReview = { ...state, camera: camera?.position.toArray(), ready: Boolean(renderer),
+  window.panoramaReview = { ...state, camera: camera?.position.toArray(), ready: Boolean(renderer), quality: lite ? 'lite' : 'full',
     activeStop, tweening: Boolean(tweenFrame), movement: walker?.snapshot(),
     reflection: surfaces?.reflectionStats, terrain: data?.terrain?.review, lighting: scene?.userData.lighting,
     infrastructure: scene?.userData.infrastructure, mappedTrees: scene?.userData.mappedTrees,
@@ -260,14 +268,15 @@ function buildPlan(container, { viewBox, labels = true, markerRadius = 8, stroke
 
 /* ---------- Scene (unchanged construction from docs/app.js) ---------- */
 function buildScene() {
-  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'low-power' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
+  if (lite) data.terrain = downsampleTerrain(data.terrain, 2);
+  renderer = new THREE.WebGLRenderer({ antialias: !lite, alpha: false, powerPreference: 'low-power' });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, lite ? 1 : 1.75));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(state.fov, 1, 0.15, 3200);
   camera.position.fromArray(walker.world());
-  scene.userData.lighting = lighting(THREE, renderer, scene);
-  surfaces = realism(THREE, renderer, scene, data);
+  scene.userData.lighting = lighting(THREE, renderer, scene, lite ? { shadowMapSize: 1024, softShadows: false } : {});
+  surfaces = realism(THREE, renderer, scene, data, lite ? { reflectionWidth: 256, reflectionHeight: 192 } : {});
   const materials = surfaces.materials;
   let seed = 73;
   const random = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
@@ -298,7 +307,7 @@ function buildScene() {
     const mesh = new THREE.Mesh(new THREE.CylinderGeometry(r, r, delta.length(), 6), material);
     mesh.position.copy(av.add(bv).multiplyScalar(0.5)); mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), delta.normalize()); parent.add(mesh);
   }
-  const terrain = terrainDetails({ THREE, scene, materials, data, box, cylinder, beam, random });
+  const terrain = terrainDetails({ THREE, scene, materials, data, box, cylinder, beam, random, density: lite ? .3 : 1 });
   scene.userData.infrastructure = infrastructure({ THREE, scene, materials, data, box, level: terrain.level });
   scene.userData.mappedTrees = mappedTrees({ THREE, scene, data, level: terrain.level, beam });
   surfaces.weather(terrain.terrainMaterial);
@@ -367,32 +376,49 @@ function buildScene() {
     }
   }
   // Static scene: combine surfaces by material so detail does not cost a draw call per window.
+  // Two passes with preallocated typed arrays: the previous push-into-JS-array build held
+  // several times the final buffer size in memory, which is what mobile browsers ran out of.
   scene.updateMatrixWorld(true);
   const batches = new Map(), originals = [];
   scene.traverse(object => {
     if (!object.isMesh || object.userData.keepIndexed) return;
     originals.push(object);
+    const count = object.geometry.index ? object.geometry.index.count : object.geometry.getAttribute('position').count;
+    const batch = batches.get(object.material) || { count: 0, offset: 0 };
+    batch.count += count; batches.set(object.material, batch);
+  });
+  for (const batch of batches.values()) {
+    batch.position = new Float32Array(batch.count * 3); batch.normal = new Float32Array(batch.count * 3); batch.uv = new Float32Array(batch.count * 2);
+  }
+  for (const object of originals) {
     const geometry = object.geometry.index ? object.geometry.toNonIndexed() : object.geometry.clone();
     if (!object.material.userData.preserveUV) surfaces.metricUV(geometry, object.geometry);
     geometry.applyMatrix4(object.matrixWorld);
-    const batch = batches.get(object.material) || { position: [], normal: [], uv: [] };
-    for (const name of ['position', 'normal', 'uv']) {
+    const batch = batches.get(object.material), count = geometry.getAttribute('position').count;
+    for (const [name, size] of [['position', 3], ['normal', 3], ['uv', 2]]) {
       const attribute = geometry.getAttribute(name);
-      if (attribute) for (const value of attribute.array) batch[name].push(value);
-      else for (let i = 0; i < geometry.getAttribute('position').count * (name === 'uv' ? 2 : 3); i++) batch[name].push(0);
+      if (attribute) batch[name].set(attribute.array.subarray(0, count * size), batch.offset * size);
     }
-    batches.set(object.material, batch); geometry.dispose();
-  });
-  for (const mesh of originals) { mesh.removeFromParent(); mesh.geometry.dispose(); }
+    batch.offset += count; geometry.dispose();
+    object.removeFromParent(); object.geometry.dispose();
+  }
   for (const [material, batch] of batches) {
     const geometry = new THREE.BufferGeometry();
-    for (const name of ['position', 'normal', 'uv']) geometry.setAttribute(name, new THREE.Float32BufferAttribute(batch[name], name === 'uv' ? 2 : 3));
+    for (const [name, size] of [['position', 3], ['normal', 3], ['uv', 2]]) geometry.setAttribute(name, new THREE.BufferAttribute(batch[name], size));
     geometry.computeBoundingSphere();
     surfaces.weather(material);
     const mesh = new THREE.Mesh(geometry, material);
     mesh.castShadow = ![materials.ground, materials.water, materials.bed, materials.plot].includes(material);
     mesh.receiveShadow = true; scene.add(mesh);
   }
+  // The scene never changes after this point: release the CPU copy of every vertex
+  // buffer once it has been uploaded, roughly halving the retained memory.
+  const releaseArray = function () { this.array = null; };
+  scene.traverse(object => {
+    if (!object.isMesh) return;
+    for (const attribute of Object.values(object.geometry.attributes)) attribute.onUpload(releaseArray);
+    object.geometry.index?.onUpload(releaseArray);
+  });
   host.append(renderer.domElement);
   renderer.domElement.setAttribute('aria-hidden', 'true');
   renderer.domElement.addEventListener('webglcontextlost', e => {
@@ -405,6 +431,19 @@ function buildScene() {
     const { width, height } = host.getBoundingClientRect(); renderer.setSize(width, height, false); camera.aspect = width / height; update();
   };
   new ResizeObserver(resize).observe(host); resize();
+}
+
+// Lighter terrain for the lite tier: sample every `stride`-th grid cell. Bounds are kept,
+// so world-space lookups, the river-bed texture and the sediment mask stay aligned.
+function downsampleTerrain(t, stride) {
+  const width = Math.ceil(t.width / stride), height = Math.ceil(t.height / stride);
+  const levels = new Float32Array(width * height), landcover = new Uint8Array(width * height), properties = new Uint8Array(width * height * 4);
+  for (let z = 0; z < height; z++) for (let x = 0; x < width; x++) {
+    const src = Math.min(t.height - 1, z * stride) * t.width + Math.min(t.width - 1, x * stride), dst = z * width + x;
+    levels[dst] = t.levels[src]; landcover[dst] = t.landcover[src];
+    properties.set(t.properties.subarray(src * 4, src * 4 + 4), dst * 4);
+  }
+  return { ...t, width, height, step: t.step * stride, levels, landcover, properties };
 }
 
 /* ---------- Loading with progress ---------- */

@@ -1,6 +1,6 @@
 // Interpreted overcast daylight, shared by the sky, materials and river reflection.
 // No date/time or measured historic lighting is implied.
-export function lighting(THREE, renderer, scene) {
+export function lighting(THREE, renderer, scene, options = {}) {
   const settings = {
     exposure: 1.12, skyIntensity: .82, environmentIntensity: .85,
     diffuseIntensity: 2.5, keyIntensity: 1.7, hazeDensity: .00065
@@ -8,7 +8,7 @@ export function lighting(THREE, renderer, scene) {
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = settings.exposure;
   renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.shadowMap.type = options.softShadows === false ? THREE.PCFShadowMap : THREE.PCFSoftShadowMap;
   renderer.shadowMap.autoUpdate = false;
   renderer.shadowMap.needsUpdate = true;
 
@@ -54,7 +54,7 @@ export function lighting(THREE, renderer, scene) {
   scene.add(new THREE.HemisphereLight('#e0e6ec', '#928578', settings.diffuseIntensity));
   const key = new THREE.DirectionalLight('#f0eee7', settings.keyIntensity);
   key.position.set(-190, 330, -160); key.target.position.set(0, 0, 40);
-  key.castShadow = true; key.shadow.mapSize.set(2048, 2048);
+  key.castShadow = true; key.shadow.mapSize.set(options.shadowMapSize || 2048, options.shadowMapSize || 2048);
   Object.assign(key.shadow.camera, { left: -360, right: 360, top: 400, bottom: -360, near: 1, far: 950 });
   key.shadow.normalBias = .12; key.shadow.bias = -.00012;
   scene.add(key, key.target);

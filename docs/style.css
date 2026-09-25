@@ -191,6 +191,13 @@ dialog::backdrop{background:rgba(6,11,10,.7);backdrop-filter:blur(4px)}
 .legend .l-water{color:#8fb1b3}.legend .l-site{color:#c2a98a}.legend .l-house{color:#c88c76}.legend .l-garden{color:#9fb586}.legend .l-camera{color:var(--amber)}
 .no-script{position:relative;z-index:6;margin:0;padding:18px var(--gutter);background:var(--amber);color:var(--ink);font-weight:600}
 
+/* Touch devices: drop backdrop blur (expensive over a full-screen WebGL canvas) for solid glass. */
+@media(pointer:coarse),(max-width:760px){
+  .site::before,.card,.walk,.tools button,.badge,#bearing{backdrop-filter:none;-webkit-backdrop-filter:none}
+  .site::before,.card,.walk,.tools button{background:rgba(15,23,22,.9)}
+  .badge,#bearing{background:rgba(15,23,22,.7)}
+}
+
 /* ---------- Responsive ---------- */
 @media(max-width:1180px){.chapters a b{display:none}.chapters a{padding:9px 8px}}
 @media(max-width:900px){

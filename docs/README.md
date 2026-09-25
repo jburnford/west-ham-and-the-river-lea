@@ -11,6 +11,12 @@ The redesigned front end for the Channelsea panorama, published by GitHub Pages.
 - Self-hosted type: Libre Caslon Text (display and reading) and Archivo (interface labels). Both are under the SIL Open Font Licence; see `fonts/OFL-*.txt`.
 - Keyboard walking, WASD, drag-to-look, native dialog, WebGL fallback and the `window.panoramaReview` diagnostic all carry over. When WebGL fails the poster remains as a still.
 
+## Quality tiers
+
+Phones and small tablets (coarse pointer and a short screen side under 900 px, or a reported device memory of 4 GB or less) get a lighter build: terrain sampled at half resolution, about a third of the scattered clods and grass, a 1024 px shadow map, a 256 × 192 reflection, no multisampling and a device pixel ratio of 1. Backdrop blur is also dropped on touch devices. Everything else, including every mapped building, is unchanged. Force a tier with `?quality=lite` or `?quality=full`.
+
+In both tiers the static geometry is batched through preallocated typed arrays and the CPU copies are released after upload, which roughly halves the memory held by the page compared with the previous front end.
+
 ## Run locally
 
 From the repository root:

@@ -1,5 +1,5 @@
 // Original procedural surfaces in metres; archive photographs are references only.
-export function realism(THREE, renderer, scene, data) {
+export function realism(THREE, renderer, scene, data, options = {}) {
   let seed = 194;
   const random = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
   function texture(kind, relief = false) {
@@ -161,7 +161,7 @@ export function realism(THREE, renderer, scene, data) {
 
   // One reduced-resolution planar reflection shared by all mapped river polygons.
   // The reflected camera moves with the walker, preserving foreground parallax.
-  const target = new THREE.WebGLRenderTarget(512, 384, { type: THREE.HalfFloatType });
+  const target = new THREE.WebGLRenderTarget(options.reflectionWidth || 512, options.reflectionHeight || 384, { type: THREE.HalfFloatType });
   const reflectionCamera = new THREE.PerspectiveCamera(), matrix = new THREE.Matrix4();
   const clip = new THREE.Plane(new THREE.Vector3(0, 1, 0), -.07);
   const riverBed=new THREE.DataTexture(data.terrain.properties,data.terrain.width,data.terrain.height,THREE.RGBAFormat);
