@@ -44,6 +44,8 @@ const host = $('#panorama');
 let tweenFrame = 0;
 const easeInOut = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 function interruptTween() { if (tweenFrame) { cancelAnimationFrame(tweenFrame); tweenFrame = 0; } }
+// Any deliberate look/zoom/walk means the reader is exploring: stop the tween and clear the title.
+function userInteracted() { interruptTween(); dismissHero(); }
 function goTo(pose, duration = 1500) {
   if (!pose) return;
   interruptTween();
@@ -65,6 +67,8 @@ function goTo(pose, duration = 1500) {
 
 /* ---------- Scroll narrative ---------- */
 const header = $('#site-header'), hero = $('#hero');
+function dismissHero() { hero.classList.add('is-dismissed'); }
+$('#hero-close').addEventListener('click', dismissHero);
 function activate(id) {
   if (id === activeStop) return;
   activeStop = id;
@@ -93,10 +97,10 @@ function onScroll() {
 addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
 /* ---------- Controls ---------- */
-function resetView() { stopWalking(); walker?.reset(); goTo(poses[activeStop] || poses.hero, 900); }
+function resetView() { stopWalking(); walker?.reset(); if (activeStop === 'hero') hero.classList.remove('is-dismissed'); goTo(poses[activeStop] || poses.hero, 900); }
 $('#reset').addEventListener('click', resetView);
-$('#zoom-in').addEventListener('click', () => { interruptTween(); state.fov = Math.max(30, state.fov - 8); update(); });
-$('#zoom-out').addEventListener('click', () => { interruptTween(); state.fov = Math.min(90, state.fov + 8); update(); });
+$('#zoom-in').addEventListener('click', () => { userInteracted(); state.fov = Math.max(30, state.fov - 8); update(); });
+$('#zoom-out').addEventListener('click', () => { userInteracted(); state.fov = Math.min(90, state.fov + 8); update(); });
 
 const dialog = $('#map-dialog');
 for (const id of ['#map-open', '#map-open-2', '#minimap']) $(id).addEventListener('click', () => { stopWalking(); dialog.showModal(); });
@@ -130,7 +134,7 @@ function walkTick(time) {
 }
 function startWalking(direction) {
   if (!renderer || held.has(direction)) return;
-  interruptTween();
+  userInteracted();
   held.add(direction); moveStep(.5);
   $(`[data-walk="${direction}"]`).dataset.active = 'true';
   if (!walkFrame) { lastWalkTime = performance.now(); walkFrame = requestAnimationFrame(walkTick); }
@@ -163,6 +167,7 @@ host.addEventListener('pointerdown', e => {
 });
 host.addEventListener('pointermove', e => {
   if (!drag || e.pointerId !== drag.id) return;
+  if (Math.abs(e.clientX - drag.x) + Math.abs(e.clientY - drag.y) > 2) dismissHero();
   interruptTween();
   state.yaw -= (e.clientX - drag.x) * 0.14;
   // On touch outside explore mode the browser owns vertical movement (page scroll).
@@ -177,7 +182,7 @@ host.addEventListener('keydown', e => {
     ArrowUp: () => state.pitch += 4, ArrowDown: () => state.pitch -= 4,
     '+': () => state.fov -= 5, '=': () => state.fov -= 5, '-': () => state.fov += 5,
     Home: resetView };
-  if (actions[e.key]) { e.preventDefault(); interruptTween(); actions[e.key](); update(); }
+  if (actions[e.key]) { e.preventDefault(); if (e.key !== 'Home') userInteracted(); else interruptTween(); actions[e.key](); update(); }
 });
 
 /* ---------- Render + readouts ---------- */

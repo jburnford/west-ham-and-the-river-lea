@@ -84,7 +84,10 @@ body.is-explore #panorama{touch-action:none}
 .hero .eyebrow{color:var(--amber-2)}
 .hero h1{font:400 clamp(56px,9.5vw,142px)/.92 var(--serif);letter-spacing:-.025em;color:var(--parchment);text-shadow:0 2px 28px rgba(0,0,0,.35)}
 .hero .lede{margin-top:26px;max-width:38ch;font:400 clamp(17px,1.5vw,22px)/1.5 var(--serif);color:var(--parchment);text-shadow:0 1px 14px rgba(0,0,0,.45)}
-.hero .cue{margin-top:34px;display:flex;align-items:center;gap:14px;font:500 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--fog)}
+.hero.is-dismissed{opacity:0!important;visibility:hidden;transform:translateY(-24px)!important;transition:opacity .7s var(--ease),transform .7s var(--ease),visibility 0s .7s}
+.hero-close{pointer-events:auto;margin-left:10px;display:inline-flex;align-items:center;gap:7px;padding:8px 10px;border:1px solid var(--line-strong);border-radius:3px;font:600 10px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--fog);background:rgba(15,23,22,.35);transition:background .2s,color .2s,border-color .2s}
+.hero-close:hover{background:rgba(242,237,225,.12);color:var(--parchment);border-color:var(--parchment)}
+.hero .cue{margin-top:34px;display:flex;align-items:center;flex-wrap:wrap;gap:14px;font:500 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--fog)}
 .cue-line{display:inline-block;width:1px;height:38px;background:linear-gradient(var(--amber),transparent);position:relative;overflow:hidden}
 .cue-line::after{content:"";position:absolute;left:0;top:-38px;width:1px;height:38px;background:var(--parchment);animation:drop 2.4s var(--ease) infinite}
 @keyframes drop{to{top:38px}}
@@ -220,6 +223,7 @@ dialog::backdrop{background:rgba(6,11,10,.7);backdrop-filter:blur(4px)}
   .hero h1{font-size:clamp(50px,15vw,80px)}
   .hero .lede{font-size:17px;margin-top:18px}
   .hero .cue{margin-top:22px}
+  .hero-close span{display:none}
   .hint{display:none}
   .hud-bottom{bottom:14px;opacity:0;transition:opacity .4s;pointer-events:none}
   body.is-explore .hud-bottom{opacity:1}
