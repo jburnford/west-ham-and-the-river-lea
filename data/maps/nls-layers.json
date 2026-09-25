@@ -45,7 +45,7 @@
         0.049,
         51.575
       ],
-      "notes": "Served to zoom 20; downloaded to 18 to match the 1893 layer. East edge of coverage at about 0.049 E, so Silvertown east and the Royal Albert Dock edge are outside."
+      "notes": "Served to zoom 20; downloaded to 18 to match the 1893 layer. East edge of coverage at about 0.049 E, so Silvertown east and the Royal Albert Dock edge are outside. Download: 4,619 tiles present, 3,636 absent; coverage is partial within the box."
     },
     {
       "id": "os-one-inch-old-series",
@@ -135,7 +135,7 @@
         0.12,
         51.64
       ],
-      "notes": "Covers West Ham fully; the separate 25_inch/essex layer does not. Sample tile shows Abbey Mills Pumping Station and Mill Meads."
+      "notes": "Covers West Ham fully; the separate 25_inch/essex layer does not. Sample tile shows Abbey Mills Pumping Station and Mill Meads. Download: 7,934 tiles present, 2,301 absent at the east and north-east edges where the London sheets end."
     },
     {
       "id": "os-25-inch-middlesex",
@@ -153,7 +153,7 @@
         0.016,
         51.726
       ],
-      "notes": "Bromley-by-Bow gasworks and Bow; blank east of the Lea."
+      "notes": "Downloaded 25 Sept 2026: only 2 low-zoom tiles exist inside the study box; the Middlesex 25-inch layer stops short of the Lea here, so Bromley-by-Bow is covered by the London 25-inch layer instead. Kept for completeness."
     },
     {
       "id": "os-london-five-foot-1893",
@@ -319,5 +319,12 @@
       "layer": "goad/*",
       "reason": "Scottish Goad plans only"
     }
-  ]
+  ],
+  "download_summary": {
+    "date": "2026-09-25",
+    "tiles": 43324,
+    "megabytes": 2027,
+    "failed": 0,
+    "location": "reference/nls-tiles/ (gitignored); manifest.json there has per-layer counts"
+  }
 }
