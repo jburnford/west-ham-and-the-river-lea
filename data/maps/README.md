@@ -27,3 +27,7 @@ All input coordinates are longitude/latitude. Selection uses positive-area polyg
 The lower Lea source had 2 invalid polygons; these were repaired in memory with Shapely `buffer(0)` before union. The West Ham source had 0 invalid polygons. Source files were not changed.
 
 The metadata footprints are rectangular extents, not verified masks of mapped content. Coverage percentages are approximate and do not confirm usable imagery at every location. The river calculation covers only the supplied water polygons, not a surrounding river corridor. The 1911 borough boundary is a selection aid, not a claim about the boundary at the maps' survey dates. Map scans have not been downloaded or checked.
+
+## NLS georeferenced tile layers (added 25 September 2026)
+
+`nls-layers.json` registers the National Library of Scotland seamless map layers that cover the West Ham study area between 1800 and 1920, with series identifications, date ranges, tile URL templates, zoom limits and the layers deliberately excluded. `scripts/fetch_nls_tiles.py` downloads every tile inside the study box for each layer into `reference/nls-tiles/` (outside the public repository), writes a manifest, and stitches a georeferenced quick-look mosaic per layer. Tiles are CC-BY National Library of Scotland; credit "Reproduced with the permission of the National Library of Scotland" with a link to https://maps.nls.uk/ wherever they appear.

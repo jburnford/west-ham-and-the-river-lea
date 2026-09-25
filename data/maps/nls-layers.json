@@ -1,0 +1,323 @@
+{
+  "description": "National Library of Scotland georeferenced map layers covering the West Ham study area, 1800-1920. Tile URL templates observed on 25 September 2026 in the NLS tileset bucket used by the NLS seamless viewers; the official hosted route is MapTiler Cloud (see WEBSITE_PLAN.md). Series titles and date ranges follow NLS layer naming and the NLS Historic Maps API layer list; verify individual sheet dates against sheet margins before citing.",
+  "source": "https://maps.nls.uk/ (Map Images); tiles from https://mapseries-tilesets.s3.amazonaws.com/",
+  "licence": "Creative Commons Attribution (CC-BY): NLS Historic Maps API layers are CC BY 3.0; NLS map images re-usable under CC-BY per https://maps.nls.uk/copyright.html",
+  "attribution": "Reproduced with the permission of the National Library of Scotland (https://maps.nls.uk/)",
+  "study_bbox": [
+    -0.037,
+    51.485,
+    0.07,
+    51.567
+  ],
+  "study_bbox_note": "West Ham 1911 borough bounding box (lon -0.0195..0.0528, lat 51.4961..51.5555) with roughly 1.2 km margin, so Bromley-by-Bow, Three Mills, Hackney Wick, the Thames south bank and the East Ham edge are included.",
+  "layers": [
+    {
+      "id": "os-london-skeleton-5280",
+      "title": "OS London skeleton survey, 1:5,280 (12 inches to the mile)",
+      "series": "Ordnance Survey skeleton plan of London for the Metropolitan Commission of Sewers (identification provisional)",
+      "dates": "c.1848-1851 (verify against sheet margins)",
+      "scale": "1:5,280",
+      "nls_layer_name": "London-5280-new2",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/town-england/London-5280",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "bounds": [
+        -0.377,
+        51.374,
+        0.124,
+        51.613
+      ],
+      "notes": "Sample tile at Abbey Mills shows roads, Mill Lane, Abbey Mill Tavern and bench marks only, consistent with the skeleton survey. Earliest large-scale coverage of West Ham in the bucket."
+    },
+    {
+      "id": "os-london-town-plan-1860s",
+      "title": "OS London town plan, first edition, 1:1,056 (NLS folder London-1870s)",
+      "series": "Ordnance Survey London, five feet to the mile, first edition",
+      "dates": "c.1862-1875 (verify per sheet; Abbey Mills area shows the Northern Outfall Sewer but no pumping station, so surveyed before c.1865 there)",
+      "scale": "1:1,056",
+      "nls_layer_name": "London-1870s",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/town-england/London-1870s",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "bounds": [
+        -0.26,
+        51.441,
+        0.049,
+        51.575
+      ],
+      "notes": "Served to zoom 20; downloaded to 18 to match the 1893 layer. East edge of coverage at about 0.049 E, so Silvertown east and the Royal Albert Dock edge are outside."
+    },
+    {
+      "id": "os-one-inch-old-series",
+      "title": "OS One-inch Old Series (first edition), England and Wales",
+      "series": "Ordnance Survey One-inch to the mile, Old Series",
+      "dates": "1805-1874 (Essex sheet 1, 1805)",
+      "scale": "1:63,360",
+      "nls_layer_name": "one-inch-old-series-allN",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/one-inch-old-series-all",
+      "minzoom": 6,
+      "maxzoom": 9,
+      "notes": "NLS serves this layer only to zoom 9 (overview resolution). Earliest OS coverage of West Ham."
+    },
+    {
+      "id": "os-six-inch-essex-1st",
+      "title": "OS Six-inch first edition, Essex",
+      "series": "Ordnance Survey Six-inch to the mile, County Series first edition",
+      "dates": "1863-1876 survey/publication (Essex)",
+      "scale": "1:10,560",
+      "nls_layer_name": "six-inch-essexN",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/six-inch-essex",
+      "minzoom": 10,
+      "maxzoom": 17,
+      "notes": "Sample tile shows West Ham Abbey Print Works, chemical and tar works and Abbey Mills before the pumping station labelling: first edition. A second scan set exists at os/six-inch-essexV."
+    },
+    {
+      "id": "os-six-inch-middlesex-1st",
+      "title": "OS Six-inch first edition, Middlesex (west bank of the Lea)",
+      "series": "Ordnance Survey Six-inch to the mile, County Series first edition",
+      "dates": "1863-1873 (Middlesex)",
+      "scale": "1:10,560",
+      "nls_layer_name": "six-inch-middlesexN",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/six-inch-middlesex",
+      "minzoom": 10,
+      "maxzoom": 17,
+      "bounds": [
+        -0.596,
+        51.371,
+        0.127,
+        51.733
+      ],
+      "notes": "Covers Bow, Bromley-by-Bow and Old Ford opposite West Ham; tiles east of the Lea are blank."
+    },
+    {
+      "id": "os-six-inch-kent-1st",
+      "title": "OS Six-inch first edition, Kent (Thames south bank)",
+      "series": "Ordnance Survey Six-inch to the mile, County Series first edition",
+      "dates": "1858-1872 (Kent)",
+      "scale": "1:10,560",
+      "nls_layer_name": "six-inch-kent",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/six-inch-kent",
+      "minzoom": 10,
+      "maxzoom": 16,
+      "bounds": [
+        -0.132,
+        50.876,
+        1.555,
+        51.526
+      ],
+      "notes": "Context only: North Woolwich is Kent detached; south-bank Woolwich and Greenwich marshes."
+    },
+    {
+      "id": "os-six-inch-2nd",
+      "title": "OS Six-inch second edition, England and Wales",
+      "series": "Ordnance Survey Six-inch to the mile, County Series second edition",
+      "dates": "1888-1913",
+      "scale": "1:10,560",
+      "nls_layer_name": "6inchsecondNew",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/6inchsecond",
+      "minzoom": 10,
+      "maxzoom": 17,
+      "notes": "Seamless mosaic across county boundaries; sheet dates vary within the range."
+    },
+    {
+      "id": "os-25-inch-london",
+      "title": "OS 25-inch, London sheets",
+      "series": "Ordnance Survey 1:2,500 County Series, London",
+      "dates": "1893-1896 revision and later editions to c.1916 (verify per sheet)",
+      "scale": "1:2,500",
+      "nls_layer_name": "london",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/25_inch/london",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "bounds": [
+        -0.372,
+        51.347,
+        0.12,
+        51.64
+      ],
+      "notes": "Covers West Ham fully; the separate 25_inch/essex layer does not. Sample tile shows Abbey Mills Pumping Station and Mill Meads."
+    },
+    {
+      "id": "os-25-inch-middlesex",
+      "title": "OS 25-inch, Middlesex (west bank of the Lea)",
+      "series": "Ordnance Survey 1:2,500 County Series, Middlesex",
+      "dates": "1890s-1910s (verify per sheet)",
+      "scale": "1:2,500",
+      "nls_layer_name": "middlesex",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/25_inch/middlesex",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "bounds": [
+        -0.545,
+        51.375,
+        0.016,
+        51.726
+      ],
+      "notes": "Bromley-by-Bow gasworks and Bow; blank east of the Lea."
+    },
+    {
+      "id": "os-london-five-foot-1893",
+      "title": "OS London, five feet to the mile (1:1,056), 1893-1896",
+      "series": "Ordnance Survey London Town Plan, 1:1,056, revision of 1891-1895",
+      "dates": "1893-1896 (published; surveyed/revised 1891-1895)",
+      "scale": "1:1,056",
+      "nls_layer_name": "oslondon1k1893",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/london_1890s",
+      "minzoom": 10,
+      "maxzoom": 18,
+      "bounds": [
+        -0.371,
+        51.377,
+        0.105,
+        51.61
+      ],
+      "notes": "Native detail to about zoom 18; zooms 19-20 are upsampled. Sheet index with revision dates: data/maps/metadata_nls_os_london_1056_2026-09-23_091420.geojson. MapTiler Cloud layer id uk-oslondon1k1893."
+    },
+    {
+      "id": "os-london-12500",
+      "title": "OS London, 1:12,500 (date to be established)",
+      "series": "Ordnance Survey London series, 1:12,500",
+      "dates": "uncertain; labels Abbey Mills as an L.C.C. sewage pumping station, so 1889 or later",
+      "scale": "1:12,500",
+      "nls_layer_name": "london-12500",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/london-12500",
+      "minzoom": 10,
+      "maxzoom": 16,
+      "bounds": [
+        -0.571,
+        51.317,
+        0.231,
+        51.789
+      ],
+      "notes": "Included for identification; may post-date 1920. Check sheet margins before use."
+    },
+    {
+      "id": "os-one-inch-revised-new-series",
+      "title": "OS One-inch Revised New Series, England and Wales (outline)",
+      "series": "Ordnance Survey One-inch to the mile, Revised New Series",
+      "dates": "1892-1908 (NLS: 1885-1903 for the seamless layer)",
+      "scale": "1:63,360",
+      "nls_layer_name": "1inch_2nd_ed_new",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/1inch_2nd_ed",
+      "minzoom": 9,
+      "maxzoom": 16,
+      "notes": "Uncoloured engraving. Already used by the industrial swipe map as its period basemap."
+    },
+    {
+      "id": "os-one-inch-revised-coloured",
+      "title": "OS One-inch Revised New Series, coloured",
+      "series": "Ordnance Survey One-inch to the mile, Revised New Series (coloured)",
+      "dates": "1897-1909",
+      "scale": "1:63,360",
+      "nls_layer_name": "1inch_revisedN",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/1inch_revised",
+      "minzoom": 9,
+      "maxzoom": 16
+    },
+    {
+      "id": "os-one-inch-third-coloured",
+      "title": "OS One-inch Third Edition, coloured, England and Wales",
+      "series": "Ordnance Survey One-inch to the mile, Third Edition (Large Sheet Series)",
+      "dates": "1903-1913 (NLS layer range extends to 1923)",
+      "scale": "1:63,360",
+      "nls_layer_name": "1inch_3rd_col_engN",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/1inch_3rd_col_eng",
+      "minzoom": 9,
+      "maxzoom": 17
+    },
+    {
+      "id": "os-half-inch-layer-colour",
+      "title": "OS Half-inch, layer coloured, England and Wales",
+      "series": "Ordnance Survey Half-inch to the mile",
+      "dates": "c.1902-1919 (verify)",
+      "scale": "1:126,720",
+      "nls_layer_name": "half-inch-layercolour",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/half-inch-layercolour",
+      "minzoom": 8,
+      "maxzoom": 13
+    },
+    {
+      "id": "os-half-inch-large-sheet-hills",
+      "title": "OS Half-inch Large Sheet Series, hills, England and Wales",
+      "series": "Ordnance Survey Half-inch to the mile, Large Sheet Series",
+      "dates": "c.1902-1919 (verify)",
+      "scale": "1:126,720",
+      "nls_layer_name": "half-inch-eng-large-sheet",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/half-inch-eng-large-sheet-hills",
+      "minzoom": 8,
+      "maxzoom": 13
+    },
+    {
+      "id": "os-quarter-inch-first-hills",
+      "title": "OS Quarter-inch first edition, hills",
+      "series": "Ordnance Survey Quarter-inch to the mile, first edition",
+      "dates": "c.1890s-1900s (verify)",
+      "scale": "1:253,440",
+      "nls_layer_name": "quarter-inch-first-hills-new",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/quarter-inch-first-hills",
+      "minzoom": 7,
+      "maxzoom": 12
+    },
+    {
+      "id": "bartholomew-half-inch-gb",
+      "title": "Bartholomew Half-inch, Great Britain",
+      "series": "John Bartholomew & Co., Half-inch to the mile (Reduced Ordnance Survey)",
+      "dates": "1897-1907",
+      "scale": "1:126,720",
+      "nls_layer_name": "great_britain_new",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/bartholomew_great_britain",
+      "minzoom": 8,
+      "maxzoom": 15
+    },
+    {
+      "id": "os-popular-england",
+      "title": "OS One-inch Popular Edition, England and Wales (edge of period)",
+      "series": "Ordnance Survey One-inch to the mile, Popular Edition",
+      "dates": "1919-1926",
+      "scale": "1:63,360",
+      "nls_layer_name": "popular-england",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/os/popular-england",
+      "minzoom": 9,
+      "maxzoom": 15,
+      "notes": "Begins at the end of the study period; included for the 1914-1920 bookend."
+    },
+    {
+      "id": "bartholomew-half-inch-1920s",
+      "title": "Bartholomew Half-inch, England and Wales, 1920s (edge of period)",
+      "series": "John Bartholomew & Son, Half-inch to the mile",
+      "dates": "1919-1924 approx.",
+      "scale": "1:126,720",
+      "nls_layer_name": "bartholomew_england_wales_1920s",
+      "url": "https://mapseries-tilesets.s3.amazonaws.com/bartholomew_england_wales_1920s",
+      "minzoom": 8,
+      "maxzoom": 15,
+      "notes": "Just outside the period; kept as the closest post-war comparison."
+    }
+  ],
+  "excluded": [
+    {
+      "layer": "25_inch/essex",
+      "reason": "no tiles over West Ham at zoom 14 or above; the London 25-inch layer carries these sheets"
+    },
+    {
+      "layer": "os/london_2500",
+      "reason": "1:2,500 National Grid mapping of the 1950s (Allotment Gardens, post-war detail); outside 1800-1920"
+    },
+    {
+      "layer": "london_1940s",
+      "reason": "1940s London; outside the period"
+    },
+    {
+      "layer": "gsgs3906, newpopular, land_uti_eng, one-inch-agricultural",
+      "reason": "1930s-1940s series"
+    },
+    {
+      "layer": "os/town-england/*",
+      "reason": "OS town plans exist for other towns; none for West Ham, Stratford, Canning Town or Silvertown (London sets checked separately)"
+    },
+    {
+      "layer": "goad/*",
+      "reason": "Scottish Goad plans only"
+    }
+  ]
+}
