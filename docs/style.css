@@ -252,31 +252,3 @@ dialog::backdrop{background:rgba(6,11,10,.7);backdrop-filter:blur(4px)}
   .minimap{width:120px;height:120px}
   .card{padding:22px 26px}.card h2{font-size:26px}
 }
-
-/* District flight controls stay available while the reader explores. */
-.travel{position:absolute;top:140px;left:var(--gutter);z-index:5;display:grid;gap:8px;width:min(300px,calc(100vw - 2 * var(--gutter)));padding:12px;background:var(--glass);border:1px solid var(--line-strong);border-radius:6px;backdrop-filter:blur(12px);font:500 12px/1.4 var(--sans)}
-.travel button{padding:10px;border:1px solid var(--amber);border-radius:4px;color:var(--parchment);background:#34443a;font:600 12px var(--sans)}
-.travel label,#flight-controls label{color:var(--fog);font:500 11px var(--sans)}
-.tide-controls{border-top:1px solid var(--line-strong);padding-top:8px}
-.tide-controls summary{cursor:pointer;color:var(--parchment);padding:4px 0}
-.tide-controls label{display:block;margin-top:8px}
-.tide-controls input{display:block;width:100%;margin:6px 0 0;accent-color:var(--amber)}
-.tide-extremes{display:flex;justify-content:space-between;color:var(--fog);font-size:10px}
-.tide-controls button{width:100%;margin-top:8px}
-.tide-controls p{font-size:10px;line-height:1.4;color:var(--fog);margin:8px 0 0}
-.travel select,#travel-speed{width:100%;min-width:0;background:#23302b;color:var(--parchment);border:1px solid var(--line-strong);border-radius:4px;padding:8px;font:500 12px var(--sans)}
-#flight-controls:not([hidden]){display:grid;gap:6px;width:100%}
-[hidden]{display:none!important}
-body.is-roaming{overflow:hidden}
-body.is-roaming .hero,body.is-roaming .step .card{visibility:hidden;pointer-events:none}
-body.is-roaming #panorama{touch-action:none}
-body.is-roaming .hud-bottom,body.is-roaming .hint{opacity:1}
-body.is-roaming .controls{pointer-events:auto}
-#plan svg{cursor:crosshair}
-@media(max-width:760px){
-  .hero{top:285px}
-  .travel{top:120px;width:min(280px,calc(100vw - 2 * var(--gutter)))}
-  body.is-roaming .controls{width:100%;justify-content:space-between;align-items:flex-end}
-  body.is-roaming .tools{flex-direction:column}
-}
-@media(max-height:600px){.travel{top:75px;left:auto;right:var(--gutter);width:250px;padding:8px;gap:4px}.travel button,.travel select{padding:6px}}
