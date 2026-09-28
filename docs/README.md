@@ -11,6 +11,10 @@ The redesigned front end for the Channelsea panorama, published by GitHub Pages.
 - Self-hosted type: Libre Caslon Text (display and reading) and Archivo (interface labels). Both are under the SIL Open Font Licence; see `fonts/OFL-*.txt`.
 - Keyboard walking, WASD, drag-to-look, native dialog, WebGL fallback and the `window.panoramaReview` diagnostic all carry over. When WebGL fails the poster remains as a still.
 
+## Historic maps page
+
+`maps/` is the site's map route: ten dated Ordnance Survey and Bartholomew editions (1848–1926) as stacked tile layers with per-layer opacity, a timeline, a swipe comparison of any two editions, the book's GIS (industrial sites, water, docks, railways, boundaries) as overlays, six curated places, and a shareable URL hash. Tiles stream from the National Library of Scotland's tileset bucket; switch `source` to `local` in `maps/layers.json` and copy chosen layers from `reference/nls-tiles/` into `maps/tiles/` to self-host. The NLS credit line is required wherever the tiles appear. Leaflet 1.9.4 is vendored under `vendor/leaflet/` (BSD-2). Vector provenance: `maps/data/README.md`.
+
 ## Quality tiers
 
 Phones and small tablets (coarse pointer and a short screen side under 900 px, or a reported device memory of 4 GB or less) get a lighter build: terrain sampled at half resolution, about a third of the scattered clods and grass, a 1024 px shadow map, a 256 × 192 reflection, no multisampling and a device pixel ratio of 1. Backdrop blur is also dropped on touch devices. Everything else, including every mapped building, is unchanged. Force a tier with `?quality=lite` or `?quality=full`.
