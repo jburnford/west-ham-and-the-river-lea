@@ -1,0 +1,1490 @@
+{
+  "source": {
+    "layer": "os-london-five-foot-1893",
+    "mosaicBounds": [
+      -1130,
+      -390,
+      -480,
+      200
+    ],
+    "mosaicPixelWidth": 1792,
+    "comparison": "User-supplied highstreet.png, 2026-09-26; underlying OS map date not independently established from that screenshot. Geometry uses the archived NLS layer in the factory coordinate frame."
+  },
+  "policy": "Main building ranges, not occupied land parcels. Use is unassigned unless explicitly labelled on the map. Two-storey elevations and divisions are estimates; no invented shop signs or tenants. Existing factory and housing footprints take precedence at registration overlaps.",
+  "ranges": [
+    {
+      "id": "high-street-01",
+      "name": "Bow Bridge south-east frontage A",
+      "sourceAxis": [
+        [
+          319,
+          1541
+        ],
+        [
+          370,
+          1503
+        ]
+      ],
+      "sourceDepth": 27,
+      "footprint": [
+        [
+          -1003.758,
+          92.612
+        ],
+        [
+          -985.165,
+          77.995
+        ],
+        [
+          -978.945,
+          85.866
+        ],
+        [
+          -997.538,
+          100.484
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-02",
+      "name": "Bow Bridge south-east frontage B",
+      "sourceAxis": [
+        [
+          378,
+          1498
+        ],
+        [
+          427,
+          1463
+        ]
+      ],
+      "sourceDepth": 27,
+      "footprint": [
+        [
+          -982.159,
+          75.997
+        ],
+        [
+          -964.28,
+          62.513
+        ],
+        [
+          -958.22,
+          70.508
+        ],
+        [
+          -976.099,
+          83.992
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-03",
+      "name": "Bow Bridge south-east corner",
+      "sourceAxis": [
+        [
+          447,
+          1452
+        ],
+        [
+          464,
+          1438
+        ]
+      ],
+      "sourceDepth": 26,
+      "footprint": [
+        [
+          -957.096,
+          58.585
+        ],
+        [
+          -950.912,
+          53.218
+        ],
+        [
+          -944.559,
+          60.499
+        ],
+        [
+          -950.744,
+          65.866
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-04",
+      "name": "Lion Wharf entrance west",
+      "sourceAxis": [
+        [
+          485,
+          1426
+        ],
+        [
+          505,
+          1410
+        ]
+      ],
+      "sourceDepth": 23,
+      "footprint": [
+        [
+          -942.806,
+          48.933
+        ],
+        [
+          -935.526,
+          42.794
+        ],
+        [
+          -929.999,
+          49.313
+        ],
+        [
+          -937.279,
+          55.453
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-05",
+      "name": "Lion Wharf frontage",
+      "sourceAxis": [
+        [
+          515,
+          1405
+        ],
+        [
+          586,
+          1353
+        ]
+      ],
+      "sourceDepth": 23,
+      "footprint": [
+        [
+          -931.714,
+          40.722
+        ],
+        [
+          -905.822,
+          20.707
+        ],
+        [
+          -900.578,
+          27.456
+        ],
+        [
+          -926.471,
+          47.471
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-06",
+      "name": "Bow Bridge Wharf street edge",
+      "sourceAxis": [
+        [
+          549,
+          1286
+        ],
+        [
+          565,
+          1274
+        ]
+      ],
+      "sourceDepth": 20,
+      "footprint": [
+        [
+          -919.955,
+          -3.316
+        ],
+        [
+          -914.123,
+          -7.931
+        ],
+        [
+          -909.497,
+          -2.115
+        ],
+        [
+          -915.329,
+          2.5
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          561,
+          1298
+        ],
+        [
+          577,
+          1286
+        ]
+      ]
+    },
+    {
+      "id": "high-street-07",
+      "name": "Bow Bridge Wharf upper street edge",
+      "sourceAxis": [
+        [
+          622,
+          1234
+        ],
+        [
+          659,
+          1203
+        ]
+      ],
+      "sourceDepth": 23,
+      "footprint": [
+        [
+          -893.842,
+          -23.64
+        ],
+        [
+          -880.389,
+          -35.518
+        ],
+        [
+          -874.715,
+          -29.125
+        ],
+        [
+          -888.169,
+          -17.247
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          632,
+          1244
+        ],
+        [
+          669,
+          1213
+        ]
+      ]
+    },
+    {
+      "id": "high-street-08",
+      "name": "Marshgate corner west frontage",
+      "sourceAxis": [
+        [
+          696,
+          1130
+        ],
+        [
+          748,
+          1089
+        ]
+      ],
+      "sourceDepth": 28,
+      "footprint": [
+        [
+          -867.858,
+          -63.778
+        ],
+        [
+          -848.924,
+          -79.518
+        ],
+        [
+          -842.252,
+          -71.534
+        ],
+        [
+          -861.186,
+          -55.793
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-09",
+      "name": "Marshgate corner public house",
+      "sourceAxis": [
+        [
+          768,
+          1072
+        ],
+        [
+          787,
+          1055
+        ]
+      ],
+      "sourceDepth": 30,
+      "footprint": [
+        [
+          -842.152,
+          -86.084
+        ],
+        [
+          -835.255,
+          -92.585
+        ],
+        [
+          -827.587,
+          -84.491
+        ],
+        [
+          -834.484,
+          -77.99
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-10",
+      "name": "Marshgate corner east frontage",
+      "sourceAxis": [
+        [
+          799,
+          1040
+        ],
+        [
+          826,
+          1015
+        ]
+      ],
+      "sourceDepth": 26,
+      "footprint": [
+        [
+          -830.49,
+          -97.676
+        ],
+        [
+          -820.696,
+          -107.227
+        ],
+        [
+          -813.932,
+          -100.326
+        ],
+        [
+          -823.725,
+          -90.775
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-11",
+      "name": "Bridge approach north-west frontage A",
+      "sourceAxis": [
+        [
+          963,
+          923
+        ],
+        [
+          991,
+          898
+        ]
+      ],
+      "sourceDepth": 27,
+      "footprint": [
+        [
+          -770.717,
+          -142.949
+        ],
+        [
+          -760.552,
+          -152.509
+        ],
+        [
+          -753.658,
+          -145.218
+        ],
+        [
+          -763.824,
+          -135.657
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-12",
+      "name": "Bridge approach north-west frontage B",
+      "sourceAxis": [
+        [
+          1000,
+          891
+        ],
+        [
+          1034,
+          860
+        ]
+      ],
+      "sourceDepth": 29,
+      "footprint": [
+        [
+          -757.57,
+          -155.429
+        ],
+        [
+          -745.233,
+          -167.277
+        ],
+        [
+          -737.748,
+          -159.523
+        ],
+        [
+          -750.084,
+          -147.675
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-13",
+      "name": "River Street High Street corner",
+      "sourceAxis": [
+        [
+          787,
+          1178
+        ],
+        [
+          827,
+          1145
+        ]
+      ],
+      "sourceDepth": 24,
+      "footprint": [
+        [
+          -833.114,
+          -46.251
+        ],
+        [
+          -818.565,
+          -58.902
+        ],
+        [
+          -812.695,
+          -52.186
+        ],
+        [
+          -827.245,
+          -39.536
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          761,
+          1153
+        ],
+        [
+          801,
+          1120
+        ]
+      ]
+    },
+    {
+      "id": "high-street-14",
+      "name": "Bridge Street High Street frontage",
+      "sourceAxis": [
+        [
+          846,
+          1132
+        ],
+        [
+          890,
+          1094
+        ]
+      ],
+      "sourceDepth": 24,
+      "footprint": [
+        [
+          -811.702,
+          -63.851
+        ],
+        [
+          -795.715,
+          -78.398
+        ],
+        [
+          -789.695,
+          -71.817
+        ],
+        [
+          -805.682,
+          -57.27
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          820,
+          1107
+        ],
+        [
+          864,
+          1069
+        ]
+      ]
+    },
+    {
+      "id": "high-street-15",
+      "name": "Bridge Court High Street frontage",
+      "sourceAxis": [
+        [
+          904,
+          1082
+        ],
+        [
+          948,
+          1043
+        ]
+      ],
+      "sourceDepth": 24,
+      "footprint": [
+        [
+          -790.669,
+          -82.954
+        ],
+        [
+          -774.692,
+          -97.872
+        ],
+        [
+          -768.588,
+          -91.368
+        ],
+        [
+          -784.565,
+          -76.45
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          878,
+          1057
+        ],
+        [
+          922,
+          1018
+        ]
+      ]
+    },
+    {
+      "id": "high-street-16",
+      "name": "River Street north-east side",
+      "sourceAxis": [
+        [
+          829,
+          1160
+        ],
+        [
+          882,
+          1116
+        ]
+      ],
+      "sourceDepth": 18,
+      "footprint": [
+        [
+          -816.943,
+          -52.509
+        ],
+        [
+          -797.668,
+          -69.374
+        ],
+        [
+          -793.251,
+          -64.351
+        ],
+        [
+          -812.526,
+          -47.486
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-17",
+      "name": "River Street south-west side",
+      "sourceAxis": [
+        [
+          845,
+          1180
+        ],
+        [
+          899,
+          1135
+        ]
+      ],
+      "sourceDepth": 18,
+      "footprint": [
+        [
+          -810.793,
+          -45.245
+        ],
+        [
+          -791.156,
+          -62.491
+        ],
+        [
+          -786.729,
+          -57.476
+        ],
+        [
+          -806.366,
+          -40.23
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-18",
+      "name": "Bridge Street north-east side",
+      "sourceAxis": [
+        [
+          872,
+          1123
+        ],
+        [
+          915,
+          1086
+        ]
+      ],
+      "sourceDepth": 18,
+      "footprint": [
+        [
+          -801.362,
+          -66.636
+        ],
+        [
+          -785.737,
+          -80.801
+        ],
+        [
+          -781.231,
+          -75.857
+        ],
+        [
+          -796.856,
+          -61.691
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-19",
+      "name": "Bridge Court rear range",
+      "sourceAxis": [
+        [
+          933,
+          1124
+        ],
+        [
+          955,
+          1104
+        ]
+      ],
+      "sourceDepth": 18,
+      "footprint": [
+        [
+          -778.723,
+          -66.82
+        ],
+        [
+          -770.74,
+          -74.464
+        ],
+        [
+          -766.1,
+          -69.644
+        ],
+        [
+          -774.084,
+          -62.0
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-20",
+      "name": "Sugar House Lane corner frontage",
+      "sourceAxis": [
+        [
+          1013,
+          984
+        ],
+        [
+          1059,
+          949
+        ]
+      ],
+      "sourceDepth": 28,
+      "footprint": [
+        [
+          -751.318,
+          -121.221
+        ],
+        [
+          -734.557,
+          -134.675
+        ],
+        [
+          -728.024,
+          -126.577
+        ],
+        [
+          -744.785,
+          -113.124
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          998,
+          969
+        ],
+        [
+          1044,
+          934
+        ]
+      ]
+    },
+    {
+      "id": "high-street-21",
+      "name": "Harrow Wharf lower frontage",
+      "sourceAxis": [
+        [
+          1098,
+          912
+        ],
+        [
+          1128,
+          881
+        ]
+      ],
+      "sourceDepth": 26,
+      "footprint": [
+        [
+          -720.721,
+          -148.012
+        ],
+        [
+          -709.872,
+          -159.819
+        ],
+        [
+          -702.738,
+          -153.299
+        ],
+        [
+          -713.587,
+          -141.491
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          1080,
+          894
+        ],
+        [
+          1110,
+          863
+        ]
+      ]
+    },
+    {
+      "id": "high-street-22",
+      "name": "Harrow Wharf middle frontage",
+      "sourceAxis": [
+        [
+          1140,
+          870
+        ],
+        [
+          1171,
+          837
+        ]
+      ],
+      "sourceDepth": 24,
+      "footprint": [
+        [
+          -705.289,
+          -163.723
+        ],
+        [
+          -694.088,
+          -176.282
+        ],
+        [
+          -687.414,
+          -170.362
+        ],
+        [
+          -698.615,
+          -157.802
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          1122,
+          852
+        ],
+        [
+          1153,
+          819
+        ]
+      ]
+    },
+    {
+      "id": "high-street-23",
+      "name": "Harrow Wharf upper frontage",
+      "sourceAxis": [
+        [
+          1187,
+          821
+        ],
+        [
+          1205,
+          801
+        ]
+      ],
+      "sourceDepth": 25,
+      "footprint": [
+        [
+          -688.501,
+          -182.43
+        ],
+        [
+          -682.006,
+          -190.034
+        ],
+        [
+          -674.924,
+          -184.017
+        ],
+        [
+          -681.419,
+          -176.413
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          1169,
+          803
+        ],
+        [
+          1187,
+          783
+        ]
+      ]
+    },
+    {
+      "id": "high-street-24",
+      "name": "Harrow Wharf riverside range",
+      "sourceAxis": [
+        [
+          1260,
+          694
+        ],
+        [
+          1290,
+          715
+        ]
+      ],
+      "sourceDepth": 25,
+      "footprint": [
+        [
+          -656.519,
+          -231.161
+        ],
+        [
+          -645.146,
+          -223.672
+        ],
+        [
+          -650.273,
+          -215.927
+        ],
+        [
+          -661.646,
+          -223.416
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "baseHeight": 1.2,
+      "bankLevelEvidence": "Photo-informed masonry plinth on the waterside range; precise floor level and correspondence are provisional."
+    },
+    {
+      "id": "high-street-25",
+      "name": "Harrow Wharf back wing",
+      "sourceAxis": [
+        [
+          1254,
+          765
+        ],
+        [
+          1271,
+          744
+        ]
+      ],
+      "sourceDepth": 23,
+      "footprint": [
+        [
+          -663.997,
+          -203.475
+        ],
+        [
+          -657.884,
+          -211.44
+        ],
+        [
+          -651.087,
+          -206.251
+        ],
+        [
+          -657.199,
+          -198.286
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          1209,
+          731
+        ],
+        [
+          1226,
+          710
+        ]
+      ]
+    },
+    {
+      "id": "high-street-26",
+      "name": "Between Waterworks bridges lower range",
+      "sourceAxis": [
+        [
+          1209,
+          671
+        ],
+        [
+          1236,
+          640
+        ]
+      ],
+      "sourceDepth": 29,
+      "footprint": [
+        [
+          -682.454,
+          -238.73
+        ],
+        [
+          -672.722,
+          -250.507
+        ],
+        [
+          -664.393,
+          -243.661
+        ],
+        [
+          -674.126,
+          -231.884
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          1193,
+          657
+        ],
+        [
+          1220,
+          626
+        ]
+      ]
+    },
+    {
+      "id": "high-street-27",
+      "name": "Between Waterworks bridges upper range",
+      "sourceAxis": [
+        [
+          1254,
+          619
+        ],
+        [
+          1276,
+          592
+        ]
+      ],
+      "sourceDepth": 27,
+      "footprint": [
+        [
+          -666.053,
+          -258.117
+        ],
+        [
+          -658.14,
+          -268.359
+        ],
+        [
+          -650.181,
+          -262.243
+        ],
+        [
+          -658.093,
+          -252.001
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          1242,
+          609
+        ],
+        [
+          1264,
+          582
+        ]
+      ]
+    },
+    {
+      "id": "high-street-28",
+      "name": "Norway Wharf lower frontage",
+      "sourceAxis": [
+        [
+          1318,
+          478
+        ],
+        [
+          1341,
+          451
+        ]
+      ],
+      "sourceDepth": 25,
+      "footprint": [
+        [
+          -643.308,
+          -310.941
+        ],
+        [
+          -635.024,
+          -321.193
+        ],
+        [
+          -627.78,
+          -315.37
+        ],
+        [
+          -636.064,
+          -305.118
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-29",
+      "name": "Norway Wharf upper frontage",
+      "sourceAxis": [
+        [
+          1362,
+          430
+        ],
+        [
+          1393,
+          395
+        ]
+      ],
+      "sourceDepth": 21,
+      "footprint": [
+        [
+          -626.796,
+          -328.791
+        ],
+        [
+          -615.616,
+          -342.092
+        ],
+        [
+          -609.627,
+          -337.085
+        ],
+        [
+          -620.807,
+          -323.783
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-30",
+      "name": "High Street school street range",
+      "sourceAxis": [
+        [
+          1422,
+          513
+        ],
+        [
+          1443,
+          485
+        ]
+      ],
+      "sourceDepth": 45,
+      "footprint": [
+        [
+          -607.473,
+          -300.923
+        ],
+        [
+          -599.943,
+          -311.526
+        ],
+        [
+          -586.277,
+          -301.871
+        ],
+        [
+          -593.807,
+          -291.268
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          1400,
+          498
+        ],
+        [
+          1421,
+          470
+        ]
+      ]
+    },
+    {
+      "id": "high-street-31",
+      "name": "High Street school return",
+      "sourceAxis": [
+        [
+          1405,
+          541
+        ],
+        [
+          1440,
+          563
+        ]
+      ],
+      "sourceDepth": 30,
+      "footprint": [
+        [
+          -603.84,
+          -290.326
+        ],
+        [
+          -590.596,
+          -282.517
+        ],
+        [
+          -596.279,
+          -272.93
+        ],
+        [
+          -609.523,
+          -280.74
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+    },
+    {
+      "id": "high-street-32",
+      "name": "Wall River east bank corner premises",
+      "sourceAxis": [
+        [
+          1364,
+          584
+        ],
+        [
+          1400,
+          595
+        ]
+      ],
+      "sourceDepth": 29,
+      "footprint": [
+        [
+          -612.065,
+          -274.35
+        ],
+        [
+          -598.56,
+          -270.633
+        ],
+        [
+          -601.433,
+          -260.255
+        ],
+        [
+          -614.937,
+          -263.972
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "sourceRegisteredFootprint": [
+        [
+          -620.065,
+          -274.35
+        ],
+        [
+          -606.56,
+          -270.633
+        ],
+        [
+          -609.433,
+          -260.255
+        ],
+        [
+          -622.937,
+          -263.972
+        ]
+      ],
+      "placementOffset": [
+        8,
+        0
+      ],
+      "placementEvidence": "Provisional 8 m landward reconciliation, matching adjacent bank premises, to retain a clear approach between the GIS river and frontage. Source footprint retained for further registration. Ground floor aligned to the interpreted raised bank, on a masonry plinth.",
+      "baseHeight": 2.05
+    },
+    {
+      "id": "high-street-33",
+      "name": "Wall River east bank dwelling range",
+      "sourceAxis": [
+        [
+          1381,
+          615
+        ],
+        [
+          1392,
+          654
+        ]
+      ],
+      "sourceDepth": 24,
+      "footprint": [
+        [
+          -602.599,
+          -259.156
+        ],
+        [
+          -598.112,
+          -244.795
+        ],
+        [
+          -606.64,
+          -242.143
+        ],
+        [
+          -611.127,
+          -256.504
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "baseHeight": 2.05,
+      "bankLevelEvidence": "Interpreted raised east-bank plot, tied to the photo-informed footpath crest; not a surveyed floor level.",
+      "sourceRegisteredFootprint": [
+        [
+          -610.599,
+          -259.156
+        ],
+        [
+          -606.112,
+          -244.795
+        ],
+        [
+          -614.64,
+          -242.143
+        ],
+        [
+          -619.127,
+          -256.504
+        ]
+      ],
+      "placementOffset": [
+        8,
+        0
+      ],
+      "placementEvidence": "8 m landward reconciliation with the GIS shoreline leaves the photographed footpath outside the building; source-registered footprint retained. Provisional, not a surveyed displacement."
+    },
+    {
+      "id": "high-street-34",
+      "name": "Wall River east bank small return",
+      "sourceAxis": [
+        [
+          1372,
+          667
+        ],
+        [
+          1392,
+          671
+        ]
+      ],
+      "sourceDepth": 18,
+      "footprint": [
+        [
+          -609.119,
+          -241.735
+        ],
+        [
+          -601.637,
+          -240.453
+        ],
+        [
+          -602.772,
+          -233.868
+        ],
+        [
+          -610.254,
+          -235.15
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          1350,
+          667
+        ],
+        [
+          1370,
+          671
+        ]
+      ],
+      "baseHeight": 2.05,
+      "bankLevelEvidence": "Interpreted raised east-bank plot, tied to the photo-informed footpath crest; not a surveyed floor level.",
+      "sourceRegisteredFootprint": [
+        [
+          -617.119,
+          -241.735
+        ],
+        [
+          -609.637,
+          -240.453
+        ],
+        [
+          -610.772,
+          -233.868
+        ],
+        [
+          -618.254,
+          -235.15
+        ]
+      ],
+      "placementOffset": [
+        8,
+        0
+      ],
+      "placementEvidence": "8 m landward reconciliation with the GIS shoreline leaves the photographed footpath outside the building; source-registered footprint retained. Provisional, not a surveyed displacement."
+    }
+  ]
+}

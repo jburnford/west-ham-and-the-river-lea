@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "workingDate": "1900\u20131902",
+  "siteId": 260,
+  "siteName": "Howards and Sons, City Mills",
+  "method": "Work through one building or connected group at a time; retain individual mapped parts and shared-envelope uncertainty.",
+  "source": {
+    "image": "reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff",
+    "pixels": [
+      3220,
+      3822
+    ],
+    "date": "July 1893 (printed heading)",
+    "recordUrl": "https://commons.wikimedia.org/wiki/File:Insurance_Plan_of_London_North_East_District_Vol._F;_sheet_3_(BL_152637).tiff",
+    "sha256": "a2889a83ce193a798fb608c1ea729cfacd3856000e4990318cbe9e5048e6395f"
+  },
+  "registration": {
+    "status": "provisional; review only",
+    "type": "two successive similarity fits",
+    "controlUncertaintyMetres": 3,
+    "warning": "Controls use the existing GIS parcel and a georeferenced screenshot. Residuals measure internal agreement, not independent historical accuracy. Rounded source pixels and small building-corner controls limit precision.",
+    "authorScreenshot": {
+      "image": "reference/author-river-plans-2026-09-25/city mills.png",
+      "controls": [
+        {
+          "pixel": [
+            817,
+            177
+          ],
+          "target": [
+            -780.27,
+            -383.29
+          ],
+          "feature": "northwest premises corner beside City Mill River"
+        },
+        {
+          "pixel": [
+            937,
+            116
+          ],
+          "target": [
+            -745.7,
+            -400.92
+          ],
+          "feature": "northern premises vertex below sewer"
+        },
+        {
+          "pixel": [
+            1105,
+            689
+          ],
+          "target": [
+            -698.07,
+            -234.4
+          ],
+          "feature": "southern corner of main island at Waterworks River"
+        },
+        {
+          "pixel": [
+            1000,
+            832
+          ],
+          "target": [
+            -729.16,
+            -193.49
+          ],
+          "feature": "east edge of southern tail at High Street approach"
+        }
+      ]
+    },
+    "goadToAuthor": {
+      "controls": [
+        {
+          "pixel": [
+            2112,
+            1737
+          ],
+          "target": [
+            1050,
+            553
+          ],
+          "feature": "quinine envelope northwest"
+        },
+        {
+          "pixel": [
+            2258,
+            1774
+          ],
+          "target": [
+            1114,
+            536
+          ],
+          "feature": "quinine envelope northeast"
+        },
+        {
+          "pixel": [
+            2206,
+            1959
+          ],
+          "target": [
+            1140,
+            637
+          ],
+          "feature": "quinine envelope southeast"
+        },
+        {
+          "pixel": [
+            2078,
+            1928
+          ],
+          "target": [
+            1077,
+            654
+          ],
+          "feature": "quinine envelope southwest"
+        }
+      ]
+    }
+  },
+  "buildings": [
+    {
+      "id": "howards-quinine",
+      "name": "Quinine Department main envelope",
+      "stage": "footprint and internal divisions recorded; elevations unresolved",
+      "publishGeometry": false,
+      "footprintPixels": [
+        [
+          2112,
+          1737
+        ],
+        [
+          2258,
+          1774
+        ],
+        [
+          2206,
+          1959
+        ],
+        [
+          2078,
+          1928
+        ]
+      ],
+      "mapParts": [
+        {
+          "id": "howards-638",
+          "mapReference": "638",
+          "name": "Northern compartment",
+          "footprintPixels": [
+            [
+              2112,
+              1737
+            ],
+            [
+              2218,
+              1763
+            ],
+            [
+              2209,
+              1799
+            ],
+            [
+              2105,
+              1772
+            ]
+          ],
+          "floorAnnotation": "1",
+          "annotationConfidence": "visible; confirm symbol convention using the volume key"
+        },
+        {
+          "id": "howards-640",
+          "mapReference": "640",
+          "name": "Main western compartment",
+          "footprintPixels": [
+            [
+              2105,
+              1772
+            ],
+            [
+              2209,
+              1799
+            ],
+            [
+              2176,
+              1905
+            ],
+            [
+              2088,
+              1880
+            ]
+          ],
+          "floorAnnotation": "1=2",
+          "annotationConfidence": "transcribed as visible; do not silently translate into a uniform storey count"
+        },
+        {
+          "id": "howards-642",
+          "mapReference": "642",
+          "name": "Southern compartment",
+          "footprintPixels": [
+            [
+              2088,
+              1880
+            ],
+            [
+              2176,
+              1905
+            ],
+            [
+              2164,
+              1948
+            ],
+            [
+              2078,
+              1928
+            ]
+          ],
+          "floorAnnotation": "2",
+          "annotationConfidence": "visible; symbol convention not independently checked"
+        },
+        {
+          "id": "howards-636",
+          "mapReference": "636",
+          "name": "Eastern range with internal partition",
+          "footprintPixels": [
+            [
+              2218,
+              1763
+            ],
+            [
+              2258,
+              1774
+            ],
+            [
+              2206,
+              1959
+            ],
+            [
+              2164,
+              1948
+            ],
+            [
+              2176,
+              1905
+            ],
+            [
+              2209,
+              1799
+            ]
+          ],
+          "floorAnnotation": "1 in each of two compartments",
+          "internalLinesPixels": [
+            [
+              [
+                2194,
+                1857
+              ],
+              [
+                2234,
+                1866
+              ]
+            ]
+          ],
+          "annotationConfidence": "visible; separate roof identity unproven"
+        }
+      ],
+      "heightMetres": null,
+      "roof": {
+        "form": null,
+        "ridgeDirection": null,
+        "status": "1897 photo shows several roof forms; correspondence of each mapped part is unresolved"
+      },
+      "function": {
+        "value": "Quinine Department",
+        "confidence": "high",
+        "evidence": "Printed Goad label and Walker2023 Fig3.4"
+      },
+      "photo": {
+        "source": "reference/city-mills-howards/howards-from-high-road-1897.png",
+        "date": "circa1897 company pamphlet",
+        "match": "Department at right identified in Walker2023 Fig3.3. This supports group identity, not an exact camera fit or one-to-one compartment roof identification.",
+        "observations": [
+          "Low industrial roofs and raised roof structures at right",
+          "Foreground river wall hides lower elevations",
+          "Several chimneys visible; their positions must be separately registered"
+        ]
+      },
+      "mapObservations": [
+        "Outer main envelope excludes narrow edge apparatus and lean-to strips",
+        "Internal divisions are insurance-plan partitions, not automatically independent buildings",
+        "Western annotations include a steam pump and tank; eastern annotations include vats and coppers",
+        "Retain working yards and river margin"
+      ],
+      "dateEvidence": {
+        "1893": "Named and shown on Goad F3",
+        "1893_os": "Comparable main envelope in LondonVIII.31 revised1893, published1894; footprint continuity checked visually, not yet metrically registered",
+        "1897": "Quinine department pictured in company pamphlet",
+        "1900_1902": "Continued form is a working continuity hypothesis"
+      },
+      "nextSteps": [
+        "Read Goad volume key for floor and construction symbols",
+        "Trace roof planes against1897 photograph with a fitted southern camera",
+        "Use original company drawings to constrain heights and later alterations",
+        "Model this group only after choosing documented or explicitly inferred elevations"
+      ]
+    }
+  ],
+  "queue": [
+    {
+      "id": "howards-mill",
+      "name": "Old steam-and-water mill, map reference644",
+      "stage": "next building",
+      "priority": 2,
+      "reason": "Named adjoining mill provides architectural and camera anchor"
+    },
+    {
+      "id": "howards-creek-range",
+      "name": "Creek-side parts646and648",
+      "stage": "queued",
+      "priority": 3
+    },
+    {
+      "id": "howards-southern-ranges",
+      "name": "Southern island ranges beside High Street",
+      "stage": "queued; split into individual buildings from full sheet",
+      "priority": 4
+    },
+    {
+      "id": "howards-central-ranges",
+      "name": "Ranges north of Quinine Department",
+      "stage": "queued; individual map numbers to transcribe",
+      "priority": 5
+    },
+    {
+      "id": "howards-north-courtyard",
+      "name": "Northern courtyard perimeter and stores",
+      "stage": "queued; individual map numbers to transcribe",
+      "priority": 6
+    },
+    {
+      "id": "howards-river-structures",
+      "name": "Bridges, river walls, openings and chimneys",
+      "stage": "queued as separate structures",
+      "priority": 7
+    }
+  ],
+  "archiveLead": {
+    "reference": "GB0074 ACC/1037",
+    "url": "https://atom.aim25.com/index.php/howards-and-sons-chemists",
+    "evidence": "Collection catalogue lists insurance records, building work, plans and photographs for Stratford, Plaistow and Ilford. Original items not retrieved."
+  }
+}

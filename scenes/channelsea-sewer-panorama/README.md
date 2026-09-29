@@ -66,3 +66,44 @@ A further [photo-informed detail pass](PHOTO_LAYERS.md) now adds rounded, open-h
 The crossing sheet, London VIII.32, and its northern neighbour VIII.22 have now been inspected. Their housing row envelopes and six West Ham holder circles are modelled, alongside seven Bromley holders. See the [source and tracing ledger](../../reference/neighbourhood-context/README.md). The next substantive task is to refine map registration, identify individual factory buildings against the photographs, and fit the camera using several landmarks. Historic England dates the bridge's rebuilding and widening to 1900–1902; use that chronology when choosing the final scene date.
 
 The current author priority is texture and topology, with phone and website development deferred. The latest [terrain and material study](TERRAIN.md) adds north/south channel relief, detailed sediment, coal, the raised Mill Mead bank and allotment sheds; revises the mill without a windmill; and extends the southwest distance using the supplied maps. The additional map labelled 1905 is catalogued as a later comparison. Current screenshots are `review/terrain-*.png`.
+
+The [river expansion](RIVER_NETWORK.md) extends relief along the existing GIS channels.
+The [current research scope and evidence ledger](RESEARCH_SCOPE.md) records the
+author's Great Eastern Main Line / Bromley gasworks / Channelsea / Old Lea
+boundaries and the planning sources for City Mills, Sugar House Lane and Three Mills.
+The [factory building register](FACTORY_BUILDINGS.md) implements the author's
+building-by-building approach across the full agreed district: 459 mapped ranges
+at 33 works, the retained Abbey Mill, and nine Bromley holders. An
+[interactive evidence atlas](../../docs/factory-atlas.html) accompanies the model.
+
+The [factory yard refinement](FACTORY_YARDS.md) replaces repeating brown ground
+with varied working surfaces, building-edge dirt, access wear and small stock
+groups. Surface detail is interpretive; mapped roads and water remain clear.
+
+The [Goad refinement survey](GOAD_REFINEMENT.md) uses Layers of London and original
+insurance sheets to refine factory compartments and uses. Its first three sites
+are Imperial Sawmills, Edward Cook's soap works and Ritchie's jute mill. The
+survey register distinguishes completed local changes from captured references.
+
+The [Great Eastern main line](GREAT_EASTERN.md) establishes the northern scene
+edge with a mapped embankment corridor, four initial running tracks and clear
+bridge openings. Railway levels and the complete junction layout remain
+provisional: **http://localhost:4175/?view=great-eastern**.
+
+The [streets and bridges pass](STREETS_AND_BRIDGES.md) and [housing frontage audit](HOUSING_FRONTAGES.md) add the missing residential streets and correct row placements and junctions. The current local preview is **http://localhost:4175/**.
+
+The [Wall River photograph study](WALL_RIVER_VISTA.md) adds the intervening High Street frontages and a provisional bank-level view with the fenced path visible in the supplied photograph: **http://localhost:4175/?view=wall-vista**.
+
+The [marsh and ditch pass](MARSH_DITCHES.md) adds the mapped Mill Meads drains,
+lower marsh ground and interpreted defensive riverbank sections:
+**http://localhost:4175/?view=marsh-ditches**.
+
+## Animated tides
+
+The [garden and terrain-join refinement](GARDENS.md) removes the abrupt field
+colour boundary and gives the interpreted allotments varied plots that follow
+the ground.
+
+The **Tide** control below the destination menu adds manual water levels and a
+90-second rise-and-fall cycle. See [TIDES.md](TIDES.md) for the illustrative
+range, retained Old Lea exception, separate marsh drains, and browser checks.

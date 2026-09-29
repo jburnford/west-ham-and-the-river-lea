@@ -1,0 +1,4800 @@
+{
+  "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+  "sources": {
+    "22": "reference/neighbourhood-context/os-viii22.jpg",
+    "32": "reference/neighbourhood-context/os-viii32.jpg",
+    "overview": "reference/neighbourhood-context/northern-housing-overview.png",
+    "western": "NLS os-london-five-foot-1893; mosaic bounds [-1020,210,-720,590], zoom 18"
+  },
+  "rows": [
+    {
+      "id": "os-row-16",
+      "x": -400.8582117056823,
+      "z": -299.19240112809666,
+      "width": 176.59,
+      "rotation": -33.3,
+      "depth": 7,
+      "houseCount": 44,
+      "frontStreet": "Livingstone Road",
+      "street": "Livingstone Road",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "livingstone-abbey",
+      "maxYardDepth": 14
+    },
+    {
+      "id": "os-row-17",
+      "depth": 6.6,
+      "houseCount": 27,
+      "frontStreet": "Livingstone Road",
+      "street": "Livingstone Road",
+      "group": "district",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 46,
+      "axis": [
+        [
+          457,
+          160
+        ],
+        [
+          584,
+          248
+        ]
+      ],
+      "sheet": "32",
+      "fitToStreet": true
+    },
+    {
+      "id": "os-row-18",
+      "x": -321.8141498168299,
+      "z": -317.359159415542,
+      "width": 71.79,
+      "rotation": 75.72,
+      "depth": 7,
+      "houseCount": 20,
+      "frontStreet": "Stanley Road",
+      "street": "Stanley Road",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "livingstone-abbey",
+      "maxYardDepth": 30
+    },
+    {
+      "id": "os-row-19",
+      "x": 217.09272007249348,
+      "z": -272.48311446413885,
+      "width": 134.97,
+      "rotation": 35.31,
+      "depth": 7,
+      "houseCount": 34,
+      "frontStreet": "Abbey Road",
+      "street": "Abbey Road",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "livingstone-abbey",
+      "maxYardDepth": 25
+    },
+    {
+      "id": "os-row-20",
+      "x": 241.4665822986555,
+      "z": -262.3270871426133,
+      "width": 99.31,
+      "rotation": 34.73,
+      "depth": 7,
+      "houseCount": 27,
+      "frontStreet": "Abbey Road",
+      "street": "Abbey Road",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "livingstone-abbey",
+      "maxYardDepth": 27
+    },
+    {
+      "id": "os-row-21",
+      "x": 270.0709989020254,
+      "z": -350.00538460044834,
+      "width": 51.08,
+      "rotation": -44.2,
+      "depth": 7,
+      "houseCount": 12,
+      "frontStreet": "Abbey Road northern side street",
+      "street": "Abbey Road northern side street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "livingstone-abbey",
+      "maxYardDepth": 22
+    },
+    {
+      "id": "os-row-22-part-1",
+      "x": -348.007428984069,
+      "z": -471.49732475906177,
+      "width": 29.39,
+      "rotation": 33.29,
+      "depth": 6.6,
+      "houseCount": 10,
+      "frontStreet": "South Street",
+      "street": "South Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-22-part-2",
+      "x": -319.90942898406905,
+      "z": -489.95032475906174,
+      "width": 21.59,
+      "rotation": 33.29,
+      "depth": 6.6,
+      "houseCount": 7,
+      "frontStreet": "South Street",
+      "street": "South Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-22-part-3",
+      "x": -278.42942898406903,
+      "z": -517.1803247590617,
+      "width": 30.69,
+      "rotation": 33.29,
+      "depth": 6.6,
+      "houseCount": 10,
+      "frontStreet": "South Street",
+      "street": "South Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-22-part-4",
+      "x": -251.23142898406903,
+      "z": -528.0043247590618,
+      "width": 10.03,
+      "rotation": 33.29,
+      "depth": 6.6,
+      "houseCount": 3,
+      "frontStreet": "South Street",
+      "street": "South Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-23",
+      "depth": 6.6,
+      "houseCount": 34,
+      "frontStreet": "Stanley Road north",
+      "street": "Stanley Road north",
+      "group": "district",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 36,
+      "axis": [
+        [
+          336,
+          1129
+        ],
+        [
+          531,
+          1159
+        ]
+      ],
+      "sheet": "22",
+      "fitToStreet": true
+    },
+    {
+      "id": "os-row-24",
+      "depth": 6.6,
+      "houseCount": 16,
+      "frontStreet": "William Street",
+      "street": "William Street",
+      "group": "district",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 25,
+      "axis": [
+        [
+          437,
+          958
+        ],
+        [
+          514,
+          1018
+        ]
+      ],
+      "sheet": "22",
+      "fitToStreet": true
+    },
+    {
+      "id": "os-row-25-part-1",
+      "x": 129.2978092881734,
+      "z": -426.6134371188543,
+      "width": 69.89,
+      "rotation": 19.56,
+      "depth": 6.6,
+      "houseCount": 20,
+      "frontStreet": "Leywick Street",
+      "street": "Leywick Street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-26-part-1",
+      "x": 137.44527738585307,
+      "z": -396.35412560194675,
+      "width": 78.16,
+      "rotation": 19.28,
+      "depth": 6.6,
+      "houseCount": 20,
+      "frontStreet": "Morley Street",
+      "street": "Morley Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-27",
+      "x": 215.0920279328358,
+      "z": -464.8940529734603,
+      "width": 73.24,
+      "rotation": 21.14,
+      "depth": 6.6,
+      "houseCount": 18,
+      "frontStreet": "Leywick Street",
+      "street": "Leywick Street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-28",
+      "x": 219.46117558561625,
+      "z": -424.0617129961163,
+      "width": 74.75,
+      "rotation": 20.25,
+      "depth": 6.6,
+      "houseCount": 18,
+      "frontStreet": "Morley Street",
+      "street": "Morley Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-29",
+      "x": 137.9425824027054,
+      "z": -781.3777593666624,
+      "width": 223.41,
+      "rotation": 21.95,
+      "depth": 6.6,
+      "houseCount": 54,
+      "frontStreet": "Northern residential street 2",
+      "street": "Northern residential street 2",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-30",
+      "x": 162.6710384067217,
+      "z": -753.6953016380203,
+      "width": 209.57,
+      "rotation": 22.13,
+      "depth": 6.6,
+      "houseCount": 52,
+      "frontStreet": "Paul Street",
+      "street": "Paul Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-31",
+      "x": 168.56647239033157,
+      "z": -738.6582708913659,
+      "width": 207.34,
+      "rotation": 22.37,
+      "depth": 6.6,
+      "houseCount": 52,
+      "frontStreet": "Paul Street",
+      "street": "Paul Street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-32",
+      "x": 187.7475441644954,
+      "z": -685.732148206084,
+      "width": 196.53,
+      "rotation": 22.44,
+      "depth": 6.6,
+      "houseCount": 48,
+      "frontStreet": "Barnby Street",
+      "street": "Barnby Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-33",
+      "x": 195.49065244176398,
+      "z": -670.2041647733809,
+      "width": 191.75,
+      "rotation": 22.22,
+      "depth": 6.6,
+      "houseCount": 48,
+      "frontStreet": "Barnby Street",
+      "street": "Barnby Street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-34",
+      "x": 213.5846558699766,
+      "z": -633.0073708709692,
+      "width": 189.29,
+      "rotation": 22.31,
+      "depth": 6.6,
+      "houseCount": 47,
+      "frontStreet": "Hotham Street",
+      "street": "Hotham Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-35",
+      "x": 220.6341071062553,
+      "z": -618.0087575226463,
+      "width": 185.86,
+      "rotation": 22.12,
+      "depth": 6.6,
+      "houseCount": 46,
+      "frontStreet": "Hotham Street",
+      "street": "Hotham Street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-36",
+      "x": 235.75307245216135,
+      "z": -576.248534967314,
+      "width": 177.24,
+      "rotation": 21.31,
+      "depth": 6.6,
+      "houseCount": 44,
+      "frontStreet": "Randal Street",
+      "street": "Randal Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-37",
+      "x": 237.6398537921632,
+      "z": -558.4782387959507,
+      "width": 169.61,
+      "rotation": 20.09,
+      "depth": 6.6,
+      "houseCount": 42,
+      "frontStreet": "Randal Street",
+      "street": "Randal Street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-38",
+      "x": 251.07226090649294,
+      "z": -516.4064379304107,
+      "width": 156.89,
+      "rotation": 20.03,
+      "depth": 6.6,
+      "houseCount": 40,
+      "frontStreet": "Canning Street",
+      "street": "Canning Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-39-part-1",
+      "x": 39.16968900431823,
+      "z": -630.691947371491,
+      "width": 69.91,
+      "rotation": 21.9,
+      "depth": 6.6,
+      "houseCount": 17,
+      "frontStreet": "Barnby Street",
+      "street": "Barnby Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-39-part-2",
+      "x": 81.91568900431822,
+      "z": -656.494947371491,
+      "width": 10.7,
+      "rotation": 21.9,
+      "depth": 6.6,
+      "houseCount": 3,
+      "frontStreet": "Barnby Street",
+      "street": "Barnby Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-40-part-1",
+      "x": 47.34769253397286,
+      "z": -610.9636329495053,
+      "width": 74.58,
+      "rotation": 19.83,
+      "depth": 6.6,
+      "houseCount": 20,
+      "frontStreet": "Barnby Street",
+      "street": "Barnby Street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-41-part-1",
+      "x": 59.31076837909868,
+      "z": -582.3853562795164,
+      "width": 75.55,
+      "rotation": 20.2,
+      "depth": 6.6,
+      "houseCount": 20,
+      "frontStreet": "Hotham Street",
+      "street": "Hotham Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-42-part-1",
+      "x": 68.56540196212146,
+      "z": -561.6332248066577,
+      "width": 74.94,
+      "rotation": 20.46,
+      "depth": 6.6,
+      "houseCount": 20,
+      "frontStreet": "Hotham Street",
+      "street": "Hotham Street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-43-part-1",
+      "x": 81.87033035475024,
+      "z": -526.1889361119239,
+      "width": 77.15,
+      "rotation": 20.85,
+      "depth": 6.6,
+      "houseCount": 20,
+      "frontStreet": "Randal Street",
+      "street": "Randal Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-44-part-1",
+      "x": 90.54570979643982,
+      "z": -505.0695450338576,
+      "width": 77.89,
+      "rotation": 21.12,
+      "depth": 6.6,
+      "houseCount": 20,
+      "frontStreet": "Randal Street",
+      "street": "Randal Street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-45-part-1",
+      "x": 103.94515969605254,
+      "z": -472.6433137771848,
+      "width": 79.64,
+      "rotation": 19.82,
+      "depth": 6.6,
+      "houseCount": 20,
+      "frontStreet": "Canning Street",
+      "street": "Canning Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-46",
+      "x": 112.22121059089687,
+      "z": -444.5155191132337,
+      "width": 80.44,
+      "rotation": 20.23,
+      "depth": 6.6,
+      "houseCount": 20,
+      "frontStreet": "Leywick Street",
+      "street": "Leywick Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-47",
+      "x": -12.874752981393996,
+      "z": -653.6995489315311,
+      "width": 40.71,
+      "rotation": -68.62,
+      "depth": 6.6,
+      "houseCount": 10,
+      "frontStreet": "Bridge Road",
+      "street": "Bridge Road",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-48-part-1",
+      "x": 9.409427384938729,
+      "z": -591.8824785234674,
+      "width": 25.31,
+      "rotation": -65.61,
+      "depth": 6.6,
+      "houseCount": 7,
+      "frontStreet": "Bridge Road",
+      "street": "Bridge Road",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-49-part-1",
+      "x": 27.612585257123524,
+      "z": -538.9238317901337,
+      "width": 28.93,
+      "rotation": -71.38,
+      "depth": 6.6,
+      "houseCount": 8,
+      "frontStreet": "Bridge Road",
+      "street": "Bridge Road",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-50",
+      "x": 48.398225991912305,
+      "z": -481.49637403854115,
+      "width": 27.26,
+      "rotation": -69.16,
+      "depth": 6.6,
+      "houseCount": 8,
+      "frontStreet": "Bridge Road",
+      "street": "Bridge Road",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-51",
+      "x": 105.08257725668604,
+      "z": -831.7470832333092,
+      "width": 210.75,
+      "rotation": 23.41,
+      "depth": 6.6,
+      "houseCount": 52,
+      "frontStreet": "Northern residential street 1",
+      "street": "Northern residential street 1",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-52",
+      "x": 122.1826076461291,
+      "z": -819.5307160408169,
+      "width": 192.26,
+      "rotation": 23.12,
+      "depth": 6.6,
+      "houseCount": 49,
+      "frontStreet": "Northern residential street 1",
+      "street": "Northern residential street 1",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-53",
+      "x": 126.91068900431823,
+      "z": -794.4389473714909,
+      "width": 206.7,
+      "rotation": 21.9,
+      "depth": 6.6,
+      "houseCount": 50,
+      "frontStreet": "Northern residential street 2",
+      "street": "Northern residential street 2",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-54-part-1",
+      "x": -26.052796240880465,
+      "z": -738.5648627632391,
+      "width": 44.46,
+      "rotation": -65.09,
+      "depth": 6.6,
+      "houseCount": 12,
+      "frontStreet": "Angel Lane block passage",
+      "street": "Angel Lane block passage",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-55",
+      "x": -8.348203759119537,
+      "z": -741.873137236761,
+      "width": 51.5,
+      "rotation": -65.09,
+      "depth": 6.6,
+      "houseCount": 12,
+      "frontStreet": "Angel Lane block passage",
+      "street": "Angel Lane block passage",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-56-part-1",
+      "x": 22.169801117446227,
+      "z": -755.8704082285781,
+      "width": 16.03,
+      "rotation": -64.04,
+      "depth": 6.6,
+      "houseCount": 5,
+      "frontStreet": "St Thomas Road",
+      "street": "St Thomas Road",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-57-part-1",
+      "x": -403.4443000324068,
+      "z": -525.8390967857899,
+      "width": 22.52,
+      "rotation": -55.58,
+      "depth": 6.6,
+      "houseCount": 6,
+      "frontStreet": "West Street",
+      "street": "West Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-57-part-2",
+      "x": -374.19830003240673,
+      "z": -494.80409678578985,
+      "width": 41.44,
+      "rotation": -55.58,
+      "depth": 6.6,
+      "houseCount": 12,
+      "frontStreet": "West Street",
+      "street": "West Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-58-part-1",
+      "x": -389.55507145782536,
+      "z": -541.2707886430776,
+      "width": 24.69,
+      "rotation": -55.2,
+      "depth": 6.6,
+      "houseCount": 8,
+      "frontStreet": "Union Street housing grid",
+      "street": "Union Street housing grid",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-58-part-2",
+      "x": -363.49507145782536,
+      "z": -503.77078864307754,
+      "width": 32.83,
+      "rotation": -55.2,
+      "depth": 6.6,
+      "houseCount": 10,
+      "frontStreet": "Union Street housing grid",
+      "street": "Union Street housing grid",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-59",
+      "x": -347.83549523757557,
+      "z": -511.7624699725557,
+      "width": 47.98,
+      "rotation": -46.9,
+      "depth": 6.6,
+      "houseCount": 14,
+      "frontStreet": "Union Street housing grid",
+      "street": "Union Street housing grid",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-60",
+      "x": -328.2033721048916,
+      "z": -528.950917128791,
+      "width": 56.49,
+      "rotation": -54.17,
+      "depth": 6.6,
+      "houseCount": 16,
+      "frontStreet": "King Street",
+      "street": "King Street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-61",
+      "x": -292.34329723106464,
+      "z": -558.3055731689284,
+      "width": 66.79,
+      "rotation": -53.96,
+      "depth": 6.6,
+      "houseCount": 18,
+      "frontStreet": "Channelsea Street",
+      "street": "Channelsea Street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-62-part-1",
+      "x": -285.311095950888,
+      "z": -582.7065227248258,
+      "width": 14.89,
+      "rotation": -52.61,
+      "depth": 6.6,
+      "houseCount": 5,
+      "frontStreet": "Channelsea Street",
+      "street": "Channelsea Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-62-part-2",
+      "x": -266.28109595088796,
+      "z": -557.8065227248259,
+      "width": 33.11,
+      "rotation": -52.61,
+      "depth": 6.6,
+      "houseCount": 10,
+      "frontStreet": "Channelsea Street",
+      "street": "Channelsea Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-63-part-1",
+      "x": -233.7078593108294,
+      "z": -577.4080161197023,
+      "width": 37.7,
+      "rotation": -82.38,
+      "depth": 6.6,
+      "houseCount": 10,
+      "frontStreet": "Channelsea Road west bank",
+      "street": "Channelsea Road west bank",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-64",
+      "x": -280.17136591199534,
+      "z": -645.9432151774821,
+      "width": 97.85,
+      "rotation": 39.28,
+      "depth": 6.6,
+      "houseCount": 26,
+      "frontStreet": "North Street",
+      "street": "North Street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-65",
+      "x": -316.34954782006474,
+      "z": -660.282442924453,
+      "width": 100.12,
+      "rotation": 49.4,
+      "depth": 6.6,
+      "houseCount": 26,
+      "frontStreet": "High Street housing frontage",
+      "street": "High Street housing frontage",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-66",
+      "depth": 6.6,
+      "houseCount": 25,
+      "frontStreet": "Stratford High Street",
+      "street": "Stratford High Street",
+      "group": "district",
+      "reviewArea": "jute-mill",
+      "maxYardDepth": 27,
+      "axis": [
+        [
+          399,
+          900
+        ],
+        [
+          497,
+          799
+        ]
+      ],
+      "sheet": "22",
+      "fitToStreet": true
+    },
+    {
+      "id": "os-row-67",
+      "depth": 6.6,
+      "houseCount": 12,
+      "frontStreet": "William Street",
+      "street": "William Street",
+      "group": "district",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 23,
+      "axis": [
+        [
+          456,
+          936
+        ],
+        [
+          510,
+          976
+        ]
+      ],
+      "sheet": "22",
+      "fitToStreet": true
+    },
+    {
+      "id": "os-row-68",
+      "depth": 6.6,
+      "houseCount": 10,
+      "frontStreet": "Robinson Road",
+      "street": "Robinson Road",
+      "group": "district",
+      "reviewArea": "jute-mill",
+      "maxYardDepth": 22,
+      "axis": [
+        [
+          303,
+          832
+        ],
+        [
+          338,
+          781
+        ]
+      ],
+      "sheet": "22",
+      "fitToStreet": true
+    },
+    {
+      "id": "os-row-69-part-1",
+      "depth": 6.6,
+      "houseCount": 12,
+      "frontStreet": "Western housing access street",
+      "street": "Western housing access street",
+      "group": "district",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 24,
+      "axis": [
+        [
+          378,
+          1052
+        ],
+        [
+          345,
+          1113
+        ]
+      ],
+      "sheet": "22",
+      "fitToStreet": true
+    },
+    {
+      "id": "os-row-70",
+      "depth": 6.6,
+      "houseCount": 28,
+      "frontStreet": "Preston Road",
+      "street": "Preston Road",
+      "group": "district",
+      "reviewArea": "jute-mill",
+      "maxYardDepth": 28,
+      "axis": [
+        [
+          287,
+          778
+        ],
+        [
+          378,
+          639
+        ]
+      ],
+      "sheet": "22",
+      "fitToStreet": true
+    },
+    {
+      "id": "os-row-71-part-1",
+      "depth": 6.6,
+      "houseCount": 32,
+      "frontStreet": "Preston Road",
+      "street": "Preston Road",
+      "group": "district",
+      "reviewArea": "jute-mill",
+      "maxYardDepth": 30,
+      "axis": [
+        [
+          246,
+          768
+        ],
+        [
+          349,
+          619
+        ]
+      ],
+      "sheet": "22",
+      "fitToStreet": true
+    },
+    {
+      "id": "os-row-72-part-1",
+      "x": -496.00068462989384,
+      "z": -719.3330449431531,
+      "width": 38.99,
+      "rotation": -48.5,
+      "depth": 6.6,
+      "houseCount": 12,
+      "frontStreet": "Carpenters Road housing section",
+      "street": "Carpenters Road housing section",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-72-part-2",
+      "x": -478.37968462989386,
+      "z": -688.4230449431532,
+      "width": 14.72,
+      "rotation": -48.5,
+      "depth": 6.6,
+      "houseCount": 4,
+      "frontStreet": "Carpenters Road housing section",
+      "street": "Carpenters Road housing section",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-73",
+      "x": 476.85148727025893,
+      "z": -391.5140350051251,
+      "width": 97.52,
+      "rotation": -81.82,
+      "depth": 7,
+      "houseCount": 24,
+      "frontStreet": "Eastern northern street 1",
+      "street": "Eastern northern street 1",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-74",
+      "x": 494.60436914719037,
+      "z": -392.732417318127,
+      "width": 88.12,
+      "rotation": -80.67,
+      "depth": 7,
+      "houseCount": 22,
+      "frontStreet": "Eastern northern street 1",
+      "street": "Eastern northern street 1",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-75",
+      "x": 519.5110149288123,
+      "z": -394.82128512822345,
+      "width": 85.43,
+      "rotation": -80.44,
+      "depth": 7,
+      "houseCount": 22,
+      "frontStreet": "Montague Road",
+      "street": "Montague Road",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-76",
+      "x": 542.6511893023472,
+      "z": -391.4114703166527,
+      "width": 78.21,
+      "rotation": -78.68,
+      "depth": 7,
+      "houseCount": 20,
+      "frontStreet": "Montague Road",
+      "street": "Montague Road",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-77-part-1",
+      "x": 566.9281930567563,
+      "z": -412.5264837401139,
+      "width": 54.0,
+      "rotation": -79.12,
+      "depth": 7,
+      "houseCount": 18,
+      "frontStreet": "Harcourt Road",
+      "street": "Harcourt Road",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-78",
+      "x": 590.2088878416437,
+      "z": -424.8533810689425,
+      "width": 107.18,
+      "rotation": -81.66,
+      "depth": 7,
+      "houseCount": 28,
+      "frontStreet": "Harcourt Road",
+      "street": "Harcourt Road",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-80-part-1",
+      "x": 381.5798904948355,
+      "z": -203.42158706627944,
+      "width": 55.6,
+      "rotation": -56.73,
+      "depth": 7,
+      "houseCount": 18,
+      "frontStreet": "Abbey Road eastern continuation",
+      "street": "Abbey Road eastern continuation",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-81",
+      "x": 408.46226030771663,
+      "z": -220.99214597459505,
+      "width": 66.92,
+      "rotation": -62.1,
+      "depth": 7,
+      "houseCount": 18,
+      "frontStreet": "Eastern southern street 1",
+      "street": "Eastern southern street 1",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-82",
+      "x": 431.9100353590687,
+      "z": -243.9598805847071,
+      "width": 54.17,
+      "rotation": -65.16,
+      "depth": 7,
+      "houseCount": 16,
+      "frontStreet": "Eastern southern street 2",
+      "street": "Eastern southern street 2",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-83",
+      "x": 450.4599262684797,
+      "z": -245.97730985537788,
+      "width": 53.2,
+      "rotation": -63.89,
+      "depth": 7,
+      "houseCount": 16,
+      "frontStreet": "Eastern southern street 2",
+      "street": "Eastern southern street 2",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-84",
+      "x": 475.72367496867565,
+      "z": -179.67091995137275,
+      "width": 51.4,
+      "rotation": -68.79,
+      "depth": 7,
+      "houseCount": 14,
+      "frontStreet": "Eastern southern street 2",
+      "street": "Eastern southern street 2",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-85-part-1",
+      "x": 366.4841567001273,
+      "z": -174.77219150289991,
+      "width": 75.0,
+      "rotation": -57.18,
+      "depth": 7,
+      "houseCount": 22,
+      "frontStreet": "Abbey Road eastern continuation",
+      "street": "Abbey Road eastern continuation",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-86",
+      "x": 479.2844877731201,
+      "z": -259.4724158874603,
+      "width": 43.88,
+      "rotation": -67.19,
+      "depth": 7,
+      "houseCount": 12,
+      "frontStreet": "Eastern southern street 3",
+      "street": "Eastern southern street 3",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-87",
+      "x": 498.4584486375068,
+      "z": -261.73573534873503,
+      "width": 43.88,
+      "rotation": -67.2,
+      "depth": 7,
+      "houseCount": 12,
+      "frontStreet": "Eastern southern street 3",
+      "street": "Eastern southern street 3",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-88",
+      "x": 543.7857307302107,
+      "z": -292.157082979797,
+      "width": 34.63,
+      "rotation": -66.15,
+      "depth": 7,
+      "houseCount": 10,
+      "frontStreet": "Richardson Road",
+      "street": "Richardson Road",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-89",
+      "x": 591.399131162682,
+      "z": -302.9676347905038,
+      "width": 36.79,
+      "rotation": 15.66,
+      "depth": 7,
+      "houseCount": 9,
+      "frontStreet": "Eastern southern cross street",
+      "street": "Eastern southern cross street",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-90",
+      "x": 564.8240986857154,
+      "z": -215.91724303358043,
+      "width": 79.06,
+      "rotation": -71.63,
+      "depth": 7,
+      "houseCount": 22,
+      "frontStreet": "Richardson Road",
+      "street": "Richardson Road",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-91",
+      "x": 586.2668075230182,
+      "z": -218.90853087274695,
+      "width": 80.98,
+      "rotation": -70.52,
+      "depth": 7,
+      "houseCount": 22,
+      "frontStreet": "Richardson Road",
+      "street": "Richardson Road",
+      "frontSign": 1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "os-row-92",
+      "x": 594.9616494416529,
+      "z": -285.6744020729603,
+      "width": 32.15,
+      "rotation": 17.73,
+      "depth": 7,
+      "houseCount": 8,
+      "frontStreet": "Eastern southern cross street",
+      "street": "Eastern southern cross street",
+      "frontSign": -1,
+      "group": "district",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "southwest-row-4",
+      "depth": 7,
+      "houseCount": 24,
+      "frontStreet": "Franklin Street",
+      "street": "Franklin Street",
+      "group": "southwest",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "axis": [
+        [
+          -960.557,
+          379.944
+        ],
+        [
+          -886.532,
+          349.707
+        ]
+      ],
+      "sheet": "scene",
+      "sourcePixels": [
+        [
+          150,
+          515
+        ],
+        [
+          351,
+          439
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "southwest-row-5",
+      "depth": 7,
+      "houseCount": 18,
+      "frontStreet": "Franklin Street",
+      "street": "Franklin Street",
+      "group": "southwest",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "axis": [
+        [
+          -930.617,
+          399.186
+        ],
+        [
+          -872.894,
+          371.991
+        ]
+      ],
+      "sheet": "scene",
+      "sourcePixels": [
+        [
+          229,
+          569
+        ],
+        [
+          386,
+          500
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "southwest-row-6",
+      "depth": 7,
+      "houseCount": 20,
+      "frontStreet": "Washington Street",
+      "street": "Washington Street",
+      "group": "southwest",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "axis": [
+        [
+          -921.051,
+          422.325
+        ],
+        [
+          -857.073,
+          392.36
+        ]
+      ],
+      "sheet": "scene",
+      "sourcePixels": [
+        [
+          253,
+          632
+        ],
+        [
+          427,
+          556
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "southwest-row-7",
+      "depth": 7,
+      "houseCount": 20,
+      "frontStreet": "Washington Street",
+      "street": "Washington Street",
+      "group": "southwest",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "axis": [
+        [
+          -900.484,
+          439.222
+        ],
+        [
+          -838.004,
+          408.926
+        ]
+      ],
+      "sheet": "scene",
+      "sourcePixels": [
+        [
+          307,
+          679
+        ],
+        [
+          477,
+          602
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "southwest-row-8",
+      "depth": 7,
+      "houseCount": 20,
+      "frontStreet": "Jefferson Street",
+      "street": "Jefferson Street",
+      "group": "southwest",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "axis": [
+        [
+          -892.045,
+          462.02
+        ],
+        [
+          -829.182,
+          432.085
+        ]
+      ],
+      "sheet": "scene",
+      "sourcePixels": [
+        [
+          328,
+          741
+        ],
+        [
+          499,
+          665
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "southwest-row-11",
+      "depth": 7,
+      "houseCount": 26,
+      "frontStreet": "Empson Street",
+      "street": "Empson Street",
+      "group": "southwest",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "axis": [
+        [
+          -875.929,
+          520.636
+        ],
+        [
+          -797.961,
+          484.719
+        ]
+      ],
+      "sheet": "scene",
+      "sourcePixels": [
+        [
+          367,
+          900
+        ],
+        [
+          579,
+          809
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "southwest-row-12",
+      "depth": 7,
+      "houseCount": 16,
+      "frontStreet": "Empson Street",
+      "street": "Empson Street",
+      "group": "southwest",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "axis": [
+        [
+          -867.319,
+          536.002
+        ],
+        [
+          -821.713,
+          515.077
+        ]
+      ],
+      "sheet": "scene",
+      "sourcePixels": [
+        [
+          389,
+          942
+        ],
+        [
+          513,
+          889
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "southwest-row-13",
+      "depth": 7,
+      "houseCount": 16,
+      "frontStreet": "Imperial Street",
+      "street": "Imperial Street",
+      "group": "southwest",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "axis": [
+        [
+          -789.628,
+          544.661
+        ],
+        [
+          -745.963,
+          520.817
+        ]
+      ],
+      "sheet": "scene",
+      "sourcePixels": [
+        [
+          597,
+          971
+        ],
+        [
+          716,
+          910
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "southwest-row-14",
+      "depth": 7,
+      "houseCount": 16,
+      "frontStreet": "Imperial Street",
+      "street": "Imperial Street",
+      "group": "southwest",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "axis": [
+        [
+          -779.861,
+          561.48
+        ],
+        [
+          -732.154,
+          535.669
+        ]
+      ],
+      "sheet": "scene",
+      "sourcePixels": [
+        [
+          622,
+          1017
+        ],
+        [
+          752,
+          951
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-gibbins-west",
+      "axis": [
+        [
+          325,
+          182
+        ],
+        [
+          308,
+          320
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 24,
+      "street": "Gibbins Road",
+      "frontStreet": "Gibbins Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-leet-gibbins",
+      "axis": [
+        [
+          251,
+          333
+        ],
+        [
+          314,
+          339
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 10,
+      "street": "Leet Road",
+      "frontStreet": "Leet Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-gibbins-east",
+      "axis": [
+        [
+          371,
+          199
+        ],
+        [
+          354,
+          326
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 22,
+      "street": "Gibbins Road",
+      "frontStreet": "Gibbins Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-blyth-west",
+      "axis": [
+        [
+          446,
+          123
+        ],
+        [
+          425,
+          329
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 34,
+      "street": "Blyth Road",
+      "frontStreet": "Blyth Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-leet-blyth",
+      "axis": [
+        [
+          353,
+          344
+        ],
+        [
+          423,
+          353
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 12,
+      "street": "Leet Road",
+      "frontStreet": "Leet Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-blyth-east",
+      "axis": [
+        [
+          507,
+          121
+        ],
+        [
+          485,
+          338
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 34,
+      "street": "Blyth Road",
+      "frontStreet": "Blyth Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-rosher-west",
+      "axis": [
+        [
+          543,
+          122
+        ],
+        [
+          524,
+          342
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 34,
+      "street": "Rosher Road",
+      "frontStreet": "Rosher Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-leet-rosher",
+      "axis": [
+        [
+          484,
+          358
+        ],
+        [
+          542,
+          365
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 10,
+      "street": "Leet Road",
+      "frontStreet": "Leet Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-rosher-east",
+      "axis": [
+        [
+          620,
+          177
+        ],
+        [
+          598,
+          351
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 28,
+      "street": "Rosher Road",
+      "frontStreet": "Rosher Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-grace-west",
+      "axis": [
+        [
+          646,
+          182
+        ],
+        [
+          628,
+          354
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 28,
+      "street": "Grace Road",
+      "frontStreet": "Grace Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-leet-grace",
+      "axis": [
+        [
+          592,
+          377
+        ],
+        [
+          633,
+          383
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 8,
+      "street": "Leet Road",
+      "frontStreet": "Leet Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-grace-east",
+      "axis": [
+        [
+          692,
+          190
+        ],
+        [
+          674,
+          359
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 28,
+      "street": "Grace Road",
+      "frontStreet": "Grace Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-carpenters-west",
+      "axis": [
+        [
+          719,
+          193
+        ],
+        [
+          700,
+          362
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 28,
+      "street": "Carpenters Road north housing",
+      "frontStreet": "Carpenters Road north housing",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-leet-carpenters",
+      "axis": [
+        [
+          671,
+          389
+        ],
+        [
+          718,
+          395
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 8,
+      "street": "Leet Road",
+      "frontStreet": "Leet Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-leet-southwest",
+      "axis": [
+        [
+          323,
+          388
+        ],
+        [
+          429,
+          399
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 16,
+      "street": "Leet Road",
+      "frontStreet": "Leet Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-blyth-southwest",
+      "axis": [
+        [
+          425,
+          419
+        ],
+        [
+          417,
+          494
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 12,
+      "street": "Blyth Road",
+      "frontStreet": "Blyth Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-carpenters-triangle",
+      "axis": [
+        [
+          258,
+          382
+        ],
+        [
+          404,
+          524
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 30,
+      "street": "Carpenters Road upper housing",
+      "frontStreet": "Carpenters Road upper housing",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-leet-southeast",
+      "axis": [
+        [
+          484,
+          395
+        ],
+        [
+          548,
+          402
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 10,
+      "street": "Leet Road",
+      "frontStreet": "Leet Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-blyth-southeast",
+      "axis": [
+        [
+          474,
+          429
+        ],
+        [
+          464,
+          522
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 16,
+      "street": "Blyth Road",
+      "frontStreet": "Blyth Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-rosher-southwest",
+      "axis": [
+        [
+          538,
+          431
+        ],
+        [
+          520,
+          579
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 24,
+      "street": "Rosher Road",
+      "frontStreet": "Rosher Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-carpenters-south-east",
+      "axis": [
+        [
+          412,
+          555
+        ],
+        [
+          498,
+          645
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 18,
+      "street": "Carpenters Road upper housing",
+      "frontStreet": "Carpenters Road upper housing",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-rosher-southeast",
+      "axis": [
+        [
+          594,
+          499
+        ],
+        [
+          580,
+          635
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 24,
+      "street": "Rosher Road",
+      "frontStreet": "Rosher Road",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-warton-upper",
+      "axis": [
+        [
+          600,
+          442
+        ],
+        [
+          656,
+          498
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 12,
+      "street": "Warton Road upper housing",
+      "frontStreet": "Warton Road upper housing",
+      "reviewArea": "northwest",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-pitchford-langthorne-west-return",
+      "axis": [
+        [
+          11.094,
+          -769.906
+        ],
+        [
+          18.641,
+          -752.481
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 5,
+      "street": "St Thomas Road",
+      "frontStreet": "St Thomas Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          38.220821246538435,
+          -779.0078172724722
+        ],
+        [
+          32.19847346048564,
+          -760.9993192817739
+        ]
+      ]
+    },
+    {
+      "id": "district-pitchford-langthorne-east-return",
+      "axis": [
+        [
+          233.703,
+          -866.769
+        ],
+        [
+          243.301,
+          -850.888
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 5,
+      "street": "Warton Road",
+      "frontStreet": "Warton Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          209.5212543160418,
+          -852.1443281969113
+        ],
+        [
+          218.41520961799887,
+          -835.8579672447387
+        ]
+      ]
+    },
+    {
+      "id": "district-langthorne-paul-west-return",
+      "axis": [
+        [
+          26.628,
+          -729.314
+        ],
+        [
+          46.199,
+          -702.73
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 8,
+      "street": "St Thomas Road",
+      "frontStreet": "St Thomas Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          38.724892086411614,
+          -736.7558258215994
+        ],
+        [
+          66.76453515893705,
+          -719.335166891738
+        ]
+      ]
+    },
+    {
+      "id": "district-langthorne-paul-east-return",
+      "axis": [
+        [
+          257.057,
+          -828.127
+        ],
+        [
+          270.819,
+          -805.356
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 6,
+      "street": "Warton Road",
+      "frontStreet": "Warton Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          240.37492975981417,
+          -818.0231034080629
+        ],
+        [
+          255.33784132361023,
+          -796.0218873987751
+        ]
+      ]
+    },
+    {
+      "id": "district-paul-barnby-west-return",
+      "axis": [
+        [
+          59.868,
+          -684.164
+        ],
+        [
+          88.239,
+          -645.627
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 12,
+      "street": "St Thomas Road",
+      "frontStreet": "St Thomas Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          77.1088702656405,
+          -696.3682494489298
+        ],
+        [
+          98.0546541036823,
+          -653.3424014096224
+        ]
+      ]
+    },
+    {
+      "id": "district-paul-barnby-east-return",
+      "axis": [
+        [
+          279.098,
+          -779.083
+        ],
+        [
+          295.885,
+          -733.938
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 12,
+      "street": "Warton Road",
+      "frontStreet": "Warton Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          263.2971161185208,
+          -772.9954815940843
+        ],
+        [
+          274.1576788756858,
+          -726.0707010332978
+        ]
+      ]
+    },
+    {
+      "id": "district-barnby-hotham-west-return",
+      "axis": [
+        [
+          94.825,
+          -623.979
+        ],
+        [
+          108.166,
+          -593.738
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 8,
+      "street": "St Thomas Road",
+      "frontStreet": "St Thomas Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          111.13878152250552,
+          -631.1015114437056
+        ],
+        [
+          127.16752612450476,
+          -602.1954298163345
+        ]
+      ]
+    },
+    {
+      "id": "district-barnby-hotham-east-return",
+      "axis": [
+        [
+          303.937,
+          -707.21
+        ],
+        [
+          312.422,
+          -675.77
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 8,
+      "street": "Warton Road",
+      "frontStreet": "Warton Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          283.09473336194435,
+          -701.3454658240834
+        ],
+        [
+          296.73707396900556,
+          -671.7755458252315
+        ]
+      ]
+    },
+    {
+      "id": "district-hotham-randal-west-return",
+      "axis": [
+        [
+          117.342,
+          -571.354
+        ],
+        [
+          130.499,
+          -539.276
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 8,
+      "street": "St Thomas Road",
+      "frontStreet": "St Thomas Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          138.94235758572066,
+          -580.1623183205994
+        ],
+        [
+          154.4244195156392,
+          -549.1390419523068
+        ]
+      ]
+    },
+    {
+      "id": "district-hotham-randal-east-return",
+      "axis": [
+        [
+          319.054,
+          -649.529
+        ],
+        [
+          323.246,
+          -612.294
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 9,
+      "street": "Warton Road",
+      "frontStreet": "Warton Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          305.5641665003506,
+          -647.8881803971839
+        ],
+        [
+          313.95636640136377,
+          -611.370027183543
+        ]
+      ]
+    },
+    {
+      "id": "district-randal-skelton-west-return",
+      "axis": [
+        [
+          140.514,
+          -516.622
+        ],
+        [
+          155.117,
+          -484.007
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 9,
+      "street": "St Thomas Road",
+      "frontStreet": "St Thomas Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          162.28937489322428,
+          -526.3402028463075
+        ],
+        [
+          178.71786953084307,
+          -494.6055188291598
+        ]
+      ]
+    },
+    {
+      "id": "district-randal-skelton-east-return",
+      "axis": [
+        [
+          326.553,
+          -582.917
+        ],
+        [
+          327.555,
+          -546.395
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 9,
+      "street": "Warton Road",
+      "frontStreet": "Warton Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          315.94439645487614,
+          -582.5395484731765
+        ],
+        [
+          320.4810480645436,
+          -546.2871723632927
+        ]
+      ]
+    },
+    {
+      "id": "district-leywick-morley-west-west-return",
+      "axis": [
+        [
+          77.004,
+          -404.089
+        ],
+        [
+          84.724,
+          -381.994
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 6,
+      "street": "Bridge Road",
+      "frontStreet": "Bridge Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          100.63592348754305,
+          -411.866595851938
+        ],
+        [
+          101.9689833585677,
+          -388.49989348864653
+        ]
+      ]
+    },
+    {
+      "id": "district-leywick-morley-west-east-return",
+      "axis": [
+        [
+          160.205,
+          -432.989
+        ],
+        [
+          169.149,
+          -411.929
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 6,
+      "street": "St Thomas Road",
+      "frontStreet": "St Thomas Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          160.83892183660964,
+          -433.2565722376727
+        ],
+        [
+          170.08198106758078,
+          -412.3260375974187
+        ]
+      ]
+    },
+    {
+      "id": "district-leywick-morley-east-west-return",
+      "axis": [
+        [
+          172.065,
+          -444.46
+        ],
+        [
+          184.793,
+          -414.488
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 8,
+      "street": "St Thomas Road",
+      "frontStreet": "St Thomas Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          185.28537388021658,
+          -448.7584471841669
+        ],
+        [
+          185.72254506784762,
+          -416.19816190354413
+        ]
+      ]
+    },
+    {
+      "id": "district-leywick-morley-east-east-return",
+      "axis": [
+        [
+          322.12,
+          -463.241
+        ],
+        [
+          317.649,
+          -430.456
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.2,
+      "houseCount": 8,
+      "street": "Warton Road",
+      "frontStreet": "Warton Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          248.00025517052984,
+          -473.0084217149147
+        ],
+        [
+          250.22319941251843,
+          -439.99370957762176
+        ]
+      ]
+    },
+    {
+      "id": "district-montague-south-a",
+      "axis": [
+        [
+          1615,
+          516
+        ],
+        [
+          1688,
+          495
+        ]
+      ],
+      "sheet": "overview",
+      "depth": 6.5,
+      "houseCount": 12,
+      "street": "Portway",
+      "frontStreet": "Portway",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-montague-south-b",
+      "axis": [
+        [
+          1725,
+          480
+        ],
+        [
+          1799,
+          458
+        ]
+      ],
+      "sheet": "overview",
+      "depth": 6.5,
+      "houseCount": 12,
+      "street": "Portway",
+      "frontStreet": "Portway",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-eastern-south-front-a",
+      "axis": [
+        [
+          1490,
+          593
+        ],
+        [
+          1541,
+          576
+        ]
+      ],
+      "sheet": "overview",
+      "depth": 6.5,
+      "houseCount": 9,
+      "street": "Portway",
+      "frontStreet": "Portway",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-eastern-south-front-b",
+      "axis": [
+        [
+          1581,
+          564
+        ],
+        [
+          1638,
+          547
+        ]
+      ],
+      "sheet": "overview",
+      "depth": 6.5,
+      "houseCount": 9,
+      "street": "Portway",
+      "frontStreet": "Portway",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-eastern-south-front-c",
+      "axis": [
+        [
+          1647,
+          543
+        ],
+        [
+          1692,
+          529
+        ]
+      ],
+      "sheet": "overview",
+      "depth": 6.5,
+      "houseCount": 8,
+      "street": "Portway",
+      "frontStreet": "Portway",
+      "reviewArea": "eastern",
+      "maxYardDepth": 32
+    },
+    {
+      "id": "district-west-priory-south",
+      "axis": [
+        [
+          -969.056,
+          354.92
+        ],
+        [
+          -885.499,
+          319.224
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.8,
+      "houseCount": 28,
+      "street": "Priory Street",
+      "frontStreet": "Priory Street",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "group": "southwest",
+      "sourcePixels": [
+        [
+          129,
+          447
+        ],
+        [
+          356,
+          357
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-west-priory-north",
+      "axis": [
+        [
+          -980.29,
+          338.883
+        ],
+        [
+          -900.021,
+          305.506
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.8,
+      "houseCount": 26,
+      "street": "Priory Street",
+      "frontStreet": "Priory Street",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "group": "southwest",
+      "sourcePixels": [
+        [
+          100,
+          403
+        ],
+        [
+          318,
+          319
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-west-hancock-priory",
+      "axis": [
+        [
+          -881.083,
+          330.989
+        ],
+        [
+          -867.666,
+          345.109
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.8,
+      "houseCount": 7,
+      "street": "Hancock Road",
+      "frontStreet": "Hancock Road",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "group": "southwest",
+      "sourcePixels": [
+        [
+          367,
+          389
+        ],
+        [
+          402,
+          428
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-west-hancock-franklin",
+      "axis": [
+        [
+          -854.028,
+          367.393
+        ],
+        [
+          -842.381,
+          384.904
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.8,
+      "houseCount": 8,
+      "street": "Hancock Road",
+      "frontStreet": "Hancock Road",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "group": "southwest",
+      "sourcePixels": [
+        [
+          437,
+          489
+        ],
+        [
+          467,
+          537
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-west-hancock-washington",
+      "axis": [
+        [
+          -833.65,
+          404.722
+        ],
+        [
+          -821.61,
+          422.965
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.8,
+      "houseCount": 8,
+      "street": "Hancock Road",
+      "frontStreet": "Hancock Road",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "group": "southwest",
+      "sourcePixels": [
+        [
+          489,
+          591
+        ],
+        [
+          520,
+          641
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-west-hancock-jefferson",
+      "axis": [
+        [
+          -808.493,
+          453.435
+        ],
+        [
+          -795.72,
+          471.287
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.8,
+      "houseCount": 8,
+      "street": "Hancock Road",
+      "frontStreet": "Hancock Road",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "group": "southwest",
+      "sourcePixels": [
+        [
+          553,
+          724
+        ],
+        [
+          586,
+          773
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-west-sherman-north",
+      "axis": [
+        [
+          -827.478,
+          371.5
+        ],
+        [
+          -811.267,
+          365.117
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.8,
+      "houseCount": 6,
+      "street": "Sherman Street",
+      "frontStreet": "Sherman Street",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "group": "southwest",
+      "sourcePixels": [
+        [
+          508,
+          502
+        ],
+        [
+          552,
+          486
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-west-sherman-south",
+      "axis": [
+        [
+          -806.789,
+          392.85
+        ],
+        [
+          -774.368,
+          380.084
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.8,
+      "houseCount": 12,
+      "street": "Sherman Street",
+      "frontStreet": "Sherman Street",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "group": "southwest",
+      "sourcePixels": [
+        [
+          562,
+          561
+        ],
+        [
+          650,
+          529
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-west-otis-north",
+      "axis": [
+        [
+          -794.378,
+          411.083
+        ],
+        [
+          -763.072,
+          398.346
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.8,
+      "houseCount": 12,
+      "street": "Otis Street",
+      "frontStreet": "Otis Street",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "group": "southwest",
+      "sourcePixels": [
+        [
+          594,
+          611
+        ],
+        [
+          679,
+          579
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-west-otis-south",
+      "axis": [
+        [
+          -789.378,
+          430.631
+        ],
+        [
+          -758.404,
+          419.389
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.8,
+      "houseCount": 12,
+      "street": "Otis Street",
+      "frontStreet": "Otis Street",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "group": "southwest",
+      "sourcePixels": [
+        [
+          606,
+          664
+        ],
+        [
+          690,
+          636
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-west-three-mills-front",
+      "axis": [
+        [
+          -772.46,
+          450.227
+        ],
+        [
+          -744.233,
+          433.86
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.8,
+      "houseCount": 12,
+      "street": "Three Mills Lane",
+      "frontStreet": "Three Mills Lane",
+      "reviewArea": "western",
+      "maxYardDepth": 32,
+      "group": "southwest",
+      "sourcePixels": [
+        [
+          650,
+          718
+        ],
+        [
+          727,
+          676
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-rokeby-barnby",
+      "axis": [
+        [
+          80.56,
+          -618.408
+        ],
+        [
+          89.527,
+          -598.082
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6,
+      "houseCount": 6,
+      "street": "St Thomas Road",
+      "frontStreet": "St Thomas Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          80.12239585947177,
+          -618.2115927952502
+        ],
+        [
+          89.52358796710898,
+          -598.083322948558
+        ]
+      ]
+    },
+    {
+      "id": "district-rokeby-hotham",
+      "axis": [
+        [
+          101.615,
+          -569.381
+        ],
+        [
+          112.637,
+          -542.507
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6,
+      "houseCount": 7,
+      "street": "St Thomas Road",
+      "frontStreet": "St Thomas Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          101.42707511957927,
+          -569.3040355390651
+        ],
+        [
+          112.65073413786467,
+          -542.5133769277202
+        ]
+      ]
+    },
+    {
+      "id": "district-rokeby-randal",
+      "axis": [
+        [
+          125.016,
+          -513.796
+        ],
+        [
+          136.191,
+          -488.835
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6,
+      "houseCount": 7,
+      "street": "St Thomas Road",
+      "frontStreet": "St Thomas Road",
+      "reviewArea": "northeast",
+      "maxYardDepth": 32,
+      "sourceAxisBeforeStreetFit": [
+        [
+          124.69276433361912,
+          -513.649853386994
+        ],
+        [
+          136.18528614962545,
+          -488.8339483001931
+        ]
+      ]
+    },
+    {
+      "id": "district-west-jefferson-south",
+      "axis": [
+        [
+          -881.504,
+          479.933
+        ],
+        [
+          -817.575,
+          448.111
+        ]
+      ],
+      "sheet": "scene",
+      "depth": 6.6,
+      "houseCount": 20,
+      "street": "Jefferson Street",
+      "frontStreet": "Jefferson Street",
+      "group": "southwest",
+      "reviewArea": "western",
+      "maxYardDepth": 24,
+      "sourcePixels": [
+        [
+          355,
+          790
+        ],
+        [
+          529,
+          709
+        ]
+      ],
+      "sourceMap": "western"
+    },
+    {
+      "id": "district-eastbourne-west",
+      "axis": [
+        [
+          1593,
+          333
+        ],
+        [
+          1616,
+          334
+        ]
+      ],
+      "sheet": "overview",
+      "depth": 6.5,
+      "houseCount": 4,
+      "street": "Eastbourne Road",
+      "frontStreet": "Eastbourne Road",
+      "reviewArea": "eastern",
+      "maxYardDepth": 14
+    },
+    {
+      "id": "district-eastbourne-middle",
+      "axis": [
+        [
+          1648,
+          335
+        ],
+        [
+          1671,
+          338
+        ]
+      ],
+      "sheet": "overview",
+      "depth": 6.5,
+      "houseCount": 4,
+      "street": "Eastbourne Road",
+      "frontStreet": "Eastbourne Road",
+      "reviewArea": "eastern",
+      "maxYardDepth": 14
+    },
+    {
+      "id": "district-eastbourne-east",
+      "axis": [
+        [
+          1709,
+          342
+        ],
+        [
+          1750,
+          345
+        ]
+      ],
+      "sheet": "overview",
+      "depth": 6.5,
+      "houseCount": 7,
+      "street": "Eastbourne Road",
+      "frontStreet": "Eastbourne Road",
+      "reviewArea": "eastern",
+      "maxYardDepth": 14
+    },
+    {
+      "id": "district-biggerstaff-mill-side",
+      "axis": [
+        [
+          154,
+          707
+        ],
+        [
+          277,
+          553
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 30,
+      "street": "Biggerstaff Road",
+      "frontStreet": "Biggerstaff Road",
+      "reviewArea": "jute-mill",
+      "maxYardDepth": 18,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-biggerstaff-preston",
+      "axis": [
+        [
+          204,
+          727
+        ],
+        [
+          319,
+          569
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 32,
+      "street": "Biggerstaff Road",
+      "frontStreet": "Biggerstaff Road",
+      "reviewArea": "jute-mill",
+      "maxYardDepth": 36,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-warton-biggerstaff-return",
+      "axis": [
+        [
+          200,
+          744
+        ],
+        [
+          239,
+          774
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 8,
+      "street": "Warton Road northern section",
+      "frontStreet": "Warton Road northern section",
+      "reviewArea": "jute-mill",
+      "maxYardDepth": 30,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-warton-preston-return",
+      "axis": [
+        [
+          283,
+          802
+        ],
+        [
+          307,
+          820
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 5,
+      "street": "Warton Road northern section",
+      "frontStreet": "Warton Road northern section",
+      "reviewArea": "jute-mill",
+      "maxYardDepth": 18,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-robinson-school-side",
+      "axis": [
+        [
+          337,
+          851
+        ],
+        [
+          364,
+          816
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 8,
+      "street": "Robinson Road",
+      "frontStreet": "Robinson Road",
+      "reviewArea": "jute-mill",
+      "maxYardDepth": 20,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-carpenters-school-return",
+      "axis": [
+        [
+          406,
+          646
+        ],
+        [
+          447,
+          706
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 13,
+      "street": "Carpenters Road housing section",
+      "frontStreet": "Carpenters Road housing section",
+      "reviewArea": "jute-mill",
+      "maxYardDepth": 23,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-high-street-school-north",
+      "axis": [
+        [
+          513,
+          784
+        ],
+        [
+          538,
+          761
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 6,
+      "street": "Stratford High Street",
+      "frontStreet": "Stratford High Street",
+      "reviewArea": "jute-mill",
+      "maxYardDepth": 20,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-warton-high-street-return",
+      "axis": [
+        [
+          350,
+          897
+        ],
+        [
+          373,
+          916
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 5,
+      "street": "Warton Road northern section",
+      "frontStreet": "Warton Road northern section",
+      "reviewArea": "jute-mill",
+      "maxYardDepth": 24,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-union-south",
+      "axis": [
+        [
+          433,
+          1054
+        ],
+        [
+          542,
+          1116
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 21,
+      "street": "Western housing cross street",
+      "frontStreet": "Western housing cross street",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 38,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-union-north",
+      "axis": [
+        [
+          407,
+          997
+        ],
+        [
+          480,
+          1043
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 15,
+      "street": "Western housing cross street",
+      "frontStreet": "Western housing cross street",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 24,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-union-court-east",
+      "axis": [
+        [
+          520,
+          1026
+        ],
+        [
+          548,
+          1047
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 6,
+      "street": "William Street",
+      "frontStreet": "William Street",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 22,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-union-north-east",
+      "axis": [
+        [
+          515,
+          1061
+        ],
+        [
+          551,
+          1084
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 8,
+      "street": "Western housing cross street",
+      "frontStreet": "Western housing cross street",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 22,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-william-west-return",
+      "axis": [
+        [
+          426,
+          960
+        ],
+        [
+          410,
+          988
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 6,
+      "street": "Western housing access street",
+      "frontStreet": "Western housing access street",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 18,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-stanley-junction-west",
+      "axis": [
+        [
+          534,
+          1127
+        ],
+        [
+          531,
+          1152
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 5,
+      "street": "Stanley Road gasworks junction",
+      "frontStreet": "Stanley Road gasworks junction",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 20,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-stanley-gasworks-east",
+      "axis": [
+        [
+          576,
+          1172
+        ],
+        [
+          621,
+          1182
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 8,
+      "street": "Stanley Road gasworks frontage",
+      "frontStreet": "Stanley Road gasworks frontage",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 17,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-stanley-triangle-south",
+      "axis": [
+        [
+          449,
+          143
+        ],
+        [
+          583,
+          160
+        ]
+      ],
+      "sheet": "32",
+      "depth": 6.6,
+      "houseCount": 23,
+      "street": "Stanley Road north",
+      "frontStreet": "Stanley Road north",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 45,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-stanley-triangle-west",
+      "axis": [
+        [
+          587,
+          173
+        ],
+        [
+          576,
+          216
+        ]
+      ],
+      "sheet": "32",
+      "depth": 6.6,
+      "houseCount": 8,
+      "street": "Stanley Road",
+      "frontStreet": "Stanley Road",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 22,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-livingstone-upper-south",
+      "axis": [
+        [
+          300,
+          1146
+        ],
+        [
+          367,
+          1193
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 14,
+      "street": "Livingstone Road",
+      "frontStreet": "Livingstone Road",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 12,
+      "fitToStreet": true
+    },
+    {
+      "id": "district-livingstone-upper-north",
+      "axis": [
+        [
+          386,
+          1170
+        ],
+        [
+          426,
+          1195
+        ]
+      ],
+      "sheet": "22",
+      "depth": 6.6,
+      "houseCount": 8,
+      "street": "Livingstone Road",
+      "frontStreet": "Livingstone Road",
+      "reviewArea": "gasworks-housing",
+      "maxYardDepth": 20,
+      "fitToStreet": true
+    }
+  ],
+  "blocks": [
+    {
+      "id": "gibbins-west",
+      "members": [
+        "district-gibbins-west",
+        "district-leet-gibbins"
+      ],
+      "boundary": [
+        [
+          237,
+          328
+        ],
+        [
+          296,
+          220
+        ],
+        [
+          315,
+          172
+        ],
+        [
+          339,
+          177
+        ],
+        [
+          324,
+          349
+        ],
+        [
+          240,
+          341
+        ]
+      ],
+      "sheet": "22"
+    },
+    {
+      "id": "gibbins-blyth",
+      "members": [
+        "district-gibbins-east",
+        "district-blyth-west",
+        "district-leet-blyth"
+      ]
+    },
+    {
+      "id": "blyth-rosher",
+      "members": [
+        "district-blyth-east",
+        "district-rosher-west",
+        "district-leet-rosher"
+      ]
+    },
+    {
+      "id": "rosher-grace",
+      "members": [
+        "district-rosher-east",
+        "district-grace-west",
+        "district-leet-grace"
+      ]
+    },
+    {
+      "id": "grace-carpenters",
+      "members": [
+        "district-grace-east",
+        "district-carpenters-west",
+        "district-leet-carpenters"
+      ]
+    },
+    {
+      "id": "leet-triangle",
+      "members": [
+        "district-leet-southwest",
+        "district-blyth-southwest",
+        "district-carpenters-triangle"
+      ]
+    },
+    {
+      "id": "blyth-rosher-south",
+      "members": [
+        "district-leet-southeast",
+        "district-blyth-southeast",
+        "district-rosher-southwest",
+        "district-carpenters-south-east"
+      ]
+    },
+    {
+      "id": "rosher-warton",
+      "members": [
+        "district-rosher-southeast",
+        "district-warton-upper"
+      ],
+      "boundary": [
+        [
+          578,
+          648
+        ],
+        [
+          588,
+          425
+        ],
+        [
+          671,
+          500
+        ],
+        [
+          635,
+          529
+        ],
+        [
+          621,
+          632
+        ]
+      ],
+      "sheet": "22"
+    },
+    {
+      "id": "pitchford-langthorne",
+      "members": [
+        "os-row-52",
+        "os-row-53",
+        "district-pitchford-langthorne-west-return",
+        "district-pitchford-langthorne-east-return"
+      ]
+    },
+    {
+      "id": "langthorne-paul",
+      "members": [
+        "os-row-29",
+        "os-row-30",
+        "district-langthorne-paul-west-return",
+        "district-langthorne-paul-east-return"
+      ]
+    },
+    {
+      "id": "paul-barnby",
+      "members": [
+        "os-row-31",
+        "os-row-32",
+        "district-paul-barnby-west-return",
+        "district-paul-barnby-east-return"
+      ]
+    },
+    {
+      "id": "barnby-hotham",
+      "members": [
+        "os-row-33",
+        "os-row-34",
+        "district-barnby-hotham-west-return",
+        "district-barnby-hotham-east-return"
+      ]
+    },
+    {
+      "id": "hotham-randal",
+      "members": [
+        "os-row-35",
+        "os-row-36",
+        "district-hotham-randal-west-return",
+        "district-hotham-randal-east-return"
+      ]
+    },
+    {
+      "id": "randal-skelton",
+      "members": [
+        "os-row-37",
+        "os-row-38",
+        "district-randal-skelton-west-return",
+        "district-randal-skelton-east-return"
+      ]
+    },
+    {
+      "id": "leywick-morley-west",
+      "members": [
+        "os-row-25-part-1",
+        "os-row-26-part-1",
+        "district-leywick-morley-west-west-return",
+        "district-leywick-morley-west-east-return"
+      ]
+    },
+    {
+      "id": "leywick-morley-east",
+      "members": [
+        "os-row-27",
+        "os-row-28",
+        "district-leywick-morley-east-west-return",
+        "district-leywick-morley-east-east-return"
+      ]
+    },
+    {
+      "id": "king-channelsea",
+      "members": [
+        "os-row-62-part-1",
+        "os-row-62-part-2",
+        "os-row-63-part-1"
+      ]
+    },
+    {
+      "id": "high-north",
+      "members": [
+        "os-row-64",
+        "os-row-65"
+      ]
+    },
+    {
+      "id": "montague-west",
+      "members": [
+        "os-row-74",
+        "os-row-75",
+        "district-eastbourne-middle"
+      ]
+    },
+    {
+      "id": "montague-harcourt",
+      "members": [
+        "os-row-76",
+        "os-row-77-part-1",
+        "district-eastbourne-east"
+      ]
+    },
+    {
+      "id": "east-south-a",
+      "members": [
+        "os-row-81",
+        "os-row-82"
+      ]
+    },
+    {
+      "id": "east-south-b",
+      "members": [
+        "os-row-83",
+        "os-row-86"
+      ]
+    },
+    {
+      "id": "east-south-c",
+      "members": [
+        "os-row-87",
+        "os-row-88"
+      ]
+    },
+    {
+      "id": "western-priory-franklin",
+      "members": [
+        "district-west-priory-south",
+        "southwest-row-4",
+        "district-west-hancock-priory"
+      ]
+    },
+    {
+      "id": "western-sherman-otis",
+      "members": [
+        "district-west-sherman-south",
+        "district-west-otis-north"
+      ]
+    },
+    {
+      "id": "bridge-albion",
+      "members": [
+        "os-row-39-part-1",
+        "os-row-39-part-2",
+        "os-row-47"
+      ]
+    },
+    {
+      "id": "bridge-barnby",
+      "members": [
+        "os-row-40-part-1",
+        "os-row-41-part-1",
+        "os-row-48-part-1",
+        "district-rokeby-barnby"
+      ]
+    },
+    {
+      "id": "bridge-hotham",
+      "members": [
+        "os-row-42-part-1",
+        "os-row-43-part-1",
+        "os-row-49-part-1",
+        "district-rokeby-hotham"
+      ]
+    },
+    {
+      "id": "bridge-randal",
+      "members": [
+        "os-row-44-part-1",
+        "os-row-45-part-1",
+        "os-row-50",
+        "district-rokeby-randal"
+      ]
+    },
+    {
+      "id": "western-franklin-washington",
+      "members": [
+        "southwest-row-5",
+        "southwest-row-6"
+      ]
+    },
+    {
+      "id": "western-washington-jefferson",
+      "members": [
+        "southwest-row-7",
+        "southwest-row-8"
+      ]
+    },
+    {
+      "id": "biggerstaff-preston",
+      "members": [
+        "district-biggerstaff-preston",
+        "os-row-71-part-1",
+        "os-row-72-part-1",
+        "district-warton-biggerstaff-return"
+      ]
+    },
+    {
+      "id": "preston-robinson",
+      "members": [
+        "os-row-70",
+        "os-row-68",
+        "district-warton-preston-return"
+      ],
+      "boundary": [
+        [
+          273,
+          795
+        ],
+        [
+          365,
+          634
+        ],
+        [
+          388,
+          643
+        ],
+        [
+          384,
+          766
+        ],
+        [
+          350,
+          781
+        ],
+        [
+          320,
+          840
+        ]
+      ],
+      "sheet": "22"
+    },
+    {
+      "id": "union-stanley",
+      "members": [
+        "district-union-south",
+        "os-row-23",
+        "district-stanley-junction-west",
+        "os-row-69-part-1"
+      ]
+    },
+    {
+      "id": "william-union-west",
+      "members": [
+        "os-row-24",
+        "district-union-north",
+        "district-william-west-return"
+      ]
+    },
+    {
+      "id": "william-union-east",
+      "members": [
+        "district-union-court-east",
+        "district-union-north-east"
+      ]
+    },
+    {
+      "id": "stanley-livingstone-triangle",
+      "members": [
+        "district-stanley-triangle-south",
+        "district-stanley-triangle-west",
+        "os-row-17"
+      ]
+    }
+  ],
+  "roads": [
+    {
+      "name": "Leet Road",
+      "points": [
+        [
+          215,
+          344
+        ],
+        [
+          341,
+          360
+        ],
+        [
+          463,
+          372
+        ],
+        [
+          574,
+          383
+        ],
+        [
+          735,
+          408
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Gibbins Road",
+      "points": [
+        [
+          340,
+          357
+        ],
+        [
+          357,
+          187
+        ],
+        [
+          432,
+          116
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Blyth Road",
+      "points": [
+        [
+          458,
+          526
+        ],
+        [
+          465,
+          372
+        ],
+        [
+          486,
+          113
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Rosher Road",
+      "points": [
+        [
+          562,
+          681
+        ],
+        [
+          576,
+          383
+        ],
+        [
+          606,
+          151
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Grace Road",
+      "points": [
+        [
+          655,
+          393
+        ],
+        [
+          680,
+          162
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Carpenters Road north housing",
+      "points": [
+        [
+          735,
+          408
+        ],
+        [
+          756,
+          166
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Kennard Road",
+      "points": [
+        [
+          606,
+          151
+        ],
+        [
+          680,
+          162
+        ],
+        [
+          756,
+          174
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Warton Road upper housing",
+      "points": [
+        [
+          574,
+          394
+        ],
+        [
+          658,
+          490
+        ],
+        [
+          743,
+          580
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Carpenters Road upper housing",
+      "points": [
+        [
+          220,
+          346
+        ],
+        [
+          325,
+          475
+        ],
+        [
+          383,
+          553
+        ],
+        [
+          457,
+          659
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Hancock Road",
+      "points": [
+        [
+          -878.048,
+          305.651
+        ],
+        [
+          -834.777,
+          390.64
+        ],
+        [
+          -807.368,
+          440.034
+        ],
+        [
+          -780.11,
+          483.862
+        ]
+      ],
+      "sheet": "scene",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Sherman Street",
+      "points": [
+        [
+          -829.799,
+          395.704
+        ],
+        [
+          -770.487,
+          372.179
+        ]
+      ],
+      "sheet": "scene",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Otis Street",
+      "points": [
+        [
+          -808.173,
+          437.828
+        ],
+        [
+          -747.051,
+          412.395
+        ]
+      ],
+      "sheet": "scene",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Priory Street",
+      "points": [
+        [
+          -995.173,
+          353.029
+        ],
+        [
+          -878.048,
+          305.651
+        ]
+      ],
+      "sheet": "scene",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "St Leonard Street",
+      "points": [
+        [
+          -1008.721,
+          320.343
+        ],
+        [
+          -991.05,
+          354.031
+        ],
+        [
+          -965.523,
+          402.734
+        ],
+        [
+          -945.448,
+          442.672
+        ],
+        [
+          -924.617,
+          482.961
+        ],
+        [
+          -898.194,
+          537.212
+        ],
+        [
+          -870.865,
+          597.381
+        ]
+      ],
+      "sheet": "scene",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Franklin Street",
+      "points": [
+        [
+          -965.523,
+          402.734
+        ],
+        [
+          -857.368,
+          354.114
+        ]
+      ],
+      "sheet": "scene",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Washington Street",
+      "points": [
+        [
+          -945.448,
+          442.672
+        ],
+        [
+          -833.983,
+          392.475
+        ]
+      ],
+      "sheet": "scene",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Jefferson Street",
+      "points": [
+        [
+          -924.617,
+          482.961
+        ],
+        [
+          -807.51,
+          434.838
+        ]
+      ],
+      "sheet": "scene",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Empson Street",
+      "points": [
+        [
+          -898.194,
+          537.212
+        ],
+        [
+          -784.173,
+          485.087
+        ]
+      ],
+      "sheet": "scene",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Imperial Street",
+      "points": [
+        [
+          -792.242,
+          558.103
+        ],
+        [
+          -733.884,
+          526.802
+        ]
+      ],
+      "sheet": "scene",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
+      "alignmentEvidence": "Centreline re-read with the district housing block review."
+    },
+    {
+      "name": "Biggerstaff Road",
+      "points": [
+        [
+          165,
+          732
+        ],
+        [
+          295,
+          550
+        ],
+        [
+          318,
+          532
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted residential macadam.",
+      "alignmentEvidence": "Re-traced with the jute mill and West Ham gasworks housing blocks on OS VIII.22 / VIII.32."
+    },
+    {
+      "name": "Preston Road",
+      "points": [
+        [
+          263,
+          800
+        ],
+        [
+          377,
+          617
+        ],
+        [
+          396,
+          596
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted residential macadam.",
+      "alignmentEvidence": "Re-traced with the jute mill and West Ham gasworks housing blocks on OS VIII.22 / VIII.32."
+    },
+    {
+      "name": "Robinson Road",
+      "points": [
+        [
+          315,
+          867
+        ],
+        [
+          356,
+          805
+        ],
+        [
+          365,
+          780
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted residential macadam.",
+      "alignmentEvidence": "Re-traced with the jute mill and West Ham gasworks housing blocks on OS VIII.22 / VIII.32."
+    },
+    {
+      "name": "Warton Road northern section",
+      "points": [
+        [
+          20.6,
+          593.8
+        ],
+        [
+          83.8,
+          660.8
+        ],
+        [
+          152,
+          733.3
+        ],
+        [
+          271.1,
+          845
+        ],
+        [
+          370,
+          924
+        ],
+        [
+          396,
+          943
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 8,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted residential macadam.",
+      "alignmentEvidence": "Re-traced with the jute mill and West Ham gasworks housing blocks on OS VIII.22 / VIII.32."
+    },
+    {
+      "name": "Western housing cross street",
+      "points": [
+        [
+          388,
+          1004
+        ],
+        [
+          552,
+          1119
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted residential macadam.",
+      "alignmentEvidence": "Re-traced with the jute mill and West Ham gasworks housing blocks on OS VIII.22 / VIII.32."
+    },
+    {
+      "name": "Stanley Road north",
+      "points": [
+        [
+          322,
+          1149
+        ],
+        [
+          409,
+          1169
+        ],
+        [
+          548,
+          1189
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted residential macadam.",
+      "alignmentEvidence": "Re-traced with the jute mill and West Ham gasworks housing blocks on OS VIII.22 / VIII.32."
+    },
+    {
+      "name": "Stanley Road gasworks junction",
+      "points": [
+        [
+          552,
+          1119
+        ],
+        [
+          548,
+          1189
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted residential macadam.",
+      "alignmentEvidence": "Re-traced with the jute mill and West Ham gasworks housing blocks on OS VIII.22 / VIII.32."
+    },
+    {
+      "name": "Stanley Road gasworks frontage",
+      "points": [
+        [
+          548,
+          1189
+        ],
+        [
+          632,
+          1206
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted residential macadam.",
+      "alignmentEvidence": "Re-traced with the jute mill and West Ham gasworks housing blocks on OS VIII.22 / VIII.32."
+    },
+    {
+      "name": "Union Court",
+      "points": [
+        [
+          523,
+          1010
+        ],
+        [
+          497,
+          1048
+        ]
+      ],
+      "sheet": "22",
+      "pixelWidth": 1888,
+      "width": 3,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted residential macadam.",
+      "alignmentEvidence": "Re-traced with the jute mill and West Ham gasworks housing blocks on OS VIII.22 / VIII.32."
+    },
+    {
+      "name": "Livingstone Road",
+      "points": [
+        [
+          -510.7399959403556,
+          -372.3696918458445
+        ],
+        [
+          -465.73032636079006,
+          -352.64860025729286
+        ],
+        [
+          -318.73028823710047,
+          -255.67731063859537
+        ]
+      ],
+      "sheet": "scene",
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Interpreted residential macadam.",
+      "alignmentEvidence": "Re-traced with the jute mill and West Ham gasworks housing blocks on OS VIII.22 / VIII.32."
+    }
+  ],
+  "reviewedOriginalRows": [
+    "os-row-16",
+    "os-row-17",
+    "os-row-18",
+    "os-row-19",
+    "os-row-20",
+    "os-row-21",
+    "os-row-22-part-1",
+    "os-row-22-part-2",
+    "os-row-22-part-3",
+    "os-row-22-part-4",
+    "os-row-23",
+    "os-row-24",
+    "os-row-25-part-1",
+    "os-row-26-part-1",
+    "os-row-27",
+    "os-row-28",
+    "os-row-29",
+    "os-row-30",
+    "os-row-31",
+    "os-row-32",
+    "os-row-33",
+    "os-row-34",
+    "os-row-35",
+    "os-row-36",
+    "os-row-37",
+    "os-row-38",
+    "os-row-39-part-1",
+    "os-row-39-part-2",
+    "os-row-40-part-1",
+    "os-row-41-part-1",
+    "os-row-42-part-1",
+    "os-row-43-part-1",
+    "os-row-44-part-1",
+    "os-row-45-part-1",
+    "os-row-46",
+    "os-row-47",
+    "os-row-48-part-1",
+    "os-row-49-part-1",
+    "os-row-50",
+    "os-row-51",
+    "os-row-52",
+    "os-row-53",
+    "os-row-54-part-1",
+    "os-row-55",
+    "os-row-56-part-1",
+    "os-row-57-part-1",
+    "os-row-57-part-2",
+    "os-row-58-part-1",
+    "os-row-58-part-2",
+    "os-row-59",
+    "os-row-60",
+    "os-row-61",
+    "os-row-62-part-1",
+    "os-row-62-part-2",
+    "os-row-63-part-1",
+    "os-row-64",
+    "os-row-65",
+    "os-row-66",
+    "os-row-67",
+    "os-row-68",
+    "os-row-69-part-1",
+    "os-row-70",
+    "os-row-71-part-1",
+    "os-row-72-part-1",
+    "os-row-72-part-2",
+    "os-row-73",
+    "os-row-74",
+    "os-row-75",
+    "os-row-76",
+    "os-row-77-part-1",
+    "os-row-78",
+    "os-row-80-part-1",
+    "os-row-81",
+    "os-row-82",
+    "os-row-83",
+    "os-row-84",
+    "os-row-85-part-1",
+    "os-row-86",
+    "os-row-87",
+    "os-row-88",
+    "os-row-89",
+    "os-row-90",
+    "os-row-91",
+    "os-row-92",
+    "southwest-row-4",
+    "southwest-row-5",
+    "southwest-row-6",
+    "southwest-row-7",
+    "southwest-row-8",
+    "southwest-row-11",
+    "southwest-row-12",
+    "southwest-row-13",
+    "southwest-row-14"
+  ],
+  "individualPlotNotes": "Opposite street faces are kept as separate plots: the Livingstone/Stanley corner, William/Union/King, Richardson and the Empson/Imperial approaches do not share a rear boundary merely because their terrace axes are nearby.",
+  "removeRoadNames": [
+    "Wharton Road",
+    "School western frontage street",
+    "School frontage street"
+  ],
+  "focusedReview": {
+    "areas": [
+      "jute-mill",
+      "gasworks-housing"
+    ],
+    "addedRows": [
+      "district-biggerstaff-mill-side",
+      "district-biggerstaff-preston",
+      "district-warton-biggerstaff-return",
+      "district-warton-preston-return",
+      "district-robinson-school-side",
+      "district-carpenters-school-return",
+      "district-high-street-school-north",
+      "district-warton-high-street-return",
+      "district-union-south",
+      "district-union-north",
+      "district-union-court-east",
+      "district-union-north-east",
+      "district-william-west-return",
+      "district-stanley-junction-west",
+      "district-stanley-gasworks-east",
+      "district-stanley-triangle-south",
+      "district-stanley-triangle-west",
+      "district-livingstone-upper-south",
+      "district-livingstone-upper-north"
+    ],
+    "revisedRows": [
+      "os-row-66",
+      "os-row-68",
+      "os-row-70",
+      "os-row-71-part-1",
+      "os-row-23",
+      "os-row-24",
+      "os-row-67",
+      "os-row-69-part-1",
+      "os-row-17"
+    ],
+    "note": "Second pass after author identified missing streets and blocks. Source axes are approximate main house bodies; fitting records shifts to the registered streets. School, chapel and church grounds are not housing infill."
+  }
+}

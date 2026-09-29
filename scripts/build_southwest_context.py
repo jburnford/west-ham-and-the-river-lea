@@ -11,6 +11,7 @@ from shapely import affinity
 ROOT=Path(__file__).resolve().parents[1]
 data=json.loads((ROOT/'docs/data/ground-plan.json').read_text())
 traces=json.loads((ROOT/'data/maps/southwest-context-traces.json').read_text())
+frontages=json.loads((ROOT/'data/maps/housing-road-traces.json').read_text())
 holders={h['id']:h for h in data['neighbourhood']['holders']}
 a=np.array([[*c['pixel'],1] for c in traces['holderControls']])
 b=np.array([[holders[c['id']]['x'],holders[c['id']]['z']] for c in traces['holderControls']])
@@ -25,8 +26,14 @@ industrial_land=unary_union(list(sites.values()))
 names={s['id']:s['name'] for s in data['sites']}
 rows=[]; omitted=[]
 for i,row in enumerate(traces['rows']):
+    correction=frontages['southwestHousingCorrections'].get(f'southwest-row-{i+1}',{})
+    if correction.get('omit'):
+        omitted.append({'row':i,'reason':correction['evidence']});continue
     start,end=map(world,row['axis']);center=(start+end)/2
     width=float(np.linalg.norm(end-start));depth=row['width']*scale*np.sqrt(abs(np.linalg.det(transform[:2])))
+    if 'axis' in correction:
+        start,end=np.array(correction['axis']);center=(start+end)/2
+        width=float(np.linalg.norm(end-start));depth=correction['depth']
     angle=math.degrees(math.atan2(end[1]-start[1],end[0]-start[0]))
     footprint=affinity.translate(affinity.rotate(box(-width/2,-depth/2,width/2,depth/2),angle),*center)
     if footprint.intersects(river.buffer(2)) or footprint.intersects(railways):
@@ -38,7 +45,7 @@ for i,row in enumerate(traces['rows']):
     assert industrial_overlap<=.15
     rows.append({'id':f'southwest-row-{i+1}','area':row['area'],'x':round(float(center[0]),2),'z':round(float(center[1]),2),
                  'width':round(width,2),'depth':round(float(depth),2),'rotation':round(-angle,2),'wallHeight':6.4,
-                 'bays':max(2,round(width/5.2)), 'evidence':'Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted.'})
+                 'bays':max(2,round(width/5.2)), 'evidence':correction.get('evidence','Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted.')})
 
 ranges=[]
 for site_id in traces['industrialSites']:
@@ -70,6 +77,8 @@ for site_id in traces['industrialSites']:
         assert site.covers(candidate) and not candidate.intersects(river)
 
 result={'source':traces['source'],'transform':transform.tolist(),'controlResidualMetres':round(residual,3),
+        'housingRevisionSource':'data/maps/housing-road-traces.json',
+        'housingMapSource':frontages['southwestMapSource'],
         'registrationLimit':'Residual measures fit to the existing holder model only, not accuracy of historical sheet overlays. Historical building positions may differ by tens of metres.',
         'rows':rows,'industrialRanges':ranges,'omittedRows':omitted}
 (ROOT/'docs/data/southwest-context.json').write_text(json.dumps(result,indent=2)+'\n')

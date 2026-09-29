@@ -39,7 +39,10 @@ for i,h in enumerate(context['holders']):
     for other in context['holders'][i+1:]:
         assert Point(h['x'],h['z']).distance(Point(other['x'],other['z'])) > h['radius']+other['radius'], 'Holder studies must not overlap'
 water = unary_union([geometry(f) for f in data['rivers']])
-assert len(context['terraces']) == 92
+represented={r.get('sourceRowId',r['id']) for r in context['terraces']}
+omitted={r['id'] for r in context.get('omittedTerraces',[])}
+assert represented | omitted == {f'os-row-{i}' for i in range(1,93)}
+assert not represented & omitted
 assert context['registrationChecks']['overview']['rmsTargetPixels'] < 2
 for row in context['terraces']+context['houses']:
     footprint = Polygon(row['footprint'])
@@ -49,7 +52,9 @@ for row in context['terraces']+context['houses']:
         assert footprint.intersection(Polygon(exclusion['footprint'])).area < 1, (row['id'],exclusion['name'])
 sewer=context['sewer']
 route=LineString(sewer['route'])
-assert route.length > 3500 and route.distance(Point(0,0)) < .1
+correction=json.loads((ROOT/'data/maps/sewer-high-street.json').read_text())
+assert sewer['route'][:len(correction['westernRoute'])] == correction['westernRoute']
+assert route.length > 3000 and route.distance(Point(0,0)) < .1
 assert sewer['height'] == 7.4
 for triangle in sewer['banks']:
     assert all(0 <= y <= 7.4 for x,y,z in triangle)

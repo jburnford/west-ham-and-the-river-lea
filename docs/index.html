@@ -68,10 +68,24 @@
           </div>
         </div>
 
+        <div class="travel" aria-label="Explore the district">
+          <button id="travel-toggle" disabled>Fly over the district</button>
+          <label for="destination">Fly to</label>
+          <select id="destination" disabled><option value="">Choose an area or factory…</option></select>
+          <label class="footprint-switch"><input id="regional-footprints" type="checkbox" checked> Building plans · 1891–96</label>
+          <details class="tide-controls">
+            <summary>Tide · <output id="tide-state">Low water</output></summary>
+            <label for="tide-level">Water level</label>
+            <input id="tide-level" type="range" min="0" max="100" step="1" value="0" disabled aria-describedby="tide-note">
+            <div class="tide-extremes" aria-hidden="true"><span>Low</span><span>High</span></div>
+            <button id="tide-play" type="button" aria-pressed="false" disabled>Play tide</button>
+            <p id="tide-note">90-second cycle · illustrative levels. Old Lea above the lock and marsh ditches stay steady.</p>
+          </details>
+        </div>
         <div class="hud hud-bottom">
-          <p id="controls-help" class="hint">Drag or arrow keys to look · <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or the pad to walk the bridge</p>
+          <p id="controls-help" class="hint">Drag or arrow keys to look · <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> to move · <kbd>Q</kbd>/<kbd>E</kbd> lower / higher when flying</p>
           <div class="controls">
-            <div class="walk" id="bridge-controls" aria-label="Move on the bridge">
+            <div class="walk" id="bridge-controls" aria-label="Move through the scene">
               <output id="walk-position" aria-live="off">South side</output>
               <div class="pad" role="group" aria-label="Move relative to your view">
                 <button data-walk="forward" aria-label="Step forward" title="Step forward (W)" disabled>↑</button>
@@ -79,9 +93,17 @@
                 <button data-walk="back" aria-label="Step backward" title="Step backward (S)" disabled>↓</button>
                 <button data-walk="right" aria-label="Step right" title="Step right (D)" disabled>→</button>
               </div>
-              <div class="sides" role="group" aria-label="Cross to the other side">
+              <div class="sides" id="bridge-sides" role="group" aria-label="Cross to the other side">
                 <button data-side="north" disabled>North side</button>
                 <button data-side="south" disabled>South side</button>
+              </div>
+              <div id="flight-controls" hidden>
+                <div class="sides" role="group" aria-label="Flying height">
+                  <button data-walk="down" title="Lower (Q)" disabled>Lower</button>
+                  <button data-walk="up" title="Higher (E)" disabled>Higher</button>
+                </div>
+                <label for="travel-speed">Speed</label>
+                <select id="travel-speed"><option value="12">Slow</option><option value="40" selected>Cruise</option><option value="100">Fast</option><option value="300">Regional</option></select>
               </div>
             </div>
             <div class="tools">
@@ -163,8 +185,8 @@
         <section class="step step-explore" id="chapter-explore" data-stop="explore">
           <article class="card card-explore">
             <p class="eyebrow"><span>07</span>Look for yourself</p>
-            <h2>Walk the crossing</h2>
-            <p>The view is yours now. Drag to look around, use the pad or <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> to move within the walkway, and cross to the other parapet. The map shows where you are standing.</p>
+            <h2>Explore the district</h2>
+            <p>Choose an area or factory from “Fly to”, then use the pad or <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> to move. Drag to look around. Use Higher / Lower or <kbd>E</kbd> / <kbd>Q</kbd> to change height. You can fly across the landscape and through buildings; this is a viewing tool. Reset returns you to the bridge.</p>
             <div class="card-actions">
               <button type="button" data-side="north" disabled>North parapet</button>
               <button type="button" data-side="south" disabled>South parapet</button>
@@ -198,6 +220,7 @@
           <p class="evidence-lede"><strong>You are on the Northern Outfall Sewer crossing.</strong> River edges and factory plots come from the supplied historical GIS. Building shapes, heights and the bridge deck are provisional. Nothing here is a photograph: every surface is modelled, and every estimate is recorded.</p>
         </div>
         <div class="evidence-grid">
+          <div class="evidence-item"><h3>Watching the tide</h3><p>The Tide control raises and lowers water through an illustrative range, exposing the mud shelves and showing the lower marsh behind the riverbanks. Its 90-second cycle is a visual demonstration, not a historical tide prediction. The Old Lea above the Limehouse Cut lock stays at its retained level. Marsh ditches stay separate because their tidal connections have not been established.</p></div>
           <div class="evidence-item"><h3>A location, not yet a photograph match</h3><p>The bridge’s approximate listed grid reference, TQ 38900 83209, anchors the scene. You can move within a 48 × 11 metre rectangle inside the bridge walkway, starting near its south side. This is an exploration limit, not a measured historical bridge boundary. Its eye level, the deck alignment and all building dimensions are estimates for this sketch. We have not yet fitted the historic photographs to this camera.</p></div>
           <div class="evidence-item"><h3>A changing crossing</h3><p>The bridge was rebuilt and widened in 1900–1902. Our working period spans that change; the simple deck shown here does not claim to depict either version precisely. <a href="https://historicengland.org.uk/listing/the-list/list-entry/1392549">Historic England: sewer bridge</a>.</p></div>
           <div class="evidence-item"><h3>Maps give us the ground plan</h3><p>River and industrial-site outlines come from the author’s supplied GIS. Housing rows and six West Ham gas-holder circles are traced from inspected scans of <a href="https://maps.nls.uk/view/101201748">London VIII.32</a> and <a href="https://maps.nls.uk/view/101201733">VIII.22</a>, revised 1893 and published 1895. Their alignment uses approximate sheet bounds and still needs refinement. Mill Meads remains open, as the map shows. The brown river surface interprets exposed bed; it is not a measured low-water shoreline.</p></div>
@@ -218,13 +241,14 @@
   </main>
 
   <dialog id="map-dialog" aria-labelledby="map-title">
-    <div class="dialog-head"><div><p class="eyebrow">Find your bearings</p><h2 id="map-title">Your position on the bridge</h2></div><button data-close aria-label="Close location map">✕</button></div>
+    <div class="dialog-head"><div><p class="eyebrow">Find your bearings</p><h2 id="map-title">Explore the district</h2></div><button data-close aria-label="Close location map">✕</button></div>
+    <label class="map-scope">Map area <select id="map-scope"><option value="district">Detailed district</option><option value="region">Whole region</option></select></label>
     <div id="plan"></div>
-    <p class="small">North is up. The dot follows your position and the gold cone shows your current view. The small outlined rectangle marks where you can move. Coloured plots are industrial sites, not individual buildings. The crossing’s listed location anchors the camera; its exact position and the photograph bearings still need to be matched.</p>
+    <p class="small">North is up. Click the map to fly there; the dot and gold cone show your position and view. The wider region uses flat building outlines from 1891–96. These will gradually be replaced by 3D models. Ground beyond the detailed district is provisional while historical elevations are recorded.</p>
     <div class="legend"><span class="l-water">● Water</span><span class="l-site">■ Industrial sites</span><span class="l-house">▬ Housing rows</span><span>┄ Railway</span><span class="l-garden">■ Garden beds</span><span class="l-camera">◆ Camera</span></div>
   </dialog>
 
   <noscript><p class="no-script">The panorama needs JavaScript. The stories are still readable below the opening view; source notes are also in the project README.</p></noscript>
-  <script src="bootstrap.js"></script>
+  <script src="bootstrap.js?v=coherent-scene-1"></script>
 </body>
 </html>

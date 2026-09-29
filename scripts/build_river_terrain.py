@@ -12,6 +12,7 @@ from scipy.ndimage import distance_transform_edt, map_coordinates, gaussian_filt
 from shapely import contains_xy
 from shapely.geometry import Polygon, LineString, box
 from shapely.ops import unary_union
+from marsh_ditches import apply_sections
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'docs/data'
@@ -120,11 +121,13 @@ for _ in range(200):
 edge_distance = np.minimum.reduce([X-x[0],x[-1]-X,Z-z[0],z[-1]-Z])
 blend = smooth(0, 3, edge_distance)
 height = height*blend + (-.1)*(1-blend)
+height,ditch_mud,marsh_active=apply_sections(X,Z,height)
 
 # Depth, moisture and bank mask for physically distinct material responses.
 depth = np.clip((.06-height)/2.4, 0, 1)
 wetness = np.maximum(1-smooth(.04, .95, height), np.exp(-rill_distance*1.8)*.55*on_bed)
 sediment_coverage=on_bed.astype(float)*(1-smooth(1.2,2.4,height)*np.clip(bank_shape*bank_start,0,1))
+sediment_coverage=np.maximum(sediment_coverage,ditch_mud)
 properties = np.stack([depth, wetness, np.clip(bank_shape*bank_start,0,1), sediment_coverage],axis=-1)
 height.astype('<f4').tofile(OUT / 'river-terrain.f32')
 (np.clip(properties,0,1)*255).astype('uint8').tofile(OUT / 'river-terrain.rgba')

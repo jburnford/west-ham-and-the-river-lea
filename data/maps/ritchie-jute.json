@@ -1,0 +1,53 @@
+{
+  "siteId": 1017,
+  "source": {
+    "parcel": "Original supplied Industry_1893-95.geojson feature 1017",
+    "plan": "goad-f4-jute",
+    "earlierAccount": "crory-jute-1876"
+  },
+  "parcel": [
+    [
+      [
+        -592.931303301244,
+        -830.9676480222843
+      ],
+      [
+        -543.6537854154594,
+        -774.7761030592374
+      ],
+      [
+        -540.9606350765098,
+        -770.1755370027968
+      ],
+      [
+        -607.7791075588902,
+        -672.8728210015688
+      ],
+      [
+        -632.2463745786808,
+        -638.598491709563
+      ],
+      [
+        -666.6711869096616,
+        -666.7064059927943
+      ],
+      [
+        -705.7064768163254,
+        -701.0322645406122
+      ],
+      [
+        -659.7536540399306,
+        -766.9396063421736
+      ],
+      [
+        -606.465005224105,
+        -846.2901195408194
+      ],
+      [
+        -592.931303301244,
+        -830.9676480222843
+      ]
+    ]
+  ],
+  "interpretation": "Temporary jute stacks explicitly labelled in Goad yard. Sparse covered bale groups are typological; no permanent blanket storage inferred."
+}

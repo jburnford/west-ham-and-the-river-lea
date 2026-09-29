@@ -5,12 +5,23 @@ import numpy as np
 from pyproj import Transformer
 from shapely.geometry import Polygon, LineString, Point, MultiPoint, box
 from shapely.ops import unary_union, triangulate
-from shapely import affinity, segmentize
+from shapely import affinity, segmentize, constrained_delaunay_triangles
+from great_eastern import build_great_eastern
 
 ROOT=Path(__file__).resolve().parents[1]
 def read(path):return json.loads((ROOT/path).read_text())
 data=read('docs/data/ground-plan.json');sw=read('docs/data/southwest-context.json')
-traces=read('data/maps/road-traces.json');sheets=read('data/maps/os-neighbourhood-traces.json')['sheets']
+traces=read('data/maps/road-traces.json')
+district=read('data/maps/district-road-traces.json')
+factories=read('docs/data/factory-buildings.json')
+housing=read('data/maps/housing-road-traces.json')
+replaced={r['name'] for r in district['roads']} | set(housing['replaceNames'])
+traces['roads']=[r for r in traces['roads'] if r['name'] not in replaced]+district['roads']+housing['roads']
+housing_review=read('data/maps/district-housing-review.json')
+housing_roads=housing_review['roads']
+housing_names={r['name'] for r in housing_roads}|set(housing_review.get('removeRoadNames',[]))
+traces['roads']=[r for r in traces['roads'] if r['name'] not in housing_names]+housing_roads
+sheets=read('data/maps/os-neighbourhood-traces.json')['sheets']
 project=Transformer.from_crs(4326,27700,always_xy=True).transform
 fits={}
 for name,s in sheets.items():
@@ -19,6 +30,7 @@ for name,s in sheets.items():
     scale=np.sum(np.conjugate(a-a.mean())*(b-b.mean()))/np.sum(abs(a-a.mean())**2)
     fits[name]=(scale,b.mean()-scale*a.mean())
 def point(sheet,p,pixel_width):
+    if sheet=='scene':return p
     if sheet=='southwest':return (np.array([p[0]*3511/pixel_width,p[1]*3511/pixel_width,1])@np.array(sw['transform'])).tolist()
     width=2048 if sheet=='overview' else 1888
     u,v=[x*width/pixel_width for x in p];s=sheets[sheet]
@@ -30,8 +42,12 @@ def point(sheet,p,pixel_width):
     return [e-538900,183209-n]
 def rectangle(b):
     return affinity.translate(affinity.rotate(box(-b['width']/2,-b['depth']/2,b['width']/2,b['depth']/2),-b.get('rotation',0)),b['x'],b['z'])
-water=unary_union([Polygon(p[0],p[1:]) for r in data['rivers'] for p in r['polygons']])
-buildings=unary_union([rectangle(b).buffer(.5) for b in data['factoryStudies']+data['neighbourhood']['mappedFactories']+data['neighbourhood']['terraces']+data['neighbourhood']['houses']+sw['rows']+sw['industrialRanges']+[data['neighbourhood']['mill']]])
+water=unary_union([Polygon(p[0],p[1:]) for r in data['rivers']+factories['westContext']['rivers'] for p in r['polygons']])
+surveyed={s['id'] for s in factories['sites']}
+legacy=[b for b in data['factoryStudies']+data['neighbourhood']['mappedFactories']+sw['industrialRanges'] if b.get('siteId') not in surveyed]
+legacy+=read('docs/data/housing-detail.json')['rows']+data['neighbourhood']['houses']+[data['neighbourhood']['mill']]
+buildings=unary_union([rectangle(b).buffer(.3) for b in legacy]+[Polygon(p['outer'],p['holes']).buffer(.15) for b in factories['buildings'] for p in b['renderPolygons']])
+
 road_shapes=[];shoulders=[];paths=[];routes=[];bridges=[]
 surface_shapes={s:[] for s in ['macadam','setts','cinder']}
 explicit_decks=[]
@@ -39,7 +55,7 @@ for r in traces['roads']:
     for span in r.get('bridgeSpans',[]):
         route=[point(r['sheet'],p,r['pixelWidth']) for p in span['points']]
         line=LineString(route)
-        bridges.append({'id':span['id'],'name':r['name'],'route':route,'width':r['width'],
+        bridges.append({**{k:v for k,v in span.items() if k not in ['points']},'id':span['id'],'name':r['name'],'route':route,'width':r['width'],
                         'height':span['height'],'surface':r['surface'],'evidence':span['evidence']})
         # Keep surface triangles off the deck, including the dry gap in the river GIS.
         explicit_decks.append(line.buffer(r['width']/2+1.1,cap_style=2))
@@ -64,10 +80,25 @@ def triangles(g,max_edge=5):
     for p in getattr(g,'geoms',[g]):
         if p.geom_type!='Polygon' or p.area<.05:continue
         tolerant=p.buffer(.00001)
-        for t in triangulate(segmentize(p,max_edge)):
+        for t in constrained_delaunay_triangles(segmentize(p,max_edge)).geoms:
             if tolerant.covers(t):result.append([[round(x,3),round(z,3)] for x,z in list(t.exterior.coords)[:3]])
     return result
-# Retain the raised sewer, but let mapped streets pass under its crest.
+# High Street passes over the enclosed sewer; other openings retain the earlier
+# interpretation until their individual structures are reviewed.
+sewer=data['neighbourhood']['sewer'];sewer_line=LineString(sewer['route'])
+crossing_spec=read('data/maps/sewer-high-street.json')['crossing']
+high_street=next(r for r in routes if r['name']==crossing_spec['road'])
+street_line=LineString(high_street['route'])
+crossing=sewer_line.intersection(street_line)
+assert crossing.geom_type=='Point'
+crossing_spec={**crossing_spec,'centre':[crossing.x,crossing.y],'roadRoute':high_street['route'],'roadWidth':high_street['width']}
+street_opening=street_line.buffer(high_street['width']/2+1.1,cap_style=2)
+sewer_crest=sewer_line.buffer(sewer['crestWidth']/2,join_style=2).difference(street_opening)
+sewer_edges=[]
+for sign in [-1,1]:
+ edge=sewer_line.offset_curve(sign*7.3,join_style=2).difference(street_opening.buffer(.15))
+ for part in getattr(edge,'geoms',[edge]):
+  if part.geom_type=='LineString':sewer_edges.append(list(segmentize(part,4).coords))
 sewer_banks=[]
 road_openings=roads.buffer(1.5)
 for tri in data['neighbourhood']['sewer']['banks']:
@@ -78,7 +109,11 @@ for tri in data['neighbourhood']['sewer']['banks']:
     for cut in triangles(polygon.difference(road_openings),8):
         sewer_banks.append([[x,round(float(np.dot([x,z,1],coefficients)),3),z] for x,z in cut])
 railways=[]
+branch_connection=read('data/maps/woolwich-northern-connection.json')
 for r in data['neighbourhood']['railways']:
+    if r['name']=='Great Eastern Railway, Woolwich branch':
+        r={**r,'route':[branch_connection['existingBranchStart'],*r['route'][1:]],
+           'evidence':r['evidence']+' '+branch_connection['alignmentNote']}
     line=LineString(r['route']);height=5.5
     # The rail deck spans the gaps; earth slopes stop at water and streets below.
     openings=water.buffer(2).union(roads.buffer(2))
@@ -104,9 +139,16 @@ for r in data['neighbourhood']['railways']:
     for part in getattr(cuts,'geoms',[cuts]):
         if part.geom_type=='LineString' and part.length>1:crossings.append(list(part.coords))
     railways.append({**r,'formationHeight':height,'embankment':mesh,'crossings':crossings,'evidence':r['evidence']+' Raised formation at 5.5 m above local marsh datum, side slopes and bridge details interpreted from author direction; not surveyed levels.'})
-result={'sources':'data/maps/road-traces.json; OS housing registration; southwest holder registration',
+railways.append(build_great_eastern(water,roads,buildings,sewer))
+from woolwich_connection import build_woolwich_connection
+branch_road_clearance=unary_union([LineString(r['route']).buffer(r['width']/2) for r in routes])
+railways.append(build_woolwich_connection(water,branch_road_clearance,buildings,railways[-1]))
+result={'sources':'data/maps/road-traces.json; data/maps/district-road-traces.json; data/maps/great-eastern-mainline.json; OS housing registration; southwest holder registration',
         'limitations':'Centrelines approximate; widths, paving, railway levels and bridge structures interpreted. Registration can differ by tens of metres. Buildings and waterways clipped out of road surface; named mapped crossings bridged separately.',
         'roads':routes,'roadTriangles':triangles(roads),'shoulderTriangles':triangles(shoulder),'pathTriangles':triangles(path),'roadBridges':bridges,'railways':railways,'sewerBanks':sewer_banks}
+result['sewerHighStreet']=crossing_spec
+result['sewerCrestTriangles']=triangles(sewer_crest,4)
+result['sewerRailEdges']=sewer_edges
 remaining=roads
 result['roadSurfaces']={}
 for kind in ['setts','macadam','cinder']:
@@ -127,6 +169,10 @@ assert not span_line.buffer(mill_span['width']/2,cap_style=2).intersects(rectang
 assert roads.intersection(deck_exclusion).area<.01
 road_mesh_area=sum(Polygon(t).area for t in result['roadTriangles'])
 assert abs(road_mesh_area-roads.area)/roads.area<.002,(road_mesh_area,roads.area)
+result['districtSources']=district['sources']
+result['districtNotes']=district['notes']
+result['housingSources']=housing['sources']
+result['housingNotes']='Street-facing envelopes and junction breaks audited together. Rear plots are not treated as lanes. Widths and facades remain approximate; see housing-road-traces.json for corrections and omissions.'
 assert all(r['formationHeight']>4 for r in railways)
 assert all(math.isfinite(v) for r in railways for t in r['embankment'] for p in t for v in p)
 (ROOT/'docs/data/infrastructure.json').write_text(json.dumps(result,separators=(',',':'))+'\n')

@@ -2,12 +2,20 @@
 // terrain and infrastructure are Astra's modules, used unchanged.
 import * as THREE from './vendor/three/three.module.js';
 import { photoDetails } from './photo-details.js';
+import { factoryBuildings } from './factory-buildings.js';
+import { factoryYards } from './factory-yards.js';
+import { housingDetails } from './housing.js';
+import { regionalFootprints } from './regional-footprints.js';
+import { wallRiverVista } from './wall-river-vista.js';
+import { sewerSurfaceHeight } from './sewer-levels.js';
 import { realism } from './realism.js';
 import { lighting } from './lighting.js';
 import { infrastructure } from './infrastructure.js';
 import { mappedTrees } from './mapped-trees.js';
 import { loadTerrain, terrainDetails } from './terrain-details.js';
-import { createBridgeWalker } from './bridge-movement.js';
+import { loadRiverNetwork, riverNetwork } from './river-network.js';
+import { tideControls } from './tides.js';
+import { createDistrictNavigator, districtViews, factoryViews, viewPose } from './district-navigation.js';
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -36,7 +44,7 @@ const poses = {
 const state = { ...poses.arrival };
 let activeStop = 'hero', pendingArrival = true;
 
-let renderer, scene, camera, data, walker, surfaces;
+let renderer, scene, camera, data, walker, surfaces, tide, regionalPlans;
 const plans = [];
 const host = $('#panorama');
 
@@ -70,7 +78,7 @@ const header = $('#site-header'), hero = $('#hero');
 function dismissHero() { hero.classList.add('is-dismissed'); }
 $('#hero-close').addEventListener('click', dismissHero);
 function activate(id) {
-  if (id === activeStop) return;
+  if (walker?.mode === 'district' || id === activeStop) return;
   activeStop = id;
   $$('.step').forEach(s => s.classList.toggle('is-active', s.dataset.stop === id));
   $$('[data-chapter]').forEach(a => { if (a.dataset.chapter === id) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
@@ -99,10 +107,55 @@ addEventListener('scroll', onScroll, { passive: true }); onScroll();
 /* ---------- Controls ---------- */
 function resetView() { stopWalking(); walker?.reset(); if (activeStop === 'hero') hero.classList.remove('is-dismissed'); goTo(poses[activeStop] || poses.hero, 900); }
 $('#reset').addEventListener('click', resetView);
+$$('[data-chapter]').forEach(link => link.addEventListener('click', () => {
+  if (walker?.mode === 'district') resetView();
+}));
 $('#zoom-in').addEventListener('click', () => { userInteracted(); state.fov = Math.max(30, state.fov - 8); update(); });
 $('#zoom-out').addEventListener('click', () => { userInteracted(); state.fov = Math.min(90, state.fov + 8); update(); });
 
+const destinations = new Map();
+function travelTo(view) {
+  if (!renderer || !walker) return;
+  stopWalking(); userInteracted();
+  walker.flyTo(view.position);
+  Object.assign(state, view.target ? viewPose(walker.world(), view.target) : { pitch: -35, fov: 62 });
+  if (view.fov) state.fov = view.fov;
+  update(); host.focus({ preventScroll: true });
+}
+function populateDestinations() {
+  const bridgeNames = { 'bow-bridge': 'Bow Bridge', 'pegshole-bridge': 'Pegshole Bridge', 'st-thomas-bridge': 'St Thomas’s Bridge', 'st-michaels-bridge': 'St Michael’s / Harrow Bridge', 'channelsea-high-street-bridge': 'Channelsea Bridge — High Street', 'three-mills-lea-bridge': 'Three Mills Bridge', 'abbey-mill-crossing': 'Abbey Mill bridge' };
+  const bridgeViews = data.infrastructure.roadBridges.map(b => {
+    const a = b.route[0], z = b.route.at(-1), x = (a[0] + z[0])/2, y = (a[1] + z[1])/2;
+    return { id: b.id, name: (bridgeNames[b.id] || b.name) + (b.provisional ? ' (provisional connection)' : ''), position: [x - 60, 28, y + 70], target: [x, b.height/2, y] };
+  });
+  for (const [label, views] of [['Areas', districtViews], ['Factories', factoryViews(data.factoryBuildings)], ['Bridges', bridgeViews]]) {
+    const group = document.createElement('optgroup'); group.label = label;
+    for (const view of views) {
+      destinations.set(view.id, view);
+      const option = document.createElement('option'); option.value = view.id; option.textContent = view.name;
+      group.append(option);
+    }
+    $('#destination').append(group);
+  }
+}
+$('#destination').addEventListener('change', e => {
+  const view = destinations.get(e.target.value);
+  if (view) travelTo(view);
+});
+$('#regional-footprints').addEventListener('change',e=>{
+  regionalPlans?.setVisible(e.target.checked);
+  $$('.regional-building-plan').forEach(image=>image.style.display=e.target.checked?'':'none');
+});
+$('#travel-toggle').addEventListener('click', () => {
+  if (walker?.mode === 'district') resetView();
+  else travelTo({ position: [walker.world()[0], 100, walker.world()[2]] });
+});
+
 const dialog = $('#map-dialog');
+$('#map-scope').addEventListener('change', e => {
+  const plan=plans.find(p=>p.labels);
+  if(plan) setPlanScope(plan,e.target.value==='region');
+});
 for (const id of ['#map-open', '#map-open-2', '#minimap']) $(id).addEventListener('click', () => { stopWalking(); dialog.showModal(); });
 dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', e => {
@@ -113,27 +166,29 @@ dialog.addEventListener('click', e => {
 
 let drag;
 const held = new Set();
-const walkingKeys = { KeyW: 'forward', KeyA: 'left', KeyS: 'back', KeyD: 'right' };
+const walkingKeys = { KeyW: 'forward', KeyA: 'left', KeyS: 'back', KeyD: 'right', KeyE: 'up', KeyQ: 'down' };
 let walkFrame = 0, lastWalkTime = 0;
 function moveStep(distance) {
   if (!walker || !renderer || !held.size) return;
   const forward = Number(held.has('forward')) - Number(held.has('back'));
   const right = Number(held.has('right')) - Number(held.has('left'));
   const magnitude = Math.hypot(forward, right);
-  if (!magnitude) return;
+  const vertical = Number(held.has('up')) - Number(held.has('down'));
+  if (!magnitude && !vertical) return;
+  const divisor = Math.max(1, magnitude);
   const before = walker.world(), yaw = state.yaw * rad;
-  walker.move((Math.sin(yaw) * forward + Math.cos(yaw) * right) * distance / magnitude,
-              (-Math.cos(yaw) * forward + Math.sin(yaw) * right) * distance / magnitude);
+  walker.move((Math.sin(yaw) * forward + Math.cos(yaw) * right) * distance / divisor,
+              (-Math.cos(yaw) * forward + Math.sin(yaw) * right) * distance / divisor, vertical * distance);
   if (walker.world().some((v, i) => v !== before[i])) update();
 }
 function walkTick(time) {
   walkFrame = 0;
   if (!held.size || !renderer) return;
-  moveStep(Math.min((time - lastWalkTime) / 1000, .05) * 3);
+  moveStep(Math.min((time - lastWalkTime) / 1000, .05) * (walker.mode === 'district' ? Number($('#travel-speed').value) : 3));
   lastWalkTime = time; walkFrame = requestAnimationFrame(walkTick);
 }
 function startWalking(direction) {
-  if (!renderer || held.has(direction)) return;
+  if (!renderer || held.has(direction) || (walker.mode === 'bridge' && ['up', 'down'].includes(direction))) return;
   userInteracted();
   held.add(direction); moveStep(.5);
   $(`[data-walk="${direction}"]`).dataset.active = 'true';
@@ -171,11 +226,12 @@ host.addEventListener('pointermove', e => {
   interruptTween();
   state.yaw -= (e.clientX - drag.x) * 0.14;
   // On touch outside explore mode the browser owns vertical movement (page scroll).
-  if (!drag.touch || document.body.classList.contains('is-explore')) state.pitch += (e.clientY - drag.y) * 0.12;
+  if (!drag.touch || walker?.mode === 'district' || document.body.classList.contains('is-explore')) state.pitch += (e.clientY - drag.y) * 0.12;
   drag.x = e.clientX; drag.y = e.clientY; update();
 });
 for (const event of ['pointerup', 'pointercancel', 'lostpointercapture']) host.addEventListener(event, () => { drag = null; });
-host.addEventListener('keydown', e => {
+function navigationKeydown(e) {
+  if (e.target.closest('select, input')) return;
   if (e.altKey || e.ctrlKey || e.metaKey) return;
   if (walkingKeys[e.code]) { e.preventDefault(); startWalking(walkingKeys[e.code]); return; }
   const actions = { ArrowLeft: () => state.yaw -= 5, ArrowRight: () => state.yaw += 5,
@@ -183,19 +239,29 @@ host.addEventListener('keydown', e => {
     '+': () => state.fov -= 5, '=': () => state.fov -= 5, '-': () => state.fov += 5,
     Home: resetView };
   if (actions[e.key]) { e.preventDefault(); if (e.key !== 'Home') userInteracted(); else interruptTween(); actions[e.key](); update(); }
-});
+}
+host.addEventListener('keydown', navigationKeydown);
+$('#bridge-controls').addEventListener('keydown', navigationKeydown);
 
 /* ---------- Render + readouts ---------- */
 const rose = $('#rose'), bearing = $('#bearing');
 function update() {
   state.yaw = (state.yaw % 360 + 360) % 360;
-  state.pitch = Math.max(-55, Math.min(40, state.pitch));
+  state.pitch = Math.max(-85, Math.min(75, state.pitch));
+  const flying = walker?.mode === 'district';
+  document.body.classList.toggle('is-roaming', Boolean(flying));
+  $('#flight-controls').hidden = !flying;
+  $('#bridge-sides').hidden = Boolean(flying);
+  $('#travel-toggle').textContent = flying ? 'Return to the bridge' : 'Fly over the district';
   state.fov = Math.max(30, Math.min(90, state.fov));
   const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
   bearing.textContent = `${directions[Math.round(state.yaw / 45) % 8]} · ${Math.round(state.yaw)}°`;
   rose.style.transform = `rotate(${-state.yaw}deg)`;
   if (camera && renderer) {
     camera.position.fromArray(walker.world());
+    regionalPlans?.update(camera);
+    if(scene.fog)scene.fog.density=.00065/(1+Math.max(0,camera.position.y-400)/260);
+    camera.near=Math.max(.15,camera.position.y/100);
     camera.fov = state.fov; camera.updateProjectionMatrix();
     camera.lookAt(camera.position.clone().add(new THREE.Vector3(
       Math.sin(state.yaw * rad) * Math.cos(state.pitch * rad), Math.sin(state.pitch * rad),
@@ -209,19 +275,34 @@ function update() {
     const a = state.yaw * rad - halfAngle, b = state.yaw * rad + halfAngle, r = 420;
     const [cx, _, cz] = walker.world();
     for (const plan of plans) {
+      if(!plan.labels)setPlanScope(plan,cx < -1650 || cx > 1300 || cz < -1350 || cz > 1600);
       plan.cone.setAttribute('d', `M${cx},${cz} L${cx + Math.sin(a) * r},${cz - Math.cos(a) * r} A${r},${r} 0 0 1 ${cx + Math.sin(b) * r},${cz - Math.cos(b) * r} Z`);
       plan.marker.setAttribute('cx', cx); plan.marker.setAttribute('cy', cz);
       plan.label?.setAttribute('x', cx + 25); plan.label?.setAttribute('y', cz - 22);
     }
     const p = walker.snapshot(), side = p.across > 2 ? 'South side' : p.across < -2 ? 'North side' : 'Centre';
-    $('#walk-position').textContent = `${side} · ${Math.round(Math.abs(p.along))} m from centre`;
+    $('#walk-position').textContent = flying ? `Flying · height ${Math.round(walker.world()[1])} m` : `${side} · ${Math.round(Math.abs(p.along))} m from centre`;
+    if (!flying) $('#destination').value = '';
     $$('[data-side]').forEach(b => b.setAttribute('aria-pressed', String(Math.abs(p.across - (b.dataset.side === 'north' ? -p.limits.across : p.limits.across)) < .01)));
   }
   // Read-only diagnostic for browser checks (same shape as the docs/ build, plus narrative state).
-  window.panoramaReview = { ...state, camera: camera?.position.toArray(), ready: Boolean(renderer), quality: lite ? 'lite' : 'full',
+  window.panoramaReview = { ...state, revision: window.sceneRevision, camera: camera?.position.toArray(), ready: Boolean(renderer), quality: lite ? 'lite' : 'full',
+    destinationCount: destinations.size,
     activeStop, tweening: Boolean(tweenFrame), movement: walker?.snapshot(),
     reflection: surfaces?.reflectionStats, terrain: data?.terrain?.review, lighting: scene?.userData.lighting,
     infrastructure: scene?.userData.infrastructure, mappedTrees: scene?.userData.mappedTrees,
+    riverNetwork: scene?.userData.riverNetwork,
+    tide: tide?.snapshot(),
+    tideObjects: scene?.userData.tideObjects,
+    gardens: scene?.userData.gardenReview,
+    factoryBuildings: scene?.userData.factoryBuildings,
+    factoryYards: scene?.userData.factoryYards,
+    housing: scene?.userData.housingDetails,
+    regionalFootprints: regionalPlans?.stats,
+    railConnections: scene?.userData.railConnections,
+    greatEastern: scene?.userData.greatEastern,
+    highStreetFrontages: scene?.userData.highStreetFrontages,
+    wallRiverVista: scene?.userData.wallRiverVista,
     stationStudy: scene?.userData.stationStudy,
     triangles: renderer?.info.render.triangles, drawCalls: renderer?.info.render.calls };
 }
@@ -230,30 +311,60 @@ function update() {
 function planPath(polygons) {
   return polygons.map(poly => poly.map(ring => ring.map((p, i) => `${i ? 'L' : 'M'}${p.join(',')}`).join(' ') + 'Z').join(' ')).join(' ');
 }
+function setPlanScope(plan, regional) {
+  if(plan.regional===regional)return;
+  plan.regional=regional;
+  const [a,b,c,d]=data.regionalFootprints.bounds;
+  plan.svg.setAttribute('viewBox',regional?`${a} ${b} ${c-a} ${d-b}`:plan.viewBox);
+  plan.marker.setAttribute('r',regional?(plan.labels?65:140):plan.markerRadius);
+  plan.label?.setAttribute('font-size',regional?'90':'24');
+  if(plan.label)plan.label.style.fontSize=regional?'90px':'';
+}
 function buildPlan(container, { viewBox, labels = true, markerRadius = 8, strokeScale = 1 }) {
   const ns = 'http://www.w3.org/2000/svg';
   const svg = document.createElementNS(ns, 'svg');
   svg.setAttribute('viewBox', viewBox);
-  svg.setAttribute('role', 'img'); svg.setAttribute('aria-label', 'Plan of the crossing, housing to the north-west and north-east, West Ham gasworks to the north-west, Abbey Mills to the west and Bromley gasworks to the south-west.');
+  svg.setAttribute('role', 'img'); svg.setAttribute('aria-label', 'Historical building plans for West Ham and the surrounding region. Click the map to fly there.');
   function element(tag, attrs, text) {
     const el = document.createElementNS(ns, tag);
     Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
     if (text) el.textContent = text;
     svg.append(el); return el;
   }
-  data.rivers.forEach(r => element('path', { d: planPath(r.polygons), fill: '#9bb8b7', 'fill-rule': 'evenodd' }));
+  const region=data.regionalFootprints, [rx,rz,rx1,rz1]=region.bounds;
+  for(const file of [region.waterContext,region.overview])element('image',{
+    href:window.sceneAssetUrl?.(`./data/regional-footprints/${file}`)||`./data/regional-footprints/${file}`,
+    x:rx,y:rz,width:rx1-rx,height:rz1-rz,preserveAspectRatio:'none',
+    class:file===region.overview?'regional-building-plan':'regional-water-plan'
+  });
+  [...data.rivers, ...data.factoryBuildings.westContext.rivers].forEach(r => element('path', { d: planPath(r.polygons), fill: '#9bb8b7', 'fill-rule': 'evenodd' }));
+  for(const r of data.infrastructure.railways)if(r.northernWater)element('path',{d:planPath(r.northernWater),fill:'#9bb8b7','fill-rule':'evenodd'});
+  for(const ditch of data.riverNetwork.marshDitches.features)element('path',{d:planPath(ditch.renderPolygons),fill:'#809796','fill-rule':'evenodd'});
+  element('polygon',{points:data.stationPlan.worldFootprint.map(p=>p.join(',')).join(' '),fill:'#79634e'});
   data.sites.forEach(s => element('path', { d: planPath(s.polygons), fill: '#c1b49e', stroke: '#a8977d', 'stroke-width': strokeScale, 'fill-rule': 'evenodd' }));
+  data.infrastructure.roads.forEach(r => element('polyline', { points: r.route.map(p => p.join(',')).join(' '), fill: 'none', stroke: '#e9ddbf', 'stroke-width': r.width + 2, 'stroke-linejoin': 'round' }));
+  data.infrastructure.roadBridges.forEach(b => element('polyline', { points: b.route.map(p => p.join(',')).join(' '), fill: 'none', stroke: '#8d633e', 'stroke-width': b.width, 'stroke-linejoin': 'round' }));
   data.neighbourhood.holders.forEach(h => element('circle', { cx: h.x, cy: h.z, r: h.radius, fill: '#728c8150', stroke: '#496d61', 'stroke-width': 2 * strokeScale }));
   [...data.neighbourhood.houses, ...data.neighbourhood.terraces].forEach(h => element('polygon', { points: h.footprint.map(p => p.join(',')).join(' '), fill: '#9e6851' }));
   data.neighbourhood.mappedFactories.forEach(h => element('polygon', { points: h.footprint.map(p => p.join(',')).join(' '), fill: '#79634e' }));
-  data.neighbourhood.garden.beds.forEach(b => element('rect', { x: b.x - b.width / 2, y: b.z - b.depth / 2, width: b.width, height: b.depth, fill: '#789069' }));
-  data.neighbourhood.railways.forEach(r => element('polyline', { points: r.route.map(p => p.join(',')).join(' '), fill: 'none', stroke: '#4a4e4c', 'stroke-width': 5 * strokeScale, 'stroke-dasharray': `${10 * strokeScale} ${4 * strokeScale}` }));
+  data.neighbourhood.garden.beds.forEach(b => element('rect', { x: b.x - b.width / 2, y: b.z - b.depth / 2, width: b.width, height: b.depth, transform:`rotate(${b.rotation||0} ${b.x} ${b.z})`, fill: '#789069' }));
+  data.infrastructure.railways.forEach(r => element('polyline', { points: r.route.map(p => p.join(',')).join(' '), fill: 'none', stroke: '#4a4e4c', 'stroke-width': 5 * strokeScale, 'stroke-dasharray': `${10 * strokeScale} ${4 * strokeScale}` }));
   element('polyline', { points: data.neighbourhood.sewer.route.map(p => p.join(',')).join(' '), fill: 'none', stroke: '#68786c', 'stroke-width': 15 });
   element('polygon', { points: walker.corners().map(p => p.join(',')).join(' '), fill: '#f5f2e9', stroke: '#ad792f', 'stroke-width': 2 * strokeScale });
+  data.factoryBuildings.buildings.forEach(b => b.renderPolygons.forEach(p => element('path', { d: planPath([[p.outer, ...p.holes]]), fill: '#79634e', 'fill-rule': 'evenodd' })));
+  data.highStreetFrontages.buildings.forEach(b => b.renderPolygons.forEach(p => element('path', { d: planPath([[p.outer, ...p.holes]]), fill: '#9e6851', 'fill-rule': 'evenodd' })));
+  const bank = data.highStreetFrontages.vista.bank;
+  element('path', { d: bank.samples.map(([x,z],i) => `${i?'L':'M'}${x+bank.pathLandOffset},${z}`).join(' '), fill: 'none', stroke: '#af9879', 'stroke-width': bank.pathWidth });
+  for(const c of data.highStreetFrontages.vista.connections)element('polyline',{points:c.route.map(([x,y,z])=>`${x},${z}`).join(' '),fill:'none',stroke:'#af9879','stroke-width':c.width});
   const cone = element('path', { fill: '#bb8d3540', stroke: '#ad792f', 'stroke-width': 2 * strokeScale });
   const marker = element('circle', { cx: 0, cy: 0, r: markerRadius, fill: '#233d3b', stroke: '#f5f2e9', 'stroke-width': 3 * strokeScale });
   let label;
   if (labels) {
+    element('text', { x: -1040, y: 155 }, 'Bow Bridge');
+    element('text', { x: -690, y: -265, transform: 'rotate(-51 -690 -265)' }, 'High Street');
+    element('text', { x: -850, y: -460 }, 'City Mills');
+    element('text', { x: -1050, y: 110 }, 'Sugar House Lane');
+    element('text', { x: -790, y: 470 }, 'Three Mills');
     element('text', { x: -45, y: -80 }, 'Corn mill');
     label = element('text', { x: 25, y: -22 }, 'You are here');
     for (const [x, z, name, dx, dz] of [[-185, -13, 'Abbey Mills', -205, -65], [-311, 650, 'Bromley gasworks', 30, 130], [-92, -117, 'Abbey Lane houses', 30, 0], [-230, -320, 'West Ham gasworks', -230, -100]]) {
@@ -267,8 +378,16 @@ function buildPlan(container, { viewBox, labels = true, markerRadius = 8, stroke
     element('path', { d: 'M230,900 L430,900 M230,890 L230,910 M430,890 L430,910', stroke: '#233d3b', 'stroke-width': 3, fill: 'none' });
     element('text', { x: 260, y: 940 }, '200 metres');
   }
+  if (labels) {
+    svg.addEventListener('click', e => {
+      if (!renderer) return;
+      const point = new DOMPoint(e.clientX, e.clientY).matrixTransform(svg.getScreenCTM().inverse());
+      dialog.close();
+      travelTo({ position: [point.x, Math.max($('#map-scope').value==='region'?500:80, walker.world()[1]), point.y] });
+    });
+  }
   container.append(svg);
-  plans.push({ cone, marker, label });
+  plans.push({ cone, marker, label, svg, viewBox, labels, markerRadius, regional:false });
 }
 
 /* ---------- Scene (unchanged construction from docs/app.js) ---------- */
@@ -278,18 +397,13 @@ function buildScene() {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, lite ? 1 : 1.75));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   scene = new THREE.Scene();
-  camera = new THREE.PerspectiveCamera(state.fov, 1, 0.15, 3200);
+  camera = new THREE.PerspectiveCamera(state.fov, 1, 0.15, 18000);
   camera.position.fromArray(walker.world());
   scene.userData.lighting = lighting(THREE, renderer, scene, lite ? { shadowMapSize: 1024, softShadows: false } : {});
   surfaces = realism(THREE, renderer, scene, data, lite ? { reflectionWidth: 256, reflectionHeight: 192 } : {});
   const materials = surfaces.materials;
   let seed = 73;
   const random = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
-  const groundShape = new THREE.Shape([new THREE.Vector2(-2750, -2750), new THREE.Vector2(2750, -2750), new THREE.Vector2(2750, 2750), new THREE.Vector2(-2750, 2750)]);
-  const [tx0, tz0, tx1, tz1] = data.terrain.bounds;
-  groundShape.holes.push(new THREE.Path([[tx0, -tz0], [tx0, -tz1], [tx1, -tz1], [tx1, -tz0]].map(([x, y]) => new THREE.Vector2(x, y))));
-  const ground = new THREE.Mesh(new THREE.ShapeGeometry(groundShape), materials.ground);
-  ground.rotation.x = -Math.PI / 2; ground.position.y = -0.1; scene.add(ground);
   function surface(polygons, material, y) {
     for (const rings of polygons) {
       const shape = new THREE.Shape(rings[0].map(([x, z]) => new THREE.Vector2(x, -z)));
@@ -298,9 +412,20 @@ function buildScene() {
       mesh.rotation.x = -Math.PI / 2; mesh.position.y = y; scene.add(mesh);
     }
   }
-  surface(data.terrain.outsideRivers, materials.water, .06);
-  surface([[[[tx0, tz0], [tx1, tz0], [tx1, tz1], [tx0, tz1], [tx0, tz0]]]], materials.water, .06);
-  surface(data.terrain.outsideSites, materials.plot, .08);
+  surface(data.riverNetwork.baseGround, materials.land, -.1);
+  scene.userData.riverNetwork = riverNetwork({ THREE, scene, materials, data: data.riverNetwork, surfaces });
+  // Water belongs to waterways, not the rectangular boundary of a terrain tile.
+  // A blanket plane exposed a straight water seam where that tile tapered down.
+  surface(data.riverNetwork.tide.polygons, materials.water, data.riverNetwork.waterLevel);
+  const retainedIds = new Set(data.riverNetwork.retainedWaterChannelIds);
+  surface([...data.rivers,...data.factoryBuildings.westContext.rivers]
+    .filter(r=>retainedIds.has(r.id)).flatMap(r=>r.polygons),materials.water,data.riverNetwork.waterLevel);
+  surface(data.riverNetwork.marshDitches.features.flatMap(f=>f.renderPolygons),materials.water,data.riverNetwork.waterLevel);
+  for (const [x,z,rx,rz] of data.terrain.pools) {
+    const ring=Array.from({length:33},(_,i)=>[x+rx*Math.cos(i*Math.PI/16),z+rz*Math.sin(i*Math.PI/16)]);
+    surface([[ring]],materials.water,data.riverNetwork.waterLevel);
+  }
+  surface(data.riverNetwork.tide.polygons, materials.tidalWater, data.riverNetwork.tide.low);
   function box(parent, x, y, z, w, h, d, material) {
     const mesh = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), material); mesh.position.set(x, y + h / 2, z); parent.add(mesh); return mesh;
   }
@@ -313,13 +438,20 @@ function buildScene() {
     mesh.position.copy(av.add(bv).multiplyScalar(0.5)); mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), delta.normalize()); parent.add(mesh);
   }
   const terrain = terrainDetails({ THREE, scene, materials, data, box, cylinder, beam, random, density: lite ? .3 : 1 });
+  scene.userData.gardenReview = terrain.gardenReview;
+  scene.userData.factoryYards = factoryYards({THREE,scene,materials,data,level:terrain.level,box,cylinder,lite});
   scene.userData.infrastructure = infrastructure({ THREE, scene, materials, data, box, level: terrain.level });
   scene.userData.mappedTrees = mappedTrees({ THREE, scene, data, level: terrain.level, beam });
   surfaces.weather(terrain.terrainMaterial);
   data.terrain.review = { clods: terrain.clodCount, sheds: terrain.sheds, gardenBeds: data.neighbourhood.garden.beds.length, gardenAreaM2: data.neighbourhood.garden.cultivableAreaM2, vegetationTufts: terrain.vegetationCount, rills: data.terrain.rills, pools: data.terrain.pools.length, heightRange: data.terrain.heightRange };
   const detail = photoDetails({ THREE, scene, materials, box, cylinder, beam, random });
-  for (const b of data.factoryStudies) detail.factory(b);
+  const surveyedFactories = new Set(data.factoryBuildings.sites.map(s => s.id));
+  scene.userData.factoryBuildings = factoryBuildings({ THREE, scene, materials, data: data.factoryBuildings, box, cylinder, beam });
+  scene.userData.highStreetFrontages = factoryBuildings({ THREE, scene, materials, data: data.highStreetFrontages, box, cylinder, beam });
+  scene.userData.wallRiverVista = wallRiverVista({ THREE, scene, materials, data: data.highStreetFrontages.vista, box, beam });
+  for (const b of data.factoryStudies) if (!surveyedFactories.has(b.siteId)) detail.factory(b);
   for (const b of data.neighbourhood.mappedFactories) {
+    if (surveyedFactories.has(b.siteId)) continue;
     // Orient the long roof axis along the traced range; facade subdivisions are inferred.
     detail.factory({ ...b, width: b.depth, depth: b.width, rotation: b.rotation - 90, mapped: true });
   }
@@ -328,28 +460,37 @@ function buildScene() {
     const b = data.factoryStudies.find(b => b.siteId === id) || data.neighbourhood.mappedFactories.find(b => b.siteId === id);
     if (b) { cylinder(scene, b.x, 0.15, b.z, 1.5, 2.1, 36, materials.brick); cylinder(scene, b.x, 35, b.z, 1.9, 1.9, 1.4, materials.brick); }
   }
-  detail.barge(20, 49, -10, true);
-  detail.barge(25, 73, 8, true);
-  detail.barge(-26, 37, 5, false);
-  detail.barge(-35, 95, -8, true);
+  const barges = [[20,49,-10,true],[25,73,8,true],[-26,37,5,false],[-35,95,-8,true]];
+  for (const spec of barges) detail.barge(...spec);
+  surfaces.excludeBargeHolds(barges);
   detail.waterfront();
-  detail.station();
+  detail.station(data.stationPlan);
   detail.mill(data.neighbourhood.mill);
-  detail.threeMills();
-  data.neighbourhood.holders.forEach(h => detail.holder(h));
+  [...data.neighbourhood.holders.filter(h => h.siteId !== 924), ...data.factoryBuildings.holders].forEach(h => detail.holder(h));
   data.neighbourhood.houses.forEach(h => detail.houses(h));
   data.neighbourhood.terraces.forEach(h => detail.terrace(h));
   // Author-supplied southwest context: distant terraces and works around
   // Three Mills/Bromley. Row axes and industrial ranges remain approximate.
   data.southwest.rows.forEach(h => detail.terrace(h));
+  scene.userData.housingDetails = housingDetails({THREE,scene,materials,data,level:terrain.level,box});
   for (const b of data.southwest.industrialRanges) {
+    if (surveyedFactories.has(b.siteId)) continue;
     detail.factory({ ...b, width: b.depth, depth: b.width, rotation: b.rotation - 90, mapped: true });
   }
   // Continuous elevated sewer: mapped bends, interpreted bank profile and distant extensions.
   const sewer = data.neighbourhood.sewer;
-  surface(sewer.crest, materials.stone, sewer.height);
+  const cover=(x,z)=>sewerSurfaceHeight(x,z,sewer,data.infrastructure.sewerHighStreet);
+  const crestGeometry=new THREE.BufferGeometry();
+  const crestVertices=[];
+  for(const source of data.infrastructure.sewerCrestTriangles) {
+    const tri=source.map(([x,z])=>[x,cover(x,z),z]);
+    const [a,b,c]=tri;if((b[0]-a[0])*(c[2]-a[2])-(b[2]-a[2])*(c[0]-a[0])>0)tri.reverse();
+    crestVertices.push(...tri.flat());
+  }
+  crestGeometry.setAttribute('position',new THREE.Float32BufferAttribute(crestVertices,3));crestGeometry.computeVertexNormals();
+  scene.add(new THREE.Mesh(crestGeometry,materials.stone));
   const bankGeometry = new THREE.BufferGeometry();
-  const sewerBanks = data.infrastructure.sewerBanks;
+  const sewerBanks = data.infrastructure.sewerBanks.map(tri=>tri.map(([x,y,z])=>[x,y*cover(x,z)/sewer.height,z]));
   bankGeometry.setAttribute('position', new THREE.Float32BufferAttribute(sewerBanks.flat(2), 3));
   bankGeometry.setAttribute('uv', new THREE.Float32BufferAttribute(sewerBanks.flat().flatMap(([x, _, z]) => [x / 5500, -z / 5500]), 2));
   bankGeometry.computeVertexNormals(); scene.add(new THREE.Mesh(bankGeometry, materials.ground));
@@ -359,25 +500,23 @@ function buildScene() {
     group.rotation.y = -Math.atan2(dz, dx); scene.add(group); return { group, length };
   }
   for (let i = 1; i < sewer.route.length; i++) {
-    const { group, length } = routeSegment(sewer.route[i - 1], sewer.route[i]);
-    // Shallow fascia makes the spanning crest legible over channels without blocking them.
-    box(group, 0, 6.9, 0, length, .48, 15, materials.stone);
+    const a=sewer.route[i-1],b=sewer.route[i],steps=Math.ceil(Math.hypot(b[0]-a[0],b[1]-a[1])/3);
+    for(let j=0;j<steps;j++) {
+      const p=a.map((v,k)=>v+(b[k]-v)*j/steps),q=a.map((v,k)=>v+(b[k]-v)*(j+1)/steps);
+      const {group,length}=routeSegment(p,q),ha=cover(...p),hb=cover(...q);
+      // Enclosed cover remains below the carriageway at High Street.
+      group.position.y=(ha+hb)/2;group.rotation.z=Math.atan2(hb-ha,length);
+      box(group,0,-.5,0,length,.48,15,materials.stone);
+    }
   }
   // Join the parapets at bends so walking closer does not reveal gaps between segments.
-  const normals = sewer.route.slice(1).map((p, i) => {
-    const a = sewer.route[i], length = Math.hypot(p[0] - a[0], p[1] - a[1]);
-    return [-(p[1] - a[1]) / length, (p[0] - a[0]) / length];
-  });
-  for (const offset of [-7.3, 7.3]) {
-    const edge = sewer.route.map((p, i) => {
-      const a = normals[Math.max(0, i - 1)], b = normals[Math.min(i, normals.length - 1)];
-      const n = [a[0] + b[0], a[1] + b[1]], length = Math.hypot(...n); n[0] /= length; n[1] /= length;
-      const scale = offset / (n[0] * a[0] + n[1] * a[1]); return [p[0] + n[0] * scale, p[1] + n[1] * scale];
-    });
+  for (const edge of data.infrastructure.sewerRailEdges) {
     for (let i = 1; i < edge.length; i++) {
       const { group, length } = routeSegment(edge[i - 1], edge[i]);
-      box(group, 0, 8.45, 0, length, .1, .1, materials.iron);
-      for (let x = -length / 2; x < length / 2; x += 5) box(group, x, 7.4, 0, .1, 1.1, .1, materials.iron);
+      const ha=cover(...edge[i-1]),hb=cover(...edge[i]);
+      group.position.y=(ha+hb)/2;group.rotation.z=Math.atan2(hb-ha,length);
+      box(group,0,1.05,0,length,.1,.1,materials.iron);
+      box(scene,edge[i-1][0],ha,edge[i-1][1],.1,1.1,.1,materials.iron);
     }
   }
   // Static scene: combine surfaces by material so detail does not cost a draw call per window.
@@ -413,10 +552,27 @@ function buildScene() {
     geometry.computeBoundingSphere();
     surfaces.weather(material);
     const mesh = new THREE.Mesh(geometry, material);
-    mesh.castShadow = ![materials.ground, materials.water, materials.bed, materials.plot].includes(material);
+    mesh.castShadow = ![materials.ground, materials.land, materials.water, materials.tidalWater, materials.bed, materials.plot].includes(material);
     mesh.receiveShadow = true; scene.add(mesh);
   }
-  // The scene never changes after this point: release the CPU copy of every vertex
+  const tidalMeshes = [], floatingMeshes = [];
+  scene.traverse(o => {
+    if (!o.isMesh) return;
+    if (o.material === materials.tidalWater) tidalMeshes.push(o);
+    if (o.material.userData.tidalFloat) floatingMeshes.push(o);
+  });
+  tide = tideControls({ config: data.riverNetwork.tide, render: update, apply: state => {
+    for (const mesh of tidalMeshes) {
+      mesh.position.y = state.level - state.low;
+      mesh.visible = state.level > state.low + .00001;
+    }
+    for (const mesh of floatingMeshes) mesh.position.y = state.level - state.low;
+    if (scene.userData.tideObjects?.waterOffsets[0] !== state.level - state.low) renderer.shadowMap.needsUpdate = true;
+    surfaces.setTideLevel(state.level);
+    scene.userData.tideObjects = { waterOffsets: tidalMeshes.map(o=>o.position.y),
+      bargeOffsets: floatingMeshes.map(o=>o.position.y) };
+  } });
+  // Only object transforms change during the tide: release the CPU copy of every vertex
   // buffer once it has been uploaded, roughly halving the retained memory.
   const releaseArray = function () { this.array = null; };
   scene.traverse(object => {
@@ -424,10 +580,12 @@ function buildScene() {
     for (const attribute of Object.values(object.geometry.attributes)) attribute.onUpload(releaseArray);
     object.geometry.index?.onUpload(releaseArray);
   });
+  regionalPlans=regionalFootprints({THREE,scene,data:data.regionalFootprints,level:terrain.level,landMaterial:materials.land,existingGround:data.riverNetwork.baseGround,lite,render:()=>requestAnimationFrame(update)});
   host.append(renderer.domElement);
   renderer.domElement.setAttribute('aria-hidden', 'true');
   renderer.domElement.addEventListener('webglcontextlost', e => {
-    e.preventDefault(); stopWalking(); renderer = null;
+    e.preventDefault(); stopWalking(); tide?.pause(); renderer = null;
+    $('#tide-level').disabled = $('#tide-play').disabled = true;
     $$('[data-walk],[data-side]').forEach(b => b.disabled = true);
     host.classList.remove('is-ready'); stall('The 3D view paused. Reload to restore it. You can still read the stories and open the location map.'); update();
   });
@@ -460,7 +618,7 @@ function paint(fraction) {
 }
 function stall(message) { loadingText.textContent = message; loadingBox.classList.add('is-stalled'); }
 async function load(url, type = 'json') {
-  const response = await fetch(url);
+  const response = await fetch(window.sceneAssetUrl?.(url)||url,{cache:'no-store'});
   if (!response.ok) throw new Error(`${url} unavailable`);
   const declared = Number(response.headers.get('content-length')) || 0;
   progress.total += declared;
@@ -481,26 +639,60 @@ async function load(url, type = 'json') {
 update();
 try {
   loadingText.textContent = 'Fetching the ground plan';
-  const [groundPlan, terrain, southwest, infrastructureData, trees] = await Promise.all([
+  const [groundPlan, terrain, southwest, infrastructureData, trees, network, factories, frontages, yards, housing, regional, stationPlan] = await Promise.all([
     load('./data/ground-plan.json'), loadTerrain(load), load('./data/southwest-context.json'),
-    load('./data/infrastructure.json'), load('./data/mapped-trees.json')]);
+    load('./data/infrastructure.json'), load('./data/mapped-trees.json'), loadRiverNetwork(load), load('./data/factory-buildings.json'), load('./data/high-street-frontages.json'),load('./data/factory-yards.json'),load('./data/housing-detail.json'),load('./data/regional-footprints/index.json'),load('./data/abbey-station-plan.json')]);
   data = groundPlan; data.terrain = terrain; data.southwest = southwest; data.infrastructure = infrastructureData; data.mappedTrees = trees;
-  walker = createBridgeWalker(data.neighbourhood.sewer);
-  buildPlan($('#plan'), { viewBox: '-700 -950 1400 1930' });
-  buildPlan($('#minimap-plan'), { viewBox: '-620 -700 1240 1240', labels: false, markerRadius: 22, strokeScale: 3 });
+  data.riverNetwork = network;
+  data.factoryBuildings = factories;
+  data.highStreetFrontages = frontages;
+  data.factoryYards = yards;
+  data.housingDetail = housing;
+  data.regionalFootprints = regional;
+  data.stationPlan = stationPlan;
+  data.neighbourhood.terraces = housing.rows.filter(r=>r.group==='district');
+  data.southwest.rows = housing.rows.filter(r=>r.group==='southwest');
+  walker = createDistrictNavigator(data.neighbourhood.sewer);
+  populateDestinations();
+  buildPlan($('#plan'), { viewBox: '-1650 -1350 2200 2950' });
+  buildPlan($('#minimap-plan'), { viewBox: '-1650 -1350 2950 2950', labels: false, markerRadius: 22, strokeScale: 3 });
   paint(.95); loadingText.textContent = 'Building the landscape';
   await new Promise(resolve => setTimeout(resolve, 40)); // let the label paint before the synchronous build
   try {
     buildScene();
     paint(1);
-    $$('[data-walk],[data-side]').forEach(b => b.disabled = false);
+    $$('[data-walk],[data-side],#travel-toggle,#destination').forEach(b => b.disabled = false);
     // First frame is drawn by resize(); reveal it over the poster, then ease into the hero view.
     requestAnimationFrame(() => {
       host.classList.add('is-ready');
       pendingArrival = false;
-      goTo(poses[activeStop] || poses.hero, activeStop === 'hero' ? 4200 : 1800);
+      const requestedView = destinations.get(new URLSearchParams(location.search).get('view'));
+      if (requestedView) {
+        $('#destination').value = requestedView.id;
+        travelTo(requestedView);
+      } else if (!new URLSearchParams(location.search).has('film') && !new URLSearchParams(location.search).has('river-review')) {
+        goTo(poses[activeStop] || poses.hero, activeStop === 'hero' ? 4200 : 1800);
+      }
       setTimeout(() => $('#poster')?.remove(), 2400);
     });
+    if (new URLSearchParams(location.search).has('river-review')) {
+      window.riverNetworkReview = ({ position, target, fov = 48 }) => {
+        interruptTween(); stopWalking(); stepObserver.disconnect();
+        const view = new THREE.PerspectiveCamera(fov, renderer.domElement.width / renderer.domElement.height, .15, 5000);
+        view.position.fromArray(position); view.lookAt(new THREE.Vector3(...target));
+        surfaces.reflect(view); renderer.render(scene, view);
+        return renderer.domElement.toDataURL('image/png');
+      };
+    }
+    // The optional film uses the same scene, with its own unrestricted camera.
+    // Keep the ordinary bridge controls and reader experience unchanged.
+    if (new URLSearchParams(location.search).has('film')) {
+      const { installFilm } = await import('./social-film.js');
+      await installFilm({ THREE, renderer, scene, surfaces, stop: () => {
+        interruptTween(); stopWalking(); stepObserver.disconnect();
+        pendingArrival = false;
+      } });
+    }
   } catch (error) {
     renderer = null;
     stall('This browser could not open the 3D view. The still image stays, and you can explore the location map and read the stories.');

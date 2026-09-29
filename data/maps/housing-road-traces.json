@@ -1,0 +1,2403 @@
+{
+  "description": "September 26 housing frontage audit. Source-map carriageways and corrected main row envelopes share a coordinate frame. Junctions split coarse rows. Names where uncertain are descriptive; paving, widths, end houses and facade divisions remain approximate.",
+  "replaceNames": [
+    "Abbey Road",
+    "Roberts Road",
+    "Beck Road",
+    "Lucas Road",
+    "Godfrey Street",
+    "Marsh Road",
+    "Ross Road",
+    "Allwyn Road",
+    "Livingstone Road",
+    "Stanley Road",
+    "Abbey Road eastern continuation",
+    "Abbey Road eastern bend",
+    "Goods-yard eastern street",
+    "Northeastern cross street",
+    "Street along eastern works",
+    "Northern grid west side",
+    "Eastern terrace street 1",
+    "Eastern terrace street 2",
+    "Eastern terrace street 3",
+    "Eastern terrace street 4",
+    "Eastern terrace street 5",
+    "Eastern block west street",
+    "Eastern block centre street",
+    "Eastern block east street",
+    "Eastern block north street",
+    "Eastern block mid street",
+    "Eastern block southern street",
+    "Eastern outer north south street",
+    "Eastern residential cross street",
+    "St Leonard Street",
+    "Blackwall Road",
+    "Barry Street",
+    "Franklin Street",
+    "Washington Street",
+    "Jefferson Street",
+    "Sherman Street",
+    "Otis Street",
+    "Empson Street",
+    "Imperial Street",
+    "Bromley High Street",
+    "Devons Road",
+    "Bruce Road"
+  ],
+  "roads": [
+    {
+      "name": "Roberts Road",
+      "sheet": "32",
+      "points": [
+        [
+          207,
+          389
+        ],
+        [
+          298,
+          334
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Beck Road",
+      "sheet": "32",
+      "points": [
+        [
+          245,
+          441
+        ],
+        [
+          366,
+          370
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Lucas Road",
+      "sheet": "32",
+      "points": [
+        [
+          303,
+          505
+        ],
+        [
+          423,
+          417
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Godfrey Street",
+      "sheet": "32",
+      "points": [
+        [
+          233,
+          284
+        ],
+        [
+          278,
+          182
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Napier Road",
+      "sheet": "32",
+      "points": [
+        [
+          299,
+          339
+        ],
+        [
+          350,
+          248
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Ross Road",
+      "sheet": "32",
+      "points": [
+        [
+          396,
+          394
+        ],
+        [
+          446,
+          307
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Allwyn Road",
+      "sheet": "32",
+      "points": [
+        [
+          479,
+          435
+        ],
+        [
+          524,
+          375
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Livingstone Road",
+      "sheet": "32",
+      "points": [
+        [
+          390,
+          136
+        ],
+        [
+          636,
+          307
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Stanley Road",
+      "sheet": "32",
+      "points": [
+        [
+          600,
+          281
+        ],
+        [
+          626,
+          137
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Abbey Road",
+      "sheet": "32",
+      "points": [
+        [
+          1319,
+          598
+        ],
+        [
+          1319,
+          469
+        ],
+        [
+          1460,
+          381
+        ],
+        [
+          1545,
+          326
+        ],
+        [
+          1625,
+          268
+        ],
+        [
+          1670,
+          242
+        ],
+        [
+          1685,
+          211
+        ],
+        [
+          1720,
+          139
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 8,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Northern residential street 1",
+      "sheet": "22",
+      "points": [
+        [
+          1190,
+          495
+        ],
+        [
+          1575,
+          347
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Northern residential street 2",
+      "sheet": "22",
+      "points": [
+        [
+          1216,
+          558
+        ],
+        [
+          1624,
+          405
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Paul Street",
+      "sheet": "22",
+      "points": [
+        [
+          1272,
+          629
+        ],
+        [
+          1660,
+          482
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Barnby Street",
+      "sheet": "22",
+      "points": [
+        [
+          1189,
+          780
+        ],
+        [
+          1354,
+          727
+        ],
+        [
+          1690,
+          603
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Hotham Street",
+      "sheet": "22",
+      "points": [
+        [
+          1213,
+          868
+        ],
+        [
+          1367,
+          815
+        ],
+        [
+          1400,
+          815
+        ],
+        [
+          1708,
+          699
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Randal Street",
+      "sheet": "22",
+      "points": [
+        [
+          1245,
+          965
+        ],
+        [
+          1395,
+          912
+        ],
+        [
+          1440,
+          905
+        ],
+        [
+          1723,
+          804
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Canning Street",
+      "sheet": "22",
+      "points": [
+        [
+          1280,
+          1065
+        ],
+        [
+          1428,
+          1015
+        ],
+        [
+          1732,
+          912
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Leywick Street",
+      "sheet": "22",
+      "points": [
+        [
+          1305,
+          1090
+        ],
+        [
+          1470,
+          1035
+        ],
+        [
+          1700,
+          957
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Morley Street",
+      "sheet": "22",
+      "points": [
+        [
+          1325,
+          1180
+        ],
+        [
+          1480,
+          1132
+        ],
+        [
+          1690,
+          1058
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Bridge Road",
+      "sheet": "22",
+      "points": [
+        [
+          1105,
+          527
+        ],
+        [
+          1131,
+          645
+        ],
+        [
+          1162,
+          758
+        ],
+        [
+          1194,
+          856
+        ],
+        [
+          1229,
+          951
+        ],
+        [
+          1261,
+          1050
+        ],
+        [
+          1294,
+          1144
+        ],
+        [
+          1308,
+          1188
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 8,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "St Thomas Road",
+      "sheet": "22",
+      "points": [
+        [
+          1190,
+          495
+        ],
+        [
+          1230,
+          595
+        ],
+        [
+          1309,
+          709
+        ],
+        [
+          1351,
+          812
+        ],
+        [
+          1388,
+          910
+        ],
+        [
+          1429,
+          1009
+        ],
+        [
+          1476,
+          1129
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Warton Road",
+      "sheet": "22",
+      "points": [
+        [
+          1590,
+          339
+        ],
+        [
+          1650,
+          445
+        ],
+        [
+          1700,
+          592
+        ],
+        [
+          1730,
+          717
+        ],
+        [
+          1740,
+          835
+        ],
+        [
+          1740,
+          958
+        ],
+        [
+          1720,
+          1080
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 7,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Angel Lane",
+      "sheet": "22",
+      "points": [
+        [
+          1080,
+          450
+        ],
+        [
+          1110,
+          540
+        ],
+        [
+          1140,
+          645
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 7,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Angel Lane block passage",
+      "sheet": "22",
+      "points": [
+        [
+          1145,
+          514
+        ],
+        [
+          1184,
+          627
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Albion Street",
+      "sheet": "22",
+      "points": [
+        [
+          1140,
+          645
+        ],
+        [
+          1255,
+          608
+        ],
+        [
+          1290,
+          590
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "South Street",
+      "sheet": "22",
+      "points": [
+        [
+          558,
+          1041
+        ],
+        [
+          586,
+          1027
+        ],
+        [
+          684,
+          947
+        ],
+        [
+          808,
+          898
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Stanley Road north",
+      "sheet": "22",
+      "points": [
+        [
+          321,
+          1150
+        ],
+        [
+          541,
+          1177
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Western housing cross street",
+      "sheet": "22",
+      "points": [
+        [
+          394,
+          1000
+        ],
+        [
+          541,
+          1113
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "William Street",
+      "sheet": "22",
+      "points": [
+        [
+          425,
+          944
+        ],
+        [
+          558,
+          1030
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "West Street",
+      "sheet": "22",
+      "points": [
+        [
+          480,
+          884
+        ],
+        [
+          586,
+          1027
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Union Street housing grid",
+      "sheet": "22",
+      "points": [
+        [
+          552,
+          889
+        ],
+        [
+          625,
+          974
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Channelsea Road west bank",
+      "sheet": "22",
+      "points": [
+        [
+          804,
+          660
+        ],
+        [
+          808,
+          898
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Channelsea Street",
+      "sheet": "22",
+      "points": [
+        [
+          707,
+          823
+        ],
+        [
+          750,
+          916
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "High Street housing frontage",
+      "sheet": "22",
+      "points": [
+        [
+          450,
+          880
+        ],
+        [
+          555,
+          775
+        ],
+        [
+          775,
+          525
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Wharton Road",
+      "sheet": "22",
+      "points": [
+        [
+          263,
+          796
+        ],
+        [
+          361,
+          620
+        ],
+        [
+          396,
+          596
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Carpenters Road housing section",
+      "sheet": "22",
+      "points": [
+        [
+          342,
+          521
+        ],
+        [
+          439,
+          646
+        ],
+        [
+          469,
+          701
+        ],
+        [
+          506,
+          739
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "School frontage street",
+      "sheet": "22",
+      "points": [
+        [
+          307,
+          854
+        ],
+        [
+          370,
+          906
+        ],
+        [
+          488,
+          788
+        ],
+        [
+          506,
+          739
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "Western housing access street",
+      "sheet": "22",
+      "points": [
+        [
+          321,
+          1150
+        ],
+        [
+          360,
+          1027
+        ],
+        [
+          399,
+          978
+        ],
+        [
+          450,
+          880
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Eastbourne Road",
+      "sheet": "overview",
+      "points": [
+        [
+          1459,
+          307
+        ],
+        [
+          1630,
+          312
+        ],
+        [
+          1769,
+          324
+        ]
+      ],
+      "pixelWidth": 2048,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Portway",
+      "sheet": "overview",
+      "points": [
+        [
+          1419,
+          605
+        ],
+        [
+          1608,
+          545
+        ],
+        [
+          1783,
+          491
+        ],
+        [
+          1850,
+          469
+        ]
+      ],
+      "pixelWidth": 2048,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Eastern northern street 1",
+      "sheet": "overview",
+      "points": [
+        [
+          1624,
+          315
+        ],
+        [
+          1635,
+          440
+        ],
+        [
+          1650,
+          532
+        ]
+      ],
+      "pixelWidth": 2048,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Montague Road",
+      "sheet": "overview",
+      "points": [
+        [
+          1687,
+          321
+        ],
+        [
+          1699,
+          443
+        ],
+        [
+          1726,
+          508
+        ]
+      ],
+      "pixelWidth": 2048,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Harcourt Road",
+      "sheet": "overview",
+      "points": [
+        [
+          1767,
+          285
+        ],
+        [
+          1770,
+          442
+        ],
+        [
+          1783,
+          491
+        ]
+      ],
+      "pixelWidth": 2048,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Eastern southern street 1",
+      "sheet": "overview",
+      "points": [
+        [
+          1468,
+          589
+        ],
+        [
+          1515,
+          719
+        ],
+        [
+          1549,
+          794
+        ]
+      ],
+      "pixelWidth": 2048,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Eastern southern street 2",
+      "sheet": "overview",
+      "points": [
+        [
+          1537,
+          569
+        ],
+        [
+          1583,
+          686
+        ],
+        [
+          1611,
+          778
+        ]
+      ],
+      "pixelWidth": 2048,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Eastern southern street 3",
+      "sheet": "overview",
+      "points": [
+        [
+          1607,
+          545
+        ],
+        [
+          1645,
+          650
+        ],
+        [
+          1663,
+          772
+        ]
+      ],
+      "pixelWidth": 2048,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Richardson Road",
+      "sheet": "overview",
+      "points": [
+        [
+          1711,
+          513
+        ],
+        [
+          1733,
+          581
+        ],
+        [
+          1773,
+          744
+        ]
+      ],
+      "pixelWidth": 2048,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Abbey Road eastern continuation",
+      "sheet": "overview",
+      "points": [
+        [
+          1340,
+          516
+        ],
+        [
+          1419,
+          605
+        ],
+        [
+          1508,
+          820
+        ],
+        [
+          1400,
+          910
+        ]
+      ],
+      "pixelWidth": 2048,
+      "width": 8,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "Eastern southern cross street",
+      "sheet": "overview",
+      "points": [
+        [
+          1733,
+          581
+        ],
+        [
+          1852,
+          553
+        ]
+      ],
+      "pixelWidth": 2048,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+    },
+    {
+      "name": "North Street",
+      "sheet": "22",
+      "points": [
+        [
+          518,
+          932
+        ],
+        [
+          603,
+          828
+        ],
+        [
+          800,
+          655
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "King Street",
+      "sheet": "22",
+      "points": [
+        [
+          603,
+          828
+        ],
+        [
+          684,
+          947
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+    },
+    {
+      "name": "St Leonard Street",
+      "sheet": "scene",
+      "points": [
+        [
+          -973.745,
+          305.651
+        ],
+        [
+          -932.346,
+          404.062
+        ],
+        [
+          -884.849,
+          534.992
+        ],
+        [
+          -842.318,
+          647.49
+        ]
+      ],
+      "pixelWidth": 3072,
+      "sourcePixels": [
+        [
+          956,
+          285
+        ],
+        [
+          1008,
+          419
+        ],
+        [
+          1067,
+          597
+        ],
+        [
+          1120,
+          750
+        ]
+      ],
+      "sourcePixelScale": 2,
+      "sourceMosaicBounds": [
+        -1600,
+        200,
+        -600,
+        1100
+      ],
+      "width": 7,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "Carriageway on common NLS mosaic; replaces southwest screenshot registration."
+    },
+    {
+      "name": "Franklin Street",
+      "sheet": "scene",
+      "points": [
+        [
+          -964.652,
+          338.83
+        ],
+        [
+          -866.604,
+          301.998
+        ]
+      ],
+      "pixelWidth": 3072,
+      "sourcePixels": [
+        [
+          967,
+          330
+        ],
+        [
+          1100,
+          284
+        ]
+      ],
+      "sourcePixelScale": 2,
+      "sourceMosaicBounds": [
+        -1600,
+        200,
+        -600,
+        1100
+      ],
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "Carriageway on common NLS mosaic; replaces southwest screenshot registration."
+    },
+    {
+      "name": "Washington Street",
+      "sheet": "scene",
+      "points": [
+        [
+          -949.807,
+          364.425
+        ],
+        [
+          -836.292,
+          321.229
+        ]
+      ],
+      "pixelWidth": 3072,
+      "sourcePixels": [
+        [
+          986,
+          365
+        ],
+        [
+          1140,
+          311
+        ]
+      ],
+      "sourcePixelScale": 2,
+      "sourceMosaicBounds": [
+        -1600,
+        200,
+        -600,
+        1100
+      ],
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "Carriageway on common NLS mosaic; replaces southwest screenshot registration."
+    },
+    {
+      "name": "Jefferson Street",
+      "sheet": "scene",
+      "points": [
+        [
+          -940.996,
+          387.212
+        ],
+        [
+          -827.44,
+          345.501
+        ]
+      ],
+      "pixelWidth": 3072,
+      "sourcePixels": [
+        [
+          997,
+          396
+        ],
+        [
+          1151,
+          344
+        ]
+      ],
+      "sourcePixelScale": 2,
+      "sourceMosaicBounds": [
+        -1600,
+        200,
+        -600,
+        1100
+      ],
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "Carriageway on common NLS mosaic; replaces southwest screenshot registration."
+    },
+    {
+      "name": "Empson Street",
+      "sheet": "scene",
+      "points": [
+        [
+          -907.481,
+          469.496
+        ],
+        [
+          -745.975,
+          410.881
+        ]
+      ],
+      "pixelWidth": 3072,
+      "sourcePixels": [
+        [
+          1039,
+          508
+        ],
+        [
+          1258,
+          435
+        ]
+      ],
+      "sourcePixelScale": 2,
+      "sourceMosaicBounds": [
+        -1600,
+        200,
+        -600,
+        1100
+      ],
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "Carriageway on common NLS mosaic; replaces southwest screenshot registration."
+    },
+    {
+      "name": "Imperial Street",
+      "sheet": "scene",
+      "points": [
+        [
+          -888.832,
+          525.444
+        ],
+        [
+          -736.193,
+          469.297
+        ]
+      ],
+      "pixelWidth": 3072,
+      "sourcePixels": [
+        [
+          1062,
+          584
+        ],
+        [
+          1269,
+          514
+        ]
+      ],
+      "sourcePixelScale": 2,
+      "sourceMosaicBounds": [
+        -1600,
+        200,
+        -600,
+        1100
+      ],
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "Carriageway on common NLS mosaic; replaces southwest screenshot registration."
+    },
+    {
+      "name": "Abbey Road northern side street",
+      "sheet": "32",
+      "points": [
+        [
+          1618,
+          135
+        ],
+        [
+          1678,
+          207
+        ],
+        [
+          1670,
+          242
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "Source carriageway beside the otherwise isolated row; frontage checked in the common sheet pixel frame."
+    },
+    {
+      "name": "School western frontage street",
+      "sheet": "22",
+      "points": [
+        [
+          307,
+          854
+        ],
+        [
+          353,
+          786
+        ],
+        [
+          365,
+          750
+        ]
+      ],
+      "pixelWidth": 1888,
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "Source carriageway beside the otherwise isolated row; frontage checked in the common sheet pixel frame."
+    }
+  ],
+  "housingCorrections": {
+    "os-row-10": {
+      "evidence": "Building-facing envelope checked against source carriageways and garden boundaries in the frontage audit.",
+      "a": [
+        400,
+        330
+      ],
+      "b": [
+        424,
+        292
+      ],
+      "street": "Ross Road west side"
+    },
+    "os-row-11": {
+      "evidence": "Building-facing envelope checked against source carriageways and garden boundaries in the frontage audit.",
+      "a": [
+        438,
+        354
+      ],
+      "b": [
+        461,
+        319
+      ],
+      "street": "Ross Road east side"
+    },
+    "os-row-12": {
+      "evidence": "Building-facing envelope checked against source carriageways and garden boundaries in the frontage audit.",
+      "a": [
+        489,
+        396
+      ],
+      "b": [
+        512,
+        359
+      ],
+      "street": "Allwyn Road west side"
+    },
+    "os-row-13": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        433,
+        410
+      ],
+      "b": [
+        472,
+        432
+      ],
+      "street": "Abbey Lane frontage"
+    },
+    "os-row-30": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1296,
+        600
+      ],
+      "b": [
+        1623,
+        477
+      ],
+      "street": "Paul Street north side"
+    },
+    "os-row-31": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1310,
+        633
+      ],
+      "b": [
+        1633,
+        510
+      ],
+      "street": "Paul Street south side"
+    },
+    "os-row-32": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1343,
+        706
+      ],
+      "b": [
+        1649,
+        589
+      ],
+      "street": "Barnby Street north"
+    },
+    "os-row-33": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1365,
+        747
+      ],
+      "b": [
+        1664,
+        634
+      ],
+      "street": "Barnby Street south"
+    },
+    "os-row-34": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1390,
+        795
+      ],
+      "b": [
+        1685,
+        683
+      ],
+      "street": "Hotham Street north"
+    },
+    "os-row-35": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1410,
+        836
+      ],
+      "b": [
+        1700,
+        727
+      ],
+      "street": "Hotham Street south"
+    },
+    "os-row-36": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1432,
+        882
+      ],
+      "b": [
+        1710,
+        782
+      ],
+      "street": "Randal Street north"
+    },
+    "os-row-37": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1447,
+        929
+      ],
+      "b": [
+        1715,
+        839
+      ],
+      "street": "Randal Street south"
+    },
+    "os-row-38": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1470,
+        974
+      ],
+      "b": [
+        1718,
+        891
+      ],
+      "street": "Canning Street north"
+    },
+    "os-row-26": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1340,
+        1156
+      ],
+      "b": [
+        1468,
+        1115
+      ],
+      "street": "Morley Street north"
+    },
+    "os-row-28": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1480,
+        1111
+      ],
+      "b": [
+        1598,
+        1071
+      ],
+      "street": "Morley Street north"
+    },
+    "os-row-22": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        570,
+        1005
+      ],
+      "b": [
+        762,
+        886
+      ]
+    },
+    "os-row-23": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        343,
+        1134
+      ],
+      "b": [
+        531,
+        1158
+      ]
+    },
+    "os-row-69": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        406,
+        1015
+      ],
+      "b": [
+        373,
+        1088
+      ]
+    },
+    "os-row-70": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        296,
+        783
+      ],
+      "b": [
+        386,
+        644
+      ]
+    },
+    "os-row-72": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        331,
+        554
+      ],
+      "b": [
+        397,
+        633
+      ]
+    },
+    "os-row-75": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1666,
+        358
+      ],
+      "b": [
+        1683,
+        482
+      ]
+    },
+    "os-row-76": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1715,
+        367
+      ],
+      "b": [
+        1734,
+        480
+      ]
+    },
+    "os-row-77": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1746,
+        356
+      ],
+      "b": [
+        1763,
+        462
+      ]
+    },
+    "os-row-78": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1786,
+        299
+      ],
+      "b": [
+        1804,
+        455
+      ]
+    },
+    "os-row-79": {
+      "omit": true,
+      "evidence": "The previous eastern axis follows rear plots; the mapped Harcourt Road frontages are already represented by rows 77 and 78. Removed duplicate garden massing."
+    },
+    "os-row-82": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1528,
+        602
+      ],
+      "b": [
+        1559,
+        675
+      ]
+    },
+    "os-row-83": {
+      "evidence": "Building-facing envelope checked against source carriageways and garden boundaries in the frontage audit.",
+      "a": [
+        1570,
+        594
+      ],
+      "b": [
+        1602,
+        665
+      ]
+    },
+    "os-row-84": {
+      "a": [
+        1605,
+        694
+      ],
+      "b": [
+        1630,
+        765
+      ],
+      "evidence": "Main envelope re-read against the carriageways on OS VIII.22 / supplied eastern mosaic."
+    },
+    "os-row-85": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1422,
+        688
+      ],
+      "b": [
+        1491,
+        803
+      ]
+    },
+    "os-row-86": {
+      "evidence": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+      "a": [
+        1598,
+        589
+      ],
+      "b": [
+        1621,
+        649
+      ]
+    },
+    "os-row-87": {
+      "evidence": "Building-facing envelope checked against source carriageways and garden boundaries in the frontage audit.",
+      "a": [
+        1648,
+        578
+      ],
+      "b": [
+        1671,
+        638
+      ]
+    },
+    "os-row-89": {
+      "evidence": "Building-facing envelope checked against source carriageways and garden boundaries in the frontage audit.",
+      "a": [
+        1758,
+        561
+      ],
+      "b": [
+        1810,
+        548
+      ]
+    },
+    "os-row-90": {
+      "a": [
+        1713,
+        631
+      ],
+      "b": [
+        1746,
+        742
+      ],
+      "evidence": "Main envelope re-read against the carriageways on OS VIII.22 / supplied eastern mosaic."
+    },
+    "os-row-91": {
+      "a": [
+        1764,
+        620
+      ],
+      "b": [
+        1800,
+        733
+      ],
+      "evidence": "Main envelope re-read against the carriageways on OS VIII.22 / supplied eastern mosaic."
+    },
+    "os-row-92": {
+      "evidence": "Building-facing envelope checked against source carriageways and garden boundaries in the frontage audit.",
+      "a": [
+        1770,
+        601
+      ],
+      "b": [
+        1815,
+        588
+      ]
+    },
+    "os-row-64": {
+      "a": [
+        652,
+        750
+      ],
+      "b": [
+        781,
+        650
+      ],
+      "evidence": "Re-read street-facing building envelope; original row was centred on the street or rear plots."
+    },
+    "os-row-67": {
+      "a": [
+        454,
+        940
+      ],
+      "b": [
+        507,
+        981
+      ],
+      "evidence": "Re-read street-facing building envelope; original row was centred on the street or rear plots."
+    },
+    "os-row-81": {
+      "a": [
+        1498,
+        622
+      ],
+      "b": [
+        1541,
+        710
+      ],
+      "evidence": "Building-facing envelope checked against source carriageways and garden boundaries in the frontage audit."
+    },
+    "os-row-88": {
+      "a": [
+        1697,
+        550
+      ],
+      "b": [
+        1716,
+        597
+      ],
+      "evidence": "Building-facing envelope checked against source carriageways and garden boundaries in the frontage audit."
+    },
+    "os-row-47": {
+      "a": [
+        1155,
+        669
+      ],
+      "b": [
+        1178,
+        733
+      ],
+      "evidence": "Main Bridge Road frontage; earlier axis lay on the back of the terrace."
+    },
+    "os-row-65": {
+      "a": [
+        604,
+        740
+      ],
+      "b": [
+        716,
+        616
+      ],
+      "evidence": "Main envelope re-read against the carriageways on OS VIII.22 / supplied eastern mosaic."
+    },
+    "os-row-58": {
+      "sheet": "22",
+      "street": "north-west, Ivanhoe Road block",
+      "a": [
+        519,
+        856
+      ],
+      "b": [
+        587,
+        960
+      ],
+      "depth": 14,
+      "evidence": "Re-read street-facing building envelope; original row was centred on the street or rear plots."
+    },
+    "os-row-60": {
+      "a": [
+        602,
+        860
+      ],
+      "b": [
+        655,
+        938
+      ],
+      "depth": 14,
+      "evidence": "Re-traced the Union Street east / King Street west frontages; earlier parallel axes occupied shared rear plots and blocked each other."
+    },
+    "os-row-40": {
+      "a": [
+        1204,
+        797
+      ],
+      "b": [
+        1340,
+        752
+      ],
+      "evidence": "Main wall envelope corrected onto the mapped street-facing houses, clear of the carriageway."
+    },
+    "os-row-46": {
+      "a": [
+        1299,
+        1077
+      ],
+      "b": [
+        1426,
+        1034
+      ],
+      "evidence": "Main wall envelope corrected onto the mapped street-facing houses, clear of the carriageway."
+    },
+    "os-row-17": {
+      "a": [
+        467,
+        166
+      ],
+      "b": [
+        590,
+        243
+      ],
+      "evidence": "Moved the earlier rear-plot axis onto the north Livingstone Road building frontage."
+    },
+    "os-row-59": {
+      "a": [
+        575,
+        892
+      ],
+      "b": [
+        628,
+        952
+      ],
+      "depth": 14,
+      "evidence": "Mapped frontage shortened at the corner return; avoids overlapping the perpendicular end terrace."
+    },
+    "os-row-61": {
+      "a": [
+        659,
+        805
+      ],
+      "b": [
+        722,
+        897
+      ],
+      "evidence": "Mapped frontage shortened at the corner return; avoids overlapping the perpendicular end terrace."
+    },
+    "os-row-62": {
+      "a": [
+        701,
+        797
+      ],
+      "b": [
+        755,
+        872
+      ],
+      "evidence": "Mapped frontage shortened at the corner return; avoids overlapping the perpendicular end terrace."
+    },
+    "os-row-56": {
+      "a": [
+        1223,
+        520
+      ],
+      "b": [
+        1242,
+        562
+      ],
+      "evidence": "Mapped frontage shortened at the corner return; avoids overlapping the perpendicular end terrace."
+    }
+  },
+  "sources": [
+    {
+      "sheet": "32",
+      "source": "https://commons.wikimedia.org/wiki/File:London_Sheet_VIII.32_(IA_dr_london-sheet-viii32-101201748).jpg",
+      "file": "reference/neighbourhood-context/os-viii32.jpg"
+    },
+    {
+      "sheet": "22",
+      "source": "https://commons.wikimedia.org/wiki/File:London_Sheet_VIII.22_(IA_dr_london-sheet-viii22-101201733).jpg",
+      "file": "reference/neighbourhood-context/os-viii22.jpg"
+    },
+    {
+      "sheet": "overview",
+      "source": "Author-supplied OS mosaic screenshot, 23 September 2026",
+      "file": "reference/neighbourhood-context/northern-housing-overview.png"
+    }
+  ],
+  "splitHousingAtStreets": true,
+  "southwestHousingCorrections": {
+    "southwest-row-4": {
+      "axis": [
+        [
+          -950.152,
+          324.323
+        ],
+        [
+          -877.908,
+          297.105
+        ]
+      ],
+      "depth": 7,
+      "sourcePixels": [
+        [
+          987,
+          311
+        ],
+        [
+          1085,
+          277
+        ]
+      ],
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
+    },
+    "southwest-row-5": {
+      "axis": [
+        [
+          -944.519,
+          339.769
+        ],
+        [
+          -870.786,
+          312.51
+        ]
+      ],
+      "depth": 7,
+      "sourcePixels": [
+        [
+          994,
+          332
+        ],
+        [
+          1094,
+          298
+        ]
+      ],
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
+    },
+    "southwest-row-6": {
+      "axis": [
+        [
+          -938.203,
+          352.967
+        ],
+        [
+          -864.47,
+          325.709
+        ]
+      ],
+      "depth": 7,
+      "sourcePixels": [
+        [
+          1002,
+          350
+        ],
+        [
+          1102,
+          316
+        ]
+      ],
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
+    },
+    "southwest-row-7": {
+      "axis": [
+        [
+          -925.168,
+          366.727
+        ],
+        [
+          -847.714,
+          339.367
+        ]
+      ],
+      "depth": 7,
+      "sourcePixels": [
+        [
+          1019,
+          369
+        ],
+        [
+          1124,
+          335
+        ]
+      ],
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
+    },
+    "southwest-row-8": {
+      "axis": [
+        [
+          -917.765,
+          392.524
+        ],
+        [
+          -838.863,
+          363.638
+        ]
+      ],
+      "depth": 7,
+      "sourcePixels": [
+        [
+          1028,
+          404
+        ],
+        [
+          1135,
+          368
+        ]
+      ],
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
+    },
+    "southwest-row-11": {
+      "axis": [
+        [
+          -896.139,
+          448.389
+        ],
+        [
+          -809.13,
+          416.312
+        ]
+      ],
+      "depth": 7,
+      "sourcePixels": [
+        [
+          1055,
+          480
+        ],
+        [
+          1173,
+          440
+        ]
+      ],
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
+    },
+    "southwest-row-12": {
+      "axis": [
+        [
+          -888.675,
+          476.413
+        ],
+        [
+          -811.26,
+          447.568
+        ]
+      ],
+      "depth": 7,
+      "sourcePixels": [
+        [
+          1064,
+          518
+        ],
+        [
+          1169,
+          482
+        ]
+      ],
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
+    },
+    "southwest-row-13": {
+      "axis": [
+        [
+          -871.455,
+          507.144
+        ],
+        [
+          -805.866,
+          481.591
+        ]
+      ],
+      "depth": 7,
+      "sourcePixels": [
+        [
+          1086,
+          560
+        ],
+        [
+          1175,
+          528
+        ]
+      ],
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
+    },
+    "southwest-row-14": {
+      "axis": [
+        [
+          -867.25,
+          524.857
+        ],
+        [
+          -790.538,
+          497.516
+        ]
+      ],
+      "depth": 7,
+      "sourcePixels": [
+        [
+          1091,
+          584
+        ],
+        [
+          1195,
+          550
+        ]
+      ],
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
+    },
+    "southwest-row-9": {
+      "omit": true,
+      "evidence": "Previous approximate screenshot axis is not confirmed as a terrace on the common map: it falls on open plots or institutional grounds. Suppressed pending dated evidence; this does not establish that later housing was absent."
+    },
+    "southwest-row-10": {
+      "omit": true,
+      "evidence": "Previous approximate screenshot axis is not confirmed as a terrace on the common map: it falls on open plots or institutional grounds. Suppressed pending dated evidence; this does not establish that later housing was absent."
+    },
+    "southwest-row-15": {
+      "omit": true,
+      "evidence": "Previous approximate screenshot axis is not confirmed as a terrace on the common map: it falls on open plots or institutional grounds. Suppressed pending dated evidence; this does not establish that later housing was absent."
+    },
+    "southwest-row-16": {
+      "omit": true,
+      "evidence": "Previous approximate screenshot axis is not confirmed as a terrace on the common map: it falls on open plots or institutional grounds. Suppressed pending dated evidence; this does not establish that later housing was absent."
+    },
+    "southwest-row-17": {
+      "omit": true,
+      "evidence": "Previous approximate screenshot axis is not confirmed as a terrace on the common map: it falls on open plots or institutional grounds. Suppressed pending dated evidence; this does not establish that later housing was absent."
+    },
+    "southwest-row-18": {
+      "omit": true,
+      "evidence": "Previous approximate screenshot axis is not confirmed as a terrace on the common map: it falls on open plots or institutional grounds. Suppressed pending dated evidence; this does not establish that later housing was absent."
+    }
+  },
+  "southwestMapSource": {
+    "layer": "os-london-five-foot-1893",
+    "mosaicBounds": [
+      -1600,
+      200,
+      -600,
+      1100
+    ],
+    "sourcePixelScale": 2,
+    "note": "Stored source coordinates refer to half-size review mosaic; full tile mosaic is 3072 pixels wide."
+  }
+}

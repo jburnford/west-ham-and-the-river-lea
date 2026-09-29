@@ -1,0 +1,185 @@
+{
+  "photo": "reference/Images and Figures/PossibleCover_Three Mills Wall London Fireworks Co 1900.jpg",
+  "photoDate": "circa 1900, supplied filename; original archive date not independently verified",
+  "orientation": "Working south-facing view from the High Street end, east bank on the left; exact camera remains provisional",
+  "camera": {
+    "position": [
+      -625,
+      6,
+      -262
+    ],
+    "target": [
+      -638,
+      3,
+      -105
+    ],
+    "fov": 48
+  },
+  "observed": [
+    "Narrow unsurfaced path above the water on the left",
+    "Close boarded boundary fence and lower riverside timber rail",
+    "Grassy bank face with a timber-retained toe",
+    "Leafless trees beside enclosed plots",
+    "Two-storey brick premises on the left and waterside masonry on the right",
+    "Tall gabled warehouse in the distance"
+  ],
+  "interpretation": "The existing Sugar House is a candidate for the distant warehouse. Its identification and the exact camera need further photographic fitting. The photo establishes types and relative arrangement, not surveyed metric dimensions.",
+  "bank": {
+    "zStart": -256,
+    "zEnd": -142,
+    "crestHeight": 2.05,
+    "pathLandOffset": 6.5,
+    "pathWidth": 2.6,
+    "boundaryOffset": 8.3,
+    "railOffset": 4.8,
+    "toeHeight": 0.6
+  },
+  "trees": [
+    {
+      "z": -212,
+      "offset": 11.3,
+      "height": 8.5
+    },
+    {
+      "z": -180,
+      "offset": 10.8,
+      "height": 11.5
+    },
+    {
+      "z": -156,
+      "offset": 11.8,
+      "height": 8.0
+    }
+  ],
+  "limits": "Path dimensions, heights, individual tree positions, timber details and all absolute offsets are photo-informed estimates attached to the existing GIS bank. No 1930s concrete embankment geometry is introduced. No photographic texture is used.",
+  "connections": [
+    {
+      "id": "high-street-access",
+      "width": 2.6,
+      "route": [
+        [
+          -617.43,
+          1.92,
+          -278.93
+        ],
+        [
+          -617,
+          2.05,
+          -271
+        ],
+        [
+          -617,
+          2.05,
+          -265
+        ],
+        [
+          -616,
+          2.05,
+          -260
+        ],
+        [
+          -613.65,
+          2.05,
+          -256
+        ]
+      ],
+      "evidence": "Interpreted bank access to Abbey Lane/High Street, reconciled with GIS bank and provisional frontage placement; not a surveyed route."
+    },
+    {
+      "id": "wall-lane-north",
+      "width": 2.6,
+      "bankStart": -142,
+      "bankEnd": 0,
+      "route": [
+        [
+          -575,
+          2.05,
+          0
+        ],
+        [
+          -569,
+          1.25,
+          10
+        ],
+        [
+          -559.39,
+          0.145,
+          21.75
+        ]
+      ],
+      "evidence": "OS five-foot map shows continuous east-bank route. Intermediate alignment follows GIS shore; junction and levels interpreted."
+    },
+    {
+      "id": "wall-lane-south",
+      "width": 1.8,
+      "route": [
+        [
+          -548.23,
+          0.145,
+          293.99
+        ],
+        [
+          -552,
+          0.145,
+          320
+        ],
+        [
+          -560,
+          0.145,
+          333
+        ],
+        [
+          -563,
+          0.145,
+          336
+        ],
+        [
+          -564,
+          0.145,
+          346
+        ],
+        [
+          -565.2,
+          0.145,
+          350
+        ],
+        [
+          -564.5,
+          0.145,
+          355
+        ],
+        [
+          -563.2,
+          0.145,
+          360
+        ],
+        [
+          -561.8,
+          0.145,
+          365
+        ],
+        [
+          -560.4,
+          0.145,
+          370
+        ],
+        [
+          -557.2,
+          0.145,
+          376
+        ],
+        [
+          -553,
+          0.145,
+          378
+        ],
+        [
+          -550.74,
+          0.145,
+          387.74
+        ]
+      ],
+      "evidence": "OS east-bank lane continues to the distillery approach; connection geometry and level inferred."
+    }
+  ]
+}

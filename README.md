@@ -18,9 +18,11 @@ The site has no build step or runtime external requests. Three.js 0.180.0 and it
 
 ## What works
 
+- District exploration: choose **Fly over the district** or select 77 destinations including all 43 factory groups from **Fly to**. WASD or the pad moves, Q/E or Lower/Higher changes height, and the speed selector controls travel speed. Click the expanded map to fly to a location. Home/reset or **Return to the bridge** restores bridge movement. Flight is a viewing tool with no building collisions.
 - Bounded bridge movement: WASD or hold the direction buttons; north/south buttons cross the walkway. Drag/arrow keys turn, plus/minus zoom, and Home/reset restores position and view.
 - Six story views: working river, Abbey Mills, Bromley gasworks, homes beside West Ham Gas Works, northern streets and the corn mill.
 - Location map showing the live camera position, movement boundary and horizontal field of view.
+- Great Eastern Railway northern boundary: a mapped embankment corridor with tracks and bridge openings; [railway evidence and review notes](scenes/channelsea-sewer-panorama/GREAT_EASTERN.md) distinguish the plan from provisional levels and junction detail.
 - Source notes distinguishing mapped geography from inferred scene detail.
 - Responsive layout, keyboard-operable dialogs and a WebGL fallback.
 - Photo-informed modelling layers: curved open-hold barges and mooring details; planked retaining edges and shallow bed relief; arched industrial facades; Abbey Mills' windows, dormers, lantern and banded chimneys; more detailed gas-holder columns and girders. Geometry and procedural textures are original; no archive photograph is displayed or used as a texture. [Photo-to-model notes](scenes/channelsea-sewer-panorama/PHOTO_LAYERS.md) distinguish visible evidence from estimates.
@@ -57,8 +59,30 @@ The subsequent [lighting and infrastructure pass](scenes/channelsea-sewer-panora
 
 ## GitHub Pages
 
+The [river network expansion](scenes/channelsea-sewer-panorama/RIVER_NETWORK.md)
+adds provisional bank relief along the existing GIS channels and records the
+new City Mills, fire-insurance and marsh-housing references. The 1948 aerial
+is a later comparison; its 1930s embankments are excluded from the c1900 scene.
+
+A 56-second landscape social video, with a lower camera route and local voiceover,
+can be exported from the same scene. Preview the camera with `?film=1&quality=full`.
+See [the social film workflow](scenes/channelsea-sewer-panorama/SOCIAL_FILM.md).
+Local MP4s, subtitles and review frames live in `exports/`, outside the published site.
+
 The public website is the `docs/` folder, which now holds the redesigned front end (full-viewport scene, scroll-driven chapters, eased camera transitions, poster frame and self-hosted type; see `docs/README.md`). The previous front end is preserved unchanged in `docs0/` and can be served locally the same way. GitHub Pages publishes from branch **main**, folder **/docs**, at https://jimclifford.ca/west-ham-and-the-river-lea/ (the standard GitHub Pages address redirects to the account’s existing custom domain). The `.nojekyll` marker serves the static assets without Jekyll processing. All runtime imports and asset URLs are relative, so the project URL works without a custom domain.
 
 Generated scene data and the bundled Three.js renderer are committed: GitHub does not need to run Python or install packages to serve this site. After changing a generator, regenerate its outputs under `docs/data/` before committing. Browser rendering still requires WebGL2 and sufficient device memory; the detailed desktop scene has not been tuned for low-powered phones.
 
 The book PDF, reference photographs/maps, original model archive, local planning/memory and review screenshots stay outside the public repository. Their local paths in research ledgers document provenance and are not website dependencies.
+
+The [completed factory coverage pass](scenes/channelsea-sewer-panorama/FACTORY_BUILDINGS.md) adds 507 individually recorded ranges across 43 works within the agreed district. Open `factory-atlas.html` on the local site to inspect buildings and sources. Heights and most roofs remain reconstruction estimates.
+
+The [district street and bridge pass](scenes/channelsea-sewer-panorama/STREETS_AND_BRIDGES.md) adds High Street, Sugar House Lane and connecting streets, with the five pre-1933 High Street crossings. Use **Fly to → Bridges** for close views. Three lane connections remain provisional, and the western Three Mills approach has a documented housing-registration gap.
+
+## Current modelling checkpoint
+
+The regional plan layer now covers historic West Ham plus a 3 km buffer, while
+existing 3D buildings are progressively matched to the supplied footprints.
+The first pass corrects 26 factory ranges and the Abbey Mills station complex.
+See [the continuation notes](scenes/channelsea-sewer-panorama/CONTINUE_FOOTPRINT_MATCHING.md)
+for the next sites, authoring files, rebuild commands and completed checks.

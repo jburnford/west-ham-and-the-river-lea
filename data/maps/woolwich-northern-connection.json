@@ -1,0 +1,197 @@
+{
+  "id": "woolwich-northern-connection",
+  "name": "Great Eastern Railway \u2014 Woolwich branch northern connection",
+  "route": [
+    [
+      -536.925,
+      -1022.455
+    ],
+    [
+      -515.766,
+      -1042.716
+    ],
+    [
+      -492.213,
+      -1057.362
+    ],
+    [
+      -459.537,
+      -1070.61
+    ],
+    [
+      -422.555,
+      -1077.385
+    ],
+    [
+      -385.393,
+      -1077.575
+    ],
+    [
+      -350.505,
+      -1070.29
+    ],
+    [
+      -315.459,
+      -1057.242
+    ],
+    [
+      -285.208,
+      -1038.297
+    ],
+    [
+      -263.856,
+      -1012.518
+    ],
+    [
+      -246.292,
+      -974.279
+    ],
+    [
+      -216.657,
+      -917.422
+    ],
+    [
+      -181.866,
+      -853.291
+    ],
+    [
+      -142.835,
+      -785.156
+    ],
+    [
+      -102.107,
+      -715.418
+    ],
+    [
+      -63.029,
+      -645.635
+    ],
+    [
+      -24.798,
+      -576.652
+    ],
+    [
+      14.282,
+      -506.868
+    ],
+    [
+      45.041,
+      -439.327
+    ],
+    [
+      67.119,
+      -387.202
+    ],
+    [
+      74,
+      -367.58
+    ]
+  ],
+  "tracks": 2,
+  "trackSpacing": 3.6,
+  "gauge": 1.435,
+  "crestHalfWidth": 4.5,
+  "baseHalfWidth": 17,
+  "formationHeight": 5.5,
+  "joinHeight": 8.5,
+  "mainlineJoinChainage": 1387.8622711486566,
+  "mainlineTrackOffset": 3.6,
+  "source": {
+    "map": "Archived NLS OS London five-foot map, 1893 revision / 1894 publication",
+    "bounds": [
+      -550,
+      -1500,
+      160,
+      -340
+    ],
+    "imageSize": [
+      923,
+      1500
+    ],
+    "tracePixels": [
+      [
+        76,
+        597
+      ],
+      [
+        105,
+        580
+      ],
+      [
+        145,
+        565
+      ],
+      [
+        190,
+        558
+      ],
+      [
+        235,
+        559
+      ],
+      [
+        277,
+        569
+      ],
+      [
+        319,
+        586
+      ],
+      [
+        355,
+        610
+      ],
+      [
+        380,
+        642
+      ],
+      [
+        400,
+        689
+      ],
+      [
+        434,
+        759
+      ],
+      [
+        474,
+        838
+      ],
+      [
+        519,
+        922
+      ],
+      [
+        566,
+        1008
+      ],
+      [
+        611,
+        1094
+      ],
+      [
+        655,
+        1179
+      ],
+      [
+        700,
+        1265
+      ],
+      [
+        735,
+        1348
+      ],
+      [
+        760,
+        1412
+      ]
+    ],
+    "registration": "Georeferenced NLS tiles; first point aligned to the outer main-line track pair and last point to the existing branch."
+  },
+  "evidence": "Mapped Woolwich-branch curve and running-line corridor south past Stratford Market. Two tracks, a smooth grade to the main line, bridge girders and earth slopes are interpreted; this is not a complete Stratford track/signalling plan.",
+  "existingBranchStart": [
+    74,
+    -367.58
+  ],
+  "alignmentNote": "The old independently registered northern branch endpoint was 28.37 m east of the mapped rail corridor. Shift it west and blend into the next existing station, avoiding the Bridge Road terrace frontage."
+}

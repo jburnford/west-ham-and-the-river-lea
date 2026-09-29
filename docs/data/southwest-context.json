@@ -15,187 +15,127 @@
     ]
   ],
   "controlResidualMetres": 1.135,
+  "housingRevisionSource": "data/maps/housing-road-traces.json",
+  "housingMapSource": {
+    "layer": "os-london-five-foot-1893",
+    "mosaicBounds": [
+      -1600,
+      200,
+      -600,
+      1100
+    ],
+    "sourcePixelScale": 2,
+    "note": "Stored source coordinates refer to half-size review mosaic; full tile mosaic is 3072 pixels wide."
+  },
   "registrationLimit": "Residual measures fit to the existing holder model only, not accuracy of historical sheet overlays. Historical building positions may differ by tens of metres.",
   "rows": [
     {
       "id": "southwest-row-4",
       "area": "Franklin Street vicinity",
-      "x": -917.92,
-      "z": 311.88,
-      "width": 95.81,
-      "depth": 8.15,
-      "rotation": 20.63,
+      "x": -914.03,
+      "z": 310.71,
+      "width": 77.2,
+      "depth": 7.0,
+      "rotation": 20.64,
       "wallHeight": 6.4,
-      "bays": 18,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+      "bays": 15,
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
     },
     {
       "id": "southwest-row-5",
       "area": "Washington Street vicinity",
-      "x": -909.1,
-      "z": 331.65,
-      "width": 94.62,
-      "depth": 8.15,
-      "rotation": 20.54,
+      "x": -907.65,
+      "z": 326.14,
+      "width": 78.61,
+      "depth": 7.0,
+      "rotation": 20.29,
       "wallHeight": 6.4,
-      "bays": 18,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+      "bays": 15,
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
     },
     {
       "id": "southwest-row-6",
       "area": "Washington Street vicinity",
-      "x": -901.05,
-      "z": 345.44,
-      "width": 95.81,
-      "depth": 8.15,
-      "rotation": 20.63,
+      "x": -901.34,
+      "z": 339.34,
+      "width": 78.61,
+      "depth": 7.0,
+      "rotation": 20.29,
       "wallHeight": 6.4,
-      "bays": 18,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+      "bays": 15,
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
     },
     {
       "id": "southwest-row-7",
       "area": "Jefferson Street vicinity",
-      "x": -887.18,
-      "z": 362.94,
-      "width": 94.11,
-      "depth": 8.15,
-      "rotation": 20.65,
+      "x": -886.44,
+      "z": 353.05,
+      "width": 82.14,
+      "depth": 7.0,
+      "rotation": 19.46,
       "wallHeight": 6.4,
-      "bays": 18,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+      "bays": 16,
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
     },
     {
       "id": "southwest-row-8",
       "area": "Jefferson Street vicinity",
-      "x": -879.1,
-      "z": 377.27,
-      "width": 95.3,
-      "depth": 8.15,
-      "rotation": 20.74,
+      "x": -878.31,
+      "z": 378.08,
+      "width": 84.02,
+      "depth": 7.0,
+      "rotation": 20.11,
       "wallHeight": 6.4,
-      "bays": 18,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
-    },
-    {
-      "id": "southwest-row-9",
-      "area": "Sherman Street vicinity",
-      "x": -795.24,
-      "z": 324.5,
-      "width": 52.59,
-      "depth": 7.61,
-      "rotation": 21.02,
-      "wallHeight": 6.4,
-      "bays": 10,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
-    },
-    {
-      "id": "southwest-row-10",
-      "area": "Otis Street vicinity",
-      "x": -769.79,
-      "z": 348.36,
-      "width": 65.52,
-      "depth": 7.61,
-      "rotation": 20.46,
-      "wallHeight": 6.4,
-      "bays": 13,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+      "bays": 16,
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
     },
     {
       "id": "southwest-row-11",
       "area": "Empson Street vicinity",
-      "x": -747.83,
-      "z": 411.31,
-      "width": 63.99,
-      "depth": 7.61,
-      "rotation": 20.94,
+      "x": -852.63,
+      "z": 432.35,
+      "width": 92.73,
+      "depth": 7.0,
+      "rotation": 20.24,
       "wallHeight": 6.4,
-      "bays": 12,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+      "bays": 18,
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
     },
     {
       "id": "southwest-row-12",
       "area": "Empson Street vicinity",
-      "x": -740.01,
-      "z": 425.92,
-      "width": 64.5,
-      "depth": 7.61,
-      "rotation": 20.78,
+      "x": -849.97,
+      "z": 461.99,
+      "width": 82.61,
+      "depth": 7.0,
+      "rotation": 20.44,
       "wallHeight": 6.4,
-      "bays": 12,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+      "bays": 16,
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
     },
     {
       "id": "southwest-row-13",
       "area": "Imperial Street vicinity",
-      "x": -786.99,
-      "z": 466.04,
-      "width": 58.2,
-      "depth": 7.61,
-      "rotation": 20.72,
+      "x": -838.66,
+      "z": 494.37,
+      "width": 70.39,
+      "depth": 7.0,
+      "rotation": 21.29,
       "wallHeight": 6.4,
-      "bays": 11,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+      "bays": 14,
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
     },
     {
       "id": "southwest-row-14",
       "area": "Imperial Street vicinity",
-      "x": -776.94,
-      "z": 482.79,
-      "width": 58.71,
-      "depth": 7.61,
-      "rotation": 20.54,
+      "x": -828.89,
+      "z": 511.19,
+      "width": 81.44,
+      "depth": 7.0,
+      "rotation": 19.62,
       "wallHeight": 6.4,
-      "bays": 11,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
-    },
-    {
-      "id": "southwest-row-15",
-      "area": "Bromley western streets",
-      "x": -1021.13,
-      "z": 314.2,
-      "width": 63.83,
-      "depth": 7.61,
-      "rotation": -60.76,
-      "wallHeight": 6.4,
-      "bays": 12,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
-    },
-    {
-      "id": "southwest-row-16",
-      "area": "Bromley western streets",
-      "x": -1045.73,
-      "z": 383.14,
-      "width": 65.8,
-      "depth": 7.61,
-      "rotation": -60.59,
-      "wallHeight": 6.4,
-      "bays": 13,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
-    },
-    {
-      "id": "southwest-row-17",
-      "area": "Bromley western streets",
-      "x": -994.58,
-      "z": 407.38,
-      "width": 64.31,
-      "depth": 7.61,
-      "rotation": -60.99,
-      "wallHeight": 6.4,
-      "bays": 12,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
-    },
-    {
-      "id": "southwest-row-18",
-      "area": "Bromley western streets",
-      "x": -943.52,
-      "z": 436.52,
-      "width": 63.09,
-      "depth": 7.61,
-      "rotation": -60.97,
-      "wallHeight": 6.4,
-      "bays": 12,
-      "evidence": "Approximate main row axis from southwest screenshot; model registration uses modern-base holder centres. Elevation and house divisions interpreted."
+      "bays": 16,
+      "evidence": "Main frontage re-read on the common NLS five-foot map mosaic. Replaces the distant screenshot registration; house divisions and elevations remain approximate."
     }
   ],
   "industrialRanges": [
@@ -435,6 +375,30 @@
       "row": 2,
       "reason": "approximate trace overlaps mapped industrial land",
       "overlapFraction": 0.229
+    },
+    {
+      "row": 8,
+      "reason": "Previous approximate screenshot axis is not confirmed as a terrace on the common map: it falls on open plots or institutional grounds. Suppressed pending dated evidence; this does not establish that later housing was absent."
+    },
+    {
+      "row": 9,
+      "reason": "Previous approximate screenshot axis is not confirmed as a terrace on the common map: it falls on open plots or institutional grounds. Suppressed pending dated evidence; this does not establish that later housing was absent."
+    },
+    {
+      "row": 14,
+      "reason": "Previous approximate screenshot axis is not confirmed as a terrace on the common map: it falls on open plots or institutional grounds. Suppressed pending dated evidence; this does not establish that later housing was absent."
+    },
+    {
+      "row": 15,
+      "reason": "Previous approximate screenshot axis is not confirmed as a terrace on the common map: it falls on open plots or institutional grounds. Suppressed pending dated evidence; this does not establish that later housing was absent."
+    },
+    {
+      "row": 16,
+      "reason": "Previous approximate screenshot axis is not confirmed as a terrace on the common map: it falls on open plots or institutional grounds. Suppressed pending dated evidence; this does not establish that later housing was absent."
+    },
+    {
+      "row": 17,
+      "reason": "Previous approximate screenshot axis is not confirmed as a terrace on the common map: it falls on open plots or institutional grounds. Suppressed pending dated evidence; this does not establish that later housing was absent."
     }
   ]
 }

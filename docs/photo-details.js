@@ -42,8 +42,13 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
     cylinder(parent,x,y+h*.65,z,.22,.22,.35,trim,8);
     beam(parent,[x-.5,y+h*.82,z],[x+.5,y+h*.82,z],.055,m.iron);
   }
-  function station() {
-    const g=new THREE.Group();g.position.set(-185,0,-13);scene.add(g);
+  function station(plan) {
+    const g=new THREE.Group();g.name='Abbey Mills pumping station';g.position.set(plan.centre[0],0,plan.centre[1]);
+    const theta=plan.angleDegrees*Math.PI/180;g.rotation.y=-theta;scene.add(g);
+    const L=plan.mainLength,D=plan.crossLength,mainDepth=plan.mainDepth,crossWidth=plan.crossWidth,offset=plan.mainOffsetZ;
+    const brickLight=m.brick.clone();brickLight.color.set('#b9ac82');
+    const red=m.brick.clone();red.color.set('#a16c51');
+    const trim=m.stone.clone();trim.color.set('#b4af9c');
     // Author's supplied Mary Evans 1868 engraving: original geometry only.
     // Relative silhouettes guide these estimates; this is not a measured elevation.
     function stationArch(parent,x,y,z,w,h,rotation=0) {
@@ -61,27 +66,38 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
         cylinder(parent,x,y0,z,r1,r0,y1-y0,m.roof,8);
       }
     }
-    for(const [w,d] of [[54,20],[20,48]]) {
-      box(g,0,0,0,w,13,d,brickLight);
+    // The mapped outline includes lower boiler wings behind the ornate cross.
+    for(const wing of plan.boilerWings) {
+      const boiler=new THREE.Group();boiler.position.set(wing.x,0,wing.z);g.add(boiler);
+      box(boiler,0,0,0,wing.width,wing.height,wing.depth,brickLight);
+      box(boiler,0,.25,0,wing.width+.4,.3,wing.depth+.4,trim);
+      box(boiler,0,wing.height-.45,0,wing.width+.5,.3,wing.depth+.5,trim);
+      roofLoft(boiler,[[wing.height,wing.width+.7,wing.depth+.7],[wing.height+wing.roofRise,wing.width+.7,.12]]);
+      for(const sign of [-1,1])for(let x=-wing.width/2+3;x<wing.width/2-1;x+=4.6)
+        stationArch(boiler,x,1.2,sign*(wing.depth/2+.02),2.1,4.6,sign===1?0:Math.PI);
+    }
+    for(const [w,d,zShift] of [[L,mainDepth,offset],[crossWidth,D,0]]) {
+      const arm=new THREE.Group();arm.position.z=zShift;g.add(arm);
+      box(arm,0,0,0,w,13,d,brickLight);
       for(const y of [.35,6.4,12.7]) {
-        box(g,0,y,0,w+.5,.3,d+.5,trim);
+        box(arm,0,y,0,w+.5,.3,d+.5,trim);
       }
-      roofLoft(g,[[13,w+1,d+1],[18,w-4,d-5],[20,w-12,d-12]]);
-      box(g,0,19.9,0,w-12,.15,d-12,m.roof);
+      roofLoft(arm,[[13,w+1,d+1],[18,w-4,d-5],[20,w-12,d-12]]);
+      box(arm,0,19.9,0,w-12,.15,d-12,m.roof);
       for(const sign of [-1,1]) {
         for(let x=-w/2+4;x<w/2-2;x+=5.6) {
-          if(w===20 || Math.abs(x)<11) continue;
-          for(const [y,h] of [[1.2,4.8],[8,3.5]]) stationArch(g,x,y,sign*(d/2+.02),2.5,h,sign===1?0:Math.PI);
+          if(w===crossWidth || Math.abs(x)<crossWidth/2+1) continue;
+          for(const [y,h] of [[1.2,4.8],[8,3.5]]) stationArch(arm,x,y,sign*(d/2+.02),2.5,h,sign===1?0:Math.PI);
         }
         for(let z=-d/2+4;z<d/2-2;z+=5.6) {
-          if(d===20 || Math.abs(z)<11) continue;
-          for(const [y,h] of [[1.2,4.8],[8,3.5]]) stationArch(g,sign*(w/2+.02),y,z,2.5,h,sign===1?Math.PI/2:-Math.PI/2);
+          if(d===mainDepth || Math.abs(z-offset)<mainDepth/2+1) continue;
+          for(const [y,h] of [[1.2,4.8],[8,3.5]]) stationArch(arm,sign*(w/2+.02),y,z,2.5,h,sign===1?Math.PI/2:-Math.PI/2);
         }
       }
     }
     // Five-bay arm ends: paired storeys, projecting piers and central porch.
-    for(const [x,z,angle] of [[0,24,0],[27,0,Math.PI/2],[0,-24,Math.PI],[-27,0,-Math.PI/2]]) {
-      const front=new THREE.Group();front.position.set(x,0,z);front.rotation.y=angle;g.add(front);
+    for(const [x,z,angle,width] of [[0,D/2,0,crossWidth],[L/2,offset,Math.PI/2,mainDepth],[0,-D/2,Math.PI,crossWidth],[-L/2,offset,-Math.PI/2,mainDepth]]) {
+      const front=new THREE.Group();front.position.set(x,0,z);front.rotation.y=angle;front.scale.x=width/20;g.add(front);
       for(const bx of [-7.2,-3.6,0,3.6,7.2]) {
         stationArch(front,bx,1.15,.04,2.45,4.7);
         const window=stationArch(front,bx,7.8,.04,2.45,bx===0?4.0:3.65);
@@ -99,19 +115,20 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
       for(let bx=-9.5;bx<10;bx+=1.3)box(front,bx,12,.1,.45,.65,.6,trim);
     }
     // Dormers project from the steep lower roof slopes.
-    for(const x of [-21,-15,15,21]) for(const sign of [-1,1]) {
-      const dormer=new THREE.Group();dormer.position.set(x,14,sign*9);dormer.rotation.y=sign===1?0:Math.PI;g.add(dormer);
+    for(const x of [-L/2+4.5,L/2-4.5]) for(const sign of [-1,1]) {
+      const dormer=new THREE.Group();dormer.position.set(x,14,offset+sign*(mainDepth/2-1));dormer.rotation.y=sign===1?0:Math.PI;g.add(dormer);
       box(dormer,0,0,0,3.5,3,2.5,trim);arch(dormer,0,.3,1.28,2,2.5,0,trim);
       const cap=new THREE.Mesh(new THREE.ConeGeometry(2.5,1.6,4),m.roof);cap.rotation.y=Math.PI/4;cap.position.y=3.7;dormer.add(cap);
       finial(dormer,0,4.4,0,1.3);
     }
-    for(const z of [-18,18])for(const sign of [-1,1]) {
-      const dormer=new THREE.Group();dormer.position.set(sign*9,14,z);dormer.rotation.y=sign*Math.PI/2;g.add(dormer);
+    for(const z of [-D/2+6,D/2-6])for(const sign of [-1,1]) {
+      const dormer=new THREE.Group();dormer.position.set(sign*(crossWidth/2-1),14,z);dormer.rotation.y=sign*Math.PI/2;g.add(dormer);
       box(dormer,0,0,0,3.2,2.7,2.5,trim);stationArch(dormer,0,.2,1.28,1.8,2.3);
       roofLoft(dormer,[[2.7,3.6,2.9],[4.0,.05,2.9]]);finial(dormer,0,4.0,0,1.3);
     }
     // More compact lantern, below the tall chimney crowns as in the engraving.
-    cylinder(g,0,13,0,4.7,7.1,8,m.roof,8);
+    cylinder(g,0,17.5,0,5.8,6.3,3.5,m.roof,8);
+    cylinder(g,0,20.6,0,4.8,5.8,1.1,m.roof,8);
     cylinder(g,0,21,0,4.7,4.7,8,red,8);
     for(let i=0;i<8;i++) {
       const angle=(i+.5)*Math.PI/4,rr=4.7*Math.cos(Math.PI/8)+.04;
@@ -124,23 +141,25 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
     }
     octagonalRoof(g,0,0,[[29,5.2],[29.5,5.4],[31,4.4],[32.8,2.3],[34.2,.25]]);finial(g,0,34.2,0,2.5);
     // Corner turrets and cornice teeth visible in the modern architectural reference.
-    for(const [x,z] of [[-11,-11],[-11,11],[11,-11],[11,11]]) {
+    for(const [x,z] of [[-crossWidth/2-1,offset-mainDepth/2-1],[-crossWidth/2-1,offset+mainDepth/2+1],[crossWidth/2+1,offset-mainDepth/2-1],[crossWidth/2+1,offset+mainDepth/2+1]]) {
       cylinder(g,x,8,z,1.9,2.2,9.5,brickLight,8);
       octagonalRoof(g,x,z,[[17.5,2.7],[18,2.8],[19.3,1.8],[20.8,.2]]);finial(g,x,20.8,z,2);
       for(let i=0;i<8;i++) {const a=(i+.5)*Math.PI/4;arch(g,x+Math.sin(a)*1.82,14.3,z+Math.cos(a)*1.82,.6,1.8,a,trim);}
     }
-    for(let x=-26;x<27;x+=1.5) for(const z of [-10.25,10.25]) box(g,x,12,z,.6,.7,.7,trim);
+    for(let x=-L/2+1;x<L/2;x+=1.5) for(const z of [offset-mainDepth/2-.25,offset+mainDepth/2+.25]) box(g,x,12,z,.6,.7,.7,trim);
     // Fine ridge cresting and pinnacles break the previously plain roof silhouette.
-    for(let x=-20;x<=20;x+=1.2)if(Math.abs(x)>6) {
+    for(let x=-L/2+6;x<=L/2-6;x+=1.2)if(Math.abs(x)>6) {
       beam(g,[x-.5,20.2,0],[x,20.95,0],.045,m.iron);beam(g,[x,20.95,0],[x+.5,20.2,0],.045,m.iron);
     }
-    for(let z=-17;z<=17;z+=1.2)if(Math.abs(z)>6) {
+    for(let z=-D/2+6;z<=D/2-6;z+=1.2)if(Math.abs(z)>6) {
       beam(g,[0,20.2,z-.5],[0,20.95,z],.045,m.iron);beam(g,[0,20.95,z],[0,20.2,z+.5],.045,m.iron);
     }
     // Broad decorated bases, slender shafts and pointed openwork crowns.
-    // Both remain on the previous provisional anchors; dimensions are interpreted.
-    for(const [x,z] of [[-41,-37],[41,37]]) {
-      const stack=new THREE.Group();stack.position.set(x,0,z);g.add(stack);
+    // Base centres come from the period map; upper profiles remain interpreted.
+    for(const chimney of plan.chimneys) {
+      const dx=chimney.centre[0]-plan.centre[0],dz=chimney.centre[1]-plan.centre[1];
+      const x=dx*Math.cos(theta)+dz*Math.sin(theta),z=-dx*Math.sin(theta)+dz*Math.cos(theta);
+      const stack=new THREE.Group();stack.position.set(x,0,z);stack.scale.set(.68,1,.68);g.add(stack);
       cylinder(stack,0,0,0,5.7,6.4,.65,trim,8);
       cylinder(stack,0,.65,0,4.6,5.7,5.4,brickLight,8);
       cylinder(stack,0,6.05,0,5.7,4.6,.55,trim,8);
@@ -172,7 +191,7 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
       }
       finial(stack,0,52.85,0,1.8);
     }
-    scene.userData.stationStudy={reference:'Mary Evans 45687726, supplied 1868 engraving',wingEndBays:5,chimneys:2,chimneyHeight:54.65,lanternHeight:36.7,dimensionsInterpreted:true};
+    scene.userData.stationStudy={reference:'Mary Evans 45687726, supplied 1868 engraving',wingEndBays:5,chimneys:2,chimneyHeight:54.65,lanternHeight:36.7,dimensionsInterpreted:true,sourceFootprintFid:plan.sourceFid,centre:plan.centre,angleDegrees:plan.angleDegrees,mainLength:L,crossLength:D,boilerWings:plan.boilerWings.length,chimneyCentres:plan.chimneys.map(c=>c.centre),footprintFit:plan.fit};
     return g;
   }
   function factory(b) {
@@ -233,6 +252,8 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
     }
     return g;
   }
+  const floatingMaterials=new Map();
+  const holdFloor=m.wood.clone();holdFloor.color.set('#75654d');
   function barge(x,z,angle,loaded) {
     const g=new THREE.Group();g.position.set(x,.14,z);g.rotation.y=angle*Math.PI/180;scene.add(g);
     const shape=new THREE.Shape();shape.moveTo(-2.7,-7.8);shape.bezierCurveTo(-2.7,-11.8,2.7,-11.8,2.7,-7.8);
@@ -240,7 +261,13 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
     const hole=new THREE.Path();hole.moveTo(-2.05,-6.8);hole.lineTo(-2.05,6.4);hole.quadraticCurveTo(0,8,2.05,6.4);hole.lineTo(2.05,-6.8);hole.closePath();shape.holes.push(hole);
     const hull=new THREE.Mesh(new THREE.ExtrudeGeometry(shape,{depth:1.45,bevelEnabled:true,bevelSize:.12,bevelThickness:.1,bevelSegments:1,steps:1,curveSegments:16}),m.wood);
     hull.rotation.x=-Math.PI/2;g.add(hull);
-    box(g,0,.24,0,4.4,.12,14.5,m.dark);
+    // A closed bottom follows the entire curved hull, including both ends.
+    // The former rectangular floor left gaps near the rounded end sections.
+    const bottomShape=shape.clone();bottomShape.holes=[];
+    const bottom=new THREE.Mesh(new THREE.ExtrudeGeometry(bottomShape,
+      {depth:.12,bevelEnabled:false,curveSegments:16}),holdFloor);
+    bottom.rotation.x=-Math.PI/2;bottom.position.y=.24;g.add(bottom);
+    for(let xx=-1.75;xx<2;xx+=.35)box(g,xx,.361,0,.018,.012,12.7,m.dark);
     // Outer rubbing strakes and transverse timbers frame a visibly hollow hold.
     const rim=shape.getPoints(32).map(p=>[p.x,1.54,-p.y]);curveBeam(g,rim,.12,m.wood);
     curveBeam(g,rim.map(([a,_,c])=>[a,.5,c]),.10,m.dark);
@@ -278,6 +305,16 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
       }
     }
     curveBeam(g,[[0,1.9,-8.4],[1,.8,-11],[2,.1,-14]],.045,m.wood);
+    // Separate material batches let the lighters follow the water without
+    // rebuilding their hulls or thousands of coal fragments.
+    g.traverse(object=>{
+      if(!object.isMesh)return;
+      if(!floatingMaterials.has(object.material)) {
+        const material=object.material.clone();material.userData.tidalFloat=true;
+        floatingMaterials.set(object.material,material);
+      }
+      object.material=floatingMaterials.get(object.material);
+    });
     return g;
   }
   function waterfront() {
@@ -345,29 +382,41 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
   }
   function terrace(spec) {
     const g=new THREE.Group();g.position.set(spec.x,0,spec.z);g.rotation.y=spec.rotation*Math.PI/180;scene.add(g);
-    const w=spec.width,d=spec.depth,h=spec.wallHeight,bay=w/spec.bays;
-    // Continuous street roof, repeated stacks and two-storey facades: original geometry.
-    // Only the row envelope is mapped; bay divisions and elevations are interpreted.
+    const w=spec.width,d=spec.depth,h=spec.wallHeight,bay=w/spec.bays,front=spec.frontSign??1;
+    // A continuous party-wall terrace; household divisions and elevations are interpreted.
     box(g,0,0,0,w,h,d,brickLight);
-    roofLoft(g,[[h,w+.4,d+.4],[h+2.4,w+.4,.08]]);
-    box(g,0,h+2.35,0,w+.4,.15,.18,m.roof);
+    roofLoft(g,[[h,w+.32,d+.4],[h+2.15,w+.32,.08]]);
+    box(g,0,h+2.12,0,w+.32,.12,.18,m.roof);
+    for(const sign of [-1,1]) {
+      box(g,0,h-.12,sign*(d/2+.12),w,.13,.15,m.iron);
+      box(g,0,.06,sign*(d/2+.015),w,.32,.06,red);
+    }
     for(let i=0;i<spec.bays;i++) {
-      const x=-w/2+(i+.5)*bay;
-      for(const sign of [-1,1]) {
+      const x=-w/2+(i+.5)*bay,doorSide=i%2===0?-1:1;
+      const window=(xx,y,sign,ww=1.02)=>{
         const z=sign*(d/2+.05);
-        for(const y of [1.2,4.1]) for(const offset of [-bay*.22,bay*.22]) {
-          if(y===1.2 && offset<0) continue;
-          box(g,x+offset,y,z,1.05,1.6,.12,m.window);
-          box(g,x+offset,y-.13,z+sign*.06,1.2,.15,.25,trim);
-          box(g,x+offset,y+1.65,z+sign*.03,1.2,.2,.2,red);
-          box(g,x+offset,y+.7,z+sign*.08,1.05,.06,.08,trim);
-        }
-        box(g,x-bay*.22,.12,z,.95,2.2,.12,m.window);
-      }
+        box(g,xx,y,z,ww,1.55,.1,m.window);
+        box(g,xx,y-.1,z+sign*.04,ww+.16,.12,.2,trim);
+        box(g,xx,y+1.56,z,ww+.18,.16,.16,red);
+        box(g,xx,y+.74,z+sign*.06,ww,.055,.045,trim);
+        box(g,xx,y,z+sign*.06,.045,1.55,.045,trim);
+      };
+      for(const offset of [-bay*.23,bay*.23])window(x+offset,3.9,front);
+      window(x-doorSide*bay*.23,1.05,front);
+      const doorX=x+doorSide*bay*.23,z=front*(d/2+.055);
+      box(g,doorX,.08,z,.86,2.08,.09,i%3===0?green:m.wood);
+      box(g,doorX,2.18,z,.86,.28,.09,m.window);
+      box(g,doorX,2.48,z,1.04,.15,.19,red);
+      box(g,doorX,.01,z+front*.21,1.02,.1,.5,trim);
+      window(x,3.9,-front,.95);
+      window(x-doorSide*bay*.22,1.12,-front,.8);
+      box(g,x+doorSide*bay*.23,.08,-front*(d/2+.05),.78,2.05,.09,m.wood);
       if(i%2===0) {
-        box(g,x,h+1.6,0,1.3,1.8,.8,m.brick);
-        box(g,x,h+3.3,0,1.5,.25,1,trim);
-        for(const offset of [-.4,0,.4]) cylinder(g,x+offset,h+3.55,0,.1,.14,.65,red,6);
+        const party=-w/2+(i+1)*bay;
+        box(g,party,h+1.35,0,1.1,1.85,.72,m.brick);
+        box(g,party,h+3.17,0,1.3,.19,.94,trim);
+        for(const offset of [-.36,0,.36])cylinder(g,party+offset,h+3.36,0,.095,.13,.58,red,6);
+        for(const sign of [-1,1])box(g,party,0,sign*(d/2+.09),.075,h,.075,m.iron);
       }
     }
     return g;

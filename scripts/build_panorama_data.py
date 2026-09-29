@@ -1,11 +1,14 @@
 """Build the review scene's metric ground plan. Requires pyproj and shapely."""
 import json
 import math
+import random
 from pathlib import Path
 
 from pyproj import Transformer
 from shapely.geometry import shape, box, Polygon, Point, MultiPoint, LineString
 from shapely.ops import transform, triangulate, unary_union
+from shapely.affinity import rotate
+from housing_frontages import split_at_streets
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = (538900, 183209)  # Historic England's approximate bridge grid reference
@@ -67,11 +70,21 @@ def neighbourhood():
         context['houses'].append(dict(spec,id=f'abbey-pair-{i+1}',wallHeight=6.5,
             evidence='OS VIII.32 envelope and position; architectural form from listing 1080983; height interpreted.'))
     context['terraces'] = []
+    frontage_audit = json.loads((ROOT/'data/maps/housing-road-traces.json').read_text())
+    housing_streets = [(r['name'],LineString([point(r['sheet'],p) for p in r['points']]),r['width'])
+                       for r in frontage_audit['roads'] if r['sheet'] not in ['scene','southwest']]
     for i,r in enumerate(traces['rows']):
+        correction = frontage_audit['housingCorrections'].get(f'os-row-{i+1}', {})
+        if correction.get('omit'):
+            context.setdefault('omittedTerraces', []).append({'id':f'os-row-{i+1}', **correction})
+            continue
+        r = {**r, **correction}
         spec = row(r.get('sheet','32'),r['a'],r['b'],r['depth'])
-        context['terraces'].append(dict(spec,id=f'os-row-{i+1}',street=r['street'],
+        spec = dict(spec,id=f'os-row-{i+1}',street=r['street'],
             wallHeight=6.4, bays=max(2,round(spec['width']/5.2)),
-            evidence='Main row envelope traced from OS; household divisions, height and facade are interpretations.'))
+            evidence='Main row envelope traced from OS; household divisions, height and facade are interpretations.',
+            frontageAudit=correction.get('evidence'))
+        context['terraces'].extend(split_at_streets(spec,housing_streets))
     for i,h in enumerate(traces['holders']):
         x,z = point(h['sheet'],h['centre'])
         edge = point(h['sheet'],[h['centre'][0]+h['radius'],h['centre'][1]])
@@ -90,6 +103,12 @@ def neighbourhood():
         if insert==0: route.insert(0,extension)
         else: route.append(extension)
     context['sewer']=dict(s,route=route)
+    correction_path=ROOT/'data/maps/sewer-high-street.json'
+    if correction_path.exists():
+        correction=json.loads(correction_path.read_text())
+        context['sewer']['priorUncorrectedRoute']=route
+        context['sewer']['route']=correction['westernRoute']+route[1:]
+        context['sewer']['alignmentEvidence']=correction['evidence']
     context['railways']=[]
     for railway in traces['railways']:
         route=[]
@@ -217,12 +236,32 @@ def build():
     garden=Polygon(context['garden']['footprint']).difference(water.buffer(8)).difference(bank)
     access=unary_union([LineString(r['route']).buffer(r['width']/2+1) for r in context['garden']['accessCorridors']])
     garden=garden.difference(access)
+    ditch_path=ROOT/'data/maps/marsh-ditches.json'
+    if ditch_path.exists():
+        ditches=json.loads(ditch_path.read_text())
+        garden=garden.difference(unary_union([LineString(f['route']).buffer(f['width']/2+3) for f in ditches['features']]))
     context['garden']['beds']=[]
-    minx,minz,maxx,maxz=garden.bounds
-    for x in range(int(minx),int(maxx),10):
-        for z in range(int(minz),int(maxz),18):
-            if garden.covers(box(x,z,x+7,z+14)):
-                context['garden']['beds'].append({'x':x+3.5,'z':z+7,'width':7,'depth':14})
+    # Inferred allotment divisions: align groups with the mapped field edge,
+    # leave shared access strips, and avoid repeating one identical bed tile.
+    rng=random.Random(1893)
+    origin=(garden.centroid.x,garden.centroid.y);angle=-15
+    local=rotate(garden,-angle,origin=origin)
+    minx,minz,maxx,maxz=local.bounds
+    z=minz+2;row=0
+    while z<maxz:
+        depth=rng.uniform(16,24);x=minx+2+(row%2)*4;column=0
+        while x<maxx:
+            width=rng.uniform(8,13)
+            footprint=rotate(box(x,z,x+width,z+depth),angle,origin=origin)
+            if garden.covers(footprint) and rng.random()>.09:
+                centre=footprint.centroid
+                context['garden']['beds'].append({'x':round(centre.x,3),'z':round(centre.y,3),
+                    'width':round(width,3),'depth':round(depth,3),'rotation':angle,
+                    'footprint':[[round(a,3),round(b,3)] for a,b in footprint.exterior.coords],
+                    'seed':rng.randrange(100000),'shed':rng.random()<.09})
+            x+=width+(3.8 if column%4==3 else 1.5);column+=1
+        z+=depth+(4.5 if row%3==2 else 2.2);row+=1
+    context['garden']['layoutEvidence']='Inferred plot divisions and planting, aligned with the mapped field edge. Varied sizes and shared access gaps are visual interpretations, not traced household boundaries.'
     context['garden']['cultivableAreaM2']=round(garden.area)
     output.write_text(json.dumps(result, separators=(',', ':')) + '\n')
     print(f'Built {len(result["rivers"])} rivers and {len(result["sites"])} industrial sites: {output}')

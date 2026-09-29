@@ -1,0 +1,409 @@
+{
+  "sourceViewer": "https://www.layersoflondon.org/map/overlays/goad-1887",
+  "dateRule": "Verify printed date of each constituent sheet; the viewer label is not sufficient.",
+  "sites": [
+    {
+      "id": 260,
+      "name": "Howards and Sons",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-city"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 18
+      }
+    },
+    {
+      "id": 940,
+      "name": "Slater & Palmer / Marshgate Mills",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-marsh"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 3
+      }
+    },
+    {
+      "id": 790,
+      "name": "A. Jeffrey marine glue works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-marsh"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 2
+      }
+    },
+    {
+      "id": 939,
+      "name": "Marshgate Lane chemical works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-marsh"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 1
+      }
+    },
+    {
+      "id": 258,
+      "name": "Augustus Smith brush and fibre works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-marsh"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 2
+      }
+    },
+    {
+      "id": 791,
+      "name": "John Alderson rope works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-marsh"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 257,
+      "name": "St Thomas corn mill",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-marsh"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 398,
+      "name": "Crown Works / Johnson chemical works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-marsh"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 1
+      }
+    },
+    {
+      "id": 256,
+      "name": "Starch Works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-sugar"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 572,
+      "name": "Bryant and May tin box works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-sugar"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 573,
+      "name": "Aberdeen Works / confectionery works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-sugar"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 1
+      }
+    },
+    {
+      "id": 947,
+      "name": "Oil and colour works and west Sugar House Lane ranges",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-sugar"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 4
+      }
+    },
+    {
+      "id": 964,
+      "name": "Paint, varnish, ink and cooperage ranges east of Sugar House Lane",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f3-sugar"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 3
+      }
+    },
+    {
+      "id": 254,
+      "name": "Bow Bridge bone and chemical works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f17"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 4
+      }
+    },
+    {
+      "id": 564,
+      "name": "Hunt Bow Bridge soap works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f17"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 2
+      }
+    },
+    {
+      "id": 565,
+      "name": "Lascelles stone and terra cotta works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f17"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 566,
+      "name": "British Ultramarine works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f17"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 1
+      }
+    },
+    {
+      "id": 567,
+      "name": "Oil refinery / machinery and printing ranges",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f17"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 2
+      }
+    },
+    {
+      "id": 568,
+      "name": "French Asphalte and Williams wharf",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f17"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 2
+      }
+    },
+    {
+      "id": 569,
+      "name": "Kendrick northern boiler and machinery works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f17"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 570,
+      "name": "Usher printing ink works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f17"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 1
+      }
+    },
+    {
+      "id": 571,
+      "name": "Kendrick southern boiler works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f17"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 419,
+      "name": "Three Mills distillery",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "goad-f17"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 1
+      }
+    },
+    {
+      "id": 796,
+      "name": "Edward Cook & Co. \u2014 East London Soap Works",
+      "status": "Goad ranges refined; review captures available",
+      "sources": [
+        "goad-f2-soap",
+        "os-1893"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 4
+      }
+    },
+    {
+      "id": 797,
+      "name": "New Imperial Saw Mills",
+      "status": "Goad ranges refined; review captures available",
+      "sources": [
+        "os-1893",
+        "goad-f2-sawmill"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 1
+      }
+    },
+    {
+      "id": 789,
+      "name": "Bow Bridge Wharf soap and chemical works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "os-1893"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 788,
+      "name": "Magnet Wharf iron foundry",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "os-1893"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 255,
+      "name": "Lime works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "os-1893"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 873,
+      "name": "West Ham Gas Works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "os-1893"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 924,
+      "name": "Bromley-by-Bow Gas Works",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "os-1893"
+      ],
+      "chimneyReview": {
+        "status": "One provisional boiler stack plus 24 interpreted retort-house roof flues, informed by the June 1924 aerial photographs; count, dimensions and spacing estimated",
+        "mappedCount": 0,
+        "interpretedCount": 1,
+        "reference": "scenes/channelsea-sewer-panorama/GASWORKS_PHOTO_REVIEW.md"
+      }
+    },
+    {
+      "id": 1018,
+      "name": "Manure Works beside Channelsea",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "os-1893"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 9001,
+      "name": "Oil Wharf and lime wharf north of Bow Bridge",
+      "status": "Overlay captured; detailed refinement pending",
+      "sources": [
+        "os-1893"
+      ],
+      "chimneyReview": {
+        "status": "Chimney evidence review pending; zero is not an absence claim",
+        "mappedCount": 0
+      }
+    },
+    {
+      "id": 1017,
+      "name": "Wm Ritchie & Sons \u2014 London Spinning Mills (jute)",
+      "status": "Goad ranges refined; review captures available",
+      "sources": [
+        "goad-f4-jute",
+        "crory-jute-1876",
+        "os-1893"
+      ],
+      "chimneyReview": {
+        "status": "Goad chimney-symbol pass completed; further photographic comparison pending",
+        "mappedCount": 1
+      }
+    }
+  ],
+  "chimneyReviewNotes": "54 symbols traced across 19 registered site groups from July 1893 originals. Source pixels and height readings retained. Supplied 1926 symbol key is interpretive support, not the survey date. Gasworks and remaining OS-only sites still need chimney evidence reviewed. One provisional Bromley boiler stack subsequently added from OS / 1924 aerial comparison. The 1902 northward photo also shows foreground chemical-works stacks; not all are gasworks stacks. Bromley retort houses now have 24 interpreted roof flues informed by the 1924 aerials; estimated arrangements follow the author\u2019s close-enough reconstruction preference."
+}

@@ -5,6 +5,7 @@
 /MEMORY.md
 /WEBSITE_PLAN.md
 /scenes/*/review/
+/exports/
 /.agents/
 /.codex/
 __pycache__/

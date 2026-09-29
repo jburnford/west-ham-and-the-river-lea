@@ -67,6 +67,12 @@ export function realism(THREE, renderer, scene, data, options = {}) {
     water: make('#656c65', null, .28)
   };
   materials.bed.userData.wetBed = true;
+  // One land treatment across the detailed tile, outer marsh and flat ground.
+  materials.land = materials.ground.clone();
+  materials.land.map = null; materials.land.bumpMap = null;
+  materials.land.userData.sharedTerrain = true;
+  materials.land.defaultAttributeValues = { ...materials.land.defaultAttributeValues,
+    sediment: [0], landCover: [0,0] };
   // Original generated sediment texture; no archive image is used here.
   // Reuse its intensity for fine bump relief, not measured displacement.
   const sediment=new THREE.Texture(data.terrain.mudImage);sediment.needsUpdate=true;
@@ -78,18 +84,26 @@ export function realism(THREE, renderer, scene, data, options = {}) {
 
   // Static soft contact shading, baked from existing reconstruction envelopes.
   // This is visual grounding, not surveyed ground marks or a new building layer.
-  const contactCanvas = document.createElement('canvas'); contactCanvas.width = contactCanvas.height = 1024;
+  const contactBounds=[-1600,-1050,650,1700], contactWidth=2250, contactDepth=2750;
+  const contactCanvas = document.createElement('canvas'); contactCanvas.width = contactCanvas.height = 2048;
   const contactContext = contactCanvas.getContext('2d');
-  contactContext.fillStyle = 'white'; contactContext.fillRect(0, 0, 1024, 1024);
-  contactContext.scale(1024 / 1200, 1024 / 1200); contactContext.translate(600, 600);
-  const footprints = [...data.factoryStudies, ...data.neighbourhood.mappedFactories,
-    ...data.neighbourhood.houses, ...data.neighbourhood.terraces, data.neighbourhood.mill,
+  contactContext.fillStyle = 'white'; contactContext.fillRect(0, 0, 2048, 2048);
+  contactContext.scale(2048/contactWidth,2048/contactDepth); contactContext.translate(-contactBounds[0],-contactBounds[1]);
+  const registered=new Set(data.factoryBuildings.sites.map(s=>s.id));
+  const footprints = [...data.factoryStudies.filter(b=>!registered.has(b.siteId)), ...data.neighbourhood.mappedFactories.filter(b=>!registered.has(b.siteId)),
+    ...data.neighbourhood.houses, ...data.neighbourhood.terraces, ...data.southwest.rows, data.neighbourhood.mill,
     { x: -185, z: -13, width: 54, depth: 20 }, { x: -185, z: -13, width: 20, depth: 48 }];
   for (const b of footprints) {
     contactContext.save(); contactContext.translate(b.x, b.z); contactContext.rotate(-(b.rotation || 0) * Math.PI / 180);
     contactContext.shadowBlur = 6; contactContext.shadowColor = 'rgba(0,0,0,.7)';
     contactContext.fillStyle = '#666666'; contactContext.fillRect(-b.width / 2, -b.depth / 2, b.width, b.depth);
     contactContext.restore();
+  }
+  for(const b of [...data.factoryBuildings.buildings,...data.highStreetFrontages.buildings])for(const p of b.renderPolygons) {
+    contactContext.save();contactContext.shadowBlur=5;contactContext.shadowColor='rgba(0,0,0,.65)';contactContext.fillStyle='#777777';
+    contactContext.beginPath();
+    for(const ring of [p.outer,...p.holes]) {ring.forEach(([x,z],i)=>i?contactContext.lineTo(x,z):contactContext.moveTo(x,z));contactContext.closePath();}
+    contactContext.fill('evenodd');contactContext.restore();
   }
   const contactMap = new THREE.CanvasTexture(contactCanvas);
 
@@ -103,25 +117,51 @@ export function realism(THREE, renderer, scene, data, options = {}) {
   `;
   function weather(material) {
     if (!material.userData.surface) return;
-    const wet = material.userData.wetBed, terrain=material.userData.terrainAtlas, wall = ['brick', 'wood'].includes(material.userData.surface);
+    const wet = material.userData.wetBed, terrain=material.userData.terrainAtlas, shared=material.userData.sharedTerrain, soil=material.userData.gardenSoil, silt=material.userData.networkSediment || shared, wall = ['brick', 'wood'].includes(material.userData.surface);
     material.onBeforeCompile = shader => {
       shader.uniforms.contactMap = { value: contactMap };
+      if(shared&&material.userData.yardAtlas) {
+        shader.uniforms.yardAtlas={value:material.userData.yardAtlas};
+        shader.uniforms.yardBounds={value:material.userData.yardBounds};
+      }
+      if(silt)shader.uniforms.networkMud={value:materials.bed.map};
       if(terrain) {
         shader.uniforms.landAtlas={value:riverBed};
         shader.uniforms.landBounds={value:new THREE.Vector4(bx0,bz0,bx1-bx0,bz1-bz0)};
       }
       shader.vertexShader = 'varying vec3 surfacePosition;\n' + shader.vertexShader;
       shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', '#include <begin_vertex>\nsurfacePosition = (modelMatrix * vec4(position,1.0)).xyz;');
+      if(silt) {
+        shader.vertexShader='attribute float sediment; varying float bankSediment;\n'+shader.vertexShader;
+        shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nbankSediment=sediment;');
+      }
+      if(shared) {
+        shader.vertexShader='attribute vec2 landCover; varying vec2 groundCover;\n'+shader.vertexShader;
+        shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\ngroundCover=landCover;');
+      }
       shader.fragmentShader = 'uniform sampler2D contactMap; varying vec3 surfacePosition;\n' + noise + shader.fragmentShader;
       if(terrain)shader.fragmentShader='uniform sampler2D landAtlas; uniform vec4 landBounds;\n'+shader.fragmentShader;
+      if(silt)shader.fragmentShader='uniform sampler2D networkMud; varying float bankSediment;\n'+shader.fragmentShader;
+      if(shared)shader.fragmentShader='varying vec2 groundCover;\n'+shader.fragmentShader;
+      if(shared&&material.userData.yardAtlas)shader.fragmentShader='uniform sampler2D yardAtlas; uniform vec4 yardBounds;\n'+shader.fragmentShader;
       shader.fragmentShader = shader.fragmentShader.replace('#include <map_fragment>', `
         ${terrain?'vec3 dryLandColour=diffuseColor.rgb;':''}
         #include <map_fragment>
+        ${shared?`// Garden paths remain grassy/earthy; individual plots carry soil.
+          diffuseColor.rgb*=.44+.045*sin(surfacePosition.x*.11+2.0*sin(surfacePosition.z*.071))*sin(surfacePosition.z*.095+sin(surfacePosition.x*.13))
+            +.022*sin(surfacePosition.x*.63+sin(surfacePosition.z*.49))*sin(surfacePosition.z*.72+sin(surfacePosition.x*.44));
+          diffuseColor.rgb*=mix(vec3(1.0),vec3(.94,.81,.65),groundCover.y*.35);`:''}
+        ${silt?`vec3 mud=texture2D(networkMud,surfacePosition.xz*.5).rgb*vec3(.39,.38,.33);
+          mud*=mix(.52,1.0,smoothstep(.06,.85,surfacePosition.y));
+          diffuseColor.rgb=mix(diffuseColor.rgb,mud,bankSediment);`:''}
         ${terrain?`float sedimentMask=texture2D(landAtlas,(surfacePosition.xz-landBounds.xy)/landBounds.zw).a;
           diffuseColor.rgb=mix(dryLandColour*(.50+.10*grainNoise(surfacePosition.xz*.7)),diffuseColor.rgb,sedimentMask);`:''}
-        float patches=grainNoise(surfacePosition.xz*.17)+.4*grainNoise(surfacePosition.xz*.83);
+        float patches=${shared||soil?'0.65+.10*sin(surfacePosition.x*.33+surfacePosition.z*.19)*sin(surfacePosition.z*.23-surfacePosition.x*.14)':'grainNoise(surfacePosition.xz*.17)+.4*grainNoise(surfacePosition.xz*.83)'};
         diffuseColor.rgb *= .76 + patches*.26;
-        vec2 contactUv=vec2(surfacePosition.x/1200.0+.5,.5-surfacePosition.z/1200.0);
+        ${shared&&material.userData.yardAtlas?`vec2 yardUv=(surfacePosition.xz-yardBounds.xy)/yardBounds.zw;
+          vec4 yard=texture2D(yardAtlas,vec2(yardUv.x,1.0-yardUv.y));
+          diffuseColor.rgb=mix(diffuseColor.rgb,yard.rgb*vec3(.402,.371,.323),yard.a);`:''}
+        vec2 contactUv=vec2((surfacePosition.x+1600.0)/2250.0,1.0-(surfacePosition.z+1050.0)/2750.0);
         float contact=texture2D(contactMap,clamp(contactUv,vec2(0),vec2(1))).r;
         diffuseColor.rgb *= 1.0-(1.0-contact)*.65*(1.0-smoothstep(.0,3.0,surfacePosition.y));
         ${wall ? `float baseDamp=1.0-smoothstep(.0,3.2,surfacePosition.y);
@@ -132,7 +172,7 @@ export function realism(THREE, renderer, scene, data, options = {}) {
       `);
       if (wet) shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `#include <roughnessmap_fragment>\nroughnessFactor=mix(.42,.95,${terrain?'max(1.0-sedimentMask,':''}smoothstep(.09,.72,surfacePosition.y)${terrain?')':''});`);
     };
-    material.customProgramCacheKey = () => `weather-${wet}-${wall}-${terrain}`;
+    material.customProgramCacheKey = () => `weather-${wet}-${wall}-${terrain}-${silt}-${shared}-${soil}`;
   }
 
   function metricUV(geometry, sourceGeometry) {
@@ -159,25 +199,39 @@ export function realism(THREE, renderer, scene, data, options = {}) {
     geometry.setAttribute('uv', new THREE.BufferAttribute(uv, 2));
   }
 
-  // One reduced-resolution planar reflection shared by all mapped river polygons.
-  // The reflected camera moves with the walker, preserving foreground parallax.
-  const target = new THREE.WebGLRenderTarget(options.reflectionWidth || 512, options.reflectionHeight || 384, { type: THREE.HalfFloatType });
-  const reflectionCamera = new THREE.PerspectiveCamera(), matrix = new THREE.Matrix4();
-  const clip = new THREE.Plane(new THREE.Vector3(0, 1, 0), -.07);
+  // Separate reflection planes for tidal water and the retained river/drains.
+  materials.tidalWater = materials.water.clone();
+  let tideHeight = data.riverNetwork.tide.low;
+  // Masks use the same placements as the rendered lighters. Only their open
+  // hold interiors are excluded; river water still meets the outside hulls.
+  const bargeHolds = Array.from({length:4},()=>new THREE.Vector4(-10000,-10000,1,0));
   const riverBed=new THREE.DataTexture(data.terrain.properties,data.terrain.width,data.terrain.height,THREE.RGBAFormat);
   riverBed.minFilter=riverBed.magFilter=THREE.LinearFilter;riverBed.needsUpdate=true;
   const [bx0,bz0,bx1,bz1]=data.terrain.bounds;
-  materials.water.onBeforeCompile = shader => {
+  function reflector(material, level) {
+  const target = new THREE.WebGLRenderTarget(options.reflectionWidth || 512, options.reflectionHeight || 384, { type: THREE.HalfFloatType });
+  const reflectionCamera = new THREE.PerspectiveCamera(), matrix = new THREE.Matrix4();
+  const clip = new THREE.Plane(new THREE.Vector3(0, 1, 0), -.07);
+  material.onBeforeCompile = shader => {
     shader.uniforms.riverReflection = { value: target.texture };
     shader.uniforms.riverMatrix = { value: matrix };
     shader.uniforms.riverBed = { value: riverBed };
+    shader.uniforms.bargeHolds = { value: bargeHolds };
     shader.uniforms.bedBounds = { value: new THREE.Vector4(bx0,bz0,bx1-bx0,bz1-bz0) };
     shader.vertexShader = 'uniform mat4 riverMatrix; varying vec4 riverCoord; varying vec3 riverPosition;\n' + shader.vertexShader;
     shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>
       riverPosition=(modelMatrix*vec4(position,1.0)).xyz;
       riverCoord=riverMatrix*vec4(riverPosition,1.0);`);
-    shader.fragmentShader = 'uniform sampler2D riverReflection; uniform sampler2D riverBed; uniform vec4 bedBounds; varying vec4 riverCoord; varying vec3 riverPosition;\n' + noise + shader.fragmentShader;
+    shader.fragmentShader = 'uniform sampler2D riverReflection; uniform sampler2D riverBed; uniform vec4 bedBounds; uniform vec4 bargeHolds[4]; varying vec4 riverCoord; varying vec3 riverPosition;\n' + noise + shader.fragmentShader;
     shader.fragmentShader = shader.fragmentShader.replace('#include <opaque_fragment>', `
+      for (int i=0;i<4;i++) {
+        vec2 delta=riverPosition.xz-bargeHolds[i].xy;
+        float c=bargeHolds[i].z,s=bargeHolds[i].w;
+        vec2 local=vec2(c*delta.x-s*delta.y,s*delta.x+c*delta.y);
+        // Exact inner-hold outline: straight sides and the quadratic end.
+        if(abs(local.x)<2.05 && local.y<6.8 &&
+           local.y>-7.2+.8*pow(local.x/2.05,2.0)) discard;
+      }
       vec2 riverUv=riverCoord.xy/riverCoord.w;
       vec2 ripple=vec2(sin(riverPosition.x*2.8+riverPosition.z*.6),cos(riverPosition.z*3.4-riverPosition.x*.4));
       ripple *= .0012 + .001*grainNoise(riverPosition.xz*.8);
@@ -185,7 +239,7 @@ export function realism(THREE, renderer, scene, data, options = {}) {
       float facing=abs(dot(normalize(cameraPosition-riverPosition),vec3(0,1,0)));
       vec2 bedUv=(riverPosition.xz-bedBounds.xy)/bedBounds.zw;
       float inside=step(0.0,bedUv.x)*step(0.0,bedUv.y)*step(bedUv.x,1.0)*step(bedUv.y,1.0);
-      float depth=mix(.6,texture2D(riverBed,bedUv).r,inside);
+      float depth=mix(.6,texture2D(riverBed,bedUv).r,inside)+max(0.0,riverPosition.y-.06)/2.4;
       float fresnel=.12+.65*pow(1.0-facing,3.0);
       vec3 sediment=mix(vec3(.15,.14,.115),vec3(.044,.058,.054),smoothstep(.0,.65,depth));
       outgoingLight=mix(mix(outgoingLight,sediment,.58),reflected,fresnel);
@@ -195,10 +249,11 @@ export function realism(THREE, renderer, scene, data, options = {}) {
   const reflectionStats = {};
   function reflect(camera) {
     const waterMeshes = [];
-    scene.traverse(o => { if (o.isMesh && o.material === materials.water) { waterMeshes.push(o); o.visible = false; } });
+    scene.traverse(o => { if (o.isMesh && [materials.water,materials.tidalWater].includes(o.material)) { waterMeshes.push([o,o.visible]); o.visible = false; } });
     reflectionCamera.copy(camera);
     const direction = camera.getWorldDirection(new THREE.Vector3()); direction.y *= -1;
-    reflectionCamera.position.y = .12 - camera.position.y;
+    reflectionCamera.position.y = 2 * level() - camera.position.y;
+    clip.constant = -level() - .01;
     reflectionCamera.up.set(0, -1, 0);
     reflectionCamera.lookAt(reflectionCamera.position.clone().add(direction));
     reflectionCamera.updateMatrixWorld();
@@ -211,7 +266,23 @@ export function realism(THREE, renderer, scene, data, options = {}) {
     reflectionStats.triangles = renderer.info.render.triangles;
     reflectionStats.width = target.width; reflectionStats.height = target.height;
     renderer.setRenderTarget(previousTarget); renderer.clippingPlanes = previousClip;
-    waterMeshes.forEach(o => { o.visible = true; });
+    waterMeshes.forEach(([o,visible]) => { o.visible = visible; });
   }
-  return { materials, weather, metricUV, reflect, reflectionStats };
+  return { reflect, reflectionStats };
+  }
+  const fixed = reflector(materials.water, () => data.riverNetwork.waterLevel);
+  const moving = reflector(materials.tidalWater, () => tideHeight);
+  const reflectionStats = {};
+  function reflect(camera) {
+    fixed.reflect(camera);
+    const animated = tideHeight > data.riverNetwork.waterLevel + .00001;
+    if (animated) moving.reflect(camera);
+    Object.assign(reflectionStats, fixed.reflectionStats, { planes: animated ? 2 : 1, tidalLevel: tideHeight });
+  }
+  return { materials, weather, metricUV, reflect, reflectionStats,
+    excludeBargeHolds: barges => {
+      barges.forEach(([x,z,angle],i)=>bargeHolds[i].set(x,z,Math.cos(angle*Math.PI/180),Math.sin(angle*Math.PI/180)));
+      reflectionStats.excludedBargeHolds=barges.length;
+    },
+    setTideLevel: value => { tideHeight = value; } };
 }

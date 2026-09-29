@@ -1,0 +1,474 @@
+{
+  "source": "reference/neighbourhood-context/os-viii32.jpg",
+  "sheet": "32",
+  "pixelWidth": 1888,
+  "evidence": "OS VIII.32 re-read at full resolution following the author\u2019s 27 September close-up. Sixteen houses retained along the principal Roberts/Beck/Lucas rows as requested; other counts are visual estimates. Axes describe main house bodies, with separate Abbey Lane returns and mapped plot limits.",
+  "rows": [
+    {
+      "id": "os-row-1",
+      "a": [
+        205,
+        374
+      ],
+      "b": [
+        257,
+        342
+      ],
+      "houseCount": 12,
+      "street": "Roberts Road",
+      "block": null,
+      "depth": 11
+    },
+    {
+      "id": "os-row-2",
+      "a": [
+        221,
+        402
+      ],
+      "b": [
+        295,
+        359
+      ],
+      "houseCount": 16,
+      "street": "Roberts Road",
+      "block": "roberts-beck",
+      "depth": 11
+    },
+    {
+      "id": "os-row-3",
+      "a": [
+        240,
+        429
+      ],
+      "b": [
+        318,
+        378
+      ],
+      "houseCount": 16,
+      "street": "Beck Road",
+      "block": "roberts-beck",
+      "depth": 11
+    },
+    {
+      "id": "os-row-4-part-1",
+      "a": [
+        258,
+        452
+      ],
+      "b": [
+        344,
+        396
+      ],
+      "houseCount": 16,
+      "street": "Beck Road",
+      "block": "beck-lucas",
+      "depth": 11
+    },
+    {
+      "id": "os-row-5",
+      "a": [
+        282,
+        480
+      ],
+      "b": [
+        367,
+        423
+      ],
+      "houseCount": 16,
+      "street": "Lucas Road",
+      "block": "beck-lucas",
+      "depth": 11
+    },
+    {
+      "id": "os-row-6",
+      "a": [
+        316,
+        516
+      ],
+      "b": [
+        409,
+        453
+      ],
+      "houseCount": 16,
+      "street": "Lucas Road",
+      "block": "lucas-outer",
+      "depth": 11
+    },
+    {
+      "id": "os-row-7",
+      "a": [
+        220,
+        267
+      ],
+      "b": [
+        263,
+        176
+      ],
+      "houseCount": 16,
+      "street": "Godfrey Street",
+      "block": null,
+      "depth": 12
+    },
+    {
+      "id": "os-row-8-part-1",
+      "a": [
+        255,
+        267
+      ],
+      "b": [
+        293,
+        190
+      ],
+      "houseCount": 14,
+      "street": "Godfrey Street",
+      "block": "godfrey-napier",
+      "depth": 12
+    },
+    {
+      "id": "os-row-9",
+      "a": [
+        342,
+        316
+      ],
+      "b": [
+        374,
+        254
+      ],
+      "houseCount": 12,
+      "street": "Napier Road",
+      "block": "napier-ross",
+      "depth": 12
+    },
+    {
+      "id": "os-row-10",
+      "a": [
+        400,
+        330
+      ],
+      "b": [
+        424,
+        292
+      ],
+      "houseCount": 8,
+      "street": "Ross Road",
+      "block": "napier-ross",
+      "depth": 12
+    },
+    {
+      "id": "os-row-11",
+      "a": [
+        438,
+        354
+      ],
+      "b": [
+        461,
+        319
+      ],
+      "houseCount": 6,
+      "street": "Ross Road",
+      "block": "ross-allwyn",
+      "depth": 12
+    },
+    {
+      "id": "os-row-12",
+      "a": [
+        489,
+        396
+      ],
+      "b": [
+        512,
+        359
+      ],
+      "houseCount": 8,
+      "street": "Allwyn Road",
+      "block": "ross-allwyn",
+      "depth": 12
+    },
+    {
+      "id": "os-row-13",
+      "a": [
+        426,
+        393
+      ],
+      "b": [
+        480,
+        420
+      ],
+      "houseCount": 10,
+      "street": "Abbey Lane",
+      "block": "ross-allwyn",
+      "depth": 12
+    },
+    {
+      "id": "os-row-14",
+      "a": [
+        519,
+        425
+      ],
+      "b": [
+        546,
+        392
+      ],
+      "houseCount": 6,
+      "street": "Allwyn Road",
+      "block": "allwyn-east",
+      "depth": 12
+    },
+    {
+      "id": "os-row-15",
+      "a": [
+        546,
+        439
+      ],
+      "b": [
+        589,
+        444
+      ],
+      "houseCount": 6,
+      "street": "Abbey Lane",
+      "block": "allwyn-east",
+      "depth": 11
+    },
+    {
+      "id": "millmeads-napier-west",
+      "a": [
+        303,
+        293
+      ],
+      "b": [
+        342,
+        225
+      ],
+      "houseCount": 12,
+      "street": "Napier Road",
+      "block": "godfrey-napier",
+      "depth": 12
+    },
+    {
+      "id": "millmeads-abbey-godfrey",
+      "a": [
+        251,
+        285
+      ],
+      "b": [
+        307,
+        303
+      ],
+      "houseCount": 8,
+      "street": "Abbey Lane",
+      "block": "godfrey-napier",
+      "depth": 12
+    },
+    {
+      "id": "millmeads-abbey-napier",
+      "a": [
+        349,
+        332
+      ],
+      "b": [
+        396,
+        359
+      ],
+      "houseCount": 8,
+      "street": "Abbey Lane",
+      "block": "napier-ross",
+      "depth": 12
+    },
+    {
+      "id": "millmeads-abbey-roberts",
+      "a": [
+        305.601,
+        356.743
+      ],
+      "b": [
+        339.915,
+        375.155
+      ],
+      "houseCount": 6,
+      "street": "Abbey Lane",
+      "block": "roberts-beck",
+      "depth": 12,
+      "clearanceAdjustment": "Return fitted within approximately registered street edges; endpoint and setback adjustments are interpreted."
+    },
+    {
+      "id": "millmeads-abbey-beck",
+      "a": [
+        364.195,
+        397.482
+      ],
+      "b": [
+        405.009,
+        419.663
+      ],
+      "houseCount": 6,
+      "street": "Abbey Lane",
+      "block": "beck-lucas",
+      "depth": 12,
+      "clearanceAdjustment": "Return fitted within approximately registered street edges; endpoint and setback adjustments are interpreted."
+    },
+    {
+      "id": "millmeads-abbey-lucas",
+      "a": [
+        428.444,
+        437.992
+      ],
+      "b": [
+        478.444,
+        463.992
+      ],
+      "houseCount": 6,
+      "street": "Abbey Lane",
+      "block": "lucas-outer",
+      "depth": 12,
+      "clearanceAdjustment": "Return fitted within approximately registered street edges; endpoint and setback adjustments are interpreted."
+    },
+    {
+      "id": "millmeads-abbey-roberts-north",
+      "a": [
+        265.0,
+        331.0
+      ],
+      "b": [
+        277.139,
+        336.311
+      ],
+      "houseCount": 2,
+      "street": "Abbey Lane",
+      "block": null,
+      "depth": 11,
+      "clearanceAdjustment": "Return fitted within approximately registered street edges; endpoint and setback adjustments are interpreted."
+    }
+  ],
+  "blocks": {
+    "roberts-beck": [
+      [
+        209,
+        400
+      ],
+      [
+        304,
+        342
+      ],
+      [
+        360,
+        372
+      ],
+      [
+        240,
+        439
+      ]
+    ],
+    "beck-lucas": [
+      [
+        247,
+        449
+      ],
+      [
+        362,
+        380
+      ],
+      [
+        423,
+        414
+      ],
+      [
+        291,
+        497
+      ]
+    ],
+    "lucas-outer": [
+      [
+        302,
+        516
+      ],
+      [
+        428,
+        420
+      ],
+      [
+        495,
+        457
+      ],
+      [
+        389,
+        513
+      ],
+      [
+        327,
+        537
+      ]
+    ],
+    "godfrey-napier": [
+      [
+        242,
+        284
+      ],
+      [
+        286,
+        182
+      ],
+      [
+        351,
+        222
+      ],
+      [
+        316,
+        314
+      ]
+    ],
+    "napier-ross": [
+      [
+        329,
+        329
+      ],
+      [
+        370,
+        246
+      ],
+      [
+        435,
+        286
+      ],
+      [
+        401,
+        373
+      ]
+    ],
+    "ross-allwyn": [
+      [
+        421,
+        394
+      ],
+      [
+        455,
+        310
+      ],
+      [
+        523,
+        351
+      ],
+      [
+        490,
+        432
+      ]
+    ],
+    "allwyn-east": [
+      [
+        511,
+        437
+      ],
+      [
+        541,
+        382
+      ],
+      [
+        598,
+        398
+      ],
+      [
+        599,
+        451
+      ]
+    ]
+  }
+}

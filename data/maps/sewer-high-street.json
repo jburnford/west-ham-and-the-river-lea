@@ -1,0 +1,85 @@
+{
+  "source": "Archived NLS OS London five-foot mapping revised 1893; user sewerhighstreet.png corroborates bend",
+  "mosaicBounds": [
+    -1250,
+    -650,
+    -350,
+    -250
+  ],
+  "mosaicPixelWidth": 2816,
+  "sourcePixels": [
+    [
+      27.5,
+      242.0
+    ],
+    [
+      536.25,
+      376.75
+    ],
+    [
+      1054.625,
+      525.25
+    ],
+    [
+      1549.625,
+      646.25
+    ],
+    [
+      1883.75,
+      774.125
+    ],
+    [
+      2007.5,
+      822.25
+    ],
+    [
+      2035.0,
+      842.875
+    ]
+  ],
+  "westernRoute": [
+    [
+      -1317.819,
+      -567.373
+    ],
+    [
+      -1127.194,
+      -522.505
+    ],
+    [
+      -932.847,
+      -472.638
+    ],
+    [
+      -747.469,
+      -432.747
+    ],
+    [
+      -621.87,
+      -388.68
+    ],
+    [
+      -575.344,
+      -372.076
+    ],
+    [
+      -564.904,
+      -364.701
+    ]
+  ],
+  "joinExistingRouteAt": [
+    -545.55,
+    -355.38
+  ],
+  "evidence": "Western centreline replaces the straight 1400 m extrapolation. High Street crosses above the enclosed sewer, not below an exposed walkway. Exact nineteenth-century section still unresolved.",
+  "crossing": {
+    "road": "Stratford High Street",
+    "surfaceHeight": 3.5,
+    "sewerApproachLength": 180,
+    "roadApproachLength": 100,
+    "levelEvidence": "Provisional surface profile only, not sewer invert or hydraulic gradient. OS reads 24.7 ft on High Street near the crossing and BM 22.40 at St Michael; 3.5 m matches their relative difference against the existing 2.8 m bridge datum. Wider ground datum and cover depths not calibrated.",
+    "sources": [
+      "https://www.thameswater.co.uk/news/2024/dec/nos-stratford-glass-lining"
+    ]
+  }
+}

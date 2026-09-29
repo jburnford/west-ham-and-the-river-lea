@@ -1,3 +1,4 @@
+import { gardens } from './gardens.js';
 // Inferred landform and working surfaces, based on Figure 2.4.
 // Original geometry only; source photograph is not used as a surface texture.
 export async function loadTerrain(load) {
@@ -9,7 +10,7 @@ export async function loadTerrain(load) {
   terrain.levels=new Float32Array(files[0]);terrain.properties=new Uint8Array(files[1]);
   terrain.landcover=new Uint8Array(files[2]);
   if(terrain.levels.length!==terrain.width*terrain.height || terrain.properties.length!==terrain.levels.length*4 || terrain.landcover.length!==terrain.levels.length) throw new Error('Terrain dimensions do not match');
-  terrain.mudImage=new Image();terrain.mudImage.src='./assets/textures/tidal-mud-v1.png';
+  terrain.mudImage=new Image();terrain.mudImage.src=window.sceneAssetUrl?.('./assets/textures/tidal-mud-v1.png')||'./assets/textures/tidal-mud-v1.png';
   await terrain.mudImage.decode();
   return terrain;
 }
@@ -17,22 +18,16 @@ export async function loadTerrain(load) {
 export function terrainDetails({THREE,scene,materials:m,data,box,cylinder,beam,random,density=1}) {
   const t=data.terrain,[x0,z0,x1,z1]=t.bounds;
   function level(x,z) {
-    if(x<x0 || x>x1 || z<z0 || z>z1) return 0;
+    if(x<x0 || x>x1 || z<z0 || z>z1) return data.riverNetwork.marshLevel(x,z);
     const fx=Math.max(0,Math.min(t.width-1.001,(x-x0)/t.step)),fz=Math.max(0,Math.min(t.height-1.001,(z-z0)/t.step));
     const i=Math.floor(fx),j=Math.floor(fz),u=fx-i,v=fz-j,at=(a,b)=>t.levels[b*t.width+a];
     return (at(i,j)*(1-u)+at(i+1,j)*u)*(1-v)+(at(i,j+1)*(1-u)+at(i+1,j+1)*u)*v;
   }
-  const terrainMaterial=m.bed.clone();terrainMaterial.color.set('#e1ddd2');terrainMaterial.vertexColors=true;
-  terrainMaterial.userData.terrainAtlas=true;
-  const position=new Float32Array(t.width*t.height*3),uv=new Float32Array(t.width*t.height*2),color=new Float32Array(position.length);
-  const dry=new THREE.Color('#a39a87'),land=new THREE.Color('#99a17d'),yard=new THREE.Color('#b3a691'),cultivated=new THREE.Color('#958768'),wet=new THREE.Color('#77776c');
+  const terrainMaterial=m.land;
+  const position=new Float32Array(t.width*t.height*3),uv=new Float32Array(t.width*t.height*2);
   for(let z=0;z<t.height;z++) for(let x=0;x<t.width;x++) {
     const i=z*t.width+x,wx=x0+x*t.step,wz=z0+z*t.step;
     position.set([wx,t.levels[i],wz],i*3);uv.set([wx,wz],i*2);
-    const bed=t.properties[i*4+3]/255,moisture=t.properties[i*4+1]/255;
-    const base=t.landcover[i]===1?yard:t.landcover[i]===2?cultivated:land;
-    const c=base.clone().lerp(dry,bed).lerp(wet,moisture*bed*.55);
-    color.set(c.toArray(),i*3);
   }
   const indices=new Uint32Array((t.width-1)*(t.height-1)*6);let k=0;
   for(let z=0;z<t.height-1;z++) for(let x=0;x<t.width-1;x++) {
@@ -40,10 +35,17 @@ export function terrainDetails({THREE,scene,materials:m,data,box,cylinder,beam,r
     indices.set((x+z)%2?[a,c,d,a,d,b]:[a,c,b,b,c,d],k);k+=6;
   }
   const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(position,3));
-  geometry.setAttribute('uv',new THREE.BufferAttribute(uv,2));geometry.setAttribute('color',new THREE.BufferAttribute(color,3));
+  geometry.setAttribute('uv',new THREE.BufferAttribute(uv,2));
   geometry.setIndex(new THREE.BufferAttribute(indices,1));geometry.computeVertexNormals();
+  const sediment=new Uint8Array(t.width*t.height),cover=new Uint8Array(t.width*t.height*2);
+  for(let i=0;i<sediment.length;i++) {
+    sediment[i]=t.properties[i*4+3];
+    cover[i*2]=t.landcover[i]===1?255:0;cover[i*2+1]=t.landcover[i]===2?255:0;
+  }
+  geometry.setAttribute('sediment',new THREE.BufferAttribute(sediment,1,true));
+  geometry.setAttribute('landCover',new THREE.BufferAttribute(cover,2,true));
   const terrainMesh=new THREE.Mesh(geometry,terrainMaterial);terrainMesh.userData.keepIndexed=true;
-  terrainMesh.receiveShadow=true;terrainMesh.castShadow=true;scene.add(terrainMesh);
+  terrainMesh.receiveShadow=true;terrainMesh.castShadow=false;scene.add(terrainMesh);
 
   // Torn clods and small ridges catch light above the lower-frequency ground mesh.
   // They are flattened mud, not scattered large stones or invented refuse.
@@ -85,39 +87,8 @@ export function terrainDetails({THREE,scene,materials:m,data,box,cylinder,beam,r
     }
   }
 
-  const tar=m.roof.clone();tar.color.set('#4a4b44');tar.map=m.wood.map;tar.bumpMap=m.wood.bumpMap;tar.userData.surface='wood';
-  let sheds=0;
-  const plotSoils=['#a29378','#8e8067','#a99b80'].map(color=>{const mat=m.ground.clone();mat.color.set(color);return mat;});
-  const crops=['#78805c','#90906b','#677452'].map(color=>new THREE.MeshStandardMaterial({color,roughness:1}));
-  for(let i=0;i<data.neighbourhood.garden.beds.length;i++) {
-    const b=data.neighbourhood.garden.beds[i],ground=level(b.x,b.z);
-    box(scene,b.x,ground+.015,b.z,b.width,.035,b.depth,plotSoils[i%plotSoils.length]);
-    // Uneven furrows and paths occupy the existing plot footprints.
-    for(let z=-b.depth/2+.7;z<b.depth/2;z+=1.3) {
-      const row=box(scene,b.x,ground-.03,b.z+z,b.width-.8,.14+random()*.12,.36,m.bed);row.rotation.z=(random()-.5)*.02;
-      if(i%5!==0 && Math.floor(z*10)%3!==0)box(scene,b.x,ground+.12,b.z+z,b.width-1,.13+random()*.2,.25,crops[i%3]);
-    }
-    if(i%7!==0 && i%19!==0) continue;
-    const w=2.5+random()*.95,d=2.8+random()*1.3,h=1.7+random()*.65;
-    const g=new THREE.Group();g.position.set(b.x,level(b.x,b.z-3),b.z-3);g.rotation.y=(random()-.5)*.24;scene.add(g);sheds++;
-    box(g,0,0,0,w,h,d,m.wood);
-    for(const sign of [-1,1]) {
-      for(let x=-w/2+.12;x<w/2;x+=.22) box(g,x,.03,sign*(d/2+.02),.025,h-.03,.035,m.dark);
-      for(let z=-d/2+.12;z<d/2;z+=.24) box(g,sign*(w/2+.02),.03,z,.035,h-.03,.024,m.dark);
-    }
-    box(g,-w*.18,.05,d/2+.06,.74,h*.82,.08,m.dark);
-    box(g,w*.25,h*.46,d/2+.065,.45,.43,.04,m.window);
-    box(g,w*.25,h*.44,d/2+.095,.53,.04,.09,m.wood);
-    const roof=box(g,0,h,0,w+.4,.12,d+.4,tar);roof.rotation.z=(i%2?1:-1)*.13;
-    // Patch boards, roof battens and a low leaning fence; no modern sheet plastics.
-    box(g,-w*.22,h+.1,0,.14,.07,d+.35,m.wood);
-    box(g,w*.32,h+.1,0,.12,.06,d+.35,m.wood);
-    for(let p=0;p<4;p++) {
-      const post=box(g,w/2+.6,.05,-d/2+p*1.25,.1,.75+random()*.3,.1,m.wood);post.rotation.z=.07;
-    }
-    box(g,w/2+.6,.52,.1,.07,.07,d+1,m.wood);
-    cylinder(g,-w/2-.45,0,d/2-.35,.24,.28,.68,m.wood,10);
-  }
+  const garden = gardens({THREE,scene,materials:m,data,box,cylinder,level});
+  const sheds = garden.sheds;
   // Low mixed grass and coarse weeds on open land; no invented trees or species.
   // Mapped working sites, allotments, roads and exposed sediment remain clear.
   const vegetation=[];let vegetationCount=0,plantSeed=902;
@@ -142,5 +113,5 @@ export function terrainDetails({THREE,scene,materials:m,data,box,cylinder,beam,r
   const grass=new THREE.MeshStandardMaterial({color:'#838961',roughness:1,side:THREE.DoubleSide});
   const grassGeometry=new THREE.BufferGeometry();grassGeometry.setAttribute('position',new THREE.Float32BufferAttribute(vegetation,3));grassGeometry.computeVertexNormals();
   scene.add(new THREE.Mesh(grassGeometry,grass));
-  return {level,terrainMaterial,clodCount,sheds,vegetationCount};
+  return {level,terrainMaterial,clodCount,sheds,vegetationCount,gardenReview:garden.review};
 }

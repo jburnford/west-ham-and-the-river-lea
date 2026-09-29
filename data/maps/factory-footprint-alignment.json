@@ -1,0 +1,2858 @@
+{
+  "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg",
+  "sourceCRS": "EPSG:3857 reprojected to EPSG:27700",
+  "worldOriginBNG": [
+    538900,
+    183209
+  ],
+  "date": "2026-09-28",
+  "method": "Reviewed one-to-one geometry corrections. Complex compounds and architectural landmarks require separate review; source feature IDs retained. Source boundary simplification tolerance 0.05 m.",
+  "buildings": [
+    {
+      "modelId": "site940-22",
+      "siteId": 940,
+      "name": "Warehouse",
+      "sourceFid": 19025,
+      "worldFootprint": [
+        [
+          -885.045,
+          -328.096
+        ],
+        [
+          -886.881,
+          -329.992
+        ],
+        [
+          -886.87,
+          -330.51
+        ],
+        [
+          -880.143,
+          -337.487
+        ],
+        [
+          -879.667,
+          -337.643
+        ],
+        [
+          -877.279,
+          -335.67
+        ],
+        [
+          -876.749,
+          -334.931
+        ],
+        [
+          -876.333,
+          -334.755
+        ],
+        [
+          -874.507,
+          -332.856
+        ],
+        [
+          -874.073,
+          -332.651
+        ],
+        [
+          -862.18,
+          -321.501
+        ],
+        [
+          -862.388,
+          -321.081
+        ],
+        [
+          -869.7,
+          -314.684
+        ],
+        [
+          -870.125,
+          -314.528
+        ],
+        [
+          -870.35,
+          -314.822
+        ],
+        [
+          -884.557,
+          -327.979
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -887.434,
+          -328.625
+        ],
+        [
+          -878.935,
+          -335.775
+        ],
+        [
+          -863.909,
+          -317.916
+        ],
+        [
+          -872.407,
+          -310.766
+        ]
+      ],
+      "priorRotationDegrees": -40.07307803330258,
+      "footprintRotationDegrees": -46.81984,
+      "preservedHeight": 6.9,
+      "preservedRoofRise": 2.998738989624914,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.5558,
+        "centroidShiftMetres": 2.932,
+        "areaRatio": 0.964,
+        "axisChangeDegrees": -6.747
+      }
+    },
+    {
+      "modelId": "site940-21",
+      "siteId": 940,
+      "name": "Ink store",
+      "sourceFid": 19748,
+      "worldFootprint": [
+        [
+          -861.065,
+          -337.254
+        ],
+        [
+          -860.833,
+          -336.845
+        ],
+        [
+          -853.133,
+          -329.613
+        ],
+        [
+          -853.121,
+          -329.137
+        ],
+        [
+          -860.483,
+          -322.751
+        ],
+        [
+          -860.964,
+          -322.905
+        ],
+        [
+          -878.26,
+          -339.204
+        ],
+        [
+          -877.766,
+          -339.982
+        ],
+        [
+          -875.625,
+          -342.17
+        ],
+        [
+          -875.219,
+          -342.409
+        ],
+        [
+          -874.038,
+          -342.499
+        ],
+        [
+          -873.604,
+          -342.689
+        ],
+        [
+          -871.025,
+          -345.108
+        ],
+        [
+          -870.583,
+          -345.018
+        ],
+        [
+          -868.392,
+          -342.86
+        ],
+        [
+          -867.963,
+          -342.663
+        ],
+        [
+          -866.913,
+          -342.487
+        ],
+        [
+          -862.661,
+          -338.695
+        ],
+        [
+          -862.494,
+          -338.217
+        ],
+        [
+          -861.56,
+          -337.32
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -878.071,
+          -338.81
+        ],
+        [
+          -870.928,
+          -344.821
+        ],
+        [
+          -855.072,
+          -325.976
+        ],
+        [
+          -862.216,
+          -319.966
+        ]
+      ],
+      "priorRotationDegrees": -40.08138834379377,
+      "footprintRotationDegrees": -46.70027,
+      "preservedHeight": 6.9,
+      "preservedRoofRise": 2.520679150699193,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6344,
+        "centroidShiftMetres": 2.008,
+        "areaRatio": 1.0617,
+        "axisChangeDegrees": -6.619
+      }
+    },
+    {
+      "modelId": "site940-20",
+      "siteId": 940,
+      "name": "Ink boiling room",
+      "sourceFid": 12242,
+      "worldFootprint": [
+        [
+          -840.581,
+          -340.578
+        ],
+        [
+          -840.783,
+          -340.15
+        ],
+        [
+          -844.103,
+          -337.234
+        ],
+        [
+          -844.579,
+          -337.104
+        ],
+        [
+          -845.065,
+          -336.344
+        ],
+        [
+          -851.415,
+          -330.833
+        ],
+        [
+          -851.842,
+          -330.899
+        ],
+        [
+          -856.119,
+          -334.685
+        ],
+        [
+          -856.609,
+          -335.439
+        ],
+        [
+          -857.358,
+          -335.927
+        ],
+        [
+          -864.495,
+          -342.502
+        ],
+        [
+          -864.916,
+          -342.689
+        ],
+        [
+          -865.963,
+          -342.732
+        ],
+        [
+          -868.147,
+          -344.886
+        ],
+        [
+          -868.267,
+          -345.414
+        ],
+        [
+          -858.61,
+          -355.69
+        ],
+        [
+          -858.188,
+          -355.896
+        ],
+        [
+          -844.604,
+          -343.395
+        ],
+        [
+          -843.127,
+          -342.998
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -868.496,
+          -347.416
+        ],
+        [
+          -857.288,
+          -356.847
+        ],
+        [
+          -841.64,
+          -338.249
+        ],
+        [
+          -852.848,
+          -328.818
+        ]
+      ],
+      "priorRotationDegrees": -40.079018974707466,
+      "footprintRotationDegrees": -49.42382,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 3.9548586674763238,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.8299,
+        "centroidShiftMetres": 0.516,
+        "areaRatio": 0.9278,
+        "axisChangeDegrees": -9.345
+      }
+    },
+    {
+      "modelId": "site940-19",
+      "siteId": 940,
+      "name": "Ink still room",
+      "sourceFid": 14333,
+      "worldFootprint": [
+        [
+          -831.495,
+          -347.441
+        ],
+        [
+          -831.634,
+          -346.943
+        ],
+        [
+          -835.64,
+          -343.473
+        ],
+        [
+          -836.816,
+          -343.384
+        ],
+        [
+          -837.289,
+          -343.206
+        ],
+        [
+          -840.33,
+          -340.63
+        ],
+        [
+          -840.581,
+          -340.578
+        ],
+        [
+          -843.127,
+          -342.998
+        ],
+        [
+          -844.604,
+          -343.395
+        ],
+        [
+          -858.188,
+          -355.896
+        ],
+        [
+          -857.986,
+          -356.324
+        ],
+        [
+          -850.187,
+          -364.705
+        ],
+        [
+          -849.771,
+          -364.916
+        ],
+        [
+          -849.283,
+          -364.765
+        ],
+        [
+          -849.086,
+          -364.649
+        ],
+        [
+          -848.861,
+          -364.232
+        ],
+        [
+          -831.716,
+          -347.798
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -856.291,
+          -357.409
+        ],
+        [
+          -848.285,
+          -364.145
+        ],
+        [
+          -833.155,
+          -346.163
+        ],
+        [
+          -841.16,
+          -339.427
+        ]
+      ],
+      "priorRotationDegrees": -40.07621584238257,
+      "footprintRotationDegrees": -47.05809,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.8248990481973806,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.7834,
+        "centroidShiftMetres": 0.648,
+        "areaRatio": 1.2127,
+        "axisChangeDegrees": -6.982
+      }
+    },
+    {
+      "modelId": "site940-18",
+      "siteId": 940,
+      "name": "Engine house",
+      "sourceFid": 30723,
+      "worldFootprint": [
+        [
+          -849.086,
+          -364.649
+        ],
+        [
+          -844.256,
+          -369.781
+        ],
+        [
+          -843.834,
+          -369.846
+        ],
+        [
+          -825.991,
+          -352.865
+        ],
+        [
+          -825.862,
+          -352.341
+        ],
+        [
+          -827.714,
+          -350.449
+        ],
+        [
+          -828.14,
+          -350.218
+        ],
+        [
+          -831.032,
+          -347.517
+        ],
+        [
+          -831.495,
+          -347.441
+        ],
+        [
+          -831.716,
+          -347.798
+        ],
+        [
+          -848.861,
+          -364.232
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -848.178,
+          -365.727
+        ],
+        [
+          -842.02,
+          -370.909
+        ],
+        [
+          -826.475,
+          -352.434
+        ],
+        [
+          -832.634,
+          -347.253
+        ]
+      ],
+      "priorRotationDegrees": -40.08084539747828,
+      "footprintRotationDegrees": -46.41791,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.172999267844156,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.798,
+        "centroidShiftMetres": 0.513,
+        "areaRatio": 0.9795,
+        "axisChangeDegrees": -6.337
+      }
+    },
+    {
+      "modelId": "site940-5",
+      "siteId": 940,
+      "name": "Engine house south",
+      "sourceFid": 185038,
+      "worldFootprint": [
+        [
+          -859.952,
+          -301.304
+        ],
+        [
+          -860.154,
+          -300.875
+        ],
+        [
+          -865.18,
+          -296.543
+        ],
+        [
+          -865.573,
+          -296.426
+        ],
+        [
+          -865.805,
+          -296.835
+        ],
+        [
+          -872.278,
+          -304.074
+        ],
+        [
+          -867.031,
+          -308.812
+        ],
+        [
+          -866.646,
+          -308.953
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -872.442,
+          -301.367
+        ],
+        [
+          -867.762,
+          -305.305
+        ],
+        [
+          -861.13,
+          -297.423
+        ],
+        [
+          -865.81,
+          -293.485
+        ]
+      ],
+      "priorRotationDegrees": -40.07903432303816,
+      "footprintRotationDegrees": -41.24048,
+      "preservedHeight": 5.35,
+      "preservedRoofRise": 1.6514794435615745,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.3194,
+        "centroidShiftMetres": 3.366,
+        "areaRatio": 1.2221,
+        "axisChangeDegrees": -1.161
+      }
+    },
+    {
+      "modelId": "site940-6",
+      "siteId": 940,
+      "name": "Ink mill",
+      "sourceFid": 243369,
+      "worldFootprint": [
+        [
+          -854.924,
+          -305.558
+        ],
+        [
+          -855.128,
+          -305.153
+        ],
+        [
+          -859.547,
+          -301.451
+        ],
+        [
+          -859.952,
+          -301.304
+        ],
+        [
+          -866.658,
+          -308.952
+        ],
+        [
+          -863.836,
+          -311.721
+        ],
+        [
+          -863.414,
+          -311.954
+        ],
+        [
+          -862.104,
+          -313.123
+        ],
+        [
+          -861.699,
+          -313.272
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -866.606,
+          -306.87
+        ],
+        [
+          -861.433,
+          -311.223
+        ],
+        [
+          -854.593,
+          -303.094
+        ],
+        [
+          -859.766,
+          -298.741
+        ]
+      ],
+      "priorRotationDegrees": -40.08009567020915,
+      "footprintRotationDegrees": -41.24054,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.8253193849890812,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.4902,
+        "centroidShiftMetres": 2.298,
+        "areaRatio": 0.9622,
+        "axisChangeDegrees": -1.16
+      }
+    },
+    {
+      "modelId": "site940-12",
+      "siteId": 940,
+      "name": "Stable",
+      "sourceFid": 352819,
+      "worldFootprint": [
+        [
+          -836.872,
+          -321.17
+        ],
+        [
+          -837.074,
+          -320.741
+        ],
+        [
+          -840.809,
+          -317.601
+        ],
+        [
+          -841.227,
+          -317.801
+        ],
+        [
+          -847.742,
+          -325.023
+        ],
+        [
+          -847.9,
+          -325.499
+        ],
+        [
+          -843.904,
+          -329.023
+        ],
+        [
+          -843.651,
+          -329.019
+        ],
+        [
+          -837.103,
+          -321.59
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -845.126,
+          -325.174
+        ],
+        [
+          -840.815,
+          -328.802
+        ],
+        [
+          -833.975,
+          -320.673
+        ],
+        [
+          -838.286,
+          -317.046
+        ]
+      ],
+      "priorRotationDegrees": -40.08289476932075,
+      "footprintRotationDegrees": -41.39132,
+      "preservedHeight": 6.9,
+      "preservedRoofRise": 1.5210994874909338,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.3649,
+        "centroidShiftMetres": 2.841,
+        "areaRatio": 1.0073,
+        "axisChangeDegrees": -1.308
+      }
+    },
+    {
+      "modelId": "site940-14",
+      "siteId": 940,
+      "name": "Small process house",
+      "sourceFid": 309981,
+      "worldFootprint": [
+        [
+          -835.812,
+          -336.46
+        ],
+        [
+          -835.39,
+          -336.691
+        ],
+        [
+          -833.384,
+          -338.402
+        ],
+        [
+          -832.826,
+          -338.496
+        ],
+        [
+          -826.064,
+          -330.934
+        ],
+        [
+          -825.942,
+          -330.39
+        ],
+        [
+          -829.944,
+          -326.902
+        ],
+        [
+          -830.324,
+          -326.749
+        ],
+        [
+          -830.549,
+          -327.156
+        ],
+        [
+          -836.319,
+          -333.854
+        ],
+        [
+          -836.386,
+          -333.835
+        ],
+        [
+          -837.358,
+          -334.725
+        ],
+        [
+          -837.156,
+          -335.139
+        ],
+        [
+          -836.803,
+          -335.421
+        ],
+        [
+          -836.704,
+          -335.422
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -838.722,
+          -330.444
+        ],
+        [
+          -831.948,
+          -336.143
+        ],
+        [
+          -825.108,
+          -328.015
+        ],
+        [
+          -831.882,
+          -322.315
+        ]
+      ],
+      "priorRotationDegrees": -40.07406928681765,
+      "footprintRotationDegrees": -41.40703,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.390299194628556,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.3366,
+        "centroidShiftMetres": 3.519,
+        "areaRatio": 0.6727,
+        "axisChangeDegrees": -1.333
+      }
+    },
+    {
+      "modelId": "site940-16",
+      "siteId": 940,
+      "name": "Resin still shed",
+      "sourceFid": 145286,
+      "worldFootprint": [
+        [
+          -823.078,
+          -343.633
+        ],
+        [
+          -817.628,
+          -337.847
+        ],
+        [
+          -817.547,
+          -337.298
+        ],
+        [
+          -823.349,
+          -331.952
+        ],
+        [
+          -824.028,
+          -331.914
+        ],
+        [
+          -830.055,
+          -339.001
+        ],
+        [
+          -830.212,
+          -339.481
+        ],
+        [
+          -830.023,
+          -339.91
+        ],
+        [
+          -826.083,
+          -343.478
+        ],
+        [
+          -825.604,
+          -343.613
+        ],
+        [
+          -825.531,
+          -343.647
+        ],
+        [
+          -825.705,
+          -343.696
+        ],
+        [
+          -825.225,
+          -343.853
+        ],
+        [
+          -824.665,
+          -343.796
+        ],
+        [
+          -824.623,
+          -343.726
+        ],
+        [
+          -824.887,
+          -343.677
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -831.732,
+          -337.401
+        ],
+        [
+          -824.219,
+          -343.723
+        ],
+        [
+          -816.964,
+          -335.101
+        ],
+        [
+          -824.477,
+          -328.78
+        ]
+      ],
+      "priorRotationDegrees": -40.07976510642343,
+      "footprintRotationDegrees": -42.65815,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.65105910676983,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.5587,
+        "centroidShiftMetres": 2.038,
+        "areaRatio": 0.7744,
+        "axisChangeDegrees": -2.578
+      }
+    },
+    {
+      "modelId": "site940-17",
+      "siteId": 940,
+      "name": "Eastern still shed",
+      "sourceFid": 147844,
+      "worldFootprint": [
+        [
+          -815.378,
+          -352.064
+        ],
+        [
+          -814.948,
+          -351.863
+        ],
+        [
+          -808.461,
+          -344.627
+        ],
+        [
+          -808.675,
+          -344.211
+        ],
+        [
+          -809.781,
+          -344.049
+        ],
+        [
+          -810.963,
+          -343.329
+        ],
+        [
+          -814.816,
+          -339.735
+        ],
+        [
+          -815.3,
+          -339.563
+        ],
+        [
+          -819.193,
+          -343.769
+        ],
+        [
+          -820.242,
+          -343.97
+        ],
+        [
+          -821.842,
+          -345.489
+        ],
+        [
+          -821.999,
+          -345.967
+        ],
+        [
+          -821.793,
+          -346.392
+        ],
+        [
+          -819.887,
+          -348.216
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -823.392,
+          -344.066
+        ],
+        [
+          -815.14,
+          -351.01
+        ],
+        [
+          -807.679,
+          -342.142
+        ],
+        [
+          -815.931,
+          -335.199
+        ]
+      ],
+      "priorRotationDegrees": -40.08037541162871,
+      "footprintRotationDegrees": -41.87431,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.9118190189111512,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.4869,
+        "centroidShiftMetres": 2.698,
+        "areaRatio": 0.68,
+        "axisChangeDegrees": -1.794
+      }
+    },
+    {
+      "modelId": "site790-884",
+      "siteId": 790,
+      "name": "Mechanics shop",
+      "sourceFid": 77857,
+      "worldFootprint": [
+        [
+          -830.195,
+          -279.701
+        ],
+        [
+          -829.966,
+          -279.283
+        ],
+        [
+          -830.138,
+          -278.816
+        ],
+        [
+          -831.688,
+          -277.365
+        ],
+        [
+          -832.205,
+          -277.224
+        ],
+        [
+          -838.973,
+          -271.497
+        ],
+        [
+          -846.752,
+          -280.583
+        ],
+        [
+          -846.616,
+          -281.071
+        ],
+        [
+          -840.544,
+          -286.255
+        ],
+        [
+          -834.951,
+          -279.995
+        ],
+        [
+          -834.467,
+          -279.99
+        ],
+        [
+          -833.88,
+          -280.645
+        ],
+        [
+          -833.482,
+          -280.867
+        ],
+        [
+          -833.223,
+          -281.242
+        ],
+        [
+          -832.463,
+          -281.743
+        ],
+        [
+          -831.974,
+          -281.609
+        ],
+        [
+          -831.522,
+          -281.217
+        ],
+        [
+          -831.363,
+          -280.731
+        ],
+        [
+          -830.475,
+          -279.757
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -849.166,
+          -283.413
+        ],
+        [
+          -842.515,
+          -289.009
+        ],
+        [
+          -831.737,
+          -276.2
+        ],
+        [
+          -838.388,
+          -270.604
+        ]
+      ],
+      "priorRotationDegrees": -40.07649305189194,
+      "footprintRotationDegrees": -40.56495,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.3468392092716903,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6615,
+        "centroidShiftMetres": 1.768,
+        "areaRatio": 0.8028,
+        "axisChangeDegrees": -0.488
+      }
+    },
+    {
+      "modelId": "site790-raw",
+      "siteId": 790,
+      "name": "Raw materials shed",
+      "sourceFid": 49851,
+      "worldFootprint": [
+        [
+          -799.213,
+          -335.02
+        ],
+        [
+          -798.661,
+          -334.988
+        ],
+        [
+          -795.26,
+          -330.921
+        ],
+        [
+          -795.362,
+          -330.403
+        ],
+        [
+          -812.021,
+          -315.868
+        ],
+        [
+          -812.255,
+          -315.51
+        ],
+        [
+          -813.029,
+          -315.003
+        ],
+        [
+          -813.52,
+          -314.988
+        ],
+        [
+          -814.817,
+          -316.19
+        ],
+        [
+          -816.759,
+          -318.62
+        ],
+        [
+          -817.112,
+          -318.856
+        ],
+        [
+          -817.052,
+          -319.43
+        ],
+        [
+          -815.808,
+          -320.665
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -819.432,
+          -316.455
+        ],
+        [
+          -799.48,
+          -333.243
+        ],
+        [
+          -796.164,
+          -329.302
+        ],
+        [
+          -816.116,
+          -312.513
+        ]
+      ],
+      "priorRotationDegrees": -40.077907710065,
+      "footprintRotationDegrees": -40.86076,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.3907195314202503,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "x",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6805,
+        "centroidShiftMetres": 2.611,
+        "areaRatio": 1.097,
+        "axisChangeDegrees": -0.783
+      }
+    },
+    {
+      "modelId": "site939-912",
+      "siteId": 939,
+      "name": "West chemical range",
+      "sourceFid": 23412,
+      "worldFootprint": [
+        [
+          -840.48,
+          -257.212
+        ],
+        [
+          -840.34,
+          -256.762
+        ],
+        [
+          -839.855,
+          -256.621
+        ],
+        [
+          -839.856,
+          -256.389
+        ],
+        [
+          -837.989,
+          -254.522
+        ],
+        [
+          -837.559,
+          -254.321
+        ],
+        [
+          -837.392,
+          -253.843
+        ],
+        [
+          -835.201,
+          -251.665
+        ],
+        [
+          -834.778,
+          -251.629
+        ],
+        [
+          -834.546,
+          -251.22
+        ],
+        [
+          -830.531,
+          -247.163
+        ],
+        [
+          -830.667,
+          -246.668
+        ],
+        [
+          -836.251,
+          -241.058
+        ],
+        [
+          -836.668,
+          -240.82
+        ],
+        [
+          -854.156,
+          -257.571
+        ],
+        [
+          -854.237,
+          -257.994
+        ],
+        [
+          -851.958,
+          -260.069
+        ],
+        [
+          -851.8,
+          -260.347
+        ],
+        [
+          -851.388,
+          -260.556
+        ],
+        [
+          -847.723,
+          -263.774
+        ],
+        [
+          -847.225,
+          -263.847
+        ],
+        [
+          -842.548,
+          -259.174
+        ],
+        [
+          -842.359,
+          -259.118
+        ],
+        [
+          -842.228,
+          -258.636
+        ],
+        [
+          -840.953,
+          -257.396
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -855.928,
+          -257.005
+        ],
+        [
+          -847.43,
+          -264.156
+        ],
+        [
+          -833.232,
+          -247.282
+        ],
+        [
+          -841.73,
+          -240.132
+        ]
+      ],
+      "priorRotationDegrees": -40.0803467116102,
+      "footprintRotationDegrees": -45.82437,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.9987389896249463,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6321,
+        "centroidShiftMetres": 2.297,
+        "areaRatio": 0.9026,
+        "axisChangeDegrees": -5.744
+      }
+    },
+    {
+      "modelId": "site939-926",
+      "siteId": 939,
+      "name": "Eastern chemical range",
+      "sourceFid": 7029,
+      "worldFootprint": [
+        [
+          -804.322,
+          -301.399
+        ],
+        [
+          -798.037,
+          -294.279
+        ],
+        [
+          -797.878,
+          -293.793
+        ],
+        [
+          -796.997,
+          -292.832
+        ],
+        [
+          -796.641,
+          -292.697
+        ],
+        [
+          -796.558,
+          -292.44
+        ],
+        [
+          -791.065,
+          -286.108
+        ],
+        [
+          -790.636,
+          -285.907
+        ],
+        [
+          -789.87,
+          -284.81
+        ],
+        [
+          -789.232,
+          -284.185
+        ],
+        [
+          -789.169,
+          -283.597
+        ],
+        [
+          -803.812,
+          -270.86
+        ],
+        [
+          -804.355,
+          -270.748
+        ],
+        [
+          -806.188,
+          -272.667
+        ],
+        [
+          -806.387,
+          -272.788
+        ],
+        [
+          -806.485,
+          -273.356
+        ],
+        [
+          -808.248,
+          -275.303
+        ],
+        [
+          -808.692,
+          -275.425
+        ],
+        [
+          -809.741,
+          -276.868
+        ],
+        [
+          -810.095,
+          -277.148
+        ],
+        [
+          -810.327,
+          -277.563
+        ],
+        [
+          -819.37,
+          -287.818
+        ],
+        [
+          -819.527,
+          -288.092
+        ],
+        [
+          -819.255,
+          -288.455
+        ],
+        [
+          -818.612,
+          -289.035
+        ],
+        [
+          -818.415,
+          -289.54
+        ],
+        [
+          -818.088,
+          -289.61
+        ],
+        [
+          -816.706,
+          -290.723
+        ],
+        [
+          -816.566,
+          -291.21
+        ],
+        [
+          -804.827,
+          -301.325
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -815.644,
+          -286.504
+        ],
+        [
+          -798.894,
+          -300.598
+        ],
+        [
+          -785.526,
+          -284.71
+        ],
+        [
+          -802.276,
+          -270.616
+        ]
+      ],
+      "priorRotationDegrees": -40.07835820187131,
+      "footprintRotationDegrees": -41.02,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.803169055518922,
+      "preservedRoofBays": 2,
+      "preservedRoofAxis": "x",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6257,
+        "centroidShiftMetres": 3.803,
+        "areaRatio": 1.0504,
+        "axisChangeDegrees": -0.942
+      }
+    },
+    {
+      "modelId": "site791-dry",
+      "siteId": 791,
+      "name": "Rope drying house",
+      "sourceFid": 107330,
+      "worldFootprint": [
+        [
+          -935.056,
+          -325.455
+        ],
+        [
+          -934.693,
+          -325.176
+        ],
+        [
+          -929.123,
+          -316.98
+        ],
+        [
+          -929.338,
+          -316.566
+        ],
+        [
+          -932.654,
+          -314.247
+        ],
+        [
+          -932.851,
+          -314.039
+        ],
+        [
+          -933.397,
+          -313.885
+        ],
+        [
+          -936.779,
+          -311.637
+        ],
+        [
+          -942.406,
+          -319.761
+        ],
+        [
+          -942.567,
+          -320.39
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -944.81,
+          -320.196
+        ],
+        [
+          -936.043,
+          -325.907
+        ],
+        [
+          -929.981,
+          -316.6
+        ],
+        [
+          -938.748,
+          -310.89
+        ]
+      ],
+      "priorRotationDegrees": -33.08102947934672,
+      "footprintRotationDegrees": -34.20428,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.8248990481973726,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6735,
+        "centroidShiftMetres": 1.546,
+        "areaRatio": 0.8529,
+        "axisChangeDegrees": -1.123
+      }
+    },
+    {
+      "modelId": "site964-range-14",
+      "siteId": 964,
+      "name": "Paint, varnish, ink and cooperage ranges east of Sugar House Lane range 14",
+      "sourceFid": 32191,
+      "worldFootprint": [
+        [
+          -717.213,
+          -45.689
+        ],
+        [
+          -731.75,
+          -43.194
+        ],
+        [
+          -732.236,
+          -43.12
+        ],
+        [
+          -732.808,
+          -43.186
+        ],
+        [
+          -734.395,
+          -42.858
+        ],
+        [
+          -734.493,
+          -43.411
+        ],
+        [
+          -733.876,
+          -52.541
+        ],
+        [
+          -733.596,
+          -52.886
+        ],
+        [
+          -716.402,
+          -55.702
+        ],
+        [
+          -714.716,
+          -46.594
+        ],
+        [
+          -714.976,
+          -46.229
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -736.214,
+          -50.908
+        ],
+        [
+          -717.896,
+          -52.77
+        ],
+        [
+          -717.115,
+          -45.083
+        ],
+        [
+          -735.433,
+          -43.221
+        ]
+      ],
+      "priorRotationDegrees": -5.804103313836769,
+      "footprintRotationDegrees": -9.30021,
+      "preservedHeight": 6.9,
+      "preservedRoofRise": 2.0861834235991488,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "x",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6342,
+        "centroidShiftMetres": 2.202,
+        "areaRatio": 1.3036,
+        "axisChangeDegrees": -3.496
+      }
+    },
+    {
+      "modelId": "site873-os-5",
+      "siteId": 873,
+      "name": "West Ham Gas Works range 5",
+      "sourceFid": 743,
+      "worldFootprint": [
+        [
+          -174.265,
+          -396.069
+        ],
+        [
+          -173.63,
+          -395.444
+        ],
+        [
+          -157.506,
+          -364.513
+        ],
+        [
+          -157.447,
+          -363.948
+        ],
+        [
+          -157.932,
+          -363.85
+        ],
+        [
+          -163.391,
+          -361.136
+        ],
+        [
+          -167.205,
+          -360.619
+        ],
+        [
+          -202.374,
+          -341.76
+        ],
+        [
+          -202.921,
+          -341.844
+        ],
+        [
+          -218.966,
+          -371.622
+        ],
+        [
+          -218.743,
+          -372.034
+        ],
+        [
+          -174.226,
+          -396.021
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -215.547,
+          -367.981
+        ],
+        [
+          -166.215,
+          -389.944
+        ],
+        [
+          -156.453,
+          -368.019
+        ],
+        [
+          -205.785,
+          -346.056
+        ]
+      ],
+      "priorRotationDegrees": -23.999009857972528,
+      "footprintRotationDegrees": -28.31836,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 3.239999999999994,
+      "preservedRoofBays": 2,
+      "preservedRoofAxis": "x",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6567,
+        "centroidShiftMetres": 2.402,
+        "areaRatio": 1.3648,
+        "axisChangeDegrees": -4.319
+      }
+    },
+    {
+      "modelId": "site873-os-9",
+      "siteId": 873,
+      "name": "West Ham Gas Works range 9",
+      "sourceFid": 69822,
+      "worldFootprint": [
+        [
+          -237.334,
+          -497.448
+        ],
+        [
+          -236.674,
+          -497.452
+        ],
+        [
+          -234.092,
+          -486.797
+        ],
+        [
+          -234.315,
+          -486.462
+        ],
+        [
+          -244.135,
+          -483.608
+        ],
+        [
+          -244.479,
+          -483.907
+        ],
+        [
+          -247.158,
+          -494.534
+        ],
+        [
+          -246.81,
+          -494.825
+        ],
+        [
+          -237.334,
+          -497.38
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -246.116,
+          -494.621
+        ],
+        [
+          -234.379,
+          -497.116
+        ],
+        [
+          -231.884,
+          -485.379
+        ],
+        [
+          -243.621,
+          -482.884
+        ]
+      ],
+      "priorRotationDegrees": -12.001044512700886,
+      "footprintRotationDegrees": -14.15016,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 3.239999999999999,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "x",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6748,
+        "centroidShiftMetres": 1.703,
+        "areaRatio": 0.8584,
+        "axisChangeDegrees": -2.149
+      }
+    },
+    {
+      "modelId": "site873-os-10",
+      "siteId": 873,
+      "name": "West Ham Gas Works range 10",
+      "sourceFid": 13095,
+      "worldFootprint": [
+        [
+          -270.966,
+          -398.086
+        ],
+        [
+          -269.1,
+          -399.358
+        ],
+        [
+          -268.822,
+          -399.706
+        ],
+        [
+          -267.803,
+          -400.527
+        ],
+        [
+          -267.24,
+          -400.632
+        ],
+        [
+          -251.323,
+          -382.237
+        ],
+        [
+          -251.147,
+          -381.751
+        ],
+        [
+          -251.304,
+          -381.263
+        ],
+        [
+          -260.191,
+          -373.962
+        ],
+        [
+          -260.753,
+          -373.849
+        ],
+        [
+          -276.534,
+          -392.393
+        ],
+        [
+          -276.728,
+          -392.852
+        ],
+        [
+          -276.517,
+          -393.277
+        ],
+        [
+          -274.716,
+          -394.616
+        ],
+        [
+          -274.469,
+          -395.02
+        ],
+        [
+          -273.584,
+          -395.41
+        ],
+        [
+          -271.225,
+          -397.395
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -264.112,
+          -398.731
+        ],
+        [
+          -249.008,
+          -380.079
+        ],
+        [
+          -259.888,
+          -371.269
+        ],
+        [
+          -274.992,
+          -389.921
+        ]
+      ],
+      "priorRotationDegrees": 51.00017028851585,
+      "footprintRotationDegrees": 49.60096,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 3.780000000000019,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "x",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.7142,
+        "centroidShiftMetres": 2.915,
+        "areaRatio": 0.9398,
+        "axisChangeDegrees": -1.399
+      }
+    },
+    {
+      "modelId": "site873-os-19",
+      "siteId": 873,
+      "name": "West Ham Gas Works range 19",
+      "sourceFid": 54201,
+      "worldFootprint": [
+        [
+          -192.679,
+          -339.266
+        ],
+        [
+          -191.993,
+          -339.272
+        ],
+        [
+          -191.827,
+          -338.869
+        ],
+        [
+          -183.202,
+          -327.494
+        ],
+        [
+          -183.416,
+          -327.068
+        ],
+        [
+          -190.139,
+          -321.901
+        ],
+        [
+          -190.56,
+          -322.102
+        ],
+        [
+          -199.427,
+          -333.245
+        ],
+        [
+          -199.582,
+          -333.72
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -191.463,
+          -341.752
+        ],
+        [
+          -180.765,
+          -328.541
+        ],
+        [
+          -188.537,
+          -322.248
+        ],
+        [
+          -199.235,
+          -335.459
+        ]
+      ],
+      "priorRotationDegrees": 51.00014894272408,
+      "footprintRotationDegrees": 52.45556,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.69999999999999,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "x",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6018,
+        "centroidShiftMetres": 1.962,
+        "areaRatio": 0.8297,
+        "axisChangeDegrees": 1.455
+      }
+    },
+    {
+      "modelId": "site924-os-3",
+      "siteId": 924,
+      "name": "Bromley-by-Bow Gas Works range 3",
+      "sourceFid": 27473,
+      "worldFootprint": [
+        [
+          -461.343,
+          731.076
+        ],
+        [
+          -460.98,
+          731.366
+        ],
+        [
+          -459.236,
+          741.011
+        ],
+        [
+          -459.593,
+          741.295
+        ],
+        [
+          -478.622,
+          744.518
+        ],
+        [
+          -478.854,
+          744.114
+        ],
+        [
+          -480.276,
+          734.721
+        ],
+        [
+          -479.943,
+          734.42
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -479.728,
+          733.589
+        ],
+        [
+          -457.942,
+          730.527
+        ],
+        [
+          -456.272,
+          742.411
+        ],
+        [
+          -478.058,
+          745.473
+        ]
+      ],
+      "priorRotationDegrees": -8.000457449366424,
+      "footprintRotationDegrees": -10.19159,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 3.239999999999987,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "x",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.723,
+        "centroidShiftMetres": 1.813,
+        "areaRatio": 0.7655,
+        "axisChangeDegrees": -2.191
+      }
+    },
+    {
+      "modelId": "site924-os-17",
+      "siteId": 924,
+      "name": "Bromley-by-Bow Gas Works range 17",
+      "sourceFid": 1095,
+      "worldFootprint": [
+        [
+          -306.347,
+          1151.887
+        ],
+        [
+          -305.859,
+          1152.027
+        ],
+        [
+          -300.591,
+          1157.32
+        ],
+        [
+          -300.42,
+          1157.804
+        ],
+        [
+          -301.034,
+          1158.458
+        ],
+        [
+          -301.221,
+          1158.881
+        ],
+        [
+          -300.941,
+          1159.226
+        ],
+        [
+          -300.515,
+          1159.408
+        ],
+        [
+          -299.705,
+          1160.465
+        ],
+        [
+          -299.271,
+          1160.673
+        ],
+        [
+          -299.038,
+          1161.081
+        ],
+        [
+          -298.327,
+          1161.605
+        ],
+        [
+          -297.769,
+          1161.508
+        ],
+        [
+          -296.82,
+          1162.427
+        ],
+        [
+          -296.398,
+          1162.607
+        ],
+        [
+          -289.417,
+          1169.961
+        ],
+        [
+          -289.236,
+          1170.937
+        ],
+        [
+          -288.518,
+          1171.428
+        ],
+        [
+          -288.284,
+          1171.827
+        ],
+        [
+          -286.692,
+          1173.347
+        ],
+        [
+          -286.27,
+          1173.276
+        ],
+        [
+          -286.029,
+          1172.92
+        ],
+        [
+          -285.647,
+          1172.65
+        ],
+        [
+          -285.144,
+          1172.75
+        ],
+        [
+          -280.182,
+          1177.773
+        ],
+        [
+          -280.105,
+          1178.33
+        ],
+        [
+          -285.105,
+          1183.319
+        ],
+        [
+          -285.593,
+          1183.186
+        ],
+        [
+          -286.188,
+          1182.514
+        ],
+        [
+          -289.066,
+          1185.262
+        ],
+        [
+          -288.944,
+          1185.635
+        ],
+        [
+          -288.338,
+          1186.298
+        ],
+        [
+          -288.485,
+          1186.79
+        ],
+        [
+          -298.762,
+          1197.067
+        ],
+        [
+          -299.185,
+          1197.275
+        ],
+        [
+          -299.906,
+          1196.745
+        ],
+        [
+          -300.338,
+          1196.694
+        ],
+        [
+          -303.105,
+          1199.53
+        ],
+        [
+          -302.534,
+          1200.213
+        ],
+        [
+          -302.365,
+          1200.698
+        ],
+        [
+          -307.667,
+          1205.988
+        ],
+        [
+          -308.224,
+          1206.087
+        ],
+        [
+          -313.328,
+          1201.22
+        ],
+        [
+          -313.562,
+          1200.805
+        ],
+        [
+          -312.766,
+          1199.733
+        ],
+        [
+          -312.774,
+          1199.375
+        ],
+        [
+          -315.262,
+          1196.882
+        ],
+        [
+          -316.302,
+          1196.692
+        ],
+        [
+          -318.562,
+          1194.636
+        ],
+        [
+          -318.792,
+          1194.219
+        ],
+        [
+          -319.152,
+          1193.939
+        ],
+        [
+          -319.299,
+          1192.975
+        ],
+        [
+          -320.521,
+          1191.695
+        ],
+        [
+          -321.632,
+          1191.601
+        ],
+        [
+          -321.867,
+          1191.186
+        ],
+        [
+          -324.59,
+          1188.295
+        ],
+        [
+          -324.597,
+          1187.804
+        ],
+        [
+          -325.14,
+          1187.122
+        ],
+        [
+          -325.551,
+          1186.921
+        ],
+        [
+          -326.078,
+          1186.157
+        ],
+        [
+          -326.464,
+          1185.95
+        ],
+        [
+          -327.383,
+          1184.975
+        ],
+        [
+          -328.027,
+          1185.596
+        ],
+        [
+          -328.491,
+          1185.787
+        ],
+        [
+          -328.984,
+          1185.646
+        ],
+        [
+          -334.34,
+          1180.412
+        ],
+        [
+          -334.344,
+          1179.928
+        ],
+        [
+          -328.758,
+          1174.292
+        ],
+        [
+          -328.271,
+          1174.424
+        ],
+        [
+          -327.676,
+          1175.092
+        ],
+        [
+          -327.25,
+          1175.031
+        ],
+        [
+          -324.706,
+          1172.571
+        ],
+        [
+          -324.713,
+          1172.162
+        ],
+        [
+          -325.528,
+          1171.1
+        ],
+        [
+          -324.26,
+          1169.853
+        ],
+        [
+          -324.055,
+          1169.417
+        ],
+        [
+          -322.395,
+          1167.979
+        ],
+        [
+          -322.153,
+          1167.598
+        ],
+        [
+          -321.431,
+          1167.082
+        ],
+        [
+          -314.595,
+          1160.197
+        ],
+        [
+          -314.167,
+          1160.4
+        ],
+        [
+          -313.544,
+          1161.022
+        ],
+        [
+          -313.211,
+          1160.947
+        ],
+        [
+          -310.709,
+          1158.47
+        ],
+        [
+          -310.846,
+          1158.118
+        ],
+        [
+          -311.401,
+          1157.433
+        ],
+        [
+          -311.411,
+          1156.938
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -306.518,
+          1146.306
+        ],
+        [
+          -276.306,
+          1175.482
+        ],
+        [
+          -305.482,
+          1205.694
+        ],
+        [
+          -335.694,
+          1176.518
+        ]
+      ],
+      "priorRotationDegrees": 44.000599321882056,
+      "footprintRotationDegrees": 44.94186,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 3.780000000000008,
+      "preservedRoofBays": 3,
+      "preservedRoofAxis": "x",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.7552,
+        "centroidShiftMetres": 3.238,
+        "areaRatio": 0.8024,
+        "axisChangeDegrees": 0.941
+      }
+    },
+    {
+      "modelId": "oilwharf-2",
+      "siteId": 9001,
+      "name": "Oil Wharf mapped range",
+      "sourceFid": 18435,
+      "worldFootprint": [
+        [
+          -1121.177,
+          -27.472
+        ],
+        [
+          -1119.963,
+          -26.818
+        ],
+        [
+          -1119.806,
+          -26.834
+        ],
+        [
+          -1119.442,
+          -26.567
+        ],
+        [
+          -1118.957,
+          -26.425
+        ],
+        [
+          -1114.113,
+          -23.886
+        ],
+        [
+          -1113.621,
+          -23.789
+        ],
+        [
+          -1113.277,
+          -23.473
+        ],
+        [
+          -1107.437,
+          -20.697
+        ],
+        [
+          -1107.133,
+          -20.352
+        ],
+        [
+          -1105.069,
+          -19.329
+        ],
+        [
+          -1104.756,
+          -19.019
+        ],
+        [
+          -1109.471,
+          -9.579
+        ],
+        [
+          -1110.066,
+          -9.615
+        ],
+        [
+          -1130.203,
+          -19.712
+        ],
+        [
+          -1130.193,
+          -20.244
+        ],
+        [
+          -1125.561,
+          -29.199
+        ],
+        [
+          -1125.125,
+          -29.404
+        ],
+        [
+          -1123.17,
+          -28.566
+        ],
+        [
+          -1122.515,
+          -27.975
+        ],
+        [
+          -1121.668,
+          -27.6
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -1128.014,
+          -28.987
+        ],
+        [
+          -1103.291,
+          -15.842
+        ],
+        [
+          -1107.986,
+          -7.013
+        ],
+        [
+          -1132.709,
+          -20.158
+        ]
+      ],
+      "priorRotationDegrees": 27.999182851473428,
+      "footprintRotationDegrees": 26.62812,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.6999999999999926,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "x",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6355,
+        "centroidShiftMetres": 1.561,
+        "areaRatio": 0.9103,
+        "axisChangeDegrees": -1.371
+      }
+    },
+    {
+      "modelId": "imperial-stoves",
+      "siteId": 797,
+      "name": "Detached stoves",
+      "sourceFid": 51531,
+      "worldFootprint": [
+        [
+          -1086.233,
+          -74.681
+        ],
+        [
+          -1085.671,
+          -74.618
+        ],
+        [
+          -1078.184,
+          -69.152
+        ],
+        [
+          -1078.211,
+          -68.564
+        ],
+        [
+          -1085.372,
+          -58.98
+        ],
+        [
+          -1085.785,
+          -58.756
+        ],
+        [
+          -1086.215,
+          -58.955
+        ],
+        [
+          -1086.636,
+          -58.863
+        ],
+        [
+          -1087.738,
+          -57.483
+        ],
+        [
+          -1088.286,
+          -57.537
+        ],
+        [
+          -1090.301,
+          -59.281
+        ],
+        [
+          -1089.316,
+          -60.781
+        ],
+        [
+          -1089.29,
+          -61.157
+        ],
+        [
+          -1089.949,
+          -61.759
+        ],
+        [
+          -1090.434,
+          -61.885
+        ],
+        [
+          -1091.473,
+          -60.413
+        ],
+        [
+          -1091.965,
+          -60.425
+        ],
+        [
+          -1092.384,
+          -60.605
+        ],
+        [
+          -1092.685,
+          -60.916
+        ],
+        [
+          -1094.219,
+          -61.886
+        ],
+        [
+          -1094.295,
+          -62.432
+        ],
+        [
+          -1093.256,
+          -63.864
+        ],
+        [
+          -1093.626,
+          -64.629
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -1096.435,
+          -65.437
+        ],
+        [
+          -1086.791,
+          -76.37
+        ],
+        [
+          -1078.908,
+          -68.629
+        ],
+        [
+          -1087.727,
+          -58.984
+        ]
+      ],
+      "priorRotationDegrees": -48.58448181984644,
+      "footprintRotationDegrees": -53.66707,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.978825576673256,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "x",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6577,
+        "centroidShiftMetres": 1.802,
+        "areaRatio": 0.9599,
+        "axisChangeDegrees": -5.083
+      }
+    },
+    {
+      "modelId": "imperial-stable-cover",
+      "siteId": 797,
+      "name": "Covered range beside stable",
+      "sourceFid": 108037,
+      "worldFootprint": [
+        [
+          -1069.884,
+          -86.466
+        ],
+        [
+          -1069.752,
+          -86.96
+        ],
+        [
+          -1067.196,
+          -89.999
+        ],
+        [
+          -1052.147,
+          -79.011
+        ],
+        [
+          -1051.917,
+          -78.577
+        ],
+        [
+          -1049.328,
+          -76.852
+        ],
+        [
+          -1049.159,
+          -76.37
+        ],
+        [
+          -1051.573,
+          -73.189
+        ],
+        [
+          -1052.008,
+          -73.342
+        ],
+        [
+          -1069.385,
+          -86.328
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -1067.129,
+          -85.944
+        ],
+        [
+          -1063.465,
+          -90.112
+        ],
+        [
+          -1048.435,
+          -76.934
+        ],
+        [
+          -1052.23,
+          -72.695
+        ]
+      ],
+      "priorRotationDegrees": -48.681985530503994,
+      "footprintRotationDegrees": -53.71688,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.5360383993042908,
+      "preservedRoofBays": 1,
+      "preservedRoofAxis": "z",
+      "review": "One-to-one source outline; preserve the previously researched use, height and roof form. Ink-works ranges inspected together on the site comparison.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6195,
+        "centroidShiftMetres": 1.633,
+        "areaRatio": 0.8807,
+        "axisChangeDegrees": -5.035
+      }
+    }
+  ]
+}
