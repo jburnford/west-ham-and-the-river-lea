@@ -18,7 +18,7 @@ but record the distinction between map evidence and interpreted elevations.
 
 ## Completed model alignment
 
-- 163 source-linked factory ranges at ten sites, including 24 Slater & Palmer /
+- 260 source-linked factory ranges at sixteen sites, including 24 Slater & Palmer /
   Marshgate Mills ink-works ranges. First-pass registry:
   `data/maps/factory-footprint-alignment.json`. It retains original outlines,
   source IDs, changes in position/area and previous roof/height interpretations.
@@ -59,7 +59,51 @@ but record the distinction between map evidence and interpreted elevations.
   chimney moves into its mapped sawmill opening, with a narrower interpreted
   base; height retained. Sugar House Lane and its works passage are re-read
   locally. A separate mapped cooperage-yard envelope restores its working surface
-  and two small timber groups. Crystal Wharf and Barber ranges 17–28 await review.
+  and two small timber groups. Its twelve deferred ranges are resolved below.
+- West of the cooperage: `data/maps/west-sugar-footprint-alignment.json`
+  aligns all 27 existing site-947 ranges and eleven added rooms in 34 groups.
+  Hodson, Dane, Winstone and Wildash remain separate mapped compounds; previous
+  roof/height interpretations are retained. Three chimney bases are source-linked;
+  the fourth transfers within its Goad room. Two duplicated Wildash edge records
+  from F17 are removed from site 569, leaving its two actual Kendrick ranges.
+  `west-sugar-bank-alignment.json` reconciles ten local river controls while
+  preserving a continuous channel. Sugar House Lane gains bend controls and a
+  5.2 m estimated carriageway to fit the 7.85 m gap with pavements; southern
+  connections remain. A small High Street shift clears the machinery store. Yard 94701 restores
+  the omitted western working ground.
+- Crystal Wharf / Barber: `data/maps/crystal-barber-footprint-alignment.json`
+  resolves the remaining twelve old site-964 ranges. Eight are corrected and
+  four open-yard rectangles are removed; thirteen omitted rooms are added,
+  making 21 newly source-linked ranges and all 40 eastern ranges aligned. Two
+  chimneys are corrected: mapped base 1230955 and a Goad boiler-room transfer
+  retaining its printed 50 ft height. Yards 96402/96403 restore working ground
+  without stock. Small isolated plant features remain explicitly deferred.
+- High Street starch, tin-box and confectionery compounds:
+  `data/maps/abbey-west-footprint-alignment.json` adds 18 source-linked ranges in
+  fifteen groups. All current site-256/572/573 ranges (5/3/8) are aligned. Four
+  omitted Hogarth rooms are added, one misclassified industrial rectangle over
+  a domestic frontage is removed, and chimney base 993523 is matched. Two Bow
+  Bridge boundary rooms are also aligned. Its two provisional process-room
+  transfers are superseded by the Bow Bridge continuation below.
+- Bow Bridge bone and chemical works:
+  `data/maps/bow-works-footprint-alignment.json` adds ten source-linked ranges
+  in seven groups and five directly traced OS rooms. Two omitted rooms are added;
+  site 254 now has seventeen ranges, twelve source-linked and five direct traces.
+  Internal Goad divisions and elevations remain interpreted. Five chimneys are
+  reviewed: four mapped bases, including a new printed 50-foot retort chimney,
+  and one Goad-room transfer. `bow-works-bank-alignment.json` reconciles ten
+  works-side River Lea controls while preserving the opposite bank and channel.
+  Hunt's neighbouring range 564-1 received a provisional 2 m southward move;
+  the full source review below supersedes it.
+- Hunt's soap works: `data/maps/hunt-works-footprint-alignment.json` aligns all
+  ten current ranges in six groups. Three omitted rooms are added: western
+  furnaces, office/laboratory and southern engine room. Five existing process
+  rooms share the main supplied OS exterior, retaining interpreted Goad cuts.
+  The stables and two-storey dwelling retain their distinct forms. The 80-foot
+  boiler chimney follows source base 1013155; the western 22 m chimney transfers
+  approximately within its Goad room. `hunt-works-bank-alignment.json` adjusts
+  two local controls, including a further correction to shared Bow Bridge vertex
+  39, clearing the furnace rooms while retaining the opposite bank.
 - Abbey Mills main station: corrected orientation (~35.88°), main cross and two
   lower rear boiler wings. Source outline 459 includes the whole attached
   complex; do not enlarge the ornate station to fill it. Chimney bases use
@@ -72,8 +116,8 @@ but record the distinction between map evidence and interpreted elevations.
   period-map access traces. These volumes use the station plan and shared factory
   renderer, separately from the industrial ranges. Heights and roofs remain
   interpreted. Tiny features 1064653 and 1162448 are explicitly deferred.
-- The broader scene has 43 factory sites, 512 ranges, 89 factory chimneys,
-  196 terrace rows / 3,204 houses and 83 modeled yards.
+- The broader scene has 43 factory sites, 538 ranges, 90 factory chimneys,
+  196 terrace rows / 3,204 houses and 85 modeled yards (36 wear routes, 160 stock groups).
 - Housing rows have not yet been aligned to the supplied regional footprints.
 
 Useful local destinations:
@@ -84,6 +128,8 @@ Useful local destinations:
 - `http://localhost:4175/?view=factory-9001`
 - `http://localhost:4175/?view=city`
 - `http://localhost:4175/?view=factory-964`
+- `http://localhost:4175/?view=factory-254`
+- `http://localhost:4175/?view=factory-564`
 - `http://localhost:4175/?view=west-ham-region`
 
 ## Source data
@@ -106,11 +152,16 @@ They cover historic West Ham plus a 3 km buffer. Regional ground is provisional.
 
 ## Next working sequence
 
-Next review the remaining Sugar House Lane groups: Crystal Wharf / Dane / Talbot
-and Barber (site 964 ranges 17–28), then western site 947 and sites 256/572/573.
-The cooperage and Winstone pass is complete. Crystal Wharf's earlier ranges
-24–26 partly cover open yard; inspect the Goad labels and OS buildings before
-reclassifying or replacing them. Do not snap these rectangles to nearby sources.
+Next review Lascelles stone/terra cotta and British Ultramarine works, sites
+565/566, currently three ranges each. Hunt's ten ranges are source-linked;
+its small platforms, service projections and western empties strip remain
+explicitly deferred plant/yard details. Bow Bridge site 254's
+seventeen ranges are accounted for. Its Goad 530 open-under structure, water
+tower, tanks and small projections remain explicitly deferred plant features.
+Current ranges at sites 256/572/573, western 947 and eastern 964 are source-linked. Small western Goad 876 and 882/884 annexes and eastern
+isolated plant features 1217966, 1065632 and 1242744 remain explicit omissions.
+Crystal Wharf's former ranges 24–27 were removed after OS/Goad review identified
+open yard; their prior records remain in the continuation register.
 The Howards, Oil Wharf, Imperial Saw Mills and ink-works compound passes
 are complete apart from explicit omissions; the firelighter
 and warehouse 24 remain explicit source omissions needing direct map tracing.
@@ -152,7 +203,8 @@ python3 scripts/build_regional_footprints.py
 python3 scripts/build_scene_manifest.py
 ```
 
-If changing the City Mills bank register, rebuild `build_panorama_data.py`
+If changing the City Mills, western Sugar House, Bow Bridge or Hunt bank registers,
+rebuild `build_panorama_data.py`
 before this sequence and `build_river_network.py` after infrastructure but before
 the final manifest. Saved Howards JSON is sufficient for routine factory builds;
 `prepare_howards_alignment.py` additionally needs the private source extract,
@@ -173,6 +225,11 @@ python3 scripts/check_sawmill_footprint_alignment.py
 python3 scripts/check_oil_wharf_alignment.py
 python3 scripts/check_howards_alignment.py
 python3 scripts/check_sugar_house_alignment.py
+python3 scripts/check_west_sugar_alignment.py
+python3 scripts/check_crystal_barber_alignment.py
+python3 scripts/check_abbey_west_alignment.py
+python3 scripts/check_bow_works_alignment.py
+python3 scripts/check_hunt_works_alignment.py
 python3 scripts/check_abbey_station_plan.py
 python3 scripts/check_factory_yards.py
 python3 scripts/check_housing_detail.py
@@ -186,6 +243,11 @@ python3 scripts/review_factory_buildings.py --sawmill-only --url http://127.0.0.
 python3 scripts/review_factory_buildings.py --oil-wharf-only --url http://127.0.0.1:4175
 python3 scripts/review_factory_buildings.py --howards-only --url http://127.0.0.1:4175
 python3 scripts/review_factory_buildings.py --sugar-house-only --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --west-sugar-only --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --crystal-barber-only --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --abbey-west-only --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --bow-works-only --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --hunt-works-only --url http://127.0.0.1:4175
 ```
 
 Geometry checks, 77 navigation destinations, four Abbey views and five factory
@@ -213,11 +275,49 @@ with no browser/shader errors.
 Private source comparisons and the immutable pre-pass snapshot are under
 `reference/footprint-model-alignment/sugar-*`; use the snapshot when regenerating
 the authoring register. Routine builds need only the saved register.
-Oil Wharf, Howards and Sugar House form the 29 September continuation checkpoint
-after `7f078c0`. This checkpoint is local; no push or deployment.
+Oil Wharf, Howards and eastern Sugar House were committed as `6dc446d` on
+29 September. The western, Crystal Wharf / Barber, High Street, Bow Bridge and Hunt
+continuations remain local and uncommitted. No push
+or deployment. Its private immutable snapshot is `west-sugar-before.json` in
+`reference/footprint-model-alignment/`; routine builds need only the saved register.
 Browser screenshots and diagnostics
 are local under `scenes/channelsea-sewer-panorama/review/`. No mobile audit.
-Latest local asset revision: `f8b93c9befe9` (all public asset hashes verified).
+Western continuation: all geometry/clearance and 77 navigation checks pass;
+seven final browser views pass after restoring the yard, with affected views
+visually inspected. Minimum western group agreement is 99.874%.
+Crystal Wharf / Barber: all geometry, clearance and navigation checks pass;
+seven browser views passed and were visually inspected, with all 40 eastern
+ranges and three chimney positions confirmed and no browser/shader errors.
+Minimum new-group agreement is 99.977%. The immutable pre-pass snapshot is
+`reference/footprint-model-alignment/crystal-barber-before.json`;
+`prepare_crystal_barber_alignment.py` needs it and the private source/maps.
+Routine builds use the saved register. Two restored yards bring the total to 85.
+High Street compounds: eighteen new source-linked ranges in fifteen groups;
+all geometry/clearance, prior alignment and 77 navigation checks pass. Seven
+browser views passed and were visually inspected, confirming the sixteen ranges
+at sites 256/572/573 and corrected Hogarth stack without browser/shader errors.
+Minimum rendered source agreement is 99.933%, including a recorded 0.52 m²
+High Street pavement corner. `prepare_abbey_west_alignment.py` needs the private
+extract and immutable `reference/footprint-model-alignment/abbey-west-before.json`;
+routine builds use the saved register. Road/bank authoring is unchanged.
+Bow Bridge: all geometry, earlier alignment, clearance, yard, housing, street,
+Abbey, western and 77 navigation checks pass. Seven browser views passed and
+were visually inspected, confirming seventeen ranges and five chimney positions
+without browser/shader errors. Minimum rendered supplied-outline group agreement
+is 99.979%; direct OS traces are counted separately. The four independent chimney
+bases clear roofs and the channel remains open. `prepare_bow_works_alignment.py`
+requires the private extract, cached OS maps and immutable snapshots
+`reference/footprint-model-alignment/bow-works-before.json` and
+`bow-works-ground-before.json`. Routine builds use the saved registers.
+Hunt's soap works: ten supplied-outline ranges in six groups, including three
+additions. All geometry/clearance, prior alignment, yard, housing, street, Abbey,
+western and 77 navigation checks pass. Six browser views passed and were visually
+inspected, confirming all ten ranges and both chimney positions without browser
+or shader errors. Minimum group agreement is 99.977%; the checked local Lea
+channel is 23.98 m wide. `prepare_hunt_works_alignment.py` needs the private
+extract and immutable `hunt-works-before.json` / `hunt-works-ground-before.json`
+snapshots in `reference/footprint-model-alignment/`. Routine builds use saved JSON.
+Latest local asset revision: `73acc66175bb` (all public asset hashes verified).
 
 ## Preserve these corrections
 

@@ -5,8 +5,27 @@ restores the Chippindale cooperage yard omitted from the original industrial
 parcels. Yard 96401 belongs to factory site 964 and supplies about 3,946 m² of
 working surface after building, road, river and chimney exclusions. Two small
 timber groups and the surface finish remain interpretations. The register is
-`data/maps/sugar-house-footprint-alignment.json`; the district now has 83 yard
-surfaces, 33 clear wear routes and 161 stock groups.
+`data/maps/sugar-house-footprint-alignment.json`; the western checkpoint had 83 yard
+surfaces. The western continuation regenerates their exclusions for 521 ranges,
+the reconciled riverbank and narrower Sugar House Lane: 35 clear wear routes
+and 160 stock groups. The western register also restores yard 94701 between
+Dane, Winstone, Wildash, the river and lane, with no added equipment or stock.
+
+The Crystal Wharf / Barber continuation restores two further OS/Goad working-ground
+envelopes, yards 96402 and 96403, in
+`data/maps/crystal-barber-footprint-alignment.json`. These are working surfaces,
+not cadastral or single-occupier claims. Building, road, water and chimney
+exclusions follow the corrected scene; no stock or equipment is added. Current
+totals at that checkpoint were 85 yards, 35 wear routes and 160 stock groups.
+The High Street starch/tin-box/confectionery continuation regenerates exclusions
+for 533 ranges: 85 yards, 36 clear wear routes and 159 stock groups.
+The Bow Bridge continuation regenerates exclusions for 535 ranges, 90 chimneys
+and the locally reconciled River Lea bank. Counts remain 85 yards, 36 clear wear
+routes and 159 stock groups.
+The Hunt soap-works continuation rebuilds exclusions for 538 ranges and the
+two-control bank correction: 85 yards, 36 clear wear routes and 160 stock groups.
+The count change follows regeneration of existing stock placement; no new yard
+envelope or historical equipment claim is introduced.
 
 The first yard refinement replaces the repeated four-metre mud texture and
 grid-based colour noise on industrial parcels. A single district surface map

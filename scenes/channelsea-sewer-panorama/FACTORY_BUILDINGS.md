@@ -1,6 +1,46 @@
 # Factory buildings — mapped coverage and refinement, 27 September 2026
 
-29 September Sugar House continuation: the current scene has 43 sites, 512 ranges
+29 September Hunt soap-works continuation: the current scene has 43 sites,
+538 ranges, 90 chimneys and 260 source-linked ranges at sixteen sites. All ten
+site-564 ranges are source-linked, including added furnace rooms, office/laboratory
+and engine room. Five existing process rooms share an OS exterior; their internal
+divisions and elevations remain interpreted. The 80-foot boiler stack follows
+its mapped base; the western stack keeps an approximate Goad-room placement.
+Two local bank controls clear the furnace rooms. The prior provisional transfer
+of range 1 is superseded by its source match.
+
+Earlier 29 September Bow Bridge bone and chemical works continuation: the scene
+had 43 sites, 535 ranges, 90 chimneys and 250 source-linked ranges at fifteen sites.
+Site 254 has seventeen ranges: twelve supplied-outline matches and five direct
+OS traces, with interpreted Goad compartment divisions. The charcoal warehouse,
+mill annex and printed 50-foot retort chimney are added. Four chimney positions
+follow mapped bases; a fifth transfers within its Goad room. Ten local bank
+controls clear the corrected waterfront walls. Previous elevations remain
+interpreted; the two earlier provisional Bow Bridge transfers are superseded.
+
+Earlier 29 September High Street starch / tin-box / confectionery continuation:
+the scene had 43 sites, 533 ranges, 89 chimneys and 240 source-linked ranges at fifteen
+sites. Sites 256/572/573 have 5/3/8 ranges respectively, all source-linked. Four
+confectionery rooms are added; an industrial rectangle over a High Street dwelling
+is removed. Two Bow Bridge boundary rooms are source-linked, while two adjoining
+process rooms have explicit provisional Goad transfers. Hogarth's chimney follows
+mapped base 993523. Previous heights and roofs remain interpreted.
+
+
+Earlier 29 September Crystal Wharf / Barber continuation: the scene had 43 sites,
+530 ranges, 89 chimneys and 222 source-linked ranges. All 40 eastern site-964
+ranges are linked: eight existing ranges corrected, thirteen rooms added and
+four former open-yard blocks removed. Two chimney positions and two working
+yards are corrected. Heights and roofs remain evidence-informed interpretations.
+
+Earlier 29 September western Sugar House continuation: the scene had 43 sites,
+521 ranges and 89 chimneys. Site 947 now has 38 source-linked ranges, including
+eleven previously omitted rooms. Two duplicate Wildash rooms from the edge of
+Goad F17 are removed from site 569; its two actual Kendrick ranges remain.
+Four chimneys, the local riverbank and lane frontage are corrected. The district
+then had 201 source-linked ranges; elevations and roof divisions remain interpreted.
+
+Earlier 29 September Sugar House continuation: the scene had 43 sites, 512 ranges
 and 89 chimneys. The cooperage and Winstone pass corrects fifteen existing ranges
 and adds three low cooperage compartments; nineteen of eastern site 964's 31
 ranges now match supplied footprints. The preceding Oil Wharf pass removed two
@@ -33,24 +73,24 @@ ranges; the wider detailed refinement remains in progress.
 
 | Site ID | Factory / works group | Recorded ranges |
 | --- | --- | ---: |
-| 254 | Bow Bridge bone and chemical works | 15 |
+| 254 | Bow Bridge bone and chemical works | 17 |
 | 255 | Lime works | 4 |
-| 256 | Starch Works | 6 |
+| 256 | Starch Works and adjoining pickle factory | 5 |
 | 257 | St Thomas corn mill | 3 |
 | 258 | Augustus Smith brush and fibre works | 7 |
 | 260 | Howards and Sons | 86 |
 | 398 | Crown Works / Johnson chemical works | 10 |
 | 419 | Three Mills distillery | 37 |
-| 564 | Hunt Bow Bridge soap works | 7 |
+| 564 | Hunt Bow Bridge soap works | 10 |
 | 565 | Lascelles stone and terra cotta works | 3 |
 | 566 | British Ultramarine works | 3 |
 | 567 | Oil refinery / machinery and printing ranges | 13 |
 | 568 | French Asphalte and Williams wharf | 18 |
-| 569 | Kendrick northern boiler and machinery works | 4 |
+| 569 | Kendrick northern boiler and machinery works | 2 |
 | 570 | Usher printing ink works | 4 |
 | 571 | Kendrick southern boiler works | 1 |
 | 572 | Bryant and May tin box works | 3 |
-| 573 | Aberdeen Works / confectionery works | 4 |
+| 573 | Aberdeen Works / confectionery works | 8 |
 | 788 | Magnet Wharf iron foundry | 4 |
 | 789 | Bow Bridge Wharf soap and chemical works | 9 |
 | 790 | A. Jeffrey marine glue works | 13 |
@@ -61,8 +101,8 @@ ranges; the wider detailed refinement remains in progress.
 | 924 | Bromley-by-Bow Gas Works | 17 |
 | 939 | Marshgate Lane chemical works | 10 |
 | 940 | Slater & Palmer / Marshgate Mills | 26 |
-| 947 | Oil and colour works and west Sugar House Lane ranges | 27 |
-| 964 | Paint, varnish, ink and cooperage ranges east of Sugar House Lane | 31 |
+| 947 | Oil and colour works and west Sugar House Lane ranges | 38 |
+| 964 | Paint, varnish, ink and cooperage ranges east of Sugar House Lane | 40 |
 | 1017 | Wm Ritchie & Sons — London Spinning Mills | 11 |
 | 1018 | Manure Works beside Channelsea | 3 |
 | 9001 | Oil Wharf and adjoining context north of Bow Bridge | 10 |

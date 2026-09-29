@@ -16,7 +16,10 @@ assert len(corrections) == 18 and len(r['groups']) == 14
 assert len(r['additionalBuildings']) == 3 and len(r['deferred']) == 12
 accounted = list(corrections) + r['previouslyAligned'] + [b['modelId'] for b in r['deferred']]
 assert len(accounted) == len(set(accounted)) == 31
-assert set(accounted) == {b['id'] for b in scene['buildings'] if b['siteId']==964}
+continuation = load('data/maps/crystal-barber-footprint-alignment.json')
+assert set(continuation['supersedesDeferred']) == {b['modelId'] for b in r['deferred']}
+current_ids = (set(accounted) - {b['id'] for b in continuation['removedBuildings']}) | {b['id'] for b in continuation['additionalBuildings']}
+assert current_ids == {b['id'] for b in scene['buildings'] if b['siteId']==964}
 registers = [load('data/maps/factory-footprint-alignment.json')] + [load(path) for path in scene['footprintAlignment']['groupRegisters']]
 assert sum(len(q['buildings']) for q in registers) == scene['footprintAlignment']['matchedRanges']
 used = set()
@@ -80,17 +83,17 @@ assert plinth.difference(holes).area<.001, 'Chimney plinth protrudes into the sa
 
 roads = {q['name']:q for q in load('data/maps/district-road-traces.json')['roads']}
 lane, passage = [roads[name] for name in ['Sugar House Lane','Sugar House Lane works passage']]
-assert lane['points'][:3]==lane['sugarHouseAlignment']['priorPoints'][:3]
-assert lane['points'][6:]==lane['sugarHouseAlignment']['priorPoints'][6:]
+assert lane['westSugarAlignment']['priorPoints'][:3]==lane['sugarHouseAlignment']['priorPoints'][:3]
+assert lane['points'][-6:]==lane['sugarHouseAlignment']['priorPoints'][-6:]
 assert LineString(lane['points']).distance(Point(passage['points'][0]))<.002
-assert lane['width']==7 and passage['width']==4
+assert lane['width']==5.2 and lane['westSugarAlignment']['priorWidth']==7 and passage['width']==4
 for road in [lane,passage]:
     corridor = LineString(road['points']).buffer(road['width']/2+1.1,cap_style=2,join_style=2)
     for id in corrections:
         overlap = corridor.intersection(Polygon(models[id]['footprint'])).area
         review = r['roadBoundaryReview']
         if road['name']==review['road'] and id==review['modelId']:
-            assert abs(overlap-review['sourceOverlapAreaM2'])<.002
+            assert overlap<=review['sourceOverlapAreaM2']+.002
         else:
             assert overlap<.01,(road['name'],id)
 

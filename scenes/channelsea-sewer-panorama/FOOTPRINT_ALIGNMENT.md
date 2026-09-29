@@ -439,3 +439,339 @@ The Goad overlay shows that several previous Crystal Wharf rectangles partly
 cover open yard; reclassify them from map evidence before assigning source IDs.
 Then continue western site 947 and sites 256/572/573. Their before-state and
 labelled OS/Goad comparisons are saved alongside this pass.
+
+
+## West of the cooperage — 29 September 2026
+
+After committing the preceding work as `6dc446d`, the author prioritized the
+western side of Sugar House Lane. `west-sugar-footprint-alignment.json` records
+38 aligned ranges in 34 reviewed groups using 58 supplied source polygons.
+All 27 existing site-947 ranges are corrected, with eleven additional rooms at
+Hodson, Dane, Winstone and Wildash. Previous heights, roof rises and bay counts
+remain; the new low volumes have explicitly interpreted elevations.
+
+The northern Hodson factory/warehouse and courtyard perimeter retain separate
+compartments within shared OS outlines. Victoria Buildings retain the joined
+tenement exteriors. The Dane calcining rooms, Winstone's detached stores and
+large riverside hall, and the Wildash court are now registered separately.
+Two old site-569 rectangles duplicate Wildash rooms drawn at the edge of Goad
+F17 (the repeated F30 block and label 892). Their full prior records are retained
+as removed duplicates; Kendrick's two actual ranges remain. Small Goad 876 and
+882/884 annexes, minor roof projections and equipment remain explicit omissions.
+
+Chimney bases 1107028, 1031260 and 1108526 supply three corrected stack positions.
+Two interpreted base radii narrow to 0.65 m to fit their mapped plinths. The
+fourth stack transfers within its Goad 860 room without claiming an independent
+OS base; all four previous 22 m shaft heights remain.
+
+`west-sugar-bank-alignment.json` reconciles ten local Three Mills Back River
+controls. Four opposite-bank points move slightly west to preserve an open
+channel alongside the corrected waterfront buildings. Bridge connections and
+banks beyond this local section remain. Sugar House Lane is re-read through the
+opposing works frontages, whose narrowest mapped gap is 7.85 m. Its interpreted
+carriageway changes from 7 to 5.2 m with additional bend controls and retained
+southern connections. Two High Street controls shift northwest by 2.5 m to
+clear the machinery store. Prior points and source pixels are preserved in
+`westSugarAlignment`; these reconciliations are not surveyed road/bank dimensions.
+
+Three supplied-outline seam overlaps (0.019–0.221 m²) and one 0.021 m² pavement
+mitre are explicitly recorded. Minimum rendered group agreement is 99.874%.
+This measures geometric agreement, not historical architectural accuracy.
+
+Browser inspection identified missing working ground in the original parcel
+layer. Yard 94701 restores the OS/Goad industrial-ground envelope between Dane,
+Winstone, Wildash, the lane and the river. Its exclusions follow the corrected
+buildings and access; finish remains interpreted. No equipment or stock is added.
+It does not claim one occupier or an exact cadastral boundary.
+
+The reproducible authoring script is `prepare_west_sugar_alignment.py`; it needs
+the private source extract and immutable `west-sugar-before.json` snapshot.
+Routine builds use the saved register alone. `check_west_sugar_alignment.py`
+checks group unions, inherited elevations, rendered clipping, duplicate removal,
+chimney bases, road clearance, channel continuity and restored yard coverage.
+
+All geometry, earlier alignment, yard, housing, street, Abbey, western-completion
+and 77-destination checks passed. The focused browser command is
+`python3 scripts/review_factory_buildings.py --west-sugar-only --url http://127.0.0.1:4175`.
+Its seven views cover the plan, Hodson, river frontage, Dane, Winstone, Wildash
+and the narrow lane. All seven final views passed after yard restoration,
+with the affected plan/Dane/Winstone/Wildash views visually inspected. No
+browser/shader errors; all 38 western ranges and four stack positions confirmed.
+Asset revision `268ce5651e76` matches all public hashes. Private captures and
+diagnostics remain in `review/`.
+The district now has 521 ranges, 43 sites, 89 chimneys and 201 source-linked
+ranges. The western continuation remains local and uncommitted; no deployment.
+
+Next: the remaining eastern site-964 ranges 17–28 (Crystal Wharf / Dane / Talbot
+and Barber), followed by sites 256/572/573. The old northern Crystal Wharf
+rectangles require reclassification against Goad before any source assignment.
+
+
+## Crystal Wharf, Barber and southern ink works — 29 September 2026
+
+The next authorized continuation resolves all twelve formerly deferred site-964
+ranges (17–28). `data/maps/crystal-barber-footprint-alignment.json` records
+21 aligned ranges in 21 reviewed groups: eight existing ranges corrected and
+thirteen separately identified rooms added. Four earlier rectangles, ranges
+24–27, cover labelled open Crystal Wharf/cooperage yard on Goad F3 and are
+removed, with their complete prior records retained. Their replacement is the
+actual mapped Talbot/Dane row to the north, not a nearest-polygon assignment.
+All 40 current eastern Sugar House Lane ranges are now source-linked.
+
+The northern additions follow Goad compartments 526–540. The surviving
+cooperage wood shed (544) and office/dwelling (542) remain separately identified.
+Southern additions include the Barber bone-shed annex, stable/loft (588), long
+riverside shed (592), attached ink-factory rooms and shed 610. The attached
+southern rooms retain the supplied small opening. Every source ID and exterior
+is saved in the register. Existing eaves heights, roof rises, axes and bay counts
+are retained. New low rooms use interpreted 3.8 m eaves; Dane 528 uses 5.35 m,
+informed by its Goad 1½-floor annotation. These are not measured elevations.
+
+Southern chimney base 1230955 fixes the stack position between the Barber
+courtyard range and riverside shed. Its interpreted radius narrows from 1.05 to
+0.5 m so its plinth fits the mapped base; the previous 22 m height remains.
+The northern boiler chimney transfers within corrected Dane compartment 532
+near its southern dividing wall. No independent OS base is claimed; its printed
+50 ft height remains 15.24 m. The earlier cooperage chimney is unchanged.
+
+Two separately recorded working-ground envelopes, yards 96402 and 96403, restore
+Crystal Wharf/Talbot and Barber/southern ink-works surfaces. Buildings, roads,
+water and chimney bases are excluded. Finish remains interpreted; these are
+not cadastral or single-occupier claims, and no stock or equipment is added.
+Roads and riverbanks require no additional changes in this pass. Small isolated
+features/plant bases 1217966, 1065632 and 1242744 remain deferred rather than
+being classified as complete buildings.
+
+`prepare_crystal_barber_alignment.py` uses the private footprint extract, OS
+mosaic and immutable `reference/footprint-model-alignment/crystal-barber-before.json`.
+Routine builds use the saved register. `check_crystal_barber_alignment.py`
+checks the old/new accounting, unique source use, retained heights and roofs,
+source exteriors, openings, stack bases, road/water clearance and yard coverage.
+Minimum rendered source agreement is 99.977%, a geometric comparison only.
+
+Factory, all earlier alignment, yard, housing, street, Abbey, western-completion
+and 77 navigation checks pass. The focused browser command is
+`python3 scripts/review_factory_buildings.py --crystal-barber-only --url http://127.0.0.1:4175`.
+All seven views were visually inspected: Crystal plan, oblique, open yard and
+boiler chimney, Barber plan and chimney, and the southern ink courtyard. No
+browser/shader errors; all 40 eastern ranges and three chimney positions
+confirmed. Source overlays and review exports remain local. Asset revision
+`964a1116a09c` matches all public asset hashes. No mobile audit or deployment.
+
+Current district totals: 530 ranges, 43 sites, 89 chimneys, 222 source-linked
+ranges, 85 yards, 35 wear routes and 160 stock groups. Both this and the western
+continuation remain uncommitted after `6dc446d`. Next review sites 256/572/573.
+
+
+## High Street starch, tin-box and confectionery works — 29 September 2026
+
+`data/maps/abbey-west-footprint-alignment.json` records eighteen source-linked
+ranges in fifteen reviewed groups. Sites 256, 572 and 573 now contain 5, 3 and 8
+ranges respectively, all linked to supplied exteriors. Two additional matches
+resolve the immediately adjoining Bow Bridge office and smithy, site 254 ranges
+15/14. The district total is 240 source-linked ranges at fifteen sites.
+
+The original rectangles need substantial re-registration. Several cross the
+High Street houses or open factory yards. Source 2797 supplies the complete
+Harvey and Neville starch exterior, divided into the retained northern factory,
+eastern stoves and southern rooms. The three room divisions are approximate
+Goad interpretations within that exterior, not surveyed OS party walls. Source
+25658 similarly retains two adjoining pickle/preserve compartments. The former
+starch range 4 lies across the Goad domestic/shop frontage at number 89: its
+industrial volume is removed and the full prior record retained. This does not
+claim that the domestic frontage has received a housing reconstruction pass.
+
+Bryant and May's main tin-box factory uses sources 26098/652278/927475, the
+japanning room and stoves use 22346/1039391/838929, and the eastern store uses
+827748. The large Hogarth confectionery factory follows source 1902. Its western
+rooms/office, eastern compartments and riverside stables remain separate ranges.
+Four omitted rooms are added: engine/boiler room 35713, corrugated courtyard shed
+506627, the southern eastern-room group and southern end range 16280 (Goad 635).
+All source IDs and saved geometries are in the register. Existing heights, roof
+rises, bay counts and axes are retained; new 3.8 m eaves and pitched roofs are
+explicit estimates. A source footprint does not establish these elevations.
+
+Hogarth's Goad 624 engine chimney moves to independent source base 993523. Its
+previous interpreted 22 m height and 1.05 m radius remain. The rendered plinth
+fits within the source base and clears the surrounding factory roofs.
+
+The corrected western Hogarth rooms exposed neighbouring Bow Bridge envelopes
+that had crossed their boundary. OS/Goad F17 matches place the office (502) at
+493587 and smithy (504) at 492587/838996. Process ranges 12/13 transfer with the
+office correction, approximately 1.21 m west and 5.83 m south, keeping their
+existing forms and elevations. These two transfers have no independent source
+exteriors and are excluded from the matched count. Their full plant and boundary
+interpretation awaits the remaining Bow Bridge works pass; this is a local
+boundary reconciliation, not a completed site-254 survey.
+
+A 0.52 m² starch-frontage corner meets the existing High Street pavement corridor.
+The source and street controls are retained and that corner is cleared by the
+renderer. No road or riverbank authoring changes are required. Minimum rendered
+group agreement is 99.933%, measuring geometry only. Minor back-frontage stores
+and starch plant features remain explicit omissions. Existing yard surfaces are
+regenerated against the new buildings: 85 yards, 36 wear routes, 159 stock groups.
+
+`prepare_abbey_west_alignment.py` requires the private supplied-footprint extract
+and immutable `reference/footprint-model-alignment/abbey-west-before.json`.
+Routine builds use the saved register alone. `check_abbey_west_alignment.py`
+checks source accounting, shared-compartment unions, retained elevations, the
+domestic reclassification, chimney plinth, neighbour transfers and clearances.
+Factory, all previous alignments, yards, housing, streets, Abbey, western
+completion and all 77 navigation destinations pass.
+
+The focused browser command is
+`python3 scripts/review_factory_buildings.py --abbey-west-only --url http://127.0.0.1:4175`.
+Seven views passed and were visually inspected: overall plan, starch works,
+High Street frontage, tin-box rooms, Hogarth compound, chimney base and the Bow
+Bridge boundary. All sixteen site-256/572/573 ranges and the corrected stack
+position reached the renderer without browser/shader errors. Asset revision
+`0967fc8d0e4d` matches every public asset hash. No mobile audit or deployment.
+
+Current totals: 533 ranges, 43 sites and 89 chimneys. This pass and the preceding
+western/Crystal continuations remain local and uncommitted after `6dc446d`.
+Next: the remaining Bow Bridge bone and chemical works (254), including its
+provisional process-room transfers and mapped plant classification.
+
+## Bow Bridge bone and chemical works, 29 September 2026
+
+The site-254 continuation accounts for seventeen ranges: twelve supplied-outline
+matches, including the two earlier office/smithy matches, and five direct OS
+traces. Ten newly source-linked ranges in seven groups bring the district total
+to 250 at fifteen sites. Two omitted rooms are added. Heights, roof forms and
+internal Goad divisions remain interpretations.
+
+Authoring register: `data/maps/bow-works-footprint-alignment.json`, prepared by
+`scripts/prepare_bow_works_alignment.py`. Supplied-outline groups:
+
+| Goad use / number | Supplied source IDs | Current ranges |
+| --- | --- | --- |
+| Animal charcoal warehouse 500 | 7377 | added charcoal warehouse |
+| Bone mill 506 | 9935 | 13 |
+| Mill annex 508 | 236456 | added mill annex |
+| Bones shed 522 | 42611 | 3 |
+| Stable / bone store 518 | 624951 | 4 |
+| Crushing 524 | 214735, 1012516, 1027327, 900941 | 9, 8 |
+| Boiling 532–536 | 9807 | 7, 10, 11 |
+
+The large continuous factory body is hatched on OS but absent from the supplied
+extract. Its exterior is traced from the cached OS mosaic and divided into five
+Goad rooms: ammonia/retorts 510/512 (range 12), bone store 514 (1), tallow/bone
+boiling 516 (2), stores 520 (5) and manure 526/528 (6). These records use
+`os-1893-direct-trace` and do not claim supplied source IDs. Adjacent mapped rooms
+and chimney bases are excluded from the body; a sub-square-metre disconnected
+tracing seam is discarded. The northern western bend was checked against OS
+before the final build. The earlier provisional transfers of ranges 12/13 are
+explicitly superseded. Effective district totals are six direct traces and two
+local transfers, avoiding stale double-counting of those earlier records.
+
+Four independent chimney bases are matched: 1011348 (printed 100 ft), 1089134
+(60 ft), 1172266 (50 ft) and newly added retort base 1044201 (50 ft / 15.24 m).
+The first three interpreted shaft radii reduce to 1.2, 0.8 and 0.65 m so their
+plinths fit the mapped openings; the new shaft radius is 0.85 m. The boiling
+house's other stack transfers within its corrected Goad room, retaining its
+interpreted 22 m height without claiming an independent base. Source 9807's
+chimney opening is retained. All four independent plinths fit their mapped bases
+and clear rendered building volumes; all five shaft positions clear water.
+
+`data/maps/bow-works-bank-alignment.json` moves ten works-side River Lea controls
+west by 1.8–5.3 m to reconcile the simplified water polygon with the OS walls.
+The opposite bank and wider Old Lea connections remain unchanged. The local
+channel retains at least 6.15 m between reviewed bank segments. This is local
+map reconciliation, not a surveyed shoreline. Hunt's neighbouring site-564 range
+1 moves provisionally 2 m south, removing a 9.16 m² overlap with the corrected
+boiling house while retaining its form and elevations. That transfer remains
+outside the source-linked count pending the full soap-works review. Roads are
+unchanged by this pass.
+
+The Goad 530 open-under structure, water tower, tanks and small projections
+remain deferred plant features. They are not filled with generic building
+volumes. The immutable private snapshots are
+`reference/footprint-model-alignment/bow-works-before.json` and
+`bow-works-ground-before.json`; preparation also needs the private source extract
+and cached maps. Routine builds use the saved JSON registers.
+
+The ground plan, buildings, infrastructure, river mesh, yards, housing exclusions,
+regional footprint masks and manifest are regenerated. District totals are
+535 ranges, 43 sites, 90 chimneys, 85 yards, 36 wear routes and 159 stock groups.
+The new Bow checker and all earlier alignment, factory, yard, housing, street,
+Abbey, western and 77-destination navigation checks pass. Minimum rendered
+supplied-outline group agreement is 99.979%, a geometry comparison rather than
+a historical-accuracy score. Direct traces are checked separately against the
+saved OS exterior and compartment partition.
+
+`python3 scripts/review_factory_buildings.py --bow-works-only --url http://127.0.0.1:4175`
+passed seven visually inspected views: plan, mill, process rooms, retorts, manure,
+boiling and riverbank. All seventeen ranges and five chimney positions reached
+the renderer without browser or shader errors. Asset revision `6ee0ae172d9a`
+matches all 25 module and 139 asset hashes. No mobile audit or deployment.
+This pass and the western, Crystal/Barber and High Street continuations remain
+uncommitted after factory commit `6dc446d`. Next: Hunt's Bow Bridge soap works,
+site 564, currently seven ranges.
+
+## Hunt's Bow Bridge soap works, 29 September 2026
+
+All ten current site-564 ranges now link to supplied outlines in six reviewed
+groups. Seven existing ranges are corrected and three omitted rooms are added,
+bringing the district to 538 ranges and 260 source-linked ranges at sixteen
+sites. The authoring register is `data/maps/hunt-works-footprint-alignment.json`,
+prepared by `scripts/prepare_hunt_works_alignment.py`.
+
+| Mapped group | Supplied source IDs | Ranges |
+| --- | --- | --- |
+| Main process body and southern projection | 1461, 938428 | existing 1–5 |
+| Stables, Goad 554 | 73603 | existing 6 |
+| Dwelling, Goad 552 | 381084 | existing 7 |
+| Western furnace rooms | 100277 | added |
+| Office/laboratory, Goad 538 | 842322 | added |
+| Southern engine room | 858006 | added |
+
+The continuous OS process exterior retains five interpreted Goad compartments:
+northern boiling/cutting/drying/packing, central process rooms with boilers,
+southern bay 548, southeastern room 550 and smithy 542. Their previous eaves,
+roof rise, direction and bay counts are retained. The Goad sheet records
+admission refused, so the interior divisions remain approximate. The separate
+stables retain low eaves and the dwelling retains its interpreted two-storey
+6.9 m eaves. New rooms use interpreted 3.8 m eaves and low pitched roofs. The
+provisional 2 m transfer of range 1 from the Bow Bridge pass is superseded; only
+Howards shed 524 remains in the effective local-transfer count.
+
+The boiler chimney is placed on supplied base 1013155, retaining its printed
+80-foot height (24.384 m) and interpreted 1.05 m radius. Its plinth fits the base
+and clears building roofs. The western shaft has no independent supplied base:
+its position transfers proportionally with the corrected process body, then
+moves 2 m east and south to retain the Goad relationship inside the process
+rooms beside the furnace wing. Its inferred 22 m height remains unchanged.
+
+The simplified River Lea polygon crossed about 20 m² of the newly restored
+furnace outline. `data/maps/hunt-works-bank-alignment.json` adjusts works-side
+vertices 39 and 40 west by 1 m and 3.5 m respectively. Vertex 39 follows the
+earlier Bow Bridge correction. The opposite bank is retained; the checked local
+channel remains 23.98 m wide. This is map reconciliation, not a surveyed bank.
+All ten building outlines clear buffered water and road corridors, and Hunt's
+rooms no longer overlap the corrected Bow Bridge boiling house.
+
+Sources 859135, 1062021, 1001071, 969335 and 1228456 remain deferred tank/platform
+and small service details. The western empties strip and lightweight sheds
+also need separate yard/plant interpretation. No generic full-height room is
+assigned to those features. Private OS/Goad comparisons and the immutable
+`hunt-works-before.json` and `hunt-works-ground-before.json` snapshots are under
+`reference/footprint-model-alignment/`. Preparation requires those snapshots and
+the private source extract; routine builds use the saved registers.
+
+The dependent ground, infrastructure, river mesh, yards, housing exclusions,
+regional masks and cache manifest are rebuilt. There are 43 sites, 538 ranges,
+90 chimneys, 85 yards, 36 wear routes and 160 stock groups. No road authoring or
+new yard envelope is introduced in this pass. Minimum rendered supplied-outline
+group agreement is 99.977%, a geometry comparison rather than an architectural
+accuracy measure.
+
+The Hunt checker, all prior factory alignment checks, factory/yard/housing,
+street, Abbey, western and 77 navigation checks pass. The focused command
+`python3 scripts/review_factory_buildings.py --hunt-works-only --url http://127.0.0.1:4175`
+passed six visually inspected views: plan, process rooms, furnaces, boilers,
+stables/dwelling and the Bow Bridge boundary. All ten ranges and two chimney
+positions reached the renderer without browser/shader errors. Asset revision
+`73acc66175bb` matches all 25 module and 139 asset hashes. No mobile audit or
+deployment. This and the four preceding continuations remain uncommitted after
+factory commit `6dc446d`. Next: Lascelles stone/terra cotta and British Ultramarine
+works, sites 565/566, currently three ranges each.

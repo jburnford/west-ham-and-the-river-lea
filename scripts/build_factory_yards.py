@@ -52,6 +52,8 @@ def build():
                          for s in factories['structures'] if s['kind']=='chimney'])
     oil=load('data/maps/oil-wharf-footprint-alignment.json')
     sugar=load('data/maps/sugar-house-footprint-alignment.json')
+    west_sugar=load('data/maps/west-sugar-footprint-alignment.json')
+    crystal_barber=load('data/maps/crystal-barber-footprint-alignment.json')
     tanks=unary_union([Point(s['x'],s['z']).buffer(s['radius']+.3) for s in oil['tanks']])
     blocked=buildings.buffer(.15).union(holders).union(water.buffer(.45)).union(roads).union(chimneys).union(tanks)
     sawmill=load('data/maps/sawmill-yard.json')
@@ -67,7 +69,7 @@ def build():
     # Give the restored full sawmill parcel precedence over anonymous context.
     western=factories['westContext'].get('sites',[])
     priority_ids={797,1017,9001,*[s['id'] for s in western]}
-    source=[oil['yard'],sugar['yard'],{'id':797,'name':names[797],'polygons':[sawmill['parcel']]},
+    source=[oil['yard'],sugar['yard'],west_sugar['yard'],*crystal_barber['yards'],{'id':797,'name':names[797],'polygons':[sawmill['parcel']]},
       {'id':1017,'name':names[1017],'polygons':[jute['parcel']]}]+western+[s for s in plan['sites'] if s['id'] not in priority_ids]+[{'id':-i-1,'name':'Western wharf context','polygons':[p]} for i,p in enumerate(factories['westContext']['yards'])]
     used=Polygon();sites=[]
     for site in source:

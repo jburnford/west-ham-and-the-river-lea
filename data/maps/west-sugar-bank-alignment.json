@@ -1,0 +1,166 @@
+{
+  "riverId": 2,
+  "polygonIndex": 0,
+  "ringIndex": 0,
+  "source": "Georeferenced OS five-foot 1893-96 and supplied Hodson factory exteriors",
+  "mosaicBounds": [
+    -805,
+    -140,
+    -710,
+    0
+  ],
+  "registration": "Local reconciliation of the simplified channel against OS map and supplied exteriors. Four opposite-bank controls move west to retain a continuous channel; positions remain approximate.",
+  "evidence": "Earlier water polygon cuts supplied factory walls. Keep bridge connections and downstream banks unchanged; local lateral map/vector reconciliation is not a surveyed shoreline.",
+  "replacements": [
+    {
+      "vertex": 39,
+      "priorPoint": [
+        -777.05,
+        -45.41
+      ],
+      "point": [
+        -780.05,
+        -45.41
+      ],
+      "mosaicPixel": [
+        153.821,
+        406.895
+      ]
+    },
+    {
+      "vertex": 40,
+      "priorPoint": [
+        -764.61,
+        -70.12
+      ],
+      "point": [
+        -767.61,
+        -70.12
+      ],
+      "mosaicPixel": [
+        189.036,
+        341.269
+      ]
+    },
+    {
+      "vertex": 41,
+      "priorPoint": [
+        -762.82,
+        -78.29
+      ],
+      "point": [
+        -765.82,
+        -78.29
+      ],
+      "mosaicPixel": [
+        194.441,
+        319.4
+      ]
+    },
+    {
+      "vertex": 42,
+      "priorPoint": [
+        -763.02,
+        -88.52
+      ],
+      "point": [
+        -766.02,
+        -88.52
+      ],
+      "mosaicPixel": [
+        194.651,
+        291.839
+      ]
+    },
+    {
+      "vertex": 49,
+      "priorPoint": [
+        -754.28,
+        -93.77
+      ],
+      "point": [
+        -758.7,
+        -93.77
+      ],
+      "mosaicPixel": [
+        214.694,
+        278.238
+      ]
+    },
+    {
+      "vertex": 50,
+      "priorPoint": [
+        -754.6,
+        -77.29
+      ],
+      "point": [
+        -760.8,
+        -77.29
+      ],
+      "mosaicPixel": [
+        207.85,
+        322.461
+      ]
+    },
+    {
+      "vertex": 51,
+      "priorPoint": [
+        -761.88,
+        -59.06
+      ],
+      "point": [
+        -766.4,
+        -59.06
+      ],
+      "mosaicPixel": [
+        191.478,
+        371.139
+      ]
+    },
+    {
+      "vertex": 52,
+      "priorPoint": [
+        -771.11,
+        -43.79
+      ],
+      "point": [
+        -775.5,
+        -43.79
+      ],
+      "mosaicPixel": [
+        165.922,
+        411.591
+      ]
+    },
+    {
+      "vertex": 53,
+      "priorPoint": [
+        -774.92,
+        -35.89
+      ],
+      "point": [
+        -779.5,
+        -35.89
+      ],
+      "mosaicPixel": [
+        154.602,
+        432.57
+      ]
+    },
+    {
+      "vertex": 54,
+      "priorPoint": [
+        -776.97,
+        -29.72
+      ],
+      "point": [
+        -780.2,
+        -29.72
+      ],
+      "mosaicPixel": [
+        152.272,
+        449.133
+      ]
+    }
+  ]
+}

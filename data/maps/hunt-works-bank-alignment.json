@@ -1,0 +1,32 @@
+{
+  "riverId": 18,
+  "polygonIndex": 0,
+  "ringIndex": 0,
+  "replacements": [
+    {
+      "vertex": 39,
+      "priorPoint": [
+        -786.65,
+        219.51
+      ],
+      "point": [
+        -787.65,
+        219.51
+      ]
+    },
+    {
+      "vertex": 40,
+      "priorPoint": [
+        -781.57,
+        235.04
+      ],
+      "point": [
+        -785.07,
+        235.04
+      ]
+    }
+  ],
+  "source": "OS five-foot map and supplied furnace outline 100277",
+  "registration": "Local reconciliation of the simplified bank with the mapped furnace wall; not a surveyed shoreline.",
+  "evidence": "Two works-side controls clear the restored western furnace range. Vertex 39 follows the prior Bow Bridge correction; the opposite bank is retained."
+}

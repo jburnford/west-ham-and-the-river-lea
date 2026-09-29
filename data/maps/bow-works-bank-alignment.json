@@ -1,0 +1,166 @@
+{
+  "riverId": 18,
+  "polygonIndex": 0,
+  "ringIndex": 0,
+  "mosaicBounds": [
+    -860,
+    65,
+    -735,
+    225
+  ],
+  "replacements": [
+    {
+      "vertex": 30,
+      "priorPoint": [
+        -865.59,
+        65.28
+      ],
+      "point": [
+        -867.39,
+        65.28
+      ],
+      "mosaicPixel": [
+        167.169,
+        186.556
+      ]
+    },
+    {
+      "vertex": 31,
+      "priorPoint": [
+        -813.05,
+        116.27
+      ],
+      "point": [
+        -814.85,
+        116.27
+      ],
+      "mosaicPixel": [
+        304.551,
+        327.7
+      ]
+    },
+    {
+      "vertex": 32,
+      "priorPoint": [
+        -809.45,
+        118.62
+      ],
+      "point": [
+        -811.25,
+        118.62
+      ],
+      "mosaicPixel": [
+        314.047,
+        334.292
+      ]
+    },
+    {
+      "vertex": 33,
+      "priorPoint": [
+        -797.61,
+        145.67
+      ],
+      "point": [
+        -799.61,
+        145.67
+      ],
+      "mosaicPixel": [
+        343.333,
+        407.98
+      ]
+    },
+    {
+      "vertex": 34,
+      "priorPoint": [
+        -795.93,
+        156.09
+      ],
+      "point": [
+        -801.23,
+        156.09
+      ],
+      "mosaicPixel": [
+        338.221,
+        435.918
+      ]
+    },
+    {
+      "vertex": 35,
+      "priorPoint": [
+        -794.64,
+        157.72
+      ],
+      "point": [
+        -799.94,
+        157.72
+      ],
+      "mosaicPixel": [
+        341.566,
+        440.402
+      ]
+    },
+    {
+      "vertex": 36,
+      "priorPoint": [
+        -795.91,
+        159.43
+      ],
+      "point": [
+        -800.01,
+        159.43
+      ],
+      "mosaicPixel": [
+        341.254,
+        445.001
+      ]
+    },
+    {
+      "vertex": 37,
+      "priorPoint": [
+        -793.39,
+        178.28
+      ],
+      "point": [
+        -797.49,
+        178.28
+      ],
+      "mosaicPixel": [
+        346.645,
+        495.941
+      ]
+    },
+    {
+      "vertex": 38,
+      "priorPoint": [
+        -786.82,
+        210.48
+      ],
+      "point": [
+        -790.92,
+        210.48
+      ],
+      "mosaicPixel": [
+        361.938,
+        583.124
+      ]
+    },
+    {
+      "vertex": 39,
+      "priorPoint": [
+        -783.45,
+        219.51
+      ],
+      "point": [
+        -786.65,
+        219.51
+      ],
+      "mosaicPixel": [
+        372.745,
+        607.751
+      ]
+    }
+  ],
+  "source": "OS five-foot map and reviewed supplied works frontages",
+  "registration": "Local lateral reconciliation of simplified River Lea bank controls against the building frontage; not surveyed shore dimensions.",
+  "evidence": "The previous bank crosses mapped warehouse, mill, bones shed and boiling-house walls. Shift ten works-side controls west while preserving the opposite bank and the wider river connections."
+}

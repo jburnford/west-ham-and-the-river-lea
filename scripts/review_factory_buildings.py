@@ -142,11 +142,78 @@ async def sugar_house(url):
     report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
     expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
     rendered=report['render']['factoryBuildings']
-    assert rendered['ranges']==len(expected['buildings']) and rendered['siteRanges']['964']==31
+    count=sum(b['siteId']==964 for b in expected['buildings'])
+    assert rendered['ranges']==len(expected['buildings']) and rendered['siteRanges']['964']==count
     stack=next(s for s in expected['structures'] if s['id']=='stack-964-1425-3049')
     top=next(s['position'] for s in rendered['chimneyTops'] if s['id']==stack['id'])
     assert top==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
-    print('All 31 eastern Sugar House Lane ranges and the corrected cooperage chimney reached the renderer.', flush=True)
+    print(f'All {count} eastern Sugar House Lane ranges and the corrected cooperage chimney reached the renderer.', flush=True)
+
+
+async def hunt_works(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings']) and rendered['siteRanges']['564']==10
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    stacks=[s for s in expected['structures'] if s['siteId']==564 and s['kind']=='chimney']
+    assert len(stacks)==2
+    for s in stacks:assert tops[s['id']]==[s['x'],s['height']+s['baseHeight'],s['z']]
+    print('All ten Hunt ranges and two corrected chimneys reached the renderer.',flush=True)
+
+
+async def bow_works(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings']) and rendered['siteRanges']['254']==17
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    stacks=[s for s in expected['structures'] if s['siteId']==254 and s['kind']=='chimney']
+    assert len(stacks)==5
+    for s in stacks:assert tops[s['id']]==[s['x'],s['height']+s['baseHeight'],s['z']]
+    print('All 17 Bow Bridge ranges and five reviewed chimney positions reached the renderer.',flush=True)
+
+
+async def abbey_west(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings'])
+    assert all(rendered['siteRanges'][str(site)]==count for site,count in [(256,5),(572,3),(573,8)])
+    stack=next(s for s in expected['structures'] if s['id']=='stack-573-487-2965')
+    top=next(s['position'] for s in rendered['chimneyTops'] if s['id']==stack['id'])
+    assert top==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
+    print('All 16 starch/tin-box/confectionery ranges and the corrected Hogarth chimney reached the renderer.',flush=True)
+
+
+async def crystal_barber(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings']) and rendered['siteRanges']['964']==40
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    for stack in expected['structures']:
+        if stack['siteId']==964 and stack['kind']=='chimney':
+            assert tops[stack['id']]==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
+    print('All 40 eastern ranges and three corrected chimney positions reached the renderer.',flush=True)
+
+
+async def west_sugar(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings']) and rendered['siteRanges']['947']==38
+    assert rendered['siteRanges']['569']==2
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    for stack in expected['structures']:
+        if stack['siteId']==947:
+            assert tops[stack['id']]==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
+    print('All 38 western ranges, four corrected chimneys and two remaining Kendrick ranges reached the renderer.',flush=True)
 
 
 if __name__ == '__main__':
@@ -167,6 +234,11 @@ if __name__ == '__main__':
     parser.add_argument('--oil-wharf-only', action='store_true', help='Review Oil Wharf stores, tank yard, Cook’s Road and neighbouring sawmill')
     parser.add_argument('--howards-only', action='store_true', help='Review City Mills / Howards departments and millrace')
     parser.add_argument('--sugar-house-only', action='store_true', help='Review Sugar House, cooperage, Winstone ranges and corrected lane access')
+    parser.add_argument('--west-sugar-only', action='store_true', help='Review Hodson, Dane, western Winstone and Wildash footprints, roads and riverbank')
+    parser.add_argument('--crystal-barber-only', action='store_true', help='Review Crystal Wharf, Barber, southern ink works and restored open yards')
+    parser.add_argument('--abbey-west-only', action='store_true', help='Review starch, tin-box and confectionery factories and the Bow Bridge boundary')
+    parser.add_argument('--bow-works-only', action='store_true', help='Review Bow Bridge bone and chemical works, direct traces, chimneys and Lea bank')
+    parser.add_argument('--hunt-works-only', action='store_true', help='Review Hunt soap works, shared rooms, chimneys and riverbank')
     parser.add_argument('--view', help='Capture one named view from the selected review')
     args = parser.parse_args()
     if args.yards_only:
@@ -308,6 +380,65 @@ if __name__ == '__main__':
             'sugar-house-works-passage': {'position':[-718,7,71],'target':[-668,4,48],'fov':64},
         }
         action=sugar_house
+    if args.west_sugar_only:
+        runner.REPORT_NAME='west-sugar-alignment-checks.json'
+        runner.VIEWS={
+            'west-sugar-plan': {'position':[-754,245,30],'target':[-748,0,-8],'fov':59},
+            'west-sugar-hodson': {'position':[-684,80,-81],'target':[-747,4,-80],'fov':60},
+            'west-sugar-river': {'position':[-803,40,-65],'target':[-762,4,-43],'fov':60},
+            'west-sugar-dane': {'position':[-706,48,12],'target':[-754,3,-3],'fov':60},
+            'west-sugar-winstone': {'position':[-704,72,78],'target':[-754,4,35],'fov':60},
+            'west-sugar-wildash': {'position':[-695,62,146],'target':[-742,3,88],'fov':60},
+            'west-sugar-lane': {'position':[-722,8,-82],'target':[-738,4,-48],'fov':62},
+        }
+        action=west_sugar
+    if args.crystal_barber_only:
+        runner.REPORT_NAME='crystal-barber-alignment-checks.json'
+        runner.VIEWS={
+            'crystal-plan': {'position':[-684,110,-105],'target':[-681,0,-112],'fov':60},
+            'crystal-oblique': {'position':[-711,42,-70],'target':[-677,4,-117],'fov':60},
+            'crystal-open-yard': {'position':[-699,8,-106],'target':[-655,3,-111],'fov':60},
+            'crystal-dane-chimney': {'position':[-662,27,-104],'target':[-662,8,-120],'fov':55},
+            'barber-plan': {'position':[-650,95,10],'target':[-648,0,-2],'fov':58},
+            'barber-chimney': {'position':[-618,30,9],'target':[-632,3,0],'fov':50},
+            'southern-ink-courtyard': {'position':[-610,48,53],'target':[-643,3,19],'fov':60},
+        }
+        action=crystal_barber
+    if args.abbey_west_only:
+        runner.REPORT_NAME='abbey-west-alignment-checks.json'
+        runner.VIEWS={
+            'abbey-west-plan': {'position':[-844,165,17],'target':[-844,0,12],'fov':59},
+            'abbey-west-starch': {'position':[-786,50,-56],'target':[-817,4,-24],'fov':58},
+            'abbey-west-high-street': {'position':[-863,11,-35],'target':[-829,5,-33],'fov':62},
+            'abbey-west-tin-box': {'position':[-900,46,54],'target':[-868,3,30],'fov':58},
+            'abbey-west-hogarth': {'position':[-879,65,62],'target':[-830,4,15],'fov':58},
+            'abbey-west-chimney': {'position':[-854,33,39],'target':[-833,6,24],'fov':54},
+            'abbey-west-bow-boundary': {'position':[-825,65,103],'target':[-832,3,53],'fov':58},
+        }
+        action=abbey_west
+    if args.bow_works_only:
+        runner.REPORT_NAME='bow-works-alignment-checks.json'
+        runner.VIEWS={
+            'bow-works-plan': {'position':[-814,230,132],'target':[-811,0,130],'fov':60},
+            'bow-works-mill': {'position':[-888,68,105],'target':[-845,4,70],'fov':58},
+            'bow-works-process': {'position':[-765,80,82],'target':[-817,5,105],'fov':60},
+            'bow-works-retorts': {'position':[-841,38,124],'target':[-819,7,105],'fov':58},
+            'bow-works-manure': {'position':[-726,65,169],'target':[-777,4,177],'fov':58},
+            'bow-works-boiling': {'position':[-725,48,219],'target':[-765,4,207],'fov':58},
+            'bow-works-riverbank': {'position':[-841,25,160],'target':[-799,5,150],'fov':62},
+        }
+        action=bow_works
+    if args.hunt_works_only:
+        runner.REPORT_NAME='hunt-works-alignment-checks.json'
+        runner.VIEWS={
+            'hunt-works-plan': {'position':[-752,135,244],'target':[-751,0,239],'fov':58},
+            'hunt-works-process': {'position':[-703,48,267],'target':[-757,4,225],'fov':58},
+            'hunt-works-furnaces': {'position':[-808,27,252],'target':[-777,4,227],'fov':58},
+            'hunt-works-boilers': {'position':[-697,33,249],'target':[-739,7,235],'fov':56},
+            'hunt-works-stables': {'position':[-711,19,301],'target':[-725,4,265],'fov':58},
+            'hunt-works-bow-boundary': {'position':[-736,35,183],'target':[-762,4,208],'fov':60},
+        }
+        action=hunt_works
     if args.view:
         if args.view not in runner.VIEWS:parser.error('Unknown selected view: '+args.view)
         runner.VIEWS={args.view:runner.VIEWS[args.view]}

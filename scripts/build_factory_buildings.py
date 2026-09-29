@@ -59,17 +59,27 @@ def build():
     aligned = {b['modelId']: b for b in alignment['buildings']}
     group_registers = ['data/maps/ink-works-footprint-alignment.json', 'data/maps/sawmill-footprint-alignment.json',
                        'data/maps/oil-wharf-footprint-alignment.json', 'data/maps/howards-footprint-alignment.json',
-                       'data/maps/sugar-house-footprint-alignment.json']
+                       'data/maps/sugar-house-footprint-alignment.json', 'data/maps/west-sugar-footprint-alignment.json',
+                       'data/maps/crystal-barber-footprint-alignment.json', 'data/maps/abbey-west-footprint-alignment.json',
+                       'data/maps/bow-works-footprint-alignment.json', 'data/maps/hunt-works-footprint-alignment.json']
     compounds = [json.loads((ROOT/path).read_text()) for path in group_registers]
     structure_alignment = {}
     map_traces = {}
+    direct_ids, local_ids = set(), set()
     for register in compounds:
+        for id in register.get('supersedesLocalTransfers', []):
+            assert id in local_ids, 'Superseded local transfer must exist'
+            local_ids.remove(id)
+            map_traces.pop(id)
         map_traces.update({b['modelId']: b for b in register.get('mapTracedBuildings', []) + register.get('locallyTransferredBuildings', [])})
+        direct_ids.update(b['modelId'] for b in register.get('mapTracedBuildings', []))
+        local_ids.update(b['modelId'] for b in register.get('locallyTransferredBuildings', []))
         removed = {b['id'] for b in register.get('removedBuildings', [])}
         raw['buildings'] = [b for b in raw['buildings'] if b['id'] not in removed] + register.get('additionalBuildings', [])
         raw.setdefault('reclassifiedFeatures', []).extend(register.get('removedBuildings', []))
         tanks = register.get('tanks', [])
         raw['structures'] = [s for s in raw['structures'] if s['id'] not in {t['id'] for t in tanks}] + tanks
+        raw['structures'] += register.get('additionalStructures', [])
         assert not set(aligned).intersection(b['modelId'] for b in register['buildings'])
         assert not set(structure_alignment).intersection(s['id'] for s in register['structures'])
         aligned.update({b['modelId']: b for b in register['buildings']})
@@ -105,7 +115,12 @@ def build():
         # First map edge fixes orientation. Roof divisions are modelling choices,
         # not an assertion that an insurance compartment had a separate roof.
         edge = points[1] - points[0]
-        angle = math.radians(correction['footprintRotationDegrees']) if correction else math.atan2(edge[1], edge[0])
+        if correction:
+            angle = math.radians(correction['footprintRotationDegrees'])
+        elif 'footprintRotationDegrees' in row:
+            angle = math.radians(row['footprintRotationDegrees'])
+        else:
+            angle = math.atan2(edge[1], edge[0])
         along, across = np.array([math.cos(angle), math.sin(angle)]), np.array([-math.sin(angle), math.cos(angle)])
         local = (points - [centre.x, centre.y]) @ np.array([along, across]).T
         low, high = local.min(axis=0), local.max(axis=0)
@@ -209,8 +224,8 @@ def build():
     result['footprintAlignment'] = {'matchedRanges': len(aligned), 'source': alignment['source'],
         'register': 'data/maps/factory-footprint-alignment.json',
         'groupRegisters': group_registers, 'reviewedGroups': sum(len(r['groups']) for r in compounds),
-        'directMapTraces': sum(len(r.get('mapTracedBuildings', [])) for r in compounds),
-        'locallyTransferredRanges': sum(len(r.get('locallyTransferredBuildings', [])) for r in compounds),
+        'directMapTraces': len(direct_ids),
+        'locallyTransferredRanges': len(local_ids),
         'groupTransferredChimneys': sum('transferGroup' in s and 'sourceFid' not in s for s in structure_alignment.values()),
         'matchedChimneyBases': sum('sourceFid' in s for s in structure_alignment.values()),
         'parentTransferredChimneys': sum('parentBuildingId' in s for s in structure_alignment.values())}

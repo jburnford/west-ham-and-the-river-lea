@@ -1,0 +1,7087 @@
+{
+  "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg",
+  "sourceCRS": "EPSG:3857 reprojected through BNG; scene origin E538900,N183209",
+  "method": "Reviewed Crystal Wharf, Barber and southern ink-works exterior matches; remove open-yard misinterpretations and retain separate map/elevation evidence.",
+  "mapReview": [
+    "Georeferenced OS five-foot 1893-96 mosaic",
+    "July 1893 Goad volume F sheet 3"
+  ],
+  "buildings": [
+    {
+      "modelId": "site964-range-17",
+      "siteId": 964,
+      "name": "Barber bone shed, Goad 584",
+      "groupId": "crystal-barber-range-17",
+      "sourceFids": [
+        58217
+      ],
+      "sourceFid": 58217,
+      "worldFootprint": [
+        [
+          -646.273,
+          -6.016
+        ],
+        [
+          -647.899,
+          -13.266
+        ],
+        [
+          -648.316,
+          -13.181
+        ],
+        [
+          -664.585,
+          -9.791
+        ],
+        [
+          -663.023,
+          -1.986
+        ],
+        [
+          -658.255,
+          -2.928
+        ],
+        [
+          -658.176,
+          -2.928
+        ],
+        [
+          -657.76,
+          -3.144
+        ],
+        [
+          -652.987,
+          -4.088
+        ],
+        [
+          -652.725,
+          -4.089
+        ],
+        [
+          -652.309,
+          -4.305
+        ],
+        [
+          -646.502,
+          -5.469
+        ],
+        [
+          -646.202,
+          -5.616
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -660.738,
+          -7.408
+        ],
+        [
+          -651.252,
+          -8.373
+        ],
+        [
+          -649.622,
+          7.656
+        ],
+        [
+          -659.108,
+          8.62
+        ]
+      ],
+      "priorRotationDegrees": -5.8043,
+      "footprintRotationDegrees": -11.770398465734516,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.5744391184840496,
+      "preservedRoofAxis": "z",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 7.765953016998644,
+        "areaRatio": 0.8849466756233982,
+        "axisChangeDegrees": -5.966098465734516
+      }
+    },
+    {
+      "modelId": "site964-range-18",
+      "siteId": 964,
+      "name": "Barber southern sheds, Goad 586",
+      "groupId": "crystal-barber-range-18",
+      "sourceFids": [
+        876117,
+        861491,
+        779418,
+        1022359
+      ],
+      "worldFootprint": [
+        [
+          -641.822,
+          -4.194
+        ],
+        [
+          -642.294,
+          -6.263
+        ],
+        [
+          -643.885,
+          -6.092
+        ],
+        [
+          -644.246,
+          -5.872
+        ],
+        [
+          -644.607,
+          -5.945
+        ],
+        [
+          -646.202,
+          -5.616
+        ],
+        [
+          -646.502,
+          -5.469
+        ],
+        [
+          -652.309,
+          -4.305
+        ],
+        [
+          -652.725,
+          -4.089
+        ],
+        [
+          -652.987,
+          -4.088
+        ],
+        [
+          -657.76,
+          -3.144
+        ],
+        [
+          -658.176,
+          -2.928
+        ],
+        [
+          -658.255,
+          -2.928
+        ],
+        [
+          -663.023,
+          -1.986
+        ],
+        [
+          -663.019,
+          -1.524
+        ],
+        [
+          -662.462,
+          1.097
+        ],
+        [
+          -662.119,
+          1.377
+        ],
+        [
+          -657.41,
+          0.359
+        ],
+        [
+          -657.22,
+          0.366
+        ],
+        [
+          -652.027,
+          -0.8
+        ],
+        [
+          -651.931,
+          -0.801
+        ],
+        [
+          -644.071,
+          -2.471
+        ],
+        [
+          -643.68,
+          -2.704
+        ],
+        [
+          -643.634,
+          -3.256
+        ],
+        [
+          -643.411,
+          -3.252
+        ],
+        [
+          -641.889,
+          -3.635
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -650.099,
+          -4.255
+        ],
+        [
+          -631.29,
+          -6.167
+        ],
+        [
+          -630.026,
+          6.263
+        ],
+        [
+          -648.835,
+          8.175
+        ]
+      ],
+      "priorRotationDegrees": -5.8043,
+      "footprintRotationDegrees": -12.175376951677137,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 3.3734029828412058,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 12.938068489925334,
+        "areaRatio": 0.30544508376389046,
+        "axisChangeDegrees": -6.3710769516771375
+      }
+    },
+    {
+      "modelId": "site964-range-19",
+      "siteId": 964,
+      "name": "Winstone southern ink factory, Goad 608",
+      "groupId": "crystal-barber-range-19",
+      "sourceFids": [
+        7904
+      ],
+      "sourceFid": 7904,
+      "worldFootprint": [
+        [
+          -659.986,
+          12.72
+        ],
+        [
+          -660.051,
+          12.717
+        ],
+        [
+          -660.042,
+          13.214
+        ],
+        [
+          -655.29,
+          36.328
+        ],
+        [
+          -654.809,
+          36.482
+        ],
+        [
+          -649.371,
+          34.332
+        ],
+        [
+          -649.028,
+          34.035
+        ],
+        [
+          -649.663,
+          31.486
+        ],
+        [
+          -649.676,
+          30.863
+        ],
+        [
+          -649.961,
+          30.516
+        ],
+        [
+          -651.962,
+          21.757
+        ],
+        [
+          -651.551,
+          21.531
+        ],
+        [
+          -641.52,
+          19.493
+        ],
+        [
+          -641.119,
+          19.492
+        ],
+        [
+          -640.83,
+          19.41
+        ],
+        [
+          -636.761,
+          18.421
+        ],
+        [
+          -636.272,
+          18.55
+        ],
+        [
+          -635.852,
+          18.405
+        ],
+        [
+          -635.363,
+          18.249
+        ],
+        [
+          -634.877,
+          18.262
+        ],
+        [
+          -634.46,
+          18.021
+        ],
+        [
+          -630.175,
+          17.239
+        ],
+        [
+          -629.8,
+          17.035
+        ],
+        [
+          -624.985,
+          16.102
+        ],
+        [
+          -624.707,
+          15.741
+        ],
+        [
+          -626.937,
+          5.942
+        ],
+        [
+          -626.963,
+          5.873
+        ],
+        [
+          -628.694,
+          6.058
+        ],
+        [
+          -629.035,
+          6.127
+        ],
+        [
+          -631.185,
+          6.531
+        ],
+        [
+          -631.248,
+          6.522
+        ],
+        [
+          -643.837,
+          9.17
+        ],
+        [
+          -643.879,
+          9.169
+        ],
+        [
+          -644.239,
+          9.367
+        ],
+        [
+          -654.873,
+          11.496
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -651.434,
+          15.276
+        ],
+        [
+          -630.99,
+          13.197
+        ],
+        [
+          -629.876,
+          24.155
+        ],
+        [
+          -650.32,
+          26.234
+        ]
+      ],
+      "priorRotationDegrees": -5.8043,
+      "footprintRotationDegrees": -11.950892080914272,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.973921050662626,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 4.695855220297915,
+        "areaRatio": 1.9610770272925537,
+        "axisChangeDegrees": -6.146592080914273
+      }
+    },
+    {
+      "modelId": "site964-range-20",
+      "siteId": 964,
+      "name": "Barber southern courtyard range, Goad 590",
+      "groupId": "crystal-barber-range-20",
+      "sourceFids": [
+        106314,
+        886541
+      ],
+      "worldFootprint": [
+        [
+          -644.613,
+          5.513
+        ],
+        [
+          -643.837,
+          9.17
+        ],
+        [
+          -631.248,
+          6.522
+        ],
+        [
+          -631.185,
+          6.531
+        ],
+        [
+          -631.175,
+          6.404
+        ],
+        [
+          -631.668,
+          3.709
+        ],
+        [
+          -631.806,
+          3.383
+        ],
+        [
+          -632.357,
+          0.757
+        ],
+        [
+          -632.576,
+          0.341
+        ],
+        [
+          -632.68,
+          -0.208
+        ],
+        [
+          -632.416,
+          -0.595
+        ],
+        [
+          -631.865,
+          -0.69
+        ],
+        [
+          -631.515,
+          -0.616
+        ],
+        [
+          -631.158,
+          -0.765
+        ],
+        [
+          -630.673,
+          -0.888
+        ],
+        [
+          -631.419,
+          -4.534
+        ],
+        [
+          -631.576,
+          -4.533
+        ],
+        [
+          -637.316,
+          -3.295
+        ],
+        [
+          -637.679,
+          -3.019
+        ],
+        [
+          -637.523,
+          -1.87
+        ],
+        [
+          -638.501,
+          -1.633
+        ],
+        [
+          -638.855,
+          -1.367
+        ],
+        [
+          -638.365,
+          1.326
+        ],
+        [
+          -638.811,
+          1.48
+        ],
+        [
+          -644.619,
+          2.643
+        ],
+        [
+          -644.967,
+          2.94
+        ],
+        [
+          -645.092,
+          3.422
+        ],
+        [
+          -644.762,
+          5.01
+        ],
+        [
+          -644.76,
+          5.078
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -632.13,
+          3.039
+        ],
+        [
+          -626.733,
+          2.491
+        ],
+        [
+          -625.669,
+          12.958
+        ],
+        [
+          -631.066,
+          13.507
+        ]
+      ],
+      "priorRotationDegrees": -5.8043,
+      "footprintRotationDegrees": -11.782032265972234,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.464767084654728,
+      "preservedRoofAxis": "z",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 9.747072505875778,
+        "areaRatio": 2.0283443411669326,
+        "axisChangeDegrees": -5.977732265972234
+      }
+    },
+    {
+      "modelId": "site964-range-21",
+      "siteId": 964,
+      "name": "Barber detached riverside shed",
+      "groupId": "crystal-barber-range-21",
+      "sourceFids": [
+        948364
+      ],
+      "sourceFid": 948364,
+      "worldFootprint": [
+        [
+          -628.121,
+          -17.592
+        ],
+        [
+          -629.992,
+          -16.93
+        ],
+        [
+          -630.056,
+          -16.374
+        ],
+        [
+          -629.246,
+          -14.031
+        ],
+        [
+          -628.735,
+          -13.912
+        ],
+        [
+          -627.697,
+          -14.151
+        ],
+        [
+          -627.28,
+          -14.369
+        ],
+        [
+          -626.728,
+          -14.471
+        ],
+        [
+          -626.295,
+          -14.692
+        ],
+        [
+          -627.232,
+          -17.59
+        ],
+        [
+          -627.717,
+          -17.73
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -637.699,
+          -14.47
+        ],
+        [
+          -628.541,
+          -15.401
+        ],
+        [
+          -627.543,
+          -5.588
+        ],
+        [
+          -636.702,
+          -4.657
+        ]
+      ],
+      "priorRotationDegrees": -5.8043,
+      "footprintRotationDegrees": -18.275153136951957,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.485665355777744,
+      "preservedRoofAxis": "z",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 7.240502950378945,
+        "areaRatio": 0.10954844533542012,
+        "axisChangeDegrees": -12.470853136951957
+      }
+    },
+    {
+      "modelId": "site964-range-22",
+      "siteId": 964,
+      "name": "Barber northern sheds, Goad 582",
+      "groupId": "crystal-barber-range-22",
+      "sourceFids": [
+        522928,
+        983780
+      ],
+      "worldFootprint": [
+        [
+          -629.584,
+          -24.326
+        ],
+        [
+          -629.918,
+          -24.651
+        ],
+        [
+          -643.062,
+          -21.901
+        ],
+        [
+          -643.266,
+          -21.476
+        ],
+        [
+          -642.858,
+          -19.334
+        ],
+        [
+          -642.451,
+          -18.452
+        ],
+        [
+          -631.317,
+          -20.67
+        ],
+        [
+          -631.316,
+          -20.613
+        ],
+        [
+          -630.795,
+          -18.618
+        ],
+        [
+          -630.322,
+          -18.458
+        ],
+        [
+          -628.168,
+          -18.865
+        ],
+        [
+          -627.762,
+          -19.138
+        ],
+        [
+          -628.41,
+          -21.067
+        ],
+        [
+          -628.697,
+          -21.416
+        ],
+        [
+          -628.698,
+          -21.434
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -643.852,
+          -16.694
+        ],
+        [
+          -633.712,
+          -17.725
+        ],
+        [
+          -633.014,
+          -10.856
+        ],
+        [
+          -643.154,
+          -9.825
+        ]
+      ],
+      "priorRotationDegrees": -5.8043,
+      "footprintRotationDegrees": -11.817020772859209,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.864249016833297,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 8.206707622426972,
+        "areaRatio": 0.8132869241661584,
+        "axisChangeDegrees": -6.012720772859209
+      }
+    },
+    {
+      "modelId": "site964-range-23",
+      "siteId": 964,
+      "name": "Cooperage wood shed, Goad 544",
+      "groupId": "crystal-barber-range-23",
+      "sourceFids": [
+        31541
+      ],
+      "sourceFid": 31541,
+      "worldFootprint": [
+        [
+          -663.292,
+          -100.97
+        ],
+        [
+          -663.333,
+          -92.055
+        ],
+        [
+          -663.217,
+          -91.453
+        ],
+        [
+          -643.349,
+          -90.687
+        ],
+        [
+          -643.032,
+          -91.021
+        ],
+        [
+          -645.024,
+          -100.481
+        ],
+        [
+          -663.155,
+          -101.167
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -670.032,
+          -102.039
+        ],
+        [
+          -644.619,
+          -100.174
+        ],
+        [
+          -645.16,
+          -92.796
+        ],
+        [
+          -670.573,
+          -94.661
+        ]
+      ],
+      "priorRotationDegrees": 4.1957,
+      "footprintRotationDegrees": 2.166795282758372,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.997409660892812,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 4.250063323057738,
+        "areaRatio": 0.9960230035870609,
+        "axisChangeDegrees": -2.0289047172416286
+      }
+    },
+    {
+      "modelId": "site964-range-28",
+      "siteId": 964,
+      "name": "Cooperage office and dwelling, Goad 542",
+      "groupId": "crystal-barber-range-28",
+      "sourceFids": [
+        43792,
+        917323,
+        1005134,
+        1098911
+      ],
+      "worldFootprint": [
+        [
+          -692.949,
+          -96.443
+        ],
+        [
+          -694.766,
+          -96.323
+        ],
+        [
+          -695.26,
+          -96.394
+        ],
+        [
+          -707.702,
+          -95.385
+        ],
+        [
+          -708.074,
+          -95.186
+        ],
+        [
+          -707.917,
+          -92.742
+        ],
+        [
+          -707.987,
+          -92.183
+        ],
+        [
+          -708.343,
+          -92.18
+        ],
+        [
+          -710.676,
+          -92.033
+        ],
+        [
+          -710.759,
+          -91.548
+        ],
+        [
+          -710.562,
+          -89.818
+        ],
+        [
+          -710.559,
+          -89.608
+        ],
+        [
+          -711.248,
+          -87.852
+        ],
+        [
+          -711.316,
+          -87.292
+        ],
+        [
+          -711.0,
+          -86.962
+        ],
+        [
+          -708.392,
+          -85.903
+        ],
+        [
+          -708.068,
+          -85.647
+        ],
+        [
+          -707.469,
+          -85.581
+        ],
+        [
+          -707.474,
+          -85.507
+        ],
+        [
+          -707.316,
+          -85.028
+        ],
+        [
+          -707.413,
+          -84.458
+        ],
+        [
+          -700.755,
+          -84.762
+        ],
+        [
+          -700.625,
+          -85.296
+        ],
+        [
+          -700.696,
+          -85.903
+        ],
+        [
+          -700.28,
+          -86.02
+        ],
+        [
+          -700.101,
+          -85.609
+        ],
+        [
+          -699.462,
+          -84.989
+        ],
+        [
+          -697.652,
+          -85.103
+        ],
+        [
+          -697.309,
+          -85.381
+        ],
+        [
+          -696.835,
+          -86.161
+        ],
+        [
+          -696.495,
+          -86.422
+        ],
+        [
+          -692.336,
+          -86.738
+        ],
+        [
+          -692.836,
+          -95.026
+        ],
+        [
+          -692.854,
+          -95.423
+        ],
+        [
+          -692.779,
+          -95.984
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -709.377,
+          -92.941
+        ],
+        [
+          -693.802,
+          -91.798
+        ],
+        [
+          -694.319,
+          -84.748
+        ],
+        [
+          -709.895,
+          -85.891
+        ]
+      ],
+      "priorRotationDegrees": 4.1957,
+      "footprintRotationDegrees": -4.636328957549253,
+      "preservedHeight": 6.9,
+      "preservedRoofRise": 1.9086358981864664,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 1.7242707682317746,
+        "areaRatio": 1.6261675859590063,
+        "axisChangeDegrees": -8.832028957549253
+      }
+    },
+    {
+      "modelId": "site964-talbot-538",
+      "siteId": 964,
+      "name": "Talbot works western range, Goad 538",
+      "groupId": "crystal-barber-talbot-538",
+      "sourceFids": [
+        162727
+      ],
+      "sourceFid": 162727,
+      "worldFootprint": [
+        [
+          -697.263,
+          -118.443
+        ],
+        [
+          -697.349,
+          -124.066
+        ],
+        [
+          -697.662,
+          -124.053
+        ],
+        [
+          -701.915,
+          -124.189
+        ],
+        [
+          -702.529,
+          -124.081
+        ],
+        [
+          -702.639,
+          -108.974
+        ],
+        [
+          -702.375,
+          -108.672
+        ],
+        [
+          -697.305,
+          -108.81
+        ],
+        [
+          -697.258,
+          -118.263
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -697.263,
+          -118.443
+        ],
+        [
+          -697.349,
+          -124.066
+        ],
+        [
+          -697.662,
+          -124.053
+        ],
+        [
+          -701.915,
+          -124.189
+        ],
+        [
+          -702.529,
+          -124.081
+        ],
+        [
+          -702.639,
+          -108.974
+        ],
+        [
+          -702.375,
+          -108.672
+        ],
+        [
+          -697.305,
+          -108.81
+        ],
+        [
+          -697.258,
+          -118.263
+        ]
+      ],
+      "priorRotationDegrees": 0.0,
+      "footprintRotationDegrees": 0.2848703530648038,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.6,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.00019058848010281487,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": 0.2848703530648038
+      }
+    },
+    {
+      "modelId": "site964-dane-536",
+      "siteId": 964,
+      "name": "Dane main ink-factory range, Goad 536",
+      "groupId": "crystal-barber-dane-536",
+      "sourceFids": [
+        233717,
+        58252
+      ],
+      "worldFootprint": [
+        [
+          -697.349,
+          -124.066
+        ],
+        [
+          -697.263,
+          -118.443
+        ],
+        [
+          -697.258,
+          -118.263
+        ],
+        [
+          -697.081,
+          -118.27
+        ],
+        [
+          -693.599,
+          -118.093
+        ],
+        [
+          -693.115,
+          -118.258
+        ],
+        [
+          -686.718,
+          -117.941
+        ],
+        [
+          -686.625,
+          -118.013
+        ],
+        [
+          -686.364,
+          -117.947
+        ],
+        [
+          -685.876,
+          -117.83
+        ],
+        [
+          -685.32,
+          -117.928
+        ],
+        [
+          -681.297,
+          -117.645
+        ],
+        [
+          -681.335,
+          -117.616
+        ],
+        [
+          -680.978,
+          -117.632
+        ],
+        [
+          -668.123,
+          -117.098
+        ],
+        [
+          -667.984,
+          -124.248
+        ],
+        [
+          -667.918,
+          -124.462
+        ],
+        [
+          -668.068,
+          -124.558
+        ],
+        [
+          -686.347,
+          -125.176
+        ],
+        [
+          -686.475,
+          -125.159
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -697.349,
+          -124.066
+        ],
+        [
+          -697.263,
+          -118.443
+        ],
+        [
+          -697.258,
+          -118.263
+        ],
+        [
+          -697.081,
+          -118.27
+        ],
+        [
+          -693.599,
+          -118.093
+        ],
+        [
+          -693.115,
+          -118.258
+        ],
+        [
+          -686.718,
+          -117.941
+        ],
+        [
+          -686.625,
+          -118.013
+        ],
+        [
+          -686.364,
+          -117.947
+        ],
+        [
+          -685.876,
+          -117.83
+        ],
+        [
+          -685.32,
+          -117.928
+        ],
+        [
+          -681.297,
+          -117.645
+        ],
+        [
+          -681.335,
+          -117.616
+        ],
+        [
+          -680.978,
+          -117.632
+        ],
+        [
+          -668.123,
+          -117.098
+        ],
+        [
+          -667.984,
+          -124.248
+        ],
+        [
+          -667.918,
+          -124.462
+        ],
+        [
+          -668.068,
+          -124.558
+        ],
+        [
+          -686.347,
+          -125.176
+        ],
+        [
+          -686.475,
+          -125.159
+        ]
+      ],
+      "priorRotationDegrees": 0.0,
+      "footprintRotationDegrees": 1.9363920034813447,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.2,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.0001558181412288149,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": 1.9363920034813447
+      }
+    },
+    {
+      "modelId": "site964-dane-534",
+      "siteId": 964,
+      "name": "Dane eastern room, Goad 534",
+      "groupId": "crystal-barber-dane-534",
+      "sourceFids": [
+        847367
+      ],
+      "sourceFid": 847367,
+      "worldFootprint": [
+        [
+          -665.139,
+          -124.168
+        ],
+        [
+          -665.071,
+          -124.337
+        ],
+        [
+          -665.052,
+          -124.401
+        ],
+        [
+          -667.362,
+          -124.56
+        ],
+        [
+          -667.918,
+          -124.462
+        ],
+        [
+          -667.984,
+          -124.248
+        ],
+        [
+          -668.123,
+          -117.098
+        ],
+        [
+          -667.641,
+          -117.118
+        ],
+        [
+          -665.279,
+          -117.041
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -665.139,
+          -124.168
+        ],
+        [
+          -665.071,
+          -124.337
+        ],
+        [
+          -665.052,
+          -124.401
+        ],
+        [
+          -667.362,
+          -124.56
+        ],
+        [
+          -667.918,
+          -124.462
+        ],
+        [
+          -667.984,
+          -124.248
+        ],
+        [
+          -668.123,
+          -117.098
+        ],
+        [
+          -667.641,
+          -117.118
+        ],
+        [
+          -665.279,
+          -117.041
+        ]
+      ],
+      "priorRotationDegrees": 0.0,
+      "footprintRotationDegrees": 1.7665788393190667,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.6,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.0004607313949806648,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": 1.7665788393190667
+      }
+    },
+    {
+      "modelId": "site964-dane-532",
+      "siteId": 964,
+      "name": "Dane engine/boiler compartment, Goad 532",
+      "groupId": "crystal-barber-dane-532",
+      "sourceFids": [
+        764441,
+        823951
+      ],
+      "worldFootprint": [
+        [
+          -664.519,
+          -124.436
+        ],
+        [
+          -665.071,
+          -124.337
+        ],
+        [
+          -665.139,
+          -124.168
+        ],
+        [
+          -665.279,
+          -117.041
+        ],
+        [
+          -665.112,
+          -116.972
+        ],
+        [
+          -661.009,
+          -116.82
+        ],
+        [
+          -660.679,
+          -116.838
+        ],
+        [
+          -657.757,
+          -116.706
+        ],
+        [
+          -657.654,
+          -122.68
+        ],
+        [
+          -657.501,
+          -123.142
+        ],
+        [
+          -657.458,
+          -123.127
+        ],
+        [
+          -657.5,
+          -123.275
+        ],
+        [
+          -657.542,
+          -123.918
+        ],
+        [
+          -657.95,
+          -124.132
+        ],
+        [
+          -660.873,
+          -124.249
+        ],
+        [
+          -661.042,
+          -124.241
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -664.519,
+          -124.436
+        ],
+        [
+          -665.071,
+          -124.337
+        ],
+        [
+          -665.139,
+          -124.168
+        ],
+        [
+          -665.279,
+          -117.041
+        ],
+        [
+          -665.112,
+          -116.972
+        ],
+        [
+          -661.009,
+          -116.82
+        ],
+        [
+          -660.679,
+          -116.838
+        ],
+        [
+          -657.757,
+          -116.706
+        ],
+        [
+          -657.654,
+          -122.68
+        ],
+        [
+          -657.501,
+          -123.142
+        ],
+        [
+          -657.458,
+          -123.127
+        ],
+        [
+          -657.5,
+          -123.275
+        ],
+        [
+          -657.542,
+          -123.918
+        ],
+        [
+          -657.95,
+          -124.132
+        ],
+        [
+          -660.873,
+          -124.249
+        ],
+        [
+          -661.042,
+          -124.241
+        ]
+      ],
+      "priorRotationDegrees": 0.0,
+      "footprintRotationDegrees": 2.121612886610208,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.6,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.0003516613761404584,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": 2.121612886610208
+      }
+    },
+    {
+      "modelId": "site964-dane-530",
+      "siteId": 964,
+      "name": "Dane eastern boiler compartment, Goad 530",
+      "groupId": "crystal-barber-dane-530",
+      "sourceFids": [
+        818468
+      ],
+      "sourceFid": 818468,
+      "worldFootprint": [
+        [
+          -653.783,
+          -122.425
+        ],
+        [
+          -653.799,
+          -122.957
+        ],
+        [
+          -653.918,
+          -123.025
+        ],
+        [
+          -657.458,
+          -123.127
+        ],
+        [
+          -657.501,
+          -123.142
+        ],
+        [
+          -657.654,
+          -122.68
+        ],
+        [
+          -657.757,
+          -116.706
+        ],
+        [
+          -657.506,
+          -116.639
+        ],
+        [
+          -653.962,
+          -116.539
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -653.783,
+          -122.425
+        ],
+        [
+          -653.799,
+          -122.957
+        ],
+        [
+          -653.918,
+          -123.025
+        ],
+        [
+          -657.458,
+          -123.127
+        ],
+        [
+          -657.501,
+          -123.142
+        ],
+        [
+          -657.654,
+          -122.68
+        ],
+        [
+          -657.757,
+          -116.706
+        ],
+        [
+          -657.506,
+          -116.639
+        ],
+        [
+          -653.962,
+          -116.539
+        ]
+      ],
+      "priorRotationDegrees": 0.0,
+      "footprintRotationDegrees": 1.6162692101923426,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.6,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.00025370606567278516,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": 1.6162692101923426
+      }
+    },
+    {
+      "modelId": "site964-dane-528",
+      "siteId": 964,
+      "name": "Dane low eastern range, Goad 528",
+      "groupId": "crystal-barber-dane-528",
+      "sourceFids": [
+        802979
+      ],
+      "sourceFid": 802979,
+      "worldFootprint": [
+        [
+          -649.662,
+          -117.465
+        ],
+        [
+          -649.666,
+          -122.799
+        ],
+        [
+          -649.696,
+          -122.798
+        ],
+        [
+          -653.799,
+          -122.957
+        ],
+        [
+          -653.783,
+          -122.425
+        ],
+        [
+          -653.962,
+          -116.539
+        ],
+        [
+          -653.809,
+          -116.555
+        ],
+        [
+          -649.706,
+          -116.38
+        ],
+        [
+          -649.641,
+          -116.927
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -649.662,
+          -117.465
+        ],
+        [
+          -649.666,
+          -122.799
+        ],
+        [
+          -649.696,
+          -122.798
+        ],
+        [
+          -653.799,
+          -122.957
+        ],
+        [
+          -653.783,
+          -122.425
+        ],
+        [
+          -653.962,
+          -116.539
+        ],
+        [
+          -653.809,
+          -116.555
+        ],
+        [
+          -649.706,
+          -116.38
+        ],
+        [
+          -649.641,
+          -116.927
+        ]
+      ],
+      "priorRotationDegrees": 0.0,
+      "footprintRotationDegrees": 1.4548464992788865,
+      "preservedHeight": 5.35,
+      "preservedRoofRise": 1.6,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.00032374302235519455,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": 1.4548464992788865
+      }
+    },
+    {
+      "modelId": "site964-dane-526",
+      "siteId": 964,
+      "name": "Dane riverside range, Goad 526",
+      "groupId": "crystal-barber-dane-526",
+      "sourceFids": [
+        147902
+      ],
+      "sourceFid": 147902,
+      "worldFootprint": [
+        [
+          -649.662,
+          -117.465
+        ],
+        [
+          -649.641,
+          -116.927
+        ],
+        [
+          -649.619,
+          -116.927
+        ],
+        [
+          -642.666,
+          -116.584
+        ],
+        [
+          -642.744,
+          -127.844
+        ],
+        [
+          -642.977,
+          -128.254
+        ],
+        [
+          -644.026,
+          -128.38
+        ],
+        [
+          -644.076,
+          -129.001
+        ],
+        [
+          -644.412,
+          -129.291
+        ],
+        [
+          -648.517,
+          -129.456
+        ],
+        [
+          -648.829,
+          -129.138
+        ],
+        [
+          -648.868,
+          -128.584
+        ],
+        [
+          -649.262,
+          -128.356
+        ],
+        [
+          -649.543,
+          -127.996
+        ],
+        [
+          -649.666,
+          -122.799
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -649.662,
+          -117.465
+        ],
+        [
+          -649.641,
+          -116.927
+        ],
+        [
+          -649.619,
+          -116.927
+        ],
+        [
+          -642.666,
+          -116.584
+        ],
+        [
+          -642.744,
+          -127.844
+        ],
+        [
+          -642.977,
+          -128.254
+        ],
+        [
+          -644.026,
+          -128.38
+        ],
+        [
+          -644.076,
+          -129.001
+        ],
+        [
+          -644.412,
+          -129.291
+        ],
+        [
+          -648.517,
+          -129.456
+        ],
+        [
+          -648.829,
+          -129.138
+        ],
+        [
+          -648.868,
+          -128.584
+        ],
+        [
+          -649.262,
+          -128.356
+        ],
+        [
+          -649.543,
+          -127.996
+        ],
+        [
+          -649.666,
+          -122.799
+        ]
+      ],
+      "priorRotationDegrees": 0.0,
+      "footprintRotationDegrees": -0.042966455753003174,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.6,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.0005833432063076012,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": -0.042966455753003174
+      }
+    },
+    {
+      "modelId": "site964-dane-540",
+      "siteId": 964,
+      "name": "Dane front sheds, Goad 540",
+      "groupId": "crystal-barber-dane-540",
+      "sourceFids": [
+        726560,
+        845958
+      ],
+      "worldFootprint": [
+        [
+          -686.625,
+          -118.013
+        ],
+        [
+          -686.718,
+          -117.941
+        ],
+        [
+          -693.115,
+          -118.258
+        ],
+        [
+          -693.599,
+          -118.093
+        ],
+        [
+          -693.578,
+          -117.57
+        ],
+        [
+          -693.777,
+          -114.102
+        ],
+        [
+          -693.592,
+          -113.619
+        ],
+        [
+          -686.023,
+          -113.303
+        ],
+        [
+          -685.427,
+          -113.321
+        ],
+        [
+          -681.464,
+          -113.127
+        ],
+        [
+          -681.183,
+          -117.131
+        ],
+        [
+          -681.335,
+          -117.616
+        ],
+        [
+          -681.297,
+          -117.645
+        ],
+        [
+          -685.32,
+          -117.928
+        ],
+        [
+          -685.876,
+          -117.83
+        ],
+        [
+          -686.364,
+          -117.947
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -686.625,
+          -118.013
+        ],
+        [
+          -686.718,
+          -117.941
+        ],
+        [
+          -693.115,
+          -118.258
+        ],
+        [
+          -693.599,
+          -118.093
+        ],
+        [
+          -693.578,
+          -117.57
+        ],
+        [
+          -693.777,
+          -114.102
+        ],
+        [
+          -693.592,
+          -113.619
+        ],
+        [
+          -686.023,
+          -113.303
+        ],
+        [
+          -685.427,
+          -113.321
+        ],
+        [
+          -681.464,
+          -113.127
+        ],
+        [
+          -681.183,
+          -117.131
+        ],
+        [
+          -681.335,
+          -117.616
+        ],
+        [
+          -681.297,
+          -117.645
+        ],
+        [
+          -685.32,
+          -117.928
+        ],
+        [
+          -685.876,
+          -117.83
+        ],
+        [
+          -686.364,
+          -117.947
+        ]
+      ],
+      "priorRotationDegrees": 0.0,
+      "footprintRotationDegrees": 2.3906669366096622,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.6,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.00048506981522487315,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": 2.3906669366096622
+      }
+    },
+    {
+      "modelId": "site964-barber-bone-annex",
+      "siteId": 964,
+      "name": "Barber bone-shed eastern annex",
+      "groupId": "crystal-barber-barber-bone-annex",
+      "sourceFids": [
+        502860
+      ],
+      "sourceFid": 502860,
+      "worldFootprint": [
+        [
+          -643.885,
+          -6.092
+        ],
+        [
+          -642.294,
+          -6.263
+        ],
+        [
+          -642.071,
+          -6.328
+        ],
+        [
+          -640.056,
+          -6.807
+        ],
+        [
+          -640.024,
+          -7.301
+        ],
+        [
+          -641.588,
+          -14.553
+        ],
+        [
+          -647.483,
+          -13.482
+        ],
+        [
+          -647.899,
+          -13.266
+        ],
+        [
+          -646.273,
+          -6.016
+        ],
+        [
+          -646.202,
+          -5.616
+        ],
+        [
+          -644.607,
+          -5.945
+        ],
+        [
+          -644.246,
+          -5.872
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -643.885,
+          -6.092
+        ],
+        [
+          -642.294,
+          -6.263
+        ],
+        [
+          -642.071,
+          -6.328
+        ],
+        [
+          -640.056,
+          -6.807
+        ],
+        [
+          -640.024,
+          -7.301
+        ],
+        [
+          -641.588,
+          -14.553
+        ],
+        [
+          -647.483,
+          -13.482
+        ],
+        [
+          -647.899,
+          -13.266
+        ],
+        [
+          -646.273,
+          -6.016
+        ],
+        [
+          -646.202,
+          -5.616
+        ],
+        [
+          -644.607,
+          -5.945
+        ],
+        [
+          -644.246,
+          -5.872
+        ]
+      ],
+      "priorRotationDegrees": -10.0,
+      "footprintRotationDegrees": -12.1702739710704,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.6,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.000362472807081729,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": -2.170273971070401
+      }
+    },
+    {
+      "modelId": "site964-barber-592",
+      "siteId": 964,
+      "name": "Barber long riverside shed, Goad 592",
+      "groupId": "crystal-barber-barber-592",
+      "sourceFids": [
+        686523
+      ],
+      "sourceFid": 686523,
+      "worldFootprint": [
+        [
+          -626.963,
+          5.873
+        ],
+        [
+          -626.937,
+          5.942
+        ],
+        [
+          -626.866,
+          5.936
+        ],
+        [
+          -626.364,
+          5.774
+        ],
+        [
+          -626.103,
+          5.557
+        ],
+        [
+          -627.489,
+          -1.973
+        ],
+        [
+          -627.878,
+          -2.205
+        ],
+        [
+          -628.434,
+          -2.243
+        ],
+        [
+          -628.666,
+          -2.658
+        ],
+        [
+          -629.05,
+          -4.794
+        ],
+        [
+          -629.413,
+          -5.08
+        ],
+        [
+          -631.419,
+          -4.534
+        ],
+        [
+          -630.673,
+          -0.888
+        ],
+        [
+          -631.158,
+          -0.765
+        ],
+        [
+          -631.515,
+          -0.616
+        ],
+        [
+          -631.476,
+          -0.129
+        ],
+        [
+          -631.358,
+          0.438
+        ],
+        [
+          -632.357,
+          0.757
+        ],
+        [
+          -631.806,
+          3.383
+        ],
+        [
+          -631.668,
+          3.709
+        ],
+        [
+          -631.192,
+          3.633
+        ],
+        [
+          -629.664,
+          3.239
+        ],
+        [
+          -629.245,
+          3.434
+        ],
+        [
+          -628.694,
+          6.058
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -626.963,
+          5.873
+        ],
+        [
+          -626.937,
+          5.942
+        ],
+        [
+          -626.866,
+          5.936
+        ],
+        [
+          -626.364,
+          5.774
+        ],
+        [
+          -626.103,
+          5.557
+        ],
+        [
+          -627.489,
+          -1.973
+        ],
+        [
+          -627.878,
+          -2.205
+        ],
+        [
+          -628.434,
+          -2.243
+        ],
+        [
+          -628.666,
+          -2.658
+        ],
+        [
+          -629.05,
+          -4.794
+        ],
+        [
+          -629.413,
+          -5.08
+        ],
+        [
+          -631.419,
+          -4.534
+        ],
+        [
+          -630.673,
+          -0.888
+        ],
+        [
+          -631.158,
+          -0.765
+        ],
+        [
+          -631.515,
+          -0.616
+        ],
+        [
+          -631.476,
+          -0.129
+        ],
+        [
+          -631.358,
+          0.438
+        ],
+        [
+          -632.357,
+          0.757
+        ],
+        [
+          -631.806,
+          3.383
+        ],
+        [
+          -631.668,
+          3.709
+        ],
+        [
+          -631.192,
+          3.633
+        ],
+        [
+          -629.664,
+          3.239
+        ],
+        [
+          -629.245,
+          3.434
+        ],
+        [
+          -628.694,
+          6.058
+        ]
+      ],
+      "priorRotationDegrees": -10.0,
+      "footprintRotationDegrees": -10.429341202744126,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.6,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.0004928564098334872,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": -0.42934120274412635
+      }
+    },
+    {
+      "modelId": "site964-barber-588",
+      "siteId": 964,
+      "name": "Barber stable/loft range, Goad 588",
+      "groupId": "crystal-barber-barber-588",
+      "sourceFids": [
+        834933,
+        544999
+      ],
+      "worldFootprint": [
+        [
+          -643.879,
+          9.169
+        ],
+        [
+          -643.837,
+          9.17
+        ],
+        [
+          -644.613,
+          5.513
+        ],
+        [
+          -644.76,
+          5.078
+        ],
+        [
+          -644.863,
+          5.079
+        ],
+        [
+          -654.766,
+          7.095
+        ],
+        [
+          -655.66,
+          7.467
+        ],
+        [
+          -656.075,
+          7.505
+        ],
+        [
+          -660.803,
+          8.444
+        ],
+        [
+          -660.842,
+          9.064
+        ],
+        [
+          -660.051,
+          12.717
+        ],
+        [
+          -659.986,
+          12.72
+        ],
+        [
+          -654.873,
+          11.496
+        ],
+        [
+          -644.239,
+          9.367
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -643.879,
+          9.169
+        ],
+        [
+          -643.837,
+          9.17
+        ],
+        [
+          -644.613,
+          5.513
+        ],
+        [
+          -644.76,
+          5.078
+        ],
+        [
+          -644.863,
+          5.079
+        ],
+        [
+          -654.766,
+          7.095
+        ],
+        [
+          -655.66,
+          7.467
+        ],
+        [
+          -656.075,
+          7.505
+        ],
+        [
+          -660.803,
+          8.444
+        ],
+        [
+          -660.842,
+          9.064
+        ],
+        [
+          -660.051,
+          12.717
+        ],
+        [
+          -659.986,
+          12.72
+        ],
+        [
+          -654.873,
+          11.496
+        ],
+        [
+          -644.239,
+          9.367
+        ]
+      ],
+      "priorRotationDegrees": -10.0,
+      "footprintRotationDegrees": -12.020439658049924,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.6,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.00032047083954584105,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": -2.0204396580499235
+      }
+    },
+    {
+      "modelId": "site964-ink-south-annex",
+      "siteId": 964,
+      "name": "Southern ink-factory attached rooms",
+      "groupId": "crystal-barber-ink-south-annex",
+      "sourceFids": [
+        510096,
+        890726
+      ],
+      "worldFootprint": [
+        [
+          -635.942,
+          21.586
+        ],
+        [
+          -635.702,
+          21.172
+        ],
+        [
+          -636.272,
+          18.55
+        ],
+        [
+          -636.761,
+          18.421
+        ],
+        [
+          -640.83,
+          19.41
+        ],
+        [
+          -641.119,
+          19.492
+        ],
+        [
+          -641.52,
+          19.493
+        ],
+        [
+          -651.551,
+          21.531
+        ],
+        [
+          -651.962,
+          21.757
+        ],
+        [
+          -649.961,
+          30.516
+        ],
+        [
+          -649.676,
+          30.863
+        ],
+        [
+          -649.576,
+          30.867
+        ],
+        [
+          -647.64,
+          30.249
+        ],
+        [
+          -647.453,
+          29.826
+        ],
+        [
+          -648.579,
+          24.581
+        ],
+        [
+          -648.317,
+          24.221
+        ],
+        [
+          -640.496,
+          22.513
+        ],
+        [
+          -640.158,
+          22.436
+        ]
+      ],
+      "worldHoles": [
+        [
+          [
+            -643.807,
+            21.159
+          ],
+          [
+            -643.494,
+            21.499
+          ],
+          [
+            -643.4,
+            22.048
+          ],
+          [
+            -643.758,
+            22.328
+          ],
+          [
+            -644.312,
+            22.431
+          ],
+          [
+            -644.674,
+            22.233
+          ],
+          [
+            -644.73,
+            21.558
+          ],
+          [
+            -644.457,
+            21.203
+          ],
+          [
+            -644.438,
+            21.202
+          ]
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -635.942,
+          21.586
+        ],
+        [
+          -635.702,
+          21.172
+        ],
+        [
+          -636.272,
+          18.55
+        ],
+        [
+          -636.761,
+          18.421
+        ],
+        [
+          -640.83,
+          19.41
+        ],
+        [
+          -641.119,
+          19.492
+        ],
+        [
+          -641.52,
+          19.493
+        ],
+        [
+          -651.551,
+          21.531
+        ],
+        [
+          -651.962,
+          21.757
+        ],
+        [
+          -649.961,
+          30.516
+        ],
+        [
+          -649.676,
+          30.863
+        ],
+        [
+          -649.576,
+          30.867
+        ],
+        [
+          -647.64,
+          30.249
+        ],
+        [
+          -647.453,
+          29.826
+        ],
+        [
+          -648.579,
+          24.581
+        ],
+        [
+          -648.317,
+          24.221
+        ],
+        [
+          -640.496,
+          22.513
+        ],
+        [
+          -640.158,
+          22.436
+        ]
+      ],
+      "priorRotationDegrees": -10.0,
+      "footprintRotationDegrees": -12.868429577974894,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.6,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.00020045819978381315,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": -2.8684295779748936
+      }
+    },
+    {
+      "modelId": "site964-ink-610",
+      "siteId": 964,
+      "name": "Southern ink-factory shed, Goad 610",
+      "groupId": "crystal-barber-ink-610",
+      "sourceFids": [
+        895545,
+        859284,
+        991908,
+        968388,
+        757132
+      ],
+      "worldFootprint": [
+        [
+          -623.466,
+          22.515
+        ],
+        [
+          -620.736,
+          21.447
+        ],
+        [
+          -620.779,
+          20.958
+        ],
+        [
+          -621.725,
+          18.741
+        ],
+        [
+          -621.977,
+          18.404
+        ],
+        [
+          -622.509,
+          18.454
+        ],
+        [
+          -623.815,
+          19.033
+        ],
+        [
+          -623.934,
+          20.076
+        ],
+        [
+          -631.073,
+          23.066
+        ],
+        [
+          -631.405,
+          23.143
+        ],
+        [
+          -633.2,
+          23.863
+        ],
+        [
+          -633.548,
+          24.146
+        ],
+        [
+          -633.697,
+          24.144
+        ],
+        [
+          -635.073,
+          24.655
+        ],
+        [
+          -635.421,
+          24.94
+        ],
+        [
+          -635.867,
+          24.98
+        ],
+        [
+          -640.699,
+          27.046
+        ],
+        [
+          -641.042,
+          27.321
+        ],
+        [
+          -641.076,
+          27.321
+        ],
+        [
+          -645.147,
+          28.909
+        ],
+        [
+          -645.339,
+          29.367
+        ],
+        [
+          -644.233,
+          32.075
+        ],
+        [
+          -639.882,
+          30.124
+        ],
+        [
+          -639.452,
+          30.083
+        ],
+        [
+          -634.262,
+          27.743
+        ],
+        [
+          -633.986,
+          27.745
+        ],
+        [
+          -632.603,
+          27.233
+        ],
+        [
+          -632.254,
+          26.946
+        ],
+        [
+          -632.056,
+          26.943
+        ],
+        [
+          -629.843,
+          26.003
+        ],
+        [
+          -629.485,
+          25.929
+        ],
+        [
+          -623.741,
+          23.468
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -623.466,
+          22.515
+        ],
+        [
+          -620.736,
+          21.447
+        ],
+        [
+          -620.779,
+          20.958
+        ],
+        [
+          -621.725,
+          18.741
+        ],
+        [
+          -621.977,
+          18.404
+        ],
+        [
+          -622.509,
+          18.454
+        ],
+        [
+          -623.815,
+          19.033
+        ],
+        [
+          -623.934,
+          20.076
+        ],
+        [
+          -631.073,
+          23.066
+        ],
+        [
+          -631.405,
+          23.143
+        ],
+        [
+          -633.2,
+          23.863
+        ],
+        [
+          -633.548,
+          24.146
+        ],
+        [
+          -633.697,
+          24.144
+        ],
+        [
+          -635.073,
+          24.655
+        ],
+        [
+          -635.421,
+          24.94
+        ],
+        [
+          -635.867,
+          24.98
+        ],
+        [
+          -640.699,
+          27.046
+        ],
+        [
+          -641.042,
+          27.321
+        ],
+        [
+          -641.076,
+          27.321
+        ],
+        [
+          -645.147,
+          28.909
+        ],
+        [
+          -645.339,
+          29.367
+        ],
+        [
+          -644.233,
+          32.075
+        ],
+        [
+          -639.882,
+          30.124
+        ],
+        [
+          -639.452,
+          30.083
+        ],
+        [
+          -634.262,
+          27.743
+        ],
+        [
+          -633.986,
+          27.745
+        ],
+        [
+          -632.603,
+          27.233
+        ],
+        [
+          -632.254,
+          26.946
+        ],
+        [
+          -632.056,
+          26.943
+        ],
+        [
+          -629.843,
+          26.003
+        ],
+        [
+          -629.485,
+          25.929
+        ],
+        [
+          -623.741,
+          23.468
+        ]
+      ],
+      "priorRotationDegrees": -10.0,
+      "footprintRotationDegrees": -24.84255294483978,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.6,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS/Goad F3 exterior match. Retain previous height/roof interpretation; keep mapped openings and the adjoining open yards.",
+      "comparison": {
+        "centroidShiftMetres": 0.00015526488467437245,
+        "areaRatio": 1.0,
+        "axisChangeDegrees": -14.842552944839781
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": "crystal-barber-range-17",
+      "modelIds": [
+        "site964-range-17"
+      ],
+      "sourceFids": [
+        58217
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -646.2021842781687,
+              -5.616337251383811
+            ],
+            [
+              -646.5016781890299,
+              -5.468786991084926
+            ],
+            [
+              -652.3094735387713,
+              -4.304875853296835
+            ],
+            [
+              -652.7254754265305,
+              -4.088657200627495
+            ],
+            [
+              -652.9868249102728,
+              -4.087610451562796
+            ],
+            [
+              -657.7598838416161,
+              -3.143932459235657
+            ],
+            [
+              -658.1758860389236,
+              -2.9277142151258886
+            ],
+            [
+              -658.2547509307042,
+              -2.928450928069651
+            ],
+            [
+              -663.0231455998728,
+              -1.9857091954327188
+            ],
+            [
+              -664.5854159105802,
+              -9.791152367659379
+            ],
+            [
+              -648.3163324260386,
+              -13.181463788961992
+            ],
+            [
+              -647.8993714826647,
+              -13.265649769629817
+            ],
+            [
+              -646.2732223974308,
+              -6.015787694137543
+            ]
+          ]
+        ]
+      ],
+      "additional": false,
+      "previousUnionIoU": 0.16712961932439394
+    },
+    {
+      "id": "crystal-barber-range-18",
+      "modelIds": [
+        "site964-range-18"
+      ],
+      "sourceFids": [
+        876117,
+        861491,
+        779418,
+        1022359
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -657.4096186393872,
+              0.3591534733423032
+            ],
+            [
+              -662.1186155944597,
+              1.3769575204933062
+            ],
+            [
+              -662.462426230777,
+              1.0973945164005272
+            ],
+            [
+              -663.0194036653265,
+              -1.5244100692216307
+            ],
+            [
+              -663.0231455998728,
+              -1.9857091954327188
+            ],
+            [
+              -658.2547509307042,
+              -2.928450928069651
+            ],
+            [
+              -658.1758860389236,
+              -2.9277142151258886
+            ],
+            [
+              -657.4114189029206,
+              0.11114428954897448
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -652.7254754265305,
+              -4.088657200627495
+            ],
+            [
+              -652.0194793960545,
+              -0.9794713949086145
+            ],
+            [
+              -652.0268337146845,
+              -0.7999498498975299
+            ],
+            [
+              -657.220249769045,
+              0.36599742603721097
+            ],
+            [
+              -657.4096186393872,
+              0.3591534733423032
+            ],
+            [
+              -657.4114189029206,
+              0.11114428954897448
+            ],
+            [
+              -658.1758860389236,
+              -2.9277142151258886
+            ],
+            [
+              -657.7598838416161,
+              -3.143932459235657
+            ],
+            [
+              -652.9868249102728,
+              -4.087610451562796
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -652.7254754265305,
+              -4.088657200627495
+            ],
+            [
+              -652.3094735387713,
+              -4.304875853296835
+            ],
+            [
+              -646.5016781890299,
+              -5.468786991084926
+            ],
+            [
+              -646.2021842781687,
+              -5.616337251383811
+            ],
+            [
+              -644.6072884137975,
+              -5.9446415028651245
+            ],
+            [
+              -644.2464512326987,
+              -5.8720949636772275
+            ],
+            [
+              -644.2461601017276,
+              -5.804697279236279
+            ],
+            [
+              -643.6337976752548,
+              -3.2560947924503125
+            ],
+            [
+              -643.680137674557,
+              -2.70416370901512
+            ],
+            [
+              -644.0707774596522,
+              -2.4705010532052256
+            ],
+            [
+              -651.9314686099533,
+              -0.8008226306410506
+            ],
+            [
+              -652.0268337146845,
+              -0.7999498498975299
+            ],
+            [
+              -652.0194793960545,
+              -0.9794713949086145
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -642.2943912711926,
+              -6.262762594909873
+            ],
+            [
+              -641.822017645929,
+              -4.194434755598195
+            ],
+            [
+              -641.8894612138392,
+              -3.6346589669119567
+            ],
+            [
+              -643.4113920137752,
+              -3.2519603124819696
+            ],
+            [
+              -643.6337976752548,
+              -3.2560947924503125
+            ],
+            [
+              -644.2461601017276,
+              -5.804697279236279
+            ],
+            [
+              -644.2464512326987,
+              -5.8720949636772275
+            ],
+            [
+              -643.8846951178275,
+              -6.091519812121987
+            ]
+          ]
+        ]
+      ],
+      "additional": false,
+      "previousUnionIoU": 0.06835592069416098
+    },
+    {
+      "id": "crystal-barber-range-19",
+      "modelIds": [
+        "site964-range-19"
+      ],
+      "sourceFids": [
+        7904
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -654.873033780721,
+              11.495887057622895
+            ],
+            [
+              -644.238924135454,
+              9.367128928308375
+            ],
+            [
+              -643.8791474917671,
+              9.169178816431668
+            ],
+            [
+              -643.8369262574706,
+              9.170300685509574
+            ],
+            [
+              -631.2479751163628,
+              6.521791422506794
+            ],
+            [
+              -631.1850730641745,
+              6.530679660092574
+            ],
+            [
+              -629.0349224123638,
+              6.126861141179688
+            ],
+            [
+              -628.6938120556297,
+              6.057820402027573
+            ],
+            [
+              -626.9631646492053,
+              5.873387705825735
+            ],
+            [
+              -626.9372893582331,
+              5.942489258828573
+            ],
+            [
+              -624.7069535084302,
+              15.740838012832683
+            ],
+            [
+              -624.9845024691895,
+              16.102251081727445
+            ],
+            [
+              -629.7997602912365,
+              17.035324411292095
+            ],
+            [
+              -630.1749991218094,
+              17.238968614663463
+            ],
+            [
+              -634.459865523153,
+              18.020740162348375
+            ],
+            [
+              -634.8766911345301,
+              18.262199335498735
+            ],
+            [
+              -635.3628523207735,
+              18.248643248167355
+            ],
+            [
+              -635.8516363542294,
+              18.40477854415076
+            ],
+            [
+              -636.2721801552689,
+              18.550036237575114
+            ],
+            [
+              -636.7613426499302,
+              18.421146026812494
+            ],
+            [
+              -640.8296759563964,
+              19.40999235661002
+            ],
+            [
+              -641.1194572569802,
+              19.492065395403188
+            ],
+            [
+              -641.5196469729999,
+              19.49292265844997
+            ],
+            [
+              -651.551061113365,
+              21.53055494808359
+            ],
+            [
+              -651.9619040420512,
+              21.75668331212364
+            ],
+            [
+              -649.961089987075,
+              30.51570039021317
+            ],
+            [
+              -649.675908276462,
+              30.863332457025535
+            ],
+            [
+              -649.6633884008043,
+              31.485784701188095
+            ],
+            [
+              -649.0278341139201,
+              34.03503242204897
+            ],
+            [
+              -649.3706687898375,
+              34.33191831491422
+            ],
+            [
+              -654.8090124975424,
+              36.481734220462386
+            ],
+            [
+              -655.2899764028843,
+              36.32807687629247
+            ],
+            [
+              -660.0421460908838,
+              13.214209688361734
+            ],
+            [
+              -660.0511082960293,
+              12.716921481536701
+            ],
+            [
+              -659.9861244931817,
+              12.720435753464699
+            ]
+          ]
+        ]
+      ],
+      "additional": false,
+      "previousUnionIoU": 0.18612293731159815
+    },
+    {
+      "id": "crystal-barber-range-20",
+      "modelIds": [
+        "site964-range-20"
+      ],
+      "sourceFids": [
+        106314,
+        886541
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -644.7604991011322,
+              5.077654397522565
+            ],
+            [
+              -644.7623355255928,
+              5.010199666023254
+            ],
+            [
+              -637.9137300569564,
+              3.6130412105703726
+            ],
+            [
+              -637.8283506202279,
+              3.0670022713020444
+            ],
+            [
+              -638.19630284491,
+              1.5118518842500634
+            ],
+            [
+              -638.3654320177156,
+              1.3257979257614352
+            ],
+            [
+              -638.8551547747338,
+              -1.3667254144093022
+            ],
+            [
+              -638.5006727551809,
+              -1.6329201369080693
+            ],
+            [
+              -637.5232666324591,
+              -1.869938443414867
+            ],
+            [
+              -637.6794671219541,
+              -3.019113660848234
+            ],
+            [
+              -637.316053907387,
+              -3.2954149267752655
+            ],
+            [
+              -631.5759454283398,
+              -4.532788246462587
+            ],
+            [
+              -631.4186470484128,
+              -4.533729754213709
+            ],
+            [
+              -630.6733874607598,
+              -0.8881485419697128
+            ],
+            [
+              -631.1580205173232,
+              -0.7647051164531149
+            ],
+            [
+              -631.5150113438722,
+              -0.6158368079341017
+            ],
+            [
+              -631.8649852765957,
+              -0.6898748858366162
+            ],
+            [
+              -632.4161258776439,
+              -0.5949130666558631
+            ],
+            [
+              -632.6797253330005,
+              -0.20816030958667397
+            ],
+            [
+              -632.5764124254929,
+              0.34106205811258405
+            ],
+            [
+              -632.3574580538552,
+              0.7571941100177355
+            ],
+            [
+              -631.8063136250712,
+              3.3832866217708215
+            ],
+            [
+              -631.6679854982067,
+              3.708628783992026
+            ],
+            [
+              -631.1754741170444,
+              6.403538169397507
+            ],
+            [
+              -631.1850730641745,
+              6.530679660092574
+            ],
+            [
+              -631.2479751163628,
+              6.521791422506794
+            ],
+            [
+              -643.8369262574706,
+              9.170300685509574
+            ],
+            [
+              -644.6133158205776,
+              5.513200399873313
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -644.7623355255928,
+              5.010199666023254
+            ],
+            [
+              -645.0917532329913,
+              3.422109661216382
+            ],
+            [
+              -644.9667089072755,
+              2.9402504321187735
+            ],
+            [
+              -644.6187943062978,
+              2.6426701464806683
+            ],
+            [
+              -638.8107109963894,
+              1.4798365055467002
+            ],
+            [
+              -638.3654320177156,
+              1.3257979257614352
+            ],
+            [
+              -638.19630284491,
+              1.5118518842500634
+            ],
+            [
+              -637.8283506202279,
+              3.0670022713020444
+            ],
+            [
+              -637.9137300569564,
+              3.6130412105703726
+            ]
+          ]
+        ]
+      ],
+      "additional": false,
+      "previousUnionIoU": 0.009722428916335948
+    },
+    {
+      "id": "crystal-barber-range-21",
+      "modelIds": [
+        "site964-range-21"
+      ],
+      "sourceFids": [
+        948364
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -627.717214706121,
+              -17.730390076176263
+            ],
+            [
+              -627.232419816195,
+              -17.589923993567936
+            ],
+            [
+              -626.2948683599243,
+              -14.692260547715705
+            ],
+            [
+              -626.7281551102642,
+              -14.47147832007613
+            ],
+            [
+              -627.2803036833648,
+              -14.368713417032268
+            ],
+            [
+              -627.6973375527887,
+              -14.151349982072134
+            ],
+            [
+              -628.735286795767,
+              -13.911500813090242
+            ],
+            [
+              -629.2461164291017,
+              -14.03088783333078
+            ],
+            [
+              -630.0555509298574,
+              -16.373969965730794
+            ],
+            [
+              -629.9921649143798,
+              -16.92988007783424
+            ],
+            [
+              -628.1214745119214,
+              -17.59183274966199
+            ]
+          ]
+        ]
+      ],
+      "additional": false,
+      "previousUnionIoU": 0.013835503318475186
+    },
+    {
+      "id": "crystal-barber-range-22",
+      "modelIds": [
+        "site964-range-22"
+      ],
+      "sourceFids": [
+        522928,
+        983780
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -631.3165643875254,
+              -20.670086915721186
+            ],
+            [
+              -642.451465569553,
+              -18.452176109305583
+            ],
+            [
+              -642.8576118859928,
+              -19.334002928750124
+            ],
+            [
+              -643.265790854115,
+              -21.476446994987782
+            ],
+            [
+              -643.0624893899076,
+              -21.901007358857896
+            ],
+            [
+              -629.9183163060807,
+              -24.650872285303194
+            ],
+            [
+              -629.5838491148315,
+              -24.325737226754427
+            ],
+            [
+              -628.6977318770951,
+              -21.434345693560317
+            ],
+            [
+              -628.6974057131447,
+              -21.416444528265856
+            ],
+            [
+              -631.2589588027913,
+              -20.80134817166254
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -628.6974057131447,
+              -21.416444528265856
+            ],
+            [
+              -628.4103043961804,
+              -21.067379875923507
+            ],
+            [
+              -627.7615976039087,
+              -19.138258240243886
+            ],
+            [
+              -628.1684300552588,
+              -18.864523029711563
+            ],
+            [
+              -630.321699460852,
+              -18.458099773095455
+            ],
+            [
+              -630.7946733272402,
+              -18.61753141967347
+            ],
+            [
+              -631.3158598609734,
+              -20.61285511573078
+            ],
+            [
+              -631.3165643875254,
+              -20.670086915721186
+            ],
+            [
+              -631.2589588027913,
+              -20.80134817166254
+            ]
+          ]
+        ]
+      ],
+      "additional": false,
+      "previousUnionIoU": 0.0
+    },
+    {
+      "id": "crystal-barber-range-23",
+      "modelIds": [
+        "site964-range-23"
+      ],
+      "sourceFids": [
+        31541
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -663.1547794659855,
+              -101.16681463248096
+            ],
+            [
+              -645.0236636854243,
+              -100.48068760399474
+            ],
+            [
+              -643.0322384601459,
+              -91.02077709959121
+            ],
+            [
+              -643.3492560095619,
+              -90.6869264349807
+            ],
+            [
+              -663.2171492709313,
+              -91.45332479581703
+            ],
+            [
+              -663.3327953808475,
+              -92.05493819480762
+            ],
+            [
+              -663.2919195484137,
+              -100.97003788914299
+            ]
+          ]
+        ]
+      ],
+      "additional": false,
+      "previousUnionIoU": 0.5559552529099723
+    },
+    {
+      "id": "crystal-barber-range-28",
+      "modelIds": [
+        "site964-range-28"
+      ],
+      "sourceFids": [
+        43792,
+        917323,
+        1005134,
+        1098911
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -694.7661502290284,
+              -96.32341297704261
+            ],
+            [
+              -694.8315744563006,
+              -95.04738584795268
+            ],
+            [
+              -694.309612284298,
+              -94.7579985044431
+            ],
+            [
+              -693.1015641932609,
+              -95.02853991149459
+            ],
+            [
+              -692.8357170817908,
+              -95.02578772132983
+            ],
+            [
+              -692.3360652499832,
+              -86.73839822679292
+            ],
+            [
+              -696.4953691426199,
+              -86.42172871669754
+            ],
+            [
+              -696.8346006578067,
+              -86.16135238693096
+            ],
+            [
+              -697.308872294263,
+              -85.38060638995375
+            ],
+            [
+              -697.6524805419613,
+              -85.10253470856696
+            ],
+            [
+              -699.4622207928915,
+              -84.9888824467198
+            ],
+            [
+              -700.101362952264,
+              -85.60932446393417
+            ],
+            [
+              -700.2804387093056,
+              -86.0196806047461
+            ],
+            [
+              -700.6960933080409,
+              -85.90311257861322
+            ],
+            [
+              -700.6252566764597,
+              -85.29573981498834
+            ],
+            [
+              -700.7546793045476,
+              -84.76248718472198
+            ],
+            [
+              -707.4131178846583,
+              -84.45813890552381
+            ],
+            [
+              -707.3157951505855,
+              -85.02755808609072
+            ],
+            [
+              -707.4737397846766,
+              -85.50681867380626
+            ],
+            [
+              -707.4689160309499,
+              -85.5814490278135
+            ],
+            [
+              -707.3257116207387,
+              -85.95768015604699
+            ],
+            [
+              -707.7253405065276,
+              -90.03001640667208
+            ],
+            [
+              -707.8332600898575,
+              -91.82570863200817
+            ],
+            [
+              -707.9869823174085,
+              -92.1831594191026
+            ],
+            [
+              -707.9170355373062,
+              -92.74214902328094
+            ],
+            [
+              -708.0737931309268,
+              -95.18571645702468
+            ],
+            [
+              -707.7017804431962,
+              -95.38527569017606
+            ],
+            [
+              -695.2604469661601,
+              -96.39393356349319
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -707.4689160309499,
+              -85.5814490278135
+            ],
+            [
+              -708.0676415177295,
+              -85.64652899897192
+            ],
+            [
+              -708.3917961646803,
+              -85.90313087607501
+            ],
+            [
+              -711.0003410977079,
+              -86.96191573981196
+            ],
+            [
+              -711.315934220911,
+              -87.29196798987687
+            ],
+            [
+              -711.2484484151937,
+              -87.85244037554367
+            ],
+            [
+              -710.559178966796,
+              -89.60800259065581
+            ],
+            [
+              -710.562244051951,
+              -89.8178001511842
+            ],
+            [
+              -708.1968219784321,
+              -90.02216091920855
+            ],
+            [
+              -707.7253405065276,
+              -90.03001640667208
+            ],
+            [
+              -707.3257116207387,
+              -85.95768015604699
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -710.562244051951,
+              -89.8178001511842
+            ],
+            [
+              -710.7590988341253,
+              -91.54830315796426
+            ],
+            [
+              -710.6757031221641,
+              -92.03251333348453
+            ],
+            [
+              -708.342650269391,
+              -92.17957879212918
+            ],
+            [
+              -707.9869823174085,
+              -92.1831594191026
+            ],
+            [
+              -707.8332600898575,
+              -91.82570863200817
+            ],
+            [
+              -707.7253405065276,
+              -90.03001640667208
+            ],
+            [
+              -708.1968219784321,
+              -90.02216091920855
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -692.8357170817908,
+              -95.02578772132983
+            ],
+            [
+              -693.1015641932609,
+              -95.02853991149459
+            ],
+            [
+              -694.309612284298,
+              -94.7579985044431
+            ],
+            [
+              -694.8315744563006,
+              -95.04738584795268
+            ],
+            [
+              -694.7661502290284,
+              -96.32341297704261
+            ],
+            [
+              -692.9486730839126,
+              -96.44297271169489
+            ],
+            [
+              -692.7787687187083,
+              -95.98448170040501
+            ],
+            [
+              -692.8544251879212,
+              -95.4233640069724
+            ]
+          ]
+        ]
+      ],
+      "additional": false,
+      "previousUnionIoU": 0.5551636514569231
+    },
+    {
+      "id": "crystal-barber-talbot-538",
+      "modelIds": [
+        "site964-talbot-538"
+      ],
+      "sourceFids": [
+        162727
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -697.2583639200311,
+              -118.26320020988351
+            ],
+            [
+              -697.3054345033597,
+              -108.8096132564242
+            ],
+            [
+              -702.3748273329111,
+              -108.67238258523867
+            ],
+            [
+              -702.6389549369924,
+              -108.97423716203775
+            ],
+            [
+              -702.5285778406542,
+              -124.08060231572017
+            ],
+            [
+              -701.9146297704428,
+              -124.18944644794101
+            ],
+            [
+              -697.6617992951069,
+              -124.05272831418552
+            ],
+            [
+              -697.3486178029561,
+              -124.06641762284562
+            ],
+            [
+              -697.2633643322624,
+              -118.44302460213657
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    },
+    {
+      "id": "crystal-barber-dane-536",
+      "modelIds": [
+        "site964-dane-536"
+      ],
+      "sourceFids": [
+        233717,
+        58252
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -686.3465878041461,
+              -125.17594684718642
+            ],
+            [
+              -686.3362404122017,
+              -125.00805439188844
+            ],
+            [
+              -686.6253948624944,
+              -118.01252757036127
+            ],
+            [
+              -686.7178159060422,
+              -117.940999989165
+            ],
+            [
+              -693.1154850523453,
+              -118.25833570869872
+            ],
+            [
+              -693.598872606759,
+              -118.09276411973406
+            ],
+            [
+              -697.0809552246938,
+              -118.27018046396552
+            ],
+            [
+              -697.2583639200311,
+              -118.26320020988351
+            ],
+            [
+              -697.2633643322624,
+              -118.44302460213657
+            ],
+            [
+              -697.3486178029561,
+              -124.06641762284562
+            ],
+            [
+              -686.4752594293095,
+              -125.15938839653973
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -686.6253948624944,
+              -118.01252757036127
+            ],
+            [
+              -686.3362404122017,
+              -125.00805439188844
+            ],
+            [
+              -686.3465878041461,
+              -125.17594684718642
+            ],
+            [
+              -668.0680872078519,
+              -124.55806019518059
+            ],
+            [
+              -667.9175568630453,
+              -124.46243179694284
+            ],
+            [
+              -667.9837652547285,
+              -124.24823495565215
+            ],
+            [
+              -668.1231968576321,
+              -117.09847659472143
+            ],
+            [
+              -680.9780338008422,
+              -117.63231523905415
+            ],
+            [
+              -681.3353813645663,
+              -117.61644747952232
+            ],
+            [
+              -681.2971089933999,
+              -117.64526893297443
+            ],
+            [
+              -685.3204345280537,
+              -117.92759491578909
+            ],
+            [
+              -685.8759306974243,
+              -117.83040241280105
+            ],
+            [
+              -686.3637122520013,
+              -117.94702053570654
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    },
+    {
+      "id": "crystal-barber-dane-534",
+      "modelIds": [
+        "site964-dane-534"
+      ],
+      "sourceFids": [
+        847367
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -665.2789640756091,
+              -117.04088445653906
+            ],
+            [
+              -667.6410612181062,
+              -117.11751790106064
+            ],
+            [
+              -668.1231968576321,
+              -117.09847659472143
+            ],
+            [
+              -667.9837652547285,
+              -124.24823495565215
+            ],
+            [
+              -667.9175568630453,
+              -124.46243179694284
+            ],
+            [
+              -667.3624214984011,
+              -124.56033845158527
+            ],
+            [
+              -665.0521468508523,
+              -124.40090160723776
+            ],
+            [
+              -665.0714918780141,
+              -124.33738220413215
+            ],
+            [
+              -665.1394637364428,
+              -124.16754358221078
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    },
+    {
+      "id": "crystal-barber-dane-532",
+      "modelIds": [
+        "site964-dane-532"
+      ],
+      "sourceFids": [
+        764441,
+        823951
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -660.8727808545809,
+              -124.24915642343694
+            ],
+            [
+              -660.8616394790588,
+              -123.96102024562424
+            ],
+            [
+              -661.0089419136057,
+              -116.81958335801028
+            ],
+            [
+              -665.1119455143344,
+              -116.9718481618911
+            ],
+            [
+              -665.2789640756091,
+              -117.04088445653906
+            ],
+            [
+              -665.1394637364428,
+              -124.16754358221078
+            ],
+            [
+              -665.0714918780141,
+              -124.33738220413215
+            ],
+            [
+              -664.518787910114,
+              -124.4360197664937
+            ],
+            [
+              -661.0415258520516,
+              -124.2414360329276
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -657.757077956805,
+              -116.70558419683948
+            ],
+            [
+              -660.6792795746587,
+              -116.83753069746308
+            ],
+            [
+              -661.0089419136057,
+              -116.81958335801028
+            ],
+            [
+              -660.8616394790588,
+              -123.96102024562424
+            ],
+            [
+              -660.8727808545809,
+              -124.24915642343694
+            ],
+            [
+              -657.9502998979297,
+              -124.1319802091457
+            ],
+            [
+              -657.5418312057154,
+              -123.91755729616852
+            ],
+            [
+              -657.4997054089326,
+              -123.27546179405181
+            ],
+            [
+              -657.4581108078128,
+              -123.12697236682288
+            ],
+            [
+              -657.5014264234342,
+              -123.14177061134251
+            ],
+            [
+              -657.6542459339835,
+              -122.67968241736526
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    },
+    {
+      "id": "crystal-barber-dane-530",
+      "modelIds": [
+        "site964-dane-530"
+      ],
+      "sourceFids": [
+        818468
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -653.9623181417119,
+              -116.53885882539907
+            ],
+            [
+              -657.5061215411406,
+              -116.63884340459481
+            ],
+            [
+              -657.757077956805,
+              -116.70558419683948
+            ],
+            [
+              -657.6542459339835,
+              -122.67968241736526
+            ],
+            [
+              -657.5014264234342,
+              -123.14177061134251
+            ],
+            [
+              -657.4581108078128,
+              -123.12697236682288
+            ],
+            [
+              -653.9175268829567,
+              -123.02505632507382
+            ],
+            [
+              -653.7986203812761,
+              -122.95656521047931
+            ],
+            [
+              -653.7831379758427,
+              -122.42529297125293
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    },
+    {
+      "id": "crystal-barber-dane-528",
+      "modelIds": [
+        "site964-dane-528"
+      ],
+      "sourceFids": [
+        802979
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -649.6411909137387,
+              -116.92652991216164
+            ],
+            [
+              -649.705573111074,
+              -116.3804326839163
+            ],
+            [
+              -653.808864215971,
+              -116.55464259866858
+            ],
+            [
+              -653.9623181417119,
+              -116.53885882539907
+            ],
+            [
+              -653.7831379758427,
+              -122.42529297125293
+            ],
+            [
+              -653.7986203812761,
+              -122.95656521047931
+            ],
+            [
+              -649.6964484368218,
+              -122.7981536469888
+            ],
+            [
+              -649.6657033999218,
+              -122.79904953856021
+            ],
+            [
+              -649.6617184387287,
+              -117.46458377427189
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    },
+    {
+      "id": "crystal-barber-dane-526",
+      "modelIds": [
+        "site964-dane-526"
+      ],
+      "sourceFids": [
+        147902
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -649.6657033999218,
+              -122.79904953856021
+            ],
+            [
+              -649.5428230081452,
+              -127.99569246673491
+            ],
+            [
+              -649.2618028238649,
+              -128.35627755895257
+            ],
+            [
+              -648.8676085456973,
+              -128.58437849505572
+            ],
+            [
+              -648.8292919977102,
+              -129.13816525618313
+            ],
+            [
+              -648.516828235006,
+              -129.45643401239067
+            ],
+            [
+              -644.4115865170024,
+              -129.29054692114005
+            ],
+            [
+              -644.0760391497752,
+              -129.00085882341955
+            ],
+            [
+              -644.0259024174884,
+              -128.38038408645662
+            ],
+            [
+              -642.9773636382306,
+              -128.25408483541105
+            ],
+            [
+              -642.7438195827417,
+              -127.84386255464051
+            ],
+            [
+              -642.6657350267051,
+              -116.58424735919107
+            ],
+            [
+              -649.6193975452334,
+              -116.92718140973011
+            ],
+            [
+              -649.6411909137387,
+              -116.92652991216164
+            ],
+            [
+              -649.6617184387287,
+              -117.46458377427189
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    },
+    {
+      "id": "crystal-barber-dane-540",
+      "modelIds": [
+        "site964-dane-540"
+      ],
+      "sourceFids": [
+        726560,
+        845958
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -685.8759306974243,
+              -117.83040241280105
+            ],
+            [
+              -685.9350984869525,
+              -117.32573705207324
+            ],
+            [
+              -686.02344590344,
+              -113.30335688305786
+            ],
+            [
+              -693.5918186479248,
+              -113.61939719924703
+            ],
+            [
+              -693.7770147742704,
+              -114.10216978326207
+            ],
+            [
+              -693.5776692419313,
+              -117.56986065383535
+            ],
+            [
+              -693.598872606759,
+              -118.09276411973406
+            ],
+            [
+              -693.1154850523453,
+              -118.25833570869872
+            ],
+            [
+              -686.7178159060422,
+              -117.940999989165
+            ],
+            [
+              -686.6253948624944,
+              -118.01252757036127
+            ],
+            [
+              -686.3637122520013,
+              -117.94702053570654
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -686.02344590344,
+              -113.30335688305786
+            ],
+            [
+              -685.9350984869525,
+              -117.32573705207324
+            ],
+            [
+              -685.8759306974243,
+              -117.83040241280105
+            ],
+            [
+              -685.3204345280537,
+              -117.92759491578909
+            ],
+            [
+              -681.2971089933999,
+              -117.64526893297443
+            ],
+            [
+              -681.3353813645663,
+              -117.61644747952232
+            ],
+            [
+              -681.1826503110351,
+              -117.13103729789145
+            ],
+            [
+              -681.4641061709262,
+              -113.1271390162874
+            ],
+            [
+              -685.4271084211068,
+              -113.3208997840411
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    },
+    {
+      "id": "crystal-barber-barber-bone-annex",
+      "modelIds": [
+        "site964-barber-bone-annex"
+      ],
+      "sourceFids": [
+        502860
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -644.2464512326987,
+              -5.8720949636772275
+            ],
+            [
+              -644.6072884137975,
+              -5.9446415028651245
+            ],
+            [
+              -646.2021842781687,
+              -5.616337251383811
+            ],
+            [
+              -646.2732223974308,
+              -6.015787694137543
+            ],
+            [
+              -647.8993714826647,
+              -13.265649769629817
+            ],
+            [
+              -647.4827863816172,
+              -13.482421961613
+            ],
+            [
+              -641.58763771737,
+              -14.55315943597816
+            ],
+            [
+              -640.02423709922,
+              -7.300668042036705
+            ],
+            [
+              -640.0563368109288,
+              -6.807499616756104
+            ],
+            [
+              -642.0706238999264,
+              -6.328225311182905
+            ],
+            [
+              -642.2943912711926,
+              -6.262762594909873
+            ],
+            [
+              -643.8846951178275,
+              -6.091519812121987
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    },
+    {
+      "id": "crystal-barber-barber-592",
+      "modelIds": [
+        "site964-barber-592"
+      ],
+      "sourceFids": [
+        686523
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -628.6938120556297,
+              6.057820402027573
+            ],
+            [
+              -629.2446229609195,
+              3.4337583477026783
+            ],
+            [
+              -629.6643339293078,
+              3.2393572086584754
+            ],
+            [
+              -631.1916818479076,
+              3.632541398925241
+            ],
+            [
+              -631.6679854982067,
+              3.708628783992026
+            ],
+            [
+              -631.8063136250712,
+              3.3832866217708215
+            ],
+            [
+              -632.3574580538552,
+              0.7571941100177355
+            ],
+            [
+              -631.3579843993066,
+              0.4382574627525173
+            ],
+            [
+              -631.4763490927871,
+              -0.1292216120637022
+            ],
+            [
+              -631.5150113438722,
+              -0.6158368079341017
+            ],
+            [
+              -631.1580205173232,
+              -0.7647051164531149
+            ],
+            [
+              -630.6733874607598,
+              -0.8881485419697128
+            ],
+            [
+              -631.4186470484128,
+              -4.533729754213709
+            ],
+            [
+              -629.4126491423231,
+              -5.079556024516933
+            ],
+            [
+              -629.0504611434881,
+              -4.7935014353715815
+            ],
+            [
+              -628.666395189357,
+              -2.6583501175628044
+            ],
+            [
+              -628.4340994574595,
+              -2.243391670694109
+            ],
+            [
+              -627.8781089048134,
+              -2.204755610029679
+            ],
+            [
+              -627.4886772944592,
+              -1.972808788123075
+            ],
+            [
+              -626.1026297893841,
+              5.5569738080957904
+            ],
+            [
+              -626.3640194981126,
+              5.773553312930744
+            ],
+            [
+              -626.8658140769694,
+              5.936029461037833
+            ],
+            [
+              -626.9372893582331,
+              5.942489258828573
+            ],
+            [
+              -626.9631646492053,
+              5.873387705825735
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    },
+    {
+      "id": "crystal-barber-barber-588",
+      "modelIds": [
+        "site964-barber-588"
+      ],
+      "sourceFids": [
+        834933,
+        544999
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -654.873033780721,
+              11.495887057622895
+            ],
+            [
+              -659.9861244931817,
+              12.720435753464699
+            ],
+            [
+              -660.0511082960293,
+              12.716921481536701
+            ],
+            [
+              -660.8420362848556,
+              9.064057155279443
+            ],
+            [
+              -660.8031582777621,
+              8.444429236871656
+            ],
+            [
+              -656.0748341997387,
+              7.5052261225064285
+            ],
+            [
+              -655.6595032674959,
+              7.467009983956814
+            ],
+            [
+              -654.9545917855576,
+              11.19211083324626
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -643.8369262574706,
+              9.170300685509574
+            ],
+            [
+              -643.8791474917671,
+              9.169178816431668
+            ],
+            [
+              -644.238924135454,
+              9.367128928308375
+            ],
+            [
+              -654.873033780721,
+              11.495887057622895
+            ],
+            [
+              -654.9545917855576,
+              11.19211083324626
+            ],
+            [
+              -655.6595032674959,
+              7.467009983956814
+            ],
+            [
+              -654.7662767613074,
+              7.095020673528779
+            ],
+            [
+              -644.8628385128686,
+              5.079129753634334
+            ],
+            [
+              -644.7604991011322,
+              5.077654397522565
+            ],
+            [
+              -644.6133158205776,
+              5.513200399873313
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    },
+    {
+      "id": "crystal-barber-ink-south-annex",
+      "modelIds": [
+        "site964-ink-south-annex"
+      ],
+      "sourceFids": [
+        510096,
+        890726
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -640.4957807325991,
+              22.512808169587515
+            ],
+            [
+              -648.3169866928365,
+              24.221154573198874
+            ],
+            [
+              -648.5794398295693,
+              24.5813946275739
+            ],
+            [
+              -647.4526425927179,
+              29.826068627939094
+            ],
+            [
+              -647.6401997397188,
+              30.248537409002893
+            ],
+            [
+              -649.5763133206638,
+              30.867220665269997
+            ],
+            [
+              -649.675908276462,
+              30.863332457025535
+            ],
+            [
+              -649.961089987075,
+              30.51570039021317
+            ],
+            [
+              -651.9619040420512,
+              21.75668331212364
+            ],
+            [
+              -651.551061113365,
+              21.53055494808359
+            ],
+            [
+              -641.5196469729999,
+              19.49292265844997
+            ],
+            [
+              -641.1194572569802,
+              19.492065395403188
+            ],
+            [
+              -640.5786621853476,
+              22.113185736059677
+            ]
+          ],
+          [
+            [
+              -644.4568521975307,
+              21.20304371457314
+            ],
+            [
+              -644.7303271573037,
+              21.557597524137236
+            ],
+            [
+              -644.6735138200456,
+              22.232905544165988
+            ],
+            [
+              -644.3124421032844,
+              22.430528815835714
+            ],
+            [
+              -643.7580534066074,
+              22.328375098120887
+            ],
+            [
+              -643.3999003586359,
+              22.04776277259225
+            ],
+            [
+              -643.4944768698188,
+              21.498749603051692
+            ],
+            [
+              -643.8070195736364,
+              21.158831742650364
+            ],
+            [
+              -644.4382527119014,
+              21.20244261471089
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -636.2721801552689,
+              18.550036237575114
+            ],
+            [
+              -635.7021681688493,
+              21.171842704468872
+            ],
+            [
+              -635.9417688614922,
+              21.585968350060284
+            ],
+            [
+              -640.1579432641156,
+              22.435888786858413
+            ],
+            [
+              -640.4957807325991,
+              22.512808169587515
+            ],
+            [
+              -640.5786621853476,
+              22.113185736059677
+            ],
+            [
+              -641.1194572569802,
+              19.492065395403188
+            ],
+            [
+              -640.8296759563964,
+              19.40999235661002
+            ],
+            [
+              -636.7613426499302,
+              18.421146026812494
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    },
+    {
+      "id": "crystal-barber-ink-610",
+      "modelIds": [
+        "site964-ink-610"
+      ],
+      "sourceFids": [
+        895545,
+        859284,
+        991908,
+        968388,
+        757132
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -639.8824816057459,
+              30.124177615856752
+            ],
+            [
+              -644.2333094790811,
+              32.07456739060581
+            ],
+            [
+              -645.3394312935416,
+              29.367494447506033
+            ],
+            [
+              -645.1468397097196,
+              28.908916048472747
+            ],
+            [
+              -641.0761303408071,
+              27.321043216565158
+            ],
+            [
+              -641.0416856971569,
+              27.320525217219256
+            ],
+            [
+              -639.8751272687223,
+              29.944664539129008
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -634.2622080296278,
+              27.743494154012296
+            ],
+            [
+              -639.4524128607009,
+              30.08298079529777
+            ],
+            [
+              -639.8824816057459,
+              30.124177615856752
+            ],
+            [
+              -639.8751272687223,
+              29.944664539129008
+            ],
+            [
+              -641.0416856971569,
+              27.320525217219256
+            ],
+            [
+              -640.699279140099,
+              27.04606724943733
+            ],
+            [
+              -635.8667529474478,
+              24.979952050663996
+            ],
+            [
+              -635.4214147955645,
+              24.939844230073504
+            ],
+            [
+              -634.3126616663067,
+              27.637518708477728
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -632.2535256568808,
+              26.946249141707085
+            ],
+            [
+              -632.6028196676634,
+              27.232977145467885
+            ],
+            [
+              -633.9863510201685,
+              27.7451568528777
+            ],
+            [
+              -634.2622080296278,
+              27.743494154012296
+            ],
+            [
+              -634.3126616663067,
+              27.637518708477728
+            ],
+            [
+              -635.4214147955645,
+              24.939844230073504
+            ],
+            [
+              -635.0728439196246,
+              24.655346959014423
+            ],
+            [
+              -633.6966052084463,
+              24.14416373812128
+            ],
+            [
+              -633.547992281965,
+              24.146282714791596
+            ],
+            [
+              -633.2605737581616,
+              24.494634433358442
+            ],
+            [
+              -632.3365238158731,
+              26.69126163609326
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -629.8427402790403,
+              26.0030452098581
+            ],
+            [
+              -632.0561577788321,
+              26.942677499901038
+            ],
+            [
+              -632.2535256568808,
+              26.946249141707085
+            ],
+            [
+              -632.3365238158731,
+              26.69126163609326
+            ],
+            [
+              -633.2605737581616,
+              24.494634433358442
+            ],
+            [
+              -633.547992281965,
+              24.146282714791596
+            ],
+            [
+              -633.2000450576888,
+              23.86272217851365
+            ],
+            [
+              -631.4054611327592,
+              23.143277712282725
+            ],
+            [
+              -631.0732518137665,
+              23.06632856093347
+            ],
+            [
+              -629.9157627138775,
+              25.688421473721974
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -631.0732518137665,
+              23.06632856093347
+            ],
+            [
+              -623.9339500925271,
+              20.076287141710054
+            ],
+            [
+              -623.815300796181,
+              19.033349858073052
+            ],
+            [
+              -622.509394251043,
+              18.454122929193545
+            ],
+            [
+              -621.9767746846192,
+              18.40367211343255
+            ],
+            [
+              -621.7245175477583,
+              18.74101855495246
+            ],
+            [
+              -620.7791516395519,
+              20.958170581958257
+            ],
+            [
+              -620.7356145230588,
+              21.446962064132094
+            ],
+            [
+              -623.4655582975829,
+              22.51454993232619
+            ],
+            [
+              -623.7406849979889,
+              23.467509297421202
+            ],
+            [
+              -629.4845479737269,
+              25.929390285687987
+            ],
+            [
+              -629.8427402790403,
+              26.0030452098581
+            ],
+            [
+              -629.9157627138775,
+              25.688421473721974
+            ]
+          ]
+        ]
+      ],
+      "additional": true,
+      "previousUnionIoU": 1.0
+    }
+  ],
+  "additionalBuildings": [
+    {
+      "id": "site964-talbot-538",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Talbot works western range, Goad 538",
+      "worldFootprint": [
+        [
+          -697.263,
+          -118.443
+        ],
+        [
+          -697.349,
+          -124.066
+        ],
+        [
+          -697.662,
+          -124.053
+        ],
+        [
+          -701.915,
+          -124.189
+        ],
+        [
+          -702.529,
+          -124.081
+        ],
+        [
+          -702.639,
+          -108.974
+        ],
+        [
+          -702.375,
+          -108.672
+        ],
+        [
+          -697.305,
+          -108.81
+        ],
+        [
+          -697.258,
+          -118.263
+        ]
+      ],
+      "worldHoles": [],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 3.8,
+      "heightEvidence": "3.8 m eaves is an estimate informed by the low Goad room; not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 1.6,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick"
+    },
+    {
+      "id": "site964-dane-536",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Dane main ink-factory range, Goad 536",
+      "worldFootprint": [
+        [
+          -697.349,
+          -124.066
+        ],
+        [
+          -697.263,
+          -118.443
+        ],
+        [
+          -697.258,
+          -118.263
+        ],
+        [
+          -697.081,
+          -118.27
+        ],
+        [
+          -693.599,
+          -118.093
+        ],
+        [
+          -693.115,
+          -118.258
+        ],
+        [
+          -686.718,
+          -117.941
+        ],
+        [
+          -686.625,
+          -118.013
+        ],
+        [
+          -686.364,
+          -117.947
+        ],
+        [
+          -685.876,
+          -117.83
+        ],
+        [
+          -685.32,
+          -117.928
+        ],
+        [
+          -681.297,
+          -117.645
+        ],
+        [
+          -681.335,
+          -117.616
+        ],
+        [
+          -680.978,
+          -117.632
+        ],
+        [
+          -668.123,
+          -117.098
+        ],
+        [
+          -667.984,
+          -124.248
+        ],
+        [
+          -667.918,
+          -124.462
+        ],
+        [
+          -668.068,
+          -124.558
+        ],
+        [
+          -686.347,
+          -125.176
+        ],
+        [
+          -686.475,
+          -125.159
+        ]
+      ],
+      "worldHoles": [],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 3.8,
+      "heightEvidence": "3.8 m eaves is an estimate informed by the low Goad room; not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 2.2,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick"
+    },
+    {
+      "id": "site964-dane-534",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Dane eastern room, Goad 534",
+      "worldFootprint": [
+        [
+          -665.139,
+          -124.168
+        ],
+        [
+          -665.071,
+          -124.337
+        ],
+        [
+          -665.052,
+          -124.401
+        ],
+        [
+          -667.362,
+          -124.56
+        ],
+        [
+          -667.918,
+          -124.462
+        ],
+        [
+          -667.984,
+          -124.248
+        ],
+        [
+          -668.123,
+          -117.098
+        ],
+        [
+          -667.641,
+          -117.118
+        ],
+        [
+          -665.279,
+          -117.041
+        ]
+      ],
+      "worldHoles": [],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 3.8,
+      "heightEvidence": "3.8 m eaves is an estimate informed by the low Goad room; not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 1.6,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick"
+    },
+    {
+      "id": "site964-dane-532",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Dane engine/boiler compartment, Goad 532",
+      "worldFootprint": [
+        [
+          -664.519,
+          -124.436
+        ],
+        [
+          -665.071,
+          -124.337
+        ],
+        [
+          -665.139,
+          -124.168
+        ],
+        [
+          -665.279,
+          -117.041
+        ],
+        [
+          -665.112,
+          -116.972
+        ],
+        [
+          -661.009,
+          -116.82
+        ],
+        [
+          -660.679,
+          -116.838
+        ],
+        [
+          -657.757,
+          -116.706
+        ],
+        [
+          -657.654,
+          -122.68
+        ],
+        [
+          -657.501,
+          -123.142
+        ],
+        [
+          -657.458,
+          -123.127
+        ],
+        [
+          -657.5,
+          -123.275
+        ],
+        [
+          -657.542,
+          -123.918
+        ],
+        [
+          -657.95,
+          -124.132
+        ],
+        [
+          -660.873,
+          -124.249
+        ],
+        [
+          -661.042,
+          -124.241
+        ]
+      ],
+      "worldHoles": [],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 3.8,
+      "heightEvidence": "3.8 m eaves is an estimate informed by the low Goad room; not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 1.6,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick"
+    },
+    {
+      "id": "site964-dane-530",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Dane eastern boiler compartment, Goad 530",
+      "worldFootprint": [
+        [
+          -653.783,
+          -122.425
+        ],
+        [
+          -653.799,
+          -122.957
+        ],
+        [
+          -653.918,
+          -123.025
+        ],
+        [
+          -657.458,
+          -123.127
+        ],
+        [
+          -657.501,
+          -123.142
+        ],
+        [
+          -657.654,
+          -122.68
+        ],
+        [
+          -657.757,
+          -116.706
+        ],
+        [
+          -657.506,
+          -116.639
+        ],
+        [
+          -653.962,
+          -116.539
+        ]
+      ],
+      "worldHoles": [],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 3.8,
+      "heightEvidence": "3.8 m eaves is an estimate informed by the low Goad room; not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 1.6,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick"
+    },
+    {
+      "id": "site964-dane-528",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Dane low eastern range, Goad 528",
+      "worldFootprint": [
+        [
+          -649.662,
+          -117.465
+        ],
+        [
+          -649.666,
+          -122.799
+        ],
+        [
+          -649.696,
+          -122.798
+        ],
+        [
+          -653.799,
+          -122.957
+        ],
+        [
+          -653.783,
+          -122.425
+        ],
+        [
+          -653.962,
+          -116.539
+        ],
+        [
+          -653.809,
+          -116.555
+        ],
+        [
+          -649.706,
+          -116.38
+        ],
+        [
+          -649.641,
+          -116.927
+        ]
+      ],
+      "worldHoles": [],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 5.35,
+      "heightEvidence": "Goad 528 marks 1\u00bd floors; interpreted 5.35 m eaves, not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 1.6,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick",
+      "floorMark": "1\u00bd"
+    },
+    {
+      "id": "site964-dane-526",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Dane riverside range, Goad 526",
+      "worldFootprint": [
+        [
+          -649.662,
+          -117.465
+        ],
+        [
+          -649.641,
+          -116.927
+        ],
+        [
+          -649.619,
+          -116.927
+        ],
+        [
+          -642.666,
+          -116.584
+        ],
+        [
+          -642.744,
+          -127.844
+        ],
+        [
+          -642.977,
+          -128.254
+        ],
+        [
+          -644.026,
+          -128.38
+        ],
+        [
+          -644.076,
+          -129.001
+        ],
+        [
+          -644.412,
+          -129.291
+        ],
+        [
+          -648.517,
+          -129.456
+        ],
+        [
+          -648.829,
+          -129.138
+        ],
+        [
+          -648.868,
+          -128.584
+        ],
+        [
+          -649.262,
+          -128.356
+        ],
+        [
+          -649.543,
+          -127.996
+        ],
+        [
+          -649.666,
+          -122.799
+        ]
+      ],
+      "worldHoles": [],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 3.8,
+      "heightEvidence": "3.8 m eaves is an estimate informed by the low Goad room; not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 1.6,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick"
+    },
+    {
+      "id": "site964-dane-540",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Dane front sheds, Goad 540",
+      "worldFootprint": [
+        [
+          -686.625,
+          -118.013
+        ],
+        [
+          -686.718,
+          -117.941
+        ],
+        [
+          -693.115,
+          -118.258
+        ],
+        [
+          -693.599,
+          -118.093
+        ],
+        [
+          -693.578,
+          -117.57
+        ],
+        [
+          -693.777,
+          -114.102
+        ],
+        [
+          -693.592,
+          -113.619
+        ],
+        [
+          -686.023,
+          -113.303
+        ],
+        [
+          -685.427,
+          -113.321
+        ],
+        [
+          -681.464,
+          -113.127
+        ],
+        [
+          -681.183,
+          -117.131
+        ],
+        [
+          -681.335,
+          -117.616
+        ],
+        [
+          -681.297,
+          -117.645
+        ],
+        [
+          -685.32,
+          -117.928
+        ],
+        [
+          -685.876,
+          -117.83
+        ],
+        [
+          -686.364,
+          -117.947
+        ]
+      ],
+      "worldHoles": [],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 3.8,
+      "heightEvidence": "3.8 m eaves is an estimate informed by the low Goad room; not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 1.6,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick"
+    },
+    {
+      "id": "site964-barber-bone-annex",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Barber bone-shed eastern annex",
+      "worldFootprint": [
+        [
+          -643.885,
+          -6.092
+        ],
+        [
+          -642.294,
+          -6.263
+        ],
+        [
+          -642.071,
+          -6.328
+        ],
+        [
+          -640.056,
+          -6.807
+        ],
+        [
+          -640.024,
+          -7.301
+        ],
+        [
+          -641.588,
+          -14.553
+        ],
+        [
+          -647.483,
+          -13.482
+        ],
+        [
+          -647.899,
+          -13.266
+        ],
+        [
+          -646.273,
+          -6.016
+        ],
+        [
+          -646.202,
+          -5.616
+        ],
+        [
+          -644.607,
+          -5.945
+        ],
+        [
+          -644.246,
+          -5.872
+        ]
+      ],
+      "worldHoles": [],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 3.8,
+      "heightEvidence": "3.8 m eaves is an estimate informed by the low Goad room; not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 1.6,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick"
+    },
+    {
+      "id": "site964-barber-592",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Barber long riverside shed, Goad 592",
+      "worldFootprint": [
+        [
+          -626.963,
+          5.873
+        ],
+        [
+          -626.937,
+          5.942
+        ],
+        [
+          -626.866,
+          5.936
+        ],
+        [
+          -626.364,
+          5.774
+        ],
+        [
+          -626.103,
+          5.557
+        ],
+        [
+          -627.489,
+          -1.973
+        ],
+        [
+          -627.878,
+          -2.205
+        ],
+        [
+          -628.434,
+          -2.243
+        ],
+        [
+          -628.666,
+          -2.658
+        ],
+        [
+          -629.05,
+          -4.794
+        ],
+        [
+          -629.413,
+          -5.08
+        ],
+        [
+          -631.419,
+          -4.534
+        ],
+        [
+          -630.673,
+          -0.888
+        ],
+        [
+          -631.158,
+          -0.765
+        ],
+        [
+          -631.515,
+          -0.616
+        ],
+        [
+          -631.476,
+          -0.129
+        ],
+        [
+          -631.358,
+          0.438
+        ],
+        [
+          -632.357,
+          0.757
+        ],
+        [
+          -631.806,
+          3.383
+        ],
+        [
+          -631.668,
+          3.709
+        ],
+        [
+          -631.192,
+          3.633
+        ],
+        [
+          -629.664,
+          3.239
+        ],
+        [
+          -629.245,
+          3.434
+        ],
+        [
+          -628.694,
+          6.058
+        ]
+      ],
+      "worldHoles": [],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 3.8,
+      "heightEvidence": "3.8 m eaves is an estimate informed by the low Goad room; not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 1.6,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick"
+    },
+    {
+      "id": "site964-barber-588",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Barber stable/loft range, Goad 588",
+      "worldFootprint": [
+        [
+          -643.879,
+          9.169
+        ],
+        [
+          -643.837,
+          9.17
+        ],
+        [
+          -644.613,
+          5.513
+        ],
+        [
+          -644.76,
+          5.078
+        ],
+        [
+          -644.863,
+          5.079
+        ],
+        [
+          -654.766,
+          7.095
+        ],
+        [
+          -655.66,
+          7.467
+        ],
+        [
+          -656.075,
+          7.505
+        ],
+        [
+          -660.803,
+          8.444
+        ],
+        [
+          -660.842,
+          9.064
+        ],
+        [
+          -660.051,
+          12.717
+        ],
+        [
+          -659.986,
+          12.72
+        ],
+        [
+          -654.873,
+          11.496
+        ],
+        [
+          -644.239,
+          9.367
+        ]
+      ],
+      "worldHoles": [],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 3.8,
+      "heightEvidence": "3.8 m eaves is an estimate informed by the low Goad room; not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 1.6,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick"
+    },
+    {
+      "id": "site964-ink-south-annex",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Southern ink-factory attached rooms",
+      "worldFootprint": [
+        [
+          -635.942,
+          21.586
+        ],
+        [
+          -635.702,
+          21.172
+        ],
+        [
+          -636.272,
+          18.55
+        ],
+        [
+          -636.761,
+          18.421
+        ],
+        [
+          -640.83,
+          19.41
+        ],
+        [
+          -641.119,
+          19.492
+        ],
+        [
+          -641.52,
+          19.493
+        ],
+        [
+          -651.551,
+          21.531
+        ],
+        [
+          -651.962,
+          21.757
+        ],
+        [
+          -649.961,
+          30.516
+        ],
+        [
+          -649.676,
+          30.863
+        ],
+        [
+          -649.576,
+          30.867
+        ],
+        [
+          -647.64,
+          30.249
+        ],
+        [
+          -647.453,
+          29.826
+        ],
+        [
+          -648.579,
+          24.581
+        ],
+        [
+          -648.317,
+          24.221
+        ],
+        [
+          -640.496,
+          22.513
+        ],
+        [
+          -640.158,
+          22.436
+        ]
+      ],
+      "worldHoles": [
+        [
+          [
+            -643.807,
+            21.159
+          ],
+          [
+            -643.494,
+            21.499
+          ],
+          [
+            -643.4,
+            22.048
+          ],
+          [
+            -643.758,
+            22.328
+          ],
+          [
+            -644.312,
+            22.431
+          ],
+          [
+            -644.674,
+            22.233
+          ],
+          [
+            -644.73,
+            21.558
+          ],
+          [
+            -644.457,
+            21.203
+          ],
+          [
+            -644.438,
+            21.202
+          ]
+        ]
+      ],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 3.8,
+      "heightEvidence": "3.8 m eaves is an estimate informed by the low Goad room; not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 1.6,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick"
+    },
+    {
+      "id": "site964-ink-610",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Southern ink-factory shed, Goad 610",
+      "worldFootprint": [
+        [
+          -623.466,
+          22.515
+        ],
+        [
+          -620.736,
+          21.447
+        ],
+        [
+          -620.779,
+          20.958
+        ],
+        [
+          -621.725,
+          18.741
+        ],
+        [
+          -621.977,
+          18.404
+        ],
+        [
+          -622.509,
+          18.454
+        ],
+        [
+          -623.815,
+          19.033
+        ],
+        [
+          -623.934,
+          20.076
+        ],
+        [
+          -631.073,
+          23.066
+        ],
+        [
+          -631.405,
+          23.143
+        ],
+        [
+          -633.2,
+          23.863
+        ],
+        [
+          -633.548,
+          24.146
+        ],
+        [
+          -633.697,
+          24.144
+        ],
+        [
+          -635.073,
+          24.655
+        ],
+        [
+          -635.421,
+          24.94
+        ],
+        [
+          -635.867,
+          24.98
+        ],
+        [
+          -640.699,
+          27.046
+        ],
+        [
+          -641.042,
+          27.321
+        ],
+        [
+          -641.076,
+          27.321
+        ],
+        [
+          -645.147,
+          28.909
+        ],
+        [
+          -645.339,
+          29.367
+        ],
+        [
+          -644.233,
+          32.075
+        ],
+        [
+          -639.882,
+          30.124
+        ],
+        [
+          -639.452,
+          30.083
+        ],
+        [
+          -634.262,
+          27.743
+        ],
+        [
+          -633.986,
+          27.745
+        ],
+        [
+          -632.603,
+          27.233
+        ],
+        [
+          -632.254,
+          26.946
+        ],
+        [
+          -632.056,
+          26.943
+        ],
+        [
+          -629.843,
+          26.003
+        ],
+        [
+          -629.485,
+          25.929
+        ],
+        [
+          -623.741,
+          23.468
+        ]
+      ],
+      "worldHoles": [],
+      "footprintEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "eavesHeight": 3.8,
+      "heightEvidence": "3.8 m eaves is an estimate informed by the low Goad room; not a measured elevation.",
+      "roofEvidence": "Separately drawn Goad/OS room; the supplied outline fixes its exterior, while roof shape and elevation remain interpreted.",
+      "roofRise": 1.6,
+      "roofBays": 1,
+      "roofAxis": "x",
+      "material": "brick"
+    }
+  ],
+  "removedBuildings": [
+    {
+      "id": "site964-range-24",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Paint, varnish, ink and cooperage ranges east of Sugar House Lane range 24",
+      "rectPixels": [
+        1750,
+        2810,
+        100,
+        93,
+        33
+      ],
+      "material": "brick",
+      "roof": "gable",
+      "footprintEvidence": "Manually read individual range envelope; recesses simplified. Site grouping includes adjoining works shown on the same industrial frontage.",
+      "heightEvidence": "Storey-based estimate; not a measured elevation.",
+      "roofEvidence": "Pitched roof inferred unless a separate elevation override is recorded.",
+      "storeysEstimate": 1.0,
+      "footprint": [
+        [
+          -681.469,
+          -106.848
+        ],
+        [
+          -665.073,
+          -105.645
+        ],
+        [
+          -666.192,
+          -90.397
+        ],
+        [
+          -682.587,
+          -91.6
+        ]
+      ],
+      "x": -673.83,
+      "z": -98.622,
+      "rotation": 4.1957,
+      "localBounds": [
+        [
+          -8.219792843180308,
+          -7.644407344157676
+        ],
+        [
+          8.219792843180318,
+          7.644407344157647
+        ]
+      ],
+      "width": 16.44,
+      "depth": 15.289,
+      "storeys": 1.0,
+      "height": 3.8,
+      "roofRise": 4.127979965845138,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "areaM2": 251.34,
+      "renderPolygons": [
+        {
+          "outer": [
+            [
+              -665.904,
+              -94.318
+            ],
+            [
+              -670.573,
+              -94.661
+            ],
+            [
+              -670.032,
+              -102.039
+            ],
+            [
+              -665.363,
+              -101.696
+            ],
+            [
+              -665.073,
+              -105.645
+            ],
+            [
+              -672.021,
+              -106.154
+            ],
+            [
+              -672.369,
+              -101.408
+            ],
+            [
+              -674.537,
+              -101.567
+            ],
+            [
+              -674.838,
+              -97.469
+            ],
+            [
+              -682.117,
+              -98.003
+            ],
+            [
+              -682.587,
+              -91.6
+            ],
+            [
+              -666.192,
+              -90.397
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "renderAreaM2": 141.62,
+      "review": "The original Goad rectangle covers labelled open Crystal Wharf/cooperage yard, not a roof. Remove this volume; separately reviewed additions follow the actual northern factory row."
+    },
+    {
+      "id": "site964-range-25",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Paint, varnish, ink and cooperage ranges east of Sugar House Lane range 25",
+      "rectPixels": [
+        1701,
+        2765,
+        120,
+        37,
+        33
+      ],
+      "material": "brick",
+      "roof": "gable",
+      "footprintEvidence": "Manually read individual range envelope; recesses simplified. Site grouping includes adjoining works shown on the same industrial frontage.",
+      "heightEvidence": "Storey-based estimate; not a measured elevation.",
+      "roofEvidence": "Pitched roof inferred unless a separate elevation override is recorded.",
+      "storeysEstimate": 1.0,
+      "footprint": [
+        [
+          -694.068,
+          -104.978
+        ],
+        [
+          -674.393,
+          -103.535
+        ],
+        [
+          -674.838,
+          -97.469
+        ],
+        [
+          -694.513,
+          -98.912
+        ]
+      ],
+      "x": -684.453,
+      "z": -101.223,
+      "rotation": 4.1957,
+      "localBounds": [
+        [
+          -9.863751411816375,
+          -3.0413233519766862
+        ],
+        [
+          9.863751411816358,
+          3.0413233519767227
+        ]
+      ],
+      "width": 19.728,
+      "depth": 6.083,
+      "storeys": 1.0,
+      "height": 3.8,
+      "roofRise": 1.6423146100674204,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "areaM2": 120.0,
+      "renderPolygons": [
+        {
+          "outer": [
+            [
+              -674.393,
+              -103.535
+            ],
+            [
+              -694.068,
+              -104.978
+            ],
+            [
+              -694.513,
+              -98.912
+            ],
+            [
+              -674.838,
+              -97.469
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "renderAreaM2": 119.99,
+      "review": "The original Goad rectangle covers labelled open Crystal Wharf/cooperage yard, not a roof. Remove this volume; separately reviewed additions follow the actual northern factory row."
+    },
+    {
+      "id": "site964-range-26",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Paint, varnish, ink and cooperage ranges east of Sugar House Lane range 26",
+      "rectPixels": [
+        1693,
+        2730,
+        198,
+        37,
+        33
+      ],
+      "material": "brick",
+      "roof": "gable",
+      "footprintEvidence": "Manually read individual range envelope; recesses simplified. Site grouping includes adjoining works shown on the same industrial frontage.",
+      "heightEvidence": "Storey-based estimate; not a measured elevation.",
+      "roofEvidence": "Pitched roof inferred unless a separate elevation override is recorded.",
+      "storeysEstimate": 1.0,
+      "footprint": [
+        [
+          -704.387,
+          -109.856
+        ],
+        [
+          -671.924,
+          -107.474
+        ],
+        [
+          -672.369,
+          -101.408
+        ],
+        [
+          -704.832,
+          -103.789
+        ]
+      ],
+      "x": -688.378,
+      "z": -105.632,
+      "rotation": 4.1957,
+      "localBounds": [
+        [
+          -16.275189829497076,
+          -3.0413233519766725
+        ],
+        [
+          16.275189829496984,
+          3.0413233519767
+        ]
+      ],
+      "width": 32.55,
+      "depth": 6.083,
+      "storeys": 1.0,
+      "height": 3.8,
+      "roofRise": 1.6423146100674106,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "areaM2": 197.99,
+      "renderPolygons": [
+        {
+          "outer": [
+            [
+              -694.068,
+              -104.978
+            ],
+            [
+              -674.393,
+              -103.535
+            ],
+            [
+              -674.537,
+              -101.567
+            ],
+            [
+              -672.369,
+              -101.408
+            ],
+            [
+              -671.924,
+              -107.474
+            ],
+            [
+              -704.387,
+              -109.856
+            ],
+            [
+              -704.832,
+              -103.789
+            ],
+            [
+              -694.212,
+              -103.01
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "renderAreaM2": 159.07,
+      "review": "The original Goad rectangle covers labelled open Crystal Wharf/cooperage yard, not a roof. Remove this volume; separately reviewed additions follow the actual northern factory row."
+    },
+    {
+      "id": "site964-range-27",
+      "siteId": 964,
+      "source": "goad-f3-sugar",
+      "name": "Paint, varnish, ink and cooperage ranges east of Sugar House Lane range 27",
+      "rectPixels": [
+        1605,
+        2680,
+        108,
+        80,
+        33
+      ],
+      "material": "brick",
+      "roof": "gable",
+      "footprintEvidence": "Manually read individual range envelope; recesses simplified. Site grouping includes adjoining works shown on the same industrial frontage.",
+      "heightEvidence": "Storey-based estimate; not a measured elevation.",
+      "roofEvidence": "Pitched roof inferred unless a separate elevation override is recorded.",
+      "storeysEstimate": 1.0,
+      "footprint": [
+        [
+          -713.388,
+          -113.072
+        ],
+        [
+          -695.681,
+          -111.773
+        ],
+        [
+          -696.643,
+          -98.656
+        ],
+        [
+          -714.35,
+          -99.955
+        ]
+      ],
+      "x": -705.015,
+      "z": -105.864,
+      "rotation": 4.1957,
+      "localBounds": [
+        [
+          -8.877376270634768,
+          -6.5758342745442295
+        ],
+        [
+          8.877376270634768,
+          6.575834274544258
+        ]
+      ],
+      "width": 17.755,
+      "depth": 13.152,
+      "storeys": 1.0,
+      "height": 3.8,
+      "roofRise": 3.5509505082538917,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "areaM2": 233.5,
+      "streetTrimAreaM2": 6.22,
+      "streetTrimEvidence": "Registered 1893 OS street and pavement corridor takes precedence over the approximate range envelope; source footprint retained.",
+      "renderPolygons": [
+        {
+          "outer": [
+            [
+              -704.832,
+              -103.789
+            ],
+            [
+              -704.387,
+              -109.856
+            ],
+            [
+              -695.867,
+              -109.231
+            ],
+            [
+              -695.681,
+              -111.773
+            ],
+            [
+              -713.388,
+              -113.072
+            ],
+            [
+              -713.812,
+              -107.285
+            ],
+            [
+              -712.663,
+              -99.832
+            ],
+            [
+              -696.643,
+              -98.656
+            ],
+            [
+              -696.312,
+              -103.164
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "renderAreaM2": 175.32,
+      "review": "The original Goad rectangle covers labelled open Crystal Wharf/cooperage yard, not a roof. Remove this volume; separately reviewed additions follow the actual northern factory row."
+    }
+  ],
+  "structures": [
+    {
+      "id": "stack-964-1658-3500",
+      "sourceFid": 1230955,
+      "sourcePolygons": [
+        [
+          [
+            [
+              -632.3574580538552,
+              0.7571941100177355
+            ],
+            [
+              -632.5764124254929,
+              0.34106205811258405
+            ],
+            [
+              -632.6797253330005,
+              -0.20816030958667397
+            ],
+            [
+              -632.4161258776439,
+              -0.5949130666558631
+            ],
+            [
+              -631.8649852765957,
+              -0.6898748858366162
+            ],
+            [
+              -631.5150113438722,
+              -0.6158368079341017
+            ],
+            [
+              -631.4763490927871,
+              -0.1292216120637022
+            ],
+            [
+              -631.3579843993066,
+              0.4382574627525173
+            ]
+          ]
+        ]
+      ],
+      "centre": [
+        -632.0262696521955,
+        0.0009582698632971039
+      ],
+      "rotation": -9.776104908691295,
+      "priorCentre": [
+        -632.429,
+        8.063
+      ],
+      "preservedHeight": 22,
+      "radius": 0.5,
+      "priorRadius": 1.05,
+      "profileEvidence": "Interpreted shaft radius narrows from 1.05 to 0.5 m so the plinth fits the small mapped base. Previous inferred 22 m height is retained; profile is not a measured elevation.",
+      "review": "Goad southern boiler chimney matched to independent OS base 1230955 in the opening between the courtyard range and riverside shed; shaft height retained."
+    },
+    {
+      "id": "stack-964-1869-2754",
+      "centre": [
+        -659.799322753555,
+        -118.27237988265668
+      ],
+      "rotation": 2.121612886610208,
+      "priorCentre": [
+        -661.123,
+        -116.115
+      ],
+      "preservedHeight": 15.24,
+      "transferGroup": "crystal-barber-dane-532",
+      "review": "Goad boiler chimney transferred within corrected compartment 532 near its southern dividing wall. No independent OS base supplied; retain printed 50 ft (15.24 m) height."
+    }
+  ],
+  "boundaryOverlapReviews": [],
+  "yards": [
+    {
+      "id": 96402,
+      "parentSiteId": 964,
+      "name": "Crystal Wharf and Talbot working yard",
+      "polygons": [
+        [
+          [
+            [
+              -715.492,
+              -124.743
+            ],
+            [
+              -634.262,
+              -122.498
+            ],
+            [
+              -629.998,
+              -116.3
+            ],
+            [
+              -628.146,
+              -102.982
+            ],
+            [
+              -710.412,
+              -102.228
+            ],
+            [
+              -712.484,
+              -109.97
+            ]
+          ]
+        ]
+      ],
+      "mosaicBounds": [
+        -725,
+        -137,
+        -625,
+        -72
+      ],
+      "mosaicPixels": [
+        [
+          77,
+          198
+        ],
+        [
+          295,
+          210
+        ],
+        [
+          306,
+          227
+        ],
+        [
+          310,
+          263
+        ],
+        [
+          89,
+          259
+        ],
+        [
+          84,
+          238
+        ]
+      ],
+      "allowStock": false,
+      "evidence": "Working-ground envelope read from the inspected OS/Goad fences and wharf frontage. Exclude buildings, roads, chimneys and water during generation. Surface finish is interpreted; this is not a cadastral boundary or evidence of a single occupier. No stock/equipment added."
+    },
+    {
+      "id": 96403,
+      "parentSiteId": 964,
+      "name": "Barber and southern ink-works yards",
+      "polygons": [
+        [
+          [
+            [
+              -667.514,
+              -17.237
+            ],
+            [
+              -624.968,
+              -27.309
+            ],
+            [
+              -616.608,
+              6.259
+            ],
+            [
+              -611.909,
+              28.413
+            ],
+            [
+              -657.089,
+              37.442
+            ],
+            [
+              -663.549,
+              5.309
+            ],
+            [
+              -669.615,
+              -12.352
+            ]
+          ]
+        ]
+      ],
+      "mosaicBounds": [
+        -678,
+        -33,
+        -613,
+        42
+      ],
+      "mosaicPixels": [
+        [
+          198,
+          235
+        ],
+        [
+          313,
+          211
+        ],
+        [
+          333,
+          302
+        ],
+        [
+          344,
+          362
+        ],
+        [
+          222,
+          383
+        ],
+        [
+          207,
+          296
+        ],
+        [
+          192,
+          248
+        ]
+      ],
+      "allowStock": false,
+      "evidence": "Working-ground envelope read from the inspected OS/Goad fences and wharf frontage. Exclude buildings, roads, chimneys and water during generation. Surface finish is interpreted; this is not a cadastral boundary or evidence of a single occupier. No stock/equipment added."
+    }
+  ],
+  "supersedesDeferred": [
+    "site964-range-17",
+    "site964-range-18",
+    "site964-range-19",
+    "site964-range-20",
+    "site964-range-21",
+    "site964-range-22",
+    "site964-range-23",
+    "site964-range-24",
+    "site964-range-25",
+    "site964-range-26",
+    "site964-range-27",
+    "site964-range-28"
+  ],
+  "deferred": [
+    {
+      "feature": "Small isolated features and plant bases, including 1217966, 1065632 and 1242744",
+      "reason": "Not independently identified as complete building volumes; retain supplied flat plans pending feature review."
+    }
+  ]
+}

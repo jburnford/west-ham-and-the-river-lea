@@ -94,8 +94,24 @@ the district total to 145. Its old mill is traced directly from OS, eighteen
 chimney positions are corrected, and the waterfront bank retains the millrace.
 The Sugar House / cooperage and Winstone pass brings the total to 163, including
 three added low compartments. It corrects lane access and the chimney opening,
-and restores the mapped cooperage working yard. Other Sugar House Lane groups
-remain for the next pass.
+and restores the mapped cooperage working yard. The western continuation adds
+38 source-linked ranges at Hodson, Dane, Winstone and Wildash, bringing the total
+to 201. Eleven omitted rooms are added and two duplicate sheet-edge models are
+removed; four chimney positions, the riverbank and lane clearance are corrected.
+The Crystal Wharf / Barber pass adds 21 source-linked ranges, bringing the total
+to 222. It replaces four open-yard blocks with the mapped northern factory row,
+adds thirteen omitted rooms, corrects two chimneys and restores two working yards.
+All 40 eastern Sugar House Lane ranges now have source links. The High Street
+starch, tin-box and confectionery pass adds 18 linked ranges, bringing the total
+to 240, with four omitted rooms and a corrected Hogarth chimney. The Bow Bridge
+bone and chemical works pass brings the total to 250. Its 17 ranges include twelve
+supplied-outline matches and five rooms traced directly from OS, replacing the
+earlier provisional transfers. Two omitted rooms and a mapped 50-foot retort
+chimney are added, with the adjoining riverbank corrected locally.
+Hunt's neighbouring soap works now has ten source-linked ranges, bringing the
+district total to 260 at sixteen sites. The furnace rooms, office/laboratory and
+engine room are restored; two chimney positions and two local bank controls are
+corrected. Shared factory-room divisions and elevations remain interpreted.
 Abbey's supporting group now adds eight mapped buildings, four lower annexes and
 five revised access routes; roof forms and elevations remain interpreted.
 See [the continuation notes](scenes/channelsea-sewer-panorama/CONTINUE_FOOTPRINT_MATCHING.md)

@@ -209,8 +209,8 @@ def build():
     output = ROOT / 'docs/data/ground-plan.json'
     # Reviewed local bank reconciliation; retain the opposite bank and the
     # old millrace instead of trimming the mapped factory walls to the old GIS.
-    bank_path = ROOT/'data/maps/city-mills-bank-alignment.json'
-    if bank_path.exists():
+    for bank_name in ['city-mills-bank-alignment.json', 'west-sugar-bank-alignment.json', 'bow-works-bank-alignment.json', 'hunt-works-bank-alignment.json']:
+        bank_path = ROOT/'data/maps'/bank_name
         correction = json.loads(bank_path.read_text())
         river = next(r for r in result['rivers'] if r['id']==correction['riverId'])
         ring = river['polygons'][correction['polygonIndex']][correction['ringIndex']]
