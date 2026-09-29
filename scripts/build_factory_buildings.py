@@ -9,8 +9,9 @@ from pathlib import Path
 
 import numpy as np
 from shapely import set_precision
-from shapely.geometry import Polygon, Point, LineString
+from shapely.geometry import Polygon, Point
 from shapely.ops import unary_union
+from factory_street_clearance import street_clearances
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -52,7 +53,7 @@ def build():
     west['sites'] = western['sites']
     water = unary_union([Polygon(p[0], p[1:]) for r in plan['rivers'] + west['rivers'] for p in r['polygons']])
     street_traces = json.loads((ROOT/'data/maps/district-road-traces.json').read_text())
-    streets = unary_union([LineString(r['points']).buffer(r['width']/2+1.1, cap_style=2, join_style=2) for r in street_traces['roads']])
+    streets, frontage_streets = street_clearances(street_traces['roads'])
     old = json.loads((ROOT/'data/maps/city-mills-building-register.json').read_text())
     exact = {p['id']: p['footprintPixels'] for b in old['buildings'] for p in b.get('parts', [])}
     alignment = json.loads((ROOT/'data/maps/factory-footprint-alignment.json').read_text())
@@ -61,7 +62,13 @@ def build():
                        'data/maps/oil-wharf-footprint-alignment.json', 'data/maps/howards-footprint-alignment.json',
                        'data/maps/sugar-house-footprint-alignment.json', 'data/maps/west-sugar-footprint-alignment.json',
                        'data/maps/crystal-barber-footprint-alignment.json', 'data/maps/abbey-west-footprint-alignment.json',
-                       'data/maps/bow-works-footprint-alignment.json', 'data/maps/hunt-works-footprint-alignment.json']
+                       'data/maps/bow-works-footprint-alignment.json', 'data/maps/hunt-works-footprint-alignment.json',
+                       'data/maps/lascelles-ultramarine-footprint-alignment.json',
+                       'data/maps/williams-asphalte-footprint-alignment.json',
+                       'data/maps/refinery-printing-footprint-alignment.json',
+                       'data/maps/kendrick-usher-footprint-alignment.json',
+                       'data/maps/three-mills-north-footprint-alignment.json',
+                       'data/maps/three-mills-south-footprint-alignment.json']
     compounds = [json.loads((ROOT/path).read_text()) for path in group_registers]
     structure_alignment = {}
     map_traces = {}
@@ -96,6 +103,10 @@ def build():
             row.update({k:v for k,v in map_traces[row['id']].items() if k != 'modelId'})
         correction = aligned.get(row['id'])
         if correction:
+            if 'priorSiteId' in correction:
+                assert row['siteId']==correction['priorSiteId']
+                row.update(siteId=correction['siteId'], priorSiteId=correction['priorSiteId'],
+                           siteAttributionEvidence=correction['siteAttributionEvidence'])
             row.update(name=correction['name'], worldFootprint=correction['worldFootprint'], priorFootprint=correction['priorFootprint'],
                        priorRotation=correction['priorRotationDegrees'],
                        footprintSource='author-os-footprints-1891-96',
@@ -145,6 +156,7 @@ def build():
                                  'fraction': round(wet/polygon.area, 3),
                                  'review': row.get('waterReview', 'Registration/bank comparison required')})
     ids = [b['id'] for b in buildings]
+    assert set(frontage_streets)<=set(ids), 'Unknown frontage-clearance model'
     assert len(ids) == len(set(ids)), 'Duplicate range ID'
     site_ids = {s['id'] for s in raw['sites']}
     assert {b['siteId'] for b in buildings} == site_ids, 'Every surveyed factory must have ranges'
@@ -158,12 +170,13 @@ def build():
     adjustments = []
     for i in sorted(range(len(buildings)), key=lambda i: (-buildings[i]['height'], polys[i].area, buildings[i]['id'])):
         b, original = buildings[i], polys[i]
+        street_exclusion = frontage_streets.get(b['id'],streets)
         q = original.difference(water.buffer(.12)) if b.get('bankTrim') else original
-        street_cut = q.intersection(streets).area
+        street_cut = q.intersection(street_exclusion).area
         if street_cut > .1:
             b['streetTrimAreaM2'] = round(street_cut, 2)
             b['streetTrimEvidence'] = 'Registered 1893 OS street and pavement corridor takes precedence over the approximate range envelope; source footprint retained.'
-        q = set_precision(q.difference(streets).difference(occupied), .001)
+        q = set_precision(q.difference(street_exclusion).difference(occupied), .001)
         if not q.is_empty:
             occupied = occupied.union(q)
         parts = [p for p in getattr(q, 'geoms', [q]) if p.geom_type == 'Polygon' and p.area > .1]

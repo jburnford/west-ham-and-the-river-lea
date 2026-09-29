@@ -112,7 +112,32 @@ Hunt's neighbouring soap works now has ten source-linked ranges, bringing the
 district total to 260 at sixteen sites. The furnace rooms, office/laboratory and
 engine room are restored; two chimney positions and two local bank controls are
 corrected. Shared factory-room divisions and elevations remain interpreted.
+The Lascelles and British Ultramarine pass adds six source-linked ranges, bringing
+the total to 266 at eighteen sites. It records two narrow OS sheet-join corrections,
+retains the Ultramarine chimney opening and clears the southern lane frontage.
+Williams wharf and French Asphalte add 17 source-linked ranges, bringing the total
+to 283 at nineteen sites, plus two rooms directly traced from OS. The omitted
+room 704 is restored, a boundary lean-to is reassigned to Ultramarine, and two
+chimneys and the adjoining lane are aligned. Missing sheet-edge geometry is
+recorded separately from supplied outlines; existing elevations are retained.
+The refinery, machinery-depot and printing-works pass adds seventeen source-linked
+ranges, reaching 300 at twenty sites. Five omitted rooms are restored, the northern
+storage shed is directly traced, and both chimneys follow mapped bases. Local
+lane and pavement corrections retain the façades through a narrow frontage.
 Abbey's supporting group now adds eight mapped buildings, four lower annexes and
 five revised access routes; roof forms and elevations remain interpreted.
 See [the continuation notes](scenes/channelsea-sewer-panorama/CONTINUE_FOOTPRINT_MATCHING.md)
 for the next sites, authoring files, rebuild commands and completed checks.
+
+The Kendrick / Usher continuation adds eight source-linked ranges, reaching 308
+at twenty-three sites. Two missing rooms are restored, both Kendrick sheet-seam
+gaps have explicit OS completions, and Usher's main factory is directly traced.
+The scene now has 546 ranges; the 40 ft chimney follows its mapped base and the
+northern lane clears the corrected walls. Existing heights and roofs are retained.
+
+Northern Three Mills adds twenty source-linked ranges, reaching 328 at twenty-four
+sites. The scene has 547 ranges after restoring timber room 828. One omitted
+outline is directly traced and one small Goad-only outbuilding remains provisional.
+Mapped chimney/tank positions and a revised works passage complete this northern
+pass. The southern continuation matches eight more ranges and three tanks,
+reaching 336 source-linked ranges. House/Clock Mills and the wharf ranges are next.

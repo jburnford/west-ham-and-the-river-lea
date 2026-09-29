@@ -5,6 +5,12 @@ circa-1900 reconstruction. Continue adjusting existing 3D models to the supplied
 building footprints, site by site. Exact architectural accuracy is not required,
 but record the distinction between map evidence and interpreted elevations.
 
+Commit checkpoint: `527d3e9` contains the western Sugar House, Crystal/Barber,
+High Street, Bow Bridge and Hunt passes. The subsequent Lascelles / Ultramarine,
+Williams / French Asphalte, refinery / printing, Kendrick / Usher and both Three Mills distillery continuations remain local
+and uncommitted.
+The separate height work is excluded.
+
 ## Start here
 
 1. Read local `MEMORY.md`, this file, `FOOTPRINT_ALIGNMENT.md` and
@@ -18,7 +24,7 @@ but record the distinction between map evidence and interpreted elevations.
 
 ## Completed model alignment
 
-- 260 source-linked factory ranges at sixteen sites, including 24 Slater & Palmer /
+- 336 source-linked factory ranges at twenty-four sites, including 24 Slater & Palmer /
   Marshgate Mills ink-works ranges. First-pass registry:
   `data/maps/factory-footprint-alignment.json`. It retains original outlines,
   source IDs, changes in position/area and previous roof/height interpretations.
@@ -104,6 +110,34 @@ but record the distinction between map evidence and interpreted elevations.
   approximately within its Goad room. `hunt-works-bank-alignment.json` adjusts
   two local controls, including a further correction to shared Bow Bridge vertex
   39, clearing the furnace rooms while retaining the opposite bank.
+- Lascelles / British Ultramarine:
+  `data/maps/lascelles-ultramarine-footprint-alignment.json` links all six existing
+  ranges in five groups. Two narrow gaps at an OS sheet join are explicitly
+  reconciled, keeping the continuous Goad exterior and southern chimney opening.
+  The 60-foot shaft follows base 986471. The final Sugar House Lane control moves
+  3.5 m west to clear the process house; upstream controls and width remain.
+  Earlier heights and roofs are retained. Northern Williams wharf boundary rooms
+  are resolved in the following pass.
+- Williams wharf / French Asphalte:
+  `data/maps/williams-asphalte-footprint-alignment.json` adds seventeen source-linked
+  ranges in fourteen groups, two direct OS traces and the omitted Goad 704 room.
+  An explicit 127.897 m² OS completion supplies the missing eastern sheet edge
+  of the western Asphalte body. Internal room cuts remain interpreted; raw source
+  polygons are retained separately. The boundary lean-to moves to Ultramarine
+  site 566 while keeping its stable model ID. Both Asphalte stacks are corrected,
+  one to mapped base 1087863 (printed 60 feet), the other within its Goad room.
+  Two southern lane controls move 1.5 m west, clearing three mapped façades.
+  Site 568 has eighteen ranges; site 566 has four. Existing elevations remain.
+- Refinery / printing / machinery depot:
+  `data/maps/refinery-printing-footprint-alignment.json` accounts for all thirteen
+  former site-567 ranges and adds rooms 652, 684, 685, 686 and 682. Seventeen
+  ranges match supplied outlines; storage shed 688 is a direct OS trace because
+  it is absent from the extract. Chimneys follow bases 1201365 and 1146475,
+  retaining inferred 22 m heights with narrower interpreted shafts. The lane
+  gains two bend controls, and the passage reconnects and clears the shed.
+  Four mapped façades use a documented 0.55 m minimum pavement clearance where
+  the opposing buildings leave 6.712 m; carriageway width stays 5.2 m. Actual
+  pavement meshes clip against those retained walls. Prior elevations remain.
 - Abbey Mills main station: corrected orientation (~35.88°), main cross and two
   lower rear boiler wings. Source outline 459 includes the whole attached
   complex; do not enlarge the ornate station to fill it. Chimney bases use
@@ -116,8 +150,25 @@ but record the distinction between map evidence and interpreted elevations.
   period-map access traces. These volumes use the station plan and shared factory
   renderer, separately from the industrial ranges. Heights and roofs remain
   interpreted. Tiny features 1064653 and 1162448 are explicitly deferred.
-- The broader scene has 43 factory sites, 538 ranges, 90 factory chimneys,
-  196 terrace rows / 3,204 houses and 85 modeled yards (36 wear routes, 160 stock groups).
+- The broader scene has 43 factory sites, 547 ranges, 90 factory chimneys,
+  196 terrace rows / 3,204 houses and 85 modeled yards (37 wear routes, 160 stock groups).
+  Eleven factory ranges use direct OS traces; two retain local Goad transfers.
+- Kendrick / Usher: `data/maps/kendrick-usher-footprint-alignment.json` adds
+  eight linked ranges, two OS seam completions and one direct main-factory trace.
+  Varnish room 612 and two-floor room 620 are restored. The 40 ft chimney follows
+  base 1154445; a matching hole keeps its plinth clear. Two local lane controls
+  preserve northern walls. All seven prior elevations and roofs are retained.
+- Northern Three Mills: `data/maps/three-mills-north-footprint-alignment.json`
+  adds twenty source-linked ranges in fifteen groups, direct OS range 824 and a
+  provisional local Goad 800 transfer. Timber room 828 is restored. The 31 m
+  inferred chimney height and two 6 m tank heights are retained at mapped bases.
+  The public lane/bridge remain; a narrower works passage clears the north rooms.
+  Southern and mill/wharf rendered geometry is unchanged.
+- Southern Three Mills: `data/maps/three-mills-south-footprint-alignment.json`
+  aligns eight existing ranges (21–28) in five groups and three mapped tanks.
+  The warehouse notch stays open; existing heights and roofs are preserved.
+  Shared authoring records and a preflight clearance check reduce repeated work.
+  Small gangways, rounded plant features and gas apparatus remain deferred.
 - Housing rows have not yet been aligned to the supplied regional footprints.
 
 Useful local destinations:
@@ -130,6 +181,10 @@ Useful local destinations:
 - `http://localhost:4175/?view=factory-964`
 - `http://localhost:4175/?view=factory-254`
 - `http://localhost:4175/?view=factory-564`
+- `http://localhost:4175/?view=factory-566`
+- `http://localhost:4175/?view=factory-568`
+- `http://localhost:4175/?view=factory-567`
+- `http://localhost:4175/?view=factory-570`
 - `http://localhost:4175/?view=west-ham-region`
 
 ## Source data
@@ -152,8 +207,22 @@ They cover historic West Ham plus a 3 km buffer. Regional ground is provisional.
 
 ## Next working sequence
 
-Next review Lascelles stone/terra cotta and British Ultramarine works, sites
-565/566, currently three ranges each. Hunt's ten ranges are source-linked;
+Next review the eight House/Clock Mill and wharf ranges. The northern pass
+accounts for 22 ranges (1–20, 29 and added 828); the southern pass aligns ranges
+21–28. Site 419 retains 38 ranges. Preserve the separate mill
+landmarks until the millrace crossings, kiln roofs and turret are reviewed together.
+Northern Goad 800 remains explicitly provisional; no OS footprint is established.
+Kendrick north, Usher and Kendrick south (569/570/571) are accounted for with
+2/5/2 ranges. Source 20821 belongs to northern Kendrick; it is separate from
+947-25/source 16620. Both Kendrick sheet-seam gaps have explicit OS completions;
+Usher's main L-shaped room is a direct trace. Goad's uncertain northern 1–2 floor
+boundary and the southern July 1893 construction status remain documented.
+Site 567 now has eighteen accounted-for ranges. Williams / French Asphalte's eighteen ranges are accounted
+for, including the added 704 room and the lean-to reassigned to Ultramarine.
+Broader working-ground envelopes for Williams, Asphalte, Lascelles and Ultramarine
+remain a separate parcel-review task. Lascelles and Ultramarine's seven current
+ranges are source-linked, with explicit sheet-join reconciliation.
+Hunt's ten ranges are source-linked;
 its small platforms, service projections and western empties strip remain
 explicitly deferred plant/yard details. Bow Bridge site 254's
 seventeen ranges are accounted for. Its Goad 530 open-under structure, water
@@ -230,6 +299,12 @@ python3 scripts/check_crystal_barber_alignment.py
 python3 scripts/check_abbey_west_alignment.py
 python3 scripts/check_bow_works_alignment.py
 python3 scripts/check_hunt_works_alignment.py
+python3 scripts/check_lascelles_ultramarine_alignment.py
+python3 scripts/check_williams_asphalte_alignment.py
+python3 scripts/check_refinery_printing_alignment.py
+python3 scripts/check_kendrick_usher_alignment.py
+python3 scripts/check_three_mills_north_alignment.py
+python3 scripts/check_three_mills_south_alignment.py
 python3 scripts/check_abbey_station_plan.py
 python3 scripts/check_factory_yards.py
 python3 scripts/check_housing_detail.py
@@ -248,7 +323,16 @@ python3 scripts/review_factory_buildings.py --crystal-barber-only --url http://1
 python3 scripts/review_factory_buildings.py --abbey-west-only --url http://127.0.0.1:4175
 python3 scripts/review_factory_buildings.py --bow-works-only --url http://127.0.0.1:4175
 python3 scripts/review_factory_buildings.py --hunt-works-only --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --lascelles-ultramarine-only --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --williams-asphalte-only --software-gl --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --refinery-printing-only --software-gl --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --kendrick-usher-only --software-gl --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --three-mills-south-only --software-gl --url http://127.0.0.1:4175
 ```
+
+If WSL's hardware-backed review loses its WebGL context, add `--software-gl`
+to the factory review command. This uses SwiftShader for local captures and
+records the graphics backend in the report; it does not alter the public app.
 
 Geometry checks, 77 navigation destinations, four Abbey views and five factory
 alignment views passed before the initial checkpoint. The continuation adds
@@ -277,8 +361,8 @@ Private source comparisons and the immutable pre-pass snapshot are under
 the authoring register. Routine builds need only the saved register.
 Oil Wharf, Howards and eastern Sugar House were committed as `6dc446d` on
 29 September. The western, Crystal Wharf / Barber, High Street, Bow Bridge and Hunt
-continuations remain local and uncommitted. No push
-or deployment. Its private immutable snapshot is `west-sugar-before.json` in
+continuations were subsequently committed as `527d3e9`. No push
+or deployment. The western private immutable snapshot is `west-sugar-before.json` in
 `reference/footprint-model-alignment/`; routine builds need only the saved register.
 Browser screenshots and diagnostics
 are local under `scenes/channelsea-sewer-panorama/review/`. No mobile audit.
@@ -317,7 +401,47 @@ or shader errors. Minimum group agreement is 99.977%; the checked local Lea
 channel is 23.98 m wide. `prepare_hunt_works_alignment.py` needs the private
 extract and immutable `hunt-works-before.json` / `hunt-works-ground-before.json`
 snapshots in `reference/footprint-model-alignment/`. Routine builds use saved JSON.
-Latest local asset revision: `73acc66175bb` (all public asset hashes verified).
+Lascelles / Ultramarine: all six ranges pass the source, sheet-join, retained-height,
+chimney-hole, lane and neighbour checks. Earlier alignment, factory, yard, housing,
+street, Abbey, western and 77 navigation checks pass. The prepare script is
+idempotent, including the lane correction. It needs the private extract, cached
+OS maps and immutable `reference/footprint-model-alignment/lascelles-ultramarine-before.json`.
+Routine builds use saved JSON. Minimum agreement with reconciled outlines is
+99.999%; raw Ultramarine agreement is lower because the explicit seam strips are
+absent from the supplied extract. See `FOOTPRINT_ALIGNMENT.md` for both measures.
+Six browser views passed and were visually inspected with `--software-gl`,
+confirming all six ranges and the 60-foot chimney without browser/shader errors.
+Two preceding hardware-backed attempts lost their WebGL context; the software
+review completed successfully. The broader Lascelles/Ultramarine working-ground
+envelopes remain for a separate parcel review alongside Williams wharf.
+Williams / French Asphalte: seventeen source-linked ranges, two direct OS traces,
+added 704, corrected lean-to attribution, two chimneys and the local lane pass
+geometry and clearance checks. All prior alignment, factory, yard, housing,
+street, Abbey, western and 77 navigation checks pass. Preparation is byte-for-byte
+idempotent; routine builds use saved JSON. Source preparation requires the private
+extract, cached OS tiles and immutable `williams-asphalte-before.json`; run it
+after Lascelles/Ultramarine preparation when regenerating both road corrections.
+Minimum completed-reference agreement is 99.998%; western Asphalte raw-source
+agreement is 82.186% because its eastern map completion is absent from the extract.
+Six Williams/Asphalte browser views passed with SwiftShader and were visually
+inspected, confirming all eighteen site-568 ranges, the reassigned lean-to and
+both chimney positions without browser/shader errors. Yard-envelope review remains
+separate. Regional masking now covers 234,606 visible features in 115 tiles.
+Refinery / printing / machinery depot: all eighteen site-567 ranges are accounted
+for (seventeen source-linked plus storage shed 688 directly traced), including
+five additions. New source/trace, chimney, road and neighbour checks pass, as do
+all preceding alignment, factory, yards, housing, streets, Abbey, western and
+77 navigation checks. Minimum rendered source agreement is 99.980%. Existing
+factory geometry outside site 567 is unchanged. The narrow lane keeps its 5.2 m
+carriageway; four recorded façades have an interpreted 0.55 m minimum pavement
+clearance, with actual pavement meshes clipped against the mapped walls.
+Preparation is byte-for-byte idempotent. Run it after the Lascelles and Williams
+preparations if regenerating all authoring registers; saved JSON suffices for
+routine scene builds. Regional masking now covers 234,589 visible features.
+Six refinery/printing browser views passed with SwiftShader and were visually
+inspected, including the narrow lane and stepped northern shed; all eighteen
+ranges and both mapped chimneys rendered without browser/shader errors.
+Latest local asset revision: `962666bb4d46` (all public asset hashes verified).
 
 ## Preserve these corrections
 
@@ -345,3 +469,51 @@ contexts. Values are reported in feet above Liverpool OD; no Newlyn conversion
 or scene-y alignment has been established. Do not apply a 0–40 ft cutoff across
 the wider region. The 2003 terrain mosaic is downloaded but not integrated.
 See `TOPOGRAPHY_RESEARCH.md` for coverage and datum limitations.
+
+Kendrick / Usher preparation is last in the authoring sequence, after the
+refinery/printing preparation. Routine builds use the saved JSON registers.
+Focused browser review: `python3 scripts/review_factory_buildings.py
+--kendrick-usher-only --software-gl`. The software GL flag avoids the recurring
+WSL hardware-context loss; inspect all six generated views.
+
+Kendrick/Usher final verification: all geometry and prior alignment checks pass;
+six SwiftShader views passed and were visually inspected. Manifest
+`5461589935f6` matches all 25 module/139 asset hashes. Regional coverage is
+234,579 visible features, 115 tiles (4.01 MB). Current yard counts are
+85 surfaces, 36 wear routes and 160 stock groups. Changes remain uncommitted.
+
+Northern Three Mills authoring: `prepare_three_mills_north_alignment.py` uses the
+private source extract, cached map and immutable `three-mills-before.json`.
+It is idempotent and follows the Kendrick/Usher pass in a full regeneration.
+The new works-passage record is replaced by name, never duplicated. Routine
+scene builds use the saved JSON.
+
+Northern Three Mills final checks: all geometry and earlier alignment checks pass,
+with six inspected SwiftShader views and a final tank capture after the radius
+adjustment. Manifest `1669da522491` matches 25 module/139 asset hashes. Regional
+coverage is 234,569 visible features, 115 tiles (4.01 MB); yards 85/36/160.
+Factory progress: 347 of 547 ranges have reviewed source matches or direct traces;
+198 still need alignment and two retain provisional transfers. Twenty-seven sites
+have some remaining work; sixteen are complete for their current building ranges.
+Housing's 196 rows remain a separate footprint-alignment task.
+
+
+Southern Three Mills authoring: `prepare_three_mills_south_alignment.py` uses
+`three-mills-south-before.json` and the private source extract; saved output is
+byte-for-byte idempotent. North/south preparation shares
+`factory_alignment_records.py`. Run the southern check with `--preflight`
+before regenerating dependent layers. Runtime checks preserve every other
+building and structure, including the eight pending mill/wharf ranges.
+
+The southern tank review also fixes yard exclusions: all modeled tanks are now
+blocked, resolving a barrel group inside a vessel. Yards retain 85/36/160 and
+clear all tanks. Housing remains 196/3204/3191. Regional coverage is 234,558
+visible features in 115 tiles (4.01 MB). Manifest `9acadf9c9fc7` matches all
+25 module/139 asset hashes. Geometry, prior alignment, yard, housing, street,
+Abbey, western-completion and 77 navigation checks pass.
+
+Final southern browser review: all three SwiftShader views passed and were
+visually inspected (`review/three-mills-south-{plan,tanks,court}.png`). The report
+`review/three-mills-south-alignment-checks.json` confirms all 38 site ranges,
+the engine chimney and five fitted tanks reach the renderer without browser or
+shader errors. Final manifest: `9acadf9c9fc7`. Changes remain uncommitted.

@@ -15,7 +15,7 @@ corrections = {c['modelId']: c for c in r['buildings']}
 assert len(corrections) == 10 and len(r['groups']) == 6 and len(r['additionalBuildings']) == 3
 assert set(corrections) == {b['id'] for b in s['buildings'] if b['siteId'] == 564}
 assert r['supersedesLocalTransfers'] == ['site564-range-1']
-assert s['footprintAlignment']['locallyTransferredRanges'] == 1
+assert s['footprintAlignment']['locallyTransferredRanges'] == 2
 registers = [load('data/maps/factory-footprint-alignment.json')] + [load(p) for p in s['footprintAlignment']['groupRegisters']]
 used = set()
 for q in registers:

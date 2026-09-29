@@ -775,3 +775,459 @@ positions reached the renderer without browser/shader errors. Asset revision
 deployment. This and the four preceding continuations remain uncommitted after
 factory commit `6dc446d`. Next: Lascelles stone/terra cotta and British Ultramarine
 works, sites 565/566, currently three ranges each.
+
+## Commit checkpoint, 29 September 2026
+
+At the author's request, the western Sugar House, Crystal/Barber, High Street,
+Bow Bridge and Hunt continuations were committed as `527d3e9`,
+“Align western Sugar House, High Street and Bow Bridge factory footprints.”
+The 46-file commit includes authoring registers, generators/checks, dependent
+scene assets and documentation. Height-extraction work and `docs2/` were excluded.
+No push or deployment. The author then requested the continuation below.
+
+## Lascelles / British Ultramarine, 29 September 2026
+
+Six existing ranges at sites 565/566 now link to supplied outlines in five groups.
+No ranges are added or removed. The district remains at 538 ranges, 43 sites and
+90 chimneys, with 266 source-linked ranges at eighteen sites.
+`data/maps/lascelles-ultramarine-footprint-alignment.json` is prepared by
+`scripts/prepare_lascelles_ultramarine_alignment.py`; routine builds need only
+the saved register.
+
+| Group | Supplied source IDs | Model ranges |
+| --- | --- | --- |
+| Lascelles main terra cotta factory | 6127 | 565-1 |
+| Lascelles southern room, Goad 628 | 102625 | 565-2 |
+| Lascelles northern room, Goad 626 | 473976 | 565-3 |
+| Ultramarine main process house | 5241, 4566 | 566-1 |
+| Ultramarine southern bays | 13778, 48472 | 566-2/3 |
+
+The supplied Ultramarine polygons stop at opposing edges of the OS sheet join,
+leaving a roughly 1.2 m registration gap. Goad shows a continuous works body.
+Two narrow, explicitly saved connector polygons reconcile that join: about
+22.41 m² in the main house and 20.32 m² in the southern bays. They join only the
+paired sheet edges, preserving the exterior walls and source 13778's chimney
+hole. The source polygons remain unmodified in the evidence register; connector
+geometry is a separate interpretation. Existing southern bay proportions, all
+eaves heights, roof rises, directions and bay counts are retained.
+
+Lascelles' rendered groups agree with raw supplied outlines by at least 99.987%.
+Ultramarine's raw-source agreement is 98.161% for the main house and 95.723% for
+the southern bays because the rendered bodies include the recorded join strips.
+Agreement with the reconciled outlines is about 99.999%. These measures test
+geometry, not historical architectural accuracy.
+
+The Ultramarine chimney moves to independent base 986471, retaining the printed
+60-foot height (18.288 m) and interpreted 1.05 m radius. Its plinth fits the base
+and retained roof opening. The final Sugar House Lane control moves 3.5 m west:
+the former coarse road/pavement corridor clipped 34.02 m² from the process house.
+The revised corridor was inspected against the OS gap between the works; width
+remains 5.2 m and all upstream controls are unchanged. Original points and pixel
+coordinates remain in the road register's `lascellesUltramarineAlignment` record.
+Both works now clear roads, water and neighbouring building volumes without
+losing their supplied exterior to renderer clipping. Bank authoring is unchanged.
+
+Small projections 1105121 and 908578 remain deferred. Northern Williams wharf
+rooms and the boundary lean-to (sources 108655, 445081, 59238, 585845 and 656439)
+remain for the full site-568 review, including the omitted Goad 704 room and
+range 17's affiliation. Existing adjoining models are retained. Private OS/Goad
+comparisons, the road overlay and immutable `lascelles-ultramarine-before.json`
+are under `reference/footprint-model-alignment/`. Preparation needs that snapshot,
+the private footprint extract and cached OS maps.
+
+Infrastructure, yards, housing exclusions, regional masks and the manifest are
+rebuilt. Yard totals are 85 surfaces, 38 clear wear routes and 160 stock groups;
+no new yard envelope is introduced. The new checker, earlier alignment checks,
+factory, street, yard, housing, Abbey, western and 77 navigation checks pass.
+
+The six browser views passed and were visually inspected: plan, Lascelles
+factory, lane, Ultramarine process house, chimney opening and Williams boundary.
+All six ranges and the corrected chimney reached the renderer without browser
+or shader errors using the review tool's new `--software-gl` option. Two earlier
+hardware-backed WSL attempts lost their WebGL context, so the successful run
+used SwiftShader. The report records that backend; public rendering settings
+are unchanged. This is not a hardware compatibility or mobile audit.
+
+Asset revision `42e380428366` matches all 25 module and 139 asset hashes.
+Preparation was rerun to verify that neither the joins nor lane control move
+again. The pass remains uncommitted after `527d3e9`; no push or deployment.
+Next: Williams wharf / French Asphalte (568), including the Ultramarine boundary,
+then site 567. Broader Lascelles/Ultramarine working-ground envelopes remain for
+a separate parcel review; existing ground coverage stays provisional there.
+
+
+## Williams wharf / French Asphalte, 29 September 2026
+
+The register `data/maps/williams-asphalte-footprint-alignment.json` accounts for
+all eighteen existing ranges, restores the omitted Goad 704 room, and corrects
+the site attribution of the boundary lean-to. Seventeen ranges are source-linked
+in fourteen groups; two eastern Asphalte rooms absent from the extract are
+separate direct OS traces. The district now has 539 ranges, 90 chimneys and
+283 source-linked ranges at nineteen sites, plus eight direct traces and one
+local Goad transfer.
+
+| Group | Supplied source IDs | Models |
+| --- | --- | --- |
+| Asphalte dwelling 668 | 179094 | 568-1 |
+| Asphalte stables 670 | 65438 | 568-2 |
+| Asphalte west 674/672 | 5501, 739969 | 568-3/4/10/11 |
+| Engine room | 190393, 499290 | 568-5 |
+| Tank-over bay / eastern boilers | 161128 / 114965 | 568-7 / 568-8 |
+| Northern process 680 / storage 676 | Direct OS traces | 568-6 / 568-9 |
+| Williams 694 / 696 / 698 | 225068 / 693774 / 64119 | 568-12 / 568-13 / 568-14 |
+| Williams 700 / 702 | 108655 / 445081, 59238 | 568-15 / 568-16 |
+| Ultramarine boundary lean-to | 656439 | 568-17, reassigned to site 566 |
+| Williams riverside 706 | 148247 | 568-18 |
+| Williams 704 | 585845 | new 568-704 |
+
+The source extract stops at the vertical OS sheet edge through the Asphalte
+works. The missing eastern walls are visible in the cached five-foot map. The
+western group retains all supplied geometry and adds an explicitly recorded
+127.897 m² map completion. Its raw-source agreement is 82.186%, compared with
+23.212% before alignment; agreement with the completed reference is 99.998%.
+These are geometric comparisons, not historical-accuracy scores. Source geometry,
+completion polygon, mosaic bounds and pixel coordinates remain independently
+reviewable. The four Goad west-body compartments use interpreted north/south
+cuts; the narrow seam tip joins the furnace bay below. Room 680's direct trace
+is trimmed against the supplied engine/tank edges to avoid duplicate volumes.
+
+Goad F17 places the boundary lean-to south of Williams' dividing wall, inside
+British Ultramarine. Its existing ID is retained with `priorSiteId` and attribution
+evidence; site 566 gains that fourth range. Added room 704 has Goad's two-floor
+mark and an interpreted 6.9 m eaves height. All eighteen existing heights, roof
+rises, axes and bay counts are preserved. No storey estimate is silently changed.
+
+The eastern chimney follows mapped base 1087863 and retains its printed 60 feet
+(18.288 m). Its interpreted radius narrows from 1.05 to 0.65 m so the plinth fits
+the mapped base. The other chimney keeps its inferred 22 m height and transfers
+within the corrected 674 compartment; no independent mapped base is asserted.
+
+Sugar House Lane's controls 12 and 13 move 1.5 m west within the mapped lane,
+removing over 15 m² of corridor overlap with the Asphalte dwelling and Williams
+694/700. Width 5.2 m and all other controls, including the preceding Ultramarine
+correction, remain. Earlier coordinates/pixels are saved in
+`williamsAsphalteAlignment`; the checker verifies the complete chain of changes.
+
+`prepare_williams_asphalte_alignment.py` requires the private source extract,
+cached OS tiles and immutable `williams-asphalte-before.json`. Routine builds
+use only the saved register. If regenerating multiple authoring registers, apply
+this preparation after Lascelles/Ultramarine so the lane corrections remain in
+order. `check_williams_asphalte_alignment.py` checks supplied-source uniqueness,
+raw/completed geometry, trace coordinates, retained elevations, site attribution,
+road/water/neighbour clearance, both chimney placements and the 60-foot plinth.
+
+Small service projections 1008000, 905626, 895423, 915272, 965896, 1042207 and
+1042217 remain deferred for classification. Broader working-ground envelopes
+for this block still need an OS parcel review. Rebuilt existing yards have
+85 surfaces, 36 clear wear routes and 161 stock groups; no yard is added here.
+
+Validation: all new and preceding alignment checks, factory clearance, yards,
+housing, streets, Abbey, western completion and 77 navigation checks pass.
+The preparation is byte-for-byte idempotent. Six browser views passed using
+SwiftShader and were visually inspected: Asphalte plan/process/boilers, Williams
+plan/riverfront and the Ultramarine boundary. All eighteen site-568 ranges,
+the reassigned lean-to and both corrected chimney positions reached the renderer;
+no browser or shader errors were reported. This is a software-rendering review,
+not a new hardware or mobile audit. The broad provisional grass areas remain
+part of the deferred yard-envelope review.
+
+Asset revision `b02fb580dce5` matches all 25 module and 139 asset hashes. Regional
+masking covers 234,606 visible features in 115 tiles (4.01 MB). This continuation
+and the preceding Lascelles/Ultramarine pass remain local and uncommitted after
+`527d3e9`. Next: site 567, oil refinery / machinery and printing (thirteen ranges).
+
+
+## Refinery / printing works / machinery depot, 29 September 2026
+
+`data/maps/refinery-printing-footprint-alignment.json` resolves all thirteen
+previous site-567 ranges and adds five omitted rooms. Seventeen ranges match
+supplied outlines; the northern storage shed is directly traced from OS. The
+scene now has 544 ranges, 43 sites and 90 chimneys, with 300 source-linked ranges
+at twenty sites, nine direct OS traces and one local Goad transfer. Goad identifies
+separate printing, varnish, machinery-depot, oil-storage and tar-boiling uses
+within the older aggregate site label; the revised names retain those distinctions.
+
+| Range / use | Supplied source IDs |
+| --- | --- |
+| 567-1, colour mixing | 299098 |
+| 567-2, printing engine and southern rooms | 435489, 808632 |
+| 567-3, varnish range | 236310, 835502, 1030800, 1052054 |
+| 567-4, varnish boiling | 859743 |
+| 567-5, varnish store | 693111 |
+| 567-6, depot 658 | 486602 |
+| 567-7, depot factory | 222267 |
+| 567-8, low depot 654 | 150510 |
+| 567-9, shed 666 | 87744 |
+| 567-10, smithy 664/662 | 38428 |
+| 567-11, stables and boiler house | 23884 |
+| 567-12, eastern printing rooms | 299237, 829931 |
+| Added 652 | 872149 |
+| Added oil stores 686 | 822606, 842580 |
+| Added oil stores 685 / 684 | 753096 / 554547 |
+| Added tar-boiling room 682 | 311225 |
+| 567-13, northern storage shed 688 | Direct OS trace; absent from extract |
+
+The storage trace retains its southern projections and ten recorded map corners,
+with mosaic bounds and source pixels saved independently. The thirteen existing
+eaves heights, roof rises, axes and bay counts remain unchanged. Added low rooms
+use interpreted 3.8 m eaves; Goad 682 labels an iron roof but no measured height
+is claimed. Small features 1004609 and 964482, the ramp outlines 775297/774492,
+and an ambiguous northern open bay adjoining 660 remain explicitly deferred.
+
+Both Goad chimney symbols have identifiable OS bases: 1201365 beside the printing
+engine and 1146475 beside depot room 658. Their inferred 22 m heights remain.
+Interpreted radii narrow from 1.05 m to 0.45/0.55 m respectively so the plinths
+fit the mapped bases and clear the adjacent rooms. Neither height is a printed
+map measurement.
+
+The old Sugar House Lane corridor cut roughly 65 m² from the two western printing
+ranges. Re-reading the centreline introduces two bend controls and shifts the
+neighbouring controls locally. The opposing supplied façades at 567-1 and 947-24
+leave only 6.712 m. The existing 5.2 m carriageway fits, but a default 1.1 m
+pavement on each side does not. The road register therefore records a 0.55 m
+minimum building clearance for four specific façades (567-1/2 and 947-24/25).
+This is an interpreted clearance, not a surveyed pavement width.
+
+`factory_street_clearance.py` applies that explicit exception to building
+exclusions. Infrastructure already clips pavement meshes against the retained
+walls, so the actual pavements narrow naturally while the carriageway remains
+continuous. Other buildings keep the default clearance. Saved prior road points
+and pixels, the replacement segment and affected model IDs make this reversible.
+The works passage reconnects to the revised lane and its eastern endpoint moves
+4.2 m north, clearing storage shed 688; its 4 m width and middle control remain.
+Earlier lane and passage checks verify the chain of corrections.
+
+`prepare_refinery_printing_alignment.py` requires the private extract, cached
+OS tiles and immutable `reference/footprint-model-alignment/refinery-printing-before.json`.
+It is byte-for-byte idempotent. If regenerating authoring registers, run it after
+Lascelles/Ultramarine and Williams/Asphalte so road changes are applied in order.
+Routine scene builds use saved JSON. The dedicated checker verifies independent
+source IDs, exact rendered exteriors, the OS trace, preserved elevations, road
+connections, both mapped plinths and the narrow frontage on both sides.
+Minimum rendered source agreement is 99.980%; this geometric measure is not a
+historical-accuracy score.
+
+The factory, infrastructure, yard, housing and regional layers are regenerated.
+Existing yard exclusions give 85 surfaces, 37 clear wear routes and 160 stock
+groups. No new working-ground envelope is introduced. The broader neighbouring
+yard-envelope review remains separate.
+
+All new and prior alignment checks, factory/road/water clearance, yards, housing,
+Abbey, western completion and 77 navigation checks pass. Six SwiftShader browser
+views passed and were visually inspected: plan, printing frontage, narrow lane,
+machinery-depot court, oil/tar rooms and northern storage. All eighteen ranges
+and both corrected chimney positions reached the renderer, without browser or
+shader errors. Hardware and mobile rendering were not re-audited.
+
+Asset revision `962666bb4d46` matches all 25 module and 139 asset hashes. Regional
+masking covers 234,589 visible features in 115 tiles (4.01 MB). This pass remains
+uncommitted alongside Lascelles/Ultramarine and Williams/Asphalte after `527d3e9`.
+Next: Kendrick northern works (569), checking its overlap with already linked
+947-25/source 16620, then Usher (570) and Kendrick southern works (571).
+
+## Kendrick northern/southern works and Usher — 29 September 2026
+
+`kendrick-usher-footprint-alignment.json` accounts for the seven existing ranges
+at sites 569/570/571 and restores two rooms. Eight resulting ranges are linked
+to supplied outlines; Usher's main L-shaped factory is a direct OS trace.
+The district now has 546 ranges, 308 source-linked ranges at twenty-three sites,
+ten direct OS traces and one local Goad transfer. Existing heights, roof rises,
+axes and bay counts are retained.
+
+| Model / Goad room | Supplied source features |
+| --- | --- |
+| 569-2, northern stables | 709193, 707542 |
+| 569-3, northern boiler works 600 | 20821 plus explicit OS completion |
+| 570-1, northern rooms 608/610 | 667726, 664504 |
+| 570-2, main factory 606 | Direct OS trace; supplied body absent beyond sheet seam |
+| 570-3, southern room 614 | 763215 |
+| 570-4, engine/boiler rooms 616 | 802249, 892564, 1182516 |
+| Added varnish-coppers room 612 | 767195 |
+| 571-1, southern boiler works 622 | 186608 plus explicit OS completion |
+| Added two-floor room 620 | 189399 |
+
+The northern Kendrick shed is separate from already linked 947-25/source 16620.
+The misleading overlap came from its old approximate rectangle. A 0.056 m²
+independent-digitisation overlap is removed in favour of that prior neighbour;
+both original source geometries remain available in their registers.
+
+All three compounds cross the same source-extract sheet seam. The northern
+Kendrick completion adds 52.907 m² and the southern completion adds 127.850 m²,
+joining the independently supplied eastern two-floor room. Their map pixels,
+mosaic bounds and source polygons are saved separately. Raw source agreement
+is 81.723% and 37.506% respectively because the extract omits these sections;
+agreement with the explicitly reconciled outlines is at least 99.998%.
+These are geometric checks, not historical-accuracy scores.
+
+Usher's L-shaped exterior follows the cached OS wall lines. Its western
+compartment division follows the retained engine-room vector edge, and an
+opening preserves independent chimney base 1154445. The square shaft moves
+there and retains its printed 40 ft (12.192 m) height. Its interpreted radius
+narrows from 1.05 m to 0.5 m so the plinth fits the mapped opening.
+
+The added varnish room uses interpreted one-floor/3.8 m eaves; no printed floor
+count is claimed. Goad labels the eastern Kendrick room two floors, represented
+by interpreted 6.9 m eaves. The northern 1–2-floor annotation lacks a clear
+internal boundary, so its previous low model is retained. Goad labels the
+southern range under construction in July 1893; the OS shows a continuous
+footprint and the c.1900 model retains its earlier interpreted completed roof.
+Small projection 1135652 remains deferred pending classification.
+
+Two local lane-centre controls, saved under `kendrickUsherAlignment`, clear the
+northern completed façade. Every previous control and the 5.2 m width remain;
+no new pavement exception is introduced. The refinery checker now verifies its
+prior correction against this pass's saved baseline, preserving the full chain.
+Riverbanks are unchanged. Yard exclusions regenerate to 85 surfaces, 36 clear
+wear routes and 160 stock groups; no new yard envelope is introduced.
+
+Preparation requires the private extract, cached OS tiles and immutable
+`reference/footprint-model-alignment/kendrick-usher-before.json`. It is
+byte-for-byte idempotent. Regenerate it after the refinery/printing authoring
+pass; routine scene builds use the saved JSON. The dedicated checker verifies
+source uniqueness, original versus completed outlines, the traced L-shaped
+body and chimney hole, retained elevations, road clearance, neighbouring
+volumes and the mapped plinth. All earlier alignment checks and the regenerated
+factory, road, yard, housing, Abbey, western and 77 navigation checks pass.
+
+Six SwiftShader browser views passed and were visually inspected: compound plan,
+northern yard and lane, Usher engine court and lane frontage, and southern
+Kendrick range. All nine ranges and the corrected 40 ft chimney reached the
+renderer without browser or shader errors. Asset revision `5461589935f6` matches
+all 25 module and 139 asset hashes. Regional masking covers 234,579 visible
+features in 115 tiles (4.01 MB). The pass remains uncommitted alongside the three
+preceding continuations after `527d3e9`. Next: Three Mills distillery (419),
+checking dedicated landmark models before matching its 37 current ranges.
+
+## Northern Three Mills distillery — 29 September 2026
+
+`three-mills-north-footprint-alignment.json` accounts for ranges 1–20 and 29,
+plus restored timber room 828. Twenty ranges follow supplied outlines in fifteen
+explicit groups; Goad 824 is a direct OS trace and small outbuilding 800 retains
+a provisional local Goad placement. Site 419 now has 38 ranges, of which sixteen
+southern/mill/wharf ranges await the next continuation. The district has 547
+ranges, 328 source-linked ranges at twenty-four sites, eleven direct OS traces
+and two provisional local Goad transfers. All twenty-one existing northern
+height and roof interpretations are retained.
+
+| Models / Goad rooms | Supplied source features |
+| --- | --- |
+| 419-1–5, dwellings 802–806 | 738916, 494587, 428628, 511713, 569447 respectively |
+| 419-7, room 808 | 138138 |
+| 419-8, northern range 818 | 30608, 63457 |
+| 419-9–12, engine/boiler rooms 812/814/816 | 9057, 125904 |
+| 419-13/14, process rooms 820/822 | 7180, 921093 |
+| 419-16/17, three-floor ranges 840/838 | 1622 |
+| 419-18, room 836 | 17105 |
+| 419-19, rooms 832/834 | 26002 |
+| 419-20, range 830 | 5218 |
+| 419-29, room 826 | 886593 |
+| Added one-floor timber room 828 | 118464 |
+| 419-15, three-floor range 824 | Direct four-corner OS trace; absent from supplied extract |
+| 419-6, small timber outbuilding 800 | Provisional local Goad transfer; no OS match |
+
+The Goad plan expressly says admission was refused and the distillery was
+sketched from outside observation. Internal room boundaries remain schematic.
+Within the engine/boiler exterior, the northern 812 room, southern 814 room and
+eastern 816 room are distinguished; two prior low roof bays remain within 814.
+The two larger paired ranges use west/east divisions proportioned from Goad.
+No claim is made that these internal cuts are independently surveyed walls.
+Minimum agreement of rendered linked exteriors with the supplied polygons is
+99.976%; this is geometric agreement, not a historical-accuracy score.
+
+The former Goad 800 rectangle was miscentred over the footpath. Its centre was
+re-read at Goad pixel 1221,2459 and locally translated using the five matched
+dwelling centres, retaining its previous dimensions and elevation. Its separate
+OS outline and persistence into c.1900 are not established. The saved record
+explicitly preserves that uncertainty rather than assigning a source polygon.
+The added 828 room has a Goad one-floor mark and timber colouring, represented
+by interpreted 3.8 m eaves and a low gable.
+
+The engine chimney follows independent round base 892638. Its inferred 31 m
+height and 1.5 m radius remain; the plinth fits the mapped base and clears the
+rooms. Tanks 869/870 follow circular sources 144175/145527, with 5.109/5.086 m fitted circular radii
+and their prior inferred 6 m heights. The slightly irregular outlines have
+equal-area radii that overlap by 0.078 m; fitting each circle inside its outline
+keeps the vessels separate. Both radius calculations remain recorded. The metal tank stage 810, rectangular tank
+813, ditch and small external projections remain deferred plant/yard features.
+
+The old eastern road alignment cut more than 250 m² from the corrected northern
+rooms. The public Three Mills Lane approach, 7 m width and bridge span remain
+through the mill entrance. Its former eastern extension is replaced by a
+separate 5.2 m interpreted works passage; the adjoining entrance is re-read at
+the same width. Opposing mapped façades leave minimum gaps of 7.629 m beside the
+engine/boiler block and 7.925 m by range 824, accommodating the ordinary 1.1 m
+clearance either side. These widths remain interpretations, not pavement surveys.
+Prior points, pixels and widths are saved under `threeMillsNorthAlignment`.
+The two passage records connect exactly; the district now has 99 routes.
+No bank changes are made, and all non-target factory render geometry is retained,
+including House Mill, Clock Mill, kilns, wharves and the southern distillery.
+
+`prepare_three_mills_north_alignment.py` requires the private extract, cached OS
+map and immutable `three-mills-before.json` snapshot. It is byte-for-byte
+idempotent and follows Kendrick/Usher in the full authoring sequence. Routine
+scene builds use saved JSON. The dedicated checker verifies source uniqueness,
+rendered exteriors, preserved elevations, the direct trace and provisional shed,
+road connections and clearance, independent chimney/tank bases, and unchanged
+surrounding factory geometry.
+
+All prior and new alignment checks, factory/road/water clearances, yards, housing,
+Abbey, western completion and 77 navigation checks pass. Six SwiftShader views
+were checked visually; after fitting the tank radii, their focused view was
+re-rendered and the final radii, centres and heights verified in the renderer.
+No browser or shader errors occurred. Final asset revision `1669da522491` matches
+all 25 module and 139 asset hashes. Regional masking covers 234,569 visible
+features in 115 tiles (4.01 MB); yards remain 85 surfaces, 36 wear routes and
+160 stock groups. This fifth continuation after `527d3e9` remains uncommitted.
+Next: southern ranges 21–28, followed by the eight mill/wharf ranges.
+
+
+## Southern Three Mills distillery — 29 September 2026
+
+`three-mills-south-footprint-alignment.json` aligns eight existing ranges in five
+reviewed groups. No building is added or removed: district totals remain 547
+ranges at 43 sites, with 336 source-linked ranges at twenty-four sites, eleven
+direct OS traces and two provisional local transfers.
+
+| Existing ranges | Supplied source features | Interpretation |
+| --- | --- | --- |
+| 21–24 | 344 | Grain warehouse/kilns 846/848 and process rooms 850/852; preserve the open southern notch |
+| 25 | 132768, 396886 | Southern room 854 |
+| 26 | 34266, 835014 | Narrow range 854 and timber annex 856 |
+| 27 | 27300, 27774, 26435, 64758, 38030, 912850, 822473, 809347 | Two-floor process block 858, including its western rooms |
+| 28 | 36050 | Gas house 860 |
+
+The warehouse/process split follows the mapped notch. Other divisions within
+344 retain Goad width proportions, with interpreted internal walls and roofs.
+Goad explicitly records an outside sketch survey after admission was refused.
+All eight existing eaves heights, roof rises, axes and bay counts are retained;
+the warehouse model still uses one height across its kiln end. Separate kiln
+heights have not been reconstructed in this footprint pass.
+
+The three existing tanks 863/864/865 follow circular sources 464133/458700/462633.
+Their heights remain inferred at 6 m. Radii fit inside the supplied outlines at
+the rounded rendered centres; equal-area radii are recorded for comparison.
+Checks cover tank pairs, all factory bodies, roads and water before rebuilding.
+
+Northern gangways 167022/29937, rounded feature 219295 and small wall projections
+need separate roof/plant interpretation. Circular features 444596/486835 and
+gas-house projections have no existing models and remain deferred. The eight
+House/Clock Mill and wharf ranges are the next coordinated millrace review.
+
+Authoring uses the immutable `three-mills-south-before.json` and private source
+extract. `factory_alignment_records.py` is shared with the northern pass;
+routine builds use saved JSON. The southern check supports `--preflight` so
+source coverage, partitions, elevations and plant spacing settle before the
+expensive dependent builds. The browser review reuses the common Three Mills
+renderer checks and captures three focused views.
+
+Yard checking found a barrel group inside a southern tank. Both generation and
+validation now exclude all modeled tanks, replacing the Oil Wharf-only rule.
+The rebuilt yards retain 85 surfaces, 36 wear routes and 160 stock groups, all
+clear of the tank bodies. Regional coverage is 234,558 visible source features
+in 115 tiles (4.01 MB); housing remains 196 rows / 3,204 houses / 3,191 rear yards.
+
+Final southern browser review: all three SwiftShader views passed and were
+visually inspected (`review/three-mills-south-{plan,tanks,court}.png`). The report
+`review/three-mills-south-alignment-checks.json` confirms all 38 site ranges,
+the engine chimney and five fitted tanks reach the renderer without browser or
+shader errors. Final manifest: `9acadf9c9fc7`. Changes remain uncommitted.

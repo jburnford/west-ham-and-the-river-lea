@@ -12,6 +12,7 @@ from render_social_film import ROOT, QuietHandler
 
 OUT = ROOT/'scenes/channelsea-sewer-panorama/review'
 REPORT_NAME = 'river-network-checks.json'
+SOFTWARE_GL = False
 VIEWS = {
     'river-network-overview': {'position': [-560, 1000, 620], 'target': [-490, 0, -100], 'fov': 65},
     'three-mills-wall-south': {'position': [-639, 8, -163], 'target': [-592, 1, 50], 'fov': 55},
@@ -29,7 +30,7 @@ async def review(url):
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, env=dict(os.environ,
             GALLIUM_DRIVER='d3d12', MESA_D3D12_DEFAULT_ADAPTER_NAME='NVIDIA'), args=[
-            '--no-sandbox', '--enable-webgl', '--use-angle=gl', '--ignore-gpu-blocklist',
+            '--no-sandbox', '--enable-webgl', '--use-angle=swiftshader' if SOFTWARE_GL else '--use-angle=gl', '--ignore-gpu-blocklist',
             '--enable-unsafe-swiftshader', '--disable-dev-shm-usage'])
         page = await browser.new_page(viewport={'width': 1600, 'height': 1000}, device_scale_factor=1)
         page.on('pageerror', lambda e: errors.append(str(e)))
@@ -40,7 +41,9 @@ async def review(url):
             data = await page.evaluate('(view) => riverNetworkReview(view)', view)
             (OUT/f'{name}.png').write_bytes(base64.b64decode(data.split(',')[1]))
             print(f'Captured {name}', flush=True)
-        report = {'views': VIEWS, 'errors': errors, 'render': await page.evaluate('window.panoramaReview')}
+        report = {'views': VIEWS, 'errors': errors,
+                  'graphicsBackend': 'swiftshader' if SOFTWARE_GL else 'gl',
+                  'render': await page.evaluate('window.panoramaReview')}
         (OUT/REPORT_NAME).write_text(json.dumps(report, indent=2)+'\n')
         await browser.close()
         assert not errors, errors

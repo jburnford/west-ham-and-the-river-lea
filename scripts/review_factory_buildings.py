@@ -150,6 +150,75 @@ async def sugar_house(url):
     print(f'All {count} eastern Sugar House Lane ranges and the corrected cooperage chimney reached the renderer.', flush=True)
 
 
+async def lascelles_ultramarine(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings'])
+    assert rendered['siteRanges']['565']==3 and rendered['siteRanges']['566']==4
+    stack=next(s for s in expected['structures'] if s['id']=='stack-566-1203-1650')
+    top=next(s['position'] for s in rendered['chimneyTops'] if s['id']==stack['id'])
+    assert top==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
+    print('All seven Lascelles/Ultramarine ranges, including the reassigned lean-to, and the mapped 60-foot chimney reached the renderer.',flush=True)
+
+
+async def williams_asphalte(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings'])
+    assert rendered['siteRanges']['568']==18 and rendered['siteRanges']['566']==4
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    for s in expected['structures']:
+        if s['siteId']==568:assert tops[s['id']]==[s['x'],s['height']+s['baseHeight'],s['z']]
+    print('Williams/Asphalte: all 18 ranges, reassigned Ultramarine lean-to and both corrected chimney positions reached the renderer.',flush=True)
+
+
+async def three_mills(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings']) and rendered['siteRanges']['419']==38
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    stack=next(s for s in expected['structures'] if s['id']=='stack-419-1459-2756')
+    assert tops[stack['id']]==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
+    tanks={s['id']:s for s in rendered['tanks']}
+    for tank in expected['structures']:
+        if tank['siteId']==419 and tank['kind']=='tank':
+            actual=tanks[tank['id']]
+            assert actual['position']==[tank['x'],.1,tank['z']]
+            assert actual['radius']==tank['radius'] and actual['height']==tank['height']
+    print('Three Mills: 38 site ranges, corrected boiler chimney and all five fitted tanks reached the renderer.',flush=True)
+
+
+async def kendrick_usher(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings'])
+    assert all(rendered['siteRanges'][str(site)]==count for site,count in [(569,2),(570,5),(571,2)])
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    stack=next(s for s in expected['structures'] if s['id']=='stack-570-959-1000')
+    assert tops[stack['id']]==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
+    print('Kendrick/Usher: all nine ranges and corrected 40 ft chimney reached the renderer.',flush=True)
+
+
+async def refinery_printing(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings']) and rendered['siteRanges']['567']==18
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    for s in expected['structures']:
+        if s['siteId']==567:assert tops[s['id']]==[s['x'],s['height']+s['baseHeight'],s['z']]
+    print('Refinery/printing: all 18 ranges and both corrected chimneys reached the renderer.',flush=True)
+
+
 async def hunt_works(url):
     await runner.review(url)
     report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
@@ -239,8 +308,16 @@ if __name__ == '__main__':
     parser.add_argument('--abbey-west-only', action='store_true', help='Review starch, tin-box and confectionery factories and the Bow Bridge boundary')
     parser.add_argument('--bow-works-only', action='store_true', help='Review Bow Bridge bone and chemical works, direct traces, chimneys and Lea bank')
     parser.add_argument('--hunt-works-only', action='store_true', help='Review Hunt soap works, shared rooms, chimneys and riverbank')
+    parser.add_argument('--lascelles-ultramarine-only', action='store_true', help='Review Lascelles and Ultramarine, map joins, chimney opening and lane')
+    parser.add_argument('--software-gl', action='store_true', help='Use SwiftShader for review when the hardware graphics context is unavailable')
+    parser.add_argument('--williams-asphalte-only', action='store_true', help='Review Williams wharf and French Asphalte footprint alignment')
+    parser.add_argument('--three-mills-south-only', action='store_true', help='Review the southern Three Mills ranges and tanks')
+    parser.add_argument('--three-mills-north-only', action='store_true', help='Review the northern Three Mills distillery and mapped plant')
+    parser.add_argument('--kendrick-usher-only', action='store_true', help='Review both Kendrick works and Usher printing ink')
+    parser.add_argument('--refinery-printing-only', action='store_true', help='Review the refinery, machinery depot and printing works')
     parser.add_argument('--view', help='Capture one named view from the selected review')
     args = parser.parse_args()
+    runner.SOFTWARE_GL = args.software_gl
     if args.yards_only:
         runner.REPORT_NAME = 'factory-yards-checks.json'
         runner.VIEWS = {name: view for name, view in runner.VIEWS.items()
@@ -439,11 +516,74 @@ if __name__ == '__main__':
             'hunt-works-bow-boundary': {'position':[-736,35,183],'target':[-762,4,208],'fov':60},
         }
         action=hunt_works
+    if args.lascelles_ultramarine_only:
+        runner.REPORT_NAME='lascelles-ultramarine-alignment-checks.json'
+        runner.VIEWS={
+            'lascelles-ultramarine-plan': {'position':[-645,170,223],'target':[-645,0,215],'fov':58},
+            'lascelles-factory': {'position':[-700,28,265],'target':[-676,4,224],'fov':58},
+            'lascelles-lane': {'position':[-679,18,261],'target':[-651,4,212],'fov':58},
+            'ultramarine-process': {'position':[-578,40,244],'target':[-617,4,204],'fov':60},
+            'ultramarine-chimney': {'position':[-603,29,253],'target':[-624,7,222],'fov':56},
+            'ultramarine-williams-boundary': {'position':[-632,33,155],'target':[-627,4,198],'fov':62},
+        }
+        action=lascelles_ultramarine
+    if args.williams_asphalte_only:
+        runner.REPORT_NAME='williams-asphalte-alignment-checks.json'
+        runner.VIEWS={
+            'asphalte-plan': {'position':[-636,125,115],'target':[-636,0,110],'fov':58},
+            'asphalte-process': {'position':[-669,32,157],'target':[-629,5,111],'fov':60},
+            'asphalte-boilers': {'position':[-564,27,120],'target':[-606,6,97],'fov':58},
+            'williams-wharf-plan': {'position':[-636,135,173],'target':[-636,0,170],'fov':58},
+            'williams-wharf-river': {'position':[-560,25,195],'target':[-620,4,173],'fov':62},
+            'williams-ultramarine-boundary': {'position':[-664,29,155],'target':[-632,4,191],'fov':62},
+        }
+        action=williams_asphalte
+    if args.refinery_printing_only:
+        runner.REPORT_NAME='refinery-printing-alignment-checks.json'
+        runner.VIEWS={
+            'refinery-printing-plan': {'position':[-672,145,74],'target':[-672,0,68],'fov':58},
+            'printing-works-frontage': {'position':[-723,21,100],'target':[-702,4,79],'fov':60},
+            'printing-lane-narrowing': {'position':[-719,5,67],'target':[-711,3,88],'fov':66},
+            'machinery-depot-court': {'position':[-691,28,62],'target':[-667,4,89],'fov':62},
+            'refinery-oil-and-tar': {'position':[-608,25,98],'target':[-640,4,75],'fov':62},
+            'refinery-northern-storage': {'position':[-625,25,65],'target':[-641,3,36],'fov':62},
+        }
+        action=refinery_printing
+    if args.kendrick_usher_only:
+        runner.REPORT_NAME='kendrick-usher-alignment-checks.json'
+        runner.VIEWS={
+            'kendrick-usher-plan': {'position':[-717,125,160],'target':[-717,0,154],'fov':58},
+            'kendrick-north-yard': {'position':[-731,24,151],'target':[-726,3,120],'fov':62},
+            'kendrick-north-lane': {'position':[-694,9,127],'target':[-706,3,106],'fov':66},
+            'usher-engine-court': {'position':[-731,22,168],'target':[-711,4,148],'fov':62},
+            'usher-lane-frontage': {'position':[-674,20,143],'target':[-703,4,147],'fov':60},
+            'kendrick-south-range': {'position':[-703,24,207],'target':[-704,4,184],'fov':64},
+        }
+        action=kendrick_usher
+    if args.three_mills_north_only:
+        runner.REPORT_NAME='three-mills-north-alignment-checks.json'
+        runner.VIEWS={
+            'three-mills-north-plan': {'position':[-487,155,377],'target':[-487,0,370],'fov':62},
+            'three-mills-dwellings': {'position':[-535,24,329],'target':[-551,5,356],'fov':62},
+            'three-mills-engine-court': {'position':[-517,28,400],'target':[-517,5,369],'fov':62},
+            'three-mills-northern-tanks': {'position':[-445,23,308],'target':[-463,5,335],'fov':62},
+            'three-mills-eastern-rooms': {'position':[-411,27,377],'target':[-452,7,356],'fov':62},
+            'three-mills-works-passage': {'position':[-494,7,380],'target':[-533,5,389],'fov':68},
+        }
+        action=three_mills
+    if args.three_mills_south_only:
+        runner.REPORT_NAME='three-mills-south-alignment-checks.json'
+        runner.VIEWS={
+            'three-mills-south-plan': {'position':[-480,140,454],'target':[-480,0,437],'fov':62},
+            'three-mills-south-tanks': {'position':[-479,24,495],'target':[-500,5,449],'fov':64},
+            'three-mills-south-court': {'position':[-440,17,463],'target':[-463,5,420],'fov':68},
+        }
+        action=three_mills
     if args.view:
         if args.view not in runner.VIEWS:parser.error('Unknown selected view: '+args.view)
         runner.VIEWS={args.view:runner.VIEWS[args.view]}
         runner.REPORT_NAME=args.view+'-checks.json'
-        action=runner.review
+        action=three_mills if (args.three_mills_north_only or args.three_mills_south_only) else runner.review
     if args.url:
         asyncio.run(action(args.url.rstrip('/')))
         raise SystemExit

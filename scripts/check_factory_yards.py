@@ -30,7 +30,7 @@ holders = unary_union([Point(h['x'], h['z']).buffer(h['radius'])
 chimneys = unary_union([Point(s['x'],s['z']).buffer(s['radius']*1.2)
     for s in factories['structures'] if s['kind']=='chimney'])
 tanks = unary_union([Point(s['x'],s['z']).buffer(s['radius'])
-    for s in factories['structures'] if s['kind']=='tank' and s['siteId']==9001])
+    for s in factories['structures'] if s['kind']=='tank'])
 blocked = unary_union([buildings, water, roads, holders, chimneys, tanks])
 used = Polygon()
 stocks = routes = 0

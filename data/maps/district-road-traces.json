@@ -480,23 +480,39 @@
           17.421
         ],
         [
-          -718.609,
+          -719.909,
           61.771
         ],
         [
-          -703.832,
+          -718.799,
+          70
+        ],
+        [
+          -713.57,
+          83
+        ],
+        [
+          -706.232,
           98.507
         ],
         [
-          -684.117,
+          -701.418,
+          105.126
+        ],
+        [
+          -698.249,
+          112.096
+        ],
+        [
+          -685.617,
           138.822
         ],
         [
-          -664.402,
+          -665.902,
           179.138
         ],
         [
-          -644.687,
+          -648.187,
           219.454
         ]
       ],
@@ -543,24 +559,40 @@
           324.002
         ],
         [
-          311.001,
-          444.002
+          307.51,
+          443.907
         ],
         [
-          348.003,
-          544.002
+          309.89,
+          466.146
         ],
         [
-          398.004,
-          654.0
+          322.983,
+          501.534
         ],
         [
-          448.003,
-          764.001
+          341.557,
+          543.826
         ],
         [
-          498.003,
-          874.0
+          354.002,
+          562.002
+        ],
+        [
+          362.004,
+          581.002
+        ],
+        [
+          393.975,
+          653.891
+        ],
+        [
+          443.975,
+          763.891
+        ],
+        [
+          488.603,
+          873.744
         ]
       ],
       "sourceBounds": [
@@ -912,6 +944,589 @@
           ]
         ],
         "priorWidth": 7
+      },
+      "lascellesUltramarineAlignment": {
+        "priorPoints": [
+          [
+            -732.972,
+            -151.377
+          ],
+          [
+            -721.255,
+            -131.271
+          ],
+          [
+            -716.4,
+            -99.789
+          ],
+          [
+            -724.8,
+            -80.869
+          ],
+          [
+            -732.568,
+            -72.0
+          ],
+          [
+            -735.4,
+            -62.305
+          ],
+          [
+            -737.8,
+            -52.541
+          ],
+          [
+            -738.6,
+            -43.411
+          ],
+          [
+            -736.048,
+            -25.063
+          ],
+          [
+            -726.518,
+            17.421
+          ],
+          [
+            -718.609,
+            61.771
+          ],
+          [
+            -703.832,
+            98.507
+          ],
+          [
+            -684.117,
+            138.822
+          ],
+          [
+            -664.402,
+            179.138
+          ],
+          [
+            -644.687,
+            219.454
+          ]
+        ],
+        "priorSourcePixels": [
+          [
+            288.002,
+            -130.999
+          ],
+          [
+            318.002,
+            -76.0
+          ],
+          [
+            328.741,
+            9.13
+          ],
+          [
+            304.798,
+            59.461
+          ],
+          [
+            283.287,
+            82.774
+          ],
+          [
+            274.973,
+            108.672
+          ],
+          [
+            267.813,
+            134.788
+          ],
+          [
+            264.998,
+            159.314
+          ],
+          [
+            270.511,
+            208.907
+          ],
+          [
+            293.001,
+            324.002
+          ],
+          [
+            311.001,
+            444.002
+          ],
+          [
+            348.003,
+            544.002
+          ],
+          [
+            398.004,
+            654.0
+          ],
+          [
+            448.003,
+            764.001
+          ],
+          [
+            498.003,
+            874.0
+          ]
+        ],
+        "review": "Final lane control reconciled 3.5 m west against the OS gap between Lascelles and Ultramarine. Earlier coarse corridor cut 34 m\u00b2 from the mapped process house. Existing width and all upstream controls retained; centreline remains interpreted.",
+        "finalPoint": [
+          -648.187,
+          219.454
+        ],
+        "sourceBounds": [
+          -742,
+          -10,
+          -614,
+          80
+        ]
+      },
+      "williamsAsphalteAlignment": {
+        "priorPoints": [
+          [
+            -732.972,
+            -151.377
+          ],
+          [
+            -721.255,
+            -131.271
+          ],
+          [
+            -716.4,
+            -99.789
+          ],
+          [
+            -724.8,
+            -80.869
+          ],
+          [
+            -732.568,
+            -72.0
+          ],
+          [
+            -735.4,
+            -62.305
+          ],
+          [
+            -737.8,
+            -52.541
+          ],
+          [
+            -738.6,
+            -43.411
+          ],
+          [
+            -736.048,
+            -25.063
+          ],
+          [
+            -726.518,
+            17.421
+          ],
+          [
+            -718.609,
+            61.771
+          ],
+          [
+            -703.832,
+            98.507
+          ],
+          [
+            -684.117,
+            138.822
+          ],
+          [
+            -664.402,
+            179.138
+          ],
+          [
+            -648.187,
+            219.454
+          ]
+        ],
+        "priorSourcePixels": [
+          [
+            288.002,
+            -130.999
+          ],
+          [
+            318.002,
+            -76.0
+          ],
+          [
+            328.741,
+            9.13
+          ],
+          [
+            304.798,
+            59.461
+          ],
+          [
+            283.287,
+            82.774
+          ],
+          [
+            274.973,
+            108.672
+          ],
+          [
+            267.813,
+            134.788
+          ],
+          [
+            264.998,
+            159.314
+          ],
+          [
+            270.511,
+            208.907
+          ],
+          [
+            293.001,
+            324.002
+          ],
+          [
+            311.001,
+            444.002
+          ],
+          [
+            348.003,
+            544.002
+          ],
+          [
+            398.004,
+            654.0
+          ],
+          [
+            448.003,
+            764.001
+          ],
+          [
+            488.603,
+            873.744
+          ]
+        ],
+        "changedIndices": [
+          12,
+          13
+        ],
+        "review": "Two southern controls moved 1.5 m west within the mapped Sugar House Lane corridor; clears the supplied Asphalte dwelling and Williams 694/700 fa\u00e7ades. Existing width and all other controls retained; centreline interpreted."
+      },
+      "refineryPrintingAlignment": {
+        "priorPoints": [
+          [
+            -732.972,
+            -151.377
+          ],
+          [
+            -721.255,
+            -131.271
+          ],
+          [
+            -716.4,
+            -99.789
+          ],
+          [
+            -724.8,
+            -80.869
+          ],
+          [
+            -732.568,
+            -72.0
+          ],
+          [
+            -735.4,
+            -62.305
+          ],
+          [
+            -737.8,
+            -52.541
+          ],
+          [
+            -738.6,
+            -43.411
+          ],
+          [
+            -736.048,
+            -25.063
+          ],
+          [
+            -726.518,
+            17.421
+          ],
+          [
+            -718.609,
+            61.771
+          ],
+          [
+            -703.832,
+            98.507
+          ],
+          [
+            -685.617,
+            138.822
+          ],
+          [
+            -665.902,
+            179.138
+          ],
+          [
+            -648.187,
+            219.454
+          ]
+        ],
+        "priorSourcePixels": [
+          [
+            288.002,
+            -130.999
+          ],
+          [
+            318.002,
+            -76.0
+          ],
+          [
+            328.741,
+            9.13
+          ],
+          [
+            304.798,
+            59.461
+          ],
+          [
+            283.287,
+            82.774
+          ],
+          [
+            274.973,
+            108.672
+          ],
+          [
+            267.813,
+            134.788
+          ],
+          [
+            264.998,
+            159.314
+          ],
+          [
+            270.511,
+            208.907
+          ],
+          [
+            293.001,
+            324.002
+          ],
+          [
+            311.001,
+            444.002
+          ],
+          [
+            348.003,
+            544.002
+          ],
+          [
+            393.975,
+            653.891
+          ],
+          [
+            443.975,
+            763.891
+          ],
+          [
+            488.603,
+            873.744
+          ]
+        ],
+        "replacementSlice": [
+          10,
+          12
+        ],
+        "replacementPoints": [
+          [
+            -719.909,
+            61.771
+          ],
+          [
+            -718.799,
+            70
+          ],
+          [
+            -713.57,
+            83
+          ],
+          [
+            -706.232,
+            98.507
+          ]
+        ],
+        "review": "Local centreline re-read within the OS lane beside the printing works. Two additional bend controls and small endpoint shifts clear the supplied fa\u00e7ades on both sides; carriageway width remains 5.2 m."
+      },
+      "buildingClearanceReviews": [
+        {
+          "modelIds": [
+            "site567-range-1",
+            "site567-range-2",
+            "site947-range-24",
+            "site947-range-25"
+          ],
+          "shoulderWidth": 0.55,
+          "evidence": "Opposing supplied fa\u00e7ades leave a minimum 6.712 m gap. Keep the 5.2 m carriageway and mapped walls; the earlier assumed 1.1 m pavements narrow here. The 0.55 m minimum clearance is interpreted, not surveyed pavement width."
+        }
+      ],
+      "kendrickUsherAlignment": {
+        "priorPoints": [
+          [
+            -732.972,
+            -151.377
+          ],
+          [
+            -721.255,
+            -131.271
+          ],
+          [
+            -716.4,
+            -99.789
+          ],
+          [
+            -724.8,
+            -80.869
+          ],
+          [
+            -732.568,
+            -72.0
+          ],
+          [
+            -735.4,
+            -62.305
+          ],
+          [
+            -737.8,
+            -52.541
+          ],
+          [
+            -738.6,
+            -43.411
+          ],
+          [
+            -736.048,
+            -25.063
+          ],
+          [
+            -726.518,
+            17.421
+          ],
+          [
+            -719.909,
+            61.771
+          ],
+          [
+            -718.799,
+            70
+          ],
+          [
+            -713.57,
+            83
+          ],
+          [
+            -706.232,
+            98.507
+          ],
+          [
+            -685.617,
+            138.822
+          ],
+          [
+            -665.902,
+            179.138
+          ],
+          [
+            -648.187,
+            219.454
+          ]
+        ],
+        "priorSourcePixels": [
+          [
+            288.002,
+            -130.999
+          ],
+          [
+            318.002,
+            -76.0
+          ],
+          [
+            328.741,
+            9.13
+          ],
+          [
+            304.798,
+            59.461
+          ],
+          [
+            283.287,
+            82.774
+          ],
+          [
+            274.973,
+            108.672
+          ],
+          [
+            267.813,
+            134.788
+          ],
+          [
+            264.998,
+            159.314
+          ],
+          [
+            270.511,
+            208.907
+          ],
+          [
+            293.001,
+            324.002
+          ],
+          [
+            307.51,
+            443.907
+          ],
+          [
+            309.89,
+            466.146
+          ],
+          [
+            322.983,
+            501.534
+          ],
+          [
+            341.557,
+            543.826
+          ],
+          [
+            393.975,
+            653.891
+          ],
+          [
+            443.975,
+            763.891
+          ],
+          [
+            488.603,
+            873.744
+          ]
+        ],
+        "insertionIndex": 14,
+        "insertedPoints": [
+          [
+            -701.418,
+            105.126
+          ],
+          [
+            -698.249,
+            112.096
+          ]
+        ],
+        "review": "Two local OS lane-centre controls clear the completed Kendrick northern fa\u00e7ade. Existing controls and 5.2 m carriageway retained."
       }
     },
     {
@@ -1591,8 +2206,8 @@
       "sheet": "scene",
       "points": [
         [
-          -716.939,
-          65.924
+          -719.306,
+          66.243
         ],
         [
           -648.833,
@@ -1600,22 +2215,22 @@
         ],
         [
           -620.345,
-          33.1
+          28.9
         ]
       ],
       "pixelWidth": 768,
       "sourcePixels": [
         [
-          315.183,
-          455.307
+          308.803,
+          455.992
         ],
         [
           500.001,
           390.001
         ],
         [
-          577.002,
-          374.002
+          577.309,
+          362.693
         ]
       ],
       "sourceBounds": [
@@ -1687,6 +2302,37 @@
           600
         ],
         "priorPixelWidth": 4864
+      },
+      "refineryPrintingAlignment": {
+        "priorPoints": [
+          [
+            -716.939,
+            65.924
+          ],
+          [
+            -648.833,
+            39.817
+          ],
+          [
+            -620.345,
+            33.1
+          ]
+        ],
+        "priorSourcePixels": [
+          [
+            315.183,
+            455.307
+          ],
+          [
+            500.001,
+            390.001
+          ],
+          [
+            577.002,
+            374.002
+          ]
+        ],
+        "review": "Reconnect the passage to the corrected lane and move its eastern endpoint 4.2 m north to follow the mapped gap above storage shed 688. Width and middle control retained."
       }
     },
     {
@@ -1732,65 +2378,49 @@
         [
           -550.737,
           387.739
-        ],
-        [
-          -498.896,
-          377.041
-        ],
-        [
-          -476.722,
-          370.866
         ]
       ],
       "pixelWidth": 4864,
       "sourcePixels": [
         [
-          1790,
-          3105
+          1790.002,
+          3105.002
         ],
         [
-          1890,
-          3040
+          1890.001,
+          3040.001
         ],
         [
-          2030,
-          2960
+          2030.003,
+          2960.002
         ],
         [
-          2130,
-          2925
+          2130.002,
+          2925.002
         ],
         [
-          2250,
-          2920
+          2250.001,
+          2920.001
         ],
         [
-          2330,
-          2895
+          2330.003,
+          2895.003
         ],
         [
-          2390,
-          2895
+          2390.004,
+          2895.002
         ],
         [
-          2470,
-          2900
+          2470.003,
+          2900.002
         ],
         [
-          2505,
-          2880
+          2505.002,
+          2880.0
         ],
         [
-          2530,
-          2870
-        ],
-        [
-          2670,
-          2845
-        ],
-        [
-          2730,
-          2830
+          2530.001,
+          2870.002
         ]
       ],
       "sourceBounds": [
@@ -1822,7 +2452,111 @@
           "height": 2.2,
           "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
         }
-      ]
+      ],
+      "threeMillsNorthAlignment": {
+        "priorPoints": [
+          [
+            -823.717,
+            482.448
+          ],
+          [
+            -787.163,
+            457.312
+          ],
+          [
+            -735.876,
+            426.205
+          ],
+          [
+            -699.02,
+            412.203
+          ],
+          [
+            -654.419,
+            409.132
+          ],
+          [
+            -624.903,
+            399.044
+          ],
+          [
+            -602.577,
+            398.436
+          ],
+          [
+            -572.759,
+            399.481
+          ],
+          [
+            -559.938,
+            391.703
+          ],
+          [
+            -550.737,
+            387.739
+          ],
+          [
+            -498.896,
+            377.041
+          ],
+          [
+            -476.722,
+            370.866
+          ]
+        ],
+        "priorSourcePixels": [
+          [
+            1790,
+            3105
+          ],
+          [
+            1890,
+            3040
+          ],
+          [
+            2030,
+            2960
+          ],
+          [
+            2130,
+            2925
+          ],
+          [
+            2250,
+            2920
+          ],
+          [
+            2330,
+            2895
+          ],
+          [
+            2390,
+            2895
+          ],
+          [
+            2470,
+            2900
+          ],
+          [
+            2505,
+            2880
+          ],
+          [
+            2530,
+            2870
+          ],
+          [
+            2670,
+            2845
+          ],
+          [
+            2730,
+            2830
+          ]
+        ],
+        "priorWidth": 7,
+        "review": "Retain the public approach, bridge span and 7 m width through the mill entrance. The former eastern extension becomes a separately traced narrower works passage."
+      }
     },
     {
       "name": "Three Mills Lane beside distillery",
@@ -1884,31 +2618,39 @@
       "sheet": "scene",
       "points": [
         [
-          -476.722,
-          370.866
+          -489,
+          377.4
         ],
         [
-          -447.086,
-          365.23
+          -463,
+          372
         ],
         [
-          -424.78,
-          363.879
+          -449,
+          369.9
+        ],
+        [
+          -425,
+          363.6
         ]
       ],
       "pixelWidth": 4864,
       "sourcePixels": [
         [
-          2730,
-          2830
+          2696.552,
+          2846.694
         ],
         [
-          2810,
-          2817
+          2766.77,
+          2834.062
         ],
         [
-          2870,
-          2815
+          2804.52,
+          2829.435
+        ],
+        [
+          2869.433,
+          2814.234
         ]
       ],
       "sourceBounds": [
@@ -1917,12 +2659,44 @@
         250,
         600
       ],
-      "width": 6,
+      "width": 5.2,
       "kind": "street",
       "surface": "setts",
       "alignmentEvidence": "Manually read centreline on archived NLS georeferenced OS London five-foot mapping, revised 1893. Scene origin 538900,183209; widths estimated from the map.",
       "surfaceEvidence": "Interpreted paving; no street-specific adoption record.",
-      "bridgeSpans": []
+      "bridgeSpans": [],
+      "threeMillsNorthAlignment": {
+        "priorPoints": [
+          [
+            -476.722,
+            370.866
+          ],
+          [
+            -447.086,
+            365.23
+          ],
+          [
+            -424.78,
+            363.879
+          ]
+        ],
+        "priorSourcePixels": [
+          [
+            2730,
+            2830
+          ],
+          [
+            2810,
+            2817
+          ],
+          [
+            2870,
+            2815
+          ]
+        ],
+        "priorWidth": 6,
+        "review": "Local OS yard passage re-read between the supplied ranges and directly traced 824. Match the adjoining 5.2 m estimated carriageway; minimum opposing fa\u00e7ade gap here is 7.925 m."
+      }
     },
     {
       "name": "Warton Road northern section",
@@ -2063,6 +2837,67 @@
       "alignmentEvidence": "Manually traced OS centreline around London Spinning Mills; local segment only.",
       "surfaceEvidence": "Road surface and width interpreted.",
       "pixelWidth": 1572
+    },
+    {
+      "name": "Three Mills distillery passage",
+      "sheet": "scene",
+      "points": [
+        [
+          -550.737,
+          387.739
+        ],
+        [
+          -541,
+          390
+        ],
+        [
+          -526,
+          386.7
+        ],
+        [
+          -500,
+          380.9
+        ],
+        [
+          -489,
+          377.4
+        ]
+      ],
+      "pixelWidth": 4864,
+      "sourceBounds": [
+        -1450,
+        -650,
+        250,
+        600
+      ],
+      "width": 5.2,
+      "kind": "lane",
+      "surface": "setts",
+      "bridgeSpans": [],
+      "alignmentEvidence": "OS passage between mapped northern engine/boiler walls and ranges 840/838; 5.2 m width interpreted within the minimum 7.629 m fa\u00e7ade gap.",
+      "surfaceEvidence": "Interpreted factory paving; no adoption or measured pavement evidence.",
+      "sourcePixels": [
+        [
+          2530.001,
+          2870.002
+        ],
+        [
+          2555.985,
+          2876.804
+        ],
+        [
+          2596.508,
+          2869.019
+        ],
+        [
+          2666.755,
+          2855.31
+        ],
+        [
+          2696.552,
+          2846.694
+        ]
+      ]
     }
   ],
   "notes": [

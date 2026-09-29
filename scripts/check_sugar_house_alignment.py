@@ -84,7 +84,8 @@ assert plinth.difference(holes).area<.001, 'Chimney plinth protrudes into the sa
 roads = {q['name']:q for q in load('data/maps/district-road-traces.json')['roads']}
 lane, passage = [roads[name] for name in ['Sugar House Lane','Sugar House Lane works passage']]
 assert lane['westSugarAlignment']['priorPoints'][:3]==lane['sugarHouseAlignment']['priorPoints'][:3]
-assert lane['points'][-6:]==lane['sugarHouseAlignment']['priorPoints'][-6:]
+assert lane['williamsAsphalteAlignment']['priorPoints'][-6:-1]==lane['sugarHouseAlignment']['priorPoints'][-6:-1]
+assert lane['lascellesUltramarineAlignment']['priorPoints'][-1]==lane['sugarHouseAlignment']['priorPoints'][-1]
 assert LineString(lane['points']).distance(Point(passage['points'][0]))<.002
 assert lane['width']==5.2 and lane['westSugarAlignment']['priorWidth']==7 and passage['width']==4
 for road in [lane,passage]:

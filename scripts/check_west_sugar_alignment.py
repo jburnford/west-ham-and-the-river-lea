@@ -56,11 +56,12 @@ for group in r['groups']:
 plan=load('docs/data/ground-plan.json')
 water=unary_union([Polygon(p[0],p[1:]) for river in plan['rivers']+scene['westContext']['rivers'] for p in river['polygons']])
 roads=load('data/maps/district-road-traces.json')['roads']
-streets=unary_union([LineString(q['points']).buffer(q['width']/2+1.1,cap_style=2,join_style=2) for q in roads])
+from factory_street_clearance import street_clearances
+streets,frontage_streets=street_clearances(roads)
 for id in corrections:
     p=Polygon(models[id]['footprint'],models[id]['worldHoles'])
     assert p.intersection(water.buffer(.12)).area<.01,(id,'water')
-    overlap=p.intersection(streets).area
+    overlap=p.intersection(frontage_streets.get(id,streets)).area
     if id==r['roadBoundaryReview']['modelId']:
         assert abs(overlap-r['roadBoundaryReview']['sourceOverlapAreaM2'])<.002
     else:
@@ -75,7 +76,8 @@ assert {c['vertex'] for c in bank['replacements']}=={39,40,41,42,49,50,51,52,53,
 assert LineString(ring[38:46]).distance(LineString(ring[47:56]))>2,'Channel pinched shut'
 lane=next(q for q in roads if q['name']=='Sugar House Lane')
 assert lane['points'][:2]==lane['westSugarAlignment']['priorPoints'][:2]
-assert lane['points'][-7:]==lane['westSugarAlignment']['priorPoints'][-7:]
+assert lane['williamsAsphalteAlignment']['priorPoints'][-7:-1]==lane['westSugarAlignment']['priorPoints'][-7:-1]
+assert lane['lascellesUltramarineAlignment']['priorPoints'][-1]==lane['westSugarAlignment']['priorPoints'][-1]
 assert lane['width']==5.2 and lane['westSugarAlignment']['priorWidth']==7
 passage=next(q for q in roads if q['name']=='Sugar House Lane works passage')
 assert LineString(lane['points']).distance(Point(passage['points'][0]))<.002

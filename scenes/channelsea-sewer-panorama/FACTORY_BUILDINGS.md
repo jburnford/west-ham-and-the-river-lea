@@ -1,6 +1,58 @@
 # Factory buildings — mapped coverage and refinement, 27 September 2026
 
-29 September Hunt soap-works continuation: the current scene has 43 sites,
+29 September southern Three Mills continuation: eight existing ranges and three
+6 m tanks now follow their supplied OS outlines. The scene has 43 sites,
+547 ranges, 90 chimneys and 336 source-linked ranges at twenty-four sites,
+plus eleven direct OS traces and two provisional local transfers. Heights and
+roof interpretations are retained; the western warehouse notch remains open.
+Eight House/Clock Mill and wharf ranges remain for coordinated landmark review.
+
+Earlier 29 September northern Three Mills continuation: the scene had 43 sites,
+547 ranges, 90 chimneys and 328 source-linked ranges at twenty-four sites.
+Twenty northern ranges follow supplied outlines; range 824 is directly traced
+and Goad 800 has a provisional local transfer. Timber room 828 is restored,
+bringing site 419 to 38 ranges. The mapped engine chimney and two tanks retain
+their previous inferred heights. A revised works passage clears the mapped walls;
+the public approach and bridge remain. Sixteen southern/mill/wharf ranges await
+their separate continuation. Existing elevations and roof interpretations remain.
+
+Earlier 29 September Kendrick / Usher continuation: the scene had 43 sites,
+546 ranges, 90 chimneys and 308 source-linked ranges at twenty-three sites.
+Sites 569/570/571 have 2/5/2 ranges: eight supplied-outline matches and one
+explicit OS trace of Usher's L-shaped main factory. Two sheet-seam completions
+restore the Kendrick exteriors; two omitted rooms are added. The mapped Usher
+chimney retains its printed 40 ft height. Existing elevations and roofs remain.
+Two local lane controls clear the northern façade without changing road width.
+District totals include ten direct OS traces and one local Goad transfer.
+
+Earlier 29 September refinery / printing / machinery-depot continuation: the scene
+had 43 sites, 544 ranges, 90 chimneys and 300 source-linked ranges at twenty sites.
+Site 567 has eighteen ranges: seventeen supplied-outline matches and one direct
+OS trace of storage shed 688. Five omitted rooms are restored. Both chimneys
+follow independent mapped bases while retaining their inferred 22 m heights.
+Sugar House Lane and the works passage are corrected locally; the 5.2 m lane
+carriageway remains, with narrower interpreted pavements at four mapped façades.
+All thirteen existing elevations and roof interpretations are retained.
+
+Earlier 29 September Williams wharf / French Asphalte continuation: the scene had
+43 sites, 539 ranges, 90 chimneys and 283 source-linked ranges at nineteen sites.
+Seventeen further ranges follow supplied outlines, with a separately recorded
+127.897 m² OS completion at the Asphalte sheet edge; two missing eastern rooms
+are directly traced. Goad 704 is added and the northern Ultramarine lean-to is
+reassigned from site 568 to 566. Site 568 retains eighteen ranges; site 566 now
+has four. Both Asphalte chimneys and two local lane controls are corrected.
+Existing elevations and roof interpretations are retained. District totals now
+include eight direct OS traces and one local Goad transfer.
+
+Earlier 29 September Lascelles / British Ultramarine continuation: the scene had
+43 sites, 538 ranges, 90 chimneys and 266 source-linked ranges at eighteen sites.
+All six site-565/566 ranges are aligned. Two narrow OS sheet joins are explicitly
+reconciled to retain the continuous Ultramarine body shown by Goad; its mapped
+60-foot chimney opening remains. The final Sugar House Lane control moves west
+to clear the process house. No ranges are added or removed; prior elevations
+and roof divisions are retained.
+
+Earlier 29 September Hunt soap-works continuation: the scene had 43 sites,
 538 ranges, 90 chimneys and 260 source-linked ranges at sixteen sites. All ten
 site-564 ranges are source-linked, including added furnace rooms, office/laboratory
 and engine room. Five existing process rooms share an OS exterior; their internal
@@ -80,15 +132,15 @@ ranges; the wider detailed refinement remains in progress.
 | 258 | Augustus Smith brush and fibre works | 7 |
 | 260 | Howards and Sons | 86 |
 | 398 | Crown Works / Johnson chemical works | 10 |
-| 419 | Three Mills distillery | 37 |
+| 419 | Three Mills distillery | 38 |
 | 564 | Hunt Bow Bridge soap works | 10 |
 | 565 | Lascelles stone and terra cotta works | 3 |
-| 566 | British Ultramarine works | 3 |
-| 567 | Oil refinery / machinery and printing ranges | 13 |
+| 566 | British Ultramarine works | 4 |
+| 567 | Oil refinery / machinery and printing ranges | 18 |
 | 568 | French Asphalte and Williams wharf | 18 |
 | 569 | Kendrick northern boiler and machinery works | 2 |
-| 570 | Usher printing ink works | 4 |
-| 571 | Kendrick southern boiler works | 1 |
+| 570 | Usher printing ink works | 5 |
+| 571 | Kendrick southern boiler works | 2 |
 | 572 | Bryant and May tin box works | 3 |
 | 573 | Aberdeen Works / confectionery works | 8 |
 | 788 | Magnet Wharf iron foundry | 4 |

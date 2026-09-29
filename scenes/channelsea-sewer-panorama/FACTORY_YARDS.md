@@ -26,6 +26,30 @@ The Hunt soap-works continuation rebuilds exclusions for 538 ranges and the
 two-control bank correction: 85 yards, 36 clear wear routes and 160 stock groups.
 The count change follows regeneration of existing stock placement; no new yard
 envelope or historical equipment claim is introduced.
+Lascelles / Ultramarine regenerates those exclusions for six corrected ranges
+and the revised southern lane control: 85 yards, 38 clear wear routes and 160
+stock groups. No additional yard envelope is introduced.
+Williams / French Asphalte regenerates exclusions for 539 ranges, the corrected
+chimneys and two lane controls: 85 yards, 36 clear wear routes and 161 stock
+groups. These count changes follow deterministic placement against the corrected
+obstacles. Broader Williams/Asphalte/Lascelles/Ultramarine working-ground envelopes
+still need a separate OS parcel review; this pass adds no yard envelope.
+The refinery/printing pass regenerates exclusions for 544 ranges and the local
+lane/passage correction: 85 yards, 37 clear wear routes and 160 stock groups.
+No new yard envelope is added; counts follow the regenerated obstacle exclusions.
+
+The Kendrick/Usher pass regenerates exclusions for 546 ranges, the mapped Usher
+chimney and two local lane controls: 85 yards, 36 clear wear routes and 160 stock
+groups. No yard envelope is added; counts follow corrected obstacle exclusions.
+
+Northern Three Mills regenerates exclusions for 547 ranges, the corrected engine
+chimney and works passage: 85 yards, 36 clear wear routes and 160 stock
+groups. No new yard envelope or stock interpretation is introduced.
+
+Southern Three Mills updates the eight corrected building exclusions. Its tank
+review exposed a barrel group inside a vessel: the generator and check now
+exclude every modeled tank, extending the previous Oil Wharf-only rule. The
+regenerated 85 yards, 36 routes and 160 stock groups clear all tank circles.
 
 The first yard refinement replaces the repeated four-metre mud texture and
 grid-based colour noise on industrial parcels. A single district surface map

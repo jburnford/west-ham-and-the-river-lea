@@ -14,7 +14,7 @@ assert len(cs)==10 and len(r['groups'])==7 and len(direct)==5 and len(r['additio
 assert set(cs)|set(direct)|{'site254-range-14','site254-range-15'}=={b['id'] for b in s['buildings'] if b['siteId']==254}
 assert {b['id'] for b in r['additionalBuildings']}=={'site254-charcoal-500','site254-mill-annex-508'}
 assert set(r['supersedesLocalTransfers'])=={'site254-range-12','site254-range-13'}
-assert s['footprintAlignment']['directMapTraces']==6 and s['footprintAlignment']['locallyTransferredRanges']==1
+assert s['footprintAlignment']['directMapTraces']==11 and s['footprintAlignment']['locallyTransferredRanges']==2
 registers=[load('data/maps/factory-footprint-alignment.json')]+[load(p) for p in s['footprintAlignment']['groupRegisters']]
 assert sum(len(q['buildings']) for q in registers)==s['footprintAlignment']['matchedRanges']
 used=set()
