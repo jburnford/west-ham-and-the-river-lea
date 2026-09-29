@@ -597,12 +597,32 @@
           -61.81
         ],
         [
-          -1083.381,
-          -38.739
+          -1125.569,
+          -47.497
         ],
         [
-          -1015.965,
-          -5.908
+          -1099.092,
+          -32.247
+        ],
+        [
+          -1068.934,
+          -18.582
+        ],
+        [
+          -1048.269,
+          -11.715
+        ],
+        [
+          -1025.733,
+          -4.528
+        ],
+        [
+          -1008.879,
+          -0.901
+        ],
+        [
+          -995.3680036530446,
+          5.339111284545475
         ],
         [
           -979.683,
@@ -617,51 +637,65 @@
           47.119
         ]
       ],
-      "pixelWidth": 4864,
+      "pixelWidth": 1024,
       "sourcePixels": [
         [
-          746.6666666666666,
-          1418.6666666666667
+          -21.331,
+          138.668
         ],
         [
-          850.6666666666666,
-          1528.0
+          82.669,
+          248.0
         ],
         [
-          965.3333333333334,
-          1616.0
+          197.336,
+          336.0
         ],
         [
-          1130.6666666666667,
-          1682.6666666666667
+          250.003,
+          376.002
         ],
         [
-          1309.3333333333333,
-          1776.0
+          320.001,
+          419.001
         ],
         [
-          1405.3333333333333,
-          1832.0
+          400.001,
+          458.001
         ],
         [
-          1416.0,
-          1880.0
+          455.001,
+          478.002
         ],
         [
-          1448.0,
-          1922.6666666666667
+          515.002,
+          499.002
+        ],
+        [
+          560.003,
+          510.001
+        ],
+        [
+          595.834,
+          527.791
+        ],
+        [
+          637.335,
+          552.001
+        ],
+        [
+          648.003,
+          600.001
+        ],
+        [
+          680.002,
+          642.667
         ]
-      ],
-      "sourceBounds": [
-        -1450,
-        -650,
-        250,
-        600
       ],
       "width": 5,
       "kind": "street",
       "surface": "cinder",
-      "alignmentEvidence": "Manually read centreline on archived NLS georeferenced OS London five-foot mapping, revised 1893. Scene origin 538900,183209; widths estimated from the map.",
+      "alignmentEvidence": "Cook\u2019s Road beside Imperial Sawmills re-read on OS five-foot mosaic m18_131060_87140 against supplied building outlines. The previous straight chord cut through the mill/office. Width and surfacing remain interpreted; original route beyond the local section and bridge approach retained.",
       "surfaceEvidence": "Interpreted paving; no street-specific adoption record.",
       "bridgeSpans": [
         {
@@ -686,7 +720,118 @@
           "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge."
         }
       ],
-      "nameEvidence": "Cook\u2019s Road on 1893 OS, corroborated by Wessex Archaeology / Crossrail XPM09 historic building recording, section 3.1.6\u20137."
+      "nameEvidence": "Cook\u2019s Road on 1893 OS, corroborated by Wessex Archaeology / Crossrail XPM09 historic building recording, section 3.1.6\u20137.",
+      "sourceMosaic": "m18_131060_87140",
+      "footprintAlignment": {
+        "priorTrace": {
+          "points": [
+            [
+              -1228.91,
+              -132.832
+            ],
+            [
+              -1189.116,
+              -93.309
+            ],
+            [
+              -1145.567,
+              -61.81
+            ],
+            [
+              -1083.381,
+              -38.739
+            ],
+            [
+              -1015.965,
+              -5.908
+            ],
+            [
+              -979.683,
+              13.904
+            ],
+            [
+              -975.23,
+              31.609
+            ],
+            [
+              -962.894,
+              47.119
+            ]
+          ],
+          "pixelWidth": 4864,
+          "sourcePixels": [
+            [
+              746.6666666666666,
+              1418.6666666666667
+            ],
+            [
+              850.6666666666666,
+              1528.0
+            ],
+            [
+              965.3333333333334,
+              1616.0
+            ],
+            [
+              1130.6666666666667,
+              1682.6666666666667
+            ],
+            [
+              1309.3333333333333,
+              1776.0
+            ],
+            [
+              1405.3333333333333,
+              1832.0
+            ],
+            [
+              1416.0,
+              1880.0
+            ],
+            [
+              1448.0,
+              1922.6666666666667
+            ]
+          ],
+          "sourceBounds": [
+            -1450,
+            -650,
+            250,
+            600
+          ],
+          "alignmentEvidence": "Manually read centreline on archived NLS georeferenced OS London five-foot mapping, revised 1893. Scene origin 538900,183209; widths estimated from the map."
+        },
+        "reviewedMosaicPixels": [
+          [
+            250,
+            376
+          ],
+          [
+            320,
+            419
+          ],
+          [
+            400,
+            458
+          ],
+          [
+            455,
+            478
+          ],
+          [
+            515,
+            499
+          ],
+          [
+            560,
+            510
+          ]
+        ],
+        "bridgeStartRetained": [
+          -995.3680036530446,
+          5.339111284545475
+        ]
+      }
     },
     {
       "name": "River Street",

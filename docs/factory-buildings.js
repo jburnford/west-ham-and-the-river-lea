@@ -63,7 +63,10 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
     for(const component of components) {
       const local=component.outer.map(toLocal),holes=component.holes.map(r=>r.map(toLocal));
       // Signed area determines outward winding for walls and roof surfaces.
-      if(local.reduce((sum,p,i)=>sum+p[0]*local[(i+1)%local.length][1]-local[(i+1)%local.length][0]*p[1],0)<0)local.reverse();
+      const signedArea=ring=>ring.reduce((sum,p,i)=>sum+p[0]*ring[(i+1)%ring.length][1]-ring[(i+1)%ring.length][0]*p[1],0);
+      if(signedArea(local)<0)local.reverse();
+      // Interior walls face into the opening, including mapped chimney wells.
+      for(const hole of holes)if(signedArea(hole)>0)hole.reverse();
       for(const ring of [local,...holes])for(let i=0;i<ring.length;i++) {
         const a=ring[i],z=ring[(i+1)%ring.length],length=Math.hypot(z[0]-a[0],z[1]-a[1]);
         const divisions=[0,1];

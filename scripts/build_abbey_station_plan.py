@@ -5,6 +5,7 @@ from scipy.optimize import differential_evolution
 from shapely.geometry import shape,box,Polygon
 from shapely import affinity
 from shapely.ops import unary_union
+from abbey_support import build_support
 ROOT=Path(__file__).resolve().parents[1]
 fs=json.loads((ROOT/'reference/historic-building-footprints-2026-09-28/current-scene-buildings-bng.geojson').read_text())['features']
 byid={f['properties']['sourceFid']:affinity.affine_transform(shape(f['geometry']),[1,0,0,-1,-538900,183209]) for f in fs}
@@ -32,6 +33,9 @@ result={'source':'Author-supplied london_buildings_1891-96_corr_v1.gpkg; OS five
  'chimneys':[{'sourceFid':fid,'centre':[round(byid[fid].centroid.x,3),round(byid[fid].centroid.y,3)],'worldFootprint':list(map(list,list(byid[fid].geoms[0].exterior.coords)[:-1]))} for fid in [257848,277380]],
  'fit':{'previousIoU':old.intersection(target).area/old.union(target).area,'bodyIoU':1-fit.fun},
  'evidence':'Main Greek cross and lower rear boiler wings separated by reading the period OS map and photographs. Body rectangles and orientation fitted to outline; ornamental projections and vertical dimensions interpreted. Not a measured elevation.'}
+support, paths, replaced = build_support()
+result.update(supportingBuildings=support, accessPaths=paths, replaceRoadNames=replaced)
 (ROOT/'data/maps/abbey-station-plan.json').write_text(json.dumps(result,indent=2)+'\n')
 (ROOT/'docs/data/abbey-station-plan.json').write_text(json.dumps(result,separators=(',',':'))+'\n')
-print(json.dumps({k:v for k,v in result.items() if k not in ['worldFootprint','sourcePolygons','chimneys']},indent=2))
+print(json.dumps({k:v for k,v in result.items() if k not in ['worldFootprint','sourcePolygons','chimneys','supportingBuildings','accessPaths']},indent=2))
+print(f'{len(support)} source-linked supporting volumes; {len(paths)} access routes.')

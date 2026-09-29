@@ -7,6 +7,7 @@ from shapely.geometry import Polygon, LineString, Point, MultiPoint, box
 from shapely.ops import unary_union, triangulate
 from shapely import affinity, segmentize, constrained_delaunay_triangles
 from great_eastern import build_great_eastern
+from abbey_support import station_footprints
 
 ROOT=Path(__file__).resolve().parents[1]
 def read(path):return json.loads((ROOT/path).read_text())
@@ -21,6 +22,8 @@ housing_review=read('data/maps/district-housing-review.json')
 housing_roads=housing_review['roads']
 housing_names={r['name'] for r in housing_roads}|set(housing_review.get('removeRoadNames',[]))
 traces['roads']=[r for r in traces['roads'] if r['name'] not in housing_names]+housing_roads
+station=read('docs/data/abbey-station-plan.json')
+traces['roads']=[r for r in traces['roads'] if r['name'] not in station['replaceRoadNames']]+station['accessPaths']
 sheets=read('data/maps/os-neighbourhood-traces.json')['sheets']
 project=Transformer.from_crs(4326,27700,always_xy=True).transform
 fits={}
@@ -47,6 +50,7 @@ surveyed={s['id'] for s in factories['sites']}
 legacy=[b for b in data['factoryStudies']+data['neighbourhood']['mappedFactories']+sw['industrialRanges'] if b.get('siteId') not in surveyed]
 legacy+=read('docs/data/housing-detail.json')['rows']+data['neighbourhood']['houses']+[data['neighbourhood']['mill']]
 buildings=unary_union([rectangle(b).buffer(.3) for b in legacy]+[Polygon(p['outer'],p['holes']).buffer(.15) for b in factories['buildings'] for p in b['renderPolygons']])
+buildings=buildings.union(station_footprints(station).buffer(.15))
 
 road_shapes=[];shoulders=[];paths=[];routes=[];bridges=[]
 surface_shapes={s:[] for s in ['macadam','setts','cinder']}

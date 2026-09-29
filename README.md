@@ -84,5 +84,10 @@ The [district street and bridge pass](scenes/channelsea-sewer-panorama/STREETS_A
 The regional plan layer now covers historic West Ham plus a 3 km buffer, while
 existing 3D buildings are progressively matched to the supplied footprints.
 The first pass corrects 26 factory ranges and the Abbey Mills station complex.
+The ink-works and Imperial Saw Mills compound passes add 27 corrected ranges,
+bringing the factory total to 53 while preserving the Goad compartments and roof
+interpretations. Cook’s Road now follows the mapped bend beside the sawmill.
+Abbey's supporting group now adds eight mapped buildings, four lower annexes and
+five revised access routes; roof forms and elevations remain interpreted.
 See [the continuation notes](scenes/channelsea-sewer-panorama/CONTINUE_FOOTPRINT_MATCHING.md)
 for the next sites, authoring files, rebuild commands and completed checks.

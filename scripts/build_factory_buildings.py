@@ -57,9 +57,17 @@ def build():
     exact = {p['id']: p['footprintPixels'] for b in old['buildings'] for p in b.get('parts', [])}
     alignment = json.loads((ROOT/'data/maps/factory-footprint-alignment.json').read_text())
     aligned = {b['modelId']: b for b in alignment['buildings']}
+    group_registers = ['data/maps/ink-works-footprint-alignment.json', 'data/maps/sawmill-footprint-alignment.json']
+    compounds = [json.loads((ROOT/path).read_text()) for path in group_registers]
+    structure_alignment = {}
+    for register in compounds:
+        assert not set(aligned).intersection(b['modelId'] for b in register['buildings'])
+        assert not set(structure_alignment).intersection(s['id'] for s in register['structures'])
+        aligned.update({b['modelId']: b for b in register['buildings']})
+        structure_alignment.update({s['id']: s for s in register['structures']})
     raw['sources']['author-os-footprints-1891-96'] = {
         'file': alignment['source'], 'registration': alignment['sourceCRS'],
-        'method': alignment['method']}
+        'method': ' '.join([alignment['method'], *[r['method'] for r in compounds]])}
     buildings, polys, water_checks = [], [], []
     for row in raw['buildings']:
         row = dict(row)
@@ -69,13 +77,18 @@ def build():
         if correction:
             row.update(worldFootprint=correction['worldFootprint'], priorFootprint=correction['priorFootprint'],
                        priorRotation=correction['priorRotationDegrees'],
-                       footprintSource='author-os-footprints-1891-96', sourceFootprintFid=correction['sourceFid'],
+                       footprintSource='author-os-footprints-1891-96',
                        footprintAlignment=correction['comparison'], priorFootprintEvidence=row['footprintEvidence'],
                        footprintEvidence=correction['review'],
                        eavesHeight=correction['preservedHeight'], roofRise=correction['preservedRoofRise'],
                        roofBays=correction['preservedRoofBays'], roofAxis=correction['preservedRoofAxis'])
+            if 'sourceFid' in correction:
+                row['sourceFootprintFid'] = correction['sourceFid']
+            if 'groupId' in correction:
+                row.update(sourceFootprintFids=correction['sourceFids'], footprintGroup=correction['groupId'],
+                           worldHoles=correction['worldHoles'])
         points = footprint(row, raw['sources'][row['source']])
-        polygon = Polygon(points)
+        polygon = Polygon(points, row.get('worldHoles', []))
         assert polygon.is_valid and polygon.area > 2, row['id']
         centre = polygon.centroid
         # First map edge fixes orientation. Roof divisions are modelling choices,
@@ -166,10 +179,23 @@ def build():
             u, v = row['pixelPosition']
             a, b, x, z = raw['sources'][row['source']]['pixelToWorld']
             item.update(x=round(a*u-b*v+x, 3), z=round(b*u+a*v+z, 3))
+        if item['id'] in structure_alignment:
+            correction = structure_alignment[item['id']]
+            item.update(x=round(correction['centre'][0], 3), z=round(correction['centre'][1], 3),
+                        rotation=correction['rotation'], priorPosition=correction['priorCentre'],
+                        priorPositionEvidence=item['positionEvidence'], positionEvidence=correction['review'])
+            if 'sourceFid' in correction:
+                item.update(sourceFootprintFid=correction['sourceFid'], sourcePolygons=correction['sourcePolygons'])
+            if 'parentBuildingId' in correction:
+                item.update(parentBuildingId=correction['parentBuildingId'], parentFractions=correction['parentFractions'])
         structures.append(item)
     chimneys = [s for s in structures if s['kind'] == 'chimney']
     result['structures'] = structures
-    result['footprintAlignment'] = {'matchedRanges': len(aligned), 'source': alignment['source'], 'register': 'data/maps/factory-footprint-alignment.json'}
+    result['footprintAlignment'] = {'matchedRanges': len(aligned), 'source': alignment['source'],
+        'register': 'data/maps/factory-footprint-alignment.json',
+        'groupRegisters': group_registers, 'reviewedGroups': sum(len(r['groups']) for r in compounds),
+        'matchedChimneyBases': sum('sourceFid' in s for s in structure_alignment.values()),
+        'parentTransferredChimneys': sum('parentBuildingId' in s for s in structure_alignment.values())}
     result['symbolKeys'] = raw.get('symbolKeys', {})
     result.update(sites=sites, buildings=buildings, counts={'sites': len(sites), 'ranges': len(buildings),
                   'chimneys': len(chimneys), 'chimneysWithMappedHeights': sum('mappedHeightFeet' in s for s in chimneys),

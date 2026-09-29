@@ -304,6 +304,7 @@ function update() {
     highStreetFrontages: scene?.userData.highStreetFrontages,
     wallRiverVista: scene?.userData.wallRiverVista,
     stationStudy: scene?.userData.stationStudy,
+    stationSupport: scene?.userData.stationSupport,
     triangles: renderer?.info.render.triangles, drawCalls: renderer?.info.render.calls };
 }
 
@@ -352,6 +353,7 @@ function buildPlan(container, { viewBox, labels = true, markerRadius = 8, stroke
   element('polyline', { points: data.neighbourhood.sewer.route.map(p => p.join(',')).join(' '), fill: 'none', stroke: '#68786c', 'stroke-width': 15 });
   element('polygon', { points: walker.corners().map(p => p.join(',')).join(' '), fill: '#f5f2e9', stroke: '#ad792f', 'stroke-width': 2 * strokeScale });
   data.factoryBuildings.buildings.forEach(b => b.renderPolygons.forEach(p => element('path', { d: planPath([[p.outer, ...p.holes]]), fill: '#79634e', 'fill-rule': 'evenodd' })));
+  data.stationPlan.supportingBuildings.forEach(b => b.renderPolygons.forEach(p => element('path', { d: planPath([[p.outer, ...p.holes]]), fill: '#79634e', 'fill-rule': 'evenodd' })));
   data.highStreetFrontages.buildings.forEach(b => b.renderPolygons.forEach(p => element('path', { d: planPath([[p.outer, ...p.holes]]), fill: '#9e6851', 'fill-rule': 'evenodd' })));
   const bank = data.highStreetFrontages.vista.bank;
   element('path', { d: bank.samples.map(([x,z],i) => `${i?'L':'M'}${x+bank.pathLandOffset},${z}`).join(' '), fill: 'none', stroke: '#af9879', 'stroke-width': bank.pathWidth });
@@ -465,6 +467,8 @@ function buildScene() {
   surfaces.excludeBargeHolds(barges);
   detail.waterfront();
   detail.station(data.stationPlan);
+  scene.userData.stationSupport = factoryBuildings({ THREE, scene, materials, box, cylinder, beam,
+    data: { buildings: data.stationPlan.supportingBuildings, sites: [{id:'abbey-support'}], holders: [], structures: [] } });
   detail.mill(data.neighbourhood.mill);
   [...data.neighbourhood.holders.filter(h => h.siteId !== 924), ...data.factoryBuildings.holders].forEach(h => detail.holder(h));
   data.neighbourhood.houses.forEach(h => detail.houses(h));

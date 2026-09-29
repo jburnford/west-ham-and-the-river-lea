@@ -5,6 +5,7 @@ from pathlib import Path
 from shapely.geometry import Polygon, Point, LineString
 from shapely.ops import unary_union
 from shapely.affinity import rotate,translate
+from abbey_support import station_footprints
 
 ROOT = Path(__file__).resolve().parents[1]
 def load(name):
@@ -19,6 +20,7 @@ frontages = load('high-street-frontages.json')
 infra = load('infrastructure.json')
 buildings = unary_union([Polygon(p['outer'], p['holes'])
     for b in factories['buildings'] + frontages['buildings'] for p in b['renderPolygons']])
+buildings = buildings.union(station_footprints(load('abbey-station-plan.json')))
 water = unary_union([polygons(r['polygons'])
     for r in plan['rivers'] + factories['westContext']['rivers']])
 roads = unary_union([LineString(r['route']).buffer(r['width']/2, cap_style=2)

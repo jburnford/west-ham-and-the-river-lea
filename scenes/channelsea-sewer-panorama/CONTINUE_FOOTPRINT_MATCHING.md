@@ -18,16 +18,35 @@ but record the distinction between map evidence and interpreted elevations.
 
 ## Completed model alignment
 
-- 26 source-linked factory ranges at nine sites, including 11 Slater & Palmer /
-  Marshgate Mills ink-works ranges. Registry:
+- 53 source-linked factory ranges at nine sites, including 24 Slater & Palmer /
+  Marshgate Mills ink-works ranges. First-pass registry:
   `data/maps/factory-footprint-alignment.json`. It retains original outlines,
   source IDs, changes in position/area and previous roof/height interpretations.
+- Ink-works continuation: `data/maps/ink-works-footprint-alignment.json` adds 13
+  ranges in ten explicit groups, including shared outlines for 25/26, 28/29 and
+  9/10, plus three corrected chimney bases. Source 2452's chimney hole is retained.
+  A 0.77 m² source overlap at the eastern store is recorded and cleared in the
+  renderer. Firelighter and warehouse 24 have no source outline in the extract;
+  their Goad models remain pending separate OS tracing.
+- Imperial Saw Mills continuation: `data/maps/sawmill-footprint-alignment.json`
+  adds 14 ranges in eight groups, completing all 16 existing site-797 ranges.
+  Seven mill compartments share a corrected outline; the northern Towers
+  slaughterhouse retains its separate courtyard arrangement. The internal boiler
+  chimney moves with its parent, without claiming a mapped base. Cook’s Road is
+  retraced locally in `district-road-traces.json`, preserving the bridge approach.
+  Additional plant outline 455070 has no existing model and remains deferred.
 - Abbey Mills main station: corrected orientation (~35.88°), main cross and two
   lower rear boiler wings. Source outline 459 includes the whole attached
   complex; do not enlarge the ornate station to fill it. Chimney bases use
   source IDs 257848 and 277380. Authoring/runtime plan:
   `data/maps/abbey-station-plan.json`, `docs/data/abbey-station-plan.json`.
 - Source fit is a geometric comparison, not a historical-accuracy score.
+- Abbey supporting group: eight buildings plus four lower annexes, including
+  source 6687, both chimney-side buildings, the lodge and southwest cluster.
+  `data/maps/abbey-supporting-buildings.json` retains source polygons and five
+  period-map access traces. These volumes use the station plan and shared factory
+  renderer, separately from the 507 industrial ranges. Heights and roofs remain
+  interpreted. Tiny features 1064653 and 1162448 are explicitly deferred.
 - The broader scene has 43 factory sites, 507 ranges, 89 factory chimneys,
   196 terrace rows / 3,204 houses and 81 modeled yards.
 - Housing rows have not yet been aligned to the supplied regional footprints.
@@ -59,11 +78,12 @@ They cover historic West Ham plus a 3 km buffer. Regional ground is provisional.
 
 ## Next working sequence
 
-Finish the Abbey Mills site around the corrected landmark: review the southern
-outbuilding (source 6687), small buildings near the chimney bases and their
-relationship to access paths. Then finish the ink-works compound ranges,
-especially source polygons shared by ranges 25/26 and 28/29. Review the Imperial
-Saw Mills complex as a group, then Howards and the remaining factory sites.
+Next review Howards, then the remaining factory sites. The Imperial Saw Mills
+and ink-works compound passes are complete; the firelighter
+and warehouse 24 remain explicit source omissions needing direct map tracing.
+Abbey's supporting buildings and access pass is complete;
+see `ABBEY_STATION_ALIGNMENT.md` for the two deferred small features and its
+separate rebuild sequence.
 
 For each site:
 
@@ -90,6 +110,7 @@ Main authoring sources are under `data/maps/`; generated site data under
 
 ```sh
 python3 scripts/build_factory_buildings.py
+python3 scripts/build_infrastructure.py
 python3 scripts/build_factory_yards.py
 python3 scripts/build_housing_detail.py
 python3 scripts/build_regional_footprints.py
@@ -107,19 +128,31 @@ Relevant checks:
 ```sh
 python3 scripts/check_factory_buildings.py
 python3 scripts/check_factory_footprint_alignment.py
+python3 scripts/check_sawmill_footprint_alignment.py
 python3 scripts/check_abbey_station_plan.py
 python3 scripts/check_factory_yards.py
 python3 scripts/check_housing_detail.py
 python3 scripts/check_western_completion.py
+python3 scripts/check_district_streets.py
 node scripts/check_district_navigation.mjs
 python3 scripts/review_factory_buildings.py --station-only --url http://127.0.0.1:4175
 python3 scripts/review_factory_buildings.py --footprints-only --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --ink-only --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --sawmill-only --url http://127.0.0.1:4175
 ```
 
 Geometry checks, 77 navigation destinations, four Abbey views and five factory
-alignment views passed before this checkpoint. Browser screenshots and diagnostics
+alignment views passed before the initial checkpoint. The continuation adds
+supporting-building and route-clearance checks; all seven Abbey browser views
+passed and were visually inspected.
+The ink-works continuation passes the geometry/clearance checks and four focused
+browser views, including the retained chimney opening and three moved stacks.
+The sawmill continuation passes its group/stack/road checks, the district street
+audit and five visually inspected browser views. All 16 mill/Towers ranges and
+the transferred chimney reached the renderer, without browser/shader errors.
+Browser screenshots and diagnostics
 are local under `scenes/channelsea-sewer-panorama/review/`. No mobile audit.
-Latest public asset revision: `adb95f9a8f13`.
+Latest local asset revision: `89260f10115c`.
 
 ## Preserve these corrections
 

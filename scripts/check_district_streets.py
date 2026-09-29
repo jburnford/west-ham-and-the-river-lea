@@ -17,7 +17,8 @@ for b in factories['buildings']:
  for p in b['renderPolygons']:
   overlap=Polygon(p['outer'],p['holes']).intersection(roads).area
   assert overlap<.15,(b['id'],overlap)
-covered=roads.union(unary_union([LineString(b['route']).buffer(b['width']/2+1.1,cap_style=2) for b in bridges.values()])).buffer(.03)
+paths=unary_union([Polygon(t) for t in data['pathTriangles']])
+covered=roads.union(paths).union(unary_union([LineString(b['route']).buffer(b['width']/2+1.1,cap_style=2) for b in bridges.values()])).buffer(.03)
 report={}
 for r in data['roads']:
  if r['sheet']!='scene':continue
@@ -37,6 +38,8 @@ housing_review=load('data/maps/district-housing-review.json')
 review=housing_review['roads']
 names={r['name'] for r in review}|set(housing_review.get('removeRoadNames',[]))
 expected_routes=[r for r in expected_routes if r['name'] not in names]+review
+station=load('docs/data/abbey-station-plan.json')
+expected_routes=[r for r in expected_routes if r['name'] not in station['replaceRoadNames']]+station['accessPaths']
 assert [r['name'] for r in data['roads']]==[r['name'] for r in expected_routes]
 report['limitations']=['Short Channelsea north-approach bank discrepancy remains within the measured 5 m bound.','Three short lane connections are provisional GIS-bank reconciliations, not independently documented bridge designs.']
 out=ROOT/'reference/district-streets/geometry-checks.json';out.write_text(json.dumps(report,indent=2)+'\n')

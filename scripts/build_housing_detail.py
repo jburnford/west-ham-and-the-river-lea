@@ -10,6 +10,7 @@ from pathlib import Path
 from shapely import affinity, voronoi_polygons
 from shapely.geometry import Polygon, Point, LineString, MultiPoint, box
 from shapely.ops import unary_union, nearest_points
+from abbey_support import station_footprints
 
 ROOT = Path(__file__).resolve().parents[1]
 def load(name):
@@ -57,6 +58,7 @@ def build():
     rows=[]
     housing=[rect(r) for r in original]+[rect(r) for r in ground['neighbourhood']['houses']]
     factory=unary_union([Polygon(p['outer'],p['holes']) for b in factories['buildings']+frontages['buildings'] for p in b['renderPolygons']])
+    factory=factory.union(station_footprints(load('docs/data/abbey-station-plan.json')))
     water=unary_union([Polygon(p[0],p[1:]) for r in ground['rivers']+factories['westContext']['rivers'] for p in r['polygons']])
     road_lines=[(r['name'],LineString(r['route']),r['width']) for r in infra['roads']]
     streets=unary_union([line.buffer(width/2+1.25,cap_style=2,join_style=2) for _,line,width in road_lines])

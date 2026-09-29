@@ -77,6 +77,40 @@ async def chimneys(url):
     print(f"All {len(stacks)} mapped chimneys reached the renderer.", flush=True)
 
 
+async def station(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/abbey-station-plan.json').read_text())
+    assert report['render']['stationSupport']['ranges']==len(expected['supportingBuildings'])
+    assert report['render']['stationStudy']['chimneys']==len(expected['chimneys'])
+    print('Station and all 12 source-linked supporting volumes reached the renderer.', flush=True)
+
+
+async def ink(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings'])
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    for stack in expected['structures']:
+        if stack['siteId']==940 and stack['kind']=='chimney':
+            assert tops[stack['id']]==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
+    print('All factory ranges and three corrected ink-works chimney positions reached the renderer.', flush=True)
+
+
+async def sawmill(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings']) and rendered['siteRanges']['797']==16
+    stack=next(s for s in expected['structures'] if s['siteId']==797 and s['kind']=='chimney')
+    top=next(s['position'] for s in rendered['chimneyTops'] if s['id']==stack['id'])
+    assert top==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
+    print('All 16 mill/Towers ranges and the transferred boiler chimney reached the renderer.', flush=True)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--url', help='Review an already running local preview')
@@ -90,6 +124,8 @@ if __name__ == '__main__':
     parser.add_argument('--completion-only', action='store_true', help='Review the northern railway connection and western industrial bank')
     parser.add_argument('--station-only', action='store_true', help='Review Abbey Mills plan and architectural refinement')
     parser.add_argument('--footprints-only', action='store_true', help='Review source footprint alignment and retained roof detail')
+    parser.add_argument('--ink-only', action='store_true', help='Review grouped ink-works footprints, workshop row and chimney opening')
+    parser.add_argument('--sawmill-only', action='store_true', help='Review Imperial mill compartments, Towers courtyard, timber yard and Cook’s Road')
     parser.add_argument('--view', help='Capture one named view from the selected review')
     args = parser.parse_args()
     if args.yards_only:
@@ -173,8 +209,30 @@ if __name__ == '__main__':
             'station-aligned-front': {'position':[-225,22,72],'target':[-181,17,-10],'fov':55},
             'station-aligned-boilers': {'position':[-125,30,-97],'target':[-181,12,-16],'fov':60},
             'station-aligned-bridge': {'position':[0,9.2,0],'target':[-182,15,-10],'fov':48},
+            'station-support-site': {'position':[-230,225,45],'target':[-230,0,-25],'fov':55},
+            'station-support-south': {'position':[-250,32,100],'target':[-184,5,27],'fov':60},
+            'station-support-entrance': {'position':[-295,7,-112],'target':[-235,4,-35],'fov':65},
         }
-        action=runner.review
+        action=station
+    if args.ink_only:
+        runner.REPORT_NAME='ink-works-alignment-checks.json'
+        runner.VIEWS={
+            'ink-compound-plan': {'position':[-875,175,-345],'target':[-875,0,-346],'fov':55},
+            'ink-lampblack-ranges': {'position':[-943,30,-322],'target':[-879,5,-365],'fov':62},
+            'ink-workshop-row': {'position':[-868,18,-277],'target':[-848,4,-320],'fov':65},
+            'ink-west-chimney-opening': {'position':[-913,31,-337],'target':[-908.2,5,-346.6],'fov':60},
+        }
+        action=ink
+    if args.sawmill_only:
+        runner.REPORT_NAME='sawmill-footprint-alignment-checks.json'
+        runner.VIEWS={
+            'sawmill-aligned-yard': {'position':[-1100,230,30],'target':[-1090,0,-75],'fov':60},
+            'sawmill-aligned-plan': {'position':[-1045,140,-35],'target':[-1045,0,-42],'fov':52},
+            'sawmill-aligned-workshops': {'position':[-1100,24,-75],'target':[-1052,7,-53],'fov':62},
+            'sawmill-aligned-cooks-road': {'position':[-1087,6,-11],'target':[-1039,5,-16],'fov':60},
+            'sawmill-aligned-towers': {'position':[-1125,48,-95],'target':[-1105,2,-138],'fov':58},
+        }
+        action=sawmill
     if args.view:
         if args.view not in runner.VIEWS:parser.error('Unknown selected view: '+args.view)
         runner.VIEWS={args.view:runner.VIEWS[args.view]}

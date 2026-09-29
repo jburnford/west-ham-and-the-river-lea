@@ -7,6 +7,7 @@ from shapely.geometry import Polygon,LineString,Point
 from shapely.affinity import rotate,translate
 from shapely.geometry import box
 from shapely.ops import unary_union,nearest_points
+from abbey_support import station_footprints
 
 ROOT=Path(__file__).resolve().parents[1]
 load=lambda path:json.loads((ROOT/path).read_text())
@@ -41,6 +42,7 @@ def build():
     frontages=load('docs/data/high-street-frontages.json');infra=load('docs/data/infrastructure.json')
     names={s['id']:s['name'] for s in factories['sites']}
     buildings=unary_union([Polygon(p['outer'],p['holes']) for b in factories['buildings']+frontages['buildings'] for p in b['renderPolygons']])
+    buildings=buildings.union(station_footprints(load('docs/data/abbey-station-plan.json')))
     live_holders=factories['holders']+[h for h in plan['neighbourhood']['holders'] if h['siteId']!=924]
     holders=unary_union([Point(h['x'],h['z']).buffer(h['radius']+.5) for h in live_holders])
     water=unary_union([Polygon(p[0],p[1:]) for r in plan['rivers']+factories['westContext']['rivers'] for p in r['polygons']])

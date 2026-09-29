@@ -56,7 +56,65 @@ The 77-destination navigation check and JavaScript syntax checks pass. Four loca
 browser views inspect the plan, front, boiler wings and view from the sewer
 bridge. No browser/shader errors occurred in the first visual review.
 
-The separate outbuildings south of the station, small connecting buildings near
-the stacks, precise ornamental carving and measured vertical elevations remain
-future refinements. This pass addresses the station's main placement, massing and
-silhouette without claiming a complete architectural survey.
+## Supporting buildings and access, 28 September continuation
+
+Eight supporting buildings and four lower annexes now use their complete source
+outlines. They previously appeared only in the regional flat plan layer. The
+saved authoring register is `data/maps/abbey-supporting-buildings.json`:
+
+| Building | Source feature IDs |
+| --- | --- |
+| Entrance lodge and two annexes | 319303, 1062450, 1067767 |
+| Northern outbuilding and annex | 47165, 1014887 |
+| Northwest chimney-side building and annex | 578410, 1016967 |
+| Southeast chimney-side building | 816877 |
+| Southern outbuilding | 6687 |
+| Three southwest/drain-side buildings | 68075, 774880, 74478 |
+
+The lodge is labelled on the map; other names describe location, not an identified
+historical use. All twelve volumes retain the source polygons, including the
+southern building's stepped end. Pitched roofs follow each outline's long axis;
+annexes have lower lean-to roofs. Heights, roof forms, openings and materials are
+interpretations, not measurements. Exact source-outline agreement does not
+establish historical accuracy. Gate-side feature 1064653 and the tiny drain-side
+projection 1162448 remain deferred because their function is unclear.
+
+The old approach crossed the northwest chimney base and ended inside the revised
+station. Five replacement access routes follow corridors read from the period
+OS mosaic, with an entrance joined to the existing Abbey Lane. Pixel traces and
+their georeferencing are retained in the authoring register. Widths, surfacing
+and the short southern forecourt connection remain interpreted. Road surfaces
+and shoulders exclude the station, stacks and supporting buildings.
+
+`abbey_support.py` derives the supporting ranges and routes, and provides common
+building exclusions for infrastructure, yards, housing and tree checks. The
+station generator publishes these in its existing authoring/runtime plan. The
+shared factory renderer draws the new volumes separately from the 507 industrial
+ranges. They also appear on the location map and mask the regional flat layer.
+Factory yards, housing clearances and regional plan tiles have been regenerated.
+
+Rebuild this group in order:
+
+```sh
+python3 scripts/build_abbey_station_plan.py
+python3 scripts/build_infrastructure.py
+python3 scripts/build_factory_yards.py
+python3 scripts/build_housing_detail.py
+python3 scripts/build_mapped_trees.py
+python3 scripts/build_regional_footprints.py
+python3 scripts/build_scene_manifest.py
+```
+
+The expanded geometry check covers all twelve source-linked volumes, lower
+annexes, water/drain clearance, road surfaces, route continuity at Abbey Lane,
+tree clearance and agreement between saved authoring/runtime plans. Existing
+factory, yard, housing, western-completion and 77-destination checks also pass.
+The browser review includes the full site, southern group and entrance, alongside
+the four earlier station views. All seven rendered without browser/shader errors
+and were visually inspected; the diagnostics confirm all twelve supporting
+volumes reached the renderer. Local source comparison:
+`reference/abbey-mills-alignment/support-source-overlay.png`.
+
+Precise ornamental carving, confirmed outbuilding uses and elevations, the two
+deferred small features and detailed gate/rail arrangements remain unresolved.
+The independent height-extraction work and terrain datum are unchanged.

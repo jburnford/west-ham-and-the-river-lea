@@ -33,6 +33,8 @@ for r in read('docs/data/infrastructure.json')['roads']:
 station=read('docs/data/abbey-station-plan.json')
 mask.append(local(station['worldFootprint']).buffer(2))
 for chimney in station['chimneys']:mask.append(local(chimney['worldFootprint']).buffer(1))
+for building in station['supportingBuildings']:
+    for p in building['renderPolygons']:mask.append(local(p['outer']).buffer(1))
 mask=unary_union(mask)
 def polygons(g):
     if g.geom_type=='Polygon':yield g

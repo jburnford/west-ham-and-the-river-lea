@@ -5,6 +5,7 @@ import numpy as np
 from pyproj import Transformer
 from shapely.geometry import Point, Polygon, LineString, box
 from shapely.ops import unary_union
+from abbey_support import station_footprints
 
 ROOT=Path(__file__).resolve().parents[1]
 source=json.loads((ROOT/'data/maps/tree-traces.json').read_text())
@@ -26,7 +27,7 @@ data=json.loads((ROOT/'docs/data/ground-plan.json').read_text())
 infra=json.loads((ROOT/'docs/data/infrastructure.json').read_text())
 water=unary_union([Polygon(p[0],p[1:]) for r in data['rivers'] for p in r['polygons']])
 roads=unary_union([LineString(r['route']).buffer(r['width']/2+.5) for r in infra['roads']])
-station=box(-212,-23,-158,-3).union(box(-195,-37,-175,11))
+station=station_footprints(json.loads((ROOT/'docs/data/abbey-station-plan.json').read_text()))
 trees=[]
 for tree in source['trees']:
     x,z=local(tree['pixel']);p=Point(x,z)
