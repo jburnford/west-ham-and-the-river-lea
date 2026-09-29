@@ -1,0 +1,242 @@
+{
+ "mosaic": "m18_131078_87143",
+ "reader": "opus-aq",
+ "area": "Marsh north-east of Abbey Mills toward Plaistow: LT&SR running east at about marsh level, the Northern Outfall Sewer crossing over it and running SE on its bank, open marsh with blue drains south of the py ~571 join, 'EAST' (Ham) display lettering",
+ "method": "Sweep crops r0c0-r2c2 all displayed and anchored at opening (r0c0 N O R sewer lettering, LT&SR; r0c1 B.M.7·89 and S.P. marks; r0c2 two 31·0 on sewer bank, triangle; r1c0 blank marsh and join line; r1c1 blue drain, B.M.7·64; r1c2 drain with sluice box; r2c0 B.M.4·25 fence end; r2c1 N-S blue drain, 3·4, 4·0; r2c2 EAST lettering). Region views c4_reg1 (4x sewer crossing), c4_reg2 (5x LT&SR slopes), c4_reg3 (4x sewer crest and 14·0 wing), c4_reg4 (5x crossing and sidings). Contact sheets c4_A (8x), c4_B3 (8x smoothed + nearest), c4_C3 (12x smoothed + nearest, 6/8), c4_D (6x), c4_E (12x), c4_F3 (8x both filters) and c4_G (16x, B.M.7·89 8/9). Every image displayed when opened. Dot centroids by numeric helper; positions checked on a marker sheet.",
+ "legibility": "clear print on mostly blank marsh; horizontal sheet join py ~571 (full width, thin line; same join as py ~570 on 131075_87143); sheet tool silent",
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 9.5,
+   "raw": "9·5",
+   "px": 167,
+   "py": 236,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "LT&SR between the rails where the line is unhatched (at grade); dot left of figure; west overlap strip"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 370,
+   "py": 164,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "LT&SR: dot at the rail-side edge of the south hatched slope, figure outside the fence line; rails fall eastward 9·5 -> 6·4 -> 3·8 toward the sewer crossing (shallow cutting or nearly at grade); open 6 at 8-12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.8,
+   "raw": "3·8",
+   "px": 577,
+   "py": 87,
+   "confidence": "low",
+   "setting": "railway",
+   "notes": "LT&SR just west of where the Northern Outfall Sewer crosses over it: dot at the rail-side edge of the south hatched slope; final digit looks closed (8) at 6x, 8x and 12x but 6 is not excluded (3·8 or 3·6)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.0,
+   "raw": "4·0",
+   "px": 679,
+   "py": 22,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "dot on the NE edge line of the sewer crossing where the sidings (with buffer stops) begin, at the top edge; rails at about marsh level"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.89,
+   "raw": "B.M.7·89",
+   "px": 666,
+   "py": 58,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "pheon on the SW abutment line of the sewer's bridge over the LT&SR, text east; 8 and 9 distinct at 12x and 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.0,
+   "raw": "14·0",
+   "px": 712,
+   "py": 116,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "tip of the curved wing at the NW end of the Northern Outfall Sewer bank's SW slope, beside the sewer bridge; mid-height between the 31·0 crest and the marsh (slope/wing-wall end, neither crest nor foot)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.0,
+   "raw": "31·0",
+   "px": 811,
+   "py": 136,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "Northern Outfall Sewer crest (unhatched strip between the two slopes), SE of the survey triangle; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.0,
+   "raw": "31·0",
+   "px": 988,
+   "py": 260,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "Northern Outfall Sewer crest further SE; dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.5,
+   "raw": "10·5",
+   "px": 650,
+   "py": 211,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open ground south of the LT&SR and west of the sewer bank, no place word (<15 ft rule); dot left; flat-topped 5 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.5,
+   "raw": "9·5",
+   "px": 633,
+   "py": 373,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open ground south of the LT&SR, no place word; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 611,
+   "py": 565,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open marsh at the bend of the blue drain, just north of the py ~571 sheet join; dot left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.64,
+   "raw": "B.M.7·64",
+   "px": 612,
+   "py": 583,
+   "confidence": "medium",
+   "setting": "other",
+   "notes": "pheon on the drain kerb/culvert at the bend of the blue drain, text west; point estimated at the drain edge; open-topped 6 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.4,
+   "raw": "3·4",
+   "px": 598,
+   "py": 736,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "dot on the west bank line of the N-S blue drain (ditch bank), figure west of it"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.0,
+   "raw": "4·0",
+   "px": 597,
+   "py": 932,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "dot on the west bank line of the N-S blue drain, figure west"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 4.25,
+   "raw": "B.M.4·25",
+   "px": 100,
+   "py": 962,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "pheon at the east end of the marsh fence line, text below; west overlap strip"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 143,
+   "py": 963,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open marsh just east of the fence end; open-topped 6; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.1,
+   "raw": "5·1",
+   "px": 359,
+   "py": 951,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open marsh; dot above-left; flat-topped 5 at 8x"
+  }
+ ],
+ "non_height_marks": [
+  "S.P. marks at the sewer crossing (~640,30-40, ~720,50)",
+  "survey triangle on the sewer bank ~768,112 without a figure",
+  "'EAST' display lettering ~880,980",
+  "sluice box on drain ~957,690"
+ ],
+ "unreadable_regions": [],
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ]
+}

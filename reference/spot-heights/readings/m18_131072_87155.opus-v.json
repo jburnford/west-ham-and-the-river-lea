@@ -1,0 +1,379 @@
+{
+ "mosaic": "m18_131072_87155",
+ "reader": "opus-v",
+ "area": "Canning Town west: Tucker Street, New Road, Quadrant Street, Bidder Street, Randall/Wellington/Ship/Shipwright/Charlotte/Junction/Stephenson Streets, St Gabriel's Church, West Ham Outfall Sewerage Works reservoir, River Lea Iron Wharf and the N bank of Bow Creek",
+ "method": "All 9 sweep crops viewed and anchored on opening (r0c0 TUCKER STREET/Reservoir; r0c1 NEW ROAD/RANDALL STREET; r0c2 St. Gabriel's Church/STEPHENSON; r1c0 West Ham Outfall Sewerage Works; r1c1 QUADRANT STREET/Mission Hall; r1c2 SHIP STREET/WELLINGTON PLACE; r2c0 River Lea Iron Works/Mud; r2c1 SHIPWRIGHT/CHARLOTTE STREET; r2c2 JUNCTION STREET/Talbot Works). Contact sheets cs1-cs4 (8-14x) and views v1-v3 (4-10x, nearest/bicubic for 4·6, 4·8, B.M.5·73, B.M.6·99) all displayed; every value confirmed at 8x+, B.M. decimals at 12-14x; dot centroids refined numerically; marker sheets checked. The E strip (px > 768) and S strip (py > 768) repeat marks I read in m18_131075_87155 and m18_131072_87158 (not independent).",
+ "legibility": "Good print, no missing tiles; the sheet tool reports no join, but a faint horizontal tint step runs across at py ~962 (the same join as py ~195 on m18_131072_87158 and py ~964 on m18_131075_87155); 11·1, 7·4 and B.M.9·16 sit just below it. TUCKER·STREET, WELLINGTON (G·T), STEPHENSON (P·H) and possibly BIDDER carry interpuncts. The Outfall Sewerage Works and reservoir carry no figures.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 5.7,
+   "raw": "5·7",
+   "px": 124,
+   "py": 238,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Tucker Street W end by the Outfall Sewerage Works boundary; dot left of figures 124,238; first digit the same flat-topped 5 as in 5·2, 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.2,
+   "raw": "5·2",
+   "px": 323,
+   "py": 223,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Tucker Street at Quadrant Street; no own dot (the dot at 332,248 is the TUCKER·STREET interpunct); centre of figures; clear 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.8,
+   "raw": "4·8",
+   "px": 430,
+   "py": 232,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Tucker Street E; dot 430,232 follows the final T of STREET (possible survey dot); final 8 closed at 12x and nearest-neighbour but stands alone"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.73,
+   "raw": "B.M.5·73",
+   "px": 350,
+   "py": 284,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "Quadrant Street W side at the Tucker Street corner, on a wall line; pheon apex 350,284 found 25-40 px NE of the text; final 3 open on the left at 12x (lone final digit)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.99,
+   "raw": "B.M.6·99",
+   "px": 515,
+   "py": 49,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "New Road N side, on the wall of the Girls school; digits clear 12x (both 9s alike, leading 6); pheon 515,49 above the text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 587,
+   "py": 61,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "New Road / Bidder Street corner below F.P; dot above 587,61; final digit 6 or 8 (top not clearly open at 12x or nearest-neighbour)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.7,
+   "raw": "4·7",
+   "px": 561,
+   "py": 228,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Bidder Street at Randall Street; dot right of figures 561,228; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 582,
+   "py": 410,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Bidder Street at Wellington Street; dot above figures 582,410; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 602,
+   "py": 508,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Bidder Street at Ship Street; dot 602,508 beside the D of BIDDER could be an interpunct; clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.9,
+   "raw": "B.M.6·90",
+   "px": 694,
+   "py": 594,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "corner house at Wellington Place (N-S) / Wellington Place (E-W); digits clear 14x (9 tailed, 0 oval); text sits in a yard 35-60 px E and the only pheon nearby is at 694,594 across the street, so the pairing is inferred"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.1,
+   "raw": "4·1",
+   "px": 697,
+   "py": 602,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Wellington Place, directly below the pheon of B.M.6·90 with no dot of its own (ground level at the B.M.); dot at 707,600 is the G·T interpunct of WELLINGTON; centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.17,
+   "raw": "B.M.7·17",
+   "px": 615,
+   "py": 673,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Bidder Street S end, house corner; digits clear 8x-12x; pheon apex 615,673 left of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 663,
+   "py": 670,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Bidder Street by the P.H.; no dot found; centre of figures; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.4,
+   "raw": "5·4",
+   "px": 782,
+   "py": 178,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Stephenson Street N end; same mark as read at 8x in m18_131075_87155"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 800,
+   "py": 287,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Stephenson Street; same mark as in m18_131075_87155; P·H interpunct only"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.46,
+   "raw": "B.M.6·46",
+   "px": 863,
+   "py": 483,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Stephenson Street W frontage; confirmed at 12x in m18_131075_87155"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 847,
+   "py": 497,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Stephenson Street, beside survey triangle (position = triangle centre); confirmed at 16x in m18_131075_87155"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 855,
+   "py": 605,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "written on a building E of Junction Street; confirmed in m18_131075_87155"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 897,
+   "py": 645,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Stephenson Street; confirmed in m18_131075_87155"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 812,
+   "py": 750,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "written on a building E of Junction Street beside the lettering; confirmed in m18_131075_87155"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 941,
+   "py": 763,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Stephenson Street S part; confirmed in m18_131075_87155"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.38,
+   "raw": "B.M.8·38",
+   "px": 955,
+   "py": 839,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Talbot Works; confirmed at 12x in m18_131075_87158"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 1006,
+   "py": 936,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "N end of Stephenson Street by the P.H.; confirmed at 12x in m18_131075_87158"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.1,
+   "raw": "7·1",
+   "px": 735,
+   "py": 887,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Junction Street; confirmed at 12x in m18_131072_87158"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 687,
+   "py": 972,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Junction Street / Charlotte Street; confirmed at 12x in m18_131072_87158"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.16,
+   "raw": "B.M.9·16",
+   "px": 693,
+   "py": 991,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Junction Street / Charlotte Street house corner; confirmed at 12x in m18_131072_87158"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.1,
+   "raw": "11·1",
+   "px": 461,
+   "py": 973,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "S end of Shipwright Street; confirmed at 12x in m18_131072_87158"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.39,
+   "raw": "B.M.18·39",
+   "px": 422,
+   "py": 1009,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "Lea Shipbuilding Yard; see m18_131072_87158 (3/8 doubt)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.9,
+   "raw": "15·9",
+   "px": 115,
+   "py": 866,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "N river wall of Bow Creek at a jetty head; confirmed at 8x in m18_131072_87158"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 199,
+   "py": 937,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "N river wall of Bow Creek; confirmed at 8x in m18_131072_87158"
+  }
+ ],
+ "non_height_marks": [
+  "S.P. and S.B. along the railway",
+  "·C marks at River Lea Iron Works",
+  "W.M. at 470,640"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 804,
+   "px1": 6,
+   "py1": 818,
+   "reason": "figure cut by the W edge (final 2 visible); lies in the mosaic to the west"
+  }
+ ]
+}

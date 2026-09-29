@@ -1,0 +1,303 @@
+{
+ "mosaic": "m18_131063_87143",
+ "reader": "opus-b",
+ "area": "Bow Bridge / Three Mills: Lime Works, Albion Works, Bow Bridge Soap Works, River Lea towing path (C.C. at L.W. boundary), Hancock Road terraces, Three Mills Bridge and Three Mills Lane",
+ "method": "read by Claude (vision): 3x3 grid of 448 px crops at 2x LANCZOS, every candidate checked at 6x (80 px window, crosshair) and ambiguous ones at 8-10x; positions in mosaic pixels",
+ "legibility": "good; an OS sheet join crosses at py~564 (tint change) and px~829; digits clear at 6x",
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 15.5,
+   "raw": "15·5",
+   "px": 130,
+   "py": 60,
+   "confidence": "high",
+   "notes": "Lime Works yard; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.0,
+   "raw": "13·0",
+   "px": 314,
+   "py": 179,
+   "confidence": "medium",
+   "notes": "open ground by the Lea; dot right of figures (a second faint dot above could also be it)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.4,
+   "raw": "14·4",
+   "px": 4,
+   "py": 189,
+   "confidence": "medium",
+   "notes": "towing path at the west edge; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.7,
+   "raw": "14·7",
+   "px": 199,
+   "py": 223,
+   "confidence": "high",
+   "notes": "towing path; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.4,
+   "raw": "14·4",
+   "px": 264,
+   "py": 262,
+   "confidence": "high",
+   "notes": "towing path at the bend; dot above-right on the wall line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 254,
+   "py": 313,
+   "confidence": "high",
+   "notes": "yard east of Albion Works; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.1,
+   "raw": "18·1",
+   "px": 141,
+   "py": 373,
+   "confidence": "high",
+   "notes": "Albion Works yard; dot above figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.1,
+   "raw": "14·1",
+   "px": 301,
+   "py": 388,
+   "confidence": "medium",
+   "notes": "towing path by the Soap Works (disused); dot 11 px right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.1,
+   "raw": "20·1",
+   "px": 92,
+   "py": 440,
+   "confidence": "high",
+   "notes": "yard west of the Soap Works; dot above-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.66,
+   "raw": "B.M.17·66",
+   "px": 323,
+   "py": 465,
+   "confidence": "high",
+   "notes": "pheon left of the text on the towing-path wall"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 31.44,
+   "raw": "B.M.31·44",
+   "px": 88,
+   "py": 560,
+   "confidence": "high",
+   "notes": "pheon below the text at the wall corner by the Mineral Water Manufactory, on the sheet join"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.7,
+   "raw": "28·7",
+   "px": 108,
+   "py": 569,
+   "confidence": "high",
+   "notes": "street head just south of the sheet join; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.5,
+   "raw": "14·5",
+   "px": 406,
+   "py": 574,
+   "confidence": "high",
+   "notes": "towing path south of the sheet join; dot right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.6,
+   "raw": "31·6",
+   "px": 178,
+   "py": 683,
+   "confidence": "medium",
+   "notes": "Hancock Road at its north end; last digit 6 (not 8); dot taken as the interpunct in 'H·A' of the road name, ~20 px from the figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 598,
+   "py": 707,
+   "confidence": "medium",
+   "notes": "towing path; no adjacent dot (dots nearby belong to the C.C. boundary dash-dot line), position = figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.7,
+   "raw": "33·7",
+   "px": 12,
+   "py": 764,
+   "confidence": "medium",
+   "notes": "street at the west edge; first digit 3; dot taken as the one above the N of the street name"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.3,
+   "raw": "32·3",
+   "px": 243,
+   "py": 793,
+   "confidence": "medium",
+   "notes": "Hancock Road; dot is the interpunct in 'C·K' of the road name, upper-right of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.87,
+   "raw": "B.M.34·87",
+   "px": 275,
+   "py": 823,
+   "confidence": "high",
+   "notes": "pheon above the text at the corner of Sherman Street and Hancock Road"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 90,
+   "py": 870,
+   "confidence": "medium",
+   "notes": "Washington Street; dot is the interpunct in 'O·N' of the street name, just left of the figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.5,
+   "raw": "32·5",
+   "px": 309,
+   "py": 906,
+   "confidence": "medium",
+   "notes": "Hancock Road; dot is the interpunct in 'O·A' of ROAD, above-right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.0,
+   "raw": "34·0",
+   "px": 154,
+   "py": 987,
+   "confidence": "high",
+   "notes": "...ferson Street; dot immediately left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.2,
+   "raw": "14·2",
+   "px": 690,
+   "py": 834,
+   "confidence": "medium",
+   "notes": "towing path by Ornamental Moulding Works; dot left of figures (other dots nearby belong to the C.C. dash-dot line)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.46,
+   "raw": "B.M.19·46",
+   "px": 707,
+   "py": 871,
+   "confidence": "high",
+   "notes": "pheon about 25 px above the text at the west abutment of Three Mills Bridge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.8,
+   "raw": "23·8",
+   "px": 544,
+   "py": 958,
+   "confidence": "medium",
+   "notes": "Three Mills Lane; dot is the interpunct in 'L·A' of LANE, ~18 px above the figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.2,
+   "raw": "21·2",
+   "px": 751,
+   "py": 867,
+   "confidence": "medium",
+   "notes": "on Three Mills Bridge; dot upper-left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.2,
+   "raw": "16·2",
+   "px": 871,
+   "py": 838,
+   "confidence": "high",
+   "notes": "Three Mills Lane east of the bridge; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.7,
+   "raw": "14·7",
+   "px": 985,
+   "py": 828,
+   "confidence": "high",
+   "notes": "lane by the W.M. at Three Mills; dot above-right"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.8,
+   "raw": "14·8",
+   "px": 1022,
+   "py": 947,
+   "confidence": "medium",
+   "notes": "east edge of mosaic; last digit 8 (possibly 6); dot right of figures at the edge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.2,
+   "raw": "15·2",
+   "px": 801,
+   "py": 993,
+   "confidence": "high",
+   "notes": "path south of Three Mills Bridge; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.4,
+   "raw": "16·4",
+   "px": 940,
+   "py": 608,
+   "confidence": "high",
+   "notes": "road on the east bank of the Lea; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 999,
+   "py": 192,
+   "confidence": "high",
+   "notes": "top of the river wall (east bank, hachured); dot left; wall-top height"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.7,
+   "raw": "16·7",
+   "px": 994,
+   "py": 430,
+   "confidence": "high",
+   "notes": "east of the river wall; dot above"
+  }
+ ],
+ "non_height_marks": [
+  "C.C. at L.W. (county boundary at low water) dash-dot line with x crosses along the Lea",
+  "F.B. footbridge, F.P. fire plugs, W.M. weighing machines, C. crane marks",
+  "Towing Path lettering: rotated 'ing' can look like '11·9' at 2x"
+ ],
+ "unreadable_regions": []
+}

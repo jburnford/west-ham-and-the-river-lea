@@ -1,0 +1,10 @@
+{
+  "mosaic": "q18_131102_87149", "reader": "opus-al", "layer": "os-25-inch-london",
+  "area": "Field north of the LT&SR and the railway itself east of the Blind Lane bridge; field parcel 112 south of it (E 541702-542088, N 182270-182650)",
+  "method": "OS 25-inch (1:2500) Essex county series, layer os-25-inch-london. sheet (no join reported), 2x sweep of all 9 crops, each anchored on opening and all displayed: r0c0 recurring speck ~205,153; r0c1 blank, speck ~655,410; r0c2 blank; r1c0 LT&SR hatched banks; r1c1 railway banks; r1c2 drain from E edge; r2c0 '19·683' either side of the join, parcel '112'; r2c1 parcel '112 / 19·683'; r2c2 railway acreage '18·040', '109·967'. No candidates needed zooming. No readings.",
+  "legibility": "Clear. Sheet join by eye: horizontal line at py ~782 (acreage 19.683 repeated either side; the railway hatching stops at it); the sheet tool misses it. No grey fill.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [],
+  "non_height_marks": ["parcel 112 / 19.683 at ~370,930 and 19.683 repeated above the join at ~275,760", "railway acreage 18.040 at ~800,760; 109.967 at ~920,810"],
+  "unreadable_regions": []
+}

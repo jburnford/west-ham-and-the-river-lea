@@ -1,0 +1,351 @@
+{
+ "mosaic": "m18_131069_87125",
+ "reader": "opus-e",
+ "area": "Stratford: Stratford Works sidings and GER main lines, Stratford Station and Eastern Junction, Stratford Goods Station, Angel Lane and Angel Lane Bridge, Angel Place, William Street, Western Street, Theatre Royal",
+ "method": "9 sweep crops at 2x; every candidate zoomed at 6x (+-40); digits confirmed at 10x (+-18) and 14x (+-12) where 8/9/6 ambiguous; pheons located at 6-10x.",
+ "legibility": "Good but dense: rails, platforms and street lettering crowd many figures. No missing tiles. No sheet join detected by the tool and none seen (no straight tint step).",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 20.9,
+   "raw": "20·9",
+   "px": 191,
+   "py": 153,
+   "confidence": "medium",
+   "notes": "Stratford Works sidings; dot upper-left; final 9 crossed by a rail line, read as 9 at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.4,
+   "raw": "21·4",
+   "px": 233,
+   "py": 362,
+   "confidence": "high",
+   "notes": "by the turntable west of the works building; dot above-right of the figures, 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.93,
+   "raw": "B.M.22·93",
+   "px": 236,
+   "py": 398,
+   "confidence": "high",
+   "notes": "wall of the works building; pheon (arrow) 10 px left of the text, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.6,
+   "raw": "22·6",
+   "px": 554,
+   "py": 85,
+   "confidence": "medium",
+   "notes": "house yard north of Angel Place; digits clear at 10x; no dot found (the nearest dot is the L· interpunct at 548,101), position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 24.63,
+   "raw": "B.M.24·63",
+   "px": 551,
+   "py": 114,
+   "confidence": "high",
+   "notes": "Angel Place kerb/building line; pheon above-right of the text, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.6,
+   "raw": "26·6",
+   "px": 720,
+   "py": 101,
+   "confidence": "high",
+   "notes": "road junction east of Angel Place; dot left of figures, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.6,
+   "raw": "25·6",
+   "px": 813,
+   "py": 72,
+   "confidence": "high",
+   "notes": "road junction by the P.H.; dot left of figures, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.2,
+   "raw": "26·2",
+   "px": 942,
+   "py": 33,
+   "confidence": "high",
+   "notes": "street at the north edge; dot left of figures, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.0,
+   "raw": "30·0",
+   "px": 654,
+   "py": 436,
+   "confidence": "high",
+   "notes": "approach ramp on the Angel Lane Bridge embankment above the railway; dot above-left, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 36.2,
+   "raw": "36·2",
+   "px": 786,
+   "py": 329,
+   "confidence": "high",
+   "notes": "Angel Lane on the bridge approach; dot above the figures, 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 40.27,
+   "raw": "B.M.40·27",
+   "px": 787,
+   "py": 376,
+   "confidence": "high",
+   "notes": "Angel Lane Bridge parapet; pheon 20 px below the text at the curved wall corner, 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 38.7,
+   "raw": "38·7",
+   "px": 807,
+   "py": 421,
+   "confidence": "high",
+   "notes": "Angel Lane Bridge roadway; dot above the figures, 10x confirms 38"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.3,
+   "raw": "21·3",
+   "px": 166,
+   "py": 534,
+   "confidence": "medium",
+   "notes": "platform/strip between the GER running lines; digits clear at 10x; no dot found within +-40 px, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.3,
+   "raw": "25·3",
+   "px": 338,
+   "py": 716,
+   "confidence": "high",
+   "notes": "Station Road frontage; dot above-right of figures, 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.9,
+   "raw": "25·9",
+   "px": 491,
+   "py": 581,
+   "confidence": "medium",
+   "notes": "Station Road; the survey dot is the interpunct in the spaced lettering 'O·N' of STATION, just left of the figures; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.5,
+   "raw": "28·5",
+   "px": 836,
+   "py": 575,
+   "confidence": "high",
+   "notes": "Angel Lane junction with Tenby Road; dot left of figures, 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.1,
+   "raw": "24·1",
+   "px": 847,
+   "py": 709,
+   "confidence": "high",
+   "notes": "Angel Lane at the Salway Road junction; dot left of figures, 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.4,
+   "raw": "22·4",
+   "px": 193,
+   "py": 751,
+   "confidence": "medium",
+   "notes": "Stratford Station platform area west of the well; digits clear; no dot found, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 27.63,
+   "raw": "B.M.27·63",
+   "px": 238,
+   "py": 815,
+   "confidence": "high",
+   "notes": "Stratford Station building; pheon ~12 px above-right of the two-line text, 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.8,
+   "raw": "22·8",
+   "px": 221,
+   "py": 868,
+   "confidence": "high",
+   "notes": "station platform by the L.B.; small dot directly above the figures; 14x confirms 8"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.41,
+   "raw": "B.M.19·41",
+   "px": 377,
+   "py": 954,
+   "confidence": "high",
+   "notes": "corner of the building south of the Urinal; pheon below-left of the text, 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.6,
+   "raw": "17·6",
+   "px": 349,
+   "py": 955,
+   "confidence": "medium",
+   "notes": "street junction by the P.H.; dot above-left; final digit read as 6 at 10x and 14x but 6/8 not fully certain"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.2,
+   "raw": "24·2",
+   "px": 80,
+   "py": 1012,
+   "confidence": "medium",
+   "notes": "among the running lines near the south-west edge; 4 is crossed by a rail line; no dot separable from the rails, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 521,
+   "py": 892,
+   "confidence": "high",
+   "notes": "William Street; dot above-right of figures, 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.1,
+   "raw": "19·1",
+   "px": 685,
+   "py": 834,
+   "confidence": "medium",
+   "notes": "William Street; the survey dot is the interpunct 'E·T' in the street lettering just left of the figures; digits clear at 14x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.0,
+   "raw": "B.M.20·00",
+   "px": 614,
+   "py": 976,
+   "confidence": "high",
+   "notes": "house front on Western Street; pheon directly below the text, 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.8,
+   "raw": "18·8",
+   "px": 688,
+   "py": 961,
+   "confidence": "low",
+   "notes": "street between William Street and Western Street; dot left of figures; sweep suggested 19·8 but at 14x the second digit has two closed loops (8); 8/9 ambiguous"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.1,
+   "raw": "18·1",
+   "px": 578,
+   "py": 997,
+   "confidence": "medium",
+   "notes": "Western Street; the survey dot is the interpunct 'N·' after WESTERN; 14x reads 18·1"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.4,
+   "raw": "23·4",
+   "px": 859,
+   "py": 837,
+   "confidence": "medium",
+   "notes": "Angel Lane; digits clear at 10x; dot taken as the one right of the L of LANE (~10 px below-left), association uncertain (F.P. dots nearby)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.2,
+   "raw": "23·2",
+   "px": 863,
+   "py": 911,
+   "confidence": "high",
+   "notes": "Angel Lane at a side-street mouth; dot above-right of figures, 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.05,
+   "raw": "B.M.25·05",
+   "px": 878,
+   "py": 907,
+   "confidence": "high",
+   "notes": "building front on the east side of Angel Lane; pheon ~25 px above-left of the text on the frontage line, 10x digits"
+  }
+ ],
+ "non_height_marks": [
+  "many S.P. signal posts, S.B. signal boxes, H hydrants, F.P. and L.B. marks",
+  "W.M. at ~580,712 and 778,642",
+  "triangle-in-square symbols at ~210,12 and 430,205 (no figures)",
+  "'Ward Bdy.' at ~140,960"
+ ],
+ "unreadable_regions": []
+}

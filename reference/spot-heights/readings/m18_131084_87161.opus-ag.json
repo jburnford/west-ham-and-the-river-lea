@@ -1,0 +1,250 @@
+{
+ "mosaic": "m18_131084_87161",
+ "reader": "opus-ag",
+ "area": "Canning Town interior: St Peter's Road, St Thomas's Road, Paragon Works and Glass Bottle Works, Butchers Road, Elphick Street, Agate Street, Eldon Road, Albany Road, Police Station, school; large open (undeveloped) ground in the centre",
+ "method": "Independent QA second read. sheet tool (no join reported); 9 sweep crops at 2x (anchors: r0c0 Glass Bottle Works/ST PETER'S ROAD; r0c1 Paragon Works; r0c2 BUTCHERS lettering; r1c0 ELPHICK STREET/AGATE STREET/School; r1c1 School Girls/Infants; r1c2 B.M.9·43/L.B.; r2c0 Police Station/ELDON ROAD; r2c1 ALBANY ROAD/Infants; r2c2 L.B./B.M.7·24); contact sheets cs1 (7x, anchor B.M.9·19), cs2 (5x ±26, anchor B.M.8·32/F.P), cs3 (5x, B.M.7·24), cs4 (12x, BM decimals), cs5 (7x, 6/8 checks), cs6 (10x nearest-neighbour) and cs6b (6x) comparing against known 6 and 8; zooms 975,900 s5 ±50 (pheon search for B.M.7·24) and 890,602 s12 (pheon of B.M.9·43); dot centroids by numeric helper; marker sheets mk1-mk3 checked every position. All crops, zooms, contact sheets and marker sheets displayed when opened; an anchor was written for each at the time.",
+ "legibility": "Good, clean print. Sheet join: vertical line with tint step at px ~633-634 running the full height (sheet tool misses it). No missing tiles.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 419,
+   "py": 8,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "road junction N of St Peter's Road at the top edge ('..OAD' lettering); no dot found within ±26 px, position = centre of figures; 6/6 checked at 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 529,
+   "py": 57,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road junction east of St Peter's Road near F.P; dot left-above figures, 5x/7x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.19,
+   "raw": "B.M.9·19",
+   "px": 509,
+   "py": 115,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the NE corner wall of Paragon Works (Printing), St Peter's Road; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 715,
+   "py": 160,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road between the two diagonal terraces NE of Paragon Works; dot left of figures; 6s open-topped at 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 870,
+   "py": 246,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "east end of the same road, beside H; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 949,
+   "py": 302,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "beside the west edge of Butchers Road (lettered B·U·T·C·H·E·R·S); no dot found within ±26 px, position = centre of figures; flat-topped 5 at 12x; may refer to the open ground just west of the road edge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 866,
+   "py": 473,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction of Butchers Road and the road running east (H nearby); survey-station triangle at ~852,481 is separate; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 776,
+   "py": 620,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "on Butchers Road at the west end of the road carrying B.M.9·43; dot left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.43,
+   "raw": "B.M.9·43",
+   "px": 889,
+   "py": 602,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on SW corner wall of the terrace north of the road; text 20 px SE of pheon; 9·43 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 275,
+   "py": 928,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road south of the Eldon Road / Albany Road block (..NE ROAD); dot left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.32,
+   "raw": "B.M.8·32",
+   "px": 385,
+   "py": 960,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "pheon (pointing down) on N wall of house block at the east end of ..NE ROAD, text above; leading digit 6/8 checked at 6x smoothed and 10x nearest-neighbour: closed top, reads 8 like the 8 of 5·8 on this sheet, but small doubt"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.3,
+   "raw": "6·3",
+   "px": 417,
+   "py": 955,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "east end of ..NE ROAD where it opens onto undeveloped ground; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.6,
+   "raw": "5·6",
+   "px": 84,
+   "py": 977,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "..NE ROAD by Eldon Road corner; dot directly below figures (F.P with its own dot at 78,955 is separate); 5 flat-topped, final 6 compared with known 6 of 6·4 at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 697,
+   "py": 758,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "west edge of Butchers Road beside the triangular terrace block; dot directly above figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 628,
+   "py": 874,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road junction west of Butchers Road beside F.P (F.P's own dot is right of its letters); dot above-right of figures; vertical sheet join line at px ~633 immediately east"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 828,
+   "py": 882,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road between terraces (lettered ..A D / R·O·A·D) south of the triangular block; dot left of figures; 8 closed at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.24,
+   "raw": "B.M.7·24",
+   "px": 1004,
+   "py": 902,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "B.M. text in the N-S road at the east edge (..CK'S ROAD); pheon not found within 925-1024 x 850-950, probably just beyond the east edge; position = centre of text; 7·24 clear at 12x"
+  }
+ ],
+ "non_height_marks": [
+  "F.P marks at 512,30; 110,762; 96,951; 4,952; 640,866; 656,896; 968,868; 994,935; 990,735",
+  "H marks (hydrants) at 618,128; 859,245; 977,332; 899,466",
+  "survey-station triangle at ~852,481 with no figure of its own",
+  "L.B. at ~1010,733"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1008,
+   "py0": 860,
+   "px1": 1024,
+   "py1": 878,
+   "reason": "figure '5·..' cut by the east edge (between R·O lettering of ..CK'S ROAD); read it on the eastern neighbour"
+  }
+ ]
+}

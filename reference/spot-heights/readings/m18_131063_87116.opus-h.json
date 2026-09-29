@@ -1,0 +1,229 @@
+{
+ "mosaic": "m18_131063_87116",
+ "reader": "opus-h",
+ "area": "Temple Mills / Leyton marsh edge: drainage ditches (C.D.) with sluices, Temple Mill Lane, Nursery glasshouses, GER Loughton branch, Wycliffe Road",
+ "method": "sheet --all; 9 sweep crops at 2x; every candidate confirmed on zoom contact sheets at 6-14x (panels labelled in mosaic px), dot or pheon searched for at 4-8x over up to +-60 px. All sweep crops and all zoom contact sheets loaded and were viewed successfully.",
+ "legibility": "Good; sparse figures. Sheet joins: horizontal at py~536 and vertical at px~837, both visible by eye (both reported by the tool)",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 16.5,
+   "raw": "16·5",
+   "px": 252,
+   "py": 22,
+   "confidence": "medium",
+   "notes": "field/marsh boundary near the north edge; dot is a blob on the fence line just left of the figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.2,
+   "raw": "16·2",
+   "px": 360,
+   "py": 148,
+   "confidence": "medium",
+   "notes": "bank of the C.D. ditch where it meets the lane; digits clear at 8x; no survey dot distinguishable from the boundary dots in the ditch, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.35,
+   "raw": "B.M.17·35",
+   "px": 105,
+   "py": 260,
+   "confidence": "high",
+   "notes": "sluice/culvert where the lane crosses the C.D. ditch; pheon below text, clear broad arrow at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.4,
+   "raw": "15·4",
+   "px": 132,
+   "py": 254,
+   "confidence": "high",
+   "notes": "lane by the sluice; dot below-left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 506,
+   "py": 291,
+   "confidence": "high",
+   "notes": "lane end at the B.S./H. by the Def. boundary; dot above-left of figures (the H. has its own dot)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 596,
+   "py": 240,
+   "confidence": "medium",
+   "notes": "field north of the Nursery; digits clear at 12x; no dot (a building corner touches the 0), position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.62,
+   "raw": "B.M.18·62",
+   "px": 580,
+   "py": 422,
+   "confidence": "high",
+   "notes": "Temple Mill Lane west side (fence line) by the terrace; pheon on the fence 15 px above-right of text; clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 580,
+   "py": 477,
+   "confidence": "high",
+   "notes": "Temple Mill Lane; dot right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 778,
+   "py": 196,
+   "confidence": "medium",
+   "notes": "GER Loughton branch running lines; digits clear at 8x; dot not separable from the rails, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.3,
+   "raw": "22·3",
+   "px": 952,
+   "py": 142,
+   "confidence": "medium",
+   "notes": "road by the terrace NE of the railway; digits clear; the only nearby dots belong to the F.P., position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.2,
+   "raw": "17·2",
+   "px": 611,
+   "py": 693,
+   "confidence": "medium",
+   "notes": "Temple Mill Lane at the boundary post; digits clear at 8x; nearby dots are boundary dots, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 669,
+   "py": 888,
+   "confidence": "medium",
+   "notes": "Temple Mill Lane; digits clear at 8x; nearest dot is the ·L·A·N·E interpunct, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.61,
+   "raw": "B.M.17·61",
+   "px": 701,
+   "py": 976,
+   "confidence": "high",
+   "notes": "corner of Temple Mill Lane and the road east; pheon above text on the fence curve; clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.9,
+   "raw": "15·9",
+   "px": 679,
+   "py": 995,
+   "confidence": "high",
+   "notes": "road south of the B.M., near the south edge (figure whole); dot above figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.0,
+   "raw": "19·0",
+   "px": 877,
+   "py": 922,
+   "confidence": "medium",
+   "notes": "road/embankment east of the vertical sheet join; small post-like dot left of figures taken as the survey dot, uncertain"
+  }
+ ],
+ "non_height_marks": [
+  "survey station triangle, no figure, at 238,247",
+  "S.P. marks along the GER lines (e.g. rotated S.P at 882,448, not a height)",
+  "B.S., Def., C.D., C.C.S., F.P., U.D. Bdy., Co. & Parly. Boro. Bdy. lettering",
+  "Sluice lettering at 140,280 and 245,500"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 530,
+   "px1": 840,
+   "py1": 542,
+   "reason": "horizontal sheet join at py~536 (tint step; darker sheet to the south)"
+  },
+  {
+   "px0": 832,
+   "py0": 0,
+   "px1": 842,
+   "py1": 1024,
+   "reason": "vertical sheet join at px~837 (line + tint step)"
+  },
+  {
+   "px0": 935,
+   "py0": 0,
+   "px1": 960,
+   "py1": 25,
+   "reason": "possible pheon at 943,13 with no B.M. text inside the mosaic; text probably north of the edge"
+  }
+ ]
+}

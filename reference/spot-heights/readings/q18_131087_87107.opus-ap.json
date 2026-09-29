@@ -1,0 +1,24 @@
+{
+ "mosaic": "q18_131087_87107", "reader": "opus-ap", "layer": "os-25-inch-london",
+ "area": "Wanstead Flats (display letters W A N S T E..): open heath with a tree clump in the NW and a pond at the south edge; a tree-lined N-S road with dashed kerbs at px ~845-885 down the east side, lettered in italic '..l Road'. Parcel 147 (69·249 ac) and 150.",
+ "method": "Layer os-25-inch-london (OS 25-inch Essex county series, inferred 1893-96 revision). Viewed: 1x full-mosaic overview (anchor W A N S T E display letters, road with 52/50/49/50); all nine 2x sweep crops, each anchored on opening: r0c0 tree clump + A N + 147/69·249, r0c1 N S, r0c2 T E + 52 + 50, r1c0 A N + 69·249, r1c1 N S + three trees, r1c2 T E + 'R o' + triangle, r2c0 blank + pond edge SW, r2c1 pond outline, r2c2 'o a d' + 49 + 50 + parcel 150; 6x contact sheet cs1 (6 panels: four figure/cross pairs, a dash fragment, the triangle). Every crop and sheet displayed and was anchored in my notes at the time. Marker sheet checked before marking done.",
+ "legibility": "Excellent; bold italic figures 12-14 px beside bold four-point crosses 15-30 px away. No sheet join seen and none reported.",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [
+  {"type": "spot", "value_ft": 52, "raw": "52", "px": 876, "py": 100, "confidence": "high", "setting": "street",
+   "notes": "tree-lined road across Wanstead Flats, north end; figures ~890-905,97-112 east of the kerb; bold star 15 px west at 876,100 in the carriageway (nearest isolated cross)."},
+  {"type": "spot", "value_ft": 50, "raw": "50", "px": 862, "py": 367, "confidence": "high", "setting": "street",
+   "notes": "same road; figures ~880-898,364-380 east of the kerb; star at 862,367 in the carriageway, ~20 px west."},
+  {"type": "spot", "value_ft": 49, "raw": "49", "px": 860, "py": 636, "confidence": "high", "setting": "street",
+   "notes": "same road north of the triangle; figures ~815-832,642-656 west of the kerb; star at 860,636 in the carriageway, ~30 px east (nearest isolated cross)."},
+  {"type": "spot", "value_ft": 50, "raw": "50", "px": 859, "py": 906, "confidence": "high", "setting": "street",
+   "notes": "same road, south part; figures ~815-832,884-898 west of the trees; star at 859,906 in the carriageway, ~30 px SE."}
+ ],
+ "non_height_marks": [
+  "parcel 147 with acreage 69·249 and S tie at ~300-340,360-440",
+  "parcel 150 with brace at ~900-940,1010",
+  "triangle with centre dot (survey station) at ~838,707, no figure",
+  "display letters W A N S T E (Wanstead Flats)"
+ ],
+ "unreadable_regions": []
+}

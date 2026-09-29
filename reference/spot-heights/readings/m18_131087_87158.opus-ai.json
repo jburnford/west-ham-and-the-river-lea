@@ -1,0 +1,33 @@
+{
+  "mosaic": "m18_131087_87158", "reader": "opus-ai",
+  "area": "Plaistow Marsh / Custom House north: open marsh lettered PLAISTOW with drains, treed grounds with a Lodge on the east, Ceylon Mills (Mat Making), Boys Girls & Infants School, Russell Road terraces, a lane (..RSH HEDGE LANE) and the N-S road meeting Sophia Road",
+  "method": "sheet tool plus eye check; 9 sweep crops at 2x (anchors: r0c0 survey triangle + join tint, no lettering; r0c1 terrace backs at top; r0c2 Lodge / D.F.; r1c0 outline P; r1c1 P L A + Bo..; r1c2 Boys Girls & Infants, A I S; r2c0 ..RSH HEDGE LANE; r2c1 Ceylon Mills, RUSSELL ROAD; r2c2 School, SOPHI.., R O A D); region views 5-10x regA (7.4), regB (5.5), regC (5.8, B.M.7.50), regD (B.M.9.35 by Lodge), regE (6.5), regF (6.0), regG (road strip 3x), regH (8.1 by outline S), regI (ditch and road strip 2x), regJ (7.7, B.M.10.54, lane letters), regK (6.8 by Sl.), regL (7.6 in RUSSELL); contact sheets cs1 (8x), cs2 and cs3 (6x, +-20-22 px); digit strips nn1-nn7 (LANCZOS and nearest-neighbour 8-20x for 5.8, 8.1, 9.35, 8.83, 10.67, 10.54, 7.50); marker sheets mk1, mk2, mk3 plus a numeric dot-centroid check. Every crop, view, sheet and strip displayed when opened and has an anchor in my notes (nn2 and nn4 were clipped windows, redone as nn3 and nn5).",
+  "legibility": "Clean; horizontal sheet join at py ~196 across the full width (tint step, confirmed by eye), no figure crosses it. No missing tiles.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":7.4,"raw":"7·4","px":436,"py":156,"confidence":"high","setting":"marsh","notes":"open marsh ground between a dotted fence and a drain, south of the terrace backs; dot above figures; 8x"},
+    {"type":"spot","value_ft":5.5,"raw":"5·5","px":417,"py":397,"confidence":"high","setting":"marsh","notes":"open marsh between two drains west of the PLAISTOW lettering; dot above figures; both 5s flat-topped at 8x"},
+    {"type":"spot","value_ft":5.8,"raw":"5·8","px":440,"py":609,"confidence":"high","setting":"marsh","notes":"open marsh west of the drain, north of Ceylon Mills; dot above; second digit closed-topped at 8x and 10x, unlike the open-topped 6s of 6·5/6·0 on this sheet"},
+    {"type":"bench_mark","value_ft":7.5,"raw":"B.M.7·50","px":461,"py":665,"confidence":"high","setting":"building","notes":"pheon at the NW corner of the Ceylon Mills building; text to the east; 8x and 12x"},
+    {"type":"bench_mark","value_ft":9.35,"raw":"B.M.9·35","px":853,"py":56,"confidence":"high","setting":"building","notes":"pheon pointing down onto the NW corner of the Lodge in the treed grounds; text to the east; tailed 9, open 3, flat 5 at 8/12/20x"},
+    {"type":"spot","value_ft":6.5,"raw":"6·5","px":796,"py":164,"confidence":"high","setting":"street","notes":"road strip east of a narrow double line (ditch) along the west side of the treed grounds, continuous with the road lettered ROAD to the south; dot above figures; could be verge; 8x"},
+    {"type":"spot","value_ft":6.0,"raw":"6·0","px":831,"py":370,"confidence":"high","setting":"street","notes":"same road strip beside the treed grounds; dot above; G-shaped 6 and oval upright 0 at 8x"},
+    {"type":"spot","value_ft":8.1,"raw":"8·1","px":862,"py":518,"confidence":"high","setting":"street","notes":"same road strip south of the grounds, below the outline S of PLAISTOW; dot left of figures; 8 closed at 8x and 10x"},
+    {"type":"spot","value_ft":7.7,"raw":"7·7","px":882,"py":632,"confidence":"high","setting":"street","notes":"road just north of the school frontage; dot left of figures; 8x"},
+    {"type":"bench_mark","value_ft":10.67,"raw":"B.M.10·67","px":855,"py":679,"confidence":"high","setting":"building","notes":"pheon pointing down onto the roof line of a building NE of the school; text to the west; 8x"},
+    {"type":"spot","value_ft":7.8,"raw":"7·8","px":899,"py":758,"confidence":"high","setting":"street","notes":"road at the Sophia Road junction; dot left of figures; hydrant H with its own dot at 905,735 is separate; 6x"},
+    {"type":"spot","value_ft":7.2,"raw":"7·2","px":911,"py":925,"confidence":"medium","setting":"street","notes":"on the road lettered R O· A D; the only dot is the O·A interpunct just left of the figures; 6x"},
+    {"type":"bench_mark","value_ft":8.83,"raw":"B.M.8·83","px":813,"py":993,"confidence":"high","setting":"building","notes":"pheon at the corner of the terrace south of Russell Road; closed leading 8 against open-left 3 at 8/14/20x"},
+    {"type":"spot","value_ft":7.0,"raw":"7·0","px":877,"py":987,"confidence":"high","setting":"street","notes":"road at its south end near the Russell Road corner; dot above figures (centroid); 6x"},
+    {"type":"spot","value_ft":7.1,"raw":"7·1","px":676,"py":975,"confidence":"medium","setting":"street","notes":"Russell Road; nearest dot is the A·D interpunct of ROAD, just below-left of the figures; 6x"},
+    {"type":"spot","value_ft":7.6,"raw":"7·6","px":494,"py":977,"confidence":"medium","setting":"street","notes":"Russell Road; the only dot is the S·S interpunct of RUSSELL, left of the figures; 6 open-topped at 8x"},
+    {"type":"spot","value_ft":6.8,"raw":"6·8","px":409,"py":817,"confidence":"high","setting":"street","notes":"on the lane at the 'Sl.' (sluice) where the drain meets it by Ceylon Mills; dot just above the figures, separate from the Sl. period; 6 open, 8 closed at 10x"},
+    {"type":"spot","value_ft":7.7,"raw":"7·7","px":269,"py":971,"confidence":"medium","setting":"street","notes":"on the lane (..RSH HEDGE LANE) at its south end; nearest dot sits between the H and E of the lane lettering, may be an interpunct; hydrant dot 287,965 is separate; 7x"},
+    {"type":"bench_mark","value_ft":10.54,"raw":"B.M.10·54","px":265,"py":1000,"confidence":"high","setting":"building","notes":"pheon at the NW corner of the Russell Road terrace; text to the east; 8x"},
+    {"type":"spot","value_ft":7.0,"raw":"7·0","px":102,"py":1014,"confidence":"medium","setting":"street","notes":"street south of the SW terraces beside a hydrant H; dot left-above; figures reach py ~1023 at the south edge, digits look whole at 6x"}
+  ],
+  "non_height_marks": ["D.F. (drinking fountain) at ~990,175 in the treed grounds", "hydrant H marks at 283,961, 88,1012, 905,735, 905,1008", "survey triangle 262,410 with no figure", "Sl. (sluice) at 400,815"],
+  "unreadable_regions": [
+    {"px0":95,"py0":1010,"px1":125,"py1":1024,"reason":"7·0 ends within 1-2 px of the south edge; may be clipped"}
+  ]
+}

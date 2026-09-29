@@ -1,0 +1,10 @@
+{
+  "mosaic": "q18_131102_87146", "reader": "opus-al", "layer": "os-25-inch-london",
+  "area": "One large open field (parcel 42, 106.720 ac) east of Blind Lane, north of the LT&SR (E 541694-542080, N 182555-182935)",
+  "method": "OS 25-inch (1:2500) Essex county series, layer os-25-inch-london. sheet (no join reported), 2x sweep of all 9 crops, each anchored on opening and all displayed: r0c0 survey triangle ~383,293; r0c1 same triangle + speck; r0c2 blank with smudges at E edge; r1c0 '10..' at E edge; r1c1 parcel '42 / 106·720'; r1c2 blank, speck ~831,425; r2c0 speck ~205,921; r2c1 '106·720'; r2c2 blank. 5x contact sheet cs1 of the triangle and the speck at 402,352, displayed. No readings.",
+  "legibility": "Clear paper; almost wholly blank field. No sheet join seen. No grey fill.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [],
+  "non_height_marks": ["survey triangle with centre dot at ~383,293, no figure beside it", "parcel 42 / 106.720 at ~450,600", "ink speck at ~402,352 (not a digit, checked 5x)"],
+  "unreadable_regions": []
+}

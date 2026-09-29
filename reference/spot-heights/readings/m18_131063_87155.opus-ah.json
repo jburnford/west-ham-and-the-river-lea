@@ -1,0 +1,302 @@
+{
+ "mosaic": "m18_131063_87155",
+ "reader": "opus-ah",
+ "area": "Bromley-by-Bow / Poplar west of Bow Creek: Teviot, Spey, Brunswick, Lochnagar, Ailsa and Leven streets; St Leonard's and Ailsa Wharves (oil works) on Bow Creek",
+ "method": "sheet; sweep 9 crops at 2x with anchors recorded at opening (r0c0 SPEY STREET/BRUNSWICK, r0c1 St. Leona../Mud, r0c2 St. Leonard's Wharf (Oil Works), r1c0 ..ETLAND STREET/Sun. Sch., r1c1 Poplar & Bromley Tabernacle/LOCHNAGAR, r1c2 AILSA STREET/Ailsa Wharf, r2c0 Phoenix Saw Mills/ULLIN STREET, r2c1 BROMLEY HALL ROAD/School, r2c2 LEVEN ROAD/School Boys, Girls & Infants); 6x position sheets csA-csD, 12x bench-mark sheet csE, 8x digit sheets csF, csG, csI, 6x csH and 10x nearest csHnn for 6/8, 10x csJ; region views regSE (3x) and regNE (4x); numeric dot centroids; marker sheet. All crops and sheets displayed when opened.",
+ "legibility": "clear; dense terrace lettering with interpuncts (C·K in BRUNSWICK, R·E in STREET, possibly HALL). sheet tool reports no join; a perfectly straight vertical line at px ~826 runs the full height through houses (possible join, no tint step seen) and a faint horizontal tint step at py ~961 in the SE open ground",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 14.5,
+   "raw": "14·5",
+   "px": 429,
+   "py": 11,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Brunswick Street near north edge; dot above figure; flat-topped 5 at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.72,
+   "raw": "B.M.17·72",
+   "px": 150,
+   "py": 215,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of house at Teviot Street / Spey Street junction; pheon pointing east onto the house, text two lines above; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.1,
+   "raw": "16·1",
+   "px": 135,
+   "py": 238,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Teviot Street at the E-W STREET lettering; only dot is between R and E of STREET (interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.3,
+   "raw": "15·3",
+   "px": 282,
+   "py": 225,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction of Spey Street and the E-W street; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.2,
+   "raw": "14·2",
+   "px": 416,
+   "py": 216,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Brunswick Street junction; dot right of figure (F.P. above has its own dot); 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.0,
+   "raw": "14·0",
+   "px": 578,
+   "py": 155,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "open premises west of St Leonard's Wharf (Oil Works); dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.1,
+   "raw": "14·1",
+   "px": 594,
+   "py": 298,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "passage by St Leonard's Wharf; the dot lies on a dotted boundary line 10 px right of the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 702,
+   "py": 288,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "St Leonard's Wharf (Oil Works), dot on the double line south of the tank circles; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.84,
+   "raw": "B.M.13·84",
+   "px": 469,
+   "py": 394,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "front of building on the east side of Brunswick Street; pheon at the building face ~30 px SW of text; decimals at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.45,
+   "raw": "B.M.18·45",
+   "px": 870,
+   "py": 255,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "river wall of Bow Creek (River Lea) at St Leonard's Wharf; pheon on the wall line left of text; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.6,
+   "raw": "18·6",
+   "px": 864,
+   "py": 280,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "St Leonard's Wharf frontage, dot at the end of the wharf double line on the river wall; final 6 open-topped at 6x and 8x, unlike the leading 8"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.6,
+   "raw": "17·6",
+   "px": 979,
+   "py": 368,
+   "confidence": "low",
+   "setting": "wall_top",
+   "notes": "river wall / jetty corner at Ailsa Wharf; final digit reads 6 at 6x and nearest-neighbour, ambiguous 6/8 at 8x (2x looked like 17·8)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.3,
+   "raw": "15·3",
+   "px": 792,
+   "py": 611,
+   "confidence": "medium",
+   "setting": "open_ground",
+   "notes": "open enclosure between Ailsa Street and Lochnagar Street, figure in the SW corner; no dot, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 951,
+   "py": 595,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Ailsa Wharf (Oil Works) premises near W.M.; dot above-left; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.09,
+   "raw": "B.M.20·09",
+   "px": 969,
+   "py": 640,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner at Lochnagar Street where the C.R. boundary crosses; pheon pointing down, text to the east; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.2,
+   "raw": "13·2",
+   "px": 461,
+   "py": 484,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Brunswick Street (Road) by the C and K of BRUNSWICK; the only dot is the C·K interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.2,
+   "raw": "13·2",
+   "px": 476,
+   "py": 650,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Brunswick Road at Lochnagar Street junction, by Poplar & Bromley Tabernacle; dot below figure could belong to the lettering"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.3,
+   "raw": "12·3",
+   "px": 623,
+   "py": 648,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Lochnagar Street / Bromley Hall Road corner; dot sits on the C.R. dash line above the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.7,
+   "raw": "10·7",
+   "px": 514,
+   "py": 866,
+   "confidence": "medium",
+   "setting": "open_ground",
+   "notes": "written in the back yards of the terrace between Brunswick Road and Bromley Hall Road; no dot, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.5,
+   "raw": "9·5",
+   "px": 636,
+   "py": 844,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Bromley Hall Road at Leven Road corner; only dot is beside the L of HALL (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.5,
+   "raw": "10·5",
+   "px": 783,
+   "py": 829,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Leven Road outside the School; figure written in a small box on the school frontage, dot taken as the isolated dot directly above the O of ROAD ~18 px below the figure; flat-topped 5"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.02,
+   "raw": "B.M.14·02",
+   "px": 857,
+   "py": 818,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "foot of the wall line at the east end of the School frontage on Leven Road; pheon pointing up; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 866,
+   "py": 924,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open ground east of the terrace (no place word, below 15 ft), dot on the fence line left of figure; 8x"
+  }
+ ],
+ "non_height_marks": [
+  "F.P., H., N. and L.B. marks throughout the streets",
+  "W.M. at ~958,588 (Ailsa Wharf)",
+  "C.R. boundary along Lochnagar Street and Brunswick Road",
+  "county boundary dash-dot with + marks in Bow Creek"
+ ],
+ "unreadable_regions": []
+}

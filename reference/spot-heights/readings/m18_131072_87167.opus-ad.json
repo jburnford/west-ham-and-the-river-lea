@@ -1,0 +1,27 @@
+{
+  "mosaic": "m18_131072_87167",
+  "reader": "opus-ad",
+  "area": "Blackwall / Leamouth: East India Dock Basin with West and East Quays and the two entrance locks, Blackwall Station and Brunswick Pier, Blackwall Pier, Orchard Wharf and Orchard Place; the south half is the Thames (no heights)",
+  "method": "Overview of 87167 row and sweep crops r0c0..r2c2 (2x) all displayed, anchored at opening (r0c0 WEST QUAY/EAST QUAY/Lock/Blackwall Station; r0c1 EAST INDIA DOCK BASIN; r0c2 Warehouse/P.H./Orchard Wharf; r1c0 Brunswick Pier/High Water Mark; r1c1 Dolphin/Blackwall Pier; r1c2 stippled strip/Crane; r2c0 'Channel at Low Water'; r2c1 'Parliamentary County, Union & Parly. Borough, Boundary'; r2c2 boundary line). Contact sheets cs1, cs2 (8x +-16), cs3 (6x +-26); all displayed. Marker sheet checked.",
+  "legibility": "Clear; no sheet join seen by eye or by the tool; many dots are mooring posts and capstans (Cn.), so several survey dots are ambiguous; river half blank",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":16.1,"raw":"16·1","px":268,"py":7,"confidence":"medium","setting":"wall_top","notes":"north end of West Quay (East India Dock Basin); nearby dots may be mooring posts, position = centre of figure; digits clear at 8x"},
+    {"type":"spot","value_ft":15.6,"raw":"15·6","px":313,"py":214,"confidence":"medium","setting":"wall_top","notes":"south end of West Quay at the lock entrance, beside a Cn. mark; dot left of figure uncertain; digits clear at 8x"},
+    {"type":"spot","value_ft":15.6,"raw":"15·6","px":401,"py":198,"confidence":"medium","setting":"wall_top","notes":"lock side at the basin entrance; dot on the corner of the lock-wall line above-left of the figure"},
+    {"type":"spot","value_ft":15.5,"raw":"15·5","px":342,"py":378,"confidence":"medium","setting":"wall_top","notes":"south end of the west lock; dot on the corner of the lock-wall line left of figure"},
+    {"type":"spot","value_ft":17.1,"raw":"17·1","px":142,"py":433,"confidence":"high","setting":"yard","notes":"Blackwall Station forecourt by the steps; dot above figure, 8x"},
+    {"type":"bench_mark","value_ft":17.23,"raw":"B.M.17·23","px":405,"py":275,"confidence":"high","setting":"building","notes":"pheon at the corner of the building east of the lock; text east; digits clear at 6x and 10x"},
+    {"type":"spot","value_ft":17.3,"raw":"17·3","px":565,"py":254,"confidence":"high","setting":"wall_top","notes":"quay between the locks at the basin edge (mooring posts); dot above figure, 8x"},
+    {"type":"spot","value_ft":17.3,"raw":"17·3","px":653,"py":334,"confidence":"medium","setting":"wall_top","notes":"quay by the east lock beside Cn.; small dot above-right of figure, other dots nearby are mooring posts"},
+    {"type":"spot","value_ft":16.8,"raw":"16·8","px":1,"py":469,"confidence":"medium","setting":"wall_top","notes":"Brunswick Pier at the west edge; dot on the line at the mosaic edge above-left of the figure; final 8 differs from the open leading 6"},
+    {"type":"spot","value_ft":10.5,"raw":"10·5","px":963,"py":54,"confidence":"medium","setting":"street","notes":"Orchard Place near the H; dot right of figure, may belong to the H mark"},
+    {"type":"spot","value_ft":10.5,"raw":"10·5","px":963,"py":179,"confidence":"high","setting":"street","notes":"Orchard Place south of the P.H.; dot above-left, 8x"},
+    {"type":"spot","value_ft":16.6,"raw":"16·6","px":860,"py":392,"confidence":"medium","setting":"wall_top","notes":"figure on the stippled foreshore strip in front of Orchard Wharf; dot in the river-wall strip above-left; final 6 matches the leading 6 at 8x"}
+  ],
+  "non_height_marks": ["Cn. (capstans), M.P., F.P, D.Fn., F.S, L.B. and many mooring-post dots on the quays", "H at (967,38), (840,112), (900,145)"],
+  "unreadable_regions": [
+    {"px0":1005,"py0":85,"px1":1024,"py1":100,"reason":"B.M. text cut by the east edge (Orchard Place)"},
+    {"px0":995,"py0":430,"px1":1024,"py1":462,"reason":"B.M.18·1x text and pheon at the east edge by the Crane; final digit may be clipped"}
+  ]
+}

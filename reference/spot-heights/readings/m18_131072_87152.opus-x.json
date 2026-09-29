@@ -1,0 +1,35 @@
+{
+  "mosaic": "m18_131072_87152", "reader": "opus-x",
+  "area": "Canning Town north / West Ham marsh: open marsh (large outline '...ST MARSH' lettering), Prospect Farm, Manor Road on its bank rising north, G.E.R. Woolwich Branch, school on New Road, Tucker / Randall / Stephenson Streets, Malmesbury Road",
+  "method": "sheet (no join reported) + 9 sweep crops at 2x, every one displayed and anchored when opened: r0c0 survey triangle at 156,270 and dotted tracks; r0c1 'Prospect Farm'/MANOR ROAD; r0c2 MANOR ROAD/'WOOL..'/B.M.7.02; r1c0 outline 'S T'; r1c1 'Prospect Farm'/outline 'M A R'/'Boys'; r1c2 'WOOLWICH BRANCH'/'G.E.R.'/outline 'S H'; r2c0 'TUCKER . STREET'/'NEW RO'; r2c1 'School Boys Infants Girls'/'RANDALL STREET'; r2c2 'MALMESBUR'/'RANDALL STREET'. Contact sheets csA-csE (8x panels +-14-18 px, 5-6x +-22-30 px for B.M.s), 12x sheet csB for B.M.7.38 / 7.02, csC 18x smooth + 16x nearest-neighbour for B.M.7.38, and a 3x context zoom at 810,130 (anchor MANOR lettering, B.M.7.02); all displayed. Dot positions from a darkness-centroid helper and checked on marker sheets.",
+  "legibility": "good; no sheet join seen by eye; top edge py 0-3 is grey (13·5 and 5·6 whole just below it)",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":5.6,"raw":"5·6","px":52,"py":10,"confidence":"high","setting":"street","notes":"road curving at the NW corner, dot on the road verge left of figures; 6x"},
+    {"type":"bench_mark","value_ft":7.38,"raw":"B.M.7·38","px":42,"py":16,"confidence":"medium","setting":"building","notes":"wall beside the NW road; pheon left of text; last digit has a closed top loop (8) at 18x smooth and 16x nearest, differing from the open 3 before it; the 2x sweep read 7·36"},
+    {"type":"spot","value_ft":13.5,"raw":"13·5","px":711,"py":5,"confidence":"high","setting":"embankment_top","notes":"Manor Road on its hatched bank climbing north; dot above figures just below the grey N-edge strip; 8x"},
+    {"type":"spot","value_ft":6.2,"raw":"6·2","px":685,"py":180,"confidence":"medium","setting":"embankment_top","notes":"Manor Road near the lower end of the hatched ramp; dot above figures sits just after the R of MANOR (could be lettering)"},
+    {"type":"spot","value_ft":4.6,"raw":"4·6","px":695,"py":374,"confidence":"medium","setting":"street","notes":"Manor Road south of the ramp at marsh level, by Prospect Farm; dot above figures just after the D of ROAD"},
+    {"type":"spot","value_ft":11.7,"raw":"11·7","px":829,"py":55,"confidence":"high","setting":"bridge","notes":"walled (unhatched) approach east of the G.E.R. Woolwich Branch rising north from 6·1; dot above figures; 8x. Setting judged from the rise between retaining lines"},
+    {"type":"bench_mark","value_ft":7.02,"raw":"B.M.7·02","px":821,"py":217,"confidence":"high","setting":"building","notes":"wall at the foot of the approach east of the railway; pheon left of text; 12x"},
+    {"type":"spot","value_ft":6.1,"raw":"6·1","px":807,"py":231,"confidence":"high","setting":"street","notes":"foot of the approach east of the railway; dot above figures; 8x"},
+    {"type":"spot","value_ft":6.0,"raw":"6·0","px":809,"py":336,"confidence":"high","setting":"street","notes":"road east of the railway at a building corner; dot left of figures; 8x"},
+    {"type":"spot","value_ft":5.5,"raw":"5·5","px":711,"py":559,"confidence":"high","setting":"street","notes":"S end of Manor Road at the Randall Street junction; dot below figures, separate from the F.P. dot at 708,571; 8x"},
+    {"type":"spot","value_ft":5.7,"raw":"5·7","px":816,"py":523,"confidence":"high","setting":"marsh","notes":"open marsh east of the G.E.R. by the footbridge (F.B.), within the '...ST MARSH' lettering; dot left of figures; 8x"},
+    {"type":"spot","value_ft":5.9,"raw":"5·9","px":975,"py":531,"confidence":"high","setting":"street","notes":"N end of Malmesbury Road where it meets the marsh; dot left of figures; H. with its own dot below-right; 8x"},
+    {"type":"bench_mark","value_ft":7.23,"raw":"B.M.7·23","px":762,"py":621,"confidence":"high","setting":"building","notes":"west boundary wall of the G.E.R. Woolwich Branch; pheon c.25 px west of text; 6x"},
+    {"type":"spot","value_ft":5.1,"raw":"5·1","px":644,"py":707,"confidence":"high","setting":"street","notes":"road running SW from the Manor Road junction; dot above figures; 8x"},
+    {"type":"bench_mark","value_ft":6.99,"raw":"B.M.6·99","px":513,"py":817,"confidence":"high","setting":"building","notes":"school wall on New Road; pheon above-left of text; 6x"},
+    {"type":"spot","value_ft":4.6,"raw":"4·6","px":587,"py":829,"confidence":"high","setting":"street","notes":"New Road / Randall Street corner; dot above figures, distinct from the F.P. trailing dot; 8x"},
+    {"type":"spot","value_ft":4.8,"raw":"4·8","px":431,"py":1000,"confidence":"high","setting":"street","notes":"Tucker Street, dot left of figures between the kerb lines; 8x"},
+    {"type":"spot","value_ft":4.7,"raw":"4·7","px":562,"py":996,"confidence":"high","setting":"street","notes":"Tucker Street east end at the corner; dot right of figures; 8x"},
+    {"type":"spot","value_ft":5.2,"raw":"5·2","px":335,"py":1004,"confidence":"medium","setting":"street","notes":"Tucker Street; the only dot is the one after the R of TUCKER (an interpunct in TUCKER·STREET), figures above the kerb line"},
+    {"type":"spot","value_ft":5.7,"raw":"5·7","px":124,"py":1006,"confidence":"high","setting":"street","notes":"W end of Tucker Street; dot left of figures; 8x"},
+    {"type":"spot","value_ft":5.2,"raw":"5·2","px":762,"py":744,"confidence":"high","setting":"street","notes":"road along the west side of the G.E.R.; dot above-left of figures; 8x"},
+    {"type":"spot","value_ft":5.4,"raw":"5·4","px":788,"py":943,"confidence":"high","setting":"street","notes":"Stephenson Street by the railway, dot right of figures before the S of the street name (not between letters); 8x"}
+  ],
+  "non_height_marks": ["survey triangle at 156,270 with no figure", "F.B. at 790,570", "S.P. at 800,862, 836,857, 822,1013", "F.P. at 715,576, 585,822, 590,905, 960,988"],
+  "unreadable_regions": [
+    {"px0":0,"py0":0,"px1":1024,"py1":3,"reason":"grey strip along N edge"}
+  ]
+}

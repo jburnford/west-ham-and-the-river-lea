@@ -1,0 +1,27 @@
+{
+  "mosaic": "m18_131057_87131", "reader": "opus-g",
+  "area": "Lea marshes east of the Lea Navigation: towing path on the west edge, embanked channel with the county boundary 'C.C. at L.W.' and 'C.D.', boundary stones, Knobshill Cottage, open marsh with drains and a sluice, Bone Works in the SE",
+  "method": "sheet check; 9 sweep crops at 2x; every candidate confirmed on 7x contact sheets (+-28 px), B.M.21·93 at 10x; 4x strip across the sheet join. A first attempt at this mosaic hit the image request limit and was discarded entirely; this file comes only from the second pass, in which all sweep crops, zoom sheets and the join strip loaded and were viewed.",
+  "legibility": "Clear, sparse map. Horizontal sheet join (drawn neatline) at py ~168 across the full width with a slight tint change and 1-2 px line offsets; the sheet tool did not report it. No figure crosses it. B.M.22·84 has its B cut by the west edge.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024],[0,150,300,190]],
+  "readings": [
+    {"type":"bench_mark","value_ft":21.93,"raw":"B.M.21·93","px":36,"py":43,"confidence":"high","notes":"towing path wall; arrow left of text pointing at the path edge; decimal faint but digits clear at 10x"},
+    {"type":"spot","value_ft":22.3,"raw":"22·3","px":25,"py":238,"confidence":"high","notes":"Lea towing path; dot left of figures; 7x"},
+    {"type":"spot","value_ft":21.9,"raw":"21·9","px":1,"py":452,"confidence":"medium","notes":"towing path at the west edge; figures whole; dot probably the one at the mosaic edge 1,452; 7x"},
+    {"type":"bench_mark","value_ft":22.84,"raw":"B.M.22·84","px":6,"py":619,"confidence":"medium","notes":"building by the towing path; pheon above-left of text; digits clear at 7x but the B of B.M. is cut by the west edge"},
+    {"type":"spot","value_ft":17.2,"raw":"17·2","px":397,"py":234,"confidence":"high","notes":"top of the hatched embankment east of the channel; dot on the bank left of figures; 7x"},
+    {"type":"spot","value_ft":17.1,"raw":"17·1","px":539,"py":59,"confidence":"high","notes":"embankment top; dot left of figures; 7x"},
+    {"type":"bench_mark","value_ft":12.98,"raw":"B.M.12·98","px":528,"py":67,"confidence":"high","notes":"just below 17·1; pheon on the embankment line left of the text; 7x. About 4 ft below the bank-top spot beside it, so the mark is presumably low on a structure at the bank foot"},
+    {"type":"spot","value_ft":17.3,"raw":"17·3","px":390,"py":449,"confidence":"high","notes":"embankment top; dot in the bank hatching left of figures; 7x"},
+    {"type":"spot","value_ft":13.9,"raw":"13·9","px":474,"py":543,"confidence":"medium","notes":"Knobshill Cottage garden; dot 10 px above-right of figures, taken as survey dot; 7x"},
+    {"type":"bench_mark","value_ft":14.52,"raw":"B.M.14·52","px":433,"py":546,"confidence":"high","notes":"Knobshill Cottage wall; pheon above-left of text; 7x"},
+    {"type":"spot","value_ft":12.1,"raw":"12·1","px":320,"py":610,"confidence":"high","notes":"open marsh; dot left of figures; 7x"},
+    {"type":"spot","value_ft":17.1,"raw":"17·1","px":146,"py":728,"confidence":"high","notes":"embankment beside the sluice; dot left of figures; 7x"},
+    {"type":"spot","value_ft":13.5,"raw":"13·5","px":561,"py":754,"confidence":"high","notes":"track between drains; isolated dot left of figures; 7x"},
+    {"type":"spot","value_ft":14.0,"raw":"14·0","px":681,"py":956,"confidence":"medium","notes":"track by Bone Works; dot 15 px below-left of figures on the bank edge; 7x"}
+  ],
+  "non_height_marks": ["'C.C. at L.W.' and 'C.D.' boundary lettering with x boundary marks", "B. St. boundary stones about 205,640; 255,690; 252,880", "sluice/bridge hatching at 122,670 (not a figure)"],
+  "unreadable_regions": [
+    {"px0":0,"py0":624,"px1":3,"py1":636,"reason":"B of B.M.22·84 cut by west edge (digits whole, recorded)"}
+  ]
+}

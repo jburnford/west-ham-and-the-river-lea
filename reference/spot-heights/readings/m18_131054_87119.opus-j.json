@@ -1,0 +1,15 @@
+{
+  "mosaic": "m18_131054_87119",
+  "reader": "opus-j",
+  "area": "Hackney / Leyton marsh north of White Post Lane: open marsh with Temple Mill Lane (dotted) crossing the north-west corner and field ditches; almost no detail",
+  "method": "sheet tool, 9 sweep crops at 2x (all nearly blank marsh), zooms at 8x, 12x, 14x and 20x on the only figure. All crops and zooms were viewed successfully; no image failed to load.",
+  "legibility": "Clear but nearly empty sheet. Faint vertical line at px ~546 from top to bottom (sheet join; the sheet tool reports none). No horizontal join seen.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 16.9, "raw": "16·9", "px": 82, "py": 106, "confidence": "low", "notes": "Temple Mill Lane (dotted edges) crossing the marsh; last digit a 9 or possibly 8 even at 20x; no separate survey dot: the interpunct after the M of TEMPLE MILL lettering (82,106) is taken as the dot per the field note, with a small tick on the lane's dotted edge at 93,108 immediately left of the figures as the alternative"}
+  ],
+  "non_height_marks": ["rotated 'TEMPLE MILL' lettering with interpunct at ~82,106", "flow arrow in the ditch at ~140,925"],
+  "unreadable_regions": [
+    {"px0": 543, "py0": 0, "px1": 549, "py1": 1024, "reason": "vertical sheet join at px ~546 (no figures on it)"}
+  ]
+}

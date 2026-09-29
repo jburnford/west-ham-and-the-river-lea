@@ -1,0 +1,275 @@
+{
+ "mosaic": "m18_131093_87128",
+ "reader": "opus-k",
+ "area": "Upton / West Ham centre east of Upton Lane: St George's Road and Square, Belton Road, Oakdale and Ferndale Roads, Upton Park Road, Windsor and Cromwell Roads, boundary lane (C.R. / Parly. Bdy.) running north-south at px ~700",
+ "method": "Primary read. sheet + 9 sweep crops at 2x; every candidate confirmed on contact sheets of zoom panels at 6x, then 12x for digits and dots; positions then checked on a verification sheet with a marker drawn at each recorded pixel. The west 256 px overlap m18_131090_87128 (px + 768) and are recorded again. All sweep crops and all zoom panels loaded and were viewed successfully.",
+ "legibility": "Good. Sheet joins: vertical at px ~937-940 over y 0-~950 (dark straight line and tint step, confirmed by eye); horizontal at py ~947-950 over x 0-~940 (tint step, confirmed by eye). The north-south lane at px ~700 carries a boundary of large dots, so dots beside figures there are ambiguous.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 34.1,
+   "raw": "34·1",
+   "px": 40,
+   "py": 288,
+   "confidence": "medium",
+   "notes": "St George's Road, figure between 'O.' and 'R' of GEORGE'S; only dot is the one right after the O"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 236,
+   "py": 283,
+   "confidence": "high",
+   "notes": "St George's Road; dot right of figure; directly above B.M.34·84"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.84,
+   "raw": "B.M.34·84",
+   "px": 258,
+   "py": 313,
+   "confidence": "low",
+   "notes": "St George's Road; pheon at building corner 15 px right of the text, touching the serif of the large 'N' lettering; third digit read as 8 at 16x on the neighbouring mosaic but 6 not excluded"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 328,
+   "py": 275,
+   "confidence": "medium",
+   "notes": "St George's Road (R O · A D); only dot is just left of figure, between the O and A of ROAD"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.5,
+   "raw": "32·5",
+   "px": 477,
+   "py": 258,
+   "confidence": "medium",
+   "notes": "St George's Road; two dots below-left of figure, one of them the leading dot of '·F.P'"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.2,
+   "raw": "31·2",
+   "px": 669,
+   "py": 128,
+   "confidence": "medium",
+   "notes": "west side of the boundary lane (C.R.) at top; no dot found at 12x, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 712,
+   "py": 319,
+   "confidence": "medium",
+   "notes": "boundary lane by B.M.34·17; small double dot just right of figure on the line of large boundary dots, may be a boundary dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.17,
+   "raw": "B.M.34·17",
+   "px": 733,
+   "py": 330,
+   "confidence": "high",
+   "notes": "corner of lane and road; pheon below text on building corner"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.9,
+   "raw": "30·9",
+   "px": 933,
+   "py": 254,
+   "confidence": "high",
+   "notes": "road north of Marlborough Road just west of the vertical sheet join; dot right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.2,
+   "raw": "32·2",
+   "px": 711,
+   "py": 429,
+   "confidence": "medium",
+   "notes": "boundary lane at St George's Square; extra dots beside figure on the boundary dot line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.4,
+   "raw": "32·4",
+   "px": 699,
+   "py": 599,
+   "confidence": "medium",
+   "notes": "boundary lane at Oakdale Road; small double dot just right of figure, on the line of large boundary dots, may be a boundary dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 45,
+   "py": 725,
+   "confidence": "high",
+   "notes": "Elmhurst Road at Belton Road (same mark as m18_131090_87128 812,725); dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 61,
+   "py": 845,
+   "confidence": "high",
+   "notes": "Belton Road by School; dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 82,
+   "py": 978,
+   "confidence": "high",
+   "notes": "Upton Park Road junction below sheet join; dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.3,
+   "raw": "32·3",
+   "px": 312,
+   "py": 942,
+   "confidence": "medium",
+   "notes": "St George's Avenue end just above the sheet join; small dot below-right of figure; 3 read at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.91,
+   "raw": "B.M.35·91",
+   "px": 352,
+   "py": 917,
+   "confidence": "high",
+   "notes": "front of houses north of Upton Park Road; pheon 15 px above-left of text on the house front line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 504,
+   "py": 913,
+   "confidence": "high",
+   "notes": "road north of Upton Park Road; dot right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.5,
+   "raw": "31·5",
+   "px": 681,
+   "py": 738,
+   "confidence": "medium",
+   "notes": "boundary lane at Windsor Road; pair of small dots left of figure beside the large boundary dots"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 688,
+   "py": 881,
+   "confidence": "medium",
+   "notes": "boundary lane at Cromwell Road; small double dot just right of figure beside the boundary dot line, may be a boundary dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.6,
+   "raw": "31·6",
+   "px": 700,
+   "py": 971,
+   "confidence": "medium",
+   "notes": "boundary lane by Methodist Chapel below the sheet join; several dots nearby (boundary and chapel lettering), survey dot not identified, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.3,
+   "raw": "31·3",
+   "px": 886,
+   "py": 907,
+   "confidence": "medium",
+   "notes": "Cromwell Road; only dot is the interpunct between M and W of CROM·WELL above figure"
+  }
+ ],
+ "non_height_marks": [
+  "large 'N' lettering at 245,325",
+  "boundary lane lettering 'C.R.' and 'L A N E' along px ~700 with large boundary dots",
+  "F.P., H marks with own dots"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 934,
+   "py0": 0,
+   "px1": 942,
+   "py1": 950,
+   "reason": "vertical sheet join at px ~937-940"
+  },
+  {
+   "px0": 0,
+   "py0": 944,
+   "px1": 940,
+   "py1": 954,
+   "reason": "horizontal sheet join at py ~947-950"
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "mosaic": "m18_131093_87119",
+ "reader": "opus-t",
+ "area": "Forest Gate north (east of Woodgrange Road): GER line, Hampton Road, Osborne Road, Richmond Road, Claremont Road, Windsor Road, Romford Road with milepost",
+ "method": "All 9 sweep crops (2x) viewed and each anchored in notes at opening (r0c0 RAILWAY+OSBORN; r0c1 B.M./37·x7+ROAD; r0c2 ROAD+join at 942; r1c0 RICHMOND+OSBORN; r1c1 RICHMOND ROAD+L.B; r1c2 B.M./35·07+join; r2c0 WINDSOR+CLAREMONT; r2c1 RICHMOND ROAD+H; r2c2 milepost London 5/Ilford 2). Contact sheets cs1-cs3 (8x all candidates, 12x pheons), cs4-cs6 (12-24x smooth and blocky for 2/3, 5/8, 6/0 and the Romford Road figure). Every crop and contact sheet displayed when opened and has an anchor in my notes. Per-reading marker panels checked before done; three positions corrected by 1-3 px.",
+ "legibility": "Clean print. Sheet join: vertical at px ~942 (full height; greyer paper east), confirmed by eye.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 35.4,
+   "raw": "35·4",
+   "px": 57,
+   "py": 247,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hampton Road between T and O of HAMPTON (overlap strip with m18_131090_87119); dot left 57,247; digits clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.9,
+   "raw": "35·9",
+   "px": 262,
+   "py": 201,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hampton Road near the Richmond Road junction; dot left 262,201; digits clear at 16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 37.57,
+   "raw": "B.M.37·57",
+   "px": 446,
+   "py": 148,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "house front, Hampton Road; two-line text B.M. / 37·x7, upward pheon point 446,148 on the frontage line; digit after the middot reads 5 (flat top bar) at 12-16x but 8 not excluded (alt 37·87)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.0,
+   "raw": "35·0",
+   "px": 315,
+   "py": 404,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Osborne Road at the Richmond Road corner, beside a circle symbol; dot left 315,404; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 36.0,
+   "raw": "36·0",
+   "px": 472,
+   "py": 160,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hampton Road; dot right of figure before D of ROAD at 472,160 (possibly a lettering dot); oval 0 at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 36.2,
+   "raw": "36·2",
+   "px": 689,
+   "py": 121,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hampton Road; dot left 689,121; digits clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 36.7,
+   "raw": "36·7",
+   "px": 899,
+   "py": 84,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hampton Road east part; dot left 899,84; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.5,
+   "raw": "33·5",
+   "px": 354,
+   "py": 608,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Claremont Road / Richmond Road corner beside a circle symbol; dot above-left 354,608; digits clear at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.22,
+   "raw": "B.M.34·22",
+   "px": 364,
+   "py": 668,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner house, Richmond Road / Claremont Road; pheon pointing at the wall left of the text, vertex 364,668; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.5,
+   "raw": "32·5",
+   "px": 558,
+   "py": 569,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Claremont Road after D of ROAD; dot left 558,569; second digit 2 at 8x but 3-like at 2x and 16x (flat-based 2; alt 33·5)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 770,
+   "py": 528,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Claremont Road; dot left 770,528; digits clear at 16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.07,
+   "raw": "B.M.35·07",
+   "px": 927,
+   "py": 483,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house front, Claremont Road, just west of the sheet join; two-line text, upward pheon point 927,483; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 982,
+   "py": 489,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Claremont Road east of the sheet join at px ~942; dot left 982,489; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 392,
+   "py": 817,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Windsor Road / Richmond Road corner beside a circle symbol; dot left 392,817; digits clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.2,
+   "raw": "33·2",
+   "px": 152,
+   "py": 653,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Claremont Road after O of CLAREMONT (overlap strip with m18_131090_87119); dot at 152,653 directly after the O may be lettering; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.5,
+   "raw": "32·5",
+   "px": 931,
+   "py": 1004,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Romford Road between the tram rails and a street tree, 10 px west of the sheet join; rail dots only, position = centre of figures; digits clear at 12x"
+  }
+ ],
+ "non_height_marks": [
+  "milepost 'London 5 / Ilford 2' (M.P.) on Romford Road at ~(810,970)",
+  "L.B. (letter box) at ~(328,636)",
+  "circle symbols (13) at Richmond Road corners ~(300,410),(340,612),(378,820)",
+  "H hydrants",
+  "S.P. on the GER ~(40,125)",
+  "F.P. marks throughout"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 998,
+   "py0": 940,
+   "px1": 1024,
+   "py1": 962,
+   "reason": "B.M. on Romford Road frontage: value cut by east edge"
+  },
+  {
+   "px0": 938,
+   "py0": 0,
+   "px1": 946,
+   "py1": 1024,
+   "reason": "vertical sheet join (1-2 px offset)"
+  }
+ ]
+}

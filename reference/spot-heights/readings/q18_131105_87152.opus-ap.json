@@ -1,0 +1,15 @@
+{
+ "mosaic": "q18_131105_87152", "reader": "opus-ap", "layer": "os-25-inch-london",
+ "area": "East Ham levels / Plaistow Level east edge, N ~182,190: open grazing marsh in large parcels (111 15·867 ac, 106 9·994 ac, 116 1·081 ac) divided by blue ditches, with a hatched railway embankment (probably the LT&SR) crossing the north of the sheet WNW-ESE.",
+ "method": "Layer os-25-inch-london (OS 25-inch Essex county series, inferred 1893-96 revision). Viewed: 1x full-mosaic overview (anchor parcels 111/15·867 and 106/9·994, embankment); all nine 2x sweep crops, each anchored on opening: r0c0 109·967 / 18·040 / embankment, r0c1 111 15·867 across join, r0c2 embankment + 111, r1c0 ditch junction + tie, r1c1 111 / ditch / 106, r1c2 111 / ditch tie, r2c0 116 1·081 / 9·994, r2c1 106 9·994 across join, r2c2 two ditches. Every crop displayed and was anchored in my notes at the time. No height figures, crosses or B.M.s anywhere on the sheet, including along the embankment and the overlap strips; no zooms needed.",
+ "legibility": "Clear. Sheet joins: vertical px ~445-446 full height (acreages repeated both sides) and horizontal py ~13-14 (neighbour sheet content above it on the left, white off-sheet margin above it on the right). The sheet tool reports neither.",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [],
+ "non_height_marks": [
+  "acreages and parcel numbers: 109·967, 18·040 (on the embankment), 111 / 15·867 (repeated across the join), 106 / 9·994 (repeated), 116 / 1·081",
+  "S-shaped drain ties on the ditches"
+ ],
+ "unreadable_regions": [
+  {"px0": 446, "py0": 0, "px1": 1024, "py1": 13, "reason": "white off-sheet margin beyond the neat line at the top right"}
+ ]
+}

@@ -1,0 +1,213 @@
+{
+ "mosaic": "m18_131063_87137",
+ "reader": "opus-b",
+ "area": "Marshgate Lane, Marshgate Mills, City Mills (chemical), Waterworks River, Stratford High Street between Pegs Hole Bridge and St Michael's Bridge",
+ "method": "read by Claude (vision): 3x3 grid of 448 px crops at 2x LANCZOS, every candidate checked at 6x (80 px window, crosshair) and ambiguous ones at 8-10x; positions in mosaic pixels",
+ "legibility": "good: digits about 6 px tall; 2x finds figures, 6-8x needed for 1/7, 6/8 and the dot",
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 11.6,
+   "raw": "11·6",
+   "px": 293,
+   "py": 64,
+   "confidence": "high",
+   "notes": "Northern Outfall Sewer path; duplicate of 293,832 in m18_131063_87134 (same mark)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 349,
+   "py": 233,
+   "confidence": "medium",
+   "notes": "west of Laboratory Yard; no dot found, position = figures; duplicate of m18_131063_87134 349,1002"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.92,
+   "raw": "B.M.16·92",
+   "px": 415,
+   "py": 256,
+   "confidence": "high",
+   "notes": "pheon above the text at the corner of the Laboratory Yard terrace"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 499,
+   "py": 398,
+   "confidence": "high",
+   "notes": "lane east of Marshgate Lane Works; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.2,
+   "raw": "16·2",
+   "px": 53,
+   "py": 619,
+   "confidence": "medium",
+   "notes": "road on the west side of Marshgate Lane; dot 11 px right of figures (a second dot below belongs to the H hydrant)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.64,
+   "raw": "B.M.18·64",
+   "px": 108,
+   "py": 731,
+   "confidence": "high",
+   "notes": "pheon right of the text at the corner of St Thomas's Mills"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.5,
+   "raw": "16·5",
+   "px": 131,
+   "py": 797,
+   "confidence": "high",
+   "notes": "Marshgate Lane by St Thomas's Mills; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 244,
+   "py": 937,
+   "confidence": "low",
+   "notes": "Marshgate Lane near the Wharf; last digit 8 or 6; no dot found, position = figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.1,
+   "raw": "19·1",
+   "px": 403,
+   "py": 984,
+   "confidence": "medium",
+   "notes": "west approach to Pegs Hole Bridge; digits clear; dot below-left taken as the survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 591,
+   "py": 574,
+   "confidence": "high",
+   "notes": "yard at City Mills; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 545,
+   "py": 662,
+   "confidence": "high",
+   "notes": "yard south of City Mills; dot left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.85,
+   "raw": "B.M.17·85",
+   "px": 528,
+   "py": 750,
+   "confidence": "high",
+   "notes": "pheon above-right of the text at the building corner"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.5,
+   "raw": "16·5",
+   "px": 664,
+   "py": 768,
+   "confidence": "medium",
+   "notes": "High Street by Sir Thomas D'Akers Bridge; dot above-left of figures (on a line)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.4,
+   "raw": "17·4",
+   "px": 526,
+   "py": 903,
+   "confidence": "medium",
+   "notes": "High Street; digits clear at 8x; dot is a tick on the tram rail above-left of figures (same convention as the High Street marks in m18_131066_87134)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.61,
+   "raw": "B.M.20·61",
+   "px": 464,
+   "py": 988,
+   "confidence": "high",
+   "notes": "pheon left of the text on Pegs Hole Bridge parapet"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.8,
+   "raw": "21·8",
+   "px": 864,
+   "py": 542,
+   "confidence": "medium",
+   "notes": "High Street at St Michael's Bridge; no dot found, position = left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.4,
+   "raw": "B.M.22·40",
+   "px": 850,
+   "py": 574,
+   "confidence": "medium",
+   "notes": "pheon about 20 px below the text by the F.A. mark at the bridge; association inferred"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.4,
+   "raw": "19·4",
+   "px": 813,
+   "py": 631,
+   "confidence": "medium",
+   "notes": "east end of High Street block by the river; no dot found, position = figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 855,
+   "py": 682,
+   "confidence": "high",
+   "notes": "east bank of the channel, dot above-left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.5,
+   "raw": "12·5",
+   "px": 997,
+   "py": 604,
+   "confidence": "high",
+   "notes": "road east of the school; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.2,
+   "raw": "17·2",
+   "px": 823,
+   "py": 882,
+   "confidence": "medium",
+   "notes": "river bank behind Harrow Bridge Wharf; dot taken from the hachured wall top right of the figures; wall-top height"
+  }
+ ],
+ "non_height_marks": [
+  "Ilford 4 / London 3 milepost (M.P.) at about 965,300",
+  "F.P. fire plugs, F.A. fire alarm, H hydrants, C. crane marks",
+  "F.B. footbridges",
+  "W.M. weighing machine at Marshgate Mills"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1000,
+   "py0": 370,
+   "px1": 1024,
+   "py1": 395,
+   "reason": "figure '26·?' cut by the east edge; read it in m18_131066_87137"
+  }
+ ]
+}

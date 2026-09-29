@@ -1,0 +1,241 @@
+{
+ "mosaic": "m18_131054_87125",
+ "reader": "opus-k",
+ "area": "Hackney Wick: Wallis Road, White Post Lane, Hackney Cut towing path and east bank, GER Victoria Park branch, marsh by the Lea",
+ "method": "Fresh primary read. sheet + 9 sweep crops at 2x; every candidate confirmed on contact sheets of zoom panels at 6x, then 10-14x for digit pairs (5/8, 6/8, 9/8) and dots/pheons, 4x wide windows to search for missing dots/pheons. All sweep crops and all zoom panels loaded and were viewed successfully.",
+ "legibility": "Good; clean engraving. Sheet joins: vertical at px ~544 (clear tint step, full height, confirmed by eye); tool also reports a horizontal join at py ~537 over x 0-256, not obvious by eye among the works buildings.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 21.5,
+   "raw": "21·5",
+   "px": 344,
+   "py": 64,
+   "confidence": "high",
+   "notes": "east bank of Hackney Cut between water edge and towing-path line; dot left of figure; final 5 matches the 17·5 shape at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.7,
+   "raw": "21·7",
+   "px": 474,
+   "py": 249,
+   "confidence": "medium",
+   "notes": "Hackney Cut towing path east side, beside 'Towing' lettering; no dot found in 120 px window at 4x, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 21.25,
+   "raw": "B.M.21·25",
+   "px": 461,
+   "py": 300,
+   "confidence": "medium",
+   "notes": "text over hatched shed at 490-520,300; digits clear at 12x; candidate pheon on towing-path water edge just before the 'P' of 'Path', ~35 px west of text, but merges with lettering so position uncertain"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.4,
+   "raw": "17·4",
+   "px": 205,
+   "py": 306,
+   "confidence": "medium",
+   "notes": "Wallis Road; only dot is the interpunct between R and O of R·O·A·D just above-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.4,
+   "raw": "21·4",
+   "px": 511,
+   "py": 473,
+   "confidence": "medium",
+   "notes": "towing path by footbridge F.B., figure under 'W.M.'; isolated dot on the path 12 px below-left of figure; 'C·' nearby carries its own dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.0,
+   "raw": "22·0",
+   "px": 553,
+   "py": 679,
+   "confidence": "high",
+   "notes": "path/bank east of Hackney Cut south of railway; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.3,
+   "raw": "13·3",
+   "px": 808,
+   "py": 517,
+   "confidence": "high",
+   "notes": "north foot/edge of GER embankment on marsh; dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.84,
+   "raw": "B.M.14·84",
+   "px": 916,
+   "py": 518,
+   "confidence": "high",
+   "notes": "on north edge line of GER embankment; pheon left of text touching the line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 779,
+   "py": 650,
+   "confidence": "high",
+   "notes": "open ground south of GER embankment; dot upper-left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.98,
+   "raw": "B.M.17·98",
+   "px": 60,
+   "py": 722,
+   "confidence": "high",
+   "notes": "frontage wall by Tallow Works south of the GER branch; pheon apex on wall line above text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.9,
+   "raw": "15·9",
+   "px": 84,
+   "py": 740,
+   "confidence": "high",
+   "notes": "road beside B.M.17·98; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.1,
+   "raw": "16·1",
+   "px": 226,
+   "py": 891,
+   "confidence": "high",
+   "notes": "White Post Lane at Combos Road/Davey Road junction; dot upper-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.3,
+   "raw": "22·3",
+   "px": 423,
+   "py": 831,
+   "confidence": "medium",
+   "notes": "White Post Lane; figure below 'LANE'; only dot is interpunct between N and E"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 23.68,
+   "raw": "B.M.23·68",
+   "px": 580,
+   "py": 786,
+   "confidence": "high",
+   "notes": "White Post Lane bridge approach over Hackney Cut; pheon on curved parapet line left of text; 68 confirmed at 14x (open-topped 6, closed 8)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.2,
+   "raw": "22·2",
+   "px": 630,
+   "py": 869,
+   "confidence": "high",
+   "notes": "towing path east of Hackney Cut south of White Post Lane; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.1,
+   "raw": "21·1",
+   "px": 578,
+   "py": 1017,
+   "confidence": "high",
+   "notes": "bank east of Hackney Cut near south edge; dot right of figure; figures end ~3 px above mosaic edge but whole"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.5,
+   "raw": "24·5",
+   "px": 829,
+   "py": 772,
+   "confidence": "high",
+   "notes": "raised ground east of Hackney Cut (spoil/bank) north of marsh; dot left of figure"
+  }
+ ],
+ "non_height_marks": [
+  "B.P. and B.S. boundary marks along the Union & Parly. Boro. Bdy. (e.g. B.S. at 655,296 and 623,462; B.P. at 646,364)",
+  "W.M. at 500,455 and 162,368",
+  "F.P. marks at 322,305, 89,788, 200,887",
+  "S.P. on GER line at 922,563",
+  "F.B. footbridge at 480,440"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 312,
+   "px1": 16,
+   "py1": 330,
+   "reason": "figure '·00' (probably a B.M.) cut by west edge on Wallis Road"
+  },
+  {
+   "px0": 540,
+   "py0": 0,
+   "px1": 548,
+   "py1": 1024,
+   "reason": "vertical sheet join at px ~544 (tint step); no figures crossed"
+  }
+ ]
+}

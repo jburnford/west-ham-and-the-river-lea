@@ -1,0 +1,240 @@
+{
+  "mosaic": "m18_131099_87122",
+  "reader": "opus-u",
+  "area": "Forest Gate east / Woodgrange: Romford Road tramway at the Rising Sun, Plashet Hall and Tramway Depot, Shrewsbury Road, Woodgrange Park Cemetery mortuary chapel, new roads laid out to the south",
+  "method": "Viewed all 9 sweep crops at 2x (anchors: r0c0 Plashet Hall / Tramway Depot / Rising Sun P.H.; r0c1 SHREWSBURY lettering and B.M.34.80; r0c2 Mortuary Chapel and WOOD(GRANGE); r1c0 Tramway Depot and circle; r1c1 SBURY ROAD; r1c2 ROAD of Shrewsbury Rd and crossroads; r2c0 R O A D lower road and join line; r2c1 join line and B.M.34.17; r2c2 B.M.33.04 with triangle). Contact sheets viewed: cs1 (6x, six northern candidates), cs2 (12x, same), cs3 (10x, B.M.34.80, B.M.33.37, 32.3, B.M.34.17, 31.5, 31.7), cs4 (6x, pheons and southern candidates), cs5 (12x, southern figures), marker sheet mk1 (all 16 positions boxed and checked; the cs4 column-3 panel offset I had made was caught at 12x and on the marker sheet). Every crop and sheet displayed when opened and has an anchor in my notes.",
+  "legibility": "Good, sparse open ground. Italic 3s look like 8s at 12x; leading 3s settled by matching digits and setting. Sheet join: straight horizontal line with a strong tint change at py ~752 across the full width (reported by the sheet tool and confirmed by eye); 32.0 sits just above it and 33.1 just below it, neither cut. 32.8 at the top edge touches the mosaic boundary.",
+  "crop_bounds_checked": [
+    [
+      0,
+      0,
+      448,
+      448
+    ],
+    [
+      288,
+      0,
+      736,
+      448
+    ],
+    [
+      576,
+      0,
+      1024,
+      448
+    ],
+    [
+      0,
+      288,
+      448,
+      736
+    ],
+    [
+      288,
+      288,
+      736,
+      736
+    ],
+    [
+      576,
+      288,
+      1024,
+      736
+    ],
+    [
+      0,
+      576,
+      448,
+      1024
+    ],
+    [
+      288,
+      576,
+      736,
+      1024
+    ],
+    [
+      576,
+      576,
+      1024,
+      1024
+    ]
+  ],
+  "readings": [
+    {
+      "type": "spot",
+      "value_ft": 32.8,
+      "raw": "32·8",
+      "px": 186,
+      "py": 18,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Romford Road tramway at the north edge; dot on the tram rail 15 px below-right of figure; figure top touches the mosaic edge (py 0-5), digits appear whole; final 8 closed unlike the leading 3"
+    },
+    {
+      "type": "spot",
+      "value_ft": 32.2,
+      "raw": "32·2",
+      "px": 614,
+      "py": 121,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "Shrewsbury Road, west footway by terrace; dot directly above the first 2; confirmed at 12x"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 34.8,
+      "raw": "B.M.34·80",
+      "px": 616,
+      "py": 205,
+      "confidence": "high",
+      "setting": "building",
+      "notes": "Shrewsbury Road, pheon on the south-east corner of the terrace, 13 px above-right of text; 0 oval at 10x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 32.2,
+      "raw": "32·2",
+      "px": 861,
+      "py": 20,
+      "confidence": "high",
+      "setting": "open_ground",
+      "notes": "Woodgrange Park Cemetery north of the Mortuary Chapel; dot directly above; 12x"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 33.37,
+      "raw": "B.M.33·37",
+      "px": 876,
+      "py": 97,
+      "confidence": "high",
+      "setting": "building",
+      "notes": "Mortuary Chapel, cemetery; pheon on the chapel's south wall 15 px NE of text; all three 3s match"
+    },
+    {
+      "type": "spot",
+      "value_ft": 31.8,
+      "raw": "31·8",
+      "px": 925,
+      "py": 147,
+      "confidence": "low",
+      "setting": "open_ground",
+      "notes": "cemetery path junction south of WOODGRANGE lettering; dot above-left of figure; final 8 closed at 12x; lowered to low: final 3/8 stands alone with no matching digit in the figure"
+    },
+    {
+      "type": "spot",
+      "value_ft": 32.3,
+      "raw": "32·3",
+      "px": 686,
+      "py": 368,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Shrewsbury Road; only dot nearby is the one before the Y of SHREWSBURY (between R and Y), taken as the survey dot 12 px right of figure; final 3 matches leading 3"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 34.17,
+      "raw": "B.M.34·17",
+      "px": 275,
+      "py": 678,
+      "confidence": "high",
+      "setting": "building",
+      "notes": "east end of the terrace north of the new road; pheon on the building corner 25 px left of text; 10x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 31.6,
+      "raw": "31·6",
+      "px": 297,
+      "py": 697,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "new road below B.M.34.17; dot touching the left of the figure; final 6 round-topped at 12x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 31.5,
+      "raw": "31·5",
+      "px": 464,
+      "py": 652,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "same road further east; dot above-right of figure; 5 has flat top bar at 10x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 31.7,
+      "raw": "31·7",
+      "px": 593,
+      "py": 616,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "same road; dot right of figure at 10x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 32.0,
+      "raw": "32·0",
+      "px": 127,
+      "py": 746,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "road junction west, just above the py ~752 sheet join; dot left of figure at 12x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 33.1,
+      "raw": "33·1",
+      "px": 781,
+      "py": 756,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "just below the py ~752 sheet join where the new road meets the cross road; dot above the figure 3 px below the join line; the two 3s match; medium because of the join"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 33.04,
+      "raw": "B.M.33·04",
+      "px": 791,
+      "py": 925,
+      "confidence": "high",
+      "setting": "other",
+      "notes": "cross-road corner; left-pointing pheon 10 px right of text, tip at 791,925; survey triangle at 773,935 below the text; setting other: B.M. on the kerb/boundary line at the road corner, no building there"
+    },
+    {
+      "type": "spot",
+      "value_ft": 33.3,
+      "raw": "33·3",
+      "px": 803,
+      "py": 946,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "road junction south of B.M.33.04; dot directly above; all three 3s match at 12x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 32.7,
+      "raw": "32·7",
+      "px": 630,
+      "py": 996,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "southern road near bottom edge; dot above the 7/middot; 12x"
+    }
+  ],
+  "non_height_marks": [
+    "survey triangle on the Mortuary Chapel at ~884,54 (no figure)",
+    "survey triangle at ~773,935 beside B.M.33.04",
+    "F.P. marks on Romford Road",
+    "Tramway Depot and Plashet Hall lettering"
+  ],
+  "unreadable_regions": [
+    {
+      "px0": 150,
+      "py0": 0,
+      "px1": 175,
+      "py1": 8,
+      "reason": "32.8 figure touches the north edge of the mosaic; recorded but check against the neighbouring mosaic"
+    }
+  ]
+}

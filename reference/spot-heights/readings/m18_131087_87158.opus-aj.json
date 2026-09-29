@@ -1,0 +1,280 @@
+{
+ "mosaic": "m18_131087_87158",
+ "reader": "opus-aj",
+ "area": "Plaistow Marsh / Custom House north: open marsh with drains and a N-S path, the Lodge grounds (NE), Ceylon Mills (Mat Making), Boys Girls & Infants School, Russell Road and terraces along the south",
+ "method": "Independent QA second read. sheet + 9 sweep crops at 2x (anchors: r0c0 drains/survey triangle; r0c1 terrace blocks N edge; r0c2 'Lodge', D.F; r1c0 large 'P'; r1c1 'P L A', 'Bo'; r1c2 'Boys Girls & Infants'; r2c0 '..SH·EDGE LANE'; r2c1 'Ceylon Mills', 'RUSSELL ROAD'; r2c2 'School', 'SOPHI..'). Contact sheets c1-c3 (6x, all candidates), c4 (8x), c5-c6 (12x B.M. decimals, 6/8 checks vs known 6 and 8), c7 (10x pheons and interpunct dots), region views reg1 (3x, 760-930 x 130-680), reg2 (5x, lane lettering), k (8x 6·8), marker sheets mk1/mk2 (5x) used to fix positions. Every crop and contact sheet displayed when opened; anchor noted for each in notes file.",
+ "legibility": "Clean, sharp print; digits clear at 6-8x. Sheet join (tint step) at py ~196 across the full width, no figures cut by it. Several street figures sit on lettering dots (RUS·SELL, ROA·D, H·E of the lane name, O of vertical ROAD), given medium.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 436,
+   "py": 155,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open marsh (PLAISTOW lettering) between drain and N-S path; dot above figure; 6x/8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 417,
+   "py": 397,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open marsh west of the N-S path, beside drain; dot above; both 5s flat-topped at 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.35,
+   "raw": "B.M.9·35",
+   "px": 851,
+   "py": 56,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. on the Lodge (grounds with trees, NE); pheon at the building corner SW of the text; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 796,
+   "py": 164,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open ground west of the Lodge grounds, beside the double-line path; dot above; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 830,
+   "py": 370,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open strip between the N-S path and the Lodge grounds fence; dot above; 0 upright oval at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 439,
+   "py": 609,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open marsh beside drain west of the path, north of Ceylon Mills; dot above; 8 closed vs flat-topped 5 at 6x/8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.5,
+   "raw": "B.M.7·50",
+   "px": 462,
+   "py": 665,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. on NW corner building of Ceylon Mills; pheon left of text at building corner; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.1,
+   "raw": "8·1",
+   "px": 861,
+   "py": 518,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open ground east of the N-S path, by the large S of PLAISTOW lettering; dot left of figure; lead 8 closed at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.7,
+   "raw": "7·7",
+   "px": 882,
+   "py": 633,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "head of the N-S road east of the school, where the path meets it; dot left-above; 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.67,
+   "raw": "B.M.10·67",
+   "px": 854,
+   "py": 679,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. on the building NE of the Boys Girls & Infants School; pheon (down arrow) right of text, tip on the roof line; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 409,
+   "py": 817,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "end of the lane at the Ceylon Mills corner, beside 'St.' (stile?); dot above figure sits just after the final E of LANE (trailing dot, could be lettering); 6 open vs 8 closed at 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.7,
+   "raw": "7·7",
+   "px": 268,
+   "py": 971,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "lane / terrace front at the SW end of the lane; dot sits between H and E of the lane lettering (only such dot in the name), hydrant H· separate at 297,965; 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.54,
+   "raw": "B.M.10·54",
+   "px": 266,
+   "py": 998,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. on the NW corner of the Russell Road terrace; pheon left of text at the corner; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 101,
+   "py": 1014,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "by the terrace in the SW corner; dot above-left; figure bottom at py ~1023, touching the south edge (may be clipped), whole in m18_131087_87161"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 494,
+   "py": 977,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Russell Road; the only dot is the RUS·SELL interpunct under the figure; final digit open-topped like the known 6 of 6·8 at 6x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.1,
+   "raw": "7·1",
+   "px": 677,
+   "py": 975,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Russell Road; dot is the ROA·D dot (no other interpuncts in ROAD), figure directly above it; 6x/10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 899,
+   "py": 757,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "corner of Sophia (Road) and the N-S road; dot left of figure, hydrant H· separate at ~907,739; 6x/8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.2,
+   "raw": "7·2",
+   "px": 911,
+   "py": 925,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "N-S road east of the school; dot just above the O of vertical ROAD lettering (could be an O·A interpunct); 6x/10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.83,
+   "raw": "B.M.8·83",
+   "px": 813,
+   "py": 994,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. on the building at the SE corner, south of Russell Road; pheon left of text at building corner; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 877,
+   "py": 988,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road junction SE (Russell Road / N-S road); dot above figure; 8x"
+  }
+ ],
+ "non_height_marks": [
+  "'D.F' (drinking fountain) at ~985,176 in the Lodge grounds",
+  "'St.' at ~398,815 beside 6·8 (stile?)",
+  "hydrant 'H' marks at ~297,965, ~903,738, ~856,1006, ~86,1012",
+  "survey triangle without figure at ~263,410"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 95,
+   "py0": 1008,
+   "px1": 125,
+   "py1": 1024,
+   "reason": "figure 7·0 touches the south edge; trailing pixels may be clipped (whole in m18_131087_87161)"
+  }
+ ]
+}

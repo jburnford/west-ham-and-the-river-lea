@@ -1,0 +1,408 @@
+{
+ "mosaic": "m18_131075_87158",
+ "reader": "opus-v",
+ "area": "Canning Town: Talbot Works, Bidder/Lea/Creek/Stephenson Streets, Canning Town station and L&NWR and G.E.R. goods depots, Barking Road from the Iron Bridge (Bow Creek) over the railway to Burnham and Woodstock Streets, Crown and Essex Wharves",
+ "method": "All 9 sweep crops viewed and anchored on opening (r0c0 Talbot Works/Saw Mills; r0c1 L.& N.W.R. Goods & Coal Depot; r0c2 MALMESBURY/OAK CRESCENT/R.C. Chapel; r1c0 Crown Wharf/LEA STREET/CREEK STREET; r1c1 Canning Town Station/BARKING ROAD; r1c2 BURNHAM/WOOD ST/School; r2c0 Essex Wharf/Line of Ordinary Tides; r2c1 G.E.R. Goods & Coal Depot/WOOLWICH BRANCH; r2c2 BURNHAM STREET/WOODSTOCK STREET). Contact sheets cs1-cs11 (8-12x) and views v1-v10 (3-16x, incl. nearest/bicubic for 16·6 and B.M.10·48) all displayed; every value confirmed at 8x+, bench-mark decimals at 12x; marker sheets checked.",
+ "legibility": "Good print. Sheet joins: vertical at px ~346 over the full height (drawn straight line + tint change), horizontal at py ~192-196 east of px 346 (tint step). No figure crosses either join. The Ward Boundary dash-dot line runs along Barking Road through the lettering, so dots there are boundary dots.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 8.38,
+   "raw": "B.M.8·38",
+   "px": 187,
+   "py": 71,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Talbot Works frontage, Canning Town; digits clear 12x (3 distinct from both 8s); pheon tip on works wall at 187,71, text 10-20 px E"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 238,
+   "py": 168,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street corner by the P.H. at the N end of Stephenson Street beside the railway; dot above figures 238,168; clear 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 57,
+   "py": 279,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Bidder Street at its corner (figure between B of BIDDER and S of STREET); isolated dot below-left 57,279, the F.P dot at 70,290 is separate; clear 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 290,
+   "py": 326,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "written on a building block on the W side of Stephenson Street; no dot found at 4-8x; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 656,
+   "py": 6,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "N-S road W of the houses at the top edge; figures whole (y 2-9) but no dot seen; centre of figures; also in the mosaic to the north"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.25,
+   "raw": "B.M.9·25",
+   "px": 679,
+   "py": 12,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "top edge, house corner at the head of the N-S road; pheon point 679,12 clear; text tops clipped by the mosaic edge; final digit read 5 (flat top) but check in the mosaic to the north"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.2,
+   "raw": "7·2",
+   "px": 652,
+   "py": 43,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "N-S road W of the houses; dot above figures 652,43; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.4,
+   "raw": "8·4",
+   "px": 652,
+   "py": 242,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same N-S road beside the L&NWR Goods & Coal Depot, just S of the horizontal join; dot above 652,242; clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.43,
+   "raw": "B.M.9·43",
+   "px": 988,
+   "py": 223,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "R.C. Chapel, corner of the building; digits clear 10-12x; pheon point at the wall corner 988,223, text inside the building outline"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 936,
+   "py": 302,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Barking Road E (tram rails, Ward Boundary alongside); dot 936,302 on a rail; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 797,
+   "py": 402,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Barking Road by the Congl. Chapel; dot 797,402 on a tram rail; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 381,
+   "py": 473,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Stephenson Street S end beside the railway; dot upper-left 381,473; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.6,
+   "raw": "16·6",
+   "px": 150,
+   "py": 600,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "lane between Crown Wharf and Essex Wharf; no dot found; second digit matches the 6 of 16·5 nearby (5/6 checked at 12x and nearest-neighbour); centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.4,
+   "raw": "B.M.19·40",
+   "px": 127,
+   "py": 611,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Crown Wharf building corner at the lane; digits clear 12x; pheon point 127,611, text 15-30 px SW"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.5,
+   "raw": "16·5",
+   "px": 242,
+   "py": 636,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same lane E of 16·6; dot upper-left 242,636; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.5,
+   "raw": "15·5",
+   "px": 383,
+   "py": 704,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "Barking Road W of Canning Town station, on the raised causeway between the railway bridge and the Iron Bridge approach; dot 374,702 lies on the Ward Boundary dash-dot line; centre of figures; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.4,
+   "raw": "17·4",
+   "px": 473,
+   "py": 636,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "Barking Road bridge over the railway at Canning Town station (tracks end at both road edges); figure beside a survey-station triangle, position = triangle centre; mark at 452,647 is a Ward Boundary dash; clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.87,
+   "raw": "B.M.20·87",
+   "px": 512,
+   "py": 583,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "Barking Road over the railway at Canning Town station, at the corner of the station structure / parapet (3.3 ft above the deck levels 17·4-17·6); digits clear 8-12x; pheon above text at 512,583"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.6,
+   "raw": "17·6",
+   "px": 559,
+   "py": 591,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "Barking Road bridge E end at Canning Town station; the only nearby dot follows the B of BARKING; centre of figures; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.0,
+   "raw": "10·0",
+   "px": 694,
+   "py": 472,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Barking Road E of the station, foot of the bridge approach; dot 694,472 just after the R of ROAD (between letters); clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.48,
+   "raw": "B.M.10·48",
+   "px": 716,
+   "py": 555,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "Barking Road E side, house front; pheon apex 716,555; final digit 8 at 8x but 6-like at 12-16x (LANCZOS, bicubic, nearest): could be 10·46"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 775,
+   "py": 643,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Burnham Street N end; dot 775,643 lies between the B and U of BURNHAM; final 0 partly crossed by the pavement line, read at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.3,
+   "raw": "8·3",
+   "px": 902,
+   "py": 606,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Woodstock Street N end; dot 902,606 below-left, the F.P dot at 909,606 is close; clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.57,
+   "raw": "B.M.9·57",
+   "px": 894,
+   "py": 625,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Woodstock Street W side, house front; digits clear 12x; pheon 894,625 below-left of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 866,
+   "py": 845,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Burnham Street; dot 866,845 between the R and E of STREET; clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.16,
+   "raw": "B.M.9·16",
+   "px": 880,
+   "py": 897,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Burnham Street E side, house front; digits clear 12x; pheon 880,897, text 15-25 px SE"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.9,
+   "raw": "7·9",
+   "px": 998,
+   "py": 824,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Woodstock Street near E edge; dot 998,824 beside the S of STREET; 9 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 188,
+   "py": 829,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "Barking Road causeway NE of Essex Wharf rising to the Iron Bridge; dot 200,836 is on the Ward Boundary dash-dot line between R and O; centre of figures; final 5 flat-topped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.4,
+   "raw": "26·4",
+   "px": 74,
+   "py": 995,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "Barking Road at the Iron Bridge approach over Bow Creek (W edge); dot 67,989 is on the Ward Boundary line under the B of BARKING; centre of figures; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.5,
+   "raw": "19·5",
+   "px": 180,
+   "py": 946,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "ground SE of the Barking Road causeway beside the curving G.E.R. goods-depot lines (made ground 17-19 ft); no dot; centre of figures; clear 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 455,
+   "py": 803,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "G.E.R. Goods & Coal Depot, dot on the outer rail/boundary line at 455,803 with figures below; depot ground here is made ground at 17-19 ft, not marsh"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.28,
+   "raw": "B.M.18·28",
+   "px": 495,
+   "py": 818,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "outer boundary line (wall) of the G.E.R. Goods & Coal Depot; digits clear 12x (both 8s alike); pheon point 495,818, text below"
+  }
+ ],
+ "non_height_marks": [
+  "\"Line of Ordinary Tides\" along Bow Creek W edge",
+  "S.P. marks by the railway near 250,0 and 300,330",
+  "W.M. at 640,440 and 530,700",
+  "C.R. at ~40,1000 and on Barking Road ~690,500",
+  "survey-station triangles at 473,636 (with 17·4)"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 160,
+   "py0": 0,
+   "px1": 185,
+   "py1": 4,
+   "reason": "bottom of a figure cut by the north edge; whole in the mosaic to the north"
+  },
+  {
+   "px0": 640,
+   "py0": 0,
+   "px1": 710,
+   "py1": 10,
+   "reason": "7·3 and B.M.9·25 text touch the north edge (B.M. tops clipped); whole in the mosaic to the north"
+  }
+ ]
+}

@@ -1,0 +1,417 @@
+{
+ "mosaic": "m18_131078_87158",
+ "reader": "opus-w",
+ "area": "Canning Town: Barking Road tramway, Wood/Woodstock/Burnham/Stratford/Swanscombe/Montesquieu/Fox Streets, Clarkson and Rathbone Streets, Lawrence, Pitt, York, Merton, Hearn, Morecombe, Burke and Peter Streets",
+ "method": "Sweep crops r0c0..r2c2 all viewed and displayed; anchors written on opening: r0c0 MALMESBURY ROAD/OAK CRESCENT/R.C. Chapel; r0c1 Bank/P.H./Congl. Chap.; r0c2 LAWRENCE STREET/PETER STREET; r1c0 SWANSCOMBE STREET/WOOD ST; r1c1 CLARKSON STREET/RATHBONE STREET/School; r1c2 BURKE STREET/MORECOMBE ST; r2c0 WOODSTOCK STREET/BURNHAM STREET; r2c1 PITT STREET/MONTESQUIEU STREET; r2c2 YORK/MERTON/HEARN STREET. Contact sheets (own helper) all displayed: c1 8x (Ward Boundary rails), c2 8x (P.H./Girls), c3 14x 7·3/6·5/B.M.8·90, c4 5x ±40 6·7/6·4 (CL·ARKSON), c5 8x (F.P., zig-zag), c6 14x B.M.9·57/9·08, c7 6x B.M.9·08 (F of FOX), c8 8x (WOODSTOCK S, RATHBONE O), c9 8x (LAWRENCE E, MORECOMBE S·T), c10 12x digit checks, c11 14x B.M.9·16, c12 5x 7·2 + east edge, marker sheet mkc 6x all 33 positions (5 positions corrected by 1-8 px after it). Every crop and sheet displayed when opened.",
+ "legibility": "Good; horizontal sheet join at py ~197 across the full width (tint step, = py ~965 on m18_131078_87155; sheet tool silent). Dense interpunct lettering on Rathbone, Burnham, Montesquieu and Clarkson Streets makes many dot attributions medium.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 337,
+   "py": 192,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "tramway road (Barking Road), figure just north of the horizontal sheet join py ~197; no separate dot; centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.43,
+   "raw": "B.M.9·43",
+   "px": 222,
+   "py": 223,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. on wall corner by the R.C. Chapel, south of the join; pheon below text; 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 168,
+   "py": 302,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "tramway road by Ward Boundary lettering; dot on the tram rail left of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 31,
+   "py": 398,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "tramway road at west edge by the Chapel 'Seats for 400'; position = tick on the tram rail above-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 525,
+   "py": 54,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "tramway road by the Bank; dot on rail above-left, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 467,
+   "py": 110,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "tramway road south side; no dot distinct from the dotted line; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 540,
+   "py": 198,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street south of tramway east of P.H.; dot directly above figure on the sheet-join line; final 3 open at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 561,
+   "py": 329,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Rathbone Street at Lawrence Street; dot left-below figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 688,
+   "py": 302,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Lawrence Street; dot left of figure; G-shaped 6 and flat-topped 5 at 12x/14x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.9,
+   "raw": "B.M.8·90",
+   "px": 547,
+   "py": 388,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Rathbone Street west side, B.M. on building wall; pheon points west onto wall, left of text; 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 572,
+   "py": 472,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Clarkson Street / Rathbone Street junction; isolated dot left of figure at 5x/8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 432,
+   "py": 513,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Clarkson Street; figure written on the School (Boys/Girls) edge; only dot is the L· interpunct of CL·ARKSON 14 px NW, used as position"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.3,
+   "raw": "8·3",
+   "px": 134,
+   "py": 606,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Wood Street by the P.H.; dot below figure lines up with a following ·F.P (the F.P. has its own dot at ~143,606)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.57,
+   "raw": "B.M.9·57",
+   "px": 126,
+   "py": 624,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Wood Street, B.M. on building wall west side; pheon left of text; 14x; zig-zag symbol at ~146,629 below is not a height"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 7,
+   "py": 642,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Burnham Street at the west edge (figure whole, x 8-22); dot left of figure; oval 0, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 320,
+   "py": 600,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Swanscombe Street / Montesquieu Street junction; dot right of figure, just above an F.P., could belong to the F.P."
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.08,
+   "raw": "B.M.9·08",
+   "px": 430,
+   "py": 706,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "Fox Street / Montesquieu Street corner; pheon 20 px SE of text below the F of FOX on building corner; final digit bulkier than the leading 9, read 8 at 14x but 9·09 not excluded"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 404,
+   "py": 721,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Montesquieu Street at Fox Street; only dot is the E· interpunct of MONTE·SQUIEU, used as position"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.9,
+   "raw": "7·9",
+   "px": 232,
+   "py": 824,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Woodstock Street; dot above-left of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 98,
+   "py": 843,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Burnham Street; only dot is R· interpunct of STR·EET above figure, used as position"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.16,
+   "raw": "B.M.9·16",
+   "px": 107,
+   "py": 893,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Burnham Street, B.M. on building front; pheon NW of text on building line; 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 587,
+   "py": 608,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Rathbone Street at Fox Street; only dot is above the O of RATHB·ONE, used as position"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.1,
+   "raw": "8·1",
+   "px": 610,
+   "py": 785,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Rathbone Street at Pitt Street; dot = R· interpunct of STR·EET (a ·F.P. dot also near); position = that dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 604,
+   "py": 844,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Rathbone Street south of the P.H.; only nearby dot is the F.P.'s trailing dot and E interpuncts; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 628,
+   "py": 971,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Rathbone Street south end; dot above-right; G-shaped 6, final closed 8 plainly different at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.77,
+   "raw": "B.M.7·77",
+   "px": 812,
+   "py": 744,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Burke Street / Pitt Street corner, B.M. on building corner; pheon below-right of text; 8x clear"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 780,
+   "py": 748,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Pitt Street west of Burke Street; digits clear at 12x (G-6, closed 8); no own dot (·R interpunct of ST·REET 15 px SE); centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 935,
+   "py": 738,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Morecombe Street at Pitt Street; no dot (S·T interpunct 16 px east); centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 815,
+   "py": 275,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Lawrence Street at Aviary Street; dot directly above the E of LAWRENCE, left of figure, could be a letter interpunct; oval 0 at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.84,
+   "raw": "B.M.6·84",
+   "px": 795,
+   "py": 267,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Aviary Street / Lawrence Street corner, B.M. on building; pheon below-left of text; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.2,
+   "raw": "7·2",
+   "px": 957,
+   "py": 313,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Lawrence Street / Peter Street corner; dot right of T of STREET (possibly interpunct); survey-station triangle at ~983,318 also beside figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 802,
+   "py": 37,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Maud / Mary / Aviary Street junction; isolated dot left-below figure, distinct from F.P.'s trailing dot (confirmed 14x on the identical tiles of m18_131078_87155 and on this mosaic's marker sheet)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 906,
+   "py": 112,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Mary Street; position = dot right of an E in STREET (possible interpunct); flat-topped 5"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangles at ~508,43 (Bank), ~549,75, ~983,318 (Peter St), ~588,812 (P.H. yard, Rathbone St)",
+  "zig-zag symbol at ~146,629 by B.M.9·57",
+  "'Ward Boundary' lettering along the tramway road",
+  "F.P. marks throughout"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1005,
+   "py0": 180,
+   "px1": 1024,
+   "py1": 200,
+   "reason": "spot height '5·?' with dot ~1019,194 cut by east edge (final digit at x 1022-1024)"
+  },
+  {
+   "px0": 0,
+   "py0": 194,
+   "px1": 1024,
+   "py1": 200,
+   "reason": "horizontal sheet join; 7·6 at 337,192 and 7·3 dot at 540,198 sit against it"
+  }
+ ]
+}

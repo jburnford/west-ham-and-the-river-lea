@@ -1,0 +1,406 @@
+{
+ "mosaic": "m18_131069_87128",
+ "reader": "opus-h",
+ "area": "Stratford centre: Stratford Station and Low Level, Eastern Junction, William/Western/Cullum/Broad Streets, Martin Street, Station Street, Angel Lane, Frederick Street, Jam Factory, High Street/Chant Street, Southern Junction",
+ "method": "Independent second read (no other reader's file consulted). sheet --all; 9 sweep crops at 2x; every candidate confirmed on zoom contact sheets at 6-14x (panels labelled in mosaic px) and the dot or pheon searched for at 4-8x. All sweep crops and all zoom contact sheets loaded and were viewed successfully.",
+ "legibility": "Good, crisp; dense terraced streets with many F.P. dots. Sheet joins: clear horizontal join at py~936-940 (tint step, full width); tool-reported weak vertical steps at px~716 and ~791 (y 768-1024) not visible by eye.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 27.63,
+   "raw": "B.M.27·63",
+   "px": 240,
+   "py": 49,
+   "confidence": "high",
+   "notes": "Stratford Station forecourt, building south of the booking hall; pheon above-right of text; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.8,
+   "raw": "22·8",
+   "px": 215,
+   "py": 104,
+   "confidence": "medium",
+   "notes": "station approach beside the low-level lines; digits clear at 8-14x; no survey dot distinguishable from the dashed kerb line, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.41,
+   "raw": "B.M.19·41",
+   "px": 380,
+   "py": 187,
+   "confidence": "high",
+   "notes": "corner building at Eastern Junction / William Street; pheon below-left of text; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.6,
+   "raw": "17·6",
+   "px": 350,
+   "py": 187,
+   "confidence": "high",
+   "notes": "road junction by P.H. at Eastern Junction; dot above the 1; last digit read as 6 (open top) at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.9,
+   "raw": "17·9",
+   "px": 408,
+   "py": 285,
+   "confidence": "high",
+   "notes": "road south of the Eastern Junction P.H.; dot above-left of figures; clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.2,
+   "raw": "24·2",
+   "px": 93,
+   "py": 240,
+   "confidence": "medium",
+   "notes": "over the GER tracks west of the Low Level station; second digit partly crossed by a rail but reads 4 at 2x and 11x; dot inferred on a rail just right of the figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.5,
+   "raw": "B.M.25·50",
+   "px": 32,
+   "py": 421,
+   "confidence": "medium",
+   "notes": "railway embankment/bridge SW of Stratford Low Level; digits clear at 10x; no pheon found within 40 px (possibly at the west edge), position = centre of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.1,
+   "raw": "19·1",
+   "px": 699,
+   "py": 67,
+   "confidence": "medium",
+   "notes": "William Street, east end; digits clear at 10x; nearest dot is the street-name interpunct before the T at 681,68, not used; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 521,
+   "py": 125,
+   "confidence": "high",
+   "notes": "William Street; dot above-right of the 8; clear at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.0,
+   "raw": "B.M.20·00",
+   "px": 613,
+   "py": 206,
+   "confidence": "high",
+   "notes": "Western Street north frontage; pheon below text beside F.P.; clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.8,
+   "raw": "18·8",
+   "px": 689,
+   "py": 192,
+   "confidence": "high",
+   "notes": "Western Street east; dot left of the figures; last digit 8 (two closed loops) at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.1,
+   "raw": "18·1",
+   "px": 575,
+   "py": 231,
+   "confidence": "medium",
+   "notes": "Western Street; figure beside the W·E·S·T·E·R·N interpunct after N, which serves as the dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.6,
+   "raw": "16·6",
+   "px": 490,
+   "py": 425,
+   "confidence": "medium",
+   "notes": "over a building block on the east side of Martin Street; last digit read as 6 at 14x (8 not excluded); no dot, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.4,
+   "raw": "23·4",
+   "px": 861,
+   "py": 68,
+   "confidence": "medium",
+   "notes": "Angel Lane north end at the junction; dot below-left of the figures near the L of LANE, could be a lettering interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.2,
+   "raw": "23·2",
+   "px": 864,
+   "py": 143,
+   "confidence": "high",
+   "notes": "Angel Lane at the P.H.; dot above the figures; clear at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.05,
+   "raw": "B.M.25·05",
+   "px": 880,
+   "py": 142,
+   "confidence": "high",
+   "notes": "Angel Lane east frontage; pheon on building line 25 px NW of the text; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.1,
+   "raw": "23·1",
+   "px": 906,
+   "py": 305,
+   "confidence": "high",
+   "notes": "Angel Lane opposite Pleasant Row; dot above the figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.1,
+   "raw": "19·1",
+   "px": 73,
+   "py": 496,
+   "confidence": "high",
+   "notes": "open ground west of the Low Level line (inside the curve of the loop); dot above-right of the 1"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 54,
+   "py": 708,
+   "confidence": "high",
+   "notes": "path at the foot of the embankment by the railway curve; dot 14 px left of figures, beside a small square structure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.26,
+   "raw": "B.M.16·26",
+   "px": 486,
+   "py": 531,
+   "confidence": "high",
+   "notes": "Martin Street west frontage; pheon left of text on the building line; clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 527,
+   "py": 576,
+   "confidence": "high",
+   "notes": "Martin Street at Broad Street; dot left of the 1; a second dot above belongs to the F.P."
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 663,
+   "py": 720,
+   "confidence": "medium",
+   "notes": "Martin Street south end; figure beside the S·T·R·E·E·T interpunct before T, taken as the dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.1,
+   "raw": "22·1",
+   "px": 954,
+   "py": 504,
+   "confidence": "medium",
+   "notes": "Angel Lane at Wilton's Yard; digits clear at 8x; only dot is 14 px left of the figures on the far side of the kerb line"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.42,
+   "raw": "B.M.22·42",
+   "px": 880,
+   "py": 605,
+   "confidence": "high",
+   "notes": "Angel Lane west frontage south of Wilton's Yard; pheon right of text; clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.2,
+   "raw": "19·2",
+   "px": 967,
+   "py": 693,
+   "confidence": "high",
+   "notes": "High Street/Angel Lane junction on the tramway; dot on a rail left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 396,
+   "py": 805,
+   "confidence": "high",
+   "notes": "Station Street at Frederick Street; dot above-left; the other dot to the right is the F.P.'s"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.2,
+   "raw": "16·2",
+   "px": 540,
+   "py": 759,
+   "confidence": "medium",
+   "notes": "Frederick Street; figure under the F·R·E·D·E·R·I·C·K·S·T interpunct, taken as the dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 414,
+   "py": 933,
+   "confidence": "high",
+   "notes": "Station Street south end by Sheet Factory Junction, just above the sheet join at py~938; dot right of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.64,
+   "raw": "B.M.14·64",
+   "px": 7,
+   "py": 831,
+   "confidence": "high",
+   "notes": "building at the west edge south of the railway curve; pheon left of text pointing to the wall; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.0,
+   "raw": "13·0",
+   "px": 23,
+   "py": 854,
+   "confidence": "medium",
+   "notes": "west edge, road by F.P.; dot above the figures could belong to the F.P. to its left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.2,
+   "raw": "B.M.19·20",
+   "px": 416,
+   "py": 1018,
+   "confidence": "medium",
+   "notes": "Southern Junction (under the lettering), 6 px above the south edge; digits clear at 7x; pheon not found (may be south of the edge), position = centre of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.1,
+   "raw": "18·1",
+   "px": 854,
+   "py": 824,
+   "confidence": "high",
+   "notes": "High Street tramway at Burton's Court; dot on the rail left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.32,
+   "raw": "B.M.20·32",
+   "px": 767,
+   "py": 893,
+   "confidence": "high",
+   "notes": "High Street north frontage opposite Burton's Court; pheon left of text on the building corner; clear at 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.14,
+   "raw": "B.M.20·14",
+   "px": 955,
+   "py": 990,
+   "confidence": "high",
+   "notes": "Chant Street corner building; pheon below-left of text on the building line; clear at 6x"
+  }
+ ],
+ "non_height_marks": [
+  "survey station triangle, no figure, at 759,1016",
+  "many F.P., S.P., L.B., H, W.M. marks throughout",
+  "Ward Bdy. lettering at 150,180"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1006,
+   "py0": 886,
+   "px1": 1024,
+   "py1": 904,
+   "reason": "figure '18·?' cut by the east edge (dot at 1001,896)"
+  },
+  {
+   "px0": 0,
+   "py0": 1010,
+   "px1": 12,
+   "py1": 1024,
+   "reason": "figure '·0' cut by the west/south corner"
+  },
+  {
+   "px0": 0,
+   "py0": 932,
+   "px1": 1024,
+   "py1": 944,
+   "reason": "horizontal sheet join, tint change and 1-2 px offsets"
+  },
+  {
+   "px0": 70,
+   "py0": 230,
+   "px1": 100,
+   "py1": 255,
+   "reason": "24·2 partly obscured by rails; dot not separable from rails"
+  }
+ ]
+}

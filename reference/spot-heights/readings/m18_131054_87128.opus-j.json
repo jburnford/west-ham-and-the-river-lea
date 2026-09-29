@@ -1,0 +1,31 @@
+{
+  "mosaic": "m18_131054_87128",
+  "reader": "opus-j",
+  "area": "Old Ford / Hackney Wick east bank: White Post Lane, Davey Road, Lea and Pharos Chemical Works, London & Provincial Dye Works, Hertford Union Canal and Old Ford Lock, Rippoth / Wyke / Roach Roads, Hackney Cut towing path and the marsh to its east",
+  "method": "Independent second reading; no other reader's file, heights.geojson or qa_report consulted. sheet tool (no join reported), 9 sweep crops at 2x, then zoom contact sheets at 8x (+-30 px) on every candidate and 12x (+-15 px) on all pheons and doubtful digits, 5x (+-50) dot search for the White Post Lane figure. All crops and zooms were viewed successfully; no image failed to load.",
+  "legibility": "Good, crisp engraving throughout. Sheet joins seen by eye (sheet tool silent): horizontal at py ~937 across the whole width (tint step, darker tan below in the west half); straight vertical line at px ~546 from top to bottom (probable sheet edge, no tint step visible). No figure crosses either join.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 16.1, "raw": "16·1", "px": 227, "py": 123, "confidence": "high", "notes": "White Post Lane at the head of Davey Road; dot left of and above the figures, 8x"},
+    {"type": "spot", "value_ft": 22.3, "raw": "22·3", "px": 435, "py": 80, "confidence": "medium", "notes": "White Post Lane, figures written on the south kerb line opposite Lea Chemical Works; no survey dot found in a +-50 px search at 5x (only the N·E interpunct of LANE at 437,63); position = centre of figures"},
+    {"type": "bench_mark", "value_ft": 17.71, "raw": "B.M.17·71", "px": 265, "py": 296, "confidence": "high", "notes": "building frontage at the south end of Davey Road, beside H and F.P.; pheon above-left of the text, point down on the frontage line, 12x"},
+    {"type": "bench_mark", "value_ft": 23.18, "raw": "B.M.23·18", "px": 485, "py": 321, "confidence": "high", "notes": "Hertford Union Canal north wall by Lea Chemical Works; pheon right of the text on the wall line, 12x"},
+    {"type": "bench_mark", "value_ft": 23.68, "raw": "B.M.23·68", "px": 580, "py": 18, "confidence": "high", "notes": "top of sheet near the White Post Lane bridge approach over the Hackney Cut; pheon left of text, point up to the curved bar, 12x"},
+    {"type": "spot", "value_ft": 22.2, "raw": "22·2", "px": 630, "py": 102, "confidence": "high", "notes": "west bank of Hackney Cut south of White Post Lane; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 21.1, "raw": "21·1", "px": 578, "py": 250, "confidence": "high", "notes": "path/yard edge on the west bank of the Cut at the canal junction; dot right of figures, 8x"},
+    {"type": "spot", "value_ft": 24.5, "raw": "24·5", "px": 829, "py": 4, "confidence": "high", "notes": "top edge, east of the Cut above the embankment hatching (White Post Lane bridge approach); dot left of figures 4 px from the edge, figures whole, 8x"},
+    {"type": "spot", "value_ft": 22.1, "raw": "22·1", "px": 728, "py": 316, "confidence": "high", "notes": "Hackney Cut east towing path, between the letters of rotated 'Towing Path'; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 21.8, "raw": "21·8", "px": 310, "py": 454, "confidence": "high", "notes": "Hertford Union Canal north towing path by Pharos Chemical Works; dot above-right of figures, 8x"},
+    {"type": "spot", "value_ft": 22.3, "raw": "22·3", "px": 75, "py": 649, "confidence": "medium", "notes": "Hertford Union Canal towing path at the head of Old Ford Lock; two small dots on the lock-side edge (75,649 and 73,666); nearest (upper) taken as survey dot, 8x"},
+    {"type": "bench_mark", "value_ft": 24.35, "raw": "B.M.24·35", "px": 45, "py": 695, "confidence": "high", "notes": "Old Ford Lock, west edge; digits 24·35 whole and clear at 12x, only the B of B.M. clipped by the west edge; pheon on the lock wall right of the text at 45,695 (shape blurred, position within ~2 px)"},
+    {"type": "spot", "value_ft": 22.6, "raw": "22·6", "px": 789, "py": 543, "confidence": "high", "notes": "Hackney Cut east towing path, between 't' and 'h' of 'Towing Path'; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 22.6, "raw": "22·6", "px": 813, "py": 758, "confidence": "high", "notes": "Hackney Cut east towing path; dot left of figures; last digit checked at 12x against the 5 of B.M.24·35 and reads 6"},
+    {"type": "bench_mark", "value_ft": 21.93, "raw": "B.M.21·93", "px": 805, "py": 811, "confidence": "high", "notes": "Hackney Cut east bank; pheon drawn horizontally left of the text, point on the bank line at 805,811; a separate small dot at 812,806 between pheon and text; 6x"},
+    {"type": "spot", "value_ft": 22.3, "raw": "22·3", "px": 793, "py": 1006, "confidence": "high", "notes": "Hackney Cut east towing path near the south edge (below the py ~937 join); dot left of figures, 8x"}
+  ],
+  "non_height_marks": ["F.P. marks at ~95,15; ~198,117; ~225,318; ~112,385; ~58,965", "P.H. at ~270,145", "H marks (hydrants) at ~256,292; ~298,573; ~282,745; ~393,768; ~390,915", "flow arrow in the marsh ditch at ~880,127", "rotated 'Towing Path' lettering on the Cut and the canal", "'Mission Hall', 'P.H.', 'Lea Chemical Works', 'Pharos Chemical Works', 'London & Provincial Dye Works'"],
+  "unreadable_regions": [
+    {"px0": 0, "py0": 684, "px1": 6, "py1": 700, "reason": "B of B.M.24·35 clipped by the west edge (value itself whole and read)"},
+    {"px0": 0, "py0": 932, "px1": 1024, "py1": 942, "reason": "horizontal sheet join at py ~937 (no figures on it)"}
+  ]
+}

@@ -1,0 +1,215 @@
+{
+ "mosaic": "m18_131081_87149",
+ "reader": "opus-ae",
+ "area": "Canning Town NE marsh: open ground with drainage ditches and F.B. east of Hermit Road; the Schools (Girls, Infants, Boys) and Suffolk Road; terraces of Florence, Shepherd, Chargeable, Sutton, Luton and Philip Streets and Union Road",
+ "method": "Overview (anchor Schools, SUFFOLK ROAD) and all 9 sweep crops at 2x viewed and anchored on opening (r0c0 HERMIT ROAD/F.P.; r0c1 Infants Schools/F.B.; r0c2 SUFFOLK ROAD; r1c0 open marsh ditch; r1c1 F.B. ditches; r1c2 ditches/B.M.8·02; r2c0 FLORENCE STREET/SHEPHERD STREET; r2c1 CHARGEABLE/SUTTON; r2c2 UNION ROAD/LUTON/PHILIP STREET). Contact sheets g1-g9 (5x ±35, 4x ±60, 6x ±12, 8x ±16-18, 10x ±13, 12x ±13, 16x ±8), all displayed when opened. Dot centroids by numeric helper; marker sheet checked.",
+ "legibility": "Clear. Horizontal sheet join by eye at py ~768 (strong tint change: white paper north, buff south). The tool's vertical joins at px ~729 and ~763 (y 0-256) are the hatched Boys school block, not joins. The open marsh interior carries no figures.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 174,
+   "py": 82,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "north end of Hermit Road where it crosses the ditch; dot above figure; first digit rounded like 6 at 8x here, but read as a flat-topped 5 on the neighbouring mosaic 131078_87149 (same mark) - 5/6 unresolved"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 52,
+   "py": 239,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hermit Road; figure at 77-87,242 east of the carriageway; dot taken as the O·A interpunct of R O·A D on the same row; 6·0 clear at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.14,
+   "raw": "B.M.6·14",
+   "px": 24,
+   "py": 316,
+   "confidence": "medium",
+   "setting": "other",
+   "notes": "Hermit Road east footway, pheon tangled with F.P. letters at the dotted footway line, no wall drawn; 6·14 clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 11,
+   "py": 442,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hermit Road; figure whole at x 5-17 against the west edge; its dot lies west of the mosaic (about px -17, the H·E interpunct on 131078_87149); position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 13,
+   "py": 630,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hermit Road; figure whole at x 8-18 against the west edge; its dot lies west of the mosaic (about px -16 on 131078_87149); position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.94,
+   "raw": "B.M.6·94",
+   "px": 520,
+   "py": 18,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "south fence/wall of the house gardens north of the ditch; 6·94 clear at 12x (open 6); pheon not found within ±35 px, position = centre of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.1,
+   "raw": "6·1",
+   "px": 781,
+   "py": 92,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "Schools ground between the Boys block and the Suffolk Road wall; no dot found, position = centre of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 962,
+   "py": 187,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road junction east of Suffolk Road; dot left of figure; closed 8 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 839,
+   "py": 265,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "south end of Suffolk Road by F.P.; dot above-left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.02,
+   "raw": "B.M.8·02",
+   "px": 885,
+   "py": 305,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "west corner of the terrace south of the junction; pheon at the house corner, text below-right; 8·02 clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.76,
+   "raw": "B.M.5·76",
+   "px": 996,
+   "py": 798,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Chargeable Street frontage at the Philip Street corner; pheon on the house corner below the text; 5·76 clear at 10x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.6,
+   "raw": "3·6",
+   "px": 1014,
+   "py": 801,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "corner of Chargeable Street and Philip Street; figure whole at x 1008-1020 (4 px from the east edge); only nearby dot is the R·G interpunct of CHAR·GEABLE at 1014,791, so position = centre of figures; 3·6 clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 872,
+   "py": 887,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Union Road at the Luton Street corner; both digits the same flat-topped 5 at 6x and 10x; a dot at 848,886 left of the dotted kerb may be the survey dot or the ·LUTON interpunct, so position = centre of figures"
+  }
+ ],
+ "non_height_marks": [
+  "F.B. (footbridge) at 505,322",
+  "F.P.s along Hermit Road, Suffolk Road, Florence and Shepherd Streets, Union Road, Philip Street"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 764,
+   "px1": 1024,
+   "py1": 772,
+   "reason": "horizontal sheet join at py ~768"
+  },
+  {
+   "px0": 1016,
+   "py0": 790,
+   "px1": 1024,
+   "py1": 810,
+   "reason": "3·6 figure ends 4 px from the east edge; CHARGEABLE lettering cut"
+  }
+ ]
+}

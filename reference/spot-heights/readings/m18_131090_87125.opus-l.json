@@ -1,0 +1,207 @@
+{
+ "mosaic": "m18_131090_87125",
+ "reader": "opus-l",
+ "area": "Upton: Upton Lane from Sylvan Road to the Ursuline Convent, Glenparke Road, Whyteville Road, Studley Road, Haslemere Road (West Ham)",
+ "method": "Second attempt. On the first attempt every image returned [media removed: request limit] and was NOT seen; that file was withdrawn. On this attempt the 9 sweep crops (2x) r0c0-r2c2 and contact sheets A, B, C, D (6-30x zoom panels, each labelled with its mosaic window, made with a helper in my scratch directory) were re-opened one at a time and every one displayed. Every value confirmed at 7x or more; 3/8 and 6/8 doubts examined at 24-30x.",
+ "legibility": "good; no sheet join found by the tool or by eye; south-east quarter is open ground with no figures",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 224,
+   "py": 11,
+   "confidence": "high",
+   "notes": "Upton Lane at Sylvan Road; dot left of figures; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.28,
+   "raw": "B.M.34·28",
+   "px": 237,
+   "py": 256,
+   "confidence": "low",
+   "notes": "wall on the west side of Upton Lane south of Sylvan Road; pheon (left-pointing) at 237,256, text 190-225,236; last digit has closed loops at 26-30x (8) but read 3 at 2x/6x (34·23)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.6,
+   "raw": "32·6",
+   "px": 250,
+   "py": 233,
+   "confidence": "medium",
+   "notes": "Upton Lane opposite the B.M.; dot left of figures; last digit 6 (curled top) at 30x, 8 not fully excluded"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.0,
+   "raw": "32·0",
+   "px": 258,
+   "py": 375,
+   "confidence": "high",
+   "notes": "Upton Lane at the Glenparke/Whyteville Road junction; dot left of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.8,
+   "raw": "32·8",
+   "px": 434,
+   "py": 372,
+   "confidence": "high",
+   "notes": "Whyteville Road west end; dot right of figures; last digit a clear 8 at 30x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.1,
+   "raw": "33·1",
+   "px": 79,
+   "py": 386,
+   "confidence": "low",
+   "notes": "road west of Upton Lane (R O A D lettering); figures 58-73,391; second digit at 24x has a looped top and could be 8 (38·1, implausible beside 32-33 ft on Upton Lane); dot at 79,386 sits between the figures and the A of ROAD (no other interpuncts in the name), taken as survey dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.97,
+   "raw": "B.M.34·97",
+   "px": 572,
+   "py": 383,
+   "confidence": "high",
+   "notes": "house front, south side of Whyteville Road; pheon at 572,383 right of text; 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.0,
+   "raw": "33·0",
+   "px": 593,
+   "py": 363,
+   "confidence": "high",
+   "notes": "Whyteville Road; dot right of figures, before the W of WHYTEVILLE (no interpuncts in the name); 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.7,
+   "raw": "33·7",
+   "px": 758,
+   "py": 194,
+   "confidence": "medium",
+   "notes": "Glenparke Road at the cross-road; dot at 758,194 above figures, between the R and K of the road name (possible interpunct); 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 768,
+   "py": 350,
+   "confidence": "low",
+   "notes": "Whyteville Road at the cross-road; dot at 768,350 between V and I of WHYTEVILLE (possible interpunct); last digit read 3 at 30x (upper left open) but 8 possible"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 959,
+   "py": 340,
+   "confidence": "medium",
+   "notes": "Whyteville Road east; dot at 959,340 between the O and A of ROAD (possible interpunct); 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.2,
+   "raw": "33·2",
+   "px": 256,
+   "py": 524,
+   "confidence": "high",
+   "notes": "Upton Lane by the Steam Laundry; dot left of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.8,
+   "raw": "33·8",
+   "px": 259,
+   "py": 694,
+   "confidence": "high",
+   "notes": "Upton Lane at Haslemere Road; dot left of figures; last digit a clear 8 at 30x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.1,
+   "raw": "34·1",
+   "px": 274,
+   "py": 867,
+   "confidence": "high",
+   "notes": "Upton Lane south of the triangle; dot right of figures; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.72,
+   "raw": "B.M.35·72",
+   "px": 287,
+   "py": 886,
+   "confidence": "high",
+   "notes": "building corner east side of Upton Lane (Ursuline Convent grounds); pheon at 287,886 above-left of text; 7x"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle at ~82,870 on the road, no figure",
+  "triangle on a building corner at ~544,962 (Ursuline Convent), no figure",
+  "F.P. and H marks",
+  "F.P cut by east edge at ~1020,70"
+ ],
+ "unreadable_regions": []
+}

@@ -1,0 +1,297 @@
+{
+ "mosaic": "m18_131096_87134",
+ "reader": "opus-n",
+ "area": "Upton Park: Green Street (C.R. / Co. & Parly. Boro. & U.D. boundary), High Street (Upton), Raymond Road, Washington Road, Waterloo Road, Crescent Road, Park Road, King's Road, Queen's Square, Upton Park Station and railway, Florence Road, Redclyffe Road, Tudor Road, Wax Vesta Works",
+ "method": "sheet tool; all 9 sweep crops r0c0..r2c2 at 2x viewed; contact sheets csA-csD (8x, +/-25 px), csD2 (5x, +/-45 px pheon search), csE (12x), nnA (12x nearest+bicubic) viewed; marker sheet viewed after writing. Every crop and contact sheet displayed when opened. csF (10x) re-zoom; three positions corrected by 2-11 px after the marker sheet.",
+ "legibility": "clean print but Green Street is lined with large boundary dots and interpunct lettering, so most figures there have no distinguishable survey dot; vertical sheet join at px ~165 over the full height confirmed by eye (tint change and straight line), no figure crosses it; 3/5/8/9 separation weak",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 32.0,
+   "raw": "32·0",
+   "px": 196,
+   "py": 11,
+   "confidence": "medium",
+   "notes": "Green Street north end by 'C.R.' and F.P./L.B.; ringed by large boundary dots and F.P. dots, no survey dot distinguishable; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.2,
+   "raw": "32·2",
+   "px": 33,
+   "py": 45,
+   "confidence": "medium",
+   "notes": "road at north-west corner; likely dot above the figure touching a boundary dash"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.7,
+   "raw": "31·7",
+   "px": 273,
+   "py": 133,
+   "confidence": "medium",
+   "notes": "Green Street by survey triangle (~265,110) and F.P.; among large C.R. boundary dots; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.6,
+   "raw": "30·6",
+   "px": 343,
+   "py": 314,
+   "confidence": "medium",
+   "notes": "Green Street; small dot above figure lies on the spacing of the boundary-dot line; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.0,
+   "raw": "32·0",
+   "px": 455,
+   "py": 150,
+   "confidence": "high",
+   "notes": "High Street / Washington Road junction; isolated dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 604,
+   "py": 183,
+   "confidence": "high",
+   "notes": "High Street east near Waterloo Road; dot left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.94,
+   "raw": "B.M.33·94",
+   "px": 717,
+   "py": 250,
+   "confidence": "medium",
+   "notes": "corner building east of Waterloo Road; pheon below text on the building corner; third digit 9 vs 2 weak at 12x (bicubic 14x shows 9)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.8,
+   "raw": "29·8",
+   "px": 947,
+   "py": 24,
+   "confidence": "low",
+   "notes": "...ELD Road (north-east) between L and D; only nearby dot is an E·L interpunct; last digit 8 at 8x but 9-like at 12x (could be 29·9 or 29·3)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.4,
+   "raw": "32·4",
+   "px": 745,
+   "py": 226,
+   "confidence": "high",
+   "notes": "High Street east; dot directly above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.8,
+   "raw": "30·8",
+   "px": 996,
+   "py": 234,
+   "confidence": "medium",
+   "notes": "High Street east edge by the chapel; only nearby dot is F.P.'s own; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.0,
+   "raw": "32·0",
+   "px": 926,
+   "py": 288,
+   "confidence": "high",
+   "notes": "High Street east; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.8,
+   "raw": "29·8",
+   "px": 412,
+   "py": 514,
+   "confidence": "medium",
+   "notes": "Green Street between E and N of G R E E N; among large boundary dots; position = centre of figures; last digit 8 in bicubic 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.3,
+   "raw": "30·3",
+   "px": 405,
+   "py": 600,
+   "confidence": "medium",
+   "notes": "Green Street beside S of STREET; among boundary dots; position = centre; last 3 matches first 3 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.8,
+   "raw": "29·8",
+   "px": 252,
+   "py": 660,
+   "confidence": "high",
+   "notes": "road north of Upton Park Station (Plashet side); dot right of figure; 8x/12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.78,
+   "raw": "B.M.35·78",
+   "px": 436,
+   "py": 690,
+   "confidence": "low",
+   "notes": "building by Green Street railway bridge; text written over the building; pheon taken at the building corner on the Green Street frontage ~28 px from text; second digit 5/6/3 unresolved at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 31.94,
+   "raw": "B.M.31·94",
+   "px": 48,
+   "py": 717,
+   "confidence": "high",
+   "notes": "west edge road north of the station; pheon left of text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.8,
+   "raw": "29·8",
+   "px": 71,
+   "py": 726,
+   "confidence": "high",
+   "notes": "same road below B.M.31·94; own dot directly above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 449,
+   "py": 670,
+   "confidence": "medium",
+   "notes": "Green Street north approach to railway bridge; among boundary dots and F.P.; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.7,
+   "raw": "35·7",
+   "px": 448,
+   "py": 716,
+   "confidence": "low",
+   "notes": "Green Street on the railway bridge by B.S. and S.P.; written in the lettering of STREET among boundary dots; second digit 5 vs 3 unresolved (12x LANCZOS 3, nearest/bicubic 5); position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.5,
+   "raw": "28·5",
+   "px": 275,
+   "py": 902,
+   "confidence": "high",
+   "notes": "road south of the station (tree-lined); dot above figure; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.2,
+   "raw": "28·2",
+   "px": 79,
+   "py": 971,
+   "confidence": "medium",
+   "notes": "tree-lined road south-west; dots to the right belong to F.P.; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 489,
+   "py": 829,
+   "confidence": "medium",
+   "notes": "Green Street at King's Road / Queen's Square; among large boundary dots and F.P. dots; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.2,
+   "raw": "30·2",
+   "px": 698,
+   "py": 1009,
+   "confidence": "high",
+   "notes": "Redclyffe Road west end; dot right of figure before R; figure whole (ends ~1017)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.1,
+   "raw": "31·1",
+   "px": 960,
+   "py": 943,
+   "confidence": "medium",
+   "notes": "Redclyffe Road east after A of ROAD; no dot beside figure (dot 20 px above is by the lettering); position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.1,
+   "raw": "31·1",
+   "px": 1003,
+   "py": 975,
+   "confidence": "medium",
+   "notes": "Tudor Road north end; dot below-right of figure between the figure and T of TUDOR"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangle at ~265,110 (Green Street), no figure of its own",
+  "B.S. (boundary stone) at ~445,700; S.P. at ~430,716; F.B. footbridges over the railway",
+  "D.F.A. drinking fountain in Queen's Square",
+  "'UPTON' and 'P' large district lettering"
+ ],
+ "unreadable_regions": []
+}

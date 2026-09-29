@@ -1,0 +1,317 @@
+{
+ "mosaic": "m18_131087_87164",
+ "reader": "opus-ao",
+ "area": "Custom House south: Williamson Road, Frederick's Road, Coolfin Road, Custom/Young/Wightman/Hill/Philip Streets, Victoria Dock Road, G.E.R. North Woolwich branch, Royal Albert & Victoria Docks Cut, K and S Warehouses",
+ "method": "Independent QC second read (no other reader file consulted). Sweep crops r0c0-r2c2 (2x) all displayed, anchors: r0c0 FREDERICK'S ROAD/Meth. Chapel; r0c1 COOLFIN ROAD; r0c2 Infants; r1c0 CUSTOM STREET; r1c1 WIGHTMAN STREET; r1c2 PHILIP STREET; r2c0 Royal Albert & Victoria Docks Cut; r2c1 WOOLWICH BRANCH; r2c2 K. Warehouse. Region views (5-8x): 0-320x60-180, 140-330x690-750, 540-740x620-720, 880-1024x930-1024, 940-1024x650-710, 0-90x690-780. Contact sheets cs_a..cs_e (7-20x, LANCZOS and nearest) all displayed. Marker sheet checked. All crops, zooms and sheets were viewed successfully.",
+ "legibility": "Clear engraving; digits legible at 10-12x. Sheet join by eye: horizontal full-width line with tint step at py ~398-400; tool also reports py ~536/665/678/945/966 and px ~346/386/561, not confirmed by eye.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 61,
+   "py": 114,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Williamson Road west of Frederick's Road; dot left of figure; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 244,
+   "py": 105,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Frederick's Road / Williamson Road junction; nearest dot lies between O and R of vertical R·O·A·D lettering (possible interpunct); 9 confirmed at 20x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.24,
+   "raw": "B.M.7·24",
+   "px": 262,
+   "py": 123,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on SW corner of Meth. Chapel (Primitive), text 20 px SW; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 434,
+   "py": 99,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Williamson Road; dot left of figure; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 641,
+   "py": 99,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Williamson Road east; dot left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.9,
+   "raw": "6·9",
+   "px": 848,
+   "py": 15,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "diagonal road at NE (continuation north); dot left; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.97,
+   "raw": "B.M.7·97",
+   "px": 843,
+   "py": 113,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon at corner of terrace at Williamson Road / diagonal road junction, text above-left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 868,
+   "py": 137,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "diagonal road east of B.M.7·97; dot left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 910,
+   "py": 279,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "diagonal road south of Coolfin Road junction; dot above-left; both 5s flat-topped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.4,
+   "raw": "5·4",
+   "px": 952,
+   "py": 388,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "diagonal road further south; dot left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 173,
+   "py": 721,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Victoria Dock Road west; dot 173,721 left of figure; survey triangle (no centre dot) at 160,727 might be the intended point; 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 304,
+   "py": 707,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road at Custom Street; dot left; 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.31,
+   "raw": "B.M.8·31",
+   "px": 565,
+   "py": 640,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on west wall of terrace at south end of Wightman Street; text right; 6x region and 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 583,
+   "py": 686,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road at Wightman Street; dot above-left of figure; 6x region, 10x and 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 445,
+   "py": 696,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road at Young Street; dot above-left; 7x and 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 721,
+   "py": 679,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road at Hill Street; dot above-left; 6x region, 7x and 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.6,
+   "raw": "5·6",
+   "px": 997,
+   "py": 523,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "diagonal road at east edge; dot left; second digit 6/8 unsettled at 7x, 10x and 16x nearest (alt 5·8)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 859,
+   "py": 670,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Victoria Dock Road at Philip Street, before V of VICTO..; dot above-right of figure (VICTORIA has no interpunct before V); 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.47,
+   "raw": "B.M.8·47",
+   "px": 1022,
+   "py": 682,
+   "confidence": "medium",
+   "setting": "other",
+   "notes": "pheon at east edge of mosaic pointing down onto a double wall/fence line on the south edge of Victoria Dock Road by the S.P.; pheon partly cut by edge; leading 8 confirmed at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 3,
+   "py": 737,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road at west edge; dot 3,737 left of figure (figure whole); 7x region and 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 941,
+   "py": 839,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "on the rails of the sidings south of the Docks Cut; dot left of figure on a rail; 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.68,
+   "raw": "B.M.9·68",
+   "px": 945,
+   "py": 957,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on NE corner of K. Warehouse; text left; 12x and 8x (6 open-topped)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.2,
+   "raw": "10·2",
+   "px": 957,
+   "py": 999,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "dock premises between warehouses; dot 957,999 left of figure; figure written in a small box with a survey triangle at 988,993 (no centre dot); 10x and 5x region"
+  }
+ ],
+ "non_height_marks": [
+  "S.P. at ~135,823 and ~890,691",
+  "S.B. signal box ~450,790",
+  "survey triangles at 160,727 and 988,993",
+  "many F.P. marks"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1010,
+   "py0": 670,
+   "px1": 1024,
+   "py1": 690,
+   "reason": "B.M.8·47 pheon partly cut by east edge"
+  },
+  {
+   "px0": 0,
+   "py0": 396,
+   "px1": 1024,
+   "py1": 402,
+   "reason": "horizontal sheet join"
+  }
+ ]
+}

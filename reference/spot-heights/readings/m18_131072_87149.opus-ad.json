@@ -1,0 +1,30 @@
+{
+  "mosaic": "m18_131072_87149",
+  "reader": "opus-ad",
+  "area": "Marsh north of Canning Town: open marsh with unmade roads west, Manor Road on hatched earth ramps rising to a bridge deck over the railway (tracks N-S at x 770-850), walled east approach descending south",
+  "method": "Independent second read (no other reader's file consulted). Sweep crops r0c0..r2c2 (2x) all displayed, each anchored in notes at opening (r0c0 road Y-junction; r0c1 road crossing + ramp hatching; r0c2 vertical 'ROAD' lettering + S.P.; r1c0 winding road bend; r1c1 crossing + B.M.16·68; r1c2 bridge deck + triangle; r2c0 join py~767; r2c1 'MANOR' lettering; r2c2 B.M.7·02). Contact sheets cs1, cs2 (8x, +-16 px), cs3 (10x +-22), cs4 (6x +-24), cs4nn (nearest 8x), cs5/cs5b (7x/5x), cs6 (7x 6/8 comparison), cs7 (6x 6/8 comparison), cs8 (6x pheons), cs9 (10x MANOR R. dot), cs10 (12x B.M.7·02 text), se3x (3x overview of bridge x660-940 y540-1024), plus raw pixel threshold maps of 6/8 glyphs; all displayed. Marker sheet checked. 6/8 judged at 6-8x against the known leading 6 of 6·2 and 6·1.",
+  "legibility": "Clear engraving, but 6-px italic 6/8 in 11·x, B.M.1x·68 and B.M.7·3x unresolvable at pixel level; strong horizontal sheet join at py ~765-767 across the full width (tint step), no figures cut by it",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":5.7,"raw":"5·7","px":304,"py":274,"confidence":"high","setting":"street","notes":"unmade road across open marsh ESE of the Y-junction; dot above-right of figure, 8x"},
+    {"type":"spot","value_ft":5.6,"raw":"5·6","px":177,"py":351,"confidence":"high","setting":"street","notes":"marsh road running SW from the junction; dot left of figure; final digit rounded-top 6 vs the flat 5, consistent at 6-8x"},
+    {"type":"spot","value_ft":5.5,"raw":"5·5","px":494,"py":343,"confidence":"high","setting":"street","notes":"road crossing on the marsh; dot left of figure at the corner, 8x"},
+    {"type":"spot","value_ft":5.5,"raw":"5·5","px":94,"py":552,"confidence":"high","setting":"street","notes":"winding marsh road, west side; dot left of figure, 8x"},
+    {"type":"spot","value_ft":4.0,"raw":"4·0","px":716,"py":377,"confidence":"high","setting":"embankment_foot","notes":"end of the marsh road at the west foot of the hatched Manor Road north ramp; dot above-right of figure, 8x"},
+    {"type":"spot","value_ft":4.2,"raw":"4·2","px":764,"py":163,"confidence":"high","setting":"embankment_foot","notes":"north foot of the hatched Manor Road ramp, just north of where the hatching starts; dot above-right, 8x"},
+    {"type":"bench_mark","value_ft":6.11,"raw":"B.M.6·11","px":772,"py":115,"confidence":"high","setting":"other","notes":"pheon on the curved west edge line of the road near the ramp's north foot (no wall drawn: road edge/fence); text 26 px to the west; digits clear at 10x"},
+    {"type":"spot","value_ft":11.8,"raw":"11·8","px":746,"py":391,"confidence":"low","setting":"embankment_top","notes":"on the hatched earth ramp of Manor Road north of the bridge; dot above figure; final digit reads 6 at 8x but 8 at 6x/7x and pixel map suggests a closed top loop; 11·6 equally possible"},
+    {"type":"spot","value_ft":21.2,"raw":"21·2","px":743,"py":594,"confidence":"high","setting":"bridge","notes":"west end of the bridge deck over the railway; dot above-left of figure, 8x"},
+    {"type":"spot","value_ft":20.8,"raw":"20·8","px":863,"py":609,"confidence":"medium","setting":"bridge","notes":"east end of the bridge deck beside a survey triangle at (878,615); dot above figure; final digit 8 at 6x and 8x, less clear at 7x"},
+    {"type":"bench_mark","value_ft":16.68,"raw":"B.M.16·68","px":739,"py":703,"confidence":"low","setting":"embankment_top","notes":"pheon on the edge line of the hatched Manor Road south ramp; text to the west; second digit renders like 8 at 5-10x (18·68 possible), 16·68 fits the ramp between deck 21·2 and 13·5; decimals 68"},
+    {"type":"spot","value_ft":13.5,"raw":"13·5","px":710,"py":770,"confidence":"high","setting":"embankment_top","notes":"Manor Road south ramp (hatched both sides) just south of the sheet join; dot above figure, 8x"},
+    {"type":"spot","value_ft":6.2,"raw":"6·2","px":685,"py":949,"confidence":"medium","setting":"embankment_top","notes":"lower end of the hatched Manor Road south ramp, under the vertical 'MANOR R.' lettering; the dot sits below-left of the R, could be the abbreviation's period; digits clear at 8-10x"},
+    {"type":"spot","value_ft":11.7,"raw":"11·7","px":829,"py":823,"confidence":"high","setting":"bridge","notes":"walled east approach road descending south from the deck (no hatching); dot above figure, 8x"},
+    {"type":"spot","value_ft":6.1,"raw":"6·1","px":808,"py":997,"confidence":"high","setting":"street","notes":"road at the south foot of the walled east approach; dot above figure, 8x"},
+    {"type":"bench_mark","value_ft":7.02,"raw":"B.M.7·02","px":822,"py":985,"confidence":"high","setting":"bridge","notes":"pheon at the south end of the east approach's west wall (small rectangular structure); text 40 px east; digits clear at 12x"},
+    {"type":"spot","value_ft":5.6,"raw":"5·6","px":52,"py":778,"confidence":"medium","setting":"street","notes":"road bend at the west edge, just below the py~767 join; dot among dotted-fence dots left of figure"},
+    {"type":"bench_mark","value_ft":7.36,"raw":"B.M.7·36","px":44,"py":784,"confidence":"low","setting":"other","notes":"pheon at the road edge/fence junction at the bend (no wall drawn); text right of pheon under 5·6; last digit 6 at one 6x view, 8 at another and at 7x (7·38 possible)"}
+  ],
+  "non_height_marks": ["S.P. at (818,166), (784,283), (868,282)", "survey triangle at (878,615) beside 20·8", "brown paper speck at (637,806), no figure"],
+  "unreadable_regions": []
+}

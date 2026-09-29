@@ -1,0 +1,17 @@
+{
+  "mosaic": "q18_131096_87155", "reader": "opus-ak", "layer": "os-25-inch-london",
+  "area": "Plaistow Level: grazing marsh parcels 17, 25, 26, 27 divided by blue drains with boundary Stones and Posts, and a straight E-W road lettered R O A D across the south with a yellow-tinted boundary along its south side; parcel 33 and buildings south of the road in the SE corner; E ~541150-541540, N ~181480-181860",
+  "method": "Layer: OS 25-inch (1:2500) Essex county series, inferred 1893-96 revision. Viewed the full 1024 px mosaic at 1x (anchor: R O A D, parcels 17/25/26/27/33, Stone, Post), all 9 sweep crops at 2x (r0c0 Stone and 17 5.978; r0c1 Stone and two Posts; r0c2 wavy drain and branch; r1c0 17 and 26; r1c1 25 5.987 and Post; r1c2 25 and drain meander; r2c0 R O of ROAD, 26 1.783, Stone; r2c1 A and D of ROAD, 27 5.269, + and 7, 4; r2c2 33 1.345, D, buildings, B M at E edge), contact sheet cs1 at 5x (7, 4, B.M. pheon), and a marker sheet. Every crop, contact sheet and marker sheet displayed when opened and has an anchor in my notes. Positions are + marker centroids.",
+  "legibility": "Clear italic single-digit figures ~13 px. Figures are very sparse: two spot heights only. A B.M. pheon on the drain bank at the east edge has its text running off the edge (only 'B M' visible), so its value is not on this mosaic. No sheet join seen (tool reports none).",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 7, "raw": "7", "px": 573, "py": 882, "confidence": "high", "setting": "street",
+     "notes": "on the E-W road lettered R O A D, between the A and the D, + marker in the carriageway between the pecked lines; figure 7 written 35 px SE just south of the road's south fence, the only figure near the marker; confirmed at 5x"},
+    {"type": "spot", "value_ft": 4, "raw": "4", "px": 725, "py": 997, "confidence": "high", "setting": "marsh",
+     "notes": "marsh parcel south of the road, + marker just west of the N-S drain, figure 4 20 px SW; figure bottom ~py 1021, close to the south edge but whole (single digit, nothing to its right); confirmed at 5x"}
+  ],
+  "non_height_marks": ["parcel numbers/acreages 17 5·978, 25 5·987, 26 1·783, 27 5·269, 33 1·345, and cut '8 ..69' / '6 ·046' at the west edge", "boundary 'Stone' at ~340,160 and ~375,840; 'Post' at ~462,160 and ~480,298", "italic word ending '..tes' at the west edge ~10,795 (lettering)"],
+  "unreadable_regions": [
+    {"px0": 960, "py0": 725, "px1": 1024, "py1": 755, "reason": "B.M. pheon at ~970,733 on the drain bank; its text runs off the east edge (only 'B M' visible), value not on this mosaic"}
+  ]
+}

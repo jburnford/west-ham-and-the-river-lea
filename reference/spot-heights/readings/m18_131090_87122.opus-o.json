@@ -1,0 +1,256 @@
+{
+ "mosaic": "m18_131090_87122",
+ "reader": "opus-o",
+ "area": "Forest Gate: Romford Road with its tramway (Emmanuel Church, Emmanuel Institute, Baptist Chapel, Sunday School, P.H.), Windsor Road, the Methodist (Wesleyan) Chapel at the top, Upton Lane running south, Sylvan Road, Victoria Road, Palmerston Road, Westbury Road and Glenparke Road.",
+ "method": "All 9 sweep crops (2x) viewed and displayed successfully, each anchored: r0c0 Methodist Chapel (Wesleyan) Seats for 1000; r0c1 Baptist Chapel Seats for 750; r0c2 WINDSOR R.., Sunday School, TRAMWAY, Pump; r1c0 ROMFORD ROAD, Emmanuel Church Seats for 900, Bank; r1c1 PALMERSTON lettering; r1c2 WESTBURY ROAD; r2c0 SYLVAN ROAD, VICTORIA RO.., UPT..; r2c1 VICTORIA ROAD, GLENPA..; r2c2 GLENPARKE ROAD. Contact sheets (own helper, all displayed): csA 6x (Methodist Chapel 33.6, 33.4, 33.1, B.M.34.78, cut 35.52 and 32.9 at edges), csB 10x (33.6, 33.4, pheon of B.M.34.78), csC 6x (Romford Road tram-rail figures), csD 12x (second B.M.34.78, 33.3, 32.6, 33.6), csE 6x (Upton Lane 33.1, 32.3, Palmerston 32.7/B.M.33.64, 32.9, B.M.34.23, Glenparke 33.7), csF 12x (32.3, 32.5, 32.6, 32.9, B.M.34.23 pheon), csG 12x and csH 20x (B.M.33.64 third digit against the 5 of 32.5 and the 6 of 32.6); marker sheets mkA (Emmanuel Institute), mkB (Tramway/Palmerston), mkC (Upton Lane) confirmed positions. Every value confirmed at 6x or more.",
+ "legibility": "Clean print. Sheet join: horizontal at py ~748 across the full width (drawn line with tint change; the sheet tool did not report it). No figure is cut by it. Romford Road figures sit beside tram rails; dots on rails read as ticks.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 33.6,
+   "raw": "33·6",
+   "px": 260,
+   "py": 28,
+   "confidence": "high",
+   "notes": "Road south of the Methodist (Wesleyan) Chapel; dot right of figure; final 6 open-topped at 10-12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 87,
+   "py": 64,
+   "confidence": "medium",
+   "notes": "Corner of the N-S road ('ROAD' lettering) and the chapel road; dot below-left of figure beside a small 'ɔ' symbol and an F.P., so the dot's owner is uncertain; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.1,
+   "raw": "33·1",
+   "px": 124,
+   "py": 256,
+   "confidence": "high",
+   "notes": "N-S road opposite the corner above Romford Road; dot left of figure; digits clear at 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.78,
+   "raw": "B.M.34·78",
+   "px": 248,
+   "py": 418,
+   "confidence": "high",
+   "notes": "House on the north side of Romford Road west of Emmanuel Institute; text ~225,425; up-arrow pheon tip on the building line ~248,418; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 159,
+   "py": 459,
+   "confidence": "medium",
+   "notes": "Romford Road at the 'M' of ROMFORD; dot above-left of figure with a small tick beside it; final 3 open at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.1,
+   "raw": "33·1",
+   "px": 200,
+   "py": 453,
+   "confidence": "high",
+   "notes": "Romford Road at the 'F' of ROMFORD; dot on tram rail above-left of figure; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.6,
+   "raw": "32·6",
+   "px": 442,
+   "py": 424,
+   "confidence": "high",
+   "notes": "Romford Road opposite Emmanuel Institute; dot on tram rail above-left; final 6 open-topped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.2,
+   "raw": "32·2",
+   "px": 674,
+   "py": 397,
+   "confidence": "high",
+   "notes": "Romford Road at the Palmerston Road corner; dot on tram rail above-left; digits clear at 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.78,
+   "raw": "B.M.34·78",
+   "px": 803,
+   "py": 414,
+   "confidence": "high",
+   "notes": "Second bench mark of the same value, on the building line south of Romford Road east of Palmerston Road; text ~785,412; pheon junction ~803,414; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.5,
+   "raw": "32·5",
+   "px": 930,
+   "py": 366,
+   "confidence": "high",
+   "notes": "Romford Road by TRAMWAY lettering near the Pump; dot as a tick on the tram rail below figure; 5 flat-topped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.1,
+   "raw": "33·1",
+   "px": 215,
+   "py": 664,
+   "confidence": "high",
+   "notes": "Upton Lane south of Romford Road; dot right of figure (hydrant H with its own dot above-left); digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.3,
+   "raw": "32·3",
+   "px": 691,
+   "py": 555,
+   "confidence": "high",
+   "notes": "Palmerston Road; dot directly above figure; final 3 open at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 704,
+   "py": 710,
+   "confidence": "medium",
+   "notes": "Palmerston Road/Victoria Road corner, written directly above B.M.33.64 with no dot of its own (ground level at the bench mark); position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.64,
+   "raw": "B.M.33·64",
+   "px": 704,
+   "py": 732,
+   "confidence": "medium",
+   "notes": "Palmerston Road/Victoria Road corner; text ~687,719; left-pointing pheon tip ~704,732; third digit rounded like the 6 of 32.6 at 20x, not flat-topped like the 5 of 32.5 (alt 33.54)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 225,
+   "py": 780,
+   "confidence": "high",
+   "notes": "Upton Lane at Sylvan/Victoria Road crossing, just below the py ~748 join; dot left of figure; digits clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.23,
+   "raw": "B.M.34·23",
+   "px": 238,
+   "py": 1021,
+   "confidence": "medium",
+   "notes": "Upton Lane west side near the bottom edge; text ~213,1004; pheon at ~238,1021 is partly cut by the mosaic edge, so its point is estimated; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.6,
+   "raw": "32·6",
+   "px": 250,
+   "py": 1000,
+   "confidence": "high",
+   "notes": "Upton Lane ('UPT' lettering) near the bottom; dot left of figure; final 6 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.7,
+   "raw": "33·7",
+   "px": 757,
+   "py": 963,
+   "confidence": "high",
+   "notes": "Glenparke Road between the letters R and K; dot directly above figure (the lettering has no interpuncts); digits clear at 6x"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangles with no figure at ~145,438, ~315,540 (Emmanuel Church), ~725,462",
+  "Pump at ~955,380",
+  "many F.P. and hydrant H marks",
+  "'Seats for 1000/900/750' chapel captions"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 460,
+   "py0": 0,
+   "px1": 510,
+   "py1": 12,
+   "reason": "bench mark 'B.M. 35·52' cut by north edge: prefix and pheon off-mosaic; whole in the mosaic to the north"
+  },
+  {
+   "px0": 0,
+   "py0": 486,
+   "px1": 14,
+   "py1": 500,
+   "reason": "'32·9' on Romford Road touching the west edge; leading digit may be clipped; whole in the mosaic to the west"
+  },
+  {
+   "px0": 228,
+   "py0": 1012,
+   "px1": 248,
+   "py1": 1024,
+   "reason": "pheon of B.M.34·23 partly cut by the south edge"
+  }
+ ]
+}

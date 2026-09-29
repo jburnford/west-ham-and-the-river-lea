@@ -1,0 +1,330 @@
+{
+ "mosaic": "m18_131078_87155",
+ "reader": "opus-w",
+ "area": "Canning Town north / Plaistow Level edge: Ordnance, Clifton, Baron, Avondale, Malmesbury, Oak Roads, Carlton and Ascot Streets, Star Lane, Holy Trinity Church, the tramway road (Public Hall, Public Library), Maud/Mary/Aviary Streets",
+ "method": "Sweep crops r0c0..r2c2 all viewed and displayed; anchors written on opening: r0c0 AVONDALE ROAD/Sunday School; r0c1 CARLTON STREET/ASCOT STREET/OAK ROAD; r0c2 Holy Trinity Church/Vicarage/STAR; r1c0 CLIFTON ROAD/BARON ROAD; r1c1 OAK ROAD/Public Hall; r1c2 TRAMWAY/Methodist Chapel; r2c0 MALMESBURY ROAD/OAK CRESCENT/R.C. Chapel; r2c1 Public Library/Bank/Smithy; r2c2 MAUD/MARY/AVIARY STREET. Contact sheets (own helper) all displayed: b1 8x six spots (N·A of ORDNANCE), b2 6x ±30 three B.M.s (OAK lettering), b3 14x B.M. decimals, b4 nearest-neighbour 16x B.M.7·33/5·69, b5 8x six (T and triangle of STAR), b6 16x, b7 12x and b8 NN 14x for 6·8/5·8, b9 20x digit comparison strip vs known 8 and 6, b10 8x tramway spots (Y of TRAMWAY), b11 8x six (F.P., B.M. cut at bottom), b12 14x B.M.9·43/3·9, b13 6x F.P. dots, marker sheet mkb 6x all 23 positions (every box on its dot/pheon/interpunct or figure centre). Every crop and sheet displayed when opened.",
+ "legibility": "Good; horizontal sheet join at py ~964-966 across the full width (tint step, seen by eye; sheet tool silent); digits 6/8 and 3/9 ambiguous on two figures",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 8.64,
+   "raw": "B.M.8·64",
+   "px": 112,
+   "py": 9,
+   "confidence": "medium",
+   "setting": "other",
+   "notes": "B.M. text whole at the top edge, open ground west of Clifton Road terraces; digits clear at 14x (8 closed, G-shaped 6); pheon not found inside the mosaic, probably just above the top edge; position = centre of text, structure unknown"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 274,
+   "py": 49,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street at north end of the Clifton Road / Baron Road terraces; dot left of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.3,
+   "raw": "3·3",
+   "px": 419,
+   "py": 57,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "north end of Ordnance Road; dot left of figure; both 3s match, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 423,
+   "py": 210,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Ordnance Road; dot above-left of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 433,
+   "py": 377,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Ordnance Road at Oak Road; only dot is the N· interpunct of ORDN·ANCE, used as position"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.3,
+   "raw": "3·3",
+   "px": 565,
+   "py": 67,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street north of the Carlton Street block (west end of Star Lane); dot left, 3s match, 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.69,
+   "raw": "B.M.5·69",
+   "px": 671,
+   "py": 87,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. on building front north side of Carlton Street block; pheon apex below text on building line; 14x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.33,
+   "raw": "B.M.7·33",
+   "px": 473,
+   "py": 413,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "B.M. on building corner at Oak Road / Ordnance Road; pheon NE of text; decimals ambiguous: reads 7·33 at 6x/10x but first decimal looks like 9 at 14x (7·93 possible)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 729,
+   "py": 74,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Star Lane west end at junction; dot above-left, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.1,
+   "raw": "6·1",
+   "px": 864,
+   "py": 66,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Star Lane; dot below-right of figure; T· interpunct at 848,67 and survey-station triangle (centre ~871,72) nearby, so dot attribution uncertain"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 995,
+   "py": 71,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Star Lane by the Chapel; dot above figure; leading G-shaped 6, final closed like the 8 of B.M.8·64 at 12x/20x but read 6·5 at 2x/6x (6·5 possible)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 443,
+   "py": 617,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Ordnance Road near its south end; position = ·D interpunct of ROA·D; final digit compared with known 8 (B.M.8·64) and 6 (B.M.5·69) at 20x, matches the 8"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 717,
+   "py": 685,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "tramway road by the Methodist Chapel (Primitive); dot just south of the tram rails, 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.32,
+   "raw": "B.M.9·32",
+   "px": 714,
+   "py": 711,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. on Methodist Chapel (Primitive) wall; pheon SW of text; 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.0,
+   "raw": "8·0",
+   "px": 956,
+   "py": 519,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "tramway road; dot on/under the tram rail, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 837,
+   "py": 603,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "tramway road; dot on rail; G-6 and oval 0, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 525,
+   "py": 822,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "tramway road by the Bank (survey-station triangles near); dot on rail, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 467,
+   "py": 878,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "tramway road south side; no dot distinct from the dotted boundary line; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 336,
+   "py": 958,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "tramway road just north of the horizontal sheet join (py ~964-966); no separate dot, centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 540,
+   "py": 965,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street running south from the tramway, east of the P.H.; dot directly above figure on the sheet-join line, figure below the join; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 802,
+   "py": 805,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Maud Street / Mary Street / Aviary Street junction; isolated dot left-below figure, distinct from the F.P.'s own trailing dot at ~798,797; 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 906,
+   "py": 880,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Mary Street; position = dot right of an E in STREET (possible interpunct); 5 has flat top"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.43,
+   "raw": "B.M.9·43",
+   "px": 222,
+   "py": 991,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. on wall corner by the R.C. Chapel (south sheet, below the join); pheon below text; 14x"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangles at ~871,72 (Star Lane), ~508,811 (Bank), ~549,843 and in Holy Trinity Church ~1000,425, no figures of their own",
+  "F.P. marks throughout",
+  "fire-hydrant symbols along the terraces"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1005,
+   "py0": 945,
+   "px1": 1024,
+   "py1": 966,
+   "reason": "spot height '5·?' with dot at ~1019,963 cut by east edge"
+  },
+  {
+   "px0": 790,
+   "py0": 1008,
+   "px1": 830,
+   "py1": 1024,
+   "reason": "'B.M.' text at bottom edge, value off the mosaic"
+  },
+  {
+   "px0": 0,
+   "py0": 962,
+   "px1": 1024,
+   "py1": 968,
+   "reason": "horizontal sheet join (tint step); figures 7·6 at 336,958 and 7·3 at 540,965 sit against it"
+  },
+  {
+   "px0": 90,
+   "py0": 0,
+   "px1": 135,
+   "py1": 4,
+   "reason": "pheon of B.M.8·64 probably above the top edge"
+  }
+ ]
+}

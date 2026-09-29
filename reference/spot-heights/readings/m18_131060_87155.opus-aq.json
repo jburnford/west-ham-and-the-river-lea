@@ -1,0 +1,293 @@
+{
+ "mosaic": "m18_131060_87155",
+ "reader": "opus-aq",
+ "area": "Bromley-by-Bow / Poplar west of the Lea: Limehouse Cut towing path and North London Railway bridge, Bell Wharf, St Leonard's Road and Avenue, Wyvis/Yattan/Zetland/Uamvar Streets, Fawe Street, St Gabriel's",
+ "method": "Sweep crops r0c0-r2c2 all displayed and anchored at opening (r0c0 LIMEHOUSE lettering, Towing Path, Bell Wharf; r0c1 PROSPECT PLACE, UAMVAR; r0c2 UAMVAR STREET, L.B.; r1c0 Dry Grain Works, FAWE STREET; r1c1 WYVIS/YATTAN STREET; r1c2 ZETLAND STREET; r2c0 St Gabriel's Church, RIFLE STREET; r2c1 ST LEONARD'S ROAD, CHADBOURN STREET; r2c2 ULLIN STREET, Mission House). Contact sheets c3_A, c3_B, c3_C (6x), c3_D (12x B.M. decimals), c3_E (8x digits), c3_F3 (10x smoothed + nearest, 5/6 test); region views c3_reg1 (2x Cut and towing path), c3_reg2 (6x pheon search for B.M.17·54), c3_reg3 (6x 17·6 dot). Every image displayed when opened. Dot centroids by numeric helper; positions checked on a marker sheet.",
+ "legibility": "clear; horizontal sheet join py ~960 (tint line, full width; = py ~192 on 87158); interpunct dots in STREET, AVENUE and ST. LEONARD'S lettering make several survey dots ambiguous",
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 15.3,
+   "raw": "15·3",
+   "px": 559,
+   "py": 12,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "Limehouse Cut towing path (SE side) at its NE end by St Leonard's Road; dot right of figure; open 3 at 8x; figure whole below top edge"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.54,
+   "raw": "B.M.17·54",
+   "px": 590,
+   "py": 12,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "St Leonard's Road at the top edge; no pheon found inside the mosaic at 6x (probably just north of the edge); position = centre of text; decimals clear at 12x; setting inferred"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.4,
+   "raw": "15·4",
+   "px": 438,
+   "py": 94,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "Limehouse Cut towing path by Prospect Place; dot right of figure on the path"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.3,
+   "raw": "15·3",
+   "px": 263,
+   "py": 210,
+   "confidence": "medium",
+   "setting": "embankment_top",
+   "notes": "Limehouse Cut towing path by Bell Wharf; dot sits between the o and w of rotated 'Towing Path' lettering (no other letter-dots), taken as survey dot; open 3 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.9,
+   "raw": "14·9",
+   "px": 20,
+   "py": 387,
+   "confidence": "medium",
+   "setting": "embankment_top",
+   "notes": "Limehouse Cut towing path SW of the North London Railway bridge, at the west edge; no survey dot found (a cut symbol at the edge); position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 21.6,
+   "raw": "B.M.21·60",
+   "px": 451,
+   "py": 232,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon below the text on the house corner at David Street / St Leonard's Road; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.6,
+   "raw": "18·6",
+   "px": 384,
+   "py": 275,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "St Leonard's Road at Bartlett Street; dot above-left; open 6 at 8-10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.03,
+   "raw": "B.M.17·03",
+   "px": 98,
+   "py": 319,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "pheon at the corner of the Dry Grain Works building by the Cut, text east; point estimated; 12x decimals"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.2,
+   "raw": "17·2",
+   "px": 361,
+   "py": 438,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "St Leonard's Road at Wyvis Street; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.2,
+   "raw": "20·2",
+   "px": 570,
+   "py": 115,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "St Leonard's Road at Uamvar Street; own dot left of figure, F.P. dot separate on the right"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 573,
+   "py": 270,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "St Leonard's Avenue; dot right of figure just before the V of AVENUE (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.4,
+   "raw": "16·4",
+   "px": 743,
+   "py": 255,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "St Leonard's Avenue; dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.72,
+   "raw": "B.M.17·72",
+   "px": 917,
+   "py": 217,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon lying sideways against the house wall at the Avenue / cross-street corner, beside L.B.; text above"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.1,
+   "raw": "16·1",
+   "px": 902,
+   "py": 239,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "cross street at St Leonard's Avenue; dot between the R and E of STREET, whose lettering has other dots (E·), ambiguous"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 442,
+   "py": 583,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "St Leonard's Road at Yattan Street; dot just before the L of ST. LEONARD'S (could be the period of ST.)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.6,
+   "raw": "17·6",
+   "px": 558,
+   "py": 724,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "St Leonard's Road at the Chadbourn Street end; dot left; final digit flat-topped like a 5 but with a closed bowl at 8-10x: 17·6 or 17·5"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.66,
+   "raw": "B.M.19·66",
+   "px": 530,
+   "py": 752,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the house corner at St Leonard's Road / Chadbourn Street, text below-right; matching 6s at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.8,
+   "raw": "22·8",
+   "px": 67,
+   "py": 743,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street west of Fawe Street by St Gabriel's; dot above-left; closed 8 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 461,
+   "py": 810,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Chadbourn Street; dot just after CHADBOURN lettering (could be a spacing dot); open 3"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 365,
+   "py": 865,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Railway Street at Chadbourn Street by South Bromley station; own dot left, F.P. dot above separate"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 697,
+   "py": 888,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "St Leonard's Road south of Wellington Street; dot above-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.43,
+   "raw": "B.M.22·43",
+   "px": 77,
+   "py": 995,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "pheon lying sideways on the Infants' school wall (arrow before 'Schools'), text below; 12x"
+  }
+ ],
+ "non_height_marks": [
+  "Crane labels on the Cut wharves",
+  "M.P. (mile post) at ~265,667 on the North London Railway, no figure",
+  "S.P., S.B., F.P., H, L.B. marks",
+  "lone dot at ~931,532 with no figure",
+  "survey triangle at ~318,379 with no figure"
+ ],
+ "unreadable_regions": [],
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ]
+}

@@ -1,0 +1,261 @@
+{
+ "mosaic": "m18_131069_87155",
+ "reader": "opus-y",
+ "area": "Bow Creek bend by the Swing Bridge and the West Ham Outfall Sewerage Works; wharves and works south of the creek",
+ "method": "Overview (anchor Swing Bridge) and all 9 sweep crops viewed and anchored as opened: r0c0 rotated building/Swing Bridge; r0c1 blank ground/filter beds; r0c2 footpath/terraces/Reservoir; r1c0 CREEK/Mud/Union & Parly. Boro. Bdy.; r1c1 C.R./L.W.M.O.T./Mud; r1c2 Reservoir/West Ham Out(fall) Sewerage Wor(ks); r2c0 W.M.O.T./works buildings; r2c1 Travelling Crane/H.W.M.O.T.; r2c2 Mud/W.M./sewage works buildings. Contact sheets cs1-cs4 and cs2b (4x-12x, +-14 to +-50 px) viewed and anchored. All crops and contact sheets displayed. Marker sheet checked.",
+ "legibility": "good; no sheet join seen by eye or by tool",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 754,
+   "py": 107,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open unbuilt ground beside the dotted footpath, north of the sewage works (no place word, below 15 ft); dot above-left of figures at 760,115, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.7,
+   "raw": "5·7",
+   "px": 892,
+   "py": 240,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "end of the street between the two terraces at the NE; dot left of figures at 903,241; flat-topped 5 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 136,
+   "py": 320,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "creek-side wall line NW of the Swing Bridge, well above the ~6 ft ground inland; dot just beside the line above figures at 130,327; final 8 closed at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.88,
+   "raw": "B.M.16·88",
+   "px": 271,
+   "py": 385,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "small structure on the channel wall 50 px NW of the Swing Bridge; text at 300,386, pheon at its left; digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.9,
+   "raw": "17·9",
+   "px": 298,
+   "py": 414,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "channel wall at the Swing Bridge; dot on the wall line left of figures at 313,418, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.9,
+   "raw": "17·9",
+   "px": 419,
+   "py": 541,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "north wall of Bow Creek SE of the Swing Bridge; dot on the wall line left of figures at 440,543"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.9,
+   "raw": "17·9",
+   "px": 588,
+   "py": 677,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "north wall of Bow Creek (Mud below it); dot on the wall line left of figures at 600,680"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 349,
+   "py": 660,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "south wall of Bow Creek at a notch in the wall line; dot on the corner left of figures at 363,664"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.3,
+   "raw": "12·3",
+   "px": 223,
+   "py": 724,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "works yard south of Bow Creek; dot left of figures at 240,727"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.43,
+   "raw": "B.M.18·43",
+   "px": 444,
+   "py": 780,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "wharf building corner at the Travelling Crane; text at 405,780, pheon right; digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.7,
+   "raw": "17·7",
+   "px": 499,
+   "py": 799,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "wharf at H.W.M.O.T. by the Travelling Crane; figures at 517,800; dot between the crane rail lines (could be a rail mark)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.3,
+   "raw": "12·3",
+   "px": 145,
+   "py": 886,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "works yard; dot left of figures at 160,888"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 12.78,
+   "raw": "B.M.12·78",
+   "px": 121,
+   "py": 904,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "works building corner; text at 155,903, pheon left; digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.6,
+   "raw": "10·6",
+   "px": 111,
+   "py": 947,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "works yard / roadway west of the large shed; dot left of figures at 125,948"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 655,
+   "py": 909,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "south wall of Bow Creek at a corner of the wall line; dot left of figures at 668,910"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.4,
+   "raw": "B.M.17·40",
+   "px": 677,
+   "py": 742,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "NW end of the long jetty/quay strip in front of the sewage works on the north bank; text at 712,736, pheon left; digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.2,
+   "raw": "17·2",
+   "px": 768,
+   "py": 806,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "on the jetty/quay strip in front of the sewage works; dot on its line above figures at 768,815"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.9,
+   "raw": "15·9",
+   "px": 883,
+   "py": 866,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "bank of the side channel (Mud) at the sewage works outfall; dot on the line left of figures at 890,868"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 967,
+   "py": 937,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "bank of the side channel (Mud) by the C. marks; dot on the line junction above figures at 963,944"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangle at 130,362 with no figure",
+  "L.W.M.O.T., H.W.M.O.T., C.R. and Union & Parly. Boro. Bdy. lettering",
+  "W.M. and C. marks at the sewage works"
+ ],
+ "unreadable_regions": []
+}

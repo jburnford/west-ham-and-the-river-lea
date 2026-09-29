@@ -1,0 +1,212 @@
+{
+ "mosaic": "m18_131078_87170",
+ "reader": "opus-aj",
+ "area": "Thames at Bugsby's Reach / Blackwall: Thames Iron Works dry docks (west), the Royal Albert & Victoria Docks Cut and railway sidings, Victoria Dock Pier and Dolphin, river-wall frontage to the entrance of the Royal Victoria Dock; most of the mosaic is river water",
+ "method": "sheet + 9 sweep crops at 2x (anchors: r0c0 Thames boundary with + marks, Cn; r0c1 DRY DOCK, Mooring Posts, Crane; r0c2 Royal Albert & Victoria Docks Cut; r1c0 river with boundary and 'B'; r1c1 Crane, Mud; r1c2 Victoria Dock Pier, Dolphin, F.S.; r2c0 B u g s b y ' s lettering; r2c1 open river, end of Bugsby's; r2c2 Mooring / B.M.17·27 / foreshore stones). Contact sheets g1, g5 (5x), g6, g7 (12x), nn3 (20x/10x nearest), region views g2, g3 (4x), g4 (10x), marker sheets mk8 (6x), mk9 (8x). Every crop and sheet displayed when opened; anchors in notes.",
+ "legibility": "Clean print. Horizontal sheet join py ~586-590 across the full width (tint step, river only, no figures cut). No missing tiles. River water and the sidings carry no figures.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 347,
+   "py": 110,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "dry-dock entrance at the caisson end (Blackwall / Thames Iron Works dry docks); dot below-left of the figure, bollard dots nearby; 5x/12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.47,
+   "raw": "B.M.16·47",
+   "px": 377,
+   "py": 133,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "head of the dry-dock wall; pheon at the wall corner left of the text, Cn· dot separate; decimals 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.4,
+   "raw": "16·4",
+   "px": 450,
+   "py": 251,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "river wall / quay west of the sidings; dot inside the double wall line NE of the figure; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 588,
+   "py": 391,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "river-wall quay by the crane; dot at the wall corner above-right of the figure; 9 closed with tail vs open 6 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.4,
+   "raw": "17·4",
+   "px": 657,
+   "py": 449,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "quay inside the river wall; dot left of the figure; 5x/8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 724,
+   "py": 517,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "river wall angle at the Victoria Dock Pier root; no own dot, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.59,
+   "raw": "B.M.19·59",
+   "px": 705,
+   "py": 515,
+   "confidence": "low",
+   "setting": "wall_top",
+   "notes": "river wall angle by the crane turntable at the pier root; pheon-like mark at the wall angle (position medium); final digit 9-like at 12x but round and closed at 20x, 19·58 possible"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 757,
+   "py": 531,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "river wall east of the pier root; dot on the wall line left of the figure; 5x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.4,
+   "raw": "17·4",
+   "px": 944,
+   "py": 590,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "river wall angle, the Cn circle at 947,583 is separate; dot at the wall vertex below-right of the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 1012,
+   "py": 555,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "quay under 'Mooring' lettering near the east edge (figure whole, ends at px ~1020); no dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 984,
+   "py": 655,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "river wall angle by a crane (Cn); dot at the wall vertex right of the figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.27,
+   "raw": "B.M.17·27",
+   "px": 934,
+   "py": 735,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "river wall of the Victoria Dock entrance frontage; pheon on the wall line left of the text; decimals 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.1,
+   "raw": "18·1",
+   "px": 912,
+   "py": 783,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "river wall junction at the dock entrance; dot at the junction left of the figure; 8 closed vs open 6 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 1000,
+   "py": 895,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "wall corner of the dock entrance works by the foreshore; dot on the wall line right of the figure"
+  }
+ ],
+ "non_height_marks": [
+  "F.S. (flagstaff) at ~822,538",
+  "Cn (crane) marks with circles at the dry docks and the river wall",
+  "boundary + marks along the dash-dot county/parish boundary in the Thames",
+  "'Mooring Posts' lettering and post dots"
+ ],
+ "unreadable_regions": []
+}

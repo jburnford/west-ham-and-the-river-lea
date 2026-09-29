@@ -1,0 +1,284 @@
+{
+ "mosaic": "m18_131099_87128",
+ "reader": "opus-r",
+ "area": "Forest Gate east (Woodgrange): Bristol, Stafford, York, Rutland and Chester Roads, School (Boys Girls & Infants), Congregational Chapel",
+ "method": "Independent second read (did not view other readers' files). Sheet tool + 9 sweep crops at 2x, each anchored on opening: r0c0 LANE/F.P./L.B.; r0c1 BRISTOL + STAFFORD ROAD; r0c2 School Boys Girls & Infants; r1c0 P.H.; r1c1 YORK RO../RUTLAN..; r1c2 YORK ROAD+RUTLAND ROAD; r2c0 School + big A S, join; r2c1 Congregational Chapel; r2c2 CHESTER RO... Contact sheets (own helper) c1 8x, c2 14x, c3 8x, c4 12x, c5 4x, c6c 12x smooth+blocky, c7 10x blocky, c8 8x, c9 12x pheons, c10 12x, c11c 12x smooth+blocky, c12 8x, c13c 12x smooth+blocky; marker sheet checked. All crops, contact sheets and zooms displayed when opened.",
+ "legibility": "Clear print; italic 3 renders like 8 throughout; sheet join (horizontal, tint to buff below) at py ~951 confirmed by eye, reported by sheet tool",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 421,
+   "py": 132,
+   "confidence": "high",
+   "notes": "Bristol Road north side, W end; dot right-above figure; leading 3 renders 8-like at 2x/14x, same shape as the 3 of 32·9; 82 impossible here"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.5,
+   "raw": "31·5",
+   "px": 251,
+   "py": 198,
+   "confidence": "high",
+   "notes": "Bristol Road, W part; dot right of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.4,
+   "raw": "30·4",
+   "px": 73,
+   "py": 270,
+   "confidence": "high",
+   "notes": "Lane (W edge) at Bristol Road corner; dot above figure; 8x/14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.5,
+   "raw": "29·5",
+   "px": 145,
+   "py": 402,
+   "confidence": "high",
+   "notes": "lane by 'N' of LANE, S of Stafford Road; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 589,
+   "py": 62,
+   "confidence": "high",
+   "notes": "Bristol Road in lettering B R I . S T O L; dot above between 2 and 9 (BRISTOL capitals have no interpuncts); final 9 checked 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.71,
+   "raw": "B.M.34·71",
+   "px": 460,
+   "py": 130,
+   "confidence": "high",
+   "notes": "Bristol Road south side house front; pheon apex below text, 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 32.29,
+   "raw": "B.M.32·29",
+   "px": 297,
+   "py": 584,
+   "confidence": "high",
+   "notes": "corner of York Road and lane, house front; pheon left of text, 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.2,
+   "raw": "30·2",
+   "px": 226,
+   "py": 562,
+   "confidence": "high",
+   "notes": "lane S of P.H.; dot above-right of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.5,
+   "raw": "30·5",
+   "px": 256,
+   "py": 620,
+   "confidence": "high",
+   "notes": "lane at York Road corner; dot left-below figure; final 5 flat top at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.4,
+   "raw": "30·4",
+   "px": 41,
+   "py": 661,
+   "confidence": "medium",
+   "notes": "York Road W end beside 'R' of ROAD; no dot within +-50 px at 4x; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.4,
+   "raw": "31·4",
+   "px": 451,
+   "py": 541,
+   "confidence": "high",
+   "notes": "York Road; dot right of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.8,
+   "raw": "32·8",
+   "px": 645,
+   "py": 464,
+   "confidence": "low",
+   "notes": "York Road E part (Y O R K . 32·8 F.P.); dot left of figure; final 8 vs 9 not settled at 8x/10x/12x smooth or blocky"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 37.34,
+   "raw": "B.M.37·34",
+   "px": 969,
+   "py": 18,
+   "confidence": "high",
+   "notes": "School NE corner wall by road lettering B U R Y; pheon apex above-left of text, 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.3,
+   "raw": "35·3",
+   "px": 1015,
+   "py": 104,
+   "confidence": "low",
+   "notes": "road on E edge by School, E of F.P.; final digit matches the leading 3 of the same figure at 12x (read 35·8 at 2x); dot below-right may be street-lettering dot near 'Y'; figure ends ~1019, 3-5 px from E edge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.4,
+   "raw": "34·4",
+   "px": 870,
+   "py": 373,
+   "confidence": "high",
+   "notes": "road S of School; dot right of figure; 8x/12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.4,
+   "raw": "B.M.35·40",
+   "px": 715,
+   "py": 452,
+   "confidence": "high",
+   "notes": "York Road/east corner house; pheon apex left of text on building line, 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.1,
+   "raw": "30·1",
+   "px": 335,
+   "py": 782,
+   "confidence": "high",
+   "notes": "road S of York Road junction; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.4,
+   "raw": "29·4",
+   "px": 405,
+   "py": 884,
+   "confidence": "high",
+   "notes": "curving road by trees W of big 'H'; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.9,
+   "raw": "28·9",
+   "px": 524,
+   "py": 961,
+   "confidence": "medium",
+   "notes": "road by Congregational Chapel, just S of sheet join py~951; dot above; second digit two closed loops (8) at 8x/12x but generic italic 3/8 risk"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.8,
+   "raw": "29·8",
+   "px": 693,
+   "py": 896,
+   "confidence": "high",
+   "notes": "Chester Road W end, dot right of big 'E'; 8x/12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.69,
+   "raw": "B.M.33·69",
+   "px": 766,
+   "py": 883,
+   "confidence": "high",
+   "notes": "Chester Road north side building line; pheon apex below text, 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 883,
+   "py": 825,
+   "confidence": "medium",
+   "notes": "Chester Road in C H E S T E R lettering; bold dot between 9 and R taken as survey dot (CHESTER not interpuncted); faint speck at 871,832 below figure also possible"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. marks along Bristol, Stafford, York and Chester Roads",
+  "L.B. at ~155,450",
+  "P.H. at ~220,455"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1010,
+   "py0": 750,
+   "px1": 1024,
+   "py1": 770,
+   "reason": "figure beginning '3' cut by east edge above F.P. (Chester Road E end)"
+  },
+  {
+   "px0": 0,
+   "py0": 945,
+   "px1": 1024,
+   "py1": 957,
+   "reason": "horizontal sheet join py ~951, 1-2 px offsets"
+  }
+ ]
+}

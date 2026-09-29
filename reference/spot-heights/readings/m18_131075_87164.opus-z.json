@@ -1,0 +1,228 @@
+{
+ "mosaic": "m18_131075_87164",
+ "reader": "opus-z",
+ "area": "Leamouth: Orchard Place, Salter's Buildings, West and Duke Streets, Lea Passage, Mission Hall, Orchard House, Bond's Wharf, Old Orchard Yard, Orchard House Yard; River Lea / Bow Creek mouth; Thames Iron Works yard east of the creek",
+ "method": "Overview at 1x; 9 sweep crops r0c0..r2c2 at 2x, each anchored on opening (r0c0 ORCHARD PLACE/SALTER'S BUILDINGS/Oil Mills; r0c1 RIVER/High Water Mark of Ordinary Tides; r0c2 Crane/Centre of Channel; r1c0 Mission Hall/LEA PASSAGE/Orchard House; r1c1 Cranes/M.P.; r1c2 Thame(s) lettering; r2c0 Warehouses/Bond's Wharf/Old Orchard Yard; r2c1 BOW/Orchard House Yard/Causeway; r2c2 BOW CREEK/Slips/Leamouth Wharf). Contact sheets cs1-cs2 at 6x +/-22 px, z1-z2 at 12x +/-13 px, z1b 16x nearest, z3 and z5 at 20x (5/6/8 checks), z4 at 14x (pheons), w1 at 5x +/-32 px; numeric dot-centroid helper and pixel tables; marker sheets mk0-mk1 at 6x viewed before writing. Every crop and sheet displayed when opened and has an anchor in my notes. Not read from other readers' files.",
+ "legibility": "Clear but faint in places; vertical sheet join px ~345 (full height; tool reports ~340) and horizontal join py ~393 (tool ~390); no figure crosses either. No missing tiles; the grey strip below py ~1022 in zooms is crop padding past the edge. The Thames Iron Works yard and the Bow Creek wharves carry no height figures on this mosaic; M.P. (mooring posts), Cranes, x' channel-line marks are not heights.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 15.3,
+   "raw": "15·3",
+   "px": 326,
+   "py": 147,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Place, Leamouth, opposite Salter's Buildings; figure written over the building edge east of the road; no own dot (the dot at 304,150 is an O·R·C·H·A·R·D interpunct); position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.1,
+   "raw": "15·1",
+   "px": 279,
+   "py": 240,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Place at West Street; figure over the building east of the road; isolated dot 279,240 left of the O of ORCHARD (not in the text line) taken as the survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.2,
+   "raw": "15·2",
+   "px": 252,
+   "py": 321,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Orchard Place by the School; dot above-right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.5,
+   "raw": "15·5",
+   "px": 209,
+   "py": 434,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Orchard Place just south of the py~393 join; dot below figure (H hydrant mark above is separate)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 75,
+   "py": 466,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Lea Passage at the Mission Hall; dot just before the L of LEA (possible interpunct)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.67,
+   "raw": "B.M.17·67",
+   "px": 180,
+   "py": 490,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house frontage on Orchard Place at Lea Passage; pheon ~30 px east of the text on the building line; decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.6,
+   "raw": "16·6",
+   "px": 63,
+   "py": 568,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "street west of the Lea Passage terrace; faint figure, final digit 6 vs 8 not settled at 12-16x; ·F.P with its own dots immediately west, no separate dot; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.1,
+   "raw": "16·1",
+   "px": 128,
+   "py": 601,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Orchard Place at Orchard House / L.B.; dot below-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.8,
+   "raw": "12·8",
+   "px": 135,
+   "py": 704,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Place by the Storehouses; no own dot (A·R interpunct east of it); position = centre of figures; 8 two-looped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.5,
+   "raw": "10·5",
+   "px": 201,
+   "py": 823,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Place by Bond's Wharf; dot right of figure is the interpunct before L of P·L·A·C·E; 5 clear"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.98,
+   "raw": "B.M.10·98",
+   "px": 234,
+   "py": 840,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "P.H. at Orchard Place / Old Orchard Yard; pheon at the building corner ~20 px NW of the text; decimals clear at 12-20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.5,
+   "raw": "10·5",
+   "px": 195,
+   "py": 947,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Orchard Place south, by the P.H.; dot above-left; final digit has a closed lower bowl at 20x unlike reference 5s (5 vs 6)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 12.37,
+   "raw": "B.M.12·37",
+   "px": 396,
+   "py": 998,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "building at the south end of Orchard Place near Orchard House Yard; digits clear at 12-14x; two pheon-like marks, one on the north building line at ~396,998 (used) and one at ~407,1017 on the south line near the edge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.5,
+   "raw": "10·5",
+   "px": 419,
+   "py": 1013,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Orchard Place south by Orchard House Yard, near the south edge (figure whole, y 1010-1018); dot left of figure; final 5 vs 6 as for 195,947"
+  }
+ ],
+ "non_height_marks": [
+  "M.P. mooring posts along the Thames Iron Works wharf (e.g. ~600,578; ~655,704; ~640,643)",
+  "x' marks on the Centre of Channel at Low Water line",
+  "H hydrant marks on Orchard Place (e.g. 212,422)",
+  "Cn at ~58,672",
+  "second pheon-like mark at ~407,1017 below B.M.12·37 (text for it, if any, is south of the edge)"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 340,
+   "py0": 0,
+   "px1": 350,
+   "py1": 1024,
+   "reason": "vertical sheet join px~345"
+  },
+  {
+   "px0": 0,
+   "py0": 388,
+   "px1": 1024,
+   "py1": 398,
+   "reason": "horizontal sheet join py~393"
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "mosaic": "q18_131105_87128", "reader": "opus-ap", "layer": "os-25-inch-london",
+ "area": "East Ham / Manor Park border, north of Plashet Grove: Recreation Ground (west), Woodhouse Grove, Byron Road (unbuilt), Wordsworth Avenue and Tennyson Avenue terraces, the C.R. lane with a large-dot boundary and yellow verge down the east side, and Plashet Grove along the south (256 px overlap with q18_131105_87131).",
+ "method": "Layer os-25-inch-london (OS 25-inch Essex county series, inferred 1893-96 revision). Viewed: 1x full-mosaic overview (anchor Recreation Ground / WORDSWORTH AVENUE / TENNYSON AVENUE); all nine 2x sweep crops, each anchored on opening: r0c0 WOODHOUSE GROVE + B.M.33·6, r0c1 BYRON ROAD + 32 at top edge, r0c2 C.R. + B.M.33·8 + 30 + 32, r1c0 Recreation Ground + tree line, r1c1 WORDSWORTH / TENNYSON + 30, r1c2 TENNYSON AVENUE + 30 + 32, r2c0 Recreation Ground + 29, r2c1 PLASHET + B.M.32·3, r2c2 PLASHET x GROVE + 28 + 'B' at east edge; 6x contact sheets cs1 (8 panels) and cs2 (5 overlap panels); zoom 412,405 s10. Every crop, sheet and zoom displayed and was anchored in my notes at the time. Marker sheet checked before marking done. The five Plashet Grove marks are the same as in my q18_131105_87131 file (offset 768 px), not independent confirmation.",
+ "legibility": "Excellent; italic figures 12-14 px with bold + / x / stars. Vertical sheet join px ~452 full height (tool reports none). The C.R. lane boundary is large round dots; the crosses are distinct.",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [
+  {"type": "spot", "value_ft": 32, "raw": "32", "px": 516, "py": 16, "confidence": "medium", "setting": "street",
+   "notes": "Shelley Road (unbuilt estate road); figures 510-523,10-22 whole, the S of SHELLEY at the top edge; its cross lies about 12 px beyond the north edge (between S and H of SHELLEY, seen on q18_131105_87125). Position = centre of figures."},
+  {"type": "spot", "value_ft": 30, "raw": "30", "px": 891, "py": 141, "confidence": "high", "setting": "street",
+   "notes": "C.R. lane at the Byron Road junction; figures ~912-930,132-148; star at 891,141 among the large boundary dots (distinct cross shape)."},
+  {"type": "bench_mark", "value_ft": 33.8, "raw": "B.M.33·8", "px": 902, "py": 265, "confidence": "high", "setting": "building",
+   "notes": "north end house of the Wordsworth Avenue block by the lane; text 805-880,258-272; pheon pointing down, tip on the house corner at 902,265 (6x)."},
+  {"type": "spot", "value_ft": 32, "raw": "32", "px": 954, "py": 360, "confidence": "high", "setting": "street",
+   "notes": "C.R. lane at the Wordsworth Avenue corner; figures 970-990,352-368; star at 954,360, ~20 px west."},
+  {"type": "bench_mark", "value_ft": 33.6, "raw": "B.M.33·6", "px": 417, "py": 410, "confidence": "medium", "setting": "building",
+   "notes": "Woodhouse Grove at the Wordsworth Avenue corner; text 305-375,398-412 west of the road; pheon pointing east, strokes converging at ~417,410 on the corner of the end house, partly merged with the V of GROVE and the house outline (10x). Tip position estimated to ~3 px."},
+  {"type": "spot", "value_ft": 30, "raw": "30", "px": 489, "py": 697, "confidence": "high", "setting": "street",
+   "notes": "Woodhouse Grove / Tennyson Avenue corner; figures ~505-522,686-700; bold x at 489,697, ~20 px west."},
+  {"type": "spot", "value_ft": 30, "raw": "30", "px": 967, "py": 561, "confidence": "high", "setting": "street",
+   "notes": "C.R. lane at the Tennyson Avenue corner; figures 938-956,566-580; star at 967,561, ~15 px NE (nearest isolated cross)."},
+  {"type": "spot", "value_ft": 30, "raw": "30", "px": 526, "py": 872, "confidence": "high", "setting": "street",
+   "notes": "Plashet Grove west end; figures ~517-535,857-870; bold x directly below at 526,872. Same mark as on q18_131105_87131."},
+  {"type": "bench_mark", "value_ft": 32.3, "raw": "B.M.32·3", "px": 551, "py": 845, "confidence": "high", "setting": "building",
+   "notes": "Plashet Grove; text 545-575,888-918 south of the road; pheon tip up on the house corner north of the road at 551,845. Same mark as on q18_131105_87131."},
+  {"type": "spot", "value_ft": 29, "raw": "29", "px": 758, "py": 843, "confidence": "high", "setting": "street",
+   "notes": "Plashet Grove; figures ~766-782,865-878; paired with the bold x between PLASHET and GROVE at 758,843."},
+  {"type": "spot", "value_ft": 28, "raw": "28", "px": 997, "py": 825, "confidence": "high", "setting": "street",
+   "notes": "Plashet Grove east end near the corner by the lane; figures ~962-990,816-830; star at 997,825."},
+  {"type": "spot", "value_ft": 29, "raw": "29", "px": 408, "py": 911, "confidence": "medium", "setting": "street",
+   "notes": "Plashet Grove among the roadside trees; figures ~378-398,911-925; probable cross fused with a tree outline at 408,911."}
+ ],
+ "non_height_marks": [
+  "broad-arrow-like symbol at ~1007,805 against a small circle at ~1015,809 below a 'B' at ~1003-1016,780-790 (probably B.M. text continuing east of the edge); not recorded",
+  "Recreation Ground lettering"
+ ],
+ "unreadable_regions": [
+  {"px0": 1000, "py0": 775, "px1": 1024, "py1": 815, "reason": "lettering beginning 'B' (probably a B.M. with the broad arrow at ~1007,805) cut by the east edge"},
+  {"px0": 495, "py0": 0, "px1": 530, "py1": 4, "reason": "cross for the Shelley Road 32 lies just beyond the north edge"}
+ ]
+}

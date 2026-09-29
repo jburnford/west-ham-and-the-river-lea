@@ -1,0 +1,266 @@
+{
+ "mosaic": "m18_131066_87134",
+ "reader": "opus-b",
+ "area": "Stratford: Carpenters Road, Biggerstaffe/Preston/Robertson Roads, Stratford High Street from Park Lane to Christ Church, West/North/East/Union/South Streets, Timber Yard on the Waterworks River",
+ "method": "read by Claude (vision): 3x3 grid of 448 px crops at 2x LANCZOS, every candidate checked at 6x (80 px window, crosshair) and ambiguous ones at 8-10x; positions in mosaic pixels",
+ "legibility": "good; figures near the High Street tramway have their survey dot sitting on a tram rail, where it reads as a small tick",
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 14.82,
+   "raw": "B.M.14·82",
+   "px": 159,
+   "py": 405,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87134 (px+768); pheon at the Biggerstaffe Road terrace corner"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.1,
+   "raw": "14·1",
+   "px": 137,
+   "py": 412,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87134; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.9,
+   "raw": "13·9",
+   "px": 408,
+   "py": 57,
+   "confidence": "medium",
+   "notes": "Carpenters Road; dot taken as the interpunct in 'E·N' of CARPENTERS (a fainter speck below-left of the figures is the alternative)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.1,
+   "raw": "14·1",
+   "px": 448,
+   "py": 107,
+   "confidence": "medium",
+   "notes": "Carpenters Road; dot is the interpunct before 'E' of CARPENTERS, below-left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.0,
+   "raw": "14·0",
+   "px": 496,
+   "py": 164,
+   "confidence": "high",
+   "notes": "Carpenters Road; dot directly above figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.88,
+   "raw": "B.M.14·88",
+   "px": 583,
+   "py": 254,
+   "confidence": "high",
+   "notes": "pheon above the text on the terrace corner, Carpenters Road"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.4,
+   "raw": "14·4",
+   "px": 627,
+   "py": 322,
+   "confidence": "high",
+   "notes": "junction by the Baptist Chapel; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.3,
+   "raw": "18·3",
+   "px": 850,
+   "py": 352,
+   "confidence": "medium",
+   "notes": "High Street; digits clear at 10x; dot is a tick on the tram rail left of the figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.5,
+   "raw": "14·5",
+   "px": 247,
+   "py": 496,
+   "confidence": "high",
+   "notes": "road south of Preston Road; dot above-left; cut by the east edge of m18_131063_87134"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.3,
+   "raw": "14·3",
+   "px": 353,
+   "py": 584,
+   "confidence": "high",
+   "notes": "road at Robertson Road corner; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 618,
+   "py": 619,
+   "confidence": "medium",
+   "notes": "High Street; dot is a tick on the tram rail above-left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.54,
+   "raw": "B.M.17·54",
+   "px": 590,
+   "py": 676,
+   "confidence": "high",
+   "notes": "pheon above the text at the house corner, High Street"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 773,
+   "py": 480,
+   "confidence": "medium",
+   "notes": "High Street at North Street by the P.O.; no dot; a small triangle (station mark) immediately right of the figures taken as the position"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.9,
+   "raw": "9·9",
+   "px": 975,
+   "py": 491,
+   "confidence": "high",
+   "notes": "Channel Sea side, by the School; dot below-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.08,
+   "raw": "B.M.11·08",
+   "px": 1005,
+   "py": 567,
+   "confidence": "high",
+   "notes": "pheon right of the text, drawn in the CHANNEL SEA lettering"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.9,
+   "raw": "10·9",
+   "px": 908,
+   "py": 653,
+   "confidence": "low",
+   "notes": "East Street; last digit 9 or 2 at 10x; figures drawn over the terrace; dot taken as the one in the street to the left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.8,
+   "raw": "11·8",
+   "px": 727,
+   "py": 697,
+   "confidence": "medium",
+   "notes": "North Street / West Street corner; digits clear at 10x; figures over a building, no dot found, position = figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.58,
+   "raw": "B.M.11·58",
+   "px": 956,
+   "py": 717,
+   "confidence": "high",
+   "notes": "pheon right of the text at the corner of South Street"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.2,
+   "raw": "10·2",
+   "px": 877,
+   "py": 786,
+   "confidence": "medium",
+   "notes": "Union Street / South Street junction; dot taken as the interpunct in '·S' of STREET right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.7,
+   "raw": "17·7",
+   "px": 505,
+   "py": 755,
+   "confidence": "medium",
+   "notes": "High Street by William Street; dot is a tick on the tram rail right of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.6,
+   "raw": "B.M.17·60",
+   "px": 645,
+   "py": 877,
+   "confidence": "medium",
+   "notes": "text is on the building by Union Court; the nearest pheon is ~50 px SW at the corner of Union Street, taken as the mark"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.6,
+   "raw": "15·6",
+   "px": 653,
+   "py": 897,
+   "confidence": "medium",
+   "notes": "Union Street; dot taken as the interpunct in 'O·N' of UNION, below the figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.6,
+   "raw": "10·6",
+   "px": 807,
+   "py": 876,
+   "confidence": "high",
+   "notes": "yard south of South Street; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 769,
+   "py": 988,
+   "confidence": "high",
+   "notes": "Union Street junction; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.9,
+   "raw": "21·9",
+   "px": 414,
+   "py": 881,
+   "confidence": "low",
+   "notes": "High Street by Christ Church; last digit 9 or 3 at 10x; dot is a tick on the tram rail left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.87,
+   "raw": "B.M.25·87",
+   "px": 291,
+   "py": 950,
+   "confidence": "high",
+   "notes": "pheon (bar over arrow) above-left of the text in the Timber Yard"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.7,
+   "raw": "24·7",
+   "px": 345,
+   "py": 1004,
+   "confidence": "medium",
+   "notes": "High Street by the P.H. (bridge approach); faint dot below-left"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. fire plugs (each with its own dot), H hydrants, C. cranes",
+  "Flood Gate and F.B. on the Waterworks River",
+  "interpuncts in spaced road-name lettering coincide with spot-height figures and were taken as survey dots"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 990,
+   "py0": 150,
+   "px1": 1024,
+   "py1": 190,
+   "reason": "figure '18·?' cut by the east edge; read it in m18_131069_87134"
+  }
+ ]
+}

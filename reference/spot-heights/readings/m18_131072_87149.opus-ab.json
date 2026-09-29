@@ -1,0 +1,259 @@
+{
+ "mosaic": "m18_131072_87149",
+ "reader": "opus-ab",
+ "area": "Open marsh north of Canning Town toward Abbey Mills (ditches and footpaths), with Manor Road carried on hatched earth ramps up to a road bridge over the railway; east approach road descending south",
+ "method": "sheet --all; sweep r0c0..r2c2 all viewed and anchored on opening (r0c0 marsh ditches/5·7; r0c1 ditch crossing/5·5; r0c2 ROAD (O A D)/S.P./B.M.6·11; r1c0 marsh path/5·5; r1c1 ditch/4·0; r1c2 bridge deck/21·2/triangle; r2c0 join line/B.M.7·36; r2c1 MANOR R./13·5; r2c2 MANOR R./B.M.7·02). Contact sheets viewed (all displayed): c4a 8x, c4b 8x, c4c 16x, c4d 10x, c4e 10x nearest, c4f 8x, c4g 6x (6/8 comparison), c4h 8x, c4i 4x east road context, c4j 6x (B.M.7·36, B.M.6·11). Dots located with a darkness-centroid helper; marker sheet checked. Every crop and contact sheet displayed when opened.",
+ "legibility": "clear; strong horizontal sheet join at py ~765-767 across the full width (tool LIKELY py ~761; tint change and 2-5 px line offsets in the rail lines); 13·5, 5·6 and B.M.7·36 sit just below it but are whole. 6/8 in final digits is hard on this sheet: 6x-8x show 6, 10x+ closes the tops (the 6 of 16·68 itself looks like 8 at 16x)",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 5.7,
+   "raw": "5·7",
+   "px": 303,
+   "py": 273,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open marsh beside a double-line ditch and dotted footpath; dot above-right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.6,
+   "raw": "5·6",
+   "px": 178,
+   "py": 351,
+   "confidence": "medium",
+   "setting": "marsh",
+   "notes": "marsh beside the ditch; dot left of figure; final 6 open-topped at 8x/10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 495,
+   "py": 343,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "marsh at the crossing of two ditches and the footpath; dot left-above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.0,
+   "raw": "4·0",
+   "px": 716,
+   "py": 375,
+   "confidence": "high",
+   "setting": "embankment_foot",
+   "notes": "marsh at the west foot of the hatched Manor Road ramp; dot above figure; pair with 11·6 on the ramp"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.11,
+   "raw": "B.M.6·11",
+   "px": 769,
+   "py": 115,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "on the west boundary line of Manor Road north of the ramp; pheon right of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.2,
+   "raw": "4·2",
+   "px": 764,
+   "py": 162,
+   "confidence": "high",
+   "setting": "embankment_foot",
+   "notes": "Manor Road just north of where the hatched ramp begins; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.6,
+   "raw": "11·6",
+   "px": 746,
+   "py": 390,
+   "confidence": "low",
+   "setting": "embankment_top",
+   "notes": "Manor Road on the hatched earth ramp, between the kerbs; final digit 6 at 6x/8x but closes to 8 at 10x+"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 95,
+   "py": 552,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "marsh on the dotted footpath west side; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.2,
+   "raw": "21·2",
+   "px": 743,
+   "py": 593,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "west end of the road bridge over the railway, top of the approach; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.8,
+   "raw": "20·8",
+   "px": 862,
+   "py": 608,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "east end of the bridge deck; dot above-left of figure; survey-station triangle at 879,615 beside it; final 8 consistent at 8x, 10x, 16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.68,
+   "raw": "B.M.16·68",
+   "px": 733,
+   "py": 702,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "on the east side wall of the south approach ramp (hatched bank below it); pheon right of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.5,
+   "raw": "13·5",
+   "px": 710,
+   "py": 770,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "Manor Road on the south hatched ramp just below the sheet join; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 685,
+   "py": 949,
+   "confidence": "medium",
+   "setting": "embankment_foot",
+   "notes": "Manor Road at the southern toe of the ramp (value at marsh level); the only dot is directly below the R of vertical 'MANOR R.' and may be its full stop"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.7,
+   "raw": "11·7",
+   "px": 829,
+   "py": 822,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "east approach road descending south from the bridge (walled, no hatching), between the kerb lines; dot above-left; setting inferred from the 20·8 -> 11·7 -> 6·1 fall"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.02,
+   "raw": "B.M.7·02",
+   "px": 821,
+   "py": 985,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the small building on the east road; pheon well left of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.1,
+   "raw": "6·1",
+   "px": 808,
+   "py": 998,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "east road at grade south of the approach; dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.6,
+   "raw": "5·6",
+   "px": 53,
+   "py": 778,
+   "confidence": "low",
+   "setting": "marsh",
+   "notes": "marsh beside the dotted footpath just below the sheet join; dot left of figure may be a path dot; final 6 vs 8 (6 at 8x, 8-like at 10x)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.36,
+   "raw": "B.M.7·36",
+   "px": 43,
+   "py": 785,
+   "confidence": "low",
+   "setting": "other",
+   "notes": "at the bend of a double-line marsh ditch (probably on a culvert or post); pheon left of text; last digit 6 at 6x/8x, closes toward 8 at 10x+"
+  }
+ ],
+ "non_height_marks": [
+  "S.P. at 822,165, 781,283, 856,280",
+  "survey-station triangle at 879,615",
+  "lone dot without figure at 812,764 just above the join"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 760,
+   "px1": 1024,
+   "py1": 770,
+   "reason": "sheet join with tint step and 2-5 px line offsets; no figures cut"
+  }
+ ]
+}

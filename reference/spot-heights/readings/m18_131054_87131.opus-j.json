@@ -1,0 +1,24 @@
+{
+  "mosaic": "m18_131054_87131",
+  "reader": "opus-j",
+  "area": "Hackney Wick / Old Ford south: Wyke, Rippoth, Smeed, Shoot-up and Stour Roads, Methodist Chapel and Board School, Wick Lane Rubber Works, Iron Foundry and Crown Wharf, Old Ford Lock and flood gates, Hackney Cut towing path, Northern Outfall Sewer embankment in the south-west, and the county boundary on the Lea in the east",
+  "method": "sheet tool, 9 sweep crops at 2x, zoom contact sheets at 8x (+-30 px) on every candidate, 6x on the bench marks and 4-5x (+-40..55 px) dot searches around figures without an obvious dot. All crops and zooms were viewed successfully; no image failed to load.",
+  "legibility": "Good. Sheet joins: horizontal at py ~170 across the full width (clear tint step, not reported by the sheet tool for this mosaic) and a straight vertical line at px ~546 with a tint change south of py 170 (darker tan west of it). No figure crosses a join. Terraces in the north-west carry no heights.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "bench_mark", "value_ft": 21.93, "raw": "B.M.21·93", "px": 805, "py": 43, "confidence": "high", "notes": "Hackney Cut east bank; horizontal pheon left of the text, point on the bank line; separate small dot at 812,40; 8x (same mark as on m18_131054_87128)"},
+    {"type": "spot", "value_ft": 22.3, "raw": "22·3", "px": 793, "py": 238, "confidence": "high", "notes": "Hackney Cut east towing path, below the py ~170 join; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 21.9, "raw": "21·9", "px": 769, "py": 452, "confidence": "medium", "notes": "towing path at the corner of the enclosure north of Old Ford Lock; isolated dot 10 px left of the figures across the path line taken as survey dot; a second isolated dot at 771,477 leaves some doubt; 8x"},
+    {"type": "bench_mark", "value_ft": 22.84, "raw": "B.M.22·84", "px": 775, "py": 615, "confidence": "high", "notes": "lock-keeper's buildings east of Old Ford Lock; pheon above the text pointing up to the dotted line, 6x"},
+    {"type": "spot", "value_ft": 21.2, "raw": "21·2", "px": 722, "py": 688, "confidence": "high", "notes": "Old Ford Lock east side wall; dot as a tick on the lock wall line left of the figures, 8x"},
+    {"type": "spot", "value_ft": 17.1, "raw": "17·1", "px": 916, "py": 730, "confidence": "high", "notes": "east of the Cut, by the bridge/culvert where the embanked path crosses the ditch; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 20.7, "raw": "20·7", "px": 752, "py": 769, "confidence": "medium", "notes": "path by the Old Ford flood gates below the lock; figures clear; thickened line crossing 8 px below-left of the figures taken as the dot (not certain), 4x and 8x"},
+    {"type": "spot", "value_ft": 15.2, "raw": "15·2", "px": 727, "py": 924, "confidence": "medium", "notes": "beside the road east of Crown Wharf (Chemical Works); no dot found in a +-55 px search at 4x; position = centre of figures"},
+    {"type": "spot", "value_ft": 35.3, "raw": "35·3", "px": 40, "py": 847, "confidence": "medium", "notes": "Northern Outfall Sewer embankment top at the Wick Lane crossing, west edge; figures clear; no distinct dot (only line junction at 34,856); position = centre of figures"}
+  ],
+  "non_height_marks": ["P.O. at ~130,325", "F.P. / F.A. marks at ~50,205; ~80,380; ~20,400", "H marks at ~120,165; ~386,145; ~180,565; ~190,815; ~105,985", "F.B. at ~705,742", "B.St. boundary stones on the county boundary at ~975,643 and ~985,895", "'Flood Gates', 'Crown Wharf (Chemical Works)', 'Crane', 'Iron Foundry', 'Wick Lane Rubber Works', 'Methodist Chapel (Primitive) Seats for 180', 'School Boys Girls & Infants'"],
+  "unreadable_regions": [
+    {"px0": 120, "py0": 1016, "px1": 160, "py1": 1024, "reason": "figure (tops of digits only) cut by the south edge beside the Northern Outfall Sewer / Wick Lane"},
+    {"px0": 0, "py0": 165, "px1": 1024, "py1": 175, "reason": "horizontal sheet join at py ~170 (no figures on it)"}
+  ]
+}

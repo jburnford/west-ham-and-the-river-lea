@@ -1,0 +1,231 @@
+{
+ "mosaic": "m18_131072_87125",
+ "reader": "opus-h",
+ "area": "Stratford north of the Broadway: Windsor Road, GER yard and Angel Lane Bridge, Tenby Road, Great Eastern Road, Grove Crescent Road, The Grove, Park Avenue, Salway Road/Place, Theatre Royal, Broadway tramway, St John's Church",
+ "method": "sheet --all; 9 sweep crops at 2x; every candidate confirmed on zoom contact sheets at 6-14x (panels labelled in mosaic px), dot or pheon searched for at 4-8x over up to +-60 px. All sweep crops and all zoom contact sheets loaded and were viewed successfully.",
+ "legibility": "Good; digits crisp. No sheet join reported by the tool and none seen by eye. Mosaic overlaps m18_131069_87128 in its SW corner: 23·4, 23·2 and B.M.25·05 here are the same marks at the same positions (px = 87128 px - 768, py = 87128 py + 768) and read identically",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 26.2,
+   "raw": "26·2",
+   "px": 175,
+   "py": 33,
+   "confidence": "high",
+   "notes": "Windsor Road; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.6,
+   "raw": "25·6",
+   "px": 45,
+   "py": 72,
+   "confidence": "high",
+   "notes": "Windsor Road west end by the P.H.; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 36.2,
+   "raw": "36·2",
+   "px": 17,
+   "py": 329,
+   "confidence": "high",
+   "notes": "Angel Lane bridge approach at the west edge; dot above the figures (figure whole, 8 px from edge)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 40.27,
+   "raw": "B.M.40·27",
+   "px": 21,
+   "py": 373,
+   "confidence": "high",
+   "notes": "Angel Lane Bridge parapet at the west edge; 'B' clipped by the edge but the value is whole; pheon below the text end; clear at 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 38.7,
+   "raw": "38·7",
+   "px": 40,
+   "py": 418,
+   "confidence": "high",
+   "notes": "Angel Lane Bridge roadway; dot above figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.4,
+   "raw": "29·4",
+   "px": 841,
+   "py": 226,
+   "confidence": "medium",
+   "notes": "The Grove at the tramway, north of Park Avenue; digits clear at 14x; only a faint dot below-left, uncertain"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 30.87,
+   "raw": "B.M.30·87",
+   "px": 856,
+   "py": 330,
+   "confidence": "high",
+   "notes": "The Grove east frontage, Sunday School corner; pheon above-right of text; clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.7,
+   "raw": "29·7",
+   "px": 850,
+   "py": 377,
+   "confidence": "medium",
+   "notes": "The Grove by the Wesleyan Methodist Chapel; digits clear at 12x; the dot to its SE belongs to the F.P., no survey dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.5,
+   "raw": "28·5",
+   "px": 69,
+   "py": 576,
+   "confidence": "high",
+   "notes": "Angel Lane at Tenby Road; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.1,
+   "raw": "24·1",
+   "px": 84,
+   "py": 709,
+   "confidence": "medium",
+   "notes": "Angel Lane at Great Eastern Road; the dot left of the figures is where the A·N·G·E·L / L·A·N·E interpunct falls, next to F.P. and L.B."
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.5,
+   "raw": "28·5",
+   "px": 757,
+   "py": 594,
+   "confidence": "high",
+   "notes": "The Grove/Broadway tramway; dot on a rail left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.3,
+   "raw": "27·3",
+   "px": 707,
+   "py": 707,
+   "confidence": "high",
+   "notes": "Broadway tramway; dot on a rail above-left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.4,
+   "raw": "23·4",
+   "px": 93,
+   "py": 836,
+   "confidence": "medium",
+   "notes": "Angel Lane at Salway Road; dot below-left beside the L of LANE, could be a lettering interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.2,
+   "raw": "23·2",
+   "px": 96,
+   "py": 908,
+   "confidence": "high",
+   "notes": "Angel Lane at the P.H./Theatre Royal; dot above figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.05,
+   "raw": "B.M.25·05",
+   "px": 112,
+   "py": 910,
+   "confidence": "high",
+   "notes": "Angel Lane east frontage; pheon on the building line 25 px NW of text; clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.2,
+   "raw": "26·2",
+   "px": 605,
+   "py": 842,
+   "confidence": "medium",
+   "notes": "Salway Place at the Broadway; digits clear at 10x; no dot found, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 26.16,
+   "raw": "B.M.26·16",
+   "px": 661,
+   "py": 825,
+   "confidence": "high",
+   "notes": "Broadway (Tramway lettering), pheon left of text between M and B.M.; clear at 6x"
+  }
+ ],
+ "non_height_marks": [
+  "F.P., L.B., S.P., H and W.M. marks throughout",
+  "'Crane' in the railway yard at 450,230"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 340,
+   "px1": 4,
+   "py1": 366,
+   "reason": "'B' of B.M.40·27 clipped by the west edge (value whole)"
+  }
+ ]
+}

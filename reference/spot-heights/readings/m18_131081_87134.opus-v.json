@@ -1,0 +1,352 @@
+{
+ "mosaic": "m18_131081_87134",
+ "reader": "opus-v",
+ "area": "Portway and West Ham Park (Lodge, Rifle Range, Drill Hall, The Cedars) south to Harberson Road, Park Road / Stork Road, Plaistow Grove, Victoria Cottages, Ann Street",
+ "method": "Independent second read (QC). All 9 sweep crops viewed and anchored at the moment of opening (r0c0 Urinal/Division of Parly. Boro.; r0c1 Lodge/Rifle Range/D.F.; r0c2 Drill Hall/The Cedars; r1c0 RICHFORD/LIDDINGTON/HARBERSON ROAD; r1c1 open plot with R O A D; r1c2 T R O A D/P.O.; r2c0 VICTORIA COTTAGES/ANN STREET/ALMA TERRACE; r2c1 P A R K/S T O R K; r2c2 W E S T/P A R K R O). Contact sheets and views cs1-cs10, v1, v1b, v2 and marker sheets mkA-mkD (8-14x, plus nearest/bicubic for B.M.28·34) all displayed; every value confirmed at 8x or more, bench-mark decimals at 12x. No other reader file consulted.",
+ "legibility": "Clean print; no missing tiles. Many dots are interpuncts (P·A·R·K, HARBERSON R·B) or the Portway dash-dot Parly. Boro. & Ward boundary, so many street figures are medium. No sheet join seen by eye or by the sheet tool.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 26.2,
+   "raw": "26·2",
+   "px": 9,
+   "py": 205,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Portway west end, S of C.R.; digits clear 8x; only nearby dot 18,191 by C.R. lettering / Parly Bdy dash-dot line, so position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.2,
+   "raw": "26·2",
+   "px": 106,
+   "py": 206,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Portway under \"Division of Parly. Boro. & Ward Bdy.\"; digits clear 8x; only dot is the F.P dot at 100,192; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.3,
+   "raw": "26·3",
+   "px": 250,
+   "py": 210,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Portway; digits clear 8x; dot at 259,203 lies on the dash-dot boundary line, so centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 27.23,
+   "raw": "B.M.27·23",
+   "px": 273,
+   "py": 236,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Portway south side; digits clear 12x; pheon point on house front line at 273,236"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.4,
+   "raw": "26·4",
+   "px": 332,
+   "py": 216,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Portway; digits clear 8x; dot 335,208 sits in a gap of the dash-dot boundary; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.9,
+   "raw": "26·9",
+   "px": 440,
+   "py": 229,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Portway opposite the Lodge; digits clear 14x; dot 434,221 hangs under a boundary dash; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.9,
+   "raw": "26·9",
+   "px": 463,
+   "py": 132,
+   "confidence": "high",
+   "setting": "open_ground",
+   "notes": "West Ham Park, path junction by D.F. (drinking fountain) N of the Lodge; dot above figures at 463,132; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.2,
+   "raw": "28·2",
+   "px": 596,
+   "py": 11,
+   "confidence": "high",
+   "setting": "open_ground",
+   "notes": "West Ham Park near top edge, W of the Rifle Range; isolated dot left of figures at 596,11; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.4,
+   "raw": "27·4",
+   "px": 592,
+   "py": 248,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Portway; figure beside survey-station triangle, position = triangle centre; a boundary dot at 604,240 also lies above the figure; digits clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.9,
+   "raw": "24·9",
+   "px": 590,
+   "py": 344,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road running S from Portway (E side of the open plot); dot above figures at 590,344; clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 28.34,
+   "raw": "B.M.28·34",
+   "px": 706,
+   "py": 243,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "Portway N side on the boundary wall/fence of The Cedars; pheon point 706,243 clear; second digit 8 vs 6 ambiguous at 12-20x (LANCZOS, nearest, bicubic); 28 preferred from context (street 27.4-28.6) but could be 26.34"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.6,
+   "raw": "28·6",
+   "px": 805,
+   "py": 271,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Portway/WAY at the P.O. road junction; dot above figures 805,271; clear 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.1,
+   "raw": "26·1",
+   "px": 1005,
+   "py": 446,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "road on E edge S of Portway, below F.P; dots at 1006,431 and 1008,438 could belong to F.P; centre of figures; digits clear 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.1,
+   "raw": "24·1",
+   "px": 978,
+   "py": 652,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Park Road (east, vertical P A R K R O A D lettering without interpuncts); dot below figures 978,652; clear 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.55,
+   "raw": "B.M.25·55",
+   "px": 985,
+   "py": 718,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Park Road E side; digits clear 12x; pheon chevron apex on house front at 985,718, text 15-25 px SW"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.1,
+   "raw": "22·1",
+   "px": 950,
+   "py": 855,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Park Road; the dot at 948,847 lies between the P and A of interpuncted P·A·R·K lettering; centre of figures; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.3,
+   "raw": "20·3",
+   "px": 50,
+   "py": 621,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Harberson Road W end; dot left of figures at 50,621; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.7,
+   "raw": "19·7",
+   "px": 136,
+   "py": 647,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Harberson Road; dot above figures 136,647; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.8,
+   "raw": "19·8",
+   "px": 197,
+   "py": 673,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Harberson Road; dot at 203,666 is the R·B interpunct of HARBERSON so position = centre; final digit 8 but it matches the 9 of \"19\" which also renders 8-like at 14x: could be 19·9"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.2,
+   "raw": "19·2",
+   "px": 364,
+   "py": 697,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Harberson Road E end at Park Road; dot 364,697 sits between R and O of ROAD (ambiguous interpunct position); clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.09,
+   "raw": "B.M.17·09",
+   "px": 135,
+   "py": 721,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of Harberson Road and Plaistow Grove; digits clear 12x (oval 0, 9); pheon on building front line at 135,721, text 15 px W"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.0,
+   "raw": "23·0",
+   "px": 555,
+   "py": 539,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Park Road (W arm, vertical R O A D); dot right of figures at 555,539 beyond the final D; 0 oval at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.7,
+   "raw": "19·7",
+   "px": 505,
+   "py": 724,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Park Road at Harberson Road junction; dots at 521,727 and 506,742 are P·A·R·K interpuncts; centre of figures; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 502,
+   "py": 834,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Park Road / Stork Road; dot above-left 501,833; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.6,
+   "raw": "14·6",
+   "px": 463,
+   "py": 993,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Stork Road near bottom edge; figure beside survey-station triangle, position = triangle centre; dot+dash 475,1000 probably F.P; clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.94,
+   "raw": "B.M.16·94",
+   "px": 497,
+   "py": 994,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Stork Road, fence/wall corner; digits clear 12x (9 not 0); pheon point 497,994, text below-right"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.0,
+   "raw": "14·0",
+   "px": 92,
+   "py": 832,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Plaistow Grove at Victoria Cottages; dot 93,832 sits between V and E of GROVE; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.4,
+   "raw": "12·4",
+   "px": 68,
+   "py": 955,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Plaistow Grove at Ann Street; dot 68,955 sits against the O of PLAISTOW (possible interpunct); clear 8x"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle in The Cedars grounds at ~823,222 with no figure",
+  "many F.P. marks along Portway, Park Road and Harberson Road",
+  "L.B at ~50,145",
+  "C.R. at ~10,183"
+ ],
+ "unreadable_regions": []
+}

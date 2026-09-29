@@ -1,0 +1,282 @@
+{
+ "mosaic": "m18_131084_87158",
+ "reader": "opus-ac",
+ "area": "Canning Town east toward Hallsville and Plaistow marsh: the road along the north edge, Cherry Island (Bradley, Edwin, Corner, Richard, Thomas Streets), Glass Bottle Works, Granville Road, St John's / St Thomas's / St Peter's Roads, Ford's Park Road, Paragon Works, Pacific Road, Fife Road and open marsh to the east",
+ "method": "sweep r0c0..r2c2 (2x) each anchored on opening: r0c0 CHERRY ISLAND/BRADLEY STREET, r0c1 RICHARD STREET/School, r0c2 RICHARD STREET/FIFE ROAD, r1c0 Glass Bottle Works/GRANVILLE ROAD, r1c1 FIFE ROAD/PACIFIC ROAD, r1c2 FIFE ROAD/drain, r2c0 ST JOHN'S/ST THOMAS'S ROAD, r2c1 Paragon Works, r2c2 terrace strip/drain. Contact sheets cs1-cs9 (6-12x, panels +-12-24 px) all displayed and anchored in notes. B.M. decimals at 8-12x. All crops and zooms viewed successfully; marker sheet checked.",
+ "legibility": "good; horizontal sheet join (tint step) at py ~197 across the full width; vertical join line at px ~637 over the full height; the east half is almost blank open ground/marsh with no figures",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 10.05,
+   "raw": "B.M.10·05",
+   "px": 34,
+   "py": 30,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building at the corner of the ROAD at the north-west edge; pheon right of text; text begins at px 0 (B clipped) but the value is whole; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 43,
+   "py": 8,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "ROAD along the north edge; dot left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 152,
+   "py": 5,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "ROAD along the north edge (R·O·A·D lettering); dot upper-left; flat 5 at 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 214,
+   "py": 4,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "ROAD at the north edge by Bradley Street; dot upper-left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.9,
+   "raw": "6·9",
+   "px": 328,
+   "py": 10,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "ROAD at the north edge by Edwin Street; faint; first digit rounded (6, or 5/8) at 8x/12x; no dot found; centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 440,
+   "py": 6,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Corner Street / the ROAD at the north edge; flat 5 at 12x; F.P. below has its own dot; no survey dot distinguished; centre"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.17,
+   "raw": "B.M.10·17",
+   "px": 622,
+   "py": 14,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "terrace front on the south side of the north-edge road east of Corner Street; text above pheon (601-634, py 2-8); 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 88,
+   "py": 72,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction south of the ROAD by F.P. (triangle island); dot upper-left; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 121,
+   "py": 224,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street west of Cherry Island terrace (Bradley Street west side); dot above; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.1,
+   "raw": "4·1",
+   "px": 117,
+   "py": 418,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Thomas Street west end at the lane; dot above; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 33,
+   "py": 592,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "LANE (L·A·N·E, probably Forty Acre Lane) by F.P.; dot left beside the A may be an interpunct; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.86,
+   "raw": "B.M.6·86",
+   "px": 83,
+   "py": 613,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "corner of the terrace at Granville Road / the lane; pheon below text; first decimal closed 8, last decimal 6 at 6x but 8-like at 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.6,
+   "raw": "5·6",
+   "px": 160,
+   "py": 623,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Granville Road / St John's Road junction; dot above; flat 5 and G 6 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 290,
+   "py": 708,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "FORD'S PARK ROAD by the apostrophe-S; no dot of its own; centre; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 420,
+   "py": 777,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "FORD'S PARK ROAD; dot above is the R· interpunct; matching G 6s at 12x; centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 530,
+   "py": 828,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Ford's Park Road / Pacific Road junction; dot upper-left; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.19,
+   "raw": "B.M.9·19",
+   "px": 510,
+   "py": 885,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Paragon Works (Printing) wall corner at Ford's Park Road; pheon left of text; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 715,
+   "py": 930,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Ford's Park Road east, between the terraces (east of the vertical join); dot upper-left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 870,
+   "py": 1015,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Ford's Park Road east end at the south edge; dot upper-left; digits end at py 1022, 2 px from the edge"
+  }
+ ],
+ "non_height_marks": [
+  "lone dash at (735,108) and speck at (738,553) with no figure",
+  "F.P., H, L.B. marks"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 192,
+   "px1": 1024,
+   "py1": 202,
+   "reason": "sheet join at py ~197"
+  },
+  {
+   "px0": 633,
+   "py0": 0,
+   "px1": 641,
+   "py1": 1024,
+   "reason": "vertical sheet join at px ~637"
+  },
+  {
+   "px0": 862,
+   "py0": 1010,
+   "px1": 885,
+   "py1": 1024,
+   "reason": "7·0 within 2 px of the bottom edge"
+  }
+ ]
+}

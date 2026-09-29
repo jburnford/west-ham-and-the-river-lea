@@ -1,0 +1,21 @@
+{
+  "mosaic": "m18_131057_87119", "reader": "opus-g",
+  "area": "Old Ford / Hackney Wick marshes: River Lea through open marsh (west half), county/borough boundary 'Union & Parly. Boro. Bdy.' and 'C.C. at L.W.', Channel Sea River, Potter's Ditch, embanked Waterworks River, Artificial Manure Works (east edge)",
+  "method": "sheet check; 9 sweep crops at 2x; every candidate and every isolated dot checked on 7x contact sheets (+-28 px). A first attempt at this mosaic hit the image request limit and was discarded entirely; this file comes only from the second pass, in which all 9 sweep crops and both zoom sheets loaded and were viewed.",
+  "legibility": "Clear, very sparse; western half is open marsh with no figures. No sheet join reported or seen. A B.M. is cut by the east edge.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"bench_mark","value_ft":18.08,"raw":"B.M.18·08","px":740,"py":149,"confidence":"high","notes":"fence/wall corner east of the boundary channel; pheon right of text; 7x"},
+    {"type":"spot","value_ft":16.7,"raw":"16·7","px":742,"py":158,"confidence":"medium","notes":"just below the B.M.18·08 pheon; no separate dot; position = centre of figures; 7x"},
+    {"type":"spot","value_ft":14.6,"raw":"14·6","px":935,"py":212,"confidence":"high","notes":"marsh by Channel Sea River; dot on the field boundary right of figures; 7x"},
+    {"type":"spot","value_ft":15.1,"raw":"15·1","px":940,"py":404,"confidence":"high","notes":"marsh corner at Potter's Ditch / Channel Sea River; dot right of figures; 7x"},
+    {"type":"spot","value_ft":17.8,"raw":"17·8","px":795,"py":438,"confidence":"high","notes":"embankment corner at the head of Waterworks River; dot in the bank hatching below figures; 7x"},
+    {"type":"spot","value_ft":18.0,"raw":"18·0","px":880,"py":655,"confidence":"medium","notes":"ground east of the Waterworks River bank; no dot found; position = centre of figures; 7x"},
+    {"type":"spot","value_ft":17.8,"raw":"17·8","px":878,"py":860,"confidence":"high","notes":"Waterworks River east embankment; dot in the bank hatching left of figures; 7x"},
+    {"type":"bench_mark","value_ft":19.76,"raw":"B.M.19·76","px":884,"py":922,"confidence":"high","notes":"text over the Waterworks River channel; pheon on the embankment right of text; 7x"}
+  ],
+  "non_height_marks": ["isolated dots with no figure at 333,382; 599,247; 561,755 (open marsh)", "W·A·T·E·R W·O·R·K·S R·I·V·E·R lettering interpuncts", "B.S. boundary stones and x boundary marks"],
+  "unreadable_regions": [
+    {"px0":1005,"py0":456,"px1":1024,"py1":470,"reason":"B.M. value cut by east edge (pheon at about 998,462)"}
+  ]
+}

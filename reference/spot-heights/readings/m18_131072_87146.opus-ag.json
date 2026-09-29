@@ -1,0 +1,231 @@
+{
+ "mosaic": "m18_131072_87146",
+ "reader": "opus-ag",
+ "area": "Marsh north of Canning Town toward Abbey Mills: Upper and Lower Abbey Mills Junctions, London & Thames Haven Petroleum Wharf, curved railway embankment, drains and sluices, G.E.R. Woolwich Branch with Manor Road alongside on the east",
+ "method": "sheet tool (no join reported); 9 sweep crops at 2x (anchors: r0c0 Upper Abbey Mills Junction; r0c1 London & Thames Haven Petroleum Wharf; r0c2 G.E.R. WOOLWICH BRANCH/Sluice; r1c0 Sluice/B.M.7·22/B.M.7·72; r1c1 Lower Abbey Mi../Sluice; r1c2 Lower Abbey Mills Junction/MANOR; r2c0 Sluice/B.M.7·72; r2c1 Lower Abbey Mi..; r2c2 Lower Abbey Mills Junction/ROAD/S.B.); contact sheets cs1 (5x, anchor B.M.7·72/B.M.6·11), cs2 (12x BM decimals), cs3 (6x pheons, anchor Sluice/S.B.), cs4 (12x 7·22/7·72), cs5 (7x 6/8 and 5/6 checks); zooms 800,560 s3.5 ±130 and 780,900 s3.5 ±124 to understand the lane and the hatched ramp; numeric dot centroids; marker sheets mk1-mk2 checked every position. All crops, zooms, contact and marker sheets displayed when opened; an anchor was written for each at the time.",
+ "legibility": "Clean, sparse marsh sheet. No sheet join seen by eye; the tool reports none. No missing tiles.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 6,
+   "py": 348,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "unfenced track (two dotted edges) across the marsh at the west edge; dot on the track, figures to the right"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.22,
+   "raw": "B.M.7·22",
+   "px": 24,
+   "py": 553,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon at the NW corner of a small square structure beside the marsh track; 7·22 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 7,
+   "py": 603,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same marsh track near the west edge; dot on the track, figures to the right"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 216,
+   "py": 620,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open marsh beside the drain north of the Sluice; dot above-right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 374,
+   "py": 638,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open marsh just south of the east-west drain; dot above figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.72,
+   "raw": "B.M.7·72",
+   "px": 419,
+   "py": 636,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "B.M. symbol (pheon in a small diamond) on the south line of the east-west drain west of a survey triangle; probably a drain kerb or culvert, no wall drawn; 7·72 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 608,
+   "py": 619,
+   "confidence": "medium",
+   "setting": "marsh",
+   "notes": "marsh on the north bank of the drain above the Sluice west of Lower Abbey Mills Junction; possible dot on the drain bend at ~606,631 not certain; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 896,
+   "py": 205,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road beside the G.E.R. Woolwich Branch (between the railway fence and the road's east edge); dot above-left; both 6s open at 7x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.2,
+   "raw": "B.M.6·20",
+   "px": 888,
+   "py": 369,
+   "confidence": "medium",
+   "setting": "other",
+   "notes": "pheon pointing down on the dotted railway boundary fence at the west side of Manor Road; text 45 px east; leading 6 open at 7x; fence, no wall drawn"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 896,
+   "py": 425,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Manor Road; dot left of figures lies on the M·A line of the vertical MANOR lettering (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 804,
+   "py": 510,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "inside the fenced strip (lane) running south-west from the railway west of the G.E.R.; dot left of figures; the drain passes under its west side at the Sluice"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 899,
+   "py": 694,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road in the gap between MANOR and ROAD; dot above-left; flat-topped 5"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.2,
+   "raw": "4·2",
+   "px": 791,
+   "py": 714,
+   "confidence": "medium",
+   "setting": "marsh",
+   "notes": "marsh just west of the fenced lane by the S.B.; the nearby dot belongs to S.B.; position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.11,
+   "raw": "B.M.6·11",
+   "px": 768,
+   "py": 881,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "pheon on the west fence line of the lane; text to the left; 6·11 clear at 12x; fence, no wall drawn"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.2,
+   "raw": "4·2",
+   "px": 765,
+   "py": 933,
+   "confidence": "medium",
+   "setting": "embankment_foot",
+   "notes": "head of the dotted strip where the lane divides, just north of where hatched banks begin (~py 945); dot above-left; setting judged from the hatching"
+  }
+ ],
+ "non_height_marks": [
+  "S.P marks along the railways",
+  "M.P at ~888,452 beside Manor Road",
+  "S.B. (signal boxes) at ~5,62 and ~806,705",
+  "survey triangle at ~446,626",
+  "'Sluice' labels at ~218,640, ~612,640, ~800,612, ~955,238"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 52,
+   "px1": 10,
+   "py1": 68,
+   "reason": "figure ('..8', probably a B.M. value with its pheon at ~15,60 by the S.B.) cut by the west edge"
+  }
+ ]
+}

@@ -1,0 +1,331 @@
+{
+ "mosaic": "m18_131066_87158",
+ "reader": "opus-ab",
+ "area": "Poplar east of the Lea / Bow Creek: Nairn Street, Leven Road, Glencoe, Findhorn, Ettrick, Aberfeldy and Abbott streets; gas works and open land ('Poplar') on the Bow Creek bank",
+ "method": "sheet --all; sweep r0c0..r2c2 all viewed and anchored on opening (r0c0 NAIRN STREET/ROAD; r0c1 Mud/H.W.M.O.T.; r0c2 Poplar/BOW; r1c0 GLENCOE STREET; r1c1 LEVEN letters/gasholder; r1c2 Poplar/ROAD; r2c0 FINDHORN/ETTRICK; r2c1 ABERFELDY STREET; r2c2 ABBOTT/L.BO). Contact sheets viewed (all displayed): c2a 8x (a-f), c2b 8x (g-l), c2c 4x LEVEN interpunct check, c2d 8x (m-r), c2e 8x (s,t), c2f 16x (n,r,t,a,d), c2g 20x nearest, c2h 12x (a,n,r), c2i 3x Leven Road context. Dots located with a darkness-centroid helper; marker sheet checked. Every crop and contact sheet displayed when opened.",
+ "legibility": "clear; weak horizontal sheet join at py ~193 (x 256-512, tool --all; = py ~961 on 87155), no figure cut by it",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 10.5,
+   "raw": "10·5",
+   "px": 12,
+   "py": 43,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "small yard behind the ROAD frontage at the west edge; no dot beside it, position = centre of figures (overlap strip with 87155)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.02,
+   "raw": "B.M.14·02",
+   "px": 89,
+   "py": 47,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "wall at the corner of the ROAD frontage, pheon pointing up left of text (overlap strip with 87155)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 97,
+   "py": 156,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open unbuilt ground east of the Nairn Street rear garden line; dot left of figure on the garden line; value < 15, no place word"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.3,
+   "raw": "6·3",
+   "px": 109,
+   "py": 367,
+   "confidence": "low",
+   "setting": "marsh",
+   "notes": "same open ground east of Nairn Street, dot at the junction of a garden line with the rear boundary; first digit has a hooked open top (6) at 12x/16x but 6/8 not settled (compare clear 8 of 8·3 at 48,484)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 15.02,
+   "raw": "B.M.15·02",
+   "px": 167,
+   "py": 389,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "NW corner of the Leven Road terrace; pheon right of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.5,
+   "raw": "11·5",
+   "px": 325,
+   "py": 439,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Leven Road near its NW end, between the terrace front and the dotted kerb; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.3,
+   "raw": "8·3",
+   "px": 51,
+   "py": 474,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "corner of Nairn Street and Glencoe Street under 'F.P.'; the F.P. carries two dots, the second (51,474) taken as the survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.1,
+   "raw": "8·1",
+   "px": 277,
+   "py": 574,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street junction south of the Leven Road terrace; dot above-left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.37,
+   "raw": "B.M.9·37",
+   "px": 277,
+   "py": 608,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house corner at Glencoe Street / Aberfeldy Street, beside F.P.; pheon below text; clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.9,
+   "raw": "7·9",
+   "px": 350,
+   "py": 608,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street junction east of B.M.9·37; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 370,
+   "py": 720,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Aberfeldy Street by Findhorn Street, above 'F.P.'; dot right of figure taken as survey dot, the F.P.'s own dot is at 353,728"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.4,
+   "raw": "8·4",
+   "px": 486,
+   "py": 511,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Leven Road; dot 20 px SW of the figure between the L and E of LEVEN (LEVEN otherwise has no interpuncts)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.85,
+   "raw": "B.M.10·85",
+   "px": 598,
+   "py": 544,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the gas works lodge on Leven Road; pheon right-below text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 604,
+   "py": 566,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Leven Road at Abbott Road; dot above-right of figure just left of the E of LEVEN (possible V·E interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 571,
+   "py": 693,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Abbott Road; figure beside a survey-station triangle, position = triangle centre; F.P. dots at 549,697 and 557,692 not used"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.5,
+   "raw": "11·5",
+   "px": 667,
+   "py": 384,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "gas works ground beside the hatched double line (siding/wall) west of the works building; dot right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.4,
+   "raw": "11·4",
+   "px": 804,
+   "py": 349,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "inside the works enclosure labelled Poplar, E of the long buildings; dot well left of figure; 4 clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.3,
+   "raw": "12·3",
+   "px": 913,
+   "py": 117,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "works yard on the Bow Creek bank (overlap strip with 87155); dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 12.78,
+   "raw": "B.M.12·78",
+   "px": 889,
+   "py": 137,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the long works building (overlap strip with 87155)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.6,
+   "raw": "10·6",
+   "px": 879,
+   "py": 179,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "works yard south of B.M.12·78 (overlap strip with 87155)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 413,
+   "py": 860,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Ettrick Street / Aberfeldy Street corner; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.7,
+   "raw": "9·7",
+   "px": 26,
+   "py": 982,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "street near the west edge south of Ettrick Street; dot above-left; first digit reads 9 like the 9 of B.M.9·86 at 12x/16x but 8 not excluded"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 696,
+   "py": 763,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Abbott Road; dot above figure, F.P. below with its own dot at 684,780"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.2,
+   "raw": "7·2",
+   "px": 455,
+   "py": 1001,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Aberfeldy Street south end; only dot is above the E of vertical STREET lettering left of the figure, may be an interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.7,
+   "raw": "7·7",
+   "px": 864,
+   "py": 837,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Abbott Road under 'F.P.'; F.P. own dot at 871,835, second dot 864,839 taken as survey dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.86,
+   "raw": "B.M.9·86",
+   "px": 878,
+   "py": 878,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "house corner on Abbott Road; pheon right of text; last digit 6 (hooked top) vs 8 at 12x not fully certain"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. marks at 40,472, 80,503, 353,728, 555,693, 684,780, 866,834, 812,892",
+  "S.P. at 178,360",
+  "L.B.O. boundary lettering on Abbott Road 760,785"
+ ],
+ "unreadable_regions": []
+}

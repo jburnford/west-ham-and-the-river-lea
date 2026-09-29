@@ -1,0 +1,418 @@
+{
+ "mosaic": "m18_131072_87128",
+ "reader": "opus-l",
+ "area": "Stratford Broadway, Angel Lane, St John's Church, Town Hall, Victoria Street, Mark Street (Stratford, West Ham)",
+ "method": "Independent second read, second attempt. On the first attempt every image returned [media removed: request limit] and was NOT seen; that file was withdrawn. On this attempt the 9 sweep crops (2x) r0c0-r2c2 and contact sheets A, B, C, D, E, F, G, H, I, J, K, L, N, O (4-24x zoom panels, each labelled with its mosaic window, made with a helper in my scratch directory) were re-opened one at a time and every one displayed. Each reading was checked against these displayed images; every value confirmed at 8x or more.",
+ "legibility": "good; horizontal sheet join confirmed by eye at py ~936-941 (tint step, line offsets) across the width; no vertical join seen",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 23.4,
+   "raw": "23·4",
+   "px": 91,
+   "py": 69,
+   "confidence": "medium",
+   "notes": "Angel Lane north end by Salway Road; figures at 95-110,62; dot at 91,69 sits just above the rotated 'L' of LANE and could be lettering, not a certain survey dot; digits clear at 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.2,
+   "raw": "23·2",
+   "px": 96,
+   "py": 141,
+   "confidence": "high",
+   "notes": "Angel Lane west footway by F.P; dot directly above figures; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.05,
+   "raw": "B.M.25·05",
+   "px": 113,
+   "py": 139,
+   "confidence": "high",
+   "notes": "building front on east side of Angel Lane; text 127-147,158-170, pheon on frontage 25 px up-left; digits clear 8x, pheon 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.1,
+   "raw": "23·1",
+   "px": 138,
+   "py": 302,
+   "confidence": "high",
+   "notes": "Angel Lane opposite Pleasant Row; dot above figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.2,
+   "raw": "26·2",
+   "px": 608,
+   "py": 76,
+   "confidence": "medium",
+   "notes": "Broadway by Salway Place, west of tramway; no dot found at 5x/8x, position = centre of figures (dot probably on the tramway rails)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 26.16,
+   "raw": "B.M.26·16",
+   "px": 661,
+   "py": 55,
+   "confidence": "medium",
+   "notes": "Broadway / The Grove corner; digits clear 8x/12x; small pheon-like mark at 660-665,51-56 between TRAMWAY letters M and W, point estimated at 661,55 (20x); association with the text inferred"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.3,
+   "raw": "24·3",
+   "px": 480,
+   "py": 301,
+   "confidence": "medium",
+   "notes": "Broadway west carriageway; figures 443-458,297; isolated dot on tramway rail at 480,301 (5x) taken as survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.3,
+   "raw": "24·3",
+   "px": 714,
+   "py": 310,
+   "confidence": "medium",
+   "notes": "Broadway south of St John's churchyard; figures 719-735,326; dot on tramway rails at 714,310; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.5,
+   "raw": "22·5",
+   "px": 612,
+   "py": 383,
+   "confidence": "medium",
+   "notes": "Broadway south of churchyard; figures 632-648,391; nearest dot on tramway rail at 612,383, 20 px from figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 27.41,
+   "raw": "B.M.27·41",
+   "px": 541,
+   "py": 384,
+   "confidence": "medium",
+   "notes": "St John's Church south porch; text 498-520,397-412 beside the Monument; pheon-like arrow at the end of the porch path at 541,384 (12x), about 25 px from text; association inferred"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.6,
+   "raw": "26·6",
+   "px": 907,
+   "py": 258,
+   "confidence": "medium",
+   "notes": "north side of tramway east of The Grove (Romford Road); no dot found at 6x, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.1,
+   "raw": "22·1",
+   "px": 186,
+   "py": 507,
+   "confidence": "high",
+   "notes": "Angel Lane east side by Wilton's Yard; figures on building 201-217,499; isolated dot on footway at 186,507, well clear of the F.P below; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.42,
+   "raw": "B.M.22·42",
+   "px": 112,
+   "py": 597,
+   "confidence": "high",
+   "notes": "building west of Angel Lane south end; pheon right of text at 112,597; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 23.63,
+   "raw": "B.M.23·63",
+   "px": 313,
+   "py": 590,
+   "confidence": "high",
+   "notes": "drinking fountain (D.F) on Broadway island; pheon on fountain's east side at 313,590; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.8,
+   "raw": "21·8",
+   "px": 360,
+   "py": 489,
+   "confidence": "high",
+   "notes": "Broadway tramway by churchyard west tip; dot as thickening on rail at 360,489; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.5,
+   "raw": "20·5",
+   "px": 320,
+   "py": 608,
+   "confidence": "high",
+   "notes": "Broadway south of fountain; clear dot on tramway rails at 320,608; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.2,
+   "raw": "19·2",
+   "px": 199,
+   "py": 693,
+   "confidence": "high",
+   "notes": "Broadway south-west towards the High Street; dot on tramway rails at 199,693; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.1,
+   "raw": "21·1",
+   "px": 480,
+   "py": 482,
+   "confidence": "high",
+   "notes": "Broadway south of Monument; dot on rails at 480,482; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 24.06,
+   "raw": "B.M.24·06",
+   "px": 842,
+   "py": 670,
+   "confidence": "medium",
+   "notes": "house front, north side of Victoria Street; pheon below text at 842,670; last digit read 6 (open rounded top) at 14x and 24x, not 8, but small figure crossed by a building line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.2,
+   "raw": "23·2",
+   "px": 864,
+   "py": 676,
+   "confidence": "medium",
+   "notes": "Victoria Street; dot at 864,676 between R and E of STREET lettering (possible interpunct) and near F.P; 6x/8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.1,
+   "raw": "18·1",
+   "px": 87,
+   "py": 822,
+   "confidence": "high",
+   "notes": "High Street / Broadway south-west; dot on tramway rails at 87,822; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.6,
+   "raw": "21·6",
+   "px": 416,
+   "py": 743,
+   "confidence": "high",
+   "notes": "road east of Town Hall; dot above figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.3,
+   "raw": "21·3",
+   "px": 426,
+   "py": 858,
+   "confidence": "high",
+   "notes": "yard south of Court House; dot left of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.7,
+   "raw": "18·7",
+   "px": 234,
+   "py": 896,
+   "confidence": "high",
+   "notes": "Burton's Court area, footway west of building; figures 250-265,893; isolated dot at 234,896; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.79,
+   "raw": "B.M.20·79",
+   "px": 263,
+   "py": 939,
+   "confidence": "low",
+   "notes": "building south of Burton's Court; at 14x/24x a V made by converging building lines sits between 20 and 79 where the middot should be, and the third digit could be 1 (20·19); pheon-like mark at 258-264,936-941 on the building corner just above the py~940 sheet join, 25 px from text; association inferred"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.32,
+   "raw": "B.M.20·32",
+   "px": 1,
+   "py": 894,
+   "confidence": "medium",
+   "notes": "High Street west edge; digits clear 8x/20x; pheon is a '<' cut by the west mosaic edge at 0-3,892-896"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.14,
+   "raw": "B.M.20·14",
+   "px": 187,
+   "py": 990,
+   "confidence": "high",
+   "notes": "Chant Street corner building; pheon at building corner 187,990 (8x, 16x)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.41,
+   "raw": "B.M.19·41",
+   "px": 366,
+   "py": 969,
+   "confidence": "high",
+   "notes": "building corner north of the text, south of the sheet join; pheon at 366,969; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.7,
+   "raw": "18·7",
+   "px": 400,
+   "py": 955,
+   "confidence": "medium",
+   "notes": "lot west of St John's Vicarage, south of join; figures clear 14x; nearby marks at 378,951 (faint, inside building) and 388,952 (line junction) not accepted as dot; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.4,
+   "raw": "22·4",
+   "px": 668,
+   "py": 771,
+   "confidence": "high",
+   "notes": "Victoria Street west end; dot left of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.7,
+   "raw": "23·7",
+   "px": 525,
+   "py": 854,
+   "confidence": "medium",
+   "notes": "corner south of Working Men's Club; dot at 525,854 sits directly under the F.P and may belong to it; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 26.89,
+   "raw": "B.M.26·89",
+   "px": 633,
+   "py": 908,
+   "confidence": "medium",
+   "notes": "Sunday School building, Mark Street west end; pheon at building corner 633,908 (16x); second digit 6 (rounded top) and third 8 at 20-22x, earlier 2x/8x impression 25·89 rejected"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.7,
+   "raw": "24·7",
+   "px": 673,
+   "py": 984,
+   "confidence": "high",
+   "notes": "road south of Unitarian Church; dot above figures; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 27.31,
+   "raw": "B.M.27·31",
+   "px": 986,
+   "py": 790,
+   "confidence": "high",
+   "notes": "house front, south side of Mark Street east end; pheon below-left of text on frontage at 986,790; 7x/14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.9,
+   "raw": "24·9",
+   "px": 937,
+   "py": 810,
+   "confidence": "medium",
+   "notes": "Mark Street; dot at 937,810 between T and R of STREET lettering (possible interpunct); 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.4,
+   "raw": "24·4",
+   "px": 798,
+   "py": 897,
+   "confidence": "high",
+   "notes": "Mark Street; dot above figures; 8x"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. marks throughout",
+  "D.F (drinking fountain) at ~323,594",
+  "L.B at ~340,655",
+  "H hydrant marks"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 370,
+   "py0": 1012,
+   "px1": 400,
+   "py1": 1024,
+   "reason": "figure (17·6?) and a pheon-like mark cut by the south edge"
+  },
+  {
+   "px0": 0,
+   "py0": 885,
+   "px1": 5,
+   "py1": 900,
+   "reason": "pheon of B.M.20·32 cut by the west edge"
+  },
+  {
+   "px0": 0,
+   "py0": 930,
+   "px1": 1024,
+   "py1": 945,
+   "reason": "horizontal sheet join; 1-2 px offsets"
+  }
+ ]
+}

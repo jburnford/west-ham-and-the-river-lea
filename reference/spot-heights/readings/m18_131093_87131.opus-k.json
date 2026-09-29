@@ -1,0 +1,303 @@
+{
+ "mosaic": "m18_131093_87131",
+ "reader": "opus-k",
+ "area": "Upton / West Ham centre: Stukeley Road, Boleyn and Neville Road ends, Plashet Road, Cromwell Road, Wesleyan Methodist Chapel and Sunday School, Gipsy Lane (C.R. / L A N E boundary lane), Nursery and Smithy, Board School (Boys, Girls & Infants) east of the lane",
+ "method": "Primary read. sheet + 9 sweep crops at 2x; every candidate confirmed on contact sheets of zoom panels at 6x, then 10-12x for digits and dots, 4x 110 px windows to search for pheons; positions checked on a verification sheet with a marker drawn at each recorded pixel. The top 256 px overlap m18_131093_87128 (py + 768) and the west 256 px overlap m18_131090_87131 (px + 768); pixel-identical, and those marks are recorded again. All sweep crops and all zoom panels loaded and were viewed successfully.",
+ "legibility": "Good. Sheet joins: horizontal at py ~179-180 over x 0-~936 (tint step, confirmed by eye); vertical at px ~936 from py ~180 to the south edge (dark straight line and tint step, confirmed by eye). The boundary along Plashet Road is plain dashes: the single dots beside figures there are survey dots. The Gipsy Lane boundary is a line of large dots, so dots beside figures in the lane are ambiguous.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 61,
+   "py": 77,
+   "confidence": "high",
+   "notes": "Belton Road by School; dot directly above figure (overlap with m18_131093_87128 61,845)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 82,
+   "py": 210,
+   "confidence": "high",
+   "notes": "Upton Park Road at Stukeley Road; dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.3,
+   "raw": "32·3",
+   "px": 312,
+   "py": 174,
+   "confidence": "medium",
+   "notes": "end of St George's Avenue just above the sheet join; small dot below-right of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.91,
+   "raw": "B.M.35·91",
+   "px": 352,
+   "py": 149,
+   "confidence": "high",
+   "notes": "house front north of Upton Park Road; pheon above-left of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 504,
+   "py": 145,
+   "confidence": "high",
+   "notes": "road north of Upton Park Road; dot right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 688,
+   "py": 113,
+   "confidence": "medium",
+   "notes": "Gipsy Lane at Cromwell Road; small double dot right of figure beside the boundary dot line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.6,
+   "raw": "31·6",
+   "px": 700,
+   "py": 203,
+   "confidence": "medium",
+   "notes": "Gipsy Lane by Methodist Chapel; several dots nearby, survey dot not identified, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.3,
+   "raw": "31·3",
+   "px": 886,
+   "py": 139,
+   "confidence": "medium",
+   "notes": "Cromwell Road; only dot is the interpunct between M and W of CROM·WELL"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.53,
+   "raw": "B.M.33·53",
+   "px": 749,
+   "py": 270,
+   "confidence": "high",
+   "notes": "south-west corner of the Wesleyan Methodist Chapel on Gipsy Lane; pheon at wall corner left of text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.9,
+   "raw": "31·9",
+   "px": 760,
+   "py": 371,
+   "confidence": "medium",
+   "notes": "Gipsy Lane at Plashet Road/Stukeley Road corner; small dot just below-left of figure, near F.P. dots and the lane's boundary dots"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.6,
+   "raw": "31·6",
+   "px": 818,
+   "py": 531,
+   "confidence": "medium",
+   "notes": "Gipsy Lane, west side of the C.R. / L A N E lettering; no survey dot distinguishable from the lettering and boundary dots, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.6,
+   "raw": "31·6",
+   "px": 888,
+   "py": 636,
+   "confidence": "medium",
+   "notes": "Gipsy Lane by the school gate; small double dot left of figure on the line of boundary dots, may be a boundary dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.29,
+   "raw": "B.M.34·29",
+   "px": 987,
+   "py": 734,
+   "confidence": "medium",
+   "notes": "St Stephen's (church) grounds east of the vertical sheet join, text on enclosure corner; first digit partly crossed by the wall line (reads 3/9, 34 is the plausible value), 29 clear at 12x; pheon taken as the arrow at the building corner ~15 px above-right of the text, uncertain"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.0,
+   "raw": "32·0",
+   "px": 963,
+   "py": 778,
+   "confidence": "medium",
+   "notes": "junction east of the sheet join by C.R.; dot upper-left of figure among several F.P. / L.B. dots"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.8,
+   "raw": "32·8",
+   "px": 117,
+   "py": 442,
+   "confidence": "high",
+   "notes": "Stukeley Road at Boleyn Road; dot upper-left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.5,
+   "raw": "B.M.33·50",
+   "px": 113,
+   "py": 504,
+   "confidence": "high",
+   "notes": "Stukeley Road frontage; pheon left of text pointing at wall"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 148,
+   "py": 637,
+   "confidence": "high",
+   "notes": "Stukeley Road at Neville Road; dot upper-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.6,
+   "raw": "33·6",
+   "px": 179,
+   "py": 837,
+   "confidence": "low",
+   "notes": "Plashet Road; dot above figure between boundary dashes; final digit 6 or 5 at 10-16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 369,
+   "py": 857,
+   "confidence": "high",
+   "notes": "Plashet Road; dot above-right of figure at the end of a boundary dash (the boundary itself has no dots)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.6,
+   "raw": "B.M.34·60",
+   "px": 405,
+   "py": 836,
+   "confidence": "high",
+   "notes": "Plashet Road frontage; pheon point on the house front line below-left of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 610,
+   "py": 832,
+   "confidence": "high",
+   "notes": "Plashet Road; dot above figure between boundary dashes"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.2,
+   "raw": "32·2",
+   "px": 800,
+   "py": 813,
+   "confidence": "high",
+   "notes": "Plashet Road at Gipsy Lane; dot above figure at the end of a boundary dash"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 644,
+   "py": 955,
+   "confidence": "high",
+   "notes": "open ground by tree-lined path; dot right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.4,
+   "raw": "31·4",
+   "px": 347,
+   "py": 1011,
+   "confidence": "high",
+   "notes": "open ground near south edge; dot left of figure; figure whole ~10 px above the edge"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangles at ~712,366 and ~695,378 (by F.P.) with no figure",
+  "'·W' at ~697,582 (well), not a height",
+  "C.R., L.B., F.P., H marks with own dots",
+  "Gipsy Lane boundary of large dots along px ~690-930"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 175,
+   "px1": 936,
+   "py1": 185,
+   "reason": "horizontal sheet join at py ~179-180"
+  },
+  {
+   "px0": 932,
+   "py0": 180,
+   "px1": 940,
+   "py1": 1024,
+   "reason": "vertical sheet join at px ~936; B.M.34·29 and 32·0 lie just east of it"
+  }
+ ]
+}

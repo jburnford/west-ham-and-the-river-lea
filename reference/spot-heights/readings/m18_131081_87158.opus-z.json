@@ -1,0 +1,390 @@
+{
+ "mosaic": "m18_131081_87158",
+ "reader": "opus-z",
+ "area": "Canning Town east: Mary, Peter, Aviary, Lawrence, Cooper, Trinity, Morgan, Vincent, Hemsworth, Wilberforce Streets, Forty Acre Lane, Thomas Street, St John's Road, Beckton Road frontage (independent second read)",
+ "method": "Overview of the full mosaic at 1x; 9 sweep crops r0c0..r2c2 at 2x, each anchored on opening (r0c0 MARY/AVIARY/PETER STREET; r0c1 TRINITY STREET/MORGAN; r0c2 MORGAN/BRADLEY STREET/CHERRY; r1c0 COOPER/BURKE STREET; r1c1 VINCENT/MARY/TRINITY STREET; r1c2 Glass Bottle Works/THOMAS ST; r2c0 HEMSWORTH/YORK/MERTON STREET; r2c1 HEMSWORTH/WILBERFORCE STREET; r2c2 ST JOHN'S ROAD/Glass Bottle Works). Contact sheets: cs1-cs4 at 6x +/-20 px (dots), z1-z3 and z5-z6 at 10-12x +/-13-14 px (digits and B.M. decimals), z4 at 16x nearest-neighbour (6/8 and 3/8), w1-w3 at 5x +/-30-35 px (pheon and dot search), all anchored on opening; dot centroids from a numeric helper; marker sheets mk0-mk3 (6x, crosshair at each recorded pixel) viewed and 3 positions corrected. Every crop, contact sheet and marker sheet displayed when opened. Not read from other readers' files.",
+ "legibility": "Clear engraving; horizontal sheet join (tint step) at py ~197 across the full width, not reported by the sheet tool; no figure crosses it. No missing tiles.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 33,
+   "py": 37,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Mary Street / Aviary Street junction NW; dot below-left of figure, separate from the F.P. and its own dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 150,
+   "py": 105,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Mary Street; no own dot, only S·T·R·E·E·T interpunct at 139,113; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 251,
+   "py": 195,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Peter Street / Mary Street junction just north of the py~197 sheet join; dot directly below figure; final digit read 8 (lower bowl closed, differs from open 3 of 4·3) at 12x and 16x NN"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.84,
+   "raw": "B.M.6·84",
+   "px": 28,
+   "py": 268,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of house at Aviary Street / Lawrence Street; pheon apex below-left of text; decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 47,
+   "py": 279,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Lawrence Street; dot above the E of LAWRENCE (street lettering has interpuncts, e.g. N·C at 79,296), so dot identity uncertain"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.2,
+   "raw": "7·2",
+   "px": 189,
+   "py": 313,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Lawrence Street / Peter Street junction; dot just after T of STREET, left of figure; hollow survey-station triangle at ~217,318 to the right has no centre dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.0,
+   "raw": "4·0",
+   "px": 407,
+   "py": 307,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Mary Street (south arm); dot between A of M·A·R·Y and figure, may be an interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 600,
+   "py": 7,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Beckton Road, at the top edge; figure whole (y 3-10); possible dot at 601,0 on the edge; 2nd digit 8 at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.05,
+   "raw": "B.M.10·05",
+   "px": 801,
+   "py": 32,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Beckton Road frontage; pheon on the roofline of the building south of the text; decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 811,
+   "py": 8,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Beckton Road; lone dot 11 px left of and above the figure taken as its dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 920,
+   "py": 5,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Beckton Road; dot above-left; 5 has flat top at 10-12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 981,
+   "py": 5,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Beckton Road near the Bradley Street end; dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 856,
+   "py": 71,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "open junction south of Beckton Road by the small triangular plot; dot above-left; 0 oval, not a 6, at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 887,
+   "py": 223,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street west of CHERRY (terrace), just south of the py~197 join; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.1,
+   "raw": "4·1",
+   "px": 884,
+   "py": 418,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Forty Acre Lane at Thomas Street; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.7,
+   "raw": "5·7",
+   "px": 287,
+   "py": 636,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Vincent Street west end at Morecombe Street; dot above figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.07,
+   "raw": "B.M.7·07",
+   "px": 463,
+   "py": 453,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Mary Street house frontage; pheon on building line ~25 px NE of the text (text 443-472,476-482); decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.4,
+   "raw": "4·4",
+   "px": 484,
+   "py": 486,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Mary Street / Cooper Street junction; no own dot (F.P. below has its own); position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 512,
+   "py": 628,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Vincent Street; dot above the S of STREET, below-left of figure (no other interpuncts in VINCENT STREET)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.88,
+   "raw": "B.M.5·88",
+   "px": 476,
+   "py": 614,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Vincent Street north frontage; pheon on house line above text; decimals clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.7,
+   "raw": "3·7",
+   "px": 633,
+   "py": 622,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Vincent Street east end at Forty Acre Lane; dot below-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.7,
+   "raw": "3·7",
+   "px": 741,
+   "py": 521,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Trinity Street / Forty Acre Lane junction; dot above-right of figure, separate from the ·F.P"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 793,
+   "py": 585,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Forty Acre Lane; dot left of the A of L A N E above figure (possible interpunct); ·F.P right has its own dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.86,
+   "raw": "B.M.6·86",
+   "px": 850,
+   "py": 610,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "corner of block at Forty Acre Lane / St John's Road; pheon below text; middle/final digits 6 vs 8 ambiguous (10x shows 6·66-like, pixel profile suggests middle 8); read 6·86"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.6,
+   "raw": "5·6",
+   "px": 928,
+   "py": 623,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "St John's Road / Grange Road junction; dot above-left; 5 flat top, 6 round at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.77,
+   "raw": "B.M.7·77",
+   "px": 44,
+   "py": 743,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of house at Burke Street / Hemsworth(?) street west end; pheon apex below-right of text; decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 16,
+   "py": 748,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street at west edge below B.M.7·77; figure whole; no own dot (T·R interpunct at 27,754); 2nd digit 8 (closed top) at 12x/16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 169,
+   "py": 738,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hemsworth Street west end at Morecombe Street; no dot found (MORECOMBE S·T interpunct nearby); position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.3,
+   "raw": "4·3",
+   "px": 643,
+   "py": 772,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hemsworth Street / Forty Acre Lane; distinct dot below-right of figure, between the two F.P.s' own dots"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.61,
+   "raw": "B.M.6·61",
+   "px": 617,
+   "py": 904,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Wilberforce Street / Forty Acre Lane corner house; pheon at building corner above-right of text; decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 631,
+   "py": 916,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Forty Acre Lane at Wilberforce Street; dot above-left; final digit 8 vs 6 (right side closed at 16x NN)"
+  }
+ ],
+ "non_height_marks": [
+  "many F.P. marks along all streets (e.g. 25,30; 480,165; 466,493)",
+  "hollow survey-station triangle without figure at ~217,318",
+  "L.B. at ~925,650",
+  "P.H. labels"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 192,
+   "px1": 1024,
+   "py1": 202,
+   "reason": "horizontal sheet join py~197 (tint step, 1-2 px offsets possible)"
+  }
+ ]
+}

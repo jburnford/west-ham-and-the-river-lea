@@ -1,0 +1,54 @@
+{
+ "mosaic": "q18_131069_87140",
+ "reader": "synth-bad",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 8.3,
+   "raw": "8·3",
+   "px": 100,
+   "py": 100,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "q18 spot with a decimal"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.79,
+   "raw": "B.M.10·79",
+   "px": 200,
+   "py": 200,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "q18 B.M. at 2 dp"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.3,
+   "raw": "8",
+   "px": 300,
+   "py": 300,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "raw does not spell value"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31,
+   "raw": "3?",
+   "px": 400,
+   "py": 400,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "doubtful digit: ok"
+  }
+ ]
+}

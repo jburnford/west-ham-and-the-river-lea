@@ -1,0 +1,17 @@
+{
+  "mosaic": "m18_131060_87131", "reader": "opus-e",
+  "area": "Open Lea marsh (Stratford Marsh) south of the Waterworks River: embanked channels running south to the City Mill River, footpaths, a trig-station triangle; works buildings at the south-west",
+  "method": "9 sweep crops at 2x; all candidates zoomed at 6x (+-40) and digits confirmed at 10x (+-18).",
+  "legibility": "Good. No missing tiles. Sheet tool reports no join, but a straight full-width horizontal line at py ~170 with a tint change below is a sheet join (continues from py ~938 in m18_131060_87128); no figures cross it. Large areas of blank marsh with no figures.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 10.8, "raw": "10·8", "px": 370, "py": 99, "confidence": "high", "notes": "dot on the crest of the channel embankment, figures to its right, 6x (same point as 371,868 in m18_131060_87128)"},
+    {"type": "bench_mark", "value_ft": 12.96, "raw": "B.M.12·96", "px": 474, "py": 221, "confidence": "high", "notes": "foot of the channel embankment; pheon 10 px left of the text, 6x"},
+    {"type": "spot", "value_ft": 16.5, "raw": "16·5", "px": 503, "py": 274, "confidence": "high", "notes": "dot on the embankment crest, figures right, 10x"},
+    {"type": "spot", "value_ft": 13.2, "raw": "13·2", "px": 486, "py": 472, "confidence": "high", "notes": "dot at the crest of the east embankment, figures right, 10x"},
+    {"type": "spot", "value_ft": 17.3, "raw": "17·3", "px": 425, "py": 674, "confidence": "high", "notes": "dot within the top of the hatching of the east embankment, figures right, 10x"},
+    {"type": "spot", "value_ft": 10.6, "raw": "10·6", "px": 407, "py": 882, "confidence": "high", "notes": "dot at the foot/crest line of the curved east embankment above the City Mill River, figures right; 10x reads 6 not 8"}
+  ],
+  "non_height_marks": ["trig-station triangle with centre dot at 619,331 (no figure)", "City Mill River lettering 'C I T' at 430-440,975-1024", "STRATFORD marsh lettering 'S T T R A T' py ~860"],
+  "unreadable_regions": []
+}

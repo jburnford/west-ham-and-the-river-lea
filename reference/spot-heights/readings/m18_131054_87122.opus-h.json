@@ -1,0 +1,138 @@
+{
+ "mosaic": "m18_131054_87122",
+ "reader": "opus-h",
+ "area": "Hackney Wick / Leyton marsh: open marsh with ditches north, Victoria Park railway and Dye Works SW, Hackney Cut with towing paths and Waterproof Cloth Works south",
+ "method": "sheet --all; 9 sweep crops at 2x; every candidate confirmed on zoom contact sheets at 6-14x (panels labelled in mosaic px), dot or pheon searched for at 4-8x over up to +-60 px. All sweep crops and all zoom contact sheets loaded and were viewed successfully.",
+ "legibility": "Good; very sparse (mostly blank marsh). Sheet joins: vertical at px~546 and horizontal at py~738, both visible by eye",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 22.6,
+   "raw": "22·6",
+   "px": 80,
+   "py": 505,
+   "confidence": "high",
+   "notes": "road/fence beside the railway (Victoria Park line) at the west side; dot above-right of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 21.91,
+   "raw": "B.M.21·91",
+   "px": 101,
+   "py": 549,
+   "confidence": "high",
+   "notes": "railway boundary wall by the Dye Works; pheon right of text; clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.4,
+   "raw": "21·4",
+   "px": 212,
+   "py": 670,
+   "confidence": "high",
+   "notes": "track beside the railway, south of the marsh; dot above-right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.5,
+   "raw": "21·5",
+   "px": 339,
+   "py": 832,
+   "confidence": "high",
+   "notes": "Hackney Cut west towing path; dot left of figures; last digit 5 at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.7,
+   "raw": "21·7",
+   "px": 468,
+   "py": 1016,
+   "confidence": "medium",
+   "notes": "Hackney Cut east towing path by the south edge; digits clear at 12x and whole (lowest pixel ~1021); no dot inside the mosaic, position = centre of figures"
+  }
+ ],
+ "non_height_marks": [
+  "flow arrows in the ditches at 140,150 and 470,860",
+  "Union & Parly. Boro. Bdy. with x marks along the SE corner",
+  "Waterproof Cloth Works (Disused) and Dye Works lettering"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 732,
+   "px1": 1024,
+   "py1": 744,
+   "reason": "horizontal sheet join at py~738 (line + tint step; not reported by the tool)"
+  },
+  {
+   "px0": 542,
+   "py0": 0,
+   "px1": 550,
+   "py1": 1024,
+   "reason": "vertical sheet join at px~546 (line + tint step; reported weak by the tool only for y 768-1024)"
+  },
+  {
+   "px0": 455,
+   "py0": 1010,
+   "px1": 485,
+   "py1": 1024,
+   "reason": "21·7 ends 2-3 px above the south edge; its dot may lie south of the edge"
+  }
+ ]
+}

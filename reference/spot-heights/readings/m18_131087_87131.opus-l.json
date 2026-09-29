@@ -1,0 +1,258 @@
+{
+ "mosaic": "m18_131087_87131",
+ "reader": "opus-l",
+ "area": "Upton Lane, West Ham Park (east side, Park Lodge), St Peter's Church, Lancaster Road, St Anthony's R.C. Church and schools, road along the Parliamentary Borough / Ward boundary (West Ham)",
+ "method": "Second attempt. On the first attempt every image returned [media removed: request limit] and was NOT seen; that file was withdrawn. On this attempt the 9 sweep crops (2x) r0c0-r2c2 and contact sheets A, B, C, D, E, F (6-30x zoom panels, each labelled with its mosaic window, made with a helper in my scratch directory) were re-opened one at a time and every one displayed, as did comparison panel X (14x, 32·4 here and in m18_131090_87134). The top 256 px are the same tiles as the bottom of m18_131087_87128 (py offset 768) and agree with my reading there. Every value confirmed at 7x or more.",
+ "legibility": "good; horizontal sheet join confirmed by eye at py ~180 (tint step, paler below); no vertical join seen. Boundary dash-dot lines (C.R./Ward boundary down Upton Lane, Parly. Boro. & Ward boundary along the southern road) hide survey dots",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 34.8,
+   "raw": "34·8",
+   "px": 435,
+   "py": 28,
+   "confidence": "medium",
+   "notes": "Upton Lane at Meggs' Almshouses (same pixels as m18_131087_87128 435,796); last digit 8 at 20-30x; dot at 422,27 lies in the Ward boundary dashes, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.5,
+   "raw": "35·5",
+   "px": 437,
+   "py": 188,
+   "confidence": "medium",
+   "notes": "Upton Lane at Lancaster Road, just below the py~180 sheet join; both 5s flat-topped at 20x; dot at 425,187 in the boundary dash line, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 36.86,
+   "raw": "B.M.36·86",
+   "px": 666,
+   "py": 164,
+   "confidence": "low",
+   "notes": "house front, north side of Lancaster Road; pheon left of text at 666,164; last digit ambiguous 6/5/8 at 20-30x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 626,
+   "py": 189,
+   "confidence": "medium",
+   "notes": "Lancaster Road; figures 600-617,192 (6 at 20-30x); the only dot is at 626,189 between the L and A of L·ANCASTER (the other letters carry no interpuncts); taken as survey dot but may be lettering"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 36.42,
+   "raw": "B.M.36·42",
+   "px": 988,
+   "py": 67,
+   "confidence": "low",
+   "notes": "building corner, Khedive Road; pheon (downward) at 988,67; second digit 6 at 2x/16x but 30x shows a loop that could make it 8 (38·42); flag for review"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 958,
+   "py": 56,
+   "confidence": "low",
+   "notes": "Khedive Road; dot at 958,56 between E and D of KHEDIVE (possible interpunct); last digit 6, 8 possible"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.0,
+   "raw": "34·0",
+   "px": 975,
+   "py": 166,
+   "confidence": "medium",
+   "notes": "Khedive Road south end; dot at 975,166 between V and E of KHEDIVE (possible interpunct); 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 774,
+   "py": 181,
+   "confidence": "high",
+   "notes": "Lancaster Road by St Anthony's R.C. Church; dot left of figures just below the py~180 join; 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.5,
+   "raw": "33·5",
+   "px": 1001,
+   "py": 305,
+   "confidence": "high",
+   "notes": "road east of St Anthony's (Khedive Road continuation) by L.B; dot left of figures at 1001,305; figures end at px ~1021, whole at 20-30x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.0,
+   "raw": "33·0",
+   "px": 428,
+   "py": 419,
+   "confidence": "medium",
+   "notes": "Upton Lane by St Peter's Church; figures 415-431,411 (italic 3s with looped tops, compared at 30x with 33·5); dot at 428,419 sits beside the O of the spaced U-P-T-O-N lettering and may be lettering; at 30x the 3s have looped tops like the 3s of 33·5 and B.M.33·61 on this sheet, 35·0 considered and rejected"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.3,
+   "raw": "30·3",
+   "px": 107,
+   "py": 511,
+   "confidence": "high",
+   "notes": "West Ham Park, path west of the triangle; dot below figures; 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.9,
+   "raw": "29·9",
+   "px": 226,
+   "py": 585,
+   "confidence": "medium",
+   "notes": "West Ham Park, on the path running south-east; no dot found at 8x, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.61,
+   "raw": "B.M.33·61",
+   "px": 387,
+   "py": 578,
+   "confidence": "high",
+   "notes": "Park Lodge wall on Upton Lane; pheon left of the C.R. lettering at 387,578 (7x); digits 33·61 at 18-30x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.2,
+   "raw": "31·2",
+   "px": 385,
+   "py": 642,
+   "confidence": "medium",
+   "notes": "Upton Lane south of the Lodge; dot at 374,641 is part of the C.R./Ward boundary dash-dot; isolated dot at 379,625 not accepted; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.6,
+   "raw": "29·6",
+   "px": 313,
+   "py": 847,
+   "confidence": "medium",
+   "notes": "Upton Lane by the Baptist Chapel; last digit 6 (open top) at 18x; dot at 298,847 follows a boundary dash, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.2,
+   "raw": "31·2",
+   "px": 703,
+   "py": 983,
+   "confidence": "medium",
+   "notes": "road along the Division of Parly. Boro. & Ward Bdy. line (south edge); dot at 700,976 lies between boundary dashes, position = centre of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.7,
+   "raw": "30·7",
+   "px": 480,
+   "py": 1018,
+   "confidence": "medium",
+   "notes": "same road near the south edge; digits clear at 8x, bottom of figures at py ~1023, 1 px from the edge; dot at 476,1011 lies between boundary dashes, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.4,
+   "raw": "32·4",
+   "px": 892,
+   "py": 952,
+   "confidence": "medium",
+   "notes": "same road east, below 'Parly.'; 14x shows two dots: the full stop of 'Parly.' at 885,949 and a separate dot at 892,952 directly above the figures, taken as the survey dot (confirmed on the same pixels in m18_131090_87134); medium because the dot sits close to the lettering"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.15,
+   "raw": "B.M.33·15",
+   "px": 804,
+   "py": 979,
+   "confidence": "medium",
+   "notes": "building south side of the boundary road near the P.H.; broad-arrow pheon with apex at 804,979 (16x), about 25 px left of the text; digits 33·15 at 18x, second digit a looped-top italic 3 like the others (8 would give an implausible 38·15)"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle at ~188,496 in West Ham Park with no figure",
+  "Fn. (fountain) at ~255,716; Drinking Fountains at ~110,640",
+  "L.B at ~982,296",
+  "F.P. and H marks"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 174,
+   "px1": 1024,
+   "py1": 186,
+   "reason": "horizontal sheet join; 1-2 px offsets"
+  },
+  {
+   "px0": 465,
+   "py0": 1012,
+   "px1": 490,
+   "py1": 1024,
+   "reason": "30·7 ends 1 px from the south edge; recorded, but check against the mosaic below"
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+  "mosaic": "m18_131084_87155",
+  "reader": "opus-ad",
+  "area": "Canning Town east / Custom House: Star Lane, Edward, Alexandra and Fisher Streets, Forty Acre Lane, the E-W '..N ROAD' with Corner, Richard, Bradley and Edwin Streets and Cherry Island to the south; open drained marsh east of x~640",
+  "method": "Overview (0.625x) and sweep crops r0c0..r2c2 (2x) all displayed, anchored at opening (overview STAR LANE/FORTY ACRE LANE; r0c0 STAR LANE, P.H., EDWARD, ALEXANDRA; r0c1 STAR LANE + join x~637 + triangle; r0c2 FORTY ACRE LANE + ditch loop; r1c0 FISHER STREET; r1c1 B.M.5·96 + fields; r1c2 open marsh + E-W boundary; r2c0 R·O·A·D + CHERRY ISLAND; r2c1 RICHARD STREET + School; r2c2 RICHARD STREET vertical + loop track). Contact sheets cs1, cs2, cs4 (8x +-16), cs3 (12x +-12), cs5 (12x +-14), cs6 (8x +-24 B.M.s), cs7 (7x +-16), zoom 230,770 (4x +-110, ROAD interpuncts); all displayed. Marker sheet checked.",
+  "legibility": "Clear; vertical sheet join at px ~637 (strong line and tint step, lighter paper east) and horizontal join at py ~962 across the full width; neither cuts a figure. R·O·A D· lettering interpuncts sit on two figures",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":6.5,"raw":"6·5","px":49,"py":65,"confidence":"medium","setting":"street","notes":"road with rails at the NW corner (south of the ..R lettering); dot is a thickening on the rail line left of the figure"},
+    {"type":"spot","value_ft":5.9,"raw":"5·9","px":135,"py":228,"confidence":"medium","setting":"street","notes":"junction of Edward Street and Alexandra Street; only dot is below-left, possibly the D· after EDWARD; final 9 at 12x"},
+    {"type":"spot","value_ft":6.4,"raw":"6·4","px":221,"py":340,"confidence":"high","setting":"street","notes":"Alexandra Street at Fisher Street, above the B.M.8·86 text; dot below-left of figure, 8x"},
+    {"type":"bench_mark","value_ft":8.86,"raw":"B.M.8·86","px":214,"py":362,"confidence":"low","setting":"building","notes":"pheon below the text on the corner building of Alexandra/Fisher Streets; decimals read 86 at 7x and 12x but the first decimal 8 could be a closed 6 (8·66)"},
+    {"type":"spot","value_ft":4.0,"raw":"4·0","px":586,"py":37,"confidence":"high","setting":"marsh","notes":"unbuilt ground inside a dotted boundary east of the Star Lane terraces, no place word, value < 15; dot left of figure, 8x"},
+    {"type":"spot","value_ft":5.3,"raw":"5·3","px":486,"py":158,"confidence":"high","setting":"street","notes":"Star Lane by a hydrant (H); dot below-left of figure, 8x"},
+    {"type":"spot","value_ft":3.9,"raw":"3·9","px":617,"py":229,"confidence":"high","setting":"street","notes":"west end of Forty Acre Lane at the Star Lane corner, near the survey triangle at (640,180); dot above-left, 8x"},
+    {"type":"spot","value_ft":3.9,"raw":"3·9","px":499,"py":354,"confidence":"high","setting":"street","notes":"Forty Acre Lane continuation SW beside the terrace, above B.M.5·96; dot above figure, 8x"},
+    {"type":"bench_mark","value_ft":5.96,"raw":"B.M.5·96","px":451,"py":383,"confidence":"high","setting":"building","notes":"pheon on the end wall of the terrace; text east; digits clear at 8x"},
+    {"type":"spot","value_ft":3.8,"raw":"3·8","px":796,"py":24,"confidence":"high","setting":"street","notes":"Forty Acre Lane NE of the H; dot left of figure; final 8 plainly differs from the leading 3 at 12x"},
+    {"type":"spot","value_ft":5.1,"raw":"5·1","px":289,"py":446,"confidence":"medium","setting":"street","notes":"south end of Alexandra Street where it opens to the curving road; dot 18 px right of figure beside the dotted kerb, not distinct at 7x"},
+    {"type":"spot","value_ft":4.4,"raw":"4·4","px":369,"py":548,"confidence":"high","setting":"street","notes":"curving road running south from Forty Acre Lane; dot above figure, 8x"},
+    {"type":"spot","value_ft":7.8,"raw":"7·8","px":43,"py":776,"confidence":"high","setting":"street","notes":"the E-W ROAD, west end; dot left of figure; final 8 at 12x"},
+    {"type":"bench_mark","value_ft":10.05,"raw":"B.M.10·05","px":33,"py":797,"confidence":"high","setting":"building","notes":"pheon on the front of the building south of the road; text above; digits clear at 8x"},
+    {"type":"spot","value_ft":7.5,"raw":"7·5","px":152,"py":773,"confidence":"medium","setting":"street","notes":"ROAD; the only dot is the R·O interpunct of R·O·A D·; flat-topped 5"},
+    {"type":"spot","value_ft":7.4,"raw":"7·4","px":213,"py":771,"confidence":"medium","setting":"street","notes":"ROAD; the only dot is the O·A interpunct of R·O·A D·"},
+    {"type":"spot","value_ft":6.9,"raw":"6·9","px":328,"py":767,"confidence":"medium","setting":"street","notes":"ROAD; dot is the D· after ROAD (can be the survey dot); final 9 at 12x"},
+    {"type":"spot","value_ft":7.5,"raw":"7·5","px":434,"py":766,"confidence":"high","setting":"street","notes":"ROAD at the head of Corner Street; separate dot above-left, the F.P. below has its own dot; 8x"},
+    {"type":"spot","value_ft":7.0,"raw":"7·0","px":88,"py":840,"confidence":"high","setting":"street","notes":"road south of ROAD by the triangular enclosure; dot above-left; 0 is an upright oval at 12x"},
+    {"type":"spot","value_ft":6.2,"raw":"6·2","px":120,"py":992,"confidence":"high","setting":"street","notes":"passage/street south of the py~962 join near Cherry Island; dot above figure, 12x"},
+    {"type":"spot","value_ft":7.8,"raw":"7·8","px":591,"py":759,"confidence":"high","setting":"street","notes":"ROAD above the Richard Street terrace; dot left of figure; final 8 at 8x"},
+    {"type":"bench_mark","value_ft":10.17,"raw":"B.M.10·17","px":623,"py":781,"confidence":"high","setting":"building","notes":"pheon on the front of the terrace on the south side of ROAD; text above; digits clear at 8x"},
+    {"type":"spot","value_ft":7.9,"raw":"7·9","px":649,"py":755,"confidence":"high","setting":"street","notes":"ROAD at the head of Richard Street, just east of the x~637 join; dot above-left, 8x"},
+    {"type":"spot","value_ft":8.3,"raw":"8·3","px":790,"py":750,"confidence":"high","setting":"street","notes":"ROAD continuing east across the marsh; dot above-left; final 3 differs from the leading 8, 8x"}
+  ],
+  "non_height_marks": ["F.P. at (45,43), (308,105), (345,262), (124,237), (200,370), (298,465), (33,761), (135,807), (80,829), (425,783), (345,977)", "H (hydrant) at (498,143), (765,17), (672,784)", "survey triangle at (640,180)", "L.B. at (8,120)", "speck at (734,876), no figure"],
+  "unreadable_regions": [
+    {"px0":1012,"py0":742,"px1":1024,"py1":762,"reason":"figure beginning '8' with its dot at (1019,746) cut by the east edge"}
+  ]
+}

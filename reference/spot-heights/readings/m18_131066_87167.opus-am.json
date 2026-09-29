@@ -1,0 +1,453 @@
+{
+ "mosaic": "m18_131066_87167",
+ "reader": "opus-am",
+ "area": "Poplar / Blackwall: Naval Row, Quixley/Harrap/Scouler/Prestage Streets, East India Dock Wall Road, Poplar Station, Brunswick Street, Leicester/Gaselee Streets, Poplar Dock (M.R.), GNR goods depot, Blackwall Yard graving docks",
+ "method": "Independent QA second read. Viewed all 9 sweep crops (2x) with anchors noted on opening (r0c0 NAVAL ROW/Shipwrights Terrace; r0c1 HARRAP/SCOULER/QUIXLEY STREET; r0c2 DOCK WALL ROAD/Great Northern Railway Goods Depot; r1c0 Poplar Station/LEICESTER STREET; r1c1 PRESTAGE STREET/Smithy; r1c2 Blackwall Yard/LONDON & BLACKWALL; r2c0 GASELEE STREET/Crane; r2c1 POPLAR DOCK (M.R.)/Saw Pit; r2c2 GRAVING DOCK/Caisson). 5-8x region views of every candidate (19 regions, anchors noted), contact sheets cs_s1 (8x), cs_s1c (12x), cs_s2 (8x), cs_bm1 (12x), cs_bm1b (7x), cs_bm1c (18x), cs_bm2 (12x), cs_bm2b/c (8-12x), cs_ph (8x pheon sheet), and a marker sheet. Every crop and contact sheet displayed when opened.",
+ "legibility": "Good; small italic figures 6 px tall. Sheet join: vertical line at px ~52-54 running full height (tool reports px ~49). Some figures sit next to interpunct lettering (PRESTAGE STREET gap dot, DOCK WALL ROAD dot before R, BRUNSWICK).",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 13.4,
+   "raw": "13·4",
+   "px": 163,
+   "py": 188,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "open junction west of Naval Row; dot upper-left of figure; 6x region + 8x panel"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.5,
+   "raw": "16·5",
+   "px": 3,
+   "py": 227,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road entering from west edge (Poplar High Street side); dot left of figure at x~3; flat-topped 5 at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 12.04,
+   "raw": "B.M.12·04",
+   "px": 266,
+   "py": 221,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon at corner of houses at Naval Row south end; 12x decimals clear"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.0,
+   "raw": "12·0",
+   "px": 259,
+   "py": 322,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "west side of Naval Row South block (Brunswick St); dot above figure; oval 0 at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.06,
+   "raw": "B.M.14·06",
+   "px": 418,
+   "py": 379,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "on house wall in Shipwrights Terrace block; pheon below text; open-topped 6 at 18x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.51,
+   "raw": "B.M.8·51",
+   "px": 27,
+   "py": 397,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner at west street near left edge; pheon below text; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.7,
+   "raw": "7·7",
+   "px": 11,
+   "py": 410,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street at west edge below B.M.8·51; no dot found; figure starts ~3 px from edge so a leading digit cannot be fully excluded; position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.6,
+   "raw": "9·6",
+   "px": 421,
+   "py": 118,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "under E of EAST (East India Dock Wall Road / Naval Row); final 6 at 6x but closes to 8 at 12x (9·8 possible); no separate dot, position = centre"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.22,
+   "raw": "B.M.22·22",
+   "px": 470,
+   "py": 5,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on gate/wall structure of East India Dock premises near top edge; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.2,
+   "raw": "20·2",
+   "px": 527,
+   "py": 75,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "dock premises north of Dock Wall Road; dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.67,
+   "raw": "B.M.17·67",
+   "px": 671,
+   "py": 100,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "pheon in the carriageway of East India Dock Wall Road under the D of DOCK, on the kerb line south of the dock wall; no wall drawn at the point (kerb/post)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.4,
+   "raw": "19·4",
+   "px": 701,
+   "py": 56,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "dock premises north of the dock wall; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 733,
+   "py": 101,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "south side of Dock Wall Road by posts; no dot found, position = centre; final 8 closed, distinct from the 6"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.0,
+   "raw": "13·0",
+   "px": 589,
+   "py": 127,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "corner of Naval Row and Quixley Street; dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.4,
+   "raw": "19·4",
+   "px": 856,
+   "py": 7,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "dock premises north of the dock wall near top edge; dot left of figure; figure whole"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.5,
+   "raw": "19·5",
+   "px": 872,
+   "py": 31,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Dock Wall Road; second digit 9 vs 0 not settled at 8x/12x; only nearby dot is the interpunct before R of ROAD, used as position"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.0,
+   "raw": "19·0",
+   "px": 970,
+   "py": 49,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Dock Wall Road near F.P.; dot between F.P and figure (F.P has its own dot at 948,52)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.58,
+   "raw": "B.M.20·58",
+   "px": 1005,
+   "py": 53,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "pheon on gate pier/wall of the dock entrance at east; 5 flat-topped and 8 closed at 18x, unclear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.6,
+   "raw": "9·6",
+   "px": 619,
+   "py": 256,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Quixley Street, west side; open-topped 6 at 8x; dot upper-right between rotated E and Y (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.7,
+   "raw": "9·7",
+   "px": 652,
+   "py": 381,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "south end of Quixley Street at Prestage Street; dot upper-right"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.57,
+   "raw": "B.M.11·57",
+   "px": 664,
+   "py": 376,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on corner of the goods depot boundary wall at Quixley St; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.8,
+   "raw": "10·8",
+   "px": 498,
+   "py": 409,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Prestage Street; closed 8 at 8x; only dot is the gap-dot between E and S of PRESTAGE STREET"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 275,
+   "py": 447,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Brunswick Street north of Poplar Station; dot upper-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.34,
+   "raw": "B.M.8·34",
+   "px": 167,
+   "py": 507,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "pheon on building corner by the railway west of Poplar Station; leading digit renders S-like, reads 8 at 8x; decimals 34 clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.67,
+   "raw": "B.M.19·67",
+   "px": 11,
+   "py": 567,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "pheon on the railway bridge/abutment where the Blackwall line crosses the street at the west edge, by S.B.; text starts at x~1 (edge) but figure appears whole"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.6,
+   "raw": "19·6",
+   "px": 318,
+   "py": 595,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "east side of Brunswick Street over the railway lines by Smithy (street 15·7/16·3 either side); no dot of its own, position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 285,
+   "py": 676,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Brunswick Street at Leicester Street; only nearby dot is above the S of BRUNSWICK (interpunct?), position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.2,
+   "raw": "9·2",
+   "px": 211,
+   "py": 705,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "corner of Leicester Street and Gaselee Street, written just inside block corner; no dot found, position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.1,
+   "raw": "11·1",
+   "px": 56,
+   "py": 712,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street at north end of Preston's Road by west join; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.1,
+   "raw": "10·1",
+   "px": 353,
+   "py": 892,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "Poplar Dock goods yard just east of Brunswick Street wall; no dot found, position = centre"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.51,
+   "raw": "B.M.13·51",
+   "px": 360,
+   "py": 999,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on wall/gate pier at Brunswick Street entrance to Poplar Dock; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.1,
+   "raw": "15·1",
+   "px": 917,
+   "py": 484,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "Blackwall Yard at head of graving dock under LONDON & BLACKWALL lettering; no dot, position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.9,
+   "raw": "15·9",
+   "px": 983,
+   "py": 602,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "Blackwall Yard between graving docks among Mooring Posts lettering; dot right-below figure could be a mooring-post interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 941,
+   "py": 873,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "dock entrance wall by Caisson; no own dot (wall vertex at 934,864 nearby), position = left part of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.63,
+   "raw": "B.M.17·63",
+   "px": 882,
+   "py": 939,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "pheon on the dock/river wall below the Caisson; 12x, final open 3"
+  }
+ ],
+ "non_height_marks": [
+  "many S.P. (signal posts) on railway lines",
+  "F.P. marks along Naval Row, Quixley St, Leicester St, Gaselee St",
+  "W.M. at 750,210",
+  "Cn (crane) marks in Blackwall Yard",
+  "\"Crane\" label at ~10,935",
+  "Mooring Posts lettering in Blackwall Yard"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 822,
+   "px1": 12,
+   "py1": 836,
+   "reason": "figure \"?7·3\" cut by west edge (leading digit may be missing); read in western neighbour"
+  },
+  {
+   "px0": 0,
+   "py0": 584,
+   "px1": 20,
+   "py1": 600,
+   "reason": "B.M.19·67 text begins at the west edge; recorded but check against neighbour"
+  },
+  {
+   "px0": 0,
+   "py0": 400,
+   "px1": 20,
+   "py1": 416,
+   "reason": "7·7 begins ~3 px from west edge; recorded but a leading digit cannot be excluded"
+  },
+  {
+   "px0": 48,
+   "py0": 0,
+   "px1": 58,
+   "py1": 1024,
+   "reason": "vertical sheet join at px ~52-54"
+  }
+ ]
+}

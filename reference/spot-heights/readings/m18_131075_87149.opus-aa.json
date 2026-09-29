@@ -1,0 +1,22 @@
+{
+  "mosaic": "m18_131075_87149",
+  "reader": "opus-aa",
+  "area": "Marsh north of Canning Town toward Abbey Mills / West Ham: the G.E.R. lines and the road beside them (west), a road bridge over the railway, a grid of laid-out (dotted-edge) streets on open marsh in the north, drainage ditches (blue) crossing the south-east",
+  "method": "sheet tool; 9 sweep crops at 2x, each anchored on opening (r0c0 vertical 'O A D' lettering and railway; r0c1 B.M.6·16 and dotted street grid; r0c2 street corners and heavy boundary; r1c0 road crossing the railway, triangle; r1c1 blue ditch; r1c2 ditch with branch; r2c0 B.M.7·02 and join py ~768; r2c1 ditch ending at the join; r2c2 ditch fork). Contact sheets d1 (8x +-18) and d2 (12x +-13, pheon and 6/8 checks). Every crop and sheet displayed when opened. Dots from a centroid helper, checked on a marker sheet.",
+  "legibility": "Clear. Horizontal sheet join at py ~768 (strong tint step over the full width; south of it the ditches are drawn uncoloured as double lines, so the lower sheet is a different printing); vertical join / tint step along the strong line at px ~349-351 (north of py 768). The 6·4 at 351,72 sits against the vertical line but reads cleanly.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":6.4,"raw":"6·4","px":351,"py":72,"confidence":"high","setting":"street","notes":"corner of a laid-out dotted-edge street on open marsh, dot just east of the heavy vertical boundary line (join); 8x/12x"},
+    {"type":"bench_mark","value_ft":6.16,"raw":"B.M.6·16","px":517,"py":70,"confidence":"high","setting":"other","notes":"pheon pointing east lying on the dotted street-edge line, no wall or building drawn (kerb or post); text 10-40 px east; both 6s alike at 12x"},
+    {"type":"spot","value_ft":6.4,"raw":"6·4","px":546,"py":84,"confidence":"high","setting":"street","notes":"head of the N-S laid-out street at its junction with the E-W street; dot above; 8x"},
+    {"type":"spot","value_ft":6.5,"raw":"6·5","px":628,"py":92,"confidence":"high","setting":"street","notes":"E-W laid-out street; dot above-left; flat-topped 5 at 8x"},
+    {"type":"spot","value_ft":20.8,"raw":"20·8","px":95,"py":608,"confidence":"medium","setting":"bridge","notes":"east end of the road bridge carrying the E-W road over the railway lines, beside a survey triangle at 111,614; dot above; final digit closed-topped 8 at 8x/12x but a 6 cannot be excluded"},
+    {"type":"spot","value_ft":11.7,"raw":"11·7","px":61,"py":822,"confidence":"high","setting":"street","notes":"road beside the G.E.R., south of the join (overlap strip with the mosaic to the south); dot above; 8x"},
+    {"type":"bench_mark","value_ft":7.02,"raw":"B.M.7·02","px":55,"py":986,"confidence":"high","setting":"building","notes":"pheon pointing east onto the west wall of the long narrow building by the road; text east (overlap strip); 8x"},
+    {"type":"spot","value_ft":6.1,"raw":"6·1","px":40,"py":998,"confidence":"high","setting":"street","notes":"road beside the G.E.R. at a side-lane entrance (overlap strip); dot above-left; 8x"}
+  ],
+  "non_height_marks": ["S.P. marks at 55,165, 10,280, 90,280", "H at 140,265", "survey triangle at 111,614", "speck in the ditch at 933,662"],
+  "unreadable_regions": [
+    {"px0":1016,"py0":0,"px1":1024,"py1":16,"reason":"isolated survey dot at 1022,9 whose figure lies beyond the east edge"}
+  ]
+}

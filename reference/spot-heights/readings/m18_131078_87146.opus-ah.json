@@ -1,0 +1,272 @@
+{
+ "mosaic": "m18_131078_87146",
+ "reader": "opus-ah",
+ "area": "Plaistow Level east of Manor Road: open marsh with fences and ditches, Merton Road and a new terrace street, sluices",
+ "method": "sheet; sweep 9 crops at 2x with anchors recorded at opening (r0c0 L A I, r0c1 I S + ditch, r0c2 EAST / S T O, r1c0 MERTON ROAD / ditch fork, r1c1 I S / MERTON ROAD, r1c2 S T O / dotted circle, r2c0 Sluices / MERTON ROAD, r2c1 Sluices / B.M.8·16, r2c2 ..OAD / P.H.); 6x position sheets csA-csD, 8x digit sheet csE, 12x bench-mark sheet csF, 7x csG and nearest csGnn for 6/8, region view regJ (3x) for the reported join; numeric dot centroids; marker sheet. All crops and sheets displayed when opened.",
+ "legibility": "clear, sparse marsh; sheet tool reports a horizontal join at py ~726 (x 512-1024) but by eye it is the terrace hatching, no join line seen",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 4.25,
+   "raw": "B.M.4·25",
+   "px": 99,
+   "py": 194,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "fence: pheon at the east end of the E-W fence line across Plaistow Level; decimals at 12x on the neighbouring mosaic and 6x here"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 143,
+   "py": 195,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, open marsh east of the fence end; dot left of figure; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.1,
+   "raw": "5·1",
+   "px": 359,
+   "py": 184,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level open marsh; dot above-left; flat-topped 5 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.0,
+   "raw": "4·0",
+   "px": 592,
+   "py": 165,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, tick on the west bank of the N-S ditch; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.4,
+   "raw": "4·4",
+   "px": 609,
+   "py": 345,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, tick on the west bank of the N-S ditch by the S of PLAISTOW; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.2,
+   "raw": "4·2",
+   "px": 221,
+   "py": 519,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, dot on the bank of the curving ditch; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 418,
+   "py": 499,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, dot on the north bank of the E-W ditch; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.7,
+   "raw": "4·7",
+   "px": 580,
+   "py": 508,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, dot on the north bank of the E-W ditch near its corner; 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.13,
+   "raw": "B.M.6·13",
+   "px": 613,
+   "py": 513,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "ditch corner / fence: pheon at the corner where the E-W ditch turns north, fence line running south; text 30 px east; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.3,
+   "raw": "3·3",
+   "px": 268,
+   "py": 657,
+   "confidence": "medium",
+   "setting": "marsh",
+   "notes": "Plaistow Level south of the ditch junction by the sluice house; both digits identical (matching digits = 3); no separate dot (only the ditch/fence junction at 264,651), position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.58,
+   "raw": "B.M.5·58",
+   "px": 267,
+   "py": 700,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "sluice house by the ditch junction west of Merton Road; pheon at its SW corner, text to the west; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.1,
+   "raw": "6·1",
+   "px": 116,
+   "py": 733,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level open marsh; dot above figure; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.3,
+   "raw": "6·3",
+   "px": 254,
+   "py": 776,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "field corner between dotted fences west of Merton Road, beside survey triangle; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 434,
+   "py": 764,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Merton Road at its junction with the E-W street; dot above-left; 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.16,
+   "raw": "B.M.8·16",
+   "px": 640,
+   "py": 732,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "front of the long terrace on the E-W street east of Merton Road, pheon at the foot of a passage between houses; leading 8 closed and unlike the final open 6 at 6x, 7x, 12x and nearest-neighbour, but 5 ft above the 3·2 street beside it, so flagged"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.2,
+   "raw": "3·2",
+   "px": 662,
+   "py": 751,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "E-W street east of Merton Road, between the kerb lines; dot left of figure; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 861,
+   "py": 741,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same E-W street further east; dot left of figure; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 942,
+   "py": 851,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "curving road (..OAD) in the SE, between the dotted kerbs; dot above figure; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 2.9,
+   "raw": "2·9",
+   "px": 338,
+   "py": 950,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "tick on the east bank of the N-S ditch south of the Sluices; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 850,
+   "py": 1008,
+   "confidence": "medium",
+   "setting": "marsh",
+   "notes": "open ground just east of the curving road edge near the south edge; no dot found, position = centre of figures"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangle at ~302,760 with no figure",
+  "P.H. with survey triangle at ~1004,762, no figure",
+  "F.P. at 558,751, 990,727, 850,829",
+  "Sluices label ~370,885"
+ ],
+ "unreadable_regions": []
+}

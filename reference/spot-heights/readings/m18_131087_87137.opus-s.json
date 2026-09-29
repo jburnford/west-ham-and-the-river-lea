@@ -1,0 +1,271 @@
+{
+ "mosaic": "m18_131087_87137",
+ "reader": "opus-s",
+ "area": "Plaistow north-east: Milton Road, Upford Road, Selwyn Road, Charlton/Chapman Roads, Pelly Road and its bridge over the London Tilbury & Southend Railway, Terrace Road, Grafton Road South, Stanley Street, Watson Street",
+ "method": "Independent second read (no other reader file consulted). Viewed full mosaic, all 9 sweep crops (2x; anchors in notes: r0c0 MILTON ROAD/Mission Room, r0c1 (U)PFORD ROAD, r0c2 SELWYN ROAD/B.M.28·13, r1c0 B.M.26·92/B.M.26·63/P.H., r1c1 T E R R A C E/B.M.27·93, r1c2 SOUTHEND RAILWAY/Silk Mill, r2c0 Meth. Chap. (United Free)/B.M.31·12, r2c1 STANLEY STREET/RADNOR, r2c2 WATSON STREET), then contact sheets cs1 (6x), cs2 (12x), cs2b (blocky 10x), cs3 (9x), cs4 (6x), cs5 (12x), cs6 (9x), cs6b (blocky), cs7 (6x), cs8 (12x), cs9 (12x), cs9b (blocky), cs10 (12x) and marker sheet mk (8x panel on every recorded position; 6 positions corrected by 1-12 px), then re-checked with mk2. Every crop and contact sheet displayed when opened. Leading digits confirmed at 12x.",
+ "legibility": "good; horizontal sheet join (tint step) at py ~377-383 across the full width; no vertical join seen by eye (sheet tool reports px ~395/792/894/983, which look like terrace hatching/tint differences)",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 25.8,
+   "raw": "25·8",
+   "px": 224,
+   "py": 152,
+   "confidence": "low",
+   "notes": "Milton Road east side, north of Charlton Road; final digit 3 or 8 (8-like blocky, 3-like at 9x); nearest dot 201,158 is across the kerb line; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.1,
+   "raw": "25·1",
+   "px": 219,
+   "py": 325,
+   "confidence": "high",
+   "notes": "Milton Road at Charlton Road; dot right of figure; clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 28.13,
+   "raw": "B.M.28·13",
+   "px": 961,
+   "py": 33,
+   "confidence": "high",
+   "notes": "road east of Selwyn Road, north end; pheon right of text on wall; digits clear at 9x/12x (final 3 open)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.6,
+   "raw": "25·6",
+   "px": 951,
+   "py": 114,
+   "confidence": "medium",
+   "notes": "road east of Selwyn Road; dot above figure; final 6 at 6x, 9x and 12x, blocky inconclusive"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.0,
+   "raw": "25·0",
+   "px": 961,
+   "py": 236,
+   "confidence": "high",
+   "notes": "road east of Selwyn Road; dot above figure; clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 26.92,
+   "raw": "B.M.26·92",
+   "px": 79,
+   "py": 442,
+   "confidence": "high",
+   "notes": "Chapman Road / Milton Road corner; pheon on building corner NE of text; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.1,
+   "raw": "25·1",
+   "px": 96,
+   "py": 453,
+   "confidence": "high",
+   "notes": "Milton Road at Chapman Road; dot above figure; clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 26.63,
+   "raw": "B.M.26·63",
+   "px": 248,
+   "py": 448,
+   "confidence": "medium",
+   "notes": "Pelly Road west side; pheon on wall ~35 px NE of text across the road; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.6,
+   "raw": "24·6",
+   "px": 247,
+   "py": 535,
+   "confidence": "low",
+   "notes": "Pelly Road, yard corner east of road; final digit 6 at 12x (G-shaped) but 8 at 6x, blocky inconclusive; dot 20 px left in the road taken as survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.6,
+   "raw": "23·6",
+   "px": 112,
+   "py": 631,
+   "confidence": "high",
+   "notes": "road north of Milton Street; dot below figure; clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.1,
+   "raw": "24·1",
+   "px": 251,
+   "py": 657,
+   "confidence": "medium",
+   "notes": "Pelly Road by P.H.; dot above figure directly after an F.P., could be the F.P. dot; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.9,
+   "raw": "24·9",
+   "px": 368,
+   "py": 670,
+   "confidence": "high",
+   "notes": "junction of Pelly Road and Terrace Road (tree-lined corner); dot left of figure; clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.3,
+   "raw": "26·3",
+   "px": 276,
+   "py": 768,
+   "confidence": "medium",
+   "notes": "Pelly Road opposite the United Free Methodist Chapel; dot immediately right of figure taken as survey dot (another dot 256,775); digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.5,
+   "raw": "28·5",
+   "px": 238,
+   "py": 843,
+   "confidence": "medium",
+   "notes": "Pelly Road bridge approach north of the LT&SR; no survey dot found, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 31.12,
+   "raw": "B.M.31·12",
+   "px": 265,
+   "py": 857,
+   "confidence": "high",
+   "notes": "Pelly Road bridge over the LT&SR, parapet; pheon NE of text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.8,
+   "raw": "25·8",
+   "px": 260,
+   "py": 960,
+   "confidence": "medium",
+   "notes": "Pelly Road south of the railway; dot after the R of R·O·A·D (interpunctuated lettering) taken as survey dot; closed 8 in blocky and 9x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.7,
+   "raw": "19·7",
+   "px": 83,
+   "py": 990,
+   "confidence": "high",
+   "notes": "Grafton Road South; dot left of figure; clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.35,
+   "raw": "B.M.22·35",
+   "px": 133,
+   "py": 985,
+   "confidence": "high",
+   "notes": "Grafton Road South; pheon on wall NW of text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.7,
+   "raw": "25·7",
+   "px": 573,
+   "py": 599,
+   "confidence": "medium",
+   "notes": "Terrace Road; dot below figure between the two Rs of T·E·R·R·A·C·E (interpunctuated lettering); digits clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 27.93,
+   "raw": "B.M.27·93",
+   "px": 656,
+   "py": 583,
+   "confidence": "high",
+   "notes": "Terrace Road south side; pheon on wall ~45 px W of text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.8,
+   "raw": "25·8",
+   "px": 776,
+   "py": 524,
+   "confidence": "medium",
+   "notes": "Terrace Road; dot right of figure before the R of ROAD, may be lettering interpunct; closed 8 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.3,
+   "raw": "25·3",
+   "px": 979,
+   "py": 448,
+   "confidence": "high",
+   "notes": "Terrace Road east end; dot left of figure; final 3 clear at 12x"
+  }
+ ],
+ "non_height_marks": [
+  "B.R. (or B.P.) at 686,706 on the LT&SR embankment",
+  "F.P. marks throughout",
+  "H hydrant marks on Pelly Road",
+  "survey-station triangles at 234,631 and 270,973 with no figure",
+  "P.O. at 272,815"
+ ],
+ "unreadable_regions": []
+}

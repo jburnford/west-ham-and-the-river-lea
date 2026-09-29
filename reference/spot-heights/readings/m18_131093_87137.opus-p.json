@@ -1,0 +1,30 @@
+{
+  "mosaic": "m18_131093_87137",
+  "reader": "opus-p",
+  "area": "Plaistow north / Upton Park east: Harold Road north of the LT&SR railway, tree-lined road south of the railway with P.H., Prince's Terrace, St. Mary's Road, W.E.S.T. street, 'NORTHE...' road, open land with Waghorn, Orwell and Ravenhill Roads laid out; Down/Up Platform of a station at the NE corner",
+  "method": "Viewed full 1024 px mosaic (anchor: Harold Road, Waghorn Road), then all 9 sweep crops at 2x, each anchored as opened: r0c0 HAROLD road/P.H./A.M.P; r0c1 '...OLD ROAD' and tree-enclosure circle; r0c2 Down/Up Platform; r1c0 ST. MARY'S ROAD/PRINCE'S TERRACE; r1c1 St Mary's Road east/survey triangle; r1c2 WAGHORN ROAD/ORWELL; r2c0 'NORTHE' road/'...ON ROAD'/triangle; r2c1 W.E.S.T. street; r2c2 ORWELL ROAD/RAVENHILL ROAD. Zoom contact sheets (own helper, mosaic-px labels): a 8x (B.M.30.30, 27.9, 28.7, 29.3, 28.1/B.M.30.63, 28.2), b 8x (B.M.26.67, 23.8, 23.2, 23.4, 26.9, 26.6), c 8x (25.2, 24.9, 24.5, west-edge '.2'), d 12x digit checks, e 6x +-40 pheon/dot search, f 10x pheon and dot, g 10x pheon of B.M.30.63; three 2x marker sheets checking every position. Every image displayed when opened.",
+  "legibility": "Clear print; two values have a final 3/8 ambiguity (low). Sheet joins at: horizontal py ~378 from the W edge to px ~933 (line and tint step), vertical px ~933-935 over the full height (strong line, tint change east of it); both confirmed by eye.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"bench_mark","value_ft":30.3,"raw":"B.M.30·30","px":108,"py":250,"confidence":"high","notes":"Harold Road house front; pheon below the text on the building line; same mark as in m18_131090_87137 (offset 768 px)"},
+    {"type":"spot","value_ft":27.9,"raw":"27·9","px":202,"py":192,"confidence":"high","notes":"Harold Road; dot above the 9; 8x"},
+    {"type":"spot","value_ft":28.7,"raw":"28·7","px":403,"py":120,"confidence":"high","notes":"Harold Road after 'D'; isolated dot left of the figure; 8x"},
+    {"type":"spot","value_ft":29.3,"raw":"29·3","px":608,"py":42,"confidence":"low","notes":"Harold Road east; dot above the figure; final digit 3 or 8 at 8x and 12x (looks 3 with a closed lower bowl), alternative 29.8"},
+    {"type":"spot","value_ft":28.1,"raw":"28·1","px":670,"py":272,"confidence":"medium","notes":"tree-lined road south of the railway; raised dot right of the 1, next to the F.P.'s own leading dot at 675,276; 12x"},
+    {"type":"bench_mark","value_ft":30.63,"raw":"B.M.30·6?","px":688,"py":284,"confidence":"low","notes":"text below 28.1 above a dotted tree enclosure; final digit 3 or 8 at 12x (alternative 30.68); pheon uncertain: V with shaft on the end-of-terrace corner ~30 px east of the text"},
+    {"type":"spot","value_ft":28.2,"raw":"28·2","px":862,"py":201,"confidence":"medium","notes":"same road further east; dot right of the figure, a second dot at 872,201 belongs to F.P.; 10x"},
+    {"type":"bench_mark","value_ft":26.67,"raw":"B.M.26·67","px":291,"py":575,"confidence":"high","notes":"corner of Prince's Terrace and St. Mary's Road; pheon on the building corner left of the text at 10x; digits clear"},
+    {"type":"spot","value_ft":23.8,"raw":"23·8","px":327,"py":611,"confidence":"medium","notes":"St. Mary's Road south side; closed 8 vs open 3 at 12x; no survey dot (dot above is the R·Y interpunct); position = centre of figures"},
+    {"type":"spot","value_ft":23.2,"raw":"23·2","px":170,"py":628,"confidence":"medium","notes":"St. Mary's Road below 'S T.'; no survey dot (S·T interpunct only); centre of figures; also in m18_131090_87137"},
+    {"type":"spot","value_ft":23.4,"raw":"23·4","px":11,"py":640,"confidence":"high","notes":"St. Mary's Road at W edge; dot left of the figure; figure whole; also in m18_131090_87137"},
+    {"type":"spot","value_ft":26.9,"raw":"26·9","px":587,"py":454,"confidence":"high","notes":"road north-east of St. Mary's Road by the terrace end, south of the py~378 join; dot left of the figure; open-topped 6 at 12x"},
+    {"type":"spot","value_ft":26.6,"raw":"26·6","px":557,"py":501,"confidence":"high","notes":"same road; dot above the figure; both 6s alike at 12x"},
+    {"type":"spot","value_ft":25.2,"raw":"25·2","px":475,"py":560,"confidence":"medium","notes":"St. Mary's Road under 'O·'; flat-topped 5 at 12x; only nearby dot is the O·A interpunct; centre of figures"},
+    {"type":"spot","value_ft":24.9,"raw":"24·9","px":518,"py":760,"confidence":"high","notes":"W.E.S.T. street; dot above the figure; 8x"},
+    {"type":"spot","value_ft":24.5,"raw":"24·5","px":527,"py":947,"confidence":"medium","notes":"W.E.S.T. street by a building corner; digits clear; no survey dot found (dot east is the W·E interpunct); centre of figures"}
+  ],
+  "non_height_marks": ["survey triangles without figures at ~584,608 and ~190,838","S.P. marks at ~720,133 and ~725,153 on the railway","A.M.P at ~100,358","dotted circular tree enclosure at ~648,302"],
+  "unreadable_regions": [
+    {"px0":0,"py0":258,"px1":10,"py1":276,"reason":"figure '·2' cut by the west edge (27·2 of m18_131090_87137)"}
+  ]
+}

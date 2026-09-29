@@ -1,0 +1,238 @@
+{
+ "mosaic": "m18_131096_87125",
+ "reader": "opus-n",
+ "area": "Upton Park / East Ham border: Sherrard Road, Halley Road, Monega Road, Strone Road, South Esk Road, Red Post Lane, unnamed terrace roads in the west half, open field in the east",
+ "method": "sheet tool; all 9 sweep crops r0c0..r2c2 at 2x viewed; contact sheets csA-csC (8x, +/-25 px), csD (12x), nnA (12x nearest+bicubic), csE (16x digit comparison) viewed; marker sheet viewed after writing. Every crop and contact sheet displayed when opened. Three positions nudged by 1-2 px after the marker sheet.",
+ "legibility": "clean print; vertical sheet join at px ~172 over the full height, confirmed by eye (strong tint change, darker paper to the west), no figure crosses it; italic 3/8/9 separation weak",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 33.8,
+   "raw": "B.M.33·80",
+   "px": 79,
+   "py": 4,
+   "confidence": "high",
+   "notes": "north-west corner; pheon right of text on the building line 4 px below the north edge, whole; text at ~20-60,6-14 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 319,
+   "py": 356,
+   "confidence": "low",
+   "notes": "terrace road in the west half (unnamed on this mosaic); dot above-right of figure; final digit 8 vs 3 unresolved at 12-16x (resembles the first 3 of the same figure; could be 31·3)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.4,
+   "raw": "31·4",
+   "px": 119,
+   "py": 421,
+   "confidence": "high",
+   "notes": "next terrace road south, west of the sheet join; dot right of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.6,
+   "raw": "32·6",
+   "px": 679,
+   "py": 33,
+   "confidence": "high",
+   "notes": "Sherrard Road at the cross road; dot after the final D of SHERRARD, before the figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 689,
+   "py": 240,
+   "confidence": "medium",
+   "notes": "Halley Road at the cross road; dot below figure between L and E of H A L L E Y"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.5,
+   "raw": "31·5",
+   "px": 519,
+   "py": 292,
+   "confidence": "high",
+   "notes": "Halley Road west; dot above-right of figure; 5 flat-topped at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.12,
+   "raw": "B.M.35·12",
+   "px": 450,
+   "py": 338,
+   "confidence": "high",
+   "notes": "south side of Halley Road; pheon below the text on the house frontage; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 678,
+   "py": 447,
+   "confidence": "medium",
+   "notes": "Monega Road at the cross road; figure between N and E of M O N E G A with dots on both sides; nearer dot after N taken"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.5,
+   "raw": "31·5",
+   "px": 832,
+   "py": 403,
+   "confidence": "high",
+   "notes": "Monega Road; dot right of figure; 5 flat-topped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.7,
+   "raw": "31·7",
+   "px": 985,
+   "py": 355,
+   "confidence": "high",
+   "notes": "Monega Road east after D of ROAD; dot left of figure; 16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.63,
+   "raw": "B.M.34·63",
+   "px": 641,
+   "py": 582,
+   "confidence": "high",
+   "notes": "corner house of Monega Road / Red Post Lane; pheon left of text on the building; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 680,
+   "py": 658,
+   "confidence": "high",
+   "notes": "Red Post Lane between R and E; dot directly above figure; final 8 clearly closed at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.4,
+   "raw": "30·4",
+   "px": 397,
+   "py": 949,
+   "confidence": "high",
+   "notes": "South Esk Road; dot left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 32.97,
+   "raw": "B.M.32·97",
+   "px": 417,
+   "py": 970,
+   "confidence": "high",
+   "notes": "corner of South Esk Road; pheon right of text on the frontage; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.7,
+   "raw": "30·7",
+   "px": 574,
+   "py": 894,
+   "confidence": "high",
+   "notes": "Strone Road east / South Esk Road; dot right of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.9,
+   "raw": "31·9",
+   "px": 746,
+   "py": 839,
+   "confidence": "low",
+   "notes": "Red Post Lane between D and P (RED POST); dot below figure just before the P; final 9 vs 3 unresolved at 12-16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.5,
+   "raw": "31·5",
+   "px": 1010,
+   "py": 968,
+   "confidence": "medium",
+   "notes": "road at east edge; figure whole (1003-1017) but no dot found; a mark at x 1023 may be the dot, cut by the edge; position = centre of figures"
+  }
+ ],
+ "non_height_marks": [
+  "H (hydrant) and F.P. marks along the roads",
+  "'M O N E G A  R O A D', 'R E D  P O S T' lettering"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 140,
+   "py0": 1016,
+   "px1": 168,
+   "py1": 1024,
+   "reason": "figure '30·?' cut by the south edge"
+  },
+  {
+   "px0": 1018,
+   "py0": 958,
+   "px1": 1024,
+   "py1": 972,
+   "reason": "possible survey dot of 31·5 cut by the east edge"
+  }
+ ]
+}

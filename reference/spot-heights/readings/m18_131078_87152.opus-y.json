@@ -1,0 +1,321 @@
+{
+ "mosaic": "m18_131078_87152",
+ "reader": "opus-y",
+ "area": "Canning Town north / Hallsville: Hermit Road, Exing Road, Beaconsfield, Boulton, Clifford, Ernest and Tyas Roads, Blanche Street, Star Lane; open unbuilt ground to the west",
+ "method": "Overview (anchor BEACONSFIELD ROAD) and all 9 sweep crops viewed and anchored as opened: r0c0 BE(ACONSFIELD)/open ground drain; r0c1 School Boys Girls & Infants/BOULTON ROAD; r0c2 FLORENCE STREET/BLANCHE/P.H.; r1c0 EXING ROAD/open ground; r1c1 CLIFFORD/ERNEST/TYAS ROAD; r1c2 HERMIT ROAD/OHIO ROAD/GARFIELD/MAYFIELD; r2c0 open ground/D A L lettering/C L; r2c1 TYAS ROAD/CARLTON STREET; r2c2 STAR/Chapel/CHURCH R(OAD). Contact sheets cs1-cs7 (4x-12x, +-12 to +-60 px) viewed and anchored. All crops and contact sheets displayed. Marker sheet checked.",
+ "legibility": "good; no sheet join seen by eye or by tool; west third is blank open ground",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 754,
+   "py": 36,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hermit Road north, by the School; dot above figures at 755,43; oval 0 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 2.9,
+   "raw": "2·9",
+   "px": 453,
+   "py": 191,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Beaconsfield Road; figures at 450,206; the only dot is between E and A of BEACONSFIELD (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.6,
+   "raw": "3·6",
+   "px": 757,
+   "py": 210,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hermit Road at Beaconsfield Road; figures at 747,213; dot right may be the F.P. dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.31,
+   "raw": "B.M.6·31",
+   "px": 780,
+   "py": 243,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "east frontage of Hermit Road; text at 758,258, pheon 25 px NE on the terrace frontage, 4x/6x; digits 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.59,
+   "raw": "B.M.6·59",
+   "px": 347,
+   "py": 249,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "west end of the terrace between Beaconsfield and Boulton Roads, facing Exing Road; pheon right of text, digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.2,
+   "raw": "3·2",
+   "px": 338,
+   "py": 298,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Exing Road at Boulton Road; dot above-left of figures at 343,305, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.6,
+   "raw": "3·6",
+   "px": 761,
+   "py": 344,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hermit Road at Boulton Road; dot above figures at 763,352, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 957,
+   "py": 347,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Blanche Street; figures at 962,355; dot between N and C of BLANCHE (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.5,
+   "raw": "3·5",
+   "px": 333,
+   "py": 421,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Exing Road at Clifford Road; figures at 343,425; dot between O and A of ROAD (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.4,
+   "raw": "4·4",
+   "px": 760,
+   "py": 457,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hermit Road at Clifford Road; figures at 745,458; dot right of figures above the D of ROAD"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.5,
+   "raw": "3·5",
+   "px": 306,
+   "py": 548,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Exing Road at Ernest Road; figures at 318,550; dot between X and I of EXING (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.7,
+   "raw": "4·7",
+   "px": 741,
+   "py": 590,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hermit Road at Ernest Road; dot directly above figures at 740,599; HERMIT lettering has interpuncts"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.5,
+   "raw": "3·5",
+   "px": 277,
+   "py": 681,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Exing Road at Tyas Road; dot left of figures at 290,683, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 8,
+   "py": 678,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open unbuilt ground at the west edge (no place word, value below 15 ft); dot above-left of figures at 15,686, beside a dotted line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.0,
+   "raw": "4·0",
+   "px": 718,
+   "py": 716,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hermit Road at Tyas Road; figures at 706,718; dot right above the E of HERMIT (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 138,
+   "py": 746,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open unbuilt ground just north of the end of the street lettered C L... west of the terrace (no place word, below 15 ft); dot left of figures at 152,751"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.64,
+   "raw": "B.M.8·64",
+   "px": 155,
+   "py": 773,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "NW corner of the terrace; text at 120,775, pheon on the corner 35 px E, digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 274,
+   "py": 818,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street junction south of Tyas Road; dot left of figures at 287,821"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.3,
+   "raw": "3·3",
+   "px": 418,
+   "py": 826,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hermit Road side street junction (Tyas Road south side); dot left of figures at 430,827; both 3s alike"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.3,
+   "raw": "3·3",
+   "px": 564,
+   "py": 835,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road north of Carlton Street; dot left of figures at 575,836"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.69,
+   "raw": "B.M.5·69",
+   "px": 671,
+   "py": 856,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "north frontage at Hermit Road / Star Lane corner; pheon below text on the frontage line, digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 729,
+   "py": 843,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hermit Road at Star Lane; dot above-left of figures at 738,852"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.1,
+   "raw": "6·1",
+   "px": 865,
+   "py": 835,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Star Lane by the survey triangle at 870,843; figures at 858,828; two dots below (848,835 and 865,835), nearer one taken"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 994,
+   "py": 835,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Star Lane east; figures at 1000,844, dot above-left; second digit flat-topped at 8x and 12x but 6·6/6·8 not excluded"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 423,
+   "py": 980,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street between terraces south of the 3·3 junction; dot above-left of figures at 428,987, 8x"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangle at 870,843 on Star Lane",
+  "double-line drain/path across the open ground (no figures)",
+  "F.P., H, L.B. marks"
+ ],
+ "unreadable_regions": []
+}

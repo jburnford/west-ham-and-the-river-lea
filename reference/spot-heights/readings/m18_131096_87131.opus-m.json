@@ -1,0 +1,283 @@
+{
+ "mosaic": "m18_131096_87131",
+ "reader": "opus-m",
+ "area": "Upton / Plashet: Cromwell Road, Shaftesbury Road, St George in the East Schools, Gipsy Lane / Green Street, St Stephen's Church and Road, Washington, Waterloo, Walpole and Whitfield Roads, Dorset Road",
+ "method": "Viewed all 9 sweep crops (2x) and contact sheets cs1-cs5 (7x to 16x zoom panels labelled in mosaic px); every image displayed when opened. Every value confirmed at >=8x, doubtful digits at 16x.",
+ "legibility": "Good. Horizontal sheet join at py ~180-182 across the full width (above it the Cromwell Road sheet) and vertical join at px ~168-171 over the full height, both confirmed by eye; no figure crosses a join. Gipsy Lane / Green Street carries a boundary of large dots and interpunct-spaced lettering.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 33.1,
+   "raw": "B.M.33·10",
+   "px": 438,
+   "py": 25,
+   "confidence": "high",
+   "notes": "Cromwell Road / Jephson Road corner (also on 131096_87128); pheon on house corner below-right of text; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.4,
+   "raw": "31·4",
+   "px": 298,
+   "py": 65,
+   "confidence": "high",
+   "notes": "CROMWELL ROAD; dot above the 4; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.3,
+   "raw": "31·3",
+   "px": 118,
+   "py": 140,
+   "confidence": "medium",
+   "notes": "CROMWELL ROAD west; dot between the M and W of CROM·WELL (interpunct ambiguity)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.6,
+   "raw": "31·6",
+   "px": 55,
+   "py": 531,
+   "confidence": "medium",
+   "notes": "GIPSY LANE (interpunct-spaced lane name, C.R. boundary); no distinct survey dot; position = centre of figures; 6 at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.6,
+   "raw": "31·6",
+   "px": 120,
+   "py": 635,
+   "confidence": "medium",
+   "notes": "Gipsy Lane by St Stephen's churchyard; extra dot immediately left of figure beside the regular large boundary dots"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.1,
+   "raw": "31·1",
+   "px": 428,
+   "py": 703,
+   "confidence": "high",
+   "notes": "ST. STEPHEN'S ROAD west, by the Vicarage; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.1,
+   "raw": "30·1",
+   "px": 724,
+   "py": 594,
+   "confidence": "medium",
+   "notes": "ST. STEPHEN'S ROAD; dot right of figure just before the first S of STEPHEN'S (interpunct ambiguity)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.6,
+   "raw": "30·6",
+   "px": 576,
+   "py": 645,
+   "confidence": "low",
+   "notes": "St Stephen's Road at Waterloo Road; dot above figure; last digit 6 at 8x but 8-like at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.7,
+   "raw": "29·7",
+   "px": 883,
+   "py": 549,
+   "confidence": "high",
+   "notes": "ST. STEPHEN'S ROAD east; dot after the final S of STEPHEN'S, left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 31.98,
+   "raw": "B.M.31·98",
+   "px": 867,
+   "py": 578,
+   "confidence": "high",
+   "notes": "corner of St Stephen's Road and Whitfield Road; pheon on house corner left of text; 16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.29,
+   "raw": "B.M.34·29",
+   "px": 224,
+   "py": 737,
+   "confidence": "high",
+   "notes": "St Stephen's Church; pheon on the church wall corner ~15 px right of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.4,
+   "raw": "31·4",
+   "px": 294,
+   "py": 743,
+   "confidence": "high",
+   "notes": "road south of St Stephen's Church; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.0,
+   "raw": "32·0",
+   "px": 203,
+   "py": 782,
+   "confidence": "medium",
+   "notes": "Gipsy Lane / Green Street corner by C.R., F.P., L.B.; the dot above the figure falls in the regular series of large boundary dots; position = centre of figures (same mark as 131093_87134)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.2,
+   "raw": "32·2",
+   "px": 32,
+   "py": 813,
+   "confidence": "medium",
+   "notes": "road at the west edge (dashed boundary); dot touching the end of a dash above the figure (same mark as 131093_87134)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.7,
+   "raw": "31·7",
+   "px": 262,
+   "py": 900,
+   "confidence": "medium",
+   "notes": "Green Street by the survey triangle and F.P.s; extra dot left of figure next to a large boundary dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.0,
+   "raw": "32·0",
+   "px": 456,
+   "py": 917,
+   "confidence": "high",
+   "notes": "WASHINGTON ROAD south end; isolated dot left of figure (the F.P. above has its own dot)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 602,
+   "py": 951,
+   "confidence": "high",
+   "notes": "WATERLOO ROAD south end; dot left of figure; the H below has its own dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.94,
+   "raw": "B.M.33·94",
+   "px": 716,
+   "py": 1019,
+   "confidence": "high",
+   "notes": "south edge between Waterloo and Walpole Roads; pheon on house frontage below text, whole inside mosaic"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.4,
+   "raw": "32·4",
+   "px": 744,
+   "py": 995,
+   "confidence": "high",
+   "notes": "same road; dot above the 2; 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.8,
+   "raw": "30·8",
+   "px": 996,
+   "py": 1004,
+   "confidence": "medium",
+   "notes": "south-east corner by Whitfield Road; only nearby dot belongs to the F.P.; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.8,
+   "raw": "29·8",
+   "px": 942,
+   "py": 777,
+   "confidence": "low",
+   "notes": "WHITFIELD ROAD; dot between the E and L of WHITFIELD above the figure (interpunct ambiguity); last digit 8 or 3"
+  }
+ ],
+ "non_height_marks": [
+  "large lettering P, L (PLASHET) at ~500,140 and ~700,140; A at ~880,140; P, T, O, N (UPTON) along the south edge",
+  "survey-station triangles without figures at ~766,241 and ~262,877",
+  "Infirmary, St. George in the East Schools, St. Stephen's Church, Vicarage, Lodge, Bank, P.H., Tr.",
+  "F.P., H, L.B., C.R. marks"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 265,
+   "px1": 24,
+   "py1": 282,
+   "reason": "2-dp figure 33·53 (probably a B.M. value) at the west edge; its B.M. label and pheon lie beyond the mosaic"
+  },
+  {
+   "px0": 0,
+   "py0": 360,
+   "px1": 10,
+   "py1": 372,
+   "reason": "figure ending '·9' cut by west edge"
+  },
+  {
+   "px0": 1014,
+   "py0": 522,
+   "px1": 1024,
+   "py1": 540,
+   "reason": "dot at 1020,531 with a mark cut by the east edge; figure lies beyond the edge"
+  }
+ ]
+}

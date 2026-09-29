@@ -1,0 +1,21 @@
+{
+  "mosaic": "q18_131099_87155", "reader": "opus-al", "layer": "os-25-inch-london",
+  "area": "Plaistow Level: open drained marsh with boundary-stone drains, down to the straight E-W road (probably Beckton Road, road parcel 28 / 3.261) with buildings south of it at the SW (E 541430-541815, N 181690-182075)",
+  "method": "OS 25-inch (1:2500) Essex county series, layer os-25-inch-london. sheet (no join reported), 2x sweep of all 9 crops, each anchored on opening and all displayed: r0c0 drains + pecked track; r0c1 parcel '24 / 8·342'; r0c2 'B.S' + 'C.S.' + '4'; r1c0 winding drain; r1c1 parcel '29 / 15·586'; r1c2 'B.S' + cut 'B.M' at E edge; r2c0 'B M.6 6' + road + '6' + parcel '33 / 1·345'; r2c1 road parcel '28 / 3·261'; r2c2 'B.M.5·3'. 5x contact sheet cs1 (6 panels) and zooms 10x at 298,742, 8x at 262,742, 10x at 1010,942, all displayed. Marker sheet checked.",
+  "legibility": "Clear; italic figures ~13 px. No sheet join seen. No grey fill. A B.M. at the east edge (pheon ~993,512 at a B.S. circle, text running off the mosaic) cannot be read here.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 4, "raw": "4", "px": 803, "py": 216, "confidence": "medium", "setting": "marsh",
+     "notes": "Plaistow Level field just south of the B.S. / C.S. drain junction; no cross found near it, position = centre of figures; duplicate of q18_131099_87152 overlap strip (py 984 there)"},
+    {"type": "bench_mark", "value_ft": 6.6, "raw": "B.M.6·6", "px": 203, "py": 731, "confidence": "medium", "setting": "other",
+     "notes": "pheon (pointing up, barbs converging at ~203,731) on the bank at a right-angle bend of the drain, where a fence line runs south to the road; no wall drawn. Text reads 'B M.6 6' at 8x: two clear 6s but the middot between them is not visible; 1 dp convention and the 4-6 ft level make 6.6 certain in magnitude, so medium"},
+    {"type": "spot", "value_ft": 6, "raw": "6", "px": 300, "py": 919, "confidence": "high", "setting": "street",
+     "notes": "E-W road (probably Beckton Road), + between the pecked lines in the carriageway; figure ~35 px north at ~305,885 just across the road's north fence line; confirmed 5x"},
+    {"type": "bench_mark", "value_ft": 5.3, "raw": "B.M.5·3", "px": 1013, "py": 946, "confidence": "high", "setting": "bridge",
+     "notes": "pheon (barbs converging downward) on the north edge of the road at the small culvert where the drain passes under it, 11 px from the east edge; text 'B.M.5·3' whole at ~940,932; confirmed 10x; setting 'bridge' as a culvert head, could be 'other'"}
+  ],
+  "non_height_marks": ["parcels 24/8.342, 29/15.586, 33/1.345, road parcel 28/3.261", "B.S. boundary stones at ~832,193, ~942,425 and ~993,505; C.S. at ~860,222", "S-shaped tie marks on the drains"],
+  "unreadable_regions": [
+    {"px0": 985, "py0": 490, "px1": 1024, "py1": 560, "reason": "B.M. at a boundary stone: pheon at ~993,512 but the B.M. value text runs off the east edge; read it on q18_131102_87155"}
+  ]
+}

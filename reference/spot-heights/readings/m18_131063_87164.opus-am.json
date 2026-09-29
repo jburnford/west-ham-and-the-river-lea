@@ -1,0 +1,541 @@
+{
+ "mosaic": "m18_131063_87164",
+ "reader": "opus-am",
+ "area": "Poplar: East India Dock Road, Follett Street, All Saints Church and Recreation Ground, Bow Lane, Cotton Street, Union Street, Woolmore/Wells/Manisty Streets, Robin Hood Lane and Blackwall Tunnel Approach, Poplar High Street",
+ "method": "Viewed all 9 sweep crops (2x) with anchors noted on opening (r0c0 All Saints Church/FOLLETT ST; r0c1 St Frideswide Ch./UNION STREET; r0c2 Poplar Hospital/ANN STREET; r1c0 Grave Yard/BOW LANE; r1c1 WOOLMORE STREET/Sunday School; r1c2 ROBIN HOOD LANE/Blackwall Tunnel Approach; r2c0 MONTAGUE PLACE/Almshouses; r2c1 MANISTY STREET/Music Hall; r2c2 Music Hall/Grosvenor Buildings). 5-10x region views of every candidate (25 regions, anchors noted), contact sheets cs_a (8x), cs_a2 (16x), cs_b (8x), cs_c (8x), cs_c2 (16x), cs_c3 (6x), cs_c4 (10x), cs_bm1 (12x), cs_bm1b (8x), cs_bm1c (20x), cs_bm2 (12x), cs_bm2b (20x), cs_bm2c (7x), cs_ph (8x pheon sheet), and marker sheets. Every crop and contact sheet displayed when opened.",
+ "legibility": "Good but several B.M. decimals in dense terraces do not resolve (5/6, 3/8, 8/9) and are low. Vertical sheet join at px ~822-824 (visible line, full height); tool-reported horizontal join at py ~386 not visible by eye. Interpuncts: R·O·B·I·N H·O·O·D L·A·N·E, W·OOLMORE, WOOLMORE·STREET gap dot.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 21.7,
+   "raw": "21·7",
+   "px": 189,
+   "py": 7,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "N-S street north of Follett St area near top edge; figure whole (top y~2); no own dot (F.P dot nearby), position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.8,
+   "raw": "20·8",
+   "px": 200,
+   "py": 127,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "N-S street west of Follett St block; dot above-left; closed 8 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.7,
+   "raw": "18·7",
+   "px": 434,
+   "py": 78,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "side street entrance north of Follett Street; no dot found, position = centre"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.13,
+   "raw": "B.M.20·13",
+   "px": 422,
+   "py": 110,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "house front south side of Follett Street; final 3/8 unclear over building shading at 12x/20x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.1,
+   "raw": "B.M.22·10",
+   "px": 184,
+   "py": 289,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "on Recreation Ground boundary wall corner, East India Dock Road; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.9,
+   "raw": "19·9",
+   "px": 196,
+   "py": 260,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "East India Dock Road tramway by Recreation Ground; isolated dot on rail upper-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.1,
+   "raw": "19·1",
+   "px": 324,
+   "py": 249,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road; dot is a thickening on the tram rail"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.9,
+   "raw": "17·9",
+   "px": 520,
+   "py": 232,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "East India Dock Road; isolated dot on the rail upper-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 659,
+   "py": 232,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road south side among a line of large boundary dots; position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.5,
+   "raw": "16·5",
+   "px": 620,
+   "py": 54,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street north of Follett St by H; dot above; flat-topped 5"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.9,
+   "raw": "19·9",
+   "px": 530,
+   "py": 406,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Union Street at Ashton Street; dot left of figure; final 9 compared with leading 9 at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 905,
+   "py": 30,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "lane west of Poplar Hospital by Smithy; dot above-left; closed 8 at 8x/16x; notably lower than the surrounding streets but digits clear, no leading digit"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 800,
+   "py": 218,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road south side by the join; row of boundary dots, position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 932,
+   "py": 177,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road north side under the School lettering; F.P./B.S. and boundary dots nearby, position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 869,
+   "py": 232,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "open junction by the Urinal south of East India Dock Road; no dot, position = centre; closed 8"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.4,
+   "raw": "15·4",
+   "px": 1003,
+   "py": 166,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road tramway at east edge; dot on rail; figure ends ~1 px from edge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.4,
+   "raw": "12·4",
+   "px": 881,
+   "py": 359,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "open junction/road space east of Ashton Street end by hydrant; dot above figure, distinct from the boundary dots to the east"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.5,
+   "raw": "20·5",
+   "px": 233,
+   "py": 476,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Bow Lane beside All Saints churchyard wall; dot upper-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.4,
+   "raw": "15·4",
+   "px": 385,
+   "py": 594,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Cotton Street at Baptist Chapel; dot between O and N of COTTON (no other interpuncts in the name)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.7,
+   "raw": "20·7",
+   "px": 275,
+   "py": 681,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Bow Lane at Montague Place; dot right of figure, F.P has its own dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 404,
+   "py": 700,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Cotton Street; dot between S and T of STREET; open-topped 6 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.0,
+   "raw": "14·0",
+   "px": 493,
+   "py": 577,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Woolmore Street at Sydney Street; only dot follows the W of W·OOLMORE (interpunct?)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.1,
+   "raw": "12·1",
+   "px": 681,
+   "py": 542,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Woolmore Street; only dot is the gap dot between WOOLMORE and STREET"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.2,
+   "raw": "10·2",
+   "px": 924,
+   "py": 502,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Robin Hood Lane beside the Blackwall Tunnel Approach line; final 2 crossed by the line; interpuncts in R·O·B·I·N nearby, position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.0,
+   "raw": "11·0",
+   "px": 936,
+   "py": 610,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Robin Hood Lane; interpunct O·O nearby, position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.9,
+   "raw": "12·9",
+   "px": 950,
+   "py": 744,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Robin Hood Lane; dot between N and E of LANE is probably an interpunct, position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.8,
+   "raw": "19·8",
+   "px": 311,
+   "py": 846,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Bow Lane south end by Almshouses; dot below-left (H has its own dot)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.4,
+   "raw": "17·4",
+   "px": 435,
+   "py": 826,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Cotton Street south; F.P. has dots on both sides, position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.3,
+   "raw": "20·3",
+   "px": 39,
+   "py": 998,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Poplar High Street west; final 3 vs 8 unresolved at 8x/16x; dot right of figure (a second dot belongs to F.P)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.6,
+   "raw": "16·6",
+   "px": 210,
+   "py": 1011,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Poplar High Street; dot left; final 6 open-topped at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 343,
+   "py": 1021,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Poplar High Street at bottom edge (digits end ~1 px above edge); dot right; second digit open 6 at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.8,
+   "raw": "14·8",
+   "px": 580,
+   "py": 1006,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Poplar High Street; dot upper-left; closed 8"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.5,
+   "raw": "16·5",
+   "px": 770,
+   "py": 994,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Poplar High Street; dot left; flat-topped 5"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.4,
+   "raw": "13·4",
+   "px": 930,
+   "py": 957,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "open junction at Blackwall end of the High Street; dot upper-left (same mark as 131066_87167 13·4)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.42,
+   "raw": "B.M.20·42",
+   "px": 607,
+   "py": 343,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "house at Union Place; first decimal reads 4 at 2x/6x but 6-like at 12x/20x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.09,
+   "raw": "B.M.16·09",
+   "px": 399,
+   "py": 573,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "Baptist Chapel wall, Cotton Street; final 9 vs 8 unresolved at 20x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.52,
+   "raw": "B.M.17·52",
+   "px": 483,
+   "py": 467,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "building at Providence Place; first decimal 5 vs 6 unresolved at 12x/20x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 12.53,
+   "raw": "B.M.12·53",
+   "px": 771,
+   "py": 538,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "house front north side of Woolmore Street; first decimal flat-topped and closed at 20x (5), read 3 at 2x (12·33 possible)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.57,
+   "raw": "B.M.11·57",
+   "px": 901,
+   "py": 634,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building wall west side of Robin Hood Lane; text 30 px east of pheon across the lane; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.48,
+   "raw": "B.M.22·48",
+   "px": 206,
+   "py": 840,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building at the entry to Burley Place off Bow Lane; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.95,
+   "raw": "B.M.20·95",
+   "px": 340,
+   "py": 851,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner at the Almshouses, Bow Lane; flat-topped 5 at 20x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.72,
+   "raw": "B.M.20·72",
+   "px": 57,
+   "py": 991,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner on Poplar High Street; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.68,
+   "raw": "B.M.16·68",
+   "px": 358,
+   "py": 1011,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "building front on Poplar High Street at bottom edge; lead digit looks closed at 20x (18·68 possible) unlike the open decimal 6"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.06,
+   "raw": "B.M.16·06",
+   "px": 608,
+   "py": 1009,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building front on Poplar High Street by the Music Hall; 12x"
+  }
+ ],
+ "non_height_marks": [
+  "B.P. and B.S. boundary marks around Follett Street and the School",
+  "F.P. marks throughout",
+  "D.Fn (drinking fountain) and Fire Alarm by the School",
+  "Urinal south of East India Dock Road"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 988,
+   "py0": 982,
+   "px1": 1024,
+   "py1": 996,
+   "reason": "B.M.12·04 text cut by east edge, pheon outside the mosaic (read whole in 131066_87167)"
+  },
+  {
+   "px0": 1008,
+   "py0": 164,
+   "px1": 1024,
+   "py1": 176,
+   "reason": "15·4 ends ~1 px from east edge"
+  },
+  {
+   "px0": 320,
+   "py0": 1014,
+   "px1": 400,
+   "py1": 1024,
+   "reason": "16·9 and B.M.16·68 touch the bottom edge"
+  },
+  {
+   "px0": 818,
+   "py0": 0,
+   "px1": 828,
+   "py1": 1024,
+   "reason": "vertical sheet join at px ~822-824"
+  }
+ ]
+}

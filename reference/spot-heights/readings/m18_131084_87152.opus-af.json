@@ -1,0 +1,405 @@
+{
+ "mosaic": "m18_131084_87152",
+ "reader": "opus-af",
+ "area": "Canning Town / Custom House north: Chargeable Lane, Luton Road, Philip, Beatrice, Constance, King and Warrington Streets, Mason and Anne Streets, the main tram road with Post Office and Cross Street, Tabernacle Avenue, Ingal Road, Avenons Road, Victoria Place, Star Lane and Forty Acre Lane",
+ "method": "Viewed all 9 sweep crops (2x) with anchors: r0c0 CHARGEABLE/LUTON ROAD; r0c1 TABERNACLE AVENUE/Bapt. Chapel; r0c2 ANNE STREET/Ward Boundary; r1c0 KING STREET/CROSS; r1c1 INGAL ROAD/VICTORIA PLACE; r1c2 AVENONS ROAD; r2c0 STAR LANE/CROSS STREET; r2c1 STAR LANE/FORTY ACRE; r2c2 FORTY ACRE LANE/ditch. Contact sheets e1-e18 (5-24x nearest and smoothed) and region views e6 (630-720,330-410) and e10 (170-620,430-760). Every crop and sheet displayed when opened. 5/6 judged against the flat-topped 5 and rounded 6 of B.M.5·76; B.M. decimals checked at 16-24x; marker sheet checked.",
+ "legibility": "good; vertical sheet join at px ~637 (strong line with paler paper east, not reported by the tool), no horizontal join; the B.M. at 628,734 sits against the join",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ],
+  [
+   630,
+   330,
+   720,
+   410
+  ],
+  [
+   170,
+   430,
+   620,
+   760
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 5.76,
+   "raw": "B.M.5·76",
+   "px": 226,
+   "py": 30,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner house of Chargeable Lane and Philip Street; pheon on the building corner below text; 5 flat-topped, 76 clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.6,
+   "raw": "3·6",
+   "px": 245,
+   "py": 25,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Chargeable Lane; nearest dot is the R·G interpunct of CHAR·GEABLE at 245,25; 6 open-topped at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.4,
+   "raw": "3·4",
+   "px": 409,
+   "py": 38,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Chargeable Lane; dot directly above the figure (no interpunct in LANE)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 81,
+   "py": 119,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Luton Road north end; dot 81,119 before the L of LUTON taken as survey dot; both digits flat-topped like the 5 of B.M.5·76"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 98,
+   "py": 314,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Luton Road south; dot = A·D interpunct of ROA·D at 98,314"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 564,
+   "py": 103,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Chargeable Lane east end towards Mason Street; isolated dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 684,
+   "py": 5,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Mason Street / Anne Street corner near the top edge; dot 684,5 sits before the A of ANNE (possible interpunct); figure whole"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 778,
+   "py": 114,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Anne Street; dot 778,114 just after the T of STREET"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 822,
+   "py": 172,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "open road junction east of Anne Street; dot above; leading 6 rounded against the flat-topped final 5 of the same figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 945,
+   "py": 174,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "main road on the Ward Boundary; figure 8 px left of a survey triangle, position = triangle centre dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 984,
+   "py": 146,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "main road east of the survey triangle; no dot found, centre of figures; final 6 G-shaped at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.2,
+   "raw": "5·2",
+   "px": 784,
+   "py": 310,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "road junction by Avenons Road; no dot found, centre of figures; 5 flat-topped"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.72,
+   "raw": "B.M.6·72",
+   "px": 656,
+   "py": 359,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Post Office front on the main road; pheon 656,359 left of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.1,
+   "raw": "5·1",
+   "px": 666,
+   "py": 392,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "main road (tramway) outside the Post Office; no own dot (the dot at 677,396 belongs to F.P.), centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.6,
+   "raw": "B.M.9·60",
+   "px": 128,
+   "py": 469,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner at Luton Road / E-W road; pheon on the wall right of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 113,
+   "py": 487,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "E-W road by Luton Road; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 258,
+   "py": 518,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "E-W road; dot 258,518 right after F.P. (could be the F.P. trailing dot)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.1,
+   "raw": "6·1",
+   "px": 293,
+   "py": 672,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "main tram road near Cross Street; dot presumably on the rails, not separable; centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.82,
+   "raw": "B.M.7·82",
+   "px": 225,
+   "py": 733,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner on the main road west of Cross Street; pheon 225,733 south-east of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 206,
+   "py": 733,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "written directly under B.M.7·82 with no dot of its own: ground level at the bench mark, centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.7,
+   "raw": "5·7",
+   "px": 590,
+   "py": 452,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "main tram road north-east end; dot not separable from rails; leading 5 flat-topped vs known 5"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 503,
+   "py": 516,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "main tram road; dot not separable; 5 flat-topped, 8 closed"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 446,
+   "py": 572,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "main tram road south side; dot not separable; 5 flat-topped, 9 open"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.8,
+   "raw": "3·8",
+   "px": 660,
+   "py": 700,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Ingal Road; no dot found, centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.96,
+   "raw": "B.M.5·96",
+   "px": 628,
+   "py": 734,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "Ingal Road house front against the px ~637 join; first decimal 9/8 not settled (16x reads 9, 12x smoothed 8-like); pheon not found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.3,
+   "raw": "4·3",
+   "px": 976,
+   "py": 639,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Forty Acre Lane north part (between dotted and solid edges); dot above"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.0,
+   "raw": "4·0",
+   "px": 584,
+   "py": 805,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "unlettered open plot between Star Lane terrace and Forty Acre Lane; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.3,
+   "raw": "5·3",
+   "px": 485,
+   "py": 926,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Star Lane by H; dot left-below"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 615,
+   "py": 995,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Forty Acre Lane by the plot corner; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.8,
+   "raw": "3·8",
+   "px": 796,
+   "py": 791,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Forty Acre Lane near H; dot left; final 8 distinct from the leading 3"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 60,
+   "py": 838,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "main tram road SW corner; no dot, centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 137,
+   "py": 992,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Edward / Alexandra Street junction at the south edge; dot 137,992 just after the D of EDWARD; 5 flat-topped at 16x"
+  }
+ ],
+ "non_height_marks": [
+  "M.P. 'Post Office 5¼' milepost at ~700,362",
+  "survey triangles at ~945,174 and ~640,950 (the latter with no figure)",
+  "F.P. marks throughout",
+  "C.R. / Ward Boundary dashes along the main road",
+  "H hydrants"
+ ],
+ "unreadable_regions": []
+}

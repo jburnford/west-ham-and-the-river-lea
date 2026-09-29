@@ -1,0 +1,44 @@
+{
+ "mosaic": "s18_131069_87140",
+ "reader": "synth-sbad",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 16.46,
+   "raw": "B.M.16·46",
+   "px": 100,
+   "py": 100,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "s18 B.M. at 2 dp"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9,
+   "raw": "9",
+   "px": 200,
+   "py": 200,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "s18 spot whole feet"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.6,
+   "raw": "8·7",
+   "px": 300,
+   "py": 300,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "raw/value mismatch"
+  }
+ ]
+}

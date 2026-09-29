@@ -1,0 +1,294 @@
+{
+ "mosaic": "m18_131075_87146",
+ "reader": "opus-ah",
+ "area": "Plaistow Level: Manor Road and the G.E.R. Woolwich Branch (west strip), open marsh with fence lines and drainage ditches",
+ "method": "Independent QA second read. sheet; sweep 9 crops at 2x (anchors recorded as each opened: r0c0 G.E.R. WOOLWICH BRANCH/Sluice, r0c1 big P, r0c2 P L A, r1c0 MANOR/...nction, r1c1 P + blue ditch, r1c2 P L A + ditch fork, r2c0 ROAD/S.B., r2c1 B.M.6·16 + fences, r2c2 ditch fork + 6·1); 6x contact sheets csA-csD (region/position checks), 8x csE, csH digit sheets, 12x csF bench-mark decimals, 8x csG and nearest-neighbour csGnn for 5/6, region views regW (4x west strip) and regE (5x east edge), csI edge checks; numeric dot centroids; marker sheet. All crops and sheets displayed when opened.",
+ "legibility": "clear engraving, sparse marsh; vertical sheet join at px ~350-353 (tint change, confirmed by eye, tool also reports it); no horizontal join seen",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 128,
+   "py": 205,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road, west side beside G.E.R. Woolwich Branch; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.7,
+   "raw": "4·7",
+   "px": 279,
+   "py": 224,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, dot on the E-W fence line; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 4.77,
+   "raw": "B.M.4·77",
+   "px": 333,
+   "py": 221,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "fence line across Plaistow Level (no wall drawn), pheon pointing west on the fence just west of the px~351 line/join; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 489,
+   "py": 215,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, dot on the E-W fence line; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 704,
+   "py": 207,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, dot on the E-W fence line; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 4.25,
+   "raw": "B.M.4·25",
+   "px": 867,
+   "py": 193,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "fence: pheon at the east end of the E-W fence line on Plaistow Level; final 5 flat-topped like the known 5 of 6·5 at 8x/12x and nearest-neighbour"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 911,
+   "py": 195,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level east of the fence end; dot left of figure; 6 open-topped at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.2,
+   "raw": "B.M.6·20",
+   "px": 121,
+   "py": 368,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "kerb/road edge: pheon pointing down on the dotted edge line inside Manor Road; text B.M.6·20 written ~50 px east beyond the road; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 128,
+   "py": 425,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road beside the M of MANOR; dot above-left; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 36,
+   "py": 510,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open strip west of the G.E.R. Woolwich Branch curves (Junction), no place word, below 15 ft; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 131,
+   "py": 694,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road; dot above figure; flat-topped 5 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.3,
+   "raw": "6·3",
+   "px": 307,
+   "py": 700,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "field east of Manor Road between dotted fence lines, Plaistow Level; dot above; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.2,
+   "raw": "4·2",
+   "px": 41,
+   "py": 708,
+   "confidence": "medium",
+   "setting": "marsh",
+   "notes": "open strip west of railway by the S.B. (signal box); only dot is right of figure just below-left of S.B. lettering, may belong to it"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 350,
+   "py": 839,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, dot on the N-S fence line (coincides with sheet join px~350); 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.2,
+   "raw": "4·2",
+   "px": 989,
+   "py": 519,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, dot on the bank of the curving ditch near east edge; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 638,
+   "py": 728,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level south of the blue ditch; dot left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.16,
+   "raw": "B.M.6·16",
+   "px": 517,
+   "py": 839,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "fence: pheon pointing east on the dotted fence line; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 546,
+   "py": 851,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, field corner between dotted fences; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 628,
+   "py": 859,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level, between dotted fences; dot above-left; flat-topped 5 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.1,
+   "raw": "6·1",
+   "px": 884,
+   "py": 733,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "Plaistow Level south of the ditch; dot above figure; 8x"
+  }
+ ],
+ "non_height_marks": [
+  "S.P. marks along the G.E.R. (e.g. 125,180; 90,248; 70,290; 115,290; 0,384)",
+  "M.P. at ~120,452 beside Manor Road",
+  "S.B. signal box at ~55,700",
+  "Sluice labels at 175,238 and 40,610"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1000,
+   "py0": 682,
+   "px1": 1024,
+   "py1": 696,
+   "reason": "B.M. figure (B.M.5..) cut by east edge beside the ditch"
+  },
+  {
+   "px0": 1015,
+   "py0": 770,
+   "px1": 1024,
+   "py1": 784,
+   "reason": "survey dot at 1022,777 whose figure lies beyond the east edge"
+  },
+  {
+   "px0": 0,
+   "py0": 876,
+   "px1": 6,
+   "py1": 892,
+   "reason": "figure fragment cut by west edge"
+  }
+ ]
+}

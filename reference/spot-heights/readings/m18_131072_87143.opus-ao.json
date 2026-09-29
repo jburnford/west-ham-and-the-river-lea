@@ -1,0 +1,317 @@
+{
+ "mosaic": "m18_131072_87143",
+ "reader": "opus-ao",
+ "area": "Marsh north of Canning Town toward Abbey Mills (west): Channelsea / Bow Creek channels with H.W.M.O.T. and L.W.M.O.T., West Ham Chemical Works, Phoenix Black Works, Printing Ink Works, Abbey Mills Chemical Works, Oil & Stearine Works, LT&SR embankment and Upper Abbey Mills Junction, London & Thames Haven Petroleum Wharf, Manor Road",
+ "method": "Sweep crops r0c0-r2c2 (2x) all displayed, anchors: r0c0 West Ham Chemical Works; r0c1 Phoenix Black Works; r0c2 MANOR ROAD; r1c0 Stearine Works; r1c1 Abbey Mills Chemical Works; r1c2 F.F./F.W./F.B.; r2c0 Upper Abbey Mills Junction; r2c1 London & Thames Haven Petroleum Wharf; r2c2 Sluice. Contact sheets cs_a, cs_b (8-12x). Marker sheet checked. All crops, zooms and sheets were viewed successfully. East strip (px 768-1024) overlaps 131075_87143, which I also read; those marks are duplicates, not independent confirmation.",
+ "legibility": "Clear. Sheet join by eye: horizontal py ~567-569 full width (blue wash of drain cut sharply, tint step); the vertical join of 131075_87143 (its px ~352) falls just beyond this mosaic.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 17.4,
+   "raw": "17·4",
+   "px": 76,
+   "py": 26,
+   "confidence": "medium",
+   "setting": "embankment_top",
+   "notes": "crest of the hatched bank on the east side of the westernmost channel (Channelsea / Bow Creek marsh); no dot distinct from hatching; position = centre of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.5,
+   "raw": "13·5",
+   "px": 322,
+   "py": 297,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "written over the hatched block of West Ham Chemical Works, no dot; position = centre of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.4,
+   "raw": "17·4",
+   "px": 157,
+   "py": 319,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "top of the hatched channel bank at the NW corner of West Ham Chemical Works; dot above-left; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.4,
+   "raw": "22·4",
+   "px": 491,
+   "py": 85,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "road on the hatched bank west of Phoenix Black Works; dot right of figure beside the road edge; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.13,
+   "raw": "B.M.13·13",
+   "px": 505,
+   "py": 166,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the NW corner of the Printing Ink Works building, text right; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.2,
+   "raw": "14·2",
+   "px": 451,
+   "py": 276,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "lane south of the Printing Ink Works by the W.M.; dot above; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.9,
+   "raw": "17·9",
+   "px": 138,
+   "py": 479,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "channel frontage line of West Ham Chemical Works; dot on the frontage line left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.17,
+   "raw": "B.M.13·17",
+   "px": 170,
+   "py": 510,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the corner of a works building, text below; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 155,
+   "py": 552,
+   "confidence": "medium",
+   "setting": "embankment_top",
+   "notes": "hatched bank by the drain outfall at the SW corner of the works; no dot distinct from hatching; position = centre of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 383,
+   "py": 673,
+   "confidence": "high",
+   "setting": "embankment_foot",
+   "notes": "flat ground at the foot of the LT&SR embankment north side; dot left; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.15,
+   "raw": "B.M.11·15",
+   "px": 618,
+   "py": 577,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "pheon on the fence line at the top edge of the LT&SR embankment hatching, text below-left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.9,
+   "raw": "7·9",
+   "px": 579,
+   "py": 596,
+   "confidence": "high",
+   "setting": "embankment_foot",
+   "notes": "foot of the LT&SR embankment below B.M.11·15; dot left; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.3,
+   "raw": "11·3",
+   "px": 190,
+   "py": 752,
+   "confidence": "medium",
+   "setting": "railway",
+   "notes": "rails at Upper Abbey Mills Junction west of the embankment hatching; dot left; open 3 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.4,
+   "raw": "3·4",
+   "px": 878,
+   "py": 40,
+   "confidence": "high",
+   "setting": "embankment_foot",
+   "notes": "Manor Road at the foot of the Northern Outfall Sewer bank; dot above-right; 8x (overlap strip with 131075_87143)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.7,
+   "raw": "31·7",
+   "px": 955,
+   "py": 39,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "crest of the Northern Outfall Sewer bank; dot left; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.4,
+   "raw": "8·4",
+   "px": 889,
+   "py": 237,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Manor Road; dot above-right near the A of R·O·A·D (possible interpunct); 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.1,
+   "raw": "15·1",
+   "px": 884,
+   "py": 380,
+   "confidence": "medium",
+   "setting": "railway",
+   "notes": "lines west of Manor Road; dot on the dashed line beside the rails; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.7,
+   "raw": "5·7",
+   "px": 905,
+   "py": 455,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road north of the LT&SR bridge; dot above; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.9,
+   "raw": "19·9",
+   "px": 779,
+   "py": 503,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "railway embankment by F.W./F.B.; dot above-left at the bank top; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.46,
+   "raw": "B.M.5·46",
+   "px": 873,
+   "py": 545,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "pheon on the abutment of the LT&SR bridge over Manor Road; leading 5 flat-topped at 8x, less clear at higher zoom"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.3,
+   "raw": "5·3",
+   "px": 890,
+   "py": 604,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road south of the bridge; dot left; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.1,
+   "raw": "6·1",
+   "px": 893,
+   "py": 743,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road south; dot above; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 896,
+   "py": 974,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road near the Sluice; dot above; 8x"
+  }
+ ],
+ "non_height_marks": [
+  "H.W.M.O.T. / L.W.M.O.T. tide lines",
+  "W.M. weighing machines ~358,340 and ~420,355",
+  "F.P., F.B., F.F., S.P. marks",
+  "survey triangle ~951,515 with no figure"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 656,
+   "px1": 14,
+   "py1": 672,
+   "reason": "figure reading 7·1 at west edge, a leading digit may be cut off (it is whole in the western neighbour)"
+  },
+  {
+   "px0": 0,
+   "py0": 564,
+   "px1": 1024,
+   "py1": 572,
+   "reason": "horizontal sheet join"
+  }
+ ]
+}

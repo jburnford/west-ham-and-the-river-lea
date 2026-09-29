@@ -1,0 +1,25 @@
+{
+  "mosaic": "q18_131099_87146", "reader": "opus-ak", "layer": "os-25-inch-london",
+  "area": "Plaistow / East Ham edge: Blind Lane running N-S down the west third (dotted boundary along it, yellow boundary tint joining from the west at the B.M.), open fields either side (parcels 5 and 40); E ~541500-541900, N ~182550-182930",
+  "method": "Layer: OS 25-inch (1:2500) Essex county series, inferred 1893-96 revision. Viewed the full 1024 px mosaic at 1x (anchor: Blind Lane, B.M.16.7, acreages 5 .653 / 40 .861), all 9 sweep crops at 2x (r0c0 B l i n d L a n e with 19 and 15; r0c1 lane and curved field line; r0c2 curved field line end, blank; r1c0 yellow boundary angle and pecked crossroads, pheon; r1c1 B.M.16.7 and 15; r1c2 blank paper with specks; r2c0 5 .653 brace and 14; r2c1 40 .861 brace, 12 and 11; r2c2 blank paper with specks), contact sheet cs1 at 5x (19, 15, B.M., 15), contact sheet cs2 at 5x (12, 11, 14), a 10x zoom on the 11 marker at 440,1004, and a marker sheet. Every crop, zoom, contact sheet and marker sheet displayed when opened and has an anchor in my notes. Positions are the x / + marker centroids and the pheon apex.",
+  "legibility": "Very clear italic whole-foot figures 12-14 px; x markers sit on the lane beside the dotted boundary and are distinct from its round dots. The B.M. is to 1 dp as expected. No sheet join seen (tool reports none).",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 19, "raw": "19", "px": 282, "py": 13, "confidence": "high", "setting": "street",
+     "notes": "Blind Lane at the north edge; x marker in the lane 22 px left of the figures; figures whole (top ~py 7); confirmed at 5x"},
+    {"type": "spot", "value_ft": 15, "raw": "15", "px": 373, "py": 307, "confidence": "high", "setting": "street",
+     "notes": "Blind Lane, beside the 'e' of Lane; x marker between two boundary dots, figures 20 px right; confirmed at 5x"},
+    {"type": "bench_mark", "value_ft": 16.7, "raw": "B.M.16·7", "px": 430, "py": 469, "confidence": "high", "setting": "other",
+     "notes": "west side of Blind Lane where the yellow-tinted boundary meets it; pheon apex pointing down onto the lane-side line, no wall or building drawn (fence/boundary corner); text 20-80 px to the east; confirmed at 5x"},
+    {"type": "spot", "value_ft": 15, "raw": "15", "px": 422, "py": 478, "confidence": "high", "setting": "street",
+     "notes": "Blind Lane just below the B.M. pheon; own x marker, figures 25 px east under the B.M. text; confirmed at 5x"},
+    {"type": "spot", "value_ft": 12, "raw": "12", "px": 433, "py": 734, "confidence": "high", "setting": "street",
+     "notes": "Blind Lane just north of where the acreage-brace arrows (5 .653 / 40 .861) meet the lane; x marker on the lane edge, figures 25 px east; confirmed at 5x"},
+    {"type": "spot", "value_ft": 11, "raw": "11", "px": 439, "py": 1004, "confidence": "medium", "setting": "street",
+     "notes": "Blind Lane at the south edge beside a small rectangle (post or hut); digits clear and whole (bottom ~py 1016), but the + marker is tangled with the rectangle and a boundary dot at 10x; position = probable cross"},
+    {"type": "spot", "value_ft": 14, "raw": "14", "px": 131, "py": 929, "confidence": "high", "setting": "marsh",
+     "notes": "open field west of Blind Lane, no place word, below 15 ft so marsh by the value rule; + marker above the figures; overlap strip with q18_131096_87146 (same mark); confirmed at 5x"}
+  ],
+  "non_height_marks": ["acreage braces '5 ·653' at ~345,745 and '40 ·861' at ~515,755 with arrows to the lane", "round dots of the boundary along Blind Lane (not survey dots)"],
+  "unreadable_regions": []
+}

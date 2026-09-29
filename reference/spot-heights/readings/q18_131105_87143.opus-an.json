@@ -1,0 +1,20 @@
+{
+  "mosaic": "q18_131105_87143",
+  "reader": "opus-an",
+  "layer": "os-25-inch-london",
+  "area": "East Ham fields (E 541970-542360, N 182860-183230): a lane running ENE across the NW corner (road acreage 2·099) with a Well and Spring beside it, large display letter 'A' of a district name, otherwise open fields; east half missing tiles beyond the sheet's neat line",
+  "method": "OS 25-inch layer os-25-inch-london. sheet (no join reported; missing tiles 131107-131108 x 87143-87146 listed); 2x sweep of all nine crops r0c0-r2c2, each displayed and anchored at the moment of opening (r0c0 big letter A, lane, Well, Spring, 2.099, B.M.24.7, 16; r0c1 Spring/Well/16 and neat line; r0c2 all grey; r1c0 B.M.24.7 and stains; r1c1 blank and neat line; r1c2 all grey; r2c0 stains and speck; r2c1 blank and neat line; r2c2 all grey). Contact sheet cs1 (5-8x: B.M. digits, pheon, 16 and its cross) and a 2x marker sheet (0-460 x 100-400) displayed; positions confirmed. All crops and zooms viewed successfully.",
+  "legibility": "Clean, digits clear at 2x; vertical neat line at px ~447 (sheet edge), white margin 447-512, grey missing tiles 512-1024 full height",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "bench_mark", "value_ft": 24.7, "raw": "B.M.24·7", "px": 65, "py": 322, "confidence": "high", "setting": "other",
+     "notes": "B.M.24·7 clear with middot, text below the lane; pheon pointing E along the lane's S boundary line (fence/hedge, no wall drawn), apex at 65,322 at 8x"},
+    {"type": "spot", "value_ft": 16, "raw": "16", "px": 443, "py": 179, "confidence": "high", "setting": "street",
+     "notes": "italic 16 at ~425,200 just S of the lane near the Spring; paired with the bold 4-point star in the carriageway 20-25 px NE at 443,179 (nearest isolated cross), 4 px inside the neat line"}
+  ],
+  "non_height_marks": ["road acreage 2·099 at ~385,195", "acreage 4·911 at ~370,5", "'Well' ~335,185 with its circle ~353,193; 'Spring' ~415,150 with circle ~436,168", "large display letter 'A' at ~80-175,165-245"],
+  "unreadable_regions": [
+    {"px0": 447, "py0": 0, "px1": 512, "py1": 1024, "reason": "white off-sheet margin beyond the neat line"},
+    {"px0": 512, "py0": 0, "px1": 1024, "py1": 1024, "reason": "grey fill: missing tiles 131107-131108 x 87143-87146"}
+  ]
+}

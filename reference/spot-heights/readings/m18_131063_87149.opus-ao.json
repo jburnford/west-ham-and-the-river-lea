@@ -1,0 +1,374 @@
+{
+ "mosaic": "m18_131063_87149",
+ "reader": "opus-ao",
+ "area": "Bromley-by-Bow: Bromley Station and the street bridge over the railway, Thomas Street, Favonia/Lingen/James/Peter Streets, St Leonard's Street, Berger Hall, Sunday School, St Leonard's Works, Bromley Maltings, Bow Creek road bridge, Tidal Lock, Bromley Lock, Sun Mills, mud flats and the east bank of Bow Creek",
+ "method": "Sweep crops r0c0-r2c2 (2x) all displayed, anchors: r0c0 Station/THOMAS STREET; r0c1 St. Leonard's Works; r0c2 BOW CREEK/Towing Path; r1c0 LINGEN STREET; r1c1 Bromley Maltings; r1c2 Tidal Lock; r2c0 Berger Hall/Sunday School; r2c1 Sun Mills; r2c2 Mud. Region views (4-5x): 60-260x0-120, 160-420x240-470, 20-440x520-690, 30-440x750-1024, 700-1024x90-345, 690-1024x420-680, 680-1000x770-960. Contact sheets cs_a..cs_f (7-20x, LANCZOS and nearest). Marker sheets checked. All crops, zooms and sheets were viewed successfully.",
+ "legibility": "Clear engraving; italic 3s render closed like 8 at 20x on this sheet, several final digits left low. Sheet joins by eye: vertical px ~828-829 full height (straight line through Bow Creek); horizontal py ~763-765 across the mosaic (tint step).",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 34.31,
+   "raw": "B.M.34·31",
+   "px": 100,
+   "py": 16,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on small building by Bromley Station, text 20 px SE; 12x and 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.1,
+   "raw": "29·1",
+   "px": 97,
+   "py": 72,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Bromley Station forecourt beside the railway; dot left of figure; 5x region and 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 48.57,
+   "raw": "B.M.48·57",
+   "px": 177,
+   "py": 82,
+   "confidence": "low",
+   "setting": "bridge",
+   "notes": "pheon on parapet where the street crosses the railway at Bromley Station; second digit 8/9 unsettled at 12x, 20x and 16x nearest (alt 49·57)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 47.3,
+   "raw": "47·3",
+   "px": 191,
+   "py": 94,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "deck of street bridge over the railway; dot above figure; 10x and 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 363,
+   "py": 22,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "on the railway lines NE of Bromley Station; dot left of figure; 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 39.1,
+   "raw": "39·1",
+   "px": 229,
+   "py": 256,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "street on hatched earth ramp descending south from the railway bridge, near foot of hatching; dot above-left; 4x region and 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.6,
+   "raw": "30·6",
+   "px": 200,
+   "py": 331,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "figure written over the hatched building block east of Thomas Street, no dot found; 6 open-topped at 7x; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.6,
+   "raw": "26·6",
+   "px": 342,
+   "py": 427,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "High Street / St Leonard's Street by the F.P.; dot below figure, separate from the F.P. dot; second digit 6/8 unsettled at 7x and 20x (alt 28·6)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 30.16,
+   "raw": "B.M.30·16",
+   "px": 358,
+   "py": 446,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on corner of house at James Street corner, text below-left; leading 3 at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.5,
+   "raw": "30·5",
+   "px": 207,
+   "py": 455,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street south of Thomas Street block; dot left; 4x region and 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.4,
+   "raw": "26·4",
+   "px": 366,
+   "py": 537,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "St Leonard's Street at James Street; small arrow-like mark above-left taken as the dot; 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.5,
+   "raw": "24·5",
+   "px": 394,
+   "py": 655,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "St Leonard's Street at Peter Street; dot above-left; 5 flat-topped at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.0,
+   "raw": "24·0",
+   "px": 409,
+   "py": 767,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "St Leonard's Street by the Urinal; no survey dot (dot below is the i of Urinal); sheet join py ~764 passes just above; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.7,
+   "raw": "28·7",
+   "px": 301,
+   "py": 789,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street north of Berger Hall; dot right of figure (F.P. has its own dot); 10x and 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.4,
+   "raw": "32·4",
+   "px": 58,
+   "py": 828,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street corner at Berger Hall; nearest dot belongs to the F.P.; position = centre of figures; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.99,
+   "raw": "B.M.34·99",
+   "px": 81,
+   "py": 922,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on west corner of the Sunday School; text right; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.2,
+   "raw": "25·2",
+   "px": 405,
+   "py": 1001,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "St Leonard's Street by Bromley Lock; nearest dot is the O·N interpunct of ST LEONARD'S; position = centre of figures; 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.7,
+   "raw": "30·7",
+   "px": 548,
+   "py": 363,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "road on hatched earth embankment approaching the Bow Creek bridge from the west; dot left; 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 869,
+   "py": 121,
+   "confidence": "low",
+   "setting": "embankment_top",
+   "notes": "Bow Creek towing path; no own dot (T·o interpunct nearby); final 8/3 unsettled at 10x and 20x (alt 15·3); position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.3,
+   "raw": "15·3",
+   "px": 845,
+   "py": 303,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "below the north edge of the Bow Creek road bridge at the creek wall; no dot distinct from the wall corner; open 3 at 20x; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.0,
+   "raw": "33·0",
+   "px": 748,
+   "py": 320,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "road bridge over Bow Creek, west approach deck; dot left; 3s match; 10x and 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.2,
+   "raw": "32·2",
+   "px": 971,
+   "py": 321,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "road bridge over Bow Creek, east end; dot above-left; 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 998,
+   "py": 438,
+   "confidence": "low",
+   "setting": "embankment_top",
+   "notes": "crest of the hatched bank east of Bow Creek; dot left; digits 6/8 and final 8/3 unsettled at 10x and 20x (alt 16·3); figure ends ~6 px from east edge"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.53,
+   "raw": "B.M.14·53",
+   "px": 757,
+   "py": 611,
+   "confidence": "low",
+   "setting": "wall_top",
+   "notes": "pheon on the side of the Tidal Lock, text below-left; final 3/9/8 unsettled at 12x and 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.0,
+   "raw": "19·0",
+   "px": 964,
+   "py": 651,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "crest of hatched bank east of Bow Creek; dot above-left; 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.7,
+   "raw": "14·7",
+   "px": 712,
+   "py": 789,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "river wall line of the Sun Mills frontage on Bow Creek; dot right of figure on the wall line; 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.2,
+   "raw": "15·2",
+   "px": 711,
+   "py": 940,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "foreshore beside Sun Mills wall; no dot found at 8x; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.5,
+   "raw": "15·5",
+   "px": 912,
+   "py": 855,
+   "confidence": "medium",
+   "setting": "embankment_top",
+   "notes": "crest of hatched bank east of Bow Creek; dot left; read 18·5 at 2x but both 5s flat-topped and matching at 7x and 20x"
+  }
+ ],
+ "non_height_marks": [
+  "C.C. at L.W. county boundary lettering along Bow Creek",
+  "S.B. near Bromley Station",
+  "Fn. (fountain) at ~326,972",
+  "many F.P. and H marks"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 376,
+   "px1": 12,
+   "py1": 390,
+   "reason": "figure ending 0·1 cut by west edge"
+  },
+  {
+   "px0": 824,
+   "py0": 0,
+   "px1": 834,
+   "py1": 1024,
+   "reason": "vertical sheet join"
+  },
+  {
+   "px0": 0,
+   "py0": 760,
+   "px1": 1024,
+   "py1": 768,
+   "reason": "horizontal sheet join"
+  }
+ ]
+}

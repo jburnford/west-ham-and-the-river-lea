@@ -1,0 +1,207 @@
+{
+ "mosaic": "m18_131057_87128",
+ "reader": "opus-e",
+ "area": "Lea marsh north-west of Stratford: towing path along the west edge, tufted marsh, Victoria Park Steam Bone Works, county boundary 'C.C. at L.W.' and embanked channels meeting the Und./Def. boundary stones",
+ "method": "9 sweep crops at 2x; every candidate zoomed at 6x (+-40) and digits checked at 10x (+-18).",
+ "legibility": "Good. No missing tiles. The sheet tool reports no join, but a straight full-width horizontal line at py ~938 with a pinker tint below is a sheet join (same join as in m18_131060_87128); no figures cross it. Rotated 'P a t h' lettering at the west edge beside 22·6 is lettering, not figures.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 24.5,
+   "raw": "24·5",
+   "px": 61,
+   "py": 3,
+   "confidence": "high",
+   "notes": "top-left, by the embankment north of the marsh; dot left of figures, 6x; figure whole just inside the north edge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.6,
+   "raw": "22·6",
+   "px": 21,
+   "py": 543,
+   "confidence": "high",
+   "notes": "towing path at the west edge (rotated 'Path' lettering either side, not part of the figure); dot left of figures, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.6,
+   "raw": "22·6",
+   "px": 44,
+   "py": 758,
+   "confidence": "high",
+   "notes": "towing path at the west edge; dot left of figures, 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 21.93,
+   "raw": "B.M.21·93",
+   "px": 36,
+   "py": 812,
+   "confidence": "high",
+   "notes": "towing path wall at the west edge; pheon (arrow) at the path edge line ~15 px left of the text, 10x digits"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.3,
+   "raw": "22·3",
+   "px": 25,
+   "py": 1006,
+   "confidence": "high",
+   "notes": "towing path near the south-west corner, below the sheet join; dot left of figures, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.7,
+   "raw": "14·7",
+   "px": 840,
+   "py": 165,
+   "confidence": "high",
+   "notes": "angle of the boundary strip west of the channel embankment; dot left of figures, 6x (overlap with m18_131060_87128)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.25,
+   "raw": "B.M.14·25",
+   "px": 880,
+   "py": 263,
+   "confidence": "medium",
+   "notes": "under the curved embankment by the Und./Def. boundary stones; digits clear; no pheon found, position = centre of figures (overlap with m18_131060_87128)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.4,
+   "raw": "17·4",
+   "px": 804,
+   "py": 364,
+   "confidence": "high",
+   "notes": "dot on the crest of the western embankment of the channel, 6x (overlap)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.6,
+   "raw": "18·6",
+   "px": 693,
+   "py": 531,
+   "confidence": "high",
+   "notes": "dot on the crest of the embankment south of the 'C.C. at L.W.' boundary, figures right, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.2,
+   "raw": "11·2",
+   "px": 862,
+   "py": 540,
+   "confidence": "high",
+   "notes": "dot on the embankment edge, figures right, 6x (overlap)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.1,
+   "raw": "19·1",
+   "px": 574,
+   "py": 668,
+   "confidence": "high",
+   "notes": "dot at the crest of the embankment hatching, figures right, 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.7,
+   "raw": "16·7",
+   "px": 998,
+   "py": 706,
+   "confidence": "high",
+   "notes": "dot on the embankment, figures to the right ending ~2 px inside the east edge, 6x (overlap)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 539,
+   "py": 827,
+   "confidence": "high",
+   "notes": "dot on the embankment crest, figures right, 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 12.98,
+   "raw": "B.M.12·98",
+   "px": 530,
+   "py": 834,
+   "confidence": "high",
+   "notes": "foot of the embankment below 17·1; pheon 6 px left of the text on the slope, 10x digits"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.2,
+   "raw": "17·2",
+   "px": 398,
+   "py": 1002,
+   "confidence": "high",
+   "notes": "dot on the embankment crest near the south edge, figures right, 6x"
+  }
+ ],
+ "non_height_marks": [
+  "marsh tuft symbols throughout the north half",
+  "boundary 'C.C. at L.W.' dash-dot line with x marks",
+  "boundary stones 'Und. B.S.' / 'Def.' ~820-970,210-265",
+  "rotated 'Towing Path' lettering at the west edge"
+ ],
+ "unreadable_regions": []
+}

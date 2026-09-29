@@ -1,0 +1,31 @@
+{
+  "mosaic": "m18_131066_87119", "reader": "opus-f",
+  "area": "Temple Mills / Stratford New Town north: Temple Mill Lane on embankment rising to its bridge over the GER Cambridge Old Main Line, High Meads Loop, sidings and signal box, Chobham Road, Heaton Place, Castle Street, Mission Halls, Baptist Chapel; pond and fields on the west",
+  "method": "9 sweep crops at 2x read in full; all candidates confirmed on 8x contact sheets (+-26 px panels), 10-12x re-checks of 28·4, 19·0 and B.M.35·38, and 6x +-45 px searches for the B.M.36·56 pheon and the 17·4 dot. All sweep crops, contact sheets and zooms were viewed successfully; no image failed to load.",
+  "legibility": "Clear sheet. Vertical sheet join at px ~68-70 (reported by the tool; strong tint step, darker sheet to the west, which is nearly blank). Street figures in Chobham Road area take interpuncts of spaced lettering as dots.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 19.0, "raw": "19·0", "px": 106, "py": 155, "confidence": "medium", "notes": "Temple Mill Lane at the foot of its embankment; dot at the foot of a short vertical stroke left of figures (stroke may be a post), 12x"},
+    {"type": "spot", "value_ft": 28.4, "raw": "28·4", "px": 276, "py": 97, "confidence": "medium", "notes": "Temple Mill Lane on the embankment; digits clear at 12x; dot left of figures, but it may be the stop of the adjacent F. lettering"},
+    {"type": "bench_mark", "value_ft": 36.56, "raw": "B.M.36·56", "px": 481, "py": 37, "confidence": "medium", "notes": "Temple Mill Lane bridge over the railway; digits clear at 8x; no pheon distinguishable within +-45 px (the mark at 441,25 is the B.S./boundary junction), position = centre of text"},
+    {"type": "spot", "value_ft": 36.0, "raw": "36·0", "px": 452, "py": 48, "confidence": "medium", "notes": "roadway of Temple Mill Lane bridge; digits clear at 8x, no dot found, position = centre of figures"},
+    {"type": "spot", "value_ft": 34.3, "raw": "34·3", "px": 834, "py": 17, "confidence": "high", "notes": "road by the Baptist Chapel; dot above-left of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 35.38, "raw": "B.M.35·38", "px": 911, "py": 105, "confidence": "high", "notes": "building corner on the road north of Chobham Road; pheon left of text, digits confirmed at 10x"},
+    {"type": "spot", "value_ft": 34.1, "raw": "34·1", "px": 905, "py": 121, "confidence": "high", "notes": "road junction; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 34.0, "raw": "34·0", "px": 1003, "py": 257, "confidence": "medium", "notes": "road near east edge (M·A·J... lettering); dot = interpunct after A above figures, figures wholly inside, 8x"},
+    {"type": "bench_mark", "value_ft": 18.9, "raw": "B.M.18·90", "px": 368, "py": 699, "confidence": "high", "notes": "at the F.B. (footbridge) over the High Meads Loop; pheon right of text, 8x"},
+    {"type": "spot", "value_ft": 17.4, "raw": "17·4", "px": 654, "py": 655, "confidence": "medium", "notes": "Cambridge Old Main Line; figures clear at 8x beside the rails, dot inferred as the tick on the rail 25 px east"},
+    {"type": "spot", "value_ft": 24.0, "raw": "24·0", "px": 502, "py": 679, "confidence": "high", "notes": "open ground between the High Meads Loop and the main line; dot above-left of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 21.9, "raw": "B.M.21·90", "px": 707, "py": 643, "confidence": "high", "notes": "signal box by the Ward Bdy.; pheon below text, 8x"},
+    {"type": "spot", "value_ft": 31.5, "raw": "31·5", "px": 785, "py": 551, "confidence": "high", "notes": "Chobham Road west end; dot above figures, 8x"},
+    {"type": "spot", "value_ft": 33.0, "raw": "33·0", "px": 914, "py": 483, "confidence": "high", "notes": "Chobham Road; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 30.9, "raw": "30·9", "px": 1001, "py": 604, "confidence": "medium", "notes": "road near east edge; dot = interpunct after Y of spaced lettering (F.P. dot at 1017,590 excluded), 8x"},
+    {"type": "spot", "value_ft": 17.7, "raw": "17·7", "px": 329, "py": 782, "confidence": "medium", "notes": "High Meads Loop; dot = tick on the rail left of figures, 8x"},
+    {"type": "spot", "value_ft": 17.0, "raw": "17·0", "px": 166, "py": 921, "confidence": "high", "notes": "GER line on embankment south-west; dot on rail above-left of figures, 8x"},
+    {"type": "spot", "value_ft": 18.2, "raw": "18·2", "px": 788, "py": 860, "confidence": "medium", "notes": "corner of shaded works yard west of Heaton Place; no dot, position = centre of figures, 8x (same figure as m18_131069_87122 21,91)"}
+  ],
+  "non_height_marks": ["S.P., S.Ps, F.P., F.B., H, C. marks", "B.S. at ~440,15", "C.R. at ~780,880", "Ward Bdy. lettering", "S.B. signal box"],
+  "unreadable_regions": [
+    {"px0": 64, "py0": 0, "px1": 74, "py1": 1024, "reason": "vertical sheet join with strong tint step; western sheet nearly blank, no figures cut"}
+  ]
+}

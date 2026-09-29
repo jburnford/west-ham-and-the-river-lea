@@ -1,0 +1,248 @@
+{
+ "mosaic": "m18_131093_87122",
+ "reader": "opus-o",
+ "area": "Forest Gate east of Westbury Road: Romford Road with its tramway (county/parliamentary borough and U.D. boundary, Police Station, P.H., Pump, milepost London 5 / Ilford 3), Windsor Road, Westbury Road, St John's Terrace, Finden Road, St Dunstan's Street, Ratcliff Road and Henderson Road.",
+ "method": "All 9 sweep crops (2x) viewed and displayed successfully, each anchored: r0c0 TRAMWAY, Pump, P.H.; r0c1 'Co. & Parly. Boro. Bdy.', 'U.D. Bdy.', Police Station; r0c2 milepost 'M.P London 5 Ilford 3'; r1c0 WESTBURY ROAD, ST. JOHN'S TERRACE; r1c1 FINDEN ROAD, ST. DUNSTAN'S STRE..; r1c2 RATCLIFF ROAD; r2c0 WESTBURY ROAD, '..KE ROAD'; r2c1 HENDERSON; r2c2 HENDERSON ROAD, ST DUNSTAN'S STREET. Contact sheets (own helper, all displayed): csA 6x (west-edge B.M.34.78, 32.6, 32.8 by the triangle, 32.9 by the circled '13', 32.6 by F.P., B.M.34.14), csB 10x (32.8 final 8, rail ticks, B.M.34.14 pheon), csC 6x (32.5 by the milepost, 32.5 at the join, east-edge B.M., 32.6 and 32.4 on the boundary road), csD 6x (31.1, B.M.33.20, 31.2 in HENDERSON, 31.0 x2, B.M.33.80), csE 10x (33.80, 31.0 zeros, pheons, east-edge 31.), csF 10x (32.5 by TRAMWAY); marker sheets mkA (Romford Road/Police Station) and mkB (Henderson Road) confirmed positions. Every value confirmed at 6x or more.",
+ "legibility": "Clean print. Sheet joins: vertical at px ~940 over the full height (drawn line, darker tint to the east, 1-2 px line offsets); horizontal at py ~750 across the full width (drawn line and tint step). No recorded figure crosses a join (32.5 at ~930,237 ends just west of the vertical join; 31.0 at 851,747 sits just above the horizontal one). A dotted boundary with large dots runs down the N-S road at px ~450-560, so figures there are medium.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 34.78,
+   "raw": "B.M.34·78",
+   "px": 35,
+   "py": 413,
+   "confidence": "medium",
+   "notes": "South side of Romford Road at the west edge; value digits whole but the 'B.M.' prefix is cut by the west edge; pheon ~35,413 inside the mosaic (same mark as m18_131090_87122 at 803,414)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.5,
+   "raw": "32·5",
+   "px": 162,
+   "py": 367,
+   "confidence": "high",
+   "notes": "Romford Road by TRAMWAY lettering; dot as a tick on the tram rail below figure; 5 flat-topped at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.6,
+   "raw": "32·6",
+   "px": 296,
+   "py": 349,
+   "confidence": "high",
+   "notes": "Romford Road; dot as a tick on the tram rail below figure; final 6 open-topped at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.8,
+   "raw": "32·8",
+   "px": 430,
+   "py": 326,
+   "confidence": "medium",
+   "notes": "Romford Road by C.R. and a survey triangle (centre ~415,315) immediately left of the figure; rail tick under the figure taken as the dot (alt: the triangle); final 8 closed at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 393,
+   "py": 51,
+   "confidence": "high",
+   "notes": "Windsor Road corner beside a circled '13'; dot directly left of figure; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.6,
+   "raw": "32·6",
+   "px": 581,
+   "py": 287,
+   "confidence": "medium",
+   "notes": "Romford Road by 'Co. & Parly. Boro. Bdy.' and F.P.; two rail ticks below; position = centre of figures; final 6 open-topped at 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.14,
+   "raw": "B.M.34·14",
+   "px": 610,
+   "py": 314,
+   "confidence": "medium",
+   "notes": "Building west of the Police Station; text ~600,331; arrow pheon ~15 px above at the building corner inside a tree symbol, point estimated; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.5,
+   "raw": "32·5",
+   "px": 754,
+   "py": 262,
+   "confidence": "medium",
+   "notes": "Romford Road below the milepost (London 5 / Ilford 3); small tick on the rail above-left of figure taken as the dot; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.5,
+   "raw": "32·5",
+   "px": 930,
+   "py": 237,
+   "confidence": "medium",
+   "notes": "Romford Road just west of the px ~940 join; regular rail ticks, no distinct dot; position = centre of figures; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.6,
+   "raw": "32·6",
+   "px": 460,
+   "py": 478,
+   "confidence": "medium",
+   "notes": "N-S road at Finden Road corner on the large-dot boundary; small mark left of figure taken as the dot; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.4,
+   "raw": "32·4",
+   "px": 466,
+   "py": 611,
+   "confidence": "medium",
+   "notes": "N-S road at St John's Terrace/St Dunstan's Street on the large-dot boundary; no distinct dot, position = centre of figures; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.1,
+   "raw": "31·1",
+   "px": 532,
+   "py": 803,
+   "confidence": "medium",
+   "notes": "N-S road at Westbury Road/Henderson Road; only nearby dot is in line with the large boundary dots; position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.2,
+   "raw": "B.M.33·20",
+   "px": 605,
+   "py": 802,
+   "confidence": "high",
+   "notes": "Corner house at the west end of Henderson Road; text ~590,793; down-pointing pheon at the building corner ~605,802; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.2,
+   "raw": "31·2",
+   "px": 702,
+   "py": 773,
+   "confidence": "medium",
+   "notes": "Henderson Road; only dot is between the letters S and O of HENDERSON, directly above the figure; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.0,
+   "raw": "31·0",
+   "px": 538,
+   "py": 922,
+   "confidence": "medium",
+   "notes": "N-S road south of Henderson Road on the boundary; a double dot right of figure, owner unclear; position = centre of figures; 0 oval at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.0,
+   "raw": "31·0",
+   "px": 855,
+   "py": 741,
+   "confidence": "high",
+   "notes": "Henderson Road east, just above the py ~750 join; dot directly above figure; 0 oval at 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.8,
+   "raw": "B.M.33·80",
+   "px": 848,
+   "py": 770,
+   "confidence": "high",
+   "notes": "Henderson Road, north-west corner of the east terrace; text ~815,778; pheon at the building corner ~848,770; digits clear at 10x"
+  }
+ ],
+ "non_height_marks": [
+  "milepost 'M.P London 5 / Ilford 3' at ~790,245",
+  "circled '13' at ~380,52",
+  "'Co. & Parly. Boro. Bdy.' and 'U.D. Bdy.' lettering along Romford Road",
+  "survey triangle at ~415,315",
+  "Pump at ~200,385"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 405,
+   "px1": 8,
+   "py1": 420,
+   "reason": "'B.M.' prefix of B.M.34·78 cut by the west edge (value and pheon recorded)"
+  },
+  {
+   "px0": 995,
+   "py0": 175,
+   "px1": 1024,
+   "py1": 195,
+   "reason": "'B.M.' text at the east edge with its value off-mosaic"
+  },
+  {
+   "px0": 1003,
+   "py0": 682,
+   "px1": 1024,
+   "py1": 700,
+   "reason": "figure '31·?' cut by the east edge"
+  }
+ ]
+}

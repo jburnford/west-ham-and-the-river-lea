@@ -1,0 +1,29 @@
+{
+  "mosaic": "q18_131105_87131",
+  "reader": "opus-an",
+  "layer": "os-25-inch-london",
+  "area": "Upton Park / East Ham (E 541940-542330, N 184000-184370): Plashet Grove across the north (continuing WSW as a tree-lined road lettered ..VE), Cowper Avenue, Milton Avenue terraces, the railway in cutting (with S.P.) across the middle, Heigham Road, Colvin Road and Bendish Road in the south",
+  "method": "OS 25-inch layer os-25-inch-london. sheet (no join reported, no missing tiles); 2x sweep of all nine crops r0c0-r2c2, each displayed and anchored at the moment of opening (r0c0 COWPER AVENUE, tree-lined road, 29, 31.8 at W edge; r0c1 PLASHET, MILTON, 30, B.M. 32.3, join px 452; r0c2 PLASHET x GROVE, MILTON AVENUE, 29, 28, yellow building; r1c0 ..N AVENUE, B.M.30.3, railway; r1c1 MILTON, railway, S.P.; r1c2 MILTON AVENUE, ..AM ROAD; r2c0 HEIGHAM ROAD, triangle, B.M.30.8 cut at bottom; r2c1 display S, COLVIN ROAD; r2c2 display T, BENDISH ROAD). Contact sheets cs1 (5-6x on six candidate areas), cs2 (4-8x: wide view round the first 29, both B.M. pheons, B.M.30.3 text) and cs3 (6x on the B.M.30.3 pheon), and two marker sheets (2x 340-1024 x 20-180; 3x 0-200 x 540-660) displayed; one position corrected from the marker sheet. All crops and zooms viewed successfully.",
+  "legibility": "Clean, digits clear at 2x. Vertical sheet join at px ~452 over the full height (the tool does not report it); B.M. figures cut by the west and bottom edges",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 29, "raw": "29", "px": 388, "py": 150, "confidence": "medium", "setting": "street",
+     "notes": "italic 29 between the kerbs of the tree-lined road WSW of Plashet Grove; no isolated cross found within 45 px at 4-5x (tree symbols crowd the kerb), position = centre of the figure"},
+    {"type": "spot", "value_ft": 30, "raw": "30", "px": 527, "py": 103, "confidence": "high", "setting": "street",
+     "notes": "italic 30 at ~520,85 at the W end of Plashet Grove, just E of the sheet join; paired with the x in the carriageway 18 px S at 527,103"},
+    {"type": "bench_mark", "value_ft": 32.3, "raw": "B.M.32·3", "px": 547, "py": 76, "confidence": "high", "setting": "building",
+     "notes": "'B.M. / 32·3' in two lines on the S side of Plashet Grove at ~560,130; the only pheon nearby is across the road, apex on the SW corner of the terrace on the N side at 547,76 (55 px from the text), 8x"},
+    {"type": "spot", "value_ft": 29, "raw": "29", "px": 760, "py": 77, "confidence": "high", "setting": "street",
+     "notes": "italic 29 at ~773,105 just S of the Plashet Grove kerb at an entrance; paired with the x printed between PLASHET and GROVE in the carriageway at 760,77, 30 px NW"},
+    {"type": "spot", "value_ft": 28, "raw": "28", "px": 997, "py": 58, "confidence": "high", "setting": "street",
+     "notes": "italic 28 at ~985,57 at the NE corner of Plashet Grove; paired with the star 12 px E at 997,58 (marker sheet corrected position)"},
+    {"type": "bench_mark", "value_ft": 30.3, "raw": "B.M.30·3", "px": 90, "py": 616, "confidence": "high", "setting": "building",
+     "notes": "B.M.30·3 clear at 5x in the carriageway of Milton Avenue at ~40,585; pheon directly below the V of AVENUE with its strokes converging on the terrace frontage (S side) at 90,616, 6x"}
+  ],
+  "non_height_marks": ["S.P. (signal post) on the railway at ~540,580", "survey-station triangle at ~98,951 with no figure", "tree symbols along the WSW road", "display letters 'S' ~560,860 and 'T' ~790,855", "'L.B' cut by the east edge at ~1010,85"],
+  "unreadable_regions": [
+    {"px0": 0, "py0": 260, "px1": 40, "py1": 285, "reason": "B.M. value '31·8' visible at the west edge but its 'B.M.' lettering and pheon are off the mosaic; should be whole in the mosaic to the west"},
+    {"px0": 280, "py0": 1012, "px1": 380, "py1": 1024, "reason": "B.M. lettering (B.M.30·8) cut by the bottom edge; whole in q18_131105_87134"},
+    {"px0": 995, "py0": 25, "px1": 1024, "py1": 50, "reason": "pheon at ~1007,39 on the corner of the yellow-tinted building; its B.M. value is off the east edge"}
+  ]
+}

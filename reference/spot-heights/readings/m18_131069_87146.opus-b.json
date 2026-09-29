@@ -1,0 +1,178 @@
+{
+ "mosaic": "m18_131069_87146",
+ "reader": "opus-b",
+ "area": "Channelsea River Long Wall, Manure Works and Abbey Creek Wharf by the London Tilbury & Southend Railway, Upper Abbey Mills Junction, gasholders, and the open marsh (West Ham Levels) south of the railway with a footpath line and a sluice",
+ "method": "read by Claude (vision): 3x3 grid of 448 px crops at 2x LANCZOS, every candidate checked at 6x (80 px window, crosshair) and ambiguous ones at 8-10x; positions in mosaic pixels",
+ "legibility": "good; the marsh is empty apart from spot heights along the footpath; the west 256 px repeat the east of m18_131066_87146 (px offset 768)",
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 55,
+   "py": 177,
+   "confidence": "medium",
+   "notes": "duplicate of m18_131066_87146 (px+768); top of the Long Wall; dot above-left on the wall"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 12.86,
+   "raw": "B.M.12·86",
+   "px": 161,
+   "py": 176,
+   "confidence": "high",
+   "notes": "duplicate of m18_131066_87146 (px+768); pheon above the text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 269,
+   "py": 121,
+   "confidence": "medium",
+   "notes": "Long Wall footpath (F.P.); dot on the wall top about 17 px above the figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 15.94,
+   "raw": "B.M.15·94",
+   "px": 277,
+   "py": 252,
+   "confidence": "medium",
+   "notes": "text inside the crane (C) oval; pheon taken as the mark at the end of 'Manure', ~35 px SE of the text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 128,
+   "py": 294,
+   "confidence": "low",
+   "notes": "duplicate of m18_131066_87146 (px+768); last digit 3 or 8; dot probably on the railway at about 132,312"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.4,
+   "raw": "13·4",
+   "px": 358,
+   "py": 215,
+   "confidence": "medium",
+   "notes": "Manure Works frontage by the railway; no dot found, position = figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.9,
+   "raw": "10·9",
+   "px": 531,
+   "py": 164,
+   "confidence": "medium",
+   "notes": "Abbey Creek Wharf by the railway; dot below-right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.6,
+   "raw": "11·6",
+   "px": 663,
+   "py": 84,
+   "confidence": "low",
+   "notes": "Abbey Creek Wharf; last digit 6 or 8 at 10x; no dot found, position = figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.68,
+   "raw": "B.M.14·68",
+   "px": 780,
+   "py": 61,
+   "confidence": "medium",
+   "notes": "pheon right of the text by the S.B. on the railway; last digit 8 (6 not excluded)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.7,
+   "raw": "10·7",
+   "px": 691,
+   "py": 139,
+   "confidence": "medium",
+   "notes": "path junction south of the railway; dot 17 px left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 773,
+   "py": 348,
+   "confidence": "high",
+   "notes": "marsh footpath; dot left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.22,
+   "raw": "B.M.7·22",
+   "px": 793,
+   "py": 552,
+   "confidence": "high",
+   "notes": "pheon left of the text on the small structure by the footpath"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 776,
+   "py": 605,
+   "confidence": "high",
+   "notes": "marsh footpath; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 984,
+   "py": 620,
+   "confidence": "high",
+   "notes": "by the Sluice; dot above figures; lowest reading in this batch"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.3,
+   "raw": "6·3",
+   "px": 726,
+   "py": 817,
+   "confidence": "high",
+   "notes": "marsh footpath; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.1,
+   "raw": "6·1",
+   "px": 690,
+   "py": 976,
+   "confidence": "high",
+   "notes": "marsh footpath; dot below-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.72,
+   "raw": "B.M.7·72",
+   "px": 460,
+   "py": 907,
+   "confidence": "high",
+   "notes": "pheon right of the text at the fence corner by the railway embankment"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 470,
+   "py": 898,
+   "confidence": "medium",
+   "notes": "by the embankment; dot taken as the one 20 px left of the figures near the B.M."
+  }
+ ],
+ "non_height_marks": [
+  "S.P. signal posts and S.B. by the railway",
+  "Division of Parly. Boro. & Ward Bdy. line",
+  "F.P. on the Long Wall (footpath)",
+  "H.W.M.O.T. line on the Channelsea"
+ ],
+ "unreadable_regions": []
+}

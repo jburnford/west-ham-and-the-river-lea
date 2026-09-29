@@ -1,0 +1,271 @@
+{
+ "mosaic": "m18_131075_87155",
+ "reader": "opus-v",
+ "area": "Canning Town north: Stephenson Street and Junction Street by the railway, Malmesbury, Avondale, Clarence, Percy, Liverpool and Clifton Roads, Talbot Works, R.C. Chapel and School",
+ "method": "All 9 sweep crops viewed and anchored on opening (r0c0 MALMESBURY/AVONDALE ROAD; r0c1 AVONDALE/PERCY ROAD; r0c2 Sunday School/CLIFTON; r1c0 STEPHENSON STREET/S.B./P.H.; r1c1 CLARENCE/LIVERPOOL ROAD; r1c2 AVONDALE/CLIFTON ROAD; r2c0 JUNCTION STREET/Talbot Works; r2c1 L.& N.W.R. Goods & Coal Depot; r2c2 MALMESBURY/OAK CRESCENT/R.C. Chapel). Contact sheets cs1-cs5 (8-16x) all displayed; every value confirmed at 8x+, bench-mark decimals at 12x. Marks in the southern strip (y > 768) are the same pixels as the north strip of m18_131075_87158, which I also read (not independent). Marker sheets checked.",
+ "legibility": "Good print. Vertical line / join at px ~346 over the full height; horizontal join (tint step) at py ~962 east of px 346. No figure crosses a join. STEPHENSON lettering has interpuncts (P·H), so dots beside figures there are medium.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 5.4,
+   "raw": "5·4",
+   "px": 14,
+   "py": 178,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Stephenson Street N end near W edge; dot 21,175 sits just before the S of STEPHENSON (interpunct-style lettering, cf. P·H); centre of figures; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 32,
+   "py": 287,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Stephenson Street; only nearby dot is the P·H interpunct; centre of figures; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 634,
+   "py": 123,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Liverpool Road N part; dot above figures 634,123; clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.42,
+   "raw": "B.M.8·42",
+   "px": 659,
+   "py": 258,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of Avondale Road and Liverpool Road, house corner; digits clear 12x; pheon point 659,258, text to the E"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 643,
+   "py": 276,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Avondale Road at Liverpool Road; dot above figures 643,276 after the final E of AVONDALE; clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.64,
+   "raw": "B.M.8·64",
+   "px": 921,
+   "py": 5,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "top edge, building corner W of Clifton Road; digits clear 12x (whole, y 3-12); pheon 921,5 E of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 648,
+   "py": 511,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Liverpool Road, figure inside the LIVERPOOL lettering; both digits the same G-shaped 6 at 12x; dot 651,516 sits between R and P; centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.46,
+   "raw": "B.M.6·46",
+   "px": 95,
+   "py": 483,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Stephenson Street W side frontage by the P.H.; digits clear 12x (both 6s alike); pheon 95,483, text 15 px W"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 79,
+   "py": 497,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Stephenson Street by the P.H. and F.P.; figure beside a survey-station triangle, position = triangle centre; first digit flat-topped 5 at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 87,
+   "py": 605,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "written on a building E of Junction Street; no dot; centre of figures; clear 8-16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 129,
+   "py": 645,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Stephenson Street; dot above-left 129,645; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 44,
+   "py": 750,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "written on a building on the E side of Junction Street; no dot; centre of figures; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 173,
+   "py": 763,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Stephenson Street S part beside the railway; dot above-left 173,763; clear 8x (cut by the N edge of the mosaic to the south)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 655,
+   "py": 764,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Liverpool Road at the Malmesbury Road junction; dot above figures 655,764, after the D of ROAD; clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.25,
+   "raw": "B.M.9·25",
+   "px": 682,
+   "py": 779,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house corner at Liverpool Road / Malmesbury Road; digits clear 8-12x (final 5); pheon point 682,779 below text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.2,
+   "raw": "7·2",
+   "px": 652,
+   "py": 811,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Liverpool Road; dot above 652,811; same pixels confirmed at 8x in the mosaic to the south"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.38,
+   "raw": "B.M.8·38",
+   "px": 187,
+   "py": 839,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Talbot Works frontage; same mark confirmed at 12x in the mosaic to the south; pheon tip 187,839"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 238,
+   "py": 936,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "N end of Stephenson Street by the P.H.; dot 238,936; confirmed at 12x in the mosaic to the south"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.43,
+   "raw": "B.M.9·43",
+   "px": 988,
+   "py": 991,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "R.C. Chapel corner; confirmed at 10-12x in the mosaic to the south; pheon 988,991"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.4,
+   "raw": "8·4",
+   "px": 652,
+   "py": 1010,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Liverpool Road beside the L&NWR depot, below the horizontal join; dot 652,1010; figures whole to y ~1018; confirmed at 8x in the mosaic to the south"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle in a house plot at ~656,52 with no figure",
+  "S.P. and S.B. marks along the railway",
+  "hydrant H marks along the roads"
+ ],
+ "unreadable_regions": []
+}

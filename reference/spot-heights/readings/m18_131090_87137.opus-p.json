@@ -1,0 +1,29 @@
+{
+  "mosaic": "m18_131090_87137",
+  "reader": "opus-p",
+  "area": "Plaistow north: north-south '...ROAD' (NW), new road with terraces along the north side of the LT&SR Southend Railway cutting, road bridge over the railway, Queen's Road with survey station, Silk Mill, Watson Street, Plaistow Park Road, 'ST. M...' road, 'NORTHE...' road and '...ION ROAD'; open ground in the north",
+  "method": "Viewed full 1024 px mosaic (anchor: Southend Railway, Silk Mill), then all 9 sweep crops at 2x, each anchored as opened: r0c0 vertical '...OAD' road with terraces; r0c1 open ground and 25.7 road; r0c2 road lettered 'H A', A.M.P, P.H.; r1c0 SOUTHEND RAILWAY/Silk Mill/'R O A D'; r1c1 QUEEN'S road with L.B. and survey triangle; r1c2 'S T. M' road/P.H.; r2c0 Watson Street/Plaistow Park Road; r2c1 Plaistow Park Road curved terrace/B.M.28.03; r2c2 'NORTHE' road/'...ION ROAD'/triangle. Zoom contact sheets (own helper, mosaic-px labels): a 8x (B.M.28.13, 25.6, 25.0, 26.1, 25.7, 27.2), b 8x (B.M.30.30, 27.9, 25.3, B.M.35.23, 27.6, 25.3), c 8x (23.7, 23.4, 23.2, 23.6, B.M.28.03), d 10x (6/8 checks and all pheons), e 14x (B.M.30.30 and 35.23 digits), f 12x blocky (dot positions of 27.2 and 27.9, corrected after marker check); three 2x marker sheets checking every position. Every image displayed when opened.",
+  "legibility": "Clear print, sparse lettering; all digits unambiguous at 8-14x. Sheet joins at: horizontal py ~376 across the full width (clear tint step and line; confirmed by eye). The sheet tool's vertical joins at px ~24/126/240 (y 0-256/512) were not confirmed by eye (they coincide with terrace hatching and road lines).",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"bench_mark","value_ft":28.13,"raw":"B.M.28·13","px":193,"py":30,"confidence":"high","notes":"north-south '...ROAD' near N edge; horizontal arrow pointing east at the terrace line, tip at 10x; digits clear"},
+    {"type":"spot","value_ft":25.6,"raw":"25·6","px":182,"py":114,"confidence":"high","notes":"same road; dot above the figure; open-topped 6 at 10x matches the 6s of 26.1/23.6"},
+    {"type":"spot","value_ft":25.0,"raw":"25·0","px":193,"py":236,"confidence":"high","notes":"same road below an F.P.; dot above the figure; 8x"},
+    {"type":"spot","value_ft":26.1,"raw":"26·1","px":361,"py":396,"confidence":"high","notes":"road corner at the north end of the railway bridge, just south of the py~376 join; dot above-left; 10x"},
+    {"type":"spot","value_ft":25.7,"raw":"25·7","px":570,"py":340,"confidence":"high","notes":"new road north of the railway terraces; dot right of the figure; 8x"},
+    {"type":"spot","value_ft":27.2,"raw":"27·2","px":774,"py":264,"confidence":"high","notes":"same road further east; dot above the final 2 (blocky 12x)"},
+    {"type":"bench_mark","value_ft":30.3,"raw":"B.M.30·30","px":876,"py":250,"confidence":"high","notes":"house front on the same road; pheon below the text on the building line; both 3s identical looped italic 3s at 14x (80/90 impossible here)"},
+    {"type":"spot","value_ft":27.9,"raw":"27·9","px":970,"py":192,"confidence":"high","notes":"same road near 'H' of its name; dot above-right of the 9 (blocky 12x)"},
+    {"type":"spot","value_ft":25.3,"raw":"25·3","px":211,"py":449,"confidence":"high","notes":"'...ROAD' north of the railway, below F.P.; isolated dot left of the figure; 8x"},
+    {"type":"bench_mark","value_ft":35.23,"raw":"B.M.35·23","px":426,"py":533,"confidence":"high","notes":"road bridge over the Southend Railway; pheon on the bridge parapet above the text at 10x; 5 flat-topped at 14x"},
+    {"type":"spot","value_ft":27.6,"raw":"27·6","px":441,"py":652,"confidence":"high","notes":"Queen's Road; figure beside a survey-station triangle, position = triangle centre; 6 open-topped at 10x; dot after 'U' is the Q·U·E·E·N interpunct"},
+    {"type":"spot","value_ft":25.3,"raw":"25·3","px":638,"py":580,"confidence":"medium","notes":"Queen's Road under 'N'S'; digits clear; only nearby dots are the interpunct before N and the apostrophe, so position = centre of figures"},
+    {"type":"spot","value_ft":23.7,"raw":"23·7","px":660,"py":667,"confidence":"high","notes":"road south from Queen's Road, top of the curved terrace; isolated dot left of the figure; 8x"},
+    {"type":"spot","value_ft":23.4,"raw":"23·4","px":779,"py":640,"confidence":"high","notes":"'ST. M...' road; dot left of the figure; 8x"},
+    {"type":"spot","value_ft":23.2,"raw":"23·2","px":938,"py":626,"confidence":"medium","notes":"same road below 'S T.'; digits clear; dot to the upper left is the S·T interpunct, no survey dot found; position = centre of figures"},
+    {"type":"spot","value_ft":23.6,"raw":"23·6","px":668,"py":803,"confidence":"high","notes":"road beside the curved terrace; dot above the figure; 10x"},
+    {"type":"bench_mark","value_ft":28.03,"raw":"B.M.28·03","px":664,"py":980,"confidence":"high","notes":"end wall of the curved terrace near the S edge; pheon on the wall line above-left of the text at 10x; digits clear"}
+  ],
+  "non_height_marks": ["survey triangle without figure at 958,838","A.M.P at ~866,357 (railway)","L.B. on Queen's Road ~637,568","F.P./H marks along the roads"],
+  "unreadable_regions": []
+}

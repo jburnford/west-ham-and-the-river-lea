@@ -1,0 +1,123 @@
+{
+ "mosaic": "q18_131099_87155",
+ "reader": "opus-an",
+ "layer": "os-25-inch-london",
+ "area": "Plaistow Level marsh (E 541430-541820, N 181690-182080): open grazing marsh cut by drains with S-shaped tie marks, boundary drain with dotted boundary and B.S./C.S. junctions on the east side, an E-W road along the bottom (pecked kerbs) with a few buildings south of it at the SW corner",
+ "method": "Independent second read (QA). OS 25-inch layer os-25-inch-london. sheet (no join reported); 2x sweep of all nine crops r0c0-r2c2, each displayed and anchored at the moment of opening (r0c0 drain junction/tie mark; r0c1 parcel 24/8.342; r0c2 B.S/C.S junction and italic 4; r1c0 winding drain; r1c1 parcel 29/15.586; r1c2 B.S and cut B.M at E edge; r2c0 B M 6 6 and road with parcel 33/1.345; r2c1 parcel 28/3.261; r2c2 B.M.5.3 at culvert). Contact sheets cs1 (5x, five candidates) and cs2 (5-8x on B.M. digits and pheons) and a marker sheet (1x, 150-1024 x 150-1000) all displayed; positions checked on the marker sheet. All crops and zooms viewed successfully.",
+ "legibility": "Clean, digits clear at 2x; no sheet join seen by eye or by the tool; grey missing/off-mosaic fill only beyond px 1024 in zooms",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 4,
+   "raw": "4",
+   "px": 804,
+   "py": 217,
+   "confidence": "medium",
+   "setting": "marsh",
+   "notes": "italic 4 in the marsh just SW of the B.S./C.S. drain junction (B.S. tie circle at ~833,193); no isolated cross within 40 px at 5x, so position = centre of the figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.6,
+   "raw": "B.M.6·6",
+   "px": 203,
+   "py": 730,
+   "confidence": "medium",
+   "setting": "other",
+   "notes": "lettered 'B M 6 6' (dot after M, middot between the 6s unprinted); 1 dp convention applied. Pheon apex on the drain bank at the bend of the N-S drain, with a thin tie line running S to the road at ~193,885. Drain bank/fence, not a building"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6,
+   "raw": "6",
+   "px": 302,
+   "py": 918,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "italic 6 at ~305,883 on the N kerb of the E-W road; paired with the bold 4-point star in the carriageway 35 px S at 302,918 (nearest isolated cross)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.3,
+   "raw": "B.M.5·3",
+   "px": 1015,
+   "py": 946,
+   "confidence": "medium",
+   "setting": "other",
+   "notes": "B.M.5·3 with clear middot; pheon strokes merge with the culvert box where the N-S drain passes under the N edge of the E-W road; convergence taken at 1015,946 (9 px inside the east edge), so position medium. Culvert headwall at road edge"
+  }
+ ],
+ "non_height_marks": [
+  "parcel 24 / 8·342 at ~440,90",
+  "parcel 29 / 15·586 at ~515,630",
+  "parcel 28 / 3·261 at ~370,925",
+  "parcel 33 / 1·345 at ~50,950",
+  "B.S. at ~820,180 and ~905,440 with tie circles; C.S. at ~870,205",
+  "S-shaped drain tie marks at ~310,235, ~570,340, ~185,560, ~155,775, ~865,820, ~985,725"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 985,
+   "py0": 450,
+   "px1": 1024,
+   "py1": 545,
+   "reason": "bench mark cut by east edge: pheon with boundary-stone circle at ~993,516 and 'B.M' / 'B.' lettering running off the mosaic; value not visible (should be whole in the neighbouring mosaic to the east)"
+  }
+ ]
+}

@@ -1,0 +1,368 @@
+{
+ "mosaic": "m18_131087_87152",
+ "reader": "opus-am",
+ "area": "Custom House / Canning Town north: Barking Road by the Police Station, Freemasons Road (Ward Boundary), James, Ethel, Frank, New Barn, Seaton, Outram and Denmark Streets, Adine Road, the School, Nursery and Cumberland House grounds, open ground to the south",
+ "method": "Viewed all 9 sweep crops (2x) with anchors noted on opening (r0c0 Police Station/JAMES STREET; r0c1 ETHEL ROAD/ADINE ROAD; r0c2 Nursery/Cumberland; r1c0 School/SEATON; r1c1 OUTRAM STREET/NEW BARN STREET; r1c2 Cumberland/Smithy; r2c0 SEATON/open ground; r2c1 DENMARK STREET; r2c2 B.M.9·54/DENMARK STREET). 4-6x region views of every candidate (14 regions, anchors noted), contact sheets cs_a (8x), cs_b (8x), cs_b2 (6x), cs_bm (12x), cs_bm2 (12x), cs_bm3 (20x), cs_bm4 (7x), cs_ph (8x pheon sheet), and marker sheets. Every crop and contact sheet displayed when opened.",
+ "legibility": "Good. A heavy straight line runs across the full width at py ~2-3 (sheet neat line or join; nothing legible above it). No other joins seen; the tool reported none. Interpuncts: N·E·W B·A·R·N, D·E·N·M·A·R·K (gap dot K·S), ..T of STREET at west edge.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 12.3,
+   "raw": "12·3",
+   "px": 376,
+   "py": 10,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Barking Road tramway curve west of the Police Station at the top edge; no dot found, position = centre; final open 3 at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 15.57,
+   "raw": "B.M.15·57",
+   "px": 405,
+   "py": 17,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "Police Station wall; pheon at the building corner 20 px left of the text; 5/6 in both places unresolved at 12x/20x (15·57 read at 2x; 16·67 not excluded)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.5,
+   "raw": "10·5",
+   "px": 303,
+   "py": 47,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "road (tramway) south-west of the Police Station; dot on the rail line upper-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 8,
+   "py": 117,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street at the west edge (…T of STREET); dot upper-left may be a letter interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 54,
+   "py": 173,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street corner south of the terrace block; dot upper-left; flat-topped 5s"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 219,
+   "py": 146,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Freemasons Road / Ward Boundary road north side; no dot of its own (boundary cross nearby), position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 161,
+   "py": 172,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "road along the Ward Boundary by the survey triangle; dot on the boundary line upper-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.2,
+   "raw": "5·2",
+   "px": 14,
+   "py": 311,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street near the west edge south of the C.R. road; no separate dot found, position = centre; flat-topped 5 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 272,
+   "py": 322,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction south of James Street by F.P.; dot above-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.49,
+   "raw": "B.M.8·49",
+   "px": 304,
+   "py": 452,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "on the School boundary wall/corner; pheon lower-left of text; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.3,
+   "raw": "6·3",
+   "px": 357,
+   "py": 439,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street corner east of the School; dot upper-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.3,
+   "raw": "14·3",
+   "px": 443,
+   "py": 130,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Ethel Road west end at the Smithy; dot just before the S of Smithy, lower-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.1,
+   "raw": "14·1",
+   "px": 466,
+   "py": 176,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Ethel Road / New Barn Street junction; dot upper-right"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.79,
+   "raw": "B.M.14·79",
+   "px": 469,
+   "py": 191,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner at the Ethel Road / James Street angle; pheon right of text; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.58,
+   "raw": "B.M.13·58",
+   "px": 573,
+   "py": 289,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "building corner on New Barn Street; pheon 35 px left-below the text; first decimal flat-topped 5 at 7x, closes at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.2,
+   "raw": "12·2",
+   "px": 538,
+   "py": 298,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "New Barn Street; only dot is the E·W interpunct, position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.8,
+   "raw": "11·8",
+   "px": 567,
+   "py": 314,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "New Barn Street; dot lower-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.0,
+   "raw": "10·0",
+   "px": 618,
+   "py": 418,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "New Barn Street; dot after the N of BARN is probably the interpunct, position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.2,
+   "raw": "16·2",
+   "px": 831,
+   "py": 437,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road/lane south of the Nursery north of Cumberland; dot above-left; notably higher than the streets to the west"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.3,
+   "raw": "4·3",
+   "px": 209,
+   "py": 639,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "lane (…NE) south of Seaton Street; dot above"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.8,
+   "raw": "3·8",
+   "px": 28,
+   "py": 793,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "lane at the west edge across the open ground; dot left; lead open 3 differs from closed final 8"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.3,
+   "raw": "6·3",
+   "px": 434,
+   "py": 553,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Seaton Street; dot upper-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 516,
+   "py": 667,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Outram Street / Denmark Street corner; dot directly after F.P could be the F.P's own trailing dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 680,
+   "py": 555,
+   "confidence": "low",
+   "setting": "yard",
+   "notes": "premises east of New Barn Street; no dot, position = centre; lead digit top looks closed at 6-8x (8·2 possible)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.2,
+   "raw": "7·2",
+   "px": 680,
+   "py": 717,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "New Barn Street south; dot left in the carriageway"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 593,
+   "py": 778,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Denmark Street; dot upper-left may be the A·R interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.3,
+   "raw": "6·3",
+   "px": 668,
+   "py": 881,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Denmark Street south end; dot upper-left may be the K·S gap dot; lead 6 open at 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.54,
+   "raw": "B.M.9·54",
+   "px": 686,
+   "py": 927,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the house block on the east side of Denmark Street; pheon 45 px left-below the text; 12x"
+  }
+ ],
+ "non_height_marks": [
+  "pheon at ~1007,480 on the road edge east of 16·2 with no B.M. text inside this mosaic (text probably in the eastern neighbour)",
+  "survey triangle at ~179,172 (Ward Boundary)",
+  "D.F. (drinking fountain) near the P.O.",
+  "F.P. marks throughout",
+  "C.R. boundary lettering"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 0,
+   "px1": 1024,
+   "py1": 4,
+   "reason": "heavy straight line along the top edge (neat line / join); nothing readable above it"
+  },
+  {
+   "px0": 990,
+   "py0": 470,
+   "px1": 1024,
+   "py1": 490,
+   "reason": "pheon without text at the east edge; B.M. value presumably in the eastern neighbour"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+  "mosaic": "m18_131069_87122", "reader": "opus-f",
+  "area": "Stratford New Town / Carpenters Road side: GER Stratford Works yard and Travelling Crane on the west; Beddingfield Street, Thornham Grove, Major Road, Queen Street, Alma Street, Dorset Place, Angel Place, Hammer Place, Waddington Road; St Paul's Church",
+  "method": "9 sweep crops at 2x read in full; all candidates confirmed on 8x contact sheets (+-26 px panels), 14x re-checks for 18·2 and 17·8, and 6x +-40 px pheon searches for B.M.28·11, B.M.27·90 and B.M.21·92. All sweep crops, contact sheets and zooms were viewed successfully; no image failed to load.",
+  "legibility": "Dense town sheet, figures clear. Weak horizontal sheet join (tint step) at py ~742, clearest over x 0-620, not reported by the sheet tool; no figure crosses it. Several street figures take their dot from interpuncts of spaced street names.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 18.2, "raw": "18·2", "px": 21, "py": 91, "confidence": "medium", "notes": "corner of shaded works yard near west edge; digits read 18·2 at 14x (flat-based 2; 2x sweep suggested 3), no dot, position = centre of figures"},
+    {"type": "spot", "value_ft": 17.8, "raw": "17·8", "px": 87, "py": 291, "confidence": "medium", "notes": "corner of shaded works yard by the railway; digits clear at 14x, no dot, position = centre of figures"},
+    {"type": "spot", "value_ft": 29.8, "raw": "29·8", "px": 402, "py": 107, "confidence": "high", "notes": "Beddingfield Street West at Major Road; dot above figures, 8x"},
+    {"type": "bench_mark", "value_ft": 28.11, "raw": "B.M.28·11", "px": 600, "py": 151, "confidence": "high", "notes": "building front on Beddingfield Street East; pheon left of text, 6x and 8x"},
+    {"type": "spot", "value_ft": 26.1, "raw": "26·1", "px": 697, "py": 139, "confidence": "high", "notes": "Queen Street north end; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 28.5, "raw": "28·5", "px": 488, "py": 207, "confidence": "high", "notes": "Major Road junction with Beddingfield Street; dot left of figures, 6x"},
+    {"type": "spot", "value_ft": 25.0, "raw": "25·0", "px": 561, "py": 390, "confidence": "high", "notes": "Major Road at Dorset Place; dot above figures, 8x"},
+    {"type": "spot", "value_ft": 26.1, "raw": "26·1", "px": 815, "py": 100, "confidence": "high", "notes": "street north of St Paul's Church; dot left of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 27.9, "raw": "B.M.27·90", "px": 893, "py": 101, "confidence": "medium", "notes": "St Paul's Church; digits clear at 8x; nearest pheon-like mark on the church wall 30 px north-east of text at 893,101, association inferred"},
+    {"type": "spot", "value_ft": 25.8, "raw": "25·8", "px": 921, "py": 73, "confidence": "high", "notes": "street north of the church (MAR... lettering); dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 18.8, "raw": "18·8", "px": 130, "py": 484, "confidence": "medium", "notes": "among sidings in the works yard; digits clear at 8x, no survey dot found (H· dot belongs to hydrant), position = centre of figures"},
+    {"type": "bench_mark", "value_ft": 20.74, "raw": "B.M.20·74", "px": 91, "py": 539, "confidence": "high", "notes": "west end of works building by the running lines; pheon left of text, 8x"},
+    {"type": "spot", "value_ft": 20.1, "raw": "20·1", "px": 156, "py": 708, "confidence": "medium", "notes": "over the shaded works yard; no dot (dot at 143,708 belongs to H), position = centre of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 21.92, "raw": "B.M.21·92", "px": 505, "py": 521, "confidence": "medium", "notes": "building at the head of Angel Place; digits clear at 8x; pheon found 25 px below-right of text at 505,521 pointing at the wall, association inferred"},
+    {"type": "spot", "value_ft": 20.8, "raw": "20·8", "px": 522, "py": 524, "confidence": "medium", "notes": "Angel Place; dot = interpunct beside A of A·N·G·E·L above figures, 8x"},
+    {"type": "spot", "value_ft": 20.8, "raw": "20·8", "px": 490, "py": 687, "confidence": "medium", "notes": "Angel Place at Hammer Place; dot left of figures below the A of ANGEL (may be a lettering interpunct), 8x"},
+    {"type": "spot", "value_ft": 26.9, "raw": "26·9", "px": 989, "py": 478, "confidence": "medium", "notes": "Waddington Road; dot = interpunct after N of W·A·D·D·I·N·G·T·O·N left of figures, 8x"},
+    {"type": "spot", "value_ft": 20.9, "raw": "20·9", "px": 189, "py": 921, "confidence": "high", "notes": "among sidings south of Stratford Works; dot on rail above-left of figures, 8x"},
+    {"type": "spot", "value_ft": 22.6, "raw": "22·6", "px": 553, "py": 852, "confidence": "medium", "notes": "over garden/building inside the bend of Angel Place; no dot (dot at 546,867 is the interpunct of L·), position = centre of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 24.63, "raw": "B.M.24·63", "px": 549, "py": 882, "confidence": "high", "notes": "wall on the south side of Angel Place; pheon above-right of text on the wall line, 8x"},
+    {"type": "spot", "value_ft": 26.6, "raw": "26·6", "px": 720, "py": 869, "confidence": "high", "notes": "east end of Angel Place; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 25.6, "raw": "25·6", "px": 813, "py": 840, "confidence": "high", "notes": "street by P.H. east of Angel Place; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 26.2, "raw": "26·2", "px": 943, "py": 801, "confidence": "high", "notes": "street running east; dot left of figures, 8x"}
+  ],
+  "non_height_marks": ["F.P., H, S.P., W.M., B.P. marks throughout", "triangle symbols at ~210,778 (inside shaded circle), ~440,968 and ~313,964 (in small squares) with no figures", "School, Infant School, P.O., P.H. lettering"],
+  "unreadable_regions": [
+    {"px0": 998, "py0": 590, "px1": 1024, "py1": 606, "reason": "B.M. text by Waddington Road cut by east edge; value beyond edge"},
+    {"px0": 0, "py0": 739, "px1": 1024, "py1": 745, "reason": "weak horizontal sheet join (tint step) not detected by the tool; no figure cut"}
+  ]
+}

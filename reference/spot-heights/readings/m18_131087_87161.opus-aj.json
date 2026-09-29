@@ -1,0 +1,323 @@
+{
+ "mosaic": "m18_131087_87161",
+ "reader": "opus-aj",
+ "area": "Custom House / Canning Town east: Butchers Hedge Lane, Russell Road, Burrard Road, Marten Road, Clever Road, Hooper Road, ..amson Road, Freemasons Road, the Primitive Methodist chapel and P.H.s; dense terraces on the marsh",
+ "method": "sheet (no join reported) + 9 sweep crops at 2x (anchors: r0c0 BUTCHERS HEDGE LANE; r0c1 Ceylon Mills/RUSSELL ROAD/BURRARD ROAD; r0c2 P.H. with triangle, MASONS ROAD; r1c0 MARTEN, CLEVER, L.B.; r1c1 BURRARD/MARTEN/CLEVER ROAD; r1c2 FREEMASONS ROAD, CHURCH, HARTIN..; r2c0 Meth. Chapel (Primitive) Seats for 200, HOOPER; r2c1 HOOPER ROAD, ..MSON ROAD; r2c2 P.H., HARTIN.., Infants). Contact sheets d1, d2, d4 (5x), d3 (8x), d5 (12x digits and B.M. decimals), region views e (4x), ko (3x Freemasons Road column), t (8x chapel junction), marker sheets mk3 (6x) and mk4 (8x). Every crop and sheet displayed when opened; anchors recorded in notes at opening.",
+ "legibility": "Clean print; no sheet join seen by eye or tool. Many figures on Freemasons Road and Russell Road sit next to lettering dots, given medium. Burrard, Marten, Clever (east part) and Hooper Roads carry no figures in this mosaic.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 408,
+   "py": 49,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "NE end of Butchers Hedge Lane at the Ceylon Mills corner, beside 'St.'; dot above figure just after final E of LANE (trailing dot); 6 open, 8 closed at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.7,
+   "raw": "7·7",
+   "px": 269,
+   "py": 204,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Butchers Hedge Lane by the Russell Road terrace; dot is the H·E dot in BUTCHERS HEDGE lettering (only such dot); hydrant H· separate; 5x/8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.54,
+   "raw": "B.M.10·54",
+   "px": 266,
+   "py": 230,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "NW corner of the Russell Road terrace; pheon left of text at corner; decimals 12x (read in both sweeps)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 102,
+   "py": 247,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road end by the terrace in the NW, hydrant H nearby; dot above-left; 5x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 180,
+   "py": 302,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "west edge of Butchers Hedge Lane, figure against the dotted lane edge; no survey dot found at 4x/8x, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 494,
+   "py": 209,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Russell Road; only dot is the RUS·SELL interpunct under the figure; final 6 open-topped at 6x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.1,
+   "raw": "7·1",
+   "px": 678,
+   "py": 208,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Russell Road; dot is the ROA·D dot (no other interpuncts in ROAD) under the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.2,
+   "raw": "7·2",
+   "px": 911,
+   "py": 157,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Freemasons Road north (vertical ROAD lettering); dot just above the O, could be lettering dot; 5x/10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.83,
+   "raw": "B.M.8·83",
+   "px": 813,
+   "py": 226,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the building at Russell Road / Freemasons Road; pheon left of text; decimals 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 878,
+   "py": 220,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Russell Road / Freemasons Road junction; dot above figure; 5x/8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 855,
+   "py": 337,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Freemasons Road east kerb south of the P.H.; no dot beside the figure, nearest dot 827,340 is by the O of FREEMASONS lettering; position = centre of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 99,
+   "py": 474,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction of Butchers Hedge Lane and Marten Road; dot left of figure, survey triangle at ~84,480 separate; 5x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.43,
+   "raw": "B.M.9·43",
+   "px": 123,
+   "py": 604,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "SW corner of the terrace on the north side of Clever Road; pheon above-left of text at the corner; decimals 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 8,
+   "py": 620,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Clever Road west end at the mosaic's west edge (figure whole, dot at px 8); dot left of figure; 5x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 843,
+   "py": 471,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Freemasons Road east side at the Church Street corner; no survey dot found at 8x (kerb line and lettering dots only); position = centre of figures; both 6s open-topped"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 817,
+   "py": 546,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Freemasons Road at Church Street; dot left of figure lies between F and R of FREEMASONS lettering; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 827,
+   "py": 667,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Freemasons Road at Hartington (Road) corner; dot above-left, F.P dot at 843,668 separate; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 244,
+   "py": 874,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "junction of ..ck's Road and ..amson Road by the Primitive Methodist Chapel; dot lies among road-name letters (between R and O of vertical ROAD), F.P dot 258,877 separate; 9 closed with tail vs flat-topped 5 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 62,
+   "py": 882,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road west of the chapel junction; dot left of figure; 8 two loops vs flat-topped 5 at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.24,
+   "raw": "B.M.7·24",
+   "px": 262,
+   "py": 894,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "NW corner of the Meth. Chapel (Primitive) block; pheon (down arrow) at the building corner, text 15-25 px west; decimals 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 434,
+   "py": 868,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "..amson Road; dot left-above; 5x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 641,
+   "py": 867,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "..amson Road; dot left-above; 5x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.9,
+   "raw": "6·9",
+   "px": 847,
+   "py": 784,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Freemasons Road east of the P.H.; dot left of figure, F.P dot separate at ~868,780; 9 loop with tail at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.97,
+   "raw": "B.M.7·97",
+   "px": 842,
+   "py": 882,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the building on Freemasons Road west side; pheon (down arrow) under the text; decimals 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 869,
+   "py": 905,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Freemasons Road south; dot left of figure; 8x"
+  }
+ ],
+ "non_height_marks": [
+  "'St.' at ~398,47",
+  "L.B. (letter box) at ~245,730 and ~796,473",
+  "F.P. marks at ~218,860, ~216,736, ~230,945, ~258,882, ~332,614, ~496,742, ~513,885, ~845,672, ~870,783",
+  "hydrant H marks throughout",
+  "survey triangles without figure at ~84,480 and in the P.H. at ~796,295"
+ ],
+ "unreadable_regions": []
+}

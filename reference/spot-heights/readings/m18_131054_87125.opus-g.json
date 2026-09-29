@@ -1,0 +1,31 @@
+{
+  "mosaic": "m18_131054_87125", "reader": "opus-g",
+  "area": "Hackney Wick: Wallis Road, Waterproof Cloth Works, Phoenix Chemical Works, Falcon Works, Hackney Wick Works, Hackney Cut Navigation and towing path, GER Park Branch embankment, Tallow Works, White Post Lane, Combos and Davey Roads, Tar & Chemical Works, Lea Chemical Works; open marsh with boundary posts and stones east of the Cut",
+  "method": "sheet check; 9 sweep crops at 2x; every candidate confirmed on 7x contact sheets (+-28 px), 21·5 and 17·5 compared at 12x, B.M.21·25 pheon searched at 4x +-64 and 9x. A first attempt at this mosaic partly hit the image request limit; everything from that pass was discarded except the two B.M.21·25 views that did load, and all 9 sweep crops and all zoom sheets used here loaded and were viewed.",
+  "legibility": "Hand-coloured sheet (blue water), clear. Vertical sheet join at px ~544 over the full height (tint step, water colour stops at it); no figure crosses it. The tool also reports a horizontal join at py ~537 (x 0-256), which coincides with the GER embankment; no separate line seen. West edge cuts a figure ending '·00' at py ~330.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024],[433,236,562,365]],
+  "readings": [
+    {"type":"spot","value_ft":21.5,"raw":"21·5","px":343,"py":64,"confidence":"medium","notes":"towing path, west bank of Hackney Cut; dot left of figures; last digit read 5 (flat top bar, same glyph as 17·5) at 12x, 8 not fully excluded (looks like 8 at 2x)"},
+    {"type":"spot","value_ft":17.4,"raw":"17·4","px":190,"py":302,"confidence":"medium","notes":"Wallis Road; dot is the interpunct between R and O of R O A D above-left of figures; 7x"},
+    {"type":"spot","value_ft":21.7,"raw":"21·7","px":472,"py":248,"confidence":"medium","notes":"Hackney Cut towing path (east bank); no dot found; position = centre of figures; 7x"},
+    {"type":"bench_mark","value_ft":21.25,"raw":"B.M.21·25","px":462,"py":302,"confidence":"medium","notes":"text over a building east of the towing path; pheon inferred at the canal wall about 30 px west, just before the P of 'Path' (9x); digits clear"},
+    {"type":"spot","value_ft":21.4,"raw":"21·4","px":511,"py":471,"confidence":"medium","notes":"towing path by the footbridge, figures under W.M.; dot taken as the one at the canal wall below-left; C. has its own dot to the right; 7x"},
+    {"type":"spot","value_ft":22.0,"raw":"22·0","px":553,"py":679,"confidence":"high","notes":"towing path east of the Cut south of the GER; dot left of figures; 7x"},
+    {"type":"spot","value_ft":13.3,"raw":"13·3","px":808,"py":517,"confidence":"high","notes":"marsh at the north foot of the GER Park Branch embankment; dot left of figures; 7x"},
+    {"type":"bench_mark","value_ft":14.84,"raw":"B.M.14·84","px":916,"py":519,"confidence":"high","notes":"on the embankment fence line north of the GER; pheon left of text; 7x"},
+    {"type":"spot","value_ft":17.5,"raw":"17·5","px":779,"py":650,"confidence":"medium","notes":"marsh south of the GER embankment; dot above-left of figures; last digit 5 at 12x (same glyph as 21·5)"},
+    {"type":"spot","value_ft":24.5,"raw":"24·5","px":829,"py":771,"confidence":"high","notes":"raised ground east of the Cut, south of the GER; dot left of figures; 7x"},
+    {"type":"bench_mark","value_ft":17.98,"raw":"B.M.17·98","px":60,"py":726,"confidence":"high","notes":"house wall on the road below Tallow Works; pheon above the text; 7x"},
+    {"type":"spot","value_ft":15.9,"raw":"15·9","px":84,"py":741,"confidence":"high","notes":"road junction; dot left of figures; 7x"},
+    {"type":"spot","value_ft":16.1,"raw":"16·1","px":227,"py":892,"confidence":"high","notes":"White Post Lane / Combos Road junction; dot above-left; 7x"},
+    {"type":"spot","value_ft":22.3,"raw":"22·3","px":439,"py":833,"confidence":"medium","notes":"White Post Lane east; nearest dot is the interpunct between N and E of L A N E, 13 px above; 7x"},
+    {"type":"bench_mark","value_ft":23.68,"raw":"B.M.23·68","px":581,"py":788,"confidence":"high","notes":"White Post Lane bridge over the Cut; pheon at the parapet left of the text; 7x"},
+    {"type":"spot","value_ft":22.2,"raw":"22·2","px":630,"py":869,"confidence":"high","notes":"road east of the Cut; dot left of figures; 7x"},
+    {"type":"spot","value_ft":21.1,"raw":"21·1","px":580,"py":1017,"confidence":"medium","notes":"road at the south edge; dot right of figures; figures end within 3 px of the south edge; 7x"}
+  ],
+  "non_height_marks": ["B.P. boundary posts and B.S. boundary stones along the 'Union & Parly. Boro. Bdy.'", "W.M. weighing machine at about 520,452", "F.B. footbridge over the Cut"],
+  "unreadable_regions": [
+    {"px0":0,"py0":322,"px1":14,"py1":336,"reason":"figure ending '·00' (probably a B.M.) cut by west edge"},
+    {"px0":555,"py0":1010,"px1":585,"py1":1024,"reason":"21·1 within 3 px of south edge (recorded medium)"}
+  ]
+}

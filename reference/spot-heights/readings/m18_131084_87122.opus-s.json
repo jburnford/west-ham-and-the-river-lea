@@ -1,0 +1,215 @@
+{
+ "mosaic": "m18_131084_87122",
+ "reader": "opus-s",
+ "area": "Forest Gate south-west: The Grove, Norwich Road, Clova Road, Congregational Chapel and Sunday School, the Tottenham & Forest Gate railway, Crosby Road and the road to District Road",
+ "method": "Viewed full mosaic, all 9 sweep crops (2x; anchors in notes: r0c0 G R O V E, r0c1 N·O·R·W·I·C·H/B.M.37·17, r0c2 CLOVA ROAD hatched houses, r1c0 CLOVA ROAD west, r1c1 Sun. Sch./NORWICH ROAD, r1c2 Congl. Chapel Seats for 700, r2c0 tint join/railway 32·3, r2c1 CROSBY/B.M.35·88, r2c2 D I S/33·5), then contact sheets cs1 (6x), cs2 (6x), cs3 (12x), cs4 (9x), cs4b (blocky 10x), cs5 (6x), cs6 (12x) and marker sheet mk (8x panel on every recorded position; 7 positions corrected by 2-6 px). Every crop and contact sheet displayed when opened. Leading digits confirmed at 12x.",
+ "legibility": "good but italic 3/6/8 ambiguous at 9-14x (87122 row); sheet joins: horizontal tint step at py ~748 (x 0-650 and again x ~790-1024), straight near-vertical sheet-edge line at px ~650-656 running the full height",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 35.6,
+   "raw": "35·6",
+   "px": 74,
+   "py": 197,
+   "confidence": "medium",
+   "notes": "The Grove, west; dot between G and R of GROVE (lettering otherwise not interpunctuated), taken as survey dot; final 6 at 6x, 9x and 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 36.0,
+   "raw": "36·0",
+   "px": 272,
+   "py": 142,
+   "confidence": "low",
+   "notes": "The Grove; isolated dot left of figure; second digit 6 or 8 ambiguous at 9-12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 37.17,
+   "raw": "B.M.37·17",
+   "px": 436,
+   "py": 115,
+   "confidence": "high",
+   "notes": "The Grove / Norwich Road corner; pheon on wall ~15 px NE of text; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.8,
+   "raw": "35·8",
+   "px": 457,
+   "py": 96,
+   "confidence": "low",
+   "notes": "Norwich Road north end at The Grove; dot above figure (F.P. dot at 443,92 separate); final 8 at 6x but 6-like at 9x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.3,
+   "raw": "35·3",
+   "px": 501,
+   "py": 249,
+   "confidence": "medium",
+   "notes": "Norwich Road; dot below the N of N·O·R·W·I·C·H (interpunctuated lettering); final 3 matches the leading 3 at 9x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.9,
+   "raw": "34·9",
+   "px": 552,
+   "py": 402,
+   "confidence": "medium",
+   "notes": "Norwich Road at Clova Road; dot after the H of NORWICH (last letter), taken as survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.2,
+   "raw": "35·2",
+   "px": 686,
+   "py": 31,
+   "confidence": "medium",
+   "notes": "The Grove east, near north edge; nearby dots belong to the F.P.; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.3,
+   "raw": "34·3",
+   "px": 602,
+   "py": 561,
+   "confidence": "high",
+   "notes": "Norwich Road south end by the Sunday School; dot above-left of figure; final 3 matches leading 3 at 9x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.0,
+   "raw": "34·0",
+   "px": 656,
+   "py": 717,
+   "confidence": "medium",
+   "notes": "railway (T.&F.G.R.) by the Congregational chapel, at the sheet-edge line; dot taken as the tick on the rails left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.57,
+   "raw": "B.M.35·57",
+   "px": 896,
+   "py": 612,
+   "confidence": "high",
+   "notes": "house frontage north of the railway, east of the Congl. Chapel; pheon ~20 px SW of text; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.8,
+   "raw": "33·8",
+   "px": 905,
+   "py": 630,
+   "confidence": "medium",
+   "notes": "on the railway east; dot taken as the tick on the rails above the figure; final 8 differs from the two 3s at 9x and 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.3,
+   "raw": "32·3",
+   "px": 199,
+   "py": 916,
+   "confidence": "medium",
+   "notes": "on the railway west; dot is a tick on the rails ~15 px NW of figure; final 3 matches leading 3"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.7,
+   "raw": "33·7",
+   "px": 437,
+   "py": 807,
+   "confidence": "medium",
+   "notes": "on the railway at Crosby Road; dot on the rails above figure; digits clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.88,
+   "raw": "B.M.35·88",
+   "px": 462,
+   "py": 819,
+   "confidence": "high",
+   "notes": "Crosby Road north end, wall south of railway; pheon ~20 px NE of text; 8s distinct from the 3 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.4,
+   "raw": "34·4",
+   "px": 696,
+   "py": 874,
+   "confidence": "high",
+   "notes": "road east of Crosby Road; dot directly above figure; clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.5,
+   "raw": "33·5",
+   "px": 950,
+   "py": 827,
+   "confidence": "medium",
+   "notes": "road junction east (District Road north); dot above figure; both leading digits render alike (3/8) at 12x, read as 33·5 by matching-digit rule"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. marks along The Grove, Norwich Road, Clova Road",
+  "L.B. and F.A. at 645,736 by the railway",
+  "survey-station triangle at 661,700 with no figure"
+ ],
+ "unreadable_regions": []
+}

@@ -1,0 +1,420 @@
+{
+ "mosaic": "m18_131060_87158",
+ "reader": "opus-aq",
+ "area": "Poplar / South Bromley west of the Lea: Chrisp Street, Railway Street beside the North London Railway, South Bromley station, St Michael & All Angels, St Leonard's Avenue, Burcham Street",
+ "method": "Sweep crops r0c0-r2c2 all displayed and anchored at opening (r0c0 South Bromley Station/RIFLE STREET; r0c1 CHADBOURN/WELLINGTON STREET; r0c2 St Michael & All Angels; r1c0 CORDING/BOWEN STREET, Sack Works; r1c1 RAILWAY STREET, BRIGHT STREET, School; r1c2 Bromley/Dunbar Cottages; r2c0 CARMEN/CHARLES/CORDELIA STREET; r2c1 NORTH LONDON rly, HACK STREET; r2c2 TAPLEY/BURCHAM STREET). Contact sheets c2_A, c2_B, c2_C, c2_D (6x region/candidate), c2_E and c2_F (12x B.M. decimals and pheons), c2_G, c2_H (8x digits), c2_I (8x), c2_J3 (10x smoothed + nearest, 6 vs 0); region views c2_reg1-reg8 (4x) for pheon searches and Railway Street lettering. Every image displayed when opened. Dot centroids by numeric helper; positions checked on a marker sheet.",
+ "legibility": "clear; horizontal sheet join py ~192 (tint line, full width); F.P. dots and interpunct-like dots in STREET/BURCHAM/KERBEY lettering make several dots ambiguous",
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 364,
+   "py": 97,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Railway Street at the west end of Chadbourn Street by South Bromley station; own dot left of figure, separate from the F.P. dot above; open 3 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 462,
+   "py": 43,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Chadbourn Street; dot just after CHADBOURN lettering (could be a spacing dot); open 3 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 697,
+   "py": 121,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "diagonal main road (…OAD lettering) NE of Wellington Street; dot above-left; oval 0 at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.2,
+   "raw": "18·2",
+   "px": 409,
+   "py": 261,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Railway Street at Croucher Place; dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.17,
+   "raw": "B.M.19·17",
+   "px": 424,
+   "py": 267,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the corner of the house at Croucher Place / Railway Street, text below; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.43,
+   "raw": "B.M.22·43",
+   "px": 77,
+   "py": 226,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "pheon lying sideways on the wall of the Infants' school (the arrow before 'Schools'), B.M. text 20-30 px SE; decimals 12x/8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.64,
+   "raw": "B.M.19·64",
+   "px": 251,
+   "py": 312,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon at the corner of a building at the Cake & Biscuit Factory, text 30-50 px east on the shaded works; G-shaped 6 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.6,
+   "raw": "18·6",
+   "px": 110,
+   "py": 390,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Chrisp Street near L.B.; dot right of figure; open 6 against the closed 8 of 18 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 818,
+   "py": 306,
+   "confidence": "medium",
+   "setting": "open_ground",
+   "notes": "churchyard of St Michael & All Angels, written under 'Seats for 1000'; no survey dot found; position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.66,
+   "raw": "B.M.19·66",
+   "px": 948,
+   "py": 312,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the east wall of St Michael & All Angels' Church, text 30-40 px east; matching 6s at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 942,
+   "py": 419,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road junction south of the church by C.R.; dashed boundary (dashes only) over the figure; dot left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.45,
+   "raw": "B.M.20·45",
+   "px": 972,
+   "py": 560,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon at a house corner south of Dunbar Cottages, text below-left; 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.1,
+   "raw": "18·1",
+   "px": 999,
+   "py": 561,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street at the east edge (east of B.M.20·45); dot left of figure; figure whole"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.7,
+   "raw": "18·7",
+   "px": 434,
+   "py": 384,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Railway Street at Cobden Street; dot below-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.5,
+   "raw": "19·5",
+   "px": 478,
+   "py": 566,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Railway Street at Bright Street, by the Parly. Borough boundary mark circles; no separate survey dot; centre of figures; flat-topped 5"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.4,
+   "raw": "18·4",
+   "px": 180,
+   "py": 479,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Chrisp Street at Cording Street; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.4,
+   "raw": "19·4",
+   "px": 240,
+   "py": 587,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Chrisp Street at Bowen Street; dot above-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 21.84,
+   "raw": "B.M.21·84",
+   "px": 229,
+   "py": 603,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the house corner at Bowen Street / Chrisp Street; closed 8 at 12x differs from open 3s on sheet"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.5,
+   "raw": "20·5",
+   "px": 292,
+   "py": 707,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Carmen Street near Chrisp Street; dot sits between R and E of S T R·E E T (ambiguous interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.8,
+   "raw": "18·8",
+   "px": 8,
+   "py": 753,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Kerbey Street at Carmen Street; dot left of figure, F.P. dot separate on the right; final 8 matches leading 8"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.67,
+   "raw": "B.M.22·67",
+   "px": 350,
+   "py": 811,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the corner at Ebenezer Place / Chrisp Street, text left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.0,
+   "raw": "21·0",
+   "px": 348,
+   "py": 852,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "forecourt of the Primitive Methodist Chapel on Chrisp Street, written under 'Seats for 320'; no survey dot; centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.11,
+   "raw": "B.M.20·11",
+   "px": 40,
+   "py": 859,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon sideways against the house wall on Kerbey Street, text below"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.8,
+   "raw": "18·8",
+   "px": 34,
+   "py": 898,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Kerbey Street at Charles Street; figure to the SW of a lone dot between the E and R of KERBEY (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.6,
+   "raw": "21·6",
+   "px": 370,
+   "py": 995,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Chrisp Street at Cordelia Street; dot right; G-shaped 6 against the oval 0 of 18·0 at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.6,
+   "raw": "19·6",
+   "px": 507,
+   "py": 770,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Railway Street; dot just after the T of S T· R E E T (only other letter-dot is E·E beside the second 19·6), taken as survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.6,
+   "raw": "19·6",
+   "px": 529,
+   "py": 884,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Railway Street by Hack Street; dot between the two Es of STREET, taken as survey dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.29,
+   "raw": "B.M.22·29",
+   "px": 542,
+   "py": 890,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the house corner at Railway Street / Byron Street end, text below; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 23.15,
+   "raw": "B.M.23·15",
+   "px": 717,
+   "py": 830,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the house wall at Hack Street / St Leonard's, text above; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.3,
+   "raw": "21·3",
+   "px": 655,
+   "py": 845,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "St Leonard's Avenue at Mauve Street; dot above figure near the T of ST (could be lettering); open 3 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.9,
+   "raw": "21·9",
+   "px": 700,
+   "py": 1012,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Burcham Street; dot right of figure, just before the B of B U R C H A M (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.5,
+   "raw": "20·5",
+   "px": 858,
+   "py": 763,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "St Leonard's Avenue; dot above-left; flat-topped 5"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 23.55,
+   "raw": "B.M.23·55",
+   "px": 833,
+   "py": 967,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the house corner on Burcham Street, text east; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.2,
+   "raw": "22·2",
+   "px": 808,
+   "py": 986,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Burcham Street at Tapley Street end; dot before the A of BURCHAM (possible interpunct)"
+  }
+ ],
+ "non_height_marks": [
+  "many F.P., H, S.P. marks",
+  "survey triangles without figures at ~938,308 and ~879,418",
+  "Parly. Borough boundary circles at ~461,570 and ~484,580",
+  "B.P.s / B.S. boundary marks ~20-60, 930-990"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1008,
+   "py0": 595,
+   "px1": 1024,
+   "py1": 630,
+   "reason": "lone dot at 1013,603 by the east edge with no figure inside the mosaic (figure presumably east of the edge)"
+  }
+ ],
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ]
+}

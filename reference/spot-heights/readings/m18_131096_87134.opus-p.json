@@ -1,0 +1,39 @@
+{
+  "mosaic": "m18_131096_87134",
+  "reader": "opus-p",
+  "area": "Upton Park: Green Street from the C.R. junction at the N edge to Redclyffe Road, Raymond Road, Washington Road, Crescent Road, Park Road, Upton Park Station (LT&SR), Queen's Square, King's Road, Florence Road, Wax Vesta Works, Tudor Road corner",
+  "method": "Independent second read (no other reader's file consulted). Viewed the full 1024 px mosaic (anchor: Upton Park Station, Wax Vesta Works), then all 9 sweep crops at 2x, each anchored as opened: r0c0 Raymond Road/P.H./Bank; r0c1 Washington Road/Smithy; r0c2 'Meth Seats'/Park Road; r1c0 Green Street 'Co. & Parly. Boro. Bdy'; r1c1 Crescent Road/Mission Room/P.O.; r1c2 Wax Vesta Works/F.B.; r2c0 Upton Park Station/Down Platform; r2c1 King's Road/Queen's Square/P.H.; r2c2 Florence Road/Redclyffe Road/Tudor. Zoom contact sheets (own helper, labelled in mosaic px): a 8x (32.2, 32.0, 31.7, 30.6, 32.0, 32.1), b 8x (B.M.33.x4, 29.3, 32.4, 30.8, 32.0, 29.8), c 8x (30.3, 29.8, B.M.3x.78, B.M.31.94, 29.8, 33.4), d 8x (35.7, 31.8, 30.2, 28.5, 28.2, 31.1), e 8x (31.1 Tudor, west-edge '.5'), f 12x digit checks, g 10x blocky (too coarse, no decisions from it), h 16x digit comparisons, i 6x +-40 pheon search, j 10x pheons; four 2x marker sheets (quadrants) checked every position. Every image displayed when opened.",
+  "legibility": "Good print; digits clear except two bench-mark values and one spot height (low). Many dots in Green Street belong to the dotted C.R./U.D./Parly. Boro. boundary and to spaced STREET/GREEN interpuncts, so survey dots there are medium. Sheet joins at: vertical px ~165 over the full height (line and tint step visible, runs through Raymond Road terraces and the station); no horizontal join seen.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":32.2,"raw":"32·2","px":32,"py":45,"confidence":"high","notes":"road junction north of Raymond Road, NW corner; single dot directly above the figure beside a dashed (not dotted) boundary; 8x/12x"},
+    {"type":"spot","value_ft":32.0,"raw":"32·0","px":194,"py":11,"confidence":"medium","notes":"top of Green Street by 'C.R.' and F.P./L.B.; dot above-left of the 3 but other dots of the C.R. boundary nearby; 8x"},
+    {"type":"spot","value_ft":31.7,"raw":"31·7","px":264,"py":133,"confidence":"medium","notes":"Green Street below the survey triangle (262,110); dot left of the 3 sits in the line of boundary dots; 8x"},
+    {"type":"spot","value_ft":30.6,"raw":"30·6","px":341,"py":310,"confidence":"medium","notes":"Green Street west side above an F.P.; dot above the 3 within the boundary dot column; 8x"},
+    {"type":"spot","value_ft":32.0,"raw":"32·0","px":455,"py":150,"confidence":"high","notes":"road at the foot of Washington Road; isolated dot left of the figure; 8x"},
+    {"type":"spot","value_ft":32.1,"raw":"32·1","px":604,"py":183,"confidence":"high","notes":"same road at the foot of '...LOO ROAD', above 'H'; dot left of the 3; 8x"},
+    {"type":"bench_mark","value_ft":33.84,"raw":"B.M.33·?4","px":716,"py":249,"confidence":"low","notes":"building corner where Crescent Road meets the east-west road, below 'UPTON' N; pheon junction clear at 10x; third digit has a waist (not 0) but could be 3, 8 or 9 (read 33·04/33·94 at 2x); alternatives 33.34/33.94"},
+    {"type":"spot","value_ft":29.3,"raw":"29·3","px":950,"py":22,"confidence":"low","notes":"top of '...ELD ROAD' (N edge); last digit open at upper left at 12x and 16x, looks 3 but could be 8 (29.8); only nearby dot is the interpunct above L; position = centre of figures"},
+    {"type":"spot","value_ft":32.4,"raw":"32·4","px":745,"py":227,"confidence":"high","notes":"junction east of B.M.; dot directly above the figure; 8x"},
+    {"type":"spot","value_ft":30.8,"raw":"30·8","px":994,"py":236,"confidence":"medium","notes":"east edge near a tree and F.P.; digits clear at 12x; no survey dot found (F.P.'s dot is its own); position = centre of figures"},
+    {"type":"spot","value_ft":32.0,"raw":"32·0","px":928,"py":289,"confidence":"high","notes":"east end of the road by Park Road; isolated dot left of the 3; 8x"},
+    {"type":"spot","value_ft":29.8,"raw":"29·8","px":401,"py":515,"confidence":"medium","notes":"Green Street at Crescent Road corner above an F.P.; dot immediately left of the 2 among boundary/interpunct dots; 12x"},
+    {"type":"spot","value_ft":30.3,"raw":"30·3","px":403,"py":601,"confidence":"medium","notes":"Green Street by 'S' of STREET; final 3 matches the first 3 at 12x; no separate dot found (nearby dots are interpuncts/boundary); position = centre of figures"},
+    {"type":"spot","value_ft":29.8,"raw":"29·8","px":253,"py":661,"confidence":"high","notes":"road north of Upton Park Station terraces; isolated dot right of the figure; 8x/16x"},
+    {"type":"bench_mark","value_ft":30.78,"raw":"B.M.3?·78","px":435,"py":690,"confidence":"low","notes":"B.M. text on building west of Green Street at the station bridge; second digit between 0 and 6 at 12x/16x (alternative 36.78); pheon uncertain: arrow-like mark under a small circle at the building corner on Green Street, ~30 px from the text; text centre is ~(405,676)"},
+    {"type":"bench_mark","value_ft":31.94,"raw":"B.M.31·94","px":50,"py":718,"confidence":"high","notes":"west end of the road north of the station, beside a tree; pheon left of the text, junction at 10x; digits clear"},
+    {"type":"spot","value_ft":29.8,"raw":"29·8","px":70,"py":727,"confidence":"high","notes":"directly below B.M.31·94; own dot between B.M. text and figure; 8x"},
+    {"type":"spot","value_ft":33.4,"raw":"33·4","px":450,"py":670,"confidence":"medium","notes":"Green Street on the approach to the railway bridge, between F.P. and 'E'; both leading digits identical 3s at 16x (not 2, no flat base); dots nearby are STREET interpuncts/boundary; position = centre of figures"},
+    {"type":"spot","value_ft":35.7,"raw":"35·7","px":452,"py":714,"confidence":"medium","notes":"Green Street over the railway (bridge) between B.S./S.P. and 'T'; 5 has flat top at 12x; dot ambiguous among STREET interpuncts; position = centre of figures"},
+    {"type":"spot","value_ft":31.8,"raw":"31·8","px":480,"py":829,"confidence":"medium","notes":"Green Street by Queen's Square between two F.P.s; dot left of the 3, F.P. dots close by; 8x"},
+    {"type":"spot","value_ft":30.2,"raw":"30·2","px":698,"py":1009,"confidence":"high","notes":"Redclyffe Road near S edge (figure whole, bottom ~1016); dot right of figure before R, and REDCLYFFE lettering has no interpuncts; 8x"},
+    {"type":"spot","value_ft":28.5,"raw":"28·5","px":274,"py":899,"confidence":"high","notes":"road south of Up Platform terraces, among trees; dot above the figure; 5 flat-topped at 8x"},
+    {"type":"spot","value_ft":28.2,"raw":"28·2","px":94,"py":970,"confidence":"high","notes":"same road further west; dot right of the figure; 8x"},
+    {"type":"spot","value_ft":31.1,"raw":"31·1","px":962,"py":931,"confidence":"medium","notes":"Redclyffe Road near 'ROAD'; dot ~12 px above-right of the figure between O and A (ROAD has no interpuncts); 8x"},
+    {"type":"spot","value_ft":31.1,"raw":"31·1","px":1001,"py":975,"confidence":"medium","notes":"Tudor Road corner at E edge; dot just below the figure before 'T' of TUDOR; 8x"}
+  ],
+  "non_height_marks": ["survey triangle at 262,110 (no figure beside it)","F.P., F.A., D.F., S.P., B.S., S.B., F.B., H marks throughout Green Street","'Co. & Parly. Boro. Bdy' / 'U.D. Bdy' dotted boundary along Green Street"],
+  "unreadable_regions": [
+    {"px0":0,"py0":518,"px1":10,"py1":538,"reason":"figure '·5' cut by west edge (leading digits in the neighbouring mosaic)"}
+  ]
+}

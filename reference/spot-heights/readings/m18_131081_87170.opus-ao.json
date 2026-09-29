@@ -1,0 +1,277 @@
+{
+ "mosaic": "m18_131081_87170",
+ "reader": "opus-ao",
+ "area": "Canning Town south at the Thames edge: sidings fan beside the Royal Albert & Victoria Docks Cut, Bell & Anchor Cottages, Swing Bridge over a lock entrance, lock and dock quays with Mooring Posts, Thames river wall, Chemical Manure Works / Odams' Wharf, North Woolwich Road",
+ "method": "Sweep crops r0c0-r2c2 (2x) all displayed, anchors: r0c0 Royal Albert & Victoria Docks Cut; r0c1 BELL & ANCHOR COTTAGES; r0c2 Mooring Posts/Crane; r1c0 Lock/Chemical M..; r1c1 Chemical Manure Works; r1c2 Fire Alarm; r2c0 Mooring Posts/foreshore; r2c1 Odams' Wharf; r2c2 Wharf/P.H. Region views: 420-720x100-440 (3x), 740-960x0-210 (4x). Contact sheets cs_a..cs_c (4-12x). Marker sheets checked. All crops, zooms and sheets were viewed successfully.",
+ "legibility": "Clear; quay figures mostly have their dot at a wall vertex. Sheet join by eye: horizontal py ~590-592 full width (tint step); tool also reports vertical px ~563 over y 512-768, not confirmed by eye. River water (Thames, west) and works interiors carry no heights.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 380,
+   "py": 26,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street at the P.H. by the L.B. at top edge; dot left of figure; final 3 open-sided at 12x but stands alone"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.34,
+   "raw": "B.M.8·34",
+   "px": 393,
+   "py": 16,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on corner of the P.H. at top, text below-left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.4,
+   "raw": "11·4",
+   "px": 468,
+   "py": 164,
+   "confidence": "medium",
+   "setting": "railway",
+   "notes": "at grade beside the sidings, next to the hatched bank below Bell & Anchor Cottages; dot above-left; 8x and 3x region"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.2,
+   "raw": "16·2",
+   "px": 580,
+   "py": 309,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "on the rails at the NW end of the Swing Bridge; dot below-left; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.6,
+   "raw": "16·6",
+   "px": 674,
+   "py": 405,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "on the rails at the SE end of the Swing Bridge; dot left; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.2,
+   "raw": "18·2",
+   "px": 831,
+   "py": 41,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "dock premises NE of the hatched bank, by a building; dot above-left; 8x, 12x and 4x region"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.63,
+   "raw": "B.M.19·63",
+   "px": 865,
+   "py": 122,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "pheon at corner of the enclosure wall at the head of the quay, text right; 12x; wall type uncertain"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 784,
+   "py": 187,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "quay beside the Mooring Posts; the only dot is left of the figure but mooring-post dots are scattered around it; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 491,
+   "py": 423,
+   "confidence": "low",
+   "setting": "wall_top",
+   "notes": "lock head by the Cn; two nearby dots (491,423 right and 480,416 above-left, one probably a mooring post); final 3/8 uncertain at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.67,
+   "raw": "B.M.9·67",
+   "px": 802,
+   "py": 568,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on corner of building beside the railway at North Woolwich Road, text right; 8x and 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.8,
+   "raw": "8·8",
+   "px": 860,
+   "py": 582,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "North Woolwich Road by the Fire Alarm; dot below-left; both digits identical at 8x (6/8 not fully excluded)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.62,
+   "raw": "B.M.17·62",
+   "px": 285,
+   "py": 460,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on corner of shed on the lock quay, text right; 8x and 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 259,
+   "py": 554,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "lock quay; dot at wall vertex right of figure; open 3 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.4,
+   "raw": "17·4",
+   "px": 177,
+   "py": 589,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "dock quay edge by the Cn; dot at wall vertex below-right; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 209,
+   "py": 653,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "quay wall vertex right of figure beside the Mooring Posts; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.27,
+   "raw": "B.M.17·27",
+   "px": 168,
+   "py": 735,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "pheon on the Thames river wall, text right; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.1,
+   "raw": "18·1",
+   "px": 144,
+   "py": 783,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "Thames river wall vertex left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 231,
+   "py": 895,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "river wall vertex right of figure at the Chemical Manure Works frontage; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 9,
+   "py": 531,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "quay edge by ..s Dock at the west edge; figure whole (x 2-15) but no dot visible; position = centre of figures; 12x"
+  }
+ ],
+ "non_height_marks": [
+  "L.B. (letter box) at ~385,12",
+  "F.S. at ~60,524",
+  "Cn/Cr crane marks",
+  "Mooring Posts dots on the quays"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 524,
+   "px1": 16,
+   "py1": 538,
+   "reason": "17·1 figure starts 2 px from west edge; its dot may lie beyond the edge"
+  },
+  {
+   "px0": 0,
+   "py0": 588,
+   "px1": 1024,
+   "py1": 594,
+   "reason": "horizontal sheet join"
+  }
+ ]
+}

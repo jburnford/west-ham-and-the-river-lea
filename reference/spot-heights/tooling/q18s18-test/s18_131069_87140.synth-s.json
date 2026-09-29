@@ -1,0 +1,35 @@
+{
+ "mosaic": "s18_131069_87140",
+ "reader": "synth-s",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 16.6,
+   "raw": "B.M.16·6",
+   "px": 924,
+   "py": 462,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "Abbey Mill Toll Bar; ~5 m from five-foot B.M.16.46"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.6,
+   "raw": "8 · 6",
+   "px": 96,
+   "py": 261,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same spot and value as five-foot 8.6; must stay separate"
+  }
+ ],
+ "unreadable_regions": []
+}

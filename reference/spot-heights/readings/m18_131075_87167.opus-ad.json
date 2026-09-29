@@ -1,0 +1,31 @@
+{
+  "mosaic": "m18_131075_87167",
+  "reader": "opus-ad",
+  "area": "Leamouth: Orchard Place, Orchard Wharf, Orchard House Yard, the shipbuilding yards and graving dock, Leamouth Wharf and Trinity Buoy Wharf on the Bow Creek / Thames point; far (east) bank of the creek mouth at the east edge; river south",
+  "method": "Overview of 87167 row and sweep crops r0c0..r2c2 (2x) all displayed, anchored at opening (r0c0 PLACE/P.H./Old Orchard Yard/Orchard Wharf; r0c1 ORCHARD PLACE/Orchard House Yard/GRAVING DOCK; r0c2 BOW CREEK/Leamouth Wharf/Mud; r1c0 Crane/B.M.18·14/join; r1c1 Shipbuilding Yard/High Water Mark; r1c2 Trinity Buoy Wharf/Slip/triangle; r2c0 boundary line + join; r2c1 foreshore edge; r2c2 'County & Parly Borough and Union Boundary'). Contact sheets cs1, cs2 (8x +-16), cs3 (8x +-22), cs4, cs5 (10x +-14); context ctxE (2x, with the east neighbour image); all displayed. Marker sheet checked.",
+  "legibility": "Clear; vertical sheet join at px ~342 (double line with tint change) running the full height; no figure cut. Many nearby dots are mooring posts, M.P./M.PS marks and H marks; several figures on wharf frontages have no separable dot",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":10.5,"raw":"10·5","px":201,"py":54,"confidence":"medium","setting":"street","notes":"Orchard Place by the H (overlap strip with 131072); dot right of figure may belong to the H mark"},
+    {"type":"bench_mark","value_ft":10.98,"raw":"B.M.10·98","px":234,"py":74,"confidence":"medium","setting":"building","notes":"pheon on the building corner NW of the text on Orchard Place; decimals read 98 at 10x, last digit 8 vs 3 not fully certain"},
+    {"type":"spot","value_ft":10.5,"raw":"10·5","px":196,"py":179,"confidence":"high","setting":"street","notes":"Orchard Place south of the P.H. (overlap strip with 131072); dot above-left, 8x"},
+    {"type":"bench_mark","value_ft":12.37,"raw":"B.M.12·37","px":406,"py":251,"confidence":"medium","setting":"building","notes":"Orchard Place; broad arrow on the building line below the text; a second pheon-like mark on the building line above the text at (394,229) could be the pheon instead; digits clear at 8x"},
+    {"type":"spot","value_ft":10.5,"raw":"10·5","px":420,"py":245,"confidence":"high","setting":"street","notes":"Orchard Place beside B.M.12·37; dot left of figure, 8x"},
+    {"type":"spot","value_ft":12.3,"raw":"12·3","px":601,"py":289,"confidence":"medium","setting":"street","notes":"Orchard Place; the only dot is the D· after O·R·C·H·A·R·D"},
+    {"type":"spot","value_ft":14.3,"raw":"14·3","px":793,"py":338,"confidence":"high","setting":"street","notes":"east end of Orchard Place towards Leamouth Wharf; dot left of figure, 8x"},
+    {"type":"bench_mark","value_ft":15.21,"raw":"B.M.15·21","px":845,"py":348,"confidence":"high","setting":"building","notes":"pheon on the building corner west of the text, Leamouth Wharf; digits clear at 8x"},
+    {"type":"spot","value_ft":16.6,"raw":"16·6","px":91,"py":390,"confidence":"medium","setting":"wall_top","notes":"figure on the foreshore stipple in front of Orchard Wharf (overlap with 131072); dot in the river-wall strip above-left"},
+    {"type":"bench_mark","value_ft":18.14,"raw":"B.M.18·14","px":248,"py":432,"confidence":"high","setting":"wall_top","notes":"pheon on the river-wall line by the Crane, Orchard Wharf; text below, whole in this mosaic; digits clear at 8x"},
+    {"type":"spot","value_ft":14.9,"raw":"14·9","px":443,"py":436,"confidence":"medium","setting":"yard","notes":"Shipbuilding Yard; dot at the building corner above-right of the figure"},
+    {"type":"spot","value_ft":16.7,"raw":"16·7","px":313,"py":450,"confidence":"medium","setting":"wall_top","notes":"on the foreshore stipple in front of the river wall west of the shipbuilding yard; no separable dot among the stipple, position = centre of figure"},
+    {"type":"spot","value_ft":17.6,"raw":"17·6","px":561,"py":531,"confidence":"medium","setting":"wall_top","notes":"river frontage of the shipbuilding yard at the graving dock mouth, by M.PS; two candidate dots (561,531) and (576,536); final 6 at 8x"},
+    {"type":"bench_mark","value_ft":18.29,"raw":"B.M.18·29","px":671,"py":537,"confidence":"high","setting":"building","notes":"pheon on the building corner above-left of the text, Trinity Buoy Wharf; digits clear at 8x"},
+    {"type":"spot","value_ft":17.7,"raw":"17·7","px":703,"py":591,"confidence":"medium","setting":"wall_top","notes":"Trinity Buoy Wharf river frontage between the wall lines beside a round crane base; no dot found, position = centre of figure"},
+    {"type":"spot","value_ft":15.3,"raw":"15·3","px":703,"py":450,"confidence":"medium","setting":"yard","notes":"Trinity Buoy Wharf yard under the 'Trinity' lettering; no dot found, position = centre of figure"},
+    {"type":"spot","value_ft":14.9,"raw":"14·9","px":822,"py":465,"confidence":"high","setting":"yard","notes":"Trinity Buoy Wharf yard east of the buildings; dot above figure, 8x"},
+    {"type":"spot","value_ft":17.7,"raw":"17·7","px":867,"py":657,"confidence":"medium","setting":"wall_top","notes":"river wall at the SE corner of Trinity Buoy Wharf beside a survey triangle (848,664) and M.P; dot right of figure on the wall line"},
+    {"type":"spot","value_ft":17.4,"raw":"17·4","px":1003,"py":746,"confidence":"medium","setting":"wall_top","notes":"far (east) side of the Bow Creek mouth, written on the creek side of the dry-dock quay wall (seen on the east neighbour image); no dot found, position = centre of figure"}
+  ],
+  "non_height_marks": ["M.P., M.PS mooring posts, Cn., Crane, Cranes, H marks, F.P, Slip", "survey triangle at (848,664)", "orange speck at (772,310)"],
+  "unreadable_regions": []
+}

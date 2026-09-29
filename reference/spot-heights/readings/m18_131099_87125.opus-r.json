@@ -1,0 +1,233 @@
+{
+ "mosaic": "m18_131099_87125",
+ "reader": "opus-r",
+ "area": "Forest Gate east / Woodgrange: open field between Bristol Road west and Shrewsbury Road crossroads, Bristol Road terraces and School in the south",
+ "method": "Sheet tool + 9 sweep crops at 2x, each anchored on opening: r0c0 two R O A D bands; r0c1 open field, road bands, field-boundary corner; r0c2 crossroads with survey triangle; r1c0 A R O A D band with B.M.31·75; r1c1 boundary corner, terrace corner; r1c2 S H R E W lettering; r2c0 Bristol Road terrace; r2c1 B R I S T O L + B.M.34·71; r2c2 School Boys Girls & Infants, SHREWSBURY. Contact sheets (own helper) e1 8x, e2 8x, e3c 12x smooth+blocky, e4c 16x smooth+blocky; marker sheet checked. Rows py 768-1024 are the same tiles as m18_131099_87128 rows 0-256, whose figures were zoomed on that mosaic in this session (c1-c11c). All crops, contact sheets and zooms displayed when opened.",
+ "legibility": "Clear; large open field with few marks; no sheet join seen by eye or by the tool",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 31.75,
+   "raw": "B.M.31·75",
+   "px": 298,
+   "py": 321,
+   "confidence": "high",
+   "notes": "Bristol Road W (upper 'A R O A D' band), roadside; pheon apex right of text, 8x; decimals 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.7,
+   "raw": "31·7",
+   "px": 215,
+   "py": 355,
+   "confidence": "high",
+   "notes": "same road, after 'D' of ROAD; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.5,
+   "raw": "31·5",
+   "px": 60,
+   "py": 402,
+   "confidence": "low",
+   "notes": "same road W end; dot right of figure; final 5 vs 6: smooth reads flat-top 5, blocky ambiguous at 12x/16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.2,
+   "raw": "32·2",
+   "px": 425,
+   "py": 291,
+   "confidence": "high",
+   "notes": "same road; dot right-above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 626,
+   "py": 227,
+   "confidence": "high",
+   "notes": "same road E part; dot above between 2 and 7; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.04,
+   "raw": "B.M.33·04",
+   "px": 787,
+   "py": 156,
+   "confidence": "high",
+   "notes": "NW corner of crossroads (Shrewsbury Road junction); pheon point left of arrow, right of text; survey triangle at ~773,168 below; 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 803,
+   "py": 178,
+   "confidence": "high",
+   "notes": "centre of crossroads; dot above; all three digits the same italic-3 glyph at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 832,
+   "py": 364,
+   "confidence": "high",
+   "notes": "Shrewsbury Road at side-road mouth; dot above-left; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.5,
+   "raw": "33·5",
+   "px": 951,
+   "py": 418,
+   "confidence": "high",
+   "notes": "Shrewsbury Road E side at fence corner; dot right of figure by fence line; final 5 flat top 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.4,
+   "raw": "32·4",
+   "px": 892,
+   "py": 541,
+   "confidence": "high",
+   "notes": "Shrewsbury Road at S H of lettering; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 945,
+   "py": 688,
+   "confidence": "high",
+   "notes": "Shrewsbury Road between E and W of lettering (not interpuncted); dot above the 3/4; 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.7,
+   "raw": "33·7",
+   "px": 764,
+   "py": 761,
+   "confidence": "high",
+   "notes": "Bristol Road E part N of School; dot right of figure; 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 421,
+   "py": 900,
+   "confidence": "high",
+   "notes": "Bristol Road; same tiles as m18_131099_87128 (py+768), zoomed there at 8x/14x; dot right-above"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.5,
+   "raw": "31·5",
+   "px": 251,
+   "py": 966,
+   "confidence": "high",
+   "notes": "Bristol Road; same tiles as 87128 (py+768), zoomed there at 8x; dot right"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.71,
+   "raw": "B.M.34·71",
+   "px": 460,
+   "py": 898,
+   "confidence": "high",
+   "notes": "Bristol Road; same tiles as 87128, pheon apex zoomed there at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 589,
+   "py": 830,
+   "confidence": "high",
+   "notes": "Bristol Road in B R I . S T O L; same tiles as 87128, dot above zoomed there 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 37.34,
+   "raw": "B.M.37·34",
+   "px": 969,
+   "py": 786,
+   "confidence": "high",
+   "notes": "School NE wall by Shrewsbury Road; same tiles as 87128, pheon apex zoomed there 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.3,
+   "raw": "35·3",
+   "px": 1015,
+   "py": 872,
+   "confidence": "low",
+   "notes": "Shrewsbury Road by School near E edge; same tiles as 87128; final digit matches leading 3 at 12x (2x reads 35·8); dot between R and Y of SHREWSBURY"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangle ~773,168 at crossroads (figure 33·3 and B.M.33·04 beside it)",
+  "lone dot ~146,182 between A and D of the upper ROAD lettering, no figure",
+  "H. marks and F.P. along Bristol Road"
+ ],
+ "unreadable_regions": []
+}

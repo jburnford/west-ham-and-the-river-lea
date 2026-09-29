@@ -1,0 +1,321 @@
+{
+ "mosaic": "m18_131066_87152",
+ "reader": "opus-ae",
+ "area": "Bromley-by-Bow Gas Works west of the Lea: retort houses, gasholders, TRAMWAY, the Gas Works DOCK; hatched bank above Mud on the west; low open ground to the NE",
+ "method": "Overview (anchor Gas Works, DOCK) and all 9 sweep crops at 2x viewed and anchored on opening (r0c0 Gas W/Mud; r0c1 Works/W.M.; r0c2 S of Works/hatched bank; r1c0 TRAMWA; r1c1 TRAMWAY/dock head; r1c2 gasholder frames/triangle; r2c0 dash-dot boundary; r2c1 DOC; r2c2 DOCK). Contact sheets d1-d14 (8x ±16, 7x ±12, 12x ±12-13, 14x nn, 20x ±7, 4x ±70, 6x ±12) covering every candidate, all displayed when opened. Dot centroids by numeric helper; marker sheet of every reading checked.",
+ "legibility": "Clear print. 6/8 is the main difficulty: several 16/18 figures show an open-topped 6 at 7-12x though 2x suggests 8; recorded low. Probable vertical sheet join at px ~57-59 (a straight full-height line with a weak 2-unit paper tint step; the sheet tool reports none). No missing tiles.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 18.5,
+   "raw": "18·5",
+   "px": 144,
+   "py": 86,
+   "confidence": "low",
+   "setting": "embankment_top",
+   "notes": "Gas Works west side, dot at the crest of the hatched bank above the Mud; second digit 8 at 8x but top loop not closed at 12x (6/8), so low"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.1,
+   "raw": "16·1",
+   "px": 44,
+   "py": 266,
+   "confidence": "low",
+   "setting": "embankment_top",
+   "notes": "Gas Works west side, dot at the crest of the hatched bank; read 18·1 at 2x/8x but the second digit shows an open-topped 6 at 12x; 6/8 unresolved"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.19,
+   "raw": "B.M.17·19",
+   "px": 11,
+   "py": 358,
+   "confidence": "medium",
+   "setting": "other",
+   "notes": "text at the west edge; B.M. letters cut by the edge (only the M. dot visible), digits 17·19 whole and clear at 8x; pheon not in the mosaic, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.77,
+   "raw": "B.M.20·77",
+   "px": 345,
+   "py": 254,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Gas Works, pheon on the NW corner of the retort house south-east of the text; 20·77 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 297,
+   "py": 282,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Gas Works yard beside the retort house; dot directly above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 153,
+   "py": 423,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Gas Works yard NW of the southern retort houses; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 41,
+   "py": 526,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Gas Works yard at the west end of the southern retort houses; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 358,
+   "py": 509,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Gas Works yard by the TRAMWAY; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 510,
+   "py": 14,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Gas Works north, beside the dotted path near the north edge; dot left of figure; 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.7,
+   "raw": "16·7",
+   "px": 657,
+   "py": 18,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Gas Works north near the W.M.; dot left of figure; open-topped 6 at 7x, 8x and 12x (compared with the closed 8 of B.M.18·45)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 465,
+   "py": 122,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Gas Works, north of the northern retort houses; dot above-left; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.45,
+   "raw": "B.M.18·45",
+   "px": 725,
+   "py": 150,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Gas Works, pheon on the north corner of the small building east of the text; 18·45 clear at 12x (two closed loops in the 8)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.4,
+   "raw": "16·4",
+   "px": 779,
+   "py": 192,
+   "confidence": "low",
+   "setting": "yard",
+   "notes": "Gas Works east boundary by the B.M.18·45 building; dot above-left; 18·4 at 2x but open-topped 6 at 7x and 12x, so 6/8 unresolved"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.1,
+   "raw": "9·1",
+   "px": 812,
+   "py": 159,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "track between parallel dotted lines just SW of the hatched bank, east of the Gas Works; dot left of figure; 8x. Much lower than the works yard (16-17)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.2,
+   "raw": "7·2",
+   "px": 927,
+   "py": 268,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open low ground east of the Gas Works between dotted fences; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 997,
+   "py": 91,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open low ground near the NE corner beside a narrow channel; dot left of figure; figure ends ~1010, whole; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.0,
+   "raw": "B.M.20·00",
+   "px": 164,
+   "py": 657,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Gas Works, pheon at the south corner of the southern retort house, text below-right; 20·00 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.9,
+   "raw": "17·9",
+   "px": 508,
+   "py": 669,
+   "confidence": "low",
+   "setting": "wall_top",
+   "notes": "head of the Gas Works DOCK, dot on the dock-wall line; final digit 9 at 6x/8x but 8-like at 20x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.87,
+   "raw": "B.M.17·87",
+   "px": 622,
+   "py": 791,
+   "confidence": "low",
+   "setting": "wall_top",
+   "notes": "west wall of the DOCK, pheon on the wall line east of the text; first decimal 8 at 6x/8x but 9-like at 12x (8/9 flip); low"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 654,
+   "py": 824,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "west wall of the DOCK, dot just inside the wall line; 8 clear at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 766,
+   "py": 940,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "west wall of the DOCK further south, dot on the wall line; 8 clear at 20x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.45,
+   "raw": "B.M.18·45",
+   "px": 130,
+   "py": 1020,
+   "confidence": "low",
+   "setting": "other",
+   "notes": "south edge, beside the dash-dot boundary; digits legible as 18·45 but their bases are clipped by the edge and no pheon found in the mosaic; position = centre of figures"
+  }
+ ],
+ "non_height_marks": [
+  "W.M. at 650,40",
+  "survey triangle at 828,668 in the gasholder (no figure)",
+  "regularly spaced dots along the DOCK west wall at ~523,688 580,747 634,805 691,864 748,925 804,983 (posts, not survey dots)",
+  "x boundary marks along the dash-dot boundary in the SW"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 350,
+   "px1": 4,
+   "py1": 366,
+   "reason": "B.M. letters of B.M.17·19 cut by the west edge"
+  },
+  {
+   "px0": 110,
+   "py0": 1014,
+   "px1": 150,
+   "py1": 1024,
+   "reason": "B.M.18·45 text clipped by the south edge"
+  },
+  {
+   "px0": 985,
+   "py0": 566,
+   "px1": 1024,
+   "py1": 586,
+   "reason": "B.M. figure cut by the east edge (only B.M.1 visible); pheon at ~987,571"
+  },
+  {
+   "px0": 55,
+   "py0": 0,
+   "px1": 61,
+   "py1": 1024,
+   "reason": "probable vertical sheet join at px ~57-59"
+  }
+ ]
+}

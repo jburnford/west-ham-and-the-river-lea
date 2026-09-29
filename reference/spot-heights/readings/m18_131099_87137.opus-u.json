@@ -1,0 +1,229 @@
+{
+  "mosaic": "m18_131099_87137",
+  "reader": "opus-u",
+  "area": "Upton Park south / Plaistow east: Redclyffe Road and Tudor Road, open field with pond, Boleyn Castle (R.C. Boys' Reformatory) and Anne Boleyn's Tower, Priory Road, Boleyn Road, Seymour Road, Cleves Road",
+  "method": "Viewed all 9 sweep crops at 2x (anchors: r0c0 REDCLYFFE ROAD and TUDOR ROAD with join; r0c1 open field and blue pond; r0c2 blank field with curving boundary; r1c0 TUDOR ROAD east-west; r1c1 pond and Mission Room; r1c2 Mission Room and C L E; r2c0 Boleyn Castle and Anne Boleyn's Tower; r2c1 PRIORY ROAD and BOLEYN; r2c2 SEYMOUR ROAD, CLEVES ROAD, BOLEYN ROAD). Contact sheets viewed: cs1 (6x, six northern and west-edge candidates), cs2 (12x, same), cs3 (6x, six southern candidates), cs4 (12x, same), cs4b (12x, 25.2 and the B.M.27.97 pheon), marker sheet mk1 (all 15 positions boxed and checked). Every crop and sheet displayed when opened and has an anchor in my notes.",
+  "legibility": "Good. Italic 3s render as 8 at 12x (31.1 read as 81.1); settled by setting. Sheet join: straight horizontal line with tint change at py ~383-384 across the full width (reported by the tool at py ~384 over x 512-1024, seen by eye over the whole width); road lines do not meet exactly across it; 29.7 sits just above it. The west edge cuts the B.M. at Anne Boleyn's Tower.",
+  "crop_bounds_checked": [
+    [
+      0,
+      0,
+      448,
+      448
+    ],
+    [
+      288,
+      0,
+      736,
+      448
+    ],
+    [
+      576,
+      0,
+      1024,
+      448
+    ],
+    [
+      0,
+      288,
+      448,
+      736
+    ],
+    [
+      288,
+      288,
+      736,
+      736
+    ],
+    [
+      576,
+      288,
+      1024,
+      736
+    ],
+    [
+      0,
+      576,
+      448,
+      1024
+    ],
+    [
+      288,
+      576,
+      736,
+      1024
+    ],
+    [
+      576,
+      576,
+      1024,
+      1024
+    ]
+  ],
+  "readings": [
+    {
+      "type": "bench_mark",
+      "value_ft": 34.15,
+      "raw": "B.M.34·15",
+      "px": 278,
+      "py": 106,
+      "confidence": "high",
+      "setting": "building",
+      "notes": "north end of Tudor Road; pheon on the terrace front 30 px left of text; 6x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 30.8,
+      "raw": "30·8",
+      "px": 309,
+      "py": 121,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "road east of Tudor Road; dot 4 px left of figure; final 8 closed"
+    },
+    {
+      "type": "spot",
+      "value_ft": 31.1,
+      "raw": "31·1",
+      "px": 190,
+      "py": 174,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Redclyffe Road at Tudor Road; no survey dot (only the dot by A of ROAD 20 px above); centre of figures; leading 3 looks 8 at 12x, 3 by setting"
+    },
+    {
+      "type": "spot",
+      "value_ft": 31.1,
+      "raw": "31·1",
+      "px": 233,
+      "py": 207,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "Tudor Road north; dot directly below the figure, before the T of TUDOR (no interpuncts in TUDOR)"
+    },
+    {
+      "type": "spot",
+      "value_ft": 29.7,
+      "raw": "29·7",
+      "px": 287,
+      "py": 381,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Tudor Road at its bend, just above the py ~384 sheet join; dot below the figure; medium because of the join"
+    },
+    {
+      "type": "spot",
+      "value_ft": 28.5,
+      "raw": "28·5",
+      "px": 388,
+      "py": 362,
+      "confidence": "medium",
+      "setting": "open_ground",
+      "notes": "field boundary east of Tudor Road; a tick on the boundary line 6 px left of figure taken as the survey mark"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 29.4,
+      "raw": "B.M.29·40",
+      "px": 417,
+      "py": 443,
+      "confidence": "high",
+      "setting": "building",
+      "notes": "Tudor Road east-west section, pheon on the building corner 10 px right of text; 12x"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 29.25,
+      "raw": "B.M.?9·25",
+      "px": 46,
+      "py": 968,
+      "confidence": "low",
+      "setting": "building",
+      "notes": "Anne Boleyn's Tower, Green Street; pheon on the tower; the B.M. text and most of the leading digit lie beyond the west edge, 2 read from the part visible and the setting; check in the western neighbour"
+    },
+    {
+      "type": "spot",
+      "value_ft": 27.0,
+      "raw": "27·0",
+      "px": 466,
+      "py": 541,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "Priory Road north; dot directly above; 0 oval at 12x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 26.5,
+      "raw": "26·5",
+      "px": 519,
+      "py": 717,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "Priory Road; dot directly above; 5 flat-topped at 12x"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 27.97,
+      "raw": "B.M.27·97",
+      "px": 568,
+      "py": 831,
+      "confidence": "high",
+      "setting": "building",
+      "notes": "Priory Road; right-pointing pheon on the building corner on the east side of the road, 35 px from text on the west side; 12x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 25.9,
+      "raw": "25·9",
+      "px": 559,
+      "py": 857,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Priory Road; the only dot is the O·R interpunct of P·R·I·O·R·Y, 7 px left of figure; F.P's own dot at 582,849"
+    },
+    {
+      "type": "spot",
+      "value_ft": 25.0,
+      "raw": "25·0",
+      "px": 623,
+      "py": 981,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Priory Road south, east footway; no dot; centre of figures; 0 oval at 12x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 26.5,
+      "raw": "26·5",
+      "px": 715,
+      "py": 812,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Boleyn Road at Seymour Road; the only dot is the E·Y interpunct of B·O·L·E·Y·N, 9 px left of figure"
+    },
+    {
+      "type": "spot",
+      "value_ft": 25.2,
+      "raw": "25·2",
+      "px": 875,
+      "py": 767,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Seymour Road at Cleves Road; dot 6 px left of figure among the lettering (after R of SEYMOUR, between V and E of CLEVES)"
+    }
+  ],
+  "non_height_marks": [
+    "F.P. marks along the southern roads",
+    "Mission Room, Chapel, Boleyn Castle lettering",
+    "pond (blue) south of the join at ~460-680,385-435"
+  ],
+  "unreadable_regions": [
+    {
+      "px0": 0,
+      "py0": 965,
+      "px1": 20,
+      "py1": 982,
+      "reason": "B.M. text at Anne Boleyn's Tower cut by the west edge (only ?9·25 visible)"
+    }
+  ]
+}

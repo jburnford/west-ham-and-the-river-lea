@@ -1,0 +1,374 @@
+{
+ "mosaic": "m18_131066_87161",
+ "reader": "opus-ac",
+ "area": "South Bromley / Poplar west of the Lea: Brunswick Road, Aberfeldy, Ettrick, Dee, Culloden, Blair, Benledi, Athol Streets, Tramway Depot, Poplar Hospital, East India Dock Road and the East India Dock north quay",
+ "method": "sweep r0c0..r2c2 (2x) each anchored on opening: r0c0 FINDHORN/ETTRICK/DEE STREET, r0c1 ABERFELDY, r0c2 L.B.O./BENLEDI, r1c0 BRUNSWICK ROAD/Brunswick Hall, r1c1 Tramway Depot/BLAIR, r1c2 Tramway Depot/BENLEDI, r2c0 Poplar Hospital/Urinal, r2c1 ATHOL STREET/TRAMWAY/Warehouse, r2c2 EAST INDIA/G.P.O. 4 1/4/NORTH Q. Contact sheets cs1-cs17 (6-20x, panels +-7-24 px) all displayed and anchored in notes. B.M. decimals at 12x (8/9 at 20x). All crops and zooms viewed successfully; marker sheet checked.",
+ "legibility": "good; probable sheet join (straight vertical line with a faint tint band) at px ~57 over the full height; no figures cross it",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 414,
+   "py": 93,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Ettrick Street / Aberfeldy Street corner; dot upper-left; italic 3 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.7,
+   "raw": "9·7",
+   "px": 27,
+   "py": 217,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Brunswick Road (west strip) opposite Dee Street; dot upper-left; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.7,
+   "raw": "9·7",
+   "px": 84,
+   "py": 351,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Brunswick Road at the Dee Street corner by the P.H.; dot above; 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.85,
+   "raw": "B.M.8·85",
+   "px": 451,
+   "py": 373,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house front at the Aberfeldy Street / Culloden Street corner; pheon above-right of text (428-458,388); 8,8,5 confirmed at 12x and 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.2,
+   "raw": "7·2",
+   "px": 474,
+   "py": 236,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "ABERFELDY STREET mid-block; digits clear at 12x; no dot of its own (interpunct lettering around); position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 497,
+   "py": 381,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Aberfeldy Street at the Culloden Street corner by F.P.; dot left; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 697,
+   "py": 4,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street at the north edge by F.P.; figure 1-7 px from top edge, digits whole; no dot found (F.P. has its own at 683,12); position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.7,
+   "raw": "7·7",
+   "px": 865,
+   "py": 71,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction by L.B.O., north-east; survey dot directly above figure, separate from the F.P.'s own dot (872,67); 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.86,
+   "raw": "B.M.9·86",
+   "px": 880,
+   "py": 108,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "corner house at Benledi Street north end; pheon right of text; last decimal 6 at 10-12x but 8-like at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 890,
+   "py": 257,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "BENLEDI STREET by F.P.; second digit 4 or 6 (angular, 4-like at 10x and 20x); nearby dots belong to F.P. and B·E interpunct; position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 947,
+   "py": 396,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Benledi Street at the Blair Street corner by F.P.; dot left; G-shaped 6 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.2,
+   "raw": "9·2",
+   "px": 92,
+   "py": 524,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "BRUNSWICK ROAD by F.P.; 9 matches the 9 of 9·1 at 12x; no dot of its own (U·N interpunct and F.P. dot nearby); position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.1,
+   "raw": "9·1",
+   "px": 128,
+   "py": 638,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "BRUNSWICK ROAD opposite Brunswick Hall; no dot of its own (C·K interpunct beside); position = centre"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.64,
+   "raw": "B.M.11·64",
+   "px": 140,
+   "py": 682,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Brunswick Hall front, Brunswick Road; pheon upper-left of text; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.2,
+   "raw": "7·2",
+   "px": 539,
+   "py": 519,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Blair Street / Aberfeldy Street junction; dot left; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 591,
+   "py": 666,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "corner of Athol Street at the tram-rail curve into the Tramway Depot; digits clear at 12x; dot not separated from the rails, position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.1,
+   "raw": "9·1",
+   "px": 989,
+   "py": 534,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "BENLEDI STREET, south part; dot left beside the T of STREET (could be an interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 137,
+   "py": 798,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Brunswick Road by the Smithy; dot upper-left; 8 (both loops closed) vs open-bottom 9 of 14·9 at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.9,
+   "raw": "14·9",
+   "px": 424,
+   "py": 876,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "East India Dock Road tramway, north side; dot lower-left between the rails; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.4,
+   "raw": "15·4",
+   "px": 235,
+   "py": 933,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "East India Dock Road tramway by Poplar Hospital; dot upper-left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 160,
+   "py": 950,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road by the School, F.P., B.S. and D.Fn; several dots nearby, survey dot not distinguished; position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 33,
+   "py": 980,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road south-west, below the row of dots of the tramway; dot above possibly part of that row"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 88,
+   "py": 1002,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "East India Dock Road south side by the Urinal; dot left; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.64,
+   "raw": "B.M.19·64",
+   "px": 268,
+   "py": 1015,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "wall corner south of East India Dock Road (dock side); pheon left of text; decimals 6,4 at 12x; digits end at py 1020"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.1,
+   "raw": "15·1",
+   "px": 622,
+   "py": 816,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "East India Dock Road north side at the Athol Street corner; dot left; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.89,
+   "raw": "B.M.16·89",
+   "px": 481,
+   "py": 879,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "East India Dock boundary/warehouse wall on the south side of the road; pheon left of text; 8,9 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.2,
+   "raw": "15·2",
+   "px": 864,
+   "py": 751,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "EAST INDIA Dock Road; digits clear at 12x; only dot nearby is the T· interpunct of EAST; position = centre"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.55,
+   "raw": "B.M.17·55",
+   "px": 978,
+   "py": 730,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "dock boundary wall on the south side of East India Dock Road; pheon above text; 12x"
+  }
+ ],
+ "non_height_marks": [
+  "G.P.O. 4 1/4 milepost at (840,775)",
+  "M.P. mooring posts on the North Quay",
+  "F.P., H (hydrant), B.S., D.Fn, Fire Alarm labels",
+  "F.P·O at (1000,687)"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 372,
+   "py0": 1016,
+   "px1": 395,
+   "py1": 1024,
+   "reason": "figure '1?·1' cut by the bottom edge"
+  },
+  {
+   "px0": 54,
+   "py0": 0,
+   "px1": 61,
+   "py1": 1024,
+   "reason": "probable sheet join at px ~57"
+  },
+  {
+   "px0": 688,
+   "py0": 0,
+   "px1": 706,
+   "py1": 8,
+   "reason": "7·4 within 1 px of top edge; dot may be off-sheet"
+  }
+ ]
+}

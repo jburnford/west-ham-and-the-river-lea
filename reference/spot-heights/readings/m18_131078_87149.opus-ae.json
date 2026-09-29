@@ -1,0 +1,255 @@
+{
+ "mosaic": "m18_131078_87149",
+ "reader": "opus-ae",
+ "area": "Marsh west of Hermit Road with drainage ditches and Sluices; Hermit Road; the School (Boys Girls & Infants); Beaconsfield Road and Florence Street terraces (Canning Town north)",
+ "method": "Independent second read. Overview mosaic (anchor HERMIT ROAD, School) and all 9 sweep crops at 2x viewed, each anchored in notes on opening (r0c0 Sluices/ditch; r0c1 Sluices/terrace; r0c2 HERMIT ROAD/F.P./B.M.; r1c0 Sluice/ditch junction; r1c1 School wall B.M.5·94; r1c2 H·ERMIT lettering; r2c0 BE(ACONSFIELD)/join; r2c1 School Boys Girls & Infants/BEACONSFIELD ROAD; r2c2 FLORENCE STRE(ET)). Contact sheets c1-c12 (8x ±14-16, 10x/12x ±12-13, 16x ±9, 20x ±8, 6x ±30, nearest-neighbour 10x/16x) covering every candidate; all crops and contact sheets displayed when opened. Dot centroids by numeric helper; marker sheet checked.",
+ "legibility": "Clear; small ditch-bank figures readable at 8x. Horizontal sheet join by eye at py ~768 (strong tint change, ditch blue north, uncoloured south); sheet tool reports none.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 6.3,
+   "raw": "6·3",
+   "px": 253,
+   "py": 9,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "track between two dotted fence lines running south from the north edge, west of the ditch; dot left of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 2.9,
+   "raw": "2·9",
+   "px": 338,
+   "py": 185,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "east bank of the north-south drainage ditch, south of the Sluices; dot on the bank line; 9 confirmed at 8x and 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.0,
+   "raw": "3·0",
+   "px": 329,
+   "py": 408,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "east bank of the drainage ditch below the Sluice; dot on the bank line; 8x and 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 2.9,
+   "raw": "2·9",
+   "px": 324,
+   "py": 604,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "east bank of the ditch at its bend west; dot on the bank; 9 read at 8x and 20x (lower bowl slightly closed at 20x, same form as the 2·9 at 338,185)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 440,
+   "py": 4,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "north edge, in front of the terrace north of the east-west ditch; figure whole (y 1-8) but no dot found in the mosaic, position = centre of figures; flat-topped 5 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 942,
+   "py": 82,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "north end of Hermit Road where it crosses the ditch; dot above figure; first digit flat-topped 5 at 8x but 6-like at 16x, so low (5 vs 6)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 822,
+   "py": 240,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hermit Road, figure east of the carriageway at 845-855,242; taken as the lone dot after O in R O·A D on the same row (an interpunct-like dot), rounded-top 6 at 8x/16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.14,
+   "raw": "B.M.6·14",
+   "px": 792,
+   "py": 316,
+   "confidence": "medium",
+   "setting": "other",
+   "notes": "Hermit Road east footway, pheon tangled with F.P. lettering at the footway dotted line, no wall drawn; digits 6·14 clear at 12x; pheon point estimated"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 751,
+   "py": 440,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hermit Road; figure at 772-781,442 east of the kerb; dot taken as the lone dot between H and E of H·ERMIT on the same row; 6·6 clear at 8x/16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 752,
+   "py": 630,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hermit Road carriageway south of the F.P.; isolated dot in the road on the figure row (F.P. has its own dot at 756,608); 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.94,
+   "raw": "B.M.5·94",
+   "px": 446,
+   "py": 683,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "NW corner of the School boundary wall; pheon at the wall corner; 5·94 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.5,
+   "raw": "3·5",
+   "px": 441,
+   "py": 751,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open marsh just west of the School boundary wall; dot directly above figure; flat-topped 5 at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.59,
+   "raw": "B.M.6·59",
+   "px": 345,
+   "py": 1016,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "south of Beaconsfield Road at the end of the house wall; text 6·59 legible at 10x but its base touches the south edge (clipped 1-2 px); pheon estimated"
+  },
+  {
+   "type": "spot",
+   "value_ft": 2.9,
+   "raw": "2·9",
+   "px": 450,
+   "py": 974,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Beaconsfield Road below B·E·A lettering and the dotted kerb; no survey dot separable (E·A interpunct 12 px above); position = centre of figures; faint but 2·9 at 8x/20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 755,
+   "py": 803,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hermit Road between the terraces south of the join; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.6,
+   "raw": "3·6",
+   "px": 757,
+   "py": 979,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "corner of Hermit Road and Beaconsfield Road; dot above-left of F.P. at 757,979 could be the F.P. dot, so medium; 6 read at 8x"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. at 985,42; 750,609; 925,735; 947,866",
+  "S.P. at 525,975 (Beaconsfield Road)",
+  "·H at 330,3",
+  "triangle mark at 770,730 on Hermit Road (no figure beside it)",
+  "Sluices at 360,120 and Sluice at 300,297 (labels)"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 745,
+   "py0": 1010,
+   "px1": 780,
+   "py1": 1024,
+   "reason": "B.M. figure on Hermit Road cut by the south edge (only B.M. and tops of digits visible)"
+  },
+  {
+   "px0": 310,
+   "py0": 1012,
+   "px1": 350,
+   "py1": 1024,
+   "reason": "B.M.6·59 text touches south edge; base of digits clipped 1-2 px"
+  },
+  {
+   "px0": 0,
+   "py0": 764,
+   "px1": 1024,
+   "py1": 772,
+   "reason": "horizontal sheet join (tint step) at py ~768"
+  }
+ ]
+}

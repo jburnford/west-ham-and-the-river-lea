@@ -1,0 +1,310 @@
+{
+ "mosaic": "m18_131066_87149",
+ "reader": "opus-ah",
+ "area": "Bow Creek and the tidal lock, the road bridge and its approach embankment, and the gas works (gasholders) east of the creek, with open marsh at the east edge",
+ "method": "sheet; sweep 9 crops at 2x with anchors recorded at opening (r0c0 BOW CR / Towing Path / C.C. at L.W., r0c1 gasholders, r0c2 gasholders / B.M.14·37, r1c0 Tidal Lock / Mud, r1c1 dotted roads / 17·7, r1c2 building with ponds, r2c0 Gas W / Mud, r2c1 Gas Works / W.M., r2c2 S / B.M.18·45); 6x position sheets csA-csD, region views regBr (4x), regE (4x), regS (4x), regL (4x), regBrW (7x); 8x digit sheets csF, csI, csJ; 12x csH for 5/6 and 6/8, 6x csL against known 8s, nearest csG; 12x bench-mark sheets csK, csM; csE for the south-edge B.M.; numeric dot centroids; marker sheet. All crops and sheets displayed when opened.",
+ "legibility": "clear; vertical sheet join at px ~61 (straight line with tint change, confirmed by eye) and horizontal join at py ~764 (line and tint step, confirmed by eye); tool reports px ~61 and py ~761",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 87,
+   "py": 120,
+   "confidence": "medium",
+   "setting": "embankment_top",
+   "notes": "Bow Creek towing path (rotated Towing Path lettering); the only dot (87,120, from raw pixels) lies between the T and o letters and may be an interpunct; flat 5 and closed 8 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 77,
+   "py": 303,
+   "confidence": "low",
+   "setting": "bridge",
+   "notes": "west end of the road bridge over Bow Creek and the tidal lock, figure in the north footway just east of the px~61 sheet join; second digit 5/6 ambiguous (15·3 at 6-7x, 16·3 at 8x and 12x); no dot of its own (isolated dot at 67,320 in the carriageway may be it), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.2,
+   "raw": "32·2",
+   "px": 202,
+   "py": 321,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "deck of the road bridge over Bow Creek; dot above figure between the kerb lines; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 30.03,
+   "raw": "B.M.30·03",
+   "px": 272,
+   "py": 303,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "north parapet at the east end of the bridge, pheon on the parapet line with the survey triangle opposite; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.3,
+   "raw": "26·3",
+   "px": 369,
+   "py": 327,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "road on the hatched approach embankment east of the bridge; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 512,
+   "py": 140,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "gas works ground among the gasholders; 2x suggested 18·0 but the 6 is open-topped at 8x and 12x; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.1,
+   "raw": "21·1",
+   "px": 499,
+   "py": 330,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road just east of the foot of the hatched approach embankment, descending east; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 662,
+   "py": 329,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same road further east, by the gasholders; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.0,
+   "raw": "14·0",
+   "px": 849,
+   "py": 338,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same road beside the cross-hatched structure; dot below figure on the footway; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.37,
+   "raw": "B.M.14·37",
+   "px": 893,
+   "py": 356,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "east corner of the cross-hatched structure (gateway) on the south side of the road, pheon pointing up; text above the road; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.6,
+   "raw": "5·6",
+   "px": 977,
+   "py": 339,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "south edge of the road where a fence leaves it, east of the hatched bank strip; final digit reads 6 at 6x but 6/8 ambiguous at 8x (compare the waisted 8 of 15·8); value 8 ft below 14·0 130 px west"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 230,
+   "py": 438,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "gas works made ground east of Bow Creek; final digit closed like an 8 at 8x and 12x, unlike the open 3 of 16·3 on the same sheet; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.0,
+   "raw": "19·0",
+   "px": 195,
+   "py": 651,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "top of the hatched bank on the east side of Bow Creek at the gas works edge; dot above-left; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.5,
+   "raw": "15·5",
+   "px": 144,
+   "py": 854,
+   "confidence": "medium",
+   "setting": "embankment_top",
+   "notes": "top of the hatched Bow Creek bank below the py~764 join; 2x looked 18·5 but at 8x and 12x the second digit matches the flat-topped final 5; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.7,
+   "raw": "17·7",
+   "px": 537,
+   "py": 475,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "dotted road inside the gas works, south of the main road; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.2,
+   "raw": "17·2",
+   "px": 572,
+   "py": 603,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "junction of dotted gas works roads; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 511,
+   "py": 782,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Gas Works, dot on the dotted road edge just south of the py~764 join; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.7,
+   "raw": "16·7",
+   "px": 657,
+   "py": 785,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Gas Works near the W.M.; dot left of figure; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 465,
+   "py": 890,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Gas Works, dotted road junction; dot above-left; 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.45,
+   "raw": "B.M.18·45",
+   "px": 724,
+   "py": 918,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "north corner of a gas works building, pheon right of text; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.4,
+   "raw": "16·4",
+   "px": 779,
+   "py": 960,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Gas Works, on the dotted track beside the B.M.18·45 building; dot above-left; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.1,
+   "raw": "9·1",
+   "px": 812,
+   "py": 926,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "strip between the gas works track and the double fence line that continues the hatched bank crest at its SE end, 7 ft below the 16·4 on the track; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 997,
+   "py": 859,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open ground east of the gas works (no place word, below 15 ft), dot on the dotted track left of figure; 8x"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangle at 271,339 opposite B.M.30·03",
+  "county boundary dash-dot with x marks along the west edge (C.C. at L.W.)",
+  "H.W.M. lettering in Bow Creek",
+  "W.M. at ~668,803"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 318,
+   "py0": 1006,
+   "px1": 352,
+   "py1": 1024,
+   "reason": "B.M. figure (B.M.20·?) cut by the south edge beside a pheon at ~345,1020"
+  }
+ ]
+}

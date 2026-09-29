@@ -1,0 +1,25 @@
+{
+  "mosaic": "m18_131069_87140",
+  "area": "Abbey Mills Pumping Station, Northern Outfall Sewer, Channelsea River and Abbey Mill (corn)",
+  "method": "read by Claude (vision) from the 1024 px mosaic plus 2x quadrant crops; key dots checked at 4x",
+  "legibility": "good: digits about 6 px tall at native zoom 18; reliable at 2x upscale, dot positions need 4x",
+  "readings": [
+    {"type": "spot", "value_ft": 8.9, "raw": "8·9", "px": 40, "py": 124, "confidence": "high", "notes": "Abbey Lane, between the letters of ABBEY"},
+    {"type": "spot", "value_ft": 6.3, "raw": "6·3", "px": 336, "py": 114, "confidence": "high", "notes": "low ground between the embanked lines NW of the gasholders"},
+    {"type": "spot", "value_ft": 8.6, "raw": "8·6", "px": 96, "py": 261, "confidence": "high", "notes": "Abbey Lane at the bend by the Lodge; dot above-left of figures"},
+    {"type": "spot", "value_ft": 8.0, "raw": "8·0", "px": 286, "py": 268, "confidence": "high", "notes": "Abbey Lane; dot confirmed at 4x"},
+    {"type": "bench_mark", "value_ft": 10.79, "raw": "B.M.10·79", "px": 390, "py": 253, "confidence": "high", "notes": "pheon to right of text at the corner of the building by the sewer; confirmed at 4x"},
+    {"type": "spot", "value_ft": 8.7, "raw": "8·7", "px": 499, "py": 243, "confidence": "medium", "notes": "road north of the sewer; figures split across my two crops, read in full view"},
+    {"type": "spot", "value_ft": 9.5, "raw": "9·5", "px": 698, "py": 207, "confidence": "high", "notes": "same road, in front of the semi-detached houses"},
+    {"type": "spot", "value_ft": 16.6, "raw": "16·6", "px": 786, "py": 99, "confidence": "medium", "notes": "figures drawn over the west edge of the Channelsea; dot right of figures at water edge; 16.6 is too high for water so probably a wall/bank top"},
+    {"type": "spot", "value_ft": 11.5, "raw": "11·5", "px": 843, "py": 318, "confidence": "medium", "notes": "towpath west of Channelsea by the reservoirs; first digit faint (could be 1 or i)"},
+    {"type": "spot", "value_ft": 14.5, "raw": "14·5", "px": 894, "py": 468, "confidence": "medium", "notes": "by Abbey Mill (Corn); dot not seen, placed left of figures"},
+    {"type": "bench_mark", "value_ft": 16.46, "raw": "B.M. 16·46", "px": 912, "py": 456, "confidence": "high", "notes": "pheon left of B.M. on Abbey Mill building; tide note 'Highest Point to which the ...' adjacent"},
+    {"type": "spot", "value_ft": 31.6, "raw": "31·6", "px": 851, "py": 554, "confidence": "medium", "notes": "top of Northern Outfall Sewer embankment at its Channelsea crossing; value clear, dot not found so position = left end of figures"},
+    {"type": "bench_mark", "value_ft": 28.25, "raw": "B.M.28·25", "px": 840, "py": 634, "confidence": "high", "notes": "pheon right of text on the sewer bridge abutment; confirmed at 4x"},
+    {"type": "spot", "value_ft": 18.9, "raw": "18·9", "px": 850, "py": 709, "confidence": "high", "notes": "embankment path; the dot is RIGHT of the figures here (4x check)"},
+    {"type": "spot", "value_ft": 17.4, "raw": "17·4", "px": 827, "py": 790, "confidence": "high", "notes": "embankment west of Channelsea"},
+    {"type": "spot", "value_ft": 18.1, "raw": "18·1", "px": 745, "py": 981, "confidence": "medium", "notes": "embankment bank above the creek; dot estimated"}
+  ],
+  "non_height_marks": ["triangle (trig/instrument station?) on Abbey Mills Pumping Station roof at about 470,555", "H.W.M.O.T. / L.W.M.O.T. tidal lines along Channelsea and Abbey Creek, no figures"]
+}

@@ -1,0 +1,294 @@
+{
+ "mosaic": "m18_131075_87143",
+ "reader": "opus-aq",
+ "area": "Abbey Mills marsh east of Manor Road: Northern Outfall Sewer crest (top edge), LT&SR embankment crossing Manor Road on an underbridge, branch railway incline, open marsh with fence line (Plaistow marsh side)",
+ "method": "QA independent second read. Sweep crops r0c0-r2c2 all displayed and anchored at opening (r0c0 MANOR ROAD lettering; r0c1 B.M.12·45 M.P.; r0c2 N O R sewer lettering; r1c0 F.W./F.B. and B.M.5·46; r1c1 B.M.12·45 and 17·3; r1c2 11·9/13·2 on bank; r2c0 Sluice label; r2c1 B.M.4·77 and fence line; r2c2 B.M.4·25). Region views (4x/3x) c1_reg1 (31·7/3·4), c1_reg2 (LT&SR bridge over Manor Road), c1_reg3 (sewer aqueduct), c1_reg4 (Manor Road 8·4/15·1), c1_nb (neighbour mosaic 131072_87143 image only, for context). Contact sheets c1_A (6x), c1_B (12x), c1_C3 (8x smooth+nearest, 5/6 test), c1_D (6x), c1_E (10x), c1_F3 (8x 5/6 comparison), c1_G (6x marsh fence line), c1_H and c1_I (12x B.M. decimals). Every crop and sheet displayed when opened. Dot centroids by numeric helper; positions checked on a marker sheet.",
+ "legibility": "clear print; sheet joins at vertical px ~350 (full height, tint step) and horizontal py ~570 (full width, tint step, darker SW quadrant)",
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 31.7,
+   "raw": "31·7",
+   "px": 186,
+   "py": 38,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "Northern Outfall Sewer crest just east of where it crosses Manor Road on its aqueduct; dot left of figure; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.4,
+   "raw": "3·4",
+   "px": 110,
+   "py": 38,
+   "confidence": "high",
+   "setting": "embankment_foot",
+   "notes": "Manor Road directly under/south of the sewer aqueduct, at the foot of the sewer bank; open-left 3 at 8x; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.4,
+   "raw": "8·4",
+   "px": 128,
+   "py": 236,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Manor Road in the carriageway; closed 8 at 8-12x; only dot is the A·D dot in R O A·D lettering, taken as the survey dot (ambiguous interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.1,
+   "raw": "15·1",
+   "px": 116,
+   "py": 379,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "raised branch railway between retaining walls running north beside Manor Road (walled incline off the LT&SR curve); dot left of figure; 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 12.45,
+   "raw": "B.M.12·45",
+   "px": 623,
+   "py": 322,
+   "confidence": "medium",
+   "setting": "embankment_top",
+   "notes": "B.M. on railway mile post (M.P.) on the north edge of the LT&SR embankment top; final 5 flat-topped at 8x/12x; pheon under M.P. letters, point estimated"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.2,
+   "raw": "13·2",
+   "px": 632,
+   "py": 349,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "LT&SR embankment top, south edge; dot above-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.5,
+   "raw": "14·5",
+   "px": 528,
+   "py": 388,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "LT&SR embankment top, south edge; 5 judged flat-topped at 8x (smoothed 12x looked rounder) against the 5 of B.M.12·45"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.9,
+   "raw": "11·9",
+   "px": 733,
+   "py": 312,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "LT&SR embankment top where the bank is dying out eastward; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.5,
+   "raw": "9·5",
+   "px": 935,
+   "py": 236,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "LT&SR east of where the embankment hatching ends (~px 800), rails nearly at grade; dot between rails"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.7,
+   "raw": "5·7",
+   "px": 137,
+   "py": 455,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road just north of the LT&SR underbridge; flat-topped 5 at 8x; dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.9,
+   "raw": "19·9",
+   "px": 11,
+   "py": 501,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "top of the branch railway bank curving off the LT&SR west of Manor Road (hatched NW slope), 'H' beside; figure whole at west edge"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.46,
+   "raw": "B.M.5·46",
+   "px": 102,
+   "py": 545,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "B.M. on the south face/abutment of the LT&SR bridge over Manor Road; pheon lies sideways at the bridge line, point estimated; decimals clear at 10-12x; first digit flat-topped 5"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.3,
+   "raw": "5·3",
+   "px": 121,
+   "py": 604,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road just south of the LT&SR underbridge; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 327,
+   "py": 465,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "LT&SR embankment top, south edge, just west of the px~350 vertical join; open 3 at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.1,
+   "raw": "6·1",
+   "px": 125,
+   "py": 743,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road; rounded 6 matching the 6·6 below; dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 128,
+   "py": 974,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Manor Road near the Sluice; dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.7,
+   "raw": "4·7",
+   "px": 278,
+   "py": 991,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "dot on the fence/drain line across the open marsh east of Manor Road"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 4.77,
+   "raw": "B.M.4·77",
+   "px": 331,
+   "py": 990,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "fence line across the marsh, pheon sideways on the line pointing west; B.M. text below; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 490,
+   "py": 982,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "tick-dot on the marsh fence line; figure below"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 704,
+   "py": 974,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "tick-dot on the marsh fence line; figure below"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 4.25,
+   "raw": "B.M.4·25",
+   "px": 866,
+   "py": 967,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "pheon at the east end of the marsh fence line, B.M. text below-right; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 911,
+   "py": 963,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open marsh just east of the fence end; open-topped 6 at 8-12x; dot left of figure"
+  }
+ ],
+ "non_height_marks": [
+  "S.P. (signal post) at ~5,560 and ~117,930 and ~75,1017",
+  "M.P. (railway mile post) at ~620,322 carrying B.M.12·45",
+  "F.B., F.P., F.W., H lettering near the LT&SR bridge",
+  "survey triangle with no figure at ~186,512",
+  "isolated tick on LT&SR north bank edge ~753,271 with no figure",
+  "tick on marsh fence line ~792,970 with no figure"
+ ],
+ "unreadable_regions": [],
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ]
+}

@@ -1,0 +1,36 @@
+{
+  "mosaic": "m18_131099_87128",
+  "reader": "opus-p",
+  "area": "Upton Park / East Ham border: a north-south '...ST' road and 'LANE' on the W, Bristol Road, Stafford Road, York Road, Rutland Road, Chester Road, two Board Schools (Boys Girls & Infants), P.H., Congregational Chapel (Seats for 400) at the S edge, '...BURY' road at the NE corner",
+  "method": "Viewed full 1024 px mosaic (anchor: York Road, Congregational Chapel), then all 9 sweep crops at 2x, each anchored as opened: r0c0 'ST' road and L A N E; r0c1 BRISTOL/STAFFORD; r0c2 School/'...BURY'; r1c0 P.H./L.B./'...Y ROAD'; r1c1 YORK ROAD/RUTLAND; r1c2 York Road B.M.35.40/Rutland Road; r2c0 west School/large 'A S'; r2c1 Congregational Chapel; r2c2 CHESTER ROAD/large 'E T'. Zoom contact sheets (own helper, mosaic-px labels): a 8x (32.1, 31.5, 30.4, 29.5, 32.9, B.M.34.71), b 8x (B.M.37.34, 35.8, 34.4, 30.2, B.M.32.29, 30.5), c 8x (30.4, 31.4, 32.8, B.M.35.40, 30.1, 29.4), d 8x (28.9, 29.8, B.M.33.69, 32.9), e 12x digit checks, f 16x 3/8 comparisons, g 14x east-edge figure and B.M.37.34 pheon, h 8x east-edge cut figure; four 2x marker sheets (quadrants) checking every position. Every image displayed when opened.",
+  "legibility": "Clear print; road-name lettering is widely spaced without interpuncts, so most dots are survey dots. 3 vs 8 is the main hazard: several final digits look 8-like at 12-16x, but they are read as 3 or 8 by comparing loop shape with 3s in the same figure. Sheet joins at: horizontal py ~951-954 across the full width (tint step and line, confirmed by eye).",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":32.1,"raw":"32·1","px":421,"py":132,"confidence":"high","notes":"Bristol Road west; dot right of the figure below 'H'; 8x"},
+    {"type":"spot","value_ft":31.5,"raw":"31·5","px":257,"py":198,"confidence":"high","notes":"Bristol Road further west; dot right of the figure; 5 flat-topped at 8x"},
+    {"type":"spot","value_ft":30.4,"raw":"30·4","px":76,"py":269,"confidence":"high","notes":"junction of the 'ST' road and LANE; dot above the 3; 8x"},
+    {"type":"spot","value_ft":29.5,"raw":"29·5","px":145,"py":402,"confidence":"high","notes":"LANE at 'N'; dot above the figure; 5 flat-topped at 12x"},
+    {"type":"spot","value_ft":32.9,"raw":"32·9","px":591,"py":63,"confidence":"high","notes":"Bristol Road east between I and S; dot above-right; 9 clear at 12x"},
+    {"type":"bench_mark","value_ft":34.71,"raw":"B.M.34·71","px":463,"py":131,"confidence":"high","notes":"Bristol Road south-side house front; pheon below the text on the building line; 8x"},
+    {"type":"bench_mark","value_ft":37.34,"raw":"B.M.37·34","px":968,"py":18,"confidence":"high","notes":"School wall by '...BURY' road at N edge; pheon above-left of the text, junction at 14x; both 3s alike at 12x"},
+    {"type":"spot","value_ft":35.8,"raw":"35·8","px":1016,"py":106,"confidence":"low","notes":"'...BURY' road at the E edge (figure whole to ~1020); second digit 5 or 6 and final digit 3 or 8 at 12x/14x; dot below-right at ~1016,106 (could be interpunct of B·U·R·Y); alternatives 35.3/36.8"},
+    {"type":"spot","value_ft":34.4,"raw":"34·4","px":874,"py":374,"confidence":"high","notes":"road north of York Road; dot right of the figure; 8x"},
+    {"type":"spot","value_ft":30.2,"raw":"30·2","px":229,"py":561,"confidence":"high","notes":"LANE south of the P.H.; dot above; 8x"},
+    {"type":"bench_mark","value_ft":32.29,"raw":"B.M.32·29","px":299,"py":586,"confidence":"high","notes":"corner house at LANE / York Road west end; pheon on the building corner above-left of the text at 8x"},
+    {"type":"spot","value_ft":30.5,"raw":"30·5","px":257,"py":620,"confidence":"medium","notes":"LANE at York Road; digits clear at 12x; isolated dot below-left at 259,620 above an F.P. (could be the F.P.'s dot)"},
+    {"type":"spot","value_ft":30.4,"raw":"30·4","px":40,"py":662,"confidence":"medium","notes":"'...Y ROAD' on the W; digits clear at 12x; no survey dot found; position = centre of figures"},
+    {"type":"spot","value_ft":31.4,"raw":"31·4","px":455,"py":540,"confidence":"high","notes":"York Road west; dot right of the figure; 8x"},
+    {"type":"spot","value_ft":32.8,"raw":"32·8","px":644,"py":466,"confidence":"medium","notes":"York Road after 'K'; dot left of the figure; final digit reads 8 (two closed loops) at 12x and 16x, unlike the open 3 in the same figure; YORK ROAD has no interpuncts"},
+    {"type":"bench_mark","value_ft":35.4,"raw":"B.M.35·40","px":719,"py":453,"confidence":"high","notes":"York Road house front; pheon left of the text with shaft on the building line, junction at 8x; 40 clear at 16x"},
+    {"type":"spot","value_ft":30.1,"raw":"30·1","px":339,"py":782,"confidence":"high","notes":"road junction south of the LANE; dot above the 3; 8x/16x"},
+    {"type":"spot","value_ft":29.4,"raw":"29·4","px":409,"py":885,"confidence":"high","notes":"tree-lined path/road beside large 'H'; dot left of the figure; 8x"},
+    {"type":"spot","value_ft":28.9,"raw":"28·9","px":524,"py":959,"confidence":"high","notes":"road by Congregational Chapel just south of the py~952 join; dot above-right; 8x/16x"},
+    {"type":"spot","value_ft":29.8,"raw":"29·8","px":696,"py":896,"confidence":"medium","notes":"Chester Road west end beside large 'E'; dot left of the figure; final digit 8-like at 16x (closed loops) but could be 3; also an F.P. nearby"},
+    {"type":"bench_mark","value_ft":33.69,"raw":"B.M.33·69","px":771,"py":884,"confidence":"high","notes":"Chester Road south-side building line; pheon under the 'H' of CHESTER below-right of the text, junction at 8x; digits clear"},
+    {"type":"spot","value_ft":32.9,"raw":"32·9","px":886,"py":828,"confidence":"high","notes":"Chester Road between 'E' and 'R'; dot right of the figure (CHESTER has no interpuncts); 8x"}
+  ],
+  "non_height_marks": ["L.B. at ~148,428","H (hydrant) marks and F.P.s along the roads"],
+  "unreadable_regions": [
+    {"px0":1016,"py0":755,"px1":1024,"py1":768,"reason":"figure starting '3' cut by the east edge above 'F.P. A'"}
+  ]
+}

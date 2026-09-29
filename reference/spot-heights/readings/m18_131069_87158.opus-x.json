@@ -1,0 +1,36 @@
+{
+  "mosaic": "m18_131069_87158", "reader": "opus-x",
+  "area": "Poplar Gas Works (west/Bromley bank of Bow Creek), wharf and crane rails on the creek edge, Bow Creek with county boundary, school and Oban / Moness Street terraces (Canning Town side, SE)",
+  "method": "sheet (no join reported) + 9 sweep crops at 2x, every one displayed and anchored when opened: r0c0 'Poplar Gas W'; r0c1 'Gas Works'/'Travelling Crane'; r0c2 'Mud'/W.N.; r1c0 'Poplar Gas W' + gasholders; r1c1 'Gas Works' + gasholder; r1c2 'School Boys, Girls & Infants'; r2c0 'R O A D' terraces/'B.M.9.86'; r2c1 'Mission Room'/OBAN ST; r2c2 MONESS STREET/OBAN STREET. Contact sheets csA-csE (8x panels +-16-18 px, 5-6x +-22-36 px for B.M.s and rails, 10-14x for 10.6, 12.3, 15.15, 9.18), all displayed. Dot positions refined with a darkness-centroid helper and checked on marker sheets.",
+  "legibility": "good; weak horizontal sheet join at py ~197 (as on the 87158 row), tool reports none; marks cut by the S edge near px 115-145",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":12.3,"raw":"12·3","px":145,"py":117,"confidence":"high","setting":"yard","notes":"Poplar Gas Works, beside the works road near the NW buildings; dot left of figures; open 3 at 14x"},
+    {"type":"bench_mark","value_ft":12.78,"raw":"B.M.12·78","px":121,"py":137,"confidence":"high","setting":"building","notes":"gas-works building corner; pheon left of text; 6x"},
+    {"type":"spot","value_ft":10.6,"raw":"10·6","px":111,"py":179,"confidence":"high","setting":"yard","notes":"Poplar Gas Works by the works road; dot left of figures; 10x"},
+    {"type":"spot","value_ft":11.4,"raw":"11·4","px":36,"py":349,"confidence":"high","setting":"yard","notes":"Poplar Gas Works, on the road between dotted lines along the west side; dot left of figures; 8x"},
+    {"type":"bench_mark","value_ft":18.43,"raw":"B.M.18·43","px":442,"py":13,"confidence":"high","setting":"building","notes":"gas-works building by the creek wharf; pheon right of text, 1 px from N edge area but whole; 6x"},
+    {"type":"spot","value_ft":17.7,"raw":"17·7","px":499,"py":31,"confidence":"medium","setting":"yard","notes":"gas-works wharf on the Bow Creek edge, crane rails ('Travelling Crane'); dot taken as the tick on the rail left-below the figures"},
+    {"type":"spot","value_ft":17.5,"raw":"17·5","px":654,"py":141,"confidence":"high","setting":"wall_top","notes":"head of a jetty / wharf wall projecting into Bow Creek from the gas works; dot at the corner of the outline left of figures; 8x"},
+    {"type":"spot","value_ft":17.2,"raw":"17·2","px":768,"py":36,"confidence":"medium","setting":"wall_top","notes":"narrow jetty (double line) on the Bow Creek edge; dot on its line above-left of figures; a second small dot at 778,43 between the lines"},
+    {"type":"spot","value_ft":15.9,"raw":"15·9","px":883,"py":98,"confidence":"high","setting":"wall_top","notes":"overlap strip with 131072_87158: west corner of Lea Shipbuilding Yard above 'Mud'; dot on wall line; seen in r0c2 sweep, zoomed on neighbour"},
+    {"type":"spot","value_ft":17.5,"raw":"17·5","px":967,"py":169,"confidence":"high","setting":"wall_top","notes":"overlap strip with 131072_87158: creek edge of Lea Shipbuilding Yard; dot on wall line"},
+    {"type":"spot","value_ft":16.7,"raw":"16·7","px":804,"py":261,"confidence":"high","setting":"wall_top","notes":"west bank of Bow Creek at the head of the ladder-hatched wall running SSW; dot left of figures (overlap strip with 131072_87158)"},
+    {"type":"spot","value_ft":13.0,"raw":"13·0","px":735,"py":437,"confidence":"high","setting":"other","notes":"on the ladder-hatched boundary wall running SSW from the creek (same feature as 16·7 at its head); ground by the wall on made ground east of the gas works; dot on the wall left of figures; 8x"},
+    {"type":"bench_mark","value_ft":15.15,"raw":"B.M.15·15","px":712,"py":484,"confidence":"high","setting":"building","notes":"junction of two ladder-hatched boundary walls; pheon left of text; both 15s match at 12x"},
+    {"type":"spot","value_ft":13.4,"raw":"13·4","px":843,"py":544,"confidence":"high","setting":"other","notes":"NW corner of school ground boundary (ladder-hatched double line), made ground; dot left of figures (overlap with 131072_87158)"},
+    {"type":"bench_mark","value_ft":9.18,"raw":"B.M.9·18","px":747,"py":636,"confidence":"medium","setting":"building","notes":"school frontage; digits clear at 12x; no pheon beside text, pheon taken as the arrow mark by H. across the street c.45 px SW"},
+    {"type":"spot","value_ft":7.5,"raw":"7·5","px":731,"py":613,"confidence":"high","setting":"street","notes":"street corner by the school, NE end of Oban Street; dot left of figures, separate from the F.P. dot at 742,605; 8x"},
+    {"type":"spot","value_ft":7.6,"raw":"7·6","px":865,"py":675,"confidence":"high","setting":"street","notes":"street south of the school; dot left of figures (overlap with 131072_87158)"},
+    {"type":"spot","value_ft":8.3,"raw":"8·3","px":1000,"py":734,"confidence":"high","setting":"street","notes":"street corner by H. at the NE end of the Moness Street terrace; dot below-left (overlap with 131072_87158)"},
+    {"type":"spot","value_ft":7.7,"raw":"7·7","px":96,"py":838,"confidence":"medium","setting":"street","notes":"street corner SW of the terraces; dot directly above figures but the F.P. and its dot sit just above"},
+    {"type":"bench_mark","value_ft":9.86,"raw":"B.M.9·86","px":110,"py":877,"confidence":"high","setting":"building","notes":"end house of the terrace; pheon right of text; 6x"},
+    {"type":"spot","value_ft":7.8,"raw":"7·8","px":327,"py":940,"confidence":"high","setting":"street","notes":"road (R O A D lettering) south of the terraces; dot above figures; 8x"},
+    {"type":"spot","value_ft":6.9,"raw":"6·9","px":662,"py":776,"confidence":"medium","setting":"street","notes":"Oban Street; dot below the figures just before the A of OBAN, could be an interpunct"},
+    {"type":"spot","value_ft":7.0,"raw":"7·0","px":601,"py":906,"confidence":"medium","setting":"street","notes":"SW end of Oban Street by the Mission Room; oval upright 0; dot above-right may be the trailing dot of F.P."}
+  ],
+  "non_height_marks": ["F.P. marks at 95,832, 590,900, 742,607, 865,705", "Travelling Crane rails 470-700,20-190", "W (weighing machine?) symbols at 350,340"],
+  "unreadable_regions": [
+    {"px0":110,"py0":1012,"px1":145,"py1":1024,"reason":"marks cut by the S edge (possible figure below)"}
+  ]
+}

@@ -1,0 +1,270 @@
+{
+ "mosaic": "m18_131081_87161",
+ "reader": "opus-z",
+ "area": "Canning Town: Roscoe, Wilberforce, Walter, Merton, Greenville, Ford and Edward Streets, Forty Acre Lane, Boyd Road, St Luke's Square, Portland, Western, Addison and Lansdowne Roads, Police Station",
+ "method": "Overview at 1x; 9 sweep crops r0c0..r2c2 at 2x, each anchored on opening (r0c0 YORK/MERTON/WALTER STREET, ROSCOE STREET; r0c1 WILBERFORCE STREET/FORTY/L.B; r0c2 SCOTT STREET/Glass Bottle Works; r1c0 FORD STREET/FORD'S MARKET/Vicarage; r1c1 PORTLAND ROAD/GREENVILLE STREET; r1c2 ELPHICK/AGATE STREET; r2c0 St Luke's Church/JOHN STREET; r2c1 WESTERN/ADDISON ROAD/Timber Yard; r2c2 Police Station/SANDFORD STREET/ELDON ROAD). Contact sheets cs1-cs3 at 6x +/-20 px, z1-z3 at 12x +/-13 px, z4 at 20x (5 vs 6 comparison), w1 at 5x +/-30 px; numeric dot-centroid helper; marker sheets mk0-mk2 at 6x viewed before writing. Every crop and sheet displayed when opened and has an anchor in my notes. Not read from other readers' files.",
+ "legibility": "Clear; no sheet join seen by eye or by the tool. No missing tiles. 4·3 of Hemsworth Street (whole in 87158) is cut by the north edge.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 60,
+   "py": 350,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Roscoe Street west; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 233,
+   "py": 327,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Roscoe Street / Greenville Street corner; dot above-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.19,
+   "raw": "B.M.8·19",
+   "px": 275,
+   "py": 331,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house at Roscoe Street / Greenville Street corner; pheon on building line above text; decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.6,
+   "raw": "5·6",
+   "px": 398,
+   "py": 300,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Roscoe Street; dot below-left of figure, immediately above the F of an F.P. (could be the F.P.'s)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 529,
+   "py": 284,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Roscoe Street east end; dot above figure; both loops of 8 closed at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 628,
+   "py": 270,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Forty Acre Lane at the Roscoe Street end, by L.B.; dot above-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.61,
+   "raw": "B.M.6·61",
+   "px": 617,
+   "py": 136,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Wilberforce Street / Forty Acre Lane corner house; pheon at building corner (overlap with 87158)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 631,
+   "py": 148,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Forty Acre Lane at Wilberforce Street; dot above-left; final 8 vs 6 (overlap with 87158)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.6,
+   "raw": "5·6",
+   "px": 566,
+   "py": 433,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street between the Forty Acre Lane and Greenville blocks; dot above-left; 6 G-shaped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.3,
+   "raw": "5·3",
+   "px": 385,
+   "py": 546,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Boyd Road at Ford Street / Greenville Street; dot left of figure; hollow survey-station triangle at ~384,522 is separate"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.3,
+   "raw": "5·3",
+   "px": 461,
+   "py": 574,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Boyd Road / Portland Road junction; dot above figure; 3 open-left at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.38,
+   "raw": "B.M.6·38",
+   "px": 343,
+   "py": 607,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Vicarage boundary wall corner at Ford's Market / Boyd Road; pheon ~5 px right of the text end, at the wall corner; decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 322,
+   "py": 772,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Boyd Road; only dot is just below the O of BOYD, left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.7,
+   "raw": "4·7",
+   "px": 273,
+   "py": 958,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Boyd Road / St Luke's Square south, by John Street; dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 451,
+   "py": 807,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Western Road / Lansdowne Road junction; dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.1,
+   "raw": "5·1",
+   "px": 590,
+   "py": 864,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Lansdowne Road at Addison Road; dot after the L of LANSDOWNE below figure (no other interpuncts in this lettering)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 719,
+   "py": 920,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Lansdowne Road at Sandford Street; dot after the D of LANSDOWNE below figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.01,
+   "raw": "B.M.7·01",
+   "px": 764,
+   "py": 923,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Police Station boundary corner at Lansdowne Road / Sandford Street; pheon below text; decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 852,
+   "py": 977,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Lansdowne Road at Eldon Road; dot below figure; read 5·6 at 2x and 6x but at 20x and in the pixel profile the leading digit has a closed lower bowl like a 6 (unlike the 5s of 5·5 at 720,912)"
+  }
+ ],
+ "non_height_marks": [
+  "hollow survey-station triangles without figures at ~384,522 and ~755,265",
+  "L.B. at ~640,258",
+  "many F.P. marks",
+  "Seats for 800 (St Luke's Church)"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 625,
+   "py0": 0,
+   "px1": 650,
+   "py1": 6,
+   "reason": "figure (4·3, whole in 87158) cut by north edge; its dot at ~643,4"
+  }
+ ]
+}

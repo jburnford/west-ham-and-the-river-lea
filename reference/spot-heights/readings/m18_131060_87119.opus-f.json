@@ -1,0 +1,22 @@
+{
+  "mosaic": "m18_131060_87119", "reader": "opus-f",
+  "area": "Channelsea River head and Potter's Ditch west of Stratford: Artificial Manure Works, embanked Waterworks River bank on the west, embanked channel along the north, open fields and allotment strips to the south and east, Well",
+  "method": "9 sweep crops at 2x read in full; all candidates confirmed on 8x contact sheets (+-26 px panels) plus a 7x +-40 px search for the B.M.19·50 digits and the 18·0 dot. All sweep crops, contact sheets and zooms were viewed successfully; no image failed to load.",
+  "legibility": "Clean sheet, sparse detail; all figures legible. No sheet join detected by the tool and none seen visually.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 14.6, "raw": "14·6", "px": 167, "py": 209, "confidence": "high", "notes": "west bank of Channel Sea River head; dot on the bank line right of figures, 8x"},
+    {"type": "spot", "value_ft": 15.1, "raw": "15·1", "px": 172, "py": 402, "confidence": "high", "notes": "north side of Potter's Ditch by the Channel Sea River; dot right of figures, 8x"},
+    {"type": "spot", "value_ft": 17.8, "raw": "17·8", "px": 27, "py": 439, "confidence": "medium", "notes": "top of the embanked Waterworks River bank by B.S.; dot in the hatching below-left of figures (the dot at 4,417 by the boundary stone rejected), 8x"},
+    {"type": "spot", "value_ft": 15.1, "raw": "15·1", "px": 393, "py": 337, "confidence": "high", "notes": "track south of the embanked channel; dot above-left of figures, 8x"},
+    {"type": "spot", "value_ft": 14.4, "raw": "14·4", "px": 610, "py": 302, "confidence": "high", "notes": "track south of the embanked channel; dot above figures, 8x"},
+    {"type": "spot", "value_ft": 14.4, "raw": "14·4", "px": 825, "py": 314, "confidence": "high", "notes": "track in front of Artificial Manure Works; dot above figures, 8x"},
+    {"type": "bench_mark", "value_ft": 15.59, "raw": "B.M.15·59", "px": 928, "py": 304, "confidence": "high", "notes": "front wall of Artificial Manure Works; pheon above text, 8x"},
+    {"type": "bench_mark", "value_ft": 19.5, "raw": "B.M.19·50", "px": 231, "py": 462, "confidence": "high", "notes": "building corner at Artificial Manure Works (west works); pheon left of text, 7x and 8x"},
+    {"type": "spot", "value_ft": 18.0, "raw": "18·0", "px": 78, "py": 655, "confidence": "medium", "notes": "Waterworks River bank; figures in open ground east of the bank, dot in the embankment hatching 25 px west, 7x"},
+    {"type": "spot", "value_ft": 17.8, "raw": "17·8", "px": 110, "py": 861, "confidence": "high", "notes": "Waterworks River embankment top; dot in hatching left of figures, 8x (same figure as m18_131057_87122 879,93)"},
+    {"type": "bench_mark", "value_ft": 19.76, "raw": "B.M.19·76", "px": 117, "py": 924, "confidence": "high", "notes": "Waterworks River embankment; pheon right of text in the hatching, 8x (same B.M. as m18_131057_87122 885,158)"}
+  ],
+  "non_height_marks": ["isolated dot at 619,784 in open field with no figure", "B.S. at ~20,412", "Well at ~240,398 and ~800,895", "Union & Parly. Boro. Bdy. lettering"],
+  "unreadable_regions": []
+}

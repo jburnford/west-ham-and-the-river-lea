@@ -1,0 +1,304 @@
+{
+ "mosaic": "m18_131084_87164",
+ "reader": "opus-ag",
+ "area": "Canning Town south-east toward the Royal Victoria Dock: Eldon Road / Albany Road (overlap with 87161), Bengeo Street, Crown Street, King Street, Queen's Road, Rendel Road, Martindale Road, Frederick's Road, the Albert & Victoria Docks Cut railway, the Royal Albert & Victoria channel (blue) and S. Warehouse",
+ "method": "sheet tool (reports joins at py ~392 and px ~629, confirmed by eye at py ~392 and px ~633-634; the others are hatching/tint false alarms); 9 sweep crops at 2x (anchors: r0c0 Police Station/Timber Yard/BENGEO STREET; r0c1 RENDEL ROAD/B.M.8·32; r0c2 FREDERICK'S ROAD; r1c0 CROWN STREET/KING STREET/QUEEN'S ROAD; r1c1 MARTINDALE; r1c2 MARTINDALE ROAD/FREDE..; r2c0 Albert & Victoria Docks Cut/Lecture Hall/Presb. Chapel; r2c1 L.B./P.H./blue channel; r2c2 Royal Albert & Vic../S. Warehouse); contact sheets cs1 (5x, anchor B.M.8·97/F.P), cs2 (12x B.M.8·97), cs3 (7x 5/6, 6/8 checks), cs4 (7x) and cs4b (10x nearest-neighbour) comparing the B.M. leading digit with known 6s, cs5 (6x, overlap-strip marks); zoom 680,930 s4 ±95 (yard and rails); pixel dumps for dots; marker sheet mk1 checked every position. All crops, zooms, contact and marker sheets displayed when opened; an anchor was written for each at the time.",
+ "legibility": "Good. Sheet joins: horizontal tint step at py ~392 across the full width; vertical line at px ~633-634 full height. East of the vertical join the sheet shows the Royal Albert & Victoria channel in blue where the western sheet shows only the railway (Albert & Victoria Docks Cut), so the two sheets differ in content across the join. No missing tiles.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 275,
+   "py": 160,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "overlap strip with 87161: road south of the Eldon Road block (..NE ROAD); dot left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.32,
+   "raw": "B.M.8·32",
+   "px": 385,
+   "py": 192,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "overlap strip: pheon pointing down on the north wall of the house block, text above; leading digit 6/8 judged 8 (closed top) at 6x, small doubt"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.3,
+   "raw": "6·3",
+   "px": 416,
+   "py": 187,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "overlap strip: east end of ..NE ROAD by open ground; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.6,
+   "raw": "5·6",
+   "px": 84,
+   "py": 209,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "overlap strip: ..NE ROAD at Eldon Road; dot directly below figures, F.P separate; flat-topped 5"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 628,
+   "py": 106,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "overlap strip: road junction beside F.P at the vertical sheet join; dot above-right"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 828,
+   "py": 114,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "overlap strip: road between terraces south of the triangular block; dot left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.24,
+   "raw": "B.M.7·24",
+   "px": 1004,
+   "py": 134,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "overlap strip: B.M. text in the N-S road at the east edge (Frederick's Road); pheon not found, probably beyond the east edge; position = centre of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 410,
+   "py": 331,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "junction of Bengeo Street and Queen's Road; dot below the figures (could be the F.P's own dot), survey triangle 18 px east at ~428,318"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 393,
+   "py": 457,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Queen's Road; the only nearby dots are the R· interpunct of ROAD and the F.P's own; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 334,
+   "py": 488,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Queen's Road at Crown Street; dot under the figures is the F.P's trailing dot; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 372,
+   "py": 619,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Queen's Road at King Street; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.1,
+   "raw": "5·1",
+   "px": 62,
+   "py": 718,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hack.. Road at the west; dot above the figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.97,
+   "raw": "B.M.8·97",
+   "px": 366,
+   "py": 766,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon pointing up at the SE corner of the P.H.; text below; leading 8 closed at 7x and 12x, unlike the open 6s on this sheet"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 416,
+   "py": 777,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road along the north side of the Albert & Victoria Docks Cut railway, by L.B.; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 241,
+   "py": 810,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same road beside the railway; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 88,
+   "py": 846,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same road by the Presbyterian Chapel; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 602,
+   "py": 757,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same road west of the vertical sheet join; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 770,
+   "py": 736,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same road east of the join (north of the Royal Albert & Victoria channel); dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 941,
+   "py": 720,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same road by a survey triangle and F.P (own dot left of its letters); dot above-left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.6,
+   "raw": "9·6",
+   "px": 688,
+   "py": 861,
+   "confidence": "low",
+   "setting": "railway",
+   "notes": "figures written at the north end of a yard south of the rails with the dot 22 px north on the rails; first digit faint (reads 9 at 7x and nearest-neighbour); on the east sheet beyond the join"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.9,
+   "raw": "6·9",
+   "px": 708,
+   "py": 1012,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "south end of the same yard beside buildings, south of the railway; dot above figures; figures end about 2 px above the bottom edge but are whole"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangles at ~428,318 and ~927,728 with no figures of their own",
+  "L.B. at ~446,768",
+  "many F.P and H marks",
+  "S.P marks on the Docks Cut railway"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1008,
+   "py0": 94,
+   "px1": 1024,
+   "py1": 110,
+   "reason": "figure '5·..' cut by the east edge"
+  },
+  {
+   "px0": 0,
+   "py0": 388,
+   "px1": 1024,
+   "py1": 396,
+   "reason": "horizontal sheet join at py ~392"
+  },
+  {
+   "px0": 630,
+   "py0": 0,
+   "px1": 638,
+   "py1": 1024,
+   "reason": "vertical sheet join at px ~633-634, sheet content differs across it"
+  }
+ ]
+}

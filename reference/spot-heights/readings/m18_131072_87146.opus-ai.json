@@ -1,0 +1,28 @@
+{
+  "mosaic": "m18_131072_87146", "reader": "opus-ai",
+  "area": "West Ham marsh south-east of Abbey Mills: Upper and Lower Abbey Mills Junctions, London & Thames Haven Petroleum Wharf, G.E.R. Woolwich branch and Manor Road on the east, marsh drains with sluices and a footpath on the west edge",
+  "method": "Independent QA second read. sheet tool (no joins) plus eye check; 9 sweep crops at 2x (anchors: r0c0 Upper Abbey Mills Junction; r0c1 London & Thames Haven Petroleum Wharf; r0c2 G.E.R. WOOLWICH BRANCH/Sluice; r1c0 Sluice + dotted footpath; r1c1 Lower Abbey Mi..; r1c2 MANOR vertical lettering; r2c0 Sluice/drain; r2c1 Lower Abbey Mills; r2c2 R O A D + S.B.); region views 5-12x regA (S.B. at west edge), regB (7.5), regC (B.M.7.22 + small square), regD (4.5/Sluice), regE (4.9, B.M.7.72, triangle), regF and regM (4.6 over drain), regG (6.6), regH (B.M.6.20, 6.2, M of MANOR), regI (4.6 by railway), regJ (track strip overview 2x), regK (4.2 by S.B.), regL (B.M.6.11, 4.2); contact sheets cs1 and cs2 at 8x +-14 px (all 15 figures); marker sheets mk1 (west) and mk2 (east). Every crop, region view, contact sheet and marker sheet displayed when opened and has an anchor in my notes. Did not look at the first reader's file.",
+  "legibility": "Clean sheet, sparse marsh with clear figures; no sheet join found by tool or by eye",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":7.5,"raw":"7·5","px":5,"py":348,"confidence":"high","setting":"marsh","notes":"dotted footpath across the marsh at the west edge; dot on the path left of figures; 5 flat-topped like 4·5, 8x"},
+    {"type":"bench_mark","value_ft":7.22,"raw":"B.M.7·22","px":24,"py":552,"confidence":"high","setting":"building","notes":"pheon beside the footpath pointing at a small square structure (hut or pillar); text to the east; 8x"},
+    {"type":"spot","value_ft":6.4,"raw":"6·4","px":7,"py":605,"confidence":"high","setting":"marsh","notes":"on the dotted footpath at the west edge; dot left of figures; 8x"},
+    {"type":"spot","value_ft":4.5,"raw":"4·5","px":216,"py":621,"confidence":"high","setting":"marsh","notes":"open marsh at the drain bend above 'Sluice'; dot above figures; 8x"},
+    {"type":"spot","value_ft":4.9,"raw":"4·9","px":375,"py":638,"confidence":"high","setting":"marsh","notes":"open marsh just south of the east-west drain; dot above figures; 8x"},
+    {"type":"bench_mark","value_ft":7.72,"raw":"B.M.7·72","px":419,"py":635,"confidence":"high","setting":"other","notes":"pheon in a small circle on the south line of the east-west marsh drain (drain kerb/edge, no wall drawn); text below; survey triangle at 446,624 has no figure; 8x"},
+    {"type":"spot","value_ft":4.6,"raw":"4·6","px":612,"py":624,"confidence":"medium","setting":"marsh","notes":"written on the north line of the drain west of the Sluice junction; no separate dot found at 12x (thickening at 615,638 is the line corner); position = centre of figures"},
+    {"type":"spot","value_ft":6.6,"raw":"6·6","px":896,"py":206,"confidence":"high","setting":"street","notes":"Manor Road beside the G.E.R. Woolwich branch; dot above figures; both 6s alike, open tops at 8x"},
+    {"type":"bench_mark","value_ft":6.2,"raw":"B.M.6·20","px":889,"py":368,"confidence":"high","setting":"other","notes":"pheon (pointing down) on the dotted fence line on the west side of Manor Road; text 45 px east across the road lines; fence, no wall drawn; 8x"},
+    {"type":"spot","value_ft":6.2,"raw":"6·2","px":896,"py":425,"confidence":"high","setting":"street","notes":"Manor Road, between M and A of the lettering; dot left-above figures; 8x"},
+    {"type":"spot","value_ft":4.6,"raw":"4·6","px":804,"py":510,"confidence":"high","setting":"street","notes":"narrow track/road strip west of the G.E.R. running south from 795,445 to the Lower Abbey Mills Junction; dot inside the strip, figures to its east; 8x"},
+    {"type":"spot","value_ft":4.2,"raw":"4·2","px":809,"py":708,"confidence":"medium","setting":"street","notes":"same track strip beside the signal box; figures west of the strip, dot inside it just below the 'S.B.' letters (separate from the S.B. periods but close); 8x"},
+    {"type":"spot","value_ft":6.5,"raw":"6·5","px":899,"py":695,"confidence":"high","setting":"street","notes":"Manor Road; dot above figures; flat-topped 5, rounded 6 at 8x"},
+    {"type":"bench_mark","value_ft":6.11,"raw":"B.M.6·11","px":770,"py":882,"confidence":"high","setting":"other","notes":"pheon on the west edge line of the track strip (road edge, no wall drawn); text to the west; 8x"},
+    {"type":"spot","value_ft":4.2,"raw":"4·2","px":764,"py":930,"confidence":"high","setting":"street","notes":"track strip south of B.M.6·11, just north of the hatched banks; dot above figures; 8x"}
+  ],
+  "non_height_marks": ["many S.P. marks along the G.E.R. and the Upper Abbey Mills Junction curve", "M.P at 889,452 on Manor Road", "S.B. signal boxes at ~10,60 and 815,712", "survey triangle 446,624 with no figure"],
+  "unreadable_regions": [
+    {"px0":0,"py0":52,"px1":20,"py1":70,"reason":"figure '..8' and a pheon beside 'S.B.' cut by the west edge (B.M. text lies in the western neighbour)"}
+  ]
+}

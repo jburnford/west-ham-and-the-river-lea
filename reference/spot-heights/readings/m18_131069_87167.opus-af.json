@@ -1,0 +1,270 @@
+{
+ "mosaic": "m18_131069_87167",
+ "reader": "opus-af",
+ "area": "Blackwall: East India (Export) Dock West, South and East Quays, Dock Wall Road east end, Great Northern Railway goods depot, Blackwall Yard graving docks and launch slips, Brunswick Hotel and Wharf, Blackwall Station and Brunswick Pier, the Thames",
+ "method": "Viewed all 9 sweep crops (2x) with anchors: r0c0 WALL ROAD/Goods Depot; r0c1 EAST INDIA (Export); r0c2 INDIA DOCK/Blackwall Station; r1c0 LONDON & BLACKWALL RAILWAY/GRAVING DOCK; r1c1 Brunswick Hotel; r1c2 Brunswick Pier/High Water Mark; r2c0 Blackwall Yard/Caisson; r2c1 Caisson/Thames; r2c2 Centre of Channel at Low Water. Contact sheets f1, f3-f5 (8-16x nearest and smoothed) and region view f2 (100-480,400-560). Every crop and sheet displayed when opened. Marker sheet checked.",
+ "legibility": "good; no sheet join seen by eye or by the tool; dock basin and the Thames are blank",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ],
+  [
+   100,
+   400,
+   480,
+   560
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 19.4,
+   "raw": "19·4",
+   "px": 88,
+   "py": 7,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "East India Dock quay strip inside the dock wall, north of Dock Wall Road; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.5,
+   "raw": "19·5",
+   "px": 105,
+   "py": 31,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Wall Road; dot 105,31 is also the interpunct before R·O·A·D"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.0,
+   "raw": "19·0",
+   "px": 202,
+   "py": 49,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Dock Wall Road east end; dot left of figure, separate from the F.P. dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.58,
+   "raw": "B.M.20·58",
+   "px": 239,
+   "py": 52,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "wall with gate piers at the east end of Dock Wall Road; pheon 239,52 right of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 418,
+   "py": 7,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "dock premises north of the railway at the top edge; dot left-below; digits reach py ~0, read whole at 16x but touching the edge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.1,
+   "raw": "15·1",
+   "px": 150,
+   "py": 485,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "Blackwall Yard entrance by H, below the London & Blackwall Railway lettering; no dot found, centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.5,
+   "raw": "23·5",
+   "px": 364,
+   "py": 482,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "road carried over the G.E.R. / London & Blackwall Railway west of Brunswick Hotel; dot above-left; 5-6 ft above the yards around"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 23.18,
+   "raw": "B.M.23·18",
+   "px": 410,
+   "py": 513,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Brunswick Hotel corner at the bridge approach; pheon 410,513 left of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.9,
+   "raw": "15·9",
+   "px": 203,
+   "py": 593,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "Blackwall Yard between the graving dock and the launch slips; nearest dot 199,591 may be a mooring-post dot; centre-left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.01,
+   "raw": "B.M.19·01",
+   "px": 342,
+   "py": 652,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner at the head of the graving dock by the Caisson; pheon 342,652, text 25 px below"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.4,
+   "raw": "15·4",
+   "px": 306,
+   "py": 735,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "entrance walls of the graving dock at the Caisson; lines cross the figure, no dot found, centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 537,
+   "py": 519,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "yard between Brunswick Hotel and the warehouse on Brunswick Wharf; isolated dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.27,
+   "raw": "B.M.18·27",
+   "px": 720,
+   "py": 484,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building / wall corner by Blackwall Station; pheon 720,484 left of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 768,
+   "py": 470,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Blackwall Station forecourt towards Brunswick Pier; dot above-left; 8 closed at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 912,
+   "py": 440,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "beside Blackwall Station (Terminus) steps; no dot found, centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 182,
+   "py": 871,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "river end of the western graving dock by the Caisson; no dot separable from the dock-gate lines, centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.63,
+   "raw": "B.M.17·63",
+   "px": 114,
+   "py": 938,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "pheon 114,938 on the Thames river wall line at Blackwall Yard, text 25 px east"
+  }
+ ],
+ "non_height_marks": [
+  "M.P. marks on Brunswick Pier",
+  "Mooring Posts lettering along the quays",
+  "S.P., F.P., L.B., D.Fn., Cn (capstans)",
+  "Centre of Channel at Low Water boundary in the Thames"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 415,
+   "py0": 0,
+   "px1": 440,
+   "py1": 8,
+   "reason": "17·0 touches the north edge; read whole but recorded medium"
+  },
+  {
+   "px0": 300,
+   "py0": 90,
+   "px1": 1024,
+   "py1": 400,
+   "reason": "East India (Export) Dock basin water, no heights"
+  },
+  {
+   "px0": 200,
+   "py0": 560,
+   "px1": 1024,
+   "py1": 1024,
+   "reason": "River Thames, no heights"
+  }
+ ]
+}

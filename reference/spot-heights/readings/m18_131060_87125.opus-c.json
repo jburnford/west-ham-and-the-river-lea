@@ -1,0 +1,227 @@
+{
+ "mosaic": "m18_131060_87125",
+ "reader": "opus-c",
+ "area": "Stratford Marsh / High Meads: the Waterworks River with the Union & Parly. Boro. Bdy along it (west), Sluice, G.E.R. Lea Curve and High Meads Loop, Lea Junction and the Victoria Park Branch, Channelsea river walls (SE) and Channel Sea Junction",
+ "method": "read by Claude (vision): 3x3 sweep of 448 px crops at 2x, every candidate confirmed at 6x (+-40 px), B.M.18·48, 16·6, 17·1 and 15·8 re-zoomed at 8x (+-30 px); positions in mosaic pixels",
+ "legibility": "good; clean sheet, no sheet join detected or seen; digits clear at 6x. Railway-level figures (15·8, 15·7, 16·5) are written outside the embankment hatching with the only nearby dot 25-35 px away on the rails",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 64,
+   "py": 145,
+   "confidence": "high",
+   "notes": "bank of the Waterworks River by the parish boundary; dot left of figures, confirmed at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.8,
+   "raw": "14·8",
+   "px": 88,
+   "py": 357,
+   "confidence": "high",
+   "notes": "east bank of the Waterworks River; dot below-left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.7,
+   "raw": "14·7",
+   "px": 105,
+   "py": 577,
+   "confidence": "high",
+   "notes": "east bank of the Waterworks River by 'C.C. at L.W.'; dot above-left of the figures; 7 clear at 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.48,
+   "raw": "B.M.18·48",
+   "px": 103,
+   "py": 648,
+   "confidence": "high",
+   "notes": "Lea Junction, where the railway crosses the Waterworks River (bridge parapet); pheon below-left of the text, point at 103,648; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.6,
+   "raw": "16·6",
+   "px": 237,
+   "py": 648,
+   "confidence": "high",
+   "notes": "Lea Junction on the railway; dot above-left of the figures between the rails; final 6 clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 432,
+   "py": 557,
+   "confidence": "high",
+   "notes": "on the G.E.R. line east of Lea Junction; dot upper-left of the figures on the rails"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.3,
+   "raw": "B.M.18·30",
+   "px": 536,
+   "py": 550,
+   "confidence": "high",
+   "notes": "at the railway bridge/culvert structure where the Lea Curve meets the High Meads Loop; pheon below the text, point at 536,550"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.5,
+   "raw": "16·5",
+   "px": 592,
+   "py": 393,
+   "confidence": "high",
+   "notes": "G.E.R. High Meads Loop; digits clear at 6-8x; figures written outside the embankment hatching with the survey dot on the rails (the standard railway pattern, also seen on m18_131063_87122); position = that dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 711,
+   "py": 212,
+   "confidence": "high",
+   "notes": "G.E.R. High Meads Loop; digits clear at 6-8x; figures written outside the embankment hatching with the survey dot on the rails (the standard railway pattern, also seen on m18_131063_87122); position = that dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 881,
+   "py": 76,
+   "confidence": "high",
+   "notes": "beside the G.E.R. south of High Meads Junction (same figure as m18_131063_87125 at 113,76 there); digits clear at 6-8x; figures written outside the embankment hatching with the survey dot on the rails (the standard railway pattern, also seen on m18_131063_87122); position = that dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.4,
+   "raw": "16·4",
+   "px": 605,
+   "py": 597,
+   "confidence": "medium",
+   "notes": "track/road on the east side of the Channelsea by the railway; digits clear at 6x; no dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.7,
+   "raw": "20·7",
+   "px": 263,
+   "py": 826,
+   "confidence": "high",
+   "notes": "open ground south of the Victoria Park Branch; dot above-left of the figures; digits clear at 6x (higher than the surrounding marsh, likely made ground)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.5,
+   "raw": "18·5",
+   "px": 429,
+   "py": 912,
+   "confidence": "high",
+   "notes": "open ground south of the Victoria Park Branch; dot above-left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.7,
+   "raw": "14·7",
+   "px": 73,
+   "py": 936,
+   "confidence": "high",
+   "notes": "east bank of the Waterworks River at the SW, inside the angle of a fence; dot left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.92,
+   "raw": "B.M.18·92",
+   "px": 490,
+   "py": 969,
+   "confidence": "high",
+   "notes": "small building south of the Victoria Park Branch; pheon right of the text on the building corner; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 695,
+   "py": 788,
+   "confidence": "medium",
+   "notes": "west bank of the Channelsea (hatched bank); digits clear at 8x; a round blob in the bank hatching up-right of the figures taken as the dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 889,
+   "py": 803,
+   "confidence": "high",
+   "notes": "north bank of the Channelsea below the long building (same figure as m18_131063_87125 at 121,801); dot below-left of figures"
+  }
+ ],
+ "non_height_marks": [
+  "'Sluice' at 215,75",
+  "B.P. (boundary post) at 70,640",
+  "B.S. (boundary stone) at 195,1000",
+  "'Def.' and 'Und.' boundary annotations at 120,990 and 60,1020",
+  "S.P. signal posts at 255,655, 185,712, 555,770, 600,860, 580,897, 575,907, 640,860",
+  "'C.C. at L.W.' boundary note at 80,560"
+ ],
+ "unreadable_regions": []
+}

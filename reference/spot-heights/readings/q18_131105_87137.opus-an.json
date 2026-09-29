@@ -1,0 +1,24 @@
+{
+  "mosaic": "q18_131105_87137",
+  "reader": "opus-an",
+  "layer": "os-25-inch-london",
+  "area": "East Ham / Upton Park edge (E 541955-542350, N 183430-183800): new terraces on Stamford Road and Oakfield Road, Katherine Road (lettered ROAD here) running N-S at the top, '..IELD STREET' and St Bernard's Road running SSE, a lane/road running S past scattered houses; east half missing tiles beyond the neat line",
+  "method": "OS 25-inch layer os-25-inch-london. sheet (no join reported; missing tiles 131107-131108 x 87137-87140 listed); 2x sweep of all nine crops r0c0-r2c2, each displayed and anchored at the moment of opening (r0c0 STAMFORD ROAD, OAKFIELD ROAD, L.B., 29, 26; r0c1 road ends at neat line; r0c2 all grey; r1c0 ..IELD STREET, ST. BERNARD'S R.., triangle, B.M.26.0; r1c1 B.M.26.0 and triangle; r1c2 all grey; r2c0 ..ARD'S ROAD, 21; r2c1 21 and neat line; r2c2 all grey). Contact sheets cs1 (6-8x: 29, a tree symbol, 26, B.M. text and pheon, 21) and cs2 (8x on 26·0 decimal), and a 2x marker sheet (0-460 x 80-900), all displayed; positions confirmed. All crops and zooms viewed successfully.",
+  "legibility": "Clean, digits clear at 2x; vertical neat line at px ~450 (sheet edge), white margin 450-512, grey missing tiles 512-1024 full height",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 29, "raw": "29", "px": 52, "py": 119, "confidence": "high", "setting": "street",
+     "notes": "italic 29 at ~38,130 at the road junction W of the Stamford Road terrace; paired with the bold star 15 px NE at 52,119 (nearest isolated cross)"},
+    {"type": "spot", "value_ft": 26, "raw": "26", "px": 271, "py": 396, "confidence": "high", "setting": "street",
+     "notes": "italic 26 at ~282,378 at the junction of '..IELD STREET' with the road running S; paired with the star 20 px SW at 271,396"},
+    {"type": "bench_mark", "value_ft": 26.0, "raw": "B.M.26·0", "px": 314, "py": 608, "confidence": "high", "setting": "building",
+     "notes": "B.M.26·0, oval 0 distinct from the hooked 6 at 8x, middot clear; pheon lying sideways with its apex on the corner of the house W of the text at 314,608"},
+    {"type": "spot", "value_ft": 21, "raw": "21", "px": 414, "py": 872, "confidence": "high", "setting": "street",
+     "notes": "italic 21 at ~418,852 in the road E of the southern terrace; paired with the star 20 px S at 414,872"}
+  ],
+  "non_height_marks": ["L.B. (letter box) at ~200,70", "tree symbol at ~105,85 that resembles an italic 3 at 2x (not a figure)", "survey-station triangle at ~308,662 with no figure beside it"],
+  "unreadable_regions": [
+    {"px0": 450, "py0": 0, "px1": 512, "py1": 1024, "reason": "white off-sheet margin beyond the neat line"},
+    {"px0": 512, "py0": 0, "px1": 1024, "py1": 1024, "reason": "grey fill: missing tiles 131107-131108 x 87137-87140"}
+  ]
+}

@@ -1,0 +1,64 @@
+{
+ "name": "q18_131069_87140",
+ "layer": "os-25-inch-london",
+ "source": "NLS OS 25-inch (1:2500) 'london' layer XYZ tiles; over West Ham the Essex county series, 1893-96 revision (edition per sheet not verified)",
+ "scale": "1:2500",
+ "survey_dates": "c.1893-96 revision (inferred, see mosaics-25inch/lattice_index.json edition_notes)",
+ "datum": "OD Liverpool",
+ "zoom": 18,
+ "tile_x0": 131069,
+ "tile_y0": 87140,
+ "tiles_w": 4,
+ "tiles_h": 4,
+ "tile_size": 256,
+ "width_px": 1024,
+ "height_px": 1024,
+ "grid_px": 128,
+ "missing_tiles": [],
+ "pixel_convention": "px,py measured from mosaic top-left corner; global pixel = tile_origin*256 + px",
+ "formula": "lon = gx/(256*2^z)*360-180; lat = atan(sinh(pi*(1-2*gy/(256*2^z))))",
+ "corners": {
+  "top_left": {
+   "lon": -0.0041199,
+   "lat": 51.5326686,
+   "x3857": -458.62,
+   "y3857": 6716063.05,
+   "bng_e": 538534.84,
+   "bng_n": 183416.82
+  },
+  "top_right": {
+   "lon": 0.0013733,
+   "lat": 51.5326686,
+   "x3857": 152.87,
+   "y3857": 6716063.05,
+   "bng_e": 538915.82,
+   "bng_n": 183427.23
+  },
+  "bottom_left": {
+   "lon": -0.0041199,
+   "lat": 51.5292514,
+   "x3857": -458.62,
+   "y3857": 6715451.56,
+   "bng_e": 538545.21,
+   "bng_n": 183036.81
+  },
+  "bottom_right": {
+   "lon": 0.0013733,
+   "lat": 51.5292514,
+   "x3857": 152.87,
+   "y3857": 6715451.56,
+   "bng_e": 538926.22,
+   "bng_n": 183047.22
+  },
+  "centre": {
+   "lon": -0.0013733,
+   "lat": 51.53096,
+   "x3857": -152.87,
+   "y3857": 6715757.31,
+   "bng_e": 538730.52,
+   "bng_n": 183232.02
+  }
+ },
+ "ground_m_per_px": 0.3822,
+ "_synthetic": "TEST ONLY: m18_131069_87140 geometry (same lattice) with 25-inch layer keys"
+}

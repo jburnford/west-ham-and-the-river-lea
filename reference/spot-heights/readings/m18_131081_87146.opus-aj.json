@@ -1,0 +1,202 @@
+{
+ "mosaic": "m18_131081_87146",
+ "reader": "opus-aj",
+ "area": "East London Cemetery (south part, mortuary chapels) and the streets south of it: Grange Road, Suffolk Road, Melford Road, the Schools, and ditches of the marsh; Upper Road embankment at the NE corner",
+ "method": "sheet + 9 sweep crops at 2x (anchors: r0c0 EAST LONDON / Mortuary Chapel (Nonconformist); r0c1 CEMETERY / Mortuary Chapel (Ch. of England); r0c2 UPPER ROAD on embankment; r1c0 T O W, terrace; r1c1 Lodge, R A N G E; r1c2 W A P, P.O.; r2c0 P.H., Tr, ditches; r2c1 Schools, Infants; r2c2 SUFFOLK ROAD, MELFORD ROAD). Contact sheets e1, e2 (5x), e3 (8x), nn1 (10x nearest + 6x), cmp (10x vs known digits), bm694/bm694b (12x), region views jl, l (4x), jn (2x join check), marker sheet mk5 (6x). Every crop and sheet displayed when opened; anchors in notes.",
+ "legibility": "Clean print. Tool-reported joins: vertical px ~729/763 (y 768-1024) are school hatching, false; horizontal py ~720 (x 0-256) not visible by eye. Cemetery interior carries no figures.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 30.1,
+   "raw": "30·1",
+   "px": 963,
+   "py": 15,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "Upper Road carried on a hatched earth embankment (approach to a bridge north of the mosaic); dot above-left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.3,
+   "raw": "22·3",
+   "px": 997,
+   "py": 210,
+   "confidence": "medium",
+   "setting": "embankment_top",
+   "notes": "Upper Road lower down the same hatched embankment; only dot is just above the R of ROAD lettering; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.3,
+   "raw": "5·3",
+   "px": 476,
+   "py": 691,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Grange Road at the cemetery gate junction; dot sits just above the N of GRANGE (lettering dot possible); 5x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.3,
+   "raw": "5·3",
+   "px": 635,
+   "py": 667,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Grange Road; dot left of figure, after the final E of GRANGE (not between letters); 5x/8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 795,
+   "py": 634,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Grange Road near Suffolk Road; dot above-left; first digit matches the open-topped 6 of B.M.6·94 at 10x, 8·8 less likely"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.0,
+   "raw": "9·0",
+   "px": 924,
+   "py": 608,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Grange Road at the P.O. corner / Melford Road; dot above-left; first digit has a closed top and looks like 9 at 6x/10x but 6·0 is possible (value high for these streets)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 94,
+   "py": 741,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Grange Road west, south of the terrace; dot left of figure; flat-topped 5 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.3,
+   "raw": "5·3",
+   "px": 315,
+   "py": 731,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Grange Road by the P.H. and trough; dot directly above figure but lies in the wide gap between G and R of GRANGE; 5x/8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 174,
+   "py": 850,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "diagonal road SW of the P.H., between the ditches; dot above figure; flat-topped 5 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 83,
+   "py": 1010,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "same diagonal road further SW, figure against the east edge line; no survey dot found at 4x (O·A lettering dot 25 px away); position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.94,
+   "raw": "B.M.6·94",
+   "px": 506,
+   "py": 765,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "SW corner of the terrace south of Grange Road; pheon at the corner, text 20 px below; decimals at 12x (open 6, closed 9)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.1,
+   "raw": "6·1",
+   "px": 782,
+   "py": 858,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "yard of the Boys/Girls Schools between the building and the Suffolk Road boundary wall; no survey dot found at 4x, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 961,
+   "py": 955,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road south-east (Suffolk/Melford Road area); dot left of figure; 5 flat, 8 two loops at 8x/10x"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangles without figures at ~1003,57 (Upper Road), ~442,690 (cemetery gate), in the P.H. at ~230,770",
+  "'Tr' (trough) at ~290,748",
+  "F.P. marks at ~205,728, ~457,696, ~695,662, ~902,617, ~815,868, ~857,1017, ~962,843",
+  "P.O. at ~905,650"
+ ],
+ "unreadable_regions": []
+}

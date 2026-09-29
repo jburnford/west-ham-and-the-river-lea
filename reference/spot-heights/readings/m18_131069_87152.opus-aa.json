@@ -1,0 +1,27 @@
+{
+  "mosaic": "m18_131069_87152",
+  "reader": "opus-aa",
+  "area": "Open marsh west of West Ham (large 'W E S T' lettering) with a dotted-edge road running NW-SE across it; works buildings and yards in the south-west (continuing from the works in the west neighbour); fenced paths in the north; start of the Canning Town terraces at the south-east corner",
+  "method": "sheet tool; 9 sweep crops at 2x, each anchored on opening (r0c0 hatched bank + small building NW, diagonal dotted road; r0c1 blank marsh, path junction; r0c2 B.M.7·3x at top by path bend, survey triangle; r1c0 B.M.17·65 by building, triangle in large building; r1c1 outline letter W; r1c2 'W E S T' lettering; r2c0 very large shaded building; r2c1 B.M.6·17 by road; r2c2 terrace corner SE). Contact sheets c1 (8x +-18), c2 (14x +-11), c3 (6x +-30 B.M.s and specks), c4 (22x), c5 (10x questioned digits beside known 6s), c6 (12x B.M. decimals), c6b (14x pheons and dot), c7 (4x NW bank context), overview at 0.8x and a context view of the west neighbour's mosaic image (image only, no readings). Every crop and sheet displayed when opened. Dots from a centroid helper, checked on a marker sheet.",
+  "legibility": "Clear; the small italic 6/8 and 5/6 in 1x·4 figures flip between zoom levels (recorded low). No sheet join seen by eye; the sheet tool reports none.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":6.0,"raw":"6·0","px":228,"py":91,"confidence":"high","setting":"street","notes":"on the dotted-edge track running north across the marsh; dot left of figure; 8x/10x"},
+    {"type":"spot","value_ft":9.1,"raw":"9·1","px":44,"py":159,"confidence":"high","setting":"street","notes":"road band along the foot of the hatched slope, SW of the small building; dot above-left; 8x"},
+    {"type":"spot","value_ft":16.4,"raw":"16·4","px":11,"py":192,"confidence":"low","setting":"yard","notes":"works ground SW of the road (the works continue into the west neighbour); dot above-left; second digit reads 8 at 2x and 10x but 6 at 4x and 22x: alt 18·4"},
+    {"type":"spot","value_ft":7.2,"raw":"7·2","px":159,"py":268,"confidence":"high","setting":"street","notes":"junction of the NW-SE road with the track north; dot above; 8x"},
+    {"type":"spot","value_ft":6.9,"raw":"6·9","px":262,"py":375,"confidence":"high","setting":"street","notes":"NW-SE road just SE of the footbridge/culvert crossing; dot above-left; 9 open below at 14x"},
+    {"type":"spot","value_ft":5.8,"raw":"5·8","px":820,"py":10,"confidence":"medium","setting":"marsh","notes":"open marsh at the bend of the fenced path at the north edge (value fallback); dot left of figure beside a dotted line, larger than its dots; final 8 closed-topped at 10x/14x/22x unlike the open-topped 6s on this sheet"},
+    {"type":"bench_mark","value_ft":7.38,"raw":"B.M.7·38","px":809,"py":17,"confidence":"medium","setting":"other","notes":"pheon on the fence line at the bend of the path (post or fence, no building); final digit 8 at 10x, 14x and 22x though 2x suggested 7·36"},
+    {"type":"spot","value_ft":7.1,"raw":"7·1","px":360,"py":473,"confidence":"high","setting":"street","notes":"NW-SE road; dot above-left; 8x"},
+    {"type":"spot","value_ft":15.4,"raw":"15·4","px":282,"py":538,"confidence":"low","setting":"yard","notes":"works enclosure east of the building carrying B.M.17·65; dot above-left; second digit 5 at 8x/14x, 6 at 22x: alt 16·4"},
+    {"type":"bench_mark","value_ft":17.65,"raw":"B.M.17·65","px":220,"py":571,"confidence":"high","setting":"building","notes":"pheon on the east corner of the works building, text east; 12x"},
+    {"type":"spot","value_ft":6.5,"raw":"6·5","px":536,"py":653,"confidence":"high","setting":"street","notes":"NW-SE road; dot above-left; flat-topped 5 at 14x"},
+    {"type":"spot","value_ft":6.3,"raw":"6·3","px":599,"py":719,"confidence":"high","setting":"street","notes":"NW-SE road near the junction with the track east; dot above-left; 3 open-left at 14x"},
+    {"type":"bench_mark","value_ft":6.17,"raw":"B.M.6·17","px":653,"py":763,"confidence":"high","setting":"other","notes":"pheon at the west edge of the NW-SE road with no building or wall drawn (post or kerb); text east; 12x"},
+    {"type":"spot","value_ft":6.0,"raw":"6·0","px":753,"py":874,"confidence":"high","setting":"street","notes":"NW-SE road; dot above-left; 8x/10x"},
+    {"type":"spot","value_ft":5.7,"raw":"5·7","px":891,"py":1007,"confidence":"high","setting":"street","notes":"street between terrace blocks at the SE corner (dotted kerbs); dot left; flat-topped 5 at 14x; figure whole above the south edge"}
+  ],
+  "non_height_marks": ["survey-station triangles without figures at 924,270 and 60,670", "isolated dot on a line at 37,982 with no figure", "specks at 137,775 and 590,932"],
+  "unreadable_regions": []
+}

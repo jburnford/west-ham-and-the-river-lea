@@ -1,0 +1,207 @@
+{
+ "mosaic": "m18_131060_87134",
+ "reader": "opus-h",
+ "area": "Stratford Marsh: Marshgate Lane, Colour/Black/Oil Works, Marshgate Works (soap & tallow), City Mill River, Northern Outfall Sewer and Rope Walk, GER main line crossing at the SE",
+ "method": "sheet --all; 9 sweep crops at 2x; every candidate confirmed on zoom contact sheets at 6-14x (panels labelled in mosaic px), dot or pheon searched for at 4-8x over up to +-60 px. All sweep crops and all zoom contact sheets loaded and were viewed successfully.",
+ "legibility": "Good; open marsh with few figures; no sheet join seen by eye or reported by the tool",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 10.6,
+   "raw": "10·6",
+   "px": 407,
+   "py": 114,
+   "confidence": "medium",
+   "notes": "west bank of City Mill River near the north edge; dot left of figures on the bank; last digit read as 6 at 14x but 8 not fully excluded"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.03,
+   "raw": "B.M.18·03",
+   "px": 424,
+   "py": 277,
+   "confidence": "high",
+   "notes": "City Mill River Road frontage by the Colour Works; pheon above-left of text; digits clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.53,
+   "raw": "B.M.16·53",
+   "px": 46,
+   "py": 300,
+   "confidence": "medium",
+   "notes": "Marshgate Lane, NW corner of the Colour Works; digits clear at 6x; no pheon found within 40 px, position = centre of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.9,
+   "raw": "13·9",
+   "px": 49,
+   "py": 356,
+   "confidence": "medium",
+   "notes": "Marshgate Lane; only dot is 11 px left, where the M·A·R·S·H·G·A·T·E interpunct between M and A falls; could be that interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.7,
+   "raw": "16·7",
+   "px": 504,
+   "py": 303,
+   "confidence": "medium",
+   "notes": "City Mill River Road on the river bank; digits clear at 14x; faint mark at the bank edge left of figures taken as the dot, uncertain"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.8,
+   "raw": "13·8",
+   "px": 200,
+   "py": 485,
+   "confidence": "medium",
+   "notes": "Marshgate Lane by the Black Works; digits clear at 14x (8, two loops); no dot, position = centre of figures (lettering interpunct T·E nearby)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.7,
+   "raw": "22·7",
+   "px": 136,
+   "py": 604,
+   "confidence": "medium",
+   "notes": "north edge of the Northern Outfall Sewer embankment at Marshgate Lane; small dot below the figures on the kerb next to a post"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.69,
+   "raw": "B.M.17·69",
+   "px": 152,
+   "py": 639,
+   "confidence": "medium",
+   "notes": "on the pipe/structure beside the sewer south of Marshgate Lane; digits clear at 6x; no pheon found (the + below-left is a boundary cross), position = centre of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.7,
+   "raw": "11·7",
+   "px": 308,
+   "py": 662,
+   "confidence": "high",
+   "notes": "ground south of the sewer embankment under the viaduct; dot above-left; clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 257,
+   "py": 720,
+   "confidence": "high",
+   "notes": "path/bank east of the viaduct; dot above-right; clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.0,
+   "raw": "13·0",
+   "px": 628,
+   "py": 470,
+   "confidence": "high",
+   "notes": "east bank of City Mill River (marsh side); dot left of figures on the bank"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 777,
+   "py": 621,
+   "confidence": "high",
+   "notes": "City Mill River bank top by the GER; dot/tick left of figures on the bank line"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.23,
+   "raw": "B.M.17·23",
+   "px": 838,
+   "py": 653,
+   "confidence": "high",
+   "notes": "abutment at City Mill River/GER; pheon below text; clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.5,
+   "raw": "22·5",
+   "px": 407,
+   "py": 864,
+   "confidence": "high",
+   "notes": "road junction south of the sewer by the W.M. (Carpenter's Road approach); dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.4,
+   "raw": "31·4",
+   "px": 877,
+   "py": 690,
+   "confidence": "medium",
+   "notes": "GER main line embankment; figures written on the parapet outline 25 px SE of an isolated dot between the rails at 877,690, taken as the survey dot"
+  }
+ ],
+ "non_height_marks": [
+  "survey station triangle with no figure at 853,793",
+  "B.S. (boundary stones) at 25,515, 70,660, 290,830, 350,815",
+  "dash-dot parish boundary with x marks across the SW quarter",
+  "W.M., S.P., Signal Bridge lettering"
+ ],
+ "unreadable_regions": []
+}

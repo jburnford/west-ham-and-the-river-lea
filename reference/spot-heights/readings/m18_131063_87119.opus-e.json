@@ -1,0 +1,160 @@
+{
+ "mosaic": "m18_131063_87119",
+ "reader": "opus-e",
+ "area": "Leyton/Temple Mills side of the Lea: Wycliffe Road, Artificial Manure Works, Temple Mills Lane with the U.D. and Parly. Boro. boundary, open fields, brick field, a pond, and the GER embankment at High Meads (south-east corner)",
+ "method": "9 sweep crops at 2x; every candidate zoomed at 6x (+-40), digits confirmed at 10x and 14x where needed.",
+ "legibility": "Clear but sparse; most of the sheet is open field and brick field with no figures. Vertical sheet join at px ~838 (confirmed visually: a straight ruled line with darker tint west, lighter east). No figures cross the join. No missing tiles.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 14.4,
+   "raw": "14·4",
+   "px": 55,
+   "py": 314,
+   "confidence": "high",
+   "notes": "Wycliffe Road footpath south of the Artificial Manure Works; dot above-left, 14x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 15.59,
+   "raw": "B.M.15·59",
+   "px": 162,
+   "py": 302,
+   "confidence": "high",
+   "notes": "south wall of the Artificial Manure Works; pheon ~10 px above the text at the building foot, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.9,
+   "raw": "14·9",
+   "px": 280,
+   "py": 312,
+   "confidence": "low",
+   "notes": "road south of the Manure Works; dot above-left; final digit 9 or 8 at 10x and 14x (loop shape unclear)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 493,
+   "py": 280,
+   "confidence": "high",
+   "notes": "road junction south of Wycliffe Road; dot above-left, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 667,
+   "py": 121,
+   "confidence": "medium",
+   "notes": "Temple Mills Lane beside the U.D./Parly. Boro. boundary; digits clear at 10x; nearest dot is the interpunct before the L of '·LANE' at 643,117, taken as the survey dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.61,
+   "raw": "B.M.17·61",
+   "px": 699,
+   "py": 207,
+   "confidence": "high",
+   "notes": "wall at the corner where the lane meets the road to the east; pheon directly above the text on the curb, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.9,
+   "raw": "15·9",
+   "px": 681,
+   "py": 231,
+   "confidence": "high",
+   "notes": "lane corner; dot above-left, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.0,
+   "raw": "19·0",
+   "px": 875,
+   "py": 154,
+   "confidence": "medium",
+   "notes": "road on the embankment just east of the sheet join at px ~838; digits clear at 10x; dot taken as the dot at the foot of the short vertical stroke left of the figures (could be part of a post symbol)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 933,
+   "py": 922,
+   "confidence": "high",
+   "notes": "GER embankment (High Meads); dot on the rails ~12 px above-left of the figures, which sit in the embankment hatching; 10x"
+  }
+ ],
+ "non_height_marks": [
+  "trig triangle symbols at ~510,582 (no figure)",
+  "'Well' at ~40,890",
+  "F.P. marks along Temple Mills Lane"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 832,
+   "py0": 0,
+   "px1": 844,
+   "py1": 1024,
+   "reason": "sheet join at px ~838; tint change and possible 1-2 px offsets; no figures on it"
+  }
+ ]
+}

@@ -1,0 +1,198 @@
+{
+ "mosaic": "m18_131063_87128",
+ "reader": "opus-c",
+ "area": "Stratford: Channelsea river walls and High Meads (north), Channel Sea Junction, Carpenter's Road with the Engineering Works, Tallow Works, Lea Valley Distillery and Soap & Candle Works, Carpenter's Road Goods Depot and the G.E.R. High Level lines",
+ "method": "read by Claude (vision): 3x3 sweep of 448 px crops at 2x, every candidate confirmed at 6x (+-40 px), B.M.s and 12·5 at 8x (+-30 px); overlap strip with m18_131063_87125 (py offset -768) re-zoomed here; positions in mosaic pixels",
+ "legibility": "good; digits clear at 6x; no join detected by the tool, but a straight vertical line at px ~833 (full height) and a horizontal line at py ~940 with a darker tint to the SE look like OS sheet joins; B.M.13·76/12·5 lie just above the py ~940 line",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 17.37,
+   "raw": "B.M.17·37",
+   "px": 286,
+   "py": 16,
+   "confidence": "high",
+   "notes": "overlap strip with m18_131063_87125: pheon at the SE corner of the building on the north bank of the Channelsea; confirmed at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 121,
+   "py": 33,
+   "confidence": "high",
+   "notes": "overlap strip: top of the north river bank; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.2,
+   "raw": "17·2",
+   "px": 326,
+   "py": 28,
+   "confidence": "high",
+   "notes": "overlap strip: north river bank; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 540,
+   "py": 31,
+   "confidence": "high",
+   "notes": "overlap strip: north river bank at the bend; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 738,
+   "py": 120,
+   "confidence": "high",
+   "notes": "overlap strip: hatched north bank SE of the bend; dot upper-left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.21,
+   "raw": "B.M.18·21",
+   "px": 920,
+   "py": 173,
+   "confidence": "high",
+   "notes": "overlap strip: by Channel Sea Junction on the bank south of the railway; pheon left of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 956,
+   "py": 187,
+   "confidence": "high",
+   "notes": "overlap strip: bank below B.M.18·21; dot above the figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 11,
+   "py": 394,
+   "confidence": "high",
+   "notes": "west edge, beside the railway (north end of Carpenter's Road); dot upper-left of figures; figures whole inside the mosaic"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.5,
+   "raw": "13·5",
+   "px": 174,
+   "py": 556,
+   "confidence": "medium",
+   "notes": "Carpenter's Road by the Engineering Works; digits clear at 6x; figures lie NE of the road edge and the only dot is ~25 px SW in the carriageway beside the R of CARPENTER'S (same layout as 13·1 and 12·7), position = that dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.76,
+   "raw": "B.M.14·76",
+   "px": 196,
+   "py": 597,
+   "confidence": "high",
+   "notes": "Carpenter's Road east side; digits clear at 8x; pheon ~30 px left of and below the text at the building corner (found on m18_131060_87128 at 964,597, just outside the 8x windows first used here)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.1,
+   "raw": "13·1",
+   "px": 330,
+   "py": 688,
+   "confidence": "high",
+   "notes": "Carpenter's Road; dot in the carriageway just left of the E of CARPENTER'S, SW of the figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.7,
+   "raw": "12·7",
+   "px": 529,
+   "py": 787,
+   "confidence": "high",
+   "notes": "Carpenter's Road opposite the Goods Depot; dot between the R and O of ROAD, above the figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.76,
+   "raw": "B.M.13·76",
+   "px": 669,
+   "py": 930,
+   "confidence": "high",
+   "notes": "Carpenter's Road at the south end, pheon right of text with its point on the building corner; 3 and 6 confirmed at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.5,
+   "raw": "12·5",
+   "px": 705,
+   "py": 950,
+   "confidence": "medium",
+   "notes": "road junction beside the L.B./F.A./F.P. marks; digits clear at 8x; the nearby dots belong to L.B., F.A. and F.P., no separate survey dot found, position = centre of figures"
+  }
+ ],
+ "non_height_marks": [
+  "S.P. signal posts at 38,262, 212,396, 422,358, 256,488, 322,554, 364,590, 290,620, 850,757",
+  "W.M. (weighing machine) at 257,685 and 752,968",
+  "L.B., F.A., F.P. by the road junction at 680-700,935-958",
+  "'Box' (signal box) at 10,327"
+ ],
+ "unreadable_regions": []
+}

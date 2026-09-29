@@ -1,0 +1,411 @@
+{
+ "mosaic": "m18_131072_87158",
+ "reader": "opus-v",
+ "area": "Bow Creek at Canning Town: Lea Shipbuilding Yard, Creek Wharf, Iron Bridge Wharf, Crown Wharf and Crown Saw Mills, Essex Wharf, Shipwright/Charlotte/Junction/Bidder Streets, the School and the old bank W of the creek, Barking Road embankment and Iron Bridge",
+ "method": "All 9 sweep crops viewed and anchored on opening (r0c0 Mud/Lea Shipbuilding; r0c1 SHIPWRIGHT ST/CHARLOTTE STREET; r0c2 Crown Saw Mills/Talbot Works; r1c0 School/hatched bank; r1c1 Creek Wharf/High Water Mark; r1c2 Crown Wharf/LEA STREET; r2c0 School/STREET lettering; r2c1 Creek Wharf/Iron Bridge Wharf; r2c2 Essex Wharf/BARKING ROAD). Contact sheets cs1-cs6 (8-12x) and views v1-v6 (2-10x, nearest/bicubic for 17·8, 18·6, 34·5) all displayed; every value confirmed at 8x+, B.M. decimals at 10-12x; dot centroids refined numerically; marker sheets mkA-mkD checked (13·3 moved 19 px to its true dot). Marks at px > 768 are the same pixels as the W strip of m18_131075_87158 (read by me, not independent).",
+ "legibility": "Good print, no missing tiles; the sheet tool reports none, but a faint horizontal tint step runs across at py ~195 (the same join as py ~196 on m18_131075_87158); no figure crosses it. County boundary dash-dot-x line runs down the middle of Bow Creek. 34·5 at the S edge is faint.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 15.9,
+   "raw": "15·9",
+   "px": 115,
+   "py": 98,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "N bank of Bow Creek at the head of a jetty/causeway running to the W edge, dot on the river-wall line 115,98 beside the Mud; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 199,
+   "py": 169,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "river wall on the N side of Bow Creek (Mud below), dot on the wall line 199,169; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 392,
+   "py": 290,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "river wall along the Lea Shipbuilding Yard frontage, dot on the wall line 392,290 with figures NE; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.7,
+   "raw": "16·7",
+   "px": 38,
+   "py": 261,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "S/W bank of Bow Creek at the landward end of a hatched slip/jetty, dot 38,261 on the bank line; clear 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.39,
+   "raw": "B.M.18·39",
+   "px": 422,
+   "py": 241,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "Lea Shipbuilding Yard, on a yard building/wall line; pheon apex 422,241 clear at 12x; decimals read 39, the 3 slightly open against the 8 of 18 but not decisive"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.1,
+   "raw": "11·1",
+   "px": 461,
+   "py": 205,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "S end of Shipwright Street where it enters the shipbuilding yard, by a hydrant; dot above 461,205; clear 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.2,
+   "raw": "15·2",
+   "px": 600,
+   "py": 294,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "Lea Shipbuilding Yard E side, dot at a junction of boundary lines 600,294 (could be the line junction itself); clear 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 687,
+   "py": 204,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Junction Street at Charlotte Street; dot above-left 687,204; clear 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.16,
+   "raw": "B.M.9·16",
+   "px": 693,
+   "py": 223,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house corner at Junction Street / Charlotte Street; digits clear 12x; pheon apex 693,223, text to the W"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.1,
+   "raw": "7·1",
+   "px": 735,
+   "py": 119,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Junction Street; dot above 735,119; clear 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.88,
+   "raw": "B.M.10·88",
+   "px": 677,
+   "py": 354,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner on Wharf Road at the Crown Saw Mills end; both 8s match at 10x; pheon 677,354, text 20-40 px W"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.38,
+   "raw": "B.M.8·38",
+   "px": 955,
+   "py": 71,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Talbot Works frontage; same mark as B.M.8·38 read at 12x in m18_131075_87158; pheon tip 955,71"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 1006,
+   "py": 168,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "corner by the P.H. at the N end of Stephenson Street; confirmed at 12x in m18_131075_87158"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 825,
+   "py": 279,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Bidder Street corner; confirmed at 12x in m18_131075_87158"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 653,
+   "py": 453,
+   "confidence": "low",
+   "setting": "wall_top",
+   "notes": "E bank of Bow Creek (Wharf), dot 653,453 by a shed on the quay edge; final digit 8 in nearest-neighbour but 3-like at 12x LANCZOS: could be 17·3"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.5,
+   "raw": "16·5",
+   "px": 740,
+   "py": 509,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Crown Wharf, beside the siding/tramway into the wharf; dot above-right 740,509; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.6,
+   "raw": "16·6",
+   "px": 918,
+   "py": 600,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "lane between Crown Wharf and Essex Wharf; no dot; confirmed at 12x in m18_131075_87158; centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.4,
+   "raw": "B.M.19·40",
+   "px": 895,
+   "py": 611,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Crown Wharf building corner; confirmed at 12x in m18_131075_87158"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.6,
+   "raw": "18·6",
+   "px": 334,
+   "py": 490,
+   "confidence": "medium",
+   "setting": "embankment_top",
+   "notes": "crest of the hatched bank (old river bank/flood bank) curving across the open ground W of Creek Wharf; dot between the hatch rows at 334,490; middle digit 8 at nearest-neighbour, cf. 13·3/13·4 on the ground inside"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.4,
+   "raw": "13·4",
+   "px": 75,
+   "py": 545,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open unbuilt ground N of the School (inside the old bank), no place word, value < 15; dot at the NW corner of the school boundary wall 75,545; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.3,
+   "raw": "13·3",
+   "px": 262,
+   "py": 628,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "same open ground, dot at the NE corner of the school boundary wall 262,628; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 97,
+   "py": 675,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street S of the School; dot left of figures 97,675; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.3,
+   "raw": "8·3",
+   "px": 232,
+   "py": 734,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street corner SE of the School by a hydrant; dot lower-left 232,734; clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.6,
+   "raw": "16·6",
+   "px": 374,
+   "py": 725,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "W corner of Creek Wharf beside the B.M.; dot 374,725 just W of the wharf boundary; clear 10x; made ground about 3 ft above the open ground to the N"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.01,
+   "raw": "B.M.19·01",
+   "px": 381,
+   "py": 730,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Creek Wharf, corner of the boundary wall; digits clear 10x; pheon apex 381,730, text E"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.1,
+   "raw": "16·1",
+   "px": 458,
+   "py": 948,
+   "confidence": "high",
+   "setting": "embankment_foot",
+   "notes": "foot of the Barking Road embankment N side, beside the steps at 465,975; dot above 458,948; clear 8x; pairs with 26·1 on the road above"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.1,
+   "raw": "26·1",
+   "px": 502,
+   "py": 990,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "Barking Road on its embankment approach to the Iron Bridge over Bow Creek, dot on the carriageway 502,990; clear 8x; the foot of the bank here is 16·1"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.5,
+   "raw": "34·5",
+   "px": 676,
+   "py": 1020,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "Barking Road at the Iron Bridge over Bow Creek; faint figures at 657-680, 1012-1020, whole but 4 px from the S edge; dot right of figures 676,1020"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 956,
+   "py": 829,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "Barking Road causeway NE of Essex Wharf; Ward Boundary dot beside it; confirmed at 12x in m18_131075_87158"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.4,
+   "raw": "26·4",
+   "px": 842,
+   "py": 995,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "Barking Road Iron Bridge approach E of Bow Creek; boundary dot beside it; confirmed at 8x in m18_131075_87158"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.5,
+   "raw": "19·5",
+   "px": 948,
+   "py": 946,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "ground SE of the Barking Road causeway by the G.E.R. goods lines; no dot; confirmed at 12x in m18_131075_87158"
+  }
+ ],
+ "non_height_marks": [
+  "\"High Water Mark of Ordinary Tides\" along both banks of Bow Creek",
+  "Crane symbols and survey triangles at 460,326 and 741,958 with no figure",
+  "C. marks (cranes/capstans) along the N bank",
+  "footbridge/jetty crossing Bow Creek at y ~900-970"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 36,
+   "px1": 6,
+   "py1": 50,
+   "reason": "figure cut by the W edge (final digit 2 visible)"
+  },
+  {
+   "px0": 0,
+   "py0": 594,
+   "px1": 30,
+   "py1": 606,
+   "reason": "B.M.9·18 (digits whole, B. and pheon beyond the W edge); read it in the mosaic to the west"
+  },
+  {
+   "px0": 1004,
+   "py0": 630,
+   "px1": 1024,
+   "py1": 642,
+   "reason": "16·5 cut by the E edge; whole in m18_131075_87158"
+  },
+  {
+   "px0": 650,
+   "py0": 1008,
+   "px1": 690,
+   "py1": 1024,
+   "reason": "34·5 within 4 px of the S edge, faint; check in the mosaic to the south"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+  "mosaic": "m18_131060_87128", "reader": "opus-e",
+  "area": "Lea marsh north of Carpenter's Road: GER Victoria Park branch and Channel Sea Junction, Channel Sea Tallow Works, Virgemount Chemical Works, Engineering Works, Waterworks River and Channel Sea banks",
+  "method": "Independent second reading. 9 sweep crops at 2x; every candidate zoomed at 6x (+-40), digits confirmed at 8-10x where needed; bench-mark pheons searched at 4x over +-60 px.",
+  "legibility": "Good, sharp print. No missing tiles. The sheet tool reports no join, but a straight full-width horizontal line at py ~938 with a slightly pinker tint below looks like a sheet join (no figures cross it). Grey beyond the mosaic edges is padding only.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 20.7, "raw": "20·7", "px": 263, "py": 57, "confidence": "high", "notes": "open ground south of the Victoria Park branch; dot upper-left of figures, 6x"},
+    {"type": "spot", "value_ft": 18.5, "raw": "18·5", "px": 430, "py": 144, "confidence": "high", "notes": "open ground south of the Victoria Park branch; dot upper-left, 6x"},
+    {"type": "spot", "value_ft": 14.7, "raw": "14·7", "px": 72, "py": 166, "confidence": "high", "notes": "inside the angle of the boundary strip west of the channel embankment; dot left of figures, 6x"},
+    {"type": "bench_mark", "value_ft": 14.25, "raw": "B.M.14·25", "px": 112, "py": 263, "confidence": "medium", "notes": "under the curved embankment by the Und./Def. boundary stones; digits clear at 8x; no pheon found within +-60 px at 4x (boundary-stone ticks only), position = centre of figures"},
+    {"type": "spot", "value_ft": 17.4, "raw": "17·4", "px": 36, "py": 364, "confidence": "high", "notes": "dot on the top of the western embankment, figures to its right, 6x"},
+    {"type": "bench_mark", "value_ft": 18.92, "raw": "B.M.18·92", "px": 492, "py": 200, "confidence": "high", "notes": "north-west corner of the Channel Sea Tallow Works building; pheon 15 px east of text at the building corner, 8x"},
+    {"type": "spot", "value_ft": 16.9, "raw": "16·9", "px": 617, "py": 260, "confidence": "high", "notes": "access road along the railway, north of the Tallow Works; dot upper-left, 6x"},
+    {"type": "spot", "value_ft": 17.1, "raw": "17·1", "px": 694, "py": 21, "confidence": "high", "notes": "dot on top of the Channel Sea bank (within the hatching), figures below-left, 6x"},
+    {"type": "spot", "value_ft": 17.5, "raw": "17·5", "px": 888, "py": 37, "confidence": "high", "notes": "north bank of the Channel Sea River by a building; dot left of figures, 6x"},
+    {"type": "spot", "value_ft": 15.8, "raw": "15·8", "px": 779, "py": 393, "confidence": "high", "notes": "road beside the railway south of the Signal Box; dot upper-left, 6x"},
+    {"type": "spot", "value_ft": 11.2, "raw": "11·2", "px": 94, "py": 540, "confidence": "high", "notes": "dot on the top edge of the embankment slope, figures to its right; 10x confirms 11 not 17"},
+    {"type": "spot", "value_ft": 16.7, "raw": "16·7", "px": 231, "py": 706, "confidence": "high", "notes": "dot on the embankment top edge, figures to its right, 6x"},
+    {"type": "spot", "value_ft": 13.5, "raw": "13·5", "px": 942, "py": 555, "confidence": "medium", "notes": "Carpenter's Road; digits clear at 10x; the only candidate dot is between the spaced letters R and P of the road name, ~26 px SW of the figures and across the fence line, so association uncertain"},
+    {"type": "spot", "value_ft": 10.8, "raw": "10·8", "px": 371, "py": 868, "confidence": "high", "notes": "dot on embankment top edge, figures right; 10x confirms 10·8"},
+    {"type": "bench_mark", "value_ft": 12.96, "raw": "B.M.12·96", "px": 474, "py": 989, "confidence": "high", "notes": "at the foot of the embankment near the south edge; pheon 15 px west of the text, 10x digits"}
+  ],
+  "non_height_marks": ["boundary stones 'Und. B.S.' and 'Def.' ~60-200,210-265", "S.P. signal posts along the railway (e.g. 545,5; 650,100; 596,142; 988,412)", "hydrant H at 490,183 and 745,382", "Signal Box 780,330", "pheon at 965,596 belongs to the edge-cut B.M. at 1005,584"],
+  "unreadable_regions": [
+    {"px0": 990, "py0": 578, "px1": 1024, "py1": 592, "reason": "B.M. figure cut by the east edge (pheon at 965,596 inside); read in the eastern neighbour"}
+  ]
+}

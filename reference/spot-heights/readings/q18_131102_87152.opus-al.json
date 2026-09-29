@@ -1,0 +1,13 @@
+{
+  "mosaic": "q18_131102_87152", "reader": "opus-al", "layer": "os-25-inch-london",
+  "area": "Plaistow Level south of the LT&SR: drained grazing fields (parcels 112, 113, 115, 116) with the B.S. / C.S. drain junction at the SW corner (E 541710-542096, N 181985-182365)",
+  "method": "OS 25-inch (1:2500) Essex county series, layer os-25-inch-london. sheet (no join reported), 2x sweep of all 9 crops, each anchored on opening and all displayed: r0c0 parcel '112 / 19·683' + join; r0c1 same parcel + railway fence; r0c2 '109·967' + drain; r1c0 drain + parcel '113'; r1c1 drain T-junction; r1c2 winding drain junction; r2c0 'B.S' + 'C.S.' + '4'; r2c1 parcel '115 / 2·101'; r2c2 parcel '116 / 11·081'. 6x zoom at 40,975, displayed. Marker position checked on the zoom.",
+  "legibility": "Clear. Sheet join by eye at py ~14 (the py ~782 join of q18_131102_87149). No grey fill.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 4, "raw": "4", "px": 36, "py": 984, "confidence": "medium", "setting": "marsh",
+     "notes": "Plaistow Level field just south of the B.S. / C.S. drain junction, in the overlap strip with q18_131099_87152; no cross within 40 px at 6x, position = centre of figures; sits beside a boundary stone"}
+  ],
+  "non_height_marks": ["parcels 112/19.683, 113/5.449, 115/2.101, 116/11.081; railway acreage 109.967", "B.S. at ~65,960 and C.S. at ~95,990", "S-shaped tie marks on the drains"],
+  "unreadable_regions": []
+}

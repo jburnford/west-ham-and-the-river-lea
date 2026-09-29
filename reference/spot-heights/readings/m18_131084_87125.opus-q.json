@@ -1,0 +1,250 @@
+{
+ "mosaic": "m18_131084_87125",
+ "reader": "opus-q",
+ "area": "Forest Gate south-west: tramway road (NW), Crosby Road, Margery Park Road, Knox Road, Disraeli Road, Salisbury Road, Alice Road, Stork Road, Burleigh Road",
+ "method": "sweep r0c0..r2c2 (9 crops, 2x) all displayed, anchors noted on opening (ELM ROAD, CROSBY ROAD, DISRAELI, ALICE ROAD, KNOX ROAD, SALISBURY ROAD, STORK ROAD, BURLEIGH ROAD, MARGERY). Zoom contact sheets A-G (8-16x, with nearest-neighbour panels for 35·88, 33·5, 35·28, 34·5, 35·96, 35·0, 34·8) all displayed with anchors; marker sheets mk1-mk2 displayed and every position checked. Every crop, contact sheet and marker sheet viewed successfully.",
+ "legibility": "Good. Sheet joins: vertical tint step at px ~645-648 over the full height (runs along Margery Park Road); no horizontal join seen.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 32.3,
+   "raw": "32·3",
+   "px": 194,
+   "py": 147,
+   "confidence": "medium",
+   "notes": "tramway road (Romford Road?) NW part; digits clear at 8x (both 3s alike); dot taken as tick on the rail 17 px NW of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.7,
+   "raw": "33·7",
+   "px": 436,
+   "py": 43,
+   "confidence": "medium",
+   "notes": "tramway road at Crosby Road corner; digits clear at 8x; dot taken as blob on rail just above figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.88,
+   "raw": "B.M.35·88",
+   "px": 462,
+   "py": 52,
+   "confidence": "high",
+   "notes": "building corner, Crosby Road / tramway road; text 440-460,59-66; pheon apex just NE of text; 88 closed loops at 8x and 14x, unlike the open leading 3"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.4,
+   "raw": "34·4",
+   "px": 696,
+   "py": 104,
+   "confidence": "high",
+   "notes": "Margery Park Road (north); digits clear at 8x; dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.7,
+   "raw": "34·7",
+   "px": 714,
+   "py": 305,
+   "confidence": "high",
+   "notes": "Margery Park Road east side; digits clear at 8x; dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.5,
+   "raw": "33·5",
+   "px": 949,
+   "py": 58,
+   "confidence": "medium",
+   "notes": "Disraeli Road north end; dot directly above figure; both leading digits have the same looped shape at 14x (italic 3s; 88·5 impossible here) so read 33·5"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 979,
+   "py": 266,
+   "confidence": "medium",
+   "notes": "DISRAELI ROAD between the S and R of the lettering; digits clear at 8x; dot below figure could be a lettering interpunct"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.39,
+   "raw": "B.M.34·39",
+   "px": 997,
+   "py": 326,
+   "confidence": "high",
+   "notes": "house front, Disraeli Road east side; text 973-993,306-313; pheon apex 997,326 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.1,
+   "raw": "34·1",
+   "px": 331,
+   "py": 509,
+   "confidence": "high",
+   "notes": "open ground west of Knox Road block; digits clear at 8x; isolated dot above-left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.28,
+   "raw": "B.M.35·28",
+   "px": 432,
+   "py": 514,
+   "confidence": "high",
+   "notes": "corner of Knox Road terrace; text 380-414,516; pheon right of text at building corner; final digit closed 8 at 8x and 16x (read 9 at 2x)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.5,
+   "raw": "34·5",
+   "px": 156,
+   "py": 546,
+   "confidence": "medium",
+   "notes": "ALICE ROAD east end; dot after the D of ROAD; final digit flat-topped 5 at 10x-16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.7,
+   "raw": "33·7",
+   "px": 71,
+   "py": 562,
+   "confidence": "medium",
+   "notes": "ALICE ROAD by 'C·E'; digits clear at 8x; no own dot (C·E interpunct only), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.1,
+   "raw": "34·1",
+   "px": 513,
+   "py": 491,
+   "confidence": "medium",
+   "notes": "KNOX ROAD; digits clear at 8x; dot right after the X of KNOX"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.96,
+   "raw": "B.M.35·96",
+   "px": 681,
+   "py": 522,
+   "confidence": "medium",
+   "notes": "SE corner Knox Road / Margery Park Road; text 659-679,502-509; pheon apex 681,522 clear; final digit read 6 at 8x and 16x with slight 6/8 doubt"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.0,
+   "raw": "35·0",
+   "px": 704,
+   "py": 476,
+   "confidence": "medium",
+   "notes": "junction Margery Park Road / Knox Road, between the K of PARK and K of KNOX; final digit oval 0 at 16x; dot after K taken as survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.8,
+   "raw": "34·8",
+   "px": 667,
+   "py": 728,
+   "confidence": "medium",
+   "notes": "Margery Park Road at Salisbury Road; final 8 closed at 10x; dot just right of the E of MARGERY (no interpuncts elsewhere in the name)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 849,
+   "py": 463,
+   "confidence": "medium",
+   "notes": "KNOX ROAD between R and O; digits clear at 8x; dot directly above figure, may be an interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.5,
+   "raw": "33·5",
+   "px": 995,
+   "py": 456,
+   "confidence": "medium",
+   "notes": "Disraeli Road at Knox Road junction, R·O of ROAD; digits clear at 8x; dot right of figure, may be interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 57,
+   "py": 823,
+   "confidence": "medium",
+   "notes": "terrace backs east of the diagonal road (south-west); digits clear at 8x; no own dot, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.1,
+   "raw": "35·1",
+   "px": 652,
+   "py": 943,
+   "confidence": "high",
+   "notes": "Margery Park Road at Burleigh Road; digits clear at 8x; dot below figure"
+  }
+ ],
+ "non_height_marks": [
+  "H (hydrant) marks at ~463,99 and ~520,456",
+  "F.P. marks throughout"
+ ],
+ "unreadable_regions": []
+}

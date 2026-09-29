@@ -1,0 +1,334 @@
+{
+ "mosaic": "m18_131066_87134",
+ "reader": "opus-d",
+ "area": "Stratford: Carpenters Road with Biggerstaffe, Preston and Robertson Roads, London Spinning Mills and the Waterworks River Flood Gate (west), High Street tramway with Baptist Chapel, P.O., R.C. Chapel, Christ Church, William / North / West / East / South / Union Streets and the Channel Sea (east), Timber Yard and aqueduct approach (south)",
+ "method": "read by Claude (vision), independent second reader (no other readings or heights.geojson consulted): 3x3 sweep of 448 px crops at 2x; every candidate confirmed at 6x (+-40 px); 14·82, 14·5, 9·9, 10·2 (East St), 11·8, 10·2 (South St), 15·6, 21·9, 25·87, 24·7, 13·9 and 18·4 at 8x (+-25 px); 10·2/10·9 and 9·9 at 10x; pheon searches for B.M.17·60 and the 17·7 dot at 4x (+-60 px); positions in mosaic pixels",
+ "legibility": "good; digits mostly clear at 8x; figures over grey building fill (10·2 East St, 11·8, B.M.17·60) are harder; sheet join at px ~58 (vertical, west, open ground) with no figures on it; grey margin at the east and south edges",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 14.82,
+   "raw": "B.M.14·82",
+   "px": 162,
+   "py": 405,
+   "confidence": "high",
+   "notes": "corner of Biggerstaffe Road and Carpenters Road; pheon on the building corner right of the text, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.1,
+   "raw": "14·1",
+   "px": 137,
+   "py": 410,
+   "confidence": "high",
+   "notes": "Carpenters Road below B.M.14·82; dot above-left of figures, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.9,
+   "raw": "13·9",
+   "px": 392,
+   "py": 72,
+   "confidence": "high",
+   "notes": "Carpenters Road by the Mission Ch.; dot below-left of figures at 8x (the dot at 404,57 is the E·N interpunct of C·A·R·P·E·N·T·E·R'S, not used)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.1,
+   "raw": "14·1",
+   "px": 450,
+   "py": 107,
+   "confidence": "medium",
+   "notes": "Carpenters Road; no separate dot, the nearest dot is the T·E interpunct of C·A·R·P·E·N·T·E·R'S just below-left of the figures (field-note convention)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.0,
+   "raw": "14·0",
+   "px": 497,
+   "py": 165,
+   "confidence": "medium",
+   "notes": "Carpenters Road bend; dot above-right of figures at 6x, but it lies in the gap between 'S and ROAD of the spaced lettering, so it may be an interpunct acting as the survey dot (F.P dot at 488,182 not used)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.88,
+   "raw": "B.M.14·88",
+   "px": 583,
+   "py": 254,
+   "confidence": "high",
+   "notes": "Carpenters Road SE side; pheon on the kerb/building line above the text, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.4,
+   "raw": "14·4",
+   "px": 627,
+   "py": 321,
+   "confidence": "high",
+   "notes": "Carpenters Road / High Street by the Baptist Chapel; dot left of figures at 6x (F.P dots at 648,311 and 646,292 not used)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.4,
+   "raw": "18·4",
+   "px": 1006,
+   "py": 170,
+   "confidence": "medium",
+   "notes": "High Street tramway at the east edge; dot on a rail left of figures at 8x; the 4 ends 2 px from the mosaic edge, so check the neighbour for a clipped figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.3,
+   "raw": "18·3",
+   "px": 853,
+   "py": 352,
+   "confidence": "high",
+   "notes": "High Street tramway; dot on the rail left of figures at 6x (F.P dot at 856,370 not used)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.5,
+   "raw": "14·5",
+   "px": 247,
+   "py": 496,
+   "confidence": "high",
+   "notes": "Carpenters Road SW of Preston Road; dot above-left of figures at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.3,
+   "raw": "14·3",
+   "px": 351,
+   "py": 585,
+   "confidence": "high",
+   "notes": "Carpenters Road at Robertson Road; dot above-left of figures at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 617,
+   "py": 620,
+   "confidence": "high",
+   "notes": "High Street tramway at West Street; dot between the rails above-left of figures at 6x (F.P dots below not used)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.54,
+   "raw": "B.M.17·54",
+   "px": 594,
+   "py": 680,
+   "confidence": "high",
+   "notes": "High Street at the corner of William Street; pheon on the building corner directly above the text, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 773,
+   "py": 482,
+   "confidence": "medium",
+   "notes": "High Street / North Street corner by the P.O.; figures clear at 6x; the mark beside them is a small triangle with a centre dot (survey station), taken as the position"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.9,
+   "raw": "9·9",
+   "px": 978,
+   "py": 493,
+   "confidence": "high",
+   "notes": "East Street by the School, Channelsea side; dot below-left of figures at 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.08,
+   "raw": "B.M.11·08",
+   "px": 1004,
+   "py": 566,
+   "confidence": "high",
+   "notes": "by the Channel Sea river (east edge); pheon right of the text against the CHANNEL lettering, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.2,
+   "raw": "10·2",
+   "px": 909,
+   "py": 655,
+   "confidence": "low",
+   "notes": "East Street; figures over the building row, dot on the street to the left at 8x; final digit 2 vs 9 not resolved at 10x (10·9 possible)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.58,
+   "raw": "B.M.11·58",
+   "px": 952,
+   "py": 717,
+   "confidence": "high",
+   "notes": "corner of East Street and South Street; pheon right of the text beside F.P, 6x (F.P dot at 953,731 not used)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.8,
+   "raw": "11·8",
+   "px": 733,
+   "py": 700,
+   "confidence": "medium",
+   "notes": "North Street / West Street corner, figures over a building corner; digits clear at 8x (8 slightly blurred by shading); no dot of its own (W·E·S·T interpuncts at 706,699 and 712,711 and F.P dots nearby), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.2,
+   "raw": "10·2",
+   "px": 875,
+   "py": 786,
+   "confidence": "medium",
+   "notes": "South Street / Union Street corner; figures clear at 8x; dot 10 px right of figures in the gap before S of STREET (F.P dot at 873,779 not used)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.6,
+   "raw": "10·6",
+   "px": 810,
+   "py": 876,
+   "confidence": "high",
+   "notes": "ground south of South Street; dot above figures at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 769,
+   "py": 987,
+   "confidence": "high",
+   "notes": "junction at the south end of Union Street; dot above-left of figures at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.6,
+   "raw": "15·6",
+   "px": 654,
+   "py": 897,
+   "confidence": "medium",
+   "notes": "Union Street; figures clear at 8x (6 not 8); the dot is the O·N interpunct of U·N·I·O·N below-left of the figures (field-note convention)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.6,
+   "raw": "B.M.17·60",
+   "px": 644,
+   "py": 878,
+   "confidence": "medium",
+   "notes": "Union Street; text clear at 6x inside the building block (650-670,826-838); the only pheon within 60 px (4x search) is the broad arrow at 644,878 on the Union Street frontage, 45 px SW; association inferred"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.7,
+   "raw": "17·7",
+   "px": 505,
+   "py": 756,
+   "confidence": "medium",
+   "notes": "High Street tramway by Christ Church; figures clear at 6x; dot taken as the tick on the rail right-below the figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.9,
+   "raw": "21·9",
+   "px": 416,
+   "py": 878,
+   "confidence": "medium",
+   "notes": "High Street tramway (bridge approach) by the Sun. School; dot on the rail left of figures at 8x; final digit read as 9 (closed top loop), 3 not wholly excluded"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.87,
+   "raw": "B.M.25·87",
+   "px": 337,
+   "py": 958,
+   "confidence": "high",
+   "notes": "High Street by the Timber Yard; broad arrow 12 px right of the text beyond the end of the rotated '...duct' lettering, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.7,
+   "raw": "24·7",
+   "px": 344,
+   "py": 1005,
+   "confidence": "high",
+   "notes": "High Street bridge approach by the P.H. (Aqueduct); dot below the figures at 8x (F.P dot at 352,1010 not used)"
+  }
+ ],
+ "non_height_marks": [
+  "small open triangle (survey station) at 18,993 on the Waterworks River embankment, no figure",
+  "'Flood Gate' and F.B. at 255,712",
+  "'Sluice' at 15,30",
+  "many F.P. and H (hydrant) marks along Carpenters Road and High Street",
+  "interpuncts in C·A·R·P·E·N·T·E·R'S, W·E·S·T and U·N·I·O·N street lettering",
+  "italic 'Timber Yard' and rotated '...duct' lettering at 250-345,830-1020"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1010,
+   "py0": 165,
+   "px1": 1024,
+   "py1": 180,
+   "reason": "18·4 ends at the east edge; a clipped trailing digit cannot be excluded"
+  }
+ ]
+}

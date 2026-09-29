@@ -1,0 +1,85 @@
+{
+ "mosaic": "q18_131069_87140",
+ "reader": "synth-q",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 6,
+   "raw": "6",
+   "px": 338,
+   "py": 116,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "agrees with m18 6.3"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9,
+   "raw": "9",
+   "px": 97,
+   "py": 263,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "agrees with m18 8.6 (rounds to 9)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9,
+   "raw": "9",
+   "px": 288,
+   "py": 270,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "DISPUTES m18 8.0"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17,
+   "raw": "17",
+   "px": 829,
+   "py": 791,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "agrees with m18 17.4"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.8,
+   "raw": "B.M.10·8",
+   "px": 392,
+   "py": 255,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "agrees with m18 B.M.10.79"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 28.2,
+   "raw": "B.M.28·2",
+   "px": 841,
+   "py": 636,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "agrees with m18 B.M.28.25"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5,
+   "raw": "5",
+   "px": 600,
+   "py": 600,
+   "confidence": "medium",
+   "setting": "marsh",
+   "notes": "25-inch only"
+  }
+ ],
+ "unreadable_regions": []
+}

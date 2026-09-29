@@ -1,0 +1,28 @@
+{
+  "mosaic": "m18_131075_87152", "reader": "opus-x",
+  "area": "West Ham / Plaistow marsh north of Canning Town: open marsh with looping drains, school (Boys Girls & Infants), G.E.R. Woolwich Branch strip on the W edge, Malmesbury / Avondale Road terraces and new streets in the south",
+  "method": "sheet (no join reported) + 9 sweep crops at 2x, every one displayed and anchored when opened: r0c0 B.M.7.02 + cross-hatched sheds; r0c1 'School' + curving drain; r0c2 blank marsh with double-line drains; r1c0 'G.E.R.'/'F.B.'/outline 'S H'; r1c1 'School Boys Girls & Infants'/B.M.8.46; r1c2 looping drain; r2c0 'MALMESBURY'/'AVONDALE ROAD'; r2c1 'AVONDALE ROAD' + survey triangle; r2c2 rotated 'D A L' / 'C L' street names. Contact sheets csA (6-12x), csB (14-16x), csC (nearest-neighbour 10x), csD (20x on B.M. leading digits and 6.8), csE (8x on the overlap-strip marks and a 4x join panel), all displayed. Dots by darkness-centroid helper, checked on marker sheets.",
+  "legibility": "good; vertical sheet join at px ~347-348 (tint step with a straight line full height), tool reports none; nothing cut by edges except the 'M' lettering at 638,1020",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":11.7,"raw":"11·7","px":61,"py":54,"confidence":"high","setting":"bridge","notes":"walled approach east of the G.E.R. rising north (overlap strip with 131072_87152); dot above figures; 8x"},
+    {"type":"bench_mark","value_ft":7.02,"raw":"B.M.7·02","px":53,"py":218,"confidence":"high","setting":"building","notes":"wall at the foot of the approach east of the railway (overlap strip); pheon left of text"},
+    {"type":"spot","value_ft":6.1,"raw":"6·1","px":40,"py":230,"confidence":"high","setting":"street","notes":"foot of the approach east of the railway (overlap strip); dot above figures; 8x"},
+    {"type":"spot","value_ft":6.0,"raw":"6·0","px":41,"py":337,"confidence":"high","setting":"street","notes":"road east of the railway at a building corner (overlap strip); dot left of figures; 8x"},
+    {"type":"spot","value_ft":5.7,"raw":"5·7","px":48,"py":523,"confidence":"high","setting":"marsh","notes":"open marsh east of the G.E.R. by the footbridge (overlap strip); dot left of figures; 8x"},
+    {"type":"spot","value_ft":5.9,"raw":"5·9","px":208,"py":531,"confidence":"high","setting":"street","notes":"N end of Malmesbury Road at the marsh edge (overlap strip); dot left of figures; 8x"},
+    {"type":"spot","value_ft":5.4,"raw":"5·4","px":20,"py":943,"confidence":"high","setting":"street","notes":"Stephenson Street by the railway (overlap strip); figures start c.4 px from the W edge but are whole; dot right of figures before the S"},
+    {"type":"bench_mark","value_ft":8.46,"raw":"B.M.8·46","px":429,"py":458,"confidence":"medium","setting":"building","notes":"SW corner of the school building; pheon above-left of text; leading digit read as 8 at 14-20x (closed top loop, like the 8 of B.M.8·64) but 6 not excluded"},
+    {"type":"spot","value_ft":6.8,"raw":"6·8","px":495,"py":522,"confidence":"medium","setting":"marsh","notes":"open marsh south of the school; dot left of figures; rounded-top 6 differs from the flat 5 of 5·8 nearby and from the closed final 8 at 16-20x, but 6/8 confusion possible"},
+    {"type":"spot","value_ft":5.8,"raw":"5·8","px":634,"py":601,"confidence":"high","setting":"marsh","notes":"open marsh south of the school; dot left of figures; flat-top 5 and solid 8 at 16x"},
+    {"type":"spot","value_ft":5.0,"raw":"5·0","px":775,"py":677,"confidence":"high","setting":"marsh","notes":"open marsh at the head of a new street (dotted lines begin just south); dot above-left; oval 0 at 16x"},
+    {"type":"spot","value_ft":6.5,"raw":"6·5","px":631,"py":728,"confidence":"high","setting":"street","notes":"new street between two terraces, N end; dot above figures; 6 and 5 differ at 8x"},
+    {"type":"spot","value_ft":6.5,"raw":"6·5","px":636,"py":892,"confidence":"high","setting":"street","notes":"same street further south; dot above figures; 8x"},
+    {"type":"spot","value_ft":4.5,"raw":"4·5","px":905,"py":746,"confidence":"high","setting":"marsh","notes":"open ground north of the triangular terrace block, no place word, below 15 ft; dot left of figures; flat-top 5 at 16x (2x sweep suggested 4·6)"},
+    {"type":"bench_mark","value_ft":8.64,"raw":"B.M.8·64","px":922,"py":772,"confidence":"high","setting":"building","notes":"end wall of the triangular terrace block under H.; pheon right of text; leading 8 differs from the open-curl 6 at 20x"}
+  ],
+  "non_height_marks": ["survey triangle at 656,819 (no figure)", "F.B. at 20,565", "S.P. at 32,868 and 58,863", "H. at 988,786 and 216,787"],
+  "unreadable_regions": [
+    {"px0":625,"py0":1012,"px1":650,"py1":1024,"reason":"'M' lettering cut by S edge"}
+  ]
+}

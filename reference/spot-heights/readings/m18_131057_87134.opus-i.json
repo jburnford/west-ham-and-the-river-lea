@@ -1,0 +1,362 @@
+{
+ "mosaic": "m18_131057_87134",
+ "reader": "opus-i",
+ "area": "Old Ford / Stratford Marsh west of the Pudding Mill River: River Lea wharves and cranes, Lea towing path, railway embankments and junction curves (North London / GER), Union & Parly. Boro. boundary, Northern Outfall Sewer embankment, Bone Works, Marshgate Lane and the Colour and Black Works at the east edge",
+ "method": "All 9 sweep crops (2x) viewed; every candidate confirmed on 8x contact sheets (+-30/32 px); pheon/dot searches at 4x (+-60 px); doubtful digits at 20x. All crops and zooms loaded and were viewed successfully.",
+ "legibility": "Good, clean sheet. No sheet join reported by the sheet tool and none seen by eye. Much of the centre is open marsh and embankment hatching with no figures.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ],
+  [
+   93,
+   346,
+   158,
+   411
+  ],
+  [
+   148,
+   348,
+   213,
+   413
+  ],
+  [
+   303,
+   409,
+   368,
+   474
+  ],
+  [
+   653,
+   140,
+   718,
+   205
+  ],
+  [
+   798,
+   273,
+   863,
+   338
+  ],
+  [
+   798,
+   325,
+   863,
+   390
+  ],
+  [
+   868,
+   446,
+   933,
+   511
+  ],
+  [
+   713,
+   528,
+   778,
+   593
+  ],
+  [
+   513,
+   465,
+   578,
+   530
+  ],
+  [
+   868,
+   560,
+   933,
+   625
+  ],
+  [
+   888,
+   608,
+   953,
+   673
+  ],
+  [
+   973,
+   703,
+   1038,
+   768
+  ],
+  [
+   88,
+   538,
+   153,
+   603
+  ],
+  [
+   163,
+   668,
+   228,
+   733
+  ],
+  [
+   200,
+   710,
+   265,
+   775
+  ],
+  [
+   280,
+   913,
+   345,
+   978
+  ],
+  [
+   218,
+   73,
+   283,
+   138
+  ],
+  [
+   938,
+   454,
+   999,
+   515
+  ],
+  [
+   760,
+   245,
+   881,
+   366
+  ],
+  [
+   940,
+   670,
+   1061,
+   791
+  ],
+  [
+   926,
+   632,
+   943,
+   649
+  ],
+  [
+   822,
+   297,
+   839,
+   314
+  ],
+  [
+   122,
+   370,
+   139,
+   387
+  ],
+  [
+   538,
+   490,
+   555,
+   507
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 33.6,
+   "raw": "33·6",
+   "px": 126,
+   "py": 367,
+   "confidence": "high",
+   "notes": "top of the railway embankment west of the bridge; dot above figure; 6 confirmed at 20x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.69,
+   "raw": "B.M.35·69",
+   "px": 182,
+   "py": 372,
+   "confidence": "high",
+   "notes": "bridge parapet where the railway crosses; pheon on the parapet line above the text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.7,
+   "raw": "33·7",
+   "px": 331,
+   "py": 430,
+   "confidence": "high",
+   "notes": "railway embankment top east of the bridge; dot above-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.6,
+   "raw": "32·6",
+   "px": 541,
+   "py": 492,
+   "confidence": "medium",
+   "notes": "Northern Outfall Sewer embankment top; two small dots above the figure (541,492 and 548,493), the left one taken"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 747,
+   "py": 552,
+   "confidence": "medium",
+   "notes": "Northern Outfall Sewer embankment top; the dot sits after the R of spaced N O R T H E R N (interpunct position), above-left of the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.7,
+   "raw": "22·7",
+   "px": 900,
+   "py": 597,
+   "confidence": "medium",
+   "notes": "foot of the sewer embankment by the Pudding Mill River; digits clear; no dot found, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.69,
+   "raw": "B.M.17·69",
+   "px": 920,
+   "py": 640,
+   "confidence": "low",
+   "notes": "south side of the sewer embankment near the Pudding Mill River; third digit 6 vs 8 unresolved (open top at 8x, looks closed at 20x; 17·89 possible); no pheon found, position = centre of text; same mark as on m18_131060_87134"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 1008,
+   "py": 728,
+   "confidence": "medium",
+   "notes": "bank by the Pudding Mill River near the east edge (figure whole, ends ~8 px from the edge); no dot found in +-60 px, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.0,
+   "raw": "14·0",
+   "px": 683,
+   "py": 189,
+   "confidence": "medium",
+   "notes": "path by the railway west of the Bone Works; isolated dot 16 px below-left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.53,
+   "raw": "B.M.16·53",
+   "px": 766,
+   "py": 320,
+   "confidence": "medium",
+   "notes": "text in two lines (B.M. / 16·53) at 820,300 by Marshgate Lane; no pheon at the text; the nearest pheon-like arrow is on the Pudding Mill River bank building 55 px WSW; association inferred"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.9,
+   "raw": "13·9",
+   "px": 822,
+   "py": 358,
+   "confidence": "high",
+   "notes": "Marshgate Lane at its west end; dot left of figure, clear of the lane lettering"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.8,
+   "raw": "13·8",
+   "px": 942,
+   "py": 489,
+   "confidence": "medium",
+   "notes": "Marshgate Lane by the Black Works; dot 26 px left of figure; last digit read as 8 at 8x, 8 vs 9 not certain"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.2,
+   "raw": "14·2",
+   "px": 128,
+   "py": 560,
+   "confidence": "high",
+   "notes": "Lea bank by the cranes; dot above-right of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.87,
+   "raw": "B.M.13·87",
+   "px": 212,
+   "py": 690,
+   "confidence": "high",
+   "notes": "Lea towing-path wall by the wharf; pheon above-right of the text on the wall line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.6,
+   "raw": "14·6",
+   "px": 243,
+   "py": 741,
+   "confidence": "high",
+   "notes": "Lea towing path; dot right of figure between the path lines"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.2,
+   "raw": "14·2",
+   "px": 307,
+   "py": 946,
+   "confidence": "high",
+   "notes": "towing path / lane west of the railway; dot left of figure"
+  }
+ ],
+ "non_height_marks": [
+  "small '5' beside the boundary mark and B.S. at 250,100 (boundary post number, not a height)",
+  "B.S. (boundary stones) at 240,110, 590,268, 790,500, 870,645",
+  "W.M. at 790,330",
+  "Crane lettering along the Lea wharf",
+  "Def. county boundary lettering at 810,985",
+  "Union & Parly. Boro. Bdy. lettering"
+ ],
+ "unreadable_regions": []
+}

@@ -1,0 +1,321 @@
+{
+ "mosaic": "m18_131072_87161",
+ "reader": "opus-w",
+ "area": "Canning Town west: Portree Street, the Barking Road Iron Bridge over Bow Creek and its approach ramp, Iron Bridge Wharf, G.E.R. Railway Wharf and Granary, Swing Bridge, Orchard Street, the Lea / Bow Creek channels",
+ "method": "Sweep crops r0c0..r2c2 all viewed and displayed; anchors written on opening: r0c0 PORTREE STREET; r0c1 Iron Bridge Wharf/Swing Bridge; r0c2 BARKING ROAD/C.R./Wharf; r1c0 RAILWAY WHARF/Warehouses/P.O.; r1c1 RIVER LEA/Crane/M.P.; r1c2 BOW CREEK/Oil; r2c0 GREAT EASTERN RAILWAY Granary/ORCHARD STREET; r2c1 RIVER/Mud/Crane; r2c2 BOW CREEK/SALTER'S BUILDINGS/WEST STREET. Contact sheets (own helper) all displayed: e1 8x six (PORTREE ramp hatching), e2 14x 8·9/B.M.17·47, e3 4x ±60 ramp context, e4 8x six (Swing Bridge rails), e5 3x rail context strip, e6 8x six (Crane, O of ROAD), e7 5x ±40 B.M.17·51/18·04, e8 8x 16·4/15·7, e9 14x five B.M. decimals, e10 20x digit comparison strip, e11 12x 34·5 dots, marker sheet mke 6x all 21 positions (3 corrected). Every crop and sheet displayed when opened. RE-SWEEP after coordinator coverage note: strips f1 3x (x0-360,y0-270; PORTREE STREET), f2 3x (x340-700,y0-270; Iron Bridge Wharf), f3 3x (x680-1024,y0-270; BARKING ROAD/C.R.), f4 2x (x760-1024,y250-1024; BOW CREEK/WEST STREET) and zoom sheet f5 8x (17·5/19·5/26·4) all displayed. Three figures in the north-east (17·5, 19·5, 26·4) had been seen in the first sweep but wrongly left out as duplicates of m18_131075_87161; now added. No other figures in those strips.",
+ "legibility": "Good; no sheet join seen by eye or by the sheet tool. Large areas of channel and mud carry no figures.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 16.7,
+   "raw": "16·7",
+   "px": 352,
+   "py": 276,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "low south-west end of the curved Barking Road approach ramp to the Iron Bridge over Bow Creek (hatched slope on the north side); dot on the ramp road left of figure, 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.47,
+   "raw": "B.M.17·47",
+   "px": 311,
+   "py": 300,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "B.M. at the south-west end of the hatched Iron Bridge approach ramp, pheon on the ramp's outer (retaining) line above-left of text; 14x. Structure read as the ramp abutment/wall"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.4,
+   "raw": "14·4",
+   "px": 288,
+   "py": 358,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "wide road at the foot of the Iron Bridge ramp, south of Portree Street; dot above figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.9,
+   "raw": "8·9",
+   "px": 48,
+   "py": 384,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "road west of Portree Street; dot left of figure; leading digit closer to the 8 of 18·4 than the open-topped 6 of 16·7 at 20x but 6·9 not excluded"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.1,
+   "raw": "16·1",
+   "px": 458,
+   "py": 180,
+   "confidence": "high",
+   "setting": "embankment_foot",
+   "notes": "Iron Bridge Wharf ground just north of the foot of the hatched ramp slope (ramp top 26·1 at 502,222, 45 px away); dot above figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.1,
+   "raw": "26·1",
+   "px": 502,
+   "py": 222,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "Barking Road on the Iron Bridge approach ramp, between the kerb lines; dot left of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.5,
+   "raw": "34·5",
+   "px": 676,
+   "py": 253,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "Barking Road on the Iron Bridge deck over Bow Creek; faint dot 6 px right of figure, a second isolated dot at 688,250; digits clear at 8x/12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 31.48,
+   "raw": "B.M.31·48",
+   "px": 761,
+   "py": 265,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "east end of the Iron Bridge where Barking Road curves off it; pheon above text on the parapet line; 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.1,
+   "raw": "23·1",
+   "px": 774,
+   "py": 378,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "railway on the narrow bank between the Lea channel and Bow Creek east of the Swing Bridge, hatched slopes both sides; dot between the rails right of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.3,
+   "raw": "23·3",
+   "px": 568,
+   "py": 323,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "railway curving from the wharf sidings onto the Swing Bridge; dot on the rail above figure (S.P. beside); about 5 ft above the wharf, no hatching at the dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 21.5,
+   "raw": "B.M.21·50",
+   "px": 450,
+   "py": 427,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "Railway Wharf, pheon on the western edge line of the sidings west of text (not a building or bridge; probably a wall or post along the sidings); 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.4,
+   "raw": "18·4",
+   "px": 440,
+   "py": 471,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "Railway Wharf sidings at grade; dot between rails right of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.5,
+   "raw": "14·5",
+   "px": 206,
+   "py": 461,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road junction east of the P.O.; dot above-left of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.8,
+   "raw": "14·8",
+   "px": 72,
+   "py": 515,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "ROAD past the P.O.; only dot is above the O of R·O·A·D, used as position"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 9,
+   "py": 752,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Street at the west edge; figure spans x ~1-15 and looks whole but the leading 1 is against the edge; no dot; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 197,
+   "py": 832,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "sidings by the turntable west of the G.E.R. Granary; dot between rails below figure, 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.51,
+   "raw": "B.M.17·51",
+   "px": 310,
+   "py": 853,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the south corner wall of the Great Eastern Railway Granary, 35 px NE of text by the turntables; 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 348,
+   "py": 869,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Railway Wharf beside the Crane among the sidings; dot left of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.4,
+   "raw": "16·4",
+   "px": 118,
+   "py": 940,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "inside premises east of the Orchard Street boundary wall; no dot; centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.04,
+   "raw": "B.M.18·04",
+   "px": 125,
+   "py": 1000,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Orchard Street, pheon on the hatched wall of the premises west of text; 0 oval at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 446,
+   "py": 662,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "figure written over the mud just east of the quay line at the Crane (crane on the quay at ~432,668); no dot; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 956,
+   "py": 60,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Barking Road east of the Iron Bridge; no own dot (nearby dots are the ·F.P and the R·O·A·D interpunct); centre of figures; 8x. Added on re-sweep (same mark as m18_131075_87161 at 188,60)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.5,
+   "raw": "19·5",
+   "px": 946,
+   "py": 179,
+   "confidence": "medium",
+   "setting": "open_ground",
+   "notes": "unbuilt ground between the railway sidings and the Bow Creek high-water line, no place word; no dot; centre of figures; 8x. Added on re-sweep (same mark as m18_131075_87161 at 178,179)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.4,
+   "raw": "26·4",
+   "px": 841,
+   "py": 226,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "Barking Road on the east approach to the Iron Bridge over Bow Creek; nearby dots belong to the C.R. dash-dot boundary and the B·A·R·K·I·N·G interpuncts; centre of figures; 8x. Added on re-sweep (same mark as m18_131075_87161 at 72,226)"
+  }
+ ],
+ "non_height_marks": [
+  "M.P. (mooring posts) at ~450,592 and ~447,614",
+  "S.P. by the Swing Bridge and at ~596,340",
+  "County & Parly. Borough and Union Boundary dash-dot along the channels",
+  "'High Water Mark of Ordinary Tides' and 'Centre of Channel at Low Water' lettering",
+  "survey-station triangle with no figure on the Iron Bridge at ~741,190"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 744,
+   "px1": 4,
+   "py1": 760,
+   "reason": "leading digit of 16·0 against the west edge; value recorded as read"
+  }
+ ]
+}

@@ -1,0 +1,251 @@
+{
+ "mosaic": "m18_131093_87134",
+ "reader": "opus-m",
+ "area": "Upton Park / Plashet: open ground north of Harold Road, Percy Road, Raymond Road, Harold Road and the railway through Upton Park station (Down/Up platforms)",
+ "method": "Viewed all 9 sweep crops (2x) and contact sheets cs1-cs4 (7x to 24x zoom panels labelled in mosaic px); every image displayed when opened. Every value confirmed at >=8x, doubtful digits at 14-24x.",
+ "legibility": "Good; large open field in the west half. Vertical sheet join at px ~935 (tint change, visible line) over the full height, confirmed by eye; no figure crosses it. Road at top carries a boundary of plain dashes (dots in gaps are survey dots).",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 33.6,
+   "raw": "33·6",
+   "px": 179,
+   "py": 69,
+   "confidence": "medium",
+   "notes": "road at top (dashed boundary along it); dot above figure in a gap of the dashes; last digit 6 at 24x but 5/6 not certain"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.6,
+   "raw": "B.M.34·60",
+   "px": 406,
+   "py": 68,
+   "confidence": "high",
+   "notes": "pheon on the front wall of the terrace, left of text; 14x digits"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 369,
+   "py": 89,
+   "confidence": "high",
+   "notes": "same road; dot above figure in a dash gap; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.4,
+   "raw": "31·4",
+   "px": 347,
+   "py": 243,
+   "confidence": "high",
+   "notes": "open ground south of the road; isolated dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 610,
+   "py": 64,
+   "confidence": "high",
+   "notes": "road at the head of Percy Road; dot above figure in a dash gap"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 643,
+   "py": 188,
+   "confidence": "high",
+   "notes": "Percy Road north, among the street trees; isolated dot right of figure; 8 at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.2,
+   "raw": "31·2",
+   "px": 692,
+   "py": 318,
+   "confidence": "medium",
+   "notes": "PERCY ROAD; the only dot lies between the E and R of PERCY (interpunct acting as survey dot), ~20 px right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.2,
+   "raw": "32·2",
+   "px": 800,
+   "py": 45,
+   "confidence": "medium",
+   "notes": "road at top, opposite Raymond Road; dot touches the end of a boundary dash above the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.0,
+   "raw": "32·0",
+   "px": 963,
+   "py": 10,
+   "confidence": "medium",
+   "notes": "by C.R. / F.P. / L.B. east of the px~935 join, Gipsy Lane C.R. boundary of large dots; small dot above figure taken as survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.8,
+   "raw": "30·8",
+   "px": 372,
+   "py": 460,
+   "confidence": "high",
+   "notes": "open ground; isolated dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.9,
+   "raw": "29·9",
+   "px": 392,
+   "py": 676,
+   "confidence": "high",
+   "notes": "open ground; isolated dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.5,
+   "raw": "30·5",
+   "px": 764,
+   "py": 522,
+   "confidence": "high",
+   "notes": "PERCY ROAD south; dot after the final D of ROAD, above-left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 31.94,
+   "raw": "B.M.31·94",
+   "px": 817,
+   "py": 718,
+   "confidence": "high",
+   "notes": "corner of Percy Road and Harold Road; pheon just left of text by a street tree; 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.8,
+   "raw": "29·8",
+   "px": 839,
+   "py": 726,
+   "confidence": "high",
+   "notes": "Harold Road, directly under B.M.31·94; own dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.8,
+   "raw": "29·8",
+   "px": 1020,
+   "py": 660,
+   "confidence": "high",
+   "notes": "road east of the px~935 join near the east edge; dot right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.7,
+   "raw": "28·7",
+   "px": 402,
+   "py": 887,
+   "confidence": "high",
+   "notes": "HAROLD ROAD; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.9,
+   "raw": "27·9",
+   "px": 203,
+   "py": 960,
+   "confidence": "high",
+   "notes": "HAROLD ROAD west; dot above the 9"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 30.3,
+   "raw": "B.M.30·30",
+   "px": 108,
+   "py": 1018,
+   "confidence": "high",
+   "notes": "Harold Road; pheon on house front below text, near south edge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.3,
+   "raw": "29·3",
+   "px": 608,
+   "py": 811,
+   "confidence": "high",
+   "notes": "Harold Road; dot above the 3"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.2,
+   "raw": "28·2",
+   "px": 862,
+   "py": 969,
+   "confidence": "medium",
+   "notes": "street south of the railway; dot right of figure, but an F.P. with its own dot lies just beyond it"
+  }
+ ],
+ "non_height_marks": [
+  "large lettering 'U' at ~1010,250",
+  "Down Platform / Up Platform lettering of the railway station",
+  "S.P., F.P., H, L.B., C.R. marks"
+ ],
+ "unreadable_regions": []
+}

@@ -1,0 +1,40 @@
+{
+  "mosaic": "m18_131072_87119",
+  "reader": "opus-j",
+  "area": "North Stratford / New Town: Chobham Road, Brydges Road, Newton Road, Hughan Road, Bond Street, Henniker Road, New Providence Street, Maryland Road and Maryland Street, St Paul's Church and schools, Stratford Brewery, and the tramway on Leytonstone Road along the east side",
+  "method": "sheet tool, 9 sweep crops at 2x, zoom contact sheets at 8x (+-30 px) on every figure, 6x on every bench mark, 12x on doubtful 6/8 digits and pheons, 4-5x strips to check the reported join and search for missing pheons. All crops and zooms were viewed successfully; no image failed to load.",
+  "legibility": "Good; dense terraces with many F.P.s. The sheet tool reports a weak horizontal step at py ~802 (x 512-1024) but no line or tint change is visible there by eye (probably the Stratford Brewery shading); no other joins seen. Several 6/8 second digits are hard to separate even at 12x.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 34.9, "raw": "34·9", "px": 19, "py": 45, "confidence": "medium", "notes": "west edge street; dot above the W of the street lettering, below-left of the figures, taken as survey dot"},
+    {"type": "spot", "value_ft": 35.5, "raw": "35·5", "px": 290, "py": 26, "confidence": "high", "notes": "Brydges Road / Chobham Road, north end; dot above figures below F.P, 8x"},
+    {"type": "bench_mark", "value_ft": 36.13, "raw": "B.M.36·13", "px": 318, "py": 253, "confidence": "low", "notes": "P.H. at Brydges Road / Chobham Road corner; pheon pointing east into the P.H. wall ~30 px above the text; second digit 6 or 8 even at 12x (36·13 fits the ~34 ft street better, 38·13 possible)"},
+    {"type": "spot", "value_ft": 33.8, "raw": "33·8", "px": 310, "py": 306, "confidence": "high", "notes": "Chobham Road at Brydges Road; dot below-left of figures, separate from the F.P.'s own dot, 8x"},
+    {"type": "spot", "value_ft": 34.0, "raw": "34·0", "px": 92, "py": 328, "confidence": "high", "notes": "Chobham Road west; dot directly above the figures between O and B of the lettering, 8x"},
+    {"type": "spot", "value_ft": 34.0, "raw": "34·0", "px": 476, "py": 287, "confidence": "high", "notes": "Chobham Road at Newton Road; dot above-left of figures, 8x"},
+    {"type": "spot", "value_ft": 33.7, "raw": "33·7", "px": 623, "py": 270, "confidence": "high", "notes": "Chobham Road; dot below-left of figures, 6x/8x"},
+    {"type": "bench_mark", "value_ft": 34.92, "raw": "B.M.34·92", "px": 626, "py": 292, "confidence": "high", "notes": "Chobham Road south frontage; pheon below-right of text on the frontage line, 6x"},
+    {"type": "spot", "value_ft": 33.7, "raw": "33·7", "px": 771, "py": 258, "confidence": "high", "notes": "Chobham Road at Bond Street; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 33.6, "raw": "33·6", "px": 960, "py": 73, "confidence": "medium", "notes": "garden plot west of Leytonstone Road; no dot within +-30 px; position = centre of figures"},
+    {"type": "spot", "value_ft": 33.5, "raw": "33·5", "px": 946, "py": 249, "confidence": "high", "notes": "Leytonstone Road; dot on the tram rails left of figures, 8x"},
+    {"type": "spot", "value_ft": 33.0, "raw": "33·0", "px": 960, "py": 471, "confidence": "medium", "notes": "Leytonstone Road by the P.O.; tick on the tram rails right of the figures taken as the dot"},
+    {"type": "bench_mark", "value_ft": 29.14, "raw": "B.M.29·14", "px": 58, "py": 561, "confidence": "high", "notes": "Henniker Road north frontage at a gateway; pheon above-right of text, 6x"},
+    {"type": "spot", "value_ft": 27.7, "raw": "27·7", "px": 60, "py": 574, "confidence": "high", "notes": "Henniker Road west; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 28.5, "raw": "28·5", "px": 266, "py": 549, "confidence": "low", "notes": "Henniker Road at Falmouth Street; dot above-right between K and E of HENNIKER (interpunct position); second digit 8 or 6 at 12x (28·5 fits between 27·7 and 29·0 on the same road)"},
+    {"type": "spot", "value_ft": 29.0, "raw": "29·0", "px": 330, "py": 548, "confidence": "high", "notes": "Henniker Road; dot after the final R of HENNIKER, left of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 31.83, "raw": "B.M.31·83", "px": 541, "py": 505, "confidence": "high", "notes": "Henniker Road north frontage; pheon above-left of text on the frontage, 6x"},
+    {"type": "spot", "value_ft": 29.6, "raw": "29·6", "px": 546, "py": 519, "confidence": "high", "notes": "Henniker Road; dot after the final D of ROAD, left of figures, 8x"},
+    {"type": "spot", "value_ft": 31.3, "raw": "31·3", "px": 749, "py": 495, "confidence": "high", "notes": "Henniker Road east; dot left of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 33.59, "raw": "B.M.33·59", "px": 962, "py": 680, "confidence": "high", "notes": "Maryland Road east end near Leytonstone Road; pheon right of text beyond the F.P., 5x"},
+    {"type": "spot", "value_ft": 27.6, "raw": "27·6", "px": 309, "py": 806, "confidence": "low", "notes": "Maryland Road at Falmouth Street; last digit 6 or 8 at 12x; dot at 309,806 beside the A of MARYLAND taken as survey dot"},
+    {"type": "spot", "value_ft": 25.8, "raw": "25·8", "px": 155, "py": 842, "confidence": "high", "notes": "Maryland Road by Ruth Street; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 26.1, "raw": "26·1", "px": 44, "py": 869, "confidence": "high", "notes": "Maryland Road at Ashton Street; dot below-left of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 27.9, "raw": "B.M.27·90", "px": 125, "py": 869, "confidence": "medium", "notes": "St Paul's Church; digits clear at 5-6x; pheon taken as the arrow at the church railing corner ~30 px right of the text"},
+    {"type": "spot", "value_ft": 27.0, "raw": "27·0", "px": 351, "py": 974, "confidence": "high", "notes": "Maryland Street by the School; dot left of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 28.83, "raw": "B.M.28·83", "px": 408, "py": 951, "confidence": "medium", "notes": "Maryland Street north frontage; pheon left of text, 6x; second digit read 8 at 12x but not certain against 6"}
+  ],
+  "non_height_marks": ["survey-station triangle at ~839,712 with no figure", "street-furniture symbol (lamp/fountain) at ~827,690", "many F.P. marks (e.g. ~290,16; ~292,311; ~120,558; ~920,670; ~768,754)", "P.O., P.H., F.A., H marks", "large 'NEW TOWN' lettering", "'Stratford Brewery', 'Mission Hall', 'St Paul's Church Seats for 1200', 'School Boys & Girls'"],
+  "unreadable_regions": [
+    {"px0": 0, "py0": 22, "px1": 10, "py1": 58, "reason": "west edge: pheon at ~8,30 whose B.M. text lies off-mosaic, and a figure ending '5' at ~2,52 cut by the edge"}
+  ]
+}

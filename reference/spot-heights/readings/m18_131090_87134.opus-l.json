@@ -1,0 +1,215 @@
+{
+ "mosaic": "m18_131090_87134",
+ "reader": "opus-l",
+ "area": "Upton / Plashet: Plashet Road, the Parly. Boro. & Ward boundary road, P.O. and P.H., Board School, Dacre Road, open ground to the south-east (West Ham)",
+ "method": "Second attempt. On the first attempt every image returned [media removed: request limit] and was NOT seen; that file was withdrawn. On this attempt the 9 sweep crops (2x) r0c0-r2c2 and contact sheets A, X (14x, 32·4 here and in m18_131087_87131), B, C, D and E3 (32x, contrast-stretched, beside the 5 of 35·5 from m18_131087_87128 for comparison) were re-opened one at a time and every one displayed. Each panel is labelled with its mosaic window and was made with a helper in my scratch directory. Every value confirmed at 7x or more.",
+ "legibility": "good; the sheet tool reports vertical joins at px ~24, ~123 and ~240 for y 768-1024, but a 3x panel over 0-260, 780-900 shows no line offsets or tint step, so these are probably building hatching (not recorded as joins); centre and east of the mosaic are open ground with no figures",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 32.4,
+   "raw": "32·4",
+   "px": 124,
+   "py": 184,
+   "confidence": "medium",
+   "notes": "road along the Division of Parly. Boro. & Ward Bdy. line, below 'Parly.'; at 14x there are two dots: the full stop of 'Parly.' at 118,181 and a separate dot at 124,184 above the figures, taken as the survey dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.15,
+   "raw": "B.M.33·15",
+   "px": 37,
+   "py": 212,
+   "confidence": "medium",
+   "notes": "building south of the boundary road; text 62-94,208; pheon (downward) at 37,212, about 25 px from text; digits 33·15 at 16-18x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 337,
+   "py": 152,
+   "confidence": "medium",
+   "notes": "Plashet Road west end at F.A; dot at 337,152 right after the P of the spaced P L A S H E T lettering (the other letters carry no interpuncts), taken as survey dot; 8x/20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.6,
+   "raw": "30·6",
+   "px": 137,
+   "py": 327,
+   "confidence": "high",
+   "notes": "road south of the P.H. (Tr.) running south; dot above figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.8,
+   "raw": "33·8",
+   "px": 505,
+   "py": 131,
+   "confidence": "high",
+   "notes": "Plashet Road; dot above-left of figures; last digit a clear 8 at 24x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.78,
+   "raw": "B.M.35·78",
+   "px": 622,
+   "py": 87,
+   "confidence": "high",
+   "notes": "house front, north side of Plashet Road; pheon at 622,87 right of text; 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.0,
+   "raw": "34·0",
+   "px": 729,
+   "py": 98,
+   "confidence": "medium",
+   "notes": "Plashet Road; dot at 729,98 at the end of a boundary dash above the figures; 8x/24x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.6,
+   "raw": "33·6",
+   "px": 947,
+   "py": 70,
+   "confidence": "low",
+   "notes": "Plashet Road east; dot at 947,70 above the figures, between boundary dashes; at 24-32x the last digit has a curled top with a flag, unlike the flat top bar of the 5 in 35·5 (m18_131087_87128) viewed alongside, and a closed bowl: 6, but 8 (33·8) possible"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.2,
+   "raw": "28·2",
+   "px": 149,
+   "py": 476,
+   "confidence": "high",
+   "notes": "Dacre Road north end; dot above figures, separate from the F.P's own dot at 157,462; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.4,
+   "raw": "27·4",
+   "px": 51,
+   "py": 576,
+   "confidence": "high",
+   "notes": "road running south-west off Dacre Road; dot below figures, separate from the F.P dot at 67,584; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.0,
+   "raw": "27·0",
+   "px": 164,
+   "py": 655,
+   "confidence": "high",
+   "notes": "Dacre Road; dot above figures; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 28.13,
+   "raw": "B.M.28·13",
+   "px": 193,
+   "py": 799,
+   "confidence": "high",
+   "notes": "house front, east side of Dacre Road; pheon right of text at 193,799; 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.8,
+   "raw": "25·8",
+   "px": 183,
+   "py": 882,
+   "confidence": "high",
+   "notes": "Dacre Road; dot above figures; last digit shows two closed loops at 26x (8)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.0,
+   "raw": "25·0",
+   "px": 193,
+   "py": 1004,
+   "confidence": "high",
+   "notes": "Dacre Road south end; dot above figures, separate from the F.P dot at 197,994; figures whole (end py ~1013); 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.9,
+   "raw": "27·9",
+   "px": 970,
+   "py": 960,
+   "confidence": "high",
+   "notes": "road at the south-east corner (H A... lettering); dot above-right of figures at 970,960; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 30.3,
+   "raw": "B.M.30·30",
+   "px": 876,
+   "py": 1015,
+   "confidence": "medium",
+   "notes": "house front on the same road; text 850-882,993; downward pheon with apex at 876,1015 on the building line about 20 px below the text (10x); digits clear at 7x"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangles with no figure at ~197,388 and ~469,625",
+  "F.A at ~330,146",
+  "F.P., H, P.O., P.H., Tr. marks"
+ ],
+ "unreadable_regions": []
+}

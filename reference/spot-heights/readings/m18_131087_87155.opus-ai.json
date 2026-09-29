@@ -1,0 +1,33 @@
+{
+  "mosaic": "m18_131087_87155", "reader": "opus-ai",
+  "area": "Plaistow Marsh north-east of Canning Town / toward Custom House: New Barn Street and a diagonal Street with terraces, dotted laid-out street blocks, marsh drains on the west, Beckton Road along py ~710-768 with terraces, the treed grounds and Lodge at the south-east",
+  "method": "sheet tool plus eye check; 9 sweep crops at 2x (anchors: r0c0 'N E' of a lane + drain loop; r0c1 ..ARN STREET, F.P.; r0c2 S T R E E T.; r1c0 drains and straight lines, no lettering; r1c1 NEW BARN STREET; r1c2 B E C.. + dotted street blocks; r2c0 Beckton Road lines + join tint; r2c1 terraces south of road, F.P.; r2c2 B E C K, Lodge, D.F.); contact sheets cs1-cs4 at 6x +-22 px (all figures incl. overlap duplicates from the 87158 strip); region views regA (B.M.9.54 pheon search 5x), regB (3.8 and lane 4x); digit strips nn1-nn4 at 6-10x (nn1 and nn3 mis-windowed, redone); marker sheets mk1 (2x) and mk2 (1x) plus numeric dot-centroid check. Every crop, sheet and strip displayed when opened and has an anchor in my notes.",
+  "legibility": "Clean; horizontal sheet join at py ~964 across the full width (tint step, confirmed by eye; = py ~196 on 87158); no figure crosses it. No missing tiles.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":3.8,"raw":"3·8","px":28,"py":24,"confidence":"high","setting":"street","notes":"on the lane (..NE lettering) at the NW corner, between its dotted NW edge and solid SE edge; dot left of figures; final 8 closed-topped at 6/8/10x against the open-topped 6 of 6·3"},
+    {"type":"spot","value_ft":6.7,"raw":"6·7","px":593,"py":10,"confidence":"high","setting":"street","notes":"street lettered ..R K at the top edge beside F.P.; dot left-above figures; 6x"},
+    {"type":"spot","value_ft":6.3,"raw":"6·3","px":668,"py":112,"confidence":"high","setting":"street","notes":"junction of the ..RK street and the diagonal STREET; dot left-above; open-topped 6 and open-left 3 at 8x"},
+    {"type":"bench_mark","value_ft":9.54,"raw":"B.M.9·54","px":686,"py":158,"confidence":"high","setting":"building","notes":"pheon at the north corner of the terrace end, text 40-65 px east across the diagonal STREET; no other arrow nearby at 5x; digits 10x"},
+    {"type":"spot","value_ft":6.1,"raw":"6·1","px":607,"py":325,"confidence":"medium","setting":"street","notes":"New Barn Street; only dot is after the final T of STREET (T·), just below the figures"},
+    {"type":"spot","value_ft":6.1,"raw":"6·1","px":798,"py":272,"confidence":"medium","setting":"street","notes":"diagonal STREET; only dot is after its final T (T·), just above-left of the figures"},
+    {"type":"spot","value_ft":5.8,"raw":"5·8","px":880,"py":375,"confidence":"high","setting":"street","notes":"diagonal STREET further south-east, between its dotted SW edge and solid NE line; dot left-above; 8 closed at 6x"},
+    {"type":"spot","value_ft":5.8,"raw":"5·8","px":555,"py":502,"confidence":"medium","setting":"street","notes":"New Barn Street by the W of NEW; the only dot is at the end of the W (W·), left of the figures; 8 closed at 6x"},
+    {"type":"spot","value_ft":6.4,"raw":"6·4","px":514,"py":627,"confidence":"high","setting":"street","notes":"south end of New Barn Street at its west edge; dot above figures; 6x"},
+    {"type":"spot","value_ft":8.3,"raw":"8·3","px":20,"py":750,"confidence":"high","setting":"street","notes":"Beckton Road at the west edge; dot above; closed 8, open-left 3 at 6x and 8x"},
+    {"type":"spot","value_ft":8.0,"raw":"8·0","px":254,"py":744,"confidence":"high","setting":"street","notes":"Beckton Road; dot left-above; oval upright 0 at 6x"},
+    {"type":"spot","value_ft":8.1,"raw":"8·1","px":445,"py":736,"confidence":"high","setting":"street","notes":"Beckton Road at the New Barn Street junction; dot left-above; 6x"},
+    {"type":"spot","value_ft":8.2,"raw":"8·2","px":515,"py":738,"confidence":"high","setting":"street","notes":"Beckton Road; dot left-above; 6x"},
+    {"type":"bench_mark","value_ft":11.46,"raw":"B.M.11·46","px":467,"py":762,"confidence":"high","setting":"building","notes":"pheon in a small circle at the NW corner of the terrace on the south side of Beckton Road; text above; 10x"},
+    {"type":"spot","value_ft":8.1,"raw":"8·1","px":660,"py":733,"confidence":"high","setting":"street","notes":"Beckton Road; dot left-above; 6x"},
+    {"type":"spot","value_ft":8.1,"raw":"8·1","px":804,"py":733,"confidence":"high","setting":"street","notes":"Beckton Road between the B and E of BECKTON; dot above; 6x"},
+    {"type":"spot","value_ft":8.5,"raw":"8·5","px":1012,"py":745,"confidence":"high","setting":"street","notes":"Beckton Road near the east edge, figures whole to px ~1018; dot above-right; flat-topped 5 at 6x"},
+    {"type":"spot","value_ft":7.4,"raw":"7·4","px":436,"py":924,"confidence":"high","setting":"marsh","notes":"overlap strip (same mark as 87158 7·4): open marsh between dotted fence and drain; dot above; 6-8x"},
+    {"type":"spot","value_ft":6.5,"raw":"6·5","px":796,"py":932,"confidence":"high","setting":"street","notes":"overlap strip (same as 87158 6·5): road strip beside the treed grounds east of a narrow ditch line; dot above; 6-8x"},
+    {"type":"bench_mark","value_ft":9.35,"raw":"B.M.9·35","px":853,"py":824,"confidence":"high","setting":"building","notes":"overlap strip (same as 87158 B.M.9·35): pheon on the NW corner of the Lodge; digits confirmed at 20x on 87158"}
+  ],
+  "non_height_marks": ["F.P. marks at ~618,47, ~690,52 and 515,692", "D.F. in the treed grounds ~990,945"],
+  "unreadable_regions": [
+    {"px0":1002,"py0":614,"px1":1024,"py1":634,"reason":"figure '6·..' cut by the east edge"}
+  ]
+}

@@ -1,0 +1,34 @@
+{
+ "mosaic": "m18_131066_87125",
+ "reader": "opus-c",
+ "area": "Stratford: G.E.R. Stratford Works (engine sheds, carriage shed, travelling cranes, G.E.R. Loop Line), the Victoria Park Branch and Channelsea bank (SW), Stratford Station (SE) with the Ward Bdy.",
+ "method": "read by Claude (vision): 3x3 sweep of 448 px crops at 2x, every candidate confirmed at 6x (+-40 px), the railway-yard figures and B.M.27·63 re-zoomed at 8x (+-30 px); positions in mosaic pixels",
+ "legibility": "fair: dense rail lines cross several figures; the SE quarter (station) is on a darker tinted sheet; a straight vertical line at px ~66 (full height) looks like an OS sheet join (continuation of the px ~833 line in m18_131063_87125), no figures cross it",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [
+  {"type": "bench_mark", "value_ft": 18.21, "raw": "B.M.18·21", "px": 152, "py": 941, "confidence": "high",
+   "notes": "same B.M. as m18_131063_87125 at 920,941 (Channel Sea Junction bank south of the Victoria Park Branch); pheon left of text"},
+  {"type": "spot", "value_ft": 16.3, "raw": "16·3", "px": 188, "py": 955, "confidence": "high",
+   "notes": "bank below B.M.18·21 (same as m18_131063_87125 956,955); dot above the figures"},
+  {"type": "spot", "value_ft": 16.3, "raw": "16·3", "px": 401, "py": 987, "confidence": "high",
+   "notes": "hatched bank south of the Victoria Park Branch; dot above-right of figures; figures whole above the south edge"},
+  {"type": "spot", "value_ft": 20.9, "raw": "20·9", "px": 958, "py": 153, "confidence": "medium",
+   "notes": "among the running lines east of 'Stratford Works'; dot above-left of figures; final 9 is crossed by a rail line at 8x but its loop and tail are visible"},
+  {"type": "spot", "value_ft": 21.4, "raw": "21·4", "px": 996, "py": 370, "confidence": "medium",
+   "notes": "beside a turntable circle on the running lines near the east edge; digits clear at 8x; no dot distinguishable from the rail lines, position = centre of figures"},
+  {"type": "spot", "value_ft": 21.3, "raw": "21·3", "px": 934, "py": 535, "confidence": "medium",
+   "notes": "between rail lines north of the C.R. platform; digits clear at 8x; no dot found, position = centre of figures"},
+  {"type": "spot", "value_ft": 22.4, "raw": "22·4", "px": 962, "py": 752, "confidence": "medium",
+   "notes": "station approach west of the Well at Stratford Station; digits clear at 6x; no dot found, position = centre of figures"},
+  {"type": "bench_mark", "value_ft": 27.63, "raw": "B.M.27·63", "px": 1007, "py": 818, "confidence": "medium",
+   "notes": "Stratford Station building; pheon above-right of the stacked B.M./27·63 text, point on the building line; on tinted ground the 6 is probably 6 (not 8) at 8x"},
+  {"type": "spot", "value_ft": 22.8, "raw": "22·8", "px": 990, "py": 873, "confidence": "medium",
+   "notes": "forecourt south of Stratford Station by the railway; digits clear at 6x; no dot found, position = centre of figures"},
+  {"type": "spot", "value_ft": 24.2, "raw": "24·2", "px": 846, "py": 1012, "confidence": "low",
+   "notes": "among the rail lines at the south edge by the S.P.; the second digit is obscured by rail lines at 8x (4 plausible), no dot found, position = centre of figures"}
+ ],
+ "non_height_marks": ["many 'H' marks through the works yards", "S.P. signal posts at 452,160, 925,110, 965,255, 895,265, 945,448, 985,448, 860,850, 895,985, 1000,985, 915,1020", "S.B. (signal box) at 1000,318, 700,1000", "L.B. at 953,852", "'C.' marks at 650,670, 640,670", "W.M. at 280,635", "'Ward Bdy.' at 900,935"],
+ "unreadable_regions": [
+  {"px0": 995, "py0": 380, "px1": 1024, "py1": 405, "reason": "B.M. with pheon (arrow at 1000,399) whose value is cut by the east edge of the mosaic; read it on the mosaic to the east"}
+ ]
+}

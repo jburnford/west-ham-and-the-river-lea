@@ -1,0 +1,142 @@
+{
+ "mosaic": "m18_131063_87125",
+ "reader": "opus-c",
+ "area": "Stratford: High Meads Junction and Channel Sea Junction of the Great Eastern Railway, GER engine sheds and sidings (NE), the river (Channelsea) with its embanked walls across the south, High Meads",
+ "method": "read by Claude (vision): 3x3 sweep of 448 px crops at 2x, every candidate confirmed at 6x (+-40 px) and ambiguous digits and dots at 8x (+-30 px); positions in mosaic pixels",
+ "legibility": "good; digits about 6 px tall and clear at 6-8x; no join detected by the tool, but a straight full-height vertical line at px ~833 with a tint change looks like an OS sheet join (no figures cross it)",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 113,
+   "py": 75,
+   "confidence": "high",
+   "notes": "beside the GER embankment south of High Meads Junction; figures at 146,92 outside the embankment hatching, survey dot on the rails at 113,75 (the standard railway pattern, confirmed from m18_131063_87122); 8 clear at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.37,
+   "raw": "B.M.17·37",
+   "px": 285,
+   "py": 784,
+   "confidence": "high",
+   "notes": "pheon on the SE corner of the long building on the north bank of the river; point at the building corner; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 121,
+   "py": 801,
+   "confidence": "high",
+   "notes": "top of the north river wall/bank; dot left of figures, confirmed at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.2,
+   "raw": "17·2",
+   "px": 326,
+   "py": 796,
+   "confidence": "high",
+   "notes": "north river bank below the B.M.; dot left of figures, confirmed at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 540,
+   "py": 799,
+   "confidence": "high",
+   "notes": "north river bank where the wall bends SE; dot left of figures, confirmed at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 738,
+   "py": 888,
+   "confidence": "high",
+   "notes": "north bank of the river further SE, on the hatched bank; dot upper-left of figures; final 9 confirmed at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.21,
+   "raw": "B.M.18·21",
+   "px": 920,
+   "py": 941,
+   "confidence": "high",
+   "notes": "near Channel Sea Junction, on the railway/bank south of the tracks; pheon left of text; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 956,
+   "py": 955,
+   "confidence": "high",
+   "notes": "bank just below the B.M.18·21; dot above the figures on the hatched bank; 3 confirmed at 8x"
+  }
+ ],
+ "non_height_marks": [
+  "S.P. (signal post) at 38,158 by the GER lines",
+  "many 'H' (hydrant/hand-lever) marks among the engine-shed sidings, 850-1024,60-730"
+ ],
+ "unreadable_regions": []
+}

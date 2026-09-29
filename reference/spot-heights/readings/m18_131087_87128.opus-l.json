@@ -1,0 +1,275 @@
+{
+ "mosaic": "m18_131087_87128",
+ "reader": "opus-l",
+ "area": "Upton: Upton Lane, Skelton Road, Park Road, Dorris Road, Verona Road, Kingsley Road, Lancaster Road, Khedive Road, Meggs' Almshouses (West Ham)",
+ "method": "Second attempt. On the first attempt every image (9 sweep crops and contact sheets A-K) returned [media removed: request limit] and was NOT seen; that file was withdrawn. On this attempt the 9 sweep crops (2x) r0c0-r2c2 were re-opened one at a time and displayed, and so did contact sheets A2, B2 (replacements for A-D), E, F, G, H, I, J, K (7-30x zoom panels, I contrast-stretched, each labelled with its mosaic window, made with a helper in my scratch directory). Every value comes from an image that displayed; every value confirmed at 7x or more; 6/8 and 3/8 doubts examined at 20-30x.",
+ "legibility": "good, but many 6/8 doubts in the small italic figures; horizontal sheet join confirmed by eye at py ~948 (tint step: paler paper below); no vertical join seen; C.R./Ward boundary dash-dot lines along Park Road and the road at px ~420 hide survey dots",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 36.38,
+   "raw": "B.M.36·38",
+   "px": 454,
+   "py": 43,
+   "confidence": "low",
+   "notes": "north end of the road west of Skelton Road, wall by the path; text 410-440,52; left-pointing pheon with point at 454,43 (7x, 20x); third and fourth digits 3 and 8 clear at 20x; second digit read 6 (curled top) but 8 (38·38) not excluded at 20-30x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.9,
+   "raw": "34·9",
+   "px": 491,
+   "py": 141,
+   "confidence": "high",
+   "notes": "road junction at west end of Skelton Road; dot left of figures; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 37.18,
+   "raw": "B.M.37·18",
+   "px": 620,
+   "py": 291,
+   "confidence": "medium",
+   "notes": "house front, north side of Upton Lane; upward pheon right of text, point at 620,291; last digit read 8 (two closed loops) at 20x and 24x (left side closed), 3 (37·13) less likely"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.2,
+   "raw": "35·2",
+   "px": 666,
+   "py": 302,
+   "confidence": "medium",
+   "notes": "Upton Lane; black dot at 666,302 just left of the figures and just above the F.P (whose own dot is at 652,309); an orange speck at 660,302 ignored; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.9,
+   "raw": "34·9",
+   "px": 514,
+   "py": 316,
+   "confidence": "high",
+   "notes": "Upton Lane by the Methodist Chapel; dot left of figures; 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.7,
+   "raw": "34·7",
+   "px": 877,
+   "py": 315,
+   "confidence": "high",
+   "notes": "Upton Lane at Khedive Road junction; dot above figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.8,
+   "raw": "34·8",
+   "px": 37,
+   "py": 466,
+   "confidence": "low",
+   "notes": "Park Road west (P·A·R·K lettering and C.R. dash-dot boundary along the road); figures 28-46,466; last digit shows a closed upper loop at 20-30x (8) but read 6 at 2x; no survey dot distinguishable from the boundary and interpunct dots, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 214,
+   "py": 470,
+   "confidence": "medium",
+   "notes": "Park Road; figures 205-225,470, last digit 6 (open top, touched by a boundary dash) at 20-30x; only nearby dots are the F.P's own, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 436,
+   "py": 468,
+   "confidence": "medium",
+   "notes": "Park Road / Dorris Road corner at the Ward boundary; dot at 424,467 is part of the dash-dot boundary line; position = centre of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.4,
+   "raw": "34·4",
+   "px": 429,
+   "py": 630,
+   "confidence": "medium",
+   "notes": "road along the Ward boundary at Verona Road; dot at 418,629 sits in the boundary dash line; position = centre of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.3,
+   "raw": "34·3",
+   "px": 899,
+   "py": 475,
+   "confidence": "high",
+   "notes": "Khedive Road; dot above figures; last digit open on the left (3) at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.4,
+   "raw": "34·4",
+   "px": 925,
+   "py": 642,
+   "confidence": "high",
+   "notes": "Khedive Road; dot above figures; 20x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 37.99,
+   "raw": "B.M.37·99",
+   "px": 407,
+   "py": 753,
+   "confidence": "high",
+   "notes": "wall by Meggs' Almshouses, west side of the boundary road; pheon at 407,753 right of text; 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.8,
+   "raw": "34·8",
+   "px": 435,
+   "py": 796,
+   "confidence": "medium",
+   "notes": "road at Meggs' Almshouses / Kingsley Road; last digit 8 (clear upper loop) at 20-30x; dot at 422,795 lies in the gap of the Ward boundary dashes, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.5,
+   "raw": "35·5",
+   "px": 437,
+   "py": 956,
+   "confidence": "medium",
+   "notes": "same boundary road at Lancaster Road, just south of the py~948 sheet join; both 5s have flat top bars at 20x; dot at 425,955 lies in the boundary dash line, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 36.86,
+   "raw": "B.M.36·86",
+   "px": 666,
+   "py": 932,
+   "confidence": "low",
+   "notes": "house front, north side of Lancaster Road; pheon left of text at 666,932 (7x); second digit 6, third digit 8 at 20-30x, last digit ambiguous 6/5/8"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 626,
+   "py": 957,
+   "confidence": "medium",
+   "notes": "Lancaster Road; figures 600-617,960 (6 at 20-30x); the only dot is the one after the L of LANCASTER at 626,957 (no other interpuncts in the name), taken as survey dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 36.42,
+   "raw": "B.M.36·42",
+   "px": 988,
+   "py": 835,
+   "confidence": "low",
+   "notes": "building corner, Khedive Road east side north of Lancaster Road; pheon (downward) at 988,835; second digit read 6 at 2x/16x but at 30x shows a closed upper loop suggesting 8 (38·42); 36·42 kept as it fits the 34·6 ground beside it, flag for review"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 958,
+   "py": 824,
+   "confidence": "low",
+   "notes": "Khedive Road; dot at 958,824 above figures but between E and D of KHEDIVE lettering (possible interpunct); last digit 6 at 8x/20x, 8 possible at 30x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.0,
+   "raw": "34·0",
+   "px": 975,
+   "py": 934,
+   "confidence": "medium",
+   "notes": "Khedive Road south end; dot at 975,934 between V and E of KHEDIVE lettering (possible interpunct); 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 774,
+   "py": 950,
+   "confidence": "high",
+   "notes": "Lancaster Road by St Anthony's R.C. Church; dot left of figures, just below the py~948 sheet join; 5x/8x"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle at ~850,100 on Skelton Road with no figure",
+  "C.R. and Ward Bdy. dash-dot boundaries along Park Road/Dorris Road and down px ~420",
+  "F.P. and H marks throughout"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 942,
+   "px1": 1024,
+   "py1": 954,
+   "reason": "horizontal sheet join; 1-2 px offsets"
+  },
+  {
+   "px0": 1012,
+   "py0": 96,
+   "px1": 1024,
+   "py1": 110,
+   "reason": "figure (starting 3) on Skelton Road cut by the east edge"
+  }
+ ]
+}

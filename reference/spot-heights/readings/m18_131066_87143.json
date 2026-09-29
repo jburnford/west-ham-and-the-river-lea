@@ -1,0 +1,25 @@
+{
+  "mosaic": "m18_131066_87143",
+  "area": "South Mill Meads drains, Short Wall, Three Mills Distillery, Long Wall on Channelsea",
+  "method": "read by Claude (vision) from the 1024 px mosaic plus 2x quadrant crops",
+  "legibility": "good; an OS sheet join runs across the mosaic at about py 566 (tint and line offset of 1-2 px)",
+  "readings": [
+    {"type": "spot", "value_ft": 16.9, "raw": "16·9", "px": 230, "py": 191, "confidence": "high", "notes": "Short Wall path; duplicate of m18_131066_87140"},
+    {"type": "bench_mark", "value_ft": 13.32, "raw": "B.M.13·32", "px": 265, "py": 356, "confidence": "high", "notes": "pheon on small building at south end of Short Wall"},
+    {"type": "spot", "value_ft": 16.7, "raw": "16·7", "px": 226, "py": 429, "confidence": "high", "notes": "river wall path"},
+    {"type": "spot", "value_ft": 9.7, "raw": "9·7", "px": 538, "py": 146, "confidence": "medium", "notes": "between parallel drains; duplicate of m18_131066_87140"},
+    {"type": "spot", "value_ft": 8.7, "raw": "8·7", "px": 531, "py": 349, "confidence": "medium", "notes": "between parallel drains; dot above figures"},
+    {"type": "bench_mark", "value_ft": 9.77, "raw": "B.M.9·77", "px": 559, "py": 405, "confidence": "high", "notes": "pheon on the culvert/sluice structure beside the drain"},
+    {"type": "spot", "value_ft": 8.4, "raw": "8·4", "px": 567, "py": 560, "confidence": "medium", "notes": "between drains, 6 px above the sheet join"},
+    {"type": "spot", "value_ft": 16.4, "raw": "16·4", "px": 171, "py": 608, "confidence": "high", "notes": "footpath south of Three Mills Wall River"},
+    {"type": "spot", "value_ft": 16.2, "raw": "16·2", "px": 102, "py": 838, "confidence": "high", "notes": "Three Mill Lane west of the distillery"},
+    {"type": "spot", "value_ft": 14.7, "raw": "14·7", "px": 217, "py": 828, "confidence": "medium", "notes": "by W.M. at distillery gate; first digit faint"},
+    {"type": "spot", "value_ft": 14.8, "raw": "14·8", "px": 253, "py": 947, "confidence": "medium", "notes": "lane beside distillery; 8 vs 6 slightly ambiguous"},
+    {"type": "spot", "value_ft": 15.2, "raw": "15·2", "px": 32, "py": 992, "confidence": "medium", "notes": "near Three Mills bridge"},
+    {"type": "spot", "value_ft": 7.7, "raw": "7·7", "px": 647, "py": 763, "confidence": "high", "notes": "low ground east of the path, south of the sheet join"},
+    {"type": "spot", "value_ft": 7.3, "raw": "7·3", "px": 683, "py": 915, "confidence": "high", "notes": "low ground north of Long Wall"},
+    {"type": "spot", "value_ft": 17.1, "raw": "17·1", "px": 823, "py": 945, "confidence": "medium", "notes": "top of Long Wall embankment; dot estimated"},
+    {"type": "bench_mark", "value_ft": 12.86, "raw": "B.M.12·86", "px": 931, "py": 943, "confidence": "medium", "notes": "pheon above text on Long Wall; second decimal small"}
+  ],
+  "unread": ["B.M. in circle 'C' at the SE corner (1007,998) cut by the mosaic edge; read in m18_131069_87143", "'...2' by Three Mills bridge on west edge, cut"]
+}

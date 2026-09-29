@@ -1,0 +1,112 @@
+{
+ "mosaic": "m18_131063_87134",
+ "reader": "opus-b",
+ "area": "Stratford Marsh: Great Eastern Railway embankment, Warton Road, London Spinning Mills (Cotton), Biggerstaff Street and the Northern Outfall Sewer (west end)",
+ "method": "read by Claude (vision): 3x3 grid of 448 px crops at 2x LANCZOS, every candidate checked at 6x (80 px window, crosshair) and ambiguous ones at 8-10x; positions in mosaic pixels",
+ "legibility": "good: digits about 6 px tall; 2x finds figures, 6-8x needed for 1/7, 6/8 and the dot",
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 14.9,
+   "raw": "14·9",
+   "px": 606,
+   "py": 97,
+   "confidence": "medium",
+   "notes": "road (...RTON ROAD) west of the railway by the S.P. signal posts; digits clear at 8x, no dot adjacent (two dots nearby belong to the S.P. marks), position = figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.3,
+   "raw": "14·3",
+   "px": 730,
+   "py": 268,
+   "confidence": "high",
+   "notes": "Warton Road south of the railway; dot below-left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.82,
+   "raw": "B.M.14·82",
+   "px": 928,
+   "py": 406,
+   "confidence": "high",
+   "notes": "pheon at the corner of the terrace at Biggerstaff Street; tip at the building corner"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.1,
+   "raw": "14·1",
+   "px": 905,
+   "py": 412,
+   "confidence": "high",
+   "notes": "road junction by Biggerstaff Street; dot above-left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 8,
+   "py": 621,
+   "confidence": "medium",
+   "notes": "at the west edge of the mosaic on an embankment; a small cross-mark left of the figures taken as the dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.23,
+   "raw": "B.M.17·23",
+   "px": 67,
+   "py": 653,
+   "confidence": "high",
+   "notes": "pheon below the text on the railway boundary wall"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.4,
+   "raw": "31·4",
+   "px": 146,
+   "py": 714,
+   "confidence": "medium",
+   "notes": "over a bridge structure where the curved road meets the railway; first digit reads 3 at 8x (italic flat-topped); no dot found, position = figures; high value consistent with a road over-bridge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.6,
+   "raw": "11·6",
+   "px": 293,
+   "py": 832,
+   "confidence": "high",
+   "notes": "Northern Outfall Sewer embankment path near its west end; dot right of figures; same mark appears at 293,64 in m18_131063_87137"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 349,
+   "py": 1002,
+   "confidence": "medium",
+   "notes": "by Laboratory Yard; no dot found in 80 px window, position = figures; duplicated in m18_131063_87137 at 349,233"
+  }
+ ],
+ "non_height_marks": [
+  "S.P. (signal post) labels by the railway at about 615,78 and 683,117",
+  "F.B. footbridge at about 1000,705",
+  "triangles (instrument/trig stations?) at about 85,792 and 785,992",
+  "Sluice labels"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1000,
+   "py0": 490,
+   "px1": 1024,
+   "py1": 515,
+   "reason": "figure '14·?' cut by the east edge of the mosaic; read it in m18_131066_87134"
+  },
+  {
+   "px0": 1000,
+   "py0": 1005,
+   "px1": 1024,
+   "py1": 1024,
+   "reason": "figure '·96' or similar cut by the SE corner; needs m18_131066_87137"
+  }
+ ]
+}

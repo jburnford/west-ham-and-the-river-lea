@@ -1,0 +1,236 @@
+{
+ "mosaic": "m18_131054_87128",
+ "reader": "opus-h",
+ "area": "Old Ford / Hackney Wick east bank: White Post Lane, Lea and Pharos Chemical Works, London & Provincial Dye Works, Hertford Union Canal and Old Ford Lock, Hackney Cut with towing path, Rippoth/Wyke/Roach Roads",
+ "method": "sheet --all; 9 sweep crops at 2x; every candidate confirmed on zoom contact sheets at 6-14x (panels labelled in mosaic px), dot or pheon searched for at 4-8x over up to +-60 px. All sweep crops and all zoom contact sheets loaded and were viewed successfully.",
+ "legibility": "Good; digits crisp. Sheet joins: vertical at px~546 (reported weak by the tool, clearly visible), horizontal at py~937 (not reported, visible tint step)",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 22.3,
+   "raw": "22·3",
+   "px": 432,
+   "py": 80,
+   "confidence": "medium",
+   "notes": "White Post Lane south kerb by the Lea Chemical Works; digits clear at 14x; no survey dot found (nearest is the L·A·N·E interpunct 20 px NW), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.1,
+   "raw": "16·1",
+   "px": 227,
+   "py": 122,
+   "confidence": "high",
+   "notes": "White Post Lane at Davey Road; dot above-left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.71,
+   "raw": "B.M.17·71",
+   "px": 264,
+   "py": 297,
+   "confidence": "high",
+   "notes": "Davey Road south end, building by the H; pheon above text; clear at 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 23.68,
+   "raw": "B.M.23·68",
+   "px": 580,
+   "py": 18,
+   "confidence": "high",
+   "notes": "White Post Lane bridge over Hackney Cut, west abutment near the north edge; pheon left of text; clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.2,
+   "raw": "22·2",
+   "px": 630,
+   "py": 101,
+   "confidence": "high",
+   "notes": "Hackney Cut west towing path; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.1,
+   "raw": "21·1",
+   "px": 579,
+   "py": 248,
+   "confidence": "high",
+   "notes": "wharf road by the Lea Chemical Works, west of the Cut; dot right of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 23.18,
+   "raw": "B.M.23·18",
+   "px": 485,
+   "py": 321,
+   "confidence": "medium",
+   "notes": "Hertford Union Canal north wall by Lea Chemical Works; digits clear at 14x; blob right of text on the wall taken as the pheon, shape not distinct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.5,
+   "raw": "24·5",
+   "px": 829,
+   "py": 4,
+   "confidence": "high",
+   "notes": "east bank of Hackney Cut at the north edge (figure whole, 3 px below edge); dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.1,
+   "raw": "22·1",
+   "px": 728,
+   "py": 316,
+   "confidence": "high",
+   "notes": "Hackney Cut east towing path; dot left; figure sits among the spaced 'Towing Path' letters but digits are clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.6,
+   "raw": "22·6",
+   "px": 789,
+   "py": 542,
+   "confidence": "high",
+   "notes": "Hackney Cut east towing path; dot left of figures, 'h' of Path below"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.8,
+   "raw": "21·8",
+   "px": 310,
+   "py": 454,
+   "confidence": "high",
+   "notes": "Hertford Union Canal north towing path; dot above figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.3,
+   "raw": "22·3",
+   "px": 75,
+   "py": 648,
+   "confidence": "medium",
+   "notes": "Old Ford Lock, towing path beside the lock head; dot above-right, but another dot 20 px below (lock furniture) makes the attribution uncertain"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 24.35,
+   "raw": "B.M.24·35",
+   "px": 44,
+   "py": 695,
+   "confidence": "medium",
+   "notes": "Old Ford Lock wall at the west edge; 'B' touches the edge but the value is whole; mark right of text on the lock wall taken as the pheon, shape not distinct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.6,
+   "raw": "22·6",
+   "px": 812,
+   "py": 757,
+   "confidence": "high",
+   "notes": "Hackney Cut east towing path; dot left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 21.93,
+   "raw": "B.M.21·93",
+   "px": 806,
+   "py": 812,
+   "confidence": "high",
+   "notes": "Hackney Cut east bank; pheon (arrow) left of text on the wall line; clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.3,
+   "raw": "22·3",
+   "px": 795,
+   "py": 1006,
+   "confidence": "high",
+   "notes": "Hackney Cut east towing path near the south edge (figure whole); dot left of figures"
+  }
+ ],
+ "non_height_marks": [
+  "H (hydrant) and F.P. marks along Rippoth/Wyke/Roach Roads",
+  "hand-drawn marsh tufts and ditch with flow arrow east of Hackney Cut, no figures"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 544,
+   "py0": 0,
+   "px1": 550,
+   "py1": 1024,
+   "reason": "vertical sheet join at px~546 (line + tint change; water colour stops at it)"
+  },
+  {
+   "px0": 0,
+   "py0": 930,
+   "px1": 1024,
+   "py1": 944,
+   "reason": "horizontal sheet join at py~937 (tint step, brown-tinted sheet south of it; tool did not report it)"
+  },
+  {
+   "px0": 0,
+   "py0": 684,
+   "px1": 4,
+   "py1": 700,
+   "reason": "'B' of B.M.24·35 touches the west edge"
+  }
+ ]
+}

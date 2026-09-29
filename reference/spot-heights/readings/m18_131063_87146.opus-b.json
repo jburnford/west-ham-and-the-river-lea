@@ -1,0 +1,294 @@
+{
+ "mosaic": "m18_131063_87146",
+ "reader": "opus-b",
+ "area": "Bromley-by-Bow: Hancock Road terraces, Three Mills Lane, St Leonard's Street and its railway bridge, Imperial Spinning Mills, Bow Pottery, the railway bridge over Bow Creek, River Lea/Bow Creek towing path",
+ "method": "read by Claude (vision): 3x3 grid of 448 px crops at 2x LANCZOS, every candidate checked at 6x (80 px window, crosshair) and ambiguous ones at 8-10x; positions in mosaic pixels",
+ "legibility": "good; the top 256 px duplicate the bottom of m18_131063_87143 (py offset 768) and those marks are repeated here with the same dots; OS sheet join at px~829",
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 32.3,
+   "raw": "32·3",
+   "px": 243,
+   "py": 25,
+   "confidence": "medium",
+   "notes": "duplicate of m18_131063_87143 (py+768); Hancock Road; dot is the interpunct in 'C·K'"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.87,
+   "raw": "B.M.34·87",
+   "px": 275,
+   "py": 55,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87143 (py+768); pheon at the corner of Sherman Street"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 90,
+   "py": 102,
+   "confidence": "medium",
+   "notes": "duplicate of m18_131063_87143 (py+768); Washington Street; dot is the interpunct in 'O·N'"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.5,
+   "raw": "32·5",
+   "px": 309,
+   "py": 138,
+   "confidence": "medium",
+   "notes": "duplicate of m18_131063_87143 (py+768); Hancock Road; dot is the interpunct in 'O·A'"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.0,
+   "raw": "34·0",
+   "px": 154,
+   "py": 219,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87143 (py+768); Jefferson Street; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.2,
+   "raw": "14·2",
+   "px": 690,
+   "py": 66,
+   "confidence": "medium",
+   "notes": "duplicate of m18_131063_87143 (py+768); towing path; dot left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.46,
+   "raw": "B.M.19·46",
+   "px": 707,
+   "py": 103,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87143 (py+768); pheon at west abutment of Three Mills Bridge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.8,
+   "raw": "23·8",
+   "px": 544,
+   "py": 190,
+   "confidence": "medium",
+   "notes": "duplicate of m18_131063_87143 (py+768); Three Mills Lane; dot is the interpunct in 'L·A', 18 px above figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.2,
+   "raw": "21·2",
+   "px": 751,
+   "py": 99,
+   "confidence": "medium",
+   "notes": "duplicate of m18_131063_87143 (py+768); Three Mills Bridge; dot upper-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.2,
+   "raw": "16·2",
+   "px": 871,
+   "py": 70,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87143 (py+768); Three Mills Lane; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.7,
+   "raw": "14·7",
+   "px": 985,
+   "py": 60,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87143 (py+768); by the W.M.; dot above-right"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.8,
+   "raw": "14·8",
+   "px": 1022,
+   "py": 179,
+   "confidence": "low",
+   "notes": "duplicate of m18_131063_87143 (py+768); east edge; last digit 8 or 6; dot right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.2,
+   "raw": "15·2",
+   "px": 801,
+   "py": 225,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87143 (py+768); path south of Three Mills Bridge; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.8,
+   "raw": "35·8",
+   "px": 9,
+   "py": 302,
+   "confidence": "low",
+   "notes": "St Leonard's Street at the west edge; last digit 8 or 3 even at 10x; no dot apart from the F.P. dot above; position = figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.4,
+   "raw": "28·4",
+   "px": 404,
+   "py": 295,
+   "confidence": "medium",
+   "notes": "Three Mills Lane; dot is the interpunct in 'I·L' of MILLS, below-right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.0,
+   "raw": "32·0",
+   "px": 236,
+   "py": 406,
+   "confidence": "medium",
+   "notes": "Three Mills Lane at the corner of Imperial Street; dot is the interpunct in 'H·R' of THREE, upper-left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.36,
+   "raw": "B.M.34·36",
+   "px": 232,
+   "py": 424,
+   "confidence": "high",
+   "notes": "pheon left of the text on the corner building"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.8,
+   "raw": "35·8",
+   "px": 110,
+   "py": 478,
+   "confidence": "low",
+   "notes": "St Leonard's Street at the Three Mills Lane junction; last digit 8 or 3; the two nearby dots belong to F.P. labels; position = figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 39.9,
+   "raw": "39·9",
+   "px": 157,
+   "py": 705,
+   "confidence": "medium",
+   "notes": "St Leonard's Street rising to the railway bridge; second digit 9 at 10x (not 3/5); dot taken as the one above the S of STREET, just below the figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.75,
+   "raw": "B.M.25·75",
+   "px": 632,
+   "py": 683,
+   "confidence": "high",
+   "notes": "pheon above-right of the text on the railway boundary by the Steam Boiler Works"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.6,
+   "raw": "28·6",
+   "px": 584,
+   "py": 707,
+   "confidence": "high",
+   "notes": "railway (London Tilbury & Southend line); dot right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.9,
+   "raw": "14·9",
+   "px": 932,
+   "py": 388,
+   "confidence": "high",
+   "notes": "towing path by Bow Creek; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.6,
+   "raw": "25·6",
+   "px": 929,
+   "py": 594,
+   "confidence": "medium",
+   "notes": "railway bridge over Bow Creek; dot between the rails above-left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.5,
+   "raw": "25·5",
+   "px": 806,
+   "py": 640,
+   "confidence": "medium",
+   "notes": "railway at the west end of the Bow Creek bridge; dot between the rails above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.3,
+   "raw": "15·3",
+   "px": 872,
+   "py": 722,
+   "confidence": "high",
+   "notes": "towing path; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 870,
+   "py": 888,
+   "confidence": "medium",
+   "notes": "towing path by the 'Towing Path' lettering; no dot found, position = figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.31,
+   "raw": "B.M.34·31",
+   "px": 98,
+   "py": 784,
+   "confidence": "high",
+   "notes": "pheon above-left of the text at the building by the station"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.1,
+   "raw": "29·1",
+   "px": 97,
+   "py": 840,
+   "confidence": "high",
+   "notes": "station forecourt; dot left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 48.57,
+   "raw": "B.M.48·57",
+   "px": 177,
+   "py": 850,
+   "confidence": "high",
+   "notes": "pheon right of the text on the St Leonard's Street bridge parapet"
+  },
+  {
+   "type": "spot",
+   "value_ft": 47.3,
+   "raw": "47·3",
+   "px": 191,
+   "py": 862,
+   "confidence": "high",
+   "notes": "St Leonard's Street on the bridge over the railway; dot above the figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 364,
+   "py": 791,
+   "confidence": "high",
+   "notes": "railway embankment; dot left of figures"
+  }
+ ],
+ "non_height_marks": [
+  "C.C. at L.W. dash-dot county boundary with x crosses",
+  "H.W.M.O.T. / L.W.M.O.T. lines on Bow Creek, no figures",
+  "S.P. signal posts, S.B. marks, F.P. fire plugs, W.M., C. cranes, F.B. footbridge"
+ ],
+ "unreadable_regions": []
+}

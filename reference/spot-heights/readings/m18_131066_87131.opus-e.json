@@ -1,0 +1,240 @@
+{
+ "mosaic": "m18_131066_87131",
+ "reader": "opus-e",
+ "area": "Stratford Marsh / Carpenter's Road: GER Stratford Southern and Woolwich lines, Star Works, London Match Works, London Spinning Mills (Cotton), Woolwich Road, Gibbins, Kennard, Rosher, Blythe, Grace, Ward and Carpenter's Roads, Calcarium & Paint Works",
+ "method": "9 sweep crops at 2x; every candidate zoomed at 6x (+-40); digits confirmed at 10x (+-18).",
+ "legibility": "Good. Horizontal sheet join at py ~168 (confirmed: straight ruled line, lighter tint above, pinker below); no figures cross it. A vertical ruled line at px ~64 through the western works and railway is also a probable join/fold (no figures on it). No missing tiles.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 12.5,
+   "raw": "12·5",
+   "px": 630,
+   "py": 127,
+   "confidence": "high",
+   "notes": "Woolwich Road; dot just below-left of the figures, separate from the F.P. dot, 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.97,
+   "raw": "B.M.13·97",
+   "px": 456,
+   "py": 303,
+   "confidence": "high",
+   "notes": "corner house at Gibbins Road / Woolwich Road; pheon directly below the text, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.6,
+   "raw": "12·6",
+   "px": 522,
+   "py": 254,
+   "confidence": "low",
+   "notes": "Woolwich Road at the corner house, right of 'F.P'; final digit 6 at 6x but 6/8 not certain at 10x; figures cross the building line; no separate dot found (F.P. dots only), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.5,
+   "raw": "12·5",
+   "px": 446,
+   "py": 401,
+   "confidence": "medium",
+   "notes": "Gibbins Road; digits clear at 10x; dot not separable from the F.P. mark (F.P at 432-440,402), position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.64,
+   "raw": "B.M.14·64",
+   "px": 781,
+   "py": 62,
+   "confidence": "high",
+   "notes": "house front at the east end of the Woolwich Road terrace; pheon (arrow) at the building corner left of the text, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.0,
+   "raw": "13·0",
+   "px": 791,
+   "py": 85,
+   "confidence": "high",
+   "notes": "road junction south of the B.M.; dot above the figures, separate from the F.P. dot, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.0,
+   "raw": "13·0",
+   "px": 766,
+   "py": 245,
+   "confidence": "high",
+   "notes": "Kennard Road at the Rosher Road corner; dot above-left, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.4,
+   "raw": "12·4",
+   "px": 908,
+   "py": 277,
+   "confidence": "medium",
+   "notes": "Kennard Road; the survey dot is the interpunct 'R·D' of KENNARD just above the figures; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.4,
+   "raw": "13·4",
+   "px": 189,
+   "py": 553,
+   "confidence": "high",
+   "notes": "open yard south of the railway, north of Carpenter's Road; dot left of figures, 6x; 10x confirms 13·4"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.7,
+   "raw": "12·7",
+   "px": 412,
+   "py": 578,
+   "confidence": "medium",
+   "notes": "Carpenter's Road at Gibbins Road; digits clear at 10x; dot at 412,578 between 'F.P' and the figures, may be the F.P. dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.92,
+   "raw": "B.M.14·92",
+   "px": 246,
+   "py": 656,
+   "confidence": "high",
+   "notes": "works frontage on Carpenter's Road by the hydrant; pheon above-right of the text, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.6,
+   "raw": "13·6",
+   "px": 287,
+   "py": 676,
+   "confidence": "high",
+   "notes": "Carpenter's Road footway; dot above-left, 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.9,
+   "raw": "13·9",
+   "px": 393,
+   "py": 840,
+   "confidence": "medium",
+   "notes": "Carpenter's Road by the Mission Church; dot below-left; final digit read as 9 at 10x (0 not excluded)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.1,
+   "raw": "14·1",
+   "px": 448,
+   "py": 874,
+   "confidence": "medium",
+   "notes": "Carpenter's Road; the survey dot is taken as the interpunct '·E' of CARPENTER'S below-left; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.0,
+   "raw": "14·0",
+   "px": 496,
+   "py": 934,
+   "confidence": "high",
+   "notes": "Carpenter's Road; dot above-right of the figures, 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 991,
+   "py": 640,
+   "confidence": "high",
+   "notes": "road at the east edge by the works; dot left of figures, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.4,
+   "raw": "18·4",
+   "px": 1003,
+   "py": 939,
+   "confidence": "medium",
+   "notes": "tramway street at the south-east corner; dot on a rail; 10x reads 18·4 but the final 4 touches the east edge"
+  }
+ ],
+ "non_height_marks": [
+  "many F.P. marks with their own dots along every street",
+  "S.P. signal posts on the railway ~(340,25),(270,265),(165,280),(400,210)",
+  "hydrants H at ~250,650 and 280,590",
+  "'Sluice' at ~20,800"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 162,
+   "px1": 1024,
+   "py1": 174,
+   "reason": "sheet join at py ~168; possible 1-2 px offsets; no figures on it"
+  },
+  {
+   "px0": 60,
+   "py0": 0,
+   "px1": 68,
+   "py1": 1024,
+   "reason": "probable vertical sheet join or fold at px ~64; no figures on it"
+  }
+ ]
+}

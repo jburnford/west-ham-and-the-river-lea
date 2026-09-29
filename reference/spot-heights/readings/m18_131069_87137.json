@@ -1,0 +1,22 @@
+{
+  "mosaic": "m18_131069_87137",
+  "area": "West Ham Gas Works, GER Goods & Coal Depot, Channelsea north, Victoria Stone Works, Langthorn Chemical Works, the Moat",
+  "method": "read by Claude (vision) from the 1024 px mosaic plus 2x crops (three quadrants; the SW quadrant is gasholders and duplicates only)",
+  "legibility": "good; sheet join at about py 370; large gasworks and railway areas carry almost no figures",
+  "readings": [
+    {"type": "spot", "value_ft": 10.2, "raw": "10·2", "px": 106, "py": 18, "confidence": "medium", "notes": "South Street; duplicate of m18_131066_87137"},
+    {"type": "spot", "value_ft": 10.6, "raw": "10·6", "px": 39, "py": 108, "confidence": "high", "notes": "duplicate"},
+    {"type": "spot", "value_ft": 15.0, "raw": "15·0", "px": 2, "py": 222, "confidence": "high", "notes": "duplicate; west edge"},
+    {"type": "spot", "value_ft": 9.4, "raw": "9·4", "px": 106, "py": 381, "confidence": "high", "notes": "duplicate"},
+    {"type": "spot", "value_ft": 17.3, "raw": "17·3", "px": 526, "py": 37, "confidence": "low", "notes": "railway embankment by the goods depot; 3 vs 8 ambiguous; dot estimated"},
+    {"type": "spot", "value_ft": 17.5, "raw": "17·5", "px": 570, "py": 262, "confidence": "medium", "notes": "railway embankment; dot estimated"},
+    {"type": "bench_mark", "value_ft": 14.62, "raw": "B.M.14·62", "px": 684, "py": 424, "confidence": "high", "notes": "pheon below-right of text at Victoria Stone Works wall"},
+    {"type": "spot", "value_ft": 18.5, "raw": "18·5", "px": 686, "py": 479, "confidence": "medium", "notes": "figures over the Channelsea, dot on east bank edge: river wall, not water"},
+    {"type": "spot", "value_ft": 17.7, "raw": "17·7", "px": 762, "py": 681, "confidence": "medium", "notes": "figures over the channel, tick on east bank: river wall"},
+    {"type": "spot", "value_ft": 16.6, "raw": "16·6", "px": 785, "py": 867, "confidence": "medium", "notes": "duplicate of m18_131069_87140"},
+    {"type": "spot", "value_ft": 14.3, "raw": "14·3", "px": 954, "py": 639, "confidence": "medium", "notes": "bank of the Moat by Globe Mill"},
+    {"type": "spot", "value_ft": 9.5, "raw": "9·5", "px": 698, "py": 976, "confidence": "high", "notes": "duplicate"}
+  ],
+  "unread": ["B.M. at Globe Mill (1020,606) cut by the east edge"],
+  "notes": "Figures along the Channelsea are written over the water but their dots sit on the bank edge; none of the values (16-19 ft) is a plausible water level."
+}

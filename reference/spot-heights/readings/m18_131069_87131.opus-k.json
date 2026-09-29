@@ -1,0 +1,420 @@
+{
+ "mosaic": "m18_131069_87131",
+ "reader": "opus-k",
+ "area": "Stratford: Kennard Road, Jupp Road, Technical Institute, Southern Junction, Station Street, Stratford Bridge / Channelsea Bridge tramway, Chapel Street, Stratford Market station, Burford Road",
+ "method": "Independent second read (no other reader's file consulted). sheet + 9 sweep crops at 2x; every candidate confirmed on contact sheets of zoom panels at 6x, then 12x for digit shapes (6/8, 3/8, 5/3) and dots/pheons; 4x wide windows (110 px) to search for missing pheons/dots. All sweep crops and all zoom panels loaded and were viewed successfully.",
+ "legibility": "Good. Sheet join: horizontal at py ~168-170 right across the mosaic (clear line and tint step, confirmed by eye; tool reports py ~168). No vertical join seen.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 14.64,
+   "raw": "B.M.14·64",
+   "px": 8,
+   "py": 61,
+   "confidence": "high",
+   "notes": "NW corner by the Southern Junction curve; pheon left of text pointing at building corner near west edge; 64 read at 12x (open-topped 6)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.0,
+   "raw": "13·0",
+   "px": 23,
+   "py": 84,
+   "confidence": "medium",
+   "notes": "road below B.M.14·64; dot above-right of figure lies ~10 px right of 'F.P' and could be the F.P.'s own dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 396,
+   "py": 36,
+   "confidence": "high",
+   "notes": "road east of railway at top; dot above figure; F.P. with own dot separate to NE"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 413,
+   "py": 163,
+   "confidence": "high",
+   "notes": "road east of railway just north of the horizontal sheet join; dot right of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.2,
+   "raw": "B.M.19·20",
+   "px": 436,
+   "py": 268,
+   "confidence": "high",
+   "notes": "'Southern Junction' B.M.; pheon on the bridge/footway line 15 px below-right of text, beside '·F.P'"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.4,
+   "raw": "12·4",
+   "px": 136,
+   "py": 268,
+   "confidence": "medium",
+   "notes": "Kennard Road; only dot is the interpunct between R and D of KENNAR·D above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.1,
+   "raw": "13·1",
+   "px": 274,
+   "py": 287,
+   "confidence": "high",
+   "notes": "Jupp Road at Kennard Road junction; isolated dot directly above figure (figure lies between it and the road lettering)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.92,
+   "raw": "B.M.13·92",
+   "px": 270,
+   "py": 430,
+   "confidence": "high",
+   "notes": "Technical Institute west wall on Jupp Road; pheon 15 px below-left of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.7,
+   "raw": "12·7",
+   "px": 282,
+   "py": 469,
+   "confidence": "medium",
+   "notes": "Jupp Road by small building; dot inside building outline just above figure, may not be the survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.7,
+   "raw": "17·7",
+   "px": 470,
+   "py": 313,
+   "confidence": "medium",
+   "notes": "Station Street, figure over building; no clear dot at 4x/6x (faint mark ~466,330), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.7,
+   "raw": "18·7",
+   "px": 624,
+   "py": 424,
+   "confidence": "high",
+   "notes": "Stratford tramway; dot on rail right of figure; '·H' nearby has its own dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.0,
+   "raw": "20·0",
+   "px": 710,
+   "py": 302,
+   "confidence": "high",
+   "notes": "tramway at Chapel Street end; dot on rail above-left of figure; F.P. and H dots separate"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.1,
+   "raw": "18·1",
+   "px": 853,
+   "py": 56,
+   "confidence": "high",
+   "notes": "tramway north-east; dot on rail left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.32,
+   "raw": "B.M.20·32",
+   "px": 765,
+   "py": 127,
+   "confidence": "high",
+   "notes": "building wall west of tramway; pheon left of text pointing at wall"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.14,
+   "raw": "B.M.20·14",
+   "px": 955,
+   "py": 222,
+   "confidence": "high",
+   "notes": "Chant Street; pheon on kerb line 17 px below text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.9,
+   "raw": "17·9",
+   "px": 1002,
+   "py": 296,
+   "confidence": "medium",
+   "notes": "Chant Street near east edge; figure ends ~3 px from edge but final 9 whole at 12x; only dot is interpunct between R and E of STREET"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 822,
+   "py": 366,
+   "confidence": "high",
+   "notes": "Chapel Street by Boys School; dot above figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.41,
+   "raw": "B.M.18·41",
+   "px": 847,
+   "py": 368,
+   "confidence": "high",
+   "notes": "School corner, Chapel Street; pheon at building corner above-right of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 220,
+   "py": 640,
+   "confidence": "high",
+   "notes": "road north of Channel Sea Ct; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.6,
+   "raw": "22·6",
+   "px": 321,
+   "py": 655,
+   "confidence": "high",
+   "notes": "Channelsea bridge approach west; dot upper-left of figure; 6 read at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.9,
+   "raw": "18·9",
+   "px": 417,
+   "py": 723,
+   "confidence": "high",
+   "notes": "tramway by Channel Sea bridge; dot on rail right of figure; F.P. dot separate"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 23.95,
+   "raw": "B.M.23·95",
+   "px": 521,
+   "py": 515,
+   "confidence": "high",
+   "notes": "Stratford Bridge parapet by Stratford Mill; pheon on parapet line right of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.7,
+   "raw": "21·7",
+   "px": 550,
+   "py": 525,
+   "confidence": "high",
+   "notes": "tramway on Stratford Bridge; dot on rail left of figure; '·H' dot separate"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.8,
+   "raw": "20·8",
+   "px": 477,
+   "py": 631,
+   "confidence": "high",
+   "notes": "tramway south of bridge; dot on rail left of figure; 8 read at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.3,
+   "raw": "15·3",
+   "px": 627,
+   "py": 609,
+   "confidence": "high",
+   "notes": "road by Bridge Terrace; dot upper-left of figure; 3 read at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.9,
+   "raw": "14·9",
+   "px": 894,
+   "py": 493,
+   "confidence": "medium",
+   "notes": "Chapel Street at King Street; dot right of figure, close to the leading dot of '·F.P'"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.2,
+   "raw": "14·2",
+   "px": 937,
+   "py": 585,
+   "confidence": "medium",
+   "notes": "Chapel Street at Mount Street; only dot is the interpunct between E and L of CHAPEL"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.9,
+   "raw": "13·9",
+   "px": 996,
+   "py": 697,
+   "confidence": "medium",
+   "notes": "Chapel Street; no dot of its own, sits directly over the pheon (988,706) of the edge-cut B.M.15·2.; taken as ground level at that B.M., position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.7,
+   "raw": "19·7",
+   "px": 353,
+   "py": 801,
+   "confidence": "high",
+   "notes": "tramway at Channel Sea Bridge; dot on rail above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.4,
+   "raw": "18·4",
+   "px": 236,
+   "py": 940,
+   "confidence": "high",
+   "notes": "tramway (High Street); dot on rail left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.51,
+   "raw": "B.M.18·51",
+   "px": 272,
+   "py": 957,
+   "confidence": "medium",
+   "notes": "text over building by Turnpike Ct; no pheon found in 110 px window at 4x; position = centre of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.3,
+   "raw": "13·3",
+   "px": 772,
+   "py": 806,
+   "confidence": "high",
+   "notes": "Burford Road side near Devon Terrace; dot below figure, separate from trailing dot of 'F.P·'"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.6,
+   "raw": "13·6",
+   "px": 804,
+   "py": 858,
+   "confidence": "high",
+   "notes": "road east of Stratford Market station; dot above-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.5,
+   "raw": "13·5",
+   "px": 1022,
+   "py": 965,
+   "confidence": "low",
+   "notes": "Albion (Road) at east edge; final 5 touches the mosaic edge and may be clipped; dot right-above figure at edge"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle with no figure at ~760,249",
+  "S.P., S.B., B.P. marks along the railway near Southern Junction",
+  "many F.P., H, L.B. marks with their own dots along Chapel Street and the tramway"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 248,
+   "px1": 10,
+   "py1": 260,
+   "reason": "figure '·0' cut by west edge on Kennard Road"
+  },
+  {
+   "px0": 1016,
+   "py0": 120,
+   "px1": 1024,
+   "py1": 136,
+   "reason": "figure '16...' cut by east edge"
+  },
+  {
+   "px0": 1008,
+   "py0": 688,
+   "px1": 1024,
+   "py1": 704,
+   "reason": "B.M.15·2. cut by east edge (pheon at 988,706 inside)"
+  },
+  {
+   "px0": 1010,
+   "py0": 958,
+   "px1": 1024,
+   "py1": 975,
+   "reason": "13·5 trailing digit at the east edge, possibly clipped"
+  },
+  {
+   "px0": 895,
+   "py0": 1015,
+   "px1": 925,
+   "py1": 1024,
+   "reason": "figure '13·5' cut by south edge"
+  },
+  {
+   "px0": 0,
+   "py0": 164,
+   "px1": 1024,
+   "py1": 174,
+   "reason": "horizontal sheet join at py ~168-170; no figure crosses it"
+  }
+ ]
+}

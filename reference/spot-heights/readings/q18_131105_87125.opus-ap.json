@@ -1,0 +1,35 @@
+{
+ "mosaic": "q18_131105_87125", "reader": "opus-ap", "layer": "os-25-inch-london",
+ "area": "Manor Park / Little Ilford, E 542120 N 184752: open fields with a double-dashed track across the NW; new estate roads laid out without houses (Shelley Road, Byron Road, Woodhouse [Grove], a '..ROAD' to the west); a lane down the east side with a yellow verge and a large-dot boundary (C.R.) along it.",
+ "method": "Layer os-25-inch-london (OS 25-inch Essex county series, inferred 1893-96 revision). Viewed: 1x full-mosaic overview (anchor SHELLEY ROAD / BYRON ROAD / B.M.32·4); all nine 2x sweep crops, each anchored on opening: r0c0 track + 35, r0c1 join px~454, r0c2 lane + 31 31 + B.M.32·4, r1c0 R O A D + B.M.35·0, r1c1 join + SHELLEY ROAD, r1c2 triangle + 31 31, r2c0 WOODHOUSE + B.M.35·0, r2c1 SHELLEY ROAD + 32 + BYRON ROAD, r2c2 BYRON ROAD + 30 + C.R.; 6x contact sheets cs1 (8 panels) and cs2 (3 panels). Every crop and sheet displayed and was anchored in my notes at the time. Marker sheet checked before marking done.",
+ "legibility": "Excellent; italic figures 12-14 px with bold + or four-point stars. Vertical sheet join at px ~454-460 full height (tool reports px ~460). The lane's boundary is a line of large round dots; the survey crosses are plainly different (+ / star shapes).",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [
+  {"type": "spot", "value_ft": 35, "raw": "35", "px": 179, "py": 158, "confidence": "high", "setting": "open_ground",
+   "notes": "double-dashed track across the fields in the NW; figures 175-195,165-182; star on the track at 179,158 just above the figures. Track across open fields (not a made road); setting open_ground."},
+  {"type": "spot", "value_ft": 31, "raw": "31", "px": 741, "py": 36, "confidence": "high", "setting": "street",
+   "notes": "lane on the east side, north end; figures 768-783,28-42 by the yellow verge; star at 741,36 in the lane among the large boundary dots (distinct cross shape)."},
+  {"type": "spot", "value_ft": 31, "raw": "31", "px": 787, "py": 245, "confidence": "high", "setting": "street",
+   "notes": "same lane; figures 810-825,238-254; star at 787,245, ~25 px west."},
+  {"type": "bench_mark", "value_ft": 32.4, "raw": "B.M.32·4", "px": 791, "py": 357, "confidence": "high", "setting": "other",
+   "notes": "same lane; text 830-900,350-365; sideways pheon pointing west, tip on the west fence line of the lane at 791,357 (6x). Fence/kerb line, no wall drawn: other."},
+  {"type": "spot", "value_ft": 31, "raw": "31", "px": 822, "py": 462, "confidence": "high", "setting": "street",
+   "notes": "same lane; figures 845-860,456-470; star at 822,462, ~25 px west."},
+  {"type": "spot", "value_ft": 31, "raw": "31", "px": 835, "py": 677, "confidence": "high", "setting": "street",
+   "notes": "same lane at the Shelley Road junction; figures 862-876,676-690; + (with a short tail) at 835,677."},
+  {"type": "spot", "value_ft": 30, "raw": "30", "px": 891, "py": 907, "confidence": "high", "setting": "street",
+   "notes": "same lane at the Byron Road junction; figures 912-930,898-912; star at 891,907, ~25 px west."},
+  {"type": "bench_mark", "value_ft": 35.0, "raw": "B.M.35·0", "px": 282, "py": 640, "confidence": "high", "setting": "other",
+   "notes": "corner of a small enclosure at the head of Woodhouse [Grove] / the west ROAD; text 290-365,645-660; pheon pointing east, tip on the fence corner at 282,640 (6x). Fence corner: other."},
+  {"type": "spot", "value_ft": 32, "raw": "32", "px": 512, "py": 756, "confidence": "high", "setting": "street",
+   "notes": "Shelley Road (laid out, unbuilt); figures 508-526,778-795 below the road name; star between the S and H of SHELLEY at 512,756 (~25 px N), no other interpuncts."}
+ ],
+ "non_height_marks": [
+  "faint + on the NW track at ~373,94 with no figure beside it",
+  "triangle (survey station) at ~774,568, no figure",
+  "C.R. lettering at ~960,1000; large-dot boundary along the east lane"
+ ],
+ "unreadable_regions": [
+  {"px0": 800, "py0": 1016, "px1": 910, "py1": 1024, "reason": "lettering (probably a B.M.) on the lane cut by the south edge; only tops of letters visible; whole on q18_131105_87128"}
+ ]
+}

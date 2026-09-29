@@ -1,0 +1,378 @@
+{
+ "mosaic": "m18_131081_87155",
+ "reader": "opus-z",
+ "area": "Canning Town north-east: Star Lane, Church Street, Holy Trinity Church, Barking Road tramway, Morgan Street, Hudson's Road, Edward, Alexandra and Fisher Streets, Beckton Road, Mary/Peter/Trinity Streets (overlap with 87158)",
+ "method": "Overview at 1x; 9 sweep crops r0c0..r2c2 at 2x, each anchored on opening (r0c0 STAR LANE/Holy Trinity Church; r0c1 Zion Gospel Hall/Smithy; r0c2 STAR LANE/EDWARD/ALEXANDRA STREET; r1c0 Schools/TRAMWAY; r1c1 MORGAN STREET/HUDSON'S ROAD; r1c2 FISHER STREET; r2c0 MARY/AVIARY/PETER STREET; r2c1 BECKTON ROAD/TRINITY STREET; r2c2 BECKTON ROAD/BRADLEY STREET/CHERRY). Contact sheets cs1-cs4 at 6x +/-20 px, z1-z3 at 12x +/-13 px, z4/z4b at 20x (smoothed and nearest) for two B.M. leading digits, w1 at 5x +/-30 px for pheons; numeric dot-centroid helper; marker sheets mk0-mk3 at 6x viewed before writing. Every crop and sheet displayed when opened and has an anchor in my notes. Not read from other readers' files.",
+ "legibility": "Clear; horizontal sheet join (tint step) at py ~964-966 across the full width, not reported by the sheet tool; 5·8 at 251,955 sits just above it. No missing tiles.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 6.1,
+   "raw": "6·1",
+   "px": 96,
+   "py": 66,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Star Lane west, by Church Street; dot below-right of figure; hollow survey-station triangle with centre dot at ~102,73 just beyond (position could be the triangle); a further dot at 80,67 after T of STAR"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 226,
+   "py": 71,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Star Lane opposite the Chapel; dot directly above figure; 5 flat-topped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.3,
+   "raw": "6·3",
+   "px": 394,
+   "py": 69,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Star Lane east; dot above the E of LANE, left of figure (dot-over-letter placement as elsewhere on this sheet); 3 open-left at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.39,
+   "raw": "B.M.8·39",
+   "px": 445,
+   "py": 94,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Star Lane south frontage, house corner; pheon ~15 px left of text; decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 494,
+   "py": 64,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Star Lane; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 643,
+   "py": 50,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Star Lane by the Smithy; dot above-left; both 5s flat-topped at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.3,
+   "raw": "B.M.8·30",
+   "px": 579,
+   "py": 193,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Barking Road north frontage by Zion Gospel Hall; pheon on building line left of text; leading 8 two loops and 3 open-left at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 645,
+   "py": 194,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Barking Road (tramway); dot just south of the tram rail, above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 817,
+   "py": 65,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Barking Road (tramway) near Star Lane; dot taken as blob on the tram rail ~12 px left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.9,
+   "raw": "7·9",
+   "px": 482,
+   "py": 309,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Barking Road (tramway); dot on/just below the rail above-left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.85,
+   "raw": "B.M.9·85",
+   "px": 306,
+   "py": 373,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Holy Trinity Church, corner of the churchyard/church wall on Barking Road; pheon ~35 px west of text; decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.4,
+   "raw": "8·4",
+   "px": 350,
+   "py": 403,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Barking Road (tramway) by Holy Trinity Church; dot merged with the rail edge above-left of figure; 8 two-looped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 905,
+   "py": 224,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Edward Street / Alexandra Street corner; dot below-left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.86,
+   "raw": "B.M.8·86",
+   "px": 983,
+   "py": 362,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "Alexandra Street / Fisher Street corner; pheon below text; leading digit 8 at 2x and 20x (two loops, pixel profile like the following 8) but looked like 9 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 989,
+   "py": 343,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Alexandra Street at Fisher Street; dot left of figure, right of the B.M. text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.0,
+   "raw": "8·0",
+   "px": 187,
+   "py": 518,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Barking Road (tramway) west; dot on the south rail above-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 69,
+   "py": 603,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Barking Road (tramway) west edge; dot at the rail above-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 456,
+   "py": 550,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Morgan Street; only dot is after the G of MORGAN (possible interpunct), below-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.9,
+   "raw": "6·9",
+   "px": 537,
+   "py": 671,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Beckton Road / Morgan Street junction; dot above-left, distinct from the F.P. and its own dot above"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 601,
+   "py": 768,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Beckton Road; dot before the K of BECKTON above-right of figure (same mark as 87158 600,7)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 811,
+   "py": 776,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Beckton Road; dot left of figure after N of BECKTON (Beckton Road lettering has no interpuncts: every dot in it sits beside a figure)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.05,
+   "raw": "B.M.10·05",
+   "px": 801,
+   "py": 800,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Beckton Road frontage; pheon on the roofline of the building below text; decimals clear at 12x (overlap with 87158)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 920,
+   "py": 773,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Beckton Road; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 981,
+   "py": 773,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Beckton Road near Bradley Street; dot above"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 856,
+   "py": 839,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction south of Beckton Road by the small triangular plot; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 887,
+   "py": 991,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street west of CHERRY terrace, just below the py~964 join; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 33,
+   "py": 805,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Mary Street / Aviary Street; dot below-left, separate from the F.P."
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 150,
+   "py": 873,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Mary Street; no own dot (S·T·R·E·E·T interpunct at 139,881); centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 251,
+   "py": 963,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Peter Street / Mary Street junction on the py~964 join; dot below figure; final 8 vs 3 (read 8)"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangles at ~102,73 and ~800,52",
+  "C.R. and Ward Boundary lettering along Barking Road",
+  "many F.P. marks",
+  "L.B. at ~795,125",
+  "H marks"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 960,
+   "px1": 1024,
+   "py1": 970,
+   "reason": "horizontal sheet join py~964-966 (tint step)"
+  },
+  {
+   "px0": 20,
+   "py0": 1012,
+   "px1": 70,
+   "py1": 1024,
+   "reason": "B.M. text cut by south edge (B.M.6·84, whole in 87158)"
+  }
+ ]
+}

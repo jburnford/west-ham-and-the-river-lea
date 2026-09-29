@@ -1,0 +1,35 @@
+{
+ "mosaic": "q18_131105_87131", "reader": "opus-ap", "layer": "os-25-inch-london",
+ "area": "East Ham / Upton Park border: Plashet Grove (north edge, trees on north verge), Cowper Avenue, Milton Avenue, the LT&SR in shallow cutting/embankment across the middle, Heigham Road, Colvin Road and Bendish Road terraces to the south; large district letters S T.",
+ "method": "Independent QC second read. Layer os-25-inch-london (OS 25-inch Essex county series, inferred 1893-96 revision). Viewed: 1x full-mosaic overview (anchor PLASHET GROVE / MILTON AVENUE); all nine 2x sweep crops, each anchored on opening: r0c0 COWPER AVENUE + trees, r0c1 PLASHET / B.M.32·3, r0c2 PLASHET x GROVE / L.B, r1c0 B.M.30·3 / COWPER AVENUE, r1c1 MILTON / S.P., r1c2 MILTON AVENUE / HEIGHAM ROAD, r2c0 HEIGHAM ROAD + triangle, r2c1 big S / COLVIN, r2c2 big T / BENDISH ROAD; 5x contact sheet cs1 (8 panels) and 6x contact sheet cs2 (8 panels); zooms at 300,1005 s6; 30,290 s5; 400,145 s6; 408,143 s12; 560,110 s5; 553,84 s12; 87,610 s12; 990,45 s6. Every crop, sheet and zoom displayed and was anchored in my notes at the time. Marker sheet checked before marking done.",
+ "legibility": "Excellent; italic figures 12-14 px, legible at 1-2x. Sheet join: vertical line at px ~449-452 full height (not reported by the sheet tool). No horizontal join.",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [
+  {"type": "spot", "value_ft": 30, "raw": "30", "px": 526, "py": 104, "confidence": "high", "setting": "street",
+   "notes": "Plashet Grove west of the B.M.; figures at 517-535,89-102, bold x directly below them at 526,104 in the carriageway (nearest isolated cross, ~8 px)."},
+  {"type": "spot", "value_ft": 29, "raw": "29", "px": 408, "py": 143, "confidence": "medium", "setting": "street",
+   "notes": "Plashet Grove among the roadside trees; figures 378-398,143-157. Nearest mark is a small star-like blob fused with the lower-left outline of a tree symbol at 408,143 (12x); probably the cross but cannot be separated cleanly from the tree."},
+  {"type": "bench_mark", "value_ft": 32.3, "raw": "B.M.32·3", "px": 551, "py": 77, "confidence": "high", "setting": "building",
+   "notes": "Plashet Grove south side; text 545-575,120-150; pheon ~45 px north on the corner of the house block north of the road, three strokes converging at 551,77 (tip up), confirmed at 12x."},
+  {"type": "spot", "value_ft": 29, "raw": "29", "px": 758, "py": 75, "confidence": "high", "setting": "street",
+   "notes": "Plashet Grove; figures 766-782,97-110 just south of the kerb line at an entrance; paired with the bold x between PLASHET and GROVE at 758,75, ~30 px NW (nearest isolated cross; the street name has no other interpuncts)."},
+  {"type": "spot", "value_ft": 28, "raw": "28", "px": 997, "py": 57, "confidence": "high", "setting": "street",
+   "notes": "east end of Plashet Grove near the corner by the yellow building; figures 962-990,48-62, four-point star at 997,57 (~8 px right)."},
+  {"type": "bench_mark", "value_ft": 30.3, "raw": "B.M.30·3", "px": 88, "py": 613, "confidence": "high", "setting": "building",
+   "notes": "Milton Avenue (west part, lettered ..N AVENUE); text 0-75,578-592; pheon under the V of AVENUE on the house frontage, strokes converging at 88,613 (tip down), 12x."},
+  {"type": "bench_mark", "value_ft": 31.8, "raw": "31·8", "px": 18, "py": 278, "confidence": "medium", "setting": "street",
+   "notes": "Plashet Grove at the west edge (lettered ..VE); figures '31·8' at 1-35,270-285 start at x ~1, so a B.M. prefix and the pheon probably lie west of the mosaic edge; one-decimal figure on this layer is a bench mark. Position = centre of figures; no pheon found within the mosaic. Setting guessed street (road verge); should be whole on the western neighbour."}
+ ],
+ "non_height_marks": [
+  "S.P. (signal post) on the railway at ~535,572",
+  "triangle (survey station) at ~100,952 on Heigham Road, no figure",
+  "broad-arrow-like symbol, three strokes converging at ~1005,39 against a small circle at ~1012,43, NE corner; no B.M. text within the mosaic (any text lies east of the edge); not recorded",
+  "small tick/cross after ROAD of Heigham Road at ~877,672 with no figure",
+  "large district display letters S (~565,860) and T (~810,850)"
+ ],
+ "unreadable_regions": [
+  {"px0": 255, "py0": 1012, "px1": 360, "py1": 1024, "reason": "B.M.30·? (probably 30·8) on Heigham Road cut by the south edge; only the tops of B.M.30· visible; whole on q18_131105_87134"},
+  {"px0": 0, "py0": 265, "px1": 4, "py1": 290, "reason": "west edge: 31·8 begins at x~1, any B.M. prefix/pheon off-mosaic"},
+  {"px0": 1012, "py0": 0, "px1": 1024, "py1": 80, "reason": "east edge: L.B lettering and text belonging to the broad-arrow symbol cut off"}
+ ]
+}

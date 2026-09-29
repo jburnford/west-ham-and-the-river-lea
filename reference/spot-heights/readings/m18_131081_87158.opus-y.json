@@ -1,0 +1,388 @@
+{
+ "mosaic": "m18_131081_87158",
+ "reader": "opus-y",
+ "area": "Canning Town east: Mary, Trinity, Morgan, Cooper, Vincent, Hemsworth and Wilberforce Streets, Forty Acre Lane, Beckton Road, Glass Bottle Works",
+ "method": "Overview (anchor TRINITY STREET) and all 9 sweep crops viewed and anchored as opened: r0c0 MARY/AVIARY/PETER STREET; r0c1 TRINITY STREET/MORGAN; r0c2 (BEC)KTON ROAD/BRADLEY STREET/CHERRY; r1c0 COOPER STREET/BURKE STREET; r1c1 MARY STREET/VINCENT STREET/P.H.; r1c2 Glass Bottle Works/THOMAS ST/FORTY ACRE LANE; r2c0 HEMSWORTH/WILBERFORCE/YORK STREET; r2c1 VINCENT/HEMSWORTH/WILBERFORCE STREET; r2c2 ST. JOHN'S ROAD/Glass Bottle Works. Contact sheets cs1-cs6 (6x-12x, +-14 to +-24 px) viewed and anchored. Overlap-strip marks shared with m18_131078_87158 were zoomed there (same pixels, offset 768) and seen whole in these crops. All crops and contact sheets displayed. Marker sheet checked.",
+ "legibility": "good; horizontal sheet join (tint step) at py ~198 across whole width, not reported by sheet tool",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 33,
+   "py": 37,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Maud Street / Mary Street junction (overlap with m18_131078_87158); dot left of figures at 44,38, separate from F.P. dot; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 148,
+   "py": 106,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Mary Street (overlap strip); only nearby dot is the STREET interpunct, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.84,
+   "raw": "B.M.6·84",
+   "px": 27,
+   "py": 269,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Aviary Street / Lawrence Street corner (overlap strip); pheon on building corner, 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 47,
+   "py": 279,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Lawrence Street (overlap strip); figures at 61,280; dot taken as the dot above E of LAWRENCE"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.2,
+   "raw": "7·2",
+   "px": 189,
+   "py": 312,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Lawrence Street at Peter Street (overlap strip); dot left of figures at 204,310"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 251,
+   "py": 195,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Peter Street / Mary Street junction just above the sheet join; figures at 252,187, dot directly below; second digit read as 8 at 12x (not fully certain against 3)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.0,
+   "raw": "4·0",
+   "px": 406,
+   "py": 308,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Mary Street; figures at 410,315; dot between A and figures could be a lettering interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 595,
+   "py": 8,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Beckton Road at top edge; possible dot at 601,0 cut by edge, position = centre of figures; digits whole, 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.05,
+   "raw": "B.M.10·05",
+   "px": 801,
+   "py": 30,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Beckton Road south frontage; text at 785,17, pheon on the wall line below-right, digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 811,
+   "py": 8,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Beckton Road; figures at 825,11, dot left; 8 closed loops at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 920,
+   "py": 5,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Beckton Road; figures at 926,15, dot above-left; flat-topped 5 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 982,
+   "py": 5,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Beckton Road at Bradley Street; figures at 987,13, dot above-left, 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 855,
+   "py": 72,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road junction south of Beckton Road (by survey triangle); figures at 861,82, dot above-left, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 888,
+   "py": 223,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road west of Cherry (Tree) block; dot above figures at 886,233, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.1,
+   "raw": "4·1",
+   "px": 884,
+   "py": 418,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Forty Acre Lane at Thomas Street; dot above figures at 885,429, 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.07,
+   "raw": "B.M.7·07",
+   "px": 465,
+   "py": 451,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Mary Street at Cooper Street; text at 460,478, pheon 27 px N on the building corner, digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.4,
+   "raw": "4·4",
+   "px": 485,
+   "py": 486,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Mary Street at Cooper Street beside B.M.7·07; no own dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.7,
+   "raw": "5·7",
+   "px": 287,
+   "py": 635,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Vincent Street west end; dot above figures at 289,643, 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.88,
+   "raw": "B.M.5·88",
+   "px": 477,
+   "py": 617,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Vincent Street north frontage; pheon on frontage above text start, digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 511,
+   "py": 626,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Vincent Street at Mary Street; figures at 512,617; dot below sits above the S of STREET (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.7,
+   "raw": "3·7",
+   "px": 634,
+   "py": 622,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Vincent Street east end at Forty Acre Lane; figures at 646,617, dot below-left, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.7,
+   "raw": "3·7",
+   "px": 741,
+   "py": 523,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Forty Acre Lane at Trinity Street; figures at 730,526, dot right, separate from the F.P. dot, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 793,
+   "py": 585,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Forty Acre Lane at the Grange road junction; figures at 797,590; dot near LANE lettering, ambiguous"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.66,
+   "raw": "B.M.6·66",
+   "px": 850,
+   "py": 613,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "Forty Acre Lane east frontage; pheon below text; the three 6s look alike (open top) at 12x but 6/8 confusion is possible"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.6,
+   "raw": "5·6",
+   "px": 928,
+   "py": 623,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction by L.B. and St John's Road; figures at 932,632, dot above-left; 5 flat top, 6 rounded"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.3,
+   "raw": "4·3",
+   "px": 643,
+   "py": 773,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hemsworth Street at Forty Acre Lane; figures at 640,766; dot below-right close to the F.P. dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.61,
+   "raw": "B.M.6·61",
+   "px": 618,
+   "py": 905,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Wilberforce Street at Forty Acre Lane; text at 600,915, pheon on building corner NE of text, digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 631,
+   "py": 917,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Forty Acre Lane south of Wilberforce Street; figures at 636,927, dot above-left; second digit closed top read as 8"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.77,
+   "raw": "B.M.7·77",
+   "px": 43,
+   "py": 745,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Pitt Street at Burke Street (overlap strip); pheon on building corner"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 14,
+   "py": 748,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Pitt Street (overlap strip); position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 164,
+   "py": 740,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Pitt Street at Morecombe Street (overlap strip); no dot, position = centre of figures"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangle at ~855,55 by Beckton Road",
+  "F.P., H and L.B. marks"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 195,
+   "px1": 1024,
+   "py1": 201,
+   "reason": "horizontal sheet join, tint step"
+  }
+ ]
+}

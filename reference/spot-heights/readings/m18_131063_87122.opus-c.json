@@ -1,0 +1,28 @@
+{
+ "mosaic": "m18_131063_87122",
+ "reader": "opus-c",
+ "area": "Stratford / Hackney Wick marsh: Brick Field and open land (NW), the G.E.R. High Meads Loop embankment running SW-NE, High Meads Junction and its signal box, the head of the Stratford engine sheds (SE)",
+ "method": "read by Claude (vision): 3x3 sweep of 448 px crops at 2x, every candidate confirmed at 6x (+-40 px), 17·0, 15·7/16·7 and 15·8 re-zoomed at 8x (+-30 px); positions in mosaic pixels",
+ "legibility": "good on the embankment, sparse elsewhere; sheet joins at py ~738 (horizontal, x 0-1024) and px ~833 (vertical, y 0-738) confirmed by tint steps; no figure crosses a join. Railway spot heights here follow one pattern: the survey dot is on the rails and the figures are written 20-35 px to the SE outside the embankment hatching",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [
+  {"type": "spot", "value_ft": 15.9, "raw": "15·9", "px": 607, "py": 433, "confidence": "high",
+   "notes": "G.E.R. High Meads Loop embankment; figures NW of the rails at 570-585,420; isolated dot on the rails at 607,433; confirmed at 6x"},
+  {"type": "bench_mark", "value_ft": 14.69, "raw": "B.M.14·69", "px": 750, "py": 281, "confidence": "high",
+   "notes": "north foot of the High Meads Loop embankment; pheon right of the text, point at its left tip; digits clear at 6x"},
+  {"type": "spot", "value_ft": 16.3, "raw": "16·3", "px": 769, "py": 296, "confidence": "high",
+   "notes": "High Meads Loop; figures at 800,312 outside the hatching; dot on the rails at 769,296"},
+  {"type": "spot", "value_ft": 17.0, "raw": "17·0", "px": 934, "py": 154, "confidence": "low",
+   "notes": "High Meads Loop NE of the sheet join; dot on the rails at 934,154 clear; figures written over the embankment hatching, 1/7 of the second digit not certain at 8x (11·0 is implausible here)"},
+  {"type": "spot", "value_ft": 15.7, "raw": "15·7", "px": 433, "py": 579, "confidence": "high",
+   "notes": "High Meads Loop by 'HIGH'; figures at 455,587; dot on the rails at 433,579; confirmed at 6x"},
+  {"type": "bench_mark", "value_ft": 16.21, "raw": "B.M.16·21", "px": 246, "py": 717, "confidence": "high",
+   "notes": "High Meads Junction signal box; pheon right of the box, point at 246,717; digits clear at 6x"},
+  {"type": "spot", "value_ft": 15.7, "raw": "15·7", "px": 278, "py": 715, "confidence": "low",
+   "notes": "High Meads Loop by the signal box; dot on the rails at 278,715 clear; figures at 298,722 over the hatching; second digit 5 or 6 (reads 15·7 at 2x, 16·7 possible at 8x)"},
+  {"type": "spot", "value_ft": 15.8, "raw": "15·8", "px": 113, "py": 843, "confidence": "high",
+   "notes": "G.E.R. SE of High Meads Junction (same figure as m18_131063_87125 at 113,76); figures at 145,860 outside the hatching; dot on the rails at 113,843; 8 clear at 8x"}
+ ],
+ "non_height_marks": ["'S.P.' signal posts at 300,665, 335,690, 30,925, 42,882", "'Well' at 40,140", "many 'H' marks among the engine-shed sidings, 840-960,830-940"],
+ "unreadable_regions": []
+}

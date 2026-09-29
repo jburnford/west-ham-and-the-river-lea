@@ -1,0 +1,393 @@
+{
+ "mosaic": "m18_131081_87164",
+ "reader": "opus-ac",
+ "area": "Canning Town east toward Tidal Basin: Hoy, Catherine, Sarah, Charlotte, Sidney, Alice, Rivett, Huntingdon, Bengeo, Crown and King Streets, Lansdowne Road, Police Station, St Luke's Church, Victoria Dock Road, Tidal Basin Station and the Woolwich branch",
+ "method": "sweep r0c0..r2c2 (2x) each anchored on opening: r0c0 St Luke's Church/Boyd Working Men's Institute, r0c1 Timber Yard/CATHERINE STREET, r0c2 Police Station/ELDON ROAD, r1c0 NELSON/FRANCIS STREET, r1c1 SARAH/CHARLOTTE STREET, r1c2 BENGEO/CROWN/KING STREET, r2c0 WOOLWICH BRANCH/Congl. Chap., r2c1 Tidal Basin Station/RIVETT STREET, r2c2 Lecture Hall/Presb. Chapel. Contact sheets cs1-cs13 (4-20x, panels +-7-40 px) all displayed and anchored in notes; pixel profile for B.M.6·28. B.M. decimals at 12x. All crops and zooms viewed successfully; marker sheet checked.",
+ "legibility": "good; horizontal tint step (sheet join) at py ~388 across x ~0-700 (continuation of the py ~391 join on 131078_87164)",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 340,
+   "py": 6,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street east of St Luke's Church (B.. lettering), north end by F.P., top edge; digits whole (tops at py 1) at 12x; no dot visible (may be off-sheet); position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.7,
+   "raw": "4·7",
+   "px": 272,
+   "py": 190,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street east of St Luke's Church (B.. lettering); dot above-left; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.8,
+   "raw": "4·8",
+   "px": 249,
+   "py": 305,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction of that street with Catherine Street by L.B.; dot left; both loops of 8 closed at 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 315,
+   "py": 306,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Catherine Street west end by F.P.; dot left; G-shaped 6 at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.13,
+   "raw": "B.M.5·13",
+   "px": 223,
+   "py": 345,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building at the School Infants corner; pheon left of text; 12x (same mark as on m18_131078_87164)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 452,
+   "py": 41,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street north of the Timber Yard; dot above-left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.1,
+   "raw": "5·1",
+   "px": 590,
+   "py": 96,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Lansdowne Road / Addison Road corner; dot between figure and the L of LANDSDOWNE, could be lettering; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 721,
+   "py": 152,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "LANDSDOWNE ROAD by the D; flat-topped 5s at 12x; dot right of D could be an interpunct"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.01,
+   "raw": "B.M.7·01",
+   "px": 763,
+   "py": 156,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Police Station wall corner, Sandford Street / Lansdowne Road; pheon below-right of text; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 853,
+   "py": 210,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "LANDSDOWNE ROAD east of the Police Station; dot below-left; first digit rounded 6, second closed 8-like at 8x/12x/20x; read 5·6 at 2x (6·6 or 5·6 possible)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.8,
+   "raw": "4·8",
+   "px": 345,
+   "py": 444,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Alice Street at Sarah Street; dot left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.8,
+   "raw": "4·8",
+   "px": 349,
+   "py": 510,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Alice Street at Charlotte Street; F.P. dots and A·L interpunct around, survey dot not distinguished; position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.9,
+   "raw": "4·9",
+   "px": 392,
+   "py": 580,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Alice Street by F.P.; dot left (378,582) could be the C· interpunct of ALICE; position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.0,
+   "raw": "5·0",
+   "px": 384,
+   "py": 674,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Alice Street / Sidney Street by F.P.; only dot nearby is the T· of STREET; position = centre"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.26,
+   "raw": "B.M.6·26",
+   "px": 277,
+   "py": 720,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "building corner on Huntingdon Street; pheon 30 px SE of text; last decimal 6 at 6x/8x (the zoom the guide prefers for 6/8) and its raw pixel profile matches the leading 6, but reads 8 at 4x and 12x (6·28 possible)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.5,
+   "raw": "4·5",
+   "px": 238,
+   "py": 724,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "written over house plots west of Huntingdon Street; no dot; centre; 12x (same mark as on m18_131078_87164)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.03,
+   "raw": "B.M.6·03",
+   "px": 72,
+   "py": 725,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house front on Francis Street; pheon left of text; 12x (same mark as on m18_131078_87164)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.7,
+   "raw": "5·7",
+   "px": 37,
+   "py": 781,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "street north of the Woolwich branch at the west edge; dot left; second digit hooked, 7 or 2 at 6x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 175,
+   "py": 848,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street north of the Woolwich branch (G.E.R. VICTORIA lettering); dot left; flat 5s at 12x (m18_131078_87164 overlap)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.7,
+   "raw": "8·7",
+   "px": 171,
+   "py": 917,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street corner south of the Woolwich branch; dot above-right; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 153,
+   "py": 1002,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "written over a plot at the south edge; matching 6s at 12x; no dot; centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.3,
+   "raw": "5·3",
+   "px": 398,
+   "py": 911,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Victoria Dock Road at the Tidal Basin station steps; final 3 open-left unlike closed 8 of 9·8; dot is the A· interpunct of VICTORIA; centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.8,
+   "raw": "9·8",
+   "px": 374,
+   "py": 989,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "road south of the railway near the Post Office; dot left; 12x; setting uncertain (station approach?)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 552,
+   "py": 801,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "RIVETT STREET by P.H.; second digit 6 at 8x but 5/6 at 12x/20x; dot is the R· interpunct; centre"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.74,
+   "raw": "B.M.5·74",
+   "px": 660,
+   "py": 753,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house front on Rivett Street; pheon below text; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 718,
+   "py": 888,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "VICTORIA DOCK ROAD between A and D of ROAD; dot left may be an interpunct; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 562,
+   "py": 914,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Victoria Dock Road by Tidal Basin Station; dot above-left beside K of DOCK may be an interpunct; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.79,
+   "raw": "B.M.7·79",
+   "px": 493,
+   "py": 921,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Tidal Basin Station front on Victoria Dock Road; pheon left of text; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.1,
+   "raw": "5·1",
+   "px": 829,
+   "py": 720,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hack Road / King Street corner; dot above-left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 857,
+   "py": 847,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road east, by the Presbyterian Chapel; dot left; 12x"
+  }
+ ],
+ "non_height_marks": [
+  "triangles at (256,325) and (766,328) with no figure",
+  "S.P., F.P., S.B., D.Fn marks",
+  "L.B letter box (272,322)"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1010,
+   "py0": 805,
+   "px1": 1024,
+   "py1": 818,
+   "reason": "figure '5·?' cut by the east edge"
+  },
+  {
+   "px0": 0,
+   "py0": 384,
+   "px1": 700,
+   "py1": 392,
+   "reason": "sheet join tint step at py ~388"
+  },
+  {
+   "px0": 330,
+   "py0": 0,
+   "px1": 350,
+   "py1": 8,
+   "reason": "4·6 at top edge; dot may be off-sheet"
+  }
+ ]
+}

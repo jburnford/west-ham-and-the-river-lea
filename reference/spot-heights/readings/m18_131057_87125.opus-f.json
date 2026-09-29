@@ -1,0 +1,26 @@
+{
+  "mosaic": "m18_131057_87125", "reader": "opus-f",
+  "area": "Old Ford marsh / Lea Junction: open ground either side of the Union & Parly. Boro. Bdy., the railway embankment crossing the Waterworks River and River Lea at Lea Junction, Victoria Park Steam Bone Works and marsh to the south-west",
+  "method": "Independent second reading (no other reader's file consulted). 9 sweep crops at 2x read in full; every candidate confirmed on 8x contact-sheet panels (+-26 px) and bench marks re-checked at 10x (+-20 px). All sweep crops, contact sheets and zooms were viewed successfully; no image failed to load.",
+  "legibility": "Clean, sharp sheet; all figures legible. No sheet join detected by the tool and none seen visually.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 13.3, "raw": "13·3", "px": 427, "py": 390, "confidence": "high", "notes": "open ground north of the embankment; dot left of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 14.65, "raw": "B.M.14·65", "px": 624, "py": 149, "confidence": "medium", "notes": "end of wall/fence line by B.S. on the boundary; digits clear at 10x; pheon drawn sideways at 618-626,147-152, point placed at its head but orientation ambiguous"},
+    {"type": "spot", "value_ft": 14.0, "raw": "14·0", "px": 583, "py": 240, "confidence": "high", "notes": "open ground; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 14.0, "raw": "14·0", "px": 705, "py": 115, "confidence": "high", "notes": "on bank line below C.R.; dot on the bank edge left of figures, 8x"},
+    {"type": "spot", "value_ft": 15.0, "raw": "15·0", "px": 832, "py": 146, "confidence": "high", "notes": "west bank of the Waterworks River channel; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 14.8, "raw": "14·8", "px": 856, "py": 359, "confidence": "high", "notes": "bank east of Waterworks River; dot below-left of figures, 8x"},
+    {"type": "spot", "value_ft": 13.3, "raw": "13·3", "px": 40, "py": 517, "confidence": "high", "notes": "foot of railway embankment north side; dot left of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 14.84, "raw": "B.M.14·84", "px": 148, "py": 518, "confidence": "high", "notes": "north foot of railway embankment; pheon left of text, point on the fence line, 10x"},
+    {"type": "spot", "value_ft": 13.0, "raw": "13·0", "px": 268, "py": 518, "confidence": "high", "notes": "north foot of railway embankment; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 17.5, "raw": "17·5", "px": 12, "py": 649, "confidence": "high", "notes": "south of embankment near west edge; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 14.7, "raw": "14·7", "px": 873, "py": 576, "confidence": "high", "notes": "towpath/bank east of Waterworks River north of railway; dot above figures, 8x"},
+    {"type": "bench_mark", "value_ft": 18.48, "raw": "B.M.18·48", "px": 872, "py": 647, "confidence": "high", "notes": "on railway bridge approach at Lea Junction; pheon below-left of text, apex at 872,647, 8x and 10x"},
+    {"type": "spot", "value_ft": 16.6, "raw": "16·6", "px": 1005, "py": 650, "confidence": "high", "notes": "on railway lines at Lea Junction; dot above figures on the rail, 8x"},
+    {"type": "spot", "value_ft": 24.5, "raw": "24·5", "px": 62, "py": 771, "confidence": "high", "notes": "ground south of embankment beside hatched bank near west edge; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 14.7, "raw": "14·7", "px": 841, "py": 935, "confidence": "high", "notes": "bank between River Lea and boundary channel south of Signal Box; dot left of figures, 8x"}
+  ],
+  "non_height_marks": ["S.P. marks on railway embankment at ~150,586 and ~290,590, ~700,630, ~983,715", "B.S. boundary stones at ~265,228, ~645,160, ~765,128, ~985,990", "B.P. at ~840,640", "C.R. at ~720,100", "C.C. of L.W. and Und./Def. boundary lettering", "Sluice at ~975,80"],
+  "unreadable_regions": []
+}

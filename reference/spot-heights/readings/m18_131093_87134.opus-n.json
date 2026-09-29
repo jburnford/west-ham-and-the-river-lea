@@ -1,0 +1,250 @@
+{
+ "mosaic": "m18_131093_87134",
+ "reader": "opus-n",
+ "area": "Upton Park: road along the north edge, open field (West Ham Park side), Percy Road, Raymond Road, Green Street north end (C.R.), Harold Road, road north of Upton Park Station, railway and Upton Park Station platforms, tree-lined road south of the railway",
+ "method": "independent second read (no other reader's file consulted); sheet tool; all 9 sweep crops r0c0..r2c2 at 2x viewed; contact sheets csA-csC (8x, +/-25 px), csD (12x) and nnA (14x nearest+bicubic) viewed; marker sheet viewed after writing. Every crop and contact sheet displayed when opened. Three positions corrected by 1-7 px after the marker sheet.",
+ "legibility": "clean print; vertical sheet join at px ~932 over the full height confirmed by eye (straight line and tint change), no figure crosses it; italic 3/5/6/8/9 separation weak on several figures",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 33.5,
+   "raw": "33·5",
+   "px": 178,
+   "py": 69,
+   "confidence": "low",
+   "notes": "road along the north edge (R O A D); dot above figure in a gap of the boundary dashes; last digit 5 vs 6 unresolved (flat top in nearest-neighbour 14x, 6-like at 8-12x LANCZOS)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.6,
+   "raw": "B.M.34·60",
+   "px": 405,
+   "py": 69,
+   "confidence": "high",
+   "notes": "terrace frontage on the north road; pheon below-left of text pointing up to the building line; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 368,
+   "py": 89,
+   "confidence": "high",
+   "notes": "north road; dot directly above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.4,
+   "raw": "31·4",
+   "px": 347,
+   "py": 243,
+   "confidence": "high",
+   "notes": "open field south of the north road; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 609,
+   "py": 66,
+   "confidence": "high",
+   "notes": "north road at the head of Percy Road; dot directly above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 644,
+   "py": 188,
+   "confidence": "high",
+   "notes": "Percy Road between the tree rows; isolated dot right of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.2,
+   "raw": "31·2",
+   "px": 691,
+   "py": 318,
+   "confidence": "medium",
+   "notes": "Percy Road; dot above-right of figure falls between E and R of P E R C Y"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.2,
+   "raw": "32·2",
+   "px": 800,
+   "py": 45,
+   "confidence": "medium",
+   "notes": "north road east of Percy Road; dot above figure touching a boundary dash"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.0,
+   "raw": "32·0",
+   "px": 967,
+   "py": 14,
+   "confidence": "medium",
+   "notes": "Green Street north end by 'C.R.' and F.P./L.B.; among large boundary dots; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.8,
+   "raw": "30·8",
+   "px": 372,
+   "py": 460,
+   "confidence": "medium",
+   "notes": "open field; dot left of figure; last digit 8 in bicubic 14x but close to the 3 of the same figure at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.9,
+   "raw": "29·9",
+   "px": 392,
+   "py": 676,
+   "confidence": "high",
+   "notes": "open field; dot left of figure; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.5,
+   "raw": "30·5",
+   "px": 763,
+   "py": 522,
+   "confidence": "high",
+   "notes": "Percy Road south end; dot after the final D of ROAD, above the figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.8,
+   "raw": "29·8",
+   "px": 1020,
+   "py": 661,
+   "confidence": "high",
+   "notes": "road north of Upton Park Station near the east edge; dot right of figure (figure whole, dot 4 px from edge); 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 31.94,
+   "raw": "B.M.31·94",
+   "px": 817,
+   "py": 720,
+   "confidence": "high",
+   "notes": "same road; pheon left of text beside a tree; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.8,
+   "raw": "29·8",
+   "px": 839,
+   "py": 726,
+   "confidence": "high",
+   "notes": "same road below B.M.31·94; own dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.7,
+   "raw": "28·7",
+   "px": 402,
+   "py": 887,
+   "confidence": "high",
+   "notes": "Harold Road after D of HAROLD; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.9,
+   "raw": "27·9",
+   "px": 202,
+   "py": 961,
+   "confidence": "high",
+   "notes": "Harold Road west by H; dot above-right of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 30.3,
+   "raw": "B.M.30·30",
+   "px": 108,
+   "py": 1013,
+   "confidence": "high",
+   "notes": "Harold Road south side; pheon below text on the terrace frontage, whole; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.3,
+   "raw": "29·3",
+   "px": 607,
+   "py": 812,
+   "confidence": "low",
+   "notes": "Harold Road east; dot above last digit; second digit 9 vs 8 and last digit 3 vs 8 unresolved at 12-14x (could be 28·3 or 29·8)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.2,
+   "raw": "28·2",
+   "px": 850,
+   "py": 971,
+   "confidence": "medium",
+   "notes": "tree-lined road south of the railway; only nearby dot belongs to F.P.; position = centre of figures"
+  }
+ ],
+ "non_height_marks": [
+  "S.P. marks along the railway at ~700,896 and ~722,920",
+  "F.P., H and L.B. marks along the roads"
+ ],
+ "unreadable_regions": []
+}

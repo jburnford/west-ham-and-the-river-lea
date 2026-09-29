@@ -1,0 +1,460 @@
+{
+ "mosaic": "m18_131066_87164",
+ "reader": "opus-af",
+ "area": "Poplar / Blackwall: East India Dock Road tramway, Poplar Hospital, Robin Hood Lane, Naval Row, Quixley Street, East India (Import) Dock West and North Quays and Dock Wall Road",
+ "method": "Viewed all 9 sweep crops (2x) with anchors: r0c0 Poplar Hospital/School; r0c1 TRAMWAY/Warehouse; r0c2 EAST INDIA (Import)/NORTH QUAY; r1c0 ROBIN HOOD LANE/WEST QUAY; r1c1 WEST QUAY/Crane; r1c2 EAST INDIA/SOUTH; r2c0 Blackwall Tunnel Approach/NAVAL ROW; r2c1 EAST INDIA DOCK/QUIXLEY; r2c2 DOCK WALL ROAD/Goods Depot. Contact sheets d1-d22 (6-20x nearest and smoothed) and region views d2 (0-230,150-260), d3 (220-460,80-190), d8 (380-480,850-910), d9 (0-60,520-580), d16 (110-230,480-770), d17 (680-1024,740-900), d18 (440-580,700-870). Every crop and sheet displayed when opened. Doubtful digits compared with known digits on the sheet; B.M. decimals checked at 12-20x; marker sheet checked.",
+ "legibility": "good; dock basin water blank; joins: horizontal tint step py ~392-393 across the whole width, vertical join px ~53-55 (straight line through houses, tool reports px ~49); no figure is split by them",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ],
+  [
+   0,
+   150,
+   230,
+   260
+  ],
+  [
+   220,
+   80,
+   460,
+   190
+  ],
+  [
+   380,
+   850,
+   480,
+   910
+  ],
+  [
+   0,
+   520,
+   60,
+   580
+  ],
+  [
+   110,
+   480,
+   230,
+   770
+  ],
+  [
+   680,
+   740,
+   1024,
+   900
+  ],
+  [
+   440,
+   700,
+   580,
+   870
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 137,
+   "py": 29,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "narrow lane by the Smithy, Poplar; dot above-left; digits clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.9,
+   "raw": "14·9",
+   "px": 423,
+   "py": 109,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "East India Dock Road tramway, north side; dot below-left between rails (not the H dot at 400,98); 9 matches 9 of 19·1"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.4,
+   "raw": "15·4",
+   "px": 235,
+   "py": 166,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "East India Dock Road tramway by Poplar Hospital; isolated dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 166,
+   "py": 182,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "tram road by the School (F.P./B.S. and boundary dots crowd it); no separable survey dot, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 32,
+   "py": 211,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "road west end near px ~55 join; dot 32,211 sits just below the regular boundary-dot row, taken as survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 86,
+   "py": 234,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "open corner by the Urinal; dot 86,234 just right of the urinal symbol, may belong to it"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.64,
+   "raw": "B.M.19·64",
+   "px": 266,
+   "py": 248,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner inside East India Dock premises; pheon left of text on the wall line; 64 clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.1,
+   "raw": "19·1",
+   "px": 370,
+   "py": 256,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "East India Dock premises between warehouses; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.4,
+   "raw": "12·4",
+   "px": 113,
+   "py": 359,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street end by H (hydrant), Poplar; dot above the 1"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.1,
+   "raw": "15·1",
+   "px": 622,
+   "py": 50,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "East India Dock Road north side at the bend; dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.69,
+   "raw": "B.M.16·69",
+   "px": 480,
+   "py": 109,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "dock boundary wall on the south side of the tramway below TRAMWAY lettering; pheon 480,109; first decimal matches known 6 (B.M.19·64), last digit matches known 9s at 12x smoothed but paper tint is grey here"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.4,
+   "raw": "19·4",
+   "px": 420,
+   "py": 434,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "West Quay, East India Dock, figure under Crane label; nearest dot is the crane symbol pivot at 405,425; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.5,
+   "raw": "19·5",
+   "px": 485,
+   "py": 656,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "West Quay, second crane, figure under Crane label; crane pivot dot 470,647; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.2,
+   "raw": "10·2",
+   "px": 140,
+   "py": 499,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Robin Hood Lane; the only nearby dot is the O·B interpunct of R·O·B·I·N at 140,499; a line (Blackwall Tunnel Approach edge) crosses the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.0,
+   "raw": "11·0",
+   "px": 160,
+   "py": 618,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Robin Hood Lane; dot = O·O interpunct of H·O·O·D at 160,618"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.57,
+   "raw": "B.M.11·57",
+   "px": 134,
+   "py": 632,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house front on Robin Hood Lane, pheon on the building corner 134,632, text 40 px east"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.9,
+   "raw": "12·9",
+   "px": 184,
+   "py": 745,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Robin Hood Lane south; no dot found (N·E interpunct 20 px away), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.6,
+   "raw": "9·6",
+   "px": 419,
+   "py": 885,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "East India Dock Road under the E of EAST INDIA; first digit merges with the E and last digit 6/8 not settled against known 6 and 8; no dot, centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.4,
+   "raw": "13·4",
+   "px": 162,
+   "py": 955,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street by P.H. and F.P. north of Naval Row; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.5,
+   "raw": "16·5",
+   "px": 4,
+   "py": 994,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street at west edge between pavement dots; distinct dot at 4,994; 5 flat-topped at 16x; figure whole inside mosaic"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 12.04,
+   "raw": "B.M.12·04",
+   "px": 265,
+   "py": 988,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner at Naval Row; pheon right of text 265,988"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.3,
+   "raw": "19·3",
+   "px": 500,
+   "py": 748,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "south-west corner of the East India (Import) Dock basin where West Quay meets the south quay; dark point on the quay corner 500,748 taken as dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.22,
+   "raw": "B.M.22·22",
+   "px": 474,
+   "py": 772,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "small building by the dock corner; pheon-like symbol 474,772 above-left of text, not certain"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.2,
+   "raw": "20·2",
+   "px": 527,
+   "py": 843,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "dock premises south of the warehouse, north of the dock wall; dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.67,
+   "raw": "B.M.17·67",
+   "px": 671,
+   "py": 869,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "post-lined wall on the south side of East India Dock Wall Road under the D of DOCK; pheon 671,869, text 25 px north-west"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.4,
+   "raw": "19·4",
+   "px": 702,
+   "py": 824,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "dock quay strip between the warehouse and the dock wall (north of the double wall line); dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.0,
+   "raw": "13·0",
+   "px": 588,
+   "py": 895,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Naval Row / Quixley Street corner by H; dot directly above the 3"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 733,
+   "py": 867,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "just south of the post-lined south edge of Dock Wall Road, at a fenced corner; no dot found, centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.4,
+   "raw": "19·4",
+   "px": 855,
+   "py": 775,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "inside the dock wall north of Dock Wall Road; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.5,
+   "raw": "19·5",
+   "px": 872,
+   "py": 801,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Wall Road; the dot 872,801 is also the interpunct before R·O·A·D"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.0,
+   "raw": "19·0",
+   "px": 970,
+   "py": 814,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Dock Wall Road east end; dot left of figure, separate from the F.P. dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.58,
+   "raw": "B.M.20·58",
+   "px": 1008,
+   "py": 820,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "wall with gate piers at the east end of Dock Wall Road; pheon 1008,820 right of text; 58 clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.2,
+   "raw": "20·2",
+   "px": 1000,
+   "py": 731,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "inside the dock wall at the NE; dot above the 0; figure ends at px 1011, whole"
+  }
+ ],
+ "non_height_marks": [
+  "G.P.O. 4¼ at ~840,20",
+  "many M.P. (mooring posts) on the jetties",
+  "B.S., B.St., B.Ss. boundary stones and the dotted boundary across the dock",
+  "D.Fn. (drinking fountain), Fire Alarm, W.M.",
+  "Def. on the boundary line in the dock"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 534,
+   "px1": 20,
+   "py1": 560,
+   "reason": "B.M. '?2·53' cut by the west edge (B and leading digit lost); pheon at ~4,538 on house front; whole in the western neighbour"
+  },
+  {
+   "px0": 300,
+   "py0": 330,
+   "px1": 1024,
+   "py1": 560,
+   "reason": "East India Dock basin water, no heights"
+  }
+ ]
+}

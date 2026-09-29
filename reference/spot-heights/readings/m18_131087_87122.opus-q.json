@@ -1,0 +1,230 @@
+{
+ "mosaic": "m18_131087_87122",
+ "reader": "opus-q",
+ "area": "Forest Gate south-west: Romford Road (tramway) with Clova Road, Sprowston Road, Pawnbrokers' Almshouses, Methodist Chapel, Upton Lane, Nursery Lane, Sylvan Road, top of Disraeli Road",
+ "method": "sweep r0c0..r2c2 (9 crops, 2x) all displayed, anchors noted on opening (CLOVA ROAD, SPROWSTON ROAD, Pawnbrokers' Almshouses/Methodist Chapel, ROMF.., NURSERY, NURSERY LANE/Bank/P.H., DIS.., glasshouses, SYLVAN ROAD/UPT..). Zoom contact sheets A-E (8-14x, nearest-neighbour panels for 33·4, the rail 33·6, B.M.33·57 and 33·8) all displayed with anchors; marker sheets mk1-mk3 displayed and all positions checked. Every crop, contact sheet and marker sheet viewed successfully.",
+ "legibility": "Good but italic 3s render as 8 at 10x+; values settled by comparing digits within each figure. Sheet join: horizontal at py ~748 across the full width (drawn line with tint change, not reported by the sheet tool); no vertical join seen.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 855,
+   "py": 63,
+   "confidence": "medium",
+   "notes": "north-south ROAD east of Pawnbrokers' Almshouses, beside the R of ROAD; leading 3s render as 8 at 14x but are identical in shape; dot left-below figure may be a lettering interpunct (F.P. below has its own dot)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.6,
+   "raw": "33·6",
+   "px": 1014,
+   "py": 29,
+   "confidence": "low",
+   "notes": "road south of the Methodist Chapel (Wesleyan) at the east edge; figure ends ~2 px from the mosaic edge; final 6 at 14x; no dot seen, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.1,
+   "raw": "33·1",
+   "px": 891,
+   "py": 256,
+   "confidence": "high",
+   "notes": "junction east of the Almshouses; digits clear at 8x; dot immediately left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.78,
+   "raw": "B.M.34·78",
+   "px": 1017,
+   "py": 418,
+   "confidence": "high",
+   "notes": "building corner, north side of Romford Road near the survey triangle; text 972-1007,427; pheon apex at building line 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.6,
+   "raw": "33·6",
+   "px": 357,
+   "py": 569,
+   "confidence": "low",
+   "notes": "Romford Road (tramway); dot = mark on the rail 10 px above figure; final digit 6 when smoothed, unclear blocky (5/6) — 2x read 33·5"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.57,
+   "raw": "B.M.33·57",
+   "px": 127,
+   "py": 609,
+   "confidence": "medium",
+   "notes": "house front, north side of Romford Road (west); text 140-160,600-608; pheon left of text; second digit rounded like the leading 3 and unlike the flat-topped 5 of 57, read 33 at 10-14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.8,
+   "raw": "33·8",
+   "px": 140,
+   "py": 643,
+   "confidence": "low",
+   "notes": "south side of Romford Road (west); final digit 3/8 undecidable at 8-12x (all digits same italic shape); no dot, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.2,
+   "raw": "33·2",
+   "px": 579,
+   "py": 513,
+   "confidence": "medium",
+   "notes": "Romford Road opposite Sprowston Road; digits clear at 8x; dot = mark on the rail below figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.99,
+   "raw": "B.M.33·99",
+   "px": 584,
+   "py": 533,
+   "confidence": "high",
+   "notes": "house front south side of Romford Road opposite Sprowston Road; text 584-603,537-544; pheon apex just NW of text at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 769,
+   "py": 487,
+   "confidence": "medium",
+   "notes": "Romford Road under the R of ROMFORD; digits clear at 8x; dot on the rail beside the R"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 929,
+   "py": 461,
+   "confidence": "medium",
+   "notes": "Romford Road by the M of ROMFORD; all three digits identical italic 3s at 12x; dot on the rail above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.1,
+   "raw": "33·1",
+   "px": 968,
+   "py": 454,
+   "confidence": "medium",
+   "notes": "Romford Road at Upton Lane corner; digits clear at 8x; dot on the rail above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.1,
+   "raw": "33·1",
+   "px": 984,
+   "py": 663,
+   "confidence": "high",
+   "notes": "Upton Lane by hydrant H; digits clear at 8x; isolated dot right of figure (hydrant dot at 964,653 is separate)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.5,
+   "raw": "33·5",
+   "px": 180,
+   "py": 823,
+   "confidence": "high",
+   "notes": "Disraeli Road north end, south of the sheet join; digits clear at 8x; dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 987,
+   "py": 778,
+   "confidence": "high",
+   "notes": "Sylvan Road at Upton Lane; digits clear at 8x; dot immediately left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.23,
+   "raw": "B.M.34·23",
+   "px": 1015,
+   "py": 1015,
+   "confidence": "medium",
+   "notes": "Upton Lane west side, SE corner of mosaic; text 958-994,1003 clear at 8x; pheon only partly visible (T-shaped strokes near the corner), position estimated"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle without figure at ~913,436",
+  "H (hydrant) marks on Upton Lane",
+  "F.P. marks throughout"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1000,
+   "py0": 20,
+   "px1": 1024,
+   "py1": 38,
+   "reason": "33·6 ends ~2 px from east edge; trailing digit may be clipped"
+  },
+  {
+   "px0": 1005,
+   "py0": 1005,
+   "px1": 1024,
+   "py1": 1024,
+   "reason": "B.M.34·23 pheon partly cut by SE corner"
+  }
+ ]
+}

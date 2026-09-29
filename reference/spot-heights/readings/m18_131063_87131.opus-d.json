@@ -1,0 +1,163 @@
+{
+ "mosaic": "m18_131063_87131",
+ "reader": "opus-d",
+ "area": "Stratford Marsh / Carpenters Road industries: Waterworks River (west), Tallow Works, Lea Valley Distillery, Lea Bank Soap & Candle Works, Victoria Oil & Candle Works, Chemical, Hudson Bay (Fur), Varnish & Japan and City of London Match Works along Warton Road, Western Junction railway, Star Works and London Spinning Mills (east); large 'STRATFORD' lettering",
+ "method": "read by Claude (vision): 3x3 sweep of 448 px crops at 2x; every candidate confirmed at 6x (+-40 px); 12·5, 14·92, 14·9 and 12·7 re-zoomed at 8x (+-30 px); positions in mosaic pixels",
+ "legibility": "good; digits clear at 6x; many figures in town sit among F.P./F.A./L.B./S.P. dots. The join detector found nothing, but sheet-edge lines are visible at py ~170 (horizontal, whole width) and px ~833 (vertical), with a tint change; no figure is cut by them",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 12.7,
+   "raw": "12·7",
+   "px": 529,
+   "py": 22,
+   "confidence": "medium",
+   "notes": "road at the north edge (Marshgate Lane / Carpenters Road bend); figures clear at 8x; the only nearby dot is 23 px above the figures between R and O of ROAD (no other interpuncts in the name), taken as the survey dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.76,
+   "raw": "B.M.13·76",
+   "px": 670,
+   "py": 159,
+   "confidence": "high",
+   "notes": "building corner at the road junction by L.B./F.A.; pheon right of text at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.5,
+   "raw": "12·5",
+   "px": 707,
+   "py": 181,
+   "confidence": "medium",
+   "notes": "road junction by L.B., F.A. and F.P.; figures clear at 8x; no dot of its own (the dot at 699,174 belongs to F.A.), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.8,
+   "raw": "12·8",
+   "px": 612,
+   "py": 311,
+   "confidence": "high",
+   "notes": "road between Chemical Works and Hudson Bay Works; dot above-right of figures at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.3,
+   "raw": "13·3",
+   "px": 537,
+   "py": 484,
+   "confidence": "high",
+   "notes": "Warton Road by the Oil & Chemical Works; dot above-right of figures at 6x (F.P dot at 519,520 not used)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.7,
+   "raw": "14·7",
+   "px": 527,
+   "py": 668,
+   "confidence": "high",
+   "notes": "Warton Road by the Varnish Works; dot above-left of figures at 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.21,
+   "raw": "B.M.16·21",
+   "px": 552,
+   "py": 699,
+   "confidence": "medium",
+   "notes": "Warton Road; text clear at 6x on the west side of the road; the only pheon nearby is on the Varnish Works corner 40 px east, association inferred"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.4,
+   "raw": "13·4",
+   "px": 957,
+   "py": 554,
+   "confidence": "high",
+   "notes": "yard/road east of the railway by the London Spinning Mills; dot left of figures at 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.92,
+   "raw": "B.M.14·92",
+   "px": 1016,
+   "py": 655,
+   "confidence": "high",
+   "notes": "building near the east edge; pheon above-right of text below the H at 8x (H dot at 1013,647 not used)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.9,
+   "raw": "14·9",
+   "px": 606,
+   "py": 867,
+   "confidence": "medium",
+   "notes": "Warton Road at the railway (Western Junction); figures clear at 8x; no dot of its own (S.P. dots above not used), position = centre of figures"
+  }
+ ],
+ "non_height_marks": [
+  "L.B., F.A., F.P., H cluster at 680-700,168-190",
+  "W.M. at 752,200",
+  "'Sluice' at 791,806",
+  "'Travelling Crane' at 345,540",
+  "S.P./S.B. marks on the railway"
+ ],
+ "unreadable_regions": []
+}

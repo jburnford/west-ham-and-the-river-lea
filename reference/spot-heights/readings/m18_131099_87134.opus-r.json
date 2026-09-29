@@ -1,0 +1,261 @@
+{
+ "mosaic": "m18_131099_87134",
+ "reader": "opus-r",
+ "area": "Plaistow north-east / Upton Park east: Plashet Road bridge over the London Tilbury & Southend Railway, Plashet Grove, Elizabeth and Fry Roads, Park Road, Mission Hall, Meth. Chapel, Wax Vesta Works, Plashet Lane, Florence Road",
+ "method": "Sheet tool + 9 sweep crops at 2x, each anchored on opening: r0c0 Meth. Chapel Seats for 450, Mission Hall, P A R; r0c1 PLASHET GROVE, ELIZAB.., R K; r0c2 LONDON TILBURY & SOUTHEND RAILWAY, FRY ROAD; r1c0 PARK ROAD, Wax Vesta Works; r1c1 P L A S H E T bridge; r1c2 PLASHET LANE; r2c0 FLORENCE ROAD, ..CLYFFE ROAD; r2c1 open ground, wiggly boundary; r2c2 LANE 'N E', triangle. Contact sheets (own helper) g1-g3 8x, g4c 12x smooth+blocky, g5c 16x smooth+blocky, g6 8x; marker sheet checked. SW corner is the same tiles as m18_131096_87137 NE, read there too. All crops, contact sheets and zooms displayed when opened.",
+ "legibility": "Clear; no sheet join found by the tool or by eye; PLASHET lettering is interpuncted so two figures there are medium",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 29.9,
+   "raw": "29·9",
+   "px": 181,
+   "py": 24,
+   "confidence": "low",
+   "notes": "Field Road(?) N end, figure inside spaced E·L·D lettering; no own dot (interpunct before L only); centre of figures; final 9 vs 8 unresolved at 12x/16x (read 29·8 at 2x)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.5,
+   "raw": "30·5",
+   "px": 382,
+   "py": 161,
+   "confidence": "high",
+   "notes": "Plashet Road N side W part, beside F.P.; dot above-right of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.8,
+   "raw": "30·8",
+   "px": 233,
+   "py": 234,
+   "confidence": "medium",
+   "notes": "Plashet Road W, at big 'P A R K' lettering; only nearby dot is F.P.'s own; centre of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.0,
+   "raw": "32·0",
+   "px": 157,
+   "py": 289,
+   "confidence": "high",
+   "notes": "Park Road / Plashet Road junction; dot above-left; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.2,
+   "raw": "32·2",
+   "px": 296,
+   "py": 360,
+   "confidence": "high",
+   "notes": "by survey triangle N of Mission Hall; dot left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 32.44,
+   "raw": "B.M.32·44",
+   "px": 537,
+   "py": 96,
+   "confidence": "high",
+   "notes": "Plashet Road N side house front; pheon right of text; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.0,
+   "raw": "30·0",
+   "px": 527,
+   "py": 111,
+   "confidence": "medium",
+   "notes": "Plashet Road in P L A S H E T lettering; nearest dot follows the S (interpunct), so no certain survey dot; centre of figures; leading 3 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.7,
+   "raw": "29·7",
+   "px": 681,
+   "py": 64,
+   "confidence": "high",
+   "notes": "Plashet Grove W end; dot below between R and O of GROVE (not interpuncted); 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.1,
+   "raw": "30·1",
+   "px": 276,
+   "py": 543,
+   "confidence": "high",
+   "notes": "top of the LT&SR cutting slope at Plashet Road bridge approach; dot on cutting top right of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.5,
+   "raw": "31·5",
+   "px": 322,
+   "py": 725,
+   "confidence": "high",
+   "notes": "open ground S of railway E of Wax Vesta Works; dot right-above; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 37.5,
+   "raw": "37·5",
+   "px": 450,
+   "py": 446,
+   "confidence": "high",
+   "notes": "Plashet Road bridge over the London Tilbury & Southend Railway; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 36.6,
+   "raw": "36·6",
+   "px": 504,
+   "py": 472,
+   "confidence": "medium",
+   "notes": "Plashet Road bridge S approach, dot below between A and S of PLASHET (interpunct position); 8x/16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.54,
+   "raw": "B.M.33·54",
+   "px": 674,
+   "py": 512,
+   "confidence": "high",
+   "notes": "house front at Plashet Road / Plashet Lane; pheon above-left of text on building line; 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.0,
+   "raw": "31·0",
+   "px": 716,
+   "py": 526,
+   "confidence": "high",
+   "notes": "Plashet Lane N end; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.7,
+   "raw": "26·7",
+   "px": 901,
+   "py": 452,
+   "confidence": "low",
+   "notes": "road N of Plashet Lane terraces (S of railway); dot right of figure; second digit matches the 6 of 36·6 at 16x, not the 8 of 30·8, but 6/8 not certain"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.1,
+   "raw": "30·1",
+   "px": 805,
+   "py": 561,
+   "confidence": "high",
+   "notes": "Plashet Lane between L and A (LANE not interpuncted); dot below-right; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.0,
+   "raw": "28·0",
+   "px": 1005,
+   "py": 662,
+   "confidence": "high",
+   "notes": "Plashet Lane E; dot left of figure; figure ends ~1016; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.15,
+   "raw": "B.M.34·15",
+   "px": 279,
+   "py": 873,
+   "confidence": "high",
+   "notes": "house at Tudor Road / Redclyffe corner block; pheon apex ~25 px W of text on building line; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.8,
+   "raw": "30·8",
+   "px": 311,
+   "py": 889,
+   "confidence": "high",
+   "notes": "road S of B.M.34·15; dot left of figure; final 8 at 12x smooth and blocky"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.1,
+   "raw": "31·1",
+   "px": 189,
+   "py": 944,
+   "confidence": "medium",
+   "notes": "Redclyffe Road at Tudor Road junction; same tiles as m18_131096_87137 (957,176) zoomed there too; dot ~23 px above at 186,921 may be its survey dot; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.1,
+   "raw": "31·1",
+   "px": 230,
+   "py": 975,
+   "confidence": "high",
+   "notes": "Tudor Road N end; same tiles as m18_131096_87137 (998,207); dot below-right before T of TUDOR; 8x"
+  }
+ ],
+ "non_height_marks": [
+  "S.P. marks on the railway cutting at ~300,505 and ~300,530",
+  "F.B. at ~40,640",
+  "survey triangles with no figure at ~904,658 and ~302,345 (32·2 beside the latter is separate, with its own dot)",
+  "H marks along Plashet Road and Elizabeth Road"
+ ],
+ "unreadable_regions": []
+}

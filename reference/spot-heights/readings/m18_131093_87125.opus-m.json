@@ -1,0 +1,228 @@
+{
+ "mosaic": "m18_131093_87125",
+ "reader": "opus-m",
+ "area": "Upton / Forest Gate border: Westbury Road, Henderson Road, Gipsy Lane (county and parliamentary borough boundary), terraces to the east",
+ "method": "Viewed all 9 sweep crops (2x) and contact sheets cs1-cs4 (6x to 14x zoom panels labelled in mosaic px); every image displayed when opened. Every value confirmed at >=8x, doubtful digits at 14x.",
+ "legibility": "Good. Vertical sheet join at px ~939-940 over the full height (paler, crisper print east of it), confirmed by eye; no figure crosses it. Gipsy Lane boundary is a line of large dots, so its figures are medium.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 196,
+   "py": 339,
+   "confidence": "medium",
+   "notes": "...VILLE ROAD (south road); dot above-left of figure, between the O and A of ROAD (interpunct ambiguity); 9 at 14x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.62,
+   "raw": "B.M.35·62",
+   "px": 278,
+   "py": 316,
+   "confidence": "high",
+   "notes": "pheon on house frontage on north side of the road, ~20 px left of text; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.5,
+   "raw": "32·5",
+   "px": 364,
+   "py": 330,
+   "confidence": "high",
+   "notes": "same road; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.1,
+   "raw": "31·1",
+   "px": 524,
+   "py": 33,
+   "confidence": "medium",
+   "notes": "Gipsy Lane at Westbury Road; small dot left of figure among the large boundary dots of the lane"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.2,
+   "raw": "B.M.33·20",
+   "px": 605,
+   "py": 34,
+   "confidence": "high",
+   "notes": "Henderson Road corner; pheon on house corner ~10 px right of text end; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.2,
+   "raw": "31·2",
+   "px": 698,
+   "py": 5,
+   "confidence": "medium",
+   "notes": "HENDERSON ROAD at top edge; dot between S and O of HENDERSON (interpunct ambiguity); figure whole (py 7-15)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.8,
+   "raw": "B.M.33·80",
+   "px": 847,
+   "py": 3,
+   "confidence": "high",
+   "notes": "north side of the road at top edge; pheon on building corner ~35 px right of text; 8 at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.0,
+   "raw": "31·0",
+   "px": 552,
+   "py": 152,
+   "confidence": "medium",
+   "notes": "Gipsy Lane; a double dot right of figure sits in the line of large boundary dots; taken as survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.8,
+   "raw": "30·8",
+   "px": 595,
+   "py": 306,
+   "confidence": "medium",
+   "notes": "Gipsy Lane; extra dot below-left of figure off the regular boundary-dot spacing taken as survey dot; last digit 8 at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.4,
+   "raw": "30·4",
+   "px": 624,
+   "py": 411,
+   "confidence": "medium",
+   "notes": "Gipsy Lane, by the P of the lane name; dot right of figure between figure and P, in the boundary-dot line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.6,
+   "raw": "30·6",
+   "px": 634,
+   "py": 496,
+   "confidence": "medium",
+   "notes": "Gipsy Lane by the S of the lane name; no distinct survey dot (boundary dots); position = centre of figures; 6 at 14x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.55,
+   "raw": "B.M.33·55",
+   "px": 711,
+   "py": 490,
+   "confidence": "high",
+   "notes": "pheon on house wall just below text at Gipsy Lane; 5s flat-topped at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.4,
+   "raw": "31·4",
+   "px": 886,
+   "py": 420,
+   "confidence": "high",
+   "notes": "road east of Gipsy Lane (Chesterton-type terrace street); dot right of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.2,
+   "raw": "31·2",
+   "px": 668,
+   "py": 695,
+   "confidence": "medium",
+   "notes": "Gipsy Lane by 'Co. & Parly. Boro. Bdy.'; small extra dot beside a large boundary dot, left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.2,
+   "raw": "31·2",
+   "px": 668,
+   "py": 896,
+   "confidence": "medium",
+   "notes": "Gipsy Lane / C.R. boundary, south; no dot found; position = centre of figures"
+  }
+ ],
+ "non_height_marks": [
+  "F.P., H (hydrant), L.B. marks",
+  "boundary lettering 'Co. & Parly. Boro. Bdy.', 'U. D. Bdy.', 'C.R.'",
+  "survey-station triangle without figure at ~695,700"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 348,
+   "px1": 8,
+   "py1": 364,
+   "reason": "figure ending '·3' cut by west edge"
+  },
+  {
+   "px0": 478,
+   "py0": 1018,
+   "px1": 500,
+   "py1": 1024,
+   "reason": "figure (32·5?) cut by south edge"
+  },
+  {
+   "px0": 912,
+   "py0": 1018,
+   "px1": 940,
+   "py1": 1024,
+   "reason": "figure (30·?) cut by south edge"
+  }
+ ]
+}

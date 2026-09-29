@@ -1,0 +1,316 @@
+{
+ "mosaic": "m18_131087_87164",
+ "reader": "opus-am",
+ "area": "Custom House / Victoria Dock Road: Frederick's Road, Williamson Road, Primitive Methodist Chapel, Coolfin Road, Custom, Young, Wightman, Hill and Philip Streets, Infants' school, G.E.R. Woolwich Branch, Royal Albert & Victoria Docks Cut, K. and S. Warehouses",
+ "method": "Viewed all 9 sweep crops (2x) with anchors noted on opening (r0c0 FREDERICK'S ROAD/Meth. Chapel; r0c1 COOLFIN ROAD/WILLIAMSON ROAD; r0c2 Infants/B.M.7·97; r1c0 CUSTOM STREET/YOUNG STREET; r1c1 WIGHTMAN STREET/G.E.R.; r1c2 PHILIP STREET/VICTO..; r2c0 Royal Albert & Victoria Docks Cut/S. Warehouse; r2c1 WOOLWICH BRANCH/S.B.; r2c2 K. Warehouse/B.M.9·68). 3-10x region views of every candidate (12 regions, anchors noted), contact sheets cs_a (8x), cs_a2 (12x), cs_b (8x), cs_bm (12x), cs_bm2 (12x), cs_ph (8x pheon sheet), and marker sheets. Every crop and contact sheet displayed when opened. A late check (region 8x, contact sheets cs_c 14x and cs_c2 6x) added the figure at 996,523.",
+ "legibility": "Good, clean figures. Horizontal sheet join at py ~399-401 across the full width (visible line with a tint change; the tool reports py ~400). Tool joins at py ~433, 536, 665, 678, 945, 966 and px ~346, 386, 561 are building/dock edges, not joins, by eye. No missing tiles.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 61,
+   "py": 115,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road at the west edge (..AD) north of the terraces; dot left; lead flat-topped 5 at 12x, final closed 8"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 244,
+   "py": 106,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "junction of Frederick's Road and Williamson Road; dot lower-left sits between the O and R of ROAD (possible interpunct); flat-topped 5 at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.24,
+   "raw": "B.M.7·24",
+   "px": 262,
+   "py": 124,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "front corner of the Primitive Methodist Chapel, Frederick's Road; pheon 15 px right of the text; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 434,
+   "py": 100,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Williamson Road; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 641,
+   "py": 99,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Williamson Road east; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.9,
+   "raw": "6·9",
+   "px": 848,
+   "py": 16,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street north of the Williamson Road junction; dot left (the F.P. has its own dot)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.97,
+   "raw": "B.M.7·97",
+   "px": 841,
+   "py": 114,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the house block at the Williamson Road / cross street junction; pheon below the text; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 868,
+   "py": 137,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "cross street south of Williamson Road; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 910,
+   "py": 278,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road by the Infants' school at Coolfin Road east end; dot above-left; both 5s flat-topped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.4,
+   "raw": "5·4",
+   "px": 952,
+   "py": 387,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road south-east of the school; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 173,
+   "py": 720,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road west, beside a survey triangle (158,727); separate dot upper-left used"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 303,
+   "py": 707,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road at Custom Street; dot upper-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 3,
+   "py": 736,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road at the west edge; dot upper-left; figure whole"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 445,
+   "py": 696,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road at Young Street; dot upper-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.31,
+   "raw": "B.M.8·31",
+   "px": 565,
+   "py": 639,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "end wall of the house at the corner of Wightman Street and Victoria Dock Road; pheon 15 px left of the text; decimal 3 open, distinct from lead 8 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 583,
+   "py": 686,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road at Wightman Street; dot upper-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 721,
+   "py": 678,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road at Hill Street; dot upper-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 859,
+   "py": 671,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Victoria Dock Road at Philip Street; dot upper-right just before the V of VICTORIA"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.47,
+   "raw": "B.M.8·47",
+   "px": 1018,
+   "py": 678,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building/wall corner on the north side of Victoria Dock Road near the east edge; pheon right of the text (whole, ~5 px from edge); 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 940,
+   "py": 840,
+   "confidence": "medium",
+   "setting": "railway",
+   "notes": "railway lines south of the Royal Albert & Victoria Docks Cut; dot left on the rails; the lines appear to be at grade"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.68,
+   "raw": "B.M.9·68",
+   "px": 946,
+   "py": 956,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "north-east corner of the K. Warehouse range; pheon right of the text; open 6, closed 8 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.2,
+   "raw": "10·2",
+   "px": 957,
+   "py": 999,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "dock premises south of the railway; figure written inside a small building beside a survey triangle (987,990); isolated dot outside its west wall used as position"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 996,
+   "py": 523,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "street east of the Infants' school near the east edge (figure ends ~9 px from edge); dot left; read 5·6 at 2x but the lead is rounded like a known 6 at 14x, and the final 6/8 is unsettled"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangles at ~158,727 and ~987,990",
+  "S.B. (signal box) and S.P. on the G.E.R.",
+  "F.P. marks throughout"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 396,
+   "px1": 1024,
+   "py1": 404,
+   "reason": "horizontal sheet join at py ~399-401"
+  },
+  {
+   "px0": 0,
+   "py0": 740,
+   "px1": 1024,
+   "py1": 800,
+   "reason": "Royal Albert & Victoria Docks Cut water, no heights"
+  }
+ ]
+}

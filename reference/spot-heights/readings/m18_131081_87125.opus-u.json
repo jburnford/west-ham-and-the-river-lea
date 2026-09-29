@@ -1,0 +1,283 @@
+{
+  "mosaic": "m18_131081_87125",
+  "reader": "opus-u",
+  "area": "West Ham Lane / Forest Gate south-west: Stratford Hall, Romford Road tramway and Ward Boundary, Dyson Road, Fairland Road North, Elm Road, Alice Road, Warwick Road, Vaughan Road, Eleanor Road, Bolton Road, Stork Road",
+  "method": "Viewed all 9 sweep crops at 2x (anchors: r0c0 Stratford Hall and N-S ROAD; r0c1 TRAMWAY, Ward Bdy., B.M.32.66; r0c2 ELM ROAD; r1c0 FAIRLAND ROAD NORTH, DYSON R; r1c1 DYSON ROAD and Fn. fountain; r1c2 ELM ROAD, ALICE ROAD, W.A.R.W.I.C; r2c0 VAUGHAN R, MATHEWS PA, FAIRLAND; r2c1 ELEANOR, BOLTON R; r2c2 STORK ROAD, WARWICK ROAD). Contact sheets viewed: cs1 (6x, six northern candidates), cs2 (10x, same), cs3 (6x, B.M.32.66, 32.3, B.M.30.33, 28.8, 29.1, 27.8), cs4 (12x, same), cs5 and cs5nn (10x smooth and nearest-neighbour for 28.8 and B.M.32.66), cs6 (6x, southern and eastern candidates), cs7 (12x, same), cs8 (8x, 26.6 and 32.7), marker sheet mk1 (all 21 positions boxed and checked). Every crop and sheet displayed when opened and has an anchor in my notes.",
+  "legibility": "Good print. Italic 6/8 is hard on B.M.32.66 and 28.8 (smoothed and blocky zooms disagree, both recorded low). Street lettering ROAD (Romford Road), WARWICK ROAD and ALICE carry interpuncts that sit next to figures. No sheet join seen by eye or reported by the tool. 30.4 lies within 2 px of the north edge.",
+  "crop_bounds_checked": [
+    [
+      0,
+      0,
+      448,
+      448
+    ],
+    [
+      288,
+      0,
+      736,
+      448
+    ],
+    [
+      576,
+      0,
+      1024,
+      448
+    ],
+    [
+      0,
+      288,
+      448,
+      736
+    ],
+    [
+      288,
+      288,
+      736,
+      736
+    ],
+    [
+      576,
+      288,
+      1024,
+      736
+    ],
+    [
+      0,
+      576,
+      448,
+      1024
+    ],
+    [
+      288,
+      576,
+      736,
+      1024
+    ],
+    [
+      576,
+      576,
+      1024,
+      1024
+    ]
+  ],
+  "readings": [
+    {
+      "type": "spot",
+      "value_ft": 30.4,
+      "raw": "30·4",
+      "px": 247,
+      "py": 6,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "N-S road at north edge, east footway; figure whole (py 2-11); only nearby dot is the O·A interpunct of the road name at 225,7; position = centre of figures"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 32.01,
+      "raw": "B.M.32·01",
+      "px": 280,
+      "py": 163,
+      "confidence": "high",
+      "setting": "building",
+      "notes": "east side of the N-S road; pheon on the building line 10 px left of text; 10x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 30.1,
+      "raw": "30·1",
+      "px": 305,
+      "py": 210,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "same road further south; no survey dot (dash-dot boundary dots on road only); centre of figures"
+    },
+    {
+      "type": "spot",
+      "value_ft": 29.9,
+      "raw": "29·9",
+      "px": 389,
+      "py": 399,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "south side of Romford Road tramway near the road junction; no separate dot (rail ticks only); centre of figures"
+    },
+    {
+      "type": "spot",
+      "value_ft": 30.7,
+      "raw": "30·7",
+      "px": 598,
+      "py": 313,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Romford Road tramway at Ward Bdy.; no clear dot; centre of figures"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 32.66,
+      "raw": "B.M.32·66",
+      "px": 630,
+      "py": 314,
+      "confidence": "low",
+      "setting": "building",
+      "notes": "Romford Road south side east of Ward Bdy.; Y pheon on the frontage line; finals read 66 on smoothed 6x/10x/12x but 8-like on nearest-neighbour 10x, so low"
+    },
+    {
+      "type": "spot",
+      "value_ft": 31.2,
+      "raw": "31·2",
+      "px": 746,
+      "py": 241,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Romford Road tramway opposite Elm Road; dot on the rail above the figure"
+    },
+    {
+      "type": "spot",
+      "value_ft": 32.3,
+      "raw": "32·3",
+      "px": 963,
+      "py": 148,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Romford Road tramway east; dot on the rail up-left of figure; final 3 matches leading 3 at 12x"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 30.33,
+      "raw": "B.M.30·33",
+      "px": 18,
+      "py": 515,
+      "confidence": "high",
+      "setting": "building",
+      "notes": "north side of Romford Road at west edge; pheon 10 px left of text; all 3s match at 12x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 28.8,
+      "raw": "28·8",
+      "px": 105,
+      "py": 521,
+      "confidence": "low",
+      "setting": "street",
+      "notes": "Romford Road at Fairland Road North; figure directly above a survey triangle, position = triangle centre; middle digit 6 on smoothed, 8 on nearest-neighbour 10x zoom (matches the final 8), so low"
+    },
+    {
+      "type": "spot",
+      "value_ft": 29.1,
+      "raw": "29·1",
+      "px": 243,
+      "py": 466,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "south side of Romford Road; nearby dots are D· of ROAD (228,452) and the F.P's leading dot (255,458); centre of figures"
+    },
+    {
+      "type": "spot",
+      "value_ft": 27.8,
+      "raw": "27·8",
+      "px": 185,
+      "py": 655,
+      "confidence": "low",
+      "setting": "street",
+      "notes": "Fairland Road North; no dot; centre of figures; final 8 closed at 12x; lowered to low: final 3/8 stands alone with no matching digit in the figure"
+    },
+    {
+      "type": "spot",
+      "value_ft": 32.4,
+      "raw": "32·4",
+      "px": 693,
+      "py": 450,
+      "confidence": "medium",
+      "setting": "building",
+      "notes": "written over the terrace frontage on the east side of Warwick Road; no dot; centre of figures"
+    },
+    {
+      "type": "spot",
+      "value_ft": 33.7,
+      "raw": "33·7",
+      "px": 840,
+      "py": 573,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Alice Road at Elm Road; dot directly below the figure, between C and E of ALICE (no other interpuncts in ALICE, so probably the survey dot)"
+    },
+    {
+      "type": "spot",
+      "value_ft": 34.5,
+      "raw": "34·5",
+      "px": 929,
+      "py": 545,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "Alice Road east; dot after the final D of ROAD (no interpuncts in this ROAD), 4 px left of figure; 5 flat-topped"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 34.96,
+      "raw": "B.M.34·96",
+      "px": 763,
+      "py": 615,
+      "confidence": "high",
+      "setting": "building",
+      "notes": "corner of Alice Road and Warwick Road; Y pheon on the house front 10 px below text; 12x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 32.7,
+      "raw": "32·7",
+      "px": 740,
+      "py": 612,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Warwick Road at Alice Road beside L.B; no clear survey dot (W·A·R·W·I·C·K interpuncts nearby); centre of figures"
+    },
+    {
+      "type": "spot",
+      "value_ft": 27.3,
+      "raw": "27·3",
+      "px": 211,
+      "py": 802,
+      "confidence": "low",
+      "setting": "street",
+      "notes": "Vaughan Road west end; dot before V of VAUGHAN, directly above figure (no interpuncts in VAUGHAN); final 3 open at 12x but stands alone; lowered to low: final 3/8 stands alone with no matching digit in the figure"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 27.66,
+      "raw": "B.M.27·66",
+      "px": 122,
+      "py": 823,
+      "confidence": "medium",
+      "setting": "building",
+      "notes": "corner of Vaughan Road and Fairland Road; pheon on the corner 12 px left of text; finals 66 on smoothed 6x and 12x, not checked blocky"
+    },
+    {
+      "type": "spot",
+      "value_ft": 26.6,
+      "raw": "26·6",
+      "px": 173,
+      "py": 926,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Fairland Road among the avenue trees; dot up-left of figure; both 6s alike at 8x (open tops)"
+    },
+    {
+      "type": "spot",
+      "value_ft": 32.7,
+      "raw": "32·7",
+      "px": 825,
+      "py": 824,
+      "confidence": "medium",
+      "setting": "building",
+      "notes": "written over houses on the east side of Warwick Road; nearby dots are R·O·A·D interpuncts; centre of figures"
+    }
+  ],
+  "non_height_marks": [
+    "small upright '·34' at ~133,846 on Fairland Road (house or plot number, no decimal)",
+    "survey triangle at 105,521 (used as position for 28.8)",
+    "Fn. fountain symbol at ~525,490",
+    "Ward Bdy. dash-dot boundary",
+    "many F.P. and L.B marks"
+  ],
+  "unreadable_regions": []
+}

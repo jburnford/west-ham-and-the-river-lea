@@ -1,0 +1,28 @@
+{
+  "mosaic": "m18_131057_87116",
+  "reader": "opus-j",
+  "area": "Temple Mills: Templemills Road embankment and bridge over the River Lea, Templemills Bridge with the weir, P.H. and boundary stones on the county boundary, 'Highest point to which Ordinary Tides flow', the cottages south of the bridge, and open marsh/fields with ditches to the south and east",
+  "method": "sheet tool, 9 sweep crops at 2x, zoom contact sheets at 8x (+-30 px) on every figure and 6x on bench marks, 11x on the crowded weir area. All crops and zooms were viewed successfully; no image failed to load.",
+  "legibility": "Good; crowded lettering (B.S., F.F., Weir, Und.) at Templemills Bridge around 630-710, 470-530. Sheet join: horizontal at py ~535 across the full width (clear tint step, darker below). No figure crosses it.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "bench_mark", "value_ft": 27.92, "raw": "B.M.27·92", "px": 52, "py": 283, "confidence": "high", "notes": "Templemills Road bridge over the Lea (west abutment/parapet corner); pheon right of text below the parapet corner, 6x"},
+    {"type": "spot", "value_ft": 22.2, "raw": "22·2", "px": 86, "py": 276, "confidence": "high", "notes": "Templemills Road on the bridge approach embankment; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 16.6, "raw": "16·6", "px": 305, "py": 371, "confidence": "high", "notes": "Templemills Road east of the embankment hatching; dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 16.7, "raw": "16·7", "px": 612, "py": 58, "confidence": "high", "notes": "east bank of the River Lea by the county boundary, beside a track; dot above figures, 8x"},
+    {"type": "spot", "value_ft": 16.8, "raw": "16·8", "px": 645, "py": 273, "confidence": "high", "notes": "east bank of the Lea at the ditch junction; dot above figures, 8x"},
+    {"type": "spot", "value_ft": 15.8, "raw": "15·8", "px": 495, "py": 473, "confidence": "high", "notes": "Templemills Road west of Templemills Bridge; dot below-right of figures, 8x"},
+    {"type": "spot", "value_ft": 19.2, "raw": "19·2", "px": 651, "py": 497, "confidence": "medium", "notes": "roadway on Templemills Bridge over the Lea; the only nearby dot (636,504) lies in the channel on the county-boundary line, so position = centre of figures"},
+    {"type": "bench_mark", "value_ft": 19.23, "raw": "B.M.19·23", "px": 690, "py": 505, "confidence": "medium", "notes": "building east of the bridge among boundary stones; digits clear at 11x; no pheon found among the B.S. dots and lines, position = centre of text"},
+    {"type": "spot", "value_ft": 16.4, "raw": "16·4", "px": 843, "py": 457, "confidence": "high", "notes": "bank between the two channels east of the bridge (C.D.); dot left of figures, 8x"},
+    {"type": "spot", "value_ft": 16.9, "raw": "16·9", "px": 696, "py": 713, "confidence": "high", "notes": "yard of the cottages south of Templemills Bridge; dot above-right of figures at a fence corner, 8x"},
+    {"type": "bench_mark", "value_ft": 18.08, "raw": "B.M.18·08", "px": 740, "py": 917, "confidence": "high", "notes": "road fork south of Temple Mills; pheon right of text at the corner, 6x"},
+    {"type": "spot", "value_ft": 16.7, "raw": "16·7", "px": 748, "py": 928, "confidence": "medium", "notes": "written directly below the pheon of B.M.18·08 (probably ground level at the B.M.); no own dot; position = centre of figures"},
+    {"type": "spot", "value_ft": 14.6, "raw": "14·6", "px": 934, "py": 978, "confidence": "high", "notes": "path/field edge in the south-east; dot on the line right of figures, 8x"}
+  ],
+  "non_height_marks": ["'Highest point to which Ordinary Tides flow' (two places, ~215,505 and ~790,515)", "B.S. boundary stones and F.F. marks around Templemills Bridge (~660-720, 470-530)", "survey-station triangle at ~683,606 with no figure", "flow arrow in the Lea at ~25,200", "'C.D.' on the channel at ~920,405", "county boundary dash-dot line along the Lea"],
+  "unreadable_regions": [
+    {"px0": 630, "py0": 470, "px1": 715, "py1": 530, "reason": "dense lettering and boundary-stone symbols at Templemills Bridge; pheon of B.M.19·23 not identifiable"},
+    {"px0": 0, "py0": 530, "px1": 1024, "py1": 540, "reason": "horizontal sheet join at py ~535 (no figures on it)"}
+  ]
+}

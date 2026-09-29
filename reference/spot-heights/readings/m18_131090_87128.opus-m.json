@@ -1,0 +1,296 @@
+{
+ "mosaic": "m18_131090_87128",
+ "reader": "opus-m",
+ "area": "Upton: Ursuline Convent and schools, St George's Road, Khedive, Ismailia, Beauchamp, Wolseley, Belton and Elmhurst Roads, Upton Park Road",
+ "method": "Independent second read. Viewed all 9 sweep crops (2x) and contact sheets cs1-cs9 (8x to 24x zoom panels labelled in mosaic px); every image displayed when opened. Every value confirmed at >=8x, doubtful digits at 14-24x.",
+ "legibility": "Good; clear print. Horizontal sheet join at py ~948-950 across the full width (tint change), confirmed by eye; no figure is cut by it.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 34.1,
+   "raw": "34·1",
+   "px": 270,
+   "py": 99,
+   "confidence": "high",
+   "notes": "unnamed road at top-left by the school; dot right of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.72,
+   "raw": "B.M.35·72",
+   "px": 285,
+   "py": 119,
+   "confidence": "high",
+   "notes": "pheon on west wall of building east of the road, text below-right; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.7,
+   "raw": "34·7",
+   "px": 109,
+   "py": 317,
+   "confidence": "high",
+   "notes": "LANE (west); dot above the 4; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 280,
+   "py": 308,
+   "confidence": "medium",
+   "notes": "LANE at corner by the Ursuline school; dot above-left of figure; final digit read 6 at 14x and 20x but 6/8 not fully certain"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.3,
+   "raw": "34·3",
+   "px": 460,
+   "py": 317,
+   "confidence": "high",
+   "notes": "road in front of Ursuline Convent; dot right of figure; final 3 confirmed at 14x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 36.38,
+   "raw": "B.M.36·38",
+   "px": 491,
+   "py": 335,
+   "confidence": "low",
+   "notes": "under the large T of UPTON lettering; pheon at foot of the T stem ~40 px left of text; final digit 8 or 6 (24x leans 8), second 6 also shaped similarly"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.1,
+   "raw": "34·1",
+   "px": 632,
+   "py": 317,
+   "confidence": "medium",
+   "notes": "ST. GEORGE'S ROAD, directly under 'T·' whose dot is the ST. abbreviation stop; no separate survey dot; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.1,
+   "raw": "34·1",
+   "px": 807,
+   "py": 288,
+   "confidence": "medium",
+   "notes": "ST. GEORGE'S ROAD; dot immediately right of the O of GEORGE'S (between letters O and R) is taken as survey dot; interpunct ambiguity"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 1004,
+   "py": 284,
+   "confidence": "high",
+   "notes": "ST. GEORGE'S ROAD east end; dot right of figure; 14x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.84,
+   "raw": "B.M.34·84",
+   "px": 1005,
+   "py": 300,
+   "confidence": "medium",
+   "notes": "by the N of UPTON at east edge; no pheon found within the mosaic (likely just beyond east edge); position = centre of text; 20x digits"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.3,
+   "raw": "34·3",
+   "px": 131,
+   "py": 475,
+   "confidence": "high",
+   "notes": "road west of Ismailia Road; dot above 4; final 3 at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.4,
+   "raw": "34·4",
+   "px": 157,
+   "py": 642,
+   "confidence": "high",
+   "notes": "same road further south; dot above 4; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 665,
+   "py": 527,
+   "confidence": "medium",
+   "notes": "WOLSELEY ROAD; the only dot is between E and Y of WOLSELEY (interpunct ambiguity); figure below it"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.26,
+   "raw": "B.M.35·26",
+   "px": 680,
+   "py": 727,
+   "confidence": "high",
+   "notes": "pheon on corner of house at Wolseley Rd / Elmhurst Rd, below the hydrant H; 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 813,
+   "py": 726,
+   "confidence": "high",
+   "notes": "Elmhurst Road at Belton Road junction; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 699,
+   "py": 743,
+   "confidence": "high",
+   "notes": "ELMHURST ROAD; dot after the final D of ROAD, left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 36.42,
+   "raw": "B.M.36·42",
+   "px": 220,
+   "py": 833,
+   "confidence": "high",
+   "notes": "Khedive Road; pheon on house-front corner just below-right of text; 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 190,
+   "py": 824,
+   "confidence": "medium",
+   "notes": "KHEDIVE ROAD; dot above the 4, lying between the E and D of KHEDIVE lettering; 6 at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.0,
+   "raw": "34·0",
+   "px": 207,
+   "py": 933,
+   "confidence": "medium",
+   "notes": "KHEDIVE ROAD south end; dot below figure, directly above the final E of KHEDIVE; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 7,
+   "py": 953,
+   "confidence": "high",
+   "notes": "road at far west edge just south of the py~950 sheet join; dot left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.5,
+   "raw": "B.M.33·50",
+   "px": 608,
+   "py": 999,
+   "confidence": "high",
+   "notes": "UPTON PARK ROAD north side; pheon on house frontage ~45 px right of text; 5 flat-topped at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 664,
+   "py": 1007,
+   "confidence": "high",
+   "notes": "UPTON PARK ROAD between O and N of UPTON; survey dot just above the middot; 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 829,
+   "py": 845,
+   "confidence": "high",
+   "notes": "Belton Road south, by the Boys Girls & Infants school; dot above 2; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 850,
+   "py": 978,
+   "confidence": "high",
+   "notes": "UPTON PARK ROAD at Belton Rd junction; dot above 2; 8x"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle without figure at 81,100",
+  "survey-station triangle without figure at 544,195",
+  "large district lettering U P T O N across py ~310-340 (P, T, O, N)",
+  "F.P., L.B., H (hydrant) marks throughout"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1012,
+   "py0": 280,
+   "px1": 1024,
+   "py1": 345,
+   "reason": "east edge: pheon for B.M.34·84 probably beyond the mosaic edge"
+  }
+ ]
+}

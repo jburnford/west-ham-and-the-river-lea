@@ -1,0 +1,408 @@
+{
+ "mosaic": "m18_131063_87158",
+ "reader": "opus-ag",
+ "area": "Bromley / Poplar west: St Michael & All Angels' Church, Phoenix Saw Mills, Dewberry Street, St Leonard's Road, Joshua / Wilson / Tapley / ..cham Streets on the west; Abbott Road, Brunswick Road, Leven Road, Nairn Street, Highland / Glencoe / Findhorn / Andrew / Desart Streets on the east; open unlabelled ground east of Nairn Street",
+ "method": "sheet tool (no join reported); 9 sweep crops at 2x (anchors: r0c0 Phoenix Saw Mills/St Michael's Church; r0c1 ABBOTT ROAD/Institute; r0c2 LEVEN ROAD/NAIRN STREET; r1c0 BROMLEY PLACE/THOMAS PLACE; r1c1 BRUNSWICK/HIGHLAND/JOSHUA; r1c2 HIGHLAND STREET/GLENCOE STREET; r2c0 TAPLEY STREET/ST LEONARD; r2c1 ANDREW STREET/DESART STREET; r2c2 FINDHORN STREET/L.B.); contact sheets cs1 (5x, anchor 'for 1000'/B.M.14·02), cs2 (4x ±30, Angels' Church/B.M.11·57), cs3 (5x, B.M.15·02/20·45/17·05), cs4 (5x, B.M.23·55/20·83/11·64), cs5 (12x BM decimals), cs6 (7x 5/6 and 6/8 checks), cs7 (12x) and cs7b (12x nearest-neighbour) on 18·1, cs8 (6x pheons), cs9 (8x AA/AC/AF/AD); zoom 90,775 s6 (20·5 dot); marker sheets mk1-mk3 checked every position (6 positions corrected). All crops, zooms, contact and marker sheets displayed when opened; an anchor was written for each at the time.",
+ "legibility": "Good. Sheet join: vertical straight line with slight tint step at px ~824 running the full height (through Nairn Street terrace and Glencoe/Findhorn Streets); the sheet tool misses it. No missing tiles. Many interpunct-lettered street names (BRUNSWICK, ROAD, LEONARD) sit against figures.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 46,
+   "py": 305,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "wide road junction west of St Michael & All Angels' Church, under 'Seats for 1000'; no dot found within ±30 px, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.66,
+   "raw": "B.M.19·66",
+   "px": 177,
+   "py": 307,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the east wall of St Michael & All Angels' Church beside survey triangle; text 25 px east across the road; 9·66 open 6s at 7x and 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 175,
+   "py": 417,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "road junction south of the Vicarage by C.R.; dot at end of a short dash of the C.R. boundary line, so position uncertain"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.7,
+   "raw": "10·7",
+   "px": 517,
+   "py": 98,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "figure written over the west houses of the terrace east of the C.R. road; no dot found; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.5,
+   "raw": "9·5",
+   "px": 646,
+   "py": 77,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction of ..Y HALL ROAD and LEVEN ROAD; dot left of figures, 12 px off the HALL letter line so not an interpunct; flat-topped 5"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.57,
+   "raw": "B.M.11·57",
+   "px": 472,
+   "py": 283,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the corner of the building at the Dewberry Street / C.R. road corner, right of the text; wall line crosses the middot; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.3,
+   "raw": "9·3",
+   "px": 506,
+   "py": 335,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction of Dewberry Street and Abbott Road near survey triangle and F.P; dot above-left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.4,
+   "raw": "8·4",
+   "px": 652,
+   "py": 398,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "ABBOTT ROAD; dot lies between the two Ts of ABBOTT (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.5,
+   "raw": "10·5",
+   "px": 778,
+   "py": 43,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "written inside a small unshaded enclosure against the building north of Leven Road; no dot; flat-topped 5 at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.02,
+   "raw": "B.M.14·02",
+   "px": 856,
+   "py": 46,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon pointing up on the boundary wall north of Leven Road at the vertical join line; text to the right; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 865,
+   "py": 156,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "unlabelled open ground east of the Nairn Street gardens; dot on the rear garden fence line; value fallback (<15 ft)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.3,
+   "raw": "8·3",
+   "px": 877,
+   "py": 367,
+   "confidence": "medium",
+   "setting": "marsh",
+   "notes": "same open ground east of Nairn Street; dot just east of the garden fence at a fence junction, may be a line thickening"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 15.02,
+   "raw": "B.M.15·02",
+   "px": 933,
+   "py": 387,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon at the NW corner of the terrace south-east of the open ground; text to the left; 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.45,
+   "raw": "B.M.20·45",
+   "px": 202,
+   "py": 558,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon pointing up on the wall of the ..bar Cottages block at St Leonard's Road; last digit flat-topped 5 at 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.1,
+   "raw": "18·1",
+   "px": 231,
+   "py": 561,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "St Leonard's Road (lettered S T. L·E·O·N·A·R·D); dot above-left; final 1 faint, compared with the leading 1 at 12x and nearest-neighbour, no 7 bar"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.8,
+   "raw": "18·8",
+   "px": 291,
+   "py": 666,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "St Leonard's Road; the only nearby dot is over the E of LEONARD (interpunct); position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.2,
+   "raw": "15·2",
+   "px": 442,
+   "py": 610,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction of Joshua Street and Wilson Street; dot above-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.05,
+   "raw": "B.M.17·05",
+   "px": 435,
+   "py": 558,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the west wall of the terrace at Wilson Street; text written over the building"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.6,
+   "raw": "9·6",
+   "px": 580,
+   "py": 560,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Brunswick Road / Highland Street corner; nearby dots are the F.P's own and the R·U interpunct of BRUNSWICK; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.6,
+   "raw": "9·6",
+   "px": 670,
+   "py": 711,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Brunswick Road; the dot left of the figures is the C·K interpunct of BRUNSWICK; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.3,
+   "raw": "8·3",
+   "px": 822,
+   "py": 483,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "east end of Abbott Road at Highland Street under F.P (own dot); the vertical sheet join at px ~824 runs through the figure; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.6,
+   "raw": "19·6",
+   "px": 324,
+   "py": 760,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "St Leonard's Road; dot above-right"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.5,
+   "raw": "20·5",
+   "px": 90,
+   "py": 763,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "..RDS AVENUE at St Leonard's side; dot above-left, on the lettering line between S and A (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.4,
+   "raw": "19·4",
+   "px": 377,
+   "py": 872,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "St Leonard's Road by Tapley Street; dot above-right"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 23.55,
+   "raw": "B.M.23·55",
+   "px": 65,
+   "py": 965,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon pointing up at the south wall of the building on ..CHAM STREET; text to the right; flat 5s at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.2,
+   "raw": "22·2",
+   "px": 49,
+   "py": 990,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "..CHAM STREET; nearby dots are the H·A interpunct and the F.P's own; position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.83,
+   "raw": "B.M.20·83",
+   "px": 418,
+   "py": 994,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon at the building corner NW of the text, St Leonard's Road; final 3 open-left at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.2,
+   "raw": "9·2",
+   "px": 673,
+   "py": 785,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Brunswick Road at Andrew Street by an F.P cluster; the dot right of the figures lies between R and O of ROAD (possible interpunct); position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.3,
+   "raw": "9·3",
+   "px": 716,
+   "py": 851,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Brunswick Road; dot is the D· after ROAD (terminal, could be survey dot)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.64,
+   "raw": "B.M.11·64",
+   "px": 731,
+   "py": 927,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon pointing up at the building corner, Brunswick Road / Desart Street; open 6 at 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.7,
+   "raw": "9·7",
+   "px": 794,
+   "py": 983,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Brunswick Road junction near L.B. and H; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.8,
+   "raw": "18·8",
+   "px": 455,
+   "py": 1019,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "St Leonard's Road at the south edge below H; figures end 1-2 px from the bottom edge but look whole; no dot found"
+  }
+ ],
+ "non_height_marks": [
+  "C.R. lettering and dashed boundary along the road west of Phoenix Saw Mills",
+  "survey triangles at ~168,303 (on church), ~492,322, ~104,418 (H.Δ)",
+  "Crane at ~360,128",
+  "many F.P and H marks",
+  "L.B. at ~770,960"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 440,
+   "py0": 1012,
+   "px1": 475,
+   "py1": 1024,
+   "reason": "18·8 within 1-2 px of the bottom edge; recorded but check against the southern neighbour"
+  },
+  {
+   "px0": 820,
+   "py0": 0,
+   "px1": 828,
+   "py1": 1024,
+   "reason": "vertical sheet join at px ~824"
+  }
+ ]
+}

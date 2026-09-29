@@ -1,0 +1,413 @@
+--- a/scripts/spot_height_merge.py
++++ b/scripts/spot_height_merge.py
+@@ -3,7 +3,11 @@
+ Inputs
+   reference/spot-heights/readings/<mosaic>.json           legacy, reader opus-a
+   reference/spot-heights/readings/<mosaic>.<reader>.json  one file per reader
+-  reference/spot-heights/mosaics/<mosaic>.json            sidecars (georeference)
++  reference/spot-heights/mosaics/<mosaic>.json            sidecars (georeference), m18_* five-foot
++  reference/spot-heights/mosaics-25inch/<mosaic>.json     q18_* 25-inch (1:2500) 1893-96
++  reference/spot-heights/mosaics-1848/<mosaic>.json       s18_* 1:5,280 skeleton survey 1848-51
++  (--readings-dir DIR reads another folder instead of readings/, --extra FILE...
++  adds files; both then require explicit --out and --report.)
+ 
+ Outputs
+   reference/spot-heights/heights.geojson   WGS84 points, one per distinct mark
+@@ -28,6 +32,21 @@
+ any clusters of the same type within 6 m whose values disagree by more than
+ 0.15 ft, provided they came from different files: that is one mark read two
+ ways, and the result is flagged disputed: true with all values listed.
++
++Layers. The folder and layer come from the mosaic prefix (spot_height_mosaics.
++mosaic_dir / LAYERS). Readings are only ever clustered within one survey epoch:
++m18 five-foot and q18 25-inch (both the 1890s levelling) may form one mark;
++s18 1848-51 skeleton readings never join either, even at the same spot, and
++their marks get ids sk_E_N (1890s marks keep sh_E_N). Within a layer values
++agree within 0.15 ft; across layers the coarser layer's rounding is allowed
++(max(0.15, half a unit of the fewer decimal places): a whole-foot 25-inch 8
++agrees with a five-foot 8.3, 9 does not). Each mark carries layer (that of the
++winning reading; five-foot first on ties), layers, scale and survey_dates;
++datum and source come from the winning reading's sidecar, except that
++five-foot marks keep 'OD Liverpool' / 'OS 1:1056 London 1891-96 via NLS'.
++Decimal places are checked per layer (five-foot spot 1 / B.M. 2; 25-inch spot
++0 / B.M. 1; skeleton spot 1 / B.M. 1), and raw must spell value_ft ('?' stands
++for a doubtful digit; a trailing '?' may also just flag doubt).
+ """
+ from __future__ import annotations
+ 
+@@ -41,7 +60,8 @@
+ from pathlib import Path
+ 
+ sys.path.insert(0, str(Path(__file__).resolve().parent))
+-from spot_height_mosaics import FROM_BNG, pixel_to_coords  # noqa: E402
++from spot_height_mosaics import (DEFAULT_LAYER, FROM_BNG, LAYERS, meta_info, mosaic_dir,  # noqa: E402
++                                 pixel_to_coords)
+ 
+ ROOT = Path(__file__).resolve().parents[1]
+ BASE = ROOT / 'reference/spot-heights'
+@@ -50,19 +70,55 @@
+ VALUE_TOL = 0.15
+ RANGE = (0.0, 120.0)  # Lea valley 0-50; gravel terrace (Forest Gate, Leytonstone, Wanstead Flats) to ~100
+ CONF = {'high': 0, 'medium': 1, 'low': 2}
+-NAME = re.compile(r'^(m\d+_\d+_\d+)(?:\.([A-Za-z0-9_-]+))?\.json$')
++NAME = re.compile(r'^([mqs]\d+_\d+_\d+)(?:\.([A-Za-z0-9_-]+))?\.json$')
++SKELETON_LAYER = 'os-london-skeleton-5280'
++# primary-layer preference when one mark is seen on several layers (finest scale first)
++LAYER_ORDER = {DEFAULT_LAYER: 0, 'os-25-inch-london': 1, SKELETON_LAYER: 2}
++LAYER_SHORT = {DEFAULT_LAYER: 'five-foot', 'os-25-inch-london': '25-inch', SKELETON_LAYER: 'skeleton 1848-51'}
++# five-foot marks keep exactly the strings heights.geojson has always carried
++FIVE_FOOT_DATUM = 'OD Liverpool'
++FIVE_FOOT_SOURCE = 'OS 1:1056 London 1891-96 via NLS'
++
++
++def layer_decimals(layer: str) -> dict:
++    """{'spot': dp, 'bench_mark': dp} for a layer (five-foot rules for unknown layers)."""
++    return LAYERS.get(layer, LAYERS[DEFAULT_LAYER]).get('decimals', {'spot': 1, 'bench_mark': 2})
++
++
++def value_tol(a: dict, b: dict) -> float:
++    """Largest value difference at which readings a and b agree: VALUE_TOL within a
++    layer; across layers also half a unit of the coarser rounding (whole-foot 8 ~ 8.3)."""
++    if a['layer'] == b['layer']:
++        return VALUE_TOL
++    dp = min(layer_decimals(a['layer']).get(a['type'], 1), layer_decimals(b['layer']).get(b['type'], 1))
++    return max(VALUE_TOL, 0.5 * 10 ** -dp)
++
++
++def agree(a: dict, b: dict) -> bool:
++    return abs(a['value_ft'] - b['value_ft']) <= value_tol(a, b) + 1e-9
+ 
+ 
+ # ----------------------------------------------------------------- loading
+ 
+-def load_readings(base: Path = BASE, readers: list[str] | None = None, only: list[Path] | None = None):
++def load_readings(base: Path = BASE, readers: list[str] | None = None, only: list[Path] | None = None,
++                  readings_dir: Path | None = None, extra: list[Path] | None = None):
+     rows, files, warnings = [], [], []
+-    paths = [Path(p) for p in only] if only else sorted((base / 'readings').glob('*.json'))
++    rdir = Path(readings_dir) if readings_dir else base / 'readings'
++    paths = [Path(p) for p in only] if only else sorted(rdir.glob('*.json'))
++    if extra and not only:
++        paths += [Path(p) for p in extra]
++    infos: dict[str, dict] = {}
++    seen_names = set()
+     for path in paths:
+         m = NAME.match(path.name)
+         if not m:
+-            warnings.append(f'{path.name}: file name not m18_X_Y.json or m18_X_Y.<reader>.json; ignored')
++            warnings.append(f'{path.name}: file name not <m18|q18|s18>_X_Y.json or <m18|q18|s18>_X_Y.<reader>.json; '
++                            f'ignored')
++            continue
++        if path.name in seen_names:
++            warnings.append(f'{path.name}: given twice ({path}); second copy ignored')
+             continue
++        seen_names.add(path.name)
+         mosaic, reader = m.group(1), m.group(2) or LEGACY_READER
+         if readers and reader not in readers:
+             continue
+@@ -75,13 +131,16 @@
+             warnings.append(f"{path.name}: 'mosaic' field {doc.get('mosaic')} disagrees with file name")
+         if doc.get('reader') and doc['reader'] != reader:
+             warnings.append(f"{path.name}: 'reader' field {doc['reader']} disagrees with file name")
+-        side = base / 'mosaics' / f'{mosaic}.json'
++        side = mosaic_dir(mosaic) / f'{mosaic}.json'
+         if not side.exists():
+             warnings.append(f'{path.name}: no sidecar {side.name}; ignored')
+             continue
+         meta = json.loads(side.read_text())
++        if mosaic not in infos:
++            infos[mosaic] = meta_info({'name': mosaic, **meta})
++        info = infos[mosaic]
+         fid = path.name
+-        files.append({'file': fid, 'mosaic': mosaic, 'reader': reader,
++        files.append({'file': fid, 'path': str(path), 'mosaic': mosaic, 'reader': reader, 'layer': info['layer'],
+                       'n': len(doc.get('readings', [])),
+                       'unreadable_regions': doc.get('unreadable_regions', []),
+                       'crop_bounds_checked': doc.get('crop_bounds_checked')})
+@@ -98,7 +157,8 @@
+             c = pixel_to_coords(meta, r['px'] + 0.5, r['py'] + 0.5)
+             rows.append({**r, 'raw': r.get('raw', str(r['value_ft'])), 'notes': r.get('notes', ''),
+                          'mosaic': mosaic, 'reader': reader, 'file': fid, 'idx': i,
+-                         'bng_e': c['bng_e'], 'bng_n': c['bng_n']})
++                         'bng_e': c['bng_e'], 'bng_n': c['bng_n'],
++                         'layer': info['layer'], 'epoch': info['epoch'], '_info': info})
+     return rows, files, warnings
+ 
+ 
+@@ -148,9 +208,9 @@
+         best = None
+         for cid in grid.near(r['bng_e'], r['bng_n']):
+             c = clusters[cid]
+-            if c['type'] != r['type'] or r['file'] in c['files']:
++            if c['type'] != r['type'] or c['epoch'] != r['epoch'] or r['file'] in c['files']:
+                 continue
+-            if abs(c['views'][0]['value_ft'] - r['value_ft']) > VALUE_TOL + 1e-9:
++            if not agree(c['views'][0], r):
+                 continue
+             d = min(math.hypot(v['bng_e'] - r['bng_e'], v['bng_n'] - r['bng_n']) for v in c['views'])
+             if d <= MERGE_M and (best is None or d < best[0]):
+@@ -159,7 +219,7 @@
+             update(best[1], [r])
+         else:
+             cid = len(clusters)
+-            clusters[cid] = {'cid': cid, 'type': r['type'], 'views': [r], 'files': {r['file']},
++            clusters[cid] = {'cid': cid, 'type': r['type'], 'epoch': r['epoch'], 'views': [r], 'files': {r['file']},
+                              'e': r['bng_e'], 'n': r['bng_n']}
+             grid.add(clusters[cid])
+     # second pass: same mark read with different values in different files -> disputed
+@@ -174,7 +234,7 @@
+                 if oid == cid:
+                     continue
+                 b = clusters[oid]
+-                if a['type'] != b['type'] or a['files'] & b['files']:
++                if a['type'] != b['type'] or a['epoch'] != b['epoch'] or a['files'] & b['files']:
+                     continue
+                 if min(math.hypot(u['bng_e'] - v['bng_e'], u['bng_n'] - v['bng_n'])
+                        for u in a['views'] for v in b['views']) <= MERGE_M:
+@@ -189,19 +249,32 @@
+ def summarise(clusters):
+     marks = []
+     for c in clusters:
+-        v = sorted(c['views'], key=lambda r: (CONF[r['confidence']], r['file'], r['idx']))
++        v = sorted(c['views'], key=lambda r: (LAYER_ORDER.get(r['layer'], 9), CONF[r['confidence']],
++                                              r['file'], r['idx']))
+         e, n = _centre(v)
+-        # value groups: votes weighted by distinct readers, then confidence
+-        groups = defaultdict(list)
++        # value groups (member agrees with the group's first reading; across layers the
++        # coarser rounding is allowed): votes weighted by distinct readers, then the
++        # finer layer, then confidence
++        groups: list[list[dict]] = []
+         for r in v:
+-            key = next((g for g in groups if abs(g - r['value_ft']) <= VALUE_TOL + 1e-9), r['value_ft'])
+-            groups[key].append(r)
+-        ranked = sorted(groups.values(), key=lambda g: (-len({r['reader'] for r in g}),
+-                                                         min(CONF[r['confidence']] for r in g), -len(g)))
++            g = next((g for g in groups if agree(g[0], r)), None)
++            if g is None:
++                groups.append([r])
++            else:
++                g.append(r)
++        ranked = sorted(groups, key=lambda g: (-len({r['reader'] for r in g}),
++                                               min(LAYER_ORDER.get(r['layer'], 9) for r in g),
++                                               min(CONF[r['confidence']] for r in g), -len(g)))
+         lead = ranked[0][0]
+         values = sorted({r['value_ft'] for r in v})
+         readers = sorted({r['reader'] for r in v})
+-        disputed = len(groups) > 1 or (len(values) > 1 and len(readers) > 1)
++        # different readers giving different values on the same layer is a dispute even
++        # within tolerance; across layers only a value outside tolerance is
++        split = any(a['reader'] != b['reader'] and a['layer'] == b['layer'] and a['value_ft'] != b['value_ft']
++                    for i, a in enumerate(v) for b in v[i + 1:])
++        disputed = len(groups) > 1 or split
++        info = lead['_info']
++        five = lead['layer'] == DEFAULT_LAYER
+         lon, lat = FROM_BNG.transform(e, n)
+         spread = max(math.hypot(r['bng_e'] - e, r['bng_n'] - n) for r in v)
+         marks.append({
+@@ -211,6 +284,12 @@
+             'mosaics': sorted({r['mosaic'] for r in v}),
+             'bng_e': round(e, 2), 'bng_n': round(n, 2), 'lon': lon, 'lat': lat,
+             'spread_m': round(spread, 2),
++            'layer': lead['layer'],
++            'layers': sorted({r['layer'] for r in v}, key=lambda s: (LAYER_ORDER.get(s, 9), s)),
++            'epoch': c['epoch'],
++            'scale': info['scale'], 'survey_dates': info['survey_dates'],
++            'datum': FIVE_FOOT_DATUM if five else info['datum'],
++            'source': FIVE_FOOT_SOURCE if five else info['geojson_source'],
+             'disputed': disputed,
+             'values': values if disputed else None,
+             'values_by_reader': ({rd: sorted({r['value_ft'] for r in v if r['reader'] == rd}) for rd in readers}
+@@ -223,7 +302,8 @@
+     marks.sort(key=lambda m: (-m['bng_n'], m['bng_e']))
+     seen = Counter()
+     for m in marks:
+-        base = f"sh_{m['bng_e']:.0f}_{m['bng_n']:.0f}"
++        prefix = 'sk' if m['epoch'] == LAYERS[SKELETON_LAYER]['epoch'] else 'sh'
++        base = f"{prefix}_{m['bng_e']:.0f}_{m['bng_n']:.0f}"
+         seen[base] += 1
+         m['id'] = base if seen[base] == 1 else f'{base}_{seen[base]}'
+     return marks
+@@ -274,6 +354,31 @@
+     return len(s.split('.')[1].rstrip('0')) if '.' in s else 0
+ 
+ 
++RAW_NUM = re.compile(r'([\d?]+)(?:\s*[.·•]\s*([\d?]+))?\s*$')
++
++
++def raw_problem(raw: str, value: float) -> str | None:
++    """None when raw spells value_ft ('?' = one doubtful digit; a trailing '?' may
++    instead just flag doubt), else what is wrong."""
++    m = RAW_NUM.search(raw or '')
++    if not m or not re.search(r'\d', m.group(0)):
++        return 'raw has no figure to compare with value_ft'
++    cands = [(m.group(1), m.group(2) or '')]
++    whole, frac = cands[0]
++    if frac.endswith('?'):
++        cands.append((whole, frac[:-1]))
++    elif not frac and whole.endswith('?') and len(whole) > 1:
++        cands.append((whole[:-1], ''))
++    for w, f in cands:
++        d = len(f)
++        if abs(round(value, d) - value) > 1e-9:
++            continue
++        pat = w.replace('?', r'\d') + (r'\.' + f.replace('?', r'\d') if d else '')
++        if re.fullmatch(pat, f'{value:.{d}f}'):
++            return None
++    return f'raw does not match value_ft {value}'
++
++
+ def checks(rows):
+     out = []
+     for r in rows:
+@@ -281,10 +386,17 @@
+         if not (RANGE[0] <= r['value_ft'] <= RANGE[1]):
+             out.append(f'{tag}: value outside plausible {RANGE[0]:g}-{RANGE[1]:g} ft')
+         dp = decimals(r['raw'], r['value_ft'])
+-        if r['type'] == 'bench_mark' and dp != 2:
+-            out.append(f'{tag}: bench mark not written to 2 dp')
+-        if r['type'] == 'spot' and dp != 1:
+-            out.append(f'{tag}: spot height not written to 1 dp')
++        layer = r.get('layer', DEFAULT_LAYER)
++        want = layer_decimals(layer)
++        what = '' if layer == DEFAULT_LAYER else f" ({LAYER_SHORT.get(layer, layer)} layer)"
++        if r['type'] == 'bench_mark' and dp != want['bench_mark']:
++            out.append(f"{tag}: bench mark not written to {want['bench_mark']} dp{what}")
++        if r['type'] == 'spot' and dp != want['spot']:
++            out.append(f"{tag}: spot height not written to {want['spot']} dp{what}"
++                       + (' (whole feet: raw "8", value_ft 8)' if want['spot'] == 0 else ''))
++        rp = raw_problem(r['raw'], r['value_ft'])
++        if rp:
++            out.append(f'{tag}: {rp}')
+         if r['type'] not in ('spot', 'bench_mark'):
+             out.append(f"{tag}: unexpected type {r['type']!r}")
+     return out
+@@ -324,6 +436,26 @@
+     return res
+ 
+ 
++def layer_table(marks) -> list[str]:
++    """'Marks by layer' section: by each mark's primary layer."""
++    L = ['', '## Marks by layer', '',
++         "Primary layer of each mark (the winning reading's; five-foot first). 1890s layers (five-foot, "
++         "25-inch) may share a mark; the 1848-51 skeleton never joins them (ids sk_E_N).", '',
++         '| layer | scale | epoch | n | spot | bench_mark | high | medium | low | disputed | also on another layer '
++         '| median ft | range ft |',
++         '|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|']
++    for lay in sorted({m['layer'] for m in marks}, key=lambda s: (LAYER_ORDER.get(s, 9), s)):
++        ms = [m for m in marks if m['layer'] == lay]
++        cc = Counter(m['confidence'] for m in ms)
++        tc = Counter(m['type'] for m in ms)
++        vals = sorted(m['value_ft'] for m in ms)
++        L.append(f"| {LAYER_SHORT.get(lay, lay)} | {ms[0]['scale']} | {ms[0]['epoch']} | {len(ms)} | {tc['spot']} | "
++                 f"{tc['bench_mark']} | {cc['high']} | {cc['medium']} | {cc['low']} | "
++                 f"{sum(m['disputed'] for m in ms)} | {sum(len(m['layers']) > 1 for m in ms)} | "
++                 f"{statistics.median(vals):.1f} | {vals[0]:.2f}-{vals[-1]:.2f} |")
++    return L
++
++
+ def report(rows, files, marks, warnings, path: Path):
+     L = ['# Spot-height merge: QA report', '']
+     readers = Counter(f['reader'] for f in files)
+@@ -354,6 +486,7 @@
+         L.append(f'Position spread of repeated readings (max distance from mark centre): '
+                  f'median {statistics.median(sp):.1f} m, 90th pct {sp[int(0.9 * (len(sp) - 1))]:.1f} m, '
+                  f'max {sp[-1]:.1f} m.')
++    L += layer_table(marks)
+     if any('setting_source' in m for m in marks):
+         L.append('')
+         L.append('## Marks by setting')
+@@ -424,7 +557,7 @@
+             for r in m['_v']:
+                 per[r['reader']].append(r)
+             vals = [r['value_ft'] for r in m['_v']]
+-            ok += max(vals) - min(vals) <= VALUE_TOL + 1e-9
++            ok += all(agree(a, b) for i, a in enumerate(m['_v']) for b in m['_v'][i + 1:])
+             exact += len(set(vals)) == 1
+             cs = [_centre(v) for v in per.values()]
+             dd += [math.hypot(a[0] - b[0], a[1] - b[1]) for i, a in enumerate(cs) for b in cs[i + 1:]]
+@@ -455,11 +588,17 @@
+     L.append('## Rule checks (per reading)')
+     L.append('')
+     ck = checks(rows) + setting_checks(rows)
+-    L += [f'- {c}' for c in ck] or ['All readings pass: spots 1 dp, bench marks 2 dp, values 0-120 ft.']
++    if all(r.get('layer', DEFAULT_LAYER) == DEFAULT_LAYER for r in rows):
++        L += [f'- {c}' for c in ck] or ['All readings pass: spots 1 dp, bench marks 2 dp, values 0-120 ft.']
++    else:
++        L += [f'- {c}' for c in ck] or ['All readings pass: five-foot spots 1 dp / bench marks 2 dp, 25-inch '
++                                        'spots 0 dp / bench marks 1 dp, skeleton spots and bench marks 1 dp; raw '
++                                        'matches value_ft; values 0-120 ft.']
+     near = []
+     for i, a in enumerate(marks):
+         for b in marks[i + 1:]:
+-            if a['type'] != b['type'] and math.hypot(a['bng_e'] - b['bng_e'], a['bng_n'] - b['bng_n']) <= 3:
++            if a['type'] != b['type'] and a['epoch'] == b['epoch'] \
++                    and math.hypot(a['bng_e'] - b['bng_e'], a['bng_n'] - b['bng_n']) <= 3:
+                 near.append(f"- {a['id']} {a['type']} {a['raw']} and {b['id']} {b['type']} {b['raw']} within 3 m "
+                             f"(one mark typed two ways?)")
+     if near:
+@@ -487,7 +626,8 @@
+             'id': m['id'], 'type': m['type'], 'value_ft': m['value_ft'], 'raw': m['raw'],
+             'confidence': m['confidence'], 'n_readings': m['n_readings'], 'readers': m['readers'],
+             'mosaics': m['mosaics'], 'bng_e': m['bng_e'], 'bng_n': m['bng_n'], 'spread_m': m['spread_m'],
+-            'datum': 'OD Liverpool', 'source': 'OS 1:1056 London 1891-96 via NLS',
++            'layer': m['layer'], 'layers': m['layers'], 'scale': m['scale'], 'survey_dates': m['survey_dates'],
++            'datum': m['datum'], 'source': m['source'],
+             'disputed': m['disputed'],
+         }
+         if m['disputed']:
+@@ -517,16 +657,26 @@
+     ap.add_argument('--out', type=Path, default=BASE / 'heights.geojson')
+     ap.add_argument('--report', type=Path, default=BASE / 'qa_report.md')
+     ap.add_argument('--readers', nargs='+', help='only use files from these readers (default: all)')
++    ap.add_argument('--readings-dir', type=Path, default=None, metavar='DIR',
++                    help='read reading files from DIR instead of reference/spot-heights/readings '
++                         '(requires --out and --report)')
++    ap.add_argument('--extra', nargs='+', type=Path, default=None, metavar='FILE',
++                    help='also merge these reading files (e.g. test files kept outside readings/; '
++                         'requires --out and --report)')
+     ap.add_argument('--check', nargs='+', type=Path, metavar='FILE',
+                     help='validate reading file(s) only: schema, name, rules; writes nothing')
+     args = ap.parse_args()
++    if (args.readings_dir or args.extra) and not args.check and (
++            args.out == BASE / 'heights.geojson' or args.report == BASE / 'qa_report.md'):
++        ap.error('--readings-dir / --extra need explicit --out and --report (so the real outputs are not '
++                 'overwritten)')
+     if args.check:
+         rows, files, warnings = load_readings(only=args.check)
+         problems = warnings + checks(rows)
+         for f in files:
+             if f['crop_bounds_checked'] is None:
+                 problems.append(f"{f['file']}: no crop_bounds_checked list")
+-            if 'reader' not in json.loads((BASE / 'readings' / f['file']).read_text()) and f['reader'] != LEGACY_READER:
++            if 'reader' not in json.loads(Path(f['path']).read_text()) and f['reader'] != LEGACY_READER:
+                 problems.append(f"{f['file']}: no 'reader' field")
+         dup = Counter((r['file'], r['type'], r['value_ft'], round(r['px'] / 8), round(r['py'] / 8)) for r in rows)
+         problems += [f'{k[0]}: {k[1]} {k[2]} listed twice at about {k[3] * 8},{k[4] * 8}' for k, n in dup.items() if n > 1]
+@@ -537,10 +687,14 @@
+         if nos:
+             print(f'  note: {nos} reading(s) without a setting field (see READING_GUIDE.md, '
+                   f'"Setting field"); the merge will infer them from notes')
++        for lay in sorted({f['layer'] for f in files} - {DEFAULT_LAYER}, key=lambda s: (LAYER_ORDER.get(s, 9), s)):
++            dp = layer_decimals(lay)
++            print(f"  note: {LAYER_SHORT.get(lay, lay)} layer: spots {dp['spot']} dp, bench marks "
++                  f"{dp['bench_mark']} dp; raw must spell value_ft")
+         for p in problems:
+             print(f'  {p}')
+         sys.exit(1 if problems else 0)
+-    rows, files, warnings = load_readings(readers=args.readers)
++    rows, files, warnings = load_readings(readers=args.readers, readings_dir=args.readings_dir, extra=args.extra)
+     marks = assign_settings(summarise(cluster(rows)))
+     write_geojson(marks, files, args.out)
+     pairs = report(rows, files, marks, warnings, args.report)
+@@ -550,6 +704,10 @@
+     for t in sorted({m['type'] for m in marks}):
+         print(f"  {t:11s} " + '  '.join(f"{c} {cc[(t, c)]}" for c in CONF))
+     print(f'  mosaics read by 2+ readers: {len({p["mosaic"] for p in pairs})}')
++    lc = Counter(m['layer'] for m in marks)
++    print('  layers: ' + ', '.join(f"{LAYER_SHORT.get(k, k)} {lc[k]}"
++                                   for k in sorted(lc, key=lambda s: (LAYER_ORDER.get(s, 9), s)))
++          + f" (marks on 2+ layers {sum(len(m['layers']) > 1 for m in marks)})")
+     sc = Counter(m['setting'] or 'unknown' for m in marks)
+     print('  setting: ' + ', '.join(f'{k} {v}' for k, v in sc.most_common())
+           + f" (reader {sum(m['setting_source'] == 'reader' for m in marks)}, "

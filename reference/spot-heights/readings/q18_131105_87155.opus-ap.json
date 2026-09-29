@@ -1,0 +1,20 @@
+{
+ "mosaic": "q18_131105_87155", "reader": "opus-ap", "layer": "os-25-inch-london",
+ "area": "East Ham levels / Plaistow Level east, N ~181,900: open grazing marsh in parcels 105 (18·055 ac), 118 (2·282), 119 (3·579) and 116 (1·081) divided by blue ditches; a straight marsh road along the south edge (probably the embanked Beckton Road), with a spot height and a B.M. at the very edge.",
+ "method": "Layer os-25-inch-london (OS 25-inch Essex county series, inferred 1893-96 revision). Viewed: 1x full-mosaic overview (anchor 105 18·055, 118 2·282, B.M.7·5 at the bottom edge); all nine 2x sweep crops, each anchored on opening: r0c0 116 / 9·994 / 18·055, r0c1 9·994 across the join, r0c2 ditch + 105, r1c0 118 2·282 + cut '5' at W edge, r1c1 rotated 2·282, r1c2 105 18·055, r2c0 119 3·579 + italic 6, r2c1 3·579 across the join, r2c2 ditch + B.M.7·5 at edge; 6x contact sheet cs1 (the 6 and the B.M.). Every crop and sheet displayed and was anchored in my notes at the time. Marker sheet checked before marking done.",
+ "legibility": "Clear. Vertical sheet join px ~443 full height (acreages repeated both sides; tool reports none). The south edge cuts the marsh road: B.M. text clipped.",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [
+  {"type": "spot", "value_ft": 6, "raw": "6", "px": 279, "py": 990, "confidence": "medium", "setting": "street",
+   "notes": "marsh road along the south edge; italic 6 whole at 275-283,984-996 just north of the road's north line (y ~1000). No cross within the mosaic; only a small peak at 278,1023 on the south edge, probably the top of its cross, which lies in q18_131105_87158. Position = centre of figure."}
+ ],
+ "non_height_marks": [
+  "acreages and parcel numbers 105 / 18·055, 118 / 2·282 (also rotated), 119 / 3·579 (repeated), 116 / 1·081, 9·994",
+  "upright '7' and '5' at the west edge (~2,550 and ~5,590): cut parcel number / acreage of the western neighbour",
+  "S-shaped drain ties on the ditches"
+ ],
+ "unreadable_regions": [
+  {"px0": 745, "py0": 1012, "px1": 825, "py1": 1024, "reason": "B.M. (reads B.M.7·5 from the upper halves) on the marsh road cut by the south edge; pheon not visible; whole on q18_131105_87158"},
+  {"px0": 265, "py0": 1018, "px1": 290, "py1": 1024, "reason": "cross for the spot height 6 probably just beyond the south edge"}
+ ]
+}

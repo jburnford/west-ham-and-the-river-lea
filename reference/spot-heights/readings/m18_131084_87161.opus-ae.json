@@ -1,0 +1,257 @@
+{
+ "mosaic": "m18_131084_87161",
+ "reader": "opus-ae",
+ "area": "Canning Town: Glass Bottle Works, Paragon Works (Printing), St Thomas's / St Peter's Roads, Elphick and Agate Streets, School, Police Station, Eldon and Albany Roads, open ground east to Butchers Road",
+ "method": "Overview (anchor CANNING TOWN lettering, Paragon Works) and all 9 sweep crops at 2x viewed and anchored on opening (r0c0 Glass Bottle Works; r0c1 Paragon Works; r0c2 BUTCHERS; r1c0 ELPHICK/AGATE STREET; r1c1 School Girls Infants; r1c2 BUTC/L.B./triangle; r2c0 Police Station/ELDON ROAD; r2c1 ALBANY ROAD; r2c2 L.B./CK'S ROAD). Contact sheets e1-e14 (6x ±12-30, 8x ±12-16, 12x ±12-14, 18x ±7), all displayed when opened. Dot centroids by numeric helper; marker sheet checked.",
+ "legibility": "Clear. Vertical sheet join at px ~634 (full-height straight line with a paper tint step, confirmed numerically; the sheet tool reports none). 6/8 and 5/6 ambiguity in three small figures (low).",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 422,
+   "py": 9,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "road at the north edge (..OAD lettering) east of St Peter's Road; no dot found, position = centre of figures; second digit read 6 at 6x/8x but matches the flat-topped 5 of 7·5 at 12x/18x and differs from the leading 6, so 6·5 vs 6·6 unresolved"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 530,
+   "py": 58,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road junction NE of Paragon Works near F.P.; dot left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.19,
+   "raw": "B.M.9·19",
+   "px": 508,
+   "py": 116,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "NE corner of Paragon Works (Printing); pheon pointing at the wall corner, text to the right; 9·19 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 715,
+   "py": 160,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street between the two long terraces; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 870,
+   "py": 247,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "east end of the same street by the H; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 946,
+   "py": 301,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "west side of Butchers Road, outside the dotted road edge; no survey dot found (the apparent dot after C of BUTCHERS is the ball terminal of the C, checked on raw pixels), position = centre of figures; 5 flat-topped at 8x/18x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 866,
+   "py": 474,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "west end of the road north of the terraces, by the H; dot left of figure, separate from the survey triangle at 852,480; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 776,
+   "py": 620,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road between terrace blocks west of B.M.9·43; dot left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.43,
+   "raw": "B.M.9·43",
+   "px": 891,
+   "py": 601,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "SW corner of the terrace north of the road; pheon at the house corner above the text; 9·43 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 699,
+   "py": 757,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open unbuilt ground west of the terrace block (no place word, below 15 ft); dot above-left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 628,
+   "py": 874,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "footpath/road junction by F.P. just west of the sheet join; dot above figure; 8 clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 828,
+   "py": 882,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road south of the terraces (R·O·A·D lettering nearby); dot left of figure; 8 clear at 6x/8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.24,
+   "raw": "B.M.7·24",
+   "px": 1008,
+   "py": 904,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "at the corner of ...CK'S ROAD near the east edge; 7·24 clear at 12x; pheon not found within 30 px, position = centre of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.8,
+   "raw": "5·8",
+   "px": 84,
+   "py": 977,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "...NE ROAD by Eldon Road, dot below-left of figure; read 5·6 at 2x, the second digit resembles an 8 at 8x/12x, 6x ambiguous (6/8)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 275,
+   "py": 928,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road at the south end of Albany Road; dot left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 6.32,
+   "raw": "B.M.6·32",
+   "px": 386,
+   "py": 964,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "house corner on the south side of the road; pheon below-left of text; leading digit open-topped 6 at 6x but closed like 8 at 8x/12x, 6/8 unresolved"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.3,
+   "raw": "6·3",
+   "px": 416,
+   "py": 955,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road east of B.M.6·32; dot left of figure; 8x"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. at 10,38; 525,30; 110,757; 100,950; 640,865; 655,896; 986,862; 1006,932; 993,735",
+  "H (hydrant) at 620,127; 830,245; 985,330; 880,462",
+  "L.B. at 1000,735",
+  "survey triangle at 852,480 (the 7·0 beside it has its own dot)"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1006,
+   "py0": 860,
+   "px1": 1024,
+   "py1": 882,
+   "reason": "spot height 5·x cut by the east edge"
+  },
+  {
+   "px0": 630,
+   "py0": 0,
+   "px1": 638,
+   "py1": 1024,
+   "reason": "vertical sheet join at px ~634"
+  }
+ ]
+}

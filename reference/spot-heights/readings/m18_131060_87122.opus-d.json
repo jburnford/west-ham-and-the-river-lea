@@ -1,0 +1,154 @@
+{
+ "mosaic": "m18_131060_87122",
+ "reader": "opus-d",
+ "area": "Hackney Wick / Stratford Marsh: River Lea with the county boundary (dash-dot, west), Channel Sea River with Sluice, open marsh and allotment strips, a Well, G.E.R. High Meads line and Signal Box (SE)",
+ "method": "read by Claude (vision): 3x3 sweep of 448 px crops at 2x; every candidate confirmed at 6x (+-40 px); B.M.19·76 and B.M.16·21 at 8x (+-30 px); positions in mosaic pixels",
+ "legibility": "good; sparse open ground, digits clear at 6x; county boundary dashes and dots beside the Lea need care; sheet join at py ~737 (horizontal tint step) passes by 15·2",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 111,
+   "py": 93,
+   "confidence": "high",
+   "notes": "River Lea east bank (embankment/wall top) beside the county boundary; dot on the embankment hatching left of figures, 6x (boundary dots at x ~88-92 not used)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.76,
+   "raw": "B.M.19·76",
+   "px": 117,
+   "py": 155,
+   "confidence": "medium",
+   "notes": "River Lea east bank; pheon on the embankment right of text, 8x; the 9 is partly overprinted by a dash of the county boundary (read as 19·76)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.6,
+   "raw": "14·6",
+   "px": 123,
+   "py": 322,
+   "confidence": "high",
+   "notes": "marsh ground east of the River Lea; dot above-left of figures at 6x, clear of the boundary dots at x ~100"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.7,
+   "raw": "14·7",
+   "px": 86,
+   "py": 534,
+   "confidence": "high",
+   "notes": "marsh by the River Lea; dot left of figures at 6x, 15 px east of the boundary line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.2,
+   "raw": "15·2",
+   "px": 44,
+   "py": 742,
+   "confidence": "high",
+   "notes": "marsh by the River Lea at the sheet join (py ~737); small dot left of figures at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 64,
+   "py": 913,
+   "confidence": "high",
+   "notes": "marsh by the River Lea; dot left of figures at 6x (boundary dot at 43,917 not used)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.21,
+   "raw": "B.M.16·21",
+   "px": 1016,
+   "py": 717,
+   "confidence": "high",
+   "notes": "Signal Box at High Meads Junction (SE); pheon on the signal box right of text, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 881,
+   "py": 843,
+   "confidence": "medium",
+   "notes": "G.E.R. High Meads line; figures clear at 6x written below the embankment hatching; nearest dot 25 px NW on the rails, association inferred"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 711,
+   "py": 980,
+   "confidence": "medium",
+   "notes": "G.E.R. line near the south edge; figures clear at 6x below the embankment hatching; nearest dot 28 px NW on the rails, association inferred"
+  }
+ ],
+ "non_height_marks": [
+  "dash-dot county boundary with x boundary marks along the River Lea (x 20-110)",
+  "boundary mark (crossed strokes) at 20,858",
+  "'Sluice' at 220,848",
+  "'Well' at 800,140",
+  "S.P. signal posts on the G.E.R. at 770,890 and 805,935"
+ ],
+ "unreadable_regions": []
+}

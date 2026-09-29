@@ -1,0 +1,322 @@
+{
+ "mosaic": "m18_131078_87161",
+ "reader": "opus-x",
+ "area": "Canning Town south of Barking Road: Victoria Dock Road and the Victoria Dock branch rails (W), Crawford / Sabberton / Hallsville / Newton / Arkwright / Brunel / Fulton / Shirley / Roscoe / York / Merton / Hearn / Walter / Ford / Edward / John Streets, St Luke's Square and Church",
+ "method": "sheet (no join reported) + 9 sweep crops at 2x, every one displayed and anchored when opened: r0c0 VICTORIA/STRATFORD STREET/CRAWFORD; r0c1 WOULDHAM STREET/NEWTON STR/Meth. chapel; r0c2 YORK/MERTON/HEARN/WALTER/ROSCOE; r1c0 VICTORIA DOCK ROAD/SABBERTON STREET; r1c1 HALLSVILLE ROAD/ARKWRIGHT STREET; r1c2 FORD STREET/EDWARD STREET/Smithy; r2c0 'ROAD'/L.B./rails; r2c1 BRUNEL/FULTON STREET; r2c2 JOHN STREET/ST LUKE'S SQUARE. Contact sheets csA-csH (8x panels +-14-18 px, 6x +-26-28 px for B.M.s, 12-14x on B.M. decimals and doubtful 6/8 digits, 22x comparison sheet csE against a clear 6 and clear 8s), all displayed. Positions from the panels with a darkness-centroid check, verified on marker sheets.",
+ "legibility": "good; dense terraces with many F.P. marks and spaced street lettering, so several dots are ambiguous (medium); no sheet join seen by eye",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 7.9,
+   "raw": "7·9",
+   "px": 233,
+   "py": 56,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "'..CK STREET' (N edge, E of Victoria Dock Road); dot above-left of figures lies between the K and S of the spaced street name, may be lettering"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 98,
+   "py": 79,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street W of the curved terrace; dot above-left sits between R and E of spaced STREET lettering"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.16,
+   "raw": "B.M.9·16",
+   "px": 107,
+   "py": 127,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house wall on the same street; pheon c.25 px NW of text; rounded 6 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.8,
+   "raw": "8·8",
+   "px": 215,
+   "py": 310,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road / Crawford Street junction; dot below-left of figures, F.P. separate; both 8s identical at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.9,
+   "raw": "8·9",
+   "px": 127,
+   "py": 367,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Victoria Dock Road; dot below-left of figures right next to the O of VICTORIA (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.1,
+   "raw": "8·1",
+   "px": 604,
+   "py": 18,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "N end of the N-S street by the P.H. (N edge area); dot left of figures under the R of spaced STREET lettering, F.P. dot nearby"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 605,
+   "py": 78,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "same street at the York Street corner by F.P.; candidate dots 614,74 and 611,61 by the E of STREET, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 628,
+   "py": 203,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same street by H.; dot above-left; first digit differs from the final 8 at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.4,
+   "raw": "8·4",
+   "px": 635,
+   "py": 372,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction by the Methodist (United Free) Chapel and survey triangle; dot left of figures; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 829,
+   "py": 350,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Roscoe Street; dot left of figures; open-top 6 at 22x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 1000,
+   "py": 328,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "E end of Roscoe Street; dot above-left of figures after the final E of ROSCOE (not between letters); 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.62,
+   "raw": "B.M.9·62",
+   "px": 258,
+   "py": 541,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner house, Victoria Dock Road / Sabberton Street; pheon above text on the wall line; 12x (2x sweep suggested 9·82)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.1,
+   "raw": "8·1",
+   "px": 235,
+   "py": 564,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road at Sabberton Street; dot above-left; leading 8 matches the 8s of 8·8 at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.3,
+   "raw": "8·3",
+   "px": 283,
+   "py": 701,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Victoria Dock Road E side; dot above-left; leading digit has a closed top loop like the 8s of 8·8 at 22x (open-top 6 of Roscoe 6·8 differs) but read 6·3 at 2x/8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.2,
+   "raw": "8·2",
+   "px": 323,
+   "py": 816,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road E side south of Hallsville Road; dot above-left; closed-top 8 at 14x and 22x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.1,
+   "raw": "9·1",
+   "px": 358,
+   "py": 912,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road E side; dot above figures; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.71,
+   "raw": "B.M.8·71",
+   "px": 547,
+   "py": 512,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "Hallsville Road at Newton Street; digits clear at 6x; pheon taken as the arrow mark on the far side of the road c.30 px SE of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 530,
+   "py": 515,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hallsville Road at Newton Street; dot above-right of figures between the words HALLSVILLE and ROAD"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 449,
+   "py": 584,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hallsville Road; dot above figures beside the S of spaced HALLSVILLE (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.9,
+   "raw": "6·9",
+   "px": 541,
+   "py": 696,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Arkwright Street at Brunel Street; dot right of the R of ARKWRIGHT above the figures (possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.7,
+   "raw": "7·7",
+   "px": 600,
+   "py": 801,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Arkwright Street at Fulton Street; the only dot (613,788) is by the E of STREET; position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.93,
+   "raw": "B.M.9·93",
+   "px": 500,
+   "py": 868,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of Fulton Street; pheon at the wall-line crossing right of text; both 9s match and the final 3 is open at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 703,
+   "py": 864,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Shirley Street / John Street corner; dot right of figures, F.P. with its own dot just beyond"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.44,
+   "raw": "B.M.7·44",
+   "px": 685,
+   "py": 992,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "end house by the P.H., George Street / John Street; pheon below-left of text; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 698,
+   "py": 1000,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "George Street / John Street corner; dot above-left of figures, F.P. dot separate below; 8x"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangles at 588,43 and 665,367 (no figures of their own)",
+  "L.B. at 392,1013",
+  "S.P. at 305,790, 360,983, 330,995, 44,320",
+  "many F.P. marks"
+ ],
+ "unreadable_regions": []
+}

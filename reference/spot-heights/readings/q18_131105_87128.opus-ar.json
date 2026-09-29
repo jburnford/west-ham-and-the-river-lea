@@ -1,0 +1,200 @@
+{
+ "mosaic": "q18_131105_87128",
+ "reader": "opus-ar",
+ "layer": "os-25-inch-london",
+ "area": "Little Ilford / Manor Park estates: Woodhouse Grove, Byron Road, Wordsworth Avenue, Tennyson Avenue, Plashet Grove, the lane with the C.R. boundary on the east (independent second read)",
+ "method": "OS 25-inch (os-25-inch-london) layer. sheet (no join reported); sweep of all 9 crops at 2x, each anchored in notes when opened: r0c0 WOODHOUSE GROVE; r0c1 BYRON ROAD + vertical join; r0c2 C.R., ROAD, ..WORTH AVENUE; r1c0 Recreation Ground; r1c1 WORDSWORTH A.., TENNYSON; r1c2 WORDSWORTH AVENUE, TENNYSON AVENUE; r2c0 Recreation Ground; r2c1 PLASHET, B.M. 32.3; r2c2 PLASHET x GROVE, TENNYSON AVENUE. Contact sheets cs1 (5x), cs2 (8x), cs3 (6x), cs4 (6x) around every candidate, digits and crosses/pheons confirmed there. All crops and contact sheets displayed when opened. Positions checked on a marker sheet.",
+ "legibility": "Clean and legible; italic whole-foot figures 12-14 px. Vertical sheet join at px ~450 down the whole mosaic (not reported by the sheet tool). East edge px 1024 cuts a B.M. on a boundary stone.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 33.6,
+   "raw": "B.M.33·6",
+   "px": 417,
+   "py": 410,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M.33·6 text at 300-380,400-415 west of Woodhouse Grove; right-pointing pheon among the GROVE letters, point at the house corner on the east side of the road; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.8,
+   "raw": "B.M.33·8",
+   "px": 904,
+   "py": 266,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M.33·8 text 810-880,262; downward pheon point on the NE corner of the house block west of the C.R. lane, north of Wordsworth Avenue; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 32.3,
+   "raw": "B.M.32·3",
+   "px": 550,
+   "py": 845,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. / 32·3 stacked at 550-590,890-915 south of Plashet Grove; pheon pointing up-left at the SW corner of the terrace at Plashet Grove / Woodhouse Grove, across the road from the text; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32,
+   "raw": "32",
+   "px": 517,
+   "py": 17,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "figure at the north edge by the kerb of the road along the top (street name lettering 'S..' cut by the edge above it); no cross within 40 px, probably on the neighbouring mosaic to the north; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30,
+   "raw": "30",
+   "px": 891,
+   "py": 141,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "figure at 910-935,137 on the yellow lane; 4-point star cross in the lane west of the C.R. dot line, 20 px left of the figure; 5x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32,
+   "raw": "32",
+   "px": 952,
+   "py": 361,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "figure at 970-990,360 on the lane east of the house block at the head of Wordsworth Avenue; star cross between the C.R. dots 18 px left; 5x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30,
+   "raw": "30",
+   "px": 970,
+   "py": 561,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "figure at 945-965,572 at the east end of Tennyson Avenue on the lane; star cross just west of the C.R. dots; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30,
+   "raw": "30",
+   "px": 487,
+   "py": 697,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "figure at 500-515,695 at the corner of Woodhouse Grove and Tennyson Avenue; x cross 15 px west of the figure; 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30,
+   "raw": "30",
+   "px": 526,
+   "py": 873,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "figure at 500-520,855 at the west end of Plashet Grove by the terrace corner; x cross 20 px SE of the figure in the carriageway; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29,
+   "raw": "29",
+   "px": 407,
+   "py": 911,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "figure at 380-400,915 on the road curving along the south of the Recreation Ground (Plashet Grove west part); only candidate cross is a small mark at 407,911 merged with the edge of a tree symbol, so position partly estimated"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29,
+   "raw": "29",
+   "px": 759,
+   "py": 843,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "figure at 765-785,873 just south of the road; x cross between PLASHET and GROVE in the carriageway, 30 px NW of the figure (nearest isolated cross); 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28,
+   "raw": "28",
+   "px": 998,
+   "py": 825,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "figure at 978-992,827 at the Plashet Grove / lane junction; star cross 12 px east of the figure, below the boundary-stone pheon; 6x"
+  }
+ ],
+ "non_height_marks": [
+  "L.B (letter box) at ~1010,855 cut by the east edge",
+  "C.R. boundary dot line along the lane at px ~880-990",
+  "tree symbols along the Recreation Ground fences"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 990,
+   "py0": 770,
+   "px1": 1024,
+   "py1": 815,
+   "reason": "B.M.28·3 on the boundary post (B P): pheon point ~1006,805 is inside this mosaic but the B P / B.M. text is cut by the east edge; read whole on q18_131108_87128 (pheon 238,805)"
+  }
+ ]
+}

@@ -1,0 +1,254 @@
+{
+ "mosaic": "m18_131093_87140",
+ "reader": "opus-t",
+ "area": "Plaistow east: Northern Road, Western Road, Southern Road, Credon Road, Ravenhill Road, Mission Hall, Hospital and Smallpox Hospital (West Ham Union), Old Street, Samson Street, New Road",
+ "method": "All 9 sweep crops (2x) viewed and each anchored in notes at opening (r0c0 NORTHERN ROAD+Nursery; r0c1 WESTERN; r0c2 RAVENHILL ROAD+CREDO; r1c0 SOUTHERN+Mission Hall; r1c1 Hospital+Mortuary; r1c2 Smallpox Hospital; r2c0 SOUTHERN+triangle; r2c1 OLD STREET+SAMSON; r2c2 NEW ROAD+Congregational). Contact sheets cs1-cs3 (8x all candidates and edges, 10x 23·6), cs4 (16x for 5/6, 8/6 and 9). The two 23·3 figures on the west edge are the same tile pixels as in m18_131090_87140, zoomed there. Every crop and contact sheet displayed when opened and has an anchor in my notes. Per-reading marker panels checked before done.",
+ "legibility": "Clean print. Sheet join: vertical at px ~932 (full height, paler paper east), confirmed by eye.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 24.5,
+   "raw": "24·5",
+   "px": 533,
+   "py": 180,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Western Road west kerb; only nearby dot is the W-E lettering dot at 558,165, position = centre of figures; final digit flat-topped 5 at 8x but 6-like at 16x (alt 24·6)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.1,
+   "raw": "24·1",
+   "px": 609,
+   "py": 383,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Western Road; dot above-left 609,383 just after N of WESTERN (may be lettering); digits clear at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 26.44,
+   "raw": "B.M.26·44",
+   "px": 639,
+   "py": 439,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "text on the west side of Western Road; the only pheon nearby is on the house front on the east side at 639,439, 55 px from the text; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.9,
+   "raw": "25·9",
+   "px": 982,
+   "py": 290,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "road below W A L lettering, east of the sheet join at px ~932; dot after A at 971,281 is lettering; position = centre of figures; digits clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.8,
+   "raw": "25·8",
+   "px": 795,
+   "py": 331,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Credon Road at its junction; dot 795,331 right of the figure near E of CREDON (may be lettering); final 8 stands alone and is 6-like at 16x (alt 25·6, 25·3)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.35,
+   "raw": "B.M.25·35",
+   "px": 816,
+   "py": 334,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "boundary wall corner at the Credon Road junction; pheon 816,334 left of text; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.0,
+   "raw": "24·0",
+   "px": 850,
+   "py": 531,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Credon Road beside the Smallpox Hospital; isolated dot left of figure at 850,531; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.1,
+   "raw": "23·1",
+   "px": 310,
+   "py": 662,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Southern Road between H and E of SOUTHERN; dot above-right 310,662 may be lettering; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.1,
+   "raw": "23·1",
+   "px": 498,
+   "py": 630,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Southern Road between O and A of ROAD, F.P. below; no survey dot, position = centre of figures; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.6,
+   "raw": "23·6",
+   "px": 654,
+   "py": 582,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Southern Road / Western Road junction; dot above-left 654,582; final 6 at 10x (smooth; blocky shows the upper-right gap)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.4,
+   "raw": "22·4",
+   "px": 531,
+   "py": 778,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction of Old Street and Samson Street by the Hospital; dot above-right 531,778; digits clear at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.2,
+   "raw": "B.M.25·20",
+   "px": 551,
+   "py": 785,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Hospital boundary wall corner at Samson Street; pheon 551,785 left of text; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.8,
+   "raw": "21·8",
+   "px": 676,
+   "py": 894,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Samson Street; the period after N of SAMSON is 30 px away across the kerb; no dot, position = centre of figures; final 8 stands alone"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.2,
+   "raw": "22·2",
+   "px": 395,
+   "py": 924,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "path junction south-west of Old Street; dot above-left 395,924; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.3,
+   "raw": "23·3",
+   "px": 210,
+   "py": 706,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Southern Road below S O U (same tile pixels as m18_131090_87140 at 977,706, zoomed at 8x there); only dot is the O-U lettering dot; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.3,
+   "raw": "23·3",
+   "px": 9,
+   "py": 732,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Southern Road at the west edge (same tile pixels as m18_131090_87140 at 777,732); figure whole but its survey dot lies ~16 px west, outside this mosaic; position = centre of figures"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. marks throughout",
+  "survey-station triangles without figures at ~(190,70) and (370,867)",
+  "H hydrant ~(955,832)",
+  "lettering interpuncts in W.ESTERN, S O.UTHERN, C R.EDON"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 505,
+   "py0": 0,
+   "px1": 540,
+   "py1": 8,
+   "reason": "figure (24·9?) on Western Road clipped by north edge"
+  },
+  {
+   "px0": 780,
+   "py0": 1014,
+   "px1": 810,
+   "py1": 1024,
+   "reason": "figure (21·8?) clipped by south edge"
+  },
+  {
+   "px0": 928,
+   "py0": 0,
+   "px1": 936,
+   "py1": 1024,
+   "reason": "vertical sheet join (1-2 px offset)"
+  }
+ ]
+}

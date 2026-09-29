@@ -1,0 +1,41 @@
+{
+  "mosaic": "m18_131078_87164",
+  "reader": "opus-aa",
+  "area": "Canning Town south toward the Victoria Dock: road beside the G.E.R. main line (north-west), Fulton, George, John, Poplar, Arthur, Smith, Hoy, Emily, Nelson and Francis Streets, St Luke's Church and School, the North Woolwich branch with the road beside it, Thames Iron Works and Bow Creek (south-west)",
+  "method": "sheet tool; 9 sweep crops at 2x, each anchored on opening (r0c0 P.H. x4 / L.B / S.B; r0c1 FULTON, GEORGE, POPLAR, ARTHUR, SMITH STREETs; r0c2 JOHN STREET / St. Luke's Church / School; r1c0 'Thames Iron' Shipbuilding lettering; r1c1 SMITH / ARTHUR / HOY STREET; r1c2 NELSON / FRANCIS STREET; r2c0 CREEK, Slips, Crane, Mud; r2c1 'Iron Works', Slip; r2c2 G.E.R. VICTORIA .. WOOLWICH BRANCH, HUNTING..). Contact sheets b1 (8x +-18), b2 (6x +-26), b3 (6x +-30 B.M.s), b4 and b6 (12x +-13), b5 (22x, 6/8 against known 6 and 8 on this sheet), b7 (14x pheons), b8 and b9 (12x B.M. decimals), b10 (3x railway-road context). Every crop and contact sheet displayed when opened. Dot positions from a centroid helper, checked on a marker sheet.",
+  "legibility": "Clear. Horizontal sheet join at py ~391-392 (tint step, clear by eye in r0c1 and r1c0 over x 0-400), no figure crosses it. East edge: a B.M. ('B' over '6') at 1012-1024,685-700 is cut by the edge.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type":"spot","value_ft":8.2,"raw":"8·2","px":323,"py":49,"confidence":"high","setting":"street","notes":"road along the east side of the G.E.R. main line, opposite P.H.; dot above-left; 12x"},
+    {"type":"spot","value_ft":9.1,"raw":"9·1","px":358,"py":144,"confidence":"high","setting":"street","notes":"same road; dot above figure; 12x"},
+    {"type":"spot","value_ft":8.1,"raw":"8·1","px":415,"py":296,"confidence":"high","setting":"street","notes":"same road further south, by the corner of George Street block; dot above-left; 12x"},
+    {"type":"spot","value_ft":7.7,"raw":"7·7","px":611,"py":23,"confidence":"medium","setting":"street","notes":"street junction at the north edge (Fulton/George Street end), under rotated '..EET' lettering; dot up-right of figure may be an interpunct before the E"},
+    {"type":"bench_mark","value_ft":9.93,"raw":"B.M.9·93","px":500,"py":99,"confidence":"high","setting":"building","notes":"pheon at a building corner at the head of Fulton Street, just east of text; 9s and final 3 clear at 12x"},
+    {"type":"spot","value_ft":7.5,"raw":"7·5","px":706,"py":98,"confidence":"medium","setting":"street","notes":"junction of George Street and John Street; two dots right of figure, the second (709,102) taken as the F.P.'s own dot, the first as the survey dot"},
+    {"type":"bench_mark","value_ft":7.44,"raw":"B.M. 7·44","px":684,"py":225,"confidence":"high","setting":"building","notes":"pheon at corner of the P.H. at George Street / Poplar Street; text above-right; 12x"},
+    {"type":"spot","value_ft":6.4,"raw":"6·4","px":700,"py":231,"confidence":"high","setting":"street","notes":"street in front of the P.H., just below the B.M.7·44 text; own dot above-left; 12x"},
+    {"type":"bench_mark","value_ft":10.21,"raw":"B.M.10·21","px":449,"py":276,"confidence":"high","setting":"building","notes":"pheon on the corner of the P.H. at the west end of George Street; text east of pheon; 12x"},
+    {"type":"spot","value_ft":5.6,"raw":"5·6","px":613,"py":365,"confidence":"medium","setting":"street","notes":"west end of Arthur Street; no separate dot; position = the interpunct in A·R of ARTHUR (only interpunct in that name); digits clear at 12x"},
+    {"type":"bench_mark","value_ft":5.13,"raw":"B.M. 5·13","px":990,"py":344,"confidence":"high","setting":"building","notes":"pheon on the wall line west of the text, south-west of St Luke's School; 12x"},
+    {"type":"spot","value_ft":6.7,"raw":"6·7","px":479,"py":443,"confidence":"high","setting":"street","notes":"road beside the railway at the west end of Smith Street; dot above; 12x"},
+    {"type":"spot","value_ft":6.8,"raw":"6·8","px":566,"py":570,"confidence":"high","setting":"street","notes":"road east of the railway near the level crossing; dot above-left; final 8 two closed loops, distinct from the 6 at 12x/22x"},
+    {"type":"spot","value_ft":6.6,"raw":"6·6?","px":561,"py":679,"confidence":"low","setting":"street","notes":"road east of the railway; dot above; leading 6 clear, middot not visible and second digit a malformed small loop with a right-hand ascender (like a d) at 12x and 22x: alts 6·0, 6·9"},
+    {"type":"spot","value_ft":5.6,"raw":"5·6","px":682,"py":693,"confidence":"low","setting":"street","notes":"street by the P.H. and F.P. north of the North Woolwich branch; dot above; 2x read 5·8, final matches the known 6 of 6·6 rather than the 8 of 6·8 at 12x and 22x: alt 5·8"},
+    {"type":"spot","value_ft":6.6,"raw":"6·6","px":607,"py":767,"confidence":"high","setting":"street","notes":"open road area between the curve of the railway and the road, beside S.P.S.; dot above-left; both 6s alike at 12x"},
+    {"type":"bench_mark","value_ft":8.16,"raw":"B.M.8·16","px":662,"py":816,"confidence":"high","setting":"building","notes":"pheon on the corner of the P.H. east of the text; 8 double-looped, distinct from the 6 at 12x"},
+    {"type":"spot","value_ft":7.4,"raw":"7·4","px":711,"py":819,"confidence":"high","setting":"street","notes":"street in front of the same P.H.; dot above-left; 12x"},
+    {"type":"spot","value_ft":6.9,"raw":"6·9","px":664,"py":903,"confidence":"medium","setting":"street","notes":"road at the foot of the footbridge steps east of the railway; dot above-left; final 9 open below at 12x but a 9/8 doubt remains"},
+    {"type":"spot","value_ft":16.9,"raw":"16·9","px":610,"py":937,"confidence":"medium","setting":"bridge","notes":"west landing of the footbridge over the railways (structure at 600-630,940-965); no clear dot, the mark at 604,944 is part of the structure outline; position = centre of figures"},
+    {"type":"spot","value_ft":16.2,"raw":"16·2","px":505,"py":1013,"confidence":"high","setting":"yard","notes":"Thames Iron Works yard, made ground; dot left of figure; digits end ~3 px above the south edge but are complete at 12x"},
+    {"type":"spot","value_ft":5.7,"raw":"5·7?","px":804,"py":781,"confidence":"low","setting":"street","notes":"road along the north side of the North Woolwich branch; dot left of figure; final digit hook-shaped, 7 or 2 at 12x; middot faint"},
+    {"type":"spot","value_ft":5.5,"raw":"5·5","px":942,"py":847,"confidence":"high","setting":"street","notes":"same road beside the rails, below F.P.; dot left of figure; 12x"},
+    {"type":"spot","value_ft":8.7,"raw":"8·7","px":935,"py":918,"confidence":"high","setting":"street","notes":"street corner on the south side of the railway; dot above; 8 two loops at 12x"},
+    {"type":"spot","value_ft":6.6,"raw":"6·6","px":922,"py":1002,"confidence":"medium","setting":"building","notes":"figure written inside a shaded building outline at the south edge, no dot; position = centre of figures"},
+    {"type":"spot","value_ft":4.5,"raw":"4·5","px":1006,"py":723,"confidence":"medium","setting":"building","notes":"figure written across a shaded building at the east edge, no dot; position = centre of figures; figure whole (ends x ~1010)"},
+    {"type":"bench_mark","value_ft":6.03,"raw":"B.M. 6·03","px":840,"py":724,"confidence":"high","setting":"building","notes":"pheon on a house wall left of the text, Francis Street; 6 open-topped, 03 clear at 12x"}
+  ],
+  "non_height_marks": ["many F.P., S.P., S.P.S., B.P.S. marks along the railways and streets", "L.B at 405,245, S.B at 360,360", "W.M. at 235,775 and Crane marks at Bow Creek"],
+  "unreadable_regions": [
+    {"px0":1008,"py0":682,"px1":1024,"py1":702,"reason":"B.M. text ('B' over '6..') cut by the east edge"}
+  ]
+}

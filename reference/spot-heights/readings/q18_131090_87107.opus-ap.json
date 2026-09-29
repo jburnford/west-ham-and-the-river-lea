@@ -1,0 +1,25 @@
+{
+ "mosaic": "q18_131090_87107", "reader": "opus-ap", "layer": "os-25-inch-london",
+ "area": "Wanstead Flats, east of q18_131087_87107 (display letters ..T E A D): open heath; the tree-lined N-S road '..l Road' along the west strip (px ~65-130, the 256 px overlap with 131087); a circular tree plantation (parcel 151, 1·304 ac) in the centre-east, a second plantation edge at the SE corner, and a diagonal F.P. path.",
+ "method": "Layer os-25-inch-london (OS 25-inch Essex county series, inferred 1893-96 revision). Viewed: 1x full-mosaic overview (anchor T E A D, plantation 151); all nine 2x sweep crops, each anchored on opening: r0c0 T E A + 52 + 50, r0c1 A D + boundary tie, r0c2 D + F.P. path, r1c0 T E A + 'R o' + triangle, r1c1 A D + plantation 151/1·304, r1c2 D + plantation + F.P., r2c0 'o a d' + 49 + 50 + parcel 150, r2c1 plantation 1·304 + F.P., r2c2 F.P. + plantation circles; 6x contact sheet cs1 (four figure/cross pairs). Every crop and sheet displayed and was anchored in my notes at the time. Marker sheet checked before marking done. The four readings are the same marks I read in the east overlap strip of q18_131087_87107 (offset 768 px); my own duplicates, not independent confirmation.",
+ "legibility": "Excellent; bold italic figures 12-14 px with bold four-point crosses. No sheet join seen or reported. Rest of the sheet is open heath with no heights.",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [
+  {"type": "spot", "value_ft": 52, "raw": "52", "px": 109, "py": 100, "confidence": "high", "setting": "street",
+   "notes": "tree-lined road across Wanstead Flats, north end; figures ~122-138,97-112 east of the kerb; bold star 15 px west at 109,100 in the carriageway."},
+  {"type": "spot", "value_ft": 50, "raw": "50", "px": 94, "py": 367, "confidence": "high", "setting": "street",
+   "notes": "same road below the display T; figures ~112-130,364-380; star at 94,367 ~20 px west."},
+  {"type": "spot", "value_ft": 49, "raw": "49", "px": 92, "py": 635, "confidence": "high", "setting": "street",
+   "notes": "same road north of the triangle; figures ~47-64,642-656 west of the kerb; star at 92,635 ~30 px east (nearest isolated cross)."},
+  {"type": "spot", "value_ft": 50, "raw": "50", "px": 92, "py": 907, "confidence": "high", "setting": "street",
+   "notes": "same road, south part; figures ~47-64,884-898; star at 92,907 ~30 px SE."}
+ ],
+ "non_height_marks": [
+  "parcel 151 with acreage 1·304 inside the circular plantation at ~690,570-620",
+  "parcel 150 with brace at ~135-175,1010",
+  "F.P. on the diagonal footpath at ~820,720 with S tie at ~815,685",
+  "triangle (survey station) at ~70,707, no figure",
+  "display letters T E A D"
+ ],
+ "unreadable_regions": []
+}

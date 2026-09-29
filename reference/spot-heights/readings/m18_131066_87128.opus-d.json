@@ -1,0 +1,217 @@
+{
+ "mosaic": "m18_131066_87128",
+ "reader": "opus-d",
+ "area": "Stratford: G.E.R. Victoria Park Branch and the Channel Sea River (west and centre), Fork Junction, Central Junction, Stratford Station and Stratford Low Level (north-east), Woolwich Branch and the streets south of it (south)",
+ "method": "read by Claude (vision): 3x3 sweep of 448 px crops at 2x; every candidate confirmed at 6x (+-40 px); 24·1, 27·63, 22·8, 24·2, 14·64 and 12·5 at 8x; 27·63 and 24·1 at 10x; positions in mosaic pixels",
+ "legibility": "good; digits clear at 6-8x except figures crossed by rails; sheet join at py ~936 (horizontal, tint change, streets and railway), no figures on it; station yard NE is shaded",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 18.21,
+   "raw": "B.M.18·21",
+   "px": 150,
+   "py": 173,
+   "confidence": "high",
+   "notes": "G.E.R. Victoria Park Branch embankment west end, by the Channel Sea; pheon left of the text at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 189,
+   "py": 188,
+   "confidence": "high",
+   "notes": "Channel Sea River north bank (wall top) below B.M.18·21; dot above-left of figures on the bank line, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 401,
+   "py": 220,
+   "confidence": "high",
+   "notes": "Channel Sea River north bank (wall top); dot above figures on the bank, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.4,
+   "raw": "16·4",
+   "px": 594,
+   "py": 299,
+   "confidence": "high",
+   "notes": "Channel Sea River at the Foot Bridge by Fork Junction; dot below-right of figures at the bridge end, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.1,
+   "raw": "24·1",
+   "px": 727,
+   "py": 406,
+   "confidence": "medium",
+   "notes": "railway at Central Junction; final digit crossed by a rail, read as 1 at 10x (7 not excluded); dot right of figures at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 27.63,
+   "raw": "B.M.27·63",
+   "px": 1006,
+   "py": 47,
+   "confidence": "medium",
+   "notes": "Stratford Station (east edge); pheon above-right of text at 8x; final digit 3 vs 9 not fully resolved at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.8,
+   "raw": "22·8",
+   "px": 991,
+   "py": 100,
+   "confidence": "medium",
+   "notes": "station yard by L.B., figures clear at 8x in shaded ground; a small dot above-right of the 8 taken as the survey dot (a dark triangle on the rails at 1003,107 not used)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.2,
+   "raw": "24·2",
+   "px": 862,
+   "py": 241,
+   "confidence": "medium",
+   "notes": "railway at Stratford (Low Level approach); figures clear at 8x among the rails; dot taken as the tick on the rail right of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.5,
+   "raw": "B.M.25·50",
+   "px": 762,
+   "py": 425,
+   "confidence": "high",
+   "notes": "by the station approach near Central Junction; pheon left of text at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.1,
+   "raw": "19·1",
+   "px": 840,
+   "py": 495,
+   "confidence": "high",
+   "notes": "open ground by the Foot Bridge south of Stratford Low Level; dot directly above figures, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 822,
+   "py": 709,
+   "confidence": "high",
+   "notes": "G.E.R. Woolwich Branch bridge parapet; dot left of figures at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.5,
+   "raw": "12·5",
+   "px": 630,
+   "py": 896,
+   "confidence": "high",
+   "notes": "road south of the Woolwich Branch; dot below-left of figures at 8x (the F.P below has its own dot at 636,902)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.64,
+   "raw": "B.M.14·64",
+   "px": 776,
+   "py": 830,
+   "confidence": "high",
+   "notes": "building corner south of the Woolwich Branch; pheon point left of text against the wall, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.0,
+   "raw": "13·0",
+   "px": 791,
+   "py": 853,
+   "confidence": "high",
+   "notes": "road below B.M.14·64; dot above figures at 6x (the F.P has its own dot at 763,852)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.0,
+   "raw": "13·0",
+   "px": 766,
+   "py": 1013,
+   "confidence": "medium",
+   "notes": "road near the south edge; figures clear at 6x and whole, but they end at the mosaic edge (y ~1023); dot above-left"
+  }
+ ],
+ "non_height_marks": [
+  "open triangle (station symbol) at 20,240 on the G.E.R. embankment, no figure",
+  "small arrow before 'BRANCH' of WOOLWICH BRANCH at 655,763, no B.M. text",
+  "open triangle before 'G.E.R.' at 591,728",
+  "S.P. signal posts throughout the junctions",
+  "W.M. at Stratford Station Low Level",
+  "'Foot Bridge' labels at 530,262 and 830,570"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 515,
+   "py0": 1015,
+   "px1": 540,
+   "py1": 1024,
+   "reason": "figure 12·6 (?) cut by the south edge"
+  }
+ ]
+}

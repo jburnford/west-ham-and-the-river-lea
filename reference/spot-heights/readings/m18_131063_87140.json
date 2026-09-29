@@ -1,0 +1,29 @@
+{
+  "mosaic": "m18_131063_87140",
+  "area": "Stratford High Street / Bow Bridge, Marshgate Lane, Pegs Hole Bridge, Sugar House Lane works, Three Mills Wall River",
+  "method": "read by Claude (vision) from the 1024 px mosaic plus 2x quadrant crops; 8x checks on BM 20·61 and 17·6",
+  "legibility": "good in streets, but dense building hatching and road lettering crowd the figures; an OS sheet join runs N-S at about px 830",
+  "readings": [
+    {"type": "spot", "value_ft": 16.5, "raw": "16·5", "px": 130, "py": 31, "confidence": "medium", "notes": "Marshgate Lane north end"},
+    {"type": "spot", "value_ft": 17.8, "raw": "17·8", "px": 236, "py": 170, "confidence": "high", "notes": "Marshgate Lane"},
+    {"type": "spot", "value_ft": 19.1, "raw": "19·1", "px": 411, "py": 204, "confidence": "high", "notes": "High Street at Pegs Hole Bridge (bridge crown)"},
+    {"type": "bench_mark", "value_ft": 20.61, "raw": "B.M.20·61", "px": 464, "py": 218, "confidence": "high", "notes": "pheon under 'Bridge' lettering, left of text; confirmed at 8x"},
+    {"type": "spot", "value_ft": 16.0, "raw": "16·0", "px": 298, "py": 327, "confidence": "high", "notes": "High Street by P.H./P.O."},
+    {"type": "bench_mark", "value_ft": 17.45, "raw": "B.M.17·45", "px": 175, "py": 436, "confidence": "medium", "notes": "pheon below text on High Street frontage; pheon identification tentative"},
+    {"type": "spot", "value_ft": 15.9, "raw": "15·9", "px": 113, "py": 496, "confidence": "high", "notes": "High Street"},
+    {"type": "spot", "value_ft": 15.3, "raw": "15·3", "px": 14, "py": 589, "confidence": "medium", "notes": "High Street at west edge; dot side uncertain"},
+    {"type": "spot", "value_ft": 16.5, "raw": "16·5", "px": 660, "py": 8, "confidence": "low", "notes": "cut by top edge of mosaic; should be re-read in the mosaic to the north"},
+    {"type": "spot", "value_ft": 17.4, "raw": "17·4", "px": 528, "py": 143, "confidence": "high", "notes": "High Street east of Pegs Hole Bridge"},
+    {"type": "spot", "value_ft": 17.2, "raw": "17·2", "px": 803, "py": 122, "confidence": "medium", "notes": "river wall west of Three Mills Wall River; duplicate of m18_131066_87140"},
+    {"type": "spot", "value_ft": 17.6, "raw": "17·6", "px": 850, "py": 322, "confidence": "medium", "notes": "river wall path; dot above-left confirmed at 8x; last digit 6 vs 9 - read 17·9 at 2x in m18_131066_87140, 8x favours 6"},
+    {"type": "bench_mark", "value_ft": 17.39, "raw": "B.M.17·39", "px": 904, "py": 466, "confidence": "high", "notes": "duplicate of m18_131066_87140"},
+    {"type": "spot", "value_ft": 17.9, "raw": "17·9", "px": 933, "py": 522, "confidence": "medium", "notes": "Short Wall; duplicate"},
+    {"type": "spot", "value_ft": 17.3, "raw": "17·3", "px": 984, "py": 722, "confidence": "medium", "notes": "Short Wall; duplicate"},
+    {"type": "spot", "value_ft": 16.9, "raw": "16·9", "px": 997, "py": 960, "confidence": "high", "notes": "Short Wall; duplicate"},
+    {"type": "spot", "value_ft": 15.5, "raw": "15·5", "px": 129, "py": 828, "confidence": "high", "notes": "Lime Works yard"},
+    {"type": "spot", "value_ft": 13.0, "raw": "13·0", "px": 314, "py": 947, "confidence": "high", "notes": "west of Bow Bridge Works; dot RIGHT of figures"},
+    {"type": "spot", "value_ft": 14.4, "raw": "14·4", "px": 4, "py": 956, "confidence": "medium", "notes": "west edge, cut"},
+    {"type": "spot", "value_ft": 14.7, "raw": "14·7", "px": 199, "py": 992, "confidence": "high", "notes": "Towing Path along the Lea / Bow Creek"}
+  ],
+  "unread": ["isolated dot near Aberdeen Works (250,632) with no figure visible", "second pheon-like mark at 439,238 near 'Peg's Hole' with no figures"]
+}

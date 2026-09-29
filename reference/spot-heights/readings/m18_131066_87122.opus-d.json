@@ -1,0 +1,153 @@
+{
+ "mosaic": "m18_131066_87122",
+ "reader": "opus-d",
+ "area": "Stratford: G.E.R. High Meads Loop (NW), Stratford goods and locomotive yards, Engine Sheds, 'Stratford Works' carriage works and turntable (SE), streets by Angel Lane/Castle St edge (NE)",
+ "method": "read by Claude (vision): 3x3 sweep of 448 px crops at 2x; every candidate confirmed at 6x (+-40 px) and 8x (+-30 px); positions in mosaic pixels",
+ "legibility": "good; digits clear at 8x. Many figures in the yards sit on shaded yard corners with no survey dot. Sheet join at px ~70 (vertical, tinted strip to the west) and a visible horizontal tint step at py ~742 across the whole mosaic",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 17.7,
+   "raw": "17·7",
+   "px": 349,
+   "py": 20,
+   "confidence": "medium",
+   "notes": "G.E.R. High Meads Loop near the north edge; figures clear and whole at 8x; no dot found (a hooked tick on a rail at 329,13 not used), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 165,
+   "py": 155,
+   "confidence": "high",
+   "notes": "G.E.R. High Meads Loop embankment; dot on the rails left of figures at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 29,
+   "py": 313,
+   "confidence": "medium",
+   "notes": "G.E.R. lines at the west edge, in the tinted strip west of the sheet join (px ~70); figures clear at 8x, no dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.2,
+   "raw": "18·2",
+   "px": 787,
+   "py": 91,
+   "confidence": "medium",
+   "notes": "Stratford goods yard, at the NW corner of a shaded yard; figures clear at 8x; no survey dot (the dot at 774,84 belongs to 'C.'), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 851,
+   "py": 294,
+   "confidence": "medium",
+   "notes": "Stratford yard, at the NW corner of a shaded yard beside the lines; figures clear at 8x; no dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.8,
+   "raw": "18·8",
+   "px": 891,
+   "py": 480,
+   "confidence": "medium",
+   "notes": "Stratford yard by the Works buildings; figures clear at 8x; only a faint smudge above-left of the 1 may be the dot (H dots nearby not used)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.74,
+   "raw": "B.M.20·74",
+   "px": 859,
+   "py": 538,
+   "confidence": "high",
+   "notes": "corner of the Works building beside the lines; pheon left of text at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.1,
+   "raw": "20·1",
+   "px": 928,
+   "py": 708,
+   "confidence": "medium",
+   "notes": "Stratford Works, on a shaded yard by a fence line; figures clear at 8x; no dot found (dot at 906,707 belongs to H), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.9,
+   "raw": "20·9",
+   "px": 959,
+   "py": 921,
+   "confidence": "high",
+   "notes": "Stratford Works lines east of 'Stratford Works' lettering; dot above-left of figures at 8x (the H above has its own dot at 963,909)"
+  }
+ ],
+ "non_height_marks": [
+  "open triangle with dot (station symbol) at 978,778 in the shaded Works yard, no figure",
+  "many H (hydrant) and S.P./S.B. marks in the yards",
+  "W (well) at 485,710",
+  "'C.R.' lettering at 763,100"
+ ],
+ "unreadable_regions": []
+}

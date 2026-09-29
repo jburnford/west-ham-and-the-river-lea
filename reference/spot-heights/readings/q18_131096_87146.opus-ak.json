@@ -1,0 +1,21 @@
+{
+  "mosaic": "q18_131096_87146", "reader": "opus-ak", "layer": "os-25-inch-london",
+  "area": "Plaistow, New City Road estate and Bermerside Farm (NW), open fields south of it crossed by a lane lettered LANE and new pecked estate roads (S); E ~541130-541510, N ~182540-182920",
+  "method": "Layer: OS 25-inch (1:2500) Essex county series, inferred 1893-96 revision. Viewed the full 1024 px mosaic at 1x (anchor: Bermerside Farm, NEW CITY ROAD, LANE), all 9 sweep crops at 2x (r0c0 Bermerside Farm/NEW CITY; r0c1 CITY ROAD with triangle; r0c2 yellow boundary band, blank ground; r1c0 Bermerside Farm hatched building and clipped 22.6; r1c1 terrace blocks at SE end of New City Road; r1c2 yellow boundary angle, pecked crossroads; r2c0 L A N E and 18; r2c1 pecked T-junction, 18, 18, 17; r2c2 17 and 14), zoom 6x on 30,548 (clipped ?2.6 at W edge), contact sheet cs1 at 5x of all four figures, and a marker sheet of the recorded positions. Every crop, zoom, contact sheet and marker sheet displayed when opened and has an anchor in my notes. Positions are the + / x marker centroids (dark-pixel centroid within 6 px).",
+  "legibility": "Very clear: italic whole-foot figures ~13 px tall, markers are distinct small crosses 20-25 px above-right of the figures. No sheet join seen by eye; the tool's 'LIKELY' vertical join at px ~236 (y 0-512) is a faint tint step only, with no line offset, and no figures cross it.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 18, "raw": "18", "px": 334, "py": 808, "confidence": "high", "setting": "street",
+     "notes": "on the lane lettered LANE, just east of where the pecked estate road leaves it; x marker 25 px above-right of the figures, confirmed at 5x"},
+    {"type": "spot", "value_ft": 18, "raw": "18", "px": 514, "py": 847, "confidence": "high", "setting": "street",
+     "notes": "on the lane at the T-junction with the second pecked estate road; x marker at the junction, figures 40 px WSW, confirmed at 5x"},
+    {"type": "spot", "value_ft": 17, "raw": "17", "px": 691, "py": 888, "confidence": "high", "setting": "open_ground",
+     "notes": "open field south-east of the estate roads, no place word; x marker 20 px above the figures, confirmed at 5x"},
+    {"type": "spot", "value_ft": 14, "raw": "14", "px": 899, "py": 929, "confidence": "high", "setting": "marsh",
+     "notes": "open field toward the east edge, no place word, below 15 ft so marsh by the value rule; + marker 18 px above the figures, confirmed at 5x"}
+  ],
+  "non_height_marks": ["triangle (survey station) with no figure in NEW CITY ROAD at ~427,183", "letter 'B' of cut lettering at NE corner ~1015,15"],
+  "unreadable_regions": [
+    {"px0": 0, "py0": 538, "px1": 36, "py1": 562, "reason": "figure '?2·6' (1 dp, probably the value of a B.M. whose text and pheon lie west) cut by the west edge; first digit clipped"}
+  ]
+}

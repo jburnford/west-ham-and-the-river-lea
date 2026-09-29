@@ -1,0 +1,269 @@
+{
+ "mosaic": "m18_131084_87134",
+ "reader": "opus-q",
+ "area": "South edge of West Ham Park (SW corner, Drill Hall, Lodge, P.O.), Congregational Church, Park Grove, All Saints' Vicarage, Park Road, East Road, Brown's Road, Chadd Street, Pelly Road",
+ "method": "sweep r0c0..r2c2 (9 crops, 2x) all displayed, anchors noted on opening (Drill Hall/Lodge, Congregational Church, All Saints' Vicarage, R.O.A.D/P.O., PARK GROVE, PELLY, PARK ROAD/EAST, BROWN/CHADD ST, BROWN'S ROAD/MILT..). Zoom contact sheets A-G (8-12x, nearest-neighbour panels for 28·52 and the 26·3/26·8 figures) all displayed with anchors; marker sheets mk1-mk2 displayed and all positions checked. Every crop, contact sheet and marker sheet viewed successfully.",
+ "legibility": "Good. Sheet join: vertical at px ~645 over the full height (tint step, along Park Grove / Brown's Road west); no horizontal join seen.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 28.7,
+   "raw": "28·7",
+   "px": 277,
+   "py": 235,
+   "confidence": "high",
+   "notes": "road along the south edge of West Ham Park, by the Lodge; digits clear at 8x; dot directly above figure in a gap of the dashed line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.6,
+   "raw": "28·6",
+   "px": 37,
+   "py": 272,
+   "confidence": "high",
+   "notes": "same road at the west end by the P.O.; digits clear at 8x; dot directly above figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 29.68,
+   "raw": "B.M.29·68",
+   "px": 420,
+   "py": 263,
+   "confidence": "high",
+   "notes": "house front on the south side of the park road; text 405-432,280-290; pheon apex 17 px above text at the building line; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.1,
+   "raw": "26·1",
+   "px": 244,
+   "py": 439,
+   "confidence": "medium",
+   "notes": "north-south road (east of P.O. terraces) below an F.P.; digits clear at 8x; two dots above the figure, lower one taken as survey dot (upper may belong to F.P.)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.4,
+   "raw": "28·4",
+   "px": 502,
+   "py": 261,
+   "confidence": "high",
+   "notes": "park road at the head of the road past the Congregational Church; digits clear at 8x; dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.6,
+   "raw": "29·6",
+   "px": 702,
+   "py": 280,
+   "confidence": "medium",
+   "notes": "park road at Park Grove; digits clear at 8x; dot not certain (blob at end of a dash 702,272 and F.P. dot below), position = figure centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.8,
+   "raw": "30·8",
+   "px": 851,
+   "py": 285,
+   "confidence": "high",
+   "notes": "park road opposite All Saints' Vicarage; final 8 closed at 8x/12x; dot above figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 31.91,
+   "raw": "B.M.31·91",
+   "px": 985,
+   "py": 284,
+   "confidence": "high",
+   "notes": "wall at L.B. by All Saints' Vicarage; text 970-1000,304; pheon apex 985,284 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.3,
+   "raw": "28·3",
+   "px": 950,
+   "py": 392,
+   "confidence": "medium",
+   "notes": "All Saints' Vicarage grounds, south-east; digits clear at 8x; only dots nearby belong to the F.P., position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.2,
+   "raw": "27·2",
+   "px": 471,
+   "py": 460,
+   "confidence": "high",
+   "notes": "road past the Congregational Church; digits clear at 8x; dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.1,
+   "raw": "24·1",
+   "px": 211,
+   "py": 650,
+   "confidence": "medium",
+   "notes": "PARK ROAD between the R and O of the lettering; digits clear at 8x; dot below figure, could be a lettering interpunct"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.55,
+   "raw": "B.M.25·55",
+   "px": 211,
+   "py": 718,
+   "confidence": "high",
+   "notes": "house on the east side of Park Road; text 188-210,720-730; pheon apex at building line right of text, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.1,
+   "raw": "22·1",
+   "px": 180,
+   "py": 847,
+   "confidence": "medium",
+   "notes": "PARK ROAD among the P A R K lettering; digits clear at 8x; dot directly above figure, may be interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.4,
+   "raw": "25·4",
+   "px": 435,
+   "py": 708,
+   "confidence": "medium",
+   "notes": "EAST ROAD by the R of ROAD; digits clear at 8x; dot just after the R"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 28.52,
+   "raw": "B.M.28·52",
+   "px": 610,
+   "py": 745,
+   "confidence": "high",
+   "notes": "corner of the terrace at Brown's Road / road north; text 572-605,730; pheon apex 610,745; second digit closed 8 at 8x and 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.3,
+   "raw": "26·3",
+   "px": 625,
+   "py": 733,
+   "confidence": "low",
+   "notes": "Brown's Road west end; final digit 3/8 unresolved at 12x (a vertical line at x~645 crosses it); dot left of figure above F.P."
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.7,
+   "raw": "26·7",
+   "px": 964,
+   "py": 580,
+   "confidence": "high",
+   "notes": "Pelly Road west side; digits clear at 8x; isolated dot in the road 11 px right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.3,
+   "raw": "26·3",
+   "px": 964,
+   "py": 698,
+   "confidence": "low",
+   "notes": "Pelly Road at Brown's Road; final digit open like a 3 at 12x but read 8 at 2x; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.3,
+   "raw": "26·3",
+   "px": 822,
+   "py": 749,
+   "confidence": "medium",
+   "notes": "BROWN'S ROAD just after the D of ROAD; final digit open-left 3 at 12x (8 at 2x); dot immediately left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.0,
+   "raw": "26·0",
+   "px": 930,
+   "py": 757,
+   "confidence": "medium",
+   "notes": "Brown's Road east end by ·F.P·; final digit oval 0 at 12x; dot left of figure may be the F.P. dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 27.63,
+   "raw": "B.M.27·63",
+   "px": 975,
+   "py": 751,
+   "confidence": "high",
+   "notes": "Pelly Road corner beside a survey-station triangle; text 977-1012,752; pheon (arrow) apex 975,751 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.8,
+   "raw": "25·8",
+   "px": 969,
+   "py": 926,
+   "confidence": "high",
+   "notes": "Pelly Road south; digits clear at 8x; isolated dot in the road 13 px left of figure"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle beside B.M.27·63 at ~966,756",
+  "L.B. and F.P. marks",
+  "'Seats for 350' (church capacity) at ~470,420"
+ ],
+ "unreadable_regions": []
+}

@@ -1,0 +1,199 @@
+{
+ "mosaic": "m18_131084_87131",
+ "reader": "opus-o",
+ "area": "West Ham Park interior: crossing paths under the WEST HAM PARK lettering, Band Stand, Refreshment House, Drinking Fountains, Urinal, Drill Ground and Drill Hall on the south-west, Lodge and the park's south boundary road at the bottom.",
+ "method": "All 9 sweep crops (2x) viewed and displayed successfully, each anchored: r0c0 WEST HAM lettering and B.M.33.41; r0c1 HAM PARK lettering and triangular shrubbery; r0c2 'K' of PARK; r1c0 'Urinal' and B.M.30.29; r1c1 'Band Stand'; r1c2 'Refreshment House', 'Drinking Fountains'; r2c0 'Drill Ground', 'Drill Hall', 'Lodge'; r2c1 Band Stand and Urinal; r2c2 shrubberies and 'Fn.'. Contact sheets (own helper, all displayed): csA 6x (33.4, B.M.33.41, 30.6, 28.1, B.M.30.29, 27.5), csB 10x (28.1, B.M.30.29 pheon, 27.5, 30.6), csC 6x (27.7 x2, 28.9, B.M.30.71 at the Refreshment House octagon, 30.7, 30.3), csD 6x (29.9 by the railing, 28.7 by the Lodge road, triangle on Drill Hall), csE 16x (6/8 comparison against the 8s of 28.9 and 28.7; 30.3), csF 8x (28.1); marker sheets mkA (WEST HAM lettering) and mkB (Refreshment House) confirmed positions. Every value confirmed at 6x or more.",
+ "legibility": "Clean print. Sheet joins: horizontal at py ~178 full width (drawn line and tint step; the 30.6 figure sits just above it); vertical tint step at px ~645 over the full height (coincides with a drawn line). No figure is cut by a join. Top 180 px repeats the bottom of m18_131084_87128 (33.4, B.M.33.41, 30.6 recorded in both).",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 349,
+   "py": 36,
+   "confidence": "high",
+   "notes": "Diagonal park path; dot above figure; digits clear at 6x (same mark as m18_131084_87128 349,804)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.41,
+   "raw": "B.M.33·41",
+   "px": 263,
+   "py": 112,
+   "confidence": "high",
+   "notes": "Beside the diagonal park path; text ~287,119, pheon ~24 px left-up; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.6,
+   "raw": "30·6",
+   "px": 197,
+   "py": 166,
+   "confidence": "medium",
+   "notes": "Crossing of park paths just above the py ~178 join; dot left of figure; final digit G-shaped, unlike the oval 0 in the same figure, so read 6 (alt 30.0)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.1,
+   "raw": "28·1",
+   "px": 65,
+   "py": 342,
+   "confidence": "low",
+   "notes": "Path junction under the 'W' of WEST; dot at the junction left of figure; second digit 8 at 2x and 8x but open-topped like a 6 at 16x (alt 26.1)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 30.29,
+   "raw": "B.M.30·29",
+   "px": 115,
+   "py": 546,
+   "confidence": "medium",
+   "notes": "West side path north of the Drill Ground; text ~95,550, small pheon ~20 px right of text at ~115,546 (point estimated to 2-3 px); digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.5,
+   "raw": "27·5",
+   "px": 76,
+   "py": 588,
+   "confidence": "high",
+   "notes": "Path on the west edge by the Drill Ground; dot above-left of figure; 5 flat-topped at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.7,
+   "raw": "27·7",
+   "px": 251,
+   "py": 537,
+   "confidence": "high",
+   "notes": "Path junction north of the Urinal; dot left-up of figure; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.7,
+   "raw": "27·7",
+   "px": 355,
+   "py": 534,
+   "confidence": "high",
+   "notes": "Path junction east of the Urinal; dot on the junction above-left; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.9,
+   "raw": "28·9",
+   "px": 580,
+   "py": 527,
+   "confidence": "high",
+   "notes": "Among trees east of the Band Stand; dot left of figure; digits clear at 6x and 16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 30.71,
+   "raw": "B.M.30·71",
+   "px": 654,
+   "py": 590,
+   "confidence": "high",
+   "notes": "Octagonal building by the Refreshment House; text ~668,603, up-arrow pheon on the building's south edge at ~654,590; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.7,
+   "raw": "30·7",
+   "px": 726,
+   "py": 550,
+   "confidence": "high",
+   "notes": "Open ground north of 'Refreshment House'; dot just below figure; digits clear at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.3,
+   "raw": "30·3",
+   "px": 875,
+   "py": 512,
+   "confidence": "high",
+   "notes": "Path east of the Refreshment House; dot below-right of figure; final 3 clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.9,
+   "raw": "29·9",
+   "px": 992,
+   "py": 584,
+   "confidence": "medium",
+   "notes": "Beside the diagonal railing/path on the east; digits clear at 6x; no survey dot seen, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.7,
+   "raw": "28·7",
+   "px": 277,
+   "py": 1002,
+   "confidence": "medium",
+   "notes": "South boundary road by the Lodge; text ~274,1010; dot above figure lies in a dash-dot line (may be a boundary dot); digits clear at 6x and 16x"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangle with no figure at ~957,494",
+  "survey triangle on the Drill Hall building at ~56,990, no figure",
+  "'Fn.' (fountain) at ~1005,722",
+  "'Drinking Fountains' ~800,625",
+  "F.P. at ~250,990"
+ ],
+ "unreadable_regions": []
+}

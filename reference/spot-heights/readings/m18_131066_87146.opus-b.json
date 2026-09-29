@@ -1,0 +1,256 @@
+{
+ "mosaic": "m18_131066_87146",
+ "reader": "opus-b",
+ "area": "Three Mills Distillery, Channelsea River mouth (Long Wall), Bow Creek and its towing path, the London Tilbury & Southend railway bridge over Bow Creek, and the Bromley-by-Bow gasworks (gasholders)",
+ "method": "read by Claude (vision): 3x3 grid of 448 px crops at 2x LANCZOS, every candidate checked at 6x (80 px window, crosshair) and ambiguous ones at 8-10x; positions in mosaic pixels",
+ "legibility": "good; large open areas (gasholders, marsh) with few marks; an OS sheet join at px~61",
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 16.2,
+   "raw": "16·2",
+   "px": 102,
+   "py": 70,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87146 (px+768); Three Mills Lane; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.7,
+   "raw": "14·7",
+   "px": 217,
+   "py": 60,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87146 (px+768); by the W.M.; dot above-right"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.8,
+   "raw": "14·8",
+   "px": 254,
+   "py": 182,
+   "confidence": "medium",
+   "notes": "lane on the west side of Three Mills Distillery; last digit 8 at 6x (6 not excluded); dot right of figures; same mark as the edge-cut 14·8 in m18_131063_87146"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.2,
+   "raw": "15·2",
+   "px": 33,
+   "py": 225,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87146 (px+768); path south of Three Mills Bridge"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.74,
+   "raw": "B.M.17·74",
+   "px": 281,
+   "py": 258,
+   "confidence": "high",
+   "notes": "pheon left of the text on the Distillery wall"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.9,
+   "raw": "14·9",
+   "px": 313,
+   "py": 354,
+   "confidence": "high",
+   "notes": "road round the Distillery; dot above-right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.9,
+   "raw": "14·9",
+   "px": 163,
+   "py": 388,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87146 (px+768); towing path by Bow Creek; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 683,
+   "py": 148,
+   "confidence": "high",
+   "notes": "low ground inside the Long Wall embankment; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 823,
+   "py": 177,
+   "confidence": "medium",
+   "notes": "top of the Long Wall (Channelsea river wall, hachured); dot above-left of figures on the wall; wall-top height"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 12.86,
+   "raw": "B.M.12·86",
+   "px": 929,
+   "py": 176,
+   "confidence": "high",
+   "notes": "pheon above the text on the foot of the Long Wall"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.5,
+   "raw": "15·5",
+   "px": 646,
+   "py": 305,
+   "confidence": "medium",
+   "notes": "corner of the Distillery grounds at the Channelsea; dot below-left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.36,
+   "raw": "B.M.16·36",
+   "px": 572,
+   "py": 338,
+   "confidence": "high",
+   "notes": "pheon below the text on the Channelsea river wall"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.1,
+   "raw": "15·1",
+   "px": 470,
+   "py": 370,
+   "confidence": "high",
+   "notes": "river wall path; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.9,
+   "raw": "18·9",
+   "px": 696,
+   "py": 386,
+   "confidence": "medium",
+   "notes": "figures on the foreshore; dot taken as the one below-right on the railway embankment top"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.9,
+   "raw": "21·9",
+   "px": 502,
+   "py": 458,
+   "confidence": "medium",
+   "notes": "figures on the foreshore; dot taken as the one below-right on the railway embankment"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 23.0,
+   "raw": "B.M.23·00",
+   "px": 335,
+   "py": 512,
+   "confidence": "high",
+   "notes": "pheon right of the text on the east abutment of the Bow Creek railway bridge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.4,
+   "raw": "25·4",
+   "px": 321,
+   "py": 534,
+   "confidence": "medium",
+   "notes": "railway at the east abutment; dot between the rails below-right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.6,
+   "raw": "25·6",
+   "px": 161,
+   "py": 594,
+   "confidence": "medium",
+   "notes": "duplicate of m18_131063_87146 (px+768); railway bridge over Bow Creek; dot between the rails"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.5,
+   "raw": "25·5",
+   "px": 38,
+   "py": 640,
+   "confidence": "medium",
+   "notes": "duplicate of m18_131063_87146 (px+768); railway at the west end of the bridge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.9,
+   "raw": "15·9",
+   "px": 380,
+   "py": 580,
+   "confidence": "high",
+   "notes": "marsh ground east of Bow Creek below the embankment; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.2,
+   "raw": "18·2",
+   "px": 471,
+   "py": 723,
+   "confidence": "high",
+   "notes": "gasworks ground; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 511,
+   "py": 907,
+   "confidence": "high",
+   "notes": "gasworks ground; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.3,
+   "raw": "15·3",
+   "px": 104,
+   "py": 722,
+   "confidence": "high",
+   "notes": "duplicate of m18_131063_87146 (px+768); towing path; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 102,
+   "py": 888,
+   "confidence": "medium",
+   "notes": "duplicate of m18_131063_87146 (px+768); towing path; no dot found, position = figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.3,
+   "raw": "16·3",
+   "px": 896,
+   "py": 297,
+   "confidence": "low",
+   "notes": "railway goods shed (F. Shed) by the Channelsea; last digit 3 or 8; dot probably the one on the railway at about 900,312"
+  }
+ ],
+ "non_height_marks": [
+  "H.W.M.O.T. / L.W.M.O.T. tide lines on Bow Creek and the Channelsea, no figures",
+  "C.C. at L.W. county boundary",
+  "S.P. signal post by the goods shed at about 886,340",
+  "F.B., F.F., F.P. marks"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 990,
+   "py0": 215,
+   "px1": 1024,
+   "py1": 240,
+   "reason": "B.M. 15·9? in the crane oval, cut by the east edge; needs m18_131069_87146"
+  },
+  {
+   "px0": 0,
+   "py0": 100,
+   "px1": 12,
+   "py1": 120,
+   "reason": "figure '·2' (21·2 on Three Mills Bridge) cut by the west edge; read in m18_131063_87146"
+  }
+ ]
+}

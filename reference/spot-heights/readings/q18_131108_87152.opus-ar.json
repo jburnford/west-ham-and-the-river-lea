@@ -1,0 +1,13 @@
+{
+ "mosaic": "q18_131108_87152", "reader": "opus-ar", "layer": "os-25-inch-london",
+ "area": "East Ham Level edge south of East Ham: LT&SR embankment across the north, Fabian Street and a new road with terraces, open grazing marsh with drains (parcels 107, 109, 110)",
+ "method": "OS 25-inch (os-25-inch-london) layer. sheet (no join reported); 1x overview (FABIAN STREET, embankment, 109.967); sweep of all 9 crops at 2x, each anchored in notes when opened: r0c0 embankment hachures, white top strip; r0c1 109.967; r0c2 110 18..; r1c0 drain with tie mark; r1c1 FABIAN STREET; r1c2 109 10.736; r2c0 drain junction; r2c1 drains, road; r2c2 107 12.772. All crops displayed when opened. No height figures, crosses or B.M.s found anywhere on the mosaic, so no zooms were needed; an empty result.",
+ "legibility": "Clean; only upright parcel numbers and acreages. Horizontal sheet join at py ~15-17 with a white strip above it across the full width (not reported by the sheet tool). Fully on-sheet otherwise; no grey missing tiles.",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [],
+ "non_height_marks": ["parcel numbers and acreages 109.967, 110 18.. (acreage cut by east edge at ~1010,367), 109 10.736, 107 12.772", "S-shaped drain tie marks", "isolated dot at ~165,355 in the field with no figure"],
+ "unreadable_regions": [
+  {"px0": 0, "py0": 0, "px1": 1024, "py1": 17, "reason": "white strip above the horizontal sheet join at py ~15-17 (content on the q18_131108_87149 row)"},
+  {"px0": 1000, "py0": 355, "px1": 1024, "py1": 380, "reason": "upright acreage '18..' of parcel 110 cut by the east edge; not a height"}
+ ]
+}

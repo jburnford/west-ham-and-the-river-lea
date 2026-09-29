@@ -1,0 +1,234 @@
+{
+ "mosaic": "m18_131081_87128",
+ "reader": "opus-s",
+ "area": "West Ham Park north-west: Vaughan Road, Fairland Road South, Mathews Park Avenue, Eleanor Road, Bolton Road, Reginald Road, Ham Park Road, Amity Road, Cecil Road and the north-west part of West Ham Park",
+ "method": "Viewed full mosaic, all 9 sweep crops (2x; anchors in notes: r0c0 FAIRLAND ROAD SOUTH, r0c1 ELEANOR ROAD/School, r0c2 REGINALD ROAD, r1c0 AMITY ROAD, r1c1 School/HAM PARK, r1c2 PARK ROAD/B.M.35·21, r2c0 CECIL/F.P., r2c1 CECIL/park avenues, r2c2 park paths/30·0), then contact sheets cs1 (8x), cs2 (12x), cs3 (6x), cs4 (6x), cs5 (12x), cs6 (6x), cs6b (blocky 10x), cs7 (12x) and marker sheet mk2 (8x panel on every recorded position; 4 positions corrected by 1-3 px). Every crop and contact sheet displayed when opened. Leading digits confirmed at 12x for all figures.",
+ "legibility": "good; print clean; sheet join at py ~944 (horizontal, visible by eye, not reported by sheet tool)",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 27.3,
+   "raw": "27·3",
+   "px": 211,
+   "py": 34,
+   "confidence": "high",
+   "notes": "Vaughan Road, south of the V of VAUGHAN; dot above-right of figure; open 3 clear at 12x like the 3s of 33·2"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 27.66,
+   "raw": "B.M.27·66",
+   "px": 122,
+   "py": 56,
+   "confidence": "high",
+   "notes": "Vaughan Road / Fairland Road South corner; pheon on building corner left of text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.6,
+   "raw": "26·6",
+   "px": 173,
+   "py": 158,
+   "confidence": "medium",
+   "notes": "Fairland Road South, north; dot left-above of figure; middle digit 6 fuzzy (tree symbol beside final digit), 6 at 8x and blocky 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.6,
+   "raw": "26·6",
+   "px": 228,
+   "py": 363,
+   "confidence": "medium",
+   "notes": "Fairland Road South near its south end; digits clear at 12x; no survey dot found within 40 px (only the H hydrant dot at 218,351), position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 30.7,
+   "raw": "B.M.30·70",
+   "px": 451,
+   "py": 390,
+   "confidence": "high",
+   "notes": "West Ham Park Board School (Boys Girls & Infants), SW corner; pheon on building corner above text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 822,
+   "py": 56,
+   "confidence": "medium",
+   "notes": "road between Bolton Road and the next street, north; only nearby dots belong to the dash-dot boundary along R·O·A·D; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.2,
+   "raw": "33·2",
+   "px": 890,
+   "py": 283,
+   "confidence": "medium",
+   "notes": "same road at Reginald Road junction; digits clear at 12x; no clear survey dot (boundary dashes/dots west), position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.21,
+   "raw": "B.M.35·21",
+   "px": 893,
+   "py": 389,
+   "confidence": "high",
+   "notes": "Ham Park Road frontage at corner of the road with the boundary; pheon on building corner ~30 px NE of text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 928,
+   "py": 420,
+   "confidence": "medium",
+   "notes": "Ham Park Road east of B.M.35·21; second 3 touched by a boundary dash above; only nearby dot (910,417) belongs to the dash-dot boundary; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.5,
+   "raw": "31·5",
+   "px": 767,
+   "py": 437,
+   "confidence": "medium",
+   "notes": "Ham Park Road; dot between O and A of ROAD (lettering otherwise not interpunctuated), taken as survey dot; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.4,
+   "raw": "26·4",
+   "px": 293,
+   "py": 504,
+   "confidence": "high",
+   "notes": "Ham Park Road west end near Amity Road; isolated dot left of figure; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.7,
+   "raw": "25·7",
+   "px": 163,
+   "py": 544,
+   "confidence": "high",
+   "notes": "Amity Road / Ham Park Road junction; dot above figure, separate from the two F.P. dots; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.8,
+   "raw": "27·8",
+   "px": 452,
+   "py": 480,
+   "confidence": "medium",
+   "notes": "Ham Park Road south of the school; dot directly above the 7; final 8 closed at 12x and blocky 10x but stands alone (no matching digit), so medium"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.5,
+   "raw": "29·5",
+   "px": 612,
+   "py": 459,
+   "confidence": "medium",
+   "notes": "Ham Park Road; dot after the A of PARK (lettering otherwise not interpunctuated), taken as survey dot; 5 has flat top at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.4,
+   "raw": "27·4",
+   "px": 202,
+   "py": 687,
+   "confidence": "high",
+   "notes": "junction at the north end of Cecil Road; isolated dot left-above figure, separate from F.P. dots; clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 29.03,
+   "raw": "B.M.29·03",
+   "px": 227,
+   "py": 752,
+   "confidence": "high",
+   "notes": "Cecil Road west side; pheon on wall ~15 px NE of text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.0,
+   "raw": "28·0",
+   "px": 181,
+   "py": 895,
+   "confidence": "medium",
+   "notes": "Cecil Road, road west of the terrace; two dots below figure above an F.P. (181,895 and 183,898), one is the F.P. dot; second digit 8 at 6x, slight 6 doubt at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.0,
+   "raw": "30·0",
+   "px": 966,
+   "py": 935,
+   "confidence": "high",
+   "notes": "West Ham Park, at crossing of park paths; dot left of figure; clear at 12x; sheet join at py ~944 just below"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. marks around Amity Road, Cecil Road and Ham Park Road",
+  "H hydrant marks along Fairland Road South and Bolton Road",
+  "dash-dot boundary along the road east of Bolton Road and along Ham Park Road east",
+  "triangle (survey station?) at 348,483 with no figure"
+ ],
+ "unreadable_regions": []
+}

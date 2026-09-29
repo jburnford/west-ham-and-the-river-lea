@@ -1,0 +1,15 @@
+{
+  "mosaic": "q18_131105_87146",
+  "reader": "opus-an",
+  "layer": "os-25-inch-london",
+  "area": "East Ham fields (E 541980-542370, N 182560-182950): west half is one open field, blank paper with staining and a single drain in the south; east half is missing tiles beyond the sheet's neat line",
+  "method": "OS 25-inch layer os-25-inch-london. sheet (no join reported; missing tiles 131107-131108 x 87146-87149 listed); 2x sweep of all nine crops r0c0-r2c2, each displayed and anchored at the moment of opening (r0c0 blank paper with stains and specks at ~3,228 and ~63,425; r0c1 neat line px 446, white margin, grey; r0c2 all grey; r1c0 blank paper, drain tip; r1c1 neat line and drain tip; r1c2 all grey; r2c0 drain curving S; r2c1 drain from neat line; r2c2 all grey). No figures, crosses or B.M.s anywhere on the printed part; nothing needed zooming. All crops viewed successfully.",
+  "legibility": "Printed area px 0-446 is clean but nearly blank; vertical neat line at px ~446 (sheet edge), white margin 446-512, grey missing tiles 512-1024 full height",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [],
+  "non_height_marks": ["isolated ink specks at ~3,228 and ~63,425 (no figure beside them)"],
+  "unreadable_regions": [
+    {"px0": 446, "py0": 0, "px1": 512, "py1": 1024, "reason": "white off-sheet margin beyond the neat line"},
+    {"px0": 512, "py0": 0, "px1": 1024, "py1": 1024, "reason": "grey fill: missing tiles 131107-131108 x 87146-87149"}
+  ]
+}

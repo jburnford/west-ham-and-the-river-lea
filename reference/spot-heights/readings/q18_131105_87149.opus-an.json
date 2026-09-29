@@ -1,0 +1,16 @@
+{
+  "mosaic": "q18_131105_87149",
+  "reader": "opus-an",
+  "layer": "os-25-inch-london",
+  "area": "East Ham fields north of the Level (E 541990-542380, N 182280-182670): open field (acreage 109·967) crossed by a single drain, and a hachured railway embankment (the LT&SR line) running WNW-ESE across the south of the mosaic; NE block is missing tiles",
+  "method": "OS 25-inch layer os-25-inch-london. sheet (no join reported; missing tiles 131107-131108 x 87149-87151 listed); 2x sweep of all nine crops r0c0-r2c2, each displayed and anchored at the moment of opening (r0c0 diagonal drain with S ties; r0c1 drain and paper edge at px 444; r0c2 all grey; r1c0 acreage 109.967; r1c1 109.967 and white margin; r1c2 all grey; r2c0 railway embankment, acreages 18.040 and 109.967 repeated across the join; r2c1 embankment across neat line px 444; r2c2 grey/white/embankment). No height candidates found, so no zooms were needed. All crops viewed successfully.",
+  "legibility": "Clean where printed. Sheet structure: the upper-left sheet ends at a vertical neat line px ~444 and a horizontal join py ~785 (acreages 18·040 and 109·967 repeated on both sides; the tool does not report it); the lower sheet runs full width below py ~785",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [],
+  "non_height_marks": ["acreage 109·967 at ~390,655 (above the join) and ~230,810 (below it, with arrow)", "acreage 18·040 at ~20,770 and ~390,845 across the join", "S-shaped drain tie marks at ~300-325,340-390"],
+  "unreadable_regions": [
+    {"px0": 444, "py0": 0, "px1": 512, "py1": 785, "reason": "white off-sheet margin beyond the neat line of the upper-left sheet"},
+    {"px0": 512, "py0": 0, "px1": 1024, "py1": 768, "reason": "grey fill: missing tiles 131107-131108 x 87149-87151"},
+    {"px0": 512, "py0": 768, "px1": 1024, "py1": 785, "reason": "white off-sheet strip above the lower sheet's neat line"}
+  ]
+}

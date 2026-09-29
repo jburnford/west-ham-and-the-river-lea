@@ -1,0 +1,292 @@
+{
+ "mosaic": "m18_131084_87137",
+ "reader": "opus-s",
+ "area": "Plaistow north / West Ham: Park Road, East Street, Brook's Road, Chadd Street, Charlton Road, Milton Road, Chapman Road, Stratford Road, Valetta Grove, Willow Grove, Libra Road, Beale Street North, Milton Street, Grafton Road South and the LT&SR",
+ "method": "Viewed full mosaic, all 9 sweep crops (2x; anchors in notes: r0c0 P A R / Meth. Chap. (Prim.), r0c1 BROOK'S ROAD/CHADD ST, r0c2 CHADD STREET/CHARLTON ROAD/MILTON, r1c0 STRATFORD/COMPTON ROAD, r1c1 Mission Room/L.B., r1c2 CHAPMAN ROAD/B.M.26·63, r2c0 VALETTA GROVE/WILSON STREET, r2c1 LIBRA ROAD/BEALE STREET NORTH, r2c2 MILTON STREET/Meth. Chap. (United Free)), then contact sheets cs1 (6x), cs2 (12x), cs3 (6x), cs4 (12x), cs5 (6x), cs6 (12x), cs7 (6x), cs8 (12x) and marker sheet mk (8x panel on every recorded position; 6 positions corrected by 1-5 px). Every crop and contact sheet displayed when opened. Leading digits confirmed at 12x.",
+ "legibility": "good; sheet joins at py ~376-378 (horizontal, full width) and px ~639-641 (vertical, from py ~0 to 1024), both visible by eye",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 22.1,
+   "raw": "22·1",
+   "px": 180,
+   "py": 79,
+   "confidence": "medium",
+   "notes": "Park Road (P·A·R lettering) north; dot between the A and the figure, may be a lettering interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.3,
+   "raw": "20·3",
+   "px": 152,
+   "py": 256,
+   "confidence": "high",
+   "notes": "Park Road; dot above figure; open 3 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.2,
+   "raw": "18·2",
+   "px": 28,
+   "py": 353,
+   "confidence": "high",
+   "notes": "Park Road south end near West Ham Lane corner; dot left-above figure; clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.1,
+   "raw": "19·1",
+   "px": 128,
+   "py": 395,
+   "confidence": "high",
+   "notes": "Stratford Road west end, south of the sheet join; dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.2,
+   "raw": "B.M.20·20",
+   "px": 100,
+   "py": 430,
+   "confidence": "high",
+   "notes": "building at Stratford Road / Valetta Grove corner; pheon ~20 px below-left of text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.6,
+   "raw": "20·6",
+   "px": 289,
+   "py": 456,
+   "confidence": "medium",
+   "notes": "Stratford Road; dot under the R of STRATFORD, may be lettering interpunct; final 6 open-topped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.5,
+   "raw": "21·5",
+   "px": 347,
+   "py": 466,
+   "confidence": "medium",
+   "notes": "Stratford Road; dot below figure between A and T of STRATFORD (F.P. dot above is separate)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.3,
+   "raw": "14·3",
+   "px": 33,
+   "py": 599,
+   "confidence": "medium",
+   "notes": "Valetta Grove area road (R O A D lettering) at west edge; dot on the O, may be lettering interpunct; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.2,
+   "raw": "22·2",
+   "px": 434,
+   "py": 504,
+   "confidence": "medium",
+   "notes": "Stratford Road bend near survey-station triangle 425,512; dot left of figure between O and R of STRATFORD"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.9,
+   "raw": "23·9",
+   "px": 571,
+   "py": 430,
+   "confidence": "high",
+   "notes": "Brook's Road south end; dot left of figure; clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.8,
+   "raw": "24·8",
+   "px": 698,
+   "py": 418,
+   "confidence": "medium",
+   "notes": "Chapman Road, on the Mission Room plot; dot immediately left of figure (another dot above the M of CHAPMAN); final 8 closed at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.2,
+   "raw": "22·2",
+   "px": 565,
+   "py": 565,
+   "confidence": "medium",
+   "notes": "Stratford Road at Libra Road; dot above-left of figure before the O of ROAD, may be lettering interpunct"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 21.92,
+   "raw": "B.M.21·92",
+   "px": 544,
+   "py": 681,
+   "confidence": "medium",
+   "notes": "Libra Road; pheon on building corner on the west side of Libra Road ~55 px from the text east of the road; association inferred"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.8,
+   "raw": "25·8",
+   "px": 992,
+   "py": 150,
+   "confidence": "low",
+   "notes": "road east of Milton Road (north); final digit 8 or 3 at 12x (same figure is whole on m18_131087_87137 at 224,152, where 9x favours 3 and blocky favours 8); no dot next to figure (nearest 970,157), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.1,
+   "raw": "25·1",
+   "px": 987,
+   "py": 325,
+   "confidence": "high",
+   "notes": "road east of Milton Road at Charlton Road; dot right of figure, separate from F.P."
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 26.92,
+   "raw": "B.M.26·92",
+   "px": 847,
+   "py": 442,
+   "confidence": "high",
+   "notes": "Chapman Road / Milton Road corner; pheon on building corner ~25 px NE of text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.1,
+   "raw": "25·1",
+   "px": 864,
+   "py": 453,
+   "confidence": "high",
+   "notes": "Milton Road at Chapman Road; dot above figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 26.63,
+   "raw": "B.M.26·63",
+   "px": 1015,
+   "py": 450,
+   "confidence": "medium",
+   "notes": "road east of Milton Road near east edge; pheon ~35 px NE of text across the road; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.6,
+   "raw": "23·6",
+   "px": 880,
+   "py": 632,
+   "confidence": "high",
+   "notes": "road north of Milton Street near P.H.; dot below figure; clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.5,
+   "raw": "28·5",
+   "px": 1004,
+   "py": 843,
+   "confidence": "medium",
+   "notes": "Pelly Road bridge approach near east edge; no survey dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.7,
+   "raw": "19·7",
+   "px": 850,
+   "py": 990,
+   "confidence": "high",
+   "notes": "Grafton Road South; dot left of figure; clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.35,
+   "raw": "B.M.22·35",
+   "px": 901,
+   "py": 985,
+   "confidence": "high",
+   "notes": "Grafton Road South; pheon on wall ~30 px NW of text; digits clear at 12x"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. marks throughout",
+  "L.B. at 452,527",
+  "F.B. at 690,1010 by the railway",
+  "survey-station triangles at 425,512, 576,512 and 1000,630 with no figures"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1004,
+   "py0": 652,
+   "px1": 1024,
+   "py1": 670,
+   "reason": "figure 24·? cut by east edge"
+  },
+  {
+   "px0": 1004,
+   "py0": 862,
+   "px1": 1024,
+   "py1": 885,
+   "reason": "bench mark B.M.31·?? cut by east edge (pheon ~1020,833)"
+  },
+  {
+   "px0": 0,
+   "py0": 974,
+   "px1": 14,
+   "py1": 990,
+   "reason": "figure ?·4 cut by west edge"
+  }
+ ]
+}

@@ -1,0 +1,287 @@
+{
+ "mosaic": "m18_131090_87131",
+ "reader": "opus-k",
+ "area": "Upton: Khedive Road, Upton Park Road, Stukeley Road, Boleyn Road, Neville Road, Plashet Road (Division of Parly. Boro. & Ward Bdy.), Upton Lane with Ursuline Schools",
+ "method": "Primary read. sheet + 9 sweep crops at 2x; every candidate confirmed on contact sheets of zoom panels at 6x, then 12x and 16x for 3/8, 5/6 and dots/pheons. The top 256 px overlap m18_131090_87128 (py + 768); those figures were re-zoomed on this mosaic and are recorded again. All sweep crops and all zoom panels loaded and were viewed successfully.",
+ "legibility": "Good. Sheet join: horizontal at py ~179-180 right across the mosaic (tint step confirmed by eye; same join as py ~947 on m18_131090_87128). The tool's second join at py ~299 over x 256-768 was not visible by eye as a straight tint line and is not recorded. Along Plashet Road the figures sit on the dashed boundary line; the boundary is plain dashes, so the single dot beside each figure is its survey dot.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 36.42,
+   "raw": "B.M.36·42",
+   "px": 219,
+   "py": 62,
+   "confidence": "high",
+   "notes": "Khedive Road frontage; pheon below text on building line (same mark as m18_131090_87128 219,830)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 190,
+   "py": 56,
+   "confidence": "medium",
+   "notes": "Khedive Road beside B.M.36·42; dot directly above figure but between E and D of KHEDIVE"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.0,
+   "raw": "34·0",
+   "px": 208,
+   "py": 165,
+   "confidence": "medium",
+   "notes": "Khedive Road just above sheet join; only dot is below figure, between V and E of KHEDIVE"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 5,
+   "py": 183,
+   "confidence": "high",
+   "notes": "road at west edge just below sheet join; dot left of figure; figure whole"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.5,
+   "raw": "B.M.33·50",
+   "px": 609,
+   "py": 232,
+   "confidence": "high",
+   "notes": "Upton Park Road frontage; pheon right of text on wall line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 664,
+   "py": 238,
+   "confidence": "medium",
+   "notes": "Upton Park Road between 'O' and 'N' of spaced lettering; raised dot above decimal taken as survey dot, may be interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 829,
+   "py": 77,
+   "confidence": "high",
+   "notes": "road by Boys Girls & Infants School; dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 850,
+   "py": 209,
+   "confidence": "high",
+   "notes": "Upton Park Road at Stukeley Road; dot directly above figure; F.P. separate"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.5,
+   "raw": "33·5",
+   "px": 233,
+   "py": 305,
+   "confidence": "high",
+   "notes": "Upton Lane (ROAD lettering) by Ursuline Schools; dot left of figure; L.B. dot separate"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 442,
+   "py": 272,
+   "confidence": "high",
+   "notes": "Upton Park Road south side; dot upper-left of figure; final digit matches the two 3s of the same figure at 16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.52,
+   "raw": "B.M.34·52",
+   "px": 297,
+   "py": 549,
+   "confidence": "high",
+   "notes": "corner of Upton Lane and Boleyn Road; pheon on curved building corner below text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.5,
+   "raw": "32·5",
+   "px": 268,
+   "py": 538,
+   "confidence": "high",
+   "notes": "Upton Lane at Boleyn Road beside survey triangle (275,527); dot left of figure; 5 read at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.3,
+   "raw": "31·3",
+   "px": 298,
+   "py": 731,
+   "confidence": "high",
+   "notes": "Upton Lane at Neville Road; dot upper-left of figure; 3 read at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.8,
+   "raw": "32·8",
+   "px": 885,
+   "py": 443,
+   "confidence": "high",
+   "notes": "Stukeley Road at Boleyn Road; dot upper-left of figure; 8 read at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.5,
+   "raw": "B.M.33·50",
+   "px": 881,
+   "py": 504,
+   "confidence": "high",
+   "notes": "Stukeley Road frontage; pheon left of text pointing at wall"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 916,
+   "py": 637,
+   "confidence": "high",
+   "notes": "Stukeley Road at Neville Road; dot upper-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 330,
+   "py": 920,
+   "confidence": "medium",
+   "notes": "Plashet Road / Upton Lane on the boundary line; only dot is the one after 'P' of spaced P L A S H E T"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.4,
+   "raw": "32·4",
+   "px": 124,
+   "py": 952,
+   "confidence": "high",
+   "notes": "Plashet Road under 'Parly.'; isolated dot above figure, separate from the abbreviation point of 'Parly.' at 116,950"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.15,
+   "raw": "B.M.33·15",
+   "px": 36,
+   "py": 978,
+   "confidence": "high",
+   "notes": "Plashet Road frontage; pheon left of text on wall; 5 read at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.8,
+   "raw": "33·8",
+   "px": 505,
+   "py": 898,
+   "confidence": "high",
+   "notes": "Plashet Road on the boundary line; dot upper-left of figure between two dashes; the boundary is plain dashes (no dots elsewhere), so this is the survey dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.78,
+   "raw": "B.M.35·78",
+   "px": 624,
+   "py": 856,
+   "confidence": "high",
+   "notes": "Plashet Road frontage; pheon right of text pointing at wall"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.0,
+   "raw": "34·0",
+   "px": 728,
+   "py": 866,
+   "confidence": "high",
+   "notes": "Plashet Road on the boundary line; dot at the end of a boundary dash just above-left of figure; the boundary is plain dashes, so this is the survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.6,
+   "raw": "33·6",
+   "px": 947,
+   "py": 838,
+   "confidence": "low",
+   "notes": "Plashet Road; dot above figure between boundary dashes (survey dot); final digit 6 or 5 at 16x"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle at 275,527 (32·5 beside it is written with its own dot)",
+  "survey-station triangle inside P.H. at 842,400, no figure",
+  "L.B., F.A., F.P., H marks with own dots",
+  "'Division of Parly. Boro. & Ward Bdy.' dashed boundary along Plashet Road; C.R. at 250,920"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 175,
+   "px1": 1024,
+   "py1": 185,
+   "reason": "horizontal sheet join at py ~179-180; 34·0 above and 34·2 below it are whole"
+  }
+ ]
+}

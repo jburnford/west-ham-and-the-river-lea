@@ -1,0 +1,20 @@
+{
+  "mosaic": "q18_131105_87140", "reader": "opus-al", "layer": "os-25-inch-london",
+  "area": "Estate roads with a new terrace and fields north of the LT&SR, with the lane at Spring Well at the south edge (E 541964-542160 on the mapped west half, N 183130-183510); parcels 36 (4.911), 37 (4.388)",
+  "method": "OS 25-inch (1:2500) Essex county series, layer os-25-inch-london. sheet (no join; missing tiles 131107-131108 reported), 2x sweep of all 9 crops, each anchored on opening and all displayed: r0c0 'A D' of ROAD + terrace + '19', '21'; r0c1 terrace + neat line + grey; r0c2 all grey; r1c0 parcel '37 / 4·388'; r1c1 field line to neat line + grey; r1c2 all grey; r2c0 'Spring Well', big 'A', parcel '36 / 4·911', '16'; r2c1 'Spring' / 'Well' + grey; r2c2 all grey. 5x contact sheet cs1 (4 panels) and 8x zoom at 297,268, all displayed; raw-pixel profile of the second digit of 19 compared with a 9 (q18_131099_87146) and an 8 (q18_131099_87149). Marker positions checked on the contact sheet.",
+  "legibility": "Clear on the mapped part; italic figures ~13 px. The map neat line runs down px ~448; px 448-512 is white off-sheet margin and px 512-1024 is grey fill (missing tiles). No sheet join seen.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 19, "raw": "19", "px": 278, "py": 281, "confidence": "high", "setting": "street",
+     "notes": "estate road junction (pecked kerbs, '..AD' lettering) just north of the yellow main road; + in the carriageway, figure ~20 px NE at ~297,270. Second digit checked at 8x and in raw pixels: large upper loop with a small tight tail curl (not the two equal bowls of the 8 in '28' on q18_131099_87149), so 9"},
+    {"type": "spot", "value_ft": 21, "raw": "21", "px": 415, "py": 104, "confidence": "high", "setting": "street",
+     "notes": "estate road east of the new terrace (pecked kerbs); + in the road, figure ~20 px above it at ~417,82; confirmed 5x"},
+    {"type": "spot", "value_ft": 16, "raw": "16", "px": 444, "py": 946, "confidence": "high", "setting": "street",
+     "notes": "lane at Spring Well (lane acreage 2.099), + between the lane lines 4 px inside the map neat line; figure ~28 px SW at ~418,967; confirmed 5x"}
+  ],
+  "non_height_marks": ["parcels 36/4.911 and 37/4.388; lane acreage 2.099", "'Spring Well' label with small circle marks at ~370,955 and ~440,930", "large sheet-quarter letter 'A' at ~140,970"],
+  "unreadable_regions": [
+    {"px0": 448, "py0": 0, "px1": 512, "py1": 1024, "reason": "white off-sheet margin east of the map neat line"},
+    {"px0": 512, "py0": 0, "px1": 1024, "py1": 1024, "reason": "grey fill: missing tiles 131107-131108 x 87140-87143"}
+  ]
+}

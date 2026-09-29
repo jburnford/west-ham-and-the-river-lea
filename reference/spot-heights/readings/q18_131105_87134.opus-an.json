@@ -1,0 +1,27 @@
+{
+  "mosaic": "q18_131105_87134",
+  "reader": "opus-an",
+  "layer": "os-25-inch-london",
+  "area": "Upton Park / East Ham west (E 541950-542340, N 183710-184080): new terraces on Heigham Road, Lawrence Road, Outram Road, Malvern Road, Stamford Road and Oakfield Road either side of Katherine Road; Colvin Road and Bendish Road in the NE; railway with hachures at the NW corner; SE quarter off-sheet/missing",
+  "method": "OS 25-inch layer os-25-inch-london. sheet (no join reported; missing tiles 131107-131108 x 87136-87137 listed); 2x sweep of all nine crops r0c0-r2c2, each displayed and anchored at the moment of opening (r0c0 HEIGHAM ROAD, LAWRENCE ROAD, triangle, B.M.30.8, two 28s; r0c1 display S, COLVIN ROAD, join px 452; r0c2 display T, BENDISH ROAD; r1c0 KATHERINE, OUTRAM ROAD, MALVERN ROAD, B.M.31.7; r1c1 road ends at neat line, white/grey; r1c2 white then grey; r2c0 STAMFORD ROAD, L.B., 29; r2c1 road ends at neat line; r2c2 all grey). Contact sheet cs1 (5-8x: both B.M.s' digits and pheons, both 28s and their crosses) and a 2x marker sheet (0-460 x 150-950) displayed; positions confirmed. All crops and zooms viewed successfully.",
+  "legibility": "Clean, digits clear at 2x. Sheet joins: horizontal py ~290 across the full width (the tool does not report it) and vertical px ~452 above it; below py 290 the printed sheet ends at a neat line px ~452, with white off-sheet paper to the east and grey missing tiles from px 512 / py 512",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "bench_mark", "value_ft": 30.8, "raw": "B.M.30·8", "px": 368, "py": 257, "confidence": "high", "setting": "building",
+     "notes": "B.M.30·8 on the S frontage of Heigham Road (leading 3 open, final 8 two closed bowls, middot clear at 5x); pheon apex on the W corner of the terrace E of the text at 368,257, 8x"},
+    {"type": "spot", "value_ft": 28, "raw": "28", "px": 214, "py": 337, "confidence": "high", "setting": "street",
+     "notes": "italic 28 at ~207,318 on Lawrence Road; paired with the isolated cross printed between the N and C of LAWRENCE at 214,337 (LAWRENCE has no interpuncts), 20 px S"},
+    {"type": "spot", "value_ft": 28, "raw": "28", "px": 44, "py": 398, "confidence": "high", "setting": "street",
+     "notes": "italic 28 at ~15,405 at the Katherine Road / Lawrence Road corner; paired with the isolated cross between the A and T of KATHERINE at 44,398, 30 px E"},
+    {"type": "bench_mark", "value_ft": 31.7, "raw": "B.M.31·7", "px": 159, "py": 720, "confidence": "high", "setting": "building",
+     "notes": "B.M.31·7 clear at 5x, text in the Malvern Road corner plot; pheon apex on the corner of the building on the E side of Katherine Road, 70 px W of the text, at 159,720"},
+    {"type": "spot", "value_ft": 29, "raw": "29", "px": 52, "py": 887, "confidence": "high", "setting": "street",
+     "notes": "italic 29 at ~38,897 at the road junction SW of Katherine Road; paired with the star 15 px NE at 52,887 (overlap strip with q18_131105_87137)"}
+  ],
+  "non_height_marks": ["survey-station triangle at ~98,183 with no figure", "L.B. at ~200,838", "tree symbols at ~105,855 and ~165,820", "display letters 'S' ~560,90 and 'T' ~790,95 of a district name"],
+  "unreadable_regions": [
+    {"px0": 452, "py0": 290, "px1": 1024, "py1": 512, "reason": "white off-sheet paper beyond the neat line"},
+    {"px0": 452, "py0": 512, "px1": 512, "py1": 1024, "reason": "white off-sheet margin beyond the neat line"},
+    {"px0": 512, "py0": 512, "px1": 1024, "py1": 1024, "reason": "grey fill: missing tiles 131107-131108 x 87136-87137"}
+  ]
+}

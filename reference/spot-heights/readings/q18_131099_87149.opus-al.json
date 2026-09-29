@@ -1,0 +1,21 @@
+{
+  "mosaic": "q18_131099_87149", "reader": "opus-al", "layer": "os-25-inch-london",
+  "area": "Blind Lane south to the road bridge over the LT&SR, and the fields either side (E 541416-541800, N 182260-182650); parcels 21 (.899), 22 (2.618)",
+  "method": "OS 25-inch (1:2500) Essex county series, layer os-25-inch-london. sheet (no join reported), 2x sweep of all 9 crops, each anchored on opening and all displayed: r0c0 'B.M.27·5' + '14'; r0c1 '·861' + '11'; r0c2 blank paper with specks; r1c0 LT&SR banks + parcel '21 / ·899'; r1c1 B.M.27·5 + road bridge + '28'; r1c2 railway hatching only; r2c0 blue drain + join line; r2c1 parcel '22 / 2·618', 'C.R.', '11'; r2c2 '·861' + join + 'C.R.'. Zooms 6x at 480,525, 10x at 455,508, 8x at 505,558 and 5x contact sheet cs1 (6 panels), all displayed. Marker sheet checked.",
+  "legibility": "Clear; italic figures ~13 px. Sheet join by eye: straight horizontal line full width at py ~782 (acreages .653 and .861 repeated either side); the sheet tool misses it. No grey fill.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 14, "raw": "14", "px": 131, "py": 161, "confidence": "high", "setting": "marsh",
+     "notes": "open field west of Blind Lane, no place word; figure ~19 px below its +; setting by value rule (<15); duplicate of the mark in q18_131099_87146 overlap strip"},
+    {"type": "spot", "value_ft": 11, "raw": "11", "px": 438, "py": 236, "confidence": "medium", "setting": "street",
+     "notes": "yellow road at the small structure where the hatched ramp to the railway bridge begins; figure ~22 px east; cross merges with the structure outline, position estimated; duplicate of q18_131099_87146 overlap strip"},
+    {"type": "bench_mark", "value_ft": 27.5, "raw": "B.M.27·5", "px": 452, "py": 509, "confidence": "high", "setting": "bridge",
+     "notes": "road bridge over the LT&SR; pheon (barbs converging, shaft east) at the west side of the bridge where the north railway fence meets the road; text ~60 px north at ~458,439; confirmed 10x"},
+    {"type": "spot", "value_ft": 28, "raw": "28", "px": 489, "py": 532, "confidence": "high", "setting": "bridge",
+     "notes": "on the road over the LT&SR at the crest between the hatched ramps; + on the yellow road, figure ~26 px east; confirmed 6x"},
+    {"type": "spot", "value_ft": 11, "raw": "11", "px": 543, "py": 825, "confidence": "high", "setting": "street",
+     "notes": "lane (C.R. boundary lane) just south of the railway ramp foot and south of the py ~782 join; bold 4-point cross on the lane, figure ~25 px east; confirmed 5x"}
+  ],
+  "non_height_marks": ["parcels 21/.899 at ~425,690, 22/2.618 at ~370,870, 2.618 at ~420,770; acreages .653 and .861 repeated below the join at ~490,805 and ~610,800", "S-shaped tie marks on the drains", "fence-line junction triangle at ~505,558", "C.R. at ~590,980", "bold upright '1' cut by east edge at ~1020,758 (parcel number)"],
+  "unreadable_regions": []
+}

@@ -1,0 +1,451 @@
+{
+ "mosaic": "m18_131063_87161",
+ "reader": "opus-ah",
+ "area": "South Bromley / Poplar: Tapley, Desart, Cawdor, Rowlett, Bloomsbury, Gray, Albert, Cook and Follett streets, Brunswick Road, Poplar Hospital and East India Dock Road",
+ "method": "sheet; sweep 9 crops at 2x with anchors recorded at opening (r0c0 TAPLEY STREET, r0c1 ANDREW / DESART / CAWDOR STREET, r0c2 FINDHORN ST / S O, r1c0 HOWARD / LODORE STREET, r1c1 ROWLETT / BLOOMSBURY / Paradise Cottages, r1c2 BRUNSWICK ROAD / Brunswick Hall, r2c0 COOK / FOLLETT STREET / Station, r2c1 St. Frideswide's Ch., r2c2 Poplar Hospital / ANN STREET); 6x position sheets csA-csG, 8x digit sheets csH, csI, csK, csM, 14x csJ for 3/8, 20x csL for 8/9, 12x bench-mark sheets csN, csO, csP, nearest csOnn, 20x csQ; raw pixel profiles for 20·83 and 13·92; numeric dot centroids; marker sheet. All crops and sheets displayed when opened.",
+ "legibility": "clear, dense terrace lettering with interpuncts (C·H·A·M, E·T in STREET, T· in ROWLETT, U·N and C·K in BRUNSWICK, D· in ROAD). Vertical sheet join at px ~825 (straight line, lighter tint and paler hatching east of it), missed by the sheet tool",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 20.5,
+   "raw": "20·5",
+   "px": 92,
+   "py": 10,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street corner at the north edge (..R D) west of Tapley Street; figure whole, no dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.4,
+   "raw": "19·4",
+   "px": 378,
+   "py": 106,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction of Tapley Street and the N-S ..NARD Road; dot above-right; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 23.55,
+   "raw": "B.M.23·55",
+   "px": 68,
+   "py": 202,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house front on the north side of ..CHAM Street, pheon left of text; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.2,
+   "raw": "22·2",
+   "px": 46,
+   "py": 227,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "..CHAM Street at the corner; the only dot is the H·A interpunct of the street name"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.83,
+   "raw": "B.M.20·83",
+   "px": 418,
+   "py": 227,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "building corner at the junction of Tapley/..CHAM streets and ..NARD Road, pheon above-left of text; at 12x the second decimal is open-left like the 3 of 23·55 and unlike the closed 8 beside it (raw pixels), kept medium"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.8,
+   "raw": "18·8",
+   "px": 436,
+   "py": 249,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "..NARD Road at Desart Street; both 8s match at 8x; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.0,
+   "raw": "21·0",
+   "px": 232,
+   "py": 302,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "S.. Street; the only dot is the E·T interpunct of STREET"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.6,
+   "raw": "23·6",
+   "px": 71,
+   "py": 347,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "S.. Street / ..DA.. Street junction; dot above-right; open 6 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.7,
+   "raw": "22·7",
+   "px": 100,
+   "py": 470,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "..DA.. Street at the E-W street; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.4,
+   "raw": "22·4",
+   "px": 128,
+   "py": 592,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same N-S street further south; dot left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 24.66,
+   "raw": "B.M.24·66",
+   "px": 136,
+   "py": 661,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house front on the west side of the N-S street, pheon ~15 px NW of text; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.2,
+   "raw": "9·2",
+   "px": 686,
+   "py": 20,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "..NARD Road / ROAD junction near the north edge; dot right of figure, separate from the F.P. dots below"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.3,
+   "raw": "9·3",
+   "px": 730,
+   "py": 81,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "ROAD (N-S) at Andrew Street; only dot is the D· after ROAD"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.64,
+   "raw": "B.M.11·64",
+   "px": 730,
+   "py": 163,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the house at the east end of Desart Street / ROAD, pheon above-right of text; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.7,
+   "raw": "9·7",
+   "px": 794,
+   "py": 215,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "ROAD east of Desart Street, just west of the px~825 sheet join; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.7,
+   "raw": "9·7",
+   "px": 850,
+   "py": 348,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Brunswick Road at Findhorn Street, east of the join; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.6,
+   "raw": "18·6",
+   "px": 481,
+   "py": 379,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "..NARD Road at Cawdor Street; dot left of figure; open 6 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.0,
+   "raw": "12·0",
+   "px": 700,
+   "py": 446,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Rowlett Street; only dot is the T· interpunct of ROWLETT"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.24,
+   "raw": "B.M.19·24",
+   "px": 503,
+   "py": 491,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner at Rowlett Street / ROAD, pheon ~25 px east of text; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.2,
+   "raw": "13·2",
+   "px": 527,
+   "py": 497,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "ROAD (N-S) at Rowlett Street, dot left of figure (516,501); second digit open-left like the 3s of 23·6 and 9·3 at 14x, but 6 ft below B.M.19·24 25 px away"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.92,
+   "raw": "B.M.13·92",
+   "px": 658,
+   "py": 469,
+   "confidence": "low",
+   "setting": "building",
+   "notes": "front of the terrace on the south side of Rowlett Street, pheon pointing down on the frontage; figures written over the building hatching, first decimal 9/8 unsettled at 12x and 20x (alt 13·82)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.7,
+   "raw": "17·7",
+   "px": 548,
+   "py": 608,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "ROAD at Bloomsbury Street / Gray Street; dot above-left; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.4,
+   "raw": "B.M.18·40",
+   "px": 581,
+   "py": 730,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building corner at Albert Street / ROAD, pheon left-below the text; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.2,
+   "raw": "9·2",
+   "px": 866,
+   "py": 525,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Brunswick Road; nearby dots are the F.P. trailing dot and the U·N interpunct of BRUNSWICK, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.1,
+   "raw": "9·1",
+   "px": 900,
+   "py": 637,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Brunswick Road by the C·K interpunct; no own dot found, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.64,
+   "raw": "B.M.11·64",
+   "px": 900,
+   "py": 683,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Brunswick Hall, pheon pointing east on the west wall, text inside the hall block; decimals at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 905,
+   "py": 797,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Brunswick Road opposite the Smithy / Poplar Hospital; dot above-left; final digit closed like the 8 of 18·8 and unlike the open-tailed 9s at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.7,
+   "raw": "21·7",
+   "px": 190,
+   "py": 775,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "..DA.. Street at Cook Street; no own dot (the F.P. dot is below-left), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.8,
+   "raw": "20·8",
+   "px": 200,
+   "py": 895,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "same N-S street at Follett Street; dot above-left; final digit closed (8) at 8x and 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.7,
+   "raw": "18·7",
+   "px": 432,
+   "py": 847,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "small walled forecourt at the west end of St Frideswide's Church on Follett Street; no dot, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.13,
+   "raw": "B.M.20·13",
+   "px": 422,
+   "py": 877,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "building front on the south side of Follett Street, pheon pointing down; the 1 of the decimals merges with a vertical building line at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.5,
+   "raw": "16·5",
+   "px": 620,
+   "py": 822,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "N-S street east of St Frideswide's Church; dot above-left; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 658,
+   "py": 990,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "East India Dock Road (tramway), dot on the rail; 2x suggested 16·9 but the final digit is closed at 20x; boundary dots nearby"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 800,
+   "py": 978,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road (tramway), dot on the rail above the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.9,
+   "raw": "17·9",
+   "px": 520,
+   "py": 1000,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road (tramway) near the south edge, dot taken as the tick on the rail above; figure whole"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 870,
+   "py": 996,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road south side by the Urinal; no own dot, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 936,
+   "py": 946,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road north kerb below School B.S.; several dots nearby (B.S., F.P.), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.4,
+   "raw": "15·4",
+   "px": 1000,
+   "py": 934,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road by the Fire Alarm, dot left of figure; figure ends ~4 px from the east edge"
+  }
+ ],
+ "non_height_marks": [
+  "B.P., B.S., C.W., F.W. boundary marks on Follett Street and at the south",
+  "F.P., H, L.B., F.H. throughout",
+  "D. Fn (drinking fountain) and Fire Alarm on East India Dock Road"
+ ],
+ "unreadable_regions": []
+}

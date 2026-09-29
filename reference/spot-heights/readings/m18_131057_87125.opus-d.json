@@ -1,0 +1,211 @@
+{
+ "mosaic": "m18_131057_87125",
+ "reader": "opus-d",
+ "area": "Old Ford / Hackney Wick marsh west of the Waterworks River: Union & Parly. Boro. boundary with boundary stones, open marsh and tracks, G.E.R. Victoria Park branch embankment crossing east to Lea Junction and Signal Box, Waterworks River with the county boundary (C.C. at L.W.) and Sluice, rough marsh and Victoria Park Steam Bone Works (south)",
+ "method": "read by Claude (vision): 3x3 sweep of 448 px crops at 2x; every candidate confirmed at 6x (+-40 px); 24·5, 17·5, B.M.14·65 and B.M.18·48 re-zoomed at 8x (+-30 px) and 24·5 searched at 4x (+-60 px); positions in mosaic pixels",
+ "legibility": "very good; sparse open ground, clean digits at 6x; no sheet join detected or seen; grey margin strips of a few px at the west and east edges",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 13.3,
+   "raw": "13·3",
+   "px": 427,
+   "py": 390,
+   "confidence": "high",
+   "notes": "open marsh (Hackney/Old Ford marsh) inside the track bend; dot left of figures at 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.65,
+   "raw": "B.M.14·65",
+   "px": 623,
+   "py": 149,
+   "confidence": "high",
+   "notes": "end of the track by the boundary stone (B.S.) on the Union & Parly. Boro. Bdy; pheon (arrow) right of text at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.0,
+   "raw": "14·0",
+   "px": 583,
+   "py": 240,
+   "confidence": "high",
+   "notes": "open marsh south of the boundary; dot left of figures at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.0,
+   "raw": "14·0",
+   "px": 705,
+   "py": 114,
+   "confidence": "high",
+   "notes": "by the C.R. boundary line west of the Waterworks River; dot left of figures on the field edge at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 832,
+   "py": 145,
+   "confidence": "high",
+   "notes": "bank between the county boundary and the Waterworks River; dot left of figures at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.8,
+   "raw": "14·8",
+   "px": 856,
+   "py": 359,
+   "confidence": "high",
+   "notes": "bank by the Waterworks River, east of the county boundary; dot below-left of figures at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.3,
+   "raw": "13·3",
+   "px": 40,
+   "py": 515,
+   "confidence": "high",
+   "notes": "north foot of the G.E.R. (Victoria Park branch) embankment; dot below-left of figures at 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.84,
+   "raw": "B.M.14·84",
+   "px": 148,
+   "py": 515,
+   "confidence": "high",
+   "notes": "north foot of the G.E.R. embankment; pheon left of text at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.0,
+   "raw": "13·0",
+   "px": 268,
+   "py": 517,
+   "confidence": "high",
+   "notes": "north foot of the G.E.R. embankment; dot left of figures at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 11,
+   "py": 650,
+   "confidence": "high",
+   "notes": "open ground south of the G.E.R. near the west edge; dot left of figures at 8x (figures whole, 8 px from the grey margin)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.5,
+   "raw": "24·5",
+   "px": 61,
+   "py": 772,
+   "confidence": "high",
+   "notes": "raised ground at the head of the hachured bank north of the osier/marsh ground (SW); dot left of figures at 8x; value high for the marsh but digits unambiguous"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.7,
+   "raw": "14·7",
+   "px": 873,
+   "py": 577,
+   "confidence": "high",
+   "notes": "bank of the Waterworks River by 'C.C. at L.W.'; dot above-left of figures at 6x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.48,
+   "raw": "B.M.18·48",
+   "px": 873,
+   "py": 645,
+   "confidence": "high",
+   "notes": "G.E.R. at Lea Junction by the B.P.; pheon below-left of text at 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.6,
+   "raw": "16·6",
+   "px": 1004,
+   "py": 648,
+   "confidence": "medium",
+   "notes": "G.E.R. at Lea Junction near the east edge; figures clear at 6x; dot above-left of figures on the rail"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.7,
+   "raw": "14·7",
+   "px": 841,
+   "py": 935,
+   "confidence": "high",
+   "notes": "corner of the enclosure by the county boundary (SE); dot above-left of figures at 6x"
+  }
+ ],
+ "non_height_marks": [
+  "B.S. boundary stones at 260,225, 660,160, 770,125 and 980,985",
+  "B.P. (boundary post) at 845,640",
+  "'Und.' and 'Def.' boundary notes at 312,205 and 890,982",
+  "'C.C. at L.W.' at 848,540",
+  "'Sluice' at 935,78",
+  "S.P. signal posts on the G.E.R.",
+  "marsh (rough pasture) symbols in the SW and S",
+  "x boundary marks along the Union & Parly. Boro. Bdy and county boundary"
+ ],
+ "unreadable_regions": []
+}

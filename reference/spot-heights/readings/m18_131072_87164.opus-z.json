@@ -1,0 +1,355 @@
+{
+ "mosaic": "m18_131072_87164",
+ "reader": "opus-z",
+ "area": "Blackwall / Leamouth: Orchard Street, G.E.R. East India Dock goods yard, East India Dock entrance lock, Fire Engine House, North Quay, West Quay, East Quay, East India Dock Basin; River Lea bend and the embanked Bow Creek peninsula; Orchard Place / Lea Passage (overlap with 131075_87164)",
+ "method": "Overview at 1x; 9 sweep crops r0c0..r2c2 at 2x, each anchored on opening (r0c0 ORCHARD STREET/EAST QUAY/GREAT EAST; r0c1 RIVER R I/Crane 15·8/Mud; r0c2 SALTER'S B/WEST STREET/School; r1c0 Lock/F.B./Fire Engine House/Swing Bridge; r1c1 NORTH QUAY/Warehouse/High Water Mark; r1c2 Mission Hall/LEA PASSAGE/Orchard House; r2c0 WEST QUAY/EAST QUAY/Caisson; r2c1 EAST INDIA DOCK BASIN; r2c2 Warehouses/EAST QUAY/P.H.). Contact sheets cs1-cs4 at 6x +/-22 px, z1-z3 and z2b at 12x +/-13 px, z2c at 20x (B.M.18·96 decimal), w1 at 5x +/-32 px (pheons and dots); pixel tables and numeric dot-centroid helper; marker sheets mk0-mk3 at 6x viewed before writing. Every crop and sheet displayed when opened and has an anchor in my notes. Not read from other readers' files.",
+ "legibility": "Clear; sheet tool reports no join. By eye a horizontal tint line at py ~393 is visible in the east (x ~830-1024, the continuation of the py~393 join on 131075_87164); the vertical join at 131075 px~345 would fall at px ~1113, outside this mosaic. No missing tiles. The River Lea mud and the hatched Bow Creek peninsula bank carry no figures; the basin has none.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 195,
+   "py": 64,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "G.E.R. East India Dock goods yard (GREAT EASTERN lettering) by the turntable; dot on the siding rail below-left of figure, rails at grade"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.8,
+   "raw": "15·8",
+   "px": 346,
+   "py": 101,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "goods yard by the Crane at the River Lea side; dot on the curved line just left of the figure (line could be a siding or the wharf edge)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.51,
+   "raw": "B.M.17·51",
+   "px": 309,
+   "py": 80,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "goods-yard wall line above the turntables; pheon ~35 px NE of the text; decimals clear at 12x; attachment of pheon to text inferred from proximity"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.4,
+   "raw": "16·4",
+   "px": 112,
+   "py": 172,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Street (west side, by the goods yard entrance); no own dot (R·E interpunct of S·T·R·E·E·T at 95,188); position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.04,
+   "raw": "B.M.18·04",
+   "px": 119,
+   "py": 234,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Orchard Street goods-yard frontage wall; pheon just west of the text on the wall line; decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 162,
+   "py": 401,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Orchard Street by the B.S. (boundary stone); dot above-left (H hydrant at ~150,398 separate)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 84,
+   "py": 477,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "East India Dock entrance lock side; dot taken as the blob on the lock-side line right of the figure (a second dot at 64,489 below-left)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.9,
+   "raw": "17·9",
+   "px": 344,
+   "py": 519,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Street kerb near the lock head; no own dot (·C interpunct of O·R·C·H·A·R·D at 362,510); position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 318,
+   "py": 566,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "North Quay west end by the Swing Bridge (dock quay); dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.54,
+   "raw": "B.M.17·54",
+   "px": 91,
+   "py": 642,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Fire Engine House corner; pheon ~15 px west of the text; decimals clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 163,
+   "py": 633,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "East India Dock premises south of the Fire Engine House; dot above-left (the trailing dot after 'House' at ~180,627 is separate)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.6,
+   "raw": "16·6",
+   "px": 20,
+   "py": 675,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "dock road inside the East India Dock premises, south of the Fire Engine House; dot left of figure; both 6s G-shaped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.1,
+   "raw": "16·1",
+   "px": 282,
+   "py": 773,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "north head of West Quay by the Caisson and F.B.; dot right of figure taken (another dot on the kerb corner at ~270,764)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.6,
+   "raw": "15·6",
+   "px": 339,
+   "py": 991,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "West Quay by the Cn. (capstan); dot at the line junction right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.6,
+   "raw": "15·6",
+   "px": 400,
+   "py": 964,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "quay head at the south of East India Dock Basin (entrance to the dock); dot on the quay edge line above figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.96,
+   "raw": "B.M.18·96",
+   "px": 488,
+   "py": 557,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "North Quay warehouse wall on Orchard Street; pheon on the wall line right of the text; first decimal 9 confirmed at 20x and in pixel profile"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 597,
+   "py": 556,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Street by the High Water Mark lettering; dot right of figure before the T of S T R E E T (spaced lettering, possible interpunct)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.2,
+   "raw": "15·2",
+   "px": 1020,
+   "py": 321,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Place by the School at the east edge; figure ends at x~1023, 1 px from the edge; dot above-right; whole and clear in m18_131075_87164"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.5,
+   "raw": "15·5",
+   "px": 977,
+   "py": 434,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Orchard Place, Leamouth; dot below figure (overlap with 131075_87164)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 843,
+   "py": 466,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Lea Passage at the Mission Hall; dot before the L of LEA (possible interpunct)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.67,
+   "raw": "B.M.17·67",
+   "px": 948,
+   "py": 490,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house frontage on Orchard Place at Lea Passage; pheon ~30 px east of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.6,
+   "raw": "16·6",
+   "px": 831,
+   "py": 568,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "street west of the Lea Passage terrace; faint, final 6 vs 8 unsettled; F.P. with own dots immediately west; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.1,
+   "raw": "16·1",
+   "px": 896,
+   "py": 601,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Orchard Place at Orchard House / L.B.; dot below-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.8,
+   "raw": "12·8",
+   "px": 903,
+   "py": 704,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Place by the Storehouses; no own dot (A·R interpunct east); centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.5,
+   "raw": "10·5",
+   "px": 969,
+   "py": 823,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Place by Bond's Wharf; dot right of figure is the interpunct before L of P·L·A·C·E"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.5,
+   "raw": "10·5",
+   "px": 963,
+   "py": 947,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Orchard Place south by the P.H.; dot above-left; final digit 5 vs 6 (closed lower bowl at 20x)"
+  }
+ ],
+ "non_height_marks": [
+  "B.S. boundary stones along the County & Parly. Borough and Union Boundary (e.g. ~72,378; ~335,378)",
+  "Def. (defaced) at ~35,378",
+  "M.P. mooring posts and Cn. capstans around the lock and quays",
+  "x' marks on the C.C. at L.W. line",
+  "H hydrant marks on Orchard Street"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1005,
+   "py0": 835,
+   "px1": 1024,
+   "py1": 870,
+   "reason": "B.M.10·98 text cut by the east edge (whole in 131075_87164)"
+  },
+  {
+   "px0": 1008,
+   "py0": 318,
+   "px1": 1024,
+   "py1": 340,
+   "reason": "15·2 ends 1 px from the east edge; recorded, confidence lowered"
+  },
+  {
+   "px0": 830,
+   "py0": 388,
+   "px1": 1024,
+   "py1": 398,
+   "reason": "horizontal sheet join py~393 (east part)"
+  }
+ ]
+}

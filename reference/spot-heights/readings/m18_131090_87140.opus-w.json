@@ -1,0 +1,250 @@
+{
+ "mosaic": "m18_131090_87140",
+ "reader": "opus-w",
+ "area": "Plaistow: St Mary's Road, St Mary's Church, North Street, Broadway, Eastern/Northern/Junction/Southern Roads, nurseries and open ground",
+ "method": "Independent second read (no other reader's file consulted). Sweep crops r0c0..r2c2 all viewed and displayed, anchors written on opening: r0c0 WATSON STREET/PLAISTOW PARK ROAD/St Mary's Church; r0c1 ST MARY'S ROAD/P.H.; r0c2 JUNCTION ROAD/NORTHERN ROAD/Nursery; r1c0 Printing Works/NORTH STREET/Schools; r1c1 EASTERN ROAD/Nursery; r1c2 EASTERN ROAD/NORTHERN ROAD/S O U; r2c0 BROADWAY/Urinal/Schools; r2c1 Nursery/B.M.25·81/open ground; r2c2 Nursery/B.M.25·81/SOUTHERN. Contact sheets (own helper) all displayed: a1 8x six spots (22·9 St Mary's Rd), a2 12x 23·0/23·8/22·9 (A of ROAD), a3 5x ±40 21·4/23·3 (S·T of STREET), a4 10x B.M.25·58/28·03 (church railings trees), a5 10x B.M.22·80/25·81 (Urinal lettering), a6 8x six spots (SO·U lettering), a7 5x 23·2/23·1 (EASTERN ROAD), a8 8x 20·0/21·9 (F.P.), marker sheet mk 6x all 18 positions (every box on its dot/pheon or figure centre). Every crop and sheet displayed when opened.",
+ "legibility": "Clean sheet, digits clear at 8-12x; no sheet join found by eye or by the sheet tool",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 22.9,
+   "raw": "22·9",
+   "px": 115,
+   "py": 416,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "St Mary's Road beside St Mary's Church railings; dot left of figure, confirmed 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.3,
+   "raw": "23·3",
+   "px": 344,
+   "py": 396,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "St Mary's Road; no dot of its own, position = the A· interpunct of M·A·R·Y'S just above-left; both 3s match at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.6,
+   "raw": "23·6",
+   "px": 669,
+   "py": 36,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road north of St Mary's Road/Junction Road corner, between terraces; dot above figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.8,
+   "raw": "23·8",
+   "px": 667,
+   "py": 271,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "St Mary's Road / Junction Road junction; dot above-left; final 8 plainly differs from leading 3 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.0,
+   "raw": "23·0",
+   "px": 557,
+   "py": 318,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "St Mary's Road; dot immediately left of the A of ROAD (only dot in R O A D, same above-left pattern as 23·6/23·8) but could be an interpunct; final 0 oval at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.4,
+   "raw": "21·4",
+   "px": 108,
+   "py": 690,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "North Street, figure on the east kerb line; no dot found at 5x/8x (S·T interpunct 26 px west not used); position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.58,
+   "raw": "B.M.25·58",
+   "px": 231,
+   "py": 408,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. on wall at east corner of St Mary's Church ground / houses; pheon point on wall line right of text, 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 28.03,
+   "raw": "B.M.28·03",
+   "px": 664,
+   "py": 211,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. on house wall at curved corner, St Mary's Road/Junction Road; pheon 12 px NW of text; final 3 differs from the 8, 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.8,
+   "raw": "B.M.22·80",
+   "px": 182,
+   "py": 998,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Broadway, B.M. on building corner east of the Urinal; pheon points onto corner NE of text; 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 25.81,
+   "raw": "B.M.25·81",
+   "px": 704,
+   "py": 726,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Southern Road north side, B.M. on south wall of building; pheon above-left of text; 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.2,
+   "raw": "23·2",
+   "px": 727,
+   "py": 473,
+   "confidence": "medium",
+   "setting": "open_ground",
+   "notes": "unbuilt plot corner just east of Eastern Road; no dot at 5x/8x, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.1,
+   "raw": "23·1",
+   "px": 745,
+   "py": 541,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "figure written over lightly hatched building east of Eastern Road; no dot, centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.3,
+   "raw": "23·3",
+   "px": 978,
+   "py": 706,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Southern Road; only nearby dot is SO·UTHERN interpunct at 971,686 across the kerb line; position = centre of figures; 3s match"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.3,
+   "raw": "23·3",
+   "px": 761,
+   "py": 736,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Southern Road north pavement by B.M.25·81; dot left of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.0,
+   "raw": "21·0",
+   "px": 116,
+   "py": 916,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "North Street approaching Broadway; dot above figure; 0 oval, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 22.1,
+   "raw": "22·1",
+   "px": 303,
+   "py": 895,
+   "confidence": "high",
+   "setting": "open_ground",
+   "notes": "large open ground south of St Mary's Road footpath, no place word; dot left of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.0,
+   "raw": "20·0",
+   "px": 106,
+   "py": 1001,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Broadway by the Urinal; dot above figure; both 0 oval, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.9,
+   "raw": "21·9",
+   "px": 589,
+   "py": 811,
+   "confidence": "high",
+   "setting": "open_ground",
+   "notes": "same large open ground (south of Nursery); dot left of figure, 8x"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle with no figure at ~958,70",
+  "F.P. marks along St Mary's Road, Eastern Road, Southern Road and the footpath at ~350,497"
+ ],
+ "unreadable_regions": []
+}

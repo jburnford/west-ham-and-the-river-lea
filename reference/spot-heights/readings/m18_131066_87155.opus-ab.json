@@ -1,0 +1,252 @@
+{
+ "mosaic": "m18_131066_87155",
+ "reader": "opus-ab",
+ "area": "Lea mouth / Bow Creek: Ailsa Wharf (Oil Works) and Islay Wharf on the Poplar/Bromley bank of the River Lea, streets west of them, the dock wall strip in the NE, works yard on the Bow Creek bank SE",
+ "method": "sheet (+--all); sweep r0c0..r2c2 all viewed and anchored on opening (r0c0 'Wharf'/RIV; r0c1 'DOC'; r0c2 'DOCK' + triangle; r1c0 Ailsa Wharf/Islay Wharf; r1c1 L.W.M.O.T./C.R.; r1c2 CREEK/Mud; r2c0 ROAD/NAI/Islay Wharf; r2c1 Mud/LEA; r2c2 BOW/B.M.12-78). Contact sheets viewed (all displayed): c1a 8x (A-F), c1b 8x (G-L), c1c 8x (N-S), c1d 16x (C,F,B,D,E,G), c1e 20x nearest (E,F,G,D,A), c1f 12x (A,D,F,E,J,O), c1g 10x wide BM texts, c1h 12x BM texts, c1i 10x pheons, c1j 6x (15.3, 10.5 context), c1k 4x Ailsa bank and SE yard context, c1l 4x (7.5, 18.0 context). Dots located with a numeric darkness-centroid helper; marker sheet checked. Every crop and contact sheet displayed when opened.",
+ "legibility": "clear; weak horizontal sheet join at py ~961 (x 256-512, tool --all; faint line also seen by eye near px 90), no figures cut by it",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 18.45,
+   "raw": "B.M.18·45",
+   "px": 102,
+   "py": 255,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "Ailsa Wharf river frontage strip beside the Lea; pheon free-standing left of the text between the two river-wall lines; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.6,
+   "raw": "18·6",
+   "px": 97,
+   "py": 280,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "Ailsa Wharf riverside; dot taken as the dark blob at the end of the double line (jetty/siding) just NW of the figure; 6 open-topped like the 6 of 17·6, confirmed 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.6,
+   "raw": "17·6",
+   "px": 211,
+   "py": 367,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "NE corner of Ailsa Wharf by the Lea; dot is the thickened junction of the wall lines left of the figure; final 6 open-topped at 16x vs closed 8s of 17·8 elsewhere on sheet"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.87,
+   "raw": "B.M.17·87",
+   "px": 622,
+   "py": 22,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "on the west wall of the DOCK strip; pheon right of text on the wall line; first decimal 8 matched to the 8 of B.M.12·78 at 12x, 8/9 not fully certain at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 654,
+   "py": 56,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "dock wall; dot just above-right of figure beside the wall line; 16x/20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.9,
+   "raw": "17·9",
+   "px": 766,
+   "py": 172,
+   "confidence": "low",
+   "setting": "wall_top",
+   "notes": "dock wall; dot above-right of figure; final digit reads 9 at 12x/16x (closed top loop with tail) but could be 8 like its neighbours"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 905,
+   "py": 320,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "dock wall further SE; dot above-right of figure; 8 closed loops at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.0,
+   "raw": "18·0",
+   "px": 182,
+   "py": 596,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "lane end north of the STREET between the block and Ailsa Wharf fence, by W.M.; dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.3,
+   "raw": "15·3",
+   "px": 24,
+   "py": 612,
+   "confidence": "medium",
+   "setting": "open_ground",
+   "notes": "blank lot north of TR·EET (R·E interpunct), west edge; no dot found at 6x over +-30 px, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.09,
+   "raw": "B.M.20·09",
+   "px": 200,
+   "py": 641,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "wall corner where the STREET meets Islay Wharf, just below the C.R. line; pheon left of text; clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.8,
+   "raw": "17·8",
+   "px": 330,
+   "py": 583,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "Islay Wharf river wall at H.W.M.O.T.; dot left-above figure on the wall line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.3,
+   "raw": "12·3",
+   "px": 991,
+   "py": 723,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "works yard on the Bow Creek bank, E of the buildings; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.5,
+   "raw": "10·5",
+   "px": 12,
+   "py": 811,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "small yard behind the ROAD frontage at the west edge (figure whole, starts px ~5); flat-topped 5 unlike the round 6 of 10·6; dot not found beside it (a dot above O of ROAD at 14,830 is 18 px away, not used); position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.02,
+   "raw": "B.M.14·02",
+   "px": 89,
+   "py": 815,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "wall at the corner of the ROAD frontage; pheon pointing up, left of text; clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 97,
+   "py": 923,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "open unbuilt ground east of the rear garden line of the houses (NAI.. street), toward the Lea bank; dot left of figure on the garden line; no place word, value < 15"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.3,
+   "raw": "12·3",
+   "px": 913,
+   "py": 885,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "works yard, Bow Creek bank; dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 12.78,
+   "raw": "B.M.12·78",
+   "px": 889,
+   "py": 905,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the long works building; pheon left of text; clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.6,
+   "raw": "10·6",
+   "px": 879,
+   "py": 947,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "works yard south of B.M.12·78; dot well left of figure between dotted boundaries; round-topped 6"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangle without figure at 897,362",
+  "W.M. at 215,595",
+  "C.R. county-boundary lettering along the Lea and the STREET",
+  "F.P. at 15,856"
+ ],
+ "unreadable_regions": []
+}

@@ -1,0 +1,34 @@
+{
+  "mosaic": "m18_131060_87116",
+  "reader": "opus-i",
+  "area": "Temple Mills / Leyton marsh: Temple Mill Lane running between two ditches (C.D., U.D. and county/parliamentary borough boundaries), a sluice and bridge in the NE, open marsh south of the lane, embanked path/railway line and buildings in the SE",
+  "method": "All 9 sweep crops (2x) viewed; all candidates confirmed on 8x contact sheets (+-30 px); ambiguous digits re-read at 16x and 24x and compared with clear 5s (15·1, 15·4 at 530,366) and a clear 6 (14·6) on the same mosaic. All crops and zooms loaded and were viewed successfully.",
+  "legibility": "Clean coloured sheet (blue water) north of the join; the lane figures are small and the 5/6 distinction is hard. Horizontal sheet join at py ~538-540 across the full width: uncoloured, darker-tinted sheet below (sheet tool: ~535). Lower half almost blank marsh.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024],
+    [275,384,336,445],[455,332,516,393],[495,336,556,397],[715,280,776,341],[832,215,893,276],[875,220,936,281],
+    [78,425,139,486],[130,953,191,1014],[970,-10,1031,51],[975,218,1036,279],
+    [456,352,477,373],[101,445,122,466],[295,404,316,425],[898,239,919,260],[104,449,117,462],[899,242,912,255],[459,355,472,368],[296,407,309,420],[739,303,752,316],[529,359,542,372],[861,230,874,243],[152,970,165,983]],
+  "readings": [
+    {"type": "spot", "value_ft": 15.1, "raw": "15·1", "px": 313, "py": 414, "confidence": "high",
+     "notes": "Temple Mill Lane between the ditches; dot right of figure; flat-topped 5 clear at 24x"},
+    {"type": "bench_mark", "value_ft": 13.92, "raw": "B.M.13·92", "px": 498, "py": 368, "confidence": "low",
+     "notes": "bridge where the north-south ditch meets the lane ditch; pheon right of text on the ditch edge; second digit 3 vs 8 unresolved at 16x/24x (13·92 or 18·92)"},
+    {"type": "spot", "value_ft": 15.4, "raw": "15·4", "px": 530, "py": 370, "confidence": "high",
+     "notes": "Temple Mill Lane east of the bridge (C.C.D. boundary corner); dot left of figure; flat-topped 5 clear at 24x"},
+    {"type": "spot", "value_ft": 16.5, "raw": "16·5", "px": 738, "py": 311, "confidence": "low",
+     "notes": "Temple Mill Lane; dot left of figure; 8x suggested 15·5 but at 24x the second digit has the curved top and closed bowl of the 6 in 14·6, unlike the flat-topped 5s of 15·1/15·4; 5 vs 6 unresolved"},
+    {"type": "bench_mark", "value_ft": 17.35, "raw": "B.M.17·35", "px": 873, "py": 262, "confidence": "high",
+     "notes": "sluice/bridge at the east end of the lane; pheon on the bridge parapet 20 px below the text beside the S; digits clear at 8x"},
+    {"type": "spot", "value_ft": 16.4, "raw": "16·4", "px": 899, "py": 253, "confidence": "low",
+     "notes": "Temple Mill Lane by the sluice; dot left of figure; 8x suggested 15·4, 24x shape nearer 6 than 5; 5 vs 6 unresolved"},
+    {"type": "spot", "value_ft": 16.4, "raw": "16·4", "px": 101, "py": 456, "confidence": "low",
+     "notes": "Temple Mill Lane west part; dot left of figure; second digit curved-top like 6 at 16x/24x, 5 vs 6 unresolved"},
+    {"type": "spot", "value_ft": 14.6, "raw": "14·6", "px": 166, "py": 980, "confidence": "high",
+     "notes": "south sheet (below join), path edge by the embanked line; dot right of figure on the path line"}
+  ],
+  "non_height_marks": ["survey-station triangle with centre dot and no figure at 1006,247", "B.S. (boundary stone) at 858,275", "C.D., C.C.D., U.D. Boundary, Co. & Parly. Boro. Bdy. lettering along the lane ditches", "Sluice at 900,290 and 1010,515", "'to which Ordinary Tides flow' note at 60,515"],
+  "unreadable_regions": [
+    {"px0": 1010, "py0": 10, "px1": 1024, "py1": 30, "reason": "figure beginning '16' cut by the east edge (dot at ~1015,19)"},
+    {"px0": 0, "py0": 530, "px1": 1024, "py1": 545, "reason": "sheet join"}
+  ]
+}

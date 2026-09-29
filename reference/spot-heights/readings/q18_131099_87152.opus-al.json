@@ -1,0 +1,19 @@
+{
+  "mosaic": "q18_131099_87152", "reader": "opus-al", "layer": "os-25-inch-london",
+  "area": "Plaistow Level fields south of the LT&SR: the C.R. lane running SE from the railway to a boundary-stone junction and drains (E 541424-541810, N 181975-182365); parcels 22-24, 113",
+  "method": "OS 25-inch (1:2500) Essex county series, layer os-25-inch-london. sheet (no join reported), 2x sweep of all 9 crops, each anchored on opening and all displayed: r0c0 join line + pecked track; r0c1 parcel '22 / 2·618', 'C.R.', 'B.S'; r0c2 'B.M.8·4'; r1c0 pecked tracks + drain junction; r1c1 parcel '23 / 3·235' + '4'; r1c2 'B.M.8·4', parcel '113 / 5·449'; r2c0 drain with tie hooks; r2c1 parcel '24 / 8·342'; r2c2 'B.S' + 'C.S.' junction + '4'. 5x contact sheet cs1 (4 panels) and 6x zoom at 815,975, all displayed. Marker sheet checked.",
+  "legibility": "Clear; italic figures ~13 px. Sheet join by eye at py ~14 (continuation of py ~782 on q18_131099_87149); the sheet tool misses it. No grey fill.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 11, "raw": "11", "px": 543, "py": 57, "confidence": "high", "setting": "street",
+     "notes": "C.R. lane just south of the railway ramp foot; bold cross on the lane, figure ~25 px east; duplicate of q18_131099_87149 overlap strip (py 825 there)"},
+    {"type": "bench_mark", "value_ft": 8.4, "raw": "B.M.8·4", "px": 643, "py": 430, "confidence": "medium", "setting": "other",
+     "notes": "on the boundary stone (B.S., four small circles tied to one point) where the C.R. lane meets the drains; pheon barbs converge at ~643,430 but tangle with the B.S. tie lines, so the exact point is uncertain by a few px; text ~55 px east at ~700,437; no wall drawn"},
+    {"type": "spot", "value_ft": 4, "raw": "4", "px": 710, "py": 592, "confidence": "high", "setting": "marsh",
+     "notes": "Plaistow Level: bank of the drain (dotted boundary in the drain) at a side-drain junction; cross on the west edge of the drain, figure ~33 px west at ~677,593; confirmed 5x"},
+    {"type": "spot", "value_ft": 4, "raw": "4", "px": 803, "py": 984, "confidence": "medium", "setting": "marsh",
+     "notes": "Plaistow Level field just south of the B.S. / C.S. drain junction; no cross found within 45 px at 6x, position = centre of figures; italic style matches the spot heights, value consistent with the level, but it sits beside a boundary stone"}
+  ],
+  "non_height_marks": ["parcels 22/2.618, 23/3.235, 24/8.342, 113/5.449; acreages .653, .861 at the join", "B.S. boundary stones with tie circles at ~640,430 and ~832,961; C.S. at ~860,990; C.R. along the lane", "S-shaped tie marks on the drains"],
+  "unreadable_regions": []
+}

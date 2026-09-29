@@ -1,0 +1,19 @@
+{
+  "mosaic": "q18_131096_87149", "reader": "opus-ak", "layer": "os-25-inch-london",
+  "area": "Plaistow: open fields south of the New City Road estate, a railway with hatched banks running WNW-ESE (dash-dot C.B. boundary down its centre, yellow tint south of it), large fields (parcels 6 and 20) to the south; E ~541130-541520, N ~182250-182630",
+  "method": "Layer: OS 25-inch (1:2500) Essex county series, inferred 1893-96 revision. Viewed the full 1024 px mosaic at 1x (anchor: C.B. and triangle on the railway, parcels 6 8.956 and 20 51.488), all 9 sweep crops at 2x (r0c0 C.B./triangle and 18; r0c1 pecked T-junction 18/18/17; r0c2 17 and 14, field corner; r1c0 parcel 6 8.956; r1c1 parcel 6 and railway fences; r1c2 railway hatching and S-shaped tie mark; r2c0 join line and part of 20 51.4..; r2c1 51.488 either side of the join; r2c2 51.488 at W and blank field), contact sheet cs1 at 5x of the four figures, and a marker sheet. Every crop, contact sheet and marker sheet displayed when opened and has an anchor in my notes. All four readings lie in the 256 px overlap strip with q18_131096_87146 (same marks, read again here). Positions are marker centroids.",
+  "legibility": "Clear italic whole-foot figures ~13 px with distinct x / + markers. Sheet join: horizontal straight line at py ~780 across the full width with acreage 51.488 repeated above and below it (tool reports no join). No figures on the railway or its banks, and none south of it.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 18, "raw": "18", "px": 334, "py": 40, "confidence": "high", "setting": "street",
+     "notes": "on the lane (LANE of 87146) just east of the pecked estate road; x marker above-right of the figures; overlap strip with q18_131096_87146; confirmed at 5x"},
+    {"type": "spot", "value_ft": 18, "raw": "18", "px": 514, "py": 79, "confidence": "high", "setting": "street",
+     "notes": "on the lane at the T-junction with the second pecked estate road; x marker at the junction; overlap strip; confirmed at 5x"},
+    {"type": "spot", "value_ft": 17, "raw": "17", "px": 691, "py": 120, "confidence": "high", "setting": "open_ground",
+     "notes": "open field, no place word; x marker 20 px above the figures; overlap strip; confirmed at 5x"},
+    {"type": "spot", "value_ft": 14, "raw": "14", "px": 899, "py": 161, "confidence": "high", "setting": "marsh",
+     "notes": "open field, no place word, below 15 ft so marsh by the value rule; + marker above the figures; overlap strip; confirmed at 5x"}
+  ],
+  "non_height_marks": ["survey-station triangle on the railway with C.B. lettering at ~60,290 (no figure)", "parcel 6 acreage 8·956 at ~375,545", "acreage 51·488 at ~605,763 and parcel 20 51·488 at ~445,1000 (repeated across the py ~780 join)", "S-shaped tie mark at ~792,505"],
+  "unreadable_regions": []
+}

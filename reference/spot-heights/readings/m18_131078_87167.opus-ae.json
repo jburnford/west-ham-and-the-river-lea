@@ -1,0 +1,301 @@
+{
+ "mosaic": "m18_131078_87167",
+ "reader": "opus-ae",
+ "area": "Mouth of Bow Creek: Leamouth Wharf (west), Thames Iron Works with its two DRY DOCKs, Canning Town sidings and the Royal Albert & Victoria Docks Cut, P.H.s on Victoria Dock Road / Union Street / Peto Street / North Woolwich Road",
+ "method": "Overview (anchor CREEK, Works, DRY DOCK) and all 9 sweep crops at 2x viewed and anchored on opening (r0c0 CREEK/Leamouth Wharf; r0c1 Works/Slip; r0c2 WOOLWICH G.E.R. BRANCH/UNION STREET; r1c0 Wharf/County & Parly Borough boundary; r1c1 Mud/Cn/DRY DOCK; r1c2 NORTH WOOLWICH/P.H.; r2c0 Centre of Channel at Low Water; r2c1 DRY DOCK Mooring Posts; r2c2 Royal Albert & Victoria Docks Cut). Contact sheets f1-f10 (6x ±12, 7x/8x ±14-18, 12x ±8-14, 20x ±6), all displayed when opened. Dot centroids by numeric helper; marker sheet checked.",
+ "legibility": "Clear. No sheet join seen by eye or by the tool. Several quay/works figures have no separate dot. 6/8 and 8/9 ambiguities in two figures (low).",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 14.3,
+   "raw": "14·3",
+   "px": 25,
+   "py": 337,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Leamouth Wharf, passage between buildings (dotted edges); dot left of figure; 7x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 15.21,
+   "raw": "B.M.15·21",
+   "px": 77,
+   "py": 348,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Leamouth Wharf, pheon on the building corner NW of the text; 15·21 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.9,
+   "raw": "14·9",
+   "px": 55,
+   "py": 467,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Leamouth Wharf yard beside Wharf lettering; dot just above figure; 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.7,
+   "raw": "17·7",
+   "px": 98,
+   "py": 657,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "south point of Leamouth Wharf on the river wall line; dot on the wall right of the figure; a survey triangle (no centre dot) at 80,662 and the M.P. dot are nearby, so medium"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 391,
+   "py": 470,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "Thames Iron Works frontage inside the fence beside a post circle at 388,461; no separate dot, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 335,
+   "py": 594,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "Thames Iron Works frontage by the building, near a post at 322,607; no dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.4,
+   "raw": "17·4",
+   "px": 243,
+   "py": 746,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "figure written on the Bow Creek side of the river wall/shore line west of the dry docks (High Water Mark of Ordinary Tides); no dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 348,
+   "py": 877,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "quay at the head of the western DRY DOCK entrance; dot below-left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.47,
+   "raw": "B.M.16·47",
+   "px": 377,
+   "py": 900,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "pheon on the small structure at the head of the eastern DRY DOCK (dock side); 16·47 clear at 12x, open-topped 6"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.9,
+   "raw": "16·9",
+   "px": 609,
+   "py": 169,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "Thames Iron Works east edge beside the footbridge landing over the railway; no dot found, position = centre of figures; 16·9 at 6x/8x/12x and 9 open at 20x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.2,
+   "raw": "16·2",
+   "px": 506,
+   "py": 245,
+   "confidence": "low",
+   "setting": "yard",
+   "notes": "Thames Iron Works yard (Works lettering); dot above-left of figure; 18·2 at 2x and near-closed top at 12x, but 16·2 at 6x/8x (6/8 unresolved)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.12,
+   "raw": "B.M.19·12",
+   "px": 447,
+   "py": 357,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "NW corner of the large Thames Iron Works shed; pheon below-left of text; 19·12 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 616,
+   "py": 6,
+   "confidence": "medium",
+   "setting": "marsh",
+   "notes": "open ground between the Thames Iron Works fence and the railway at the north edge (no place word, below 15 ft); no dot found in the mosaic, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.16,
+   "raw": "B.M.8·16",
+   "px": 662,
+   "py": 50,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the P.H. at the north edge; pheon right of text; 8·16 clear at 12x (closed 8, open 6)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 711,
+   "py": 51,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road in front of the P.H. near F.P.; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.8,
+   "raw": "6·8",
+   "px": 664,
+   "py": 135,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "road between the P.H. block and the railway near the footbridge; dot above-left; final digit 9-like at 8x but two closed loops at 20x unlike the 9 of 16·9 (8/9)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.7,
+   "raw": "5·7",
+   "px": 804,
+   "py": 13,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road on the north side of the Woolwich G.E.R. branch (Victoria Dock Road); dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 943,
+   "py": 79,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road north of the railway, below F.P.; dot left of figure; flat-topped 5s at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.7,
+   "raw": "8·7",
+   "px": 935,
+   "py": 151,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction of Union Street south of the railway; dot above-right of figure; closed 8 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 915,
+   "py": 237,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Union Street, figure written over the corner of a building; no dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 777,
+   "py": 322,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "North Woolwich Road at Union Street; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 937,
+   "py": 490,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "North Woolwich Road frontage south of the P.H.; no dot found, position = centre of figures"
+  }
+ ],
+ "non_height_marks": [
+  "M.P. and M.PS. (mooring posts) along Leamouth Wharf and the Iron Works frontage",
+  "Cn / Crane labels",
+  "S.P., S.P.S., F.P., S.B. around the railway and P.H.s",
+  "survey triangle at 80,662 (Leamouth Wharf); triangle at 413,457 on the shed",
+  "Mooring Posts lettering along the dry docks"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1000,
+   "py0": 420,
+   "px1": 1024,
+   "py1": 440,
+   "reason": "B.M. at the east edge; its value is off the mosaic"
+  }
+ ]
+}

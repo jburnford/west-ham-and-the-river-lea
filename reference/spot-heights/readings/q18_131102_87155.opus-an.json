@@ -1,0 +1,19 @@
+{
+  "mosaic": "q18_131102_87155",
+  "reader": "opus-an",
+  "layer": "os-25-inch-london",
+  "area": "Plaistow / East Ham Level marsh (E 541820-542200, N 181700-182090): grazing marsh with drains and a dotted boundary drain (B.S. and C.S. boundary marks), the E-W road along the bottom with a boundary crossing at ~325",
+  "method": "OS 25-inch layer os-25-inch-london. sheet (no join reported); 2x sweep of all nine crops r0c0-r2c2, each displayed and anchored at the moment of opening (r0c0 B.S/C.S junction, italic 4, parcel 114/3.350; r0c1 parcel 115/2.101; r0c2 parcel 116/11.081; r1c0 B Ss and B.M.5.5; r1c1 dotted boundary drain; r1c2 parcel 117/8.175; r2c0 B.M.5.3 at culvert, parcel 30/3.321; r2c1 B.S pair at road, parcel 120/2.722; r2c2 drains and road). Contact sheet cs1 (5-8x on the 4, B.M.5.5 digits and pheon, B.M.5.3 pheon) and a 2x marker sheet (0-400 x 150-1000) displayed; positions corrected on the marker sheet. All crops and zooms viewed successfully.",
+  "legibility": "Clean, digits clear at 2x; no sheet join seen by eye or by the tool",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 4, "raw": "4", "px": 36, "py": 217, "confidence": "medium", "setting": "marsh",
+     "notes": "italic 4 in the marsh SW of the B.S./C.S. drain junction; no isolated cross within 40 px at 5x, position = centre of figure (overlap strip with q18_131099_87155)"},
+    {"type": "bench_mark", "value_ft": 5.5, "raw": "B.M.5·5", "px": 224, "py": 514, "confidence": "medium", "setting": "other",
+     "notes": "B.M.5·5 with clear middot, both 5s flat-topped; pheon apex at the foot of the tie circle beside 'B Ss' (boundary stones) at the junction of the dotted boundary drains; boundary-stone pheon, medium per guide"},
+    {"type": "bench_mark", "value_ft": 5.3, "raw": "B.M.5·3", "px": 247, "py": 946, "confidence": "medium", "setting": "other",
+     "notes": "B.M.5·3 clear; pheon strokes merge with the culvert box where the N-S drain passes under the N edge of the E-W road; convergence estimated, medium. Culvert headwall at road edge (overlap strip with q18_131099_87155)"}
+  ],
+  "non_height_marks": ["parcels 114/3·350, 115/2·101, 116/11·081, 117/8·175, 30/3·321, 120/2·722", "parcel '31 ·249' in the road at ~350-410,985 (not a height)", "B.S. marks with tie circles at ~50,180, ~130,440, ~240,465, ~440,810, ~520,955; C.S. at ~115,210", "rotated boundary lettering 'De..' at ~480,1000", "S-shaped drain tie marks throughout"],
+  "unreadable_regions": []
+}

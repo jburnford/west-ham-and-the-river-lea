@@ -1,0 +1,269 @@
+{
+ "mosaic": "m18_131087_87137",
+ "reader": "opus-q",
+ "area": "Upton Cross south / Plaistow north: Milton Road, Selwyn Road, Terrace Road, Pelly Road with its bridge over the London Tilbury & Southend Railway, Milton Road South, Stanley Street, Watson Street",
+ "method": "sweep r0c0..r2c2 (9 crops, 2x) all displayed, anchors noted on opening (MILTON ROAD/Mission Room, ..FORD ROAD, SELWYN ROAD, ..ON ROAD/P.H., T·E·R·R·A·C·E/LONDON TILBURY, Silk Mill, Meth. Chap./MILTON STREET, STANLEY STREET/RADNOR, WATSON STREET). Zoom contact sheets A-E (6-12x, nearest-neighbour panels for 24·6, 25·6, 25·0) all displayed with anchors; marker sheets mk1-mk3 displayed and all positions checked. Every crop, contact sheet and marker sheet viewed successfully.",
+ "legibility": "Good. Sheet join: horizontal tint step at py ~372-377 across the full width (confirmed by eye). The sheet tool's vertical joins at px ~395, 792, 894, 983 were not confirmed by eye (no line offset seen; 983 lies along a road edge).",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 25.8,
+   "raw": "25·8",
+   "px": 201,
+   "py": 157,
+   "confidence": "high",
+   "notes": "north-south road (Milton Road north) opposite the Mission Room; digits clear at 8x; isolated dot in the road left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.1,
+   "raw": "25·1",
+   "px": 219,
+   "py": 325,
+   "confidence": "high",
+   "notes": "same road at the Milton Road junction; digits clear at 8x; dot right of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 26.92,
+   "raw": "B.M.26·92",
+   "px": 80,
+   "py": 443,
+   "confidence": "high",
+   "notes": "corner house at Milton Road; text 35-70,450; pheon apex at building corner NE of text, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.1,
+   "raw": "25·1",
+   "px": 97,
+   "py": 452,
+   "confidence": "high",
+   "notes": "Milton Road; digits clear at 8x; dot directly above figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 26.63,
+   "raw": "B.M.26·63",
+   "px": 249,
+   "py": 453,
+   "confidence": "high",
+   "notes": "wall by the road east of Milton Road block; text 196-230,473; pheon apex across the F.P. at the road edge, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.6,
+   "raw": "24·6",
+   "px": 246,
+   "py": 537,
+   "confidence": "low",
+   "notes": "road north of Pelly Road junction; final digit G-shaped 6 at 10x (smoothed) but read 8 at 2x and blocky zoom unclear; isolated dot in road left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 23.6,
+   "raw": "23·6",
+   "px": 112,
+   "py": 631,
+   "confidence": "medium",
+   "notes": "road west of the P.H.; digits clear at 8x; dot directly below figure taken as survey dot (other small dots and F.P. nearby)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.1,
+   "raw": "24·1",
+   "px": 250,
+   "py": 664,
+   "confidence": "medium",
+   "notes": "head of Pelly Road by the P.H.; digits clear at 8x; only dots nearby belong to F.P., position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 24.9,
+   "raw": "24·9",
+   "px": 369,
+   "py": 670,
+   "confidence": "high",
+   "notes": "road with tree-lined path at head of Terrace Road; digits clear at 8x; isolated dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.7,
+   "raw": "25·7",
+   "px": 573,
+   "py": 598,
+   "confidence": "medium",
+   "notes": "TERRACE ROAD among the T·E·R·R·A·C·E lettering; digits clear at 8x; dot below-left may be a lettering interpunct"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 28.13,
+   "raw": "B.M.28·13",
+   "px": 961,
+   "py": 30,
+   "confidence": "high",
+   "notes": "house front on the north-south road east of Selwyn Road; text 936-955,20-35; pheon (arrow) apex 961,30, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.6,
+   "raw": "25·6",
+   "px": 951,
+   "py": 114,
+   "confidence": "low",
+   "notes": "same road; dot directly above figure; final digit 6 when smoothed at 12x but 6/8 unclear on blocky zoom"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.0,
+   "raw": "25·0",
+   "px": 962,
+   "py": 236,
+   "confidence": "high",
+   "notes": "same road below an F.P.; oval 0 at 12x smoothed and blocky; dot directly above figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 27.93,
+   "raw": "B.M.27·93",
+   "px": 656,
+   "py": 582,
+   "confidence": "high",
+   "notes": "Terrace Road south side; text 699-733,572 clear at 10x; pheon apex 656,582 some 45 px west of text below the F.P."
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.8,
+   "raw": "25·8",
+   "px": 776,
+   "py": 524,
+   "confidence": "medium",
+   "notes": "TERRACE ROAD before the R of ROAD; digits clear at 8-12x; dot right of figure could be interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.3,
+   "raw": "25·3",
+   "px": 979,
+   "py": 450,
+   "confidence": "high",
+   "notes": "Terrace Road east end below F.P.; digits clear at 8x; isolated dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.3,
+   "raw": "26·3",
+   "px": 269,
+   "py": 768,
+   "confidence": "medium",
+   "notes": "PELLY ROAD by the Meth. Chap. (United Free); digits clear at 8x; dot at 252,774 may be the PELLY lettering interpunct, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.5,
+   "raw": "28·5",
+   "px": 248,
+   "py": 842,
+   "confidence": "medium",
+   "notes": "Pelly Road approach to the railway bridge; flat-topped 5 at 8x; only a mark/dot above-right of uncertain nature, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 31.12,
+   "raw": "B.M.31·12",
+   "px": 264,
+   "py": 858,
+   "confidence": "high",
+   "notes": "Pelly Road bridge parapet over the London Tilbury & Southend Railway; text 245-262,868-880; pheon apex 264,858, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.8,
+   "raw": "25·8",
+   "px": 277,
+   "py": 951,
+   "confidence": "medium",
+   "notes": "Pelly Road south of the railway; digits clear at 8x; no dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.7,
+   "raw": "19·7",
+   "px": 83,
+   "py": 991,
+   "confidence": "medium",
+   "notes": "Milton Road South; digits clear at 8x; dot left of figure taken as survey dot (another dot to the right)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 22.35,
+   "raw": "B.M.22·35",
+   "px": 133,
+   "py": 987,
+   "confidence": "high",
+   "notes": "house front, Milton Road South; text 138-173,1000; pheon apex 133,987 above the F.P., 8x"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangles without figures at ~238,612 and ~271,973",
+  "S.B./S.P. marks by the railway",
+  "'Seats for 780' (chapel capacity) at ~230,787"
+ ],
+ "unreadable_regions": []
+}

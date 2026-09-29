@@ -1,0 +1,223 @@
+{
+ "mosaic": "m18_131069_87164",
+ "reader": "opus-ab",
+ "area": "East India Docks, Blackwall: Import Dock with North and South Quays, Export Dock, East Quay, lock entrance and Fire Engine House, Orchard Street, Wall Road",
+ "method": "sheet --all; sweep r0c0..r2c2 all viewed and anchored on opening (r0c0 NORTH QUAY/G.P.O.; r0c1 DOCK/M.P.; r0c2 ORCHARD STREET/EAST QUAY; r1c0 SOUTH QUAY/(Import); r1c1 Warehouse/NORTH QUAY; r1c2 Lock/Fire Engine House; r2c0 WALL ROAD/Goods Depot; r2c1 NORTH QUAY/(Export); r2c2 Caisson/EAST QUAY). Contact sheets viewed (all displayed): c3a 8x, c3b 8x, c3c 8x, c3d 12x, c3e 16x (B.M.20·58), c3f 16x (B.M.17·54, 16·8). Dots located with a darkness-centroid helper; marker sheet checked. Every crop and contact sheet displayed when opened.",
+ "legibility": "clear; no sheet join found by tool or eye; dock water areas carry only M.P. (mooring post) labels and the dotted Def. line",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 964,
+   "py": 65,
+   "confidence": "medium",
+   "setting": "railway",
+   "notes": "Orchard Place siding by the turntable, NE corner; dot on the rail line below-left of the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.4,
+   "raw": "16·4",
+   "px": 861,
+   "py": 185,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Orchard Street; dot left-below figure beside the hatched dock wall"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.04,
+   "raw": "B.M.18·04",
+   "px": 886,
+   "py": 234,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "on the hatched dock boundary wall along Orchard Street; pheon left of text; clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 930,
+   "py": 401,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "south end of Orchard Street by the B.S.; dot above-left; faint '14' at 920,401 is not a height"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 831,
+   "py": 488,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "lock side at the dock entrance by the capstans (Cn.); dot below-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 931,
+   "py": 632,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "quay east of Fire Engine House near the swing bridge; dot above-left (the dot after 'House' at 949,628 is its full stop)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.54,
+   "raw": "B.M.17·54",
+   "px": 859,
+   "py": 643,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "SW corner of Fire Engine House; pheon left of text; first decimal 5 with a closed lower bowl, 5/6 not fully certain at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.6,
+   "raw": "16·6",
+   "px": 788,
+   "py": 674,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "North Quay surface between the warehouse and the quay shed; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.1,
+   "raw": "17·1",
+   "px": 635,
+   "py": 718,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "North Quay; the only dot is between the A and Y of NORTH QUAY (no other interpuncts in that lettering), taken as the survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 418,
+   "py": 775,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "North Quay west end by F.P.; dot below-left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 20.2,
+   "raw": "20·2",
+   "px": 232,
+   "py": 732,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "entrance road between warehouses north of Wall Road; dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.4,
+   "raw": "19·4",
+   "px": 88,
+   "py": 775,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Wall Road; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.5,
+   "raw": "19·5",
+   "px": 104,
+   "py": 799,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Wall Road south side; dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.0,
+   "raw": "19·0",
+   "px": 202,
+   "py": 817,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Wall Road east end by F.P.; dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 20.58,
+   "raw": "B.M.20·58",
+   "px": 238,
+   "py": 821,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "gate pier / wall at the Wall Road dock entrance; pheon right of text pointing down; 20·58 confirmed at 16x"
+  }
+ ],
+ "non_height_marks": [
+  "M.P. (mooring post) labels throughout the dock jetties and quays",
+  "G.P.O. 4 1/4 at 90,25",
+  "symbols along the South Quay warehouse front around 80-150,715",
+  "'14' at 920,401",
+  "B.S., Cn., Def., F.B. labels"
+ ],
+ "unreadable_regions": []
+}

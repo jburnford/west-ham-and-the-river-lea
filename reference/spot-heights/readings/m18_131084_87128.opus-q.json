@@ -1,0 +1,215 @@
+{
+ "mosaic": "m18_131084_87128",
+ "reader": "opus-q",
+ "area": "West Ham Park north edge: Ham Park Road, Reginald Road, Burleigh Road; northern half of the park with paths and the Drinking Fountain",
+ "method": "Independent second read. sweep r0c0..r2c2 (9 crops, 2x) all displayed, anchors noted on opening (REGINALD ROAD, BURLEIGH ROAD, HAM PARK ROAD, C.F.P., Drinking Fountain, B.M.33·41, park paths/join). Zoom contact sheets A-E (6-20x, incl. nearest-neighbour panel for 35·0) all displayed with anchors; marker sheets mk1-mk3 displayed and used to correct positions (32·7, 33·2, 34·6 east). Every crop, contact sheet and marker sheet viewed successfully.",
+ "legibility": "Good; figures crisp. Sheet joins: horizontal at py ~946 across the whole width (drawn line with tint change, lighter below), vertical at px ~645 (tint step, mostly within the park, along the north-south road).",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 57,
+   "py": 55,
+   "confidence": "medium",
+   "notes": "terrace backs east of the diagonal ROAD (R·O·A·D lettering) at NW; digits clear at 6-8x; no own dot (only lettering interpuncts at ~27,58), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.2,
+   "raw": "33·2",
+   "px": 119,
+   "py": 283,
+   "confidence": "medium",
+   "notes": "junction of Reginald Road with the diagonal road; digits clear at 6x; nearby dots belong to the dash-dot boundary, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 301,
+   "py": 396,
+   "confidence": "medium",
+   "notes": "Ham Park Road / park gate at SE corner of Reginald Road block; digits clear at 8x; dot taken as the filled dot of the gate symbol left of the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 161,
+   "py": 419,
+   "confidence": "medium",
+   "notes": "Ham Park Road north side east of B.M.35·21; digits clear at 8x; only dash-dot boundary dot at 148,416, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.21,
+   "raw": "B.M.35·21",
+   "px": 127,
+   "py": 390,
+   "confidence": "high",
+   "notes": "Ham Park Road, corner of building NW of park; text at ~100-135,418, pheon (arrow) at corner of building 28 px NE of text; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 457,
+   "py": 437,
+   "confidence": "medium",
+   "notes": "Ham Park Road at park gate opposite C.R.; digits clear at 8-10x; dot taken as filled dot of gate symbol right of figure (F.P. nearby)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.1,
+   "raw": "35·1",
+   "px": 652,
+   "py": 176,
+   "confidence": "high",
+   "notes": "north-south road (MAR.. lettering) at Burleigh Road junction; digits clear at 8x; isolated dot 6 px below figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.79,
+   "raw": "B.M.35·79",
+   "px": 664,
+   "py": 436,
+   "confidence": "high",
+   "notes": "building on NE corner of Ham Park Road and the north-south road, by L.B.; text 670-690,413; pheon apex 664,436 at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.0,
+   "raw": "35·0",
+   "px": 649,
+   "py": 452,
+   "confidence": "low",
+   "notes": "Ham Park Road at junction with north-south road; dot clear left of figure; final digit oval like 0 at 14-20x but 0/6 not certain (a boundary dash touches its top)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.1,
+   "raw": "34·1",
+   "px": 599,
+   "py": 531,
+   "confidence": "high",
+   "notes": "path junction by shrubbery inside park NE entrance; digits clear at 8x; dot 12 px above-left of figure on path"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 492,
+   "py": 672,
+   "confidence": "high",
+   "notes": "park path by Drinking Fountain; digits clear at 8x; dot on path left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 809,
+   "py": 461,
+   "confidence": "medium",
+   "notes": "HAM PARK ROAD under 'A·R'; digits clear at 14x; only dot is the lettering interpunct between A and R at 809,461"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 980,
+   "py": 472,
+   "confidence": "medium",
+   "notes": "HAM PARK ROAD east end by ·F.P·; digits clear at 20x (bar over the 6 is a boundary dash); only nearby dots belong to F.P., position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 349,
+   "py": 804,
+   "confidence": "high",
+   "notes": "park path SW of Drinking Fountain; digits clear at 8x; dot 13 px above figure between path lines"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.41,
+   "raw": "B.M.33·41",
+   "px": 265,
+   "py": 882,
+   "confidence": "high",
+   "notes": "park path, under tree; text 270-300,887; pheon just left of text at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.0,
+   "raw": "30·0",
+   "px": 197,
+   "py": 934,
+   "confidence": "high",
+   "notes": "crossing of park paths near south edge, just north of the sheet join line py ~946; digits 3,0,0 clear at 8x; dot left of figure"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle without figure on the north-south road north of Ham Park Road (position approximate, ~660,330)",
+  "F.P. marks along Ham Park Road, Burleigh Road, Reginald Road",
+  "C.R. and C.F.P. boundary lettering"
+ ],
+ "unreadable_regions": []
+}

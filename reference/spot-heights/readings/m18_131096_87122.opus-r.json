@@ -1,0 +1,256 @@
+{
+ "mosaic": "m18_131096_87122",
+ "reader": "opus-r",
+ "area": "Plashet north / Romford Road: Red Post Lane, Plashet Hall, Tramway Depot, Bristol Smelting & Refining Works, Henderson and Sherrard Roads",
+ "method": "Sheet tool + 9 sweep crops at 2x, each anchored on opening: r0c0 Bristol Smelting & Refining Works/P.H./M.P.; r0c1 Smithy, Co.& Parly. Boro. Bdy.; r0c2 Plashet Hall, Tramway Depot; r1c0 RATCLIFF ROAD, HENDERSON; r1c1 Red Post Steam Saw Mill; r1c2 Tramway Depot; r2c0 HENDERSON; r2c1 SHERRARD R..; r2c2 SHERRARD ROAD, ..LEY ROAD. Contact sheets (own helper) d1 8x, d2 8x, d3c 12x smooth+blocky, d4c 12x smooth+blocky, d5 8x, d6c 10x smooth+blocky, d7 14x; marker sheet checked. All crops, contact sheets and zooms displayed when opened.",
+ "legibility": "Clear; Romford Road tramway rails carry regular dots, so several figures there have no identifiable survey dot; sheet joins: vertical px ~170-174 (tool ~168) and horizontal py ~752 (tool ~749), both confirmed by eye with tint changes",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 34.06,
+   "raw": "B.M.34·06",
+   "px": 276,
+   "py": 175,
+   "confidence": "low",
+   "notes": "Romford Road north side house front W of Co.& Parly. Boro. Bdy.; pheon apex above text end, 8x; final 6 vs 8 disagree smooth/blocky at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 354,
+   "py": 176,
+   "confidence": "medium",
+   "notes": "Romford Road N kerb under 'Co. &'; no own dot (tram rails and boundary dots only), position = centre of figures; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.5,
+   "raw": "32·5",
+   "px": 161,
+   "py": 237,
+   "confidence": "medium",
+   "notes": "Romford Road S side just W of vertical sheet join px~170; no dot found, tree symbol below; centre of figures; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 547,
+   "py": 147,
+   "confidence": "medium",
+   "notes": "Romford Road S of tramway, E of Red Post Lane junction; only a rail tick at ~536,139; centre of figures; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.5,
+   "raw": "33·5",
+   "px": 597,
+   "py": 346,
+   "confidence": "medium",
+   "notes": "Red Post Lane, in R E . D lettering; dot directly after figure between E and D (interpunct position); 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.52,
+   "raw": "B.M.34·52",
+   "px": 707,
+   "py": 108,
+   "confidence": "high",
+   "notes": "Romford Road S side at Plashet Hall entrance wall; pheon apex left of text, 8x/14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.8,
+   "raw": "32·8",
+   "px": 737,
+   "py": 58,
+   "confidence": "medium",
+   "notes": "Romford Road N side E of Red Post Lane; no own dot (rail dot 747,78 only); centre of figures; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.8,
+   "raw": "32·8",
+   "px": 930,
+   "py": 3,
+   "confidence": "low",
+   "notes": "Romford Road at N edge; digit tops touch the mosaic edge (y~0-5), possibly clipped; no dot; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.2,
+   "raw": "31·2",
+   "px": 252,
+   "py": 687,
+   "confidence": "high",
+   "notes": "Henderson Road W part; dot right-above figure; 8x/14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 445,
+   "py": 622,
+   "confidence": "high",
+   "notes": "Henderson Road; dot above between 1 and 8; final 8 two closed loops at 12x smooth and blocky"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 638,
+   "py": 558,
+   "confidence": "low",
+   "notes": "Red Post Lane by 'A . N' of LANE; dot above N (LANE not interpuncted); final digit same glyph as the two leading 3s at 12x (read 33·8 at 2x)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.99,
+   "raw": "B.M.33·99",
+   "px": 659,
+   "py": 590,
+   "confidence": "high",
+   "notes": "Red Post Lane E side building; pheon apex right-above text on building line, 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.0,
+   "raw": "33·0",
+   "px": 661,
+   "py": 676,
+   "confidence": "high",
+   "notes": "Red Post Lane S part; dot above-left; 0 upright oval at 10x/14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.0,
+   "raw": "31·0",
+   "px": 83,
+   "py": 740,
+   "confidence": "high",
+   "notes": "road SW (..OAD) just above horizontal sheet join py~752; dot above; 10x/14x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.8,
+   "raw": "B.M.33·80",
+   "px": 76,
+   "py": 772,
+   "confidence": "low",
+   "notes": "house at W end below the join; pheon apex ~18 px right of text; digit after decimal 8 vs 3 unresolved at 10x smooth/blocky"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.6,
+   "raw": "32·6",
+   "px": 680,
+   "py": 803,
+   "confidence": "high",
+   "notes": "Sherrard Road at Red Post Lane; dot between SHERRARD and the figure (after last letter D); G-shaped 6 at 8x/10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 685,
+   "py": 1007,
+   "confidence": "medium",
+   "notes": "..LEY Road at Red Post Lane, S edge; dot below figure between L and E (interpunct position); 8x/14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.0,
+   "raw": "32·0",
+   "px": 891,
+   "py": 746,
+   "confidence": "high",
+   "notes": "road E of Red Post Lane just above horizontal join; dot left of figure; 10x/14x"
+  }
+ ],
+ "non_height_marks": [
+  "milepost 'London 5 / Ilford 3' (cut) and M.P. at W edge ~0-60,225-245",
+  "G.P./S.P. at ~540,168",
+  "survey triangles at ~517,130 and ~785,195 (Plashet Hall) with no figure",
+  "B.P., P.O., F.P. marks along Romford Road"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 915,
+   "py0": 0,
+   "px1": 950,
+   "py1": 7,
+   "reason": "figure 32·8 touching N edge, top possibly clipped"
+  },
+  {
+   "px0": 166,
+   "py0": 0,
+   "px1": 178,
+   "py1": 1024,
+   "reason": "vertical sheet join px ~170-174"
+  },
+  {
+   "px0": 0,
+   "py0": 747,
+   "px1": 1024,
+   "py1": 757,
+   "reason": "horizontal sheet join py ~752"
+  }
+ ]
+}

@@ -1,0 +1,9030 @@
+{
+ "layer": "os-25-inch-london",
+ "prefix": "q18",
+ "source": "NLS OS 25-inch (1:2500) 'london' layer XYZ tiles; over West Ham the Essex county series, 1893-96 revision (edition per sheet not verified)",
+ "scale": "1:2500",
+ "survey_dates": "c.1893-96 revision (inferred, see mosaics-25inch/lattice_index.json edition_notes)",
+ "datum": "OD Liverpool",
+ "positions_from": "reference/spot-heights/mosaics/lattice_index.json",
+ "where_missing_gt": 0.25,
+ "zoom": 18,
+ "size": 4,
+ "overlap": 1,
+ "step": 3,
+ "align": [
+  131063,
+  87134
+ ],
+ "max_missing_frac": 0.5,
+ "counts": {
+  "written": 124,
+  "skipped_missing": 9,
+  "skipped_no_tiles": 45
+ },
+ "mosaics": [
+  {
+   "name": "q18_131045_87194",
+   "tile_x0": 131045,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131045,
+     87196
+    ],
+    [
+     131045,
+     87197
+    ],
+    [
+     131046,
+     87196
+    ],
+    [
+     131046,
+     87197
+    ],
+    [
+     131047,
+     87196
+    ],
+    [
+     131047,
+     87197
+    ],
+    [
+     131048,
+     87196
+    ],
+    [
+     131048,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    536582.4,
+    178037.41
+   ],
+   "centre_lonlat": [
+    -0.0343323,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131045_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131048_87194",
+   "tile_x0": 131048,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131048,
+     87196
+    ],
+    [
+     131048,
+     87197
+    ],
+    [
+     131049,
+     87196
+    ],
+    [
+     131049,
+     87197
+    ],
+    [
+     131050,
+     87196
+    ],
+    [
+     131050,
+     87197
+    ],
+    [
+     131051,
+     87196
+    ],
+    [
+     131051,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    536868.44,
+    178045.1
+   ],
+   "centre_lonlat": [
+    -0.0302124,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131048_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131051_87194",
+   "tile_x0": 131051,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131051,
+     87196
+    ],
+    [
+     131051,
+     87197
+    ],
+    [
+     131052,
+     87196
+    ],
+    [
+     131052,
+     87197
+    ],
+    [
+     131053,
+     87196
+    ],
+    [
+     131053,
+     87197
+    ],
+    [
+     131054,
+     87196
+    ],
+    [
+     131054,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    537154.47,
+    178052.81
+   ],
+   "centre_lonlat": [
+    -0.0260925,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131051_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131054_87194",
+   "tile_x0": 131054,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131054,
+     87196
+    ],
+    [
+     131054,
+     87197
+    ],
+    [
+     131055,
+     87196
+    ],
+    [
+     131055,
+     87197
+    ],
+    [
+     131056,
+     87196
+    ],
+    [
+     131056,
+     87197
+    ],
+    [
+     131057,
+     87196
+    ],
+    [
+     131057,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    537440.51,
+    178060.53
+   ],
+   "centre_lonlat": [
+    -0.0219727,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131054_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131057_87194",
+   "tile_x0": 131057,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131057,
+     87196
+    ],
+    [
+     131057,
+     87197
+    ],
+    [
+     131058,
+     87196
+    ],
+    [
+     131058,
+     87197
+    ],
+    [
+     131059,
+     87196
+    ],
+    [
+     131059,
+     87197
+    ],
+    [
+     131060,
+     87196
+    ],
+    [
+     131060,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    537726.55,
+    178068.26
+   ],
+   "centre_lonlat": [
+    -0.0178528,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131057_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131060_87194",
+   "tile_x0": 131060,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131060,
+     87196
+    ],
+    [
+     131060,
+     87197
+    ],
+    [
+     131061,
+     87196
+    ],
+    [
+     131061,
+     87197
+    ],
+    [
+     131062,
+     87196
+    ],
+    [
+     131062,
+     87197
+    ],
+    [
+     131063,
+     87196
+    ],
+    [
+     131063,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    538012.59,
+    178076.02
+   ],
+   "centre_lonlat": [
+    -0.0137329,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131060_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131063_87194",
+   "tile_x0": 131063,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131063,
+     87196
+    ],
+    [
+     131063,
+     87197
+    ],
+    [
+     131064,
+     87196
+    ],
+    [
+     131064,
+     87197
+    ],
+    [
+     131065,
+     87196
+    ],
+    [
+     131065,
+     87197
+    ],
+    [
+     131066,
+     87196
+    ],
+    [
+     131066,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    538298.62,
+    178083.78
+   ],
+   "centre_lonlat": [
+    -0.009613,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131063_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131066_87194",
+   "tile_x0": 131066,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131066,
+     87196
+    ],
+    [
+     131066,
+     87197
+    ],
+    [
+     131067,
+     87196
+    ],
+    [
+     131067,
+     87197
+    ],
+    [
+     131068,
+     87196
+    ],
+    [
+     131068,
+     87197
+    ],
+    [
+     131069,
+     87196
+    ],
+    [
+     131069,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    538584.66,
+    178091.57
+   ],
+   "centre_lonlat": [
+    -0.0054932,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131066_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131069_87194",
+   "tile_x0": 131069,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131069,
+     87196
+    ],
+    [
+     131069,
+     87197
+    ],
+    [
+     131070,
+     87196
+    ],
+    [
+     131070,
+     87197
+    ],
+    [
+     131071,
+     87196
+    ],
+    [
+     131071,
+     87197
+    ],
+    [
+     131072,
+     87196
+    ],
+    [
+     131072,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    538870.69,
+    178099.37
+   ],
+   "centre_lonlat": [
+    -0.0013733,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131069_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131072_87194",
+   "tile_x0": 131072,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131072,
+     87196
+    ],
+    [
+     131072,
+     87197
+    ],
+    [
+     131073,
+     87196
+    ],
+    [
+     131073,
+     87197
+    ],
+    [
+     131074,
+     87196
+    ],
+    [
+     131074,
+     87197
+    ],
+    [
+     131075,
+     87196
+    ],
+    [
+     131075,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    539156.73,
+    178107.19
+   ],
+   "centre_lonlat": [
+    0.0027466,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131072_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131075_87194",
+   "tile_x0": 131075,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131075,
+     87196
+    ],
+    [
+     131075,
+     87197
+    ],
+    [
+     131076,
+     87196
+    ],
+    [
+     131076,
+     87197
+    ],
+    [
+     131077,
+     87196
+    ],
+    [
+     131077,
+     87197
+    ],
+    [
+     131078,
+     87196
+    ],
+    [
+     131078,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    539442.77,
+    178115.02
+   ],
+   "centre_lonlat": [
+    0.0068665,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131075_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131078_87194",
+   "tile_x0": 131078,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131078,
+     87196
+    ],
+    [
+     131078,
+     87197
+    ],
+    [
+     131079,
+     87196
+    ],
+    [
+     131079,
+     87197
+    ],
+    [
+     131080,
+     87196
+    ],
+    [
+     131080,
+     87197
+    ],
+    [
+     131081,
+     87196
+    ],
+    [
+     131081,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    539728.8,
+    178122.87
+   ],
+   "centre_lonlat": [
+    0.0109863,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131078_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131081_87194",
+   "tile_x0": 131081,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131081,
+     87196
+    ],
+    [
+     131081,
+     87197
+    ],
+    [
+     131082,
+     87196
+    ],
+    [
+     131082,
+     87197
+    ],
+    [
+     131083,
+     87196
+    ],
+    [
+     131083,
+     87197
+    ],
+    [
+     131084,
+     87196
+    ],
+    [
+     131084,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    540014.84,
+    178130.73
+   ],
+   "centre_lonlat": [
+    0.0151062,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131081_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131084_87098",
+   "tile_x0": 131084,
+   "tile_y0": 87098,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131084,
+     87098
+    ],
+    [
+     131085,
+     87098
+    ],
+    [
+     131086,
+     87098
+    ],
+    [
+     131087,
+     87098
+    ]
+   ],
+   "centre_bng": [
+    540049.15,
+    187259.73
+   ],
+   "centre_lonlat": [
+    0.0192261,
+    51.566827
+   ],
+   "blank_frac": 0.2501,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131084_87098",
+    "status": "written",
+    "missing": 7
+   }
+  },
+  {
+   "name": "q18_131084_87194",
+   "tile_x0": 131084,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131084,
+     87196
+    ],
+    [
+     131084,
+     87197
+    ],
+    [
+     131085,
+     87196
+    ],
+    [
+     131085,
+     87197
+    ],
+    [
+     131086,
+     87196
+    ],
+    [
+     131086,
+     87197
+    ],
+    [
+     131087,
+     87196
+    ],
+    [
+     131087,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    540300.87,
+    178138.62
+   ],
+   "centre_lonlat": [
+    0.0192261,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131084_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131087_87098",
+   "tile_x0": 131087,
+   "tile_y0": 87098,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131087,
+     87098
+    ],
+    [
+     131088,
+     87098
+    ],
+    [
+     131089,
+     87098
+    ],
+    [
+     131090,
+     87098
+    ]
+   ],
+   "centre_bng": [
+    540334.67,
+    187267.62
+   ],
+   "centre_lonlat": [
+    0.0233459,
+    51.566827
+   ],
+   "blank_frac": 0.2501,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131087_87098",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131087_87101",
+   "tile_x0": 131087,
+   "tile_y0": 87101,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    540342.55,
+    186982.84
+   ],
+   "centre_lonlat": [
+    0.0233459,
+    51.564266
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131087_87101",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131087_87104",
+   "tile_x0": 131087,
+   "tile_y0": 87104,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    540350.43,
+    186698.03
+   ],
+   "centre_lonlat": [
+    0.0233459,
+    51.5617049
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131087_87104",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131087_87107",
+   "tile_x0": 131087,
+   "tile_y0": 87107,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    540358.31,
+    186413.21
+   ],
+   "centre_lonlat": [
+    0.0233459,
+    51.5591436
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131087_87107",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131087_87194",
+   "tile_x0": 131087,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131087,
+     87196
+    ],
+    [
+     131087,
+     87197
+    ],
+    [
+     131088,
+     87196
+    ],
+    [
+     131088,
+     87197
+    ],
+    [
+     131089,
+     87196
+    ],
+    [
+     131089,
+     87197
+    ],
+    [
+     131090,
+     87196
+    ],
+    [
+     131090,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    540586.91,
+    178146.51
+   ],
+   "centre_lonlat": [
+    0.0233459,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131087_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131090_87098",
+   "tile_x0": 131090,
+   "tile_y0": 87098,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131090,
+     87098
+    ],
+    [
+     131091,
+     87098
+    ],
+    [
+     131092,
+     87098
+    ],
+    [
+     131093,
+     87098
+    ]
+   ],
+   "centre_bng": [
+    540620.19,
+    187275.53
+   ],
+   "centre_lonlat": [
+    0.0274658,
+    51.566827
+   ],
+   "blank_frac": 0.2501,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131090_87098",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131090_87101",
+   "tile_x0": 131090,
+   "tile_y0": 87101,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    540628.09,
+    186990.75
+   ],
+   "centre_lonlat": [
+    0.0274658,
+    51.564266
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131090_87101",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131090_87104",
+   "tile_x0": 131090,
+   "tile_y0": 87104,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    540635.98,
+    186705.94
+   ],
+   "centre_lonlat": [
+    0.0274658,
+    51.5617049
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131090_87104",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131090_87107",
+   "tile_x0": 131090,
+   "tile_y0": 87107,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    540643.88,
+    186421.12
+   ],
+   "centre_lonlat": [
+    0.0274658,
+    51.5591436
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131090_87107",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131090_87194",
+   "tile_x0": 131090,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131090,
+     87196
+    ],
+    [
+     131090,
+     87197
+    ],
+    [
+     131091,
+     87196
+    ],
+    [
+     131091,
+     87197
+    ],
+    [
+     131092,
+     87196
+    ],
+    [
+     131092,
+     87197
+    ],
+    [
+     131093,
+     87196
+    ],
+    [
+     131093,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    540872.94,
+    178154.43
+   ],
+   "centre_lonlat": [
+    0.0274658,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131090_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131093_87098",
+   "tile_x0": 131093,
+   "tile_y0": 87098,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131093,
+     87098
+    ],
+    [
+     131094,
+     87098
+    ],
+    [
+     131095,
+     87098
+    ],
+    [
+     131096,
+     87098
+    ]
+   ],
+   "centre_bng": [
+    540905.71,
+    187283.46
+   ],
+   "centre_lonlat": [
+    0.0315857,
+    51.566827
+   ],
+   "blank_frac": 0.2501,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131093_87098",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131093_87101",
+   "tile_x0": 131093,
+   "tile_y0": 87101,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    540913.62,
+    186998.67
+   ],
+   "centre_lonlat": [
+    0.0315857,
+    51.564266
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131093_87101",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131093_87104",
+   "tile_x0": 131093,
+   "tile_y0": 87104,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    540921.54,
+    186713.87
+   ],
+   "centre_lonlat": [
+    0.0315857,
+    51.5617049
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131093_87104",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131093_87107",
+   "tile_x0": 131093,
+   "tile_y0": 87107,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    540929.45,
+    186429.05
+   ],
+   "centre_lonlat": [
+    0.0315857,
+    51.5591436
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131093_87107",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131093_87194",
+   "tile_x0": 131093,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131093,
+     87196
+    ],
+    [
+     131093,
+     87197
+    ],
+    [
+     131094,
+     87196
+    ],
+    [
+     131094,
+     87197
+    ],
+    [
+     131095,
+     87196
+    ],
+    [
+     131095,
+     87197
+    ],
+    [
+     131096,
+     87196
+    ],
+    [
+     131096,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    541158.98,
+    178162.36
+   ],
+   "centre_lonlat": [
+    0.0315857,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131093_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131096_87098",
+   "tile_x0": 131096,
+   "tile_y0": 87098,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131096,
+     87098
+    ],
+    [
+     131097,
+     87098
+    ],
+    [
+     131098,
+     87098
+    ],
+    [
+     131099,
+     87098
+    ]
+   ],
+   "centre_bng": [
+    541191.23,
+    187291.4
+   ],
+   "centre_lonlat": [
+    0.0357056,
+    51.566827
+   ],
+   "blank_frac": 0.25,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131096_87098",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131096_87101",
+   "tile_x0": 131096,
+   "tile_y0": 87101,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541199.16,
+    187006.61
+   ],
+   "centre_lonlat": [
+    0.0357056,
+    51.564266
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131096_87101",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131096_87104",
+   "tile_x0": 131096,
+   "tile_y0": 87104,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541207.09,
+    186721.81
+   ],
+   "centre_lonlat": [
+    0.0357056,
+    51.5617049
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131096_87104",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131096_87107",
+   "tile_x0": 131096,
+   "tile_y0": 87107,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541215.02,
+    186436.99
+   ],
+   "centre_lonlat": [
+    0.0357056,
+    51.5591436
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131096_87107",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131096_87146",
+   "tile_x0": 131096,
+   "tile_y0": 87146,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541318.1,
+    182732.89
+   ],
+   "centre_lonlat": [
+    0.0357056,
+    51.5258338
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131096_87146",
+    "status": "skipped_missing",
+    "missing": 12
+   }
+  },
+  {
+   "name": "q18_131096_87149",
+   "tile_x0": 131096,
+   "tile_y0": 87149,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541326.03,
+    182447.85
+   ],
+   "centre_lonlat": [
+    0.0357056,
+    51.5232705
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131096_87149",
+    "status": "skipped_missing",
+    "missing": 12
+   }
+  },
+  {
+   "name": "q18_131096_87152",
+   "tile_x0": 131096,
+   "tile_y0": 87152,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541333.96,
+    182162.79
+   ],
+   "centre_lonlat": [
+    0.0357056,
+    51.5207071
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131096_87152",
+    "status": "skipped_missing",
+    "missing": 12
+   }
+  },
+  {
+   "name": "q18_131096_87155",
+   "tile_x0": 131096,
+   "tile_y0": 87155,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541341.9,
+    181877.72
+   ],
+   "centre_lonlat": [
+    0.0357056,
+    51.5181435
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131096_87155",
+    "status": "skipped_missing",
+    "missing": 9
+   }
+  },
+  {
+   "name": "q18_131096_87194",
+   "tile_x0": 131096,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131096,
+     87196
+    ],
+    [
+     131096,
+     87197
+    ],
+    [
+     131097,
+     87196
+    ],
+    [
+     131097,
+     87197
+    ],
+    [
+     131098,
+     87196
+    ],
+    [
+     131098,
+     87197
+    ],
+    [
+     131099,
+     87196
+    ],
+    [
+     131099,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    541445.01,
+    178170.3
+   ],
+   "centre_lonlat": [
+    0.0357056,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131096_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131099_87098",
+   "tile_x0": 131099,
+   "tile_y0": 87098,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131099,
+     87098
+    ],
+    [
+     131100,
+     87098
+    ],
+    [
+     131101,
+     87098
+    ],
+    [
+     131102,
+     87098
+    ]
+   ],
+   "centre_bng": [
+    541476.75,
+    187299.36
+   ],
+   "centre_lonlat": [
+    0.0398254,
+    51.566827
+   ],
+   "blank_frac": 0.2501,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131099_87098",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131099_87101",
+   "tile_x0": 131099,
+   "tile_y0": 87101,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541484.7,
+    187014.57
+   ],
+   "centre_lonlat": [
+    0.0398254,
+    51.564266
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131099_87101",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131099_87104",
+   "tile_x0": 131099,
+   "tile_y0": 87104,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541492.64,
+    186729.76
+   ],
+   "centre_lonlat": [
+    0.0398254,
+    51.5617049
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131099_87104",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131099_87107",
+   "tile_x0": 131099,
+   "tile_y0": 87107,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541500.59,
+    186444.95
+   ],
+   "centre_lonlat": [
+    0.0398254,
+    51.5591436
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131099_87107",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131099_87146",
+   "tile_x0": 131099,
+   "tile_y0": 87146,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541603.88,
+    182740.85
+   ],
+   "centre_lonlat": [
+    0.0398254,
+    51.5258338
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131099_87146",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131099_87149",
+   "tile_x0": 131099,
+   "tile_y0": 87149,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541611.83,
+    182455.81
+   ],
+   "centre_lonlat": [
+    0.0398254,
+    51.5232705
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131099_87149",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131099_87152",
+   "tile_x0": 131099,
+   "tile_y0": 87152,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541619.77,
+    182170.75
+   ],
+   "centre_lonlat": [
+    0.0398254,
+    51.5207071
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131099_87152",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131099_87155",
+   "tile_x0": 131099,
+   "tile_y0": 87155,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541627.72,
+    181885.68
+   ],
+   "centre_lonlat": [
+    0.0398254,
+    51.5181435
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131099_87155",
+    "status": "skipped_missing",
+    "missing": 12
+   }
+  },
+  {
+   "name": "q18_131099_87194",
+   "tile_x0": 131099,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131099,
+     87196
+    ],
+    [
+     131099,
+     87197
+    ],
+    [
+     131100,
+     87196
+    ],
+    [
+     131100,
+     87197
+    ],
+    [
+     131101,
+     87196
+    ],
+    [
+     131101,
+     87197
+    ],
+    [
+     131102,
+     87196
+    ],
+    [
+     131102,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    541731.05,
+    178178.27
+   ],
+   "centre_lonlat": [
+    0.0398254,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131099_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131102_87098",
+   "tile_x0": 131102,
+   "tile_y0": 87098,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131102,
+     87098
+    ],
+    [
+     131103,
+     87098
+    ],
+    [
+     131104,
+     87098
+    ],
+    [
+     131105,
+     87098
+    ]
+   ],
+   "centre_bng": [
+    541762.27,
+    187307.33
+   ],
+   "centre_lonlat": [
+    0.0439453,
+    51.566827
+   ],
+   "blank_frac": 0.2501,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131102_87098",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131102_87101",
+   "tile_x0": 131102,
+   "tile_y0": 87101,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541770.23,
+    187022.54
+   ],
+   "centre_lonlat": [
+    0.0439453,
+    51.564266
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131102_87101",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131102_87104",
+   "tile_x0": 131102,
+   "tile_y0": 87104,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541778.19,
+    186737.74
+   ],
+   "centre_lonlat": [
+    0.0439453,
+    51.5617049
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131102_87104",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131102_87107",
+   "tile_x0": 131102,
+   "tile_y0": 87107,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541786.15,
+    186452.92
+   ],
+   "centre_lonlat": [
+    0.0439453,
+    51.5591436
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131102_87107",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131102_87146",
+   "tile_x0": 131102,
+   "tile_y0": 87146,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541889.66,
+    182748.83
+   ],
+   "centre_lonlat": [
+    0.0439453,
+    51.5258338
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131102_87146",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131102_87149",
+   "tile_x0": 131102,
+   "tile_y0": 87149,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541897.62,
+    182463.78
+   ],
+   "centre_lonlat": [
+    0.0439453,
+    51.5232705
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131102_87149",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131102_87152",
+   "tile_x0": 131102,
+   "tile_y0": 87152,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541905.58,
+    182178.73
+   ],
+   "centre_lonlat": [
+    0.0439453,
+    51.5207071
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131102_87152",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131102_87155",
+   "tile_x0": 131102,
+   "tile_y0": 87155,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    541913.55,
+    181893.65
+   ],
+   "centre_lonlat": [
+    0.0439453,
+    51.5181435
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131102_87155",
+    "status": "skipped_missing",
+    "missing": 12
+   }
+  },
+  {
+   "name": "q18_131102_87194",
+   "tile_x0": 131102,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131102,
+     87196
+    ],
+    [
+     131102,
+     87197
+    ],
+    [
+     131103,
+     87196
+    ],
+    [
+     131103,
+     87197
+    ],
+    [
+     131104,
+     87196
+    ],
+    [
+     131104,
+     87197
+    ],
+    [
+     131105,
+     87196
+    ],
+    [
+     131105,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    542017.08,
+    178186.24
+   ],
+   "centre_lonlat": [
+    0.0439453,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131102_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131105_87098",
+   "tile_x0": 131105,
+   "tile_y0": 87098,
+   "missing": 10,
+   "missing_tiles": [
+    [
+     131105,
+     87098
+    ],
+    [
+     131106,
+     87098
+    ],
+    [
+     131107,
+     87098
+    ],
+    [
+     131107,
+     87099
+    ],
+    [
+     131107,
+     87100
+    ],
+    [
+     131107,
+     87101
+    ],
+    [
+     131108,
+     87098
+    ],
+    [
+     131108,
+     87099
+    ],
+    [
+     131108,
+     87100
+    ],
+    [
+     131108,
+     87101
+    ]
+   ],
+   "centre_bng": [
+    542047.79,
+    187315.32
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.566827
+   ],
+   "blank_frac": 0.6559,
+   "status": "skipped_missing",
+   "written": false,
+   "replaces": {
+    "name": "m18_131105_87098",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131105_87101",
+   "tile_x0": 131105,
+   "tile_y0": 87101,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131107,
+     87101
+    ],
+    [
+     131107,
+     87102
+    ],
+    [
+     131107,
+     87103
+    ],
+    [
+     131107,
+     87104
+    ],
+    [
+     131108,
+     87101
+    ],
+    [
+     131108,
+     87102
+    ],
+    [
+     131108,
+     87103
+    ],
+    [
+     131108,
+     87104
+    ]
+   ],
+   "centre_bng": [
+    542055.77,
+    187030.53
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.564266
+   ],
+   "blank_frac": 0.5424,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87101",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131105_87104",
+   "tile_x0": 131105,
+   "tile_y0": 87104,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131107,
+     87104
+    ],
+    [
+     131107,
+     87105
+    ],
+    [
+     131107,
+     87106
+    ],
+    [
+     131107,
+     87107
+    ],
+    [
+     131108,
+     87104
+    ],
+    [
+     131108,
+     87105
+    ],
+    [
+     131108,
+     87106
+    ],
+    [
+     131108,
+     87107
+    ]
+   ],
+   "centre_bng": [
+    542063.75,
+    186745.73
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5617049
+   ],
+   "blank_frac": 0.5439,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87104",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131105_87107",
+   "tile_x0": 131105,
+   "tile_y0": 87107,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131107,
+     87107
+    ],
+    [
+     131107,
+     87108
+    ],
+    [
+     131107,
+     87109
+    ],
+    [
+     131107,
+     87110
+    ],
+    [
+     131108,
+     87107
+    ],
+    [
+     131108,
+     87108
+    ],
+    [
+     131108,
+     87109
+    ],
+    [
+     131108,
+     87110
+    ]
+   ],
+   "centre_bng": [
+    542071.72,
+    186460.91
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5591436
+   ],
+   "blank_frac": 0.5453,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87107",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131105_87125",
+   "tile_x0": 131105,
+   "tile_y0": 87125,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542119.59,
+    184751.66
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5437729
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87125",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131105_87128",
+   "tile_x0": 131105,
+   "tile_y0": 87128,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542127.56,
+    184466.73
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5412106
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87128",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131105_87131",
+   "tile_x0": 131105,
+   "tile_y0": 87131,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542135.54,
+    184181.79
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5386482
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87131",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131105_87134",
+   "tile_x0": 131105,
+   "tile_y0": 87134,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131107,
+     87136
+    ],
+    [
+     131107,
+     87137
+    ],
+    [
+     131108,
+     87136
+    ],
+    [
+     131108,
+     87137
+    ]
+   ],
+   "centre_bng": [
+    542143.52,
+    183896.82
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5360856
+   ],
+   "blank_frac": 0.4009,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87134",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131105_87137",
+   "tile_x0": 131105,
+   "tile_y0": 87137,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131107,
+     87137
+    ],
+    [
+     131107,
+     87138
+    ],
+    [
+     131107,
+     87139
+    ],
+    [
+     131107,
+     87140
+    ],
+    [
+     131108,
+     87137
+    ],
+    [
+     131108,
+     87138
+    ],
+    [
+     131108,
+     87139
+    ],
+    [
+     131108,
+     87140
+    ]
+   ],
+   "centre_bng": [
+    542151.5,
+    183611.85
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5335229
+   ],
+   "blank_frac": 0.5601,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87137",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131105_87140",
+   "tile_x0": 131105,
+   "tile_y0": 87140,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131107,
+     87140
+    ],
+    [
+     131107,
+     87141
+    ],
+    [
+     131107,
+     87142
+    ],
+    [
+     131107,
+     87143
+    ],
+    [
+     131108,
+     87140
+    ],
+    [
+     131108,
+     87141
+    ],
+    [
+     131108,
+     87142
+    ],
+    [
+     131108,
+     87143
+    ]
+   ],
+   "centre_bng": [
+    542159.48,
+    183326.85
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.53096
+   ],
+   "blank_frac": 0.5616,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87140",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131105_87143",
+   "tile_x0": 131105,
+   "tile_y0": 87143,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131107,
+     87143
+    ],
+    [
+     131107,
+     87144
+    ],
+    [
+     131107,
+     87145
+    ],
+    [
+     131107,
+     87146
+    ],
+    [
+     131108,
+     87143
+    ],
+    [
+     131108,
+     87144
+    ],
+    [
+     131108,
+     87145
+    ],
+    [
+     131108,
+     87146
+    ]
+   ],
+   "centre_bng": [
+    542167.46,
+    183041.84
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.528397
+   ],
+   "blank_frac": 0.563,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87143",
+    "status": "skipped_missing",
+    "missing": 10
+   }
+  },
+  {
+   "name": "q18_131105_87146",
+   "tile_x0": 131105,
+   "tile_y0": 87146,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131107,
+     87146
+    ],
+    [
+     131107,
+     87147
+    ],
+    [
+     131107,
+     87148
+    ],
+    [
+     131107,
+     87149
+    ],
+    [
+     131108,
+     87146
+    ],
+    [
+     131108,
+     87147
+    ],
+    [
+     131108,
+     87148
+    ],
+    [
+     131108,
+     87149
+    ]
+   ],
+   "centre_bng": [
+    542175.43,
+    182756.82
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5258338
+   ],
+   "blank_frac": 0.5645,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87146",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131105_87149",
+   "tile_x0": 131105,
+   "tile_y0": 87149,
+   "missing": 6,
+   "missing_tiles": [
+    [
+     131107,
+     87149
+    ],
+    [
+     131107,
+     87150
+    ],
+    [
+     131107,
+     87151
+    ],
+    [
+     131108,
+     87149
+    ],
+    [
+     131108,
+     87150
+    ],
+    [
+     131108,
+     87151
+    ]
+   ],
+   "centre_bng": [
+    542183.41,
+    182471.78
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5232705
+   ],
+   "blank_frac": 0.4332,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87149",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131105_87152",
+   "tile_x0": 131105,
+   "tile_y0": 87152,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542191.39,
+    182186.72
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5207071
+   ],
+   "blank_frac": 0.0089,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87152",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131105_87155",
+   "tile_x0": 131105,
+   "tile_y0": 87155,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542199.37,
+    181901.64
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5181435
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87155",
+    "status": "skipped_missing",
+    "missing": 14
+   }
+  },
+  {
+   "name": "q18_131105_87158",
+   "tile_x0": 131105,
+   "tile_y0": 87158,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542207.35,
+    181616.56
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5155798
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87158",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131105_87161",
+   "tile_x0": 131105,
+   "tile_y0": 87161,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542215.33,
+    181331.45
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.5130159
+   ],
+   "blank_frac": 0.0001,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87161",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131105_87194",
+   "tile_x0": 131105,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131105,
+     87196
+    ],
+    [
+     131105,
+     87197
+    ],
+    [
+     131106,
+     87196
+    ],
+    [
+     131106,
+     87197
+    ],
+    [
+     131107,
+     87196
+    ],
+    [
+     131107,
+     87197
+    ],
+    [
+     131108,
+     87196
+    ],
+    [
+     131108,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    542303.12,
+    178194.24
+   ],
+   "centre_lonlat": [
+    0.0480652,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131105_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131108_87098",
+   "tile_x0": 131108,
+   "tile_y0": 87098,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131108,
+     87098
+    ],
+    [
+     131108,
+     87099
+    ],
+    [
+     131108,
+     87100
+    ],
+    [
+     131108,
+     87101
+    ],
+    [
+     131109,
+     87098
+    ],
+    [
+     131109,
+     87099
+    ],
+    [
+     131109,
+     87100
+    ],
+    [
+     131109,
+     87101
+    ],
+    [
+     131110,
+     87098
+    ],
+    [
+     131110,
+     87099
+    ],
+    [
+     131110,
+     87100
+    ],
+    [
+     131110,
+     87101
+    ],
+    [
+     131111,
+     87098
+    ],
+    [
+     131111,
+     87099
+    ],
+    [
+     131111,
+     87100
+    ],
+    [
+     131111,
+     87101
+    ]
+   ],
+   "centre_bng": [
+    542333.31,
+    187323.32
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.566827
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131108_87098",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87101",
+   "tile_x0": 131108,
+   "tile_y0": 87101,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131108,
+     87101
+    ],
+    [
+     131108,
+     87102
+    ],
+    [
+     131108,
+     87103
+    ],
+    [
+     131108,
+     87104
+    ],
+    [
+     131109,
+     87101
+    ],
+    [
+     131109,
+     87102
+    ],
+    [
+     131109,
+     87103
+    ],
+    [
+     131109,
+     87104
+    ],
+    [
+     131110,
+     87101
+    ],
+    [
+     131110,
+     87102
+    ],
+    [
+     131110,
+     87103
+    ],
+    [
+     131110,
+     87104
+    ],
+    [
+     131111,
+     87101
+    ],
+    [
+     131111,
+     87102
+    ],
+    [
+     131111,
+     87103
+    ],
+    [
+     131111,
+     87104
+    ]
+   ],
+   "centre_bng": [
+    542341.31,
+    187038.54
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.564266
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131108_87101",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87104",
+   "tile_x0": 131108,
+   "tile_y0": 87104,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131108,
+     87104
+    ],
+    [
+     131108,
+     87105
+    ],
+    [
+     131108,
+     87106
+    ],
+    [
+     131108,
+     87107
+    ],
+    [
+     131109,
+     87104
+    ],
+    [
+     131109,
+     87105
+    ],
+    [
+     131109,
+     87106
+    ],
+    [
+     131109,
+     87107
+    ],
+    [
+     131110,
+     87104
+    ],
+    [
+     131110,
+     87105
+    ],
+    [
+     131110,
+     87106
+    ],
+    [
+     131110,
+     87107
+    ],
+    [
+     131111,
+     87104
+    ],
+    [
+     131111,
+     87105
+    ],
+    [
+     131111,
+     87106
+    ],
+    [
+     131111,
+     87107
+    ]
+   ],
+   "centre_bng": [
+    542349.3,
+    186753.73
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5617049
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131108_87104",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87107",
+   "tile_x0": 131108,
+   "tile_y0": 87107,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131108,
+     87107
+    ],
+    [
+     131108,
+     87108
+    ],
+    [
+     131108,
+     87109
+    ],
+    [
+     131108,
+     87110
+    ],
+    [
+     131109,
+     87107
+    ],
+    [
+     131109,
+     87108
+    ],
+    [
+     131109,
+     87109
+    ],
+    [
+     131109,
+     87110
+    ],
+    [
+     131110,
+     87107
+    ],
+    [
+     131110,
+     87108
+    ],
+    [
+     131110,
+     87109
+    ],
+    [
+     131110,
+     87110
+    ],
+    [
+     131111,
+     87107
+    ],
+    [
+     131111,
+     87108
+    ],
+    [
+     131111,
+     87109
+    ],
+    [
+     131111,
+     87110
+    ]
+   ],
+   "centre_bng": [
+    542357.29,
+    186468.91
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5591436
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131108_87107",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87125",
+   "tile_x0": 131108,
+   "tile_y0": 87125,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542405.25,
+    184759.67
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5437729
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131108_87125",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87128",
+   "tile_x0": 131108,
+   "tile_y0": 87128,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542413.25,
+    184474.74
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5412106
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131108_87128",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87131",
+   "tile_x0": 131108,
+   "tile_y0": 87131,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542421.24,
+    184189.79
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5386482
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131108_87131",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87134",
+   "tile_x0": 131108,
+   "tile_y0": 87134,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131108,
+     87136
+    ],
+    [
+     131108,
+     87137
+    ],
+    [
+     131109,
+     87136
+    ],
+    [
+     131109,
+     87137
+    ],
+    [
+     131110,
+     87136
+    ],
+    [
+     131110,
+     87137
+    ],
+    [
+     131111,
+     87136
+    ],
+    [
+     131111,
+     87137
+    ]
+   ],
+   "centre_bng": [
+    542429.23,
+    183904.83
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5360856
+   ],
+   "blank_frac": 0.7161,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131108_87134",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87137",
+   "tile_x0": 131108,
+   "tile_y0": 87137,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131108,
+     87137
+    ],
+    [
+     131108,
+     87138
+    ],
+    [
+     131108,
+     87139
+    ],
+    [
+     131108,
+     87140
+    ],
+    [
+     131109,
+     87137
+    ],
+    [
+     131109,
+     87138
+    ],
+    [
+     131109,
+     87139
+    ],
+    [
+     131109,
+     87140
+    ],
+    [
+     131110,
+     87137
+    ],
+    [
+     131110,
+     87138
+    ],
+    [
+     131110,
+     87139
+    ],
+    [
+     131110,
+     87140
+    ],
+    [
+     131111,
+     87137
+    ],
+    [
+     131111,
+     87138
+    ],
+    [
+     131111,
+     87139
+    ],
+    [
+     131111,
+     87140
+    ]
+   ],
+   "centre_bng": [
+    542437.23,
+    183619.85
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5335229
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131108_87137",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87140",
+   "tile_x0": 131108,
+   "tile_y0": 87140,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131108,
+     87140
+    ],
+    [
+     131108,
+     87141
+    ],
+    [
+     131108,
+     87142
+    ],
+    [
+     131108,
+     87143
+    ],
+    [
+     131109,
+     87140
+    ],
+    [
+     131109,
+     87141
+    ],
+    [
+     131109,
+     87142
+    ],
+    [
+     131109,
+     87143
+    ],
+    [
+     131110,
+     87140
+    ],
+    [
+     131110,
+     87141
+    ],
+    [
+     131110,
+     87142
+    ],
+    [
+     131110,
+     87143
+    ],
+    [
+     131111,
+     87140
+    ],
+    [
+     131111,
+     87141
+    ],
+    [
+     131111,
+     87142
+    ],
+    [
+     131111,
+     87143
+    ]
+   ],
+   "centre_bng": [
+    542445.22,
+    183334.86
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.53096
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131108_87140",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87143",
+   "tile_x0": 131108,
+   "tile_y0": 87143,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131108,
+     87143
+    ],
+    [
+     131108,
+     87144
+    ],
+    [
+     131108,
+     87145
+    ],
+    [
+     131108,
+     87146
+    ],
+    [
+     131109,
+     87143
+    ],
+    [
+     131109,
+     87144
+    ],
+    [
+     131109,
+     87145
+    ],
+    [
+     131109,
+     87146
+    ],
+    [
+     131110,
+     87143
+    ],
+    [
+     131110,
+     87144
+    ],
+    [
+     131110,
+     87145
+    ],
+    [
+     131110,
+     87146
+    ],
+    [
+     131111,
+     87143
+    ],
+    [
+     131111,
+     87144
+    ],
+    [
+     131111,
+     87145
+    ],
+    [
+     131111,
+     87146
+    ]
+   ],
+   "centre_bng": [
+    542453.22,
+    183049.85
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.528397
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131108_87143",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87146",
+   "tile_x0": 131108,
+   "tile_y0": 87146,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131108,
+     87146
+    ],
+    [
+     131108,
+     87147
+    ],
+    [
+     131108,
+     87148
+    ],
+    [
+     131108,
+     87149
+    ],
+    [
+     131109,
+     87146
+    ],
+    [
+     131109,
+     87147
+    ],
+    [
+     131109,
+     87148
+    ],
+    [
+     131109,
+     87149
+    ],
+    [
+     131110,
+     87146
+    ],
+    [
+     131110,
+     87147
+    ],
+    [
+     131110,
+     87148
+    ],
+    [
+     131110,
+     87149
+    ],
+    [
+     131111,
+     87146
+    ],
+    [
+     131111,
+     87147
+    ],
+    [
+     131111,
+     87148
+    ],
+    [
+     131111,
+     87149
+    ]
+   ],
+   "centre_bng": [
+    542461.21,
+    182764.83
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5258338
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131108_87146",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87149",
+   "tile_x0": 131108,
+   "tile_y0": 87149,
+   "missing": 12,
+   "missing_tiles": [
+    [
+     131108,
+     87149
+    ],
+    [
+     131108,
+     87150
+    ],
+    [
+     131108,
+     87151
+    ],
+    [
+     131109,
+     87149
+    ],
+    [
+     131109,
+     87150
+    ],
+    [
+     131109,
+     87151
+    ],
+    [
+     131110,
+     87149
+    ],
+    [
+     131110,
+     87150
+    ],
+    [
+     131110,
+     87151
+    ],
+    [
+     131111,
+     87149
+    ],
+    [
+     131111,
+     87150
+    ],
+    [
+     131111,
+     87151
+    ]
+   ],
+   "centre_bng": [
+    542469.21,
+    182479.78
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5232705
+   ],
+   "blank_frac": 0.7666,
+   "status": "skipped_missing",
+   "written": false,
+   "replaces": {
+    "name": "m18_131108_87149",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87152",
+   "tile_x0": 131108,
+   "tile_y0": 87152,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542477.2,
+    182194.73
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5207071
+   ],
+   "blank_frac": 0.0166,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131108_87152",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87155",
+   "tile_x0": 131108,
+   "tile_y0": 87155,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542485.2,
+    181909.65
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5181435
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131108_87155",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87158",
+   "tile_x0": 131108,
+   "tile_y0": 87158,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542493.19,
+    181624.56
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5155798
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131108_87158",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87161",
+   "tile_x0": 131108,
+   "tile_y0": 87161,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542501.19,
+    181339.46
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.5130159
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131108_87161",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131108_87194",
+   "tile_x0": 131108,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131108,
+     87196
+    ],
+    [
+     131108,
+     87197
+    ],
+    [
+     131109,
+     87196
+    ],
+    [
+     131109,
+     87197
+    ],
+    [
+     131110,
+     87196
+    ],
+    [
+     131110,
+     87197
+    ],
+    [
+     131111,
+     87196
+    ],
+    [
+     131111,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    542589.15,
+    178202.25
+   ],
+   "centre_lonlat": [
+    0.0521851,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131108_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131111_87098",
+   "tile_x0": 131111,
+   "tile_y0": 87098,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131111,
+     87098
+    ],
+    [
+     131111,
+     87099
+    ],
+    [
+     131111,
+     87100
+    ],
+    [
+     131111,
+     87101
+    ],
+    [
+     131112,
+     87098
+    ],
+    [
+     131112,
+     87099
+    ],
+    [
+     131112,
+     87100
+    ],
+    [
+     131112,
+     87101
+    ],
+    [
+     131113,
+     87098
+    ],
+    [
+     131113,
+     87099
+    ],
+    [
+     131113,
+     87100
+    ],
+    [
+     131113,
+     87101
+    ],
+    [
+     131114,
+     87098
+    ],
+    [
+     131114,
+     87099
+    ],
+    [
+     131114,
+     87100
+    ],
+    [
+     131114,
+     87101
+    ]
+   ],
+   "centre_bng": [
+    542618.83,
+    187331.34
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.566827
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131111_87098",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87101",
+   "tile_x0": 131111,
+   "tile_y0": 87101,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131111,
+     87101
+    ],
+    [
+     131111,
+     87102
+    ],
+    [
+     131111,
+     87103
+    ],
+    [
+     131111,
+     87104
+    ],
+    [
+     131112,
+     87101
+    ],
+    [
+     131112,
+     87102
+    ],
+    [
+     131112,
+     87103
+    ],
+    [
+     131112,
+     87104
+    ],
+    [
+     131113,
+     87101
+    ],
+    [
+     131113,
+     87102
+    ],
+    [
+     131113,
+     87103
+    ],
+    [
+     131113,
+     87104
+    ],
+    [
+     131114,
+     87101
+    ],
+    [
+     131114,
+     87102
+    ],
+    [
+     131114,
+     87103
+    ],
+    [
+     131114,
+     87104
+    ]
+   ],
+   "centre_bng": [
+    542626.84,
+    187046.56
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.564266
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131111_87101",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87104",
+   "tile_x0": 131111,
+   "tile_y0": 87104,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131111,
+     87104
+    ],
+    [
+     131111,
+     87105
+    ],
+    [
+     131111,
+     87106
+    ],
+    [
+     131111,
+     87107
+    ],
+    [
+     131112,
+     87104
+    ],
+    [
+     131112,
+     87105
+    ],
+    [
+     131112,
+     87106
+    ],
+    [
+     131112,
+     87107
+    ],
+    [
+     131113,
+     87104
+    ],
+    [
+     131113,
+     87105
+    ],
+    [
+     131113,
+     87106
+    ],
+    [
+     131113,
+     87107
+    ],
+    [
+     131114,
+     87104
+    ],
+    [
+     131114,
+     87105
+    ],
+    [
+     131114,
+     87106
+    ],
+    [
+     131114,
+     87107
+    ]
+   ],
+   "centre_bng": [
+    542634.85,
+    186761.75
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5617049
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131111_87104",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87107",
+   "tile_x0": 131111,
+   "tile_y0": 87107,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131111,
+     87107
+    ],
+    [
+     131111,
+     87108
+    ],
+    [
+     131111,
+     87109
+    ],
+    [
+     131111,
+     87110
+    ],
+    [
+     131112,
+     87107
+    ],
+    [
+     131112,
+     87108
+    ],
+    [
+     131112,
+     87109
+    ],
+    [
+     131112,
+     87110
+    ],
+    [
+     131113,
+     87107
+    ],
+    [
+     131113,
+     87108
+    ],
+    [
+     131113,
+     87109
+    ],
+    [
+     131113,
+     87110
+    ],
+    [
+     131114,
+     87107
+    ],
+    [
+     131114,
+     87108
+    ],
+    [
+     131114,
+     87109
+    ],
+    [
+     131114,
+     87110
+    ]
+   ],
+   "centre_bng": [
+    542642.86,
+    186476.94
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5591436
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131111_87107",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87125",
+   "tile_x0": 131111,
+   "tile_y0": 87125,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542690.92,
+    184767.69
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5437729
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131111_87125",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87128",
+   "tile_x0": 131111,
+   "tile_y0": 87128,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542698.93,
+    184482.76
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5412106
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131111_87128",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87131",
+   "tile_x0": 131111,
+   "tile_y0": 87131,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542706.94,
+    184197.82
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5386482
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131111_87131",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87134",
+   "tile_x0": 131111,
+   "tile_y0": 87134,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131111,
+     87136
+    ],
+    [
+     131111,
+     87137
+    ],
+    [
+     131112,
+     87136
+    ],
+    [
+     131112,
+     87137
+    ],
+    [
+     131113,
+     87136
+    ],
+    [
+     131113,
+     87137
+    ],
+    [
+     131114,
+     87136
+    ],
+    [
+     131114,
+     87137
+    ]
+   ],
+   "centre_bng": [
+    542714.95,
+    183912.86
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5360856
+   ],
+   "blank_frac": 0.7146,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131111_87134",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87137",
+   "tile_x0": 131111,
+   "tile_y0": 87137,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131111,
+     87137
+    ],
+    [
+     131111,
+     87138
+    ],
+    [
+     131111,
+     87139
+    ],
+    [
+     131111,
+     87140
+    ],
+    [
+     131112,
+     87137
+    ],
+    [
+     131112,
+     87138
+    ],
+    [
+     131112,
+     87139
+    ],
+    [
+     131112,
+     87140
+    ],
+    [
+     131113,
+     87137
+    ],
+    [
+     131113,
+     87138
+    ],
+    [
+     131113,
+     87139
+    ],
+    [
+     131113,
+     87140
+    ],
+    [
+     131114,
+     87137
+    ],
+    [
+     131114,
+     87138
+    ],
+    [
+     131114,
+     87139
+    ],
+    [
+     131114,
+     87140
+    ]
+   ],
+   "centre_bng": [
+    542722.96,
+    183627.88
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5335229
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131111_87137",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87140",
+   "tile_x0": 131111,
+   "tile_y0": 87140,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131111,
+     87140
+    ],
+    [
+     131111,
+     87141
+    ],
+    [
+     131111,
+     87142
+    ],
+    [
+     131111,
+     87143
+    ],
+    [
+     131112,
+     87140
+    ],
+    [
+     131112,
+     87141
+    ],
+    [
+     131112,
+     87142
+    ],
+    [
+     131112,
+     87143
+    ],
+    [
+     131113,
+     87140
+    ],
+    [
+     131113,
+     87141
+    ],
+    [
+     131113,
+     87142
+    ],
+    [
+     131113,
+     87143
+    ],
+    [
+     131114,
+     87140
+    ],
+    [
+     131114,
+     87141
+    ],
+    [
+     131114,
+     87142
+    ],
+    [
+     131114,
+     87143
+    ]
+   ],
+   "centre_bng": [
+    542730.97,
+    183342.88
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.53096
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131111_87140",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87143",
+   "tile_x0": 131111,
+   "tile_y0": 87143,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131111,
+     87143
+    ],
+    [
+     131111,
+     87144
+    ],
+    [
+     131111,
+     87145
+    ],
+    [
+     131111,
+     87146
+    ],
+    [
+     131112,
+     87143
+    ],
+    [
+     131112,
+     87144
+    ],
+    [
+     131112,
+     87145
+    ],
+    [
+     131112,
+     87146
+    ],
+    [
+     131113,
+     87143
+    ],
+    [
+     131113,
+     87144
+    ],
+    [
+     131113,
+     87145
+    ],
+    [
+     131113,
+     87146
+    ],
+    [
+     131114,
+     87143
+    ],
+    [
+     131114,
+     87144
+    ],
+    [
+     131114,
+     87145
+    ],
+    [
+     131114,
+     87146
+    ]
+   ],
+   "centre_bng": [
+    542738.98,
+    183057.87
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.528397
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131111_87143",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87146",
+   "tile_x0": 131111,
+   "tile_y0": 87146,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131111,
+     87146
+    ],
+    [
+     131111,
+     87147
+    ],
+    [
+     131111,
+     87148
+    ],
+    [
+     131111,
+     87149
+    ],
+    [
+     131112,
+     87146
+    ],
+    [
+     131112,
+     87147
+    ],
+    [
+     131112,
+     87148
+    ],
+    [
+     131112,
+     87149
+    ],
+    [
+     131113,
+     87146
+    ],
+    [
+     131113,
+     87147
+    ],
+    [
+     131113,
+     87148
+    ],
+    [
+     131113,
+     87149
+    ],
+    [
+     131114,
+     87146
+    ],
+    [
+     131114,
+     87147
+    ],
+    [
+     131114,
+     87148
+    ],
+    [
+     131114,
+     87149
+    ]
+   ],
+   "centre_bng": [
+    542746.99,
+    182772.85
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5258338
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131111_87146",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87149",
+   "tile_x0": 131111,
+   "tile_y0": 87149,
+   "missing": 12,
+   "missing_tiles": [
+    [
+     131111,
+     87149
+    ],
+    [
+     131111,
+     87150
+    ],
+    [
+     131111,
+     87151
+    ],
+    [
+     131112,
+     87149
+    ],
+    [
+     131112,
+     87150
+    ],
+    [
+     131112,
+     87151
+    ],
+    [
+     131113,
+     87149
+    ],
+    [
+     131113,
+     87150
+    ],
+    [
+     131113,
+     87151
+    ],
+    [
+     131114,
+     87149
+    ],
+    [
+     131114,
+     87150
+    ],
+    [
+     131114,
+     87151
+    ]
+   ],
+   "centre_bng": [
+    542755.0,
+    182487.81
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5232705
+   ],
+   "blank_frac": 0.7681,
+   "status": "skipped_missing",
+   "written": false,
+   "replaces": {
+    "name": "m18_131111_87149",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87152",
+   "tile_x0": 131111,
+   "tile_y0": 87152,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542763.01,
+    182202.75
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5207071
+   ],
+   "blank_frac": 0.0181,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131111_87152",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87155",
+   "tile_x0": 131111,
+   "tile_y0": 87155,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542771.02,
+    181917.68
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5181435
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131111_87155",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87158",
+   "tile_x0": 131111,
+   "tile_y0": 87158,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542779.03,
+    181632.59
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5155798
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131111_87158",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87161",
+   "tile_x0": 131111,
+   "tile_y0": 87161,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542787.05,
+    181347.48
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.5130159
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131111_87161",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131111_87194",
+   "tile_x0": 131111,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131111,
+     87196
+    ],
+    [
+     131111,
+     87197
+    ],
+    [
+     131112,
+     87196
+    ],
+    [
+     131112,
+     87197
+    ],
+    [
+     131113,
+     87196
+    ],
+    [
+     131113,
+     87197
+    ],
+    [
+     131114,
+     87196
+    ],
+    [
+     131114,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    542875.19,
+    178210.28
+   ],
+   "centre_lonlat": [
+    0.0563049,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131111_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131114_87098",
+   "tile_x0": 131114,
+   "tile_y0": 87098,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131114,
+     87098
+    ],
+    [
+     131114,
+     87099
+    ],
+    [
+     131114,
+     87100
+    ],
+    [
+     131114,
+     87101
+    ],
+    [
+     131115,
+     87098
+    ],
+    [
+     131115,
+     87099
+    ],
+    [
+     131115,
+     87100
+    ],
+    [
+     131115,
+     87101
+    ],
+    [
+     131116,
+     87098
+    ],
+    [
+     131116,
+     87099
+    ],
+    [
+     131116,
+     87100
+    ],
+    [
+     131116,
+     87101
+    ],
+    [
+     131117,
+     87098
+    ],
+    [
+     131117,
+     87099
+    ],
+    [
+     131117,
+     87100
+    ],
+    [
+     131117,
+     87101
+    ]
+   ],
+   "centre_bng": [
+    542904.35,
+    187339.38
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.566827
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131114_87098",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87101",
+   "tile_x0": 131114,
+   "tile_y0": 87101,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131114,
+     87101
+    ],
+    [
+     131114,
+     87102
+    ],
+    [
+     131114,
+     87103
+    ],
+    [
+     131114,
+     87104
+    ],
+    [
+     131115,
+     87101
+    ],
+    [
+     131115,
+     87102
+    ],
+    [
+     131115,
+     87103
+    ],
+    [
+     131115,
+     87104
+    ],
+    [
+     131116,
+     87101
+    ],
+    [
+     131116,
+     87102
+    ],
+    [
+     131116,
+     87103
+    ],
+    [
+     131116,
+     87104
+    ],
+    [
+     131117,
+     87101
+    ],
+    [
+     131117,
+     87102
+    ],
+    [
+     131117,
+     87103
+    ],
+    [
+     131117,
+     87104
+    ]
+   ],
+   "centre_bng": [
+    542912.38,
+    187054.59
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.564266
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131114_87101",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87104",
+   "tile_x0": 131114,
+   "tile_y0": 87104,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131114,
+     87104
+    ],
+    [
+     131114,
+     87105
+    ],
+    [
+     131114,
+     87106
+    ],
+    [
+     131114,
+     87107
+    ],
+    [
+     131115,
+     87104
+    ],
+    [
+     131115,
+     87105
+    ],
+    [
+     131115,
+     87106
+    ],
+    [
+     131115,
+     87107
+    ],
+    [
+     131116,
+     87104
+    ],
+    [
+     131116,
+     87105
+    ],
+    [
+     131116,
+     87106
+    ],
+    [
+     131116,
+     87107
+    ],
+    [
+     131117,
+     87104
+    ],
+    [
+     131117,
+     87105
+    ],
+    [
+     131117,
+     87106
+    ],
+    [
+     131117,
+     87107
+    ]
+   ],
+   "centre_bng": [
+    542920.4,
+    186769.79
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5617049
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131114_87104",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87107",
+   "tile_x0": 131114,
+   "tile_y0": 87107,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131114,
+     87107
+    ],
+    [
+     131114,
+     87108
+    ],
+    [
+     131114,
+     87109
+    ],
+    [
+     131114,
+     87110
+    ],
+    [
+     131115,
+     87107
+    ],
+    [
+     131115,
+     87108
+    ],
+    [
+     131115,
+     87109
+    ],
+    [
+     131115,
+     87110
+    ],
+    [
+     131116,
+     87107
+    ],
+    [
+     131116,
+     87108
+    ],
+    [
+     131116,
+     87109
+    ],
+    [
+     131116,
+     87110
+    ],
+    [
+     131117,
+     87107
+    ],
+    [
+     131117,
+     87108
+    ],
+    [
+     131117,
+     87109
+    ],
+    [
+     131117,
+     87110
+    ]
+   ],
+   "centre_bng": [
+    542928.43,
+    186484.97
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5591436
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131114_87107",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87110",
+   "tile_x0": 131114,
+   "tile_y0": 87110,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131114,
+     87110
+    ],
+    [
+     131114,
+     87111
+    ],
+    [
+     131114,
+     87112
+    ],
+    [
+     131114,
+     87113
+    ],
+    [
+     131115,
+     87110
+    ],
+    [
+     131115,
+     87111
+    ],
+    [
+     131115,
+     87112
+    ],
+    [
+     131115,
+     87113
+    ],
+    [
+     131116,
+     87110
+    ],
+    [
+     131116,
+     87111
+    ],
+    [
+     131116,
+     87112
+    ],
+    [
+     131116,
+     87113
+    ],
+    [
+     131117,
+     87110
+    ],
+    [
+     131117,
+     87111
+    ],
+    [
+     131117,
+     87112
+    ],
+    [
+     131117,
+     87113
+    ]
+   ],
+   "centre_bng": [
+    542936.45,
+    186200.14
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5565822
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131114_87110",
+    "status": "written",
+    "missing": 7
+   }
+  },
+  {
+   "name": "q18_131114_87122",
+   "tile_x0": 131114,
+   "tile_y0": 87122,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542968.55,
+    185060.64
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.546335
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131114_87122",
+    "status": "written",
+    "missing": 7
+   }
+  },
+  {
+   "name": "q18_131114_87125",
+   "tile_x0": 131114,
+   "tile_y0": 87125,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542976.58,
+    184775.73
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5437729
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131114_87125",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87128",
+   "tile_x0": 131114,
+   "tile_y0": 87128,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542984.61,
+    184490.8
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5412106
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131114_87128",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87131",
+   "tile_x0": 131114,
+   "tile_y0": 87131,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    542992.63,
+    184205.86
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5386482
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131114_87131",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87134",
+   "tile_x0": 131114,
+   "tile_y0": 87134,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131114,
+     87136
+    ],
+    [
+     131114,
+     87137
+    ],
+    [
+     131115,
+     87136
+    ],
+    [
+     131115,
+     87137
+    ],
+    [
+     131116,
+     87136
+    ],
+    [
+     131116,
+     87137
+    ],
+    [
+     131117,
+     87136
+    ],
+    [
+     131117,
+     87137
+    ]
+   ],
+   "centre_bng": [
+    543000.66,
+    183920.89
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5360856
+   ],
+   "blank_frac": 0.713,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131114_87134",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87137",
+   "tile_x0": 131114,
+   "tile_y0": 87137,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131114,
+     87137
+    ],
+    [
+     131114,
+     87138
+    ],
+    [
+     131114,
+     87139
+    ],
+    [
+     131114,
+     87140
+    ],
+    [
+     131115,
+     87137
+    ],
+    [
+     131115,
+     87138
+    ],
+    [
+     131115,
+     87139
+    ],
+    [
+     131115,
+     87140
+    ],
+    [
+     131116,
+     87137
+    ],
+    [
+     131116,
+     87138
+    ],
+    [
+     131116,
+     87139
+    ],
+    [
+     131116,
+     87140
+    ],
+    [
+     131117,
+     87137
+    ],
+    [
+     131117,
+     87138
+    ],
+    [
+     131117,
+     87139
+    ],
+    [
+     131117,
+     87140
+    ]
+   ],
+   "centre_bng": [
+    543008.69,
+    183635.92
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5335229
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131114_87137",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87140",
+   "tile_x0": 131114,
+   "tile_y0": 87140,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131114,
+     87140
+    ],
+    [
+     131114,
+     87141
+    ],
+    [
+     131114,
+     87142
+    ],
+    [
+     131114,
+     87143
+    ],
+    [
+     131115,
+     87140
+    ],
+    [
+     131115,
+     87141
+    ],
+    [
+     131115,
+     87142
+    ],
+    [
+     131115,
+     87143
+    ],
+    [
+     131116,
+     87140
+    ],
+    [
+     131116,
+     87141
+    ],
+    [
+     131116,
+     87142
+    ],
+    [
+     131116,
+     87143
+    ],
+    [
+     131117,
+     87140
+    ],
+    [
+     131117,
+     87141
+    ],
+    [
+     131117,
+     87142
+    ],
+    [
+     131117,
+     87143
+    ]
+   ],
+   "centre_bng": [
+    543016.71,
+    183350.92
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.53096
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131114_87140",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87143",
+   "tile_x0": 131114,
+   "tile_y0": 87143,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131114,
+     87143
+    ],
+    [
+     131114,
+     87144
+    ],
+    [
+     131114,
+     87145
+    ],
+    [
+     131114,
+     87146
+    ],
+    [
+     131115,
+     87143
+    ],
+    [
+     131115,
+     87144
+    ],
+    [
+     131115,
+     87145
+    ],
+    [
+     131115,
+     87146
+    ],
+    [
+     131116,
+     87143
+    ],
+    [
+     131116,
+     87144
+    ],
+    [
+     131116,
+     87145
+    ],
+    [
+     131116,
+     87146
+    ],
+    [
+     131117,
+     87143
+    ],
+    [
+     131117,
+     87144
+    ],
+    [
+     131117,
+     87145
+    ],
+    [
+     131117,
+     87146
+    ]
+   ],
+   "centre_bng": [
+    543024.74,
+    183065.91
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.528397
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131114_87143",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87146",
+   "tile_x0": 131114,
+   "tile_y0": 87146,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131114,
+     87146
+    ],
+    [
+     131114,
+     87147
+    ],
+    [
+     131114,
+     87148
+    ],
+    [
+     131114,
+     87149
+    ],
+    [
+     131115,
+     87146
+    ],
+    [
+     131115,
+     87147
+    ],
+    [
+     131115,
+     87148
+    ],
+    [
+     131115,
+     87149
+    ],
+    [
+     131116,
+     87146
+    ],
+    [
+     131116,
+     87147
+    ],
+    [
+     131116,
+     87148
+    ],
+    [
+     131116,
+     87149
+    ],
+    [
+     131117,
+     87146
+    ],
+    [
+     131117,
+     87147
+    ],
+    [
+     131117,
+     87148
+    ],
+    [
+     131117,
+     87149
+    ]
+   ],
+   "centre_bng": [
+    543032.77,
+    182780.89
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5258338
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131114_87146",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87149",
+   "tile_x0": 131114,
+   "tile_y0": 87149,
+   "missing": 12,
+   "missing_tiles": [
+    [
+     131114,
+     87149
+    ],
+    [
+     131114,
+     87150
+    ],
+    [
+     131114,
+     87151
+    ],
+    [
+     131115,
+     87149
+    ],
+    [
+     131115,
+     87150
+    ],
+    [
+     131115,
+     87151
+    ],
+    [
+     131116,
+     87149
+    ],
+    [
+     131116,
+     87150
+    ],
+    [
+     131116,
+     87151
+    ],
+    [
+     131117,
+     87149
+    ],
+    [
+     131117,
+     87150
+    ],
+    [
+     131117,
+     87151
+    ]
+   ],
+   "centre_bng": [
+    543040.79,
+    182495.85
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5232705
+   ],
+   "blank_frac": 0.7697,
+   "status": "skipped_missing",
+   "written": false,
+   "replaces": {
+    "name": "m18_131114_87149",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87152",
+   "tile_x0": 131114,
+   "tile_y0": 87152,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543048.82,
+    182210.79
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5207071
+   ],
+   "blank_frac": 0.0197,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131114_87152",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87155",
+   "tile_x0": 131114,
+   "tile_y0": 87155,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543056.85,
+    181925.72
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5181435
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131114_87155",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87158",
+   "tile_x0": 131114,
+   "tile_y0": 87158,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543064.88,
+    181640.63
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5155798
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131114_87158",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87161",
+   "tile_x0": 131114,
+   "tile_y0": 87161,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543072.9,
+    181355.52
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.5130159
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131114_87161",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131114_87194",
+   "tile_x0": 131114,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131114,
+     87196
+    ],
+    [
+     131114,
+     87197
+    ],
+    [
+     131115,
+     87196
+    ],
+    [
+     131115,
+     87197
+    ],
+    [
+     131116,
+     87196
+    ],
+    [
+     131116,
+     87197
+    ],
+    [
+     131117,
+     87196
+    ],
+    [
+     131117,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    543161.22,
+    178218.32
+   ],
+   "centre_lonlat": [
+    0.0604248,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131114_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131117_87098",
+   "tile_x0": 131117,
+   "tile_y0": 87098,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131117,
+     87098
+    ],
+    [
+     131117,
+     87099
+    ],
+    [
+     131117,
+     87100
+    ],
+    [
+     131117,
+     87101
+    ],
+    [
+     131118,
+     87098
+    ],
+    [
+     131118,
+     87099
+    ],
+    [
+     131118,
+     87100
+    ],
+    [
+     131118,
+     87101
+    ],
+    [
+     131119,
+     87098
+    ],
+    [
+     131119,
+     87099
+    ],
+    [
+     131119,
+     87100
+    ],
+    [
+     131119,
+     87101
+    ],
+    [
+     131120,
+     87098
+    ],
+    [
+     131120,
+     87099
+    ],
+    [
+     131120,
+     87100
+    ],
+    [
+     131120,
+     87101
+    ]
+   ],
+   "centre_bng": [
+    543189.87,
+    187347.43
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.566827
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131117_87098",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87101",
+   "tile_x0": 131117,
+   "tile_y0": 87101,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131117,
+     87101
+    ],
+    [
+     131117,
+     87102
+    ],
+    [
+     131117,
+     87103
+    ],
+    [
+     131117,
+     87104
+    ],
+    [
+     131118,
+     87101
+    ],
+    [
+     131118,
+     87102
+    ],
+    [
+     131118,
+     87103
+    ],
+    [
+     131118,
+     87104
+    ],
+    [
+     131119,
+     87101
+    ],
+    [
+     131119,
+     87102
+    ],
+    [
+     131119,
+     87103
+    ],
+    [
+     131119,
+     87104
+    ],
+    [
+     131120,
+     87101
+    ],
+    [
+     131120,
+     87102
+    ],
+    [
+     131120,
+     87103
+    ],
+    [
+     131120,
+     87104
+    ]
+   ],
+   "centre_bng": [
+    543197.91,
+    187062.65
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.564266
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131117_87101",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87104",
+   "tile_x0": 131117,
+   "tile_y0": 87104,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131117,
+     87104
+    ],
+    [
+     131117,
+     87105
+    ],
+    [
+     131117,
+     87106
+    ],
+    [
+     131117,
+     87107
+    ],
+    [
+     131118,
+     87104
+    ],
+    [
+     131118,
+     87105
+    ],
+    [
+     131118,
+     87106
+    ],
+    [
+     131118,
+     87107
+    ],
+    [
+     131119,
+     87104
+    ],
+    [
+     131119,
+     87105
+    ],
+    [
+     131119,
+     87106
+    ],
+    [
+     131119,
+     87107
+    ],
+    [
+     131120,
+     87104
+    ],
+    [
+     131120,
+     87105
+    ],
+    [
+     131120,
+     87106
+    ],
+    [
+     131120,
+     87107
+    ]
+   ],
+   "centre_bng": [
+    543205.95,
+    186777.85
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5617049
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131117_87104",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87107",
+   "tile_x0": 131117,
+   "tile_y0": 87107,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131117,
+     87107
+    ],
+    [
+     131117,
+     87108
+    ],
+    [
+     131117,
+     87109
+    ],
+    [
+     131117,
+     87110
+    ],
+    [
+     131118,
+     87107
+    ],
+    [
+     131118,
+     87108
+    ],
+    [
+     131118,
+     87109
+    ],
+    [
+     131118,
+     87110
+    ],
+    [
+     131119,
+     87107
+    ],
+    [
+     131119,
+     87108
+    ],
+    [
+     131119,
+     87109
+    ],
+    [
+     131119,
+     87110
+    ],
+    [
+     131120,
+     87107
+    ],
+    [
+     131120,
+     87108
+    ],
+    [
+     131120,
+     87109
+    ],
+    [
+     131120,
+     87110
+    ]
+   ],
+   "centre_bng": [
+    543214.0,
+    186493.03
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5591436
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131117_87107",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87110",
+   "tile_x0": 131117,
+   "tile_y0": 87110,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131117,
+     87110
+    ],
+    [
+     131117,
+     87111
+    ],
+    [
+     131117,
+     87112
+    ],
+    [
+     131117,
+     87113
+    ],
+    [
+     131118,
+     87110
+    ],
+    [
+     131118,
+     87111
+    ],
+    [
+     131118,
+     87112
+    ],
+    [
+     131118,
+     87113
+    ],
+    [
+     131119,
+     87110
+    ],
+    [
+     131119,
+     87111
+    ],
+    [
+     131119,
+     87112
+    ],
+    [
+     131119,
+     87113
+    ],
+    [
+     131120,
+     87110
+    ],
+    [
+     131120,
+     87111
+    ],
+    [
+     131120,
+     87112
+    ],
+    [
+     131120,
+     87113
+    ]
+   ],
+   "centre_bng": [
+    543222.04,
+    186208.19
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5565822
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131117_87110",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87113",
+   "tile_x0": 131117,
+   "tile_y0": 87113,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131117,
+     87113
+    ],
+    [
+     131117,
+     87114
+    ],
+    [
+     131117,
+     87115
+    ],
+    [
+     131117,
+     87116
+    ],
+    [
+     131118,
+     87113
+    ],
+    [
+     131118,
+     87114
+    ],
+    [
+     131118,
+     87115
+    ],
+    [
+     131118,
+     87116
+    ],
+    [
+     131119,
+     87113
+    ],
+    [
+     131119,
+     87114
+    ],
+    [
+     131119,
+     87115
+    ],
+    [
+     131119,
+     87116
+    ],
+    [
+     131120,
+     87113
+    ],
+    [
+     131120,
+     87114
+    ],
+    [
+     131120,
+     87115
+    ],
+    [
+     131120,
+     87116
+    ]
+   ],
+   "centre_bng": [
+    543230.08,
+    185923.34
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5540206
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131117_87113",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87116",
+   "tile_x0": 131117,
+   "tile_y0": 87116,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131117,
+     87116
+    ],
+    [
+     131117,
+     87117
+    ],
+    [
+     131118,
+     87116
+    ],
+    [
+     131118,
+     87117
+    ],
+    [
+     131119,
+     87116
+    ],
+    [
+     131119,
+     87117
+    ],
+    [
+     131120,
+     87116
+    ],
+    [
+     131120,
+     87117
+    ]
+   ],
+   "centre_bng": [
+    543238.12,
+    185638.48
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5514589
+   ],
+   "blank_frac": 0.5547,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131117_87116",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87119",
+   "tile_x0": 131117,
+   "tile_y0": 87119,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543246.16,
+    185353.6
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.548897
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131117_87119",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87122",
+   "tile_x0": 131117,
+   "tile_y0": 87122,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543254.2,
+    185068.7
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.546335
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131117_87122",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87125",
+   "tile_x0": 131117,
+   "tile_y0": 87125,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543262.24,
+    184783.79
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5437729
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131117_87125",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87128",
+   "tile_x0": 131117,
+   "tile_y0": 87128,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543270.29,
+    184498.86
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5412106
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131117_87128",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87131",
+   "tile_x0": 131117,
+   "tile_y0": 87131,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543278.33,
+    184213.91
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5386482
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131117_87131",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87134",
+   "tile_x0": 131117,
+   "tile_y0": 87134,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131117,
+     87136
+    ],
+    [
+     131117,
+     87137
+    ],
+    [
+     131118,
+     87136
+    ],
+    [
+     131118,
+     87137
+    ],
+    [
+     131119,
+     87136
+    ],
+    [
+     131119,
+     87137
+    ],
+    [
+     131120,
+     87136
+    ],
+    [
+     131120,
+     87137
+    ]
+   ],
+   "centre_bng": [
+    543286.37,
+    183928.95
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5360856
+   ],
+   "blank_frac": 0.7113,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131117_87134",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87137",
+   "tile_x0": 131117,
+   "tile_y0": 87137,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131117,
+     87137
+    ],
+    [
+     131117,
+     87138
+    ],
+    [
+     131117,
+     87139
+    ],
+    [
+     131117,
+     87140
+    ],
+    [
+     131118,
+     87137
+    ],
+    [
+     131118,
+     87138
+    ],
+    [
+     131118,
+     87139
+    ],
+    [
+     131118,
+     87140
+    ],
+    [
+     131119,
+     87137
+    ],
+    [
+     131119,
+     87138
+    ],
+    [
+     131119,
+     87139
+    ],
+    [
+     131119,
+     87140
+    ],
+    [
+     131120,
+     87137
+    ],
+    [
+     131120,
+     87138
+    ],
+    [
+     131120,
+     87139
+    ],
+    [
+     131120,
+     87140
+    ]
+   ],
+   "centre_bng": [
+    543294.41,
+    183643.97
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5335229
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131117_87137",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87140",
+   "tile_x0": 131117,
+   "tile_y0": 87140,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131117,
+     87140
+    ],
+    [
+     131117,
+     87141
+    ],
+    [
+     131117,
+     87142
+    ],
+    [
+     131117,
+     87143
+    ],
+    [
+     131118,
+     87140
+    ],
+    [
+     131118,
+     87141
+    ],
+    [
+     131118,
+     87142
+    ],
+    [
+     131118,
+     87143
+    ],
+    [
+     131119,
+     87140
+    ],
+    [
+     131119,
+     87141
+    ],
+    [
+     131119,
+     87142
+    ],
+    [
+     131119,
+     87143
+    ],
+    [
+     131120,
+     87140
+    ],
+    [
+     131120,
+     87141
+    ],
+    [
+     131120,
+     87142
+    ],
+    [
+     131120,
+     87143
+    ]
+   ],
+   "centre_bng": [
+    543302.46,
+    183358.98
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.53096
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131117_87140",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87143",
+   "tile_x0": 131117,
+   "tile_y0": 87143,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131117,
+     87143
+    ],
+    [
+     131117,
+     87144
+    ],
+    [
+     131117,
+     87145
+    ],
+    [
+     131117,
+     87146
+    ],
+    [
+     131118,
+     87143
+    ],
+    [
+     131118,
+     87144
+    ],
+    [
+     131118,
+     87145
+    ],
+    [
+     131118,
+     87146
+    ],
+    [
+     131119,
+     87143
+    ],
+    [
+     131119,
+     87144
+    ],
+    [
+     131119,
+     87145
+    ],
+    [
+     131119,
+     87146
+    ],
+    [
+     131120,
+     87143
+    ],
+    [
+     131120,
+     87144
+    ],
+    [
+     131120,
+     87145
+    ],
+    [
+     131120,
+     87146
+    ]
+   ],
+   "centre_bng": [
+    543310.5,
+    183073.97
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.528397
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131117_87143",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87146",
+   "tile_x0": 131117,
+   "tile_y0": 87146,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131117,
+     87146
+    ],
+    [
+     131117,
+     87147
+    ],
+    [
+     131117,
+     87148
+    ],
+    [
+     131117,
+     87149
+    ],
+    [
+     131118,
+     87146
+    ],
+    [
+     131118,
+     87147
+    ],
+    [
+     131118,
+     87148
+    ],
+    [
+     131118,
+     87149
+    ],
+    [
+     131119,
+     87146
+    ],
+    [
+     131119,
+     87147
+    ],
+    [
+     131119,
+     87148
+    ],
+    [
+     131119,
+     87149
+    ],
+    [
+     131120,
+     87146
+    ],
+    [
+     131120,
+     87147
+    ],
+    [
+     131120,
+     87148
+    ],
+    [
+     131120,
+     87149
+    ]
+   ],
+   "centre_bng": [
+    543318.54,
+    182788.95
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5258338
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131117_87146",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87149",
+   "tile_x0": 131117,
+   "tile_y0": 87149,
+   "missing": 12,
+   "missing_tiles": [
+    [
+     131117,
+     87149
+    ],
+    [
+     131117,
+     87150
+    ],
+    [
+     131117,
+     87151
+    ],
+    [
+     131118,
+     87149
+    ],
+    [
+     131118,
+     87150
+    ],
+    [
+     131118,
+     87151
+    ],
+    [
+     131119,
+     87149
+    ],
+    [
+     131119,
+     87150
+    ],
+    [
+     131119,
+     87151
+    ],
+    [
+     131120,
+     87149
+    ],
+    [
+     131120,
+     87150
+    ],
+    [
+     131120,
+     87151
+    ]
+   ],
+   "centre_bng": [
+    543326.59,
+    182503.9
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5232705
+   ],
+   "blank_frac": 0.7714,
+   "status": "skipped_missing",
+   "written": false,
+   "replaces": {
+    "name": "m18_131117_87149",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87152",
+   "tile_x0": 131117,
+   "tile_y0": 87152,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543334.63,
+    182218.85
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5207071
+   ],
+   "blank_frac": 0.0214,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131117_87152",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87155",
+   "tile_x0": 131117,
+   "tile_y0": 87155,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543342.67,
+    181933.77
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5181435
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131117_87155",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87158",
+   "tile_x0": 131117,
+   "tile_y0": 87158,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543350.72,
+    181648.69
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5155798
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131117_87158",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87161",
+   "tile_x0": 131117,
+   "tile_y0": 87161,
+   "missing": 0,
+   "missing_tiles": [],
+   "centre_bng": [
+    543358.76,
+    181363.58
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.5130159
+   ],
+   "blank_frac": 0.0,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131117_87161",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131117_87194",
+   "tile_x0": 131117,
+   "tile_y0": 87194,
+   "missing": 8,
+   "missing_tiles": [
+    [
+     131117,
+     87196
+    ],
+    [
+     131117,
+     87197
+    ],
+    [
+     131118,
+     87196
+    ],
+    [
+     131118,
+     87197
+    ],
+    [
+     131119,
+     87196
+    ],
+    [
+     131119,
+     87197
+    ],
+    [
+     131120,
+     87196
+    ],
+    [
+     131120,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    543447.25,
+    178226.38
+   ],
+   "centre_lonlat": [
+    0.0645447,
+    51.4848037
+   ],
+   "blank_frac": 0.5,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131117_87194",
+    "status": "written",
+    "missing": 8
+   }
+  },
+  {
+   "name": "q18_131120_87098",
+   "tile_x0": 131120,
+   "tile_y0": 87098,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131120,
+     87098
+    ],
+    [
+     131120,
+     87099
+    ],
+    [
+     131120,
+     87100
+    ],
+    [
+     131120,
+     87101
+    ],
+    [
+     131121,
+     87098
+    ],
+    [
+     131121,
+     87099
+    ],
+    [
+     131121,
+     87100
+    ],
+    [
+     131121,
+     87101
+    ],
+    [
+     131122,
+     87098
+    ],
+    [
+     131122,
+     87099
+    ],
+    [
+     131122,
+     87100
+    ],
+    [
+     131122,
+     87101
+    ],
+    [
+     131123,
+     87098
+    ],
+    [
+     131123,
+     87099
+    ],
+    [
+     131123,
+     87100
+    ],
+    [
+     131123,
+     87101
+    ]
+   ],
+   "centre_bng": [
+    543475.39,
+    187355.5
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.566827
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131120_87098",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87101",
+   "tile_x0": 131120,
+   "tile_y0": 87101,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131120,
+     87101
+    ],
+    [
+     131120,
+     87102
+    ],
+    [
+     131120,
+     87103
+    ],
+    [
+     131120,
+     87104
+    ],
+    [
+     131121,
+     87101
+    ],
+    [
+     131121,
+     87102
+    ],
+    [
+     131121,
+     87103
+    ],
+    [
+     131121,
+     87104
+    ],
+    [
+     131122,
+     87101
+    ],
+    [
+     131122,
+     87102
+    ],
+    [
+     131122,
+     87103
+    ],
+    [
+     131122,
+     87104
+    ],
+    [
+     131123,
+     87101
+    ],
+    [
+     131123,
+     87102
+    ],
+    [
+     131123,
+     87103
+    ],
+    [
+     131123,
+     87104
+    ]
+   ],
+   "centre_bng": [
+    543483.45,
+    187070.72
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.564266
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131120_87101",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87104",
+   "tile_x0": 131120,
+   "tile_y0": 87104,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131120,
+     87104
+    ],
+    [
+     131120,
+     87105
+    ],
+    [
+     131120,
+     87106
+    ],
+    [
+     131120,
+     87107
+    ],
+    [
+     131121,
+     87104
+    ],
+    [
+     131121,
+     87105
+    ],
+    [
+     131121,
+     87106
+    ],
+    [
+     131121,
+     87107
+    ],
+    [
+     131122,
+     87104
+    ],
+    [
+     131122,
+     87105
+    ],
+    [
+     131122,
+     87106
+    ],
+    [
+     131122,
+     87107
+    ],
+    [
+     131123,
+     87104
+    ],
+    [
+     131123,
+     87105
+    ],
+    [
+     131123,
+     87106
+    ],
+    [
+     131123,
+     87107
+    ]
+   ],
+   "centre_bng": [
+    543491.51,
+    186785.92
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5617049
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131120_87104",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87107",
+   "tile_x0": 131120,
+   "tile_y0": 87107,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131120,
+     87107
+    ],
+    [
+     131120,
+     87108
+    ],
+    [
+     131120,
+     87109
+    ],
+    [
+     131120,
+     87110
+    ],
+    [
+     131121,
+     87107
+    ],
+    [
+     131121,
+     87108
+    ],
+    [
+     131121,
+     87109
+    ],
+    [
+     131121,
+     87110
+    ],
+    [
+     131122,
+     87107
+    ],
+    [
+     131122,
+     87108
+    ],
+    [
+     131122,
+     87109
+    ],
+    [
+     131122,
+     87110
+    ],
+    [
+     131123,
+     87107
+    ],
+    [
+     131123,
+     87108
+    ],
+    [
+     131123,
+     87109
+    ],
+    [
+     131123,
+     87110
+    ]
+   ],
+   "centre_bng": [
+    543499.56,
+    186501.1
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5591436
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131120_87107",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87110",
+   "tile_x0": 131120,
+   "tile_y0": 87110,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131120,
+     87110
+    ],
+    [
+     131120,
+     87111
+    ],
+    [
+     131120,
+     87112
+    ],
+    [
+     131120,
+     87113
+    ],
+    [
+     131121,
+     87110
+    ],
+    [
+     131121,
+     87111
+    ],
+    [
+     131121,
+     87112
+    ],
+    [
+     131121,
+     87113
+    ],
+    [
+     131122,
+     87110
+    ],
+    [
+     131122,
+     87111
+    ],
+    [
+     131122,
+     87112
+    ],
+    [
+     131122,
+     87113
+    ],
+    [
+     131123,
+     87110
+    ],
+    [
+     131123,
+     87111
+    ],
+    [
+     131123,
+     87112
+    ],
+    [
+     131123,
+     87113
+    ]
+   ],
+   "centre_bng": [
+    543507.62,
+    186216.26
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5565822
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131120_87110",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87113",
+   "tile_x0": 131120,
+   "tile_y0": 87113,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131120,
+     87113
+    ],
+    [
+     131120,
+     87114
+    ],
+    [
+     131120,
+     87115
+    ],
+    [
+     131120,
+     87116
+    ],
+    [
+     131121,
+     87113
+    ],
+    [
+     131121,
+     87114
+    ],
+    [
+     131121,
+     87115
+    ],
+    [
+     131121,
+     87116
+    ],
+    [
+     131122,
+     87113
+    ],
+    [
+     131122,
+     87114
+    ],
+    [
+     131122,
+     87115
+    ],
+    [
+     131122,
+     87116
+    ],
+    [
+     131123,
+     87113
+    ],
+    [
+     131123,
+     87114
+    ],
+    [
+     131123,
+     87115
+    ],
+    [
+     131123,
+     87116
+    ]
+   ],
+   "centre_bng": [
+    543515.68,
+    185931.41
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5540206
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131120_87113",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87116",
+   "tile_x0": 131120,
+   "tile_y0": 87116,
+   "missing": 10,
+   "missing_tiles": [
+    [
+     131120,
+     87116
+    ],
+    [
+     131120,
+     87117
+    ],
+    [
+     131121,
+     87116
+    ],
+    [
+     131121,
+     87117
+    ],
+    [
+     131122,
+     87116
+    ],
+    [
+     131122,
+     87117
+    ],
+    [
+     131123,
+     87116
+    ],
+    [
+     131123,
+     87117
+    ],
+    [
+     131123,
+     87118
+    ],
+    [
+     131123,
+     87119
+    ]
+   ],
+   "centre_bng": [
+    543523.74,
+    185646.55
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5514589
+   ],
+   "blank_frac": 0.6671,
+   "status": "skipped_missing",
+   "written": false,
+   "replaces": {
+    "name": "m18_131120_87116",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87119",
+   "tile_x0": 131120,
+   "tile_y0": 87119,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131123,
+     87119
+    ],
+    [
+     131123,
+     87120
+    ],
+    [
+     131123,
+     87121
+    ],
+    [
+     131123,
+     87122
+    ]
+   ],
+   "centre_bng": [
+    543531.79,
+    185361.67
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.548897
+   ],
+   "blank_frac": 0.25,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131120_87119",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87122",
+   "tile_x0": 131120,
+   "tile_y0": 87122,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131123,
+     87122
+    ],
+    [
+     131123,
+     87123
+    ],
+    [
+     131123,
+     87124
+    ],
+    [
+     131123,
+     87125
+    ]
+   ],
+   "centre_bng": [
+    543539.85,
+    185076.77
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.546335
+   ],
+   "blank_frac": 0.25,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131120_87122",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87125",
+   "tile_x0": 131120,
+   "tile_y0": 87125,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131123,
+     87125
+    ],
+    [
+     131123,
+     87126
+    ],
+    [
+     131123,
+     87127
+    ],
+    [
+     131123,
+     87128
+    ]
+   ],
+   "centre_bng": [
+    543547.91,
+    184791.86
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5437729
+   ],
+   "blank_frac": 0.25,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131120_87125",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87128",
+   "tile_x0": 131120,
+   "tile_y0": 87128,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131123,
+     87128
+    ],
+    [
+     131123,
+     87129
+    ],
+    [
+     131123,
+     87130
+    ],
+    [
+     131123,
+     87131
+    ]
+   ],
+   "centre_bng": [
+    543555.97,
+    184506.93
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5412106
+   ],
+   "blank_frac": 0.25,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131120_87128",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87131",
+   "tile_x0": 131120,
+   "tile_y0": 87131,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131123,
+     87131
+    ],
+    [
+     131123,
+     87132
+    ],
+    [
+     131123,
+     87133
+    ],
+    [
+     131123,
+     87134
+    ]
+   ],
+   "centre_bng": [
+    543564.03,
+    184221.98
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5386482
+   ],
+   "blank_frac": 0.25,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131120_87131",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87134",
+   "tile_x0": 131120,
+   "tile_y0": 87134,
+   "missing": 10,
+   "missing_tiles": [
+    [
+     131120,
+     87136
+    ],
+    [
+     131120,
+     87137
+    ],
+    [
+     131121,
+     87136
+    ],
+    [
+     131121,
+     87137
+    ],
+    [
+     131122,
+     87136
+    ],
+    [
+     131122,
+     87137
+    ],
+    [
+     131123,
+     87134
+    ],
+    [
+     131123,
+     87135
+    ],
+    [
+     131123,
+     87136
+    ],
+    [
+     131123,
+     87137
+    ]
+   ],
+   "centre_bng": [
+    543572.08,
+    183937.02
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5360856
+   ],
+   "blank_frac": 0.7824,
+   "status": "skipped_missing",
+   "written": false,
+   "replaces": {
+    "name": "m18_131120_87134",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87137",
+   "tile_x0": 131120,
+   "tile_y0": 87137,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131120,
+     87137
+    ],
+    [
+     131120,
+     87138
+    ],
+    [
+     131120,
+     87139
+    ],
+    [
+     131120,
+     87140
+    ],
+    [
+     131121,
+     87137
+    ],
+    [
+     131121,
+     87138
+    ],
+    [
+     131121,
+     87139
+    ],
+    [
+     131121,
+     87140
+    ],
+    [
+     131122,
+     87137
+    ],
+    [
+     131122,
+     87138
+    ],
+    [
+     131122,
+     87139
+    ],
+    [
+     131122,
+     87140
+    ],
+    [
+     131123,
+     87137
+    ],
+    [
+     131123,
+     87138
+    ],
+    [
+     131123,
+     87139
+    ],
+    [
+     131123,
+     87140
+    ]
+   ],
+   "centre_bng": [
+    543580.14,
+    183652.04
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5335229
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131120_87137",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87140",
+   "tile_x0": 131120,
+   "tile_y0": 87140,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131120,
+     87140
+    ],
+    [
+     131120,
+     87141
+    ],
+    [
+     131120,
+     87142
+    ],
+    [
+     131120,
+     87143
+    ],
+    [
+     131121,
+     87140
+    ],
+    [
+     131121,
+     87141
+    ],
+    [
+     131121,
+     87142
+    ],
+    [
+     131121,
+     87143
+    ],
+    [
+     131122,
+     87140
+    ],
+    [
+     131122,
+     87141
+    ],
+    [
+     131122,
+     87142
+    ],
+    [
+     131122,
+     87143
+    ],
+    [
+     131123,
+     87140
+    ],
+    [
+     131123,
+     87141
+    ],
+    [
+     131123,
+     87142
+    ],
+    [
+     131123,
+     87143
+    ]
+   ],
+   "centre_bng": [
+    543588.2,
+    183367.05
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.53096
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131120_87140",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87143",
+   "tile_x0": 131120,
+   "tile_y0": 87143,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131120,
+     87143
+    ],
+    [
+     131120,
+     87144
+    ],
+    [
+     131120,
+     87145
+    ],
+    [
+     131120,
+     87146
+    ],
+    [
+     131121,
+     87143
+    ],
+    [
+     131121,
+     87144
+    ],
+    [
+     131121,
+     87145
+    ],
+    [
+     131121,
+     87146
+    ],
+    [
+     131122,
+     87143
+    ],
+    [
+     131122,
+     87144
+    ],
+    [
+     131122,
+     87145
+    ],
+    [
+     131122,
+     87146
+    ],
+    [
+     131123,
+     87143
+    ],
+    [
+     131123,
+     87144
+    ],
+    [
+     131123,
+     87145
+    ],
+    [
+     131123,
+     87146
+    ]
+   ],
+   "centre_bng": [
+    543596.26,
+    183082.04
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.528397
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131120_87143",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87146",
+   "tile_x0": 131120,
+   "tile_y0": 87146,
+   "missing": 16,
+   "missing_tiles": [
+    [
+     131120,
+     87146
+    ],
+    [
+     131120,
+     87147
+    ],
+    [
+     131120,
+     87148
+    ],
+    [
+     131120,
+     87149
+    ],
+    [
+     131121,
+     87146
+    ],
+    [
+     131121,
+     87147
+    ],
+    [
+     131121,
+     87148
+    ],
+    [
+     131121,
+     87149
+    ],
+    [
+     131122,
+     87146
+    ],
+    [
+     131122,
+     87147
+    ],
+    [
+     131122,
+     87148
+    ],
+    [
+     131122,
+     87149
+    ],
+    [
+     131123,
+     87146
+    ],
+    [
+     131123,
+     87147
+    ],
+    [
+     131123,
+     87148
+    ],
+    [
+     131123,
+     87149
+    ]
+   ],
+   "centre_bng": [
+    543604.32,
+    182797.02
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5258338
+   ],
+   "status": "skipped_no_tiles",
+   "written": false,
+   "blank_frac": 1.0,
+   "replaces": {
+    "name": "m18_131120_87146",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87149",
+   "tile_x0": 131120,
+   "tile_y0": 87149,
+   "missing": 13,
+   "missing_tiles": [
+    [
+     131120,
+     87149
+    ],
+    [
+     131120,
+     87150
+    ],
+    [
+     131120,
+     87151
+    ],
+    [
+     131121,
+     87149
+    ],
+    [
+     131121,
+     87150
+    ],
+    [
+     131121,
+     87151
+    ],
+    [
+     131122,
+     87149
+    ],
+    [
+     131122,
+     87150
+    ],
+    [
+     131122,
+     87151
+    ],
+    [
+     131123,
+     87149
+    ],
+    [
+     131123,
+     87150
+    ],
+    [
+     131123,
+     87151
+    ],
+    [
+     131123,
+     87152
+    ]
+   ],
+   "centre_bng": [
+    543612.38,
+    182511.98
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5232705
+   ],
+   "blank_frac": 0.8296,
+   "status": "skipped_missing",
+   "written": false,
+   "replaces": {
+    "name": "m18_131120_87149",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87152",
+   "tile_x0": 131120,
+   "tile_y0": 87152,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131123,
+     87152
+    ],
+    [
+     131123,
+     87153
+    ],
+    [
+     131123,
+     87154
+    ],
+    [
+     131123,
+     87155
+    ]
+   ],
+   "centre_bng": [
+    543620.44,
+    182226.92
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5207071
+   ],
+   "blank_frac": 0.2671,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131120_87152",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87155",
+   "tile_x0": 131120,
+   "tile_y0": 87155,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131123,
+     87155
+    ],
+    [
+     131123,
+     87156
+    ],
+    [
+     131123,
+     87157
+    ],
+    [
+     131123,
+     87158
+    ]
+   ],
+   "centre_bng": [
+    543628.5,
+    181941.85
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5181435
+   ],
+   "blank_frac": 0.25,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131120_87155",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87158",
+   "tile_x0": 131120,
+   "tile_y0": 87158,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131123,
+     87158
+    ],
+    [
+     131123,
+     87159
+    ],
+    [
+     131123,
+     87160
+    ],
+    [
+     131123,
+     87161
+    ]
+   ],
+   "centre_bng": [
+    543636.56,
+    181656.76
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5155798
+   ],
+   "blank_frac": 0.25,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131120_87158",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87161",
+   "tile_x0": 131120,
+   "tile_y0": 87161,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131123,
+     87161
+    ],
+    [
+     131123,
+     87162
+    ],
+    [
+     131123,
+     87163
+    ],
+    [
+     131123,
+     87164
+    ]
+   ],
+   "centre_bng": [
+    543644.62,
+    181371.65
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5130159
+   ],
+   "blank_frac": 0.25,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131120_87161",
+    "status": "skipped_no_tiles",
+    "missing": 16
+   }
+  },
+  {
+   "name": "q18_131120_87164",
+   "tile_x0": 131120,
+   "tile_y0": 87164,
+   "missing": 4,
+   "missing_tiles": [
+    [
+     131123,
+     87164
+    ],
+    [
+     131123,
+     87165
+    ],
+    [
+     131123,
+     87166
+    ],
+    [
+     131123,
+     87167
+    ]
+   ],
+   "centre_bng": [
+    543652.68,
+    181086.53
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.5104519
+   ],
+   "blank_frac": 0.25,
+   "status": "written",
+   "written": true,
+   "replaces": {
+    "name": "m18_131120_87164",
+    "status": "written",
+    "missing": 7
+   }
+  },
+  {
+   "name": "q18_131120_87194",
+   "tile_x0": 131120,
+   "tile_y0": 87194,
+   "missing": 10,
+   "missing_tiles": [
+    [
+     131120,
+     87196
+    ],
+    [
+     131120,
+     87197
+    ],
+    [
+     131121,
+     87196
+    ],
+    [
+     131121,
+     87197
+    ],
+    [
+     131122,
+     87196
+    ],
+    [
+     131122,
+     87197
+    ],
+    [
+     131123,
+     87194
+    ],
+    [
+     131123,
+     87195
+    ],
+    [
+     131123,
+     87196
+    ],
+    [
+     131123,
+     87197
+    ]
+   ],
+   "centre_bng": [
+    543733.29,
+    178234.45
+   ],
+   "centre_lonlat": [
+    0.0686646,
+    51.4848037
+   ],
+   "blank_frac": 0.625,
+   "status": "skipped_missing",
+   "written": false,
+   "replaces": {
+    "name": "m18_131120_87194",
+    "status": "skipped_missing",
+    "missing": 10
+   }
+  }
+ ],
+ "edition_notes": {
+  "status": "INFERENCE from map content, 2026-09-28; sheet margins are cut off in the tiles, so no sheet number, survey or revision date was read directly. Verify against NLS sheet metadata before citing.",
+  "inferred_edition": "Essex (or London) County Series 1:2500, most likely the 1893-96 revision (2nd edition), same epoch as the five-foot sheets; not the 1860s-70s first edition and probably not the c.1915 revision.",
+  "evidence": [
+   "q18_131105_87125 (Manor Park / Little Ilford, E 542120 N 184752): Shelley Road, Byron Road and Woodhouse [Grove] are drawn as laid-out estate roads (pecked kerbs) with NO houses. That is the moment of 1890s estate layout: a 1860s-70s first edition would show only fields, and a c.1915 edition would show these streets built up.",
+   "q18_131111_87128 (E 542699 N 184483): the railway is lettered LONDON TILBURY & SOUTHEND RAILWAY with fields, Farm Lane and a few buildings; no suburban housing yet. Consistent with an early-1890s snapshot of East Ham; not diagnostic on its own.",
+   "q18_131105_87161 and q18_131108_87158 (Plaistow / East Ham levels, N 181300-181700): open grazing marsh with ditches, a straight embanked road (probably Beckton Road, c.1870) and a railway at the SE corner (probably the Beckton gasworks branch, 1870s). Proves post-1870; the marsh stayed open into the 1900s so this does not separate 1890s from later.",
+   "q18_131102_87149 / q18_131099_87152 (N 182100-182500): fields and a railway in cutting/embankment, parcel numbers with acreages to 3 dp; no West Ham tramways or new housing visible.",
+   "Hole mosaics are almost entirely undeveloped land (marsh, fields). That is probably WHY the five-foot London town plan has no sheets there: the 1:1056 was only published for built-up areas.",
+   "Sheet joins visible as thin straight lines with acreages repeated on both sides: horizontal at py ~780 in q18_131102_87149, vertical at px ~440 in q18_131105_87161 and px ~455 in q18_131105_87125.",
+   "Not seen in the mosaics examined: Royal Albert Dock (1880), Abbey Mills or LCC lettering, tram lines. The q18 set covers the hole east of the Channelsea plus edge rows, which lie away from those features."
+  ],
+  "datum": "Heights read as feet above Ordnance Datum (Liverpool), as on the five-foot. Local B.M.s agree with the five-foot/1848 values in magnitude (e.g. marsh B.M.5.6, 5.7, 8.4; Manor Park B.M.32.4, 35.0)."
+ },
+ "reading_notes": {
+  "digit_size_px": "about 11-14 px tall at zoom 18 (upright acreages ~14 px, italic spot figures ~12-14 px, B.M. lettering ~11-13 px): about twice the five-foot 6 px",
+  "spot_heights": "Whole feet, in small italic figures (e.g. 4, 8, 16, 31), written beside a small + or x or a dot on the road, path or bank; the survey point is that + / x / dot, not the figure. No decimal. Often regularly spaced along roads.",
+  "bench_marks": "B.M. + pheon (broad arrow), to 1 dp (B.M.5.6, B.M.20.8, B.M.32.4); the pheon point is the position, usually on the line just beside the text.",
+  "look_alikes": "Upright figures are parcel numbers (e.g. 104, 123) and acreages to 3 dp (4.818, 23.891, .653); never heights. B.S. = boundary stone, C.R. / C.S. = centre of road / stream (boundary), S.P. = signal post, B.P. = boundary post, triangle = trig/traverse station."
+ }
+}

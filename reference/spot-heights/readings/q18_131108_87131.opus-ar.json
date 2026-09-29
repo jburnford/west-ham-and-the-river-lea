@@ -1,0 +1,24 @@
+{
+ "mosaic": "q18_131108_87131", "reader": "opus-ar", "layer": "os-25-inch-london",
+ "area": "East Ham: High Street North crossing the London Tilbury & Southend Railway at East Ham Station, Burges Road, Lathom Road, Keppel Road, Clements Road, Bendish Road, Sibley Grove; open plots on the east",
+ "method": "OS 25-inch (os-25-inch-london) layer. sheet (no join reported); 1x overview (East Ham Station, HIGH STREET NORTH); sweep of all 9 crops at 2x, each anchored in notes when opened: r0c0 GROVE, AVENUE, B P, L.B; r0c1 SIBLEY, East Ham, S.B; r0c2 SIBLEY GROVE, LONDON TILBURY; r1c0 HIGH STREET NORTH, S.P; r1c1 BURGES ROAD; r1c2 KEPPEL R.., East Ham Station; r2c0 BENDISH ROAD, display T; r2c1 LATHOM ROAD, CLEMENTS, display H; r2c2 KEPPEL ROAD, display A, triangle. Contact sheets cs1 (6x) and cs2 (5x, wide) around every candidate. All crops and contact sheets displayed when opened. Positions checked on a marker sheet. Fully on-sheet; no margin or missing tiles.",
+ "legibility": "Clean; italic whole-foot figures clear. No sheet join seen. North 256 px overlaps q18_131108_87128 (py there = py here + 768).",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [
+  {"type": "spot", "value_ft": 28, "raw": "28", "px": 229, "py": 58, "confidence": "high", "setting": "street",
+   "notes": "overlap strip; figure 210-225,58 at the Plashet Grove / C.R. lane / Jews Farm Lane junction; star cross 12 px east below the B.P. pheon; 6x"},
+  {"type": "spot", "value_ft": 37, "raw": "37", "px": 363, "py": 437, "confidence": "medium", "setting": "bridge",
+   "notes": "figure at 355-372,437 at the south end of the High Street North bridge over the LT&SR (east parapet, beside S.P and the cutting hachures); no distinct cross found within 45 px, position = centre of figures; value fits a road bridge over the railway with the street at 30 just south"},
+  {"type": "spot", "value_ft": 30, "raw": "30", "px": 340, "py": 600, "confidence": "high", "setting": "street",
+   "notes": "figure 305-325,607 on High Street North at Burges Road; star cross between STREET and NORTH 20 px NE; 6x"},
+  {"type": "spot", "value_ft": 28, "raw": "28", "px": 378, "py": 787, "confidence": "high", "setting": "street",
+   "notes": "figure 405-425,797 at the corner of High Street North and Lathom Road; star cross in the carriageway 35 px west (nearest isolated cross); 6x"},
+  {"type": "spot", "value_ft": 28, "raw": "28", "px": 434, "py": 980, "confidence": "high", "setting": "street",
+   "notes": "figure 428-448,953 at the corner of High Street North and Clements Road; star cross 27 px below the figure; 6x"}
+ ],
+ "non_height_marks": ["triangle with centre dot (survey station) at 973,768 with no figure", "S.P (signal posts) at ~305,430 and ~715,165", "S.B (signal box) at ~390,405", "district display letters T, H, A (EAST HAM)", "P.H. at ~355,1010", "isolated dot at ~662,610 in an open plot, no figure"],
+ "unreadable_regions": [
+  {"px0": 225, "py0": 0, "px1": 300, "py1": 10, "reason": "B P / B.M.28·3 text cut by the north edge (pheon whole at ~238,37); read whole on q18_131108_87128"},
+  {"px0": 0, "py0": 95, "px1": 20, "py1": 118, "reason": "figure '29' cut by the west edge (whole on q18_131105_87131 / q18_131105_87128)"}
+ ]
+}

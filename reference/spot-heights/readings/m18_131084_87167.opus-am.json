@@ -1,0 +1,244 @@
+{
+ "mosaic": "m18_131084_87167",
+ "reader": "opus-am",
+ "area": "Royal Victoria Dock west end / Tidal Basin, Custom House side: Albert & Victoria Docks Cut railway, Presbyterian Chapel, M.R. Goods & Coal Depot, N., S. and E. Warehouses and jetties, Tidal Basin",
+ "method": "Viewed all 9 sweep crops (2x) with anchors noted on opening (r0c0 Albert & Victoria Docks Cut/Presb. Chapel; r0c1 N. Warehouse/embankment; r0c2 Royal Albert & Vic.../S. Warehouse; r1c0 M.R. Goods & Coal Depot/Crane; r1c1 N. Warehouse/M.P jetty; r1c2 E. Warehouse/Crane; r2c0 TIDAL/Mooring Posts; r2c1 TIDAL BASIN; r2c2 E. Warehouse/swing bridge). 4-8x region views of every candidate (9 regions, anchors noted), contact sheets cs_a (8x), cs_a2 (14x), cs_bm (12x), cs_bm2 (12x), cs_ph (8x pheon sheet), and a marker sheet. Every crop and contact sheet displayed when opened.",
+ "legibility": "Good; mostly open dock ground and water with few figures. Vertical sheet join at px ~632 full height (dock water uncoloured west of it, blue east of it). The tool's horizontal joins at py ~177-418 and ~788 and vertical ~772/858 were not seen as joins by eye (dock water colour edges).",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "bench_mark",
+   "value_ft": 8.97,
+   "raw": "B.M.8·97",
+   "px": 372,
+   "py": 11,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "text whole at top edge south of the terrace; no pheon found inside the mosaic (probably on the building just beyond the north edge); position = centre of text; lead 8 closed at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 416,
+   "py": 9,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road along the north edge (south of the terrace, north of the Docks Cut railway); dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 242,
+   "py": 42,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "road north of the railway lines beside the Albert & Victoria Docks Cut; dot left; lead digit flat-topped like the clear 5 of the other 5·9 at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 89,
+   "py": 77,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road south of the Presbyterian Chapel; dot left; flat-topped 5"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.6,
+   "raw": "9·6",
+   "px": 690,
+   "py": 114,
+   "confidence": "low",
+   "setting": "yard",
+   "notes": "corner of the premises yard south of the railway at the join; lead 9/5 and final 6/8 both uncertain at 8x/14x; an isolated dot on the rail 22 px north (687,92) may belong to it; position = centre"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.9,
+   "raw": "6·9",
+   "px": 708,
+   "py": 243,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "lane/yard between the buildings east of the embankment; dot above"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.3,
+   "raw": "21·3",
+   "px": 728,
+   "py": 367,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "dock quay north of the Crane and warehouses, south of the S. Warehouse; dot upper-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 21.6,
+   "raw": "21·6",
+   "px": 936,
+   "py": 352,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "dock quay south of S. Warehouse; dot left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.6,
+   "raw": "19·6",
+   "px": 752,
+   "py": 545,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "figure written over the dock water, dot on the west wall of the E. Warehouse jetty; open-topped 6 at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.7,
+   "raw": "19·7",
+   "px": 766,
+   "py": 706,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "figure over water, dot on the west wall of the E. Warehouse jetty"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.22,
+   "raw": "B.M.19·22",
+   "px": 818,
+   "py": 825,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "pheon on the jetty end wall at the swing-bridge landing south of E. Warehouse; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.3,
+   "raw": "19·3",
+   "px": 785,
+   "py": 897,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "north-west corner of the southern jetty at the swing bridge; dot at the wall vertex (M.P below has its own dot)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.2,
+   "raw": "18·2",
+   "px": 63,
+   "py": 808,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "M.R. Goods & Coal Depot ground just east of the hatched NW-SE bank; dot above-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.63,
+   "raw": "B.M.19·63",
+   "px": 97,
+   "py": 890,
+   "confidence": "medium",
+   "setting": "wall_top",
+   "notes": "pheon at the quay wall corner by the Tidal Basin south of the goods depot; first decimal read 6 at 12x but not fully closed-off from 8"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 17,
+   "py": 955,
+   "confidence": "medium",
+   "setting": "embankment_foot",
+   "notes": "quay ground beside the Tidal Basin (Mooring Posts) at the foot of the lower hatched slope, below 18·2/19·63 on the made ground above; dot left; closed 8"
+  }
+ ],
+ "non_height_marks": [
+  "M.P / M.PS (mooring posts) along dock quays and jetties",
+  "S.P. on the railway",
+  "Cn and Crane labels",
+  "survey triangle at ~150,425 with no figure"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 610,
+   "px1": 8,
+   "py1": 626,
+   "reason": "figure (ending in 5) cut by the west edge"
+  },
+  {
+   "px0": 628,
+   "py0": 0,
+   "px1": 636,
+   "py1": 1024,
+   "reason": "vertical sheet join at px ~632"
+  },
+  {
+   "px0": 256,
+   "py0": 470,
+   "px1": 1024,
+   "py1": 1024,
+   "reason": "dock and Tidal Basin water, no heights (uncoloured west of the join)"
+  }
+ ]
+}

@@ -1,0 +1,232 @@
+{
+  "mosaic": "m18_131084_87122",
+  "reader": "opus-u",
+  "area": "Forest Gate: The Grove, Norwich Road, Clova Road, Congregational Chapel and Sunday School, Romford Road tramway, top of Crosby Road",
+  "method": "Independent second read (no other reader's file consulted). Viewed all 9 sweep crops at 2x (anchors: r0c0 GROVE lettering; r0c1 N.O.R.W.I.C.H and B.M.37.17; r0c2 CLOVA ROA; r1c0 CLOVA ROAD west; r1c1 Sun. Sch./Cong; r1c2 Congl. Chapel Seats for 700; r2c0 tramway road with F.P and tint join; r2c1 CROSBY and L.D./F.A.; r2c2 D I S lettering). Contact sheets viewed: cs1 (8x, 6 panels, G 35.6 / 36.0 / B.M.37.17 / F.P 35.8 / N 35.3 / 34.9), cs2 (12x, 6 panels), cs3 (6x pheon and 34.9 dot), cs4 (12x pheon, 4.9, .2), cs5 (10x 34.9, F.P 35.2, 34.3), cs6 + cs6nn (14x smooth and nearest-neighbour 35.2, 34.3), cs7 (6x, six southern candidates), cs8 (12x, six southern figures), cs9 (10x 33.5 and B.M.35.57), marker sheets mk1 and mk2 (every recorded position boxed and checked; corrected 36.0 dot by 11 px and 35.6 dot by 2 px). Every crop and sheet displayed when opened and has an anchor in my notes.",
+  "legibility": "Good, clean print. Italic 3s render close to 8 at 10-14x; resolved by matching digits within a figure and by setting. Sheet joins: horizontal tint step at py ~748 across the full width; vertical join at px ~650-656 south of py ~748 (tint change); both seen by eye, no figure cut by either.",
+  "crop_bounds_checked": [
+    [
+      0,
+      0,
+      448,
+      448
+    ],
+    [
+      288,
+      0,
+      736,
+      448
+    ],
+    [
+      576,
+      0,
+      1024,
+      448
+    ],
+    [
+      0,
+      288,
+      448,
+      736
+    ],
+    [
+      288,
+      288,
+      736,
+      736
+    ],
+    [
+      576,
+      288,
+      1024,
+      736
+    ],
+    [
+      0,
+      576,
+      448,
+      1024
+    ],
+    [
+      288,
+      576,
+      736,
+      1024
+    ],
+    [
+      576,
+      576,
+      1024,
+      1024
+    ]
+  ],
+  "readings": [
+    {
+      "type": "spot",
+      "value_ft": 35.6,
+      "raw": "35·6",
+      "px": 76,
+      "py": 198,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "The Grove, west; dot after G of GROVE (no interpuncts in GROVE); digits clear at 8x and 12x, final 6 open"
+    },
+    {
+      "type": "spot",
+      "value_ft": 36.0,
+      "raw": "36·0",
+      "px": 272,
+      "py": 140,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "The Grove; isolated dot 10 px left of figure; 6 open at 8x; position corrected on marker sheet"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 37.17,
+      "raw": "B.M.37·17",
+      "px": 439,
+      "py": 115,
+      "confidence": "high",
+      "setting": "building",
+      "notes": "corner of The Grove and Norwich Road; Y-shaped pheon 20 px NE of text, tip located at 12x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 35.8,
+      "raw": "35·8",
+      "px": 455,
+      "py": 96,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "Norwich Road north end at The Grove; dot directly above figure, separate from the F.P's own leading dot at 445,91; final 8 closed at 8x and 12x"
+    },
+    {
+      "type": "spot",
+      "value_ft": 35.3,
+      "raw": "35·3",
+      "px": 502,
+      "py": 249,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Norwich Road; only nearby dot is the N·O interpunct of N·O·R·W·I·C·H, used as position; final 3 matches leading 3"
+    },
+    {
+      "type": "spot",
+      "value_ft": 34.9,
+      "raw": "34·9",
+      "px": 552,
+      "py": 402,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Norwich Road at Clova Road; dot after the final H of NORWICH (last letter, so probably the survey dot), 10 px left of figure"
+    },
+    {
+      "type": "spot",
+      "value_ft": 35.2,
+      "raw": "35·2",
+      "px": 667,
+      "py": 36,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "The Grove east, by railway line; F.P has its own leading dot, the extra dot below between P and figure taken as survey dot; leading digit blurred 3/5 at 14x, 3 by setting"
+    },
+    {
+      "type": "spot",
+      "value_ft": 34.3,
+      "raw": "34·3",
+      "px": 603,
+      "py": 562,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Norwich Road south end at Romford Road, by Sunday School; dot directly above; final 3 read by comparison with leading 3 (8-like at 14x)"
+    },
+    {
+      "type": "spot",
+      "value_ft": 34.0,
+      "raw": "34·0",
+      "px": 657,
+      "py": 718,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Romford Road by the Congl. Chapel; dot on the tramway rail above-left of figure (rails carry dots); survey triangle at ~664,695 nearby without its own figure"
+    },
+    {
+      "type": "spot",
+      "value_ft": 33.7,
+      "raw": "33·7",
+      "px": 436,
+      "py": 807,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Romford Road at Crosby Road; dot on tramway rail above figure"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 35.88,
+      "raw": "B.M.35·88",
+      "px": 462,
+      "py": 821,
+      "confidence": "high",
+      "setting": "building",
+      "notes": "corner of Romford Road and Crosby Road; Y pheon 15 px NE of text, tip at 12x; both final digits identical, closed 8s"
+    },
+    {
+      "type": "spot",
+      "value_ft": 34.4,
+      "raw": "34·4",
+      "px": 696,
+      "py": 874,
+      "confidence": "high",
+      "setting": "street",
+      "notes": "road south of Romford Road east of the vertical join; dot directly above the first 4"
+    },
+    {
+      "type": "bench_mark",
+      "value_ft": 35.57,
+      "raw": "B.M.35·57",
+      "px": 895,
+      "py": 611,
+      "confidence": "medium",
+      "setting": "building",
+      "notes": "north side of Romford Road east; arrow on building front 15 px left of value; leading 3 crossed by the frontage line, read by setting"
+    },
+    {
+      "type": "spot",
+      "value_ft": 33.8,
+      "raw": "33·8",
+      "px": 906,
+      "py": 630,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Romford Road east; dot on tramway rail above figure; final 8 closed, unlike the leading 3s"
+    },
+    {
+      "type": "spot",
+      "value_ft": 33.5,
+      "raw": "33·5",
+      "px": 949,
+      "py": 826,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "side road south of Romford Road (D I S lettering); dot directly above; the two leading digits identical and 8-like at 10-12x, so 33 by the matching rule and setting"
+    },
+    {
+      "type": "spot",
+      "value_ft": 32.3,
+      "raw": "32·3",
+      "px": 195,
+      "py": 916,
+      "confidence": "medium",
+      "setting": "street",
+      "notes": "Romford Road west; dot on tramway rail up-left of figure; final 3 matches leading 3"
+    }
+  ],
+  "non_height_marks": [
+    "many F.P. marks along The Grove, Norwich Road, Clova Road and Romford Road",
+    "L.D. and F.A. at ~615-640,735 by the Romford Road tramway",
+    "survey-station triangle with centre dot at ~664,695, no figure of its own",
+    "Sun. Sch. / Congl. Chapel Seats for 700 lettering"
+  ],
+  "unreadable_regions": []
+}

@@ -1,0 +1,341 @@
+{
+ "mosaic": "m18_131081_87167",
+ "reader": "opus-ag",
+ "area": "Canning Town south / Tidal Basin: G.E.R. Woolwich Branch and Victoria Dock Road, Tidal Basin Station, Union Street, Peto Street, Rivett.., North Woolwich Road, the Cricket Ground, Alfred Street, Chapel Street, Bell & Anchor Cottages, the M.R. Goods & Coal Depot and the Tidal Basin quay (Mooring Posts)",
+ "method": "sheet tool (no join reported; none seen by eye); 9 sweep crops at 2x (anchors: r0c0 G.E.R. WOOLWICH BRANCH/PETO STREET/Post Office; r0c1 Tidal Basin Station/S.B./Sluice; r0c2 Presb. Chapel/Royal Albert & Victoria Dock; r1c0 NORTH WOOLWICH ROAD/Cricket Ground; r1c1 Cricket Ground/ALFRED STREET; r1c2 M.R. Goods & Coal Depôt/Crane; r2c0 Albert & Victoria Docks Cut/L.B./B.M.8·34; r2c1 CHAPEL STREET/BELL & ANCHOR COTTAGES; r2c2 Mooring Posts/B.M.19·63); contact sheets cs1 (5x, anchor B.M.8·01/Tidal Sta..), cs2 (5x, B.M.16·80/L.B./B.M.19·63), cs3 and cs4 (12x B.M. decimals), cs5 (7x digit checks), cs6 (14x nearest-neighbour) and cs6b (14x) on the NW 5·7; zooms 760,960 s3 (quay strip) and 460,915 s3 (hatched bank by the sidings); numeric dot centroids; marker sheets mk1-mk2 checked every position. All crops, zooms, contact and marker sheets displayed when opened; an anchor was written for each at the time.",
+ "legibility": "Good. No sheet join seen. No missing tiles. Victoria Dock Road and North Woolwich Road use interpunct lettering (VICTORIA, DOCK, W·O·O·L), so several street figures have no separable dot.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 5.7,
+   "raw": "5·7",
+   "px": 36,
+   "py": 13,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "road north of the G.E.R. at the NW corner; dot left of figures; final digit has a curled top and no base bar, read 7 against the known 7 of 5·7 at Peto Street but could be 2"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.5,
+   "raw": "5·5",
+   "px": 174,
+   "py": 79,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road beside F.P, north of the G.E.R. Woolwich Branch; dot left of figures; both 5s flat-topped"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.7,
+   "raw": "8·7",
+   "px": 167,
+   "py": 150,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road junction south of the railway at Union Street; dot above figures; 8 closed at 7x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 157,
+   "py": 236,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "figure written over the corner building at Union Street / Peto Street; no dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.3,
+   "raw": "5·3",
+   "px": 389,
+   "py": 143,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Victoria Dock Road by the station forecourt, between the I and A of VICTORIA; no dot found; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.8,
+   "raw": "9·8",
+   "px": 373,
+   "py": 217,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road south of the railway east of Post Office; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.6,
+   "raw": "6·6",
+   "px": 14,
+   "py": 321,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "North Woolwich Road at the west edge; dot left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.01,
+   "raw": "B.M.8·01",
+   "px": 256,
+   "py": 406,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon at the building corner at the south end of Peto Street; text below; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.7,
+   "raw": "5·7",
+   "px": 275,
+   "py": 417,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "south end of Peto Street at the Cricket Ground road; dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.6,
+   "raw": "4·6",
+   "px": 552,
+   "py": 24,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Rivett.. street north of Victoria Dock Road; the dot above-left is at the start of the R of RIVETT (possible interpunct); position = dot"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 7.79,
+   "raw": "B.M.7·79",
+   "px": 492,
+   "py": 152,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon pointing down on the north wall line of Tidal Basin Station, Victoria Dock Road; 7·79 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.7,
+   "raw": "6·7",
+   "px": 562,
+   "py": 148,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Victoria Dock Road at the station; the dot above is the C·K interpunct of DOCK; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 722,
+   "py": 125,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Victoria Dock Road east of the station (by the A of ROAD); no dot found; position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.8,
+   "raw": "B.M.16·80",
+   "px": 684,
+   "py": 300,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "pheon on the bridge structure carrying the road over the railway east of Tidal Basin Station; text 30 px NW; 16·80 clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.6,
+   "raw": "13·6",
+   "px": 634,
+   "py": 313,
+   "confidence": "high",
+   "setting": "bridge",
+   "notes": "road approach rising to the bridge over the railway (no hatching drawn), south-west of B.M.16·80; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.9,
+   "raw": "15·9",
+   "px": 756,
+   "py": 369,
+   "confidence": "medium",
+   "setting": "yard",
+   "notes": "made ground at the north end of the M.R. Goods & Coal Depot beside the railway, at the head of the hatched bank on its west side; dot above-left; setting judged from surroundings"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.5,
+   "raw": "18·5",
+   "px": 766,
+   "py": 597,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "M.R. Goods & Coal Depot beside the sidings; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.0,
+   "raw": "6·0",
+   "px": 179,
+   "py": 490,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "North Woolwich Road by the P.H.; no dot found; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 260,
+   "py": 648,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "North Woolwich Road beside F.P; the only nearby dot is the F.P's own leading dot; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.3,
+   "raw": "7·3",
+   "px": 377,
+   "py": 794,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "North Woolwich Road at the L.B. corner by the P.H.; dot left of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.34,
+   "raw": "B.M.8·34",
+   "px": 396,
+   "py": 784,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon at the west corner of the P.H. at Alfred Street; text below-left; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.4,
+   "raw": "11·4",
+   "px": 468,
+   "py": 932,
+   "confidence": "high",
+   "setting": "embankment_top",
+   "notes": "railway sidings side at the crest of the hatched bank that drops to the Chapel Street / Bell & Anchor Cottages streets (6-7 ft); dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.2,
+   "raw": "18·2",
+   "px": 831,
+   "py": 808,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "M.R. Goods & Coal Depot south end; dot above-left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 19.63,
+   "raw": "B.M.19·63",
+   "px": 866,
+   "py": 888,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "pheon on the south boundary wall of the depot at the quay corner; text to the right; final 3 open at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.8,
+   "raw": "16·8",
+   "px": 784,
+   "py": 954,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "quay strip between the hatched bank south of Bell & Anchor Cottages and the Mooring Posts line (Tidal Basin quay); dot left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 856,
+   "py": 77,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "overlap strip with 87164: road north of the railway by the Presbyterian Chapel; dot left of figures"
+  }
+ ],
+ "non_height_marks": [
+  "S.P marks on the G.E.R. and sidings",
+  "D.Fn. (drinking fountain) at ~400,120",
+  "Crane / Cn marks and mooring-post dots along the Tidal Basin quay",
+  "survey triangle at ~916,428 with no figure",
+  "L.B. at ~380,780"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1004,
+   "py0": 34,
+   "px1": 1024,
+   "py1": 50,
+   "reason": "figure '5·..' cut by the east edge (its dot at ~1008,42)"
+  }
+ ]
+}

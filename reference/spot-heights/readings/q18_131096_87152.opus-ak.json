@@ -1,0 +1,10 @@
+{
+  "mosaic": "q18_131096_87152", "reader": "opus-ak", "layer": "os-25-inch-london",
+  "area": "Plaistow marsh south of the railway: the large field parcel 20 (51.488 ac) crossed by two pecked field tracks, blue marsh drains along the south and east edges with a boundary Stone and Post; E ~541140-541530, N ~181860-182250",
+  "method": "Layer: OS 25-inch (1:2500) Essex county series, inferred 1893-96 revision. Viewed the full 1024 px mosaic at 1x (anchor: 20 51.488, Stone, Post, blue drains), all 9 sweep crops at 2x (r0c0 join line and part of 20/51.4..; r0c1 20 51.488 and tie mark on track; r0c2 pecked track corner; r1c0 two pecked tracks; r1c1 two tie marks on tracks; r1c2 blue drain junction; r2c0 Stone by drain; r2c1 Stone and Post; r2c2 east drain with tie mark), and one 6x zoom at 520,365 (irregular track dashes, no figure). Every crop and zoom displayed when opened and has an anchor in my notes. No height figures anywhere, so no marker sheet was needed.",
+  "legibility": "Clear. The sheet is almost blank field/marsh; no spot heights or bench marks on the tracks, drains or field. Horizontal sheet join at py ~12 (the py ~780 join of q18_131096_87149), with the acreage 51.488 repeated on both sides; the tool reports no join.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [],
+  "non_height_marks": ["parcel 20 acreage 51·488 at ~445,232", "boundary 'Stone' dot at ~341,932 and 'Post' dot at ~463,930 by the drain", "S-shaped tie marks on the pecked tracks at ~455,375, ~475,620, ~540,905 and on the drains at ~160,965, ~1000,745"],
+  "unreadable_regions": []
+}

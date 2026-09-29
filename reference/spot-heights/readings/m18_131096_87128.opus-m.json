@@ -1,0 +1,243 @@
+{
+ "mosaic": "m18_131096_87128",
+ "reader": "opus-m",
+ "area": "Upton / Plashet: Strone Road, South Esk Road, Marlborough Road, Rothsay Road, Post Lane, Jephson Road, Lansdown Road, Westbury Road, Cromwell Road, Shaftesbury Road; Plashet school",
+ "method": "Viewed all 9 sweep crops (2x) and contact sheets cs1-cs6 (8x to 24x zoom panels labelled in mosaic px), plus a grayscale pixel dump of two figures; every image displayed when opened. Every value confirmed at >=8x, doubtful digits at 14-24x.",
+ "legibility": "Good, but the small italic 3 renders 8-like at high zoom, so final 3/8 and 5/6 are hard. Vertical sheet join at px ~171 (py 0-950) and horizontal join at py ~948-950 across the width, both confirmed by eye; no figure crosses a join.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 30.9,
+   "raw": "30·9",
+   "px": 165,
+   "py": 254,
+   "confidence": "high",
+   "notes": "road between Strone Road and South Esk Road, just west of the px~171 sheet join; dot right of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.4,
+   "raw": "30·4",
+   "px": 397,
+   "py": 182,
+   "confidence": "high",
+   "notes": "SOUTH ESK ROAD at the Jephson Road corner; dot left of figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 32.97,
+   "raw": "B.M.32·97",
+   "px": 414,
+   "py": 201,
+   "confidence": "medium",
+   "notes": "corner house at South Esk / Jephson Road; pheon on the house wall right of the B.M. text; first digit is the italic 3 that renders 8-like at 14-24x, read 3 by context"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.3,
+   "raw": "31·3",
+   "px": 363,
+   "py": 361,
+   "confidence": "low",
+   "notes": "end of MARLBOROUGH ROAD; last digit 3 or 8 (matches the italic first 3 at 16x); only nearby dots are the A·D interpunct and the F.P. dot; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.7,
+   "raw": "30·7",
+   "px": 573,
+   "py": 125,
+   "confidence": "high",
+   "notes": "SOUTH ESK ROAD east; dot right of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.3,
+   "raw": "31·3",
+   "px": 746,
+   "py": 71,
+   "confidence": "low",
+   "notes": "POST LANE, north; dot below-right of figure just before the P of the lane name (interpunct ambiguity); last digit 3 vs 9/8 at 24x, same shape as first 3"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.4,
+   "raw": "30·4",
+   "px": 843,
+   "py": 270,
+   "confidence": "high",
+   "notes": "POST LANE at Rothsay Road; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.5,
+   "raw": "31·5",
+   "px": 1023,
+   "py": 198,
+   "confidence": "high",
+   "notes": "road at the east edge; dot right of figure at the very edge; 5 flat-topped at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.5,
+   "raw": "29·5",
+   "px": 912,
+   "py": 402,
+   "confidence": "medium",
+   "notes": "POST LANE south; dot above figure, just below the N of LANE (interpunct ambiguity); 5 read at 16x, 5/6 not fully certain at 24x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.6,
+   "raw": "31·6",
+   "px": 385,
+   "py": 472,
+   "confidence": "medium",
+   "notes": "JEPHSON ROAD north; isolated dot below-left of figure; last digit 6 at 16x, 6/8 doubt at 24x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.7,
+   "raw": "31·7",
+   "px": 412,
+   "py": 565,
+   "confidence": "medium",
+   "notes": "JEPHSON ROAD; dot below figure between the H and S of JEPHSON, next to an F.P. (interpunct ambiguity)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.9,
+   "raw": "31·9",
+   "px": 438,
+   "py": 643,
+   "confidence": "medium",
+   "notes": "JEPHSON ROAD south; dot above-left of figure directly below an F.P. mark (could be the F.P.'s own dot)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.2,
+   "raw": "30·2",
+   "px": 998,
+   "py": 562,
+   "confidence": "high",
+   "notes": "POST LANE south-east corner; dot above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.4,
+   "raw": "30·4",
+   "px": 806,
+   "py": 661,
+   "confidence": "medium",
+   "notes": "WESTBURY ROAD; no dot found at 16x; position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.1,
+   "raw": "B.M.33·10",
+   "px": 437,
+   "py": 790,
+   "confidence": "high",
+   "notes": "Cromwell Road / Jephson Road corner; pheon on house corner ~15 px below-right of text; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.4,
+   "raw": "31·4",
+   "px": 297,
+   "py": 832,
+   "confidence": "high",
+   "notes": "CROMWELL ROAD; dot above the 4; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.3,
+   "raw": "31·3",
+   "px": 118,
+   "py": 908,
+   "confidence": "medium",
+   "notes": "CROMWELL ROAD west; dot between the M and W of CROM·WELL taken as survey dot (interpunct ambiguity); last digit 3 matches first"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.7,
+   "raw": "31·7",
+   "px": 471,
+   "py": 761,
+   "confidence": "high",
+   "notes": "Jephson Road at Westbury Road; dot above-right of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.0,
+   "raw": "31·0",
+   "px": 632,
+   "py": 750,
+   "confidence": "medium",
+   "notes": "WESTBURY ROAD lettering; dot above the figure between the P and R letters (interpunct ambiguity)"
+  }
+ ],
+ "non_height_marks": [
+  "large district lettering P, L, A (PLASHET) around 460-850, 880-900",
+  "survey-station triangle without figure at ~766,987",
+  "School Boys Girls & Infants",
+  "F.P., H, L.B., P.H. marks"
+ ],
+ "unreadable_regions": []
+}

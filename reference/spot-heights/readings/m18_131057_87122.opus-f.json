@@ -1,0 +1,22 @@
+{
+  "mosaic": "m18_131057_87122", "reader": "opus-f",
+  "area": "Old Ford / Hackney Marsh edge: open ground crossed by footpath fences, the River Lea (Waterworks River) with the county boundary, Channelsea River embankment in the north-east; south strip overlaps m18_131057_87125 (B.M.14·65, C.R., Sluice)",
+  "method": "9 sweep crops at 2x read in full; every candidate confirmed on an 8x contact sheet (+-26 px panels). All sweep crops and contact sheets were viewed successfully; no image failed to load.",
+  "legibility": "Clean sheet; most of the west half is blank open ground. Weak horizontal sheet join (tint step) at py ~737 across the full width, not reported by the sheet tool; 15·2 at 811,741 lies just below it but reads clearly.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 17.8, "raw": "17·8", "px": 879, "py": 93, "confidence": "high", "notes": "on the hatched embankment of the Channelsea/Waterworks river bank; dot among the hatching left of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 19.76, "raw": "B.M.19·76", "px": 885, "py": 158, "confidence": "high", "notes": "on the embankment; pheon right of text at 882-888,152-158, point at its foot, 8x"},
+    {"type": "spot", "value_ft": 14.6, "raw": "14·6", "px": 890, "py": 322, "confidence": "high", "notes": "east bank of Waterworks River; dot above figures (the dot at 869,319 is on the boundary line and not used), 8x"},
+    {"type": "spot", "value_ft": 14.7, "raw": "14·7", "px": 854, "py": 535, "confidence": "high", "notes": "east bank of Waterworks River; dot on the bank line left of figures, 8x"},
+    {"type": "spot", "value_ft": 15.2, "raw": "15·2", "px": 811, "py": 741, "confidence": "high", "notes": "west bank of Waterworks River just below the py ~737 sheet join; dot on the bank line left of figures, 8x"},
+    {"type": "bench_mark", "value_ft": 14.65, "raw": "B.M.14·65", "px": 624, "py": 917, "confidence": "medium", "notes": "same B.M. as in m18_131057_87125 (overlap strip); digits clear at 8x; sideways pheon at 618-626,915-920, point placed at its head, orientation ambiguous"},
+    {"type": "spot", "value_ft": 14.0, "raw": "14·0", "px": 705, "py": 883, "confidence": "high", "notes": "below C.R.; dot on the bank line left of figures, 8x"},
+    {"type": "spot", "value_ft": 14.0, "raw": "14·0", "px": 583, "py": 1007, "confidence": "high", "notes": "open ground near south edge; dot left of figures, figures wholly inside, 8x"},
+    {"type": "spot", "value_ft": 15.0, "raw": "15·0", "px": 832, "py": 913, "confidence": "high", "notes": "west bank of Waterworks River; dot left of figures, 8x"}
+  ],
+  "non_height_marks": ["small triangle at ~512,10 (possible survey station, no figure beside it)", "C.R. at ~720,868", "B.S. boundary stones at ~645,928, ~765,896", "Sluice at ~975,848", "Union & Parly. Boro. Bdy. / Und. lettering along dotted boundary"],
+  "unreadable_regions": [
+    {"px0": 0, "py0": 734, "px1": 1024, "py1": 740, "reason": "weak horizontal sheet join (tint step) not detected by the tool; no figure is cut by it"}
+  ]
+}

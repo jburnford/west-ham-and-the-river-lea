@@ -1,0 +1,296 @@
+{
+ "mosaic": "m18_131090_87128",
+ "reader": "opus-k",
+ "area": "Upton / Forest Gate border: Ursuline Convent and School, Lane at top-left, St George's Road, Ismailia, Beauchamp, Wolseley, Belton and Khedive Roads, Elmhurst Road, Upton Park Road / Upton Lane at bottom",
+ "method": "Primary read. sheet + 9 sweep crops at 2x; every candidate confirmed on contact sheets of zoom panels at 6x, then 12x (16x for bench-mark digit pairs) for 3/8, 6/8, 5/6 and dots/pheons; 4x 110 px window to search for a missing pheon. All sweep crops and all zoom panels loaded and were viewed successfully.",
+ "legibility": "Good, rather faint engraving on the upper sheet. Sheet join: horizontal at py ~947-950 across the whole mosaic (tint step confirmed by eye; tool reports py ~947). Figures in this suburb are commonly written with the survey dot directly above the figure.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 34.1,
+   "raw": "34·1",
+   "px": 270,
+   "py": 100,
+   "confidence": "high",
+   "notes": "road junction west of Ursuline Convent; dot right of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.72,
+   "raw": "B.M.35·72",
+   "px": 284,
+   "py": 118,
+   "confidence": "high",
+   "notes": "building corner west of the convent; pheon left of text pointing at wall corner"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.7,
+   "raw": "34·7",
+   "px": 108,
+   "py": 316,
+   "confidence": "medium",
+   "notes": "lane (L A N E lettering) top-left; dot directly above figure but lies between the A and N of the spaced street name"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 280,
+   "py": 308,
+   "confidence": "high",
+   "notes": "same lane east of the large 'P' symbol; dot above figure; 6 read at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.3,
+   "raw": "34·3",
+   "px": 460,
+   "py": 316,
+   "confidence": "high",
+   "notes": "road in front of convent; dot right of figure; 3 read at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 36.36,
+   "raw": "B.M.36·36",
+   "px": 492,
+   "py": 337,
+   "confidence": "low",
+   "notes": "convent frontage by large 'T' symbol; pheon below-left of text; at 16x first pair reads 36 (possibly 35) and last digit 6 or 8; review"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.1,
+   "raw": "34·1",
+   "px": 632,
+   "py": 308,
+   "confidence": "medium",
+   "notes": "St George's Road; only dot is the one after 'T' of 'S T·' just above the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.1,
+   "raw": "34·1",
+   "px": 808,
+   "py": 288,
+   "confidence": "medium",
+   "notes": "St George's Road, figure written between 'O.' and 'R' of GEORGE'S; the only dot is the one right after the O (808,288), just left of the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 1004,
+   "py": 283,
+   "confidence": "high",
+   "notes": "St George's Road near east edge; dot right of figure; directly above B.M.34·84"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.84,
+   "raw": "B.M.34·84",
+   "px": 1005,
+   "py": 300,
+   "confidence": "low",
+   "notes": "St George's Road near east edge; third digit read as 8 at 16x but 6 not excluded; pheon not inside this mosaic: on m18_131093_87128 it is at 258,313 there, i.e. about px 1026,313 here, just off the east edge; position = centre of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.3,
+   "raw": "34·3",
+   "px": 130,
+   "py": 476,
+   "confidence": "high",
+   "notes": "road west of Ismailia Road; dot directly above figure; 3 read at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.4,
+   "raw": "34·4",
+   "px": 157,
+   "py": 642,
+   "confidence": "high",
+   "notes": "same road further south; dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 665,
+   "py": 526,
+   "confidence": "medium",
+   "notes": "Wolseley Road; only dot is the interpunct between E and Y of WOLSELE·Y just above figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.26,
+   "raw": "B.M.35·26",
+   "px": 682,
+   "py": 727,
+   "confidence": "high",
+   "notes": "corner of Wolseley Road and Elmhurst Road; pheon at building corner below-left of text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 812,
+   "py": 725,
+   "confidence": "high",
+   "notes": "Elmhurst Road at Belton Road; dot left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 36.42,
+   "raw": "B.M.36·42",
+   "px": 219,
+   "py": 830,
+   "confidence": "high",
+   "notes": "Khedive Road frontage; pheon below text on building line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 190,
+   "py": 824,
+   "confidence": "medium",
+   "notes": "Khedive Road beside B.M.36·42; dot directly above figure (the usual placement here) but it also lies between E and D of KHEDIVE; 6 read at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.0,
+   "raw": "34·0",
+   "px": 208,
+   "py": 933,
+   "confidence": "medium",
+   "notes": "Khedive Road just above the sheet join; only dot is below figure, between V and E of KHEDIVE"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 6,
+   "py": 951,
+   "confidence": "high",
+   "notes": "road at west edge just below the sheet join; dot left of figure; figure whole"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.3,
+   "raw": "33·3",
+   "px": 698,
+   "py": 742,
+   "confidence": "medium",
+   "notes": "Elmhurst Road; dot after the last letter D of ROAD, just left of figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.5,
+   "raw": "B.M.33·50",
+   "px": 609,
+   "py": 1000,
+   "confidence": "high",
+   "notes": "Upton Park Road frontage below the sheet join; pheon right of text on wall line; 5 read at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 664,
+   "py": 1006,
+   "confidence": "medium",
+   "notes": "Upton Park Road, figure between 'O' and 'N' of spaced lettering; raised dot above the decimal taken as survey dot, may be an interpunct"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.1,
+   "raw": "32·1",
+   "px": 829,
+   "py": 845,
+   "confidence": "high",
+   "notes": "road east of Belton Road by Boys Girls & Infants School; dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.7,
+   "raw": "32·7",
+   "px": 850,
+   "py": 977,
+   "confidence": "high",
+   "notes": "Upton Park Road junction; dot directly above figure; F.P. separate"
+  }
+ ],
+ "non_height_marks": [
+  "survey-station triangle near 545,195 in convent grounds, no figure",
+  "triangle at ~82,100 on road, no figure",
+  "large 'P', 'T', 'O', 'N' symbols/letters (e.g. 'P' at 225,300, 'T' at 505,320, 'O' at 758,310, 'N' at 1000,320) are not heights",
+  "L.B., H, F.P. marks with their own dots"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 944,
+   "px1": 1024,
+   "py1": 954,
+   "reason": "horizontal sheet join at py ~947-950; 34·2 at west edge lies just below it"
+  }
+ ]
+}

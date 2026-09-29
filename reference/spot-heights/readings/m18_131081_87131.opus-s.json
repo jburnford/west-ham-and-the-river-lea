@@ -1,0 +1,315 @@
+{
+ "mosaic": "m18_131081_87131",
+ "reader": "opus-s",
+ "area": "West Ham Park west and south: Amity Road, Cecil Road, Gladstone Road, the park (WEST lettering, Rifle Range, Drill Ground, Drill Hall, The Cedars, Lodge) and Portway",
+ "method": "Viewed full mosaic, all 9 sweep crops (2x; anchors in notes: r0c0 CECIL ROAD/AMITY ROAD, r0c1 CECIL ROAD park trees, r0c2 WEST/30·0, r1c0 GLADSTONE ROAD, r1c1 B.M.30·59/open park, r1c2 WEST/Urinal/B.M.30·29, r2c0 Urinal/P.H./Division of Parly. Boro., r2c1 Lodge/D.F./Rifle Range, r2c2 Drill Ground/Drill Hall/The Cedars), then contact sheets cs1 (6x), cs2 (12x), cs3 (6x), cs4 (12x), cs4b (blocky 10x), cs5 (9x 6/8 comparison), cs6 (6x), cs7 (10x), cs7b (blocky), cs8 (6x), cs9 (12x), cs10 (9x), cs10b (blocky), cs11 (6x east edge) and marker sheet mk (8x panel on every recorded position; 4 positions corrected by 2-6 px). Every crop and contact sheet displayed when opened. Leading digits confirmed at 10-12x.",
+ "legibility": "good; horizontal sheet join at py ~176 (visible by eye, sheet tool silent); dash-dot parliamentary/ward boundary along Portway hides survey dots",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 28.0,
+   "raw": "28·0",
+   "px": 181,
+   "py": 128,
+   "confidence": "medium",
+   "notes": "Amity Road north (same mark as m18_131081_87128 py ~895); two dots below figure above an F.P. (181,128 and 183,131), one is the F.P. dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.6,
+   "raw": "28·6",
+   "px": 146,
+   "py": 318,
+   "confidence": "medium",
+   "notes": "Amity Road; dot below figure above the O of ROAD; a second dot after the O is taken as lettering/F.P.; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.8,
+   "raw": "27·8",
+   "px": 112,
+   "py": 491,
+   "confidence": "medium",
+   "notes": "Amity Road at Gladstone Road; dot left-above figure; final 8 closed at 12x but stands alone"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 29.35,
+   "raw": "B.M.29·35",
+   "px": 120,
+   "py": 533,
+   "confidence": "high",
+   "notes": "building at Amity Road / Gladstone Road corner; pheon on wall ~30 px left of text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.6,
+   "raw": "28·6",
+   "px": 325,
+   "py": 509,
+   "confidence": "high",
+   "notes": "Gladstone Road east end at park gate; dot above figure; clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 30.59,
+   "raw": "B.M.30·59",
+   "px": 343,
+   "py": 528,
+   "confidence": "high",
+   "notes": "park railing corner at Gladstone Road east end; pheon ~25 px NE of text; digits clear at 6x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.7,
+   "raw": "28·7",
+   "px": 388,
+   "py": 546,
+   "confidence": "high",
+   "notes": "West Ham Park west path by Cecil Road; dot left of figure; 8 closed smoothed and blocky"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.5,
+   "raw": "26·5",
+   "px": 67,
+   "py": 713,
+   "confidence": "low",
+   "notes": "Amity Road south; second digit 6 at 6x/9x but unclear at 12x and blocky; two dots (above figure and above F.P.)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.1,
+   "raw": "28·1",
+   "px": 513,
+   "py": 591,
+   "confidence": "high",
+   "notes": "West Ham Park open ground; dot left-below figure; 8 clear blocky 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.5,
+   "raw": "28·5",
+   "px": 659,
+   "py": 646,
+   "confidence": "high",
+   "notes": "West Ham Park west of the Rifle Range path; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.1,
+   "raw": "28·1",
+   "px": 720,
+   "py": 665,
+   "confidence": "high",
+   "notes": "park path junction near Rifle Range north end; dot above-right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.7,
+   "raw": "28·7",
+   "px": 713,
+   "py": 461,
+   "confidence": "high",
+   "notes": "park path west of the WEST lettering; dot left of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.1,
+   "raw": "28·1",
+   "px": 832,
+   "py": 342,
+   "confidence": "medium",
+   "notes": "junction of avenues below WEST; dot left of figure; second digit 8 in blocky, ambiguous smoothed"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.0,
+   "raw": "30·0",
+   "px": 965,
+   "py": 167,
+   "confidence": "high",
+   "notes": "crossing of park avenues (same mark as m18_131081_87128 py ~935); dot left of figure; sheet join at py ~176 just below"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 30.29,
+   "raw": "B.M.30·29",
+   "px": 881,
+   "py": 546,
+   "confidence": "high",
+   "notes": "park path east, south-east of WEST; pheon right of text; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.5,
+   "raw": "27·5",
+   "px": 843,
+   "py": 588,
+   "confidence": "high",
+   "notes": "park path near Urinal north of Drill Ground; dot above figure; clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.2,
+   "raw": "28·2",
+   "px": 596,
+   "py": 780,
+   "confidence": "high",
+   "notes": "West Ham Park south; dot left-above figure; clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.9,
+   "raw": "26·9",
+   "px": 463,
+   "py": 899,
+   "confidence": "medium",
+   "notes": "park entrance near Lodge and D.F.; dot above figure; second digit 6 at 9-10x (like 26·9 on Portway), blocky ambiguous"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.2,
+   "raw": "26·2",
+   "px": 12,
+   "py": 971,
+   "confidence": "medium",
+   "notes": "Portway at C.R. near west edge; only nearby dots belong to the dash-dot parliamentary/ward boundary; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.2,
+   "raw": "26·2",
+   "px": 107,
+   "py": 975,
+   "confidence": "medium",
+   "notes": "Portway; nearby dots belong to the boundary and an F.P.; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.3,
+   "raw": "26·3",
+   "px": 247,
+   "py": 981,
+   "confidence": "medium",
+   "notes": "Portway below \"Ward Bdy.\"; dot above belongs to the dash-dot boundary; position = centre of figures; open 3 clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 27.23,
+   "raw": "B.M.27·23",
+   "px": 271,
+   "py": 1000,
+   "confidence": "high",
+   "notes": "house on south side of Portway; pheon on wall right of text; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.4,
+   "raw": "26·4",
+   "px": 333,
+   "py": 986,
+   "confidence": "medium",
+   "notes": "Portway; dots nearby are boundary dot and F.P. dot; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.9,
+   "raw": "26·9",
+   "px": 438,
+   "py": 996,
+   "confidence": "medium",
+   "notes": "Portway at park Lodge; dot beside boundary dash; position = centre of figures; 6 at 9x smoothed and blocky"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.4,
+   "raw": "27·4",
+   "px": 594,
+   "py": 1016,
+   "confidence": "medium",
+   "notes": "Portway; figure beside survey-station triangle, position = triangle centre; figure ends ~4 px above south edge"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 28.34,
+   "raw": "B.M.28·34",
+   "px": 705,
+   "py": 1012,
+   "confidence": "low",
+   "notes": "The Cedars frontage on Portway; pheon on wall ~30 px left of text; second digit 8 in blocky but reads 6 smoothed; near south edge"
+  }
+ ],
+ "non_height_marks": [
+  "\"Division of Parly. Boro. & Ward Bdy.\" dash-dot boundary along Portway",
+  "C.R. at 12,950",
+  "D.F. (drinking fountain) at 480,925",
+  "F.P. marks along Amity Road, Cecil Road, Gladstone Road, Portway",
+  "survey-station triangles at 594,1016 and 826,990 (The Cedars)"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1008,
+   "py0": 528,
+   "px1": 1024,
+   "py1": 546,
+   "reason": "isolated dot at 1019,537 by east edge; its figure is beyond the mosaic edge"
+  }
+ ]
+}

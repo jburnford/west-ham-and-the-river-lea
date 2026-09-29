@@ -1,0 +1,24 @@
+{
+ "mosaic": "q18_131108_87134", "reader": "opus-ap", "layer": "os-25-inch-london",
+ "area": "East Ham, east of the 131105 column (E ~542430, N ~184100 at the top strip): Bendish Road terraces, Clements Road (unbuilt), a P.H. at the corner, large district letters T H A, a yellow-edged boundary road on the east. Only the top ~290 px carry map; below is off-sheet margin and missing tiles.",
+ "method": "Layer os-25-inch-london (OS 25-inch Essex county series, inferred 1893-96 revision). Viewed: 1x full-mosaic overview (anchor BENDISH ROAD / CLEMENTS ROAD / T H A); all nine 2x sweep crops, each anchored on opening: r0c0 T + BENDISH ROAD + P.H., r0c1 H + CLEMENTS + B.M.30·6, r0c2 A + ROAD + yellow boundary, r1c0 / r1c1 / r1c2 neat-line strip then white margin then grey, r2c0 / r2c1 / r2c2 grey fill with grid labels; 6x contact sheet cs1 (4 panels), 12x contact sheet cs2 (3 panels), zoom 560,278 s6. Every crop, sheet and zoom displayed and was anchored in my notes at the time. Marker sheet checked before marking done.",
+ "legibility": "Map strip clear; italic figures 12-14 px with bold stars. OS neat line at py ~290 across the full width; white off-sheet margin py 290-512; grey missing tiles py 512-1024 (tile row 87136-87137).",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [
+  {"type": "spot", "value_ft": 28, "raw": "28", "px": 378, "py": 18, "confidence": "high", "setting": "street",
+   "notes": "road junction north of Clements Road (north end of the cross street by the P.H.); figures 402-440,20-35; four-point star at 378,18 ~25 px west in the carriageway."},
+  {"type": "spot", "value_ft": 28, "raw": "28", "px": 434, "py": 212, "confidence": "high", "setting": "street",
+   "notes": "cross street at the west end of Clements Road, opposite the P.H.; figures 429-447,183-195 (second digit an 8 with two loops at 12x, matching the other 28); star at 434,212 ~20 px south."},
+  {"type": "bench_mark", "value_ft": 30.6, "raw": "B.M.30·6", "px": 448, "py": 285, "confidence": "medium", "setting": "building",
+   "notes": "text 580-655,276-289 along the road just above the neat line; the only pheon nearby is ~130 px west, strokes converging at 448,285 on a house corner at the P.H. block (12x). No pheon within 60 px of the text (zoom 560,278). Pairing by nearest pheon; position may be off if the pheon belongs to a B.M. whose text lies beyond the neat line."}
+ ],
+ "non_height_marks": [
+  "P.H. at ~370,240",
+  "triangle (survey station) cut at the top edge ~970,0",
+  "display letters T H A (EAST HAM)"
+ ],
+ "unreadable_regions": [
+  {"px0": 0, "py0": 290, "px1": 1024, "py1": 512, "reason": "white off-sheet margin beyond the OS neat line"},
+  {"px0": 0, "py0": 512, "px1": 1024, "py1": 1024, "reason": "grey fill: missing tiles (rows 87136-87137)"}
+ ]
+}

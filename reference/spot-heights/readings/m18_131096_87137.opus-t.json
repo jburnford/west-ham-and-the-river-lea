@@ -1,0 +1,223 @@
+{
+ "mosaic": "m18_131096_87137",
+ "reader": "opus-t",
+ "area": "Upton Park: Upton Park station platforms, Rochester Avenue, Green Street, Queen's Square, Redclyffe Road, Tudor Road, Selsdon Road, Kirton/Ravenhill/Orwell Roads, Boleyn Castle and Anne Boleyn's Tower",
+ "method": "Independent second read. All 9 sweep crops (r0c0..r2c2, 2x) viewed and each anchored in notes at opening (r0c0 Down/Up Platform+ROCHESTER AVENUE; r0c1 QUEEN'S SQUARE+P.H.; r0c2 REDCLYFFE ROAD+TUDOR; r1c0 ORWELL/..HORN ROAD; r1c1 SELSDON ROAD+Nursery; r1c2 TUDOR ROAD; r2c0 RAVENHILL/KIRTON ROAD; r2c1 SELSDON (vertical)+GREEN; r2c2 Boleyn Castle+Anne Boleyn's Tower). Contact sheets cs1-cs3 (8x/6x, all candidates), cs4 (12x leading digits, pheon), cs5-cs8 (16x/10x smooth+blocky 3/8 and 6/8 comparisons, BM digits and pheon). Every crop and contact sheet displayed when opened and has an anchor in my notes. Marker panels (one per reading) checked; 29·7 corrected by 2 px after cs9 (12x).",
+ "legibility": "Clean print; italic 3s render 8-like at 12-16x; Green Street carries a boundary line of large dots that hides survey dots. Sheet joins: vertical at px ~166 (full height, paler paper west), horizontal at py ~380-384 (full width).",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 28.5,
+   "raw": "28·5",
+   "px": 274,
+   "py": 134,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "tree-lined road between terraces south of Upton Park station platforms; dot directly above-right of figure; digits clear at 8x and 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.2,
+   "raw": "28·2",
+   "px": 95,
+   "py": 201,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "same tree-lined road, west part; dot right of figure at 95,201, then .F.P (F.P own dot at ~104); digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.8,
+   "raw": "31·8",
+   "px": 491,
+   "py": 61,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Green Street / Queen's Square corner among F.P. marks and boundary dots; final digit 8 vs 3 ambiguous at 12x/16x (alt 31·3); leading italic 3; dot not identified (boundary dots at 480,62 and 478,57), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 29.7,
+   "raw": "29·7",
+   "px": 535,
+   "py": 267,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Green Street at Rochester Avenue corner, F.P. above; double dot right of figure at 533-536,267 (pair of small dots) taken as survey dot; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.2,
+   "raw": "30·2",
+   "px": 699,
+   "py": 242,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Redclyffe Road west end; dot right of figure before R of REDCLYFFE (no interpuncts); leading digit renders 8-like at 12-16x (italic 3), read 3 by comparison with the open 3s of B.M.30·35 on this sheet"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.6,
+   "raw": "28·6",
+   "px": 607,
+   "py": 423,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Green Street east side at Nursery corner; final 6/8: smooth 10x reads 6, blocky 10x reads 8 (alt 28·8); no dot found, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.1,
+   "raw": "31·1",
+   "px": 959,
+   "py": 174,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Redclyffe Road near Tudor Road junction; only dot is 21 px above over A of ROAD; position = centre of figures; digits clear at 16x (italic 3)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.1,
+   "raw": "31·1",
+   "px": 1000,
+   "py": 207,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Tudor Road at Redclyffe Road junction; dot just below-right of figure at 1000,207 above T of TUDOR (may be lettering dot); digits clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.7,
+   "raw": "27·7",
+   "px": 648,
+   "py": 524,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Green Street east side at Tudor Road corner; no survey dot distinguishable from boundary dots; position = centre of figures; digits clear at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 30.35,
+   "raw": "B.M.30·35",
+   "px": 668,
+   "py": 560,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building front on Green Street south of Tudor Road; pheon vertex 668,560 below text; digits clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.8,
+   "raw": "26·8",
+   "px": 680,
+   "py": 712,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Green Street by the Boleyn Castle entrance; boundary dots around, no survey dot; position = centre of figures; final 8 differs from middle 6 at 10x; final 8 stands alone (alt 26·3), so low"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.2,
+   "raw": "26·2",
+   "px": 400,
+   "py": 986,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Kirton Road / Ravenhill Road corner (south edge); dot above-left 400,986; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.7,
+   "raw": "26·7",
+   "px": 564,
+   "py": 937,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Selsdon Road junction; dot above-left at 564,937; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.1,
+   "raw": "27·1",
+   "px": 748,
+   "py": 882,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Green Street west side opposite Boleyn Castle; only boundary dots nearby; position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 29.25,
+   "raw": "B.M.29·25",
+   "px": 814,
+   "py": 969,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Anne Boleyn's Tower, Green Street; text 20-40 px west of pheon, pheon vertex at tower corner 814,969; digits clear at 12x"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. marks around Queen's Square / Green Street (e.g. 510,55; 505,258; 610,280; 640,254)",
+  "D.F / F.A at Queen's Square ~(440,52)",
+  "H (hydrant) at 572,916 and 405,454",
+  "survey-station triangles without figures at 626,576 and 725,721",
+  "boundary dots along Green Street"
+ ],
+ "unreadable_regions": []
+}

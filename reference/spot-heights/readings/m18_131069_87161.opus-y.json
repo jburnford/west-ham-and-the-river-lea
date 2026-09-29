@@ -1,0 +1,322 @@
+{
+ "mosaic": "m18_131069_87161",
+ "reader": "opus-y",
+ "area": "Poplar / Bromley: Benledi and Dunkeld Streets, Moness and Portree Streets, All Hallows Church, East India Dock Road, Orchard Street, North Quay of the East India Docks",
+ "method": "Overview (anchor BROMLEY) and all 9 sweep crops viewed and anchored as opened: r0c0 BROM(LEY)/BENLEDI STREET; r0c1 Mission Room/MONESS; r0c2 MONESS STREET/PORTREE STREET; r1c0 Mission Hall (Prim. Meth.)/DUNKELD; r1c1 All Hallows Church/Parish Room; r1c2 P.O./Warehouses/sidings; r2c0 NORTH QUAY/G.P.O. Warehouse; r2c1 Mooring Posts/M.P.; r2c2 ORCHARD STREET/GREAT EAS(TERN). Contact sheets cs1-cs5, cs2b, cs4b (6x-12x, +-14 to +-24 px) viewed and anchored. All crops and contact sheets displayed. Marker sheet checked.",
+ "legibility": "good; no sheet join seen by eye or by tool",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 7.7,
+   "raw": "7·7",
+   "px": 96,
+   "py": 69,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "junction at the NW (road lettered ...T T); dot below the F.P., separate from the F.P.'s own dot at 103,66; figures at 105,80"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.86,
+   "raw": "B.M.9·86",
+   "px": 111,
+   "py": 110,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the terrace at the west end of the road; text at 90,112, pheon right; digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 326,
+   "py": 169,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road north of Bromley (lettered R O A D); dot above figures at 330,177, 6x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 125,
+   "py": 258,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Benledi Street north end; nearby dots are the F.P.'s trailing dot and a B·E interpunct, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 179,
+   "py": 396,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Benledi Street at the street lettered S T R E E T; figures at 197,400; dot left may be a lettering interpunct; G-shaped 6 at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 600,
+   "py": 137,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "road junction by the Mission Room; figures at 603,147; the dot above may be the F.P.'s trailing dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.0,
+   "raw": "8·0",
+   "px": 539,
+   "py": 267,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road junction east of the Mission Room block; dot below-left of the F.P., separate from the F.P.'s own dot; figures at 549,277"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.12,
+   "raw": "B.M.9·12",
+   "px": 683,
+   "py": 283,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the Moness Street terrace; text at 700,297, pheon above-left on the building corner; digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 677,
+   "py": 324,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Abbott Road / Moness Street junction; dot left of figures at 690,328"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.0,
+   "raw": "8·0",
+   "px": 757,
+   "py": 361,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road junction at the foot of Moness Street; dot above figures at 762,370"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.9,
+   "raw": "8·9",
+   "px": 815,
+   "py": 383,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road east of the Moness Street junction; dot left of figures at 826,390"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.1,
+   "raw": "9·1",
+   "px": 222,
+   "py": 537,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Benledi Street at Dunkeld Street; dot left of figures at 235,540"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.5,
+   "raw": "14·5",
+   "px": 974,
+   "py": 461,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "East India Dock Road east end; dot above-left of figures at 988,470"
+  },
+  {
+   "type": "spot",
+   "value_ft": 14.8,
+   "raw": "14·8",
+   "px": 853,
+   "py": 513,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road; only nearby dot is above the O of ROAD (lettering interpunct), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 739,
+   "py": 549,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "East India Dock Road at Orchard Street; dot left of figures at 748,552"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 16.48,
+   "raw": "B.M.16·48",
+   "px": 760,
+   "py": 563,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner of the building at Orchard Street / East India Dock Road; text at 745,572, pheon right; digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 540,
+   "py": 610,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "East India Dock Road opposite All Hallows Church; dot left of figures at 555,613"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.1,
+   "raw": "15·1",
+   "px": 385,
+   "py": 665,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road; dot near the I·A interpunct of INDIA, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.3,
+   "raw": "15·3",
+   "px": 290,
+   "py": 695,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road by the L.B.; the only dot lies between N and D of INDIA (interpunct), position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 17.55,
+   "raw": "B.M.17·55",
+   "px": 211,
+   "py": 727,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "East India Docks boundary wall on the south side of East India Dock Road; text at 222,748, pheon on the wall line above; digits 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.2,
+   "raw": "15·2",
+   "px": 95,
+   "py": 752,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "East India Dock Road west; dot after T of EAST (interpunct), position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.0,
+   "raw": "16·0",
+   "px": 779,
+   "py": 752,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Street; no dot found in +-24 px, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.7,
+   "raw": "15·7",
+   "px": 963,
+   "py": 833,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "Great Eastern rails at the turntable junction east of Orchard Street; figures at 972,828, dot on the rail below"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.4,
+   "raw": "16·4",
+   "px": 885,
+   "py": 942,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Orchard Street south; the nearby dot at 861,954 is a STREET interpunct, position = centre of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.04,
+   "raw": "B.M.18·04",
+   "px": 887,
+   "py": 1003,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "hatched retaining wall on the east side of Orchard Street; text at 920,1008, pheon left; digits 12x"
+  }
+ ],
+ "non_height_marks": [
+  "many M.P. (mooring post) marks on the North Quay jetties",
+  "'Mooring Posts' lettering",
+  "G.P.O. 4 1/4 on the warehouse",
+  "F.P., H, L.B., P.O. marks"
+ ],
+ "unreadable_regions": []
+}

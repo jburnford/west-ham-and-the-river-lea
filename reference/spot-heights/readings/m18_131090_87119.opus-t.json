@@ -1,0 +1,280 @@
+{
+ "mosaic": "m18_131090_87119",
+ "reader": "opus-t",
+ "area": "Forest Gate north: Woodgrange Road (Fire Station, Club, P.O., Sunday School, Wesleyan Methodist Chapel), Great Eastern Railway, Congregational Chapel, Hampton Road, Claremont Road, Windsor Road",
+ "method": "All 9 sweep crops (2x) viewed and each anchored in notes at opening (r0c0 Fire Sta./Club/Smithy; r0c1 GREAT EASTERN+Congl Chapel; r0c2 EASTERN RAILWAY+HAMPTON; r1c0 WOODGRAN(GE)+Sun. Sch.; r1c1 H of HAMPTON+CLA; r1c2 CLAREMONT+OSB; r2c0 Methodist Chapel (Wesleyan); r2c1 B.M. 35·52+CLA; r2c2 WINDSOR+CLAREMONT). Contact sheets cs1-cs4 (8x, all candidates and edges), cs5-cs9 (10-16x smooth and blocky for leading 3/8, 6/8, 9/0 and all B.M. digits and pheons). Every crop and contact sheet displayed when opened and has an anchor in my notes. Per-reading marker panels checked before done.",
+ "legibility": "Clean print; italic 3s render as closed 8 at 10-16x, so 33/38 cannot be separated on shape alone. No sheet join detected by tool or by eye.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 36.6,
+   "raw": "36·6",
+   "px": 297,
+   "py": 54,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street north of the GER line, west part; dot left-below of figure at 297,54 (the F.P. below has its own dot at 284,62); middle and final digits are the same 6-like glyph at 10x, 8 not excluded"
+  },
+  {
+   "type": "spot",
+   "value_ft": 38.4,
+   "raw": "38·4",
+   "px": 58,
+   "py": 108,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Woodgrange Road at the Fire Station; dot below-left 58,108; both leading glyphs render as closed 8 at 16x (smooth and blocky), so 38·4 vs 33·4 unresolved; 38·4 preferred by BM 40·82, 40·5 and 39·0 within 15 m"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 40.82,
+   "raw": "B.M.40·82",
+   "px": 27,
+   "py": 143,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Club building, Woodgrange Road; pheon left of the text pointing left, vertex 27,143; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 40.5,
+   "raw": "40·5",
+   "px": 24,
+   "py": 234,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Woodgrange Road by the trough (Tr.); dot above-left at 24,234, separate from the period of Tr.; digits clear at 12x (5 flat top)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.5,
+   "raw": "34·5",
+   "px": 405,
+   "py": 350,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street south of the GER, west part; dot left of figure at 405,350; digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.9,
+   "raw": "33·9",
+   "px": 195,
+   "py": 402,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "same street further west; dot left at 195,402; both 3s identical glyphs, final 9 at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 39.0,
+   "raw": "39·0",
+   "px": 18,
+   "py": 443,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Woodgrange Road by P.O., F.P. below; dot left at 18,443; 3 9 and oval 0 at 12-16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 25,
+   "py": 566,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Woodgrange Road between the W and O of WOODGRANGE; dot above-left 25,566 may be a lettering dot; final G-shaped 6 at 10x smooth, blocky ambiguous"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.9,
+   "raw": "33·9",
+   "px": 42,
+   "py": 637,
+   "confidence": "low",
+   "setting": "street",
+   "notes": "Woodgrange Road between D and G of WOODGRANGE; dot left 42,637 (lettering position); final digit 9 vs 0 unresolved at 10-16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.24,
+   "raw": "B.M.35·24",
+   "px": 78,
+   "py": 682,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Sunday School wall, Woodgrange Road; pheon left of text at 78,682; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.6,
+   "raw": "33·6",
+   "px": 260,
+   "py": 796,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road in front of the Wesleyan Methodist Chapel; dot right of figure at 260,796 before F.P.; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 88,
+   "py": 831,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Woodgrange Road at the R of ROAD, F.P. below; dot left at 88,831 could be the period after R; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 36.7,
+   "raw": "36·7",
+   "px": 504,
+   "py": 7,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "street north of the GER, near the top edge (figure whole, y 3-10); dot left at 504,7; middle digit 6 (0 not fully excluded) at 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 37.02,
+   "raw": "B.M.37·02",
+   "px": 585,
+   "py": 290,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Hampton Road frontage by H of HAMPTON; upward arrow point on building line 585,290 above the text; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.0,
+   "raw": "35·0",
+   "px": 616,
+   "py": 299,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Hampton Road, figure written above-right of A of HAMPTON; dot left of the A at 616,299 taken as survey dot; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 35.4,
+   "raw": "35·4",
+   "px": 824,
+   "py": 248,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Hampton Road between T and O of HAMPTON; dot left at 824,248; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 699,
+   "py": 699,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Claremont Road by A of CLAREMONT, F.P. below; dot below-left 699,699 is close to the F.P. own dot 702,703; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.2,
+   "raw": "33·2",
+   "px": 916,
+   "py": 653,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Claremont Road; dot right after O of CLAREMONT at 916,653 (could be lettering); digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.7,
+   "raw": "33·7",
+   "px": 469,
+   "py": 748,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Claremont Road west part; dot right of figure at 469,748 (F.P. own dot at 483,750); digits clear at 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.52,
+   "raw": "B.M.35·52",
+   "px": 499,
+   "py": 757,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house front, Claremont Road; two-line text B.M. / 35·52, pheon above-right at 499,757; digits clear at 10x"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. marks throughout",
+  "S.P. at ~(62,300) and (68,322); S.B./S.P. on the GER ~(500,153),(527,197)",
+  "H hydrants ~(5,390),(78,636),(938,213)",
+  "Congl Chapel \"Seats for 1100\", Methodist Chapel \"Seats for 1000\""
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 120,
+   "py0": 1014,
+   "px1": 150,
+   "py1": 1024,
+   "reason": "figure (33·1?) on Woodgrange Road cut by south edge"
+  }
+ ]
+}

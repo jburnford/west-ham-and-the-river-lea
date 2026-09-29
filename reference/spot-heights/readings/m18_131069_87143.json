@@ -1,0 +1,29 @@
+{
+  "mosaic": "m18_131069_87143",
+  "area": "Long Wall, Abbey Creek tidal flats, Channelsea south, Abbey Wharf, Oil & Stearine Works, LT&S railway",
+  "method": "read by Claude (vision) from the 1024 px mosaic plus 2x crops",
+  "legibility": "good; sheet join at about py 566; tidal flats carry no figures, only H.W.M.O.T./L.W.M.O.T. lines",
+  "readings": [
+    {"type": "spot", "value_ft": 17.4, "raw": "17·4", "px": 827, "py": 21, "confidence": "high", "notes": "embankment; duplicate of m18_131069_87140"},
+    {"type": "spot", "value_ft": 18.1, "raw": "18·1", "px": 735, "py": 209, "confidence": "high", "notes": "Long Wall top; duplicate of m18_131069_87140 (dot seen clearly here, 10 px west of the earlier estimate)"},
+    {"type": "spot", "value_ft": 17.4, "raw": "17·4", "px": 628, "py": 372, "confidence": "high", "notes": "Long Wall top"},
+    {"type": "spot", "value_ft": 17.4, "raw": "17·4", "px": 924, "py": 320, "confidence": "high", "notes": "river wall at West Ham works, east bank of Channelsea"},
+    {"type": "spot", "value_ft": 17.9, "raw": "17·9", "px": 906, "py": 479, "confidence": "high", "notes": "river wall, east bank"},
+    {"type": "bench_mark", "value_ft": 13.17, "raw": "B.M.13·17", "px": 939, "py": 508, "confidence": "high", "notes": "pheon at building corner"},
+    {"type": "spot", "value_ft": 17.3, "raw": "17·3", "px": 907, "py": 546, "confidence": "medium", "notes": "3 vs 8 ambiguous (read 17·8 in one crop, 17·3 in another)"},
+    {"type": "spot", "value_ft": 17.8, "raw": "17·8", "px": 532, "py": 559, "confidence": "medium", "notes": "Long Wall just above the sheet join; dot estimated"},
+    {"type": "spot", "value_ft": 17.5, "raw": "17·5", "px": 408, "py": 733, "confidence": "medium", "notes": "Long Wall; dot estimated"},
+    {"type": "spot", "value_ft": 17.3, "raw": "17·3", "px": 270, "py": 891, "confidence": "medium", "notes": "'F.P.17·3' on Long Wall footpath"},
+    {"type": "spot", "value_ft": 17.1, "raw": "17·1", "px": 55, "py": 946, "confidence": "medium", "notes": "Long Wall; duplicate of m18_131066_87143"},
+    {"type": "bench_mark", "value_ft": 12.86, "raw": "B.M.12·86", "px": 162, "py": 943, "confidence": "high", "notes": "duplicate of m18_131066_87143"},
+    {"type": "bench_mark", "value_ft": 15.94, "raw": "B.M.15·94", "px": 242, "py": 999, "confidence": "medium", "notes": "written inside a small oval marked 'C' at the Manure Works; pheon not identified, position = text centre"},
+    {"type": "spot", "value_ft": 13.4, "raw": "13·4", "px": 345, "py": 975, "confidence": "medium", "notes": "over Manure Works yard; dot position uncertain"},
+    {"type": "spot", "value_ft": 17.1, "raw": "17·1", "px": 762, "py": 660, "confidence": "medium", "notes": "bank by Oil & Stearine Works, next to F.P."},
+    {"type": "spot", "value_ft": 16.9, "raw": "16·9", "px": 607, "py": 741, "confidence": "low", "notes": "near Abbey Creek wharf head; dot not located"},
+    {"type": "bench_mark", "value_ft": 14.68, "raw": "B.M.14·68", "px": 780, "py": 828, "confidence": "high", "notes": "arrow right of text at railway boundary"},
+    {"type": "spot", "value_ft": 11.6, "raw": "11·6", "px": 662, "py": 847, "confidence": "medium", "notes": "by Parly. Boro. & Ward boundary"},
+    {"type": "spot", "value_ft": 11.3, "raw": "11·3", "px": 957, "py": 752, "confidence": "high", "notes": "road north of railway"},
+    {"type": "spot", "value_ft": 10.7, "raw": "10·7", "px": 691, "py": 907, "confidence": "high", "notes": "south of railway"},
+    {"type": "spot", "value_ft": 10.9, "raw": "10·9", "px": 505, "py": 920, "confidence": "medium", "notes": "by Abbey Wharf; seen mostly in full view, dot estimated"}
+  ]
+}

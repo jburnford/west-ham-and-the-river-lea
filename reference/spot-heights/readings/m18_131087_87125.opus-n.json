@@ -1,0 +1,214 @@
+{
+ "mosaic": "m18_131087_87125",
+ "reader": "opus-n",
+ "area": "Upton / Forest Gate: Disraeli Road, Fox Road, Salisbury Road, Chaucer Road, Gower Road, Dunbar Road, Skelton Road, Wyatt Road, Sylvan Road; Unitarian Chapel; Upton (Lane) along the east edge",
+ "method": "sheet tool (no join reported); all 9 sweep crops r0c0..r2c2 at 2x viewed; contact sheets csA, csB, csC (8x, +/-25 px), csD (12x, +/-14 px), csE (16x), csF (8x, edge/triangle) and nearest/bicubic comparison nnA (14x, B.M.35.27 vs B.M.3?.38) viewed. Every crop and contact sheet displayed when opened. Marker sheet (6x panels at each recorded position) viewed; four positions corrected by 2-11 px after it.",
+ "legibility": "clean print, digits sharp at 8-12x; no sheet join seen by eye or by tool",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 33.5,
+   "raw": "33·5",
+   "px": 181,
+   "py": 57,
+   "confidence": "high",
+   "notes": "north end of Disraeli Road; dot directly above figure; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.4,
+   "raw": "33·4",
+   "px": 209,
+   "py": 266,
+   "confidence": "medium",
+   "notes": "Disraeli Road, figure between S and R of D I S R A E L I; dot just below figure between the letters (no other interpuncts in the name), digits clear at 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.39,
+   "raw": "B.M.34·39",
+   "px": 231,
+   "py": 326,
+   "confidence": "high",
+   "notes": "Disraeli Road east side; pheon on the house front right of the text, confirmed at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.1,
+   "raw": "34·1",
+   "px": 441,
+   "py": 415,
+   "confidence": "high",
+   "notes": "Wyatt Road / Chaucer Road corner; dot above figure; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 35.27,
+   "raw": "B.M.35·27",
+   "px": 463,
+   "py": 425,
+   "confidence": "high",
+   "notes": "corner house Wyatt Road / Chaucer Road; pheon below the text on the building corner; 5 has flat top bar at 14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.2,
+   "raw": "33·2",
+   "px": 660,
+   "py": 398,
+   "confidence": "medium",
+   "notes": "Chaucer Road, figure between U and C of CHAUCER; dot above first digit, between letters; digits clear at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.9,
+   "raw": "32·9",
+   "px": 992,
+   "py": 11,
+   "confidence": "high",
+   "notes": "Sylvan Road east end near Upton Lane; dot left of figure; 8x; figure whole, 8 px from north edge"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 34.23,
+   "raw": "B.M.34·23",
+   "px": 1003,
+   "py": 256,
+   "confidence": "high",
+   "notes": "wall on west side of Upton Lane; pheon right of text on the frontage line; last 3 matches first 3 at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.1,
+   "raw": "33·1",
+   "px": 842,
+   "py": 386,
+   "confidence": "medium",
+   "notes": "Chaucer Road, figure between O and A of ROAD; dot after figure between the letters; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 81,
+   "py": 465,
+   "confidence": "medium",
+   "notes": "Fox Road, figure between R and O of ROAD; dot directly above figure between letters; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 33.5,
+   "raw": "33·5",
+   "px": 228,
+   "py": 457,
+   "confidence": "medium",
+   "notes": "Disraeli Road at Fox Road, figure below R of vertical ROAD lettering; dot right of figure between R and O; 5 flat-topped at 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.2,
+   "raw": "34·2",
+   "px": 454,
+   "py": 576,
+   "confidence": "high",
+   "notes": "Wyatt Road / Gower Road junction; dot left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.6,
+   "raw": "34·6",
+   "px": 466,
+   "py": 743,
+   "confidence": "high",
+   "notes": "Wyatt Road / Dunbar Road junction; dot left of figure; last digit 6 at both 8x and 12x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 36.38,
+   "raw": "B.M.36·38",
+   "px": 452,
+   "py": 811,
+   "confidence": "low",
+   "notes": "west side of Wyatt Road; pheon right of text on the frontage; second digit 6 vs 5 unresolved (rounded top suggests 6, compared with the flat-topped 5 of B.M.35·27 at 14x); could be 35·38"
+  },
+  {
+   "type": "spot",
+   "value_ft": 34.9,
+   "raw": "34·9",
+   "px": 490,
+   "py": 908,
+   "confidence": "high",
+   "notes": "Wyatt Road / Skelton Road junction; dot left of figure; 8x"
+  }
+ ],
+ "non_height_marks": [
+  "F.P. marks at ~206,130, ~203,342, ~238,572, ~272,832 and ~964,13",
+  "survey triangle with no figure at 849,869 (Skelton Road)",
+  "'Unitarian Chapel Seats for 225' at ~920,600"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1016,
+   "py0": 864,
+   "px1": 1024,
+   "py1": 878,
+   "reason": "figure '3·..' cut by east edge (Skelton Road east end)"
+  }
+ ]
+}

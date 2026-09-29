@@ -1,0 +1,305 @@
+{
+ "mosaic": "m18_131087_87134",
+ "reader": "opus-n",
+ "area": "Upton / Plashet: Upton Cross, Upton Lane, Baptist Chapel, All Saints' Vicarage, St John's Church (Reformed Episcopal), Parly. Boro. & Ward boundary road, Pelly Road, Stopford Road, Cecil Road, Crescent Road, Dacre Road, Selwyn Road, Mission Room",
+ "method": "sheet tool; all 9 sweep crops r0c0..r2c2 at 2x viewed; contact sheets csA-csD (8x, +/-25 px), boundary strips bdy (5x, nearest+bicubic), csE (12x), nnA (10x nearest+bicubic), csF (16x digit comparison with known 3 and 8), csG (10x) viewed; marker sheet viewed after writing. Every crop and contact sheet displayed when opened. Three positions corrected by 2-7 px after the marker sheet.",
+ "legibility": "clean print; 3/8 and 6/8 separation weak at all zooms; the sheet tool reported vertical joins at px ~792, ~891, ~983 over y 768-1024 but none was visible by eye (the positions coincide with building rows and Dacre Road edges)",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 29.6,
+   "raw": "29·6",
+   "px": 301,
+   "py": 81,
+   "confidence": "medium",
+   "notes": "Upton Lane south of the Baptist Chapel; single dot left of figure right at the end of a road-boundary dash; could be part of the line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.3,
+   "raw": "30·3",
+   "px": 296,
+   "py": 280,
+   "confidence": "medium",
+   "notes": "Upton Cross junction; no separate dot found at 8x; position = centre of figures; last 3 matches first 3 at 12-16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.6,
+   "raw": "30·6",
+   "px": 83,
+   "py": 283,
+   "confidence": "low",
+   "notes": "road north of All Saints' Vicarage; figure at ~82,298, isolated dot in the road ~15 px above it; last digit 6 at 12x but 8 at 8x and ambiguous at 16x (could be 30·8)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 31.91,
+   "raw": "B.M.31·91",
+   "px": 217,
+   "py": 287,
+   "confidence": "high",
+   "notes": "All Saints' Vicarage road wall; pheon above the text pointing up to the wall line; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.3,
+   "raw": "26·3",
+   "px": 180,
+   "py": 394,
+   "confidence": "medium",
+   "notes": "inside All Saints' Vicarage grounds by outbuilding; no dot (nearby dots belong to F.P.); position = centre of figures; last digit matches known 3 at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.7,
+   "raw": "30·7",
+   "px": 476,
+   "py": 246,
+   "confidence": "high",
+   "notes": "road east of Upton Cross (Parly. Boro. & Ward boundary road, plain dashes); dot directly above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 31.2,
+   "raw": "31·2",
+   "px": 697,
+   "py": 210,
+   "confidence": "medium",
+   "notes": "same road opposite St John's Church; dot above the 3 merges with a boundary dash"
+  },
+  {
+   "type": "spot",
+   "value_ft": 32.4,
+   "raw": "32·4",
+   "px": 893,
+   "py": 185,
+   "confidence": "medium",
+   "notes": "same road east near P.O.; only dot nearby could be the period of 'Parly.'"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 33.15,
+   "raw": "B.M.33·15",
+   "px": 804,
+   "py": 211,
+   "confidence": "high",
+   "notes": "north-west corner of the terrace east of St John's Church; pheon left of text pointing down to the building line; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 30.6,
+   "raw": "30·6",
+   "px": 906,
+   "py": 328,
+   "confidence": "high",
+   "notes": "north end of Dacre Road; dot directly above figure; 6 at 8x and 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.7,
+   "raw": "26·7",
+   "px": 196,
+   "py": 581,
+   "confidence": "high",
+   "notes": "Pelly Road; dot right of figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.3,
+   "raw": "26·3",
+   "px": 197,
+   "py": 700,
+   "confidence": "high",
+   "notes": "Pelly Road / Stopford Road junction; dot left of figure; last digit matches known 3 at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.1,
+   "raw": "26·1",
+   "px": 309,
+   "py": 723,
+   "confidence": "medium",
+   "notes": "Stopford Road at Crescent Road; dot between the rotated T of S T O P F O R D and the figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.4,
+   "raw": "26·4",
+   "px": 517,
+   "py": 722,
+   "confidence": "medium",
+   "notes": "Crescent Road at Cecil Road; dot between S and C of C R E S C E N T"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 28.07,
+   "raw": "B.M.28·07",
+   "px": 705,
+   "py": 638,
+   "confidence": "high",
+   "notes": "corner of Crescent Road; pheon on the frontage line below-left of the text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.6,
+   "raw": "26·6",
+   "px": 733,
+   "py": 642,
+   "confidence": "medium",
+   "notes": "Crescent Road between A and D of ROAD; no clear dot; position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.4,
+   "raw": "27·4",
+   "px": 820,
+   "py": 577,
+   "confidence": "medium",
+   "notes": "Crescent Road east; dot below-left of figure, separate from the F.P. and its own dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 28.2,
+   "raw": "28·2",
+   "px": 917,
+   "py": 476,
+   "confidence": "high",
+   "notes": "Dacre Road north; dot directly above figure; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 27.0,
+   "raw": "27·0",
+   "px": 933,
+   "py": 655,
+   "confidence": "high",
+   "notes": "Dacre Road; dot directly above figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.3,
+   "raw": "26·3",
+   "px": 55,
+   "py": 747,
+   "confidence": "medium",
+   "notes": "road at west edge by P.H. ('ROAD 26·3'); dot touching left of figure; last digit compared with known 3 at 16x (26·8 not excluded)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.0,
+   "raw": "26·0",
+   "px": 192,
+   "py": 755,
+   "confidence": "high",
+   "notes": "Pelly Road by survey triangle at ~198,755; dot between figure and triangle; 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 27.63,
+   "raw": "B.M.27·63",
+   "px": 206,
+   "py": 751,
+   "confidence": "high",
+   "notes": "Pelly Road; pheon right of the survey triangle, text to the right; digits clear at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.8,
+   "raw": "25·8",
+   "px": 198,
+   "py": 926,
+   "confidence": "medium",
+   "notes": "Pelly Road south by Mission Room; dot left of figure; last digit 8 at 16x vs known 3, but 3/8 separation weak on this sheet"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 28.13,
+   "raw": "B.M.28·13",
+   "px": 963,
+   "py": 797,
+   "confidence": "medium",
+   "notes": "Dacre Road east side; pheon right of text on the frontage; final 3 vs 8 blurry at 10-16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.6,
+   "raw": "25·6",
+   "px": 951,
+   "py": 882,
+   "confidence": "high",
+   "notes": "Dacre Road; dot directly above figure; 6 at 10x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 25.0,
+   "raw": "25·0",
+   "px": 960,
+   "py": 1003,
+   "confidence": "high",
+   "notes": "Dacre Road south; dot directly above figure; figure whole (ends ~1011)"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangle without figure at ~966,386 (Dacre Road east)",
+  "'Division of Parly. Boro. & Ward Bdy.' lettering at ~800-980,160-195",
+  "F.P. marks throughout; H (hydrant) marks at ~310,710 and others"
+ ],
+ "unreadable_regions": []
+}

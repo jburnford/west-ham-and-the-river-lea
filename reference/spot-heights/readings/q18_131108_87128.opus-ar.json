@@ -1,0 +1,36 @@
+{
+ "mosaic": "q18_131108_87128", "reader": "opus-ar", "layer": "os-25-inch-london",
+ "area": "East Ham / Little Ilford: the C.R. lane (Plashet Grove end), fields 81-88 east of it with a field track, Jews Farm Lane, Sibley Grove and the London Tilbury & Southend Railway in the SE corner",
+ "method": "OS 25-inch (os-25-inch-london) layer. sheet (no join reported); 1x overview (JEWS FARM LANE, SIBLEY GROVE, LONDON TILBURY); sweep of all 9 crops at 2x, each anchored in notes when opened: r0c0 C.R., B.M.33.8, parcel 85 5.534; r0c1 parcels 84 .288, 85, 86; r0c2 parcels 83 .983, 82 4.233; r1c0 AVENUE, parcel 88 2.370; r1c1 parcel 87 4.030, ponds; r1c2 parcel 81 4.507, FARM LANE; r2c0 GROVE, B P, B.M.28.3, L.B; r2c1 JEWS, SIBLEY; r2c2 JEWS FARM LANE, SIBLEY GROVE, LONDON TILBURY. Contact sheets cs1-cs3 at 6x around every candidate. All crops and contact sheets displayed when opened. Positions checked on a marker sheet. The mosaic is fully on-sheet (no margin or missing tiles).",
+ "legibility": "Clean; italic whole-foot figures clear at 2x, parcel numbers upright with 3 dp acreages. No sheet join seen. West 256 px overlaps q18_131105_87128 exactly (px there = px here + 768).",
+ "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+ "readings": [
+  {"type": "bench_mark", "value_ft": 33.8, "raw": "B.M.33·8", "px": 136, "py": 266, "confidence": "high", "setting": "building",
+   "notes": "overlap strip; B.M.33·8 text 40-110,262; downward pheon at the NE corner of the house block west of the C.R. lane"},
+  {"type": "spot", "value_ft": 30, "raw": "30", "px": 123, "py": 141, "confidence": "high", "setting": "street",
+   "notes": "overlap strip; figure 145-165,137 on the yellow lane; star cross west of the C.R. dots"},
+  {"type": "spot", "value_ft": 32, "raw": "32", "px": 185, "py": 362, "confidence": "high", "setting": "street",
+   "notes": "overlap strip; figure 200-220,360 on the lane; star cross between C.R. dots 18 px left; 6x"},
+  {"type": "spot", "value_ft": 30, "raw": "30", "px": 200, "py": 562, "confidence": "high", "setting": "street",
+   "notes": "overlap strip; figure 175-195,572 at the east end of Tennyson Avenue; star cross between C.R. dots; 6x"},
+  {"type": "spot", "value_ft": 28, "raw": "28", "px": 230, "py": 825, "confidence": "high", "setting": "street",
+   "notes": "overlap strip; figure 210-225,827 at the Plashet Grove / lane / Jews Farm Lane junction; star cross 12 px east, below the B.P. pheon; 6x"},
+  {"type": "bench_mark", "value_ft": 28.3, "raw": "B.M.28·3", "px": 238, "py": 805, "confidence": "medium", "setting": "other",
+   "notes": "B.M. on the boundary post (B P) at the corner of Jews Farm Lane and the C.R. lane; text B.M.28·3 at 290-360,768 on the lane; right-pointing pheon, point taken where the barbs converge against the post circle; setting other = boundary post at the road corner"},
+  {"type": "spot", "value_ft": 31, "raw": "31", "px": 408, "py": 255, "confidence": "high", "setting": "street",
+   "notes": "figure 415-435,268 below the field track; star cross on the track edge at the fence junction 15 px NW; 6x"},
+  {"type": "spot", "value_ft": 26, "raw": "26", "px": 726, "py": 195, "confidence": "high", "setting": "street",
+   "notes": "figure 725-745,213 below the field track; small x cross on the track 18 px above; 6x"},
+  {"type": "spot", "value_ft": 25, "raw": "25", "px": 863, "py": 99, "confidence": "high", "setting": "street",
+   "notes": "figure 875-895,103 east of the NE-running field track; star cross on the double track line 20 px west; 6x"},
+  {"type": "spot", "value_ft": 22, "raw": "22", "px": 640, "py": 736, "confidence": "high", "setting": "street",
+   "notes": "italic figure 590-615,700 north of Jews Farm Lane; nearest isolated star cross on the lane's south edge line 38 px SE, distinct from the boundary dots; 6x"},
+  {"type": "spot", "value_ft": 20, "raw": "20", "px": 961, "py": 669, "confidence": "high", "setting": "street",
+   "notes": "figure 980-1000,633 north of Jews Farm Lane; star cross in the lane among the boundary dots, 35 px SW of the figure (nearest isolated cross); 6x"}
+ ],
+ "non_height_marks": ["parcel numbers and acreages 81 4.507, 82 4.233, 83 .983, 84 .288, 85 5.534, 86 2.215, 87 4.030, 88 2.370", "B P (boundary post) at ~250,780", "L.B (letter box) at ~245,855", "S.P (signal post) at ~715,933 by the LT&SR", "S-shaped drain tie marks in fields 84-88"],
+ "unreadable_regions": [
+  {"px0": 0, "py0": 860, "px1": 20, "py1": 885, "reason": "figure '29' cut by the west edge (whole on q18_131105_87128 at 773,873)"},
+  {"px0": 1005, "py0": 755, "px1": 1024, "py1": 780, "reason": "italic 'S..' cut by the east edge, probably S.P. by the railway; not a height"}
+ ]
+}

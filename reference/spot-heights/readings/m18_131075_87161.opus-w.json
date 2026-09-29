@@ -1,0 +1,274 @@
+{
+ "mosaic": "m18_131075_87161",
+ "reader": "opus-w",
+ "area": "Bow Creek loop and River Lea mouth at Canning Town: Barking Road bridge approach, Cooperage Wharf, Orchard Place, Oil Refinery, Galvanized Iron Works, G.E.R. Woolwich branch sidings, Victoria Dock Road, Burnham and Woodstock Streets",
+ "method": "Sweep crops r0c0..r2c2 all viewed and displayed; anchors written on opening: r0c0 BARKING ROAD/Wharf/Cooperage Wharf; r0c1 G.E.R. WOOLWICH BRANCH/High Water Mark; r0c2 VICTORIA/P.O./P.H.; r1c0 BOW CREEK/Oil Refinery; r1c1 RIVER LEA/Sack & Bag Works/Glasshouse Wharf; r1c2 VICTORIA DOCK ROAD/Mud; r2c0 ORCHARD PLACE/SALTER'S BUILDINGS/WEST STREET; r2c1 Centre of Channel at Low Water/Galvanized Iron Works; r2c2 Crane/works yard with turntables. Contact sheets (own helper) all displayed: d1 8x six (R O of ROAD, big W of Wharf), d2 5x ±40 19·5/26·4 (C.R.), d3 8x six (Sack F.P., B.M.18·82), d4 6x B.M.18·28, d5 5x Orchard Place houses (missed figures, re-cut), d6 12x, d7 5x ±40 (ORCHARD), d8 8x six east side (DOCK K), d9 8x and d10 14x 8·9, d11 3x Victoria Dock Road lettering strip, marker sheet mkd 6x all 18 positions (2 corrected by 2 px). Every crop and sheet displayed when opened.",
+ "legibility": "Good; vertical sheet join at px ~340-343 over the full height (reported by sheet tool and seen by eye as a line with a tint step); no figure crosses it. Large areas of creek, mud and works yard carry no figures.",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 17.5,
+   "raw": "17·5",
+   "px": 188,
+   "py": 60,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Barking Road east of the Bow Creek bridge; no own dot (dots nearby are the ·F.P and the interpuncts of R·O·A·D); centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.5,
+   "raw": "19·5",
+   "px": 178,
+   "py": 179,
+   "confidence": "medium",
+   "setting": "open_ground",
+   "notes": "unbuilt ground between the railway sidings and the Bow Creek high-water line, no place word; no dot at 5x/8x; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 26.4,
+   "raw": "26·4",
+   "px": 72,
+   "py": 226,
+   "confidence": "medium",
+   "setting": "bridge",
+   "notes": "Barking Road rising to the Bow Creek (Iron) Bridge at the west edge; the nearby dots belong to the C.R. dash-dot boundary and B·A·R·K·I·N·G interpuncts; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 19.5,
+   "raw": "19·5",
+   "px": 424,
+   "py": 377,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "Cooperage Wharf; dot at the end of a boundary line left of figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.0,
+   "raw": "17·0",
+   "px": 455,
+   "py": 34,
+   "confidence": "high",
+   "setting": "railway",
+   "notes": "sidings curving west from the G.E.R. Woolwich branch; dot on the outer rail, figure below; rails at grade (wharf ground beside is 17·7-19·5)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.28,
+   "raw": "B.M.18·28",
+   "px": 501,
+   "py": 52,
+   "confidence": "high",
+   "setting": "other",
+   "notes": "B.M. whose pheon apex sits on the southern edge line of the railway sidings north of Cooperage Wharf (structure unclear, probably a wall along the sidings); pheon above-left of text; 12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.7,
+   "raw": "17·7",
+   "px": 453,
+   "py": 250,
+   "confidence": "high",
+   "setting": "wall_top",
+   "notes": "Cooperage Wharf edge on the Bow Creek loop; dot 3-4 px inside the wharf/bank line, figure below; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.2,
+   "raw": "17·2",
+   "px": 401,
+   "py": 520,
+   "confidence": "high",
+   "setting": "yard",
+   "notes": "by the Sack & Bag Works, Orchard Place side; dot on the boundary line left of figure, 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.82,
+   "raw": "B.M.18·82",
+   "px": 362,
+   "py": 632,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "B.M. on building edge west side of Orchard Place by the Oil Refinery; pheon above text; 8x/12x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 16.1,
+   "raw": "16·1",
+   "px": 356,
+   "py": 707,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Orchard Place; dot above figure, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.3,
+   "raw": "15·3",
+   "px": 326,
+   "py": 913,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "figure written on the grey building (Mills) east of Orchard Place; no dot (·R interpunct of ORCHARD 22 px west across the kerb); centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.1,
+   "raw": "15·1",
+   "px": 297,
+   "py": 1015,
+   "confidence": "medium",
+   "setting": "building",
+   "notes": "figure written on a building east of Orchard Place near the bottom edge (whole, ends ~y1020); no dot; centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.8,
+   "raw": "8·8",
+   "px": 984,
+   "py": 310,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "side street east of Victoria Dock Road; dot left of figure; both 8s match, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.9,
+   "raw": "8·9",
+   "px": 894,
+   "py": 367,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road; lone dot after the O of VICTORIA (the lettering has no interpuncts), left-below figure; 8x/14x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.1,
+   "raw": "8·1",
+   "px": 999,
+   "py": 564,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Victoria Dock Road at the level crossing of the sidings; lone dot after the K of DOCK, above-left of figure; 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.9,
+   "raw": "7·9",
+   "px": 1000,
+   "py": 55,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Woodstock Street; dot above-left, 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.6,
+   "raw": "7·6",
+   "px": 867,
+   "py": 74,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Burnham Street; only dot is the R· interpunct of STR·EET above figure"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 9.16,
+   "raw": "B.M.9·16",
+   "px": 876,
+   "py": 124,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Burnham Street, B.M. on building front; pheon NW of text; 8x (decimals 14x on identical tiles of m18_131078_87158)"
+  }
+ ],
+ "non_height_marks": [
+  "County & Parly. Borough and Union Boundary (dash-dot with x) along Bow Creek and the Lea",
+  "'High Water Mark of Ordinary Tides' and 'Centre of Channel at Low Water' lettering",
+  "C.R. dash-dot boundary along Barking Road",
+  "S.P. at ~40,300"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 0,
+   "py0": 266,
+   "px1": 18,
+   "py1": 286,
+   "reason": "figure '·48' (probably a B.M. value) cut by the west edge"
+  },
+  {
+   "px0": 1006,
+   "py0": 552,
+   "px1": 1024,
+   "py1": 572,
+   "reason": "'B.M.' text at the east edge, value off the mosaic"
+  },
+  {
+   "px0": 336,
+   "py0": 0,
+   "px1": 346,
+   "py1": 1024,
+   "reason": "vertical sheet join (tint step); no figures on it"
+  }
+ ]
+}

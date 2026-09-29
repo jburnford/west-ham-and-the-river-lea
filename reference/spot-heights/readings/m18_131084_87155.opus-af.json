@@ -1,0 +1,332 @@
+{
+ "mosaic": "m18_131084_87155",
+ "reader": "opus-af",
+ "area": "Custom House / Canning Town east: Star Lane, Alexandra Street, Edward and Fisher Streets, Forty Acre Lane, Cherry Island, Corner / Edwin / Richard Streets and the open marsh fields and ditches to the east",
+ "method": "Independent QA second read, no other reader file consulted. Viewed all 9 sweep crops (2x) with anchors: r0c0 STAR LANE/ALEXANDRA ST; r0c1 STAR LANE/FORTY ACRE; r0c2 FORTY ACRE LANE/ditch; r1c0 FISHER STREET; r1c1 Forty Acre Lane/B.M.5·96; r1c2 blank fields/double ditch; r2c0 CHERRY ISLAND/BRADLEY ST; r2c1 RICHARD STREET/School; r2c2 RICHARD STREET/H. Contact sheets c1-c13 (5-20x, nearest and smoothed) and region views reg1 (540-840,0-300, anchor FORTY ACRE LANE) and reg2 (260-480,480-700, anchor 4·4 road). Every crop and contact sheet displayed when opened. 6/8 compared against known 6 and 8 on the sheet; B.M. decimals checked at 16-20x; marker sheet checked.",
+ "legibility": "good; sheet joins at px ~637 vertical (strong tint change, paler east) and py ~963 horizontal (paler south); neither cuts a figure",
+ "crop_bounds_checked": [
+  [
+   0,
+   0,
+   448,
+   448
+  ],
+  [
+   288,
+   0,
+   736,
+   448
+  ],
+  [
+   576,
+   0,
+   1024,
+   448
+  ],
+  [
+   0,
+   288,
+   448,
+   736
+  ],
+  [
+   288,
+   288,
+   736,
+   736
+  ],
+  [
+   576,
+   288,
+   1024,
+   736
+  ],
+  [
+   0,
+   576,
+   448,
+   1024
+  ],
+  [
+   288,
+   576,
+   736,
+   1024
+  ],
+  [
+   576,
+   576,
+   1024,
+   1024
+  ],
+  [
+   540,
+   0,
+   840,
+   300
+  ],
+  [
+   260,
+   480,
+   480,
+   700
+  ]
+ ],
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 6.5,
+   "raw": "6·5",
+   "px": 59,
+   "py": 70,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "tram road across NW corner (large R lettering); digits clear at 8x/16x; no survey dot found on the rails within 30 px, position = centre of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.9,
+   "raw": "5·9",
+   "px": 137,
+   "py": 225,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "junction of Edward Street and Alexandra Street; dot at 137,225 just after the D of EDWARD (could be a word-end dot), digits clear at 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.4,
+   "raw": "6·4",
+   "px": 222,
+   "py": 344,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Alexandra Street by Fisher Street corner, above B.M.8·86; dot at 222,344 below-left of figure but close to the full stop of B.M.; digits clear at 8x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 8.86,
+   "raw": "B.M.8·86",
+   "px": 214,
+   "py": 363,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "corner house of Alexandra Street / Fisher Street; pheon junction 214,363 below text; leading 8 has closed lower bowl at 20x matching the second 8, final 6 G-shaped"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.0,
+   "raw": "4·0",
+   "px": 584,
+   "py": 37,
+   "confidence": "high",
+   "setting": "marsh",
+   "notes": "unlettered open plot inside dotted boundary between Star Lane terrace and Forty Acre Lane; dot left of figure; value rule (<15) -> marsh"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.3,
+   "raw": "5·3",
+   "px": 484,
+   "py": 158,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Star Lane by H (hydrant); dot left-below figure; digits clear 8x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 615,
+   "py": 230,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Forty Acre Lane at the south corner of the dotted plot; dot above-left; 3 and 9 clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.9,
+   "raw": "3·9",
+   "px": 498,
+   "py": 355,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Forty Acre Lane in front of the terrace end; dot above; clear at 16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 5.96,
+   "raw": "B.M.5·96",
+   "px": 451,
+   "py": 381,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "house at the end of the terrace facing Forty Acre Lane; pheon point left of text at 451,381; 5 flat-topped, 96 clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 3.8,
+   "raw": "3·8",
+   "px": 796,
+   "py": 23,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "Forty Acre Lane near its north end (H nearby); dot left of figure; final digit closed 8 plainly different from leading 3 at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 5.1,
+   "raw": "5·1",
+   "px": 292,
+   "py": 445,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "Alexandra Street south end; figure written just west of the carriageway edge, isolated dot 292,445 in the street ~20 px NE taken as survey dot"
+  },
+  {
+   "type": "spot",
+   "value_ft": 4.4,
+   "raw": "4·4",
+   "px": 370,
+   "py": 544,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "unfenced road continuing Alexandra Street south between open fields; dot above figure"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 44,
+   "py": 775,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "E-W road (R·O·A D·) west end; isolated dot left of figure; 8 closed at 16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.05,
+   "raw": "B.M.10·05",
+   "px": 34,
+   "py": 797,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "building front at SW corner of the E-W road, pheon 34,797 below text; B of B.M. touches west edge but value whole; final 5 flat-topped at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 152,
+   "py": 773,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "E-W road; dot at 152,773 is the R·O interpunct position of the road lettering; 5 flat-topped at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.4,
+   "raw": "7·4",
+   "px": 214,
+   "py": 776,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "E-W road; dot at 214,776 coincides with the O·A interpunct; digits clear"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.9,
+   "raw": "6·9",
+   "px": 327,
+   "py": 767,
+   "confidence": "medium",
+   "setting": "street",
+   "notes": "E-W road at Corner Street; dot = D· after ROAD lettering; leading digit compared with known 6 (6·5, 6·4) and known 8 (7·8) at 6x/10x, resembles the 6"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.5,
+   "raw": "7·5",
+   "px": 432,
+   "py": 767,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "E-W road at Corner Street / Edwin Street; dot above-left, separate from the F.P. below; 5 flat-topped at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.0,
+   "raw": "7·0",
+   "px": 87,
+   "py": 839,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road SW of the triangular island; dot above-left; oval 0 at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 6.2,
+   "raw": "6·2",
+   "px": 120,
+   "py": 992,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "street west of Cherry Island terraces, south of the py ~963 join; dot above"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.8,
+   "raw": "7·8",
+   "px": 590,
+   "py": 758,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road north of Richard Street terrace; dot left of figure; 8 closed at 16x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.17,
+   "raw": "B.M.10·17",
+   "px": 621,
+   "py": 780,
+   "confidence": "high",
+   "setting": "building",
+   "notes": "Richard Street terrace front, pheon on building line 621,780 below text; clear at 16x"
+  },
+  {
+   "type": "spot",
+   "value_ft": 7.9,
+   "raw": "7·9",
+   "px": 648,
+   "py": 754,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road at the Richard Street corner, east of the px ~637 join; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 8.3,
+   "raw": "8·3",
+   "px": 788,
+   "py": 751,
+   "confidence": "high",
+   "setting": "street",
+   "notes": "road east of Richard Street towards the ditch; dot above-left; 8 and 3 distinct at 16x"
+  }
+ ],
+ "non_height_marks": [
+  "survey triangle on Forty Acre Lane at ~640,182 with no figure",
+  "F.P. marks along Alexandra, Star and Corner Streets",
+  "H hydrant marks at 486,146 and 676,784",
+  "School Boys, Girls & Infants lettering"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 1012,
+   "py0": 740,
+   "px1": 1024,
+   "py1": 760,
+   "reason": "figure (leading 8 with dot at ~1022,745) cut by east edge; belongs to the eastern neighbour"
+  }
+ ]
+}

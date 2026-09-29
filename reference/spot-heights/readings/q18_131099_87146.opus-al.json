@@ -1,0 +1,25 @@
+{
+  "mosaic": "q18_131099_87146", "reader": "opus-al", "layer": "os-25-inch-london",
+  "area": "Blind Lane and the fields east of it, north of the LT&SR (E 541410-541800, N 182545-182935); parcels 5 (.653 ac) and 40 (.861 ac)",
+  "method": "OS 25-inch (1:2500) Essex county series, layer os-25-inch-london. Independent QA second read. sheet (no join reported), 2x sweep of all 9 crops, each anchored on opening and all displayed: r0c0 'Blind Lane' lettering + 19/15; r0c1 'Lane' + 15; r0c2 single curved field line, blank; r1c0 yellow road bend + dashed field lines; r1c1 'B.M.16·7'; r1c2 blank paper, crease ~660; r2c0 parcel '5 / ·653'; r2c1 parcel '40 / ·861' + 12, 11; r2c2 blank with specks. 5x contact sheet cs1 (6 panels: 19, 15, B.M.16·7/15, 12, 11, 14) and 8x zooms at 440,1004 and 428,470, all displayed. Positions from the cross/pheon measured on the contact sheet and zooms; marker sheet checked.",
+  "legibility": "Clear; italic whole-foot figures ~13 px, legible at 2x and unambiguous at 5x. No sheet join seen by eye; east half is blank paper. No grey fill.",
+  "crop_bounds_checked": [[0,0,448,448],[288,0,736,448],[576,0,1024,448],[0,288,448,736],[288,288,736,736],[576,288,1024,736],[0,576,448,1024],[288,576,736,1024],[576,576,1024,1024]],
+  "readings": [
+    {"type": "spot", "value_ft": 19, "raw": "19", "px": 283, "py": 14, "confidence": "high", "setting": "street",
+     "notes": "Blind Lane, north end; figure at ~309,16 paired with the x on the lane ~26 px west, between the boundary dots; confirmed 5x"},
+    {"type": "spot", "value_ft": 15, "raw": "15", "px": 374, "py": 310, "confidence": "high", "setting": "street",
+     "notes": "Blind Lane; figure at ~396,307 east of the lane, paired with the x on the lane ~22 px west; confirmed 5x"},
+    {"type": "bench_mark", "value_ft": 16.7, "raw": "B.M.16·7", "px": 428, "py": 471, "confidence": "high", "setting": "other",
+     "notes": "pheon point on the east fence line of Blind Lane at the junction with the yellow road running west; no wall drawn (fence); text to the east; confirmed 8x"},
+    {"type": "spot", "value_ft": 15, "raw": "15", "px": 421, "py": 477, "confidence": "high", "setting": "street",
+     "notes": "lane junction just below the B.M. pheon; figure at ~450,485 across the east fence, paired with the x on the road ~29 px west; confirmed 5x and 8x"},
+    {"type": "spot", "value_ft": 12, "raw": "12", "px": 433, "py": 732, "confidence": "high", "setting": "street",
+     "notes": "yellow road (continuation of Blind Lane south); figure at ~458,738 east of the road, paired with the x on the road ~25 px west, just north of the parcel arrows; confirmed 5x"},
+    {"type": "spot", "value_ft": 11, "raw": "11", "px": 438, "py": 1004, "confidence": "medium", "setting": "street",
+     "notes": "yellow road at the small rectangular structure near the south edge; figure at ~462,1008 whole inside the mosaic; the cross merges with the structure outline at 8x, position estimated"},
+    {"type": "spot", "value_ft": 14, "raw": "14", "px": 131, "py": 929, "confidence": "high", "setting": "marsh",
+     "notes": "open field west of the road, no place word; figure at ~127,948 below its + (~19 px above); setting by the value rule (<15 ft); confirmed 5x"}
+  ],
+  "non_height_marks": ["parcel 5 / .653 with brace and arrow at ~340,760", "parcel 40 / .861 with brace and arrow at ~545,760", "'51'-like upright parcel figure fragment = the 5 of parcel 5"],
+  "unreadable_regions": []
+}

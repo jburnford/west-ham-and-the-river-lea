@@ -1,0 +1,283 @@
+{
+ "mosaic": "m18_131069_87134",
+ "reader": "opus-b",
+ "area": "Stratford: Channelsea Bridge on the High Street, Channel Sea Road and Street, Stratford Wharf, Victoria Mills, Halling Wharf, G.E.R. Goods & Coal Depot, Stratford Market station, Bridge Road / Albion Street",
+ "method": "read by Claude (vision): 3x3 grid of 448 px crops at 2x LANCZOS, every candidate checked at 6x (80 px window, crosshair) and ambiguous ones at 8-10x; positions in mosaic pixels",
+ "legibility": "good; the west 256 px duplicate the east of m18_131066_87134 (px offset 768); east edge cuts two figures",
+ "readings": [
+  {
+   "type": "spot",
+   "value_ft": 19.7,
+   "raw": "19·7",
+   "px": 353,
+   "py": 32,
+   "confidence": "medium",
+   "notes": "High Street at Channelsea Bridge; dot is a tick on the tram rail above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.4,
+   "raw": "18·4",
+   "px": 236,
+   "py": 170,
+   "confidence": "medium",
+   "notes": "High Street; dot on the tram rail left of figures (seen at 10x); cut by the east edge of m18_131066_87134"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 18.51,
+   "raw": "B.M.18·51",
+   "px": 272,
+   "py": 187,
+   "confidence": "medium",
+   "notes": "text on the building east of the High Street; no pheon found within 60 px, position = text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.7,
+   "raw": "12·7",
+   "px": 388,
+   "py": 258,
+   "confidence": "high",
+   "notes": "Channel Sea Road north end; dot right of figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.81,
+   "raw": "B.M.13·81",
+   "px": 381,
+   "py": 272,
+   "confidence": "high",
+   "notes": "pheon right of the text at the terrace end by the Channel Sea River"
+  },
+  {
+   "type": "spot",
+   "value_ft": 18.3,
+   "raw": "18·3",
+   "px": 82,
+   "py": 352,
+   "confidence": "medium",
+   "notes": "duplicate of m18_131066_87134 (px+768); High Street; dot on tram rail"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.1,
+   "raw": "12·1",
+   "px": 301,
+   "py": 381,
+   "confidence": "medium",
+   "notes": "figures over a building by New Street; no dot found, position = figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 10.93,
+   "raw": "B.M.10·93",
+   "px": 316,
+   "py": 420,
+   "confidence": "medium",
+   "notes": "pheon at the east end of Prospect Row by the F.P., about 30 px NE of the text"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.9,
+   "raw": "9·9",
+   "px": 207,
+   "py": 491,
+   "confidence": "high",
+   "notes": "duplicate of m18_131066_87134 (px+768); by the School; dot below-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.3,
+   "raw": "11·3",
+   "px": 396,
+   "py": 489,
+   "confidence": "high",
+   "notes": "Channel Sea Road by the river; dot right"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.08,
+   "raw": "B.M.11·08",
+   "px": 237,
+   "py": 564,
+   "confidence": "high",
+   "notes": "duplicate of m18_131066_87134 (px+768); pheon in the CHANNEL SEA lettering"
+  },
+  {
+   "type": "spot",
+   "value_ft": 9.8,
+   "raw": "9·8",
+   "px": 249,
+   "py": 578,
+   "confidence": "medium",
+   "notes": "Channel Sea Street; figures over a building; dot taken as the interpunct before SEA"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.2,
+   "raw": "11·2",
+   "px": 418,
+   "py": 639,
+   "confidence": "medium",
+   "notes": "south end of Channel Sea Road; dot on the wall line right of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 11.6,
+   "raw": "11·6",
+   "px": 585,
+   "py": 450,
+   "confidence": "medium",
+   "notes": "Channel Sea Road by Halling Wharf; no dot apart from the F.P. dot, position = figures"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 15.71,
+   "raw": "B.M.15·71",
+   "px": 482,
+   "py": 594,
+   "confidence": "high",
+   "notes": "pheon below-left of the text on the goods-depot building by the river"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 480,
+   "py": 617,
+   "confidence": "high",
+   "notes": "goods-depot embankment by the river; dot left on the wall line"
+  },
+  {
+   "type": "spot",
+   "value_ft": 17.3,
+   "raw": "17·3",
+   "px": 526,
+   "py": 806,
+   "confidence": "medium",
+   "notes": "goods-depot embankment; last digit 3 (possibly 8); dot a tick on the embankment line left of figures"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.9,
+   "raw": "10·9",
+   "px": 141,
+   "py": 653,
+   "confidence": "low",
+   "notes": "duplicate of m18_131066_87134 (px+768); East Street; last digit 9 or 2 at 10x"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 11.58,
+   "raw": "B.M.11·58",
+   "px": 188,
+   "py": 717,
+   "confidence": "high",
+   "notes": "duplicate of m18_131066_87134 (px+768); pheon at South Street"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.2,
+   "raw": "10·2",
+   "px": 109,
+   "py": 786,
+   "confidence": "medium",
+   "notes": "duplicate of m18_131066_87134 (px+768); dot = interpunct in STREET lettering"
+  },
+  {
+   "type": "spot",
+   "value_ft": 10.6,
+   "raw": "10·6",
+   "px": 39,
+   "py": 876,
+   "confidence": "high",
+   "notes": "duplicate of m18_131066_87134 (px+768); dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 15.0,
+   "raw": "15·0",
+   "px": 1,
+   "py": 988,
+   "confidence": "high",
+   "notes": "duplicate of m18_131066_87134 (px+768); dot above-left, at the west edge"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.3,
+   "raw": "13·3",
+   "px": 772,
+   "py": 38,
+   "confidence": "high",
+   "notes": "Bridge Road by Devon Street; dot below-right (the F.P. has its own dot)"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.6,
+   "raw": "13·6",
+   "px": 805,
+   "py": 90,
+   "confidence": "high",
+   "notes": "Bridge Road; dot above-left"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.5,
+   "raw": "13·5",
+   "px": 910,
+   "py": 262,
+   "confidence": "medium",
+   "notes": "Bridge Road at Albion Street; dot below-left (the second dot belongs to F.P.)"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 14.65,
+   "raw": "B.M.14·65",
+   "px": 930,
+   "py": 275,
+   "confidence": "high",
+   "notes": "pheon above the text at the corner house, Bridge Road"
+  },
+  {
+   "type": "spot",
+   "value_ft": 12.2,
+   "raw": "12·2",
+   "px": 786,
+   "py": 307,
+   "confidence": "high",
+   "notes": "Channel Sea Road east end; dot left"
+  },
+  {
+   "type": "bench_mark",
+   "value_ft": 13.62,
+   "raw": "B.M.13·62",
+   "px": 810,
+   "py": 310,
+   "confidence": "high",
+   "notes": "pheon right of the text at the building corner"
+  },
+  {
+   "type": "spot",
+   "value_ft": 13.5,
+   "raw": "13·5",
+   "px": 1012,
+   "py": 207,
+   "confidence": "low",
+   "notes": "Albion Street at the east edge; last digit partly cut; no dot seen"
+  }
+ ],
+ "non_height_marks": [
+  "S.P. signal posts, S.B., W.M., H hydrants, F.P. fire plugs, L.B. letter box",
+  "triangle (station mark) by the F.P. at about 421,560 on Channel Sea Road"
+ ],
+ "unreadable_regions": [
+  {
+   "px0": 995,
+   "py0": 450,
+   "px1": 1024,
+   "py1": 480,
+   "reason": "figure '13·?' cut by the east edge, dot at about 1009,469; needs the mosaic to the east"
+  }
+ ]
+}
