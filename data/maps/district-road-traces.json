@@ -2364,12 +2364,28 @@
           399.044
         ],
         [
-          -602.577,
-          398.436
+          -611,
+          397
         ],
         [
-          -572.759,
-          399.481
+          -601,
+          396
+        ],
+        [
+          -589,
+          394.2
+        ],
+        [
+          -583.5,
+          394.2
+        ],
+        [
+          -575,
+          396.2
+        ],
+        [
+          -570,
+          395
         ],
         [
           -559.938,
@@ -2407,12 +2423,28 @@
           2895.003
         ],
         [
-          2390.004,
-          2895.002
+          2367.489,
+          2890.518
         ],
         [
-          2470.003,
-          2900.002
+          2394.417,
+          2888.559
+        ],
+        [
+          2426.774,
+          2884.592
+        ],
+        [
+          2441.544,
+          2884.996
+        ],
+        [
+          2464.225,
+          2891.004
+        ],
+        [
+          2477.74,
+          2888.14
         ],
         [
           2505.002,
@@ -2556,7 +2588,125 @@
         ],
         "priorWidth": 7,
         "review": "Retain the public approach, bridge span and 7 m width through the mill entrance. The former eastern extension becomes a separately traced narrower works passage."
-      }
+      },
+      "threeMillsLandmarkAlignment": {
+        "points": [
+          [
+            -823.717,
+            482.448
+          ],
+          [
+            -787.163,
+            457.312
+          ],
+          [
+            -735.876,
+            426.205
+          ],
+          [
+            -699.02,
+            412.203
+          ],
+          [
+            -654.419,
+            409.132
+          ],
+          [
+            -624.903,
+            399.044
+          ],
+          [
+            -602.577,
+            398.436
+          ],
+          [
+            -572.759,
+            399.481
+          ],
+          [
+            -559.938,
+            391.703
+          ],
+          [
+            -550.737,
+            387.739
+          ]
+        ],
+        "sourcePixels": [
+          [
+            1790.002,
+            3105.002
+          ],
+          [
+            1890.001,
+            3040.001
+          ],
+          [
+            2030.003,
+            2960.002
+          ],
+          [
+            2130.002,
+            2925.002
+          ],
+          [
+            2250.001,
+            2920.001
+          ],
+          [
+            2330.003,
+            2895.003
+          ],
+          [
+            2390.004,
+            2895.002
+          ],
+          [
+            2470.003,
+            2900.002
+          ],
+          [
+            2505.002,
+            2880.0
+          ],
+          [
+            2530.001,
+            2870.002
+          ]
+        ],
+        "width": 7,
+        "kind": "street",
+        "bridgeSpans": [
+          {
+            "id": "three-mills-lea-bridge",
+            "points": [
+              [
+                -680.436,
+                410.923
+              ],
+              [
+                -624.903,
+                399.044
+              ]
+            ],
+            "style": "deck",
+            "archCount": 1,
+            "height": 2.2,
+            "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+          }
+        ],
+        "review": "OS centreline follows the open mill court north of the clock/stair projection. Western approach, main Lea bridge and distillery junction retained."
+      },
+      "buildingClearanceReviews": [
+        {
+          "modelIds": [
+            "house-tail",
+            "clock-kilns"
+          ],
+          "shoulderWidth": 0.9,
+          "evidence": "Re-read OS mill-court bend retains the 7 m carriageway. A 0.9 m pavement allowance at the kiln/tail pinch preserves both supplied walls; minimum opposing exterior gap is 9.469 m."
+        }
+      ]
     },
     {
       "name": "Three Mills Lane beside distillery",
@@ -2567,19 +2717,35 @@
           391.703
         ],
         [
-          -566.126,
+          -559.5,
+          387
+        ],
+        [
+          -561,
+          379
+        ],
+        [
+          -564,
           369.588
         ]
       ],
       "pixelWidth": 4864,
       "sourcePixels": [
         [
-          2505,
-          2880
+          2505.002,
+          2880.0
         ],
         [
-          2490,
-          2820
+          2506.523,
+          2867.37
+        ],
+        [
+          2503.079,
+          2845.72
+        ],
+        [
+          2495.711,
+          2820.158
         ]
       ],
       "sourceBounds": [
@@ -2588,8 +2754,8 @@
         250,
         600
       ],
-      "width": 4.5,
-      "kind": "street",
+      "width": 2.2,
+      "kind": "path",
       "surface": "cinder",
       "alignmentEvidence": "Manually read centreline on archived NLS georeferenced OS London five-foot mapping, revised 1893. Scene origin 538900,183209; widths estimated from the map.",
       "surfaceEvidence": "Interpreted paving; no street-specific adoption record.",
@@ -2598,20 +2764,68 @@
           "id": "three-mills-lane-beside-distillery-connection-0",
           "points": [
             [
-              -562.1648314724727,
-              383.744632512325
+              -560.4375,
+              382
             ],
             [
-              -566.126,
+              -561,
+              379
+            ],
+            [
+              -564,
               369.588
             ]
           ],
           "style": "deck",
           "height": 1.5,
           "provisional": true,
-          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge."
+          "evidence": "Provisional narrow footpath deck/culvert at the independently registered bank; route corrected to pass east of mapped office 742. Structure and level remain uncertain."
         }
-      ]
+      ],
+      "threeMillsLandmarkAlignment": {
+        "points": [
+          [
+            -559.938,
+            391.703
+          ],
+          [
+            -566.126,
+            369.588
+          ]
+        ],
+        "sourcePixels": [
+          [
+            2505,
+            2880
+          ],
+          [
+            2490,
+            2820
+          ]
+        ],
+        "width": 4.5,
+        "kind": "street",
+        "bridgeSpans": [
+          {
+            "id": "three-mills-lane-beside-distillery-connection-0",
+            "points": [
+              [
+                -562.1648314724727,
+                383.744632512325
+              ],
+              [
+                -566.126,
+                369.588
+              ]
+            ],
+            "style": "deck",
+            "height": 1.5,
+            "provisional": true,
+            "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge."
+          }
+        ],
+        "review": "OS labels this eastern route F.P.; re-read footpath east of office 742 with an interpreted 2.2 m width. Its existing provisional water crossing follows the corrected route."
+      }
     },
     {
       "name": "Three Mills entrance",

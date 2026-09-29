@@ -46,7 +46,7 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
     }
     return result;
   }
-  const counts={sites:data.sites.length,ranges:0,roofPlanes:0,windows:0,holders:data.holders.length,siteRanges:{},chimneys:0,chimneysWithMappedHeights:0,siteChimneys:{},chimneyTops:[],tanks:[]};
+  const counts={sites:data.sites.length,ranges:0,roofPlanes:0,windows:0,holders:data.holders.length,siteRanges:{},chimneys:0,chimneysWithMappedHeights:0,siteChimneys:{},chimneyTops:[],tanks:[],landmarks:[]};
   for(const b of data.buildings) {
     const angle=b.rotation*Math.PI/180,c=Math.cos(angle),s=Math.sin(angle);
     const toLocal=([x,z])=>[(x-b.x)*c+(z-b.z)*s,-(x-b.x)*s+(z-b.z)*c];
@@ -100,6 +100,17 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
           const u=at(t-half).map((v,j)=>v+normal[j]),v=at(t+half).map((v,j)=>v+normal[j]);
           const bottom=base+1.2+floor*3.1,top=Math.min(base+h-.55,bottom+1.75);
           if(top<=bottom)continue;
+          // The attached weatherboard panel supplies its own openings. Do not
+          // leave the generic masonry windows and projecting frames underneath.
+          if(top>2.2 && b.landmarkDetails?.houseFacades) {
+            const [wx,,wz]=world(at(t),0);
+            const clad=b.landmarkDetails.houseFacades.some(([p,q])=>{
+              const dx=q[0]-p[0],dz=q[1]-p[1],length2=dx*dx+dz*dz;
+              const along=((wx-p[0])*dx+(wz-p[1])*dz)/length2;
+              return along>=0 && along<=1 && Math.abs((wx-p[0])*dz-(wz-p[1])*dx)/Math.sqrt(length2)<.02;
+            });
+            if(clad)continue;
+          }
           quad(m.window,world(u,bottom),world(u,top),world(v,top),world(v,bottom));
           if(b.louvredUpperStorey && floor===Math.floor(b.storeys)-1) {
             // Goad explicitly notes louvred windows; dimensions are interpreted.
@@ -146,28 +157,48 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
       const g=new THREE.Group();g.position.set(b.x,0,b.z);g.rotation.y=-angle;scene.add(g);
       if(b.id==='house-main') {
         // Weatherboarded central upper facade and attic dormers: surviving mill character.
+        const facades=b.landmarkDetails?.houseFacades;
+        if(facades)for(const [a,z] of facades) {
+          const face=new THREE.Group(),length=Math.hypot(z[0]-a[0],z[1]-a[1]);
+          face.position.set((a[0]+z[0])/2,0,(a[1]+z[1])/2);
+          face.rotation.y=-Math.atan2(z[1]-a[1],z[0]-a[0]);scene.add(face);
+          box(face,0,2.2,0,length,h-2.2,.10,pale);
+          for(let x=-length*.4;x<=length*.41;x+=length*.2)for(const y of [3.1,6.2,8.1])
+            for(const sign of [-1,1])box(face,x,y,sign*.08,1.05,1.5,.05,m.window);
+        }
+        if(facades)counts.landmarks.push({id:'house-main-facades',segments:facades});
         for(const sign of [-1,1]) {
+          if(!facades) {
           box(g,0,2.2,sign*(b.depth/2+.03),b.width*.62,h-2.2,.08,pale);
           for(let x=-b.width*.25;x<=b.width*.26;x+=b.width*.125)for(const y of [3.1,6.2,8.1])
             box(g,x,y,sign*(b.depth/2+.10),1.05,1.5,.05,m.window);
+          }
           for(let x=-b.width*.25;x<=b.width*.3;x+=b.width*.25) {
-            box(g,x,h+.65,sign*b.depth*.30,1.7,1.45,1.4,pale);
-            box(g,x,h+.8,sign*(b.depth*.30+.73),1.1,1,.06,m.window);
-            box(g,x,h+2.1,sign*b.depth*.30,2,.12,1.7,m.roof);
+            const z=sign*b.depth*.30,dormerBase=roofHeight([x,z-sign*.7])-.6;
+            box(g,x,dormerBase,z,1.7,1.45,1.4,pale);
+            box(g,x,dormerBase+.15,sign*(b.depth*.30+.73),1.1,1,.06,m.window);
+            box(g,x,dormerBase+1.45,z,2,.12,1.7,m.roof);
           }
         }
       }
     }
     if(b.id==='clock-kilns') {
       const g=new THREE.Group();g.position.set(b.x,0,b.z);g.rotation.y=-angle;scene.add(g);
-      for(const z of [-b.depth*.25,b.depth*.25])cylinder(g,0,b.height,z,.4,Math.min(b.width,b.depth*.5)*.65,5.7,m.roof,16);
-      const tx=-b.width*.7,tz=-b.depth*.25;
-      box(g,tx,0,tz,4.6,12,4.6,stock);
-      cylinder(g,tx,12,tz,2.3,2.6,5.5,pale,8);
-      cylinder(g,tx,17.5,tz,0,2.6,3.6,m.roof,8);
+      const detail=b.landmarkDetails;
+      if(detail?.kilnCaps)for(const cap of detail.kilnCaps) {
+        const [x,z]=toLocal(cap.centre);cylinder(g,x,b.height,z,.4,cap.radius,cap.height,m.roof,16);
+        counts.landmarks.push({id:'clock-kiln-cap',centre:cap.centre,radius:cap.radius});
+      }
+      else for(const z of [-b.depth*.25,b.depth*.25])cylinder(g,0,b.height,z,.4,Math.min(b.width,b.depth*.5)*.65,5.7,m.roof,16);
+      const tower=detail?.tower,[tx,tz]=tower?toLocal(tower.centre):[-b.width*.7,-b.depth*.25];
+      const width=tower?.width??4.6,baseHeight=tower?.baseHeight??12,lanternHeight=tower?.lanternHeight??5.5;
+      box(g,tx,0,tz,width,baseHeight,width,stock);
+      cylinder(g,tx,baseHeight,tz,width*.5,width*.565,lanternHeight,pale,8);
+      cylinder(g,tx,baseHeight+lanternHeight,tz,0,width*.565,tower?.spireHeight??3.6,m.roof,8);
+      if(tower)counts.landmarks.push({id:'clock-tower',centre:tower.centre,width});
       for(const sign of [-1,1]) {
-        const dial=new THREE.Mesh(new THREE.CircleGeometry(.85,24),pale);dial.position.set(tx,15.4,tz+sign*2.45);if(sign<0)dial.rotation.y=Math.PI;g.add(dial);
-        box(g,tx,15.4,tz+sign*2.5,.07,.65,.06,m.iron);box(g,tx+.2,15.38,tz+sign*2.5,.45,.07,.06,m.iron);
+        const dial=new THREE.Mesh(new THREE.CircleGeometry(.85,24),pale);dial.position.set(tx,15.4,tz+sign*width*.54);if(sign<0)dial.rotation.y=Math.PI;g.add(dial);
+        box(g,tx,15.4,tz+sign*width*.55,.07,.65,.06,m.iron);box(g,tx+.2,15.38,tz+sign*width*.55,.45,.07,.06,m.iron);
       }
     }
   }

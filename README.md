@@ -141,3 +141,9 @@ outline is directly traced and one small Goad-only outbuilding remains provision
 Mapped chimney/tank positions and a revised works passage complete this northern
 pass. The southern continuation matches eight more ranges and three tanks,
 reaching 336 source-linked ranges. House/Clock Mills and the wharf ranges are next.
+
+The House/Clock Mill and wharf continuation aligns the remaining eight mapped
+Three Mills ranges, bringing the district to 344 source-linked ranges plus eleven
+direct OS traces. Clock-tower and kiln details follow the corrected footprint;
+the mill-court bend and eastern footpath now clear the mapped walls. One small
+Three Mills outbuilding remains a provisional Goad transfer.

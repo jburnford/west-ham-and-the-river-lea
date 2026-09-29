@@ -191,6 +191,19 @@ async def three_mills(url):
             actual=tanks[tank['id']]
             assert actual['position']==[tank['x'],.1,tank['z']]
             assert actual['radius']==tank['radius'] and actual['height']==tank['height']
+    by_id={b['id']:b for b in expected['buildings']}
+    if 'landmarkDetails' in by_id['clock-kilns']:
+        detail=by_id['clock-kilns']['landmarkDetails']
+        landmarks=rendered['landmarks']
+        tower=next(t for t in landmarks if t['id']=='clock-tower')
+        assert tower['centre']==detail['tower']['centre'] and tower['width']==detail['tower']['width']
+        caps=[t for t in landmarks if t['id']=='clock-kiln-cap']
+        assert len(caps)==2
+        for actual,target in zip(caps,detail['kilnCaps']):
+            assert actual['centre']==target['centre'] and actual['radius']==target['radius']
+        facades=next(t for t in landmarks if t['id']=='house-main-facades')
+        assert facades['segments']==by_id['house-main']['landmarkDetails']['houseFacades']
+        print('House Mill facades, both kiln caps and clock tower reached their mapped anchors.',flush=True)
     print('Three Mills: 38 site ranges, corrected boiler chimney and all five fitted tanks reached the renderer.',flush=True)
 
 
@@ -311,6 +324,7 @@ if __name__ == '__main__':
     parser.add_argument('--lascelles-ultramarine-only', action='store_true', help='Review Lascelles and Ultramarine, map joins, chimney opening and lane')
     parser.add_argument('--software-gl', action='store_true', help='Use SwiftShader for review when the hardware graphics context is unavailable')
     parser.add_argument('--williams-asphalte-only', action='store_true', help='Review Williams wharf and French Asphalte footprint alignment')
+    parser.add_argument('--three-mills-landmarks-only', action='store_true', help='Review House/Clock Mills and the bonded wharf')
     parser.add_argument('--three-mills-south-only', action='store_true', help='Review the southern Three Mills ranges and tanks')
     parser.add_argument('--three-mills-north-only', action='store_true', help='Review the northern Three Mills distillery and mapped plant')
     parser.add_argument('--kendrick-usher-only', action='store_true', help='Review both Kendrick works and Usher printing ink')
@@ -579,11 +593,20 @@ if __name__ == '__main__':
             'three-mills-south-court': {'position':[-440,17,463],'target':[-463,5,420],'fov':68},
         }
         action=three_mills
+    if args.three_mills_landmarks_only:
+        runner.REPORT_NAME='three-mills-landmark-alignment-checks.json'
+        runner.VIEWS={
+            'three-mills-landmark-plan': {'position':[-602,140,417],'target':[-602,0,410],'fov':60},
+            'three-mills-house-front': {'position':[-615,14,418],'target':[-611,7,383],'fov':66},
+            'three-mills-clock-court': {'position':[-596,9,386],'target':[-575,10,408],'fov':68},
+            'three-mills-wharf': {'position':[-643,36,486],'target':[-609,8,445],'fov':66},
+        }
+        action=three_mills
     if args.view:
         if args.view not in runner.VIEWS:parser.error('Unknown selected view: '+args.view)
         runner.VIEWS={args.view:runner.VIEWS[args.view]}
         runner.REPORT_NAME=args.view+'-checks.json'
-        action=three_mills if (args.three_mills_north_only or args.three_mills_south_only) else runner.review
+        action=three_mills if (args.three_mills_north_only or args.three_mills_south_only or args.three_mills_landmarks_only) else runner.review
     if args.url:
         asyncio.run(action(args.url.rstrip('/')))
         raise SystemExit

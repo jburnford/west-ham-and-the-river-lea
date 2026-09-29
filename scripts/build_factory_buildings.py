@@ -68,7 +68,8 @@ def build():
                        'data/maps/refinery-printing-footprint-alignment.json',
                        'data/maps/kendrick-usher-footprint-alignment.json',
                        'data/maps/three-mills-north-footprint-alignment.json',
-                       'data/maps/three-mills-south-footprint-alignment.json']
+                       'data/maps/three-mills-south-footprint-alignment.json',
+                       'data/maps/three-mills-landmark-footprint-alignment.json']
     compounds = [json.loads((ROOT/path).read_text()) for path in group_registers]
     structure_alignment = {}
     map_traces = {}
@@ -103,6 +104,8 @@ def build():
             row.update({k:v for k,v in map_traces[row['id']].items() if k != 'modelId'})
         correction = aligned.get(row['id'])
         if correction:
+            if 'landmarkDetails' in correction:
+                row['landmarkDetails'] = correction['landmarkDetails']
             if 'priorSiteId' in correction:
                 assert row['siteId']==correction['priorSiteId']
                 row.update(siteId=correction['siteId'], priorSiteId=correction['priorSiteId'],

@@ -5,11 +5,10 @@ circa-1900 reconstruction. Continue adjusting existing 3D models to the supplied
 building footprints, site by site. Exact architectural accuracy is not required,
 but record the distinction between map evidence and interpreted elevations.
 
-Commit checkpoint: `527d3e9` contains the western Sugar House, Crystal/Barber,
-High Street, Bow Bridge and Hunt passes. The subsequent Lascelles / Ultramarine,
-Williams / French Asphalte, refinery / printing, Kendrick / Usher and both Three Mills distillery continuations remain local
-and uncommitted.
-The separate height work is excluded.
+Commit checkpoint: `d6c9335` contains the six completed continuations through
+southern Three Mills, including shared authoring records and tank-safe yard
+exclusions. The later House/Clock Mill and wharf continuation is local and
+uncommitted. Separate height work and `docs2/` remain excluded.
 
 ## Start here
 
@@ -24,7 +23,7 @@ The separate height work is excluded.
 
 ## Completed model alignment
 
-- 336 source-linked factory ranges at twenty-four sites, including 24 Slater & Palmer /
+- 344 source-linked factory ranges at twenty-four sites, including 24 Slater & Palmer /
   Marshgate Mills ink-works ranges. First-pass registry:
   `data/maps/factory-footprint-alignment.json`. It retains original outlines,
   source IDs, changes in position/area and previous roof/height interpretations.
@@ -169,6 +168,11 @@ The separate height work is excluded.
   The warehouse notch stays open; existing heights and roofs are preserved.
   Shared authoring records and a preflight clearance check reduce repeated work.
   Small gangways, rounded plant features and gas apparatus remain deferred.
+- House/Clock Mills and bonded wharf: `three-mills-landmark-footprint-alignment.json`
+  matches eight existing ranges in six groups. Millrace overlaps are retained;
+  weatherboarding, kiln caps and clock tower follow the corrected footprints.
+  The mill-court bend retains its 7 m carriageway; its eastern F.P. is re-read as
+  a 2.2 m interpreted footpath. Main bridge and western approach are unchanged.
 - Housing rows have not yet been aligned to the supplied regional footprints.
 
 Useful local destinations:
@@ -207,11 +211,12 @@ They cover historic West Ham plus a 3 km buffer. Regional ground is provisional.
 
 ## Next working sequence
 
-Next review the eight House/Clock Mill and wharf ranges. The northern pass
-accounts for 22 ranges (1–20, 29 and added 828); the southern pass aligns ranges
-21–28. Site 419 retains 38 ranges. Preserve the separate mill
-landmarks until the millrace crossings, kiln roofs and turret are reviewed together.
-Northern Goad 800 remains explicitly provisional; no OS footprint is established.
+Next review the nearby western-bank compounds: Ratner Safe Works (420), Albion
+(421), Bow Flour Mills (422), Indiarubber/Oilskin (423) and Felt Works (424),
+in manageable groups. Three Mills now has 36 source-linked ranges and one direct
+trace; only Goad 800 remains provisional. Gangways and minor plant projections
+are explicit separate omissions. Preserve the landmark anchors and mapped
+millrace relationships established in the mill/wharf continuation.
 Kendrick north, Usher and Kendrick south (569/570/571) are accounted for with
 2/5/2 ranges. Source 20821 belongs to northern Kendrick; it is separate from
 947-25/source 16620. Both Kendrick sheet-seam gaps have explicit OS completions;
@@ -305,6 +310,7 @@ python3 scripts/check_refinery_printing_alignment.py
 python3 scripts/check_kendrick_usher_alignment.py
 python3 scripts/check_three_mills_north_alignment.py
 python3 scripts/check_three_mills_south_alignment.py
+python3 scripts/check_three_mills_landmark_alignment.py
 python3 scripts/check_abbey_station_plan.py
 python3 scripts/check_factory_yards.py
 python3 scripts/check_housing_detail.py
@@ -327,7 +333,7 @@ python3 scripts/review_factory_buildings.py --lascelles-ultramarine-only --url h
 python3 scripts/review_factory_buildings.py --williams-asphalte-only --software-gl --url http://127.0.0.1:4175
 python3 scripts/review_factory_buildings.py --refinery-printing-only --software-gl --url http://127.0.0.1:4175
 python3 scripts/review_factory_buildings.py --kendrick-usher-only --software-gl --url http://127.0.0.1:4175
-python3 scripts/review_factory_buildings.py --three-mills-south-only --software-gl --url http://127.0.0.1:4175
+python3 scripts/review_factory_buildings.py --three-mills-landmarks-only --software-gl --url http://127.0.0.1:4175
 ```
 
 If WSL's hardware-backed review loses its WebGL context, add `--software-gl`
@@ -492,8 +498,8 @@ Northern Three Mills final checks: all geometry and earlier alignment checks pas
 with six inspected SwiftShader views and a final tank capture after the radius
 adjustment. Manifest `1669da522491` matches 25 module/139 asset hashes. Regional
 coverage is 234,569 visible features, 115 tiles (4.01 MB); yards 85/36/160.
-Factory progress: 347 of 547 ranges have reviewed source matches or direct traces;
-198 still need alignment and two retain provisional transfers. Twenty-seven sites
+Factory progress: 355 of 547 ranges have reviewed source matches or direct traces;
+190 still need alignment and two retain provisional transfers. Twenty-seven sites
 have some remaining work; sixteen are complete for their current building ranges.
 Housing's 196 rows remain a separate footprint-alignment task.
 
@@ -517,3 +523,20 @@ visually inspected (`review/three-mills-south-{plan,tanks,court}.png`). The repo
 `review/three-mills-south-alignment-checks.json` confirms all 38 site ranges,
 the engine chimney and five fitted tanks reach the renderer without browser or
 shader errors. Final manifest: `9acadf9c9fc7`. Changes remain uncommitted.
+
+Mill/wharf geometry and all earlier factory alignment checks pass, along with
+street, yard, housing, Abbey, western-completion and 77 navigation checks.
+Regional coverage is 234,550 visible features, 115 tiles (4.01 MB); yards remain
+85/36/160 and housing 196/3204/3191. Manifest `5cd6e03c4929` matches all 25 module
+and 139 asset hashes. The saved source register and road preparation are
+byte-for-byte idempotent.
+
+All four landmark browser views passed without errors and were inspected. The
+House Mill close view exposed generic window frames behind the weatherboarding
+and dormers mostly buried in the pitched roof. The renderer now suppresses the
+covered masonry openings and seats dormers against the actual roof plane;
+a focused House Mill follow-up checks these final presentation fixes.
+
+The final House Mill follow-up passed and was visually inspected: weatherboard
+openings are clear and dormers meet the roof plane. All landmark/tank anchors
+also pass the renderer checks. Final revision remains `5cd6e03c4929`.

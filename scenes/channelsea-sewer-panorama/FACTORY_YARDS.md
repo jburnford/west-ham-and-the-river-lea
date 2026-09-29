@@ -51,6 +51,11 @@ review exposed a barrel group inside a vessel: the generator and check now
 exclude every modeled tank, extending the previous Oil Wharf-only rule. The
 regenerated 85 yards, 36 routes and 160 stock groups clear all tank circles.
 
+The House/Clock Mill and wharf continuation refreshes exclusions for the eight
+corrected ranges, the mill-court bend and eastern footpath. Counts remain
+85 surfaces, 36 clear routes and 160 stock groups; all factory tanks remain
+excluded. No working-yard envelope or additional stock type is introduced.
+
 The first yard refinement replaces the repeated four-metre mud texture and
 grid-based colour noise on industrial parcels. A single district surface map
 now gives each yard uneven, non-repeating colour, dirt at building edges,

@@ -1,5 +1,13 @@
 # Factory buildings — mapped coverage and refinement, 27 September 2026
 
+29 September mill/wharf continuation: all eight existing House/Clock Mill and
+bonded-wharf ranges now follow supplied OS outlines. District totals remain
+547 ranges, 43 sites and 90 chimneys; 344 ranges are source-linked at twenty-four
+sites, with eleven direct OS traces and two provisional transfers. Three Mills
+has 37 reviewed ranges and one provisional outbuilding. The millrace relationships,
+eaves heights and roof interpretations are retained. Weatherboarded facades,
+two kiln caps and the clock tower now attach to the corrected mapped geometry.
+
 29 September southern Three Mills continuation: eight existing ranges and three
 6 m tanks now follow their supplied OS outlines. The scene has 43 sites,
 547 ranges, 90 chimneys and 336 source-linked ranges at twenty-four sites,

@@ -73,7 +73,8 @@ roads=load('data/maps/district-road-traces.json')['roads']
 lane=next(q for q in roads if q['name']=='Three Mills Lane')
 entrance=next(q for q in roads if q['name']=='Three Mills entrance')
 passage=next(q for q in roads if q['name']=='Three Mills distillery passage')
-assert lane['points']==lane['threeMillsNorthAlignment']['priorPoints'][:10] and lane['width']==7
+prior_lane = lane.get('threeMillsLandmarkAlignment', {}).get('points', lane['points'])
+assert prior_lane==lane['threeMillsNorthAlignment']['priorPoints'][:10] and lane['width']==7
 assert passage['points'][0]==lane['points'][-1] and passage['points'][-1]==entrance['points'][0]
 assert passage['width']==entrance['width']==5.2 and len(lane['bridgeSpans'])==1
 streets,frontage_streets=street_clearances(roads)
@@ -112,9 +113,11 @@ for c in r['tanks']:
     assert circle.intersection(body).area<.01 and circle.intersection(streets).area<.01 and circle.intersection(water).area<.01
 a,b=r['tanks']
 assert Point(a['x'],a['z']).distance(Point(b['x'],b['z']))>a['radius']+b['radius']+.1
-# Preserve untouched ranges, allowing the separately checked southern continuation.
+# Preserve untouched ranges, allowing the separately checked southern and landmark continuations.
 south_path = ROOT/'data/maps/three-mills-south-footprint-alignment.json'
 south_ids = {c['modelId'] for c in load(south_path)['buildings']} if south_path.exists() else set()
+landmark_path=ROOT/'data/maps/three-mills-landmark-footprint-alignment.json'
+if landmark_path.exists():south_ids.update(c['modelId'] for c in load(landmark_path)['buildings'])
 before_path=ROOT/'reference/footprint-model-alignment/three-mills-before.json'
 if before_path.exists():
     before=load(before_path)
@@ -124,4 +127,4 @@ if before_path.exists():
             current=unary_union([Polygon(p['outer'],p['holes']) for p in models[b['id']]['renderPolygons']])
             assert old.symmetric_difference(current).area<.01,b['id']
 (ROOT/'reference/footprint-model-alignment/verified-three-mills-north.json').write_text(json.dumps(results,indent=2)+'\n')
-print('Three Mills north: 20 linked ranges, direct trace, provisional shed, mapped chimney/tanks and clear works passage pass; earlier landmarks retained.')
+print('Three Mills north: 20 linked ranges, direct trace, provisional shed, mapped chimney/tanks and clear works passage pass; other previously reviewed ranges retained.')

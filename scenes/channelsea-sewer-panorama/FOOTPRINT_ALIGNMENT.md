@@ -1231,3 +1231,65 @@ visually inspected (`review/three-mills-south-{plan,tanks,court}.png`). The repo
 `review/three-mills-south-alignment-checks.json` confirms all 38 site ranges,
 the engine chimney and five fitted tanks reach the renderer without browser or
 shader errors. Final manifest: `9acadf9c9fc7`. Changes remain uncommitted.
+
+
+## House/Clock Mills and bonded wharf — 29 September 2026
+
+The preceding six continuations are committed as `d6c9335`. The new
+`three-mills-landmark-footprint-alignment.json` links eight existing ranges in
+six groups; no models are added or removed. Totals are 547 ranges, 344 supplied
+source matches, eleven direct OS traces and two provisional local transfers.
+
+| Models | Supplied source features | Review |
+| --- | --- | --- |
+| house-west | 14650 | Western warehouse exterior |
+| house-main | 35019, 17973 | House Mill exterior joined across the source seam |
+| house-east | 37328 | Eastern range |
+| house-tail | 62255, 545510 | Eastern rooms and office 742 |
+| clock-kilns, clock | 5360 | One exterior, interpreted western kiln/main-mill division |
+| wharf, wharf-south | 4800, 3046 | Join the source seam and retain two interpreted roof ranges at the mapped bend |
+
+The previous eaves heights, roof rises, axes and bay counts remain. House Mill's
+weatherboarded panels attach to actual long exterior edges. Two separate kiln
+caps fit inside the western strip, and the clock tower is attached to the
+mapped northern stair projection. Cap/tower vertical dimensions are retained;
+horizontal dimensions are fitted to the supplied outline. These details remain
+architectural interpretations, not surveyed elevations.
+
+House Mill and the kiln strip retain their documented millrace relationships:
+approximately 15.91 m² and 9.25 m² overlap the existing water geometry. No banks
+or waterways are moved or filled. All other matched ranges clear the water.
+
+Three Mills Lane follows a re-read bend north of the stair tower. Its 7 m
+carriageway, first six approach controls, main Lea bridge and eastern junction
+remain; two mapped frontages use 0.9 m pavement allowances within the 9.469 m
+minimum opposing-wall gap. The eastern route marked F.P. is re-read east of
+office 742, using an interpreted 2.2 m footpath. Its provisional deck/culvert
+follows the revised route; its structural form and level remain uncertain.
+
+Small wall projections and freestanding plant are deferred. Three Mills now has
+37 reviewed ranges and only the existing Goad 800 transfer remains provisional.
+
+Authoring uses the private extract and immutable `three-mills-landmarks-before`
+snapshot. Saved records and road changes are byte-for-byte idempotent. Shared
+`factory_alignment_checks.py` verifies southern and landmark groups; preflight
+checks settle clearances before rebuilding. Dedicated assertions verify facade
+anchors, tower base, separate kiln caps, route continuity, unchanged approaches,
+unchanged neighbouring buildings and all existing plant.
+
+Mill/wharf geometry and all earlier factory alignment checks pass, along with
+street, yard, housing, Abbey, western-completion and 77 navigation checks.
+Regional coverage is 234,550 visible features, 115 tiles (4.01 MB); yards remain
+85/36/160 and housing 196/3204/3191. Manifest `5cd6e03c4929` matches all 25 module
+and 139 asset hashes. The saved source register and road preparation are
+byte-for-byte idempotent.
+
+All four landmark browser views passed without errors and were inspected. The
+House Mill close view exposed generic window frames behind the weatherboarding
+and dormers mostly buried in the pitched roof. The renderer now suppresses the
+covered masonry openings and seats dormers against the actual roof plane;
+a focused House Mill follow-up checks these final presentation fixes.
+
+The final House Mill follow-up passed and was visually inspected: weatherboard
+openings are clear and dormers meet the roof plane. All landmark/tank anchors
+also pass the renderer checks. Final revision remains `5cd6e03c4929`.
