@@ -1,0 +1,196 @@
+{
+  "riverId": 7,
+  "polygonIndex": 1,
+  "ringIndex": 0,
+  "source": "Georeferenced OS London five-foot 1893-96; supplied building outlines 1814,17230,794027,860299,791472,823292",
+  "mosaicBounds": [
+    -810,
+    -295,
+    -660,
+    -165
+  ],
+  "registration": "Map shoreline reviewed against the supplied river-facing building edges. Small westward reconciliation accounts for OS raster/vector differences; positions remain approximate.",
+  "evidence": "The earlier simplified GIS shore clips mapped factory walls. Adjust only the eastern bank beside Howards southern island and the east bank of its millrace. Keep opposite bank and river connections; old mill spans the race intentionally.",
+  "replacements": [
+    {
+      "vertex": 19,
+      "priorPoint": [
+        -726.74,
+        -260.22
+      ],
+      "mosaicPixel": [
+        308,
+        344
+      ],
+      "point": [
+        -728.489,
+        -260.307
+      ]
+    },
+    {
+      "vertex": 21,
+      "priorPoint": [
+        -740.02,
+        -273.77
+      ],
+      "mosaicPixel": [
+        276,
+        302
+      ],
+      "point": [
+        -740.819,
+        -275.569
+      ]
+    },
+    {
+      "vertex": 22,
+      "priorPoint": [
+        -745.54,
+        -267.38
+      ],
+      "mosaicPixel": [
+        255,
+        320
+      ],
+      "point": [
+        -748.45,
+        -268.677
+      ]
+    },
+    {
+      "vertex": 23,
+      "priorPoint": [
+        -749.01,
+        -259.72
+      ],
+      "mosaicPixel": [
+        244,
+        339
+      ],
+      "point": [
+        -752.351,
+        -261.515
+      ]
+    },
+    {
+      "vertex": 24,
+      "priorPoint": [
+        -755.32,
+        -254.21
+      ],
+      "mosaicPixel": [
+        227,
+        354
+      ],
+      "point": [
+        -758.524,
+        -255.776
+      ]
+    },
+    {
+      "vertex": 25,
+      "priorPoint": [
+        -764.6,
+        -248.62
+      ],
+      "mosaicPixel": [
+        202,
+        368
+      ],
+      "point": [
+        -767.684,
+        -250.328
+      ]
+    },
+    {
+      "vertex": 26,
+      "priorPoint": [
+        -769.86,
+        -243.02
+      ],
+      "mosaicPixel": [
+        188,
+        385
+      ],
+      "point": [
+        -772.721,
+        -243.878
+      ]
+    },
+    {
+      "vertex": 27,
+      "priorPoint": [
+        -772.82,
+        -231.7
+      ],
+      "mosaicPixel": [
+        179,
+        417
+      ],
+      "point": [
+        -775.747,
+        -231.912
+      ]
+    },
+    {
+      "vertex": 28,
+      "priorPoint": [
+        -770.93,
+        -208.16
+      ],
+      "mosaicPixel": [
+        180,
+        481
+      ],
+      "point": [
+        -774.729,
+        -208.173
+      ]
+    },
+    {
+      "vertex": 29,
+      "priorPoint": [
+        -772.03,
+        -202.56
+      ],
+      "mosaicPixel": [
+        178,
+        496
+      ],
+      "point": [
+        -775.321,
+        -202.587
+      ]
+    },
+    {
+      "vertex": 30,
+      "priorPoint": [
+        -770.17,
+        -177.69
+      ],
+      "mosaicPixel": [
+        179,
+        562
+      ],
+      "point": [
+        -774.283,
+        -178.105
+      ]
+    },
+    {
+      "vertex": 31,
+      "priorPoint": [
+        -768.84,
+        -172.16
+      ],
+      "mosaicPixel": [
+        187,
+        580
+      ],
+      "point": [
+        -771.125,
+        -171.507
+      ]
+    }
+  ]
+}

@@ -86,7 +86,16 @@ existing 3D buildings are progressively matched to the supplied footprints.
 The first pass corrects 26 factory ranges and the Abbey Mills station complex.
 The ink-works and Imperial Saw Mills compound passes add 27 corrected ranges,
 bringing the factory total to 53 while preserving the Goad compartments and roof
-interpretations. Cook’s Road now follows the mapped bend beside the sawmill.
+interpretations. The Oil Wharf pass brings that total to 62, clears two spurious
+blocks from open ground and restores four petroleum tanks plus a disused tank.
+Cook’s Road now clears the mapped stores and mill frontage.
+The Howards pass adds 83 source-linked ranges in 53 reviewed groups, bringing
+the district total to 145. Its old mill is traced directly from OS, eighteen
+chimney positions are corrected, and the waterfront bank retains the millrace.
+The Sugar House / cooperage and Winstone pass brings the total to 163, including
+three added low compartments. It corrects lane access and the chimney opening,
+and restores the mapped cooperage working yard. Other Sugar House Lane groups
+remain for the next pass.
 Abbey's supporting group now adds eight mapped buildings, four lower annexes and
 five revised access routes; roof forms and elevations remain interpreted.
 See [the continuation notes](scenes/channelsea-sewer-panorama/CONTINUE_FOOTPRINT_MATCHING.md)

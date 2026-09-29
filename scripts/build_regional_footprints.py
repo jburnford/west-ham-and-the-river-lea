@@ -25,6 +25,9 @@ mask=[]
 for file in ['docs/data/factory-buildings.json','docs/data/high-street-frontages.json']:
     for b in read(file)['buildings']:mask.append(local(b['footprint']).buffer(2))
 for b in read('docs/data/housing-detail.json')['rows']:mask.append(local(b['footprint']).buffer(4))
+for s in read('docs/data/factory-buildings.json')['structures']:
+    if s['kind']=='tank' and s['siteId']==9001:
+        mask.append(Point(ox+s['x'],oz-s['z']).buffer(s['radius']+1))
 plan=read('docs/data/ground-plan.json')
 for b in plan['neighbourhood']['houses']:mask.append(local(b['footprint']).buffer(2))
 for h in plan['neighbourhood']['holders']:mask.append(Point(ox+h['x'],oz-h['z']).buffer(h['radius']+2))

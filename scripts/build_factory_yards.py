@@ -50,7 +50,10 @@ def build():
     route_lines=unary_union([LineString(r['route']) for r in infra['roads']])
     chimneys=unary_union([Point(s['x'],s['z']).buffer(s['radius']*1.2+.25)
                          for s in factories['structures'] if s['kind']=='chimney'])
-    blocked=buildings.buffer(.15).union(holders).union(water.buffer(.45)).union(roads).union(chimneys)
+    oil=load('data/maps/oil-wharf-footprint-alignment.json')
+    sugar=load('data/maps/sugar-house-footprint-alignment.json')
+    tanks=unary_union([Point(s['x'],s['z']).buffer(s['radius']+.3) for s in oil['tanks']])
+    blocked=buildings.buffer(.15).union(holders).union(water.buffer(.45)).union(roads).union(chimneys).union(tanks)
     sawmill=load('data/maps/sawmill-yard.json')
     jute=load('data/maps/ritchie-jute.json')
     sawmill_parcel=Polygon(sawmill['parcel'][0])
@@ -63,18 +66,19 @@ def build():
     tracks_union=unary_union([LineString(t['points']) for t in tracks])
     # Give the restored full sawmill parcel precedence over anonymous context.
     western=factories['westContext'].get('sites',[])
-    priority_ids={797,1017,*[s['id'] for s in western]}
-    source=[{'id':797,'name':names[797],'polygons':[sawmill['parcel']]},
+    priority_ids={797,1017,9001,*[s['id'] for s in western]}
+    source=[oil['yard'],sugar['yard'],{'id':797,'name':names[797],'polygons':[sawmill['parcel']]},
       {'id':1017,'name':names[1017],'polygons':[jute['parcel']]}]+western+[s for s in plan['sites'] if s['id'] not in priority_ids]+[{'id':-i-1,'name':'Western wharf context','polygons':[p]} for i,p in enumerate(factories['westContext']['yards'])]
     used=Polygon();sites=[]
     for site in source:
         parcel=unary_union([Polygon(p[0],p[1:]) for p in site['polygons']])
         free=parcel.difference(blocked).difference(used);used=used.union(free)
         if free.area<20:continue
-        name=names.get(site['id'],site.get('name') or 'Industrial yard');lower=name.lower()
+        name=site['name'] if site['id']==9001 else names.get(site['id'],site.get('name') or 'Industrial yard');lower=name.lower()
         kind='cinder' if any(v in lower for v in ['gas','foundry','boiler','asphalte']) else 'stone' if any(v in lower for v in ['lime','stone','terra cotta']) else 'earth'
         stock='timber' if any(v in lower for v in ['saw','wood','fibre','rope']) else 'coal' if 'gas' in lower else 'stone' if kind=='stone' else 'iron' if any(v in lower for v in ['foundry','boiler','machin']) else 'barrels' if any(v in lower for v in ['oil','chemical','soap','distill','ink','varnish','howard']) else 'crates'
         if site['id']==1017:stock='bales'
+        stock=site.get('stockType',stock)
         routes=[]
         for component in sorted(parts(free),key=lambda p:-p.area)[:3]:
             centre=component.representative_point();entry,road=nearest_points(component,route_lines)
@@ -89,7 +93,7 @@ def build():
         # Small stock groups near ranges, never a blanket scattering over yards.
         safe=safe.intersection(buildings.buffer(14).difference(buildings.buffer(2)))
         rng=random.Random(site['id']+19400);objects=[]
-        if site['id'] in names and not safe.is_empty:
+        if (site['id'] in names or site.get('allowStock')) and not safe.is_empty:
             minx,minz,maxx,maxz=safe.bounds
             target=min(9,max(1,round(free.area/1800)))
             if site['id']==1017:target=3

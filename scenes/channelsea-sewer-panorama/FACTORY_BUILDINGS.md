@@ -1,5 +1,13 @@
 # Factory buildings — mapped coverage and refinement, 27 September 2026
 
+29 September Sugar House continuation: the current scene has 43 sites, 512 ranges
+and 89 chimneys. The cooperage and Winstone pass corrects fifteen existing ranges
+and adds three low cooperage compartments; nineteen of eastern site 964's 31
+ranges now match supplied footprints. The preceding Oil Wharf pass removed two
+spurious open-yard blocks and added four mapped ranges; site 9001 has ten ranges
+and five tanks. See
+[FOOTPRINT_ALIGNMENT.md](FOOTPRINT_ALIGNMENT.md) for the source register and checks.
+
 27 September western-bank extension: ten more sites and 48 ranges bring the scene to 43 sites, 507 ranges and 89 chimneys. The former western scope now includes the Old Lea frontage from Three Mills to the railway. See [WESTERN_COMPLETION.md](WESTERN_COMPLETION.md) for the evidence, interpreted elevations and checks.
 
 The c1900–1902 scene now renders **459 individually recorded building ranges across
@@ -54,10 +62,10 @@ ranges; the wider detailed refinement remains in progress.
 | 939 | Marshgate Lane chemical works | 10 |
 | 940 | Slater & Palmer / Marshgate Mills | 26 |
 | 947 | Oil and colour works and west Sugar House Lane ranges | 27 |
-| 964 | Paint, varnish, ink and cooperage ranges east of Sugar House Lane | 28 |
+| 964 | Paint, varnish, ink and cooperage ranges east of Sugar House Lane | 31 |
 | 1017 | Wm Ritchie & Sons — London Spinning Mills | 11 |
 | 1018 | Manure Works beside Channelsea | 3 |
-| 9001 | Oil Wharf and lime wharf north of Bow Bridge | 8 |
+| 9001 | Oil Wharf and adjoining context north of Bow Bridge | 10 |
 
 Groups follow the existing industrial inventory where possible. Some Goad uses
 and company names differ from the OS/GIS names; adjoining small works are grouped
@@ -78,6 +86,13 @@ boundary context. Out-of-scope buildings remain as the earlier distant context.
   model settings. The old mill has a pale upper exterior and a taller roof,
   informed by the supplied photographs. Individual roofs have not all been
   identified in those photographs.
+  The September footprint pass now aligns 83 ranges to 101 source polygons in
+  53 groups, retaining those interpreted internal compartments and elevations.
+  Old mill 644 uses a direct OS trace; shed 524 retains its local Goad relationship
+  to process house 520; shed 620 remains deferred. Two chimney bases are mapped
+  independently and sixteen move with their reviewed departments. The adjacent
+  bank is reconciled locally while preserving the millrace. See
+  [the footprint continuation](FOOTPRINT_ALIGNMENT.md#howards-continuation-recovered-29-september-2026).
 - **Sugar House:** Goad F3 reference 570 is the tall building in Chippendale's
   cooperage. Its mapped position is registered separately from the estimated
   elevation. [ASE report 2013200](https://archaeologydataservice.ac.uk/catalogue/adsdata/arch-480-1/dissemination/pdf/archaeol6-159592_1.pdf),

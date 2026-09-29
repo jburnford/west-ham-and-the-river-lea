@@ -1,5 +1,13 @@
 # Factory working surfaces
 
+29 September cooperage continuation: a separately recorded OS/Goad envelope
+restores the Chippindale cooperage yard omitted from the original industrial
+parcels. Yard 96401 belongs to factory site 964 and supplies about 3,946 m² of
+working surface after building, road, river and chimney exclusions. Two small
+timber groups and the surface finish remain interpretations. The register is
+`data/maps/sugar-house-footprint-alignment.json`; the district now has 83 yard
+surfaces, 33 clear wear routes and 161 stock groups.
+
 The first yard refinement replaces the repeated four-metre mud texture and
 grid-based colour noise on industrial parcels. A single district surface map
 now gives each yard uneven, non-repeating colour, dirt at building edges,
@@ -60,10 +68,17 @@ The same survey identifies the oil wharf as Rowatts Wharf in the 1894–5 direct
 but notes its absence from later directory entries; this pass does not assign
 that company confidently to the c1900 scene.
 
-The trace and source ledger is `data/maps/sawmill-yard.json`.
+28 September Oil Wharf continuation: a separate reviewed working envelope now
+occupies the oil yard south of Cook’s Road, with six interpreted barrel groups.
+Four mapped petroleum tanks and the northern disused tank exclude yard surfaces,
+stock and flat-plan masks. Building blocks previously covering open ground are
+removed. See [FOOTPRINT_ALIGNMENT.md](FOOTPRINT_ALIGNMENT.md); the source and
+boundary interpretation are in `data/maps/oil-wharf-footprint-alignment.json`.
+
+The timber-yard trace and source ledger is `data/maps/sawmill-yard.json`.
 `python3 scripts/review_sawmill_map.py` produces the source-map overlay: restored
 parcel in green, track lines in red and interpreted stock in blue. Next reviews
-for this sheet are the Oil Wharf ranges and tanks, lime/cement wharf apparatus,
+for this sheet are lime/cement wharf apparatus,
 roadside houses and the East London Soap Works boundaries. Track-end/gate detail
 needs closer source comparison before adding carts or loading equipment.
 Use <http://localhost:4175/?view=sawmill-yard> for the new timber-yard view.

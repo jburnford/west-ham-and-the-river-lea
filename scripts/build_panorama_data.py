@@ -207,6 +207,18 @@ def build():
                             'width': width, 'depth': depth, 'height': 9 + ((x+y)%4)*2,
                             'evidence': 'Illustrative mass inside a mapped industrial site; not a surveyed footprint.'})
     output = ROOT / 'docs/data/ground-plan.json'
+    # Reviewed local bank reconciliation; retain the opposite bank and the
+    # old millrace instead of trimming the mapped factory walls to the old GIS.
+    bank_path = ROOT/'data/maps/city-mills-bank-alignment.json'
+    if bank_path.exists():
+        correction = json.loads(bank_path.read_text())
+        river = next(r for r in result['rivers'] if r['id']==correction['riverId'])
+        ring = river['polygons'][correction['polygonIndex']][correction['ringIndex']]
+        for change in correction['replacements']:
+            assert math.dist(ring[change['vertex']], change['priorPoint']) < .02, 'Bank source changed; review controls'
+            ring[change['vertex']] = change['point']
+        assert all(Polygon(p[0],p[1:]).is_valid for p in river['polygons'])
+        river['bankAlignment'] = correction
     result['neighbourhood'] = neighbourhood()
     context=result['neighbourhood']
     context['mill']={'name':'Abbey Mill (Corn)','siteId':252,'x':-11.97,'z':-58.22,'width':14,'depth':8,'height':11.5,'rotation':11.7,

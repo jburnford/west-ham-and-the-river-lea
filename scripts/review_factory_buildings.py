@@ -111,6 +111,44 @@ async def sawmill(url):
     print('All 16 mill/Towers ranges and the transferred boiler chimney reached the renderer.', flush=True)
 
 
+async def oil_wharf(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings']) and rendered['siteRanges']['9001']==10
+    tanks={s['id']:s for s in rendered['tanks']}
+    for s in expected['structures']:
+        if s['siteId']==9001 and s['kind']=='tank':
+            assert tanks[s['id']]=={'id':s['id'],'position':[s['x'],.1,s['z']],'radius':s['radius'],'height':s['height']}
+    print('All 10 Oil Wharf/context ranges and five corrected tanks reached the renderer.', flush=True)
+
+
+async def howards(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings']) and rendered['siteRanges']['260']==86
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    for stack in expected['structures']:
+        if stack['siteId']==260:
+            assert tops[stack['id']]==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
+    print('All 86 Howards ranges and 18 corrected chimney positions reached the renderer.', flush=True)
+
+
+async def sugar_house(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings']) and rendered['siteRanges']['964']==31
+    stack=next(s for s in expected['structures'] if s['id']=='stack-964-1425-3049')
+    top=next(s['position'] for s in rendered['chimneyTops'] if s['id']==stack['id'])
+    assert top==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
+    print('All 31 eastern Sugar House Lane ranges and the corrected cooperage chimney reached the renderer.', flush=True)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--url', help='Review an already running local preview')
@@ -126,6 +164,9 @@ if __name__ == '__main__':
     parser.add_argument('--footprints-only', action='store_true', help='Review source footprint alignment and retained roof detail')
     parser.add_argument('--ink-only', action='store_true', help='Review grouped ink-works footprints, workshop row and chimney opening')
     parser.add_argument('--sawmill-only', action='store_true', help='Review Imperial mill compartments, Towers courtyard, timber yard and Cook’s Road')
+    parser.add_argument('--oil-wharf-only', action='store_true', help='Review Oil Wharf stores, tank yard, Cook’s Road and neighbouring sawmill')
+    parser.add_argument('--howards-only', action='store_true', help='Review City Mills / Howards departments and millrace')
+    parser.add_argument('--sugar-house-only', action='store_true', help='Review Sugar House, cooperage, Winstone ranges and corrected lane access')
     parser.add_argument('--view', help='Capture one named view from the selected review')
     args = parser.parse_args()
     if args.yards_only:
@@ -233,6 +274,40 @@ if __name__ == '__main__':
             'sawmill-aligned-towers': {'position':[-1125,48,-95],'target':[-1105,2,-138],'fov':58},
         }
         action=sawmill
+    if args.oil_wharf_only:
+        runner.REPORT_NAME='oil-wharf-alignment-checks.json'
+        runner.VIEWS={
+            'oil-wharf-plan': {'position':[-1163,225,-20],'target':[-1163,0,-30],'fov':55},
+            'oil-wharf-tanks': {'position':[-1080,14,60],'target':[-1130,3,1],'fov':60},
+            'oil-wharf-stores': {'position':[-1145,16,-48],'target':[-1190,3,-10],'fov':62},
+            'oil-wharf-north': {'position':[-1165,55,-115],'target':[-1220,0,-62],'fov':65},
+            'oil-wharf-road': {'position':[-1090,7,-30],'target':[-1150,4,-65],'fov':60},
+            'oil-wharf-sawmill-road': {'position':[-1087,6,-11],'target':[-1039,5,-16],'fov':60},
+        }
+        action=oil_wharf
+    if args.howards_only:
+        runner.REPORT_NAME='howards-alignment-checks.json'
+        runner.VIEWS={
+            'howards-overview': {'position':[-810,240,-130],'target':[-727,0,-298],'fov':60},
+            'howards-northern-works': {'position':[-746,115,-345],'target':[-746,0,-373],'fov':58},
+            'howards-epsom-court': {'position':[-700,60,-270],'target':[-715,2,-328],'fov':60},
+            'howards-quinine': {'position':[-640,55,-223],'target':[-695,5,-265],'fov':58},
+            'howards-millrace': {'position':[-726,17,-220],'target':[-734,5,-270],'fov':60},
+            'howards-mercurial': {'position':[-800,75,-210],'target':[-756,3,-240],'fov':60},
+            'howards-southern-ranges': {'position':[-727,40,-133],'target':[-746,4,-204],'fov':58},
+        }
+        action=howards
+    if args.sugar_house_only:
+        runner.REPORT_NAME='sugar-house-alignment-checks.json'
+        runner.VIEWS={
+            'sugar-house-aligned-plan': {'position':[-710,170,0],'target':[-690,0,-12],'fov':58},
+            'sugar-house-warehouse': {'position':[-706,24,-17],'target':[-653,11,-57],'fov':58},
+            'sugar-house-cooperage': {'position':[-614,57,-5],'target':[-677,3,-38],'fov':62},
+            'sugar-house-chimney-opening': {'position':[-684,36,-30],'target':[-698,3,-44],'fov':48},
+            'sugar-house-winstone': {'position':[-706,65,98],'target':[-688,3,28],'fov':58},
+            'sugar-house-works-passage': {'position':[-718,7,71],'target':[-668,4,48],'fov':64},
+        }
+        action=sugar_house
     if args.view:
         if args.view not in runner.VIEWS:parser.error('Unknown selected view: '+args.view)
         runner.VIEWS={args.view:runner.VIEWS[args.view]}

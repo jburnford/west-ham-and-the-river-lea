@@ -219,3 +219,223 @@ Private comparisons and measurements are under
 `reference/footprint-model-alignment/sawmill-*` and `verified-sawmill-groups.json`.
 Next: Howards. Small plant features and the two ink-works source omissions remain
 explicitly deferred.
+
+## Oil Wharf continuation, 28 September 2026
+
+The author's next priority was the oil yard beside the timber mill. The earlier
+model contained two rectangles over mapped open ground, a large block spanning
+the tank yard, and three displaced tanks. OS five-foot mosaics
+`m18_131060_87140` / `m18_131057_87140` and July 1893 Goad F2 establish a much
+more open arrangement. Goad labels petroleum stores, a filling shed, four iron
+petroleum tanks and a separate northern disused tank. Its proposed additional
+tanks are not modelled as existing structures.
+
+`data/maps/oil-wharf-footprint-alignment.json` corrects five existing ranges,
+adds four source-backed ranges and retains the earlier `oilwharf-2` filling-shed
+match (18435). The two removed rectangles, `oilwharf-0` and `oilwharf-8`, retain
+their prior records and reasons for reclassification. The site has ten ranges;
+the district now has 509 ranges, of which 62 are linked to supplied footprints.
+
+| Range | Source feature IDs | Interpretation |
+| --- | --- | --- |
+| Petroleum store F (`oilwharf-1`) | 5843 | Corrected waterfront store, clearing the tank yard |
+| Roadside store N (`oilwharf-3`) | 85938 | Corrected store beside the filling shed |
+| Detached store C (`oilwharf-4`) | 857458, 788844, 234020, 709244 | Adjacent OS compartments retained as one range |
+| Cook’s Road dwellings (`oilwharf-5`) | 705774, 750552, 742081, 693202, 680145, 730406, 683899 | Contextual housing, distinguished from oil-production buildings |
+| Northern stores (`oilwharf-7`) | 13285, 15121, 205514 | Petroleum stores B1/B2 and annexe A |
+| Petroleum store E | 14095 | Newly represented adjoining waterfront range |
+| Eastern store annexes | 35525, 583733 | Newly represented attached B/G ranges |
+| Office | 692188, 776579, 904389, 923683, 1297524, 1132988, 1173979 | Office 538 and small attached compartments |
+| Detached iron-roof range | 185430 | Range 544; specific use unresolved despite the internal `pump` ID |
+
+Existing elevation/roof interpretations are retained. The four additions use
+explicitly inferred low pitched envelopes; Goad's iron roof is retained on 544.
+Dwelling elevations remain pending the grouped housing pass. Small source overlaps
+of 0.37 m² at stores E/F and 0.16 m² at the filling shed/office are recorded and
+partitioned at the rendered seams. Minimum new-group rendered/source intersection
+over union is 99.928%; this is dataset agreement, not historical accuracy.
+
+Tank outlines 73371 and 74874 fix two of the four petroleum-tank centres and
+radii. The other two circles are missing from the extract, so their centres and
+16.5-pixel radii are read from the OS mosaic. A local translation, fitted from
+the two available circle centres, reconciles the roughly 1.7 m difference between
+the map and supplied geometry. Source 73958 fixes the northern disused tank.
+All five tank heights remain interpreted at 4 m, preserving the prior three
+heights. No tank volume or modern operating status is inferred from these models.
+
+The northern Cook’s Road trace formerly followed the southern kerb and clipped
+the roadside stores. Its centreline is re-read between the mapped edges; the
+sawmill frontage from mosaic pixel 400,458 onward and bridge approach are retained.
+`district-road-traces.json` preserves both earlier reviews and source pixels.
+
+A named Oil Wharf working envelope replaces anonymous context in this area. It
+follows the mapped yard arrangement approximately, with six interpreted barrel
+groups placed in clear space. The envelope, stock locations and surface finish
+are not surveyed parcel or paving evidence. Yard surfaces, stock and regional
+flat-plan masks now exclude the five tank bodies. The adjoining lime/cement
+works, small detached features, cranes and gates remain deferred.
+
+Routine builds read the saved JSON. `prepare_oil_wharf_alignment.py` regenerates
+only the explicit reviewed matches from the private source extract.
+`check_oil_wharf_alignment.py` checks coverage, elevations, documented seams,
+tank separation, water/road/building clearance and the reopened yard. Rebuild
+factory data, infrastructure, yards, housing detail, regional masks and manifest.
+The usual factory, previous alignment, sawmill, street, yard, housing, Abbey,
+western-completion and 77-destination checks pass.
+
+Source crops, before/after overlays and measured results remain private under
+`reference/footprint-model-alignment/oilwharf-*` and `verified-oil-wharf.json`.
+
+Six browser views passed without browser/shader errors and were visually
+inspected: plan, tanks, waterfront stores, northern stores, Cook’s Road and the
+neighbouring sawmill frontage. Diagnostics confirm all ten ranges and five tank
+positions/radii/heights reached the renderer. Use
+`python3 scripts/review_factory_buildings.py --oil-wharf-only --url http://127.0.0.1:4175`.
+Local asset revision: `886ca5c58068`. The preceding Abbey/ink/sawmill work was
+committed locally as `7f078c0`; this Oil Wharf continuation remains uncommitted.
+
+## Howards continuation, recovered 29 September 2026
+
+The Howards / City Mills pass was implemented on 28 September and its interrupted
+browser review completed after the WSL restart on 29 September. It accounts for
+all 86 existing site-260 ranges, preserving their Goad uses and elevation evidence:
+
+- 83 ranges match 101 supplied polygons in 53 explicitly reviewed groups.
+- Old mill 644, missing from the extract, uses four corners traced directly from
+  the georeferenced OS five-foot mosaic. Its existing photographic interpretation
+  of the pale upper exterior and roof is retained.
+- Shed 524 retains its dimensions and relative position beside process house
+  520, rotating/translating with that match. The tiny source circle initially
+  considered nearby is not claimed as a shed footprint.
+- Detached riverside shed 620 remains at its Goad trace pending a direct OS trace.
+
+`data/maps/howards-footprint-alignment.json` records the source polygons, previous
+outlines, compartment divisions, height/roof parameters and unresolved evidence.
+Shared external outlines include the northern mills, central workshops, salts
+compound, ether/acid departments, Quinine and mercurial/potash works. Internal
+divisions use the earlier Goad proportions and remain interpreted. Five small
+source overlaps (0.049–0.342 m²) are retained in the evidence and resolved at the
+rendered seams. Minimum rendered group agreement is 99.157%, a geometric measure
+against the supplied extract, not historical accuracy. District totals remain
+509 ranges and 89 chimneys; 145 ranges now link to supplied footprints.
+
+All eighteen Howards chimneys move with the corrected plan. Two identifiable
+OS bases (1092039 and 1223064) supply independent centres; sixteen other positions
+are transferred with their local departments using relative Goad positions.
+Existing shaft heights and profiles remain unchanged.
+
+`data/maps/city-mills-bank-alignment.json` records twelve local bank-vertex
+corrections, with previous positions and inspected OS mosaic pixels. These clear
+the southern island buildings and retain the narrow millrace and its connections.
+The old mill's intentional crossing remains explicitly recorded; no other Howards
+range overlaps water. The opposite bank and the wider Old Lea connectivity are
+outside this correction.
+
+Routine rebuilds use the saved registers. For bank changes, build panorama data,
+factory buildings, infrastructure, river network, factory yards, housing detail,
+regional footprints and the scene manifest in that order. Recreating the Howards
+register with `prepare_howards_alignment.py` additionally requires the private
+source extract, OS mosaic and `howards-before.json` snapshot.
+
+`check_howards_alignment.py` verifies complete accounting, source-group coverage,
+preserved elevation evidence, seams, all chimney positions, local bank changes,
+millrace continuity and water clearance. Factory, earlier alignment, yards,
+housing, Abbey, western-completion, streets and all 77 navigation destinations
+also pass. Seven desktop browser views were visually inspected: overview,
+northern works, Epsom court, Quinine, old mill, mercurial works and southern ranges.
+No browser/shader errors occurred; diagnostics confirm all 86 ranges and eighteen
+corrected chimney positions reached the renderer.
+
+Run `python3 scripts/review_factory_buildings.py --howards-only --url http://127.0.0.1:4175`.
+Private source overlays and measurements are under
+`reference/footprint-model-alignment/howards-*` and `verified-howards.json`;
+browser captures and `howards-alignment-checks.json` are under the scene's
+`review/` directory. Local asset revision: `b579ba9706a5`, verified against the
+public asset hashes after restart. No deployment or mobile audit.
+
+Next: Sugar House Lane groups and the remaining factory sites. Howards shed 620
+and the two ink-works omissions remain separate direct-tracing tasks; housing
+still needs a grouped row/rear-extension/yard pass.
+
+## Sugar House, cooperage and Winstone, 29 September 2026
+
+Eighteen ranges now use nineteen supplied polygons in fourteen reviewed groups
+at eastern Sugar House Lane (site 964). Fifteen existing ranges are corrected;
+three omitted low cooperage compartments are added. With the earlier range-14
+match, nineteen of the site's 31 ranges are aligned. District totals are now
+512 ranges and 163 source-linked ranges; chimney and factory-site counts remain
+89 and 43. This pass covers the cooperage and Winstone compound, not all the
+northern Crystal Wharf or southern Barber buildings.
+
+The register is `data/maps/sugar-house-footprint-alignment.json`. Its saved source
+geometry and earlier footprints support routine builds without the private
+extract. `prepare_sugar_house_alignment.py` reconstructs it from that extract,
+the OS mosaic and the saved `reference/footprint-model-alignment/sugar-before.json`.
+Do not replace that pre-pass snapshot with current generated data.
+
+| Model ranges | Source IDs | Reviewed interpretation |
+| --- | --- | --- |
+| 1, 3, 4, 6 | 1231 | Winstone main works, retaining four Goad compartments |
+| 2 | 91401 | Winstone southeast range |
+| 5 | 305125, 1075088 | Goad 594 acid chamber |
+| 7 | 13976 | 1882 Sugar House, five storeys and paired roof retained |
+| 8 | 10438, 950788, 952756 | Main cooperage and its small projecting bays |
+| 9 | 193674 | Southern boiler range |
+| 10, 11 | 10706 | Beam house and arched-cellar range, split at the mapped elbow |
+| 12 | 832965 | Boiler room |
+| 13 | 823808, 837886 | Entrance office |
+| 15 | 4803 | Banding warehouse and sawmill, with chimney opening |
+| 16 | 619800 | Mechanical shop |
+| Added western sawmill | 101293 | Goad 566, low adjoining volume |
+| Added stable | 65393 | Goad 578, separate low stable |
+| Added southern rooms | 112632, 329600 | Goad 580 and eastern annex |
+
+The earlier Goad use/height/roof evidence remains attached to existing ranges.
+Winstone's main roof axis follows its northern wall rather than the oblique
+southern street frontage. The beam house and cellar retain different roof
+directions within their shared exterior. New low compartments use an estimated
+3.8 m eaves height and 2.2 m roof rise; their source plans are firmer evidence
+than those elevations. This does not resolve the construction dates of later
+Sugar House additions identified in the archaeological survey.
+
+The sawmill chimney now uses base 1142465 inside source 4803's opening. Its
+22 m height remains an estimate. The interpreted shaft radius changes from
+1.05 to 0.65 m so the rendered plinth fits the mapped opening with clearance;
+the source does not establish an exact shaft profile.
+
+Sugar House Lane's cooperage-side controls move slightly west and the works
+passage moves into the mapped gap south of Winstone's buildings. Prior points,
+map pixels and local review coordinates are retained in `district-road-traces.json`.
+Widths and surface interpretations remain unchanged, with the passage still
+joining the lane. Four small source-edge overlaps and a 0.038 m² street-buffer
+corner sliver remain explicit in the register and are cleared in the renderer.
+Minimum rendered group/source agreement is 99.855%, not historical accuracy.
+
+The original parcel layer omitted much of the cooperage yard. A separate
+map-informed envelope (yard 96401, parent site 964) now supplies approximately
+3,946 m² of working surface after exclusions, with two small timber groups.
+Ground finish, wear routes and stock are interpreted. There are now 83 yard
+surfaces, 33 clear wear routes and 161 stock groups across the district.
+
+Rebuilt factory buildings, infrastructure, river-network road exclusions, yards,
+housing clearances, regional plan masks and the scene manifest. The dedicated
+`check_sugar_house_alignment.py` covers source/compartment accounting, preserved
+elevations, separate roof directions, chimney-plinth clearance, road-junction
+continuity and yard coverage. Factory, earlier alignment, yards, housing,
+streets, Abbey, western-completion and 77 navigation checks pass.
+
+The focused browser review is
+`python3 scripts/review_factory_buildings.py --sugar-house-only --url http://127.0.0.1:4175`.
+All six final views passed and were visually inspected after the yard correction,
+covering the site plan, warehouse, cooperage, chimney opening, Winstone works
+and works passage. Diagnostics confirm all 31 eastern ranges and the corrected
+chimney with no browser/shader errors. Asset revision `f8b93c9befe9` matches all
+public asset hashes. Captures and diagnostics are in the scene's private `review/`
+directory; source overlays and `verified-sugar-house.json` remain under
+`reference/footprint-model-alignment/`. No deployment or mobile audit.
+
+Next review site 964 ranges 17–28 (Barber and Crystal Wharf / Dane / Talbot).
+The Goad overlay shows that several previous Crystal Wharf rectangles partly
+cover open yard; reclassify them from map evidence before assigning source IDs.
+Then continue western site 947 and sites 256/572/573. Their before-state and
+labelled OS/Goad comparisons are saved alongside this pass.

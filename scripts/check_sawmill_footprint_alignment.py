@@ -19,7 +19,8 @@ earlier = [load('data/maps/factory-footprint-alignment.json'), load('data/maps/i
 used_sources = {fid for r in earlier for b in r['buildings'] for fid in b.get('sourceFids', [b.get('sourceFid')])}
 used_models = {b['modelId'] for r in earlier for b in r['buildings']}
 assert not used_models.intersection(corrections)
-assert scene['footprintAlignment']['matchedRanges'] == len(used_models) + len(corrections) == 53
+assert len(used_models) + len(corrections) == 53
+assert scene['footprintAlignment']['matchedRanges'] >= 53
 results = []
 for group in register['groups']:
     assert not used_sources.intersection(group['sourceFids']), group['id']

@@ -57,10 +57,19 @@ def build():
     exact = {p['id']: p['footprintPixels'] for b in old['buildings'] for p in b.get('parts', [])}
     alignment = json.loads((ROOT/'data/maps/factory-footprint-alignment.json').read_text())
     aligned = {b['modelId']: b for b in alignment['buildings']}
-    group_registers = ['data/maps/ink-works-footprint-alignment.json', 'data/maps/sawmill-footprint-alignment.json']
+    group_registers = ['data/maps/ink-works-footprint-alignment.json', 'data/maps/sawmill-footprint-alignment.json',
+                       'data/maps/oil-wharf-footprint-alignment.json', 'data/maps/howards-footprint-alignment.json',
+                       'data/maps/sugar-house-footprint-alignment.json']
     compounds = [json.loads((ROOT/path).read_text()) for path in group_registers]
     structure_alignment = {}
+    map_traces = {}
     for register in compounds:
+        map_traces.update({b['modelId']: b for b in register.get('mapTracedBuildings', []) + register.get('locallyTransferredBuildings', [])})
+        removed = {b['id'] for b in register.get('removedBuildings', [])}
+        raw['buildings'] = [b for b in raw['buildings'] if b['id'] not in removed] + register.get('additionalBuildings', [])
+        raw.setdefault('reclassifiedFeatures', []).extend(register.get('removedBuildings', []))
+        tanks = register.get('tanks', [])
+        raw['structures'] = [s for s in raw['structures'] if s['id'] not in {t['id'] for t in tanks}] + tanks
         assert not set(aligned).intersection(b['modelId'] for b in register['buildings'])
         assert not set(structure_alignment).intersection(s['id'] for s in register['structures'])
         aligned.update({b['modelId']: b for b in register['buildings']})
@@ -73,9 +82,11 @@ def build():
         row = dict(row)
         if row['id'] in exact:
             row['footprintPixels'] = exact[row['id']]
+        if row['id'] in map_traces:
+            row.update({k:v for k,v in map_traces[row['id']].items() if k != 'modelId'})
         correction = aligned.get(row['id'])
         if correction:
-            row.update(worldFootprint=correction['worldFootprint'], priorFootprint=correction['priorFootprint'],
+            row.update(name=correction['name'], worldFootprint=correction['worldFootprint'], priorFootprint=correction['priorFootprint'],
                        priorRotation=correction['priorRotationDegrees'],
                        footprintSource='author-os-footprints-1891-96',
                        footprintAlignment=correction['comparison'], priorFootprintEvidence=row['footprintEvidence'],
@@ -186,14 +197,21 @@ def build():
                         priorPositionEvidence=item['positionEvidence'], positionEvidence=correction['review'])
             if 'sourceFid' in correction:
                 item.update(sourceFootprintFid=correction['sourceFid'], sourcePolygons=correction['sourcePolygons'])
+            if 'radius' in correction:
+                item.update(radius=correction['radius'], priorRadius=correction['priorRadius'],
+                            profileEvidence=correction['profileEvidence'])
             if 'parentBuildingId' in correction:
                 item.update(parentBuildingId=correction['parentBuildingId'], parentFractions=correction['parentFractions'])
         structures.append(item)
     chimneys = [s for s in structures if s['kind'] == 'chimney']
     result['structures'] = structures
+    result['reclassifiedFeatures'] = raw.get('reclassifiedFeatures', [])
     result['footprintAlignment'] = {'matchedRanges': len(aligned), 'source': alignment['source'],
         'register': 'data/maps/factory-footprint-alignment.json',
         'groupRegisters': group_registers, 'reviewedGroups': sum(len(r['groups']) for r in compounds),
+        'directMapTraces': sum(len(r.get('mapTracedBuildings', [])) for r in compounds),
+        'locallyTransferredRanges': sum(len(r.get('locallyTransferredBuildings', [])) for r in compounds),
+        'groupTransferredChimneys': sum('transferGroup' in s and 'sourceFid' not in s for s in structure_alignment.values()),
         'matchedChimneyBases': sum('sourceFid' in s for s in structure_alignment.values()),
         'parentTransferredChimneys': sum('parentBuildingId' in s for s in structure_alignment.values())}
     result['symbolKeys'] = raw.get('symbolKeys', {})
