@@ -69,12 +69,35 @@ def build():
                        'data/maps/kendrick-usher-footprint-alignment.json',
                        'data/maps/three-mills-north-footprint-alignment.json',
                        'data/maps/three-mills-south-footprint-alignment.json',
-                       'data/maps/three-mills-landmark-footprint-alignment.json']
+                       'data/maps/three-mills-landmark-footprint-alignment.json',
+                       'data/maps/ratner-footprint-alignment.json',
+                       'data/maps/albion-footprint-alignment.json',
+                       'data/maps/bow-flour-footprint-alignment.json',
+                       'data/maps/rubber-felt-footprint-alignment.json',
+                       'data/maps/cook-soap-footprint-alignment.json',
+                       'data/maps/bow-magnet-footprint-alignment.json',
+                       'data/maps/lime-works-footprint-alignment.json',
+                       'data/maps/mill-brush-footprint-alignment.json',
+                       'data/maps/bow-brewery-footprint-alignment.json',
+                       'data/maps/mineral-water-footprint-alignment.json',
+                       'data/maps/jeffrey-glue-footprint-alignment.json',
+                       'data/maps/marshgate-chemical-footprint-alignment.json',
+                       'data/maps/alderson-rope-footprint-alignment.json',
+                       'data/maps/ritchie-jute-footprint-alignment.json',
+                       'data/maps/crown-johnson-footprint-alignment.json',
+                       'data/maps/western-trades-footprint-alignment.json',
+                       'data/maps/east-channelsea-south-footprint-alignment.json',
+                       'data/maps/east-channelsea-upper-footprint-alignment.json']
     compounds = [json.loads((ROOT/path).read_text()) for path in group_registers]
     structure_alignment = {}
     map_traces = {}
     direct_ids, local_ids = set(), set()
     for register in compounds:
+        additions = register.get('additionalSites', [])
+        assert not {s['id'] for s in raw['sites']}.intersection(s['id'] for s in additions), 'Duplicate added site'
+        raw['sites'].extend(additions)
+        added_sites = {s['id'] for s in additions}
+        raw['excludedSites'] = [s for s in raw['excludedSites'] if s['id'] not in added_sites]
         for id in register.get('supersedesLocalTransfers', []):
             assert id in local_ids, 'Superseded local transfer must exist'
             local_ids.remove(id)
@@ -85,13 +108,20 @@ def build():
         removed = {b['id'] for b in register.get('removedBuildings', [])}
         raw['buildings'] = [b for b in raw['buildings'] if b['id'] not in removed] + register.get('additionalBuildings', [])
         raw.setdefault('reclassifiedFeatures', []).extend(register.get('removedBuildings', []))
-        tanks = register.get('tanks', [])
-        raw['structures'] = [s for s in raw['structures'] if s['id'] not in {t['id'] for t in tanks}] + tanks
+        removed_structures = {s['id'] for s in register.get('removedStructures', [])}
+        assert removed_structures <= {s['id'] for s in raw['structures']}, 'Unknown removed structure'
+        raw['structures'] = [s for s in raw['structures'] if s['id'] not in removed_structures]
+        raw.setdefault('reclassifiedStructures', []).extend(register.get('removedStructures', []))
+        fitted_plant = register.get('tanks', []) + register.get('mappedPlants', [])
+        raw['structures'] = [s for s in raw['structures'] if s['id'] not in {t['id'] for t in fitted_plant}] + fitted_plant
         raw['structures'] += register.get('additionalStructures', [])
         assert not set(aligned).intersection(b['modelId'] for b in register['buildings'])
         assert not set(structure_alignment).intersection(s['id'] for s in register['structures'])
         aligned.update({b['modelId']: b for b in register['buildings']})
         structure_alignment.update({s['id']: s for s in register['structures']})
+    if any(r.get('additionalSites') for r in compounds):
+        raw['scope'] += '; reviewed industrial roofs between Channelsea and the Woolwich railway'
+        raw['scopeNotes'].append('Eastern strip roof exteriors follow the OS plan and supplied footprints; new heights, storeys and roof forms remain explicit estimates without asserted Goad coverage.')
     raw['sources']['author-os-footprints-1891-96'] = {
         'file': alignment['source'], 'registration': alignment['sourceCRS'],
         'method': ' '.join([alignment['method'], *[r['method'] for r in compounds]])}
@@ -104,6 +134,9 @@ def build():
             row.update({k:v for k,v in map_traces[row['id']].items() if k != 'modelId'})
         correction = aligned.get(row['id'])
         if correction:
+            if 'waterInterface' in correction:
+                assert correction.get('waterReview') and not row.get('bankTrim')
+                row.update(waterInterface=correction['waterInterface'],waterReview=correction['waterReview'])
             if 'landmarkDetails' in correction:
                 row['landmarkDetails'] = correction['landmarkDetails']
             if 'priorSiteId' in correction:
@@ -237,6 +270,7 @@ def build():
     chimneys = [s for s in structures if s['kind'] == 'chimney']
     result['structures'] = structures
     result['reclassifiedFeatures'] = raw.get('reclassifiedFeatures', [])
+    result['reclassifiedStructures'] = raw.get('reclassifiedStructures', [])
     result['footprintAlignment'] = {'matchedRanges': len(aligned), 'source': alignment['source'],
         'register': 'data/maps/factory-footprint-alignment.json',
         'groupRegisters': group_registers, 'reviewedGroups': sum(len(r['groups']) for r in compounds),

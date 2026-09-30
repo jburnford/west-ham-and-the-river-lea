@@ -1,0 +1,175 @@
+{
+  "source": "Cached georeferenced OS London five-foot 1893 mosaic; original July 1893 Goad F3 for rope range context",
+  "review": "Raw OS five-foot map re-read along the lane between the eastern rope-works wall and the eastern street edge. Preserve northern-arm controls0\u20138, then fit the south bend clear of the mapped drying house and follow the eastern rope frontage to the lane head at the railway underpass boundary. The former tail cut through the mapped eastern rope roof and extended into the railway. Existing interpreted 7 m carriageway and normal 1.1 m shoulder retained; no new road connection or bridge inferred.",
+  "road": {
+    "name": "Marshgate Lane \u2014 northern arm",
+    "priorPoints": [
+      [
+        -868,
+        -201
+      ],
+      [
+        -865,
+        -208
+      ],
+      [
+        -858,
+        -217
+      ],
+      [
+        -847,
+        -226
+      ],
+      [
+        -840,
+        -230
+      ],
+      [
+        -840,
+        -234
+      ],
+      [
+        -847,
+        -243.5
+      ],
+      [
+        -877.732,
+        -271.845
+      ],
+      [
+        -908.202,
+        -297.012
+      ],
+      [
+        -931.331,
+        -326.091
+      ],
+      [
+        -950.942,
+        -362.693
+      ],
+      [
+        -968.591,
+        -395.635
+      ],
+      [
+        -990.01,
+        -430.331
+      ]
+    ],
+    "points": [
+      [
+        -868,
+        -201
+      ],
+      [
+        -865,
+        -208
+      ],
+      [
+        -858,
+        -217
+      ],
+      [
+        -847,
+        -226
+      ],
+      [
+        -840,
+        -230
+      ],
+      [
+        -840,
+        -234
+      ],
+      [
+        -847,
+        -243.5
+      ],
+      [
+        -877.732,
+        -271.845
+      ],
+      [
+        -908.202,
+        -297.012
+      ],
+      [
+        -929.099,
+        -326.152
+      ],
+      [
+        -933.112,
+        -336.812
+      ],
+      [
+        -945.733,
+        -362.835
+      ],
+      [
+        -964.498,
+        -395.746
+      ],
+      [
+        -976.586,
+        -415.842
+      ]
+    ],
+    "width": 7,
+    "priorBridgeSpans": [],
+    "reviewedSourceBounds": [
+      -1025,
+      -440,
+      -895,
+      -285
+    ],
+    "reviewedSourcePixels": [
+      [
+        286,
+        408
+      ],
+      [
+        276,
+        379
+      ],
+      [
+        244,
+        308
+      ],
+      [
+        196,
+        218
+      ],
+      [
+        165,
+        163
+      ]
+    ],
+    "preservedPointCount": 9,
+    "ordinaryShoulderWidth": 1.1
+  },
+  "inheritedInkAlignmentLimits": [
+    {
+      "modelId": "site940-firelighter",
+      "priorOverlapAreaM2": 3.1386899962366197,
+      "overlapAreaM2": 33.92363637305208,
+      "evidence": "Inherited unaligned Goad rectangle differs from the OS wall beside this lane; already intersects the prior route. Existing renderer clips provisional roofs against roads. This pass retains the mapped lane and defers an independent ink-building outline review."
+    },
+    {
+      "modelId": "site940-24",
+      "priorOverlapAreaM2": 27.29224072326059,
+      "overlapAreaM2": 84.47259651618477,
+      "evidence": "Inherited unaligned Goad rectangle differs from the OS wall beside this lane; already intersects the prior route. Existing renderer clips provisional roofs against roads. This pass retains the mapped lane and defers an independent ink-building outline review."
+    }
+  ],
+  "retainedRiverGeometrySha256": {
+    "ground": "8b23405b79079bf4298ceef6321fdc5caba8a9d939d27d49d8259274856abdff",
+    "west": "5e1aa0c896d440767df2fde0d6677ac9ab7aaa8940e462446f84834a609898ad"
+  },
+  "evidenceImages": [
+    "reference/footprint-model-alignment/alderson-rope-road-raw.png",
+    "reference/footprint-model-alignment/alderson-rope-road-grid.png",
+    "reference/footprint-model-alignment/alderson-rope-road-after.png",
+    "reference/footprint-model-alignment/alderson-rope-goad.png"
+  ]
+}

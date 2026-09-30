@@ -176,6 +176,161 @@ async def williams_asphalte(url):
     print('Williams/Asphalte: all 18 ranges, reassigned Ultramarine lean-to and both corrected chimney positions reached the renderer.',flush=True)
 
 
+async def west_mills(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings'])
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    for site in [422,423,424]:
+        buildings=[b for b in expected['buildings'] if b['siteId']==site]
+        stacks=[s for s in expected['structures'] if s['siteId']==site and s['kind']=='chimney']
+        assert rendered['siteRanges'][str(site)]==len(buildings)
+        assert rendered['siteChimneys'].get(str(site),0)==len(stacks)
+        for stack in stacks:
+            assert tops[stack['id']]==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
+    for stack in expected['reclassifiedStructures']:
+        assert stack['id'] not in tops
+    print('Bow Flour, rubber/oilskin and felt works: corrected ranges and chimney anchors reached the renderer; removed stacks absent.',flush=True)
+
+
+async def soap_wharves(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings'])
+    for site,count in [(796,31),(789,9),(788,4),(255,4)]:
+        assert rendered['siteRanges'][str(site)]==count,(site,'range count')
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    stacks=[s for s in expected['structures'] if s['siteId']==796 and s['kind']=='chimney']
+    assert len(stacks)==4 and rendered['siteChimneys']['796']==4
+    for stack in stacks:
+        assert tops[stack['id']]==[stack['x'],stack['height']+stack['baseHeight'],stack['z']],stack['id']
+    kilns={s['id']:s for s in rendered['kilns']}
+    plants=[s for s in expected['structures'] if s['siteId']==255 and s['kind']=='kiln']
+    assert len(plants)==2
+    for plant in plants:
+        assert kilns[plant['id']]=={'id':plant['id'],'position':[plant['x'],.1,plant['z']],
+                                   'radius':plant['radius'],'height':plant['height']},plant['id']
+    print('Cook, Bow Bridge, Magnet and Lime Works: all 48 ranges, four Cook chimney tops and two corrected kilns reached the renderer.',flush=True)
+
+
+async def mill_brush_brewery(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings'])
+    for site,count in [(257,3),(258,7),(259,7),(792,3)]:
+        assert rendered['siteRanges'][str(site)]==count,(site,'range count')
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    stack_ids={258:{'stack-258-1149-1128','stack-258-1129-1732'},
+               259:{'west-259-7-stack'}}
+    for site,ids in stack_ids.items():
+        stacks=[s for s in expected['structures'] if s['siteId']==site and s['kind']=='chimney']
+        assert {s['id'] for s in stacks}==ids,(site,'chimney identities')
+        assert rendered['siteChimneys'].get(str(site),0)==len(ids),(site,'chimney count')
+        for stack in stacks:
+            assert tops[stack['id']]==[stack['x'],stack['height']+stack['baseHeight'],stack['z']],stack['id']
+    print('Mill, Smith brush/fibre works, Bow Brewery and mineral-water works: all 20 ranges, two corrected Smith chimney tops and the brewery chimney reached the renderer.',flush=True)
+
+
+async def marshgate_trades(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings'])==544
+    for site,count in [(790,13),(939,10),(791,8)]:
+        assert rendered['siteRanges'][str(site)]==count,(site,'range count')
+    registers=[json.loads((runner.ROOT/f'data/maps/{name}-footprint-alignment.json').read_text())
+               for name in ['jeffrey-glue','marshgate-chemical','alderson-rope']]
+    source_ids={b['modelId'] for r in registers for b in r['buildings']}
+    traced_ids={b['modelId'] for r in registers for b in r.get('mapTracedBuildings',[])}
+    assert len(source_ids)==25 and len(traced_ids)==1 and not source_ids.intersection(traced_ids)
+    by_id={b['id']:b for b in expected['buildings']}
+    assert source_ids|traced_ids<=set(by_id)
+    removed_ids={b.get('modelId',b.get('id')) for r in registers for b in r.get('removedBuildings',[])}
+    assert len(removed_ids)==1 and not removed_ids.intersection(by_id)
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    corrected_stack_ids={s['id'] for r in registers for s in r.get('structures',[])}
+    assert len(corrected_stack_ids)==3
+    assert {s['id'] for s in expected['structures'] if s['siteId'] in [790,939,791]
+            and s['kind']=='chimney'}==corrected_stack_ids
+    for site,count in [(790,2),(939,1),(791,0)]:
+        assert rendered['siteChimneys'].get(str(site),0)==count,(site,'chimney count')
+    for stack in expected['structures']:
+        if stack['id'] in corrected_stack_ids:
+            assert tops[stack['id']]==[stack['x'],stack['height']+stack['baseHeight'],stack['z']],stack['id']
+    print('Marshgate trades: all 544 factory ranges, 26 corrected Jeffrey/chemical/rope ranges and three corrected chimney tops reached the renderer; the unsupported northern rope workshop is absent.',flush=True)
+
+
+async def east_channelsea(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    registers=[json.loads((runner.ROOT/f'data/maps/east-channelsea-{part}-footprint-alignment.json').read_text())
+               for part in ['south','north','upper']]
+    assert rendered['ranges']==len(expected['buildings'])
+    ids={b['id'] for r in registers for b in r['additionalBuildings']}
+    actual={b['id']:b for b in expected['buildings']}
+    assert ids<=actual.keys()
+    sites={s['id'] for r in registers for s in r['additionalSites']}
+    for site in sites:
+        assert rendered['siteRanges'].get(str(site),0)==sum(b['siteId']==site for b in actual.values()),site
+    assert rendered['chimneys']==expected['counts']['chimneys']
+    print(f'Eastern strip: {len(ids)} reviewed building ranges at {len(sites)} new sites reached the renderer; all prior factory ranges and registered chimneys remain.',flush=True)
+
+
+async def remaining_trades(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings'])
+    registers=[json.loads((runner.ROOT/f'data/maps/{name}-footprint-alignment.json').read_text())
+               for name in ['ritchie-jute','crown-johnson','western-trades']]
+    by_id={b['id']:b for b in expected['buildings']}
+    reviewed_ids={b['modelId'] for r in registers for key in
+                  ['buildings','mapTracedBuildings','locallyTransferredBuildings'] for b in r.get(key,[])}
+    assert reviewed_ids<=set(by_id)
+    removed_ids={b.get('modelId',b.get('id')) for r in registers for b in r.get('removedBuildings',[])}
+    assert not removed_ids.intersection(by_id)
+    sites={by_id[ident]['siteId'] for ident in reviewed_ids}
+    for site in sites:
+        count=sum(b['siteId']==site for b in expected['buildings'])
+        assert rendered['siteRanges'].get(str(site),0)==count,(site,'range count')
+    stacks=[s for s in expected['structures'] if s['kind']=='chimney']
+    assert rendered['chimneys']==len(stacks)
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    assert set(tops)=={s['id'] for s in stacks}
+    corrected_stack_ids={s['id'] for r in registers for s in r.get('structures',[])}
+    assert corrected_stack_ids<={s['id'] for s in stacks}
+    for stack in stacks:
+        if stack['id'] in corrected_stack_ids:
+            assert tops[stack['id']]==[stack['x'],stack['height']+stack['baseHeight'],stack['z']],stack['id']
+    mapped=sum('sourceFid' in s for r in registers for s in r.get('structures',[]))
+    print(f'Remaining trades: all {len(expected["buildings"])} factory ranges and {len(stacks)} chimneys reached the renderer; {len(reviewed_ids)} reviewed Ritchie/Crown/Johnson/western ranges, {mapped} mapped chimney bases and {len(corrected_stack_ids)-mapped} retained inferred chimney transfers pass; {len(removed_ids)} unsupported ranges are absent.',flush=True)
+
+
+async def ratner_albion(url):
+    await runner.review(url)
+    report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
+    expected=json.loads((runner.ROOT/'docs/data/factory-buildings.json').read_text())
+    rendered=report['render']['factoryBuildings']
+    assert rendered['ranges']==len(expected['buildings'])
+    assert rendered['siteRanges']['420']==4 and rendered['siteRanges']['421']==3
+    assert rendered['siteChimneys'].get('420',0)==1 and rendered['siteChimneys'].get('421',0)==0
+    tops={s['id']:s['position'] for s in rendered['chimneyTops']}
+    stack=next(s for s in expected['structures'] if s['id']=='west-420-3-stack')
+    assert tops[stack['id']]==[stack['x'],stack['height']+stack['baseHeight'],stack['z']]
+    assert 'west-421-4-stack' not in tops
+    print('Ratner/Albion: seven corrected ranges, relocated inferred chimney and removed unsupported soap-yard stack reached the renderer.',flush=True)
+
+
 async def three_mills(url):
     await runner.review(url)
     report=json.loads((runner.OUT/runner.REPORT_NAME).read_text())
@@ -324,6 +479,13 @@ if __name__ == '__main__':
     parser.add_argument('--lascelles-ultramarine-only', action='store_true', help='Review Lascelles and Ultramarine, map joins, chimney opening and lane')
     parser.add_argument('--software-gl', action='store_true', help='Use SwiftShader for review when the hardware graphics context is unavailable')
     parser.add_argument('--williams-asphalte-only', action='store_true', help='Review Williams wharf and French Asphalte footprint alignment')
+    parser.add_argument('--ratner-albion-only', action='store_true', help='Review the western Ratner/Albion source matches')
+    parser.add_argument('--west-mills-only', action='store_true', help='Review Bow Flour, rubber/oilskin and felt works matches')
+    parser.add_argument('--soap-wharves-only', action='store_true', help='Review Cook soap works, Bow Bridge/Magnet wharves and Lime Works plant')
+    parser.add_argument('--mill-brush-brewery-only', action='store_true', help='Review the mill, Smith brush/fibre works, Bow Brewery court and mineral-water works')
+    parser.add_argument('--marshgate-trades-only', action='store_true', help='Review Jeffrey glue works, Marshgate chemical works and Alderson rope works')
+    parser.add_argument('--east-channelsea-only', action='store_true', help='Review eastern river frontage, gasworks, manure works and eastern housing')
+    parser.add_argument('--remaining-trades-only', action='store_true', help='Review Ritchie jute, Crown/Johnson and the remaining western trades')
     parser.add_argument('--three-mills-landmarks-only', action='store_true', help='Review House/Clock Mills and the bonded wharf')
     parser.add_argument('--three-mills-south-only', action='store_true', help='Review the southern Three Mills ranges and tanks')
     parser.add_argument('--three-mills-north-only', action='store_true', help='Review the northern Three Mills distillery and mapped plant')
@@ -602,11 +764,86 @@ if __name__ == '__main__':
             'three-mills-wharf': {'position':[-643,36,486],'target':[-609,8,445],'fov':66},
         }
         action=three_mills
+    if args.ratner_albion_only:
+        runner.REPORT_NAME='ratner-albion-alignment-checks.json'
+        runner.VIEWS={
+            'ratner-albion-plan': {'position':[-888,160,226],'target':[-888,0,216],'fov':60},
+            'ratner-courtyard': {'position':[-903,27,159],'target':[-906,4,200],'fov':66},
+            'albion-court-and-yard': {'position':[-895,28,265],'target':[-849,4,220],'fov':66},
+        }
+        action=ratner_albion
+    if args.west_mills_only:
+        runner.REPORT_NAME='west-mills-alignment-checks.json'
+        runner.VIEWS={
+            'bow-flour-plan': {'position':[-1090,115,116],'target':[-1090,0,110],'fov':60},
+            'bow-flour-river-front': {'position':[-1033,22,154],'target':[-1081,8,110],'fov':66},
+            'rubber-felt-plan': {'position':[-1216,145,139],'target':[-1216,0,131],'fov':60},
+            'rubber-felt-courtyard': {'position':[-1250,19,124],'target':[-1201,5,111],'fov':66},
+        }
+        action=west_mills
+    if args.soap_wharves_only:
+        runner.REPORT_NAME='soap-wharves-alignment-checks.json'
+        runner.VIEWS={
+            'cook-soap-plan': {'position':[-1190,195,-171],'target':[-1190,0,-180],'fov':66},
+            'cook-soap-main': {'position':[-1320,45,-46],'target':[-1265,7,-118],'fov':62},
+            'cook-soap-process': {'position':[-1245,53,-215],'target':[-1190,5,-178],'fov':66},
+            'bow-magnet-plan': {'position':[-964,195,18],'target':[-964,0,8],'fov':62},
+            'bow-magnet-bank-road': {'position':[-1090,90,15],'target':[-955,3,5],'fov':66},
+            'lime-works-plan': {'position':[-920,92,132],'target':[-920,0,123],'fov':62},
+        }
+        action=soap_wharves
+    if args.mill_brush_brewery_only:
+        runner.REPORT_NAME='mill-brush-brewery-alignment-checks.json'
+        runner.VIEWS={
+            'mill-brush-plan': {'position':[-859,155,-219],'target':[-859,0,-224],'fov':62},
+            'mill-street-river': {'position':[-940,43,-153],'target':[-876,6,-201],'fov':66},
+            'smith-process-close': {'position':[-809,36,-165],'target':[-849,6,-195],'fov':66},
+            'bow-brewery-plan': {'position':[-1052,150,201],'target':[-1052,0,194],'fov':62},
+            'bow-brewery-court': {'position':[-1041,28,238],'target':[-1050,5,190],'fov':68},
+            'mineral-water-plan': {'position':[-911,90,276],'target':[-911,0,270],'fov':62},
+        }
+        action=mill_brush_brewery
+    if args.marshgate_trades_only:
+        runner.REPORT_NAME='marshgate-trades-alignment-checks.json'
+        runner.VIEWS={
+            'jeffrey-glue-plan': {'position':[-815,100,-300],'target':[-815,0,-306],'fov':62},
+            'jeffrey-glue-close': {'position':[-780,38,-270],'target':[-822,5,-305],'fov':66},
+            'marshgate-chemical-plan': {'position':[-816,120,-254],'target':[-816,0,-260],'fov':62},
+            'marshgate-chemical-close': {'position':[-801,33,-228],'target':[-824,5,-267],'fov':66},
+            'alderson-rope-plan': {'position':[-966,145,-358],'target':[-966,0,-365],'fov':62},
+            'alderson-rope-low': {'position':[-918,15,-350],'target':[-958,5,-368],'fov':66},
+        }
+        action=marshgate_trades
+    if args.remaining_trades_only:
+        runner.REPORT_NAME='remaining-trades-alignment-checks.json'
+        runner.VIEWS={
+            'ritchie-jute-plan': {'position':[-607,225,-748],'target':[-607,0,-756],'fov':62},
+            'ritchie-jute-close': {'position':[-525,75,-733],'target':[-590,17,-798],'fov':66},
+            'crown-johnson-plan': {'position':[-886,110,-120],'target':[-886,0,-128],'fov':62},
+            'crown-johnson-close': {'position':[-842,35,-72],'target':[-887,8,-120],'fov':66},
+            'western-foundry-plan': {'position':[-838,125,285],'target':[-838,0,280],'fov':62},
+            'western-moulding-plan': {'position':[-712,145,381],'target':[-712,0,376],'fov':62},
+            'imperial-crown-230-plan': {'position':[-698,150,505],'target':[-698,0,500],'fov':62},
+        }
+        action=remaining_trades
+    if args.east_channelsea_only:
+        runner.REPORT_NAME='east-channelsea-alignment-checks.json'
+        runner.VIEWS={
+            'east-strip-overview': {'position':[540,520,560],'target':[25,0,-160],'fov':65},
+            'east-strip-north-plan': {'position':[-35,370,-455],'target':[-35,0,-462],'fov':62},
+            'east-strip-middle-plan': {'position':[65,290,-140],'target':[65,0,-148],'fov':62},
+            'east-strip-south-plan': {'position':[65,310,220],'target':[65,0,212],'fov':62},
+            'east-strip-riverfront': {'position':[-145,60,255],'target':[35,5,155],'fov':65},
+            'east-strip-wharfs': {'position':[-90,260,-730],'target':[-150,0,-743],'fov':62},
+            'east-strip-stirling-close': {'position':[85,45,80],'target':[160,6,-4],'fov':65},
+            'east-abbey-frontage': {'position':[70,160,150],'target':[-185,0,-13],'fov':65},
+        }
+        action=east_channelsea
     if args.view:
         if args.view not in runner.VIEWS:parser.error('Unknown selected view: '+args.view)
         runner.VIEWS={args.view:runner.VIEWS[args.view]}
         runner.REPORT_NAME=args.view+'-checks.json'
-        action=three_mills if (args.three_mills_north_only or args.three_mills_south_only or args.three_mills_landmarks_only) else runner.review
+        action=east_channelsea if args.east_channelsea_only else remaining_trades if args.remaining_trades_only else marshgate_trades if args.marshgate_trades_only else mill_brush_brewery if args.mill_brush_brewery_only else soap_wharves if args.soap_wharves_only else west_mills if args.west_mills_only else ratner_albion if args.ratner_albion_only else three_mills if (args.three_mills_north_only or args.three_mills_south_only or args.three_mills_landmarks_only) else runner.review
     if args.url:
         asyncio.run(action(args.url.rstrip('/')))
         raise SystemExit

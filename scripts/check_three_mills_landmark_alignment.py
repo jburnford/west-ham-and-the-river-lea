@@ -32,8 +32,17 @@ def check(preflight=False):
     lane=next(q for q in roads if q['name']=='Three Mills Lane')
     branch=next(q for q in roads if q['name']=='Three Mills Lane beside distillery')
     prior=lane['threeMillsLandmarkAlignment']
-    assert lane['points'][:6]==prior['points'][:6] and lane['points'][-2:]==prior['points'][-2:]
-    assert lane['width']==prior['width']==7 and lane['bridgeSpans']==prior['bridgeSpans']
+    later=ROOT/'data/maps/remaining-trades-context-alignment.json'
+    expected_points=prior['points'][:6]
+    expected_bridges=prior['bridgeSpans']
+    if later.exists():
+        correction=next(c for c in load('data/maps/remaining-trades-context-alignment.json')['roads'] if c['name']==lane['name'])
+        assert correction['priorPoints'][:6]==prior['points'][:6]
+        assert correction['priorBridgeSpans']==prior['bridgeSpans']
+        expected_points=correction['points'][:6]
+        expected_bridges=correction['bridgeSpans']
+    assert lane['points'][:6]==expected_points and lane['points'][-2:]==prior['points'][-2:]
+    assert lane['width']==prior['width']==7 and lane['bridgeSpans']==expected_bridges
     assert branch['kind']=='path' and branch['width']==2.2
     assert branch['points'][0]==lane['points'][-2]
     assert len(branch['bridgeSpans'])==1 and branch['bridgeSpans'][0]['provisional']

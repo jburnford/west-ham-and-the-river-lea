@@ -55,10 +55,11 @@ def build():
     west_sugar=load('data/maps/west-sugar-footprint-alignment.json')
     crystal_barber=load('data/maps/crystal-barber-footprint-alignment.json')
     tanks=unary_union([Point(s['x'],s['z']).buffer(s['radius']+.3)
-                      for s in factories['structures'] if s['kind']=='tank'])
+                      for s in factories['structures'] if s['kind'] in {'tank','kiln'}])
     blocked=buildings.buffer(.15).union(holders).union(water.buffer(.45)).union(roads).union(chimneys).union(tanks)
     sawmill=load('data/maps/sawmill-yard.json')
     jute=load('data/maps/ritchie-jute.json')
+    east=load('data/maps/east-channelsea-context-alignment.json')
     sawmill_parcel=Polygon(sawmill['parcel'][0])
     track_space=sawmill_parcel.buffer(-1.2).difference(blocked.buffer(1.2))
     tracks=[]
@@ -66,11 +67,21 @@ def build():
         clipped=LineString(row['points']).intersection(track_space)
         for line in getattr(clipped,'geoms',[clipped]):
             if line.geom_type=='LineString' and line.length>2:tracks.append({'id':row['id'],'points':[list(p) for p in line.coords]})
+    depot=next(y for y in east['additionalYards'] if y['id']==13011)
+    depot_parcel=unary_union([Polygon(p[0],p[1:]) for p in depot['polygons']])
+    depot_space=depot_parcel.buffer(-1.4).difference(blocked.buffer(1.4))
+    for source in east['railSidings']:
+        clipped=LineString(source['points']).intersection(depot_space)
+        for index,line in enumerate(getattr(clipped,'geoms',[clipped])):
+            if line.geom_type=='LineString' and line.length>2:
+                tracks.append(dict(id=source['id']+'-'+str(index),siteId=13011,
+                    points=[list(p) for p in line.coords],gauge=1.435,sleeperWidth=2.4,
+                    sourceTrackId=source['id'],evidence=source['evidence']))
     tracks_union=unary_union([LineString(t['points']) for t in tracks])
     # Give the restored full sawmill parcel precedence over anonymous context.
     western=factories['westContext'].get('sites',[])
-    priority_ids={797,1017,9001,*[s['id'] for s in western]}
-    source=[oil['yard'],sugar['yard'],west_sugar['yard'],*crystal_barber['yards'],{'id':797,'name':names[797],'polygons':[sawmill['parcel']]},
+    priority_ids={797,1017,9001,*[s['id'] for s in western],*[s['id'] for s in east['additionalYards']]}
+    source=[*east['additionalYards'],oil['yard'],sugar['yard'],west_sugar['yard'],*crystal_barber['yards'],{'id':797,'name':names[797],'polygons':[sawmill['parcel']]},
       {'id':1017,'name':names[1017],'polygons':[jute['parcel']]}]+western+[s for s in plan['sites'] if s['id'] not in priority_ids]+[{'id':-i-1,'name':'Western wharf context','polygons':[p]} for i,p in enumerate(factories['westContext']['yards'])]
     used=Polygon();sites=[]
     for site in source:
@@ -79,6 +90,7 @@ def build():
         if free.area<20:continue
         name=site['name'] if site['id']==9001 else names.get(site['id'],site.get('name') or 'Industrial yard');lower=name.lower()
         kind='cinder' if any(v in lower for v in ['gas','foundry','boiler','asphalte']) else 'stone' if any(v in lower for v in ['lime','stone','terra cotta']) else 'earth'
+        kind=site.get('surface',kind)
         stock='timber' if any(v in lower for v in ['saw','wood','fibre','rope']) else 'coal' if 'gas' in lower else 'stone' if kind=='stone' else 'iron' if any(v in lower for v in ['foundry','boiler','machin']) else 'barrels' if any(v in lower for v in ['oil','chemical','soap','distill','ink','varnish','howard']) else 'crates'
         if site['id']==1017:stock='bales'
         stock=site.get('stockType',stock)
@@ -91,12 +103,12 @@ def build():
             route=LineString([entry,centre])
             if route.length>5 and component.buffer(.02).covers(route):routes.append([list(entry.coords[0]),list(centre.coords[0])])
         circulation=unary_union([LineString(r).buffer(3) for r in routes])
-        if site['id']==797:circulation=circulation.union(tracks_union.buffer(3))
+        if site['id'] in {797,13011}:circulation=circulation.union(tracks_union.buffer(3))
         safe=free.buffer(-2.2).difference(circulation).difference(water.buffer(4))
         # Small stock groups near ranges, never a blanket scattering over yards.
         safe=safe.intersection(buildings.buffer(14).difference(buildings.buffer(2)))
         rng=random.Random(site['id']+19400);objects=[]
-        if (site['id'] in names or site.get('allowStock')) and not safe.is_empty:
+        if site.get('allowStock',site['id'] in names) and not safe.is_empty:
             minx,minz,maxx,maxz=safe.bounds
             target=min(9,max(1,round(free.area/1800)))
             if site['id']==1017:target=3
@@ -128,7 +140,7 @@ def build():
     result={'sites':sites,'bounds':[extent[0]-2,extent[1]-2,extent[2]+2,extent[3]+2],
       'buildingEdges':[[list(q) for q in p.exterior.coords] for p in parts(buildings)],
       'softEdges':soft_edges,
-      'tracks':tracks,'trackEvidence':sawmill['interpretation'],
+      'tracks':tracks,'trackEvidence':sawmill['interpretation']+' Eastern depot siding centrelines follow OS; standard gauge, low yard elevation and sleepers are interpretations.',
       'evidence':'Parcel and building geometry from the existing GIS/map register. Surface materials, wear, damp patches and small stock groups are typological visual interpretations. Routes describe clear circulation space, not identified historical gates or roads.',
       'counts':{'sites':len(sites),'wearRoutes':sum(len(s['wearRoutes']) for s in sites),'stockGroups':sum(len(s['stock']) for s in sites)}}
     (ROOT/'docs/data/factory-yards.json').write_text(json.dumps(result,separators=(',',':'))+'\n')

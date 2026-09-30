@@ -1,0 +1,1383 @@
+{
+  "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg; cached OS London five-foot 1893 mosaic",
+  "sourceCRS": "EPSG:3857 reprojected through BNG; scene origin E538900,N183209",
+  "method": "Explicit OS exteriors for Albion; separate northern/southern bodies preserve the open courtyard. Southwest disused-soap-yard envelope rejected after raw map review.",
+  "groups": [
+    {
+      "id": "albion-north",
+      "modelIds": [
+        "west-421-1"
+      ],
+      "sourceFids": [
+        4945,
+        107344
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -846.071843798738,
+              209.6292413394549
+            ],
+            [
+              -846.5627068362664,
+              209.7943077844684
+            ],
+            [
+              -846.9064834224992,
+              210.06622721959138
+            ],
+            [
+              -847.0923945339164,
+              210.38266314129578
+            ],
+            [
+              -846.4752005550545,
+              211.68298514181515
+            ],
+            [
+              -846.5814773391467,
+              212.2174480421818
+            ],
+            [
+              -862.7391814640723,
+              221.75293355988106
+            ],
+            [
+              -863.3330435727257,
+              221.81689452100545
+            ],
+            [
+              -863.4752878597938,
+              221.40580762474565
+            ],
+            [
+              -864.8934326238232,
+              219.05818846437614
+            ],
+            [
+              -865.3129093508469,
+              219.12767703138525
+            ],
+            [
+              -865.7321088244207,
+              219.35579036473064
+            ],
+            [
+              -866.2565783229657,
+              219.2563487571897
+            ],
+            [
+              -867.1644773449516,
+              217.67450990498764
+            ],
+            [
+              -867.4955091361189,
+              217.47608622827101
+            ],
+            [
+              -867.9707665676251,
+              217.6440702608088
+            ],
+            [
+              -870.3226974229328,
+              219.0632440978079
+            ],
+            [
+              -870.6525690823328,
+              219.140816097497
+            ],
+            [
+              -875.6873011741554,
+              210.39145127031952
+            ],
+            [
+              -875.9084991805721,
+              210.03516287409002
+            ],
+            [
+              -875.6286210981198,
+              209.73634103458608
+            ],
+            [
+              -859.4582879634108,
+              200.2045694133849
+            ],
+            [
+              -858.954790065065,
+              200.04025945509784
+            ],
+            [
+              -842.7416253190022,
+              190.57497459556907
+            ],
+            [
+              -842.5968479608418,
+              190.56527926464332
+            ],
+            [
+              -835.2215061538154,
+              202.62965692672879
+            ],
+            [
+              -835.2007038692245,
+              203.10823320155032
+            ],
+            [
+              -843.8454202630091,
+              208.29516310809413
+            ],
+            [
+              -844.1398592002224,
+              208.49660791142378
+            ],
+            [
+              -844.6879760294687,
+              208.57090300571872
+            ],
+            [
+              -845.7902451086557,
+              209.33917961415136
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -870.6525690823328,
+              219.140816097497
+            ],
+            [
+              -870.9255342050456,
+              219.48088759521488
+            ],
+            [
+              -877.981172844884,
+              223.7355808521388
+            ],
+            [
+              -878.3092524019303,
+              223.80439116287744
+            ],
+            [
+              -878.9446416187566,
+              223.1798498891876
+            ],
+            [
+              -883.7159641586477,
+              214.77620855468558
+            ],
+            [
+              -883.5010038783075,
+              214.36194958369015
+            ],
+            [
+              -876.3821447116788,
+              210.1823859521537
+            ],
+            [
+              -875.9084991805721,
+              210.03516287409002
+            ],
+            [
+              -875.6873011741554,
+              210.39145127031952
+            ]
+          ]
+        ]
+      ],
+      "reconciledPolygons": [
+        [
+          [
+            [
+              -867.971,
+              217.644
+            ],
+            [
+              -867.496,
+              217.476
+            ],
+            [
+              -867.164,
+              217.675
+            ],
+            [
+              -866.257,
+              219.256
+            ],
+            [
+              -865.732,
+              219.356
+            ],
+            [
+              -865.313,
+              219.128
+            ],
+            [
+              -864.893,
+              219.058
+            ],
+            [
+              -863.475,
+              221.406
+            ],
+            [
+              -863.333,
+              221.817
+            ],
+            [
+              -862.739,
+              221.753
+            ],
+            [
+              -846.581,
+              212.217
+            ],
+            [
+              -846.475,
+              211.683
+            ],
+            [
+              -847.092,
+              210.383
+            ],
+            [
+              -846.906,
+              210.066
+            ],
+            [
+              -846.563,
+              209.794
+            ],
+            [
+              -846.072,
+              209.629
+            ],
+            [
+              -845.79,
+              209.339
+            ],
+            [
+              -844.688,
+              208.571
+            ],
+            [
+              -844.14,
+              208.497
+            ],
+            [
+              -843.845,
+              208.295
+            ],
+            [
+              -835.201,
+              203.108
+            ],
+            [
+              -835.222,
+              202.63
+            ],
+            [
+              -842.597,
+              190.565
+            ],
+            [
+              -842.742,
+              190.575
+            ],
+            [
+              -858.955,
+              200.04
+            ],
+            [
+              -859.458,
+              200.205
+            ],
+            [
+              -875.629,
+              209.736
+            ],
+            [
+              -875.908,
+              210.035
+            ],
+            [
+              -876.382,
+              210.182
+            ],
+            [
+              -883.501,
+              214.362
+            ],
+            [
+              -883.716,
+              214.776
+            ],
+            [
+              -878.945,
+              223.18
+            ],
+            [
+              -878.309,
+              223.804
+            ],
+            [
+              -877.981,
+              223.736
+            ],
+            [
+              -870.926,
+              219.481
+            ],
+            [
+              -870.653,
+              219.141
+            ],
+            [
+              -870.323,
+              219.063
+            ]
+          ]
+        ]
+      ],
+      "previousUnionIoU": 0.2148211214439551,
+      "additional": false,
+      "division": "Two supplied polygons join at an artificial seam; the mapped northern Albion range retains its courtyard-facing reentrants."
+    },
+    {
+      "id": "albion-south",
+      "modelIds": [
+        "west-421-2",
+        "west-421-3"
+      ],
+      "sourceFids": [
+        4270,
+        222333
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -853.3440691787982,
+              220.96562369709136
+            ],
+            [
+              -852.717892136192,
+              220.33334684587317
+            ],
+            [
+              -842.1512886786368,
+              214.56799052667338
+            ],
+            [
+              -841.80517866218,
+              214.85548626742093
+            ],
+            [
+              -839.4516166561516,
+              218.78881784930127
+            ],
+            [
+              -839.0448903113138,
+              218.7888962943107
+            ],
+            [
+              -835.8461871806066,
+              216.98770387039986
+            ],
+            [
+              -835.5300359249813,
+              216.6695367897628
+            ],
+            [
+              -822.5610749379266,
+              209.51264217036078
+            ],
+            [
+              -822.3003187157447,
+              209.2177975695231
+            ],
+            [
+              -821.7408184006345,
+              209.20683287660358
+            ],
+            [
+              -820.15370399924,
+              213.97912074899068
+            ],
+            [
+              -820.3584818246309,
+              214.39831189607503
+            ],
+            [
+              -829.2769808822777,
+              219.30565059895162
+            ],
+            [
+              -829.5767957856879,
+              219.63354612968396
+            ],
+            [
+              -824.8480618494796,
+              228.73119696753565
+            ],
+            [
+              -824.8790978825418,
+              229.16294941614615
+            ],
+            [
+              -839.1942721293308,
+              236.86838729021838
+            ],
+            [
+              -839.2647234785836,
+              237.34169595438289
+            ],
+            [
+              -839.1396210183157,
+              237.8346068909741
+            ],
+            [
+              -846.8604115209309,
+              242.05132278212113
+            ],
+            [
+              -847.281642123824,
+              242.0051033871132
+            ],
+            [
+              -848.8651768440614,
+              239.17306715640007
+            ],
+            [
+              -849.3059177831747,
+              239.01091136416653
+            ],
+            [
+              -855.4539983337745,
+              242.2808593030786
+            ],
+            [
+              -855.9463084042072,
+              242.29908278764924
+            ],
+            [
+              -861.7884718662826,
+              231.8180787388119
+            ],
+            [
+              -861.8538750688313,
+              231.59307308291318
+            ],
+            [
+              -861.5747448921902,
+              231.24296201358084
+            ],
+            [
+              -851.0623736600392,
+              225.4481190497172
+            ],
+            [
+              -851.0044097864302,
+              225.02003844076535
+            ],
+            [
+              -853.272688887082,
+              221.02665057382546
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -861.8538750688313,
+              231.59307308291318
+            ],
+            [
+              -862.754195390502,
+              231.96710350556532
+            ],
+            [
+              -863.2438741551014,
+              231.87499158765422
+            ],
+            [
+              -863.3468512237305,
+              231.30880265822634
+            ],
+            [
+              -865.2307805819437,
+              228.16794907132862
+            ],
+            [
+              -865.3473716344452,
+              227.65437352762092
+            ],
+            [
+              -865.0862549978774,
+              227.29521905397996
+            ],
+            [
+              -861.4298819894902,
+              225.31269362586318
+            ],
+            [
+              -860.8404088296229,
+              225.21231178933522
+            ],
+            [
+              -860.1099832977634,
+              224.72913053340744
+            ],
+            [
+              -859.8258483599639,
+              224.4031535354443
+            ],
+            [
+              -853.8448452145094,
+              220.98367700568633
+            ],
+            [
+              -853.3440691787982,
+              220.96562369709136
+            ],
+            [
+              -853.272688887082,
+              221.02665057382546
+            ],
+            [
+              -851.0044097864302,
+              225.02003844076535
+            ],
+            [
+              -851.0623736600392,
+              225.4481190497172
+            ],
+            [
+              -861.5747448921902,
+              231.24296201358084
+            ]
+          ]
+        ]
+      ],
+      "reconciledPolygons": [
+        [
+          [
+            [
+              -855.946,
+              242.299
+            ],
+            [
+              -855.454,
+              242.281
+            ],
+            [
+              -849.306,
+              239.011
+            ],
+            [
+              -848.865,
+              239.173
+            ],
+            [
+              -847.282,
+              242.005
+            ],
+            [
+              -846.86,
+              242.051
+            ],
+            [
+              -839.14,
+              237.835
+            ],
+            [
+              -839.265,
+              237.342
+            ],
+            [
+              -839.194,
+              236.868
+            ],
+            [
+              -824.879,
+              229.163
+            ],
+            [
+              -824.848,
+              228.731
+            ],
+            [
+              -829.577,
+              219.634
+            ],
+            [
+              -829.277,
+              219.306
+            ],
+            [
+              -820.358,
+              214.398
+            ],
+            [
+              -820.154,
+              213.979
+            ],
+            [
+              -821.741,
+              209.207
+            ],
+            [
+              -822.3,
+              209.218
+            ],
+            [
+              -822.561,
+              209.513
+            ],
+            [
+              -835.53,
+              216.67
+            ],
+            [
+              -835.846,
+              216.988
+            ],
+            [
+              -839.045,
+              218.789
+            ],
+            [
+              -839.452,
+              218.789
+            ],
+            [
+              -841.805,
+              214.855
+            ],
+            [
+              -842.151,
+              214.568
+            ],
+            [
+              -852.718,
+              220.333
+            ],
+            [
+              -853.344,
+              220.966
+            ],
+            [
+              -853.845,
+              220.984
+            ],
+            [
+              -859.826,
+              224.403
+            ],
+            [
+              -860.11,
+              224.729
+            ],
+            [
+              -860.84,
+              225.212
+            ],
+            [
+              -861.43,
+              225.313
+            ],
+            [
+              -865.086,
+              227.295
+            ],
+            [
+              -865.347,
+              227.654
+            ],
+            [
+              -865.231,
+              228.168
+            ],
+            [
+              -863.347,
+              231.309
+            ],
+            [
+              -863.244,
+              231.875
+            ],
+            [
+              -862.754,
+              231.967
+            ],
+            [
+              -861.854,
+              231.593
+            ],
+            [
+              -861.788,
+              231.818
+            ]
+          ]
+        ]
+      ],
+      "previousUnionIoU": 0.27389003134037704,
+      "additional": false,
+      "division": "Southern body and western projection join across an artificial source seam. The small eastern spur is divided at its mapped reentrant corner by an interpreted roof boundary; OS supplies the combined exterior, not this internal roof division."
+    }
+  ],
+  "buildings": [
+    {
+      "modelId": "west-421-1",
+      "siteId": 421,
+      "name": "Albion \u2014 oil and grease warehouse",
+      "groupId": "albion-north",
+      "sourceFids": [
+        4945,
+        107344
+      ],
+      "worldFootprint": [
+        [
+          -867.971,
+          217.644
+        ],
+        [
+          -867.496,
+          217.476
+        ],
+        [
+          -867.164,
+          217.675
+        ],
+        [
+          -866.257,
+          219.256
+        ],
+        [
+          -865.732,
+          219.356
+        ],
+        [
+          -865.313,
+          219.128
+        ],
+        [
+          -864.893,
+          219.058
+        ],
+        [
+          -863.475,
+          221.406
+        ],
+        [
+          -863.333,
+          221.817
+        ],
+        [
+          -862.739,
+          221.753
+        ],
+        [
+          -846.581,
+          212.217
+        ],
+        [
+          -846.475,
+          211.683
+        ],
+        [
+          -847.092,
+          210.383
+        ],
+        [
+          -846.906,
+          210.066
+        ],
+        [
+          -846.563,
+          209.794
+        ],
+        [
+          -846.072,
+          209.629
+        ],
+        [
+          -845.79,
+          209.339
+        ],
+        [
+          -844.688,
+          208.571
+        ],
+        [
+          -844.14,
+          208.497
+        ],
+        [
+          -843.845,
+          208.295
+        ],
+        [
+          -835.201,
+          203.108
+        ],
+        [
+          -835.222,
+          202.63
+        ],
+        [
+          -842.597,
+          190.565
+        ],
+        [
+          -842.742,
+          190.575
+        ],
+        [
+          -858.955,
+          200.04
+        ],
+        [
+          -859.458,
+          200.205
+        ],
+        [
+          -875.629,
+          209.736
+        ],
+        [
+          -875.908,
+          210.035
+        ],
+        [
+          -876.382,
+          210.182
+        ],
+        [
+          -883.501,
+          214.362
+        ],
+        [
+          -883.716,
+          214.776
+        ],
+        [
+          -878.945,
+          223.18
+        ],
+        [
+          -878.309,
+          223.804
+        ],
+        [
+          -877.981,
+          223.736
+        ],
+        [
+          -870.926,
+          219.481
+        ],
+        [
+          -870.653,
+          219.141
+        ],
+        [
+          -870.323,
+          219.063
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -877.793,
+          219.11
+        ],
+        [
+          -834.452,
+          197.134
+        ],
+        [
+          -825.792,
+          214.354
+        ],
+        [
+          -869.133,
+          236.33
+        ]
+      ],
+      "priorRotationDegrees": -26.8872,
+      "footprintRotationDegrees": -30.49042892011243,
+      "preservedHeight": 6.9,
+      "preservedRoofRise": 1.7347367438873142,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 3,
+      "review": "Explicit OS Albion match; previous estimated elevations and roofs retained. No Goad corroboration asserted. Two supplied polygons join at an artificial seam; the mapped northern Albion range retains its courtyard-facing reentrants.",
+      "comparison": {
+        "centroidShiftMetres": 10.689642334989607,
+        "areaRatio": 0.7412264217560184,
+        "axisChangeDegrees": -3.6032289201124286
+      }
+    },
+    {
+      "modelId": "west-421-2",
+      "siteId": 421,
+      "name": "Albion \u2014 southern oil store",
+      "groupId": "albion-south",
+      "sourceFids": [
+        4270,
+        222333
+      ],
+      "worldFootprint": [
+        [
+          -855.946,
+          242.299
+        ],
+        [
+          -855.454,
+          242.281
+        ],
+        [
+          -849.306,
+          239.011
+        ],
+        [
+          -848.865,
+          239.173
+        ],
+        [
+          -847.282,
+          242.005
+        ],
+        [
+          -846.86,
+          242.051
+        ],
+        [
+          -839.14,
+          237.835
+        ],
+        [
+          -839.265,
+          237.342
+        ],
+        [
+          -839.194,
+          236.868
+        ],
+        [
+          -824.879,
+          229.163
+        ],
+        [
+          -824.848,
+          228.731
+        ],
+        [
+          -829.577,
+          219.634
+        ],
+        [
+          -832.221,
+          214.844
+        ],
+        [
+          -835.53,
+          216.67
+        ],
+        [
+          -835.846,
+          216.988
+        ],
+        [
+          -839.045,
+          218.789
+        ],
+        [
+          -839.452,
+          218.789
+        ],
+        [
+          -841.805,
+          214.855
+        ],
+        [
+          -842.151,
+          214.568
+        ],
+        [
+          -852.718,
+          220.333
+        ],
+        [
+          -853.344,
+          220.966
+        ],
+        [
+          -853.845,
+          220.984
+        ],
+        [
+          -859.826,
+          224.403
+        ],
+        [
+          -860.11,
+          224.729
+        ],
+        [
+          -860.84,
+          225.212
+        ],
+        [
+          -861.43,
+          225.313
+        ],
+        [
+          -865.086,
+          227.295
+        ],
+        [
+          -865.347,
+          227.654
+        ],
+        [
+          -865.231,
+          228.168
+        ],
+        [
+          -863.347,
+          231.309
+        ],
+        [
+          -863.244,
+          231.875
+        ],
+        [
+          -862.754,
+          231.967
+        ],
+        [
+          -861.854,
+          231.593
+        ],
+        [
+          -861.788,
+          231.818
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -870.31,
+          234.133
+        ],
+        [
+          -851.214,
+          224.33
+        ],
+        [
+          -843.831,
+          235.642
+        ],
+        [
+          -863.662,
+          245.837
+        ]
+      ],
+      "priorRotationDegrees": -27.1739,
+      "footprintRotationDegrees": -28.639571259350532,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 3.6310296612189505,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS Albion match; previous estimated elevations and roofs retained. No Goad corroboration asserted. Southern body and western projection join across an artificial source seam. The small eastern spur is divided at its mapped reentrant corner by an interpreted roof boundary; OS supplies the combined exterior, not this internal roof division.",
+      "comparison": {
+        "centroidShiftMetres": 14.048461513596104,
+        "areaRatio": 2.2477258451734223,
+        "axisChangeDegrees": -1.4656712593505326
+      }
+    },
+    {
+      "modelId": "west-421-3",
+      "siteId": 421,
+      "name": "Albion \u2014 canal-side shed",
+      "groupId": "albion-south",
+      "sourceFids": [
+        4270,
+        222333
+      ],
+      "worldFootprint": [
+        [
+          -829.577,
+          219.634
+        ],
+        [
+          -829.277,
+          219.306
+        ],
+        [
+          -820.358,
+          214.398
+        ],
+        [
+          -820.154,
+          213.979
+        ],
+        [
+          -821.741,
+          209.207
+        ],
+        [
+          -822.3,
+          209.218
+        ],
+        [
+          -822.561,
+          209.513
+        ],
+        [
+          -832.221,
+          214.844
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -835.386,
+          217.586
+        ],
+        [
+          -823.972,
+          212.819
+        ],
+        [
+          -821.97,
+          217.964
+        ],
+        [
+          -833.022,
+          222.35
+        ]
+      ],
+      "priorRotationDegrees": -22.6676,
+      "footprintRotationDegrees": -28.639571259350532,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.4901623504588537,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit OS Albion match; previous estimated elevations and roofs retained. No Goad corroboration asserted. Southern body and western projection join across an artificial source seam. The small eastern spur is divided at its mapped reentrant corner by an interpreted roof boundary; OS supplies the combined exterior, not this internal roof division.",
+      "comparison": {
+        "centroidShiftMetres": 4.180221456784552,
+        "areaRatio": 0.9289714866453715,
+        "axisChangeDegrees": -5.971971259350532
+      }
+    }
+  ],
+  "structures": [],
+  "removedBuildings": [
+    {
+      "id": "west-421-4",
+      "siteId": 421,
+      "name": "Disused soap works \u2014 retained manufacturing range",
+      "source": "os-west-bank-1893",
+      "worldFootprint": [
+        [
+          -905.919,
+          239.186
+        ],
+        [
+          -887.557,
+          229.774
+        ],
+        [
+          -871.052,
+          261.637
+        ],
+        [
+          -882.425,
+          267.888
+        ],
+        [
+          -892.533,
+          252.193
+        ]
+      ],
+      "mapFrame": "west-centre",
+      "mapPixels": [
+        [
+          563,
+          396
+        ],
+        [
+          613,
+          372
+        ],
+        [
+          655,
+          459
+        ],
+        [
+          624,
+          475
+        ],
+        [
+          598,
+          432
+        ]
+      ],
+      "storeysEstimate": 1,
+      "roofBays": 2,
+      "material": "brick",
+      "roof": "gable",
+      "bankTrim": true,
+      "waterReview": "Retain the existing GIS bank where the rounded OS envelope marginally differs.",
+      "footprintEvidence": "Individual shaded OS range read on the georeferenced NLS map; rounded envelope.",
+      "heightEvidence": "Estimated industrial storeys and roof heights for a close visual reconstruction; OS supplies plan only.",
+      "roofEvidence": "Pitched industrial roof inferred; division into bays is an interpretation.",
+      "eavesHeight": 6.2,
+      "footprint": [
+        [
+          -905.919,
+          239.186
+        ],
+        [
+          -887.557,
+          229.774
+        ],
+        [
+          -871.052,
+          261.637
+        ],
+        [
+          -882.425,
+          267.888
+        ],
+        [
+          -892.533,
+          252.193
+        ]
+      ],
+      "x": -887.085,
+      "z": 248.168,
+      "rotation": -27.1388,
+      "localBounds": [
+        [
+          -12.66320124964314,
+          -16.583906913325713
+        ],
+        [
+          8.124124279830676,
+          19.674851529806446
+        ]
+      ],
+      "width": 20.787,
+      "depth": 36.259,
+      "storeys": 1,
+      "height": 6.2,
+      "roofRise": 2.8062889464789658,
+      "roofAxis": "z",
+      "areaM2": 567.54,
+      "renderPolygons": [
+        {
+          "outer": [
+            [
+              -887.557,
+              229.774
+            ],
+            [
+              -905.919,
+              239.186
+            ],
+            [
+              -892.533,
+              252.193
+            ],
+            [
+              -882.425,
+              267.888
+            ],
+            [
+              -871.052,
+              261.637
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "renderAreaM2": 567.54,
+      "review": "Raw OS mosaic and annotated OS source review show the prior polygon crossing the southwest Soap Works (Disused) yard boundary. Its northwestern rectangle is unshaded; the southeast portion is open yard, with a parcel boundary continuing through the former footprint. No enclosed shaded manufacturing range supports this envelope. Removal is based on positive yard-boundary evidence, not merely absence from the supplied extract."
+    }
+  ],
+  "removedStructures": [
+    {
+      "id": "west-421-4-stack",
+      "siteId": 421,
+      "kind": "chimney",
+      "name": "Interpreted works steam/process chimney",
+      "source": "os-west-bank-1893",
+      "supportingSources": [
+        "os-west-bank-1893"
+      ],
+      "parentBuildingId": "west-421-4",
+      "localPosition": [
+        -0.694,
+        -3.513
+      ],
+      "height": 25,
+      "radius": 1.1,
+      "topRadiusRatio": 0.7,
+      "baseHeight": 0.12,
+      "section": "round",
+      "material": "brick",
+      "evidenceType": "map-interpretation",
+      "positionEvidence": "Approximate boiler/process stack placed within an individually mapped works range; not a transcribed OS chimney symbol.",
+      "heightEvidence": "Interpreted height chosen for the works scale; not measured.",
+      "profileEvidence": "Tapered brick works chimney with projecting crown, a period modelling assumption.",
+      "x": -889.305,
+      "z": 245.358,
+      "rotation": -27.1388,
+      "review": "Prior 25 m chimney was inferred from the rejected west-421-4 manufacturing envelope, not transcribed from an OS chimney symbol. The tiny independent source outline 1018263 is not identified as a chimney; its function remains deferred."
+    }
+  ],
+  "evidenceImages": [
+    "reference/footprint-model-alignment/albion-soap-yard-evidence.png",
+    "reference/footprint-model-alignment/ratner-albion-soap-raw.png",
+    "reference/footprint-model-alignment/ratner-albion-source.png",
+    "reference/footprint-model-alignment/ratner-albion-models.png"
+  ],
+  "yardEvidenceCrop": {
+    "sourceBounds": [
+      -918,
+      222,
+      -865,
+      278
+    ],
+    "zoom": 18,
+    "layer": "os-london-five-foot-1893",
+    "mosaicPixelBounds": [
+      19,
+      92,
+      159,
+      248
+    ],
+    "displayScale": 4,
+    "worldCorners": [
+      [
+        -918.3098289530026,
+        221.69630061095813
+      ],
+      [
+        -864.6446268425789,
+        278.17511424957775
+      ]
+    ],
+    "note": "Unmodified cached tile samples cropped, enlarged 4x for readability; reversible mosaic transform in scripts/factory_map_sources.py"
+  },
+  "deferred": [
+    {
+      "sourceFid": 1018263,
+      "reason": "Small boundary-side outline, 5.644 m\u00b2; no positive chimney symbol or reliable function. Retain as source evidence without introducing a full-height range or stack."
+    }
+  ]
+}

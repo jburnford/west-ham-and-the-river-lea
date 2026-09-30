@@ -1293,3 +1293,331 @@ a focused House Mill follow-up checks these final presentation fixes.
 The final House Mill follow-up passed and was visually inspected: weatherboard
 openings are clear and dormers meet the roof plane. All landmark/tank anchors
 also pass the renderer checks. Final revision remains `5cd6e03c4929`.
+
+
+## Ratner Safe Works / Albion — GPT-6.1 Sol trial, 29 September 2026
+
+Following commit `9d14388`, the user requested testing GPT-6.1 Sol agents on the
+continuing alignment. Two agents separately authored Ratner and Albion using
+the cached map, supplied source shapes, immutable baseline and shared alignment
+record helper. Both returned within roughly four minutes of dispatch. Parent
+review accepted the source geometry without shape edits, checked the removal
+evidence independently, integrated the registers and added runtime assertions.
+This establishes a successful authoring trial, not a measured token/cost saving;
+shared integration, data rebuilds and browser review remain part of the work.
+
+| Models | Source polygons | Decision |
+| --- | --- | --- |
+| west-420-1/3/4 | 395 | Preserve U-shaped exterior and northern open court; main/plant/office roof divisions remain interpreted |
+| west-420-2 | 10793 | Separate eastern workshop |
+| west-421-1 | 4945, 107344 | Join northern Albion exterior across source seam |
+| west-421-2/3 | 4270, 222333 | Southern body and eastern spur, divided at a mapped reentrant corner; roof boundary interpreted |
+| west-421-4 and stack | None | Reject former envelope crossing the soap-yard boundary and its unsupported inferred chimney |
+
+All seven retained eaves heights and roof parameters remain. Ratner's inferred
+28 m chimney moves 7.115 m to the corrected northeast compartment; the full
+base fits inside it. No independent mapped chimney position is claimed.
+Albion's northern/southern passage is 3.763 m wide. All new footprints clear
+roads, buffered water and neighbouring models; no road or bank changes are made.
+
+Albion removal uses positive OS evidence: an unshaded enclosed yard northwest
+of the boundary, and a continuing parcel wall through the unsupported model's
+southeastern extent, with open yard alongside. It is not inferred solely from
+the missing supplied footprint. `albion-soap-yard-evidence.png` and reversible
+crop metadata record the review. Both removed records are retained in the
+register; the runtime now records `reclassifiedStructures` as well as buildings.
+Tiny source1018263 and Ratner projections964640/966740/967834 remain deferred.
+
+The scene now contains 546 ranges, 89 chimneys and 351 source-linked ranges at
+twenty-six sites, plus eleven direct OS traces and two provisional transfers.
+Shared checks allow only explicit later/companion reviewed changes when comparing
+historical baselines. Both agent-authored registers regenerate byte-for-byte.
+
+Ratner/Albion final data checks: all factory and earlier alignment checks,
+streets, yards, housing, Abbey, western completion and 77 navigation checks pass.
+Yards: 85 surfaces / 36 wear routes / 161 stock groups. Housing: 196 rows /
+3,204 houses / 3,191 rear yards. Regional coverage: 234,540 visible features,
+115 tiles (4.01 MB). Manifest `965d5cc38219` matches all 25 module and 139 asset
+hashes. No source geometry edits were required after the two agents' handoffs.
+
+All three Ratner/Albion SwiftShader views passed and were visually inspected:
+`review/ratner-albion-plan.png`, `review/ratner-courtyard.png` and
+`review/albion-court-and-yard.png`. The browser confirms seven ranges, Ratner's
+relocated chimney and removal of the unsupported soap-yard stack, with no
+browser/shader errors. This Sol-agent continuation remains uncommitted.
+
+
+## Bow Flour, rubber/oilskin and felt works, 29 September 2026
+
+Two GPT-6.1 Sol agents authored the independent groups, followed by parent
+source-map review, context reconciliation and integration. Twelve resulting
+ranges in eleven groups use 23 supplied source polygons. One northwest rubber
+room is added; two former industrial ranges over domestic terraces are removed.
+
+| Model/group | Source feature IDs | Decision |
+| --- | --- | --- |
+| Bow main / lower boiler tip, 422-1/6 | 6296 | Complete exterior, interpreted roof division at the northern shoulder |
+| Bow road-front, 422-2 | 664578, 783709 | Smaller mapped body restores the surrounding yard |
+| Bow rear, 422-3 | 22581, 133193, 1006180 | Joined body; explicit 0.185 m² overlap with 6296 removed |
+| Albion Wharf riverside, 422-4 | 6191, 247343, 970043 | Complete exterior and southern recess retained |
+| Albion Wharf western, 422-5 | 147640 | Principal body only; store use remains uncertain |
+| Rubber eastern body, 423-1 | 19653 | Moves the former courtyard rectangle onto the actual shaded works |
+| Rubber northwest, 423-2 / added northwest room | 80446 / 185796 | Separate bodies preserve the 0.696 m source division |
+| Felt western body, 424-1 | 15902, 131228, 116562, 834137, 131038 | Combined exterior retains its courtyard recess |
+| Felt eastern body, 424-2 | 39619, 117398 | School and northern domestic frontage excluded |
+| Felt southern body, 424-3 | 167043, 146487, 566260 | Passage and chapel boundary retained |
+
+The raw OS shows repeated domestic rear extensions and garden divisions beneath
+former ranges 423-3 and 423-5, south of the manufacturing court and beside the
+Baptist Chapel. Their industrial volumes and the unsupported 25 m process
+chimney are removed, with full prior records saved. Domestic source outlines
+remain in regional context; this does not complete their separate housing pass.
+The northwest source division may be a gap or roof seam; no connector is inferred.
+No Goad corroboration or measured elevations are asserted in this pass.
+
+The other eleven existing elevations/roof profiles are retained, and the added
+northwest room reuses its neighbour's interpreted profile. The inferred 32 m
+Bow mill and 24 m felt chimneys move to corrected parent centroids; both full
+plinths fit. Raw source exteriors remain saved alongside the explicit rear/mill
+seam reconciliation. The checker reconstructs that exclusion from source 6296,
+then checks millimetre rounding and both raw/reconciled overlap scores.
+
+Bow Road's earlier centreline cut through the mill and road-front rooms. The
+first two High Street controls and Bow Bridge span move 5.7 m east / 7 m south
+to follow the visible carriageway. Width stays 12 m; eastern controls and other
+bridges remain. Two wharf-side River Lea controls move 2 m north to clear the
+mapped Albion Wharf wall. The checked local channel remains over 24 m wide.
+These are map reconciliations, not measured road widths or a surveyed shoreline.
+`bow-flour-context-alignment.json` records all prior controls and bridge positions.
+
+Routine builds use the saved registers. Source preparation needs immutable
+`reference/footprint-model-alignment/west-mills-before.json`, cached
+`west-mills-source-shapes.json`, and cached OS tiles for the context authoring.
+All three preparation scripts are byte-for-byte idempotent. Apply the context
+preparation after preceding road passes when regenerating authoring data.
+
+```sh
+python3 scripts/prepare_bow_flour_alignment.py
+python3 scripts/prepare_rubber_felt_alignment.py
+python3 scripts/prepare_bow_flour_context.py
+python3 scripts/build_factory_buildings.py
+python3 scripts/build_infrastructure.py
+python3 scripts/build_factory_yards.py
+python3 scripts/build_housing_detail.py
+python3 scripts/build_river_network.py
+python3 scripts/build_regional_footprints.py
+python3 scripts/build_scene_manifest.py
+python3 scripts/check_bow_flour_alignment.py
+python3 scripts/check_rubber_felt_alignment.py
+python3 scripts/check_bow_flour_context.py
+python3 scripts/review_factory_buildings.py --west-mills-only --software-gl
+```
+
+All current ranges at sites 422/423/424 are source-linked (6/3/3). Circular tank
+730314, small projection 835826, likely domestic western rooms 745243/775257,
+other unmodeled Albion Wharf bodies and small rubber-yard features remain
+explicitly deferred. The boys school is not absorbed into Felt Works.
+
+
+Bow Flour/rubber/felt final verification: all twenty alignment scripts and the
+factory, yard, housing, street, Abbey, western-completion, Bow context and river
+tide checks pass, alongside all 77 navigation destinations. Four SwiftShader
+browser views passed and were visually inspected: `bow-flour-plan`,
+`bow-flour-river-front`, `rubber-felt-plan` and `rubber-felt-courtyard`. No browser
+or shader errors; all twelve corrected ranges, both retained chimney positions
+and removal of the unsupported rubber process stack were confirmed.
+Minimum reconciled-reference IoU is 99.989%; Bow rear raw-source IoU is 99.936%
+because its explicit overlapping seam is removed. Final manifest `870ca57e01cc`
+matches all 25 module and 139 asset hashes. Regional coverage: 234,547 visible
+features, 115 tiles, 4.01 MB. Changes remain uncommitted; local preview on port 4175.
+
+
+## Cook, Bow Bridge/Magnet Wharf and limeworks — 29 September 2026
+
+Three saved registers add 48 retained ranges in 37 groups, using 75 supplied
+source polygons. No ranges or structures are added or removed. Existing eaves,
+roof rises, roof axes and bay counts are preserved. OS fixes the exteriors;
+Goad F2 supports Cook’s process compartments. Bow/Magnet and limeworks uses
+remain map-based interpretations where no detailed elevation evidence exists.
+
+| Register | Ranges / groups / source outlines | Main decisions |
+| --- | --- | --- |
+| cook-soap | 31 / 21 / 47 | Main soap block 511 split into four existing compartments; railway range 1438 split into export/bone rooms and tower. Two enclosed courts/openings and Mabbers’ open notch preserved. |
+| bow-magnet | 13 / 12 / 24 | Bow granary 2353, main works 787 and separate northern wings; Magnet court remains open. Source 36727’s 2.276 m² overlap with 13037 is explicitly reconciled. |
+| lime-works | 4 / 4 / 4 | Separate rooms 79566,18540,109441,403081 replace oversized envelopes, preserving the kiln yards. |
+
+Cook’s mapped stack bases are 849114,1141408,1096338. The 120-foot stack keeps
+its 1.5 m radius; two 22 m stacks narrow to 0.46/0.58 m to contain the renderer’s
+rotated square plinths. The 50-foot export stack transfers within its corrected
+parent. Three mapped bases are evidenced; this does not establish measured
+shaft diameters for c1900.
+
+The limeworks’ two existing seven-metre cylinders fit outer envelopes 1022949
+and 914794. Their source polygons retain the latter’s throat hole; detailed
+kiln masonry/throats, enclosing rooms and two other mapped kiln circles remain
+deferred. Yard exclusions now include kiln bodies as well as tanks, and the
+regional overlay suppresses the two modeled kiln outlines.
+
+Bow/Magnet context uses saved bank and road registers. Ten works-side vertices
+of river 17 move 5.5 m west; the opposite bank stays fixed and the main reach
+remains over 12 m wide at checked sections. The last bank control also moves
+2.04 m north to avoid overlap at the tidal/retained channel junction. High
+Street control 2 moves 3 m east
+and 4 m south, with a transition onto the original eastern line before the
+previously reviewed starch frontage. Cook’s Road’s final bend moves 10 m west
+and joins High Street. Its connection remains explicitly provisional (deck
+versus culvert unresolved), follows the revised route and reaches dry land.
+Interpreted road widths and Bow Bridge are preserved.
+
+Authoring: run prepare_cook_soap_alignment.py, prepare_bow_magnet_alignment.py
+and prepare_lime_works_alignment.py against immutable soap-wharves-before.json.
+Run prepare_bow_magnet_context.py after prepare_bow_flour_context.py. Routine
+builds use saved registers; rebuild panorama data before factory/infrastructure,
+and river-network data before the manifest. Focused browser command:
+`python3 scripts/review_factory_buildings.py --soap-wharves-only --software-gl
+--url http://127.0.0.1:4175`.
+
+All six SwiftShader views passed and were visually inspected: cook-soap-plan,
+cook-soap-main, cook-soap-process, bow-magnet-plan, bow-magnet-bank-road and
+lime-works-plan. No browser or shader errors. Renderer diagnostics confirm all
+48 ranges, four Cook chimney tops and both corrected kilns. Final revision:
+`776f3ddea127`; local preview remains on port 4175.
+
+
+## St Thomas, Smith, Bow Brewery and mineral water — 29 September 2026
+
+Twenty retained ranges in nineteen groups use 43 supplied outlines. Existing
+eaves and roof parameters remain interpreted and unchanged; no ranges or
+structures are added or removed. Two Sol 6.1 agents authored mill/brush and
+brewery registers, with parent mineral-water authoring and independent review.
+
+| Register / groups | Reviewed source matches |
+| --- | --- |
+| mill-brush / 9 | Mill main 5319; engine 828523; room 858 uses 832881+966459. Smith brush 64628+764378; fibre 22190+553943+442961; drying warehouse 41501; southern office/warehouse 602713; coppers/stoves share 19138+842299+701026; eastern drying 724119+936507+820609. |
+| bow-brewery / 7 | Northeast 7367+550364; western 5599+396988; north 14349 and annexes; southern 10218 and annexes; southeast 9963+814662 and annexes; workshop 750604+518082 and annexes; service room 916095. |
+| mineral-water / 3 | Northern body 108407+27009; southern 154380+32892; eastern rooms 235227+825734. |
+
+The old mill southern-range rectangle was drawn over Smith’s warehouse. Its
+existing low profile now follows the actual mill room 858 on Goad. Smith’s own
+warehouse model follows 602713; no duplicate or ownership transfer is needed.
+Smith chimney bases 1073893 and 1041835 retain their printed 50/60-foot heights.
+Interpreted radii reduce to 0.658/0.753 m so the actual rotated square plinths
+fit their source bases. Both mapped chimney openings stay open.
+
+The Pudding Mill stream heads are preserved. Goad and OS show the upper channel
+terminating against the mill and the lower channel resuming below the engine
+bay: a covered millrace interface is inferred, with no surveyed buried route or
+structural span claimed. Goad explicitly labels the western Smith warehouse
+projection OVERHANGING. Narrow saved water reviews retain 29.8445 m² of mill
+intersection with river 8 and 10.6061 m² of warehouse intersection with river 9.
+Checks bound each overlap and prohibit other river intersections. Supporting
+structure, lower opening levels and hidden hydraulic details remain unresolved.
+
+The old Marshgate Lane trace crossed the mill diagonally. Saved context now
+retains western controls 0–6 and their existing provisional crossing, and places
+the northern arm on the mapped frontage passage and bend, joining unchanged
+northern controls. No public road or new bridge is invented across the mill
+courts. Both arms retain the interpreted 7 m width. The earlier western road
+registration beyond this local correction remains a later refinement task.
+
+Enlarged brewery map stippling confirms roofed irregular bodies around a pale
+central court. The former northern office envelope sat over the separate P.H.;
+its profile now occupies actual northern range 14349. The brewery’s 30 m
+inferred chimney moves into the corrected workshop, where its full existing
+plinth fits. No mapped chimney symbol is claimed. Source 5599’s frontage is
+6.787 m from the unchanged High Street centreline: a saved 0.78 m pavement
+exception preserves both the full wall and the 12 m carriageway. Separate
+court ranges and the tiny source hole remain open.
+
+Mineral-water models formerly extended over St Mary’s Church and its adjoining
+open ground. Their three profiles now occupy the shaded factory strip; source
+5167 is explicitly excluded as the church. Northern cross-range 44811 and
+small annexes remain deferred, along with church/school-side source buildings.
+
+Authoring baselines are immutable mill-brush-brewery-before.json and its source,
+road and ground caches. The three footprint preparations and both context
+preparations are byte-idempotent. Routine builds use saved JSON. Run the two
+new context preparations after earlier road corrections; rebuild factories,
+infrastructure, yards, housing, regional overlays and river network before
+the manifest. No ground-plan or bank correction is required for this pass.
+Focused browser command: `python3 scripts/review_factory_buildings.py
+--mill-brush-brewery-only --software-gl --url http://127.0.0.1:4175`.
+
+Geometry and data verification: all 26 alignment scripts pass, along with
+factory, yard, housing, street, Abbey, western-completion, local-context and
+river-tide checks, plus all 77 navigation destinations. Minimum source IoU is
+99.9731%. Manifest `a5797ad2547e` matches all 25 module and 139 asset hashes.
+Regional coverage: 234,480 visible features, 115 tiles, 4.01 MB. Yards: 85/35/153;
+housing: 196/3204/3191. The 100 street traces retain ten crossing segments.
+Current progress: 431 source-linked ranges plus eleven direct traces, or
+442 of 545 reviewed; 101 unaligned and two provisional transfers remain.
+Twenty-nine sites have all current ranges reviewed; fourteen retain work.
+Separate northern Smith compound roofs and further southern brewery bodies
+remain explicitly deferred; complete current-range alignment is not complete
+architectural reconstruction.
+
+All six SwiftShader views passed and were visually inspected: mill-brush-plan,
+mill-street-river, smith-process-close, bow-brewery-plan, bow-brewery-court and
+mineral-water-plan. No browser or shader errors. Diagnostics confirm all twenty
+corrected ranges, both Smith chimney tops and the brewery chimney. Final
+manifest remains `a5797ad2547e`; changes are uncommitted and the local preview
+on port 4175 serves the rebuilt scene.
+
+## Jeffrey glue, Marshgate chemical and Alderson rope continuation
+
+The three registers add twenty-five source-linked ranges in seventeen groups
+and one direct OS trace. Jeffrey’s eleven corrected ranges preserve the two
+earlier matches. Marshgate’s eight corrected ranges preserve its two earlier
+exteriors; inherited middle-room labels and internal division remain uncertain.
+Three existing chimney shafts move onto independently mapped square bases,
+with full rotated plinth containment checked and heights retained.
+
+At Alderson’s, six ranges follow supplied exteriors. The absent western
+ropewalk exterior is directly traced from the OS mosaic; its existing low
+wooden profile is retained. Original Goad F3 and OS both contradict the former
+northern cross-workshop, whose envelope occupied the open central yard. Its
+removal is recorded with the previous footprint. The already matched drying
+house remains. Small sheds, unshaded yard frames and drying-house ancillary
+strips are separately deferred.
+
+Current coverage is 456 supplied-outline ranges plus twelve direct traces,
+or 468 of 544 ranges reviewed. Seventy-four ranges remain unaligned and two
+remain provisional transfers. Thirty-two sites have all current ranges
+reviewed; eleven retain work. This does not claim complete reconstruction of
+every mapped ancillary feature or historical elevation.
+
+The northern Marshgate lane now clears the eastern rope ranges and drying
+house at its existing 7 m width, preserving the earlier mill/brush split and
+all river geometry. Original linked outlines remain fixed where neighbour
+corrections alter overlap clipping; saved render-change records constrain those
+differences explicitly. Two still-unreviewed ink envelopes retain their
+authored shapes while the existing renderer clips them against the mapped lane.
+
+## Ritchie, Crown/Johnson and western trades continuation
+
+The three registers add 37 supplied-outline ranges in 23 groups and one direct
+OS trace, retaining all 38 existing profiles. Ritchie’s continuous mill exterior
+uses Goad process divisions; its 200-foot chimney fits the independent round
+base. Crown/Johnson keeps nine supplied-outline ranges and a directly traced
+southern roof between mapped terminal walls. Its Goad plan says the northern
+works are under alterations, so the differing OS exterior and exact room
+attributions remain explicit uncertainties. The existing estimated chimney
+height is retained on the mapped square base.
+
+The western register covers17 ranges, including source 609’s complete Crown
+Chemical Works roof. Native OS hatch comparison confirms it is a building,
+with interpreted divisions between two retained profiles. Four existing western
+chimneys remain inferred, attached to corrected parents; no independent mapped
+base is claimed. The supplied Imperial site identity versus Crown map label
+is left for tenant/parcel reconciliation. No ranges or chimneys are removed.
+
+Marshgate Lane follows the mapped street east of Crown/Johnson, keeping the
+last two mill-approach controls and the separate northern arm. Three Mills Lane
+has a small local approach adjustment beside the moulding shed. Both roads
+retain 7 m widths and ordinary1.1m shoulders. Existing bridge records follow
+the corrected routes; all river polygons remain fixed.
+
+Current coverage:493 source-linked +13 directly traced =506 of544 ranges
+reviewed. Thirty-six remain unaligned and two provisional. Thirty-seven sites
+have all current ranges reviewed; six retain work. Ancillary buildings and
+uncertain elevation/room details remain separate from that progress measure.

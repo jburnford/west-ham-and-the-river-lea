@@ -1,0 +1,388 @@
+{
+  "source": "Cached georeferenced OS London five-foot 1893 mosaic; original Goad F3 for Crown/Johnson context; western approach reviewed on OS alone because Goad F16 is not cached",
+  "review": "Re-read the complete unmodified OS mosaic. The southern Marshgate arm previously ran through Crown/Johnson instead of the public street east of its walls. Follow that street and keep the last two mill approach controls and the separate northern arm. At the ornamental moulding shed, Three Mills Lane follows the middle of the mapped street a little south of the former western bridge approach. Retain both 7 m carriageways and ordinary 1.1 m shoulders. No building clearance exception, new road link, or river change is introduced.",
+  "baseline": "reference/footprint-model-alignment/remaining-trades-roads-before.json",
+  "baselineSha256": "230f95ff54e08bd0570405da1d51d2382affb698d10b28f8edaf02e3fd2a1893",
+  "roads": [
+    {
+      "name": "Marshgate Lane",
+      "priorPoints": [
+        [
+          -830.854,
+          -54.016
+        ],
+        [
+          -852.125,
+          -83.147
+        ],
+        [
+          -863.993,
+          -108.82
+        ],
+        [
+          -865.714,
+          -131.055
+        ],
+        [
+          -876.365,
+          -153.048
+        ],
+        [
+          -891.852,
+          -174.909
+        ],
+        [
+          -901.658,
+          -193.21
+        ]
+      ],
+      "points": [
+        [
+          -816.083,
+          -58.503
+        ],
+        [
+          -828.805,
+          -74.497
+        ],
+        [
+          -837.354,
+          -87.634
+        ],
+        [
+          -842.141,
+          -99.388
+        ],
+        [
+          -845.099,
+          -112.305
+        ],
+        [
+          -847.393,
+          -128.211
+        ],
+        [
+          -855.559,
+          -140.987
+        ],
+        [
+          -866.279,
+          -151.836
+        ],
+        [
+          -878.538,
+          -164.501
+        ],
+        [
+          -891.852,
+          -174.909
+        ],
+        [
+          -901.658,
+          -193.21
+        ]
+      ],
+      "width": 7,
+      "priorBridgeSpans": [
+        {
+          "id": "marshgate-lane-connection-0",
+          "points": [
+            [
+              -852.2051184026079,
+              -83.32031308983436
+            ],
+            [
+              -857.9819309678737,
+              -95.81678334498001
+            ]
+          ],
+          "style": "deck",
+          "height": 1.5,
+          "provisional": true,
+          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge."
+        }
+      ],
+      "bridgeSpans": [
+        {
+          "id": "marshgate-lane-connection-0",
+          "points": [
+            [
+              -837.354,
+              -87.634
+            ],
+            [
+              -842.141,
+              -99.388
+            ],
+            [
+              -845.099,
+              -112.305
+            ]
+          ],
+          "style": "deck",
+          "height": 1.5,
+          "provisional": true,
+          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge. Existing provisional crossing moved onto the mapped eastern lane; both endpoints relocated, with one intervening road control to follow its bend. Identity, deck style, 1.5 m height and uncertainty retained. Exact bank alignment and deck versus culvert remain unresolved."
+        }
+      ],
+      "reviewedSourceBounds": [
+        -960,
+        -235,
+        -785,
+        -40
+      ],
+      "reviewedSourcePixels": [
+        [
+          570,
+          625
+        ],
+        [
+          537,
+          581
+        ],
+        [
+          515,
+          545
+        ],
+        [
+          503,
+          513
+        ],
+        [
+          496,
+          478
+        ],
+        [
+          491,
+          435
+        ],
+        [
+          470,
+          400
+        ],
+        [
+          442,
+          370
+        ],
+        [
+          410,
+          335
+        ]
+      ],
+      "ordinaryShoulderWidth": 1.1,
+      "bridgeReview": "Existing provisional crossing moved onto the mapped eastern lane; both endpoints relocated, with one intervening road control to follow its bend. Identity, deck style, 1.5 m height and uncertainty retained. Exact bank alignment and deck versus culvert remain unresolved."
+    },
+    {
+      "name": "Three Mills Lane",
+      "priorPoints": [
+        [
+          -823.717,
+          482.448
+        ],
+        [
+          -787.163,
+          457.312
+        ],
+        [
+          -735.876,
+          426.205
+        ],
+        [
+          -699.02,
+          412.203
+        ],
+        [
+          -654.419,
+          409.132
+        ],
+        [
+          -624.903,
+          399.044
+        ],
+        [
+          -611,
+          397
+        ],
+        [
+          -601,
+          396
+        ],
+        [
+          -589,
+          394.2
+        ],
+        [
+          -583.5,
+          394.2
+        ],
+        [
+          -575,
+          396.2
+        ],
+        [
+          -570,
+          395
+        ],
+        [
+          -559.938,
+          391.703
+        ],
+        [
+          -550.737,
+          387.739
+        ]
+      ],
+      "points": [
+        [
+          -823.717,
+          482.448
+        ],
+        [
+          -787.163,
+          457.312
+        ],
+        [
+          -735.876,
+          426.205
+        ],
+        [
+          -698.185,
+          415.523
+        ],
+        [
+          -653.986,
+          411.349
+        ],
+        [
+          -624.903,
+          399.044
+        ],
+        [
+          -611,
+          397
+        ],
+        [
+          -601,
+          396
+        ],
+        [
+          -589,
+          394.2
+        ],
+        [
+          -583.5,
+          394.2
+        ],
+        [
+          -575,
+          396.2
+        ],
+        [
+          -570,
+          395
+        ],
+        [
+          -559.938,
+          391.703
+        ],
+        [
+          -550.737,
+          387.739
+        ]
+      ],
+      "width": 7,
+      "priorBridgeSpans": [
+        {
+          "id": "three-mills-lea-bridge",
+          "points": [
+            [
+              -680.436,
+              410.923
+            ],
+            [
+              -624.903,
+              399.044
+            ]
+          ],
+          "style": "deck",
+          "archCount": 1,
+          "height": 2.2,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+        }
+      ],
+      "bridgeSpans": [
+        {
+          "id": "three-mills-lea-bridge",
+          "points": [
+            [
+              -680.162,
+              413.821
+            ],
+            [
+              -624.903,
+              399.044
+            ]
+          ],
+          "style": "deck",
+          "archCount": 1,
+          "height": 2.2,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates. Only the western endpoint of the existing Lea bridge moves onto the re-read approach; eastern endpoint, identity, deck style, single arch and 2.2 m estimated height retained."
+        }
+      ],
+      "reviewedSourceBounds": [
+        -750,
+        365,
+        -635,
+        440
+      ],
+      "reviewedSourcePixels": [
+        [
+          340,
+          374
+        ],
+        [
+          459,
+          366
+        ]
+      ],
+      "ordinaryShoulderWidth": 1.1,
+      "bridgeReview": "Only the western endpoint of the existing Lea bridge moves onto the re-read approach; eastern endpoint, identity, deck style, single arch and 2.2 m estimated height retained."
+    }
+  ],
+  "retainedRiverGeometrySha256": {
+    "ground": "8b23405b79079bf4298ceef6321fdc5caba8a9d939d27d49d8259274856abdff",
+    "west": "5e1aa0c896d440767df2fde0d6677ac9ab7aaa8940e462446f84834a609898ad"
+  },
+  "evidenceImages": [
+    "reference/footprint-model-alignment/remaining-trades-marshgate-road-raw.png",
+    "reference/footprint-model-alignment/remaining-trades-marshgate-road-after.png",
+    "reference/footprint-model-alignment/remaining-trades-western-road-raw.png",
+    "reference/footprint-model-alignment/remaining-trades-western-road-after.png"
+  ],
+  "priorSceneRoadExclusionEffects": [
+    {
+      "modelId": "site398-range-2",
+      "priorRoadExclusionAreaM2": 0.15869101263565966,
+      "roadExclusionAreaM2": 0.0,
+      "changeAreaM2": -0.15869101263565966
+    },
+    {
+      "modelId": "site398-range-6",
+      "priorRoadExclusionAreaM2": 53.119523763542226,
+      "roadExclusionAreaM2": 0.0,
+      "changeAreaM2": -53.119523763542226
+    },
+    {
+      "modelId": "site398-range-7",
+      "priorRoadExclusionAreaM2": 53.70702721412115,
+      "roadExclusionAreaM2": 0.0,
+      "changeAreaM2": -53.70702721412115
+    },
+    {
+      "modelId": "site398-range-8",
+      "priorRoadExclusionAreaM2": 35.03663894532745,
+      "roadExclusionAreaM2": 14.338960779899631,
+      "changeAreaM2": -20.697678165427817
+    }
+  ]
+}

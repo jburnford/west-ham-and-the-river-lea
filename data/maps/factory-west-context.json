@@ -663,11 +663,11 @@
             ],
             [
               -1104.4800994172692,
-              71.32319705944974
+              69.32319705944974
             ],
             [
               -1084.6190045056865,
-              81.91266269708285
+              79.91266269708285
             ],
             [
               -1079.537607024191,
@@ -743,7 +743,11 @@
             ]
           ]
         ]
-      ]
+      ],
+      "bowFlourAlignment": {
+        "register": "data/maps/bow-flour-context-alignment.json",
+        "review": "Two wharf-side bank controls move 2 m north to follow the mapped riverside wall and clear the supplied Albion Wharf exterior. Opposite bank and remaining channel controls retained; this is local map reconciliation, not a surveyed shoreline."
+      }
     }
   ],
   "yards": [

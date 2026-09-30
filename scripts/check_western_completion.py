@@ -37,8 +37,14 @@ earth=unary_union([Polygon([(p[0],p[2]) for p in tri]) for tri in extension['emb
 assert earth.intersection(roads.union(water)).area<.01,'Earth fills a bridge opening'
 new_ids={s['id'] for s in survey['sites']}
 assert not new_ids.intersection({s['id'] for s in factories['excludedSites']})
+reclassified={b['id']:b for b in factories.get('reclassifiedFeatures',[]) if 'id' in b}
+retained_western=0
 for b in survey['buildings']:
+    if b['id'] in reclassified:
+        assert b['id'] not in factory_polys,('Reclassified western feature still rendered',b['id'])
+        continue
     g=factory_polys[b['id']]
     assert not g.is_empty,('Unrendered western building',b['id'])
     assert g.intersection(homes.union(roads).union(water)).area<.1,('Western building obstruction',b['id'])
-print(f"Western completion passed: {extension['length']:.1f} m connected railway, matching track pairs and levels, maximum grade {max(grades)*100:.2f}%; {len(new_ids)} sites / {len(survey['buildings'])} clear western ranges.")
+    retained_western+=1
+print(f"Western completion passed: {extension['length']:.1f} m connected railway, matching track pairs and levels, maximum grade {max(grades)*100:.2f}%; {len(new_ids)} sites / {retained_western} clear western ranges.")

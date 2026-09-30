@@ -147,3 +147,40 @@ Three Mills ranges, bringing the district to 344 source-linked ranges plus eleve
 direct OS traces. Clock-tower and kiln details follow the corrected footprint;
 the mill-court bend and eastern footpath now clear the mapped walls. One small
 Three Mills outbuilding remains a provisional Goad transfer.
+
+Ratner and Albion now have seven source-linked ranges, with their mapped
+courtyards restored. One former soap-yard boundary model and its inferred chimney
+are removed after OS review. The scene has 546 ranges, 89 chimneys and 351
+source-linked ranges; eleven more ranges have direct OS traces.
+
+Bow Flour Mills, rubber/oilskin and felt works add twelve source-linked ranges.
+Two industrial blocks over domestic terraces and their inferred chimney are
+removed; the rubber works courtyard stays open. Bow Road and its bridge move
+locally onto the mapped carriageway, and two wharf-bank controls clear Albion
+Wharf. Current totals: 545 ranges, 88 chimneys, 363 source-linked ranges and
+eleven direct OS traces. Heights and roofs remain interpretations.
+
+Cook’s East London Soap Works, Bow Bridge Wharf, Magnet Wharf and the limeworks
+now have 48 more source-linked ranges. Four Cook chimneys and two existing lime
+kilns are repositioned, with heights retained. Local road and bank corrections
+clear the mapped wharf walls. Current totals: 545 ranges, 88 chimneys, 411
+source-linked ranges and eleven direct OS traces.
+
+St Thomas corn mill, Smith’s brush/fibre works, Bow Brewery and the mineral-water
+works add twenty source-linked ranges. The mill’s covered water interface and
+Smith warehouse overhang remain; the road shortcut through the mill is removed.
+The mineral-water ranges now clear St Mary’s Church and the brewery courtyard
+stays open. Current totals: 545 ranges, 88 chimneys, 431 source-linked ranges
+and eleven direct OS traces.
+
+Jeffrey’s marine glue works, Marshgate chemical works and Alderson’s rope works
+add twenty-five source-linked ranges and one directly traced ropewalk. An
+unsupported workshop is removed from the rope yard, and three chimney bases
+follow the maps. Totals: 544 ranges, 88 chimneys, 456 source-linked ranges and
+twelve direct OS traces. Heights and internal divisions remain interpretations.
+
+Ritchie’s jute mill, Crown/Johnson works, the London and Glasgow Foundry,
+Ornamental Moulding Works and the western chemical buildings add 37 source-linked
+ranges and one directly traced roof. The complete large Crown Chemical Works
+roof is included. Local road approaches now clear the mapped walls. Current
+totals:544 ranges, 88 chimneys, 493 source-linked ranges and thirteen direct traces.

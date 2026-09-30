@@ -1,0 +1,408 @@
+{
+  "source": "Cached OS London five-foot 1893 map and reviewed Bow/Magnet supplied building outlines",
+  "evidenceImage": "reference/footprint-model-alignment/bow-magnet-context-before.png",
+  "review": "OS carriageway reconciliation retains interpreted widths. High Street control 2 moves 3 m east and 4 m south. Cook\u2019s Road last bend moves 10 m west and joins the revised High Street centreline; earlier controls and Bow Bridge are retained. An intermediate control rejoins the original eastern segment before the previously reviewed starch works frontage.",
+  "roads": [
+    {
+      "name": "Stratford High Street",
+      "priorPoints": [
+        [
+          -1120.385,
+          187.542
+        ],
+        [
+          -1036.62,
+          118.42
+        ],
+        [
+          -943.775,
+          38.182
+        ],
+        [
+          -830.854,
+          -54.016
+        ],
+        [
+          -771.719,
+          -117.611
+        ],
+        [
+          -699.226,
+          -190.143
+        ],
+        [
+          -630.22,
+          -274.865
+        ],
+        [
+          -535.116,
+          -405.572
+        ],
+        [
+          -452.582,
+          -519.224
+        ],
+        [
+          -395.436,
+          -608.046
+        ],
+        [
+          -370.61,
+          -653.283
+        ]
+      ],
+      "points": [
+        [
+          -1120.385,
+          187.542
+        ],
+        [
+          -1036.62,
+          118.42
+        ],
+        [
+          -940.775,
+          42.182
+        ],
+        [
+          -875,
+          -17.971572
+        ],
+        [
+          -830.854,
+          -54.016
+        ],
+        [
+          -771.719,
+          -117.611
+        ],
+        [
+          -699.226,
+          -190.143
+        ],
+        [
+          -630.22,
+          -274.865
+        ],
+        [
+          -535.116,
+          -405.572
+        ],
+        [
+          -452.582,
+          -519.224
+        ],
+        [
+          -395.436,
+          -608.046
+        ],
+        [
+          -370.61,
+          -653.283
+        ]
+      ],
+      "width": 12,
+      "priorBridgeSpans": [
+        {
+          "id": "bow-bridge",
+          "points": [
+            [
+              -1049.366,
+              128.939
+            ],
+            [
+              -1018.37,
+              104.858
+            ]
+          ],
+          "style": "stone-arch",
+          "archCount": 1,
+          "height": 4.8,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates.",
+          "alignmentEvidence": "First two road controls and Bow Bridge span moved 5.7 m east and 7 m south to the visible Bow Road carriageway. The former line ran along the north frontage and through the mill. Retain the interpreted 12 m carriageway and all eastern controls/bridges."
+        },
+        {
+          "id": "pegshole-bridge",
+          "points": [
+            [
+              -782.633,
+              -101.814
+            ],
+            [
+              -758.345,
+              -125.991
+            ]
+          ],
+          "style": "stone-arch",
+          "archCount": 2,
+          "height": 3.0,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+        },
+        {
+          "id": "st-thomas-bridge",
+          "points": [
+            [
+              -680.549,
+              -208.859
+            ],
+            [
+              -669.764,
+              -223.003
+            ]
+          ],
+          "style": "brick-arch",
+          "archCount": 1,
+          "height": 2.6,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+        },
+        {
+          "id": "st-michaels-bridge",
+          "points": [
+            [
+              -642.802,
+              -258.364
+            ],
+            [
+              -624.837,
+              -282.264
+            ]
+          ],
+          "style": "stone-arch",
+          "archCount": 1,
+          "height": 2.8,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+        }
+      ],
+      "bridgeSpans": [
+        {
+          "id": "bow-bridge",
+          "points": [
+            [
+              -1049.366,
+              128.939
+            ],
+            [
+              -1018.37,
+              104.858
+            ]
+          ],
+          "style": "stone-arch",
+          "archCount": 1,
+          "height": 4.8,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates.",
+          "alignmentEvidence": "First two road controls and Bow Bridge span moved 5.7 m east and 7 m south to the visible Bow Road carriageway. The former line ran along the north frontage and through the mill. Retain the interpreted 12 m carriageway and all eastern controls/bridges."
+        },
+        {
+          "id": "pegshole-bridge",
+          "points": [
+            [
+              -782.633,
+              -101.814
+            ],
+            [
+              -758.345,
+              -125.991
+            ]
+          ],
+          "style": "stone-arch",
+          "archCount": 2,
+          "height": 3.0,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+        },
+        {
+          "id": "st-thomas-bridge",
+          "points": [
+            [
+              -680.549,
+              -208.859
+            ],
+            [
+              -669.764,
+              -223.003
+            ]
+          ],
+          "style": "brick-arch",
+          "archCount": 1,
+          "height": 2.6,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+        },
+        {
+          "id": "st-michaels-bridge",
+          "points": [
+            [
+              -642.802,
+              -258.364
+            ],
+            [
+              -624.837,
+              -282.264
+            ]
+          ],
+          "style": "stone-arch",
+          "archCount": 1,
+          "height": 2.8,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+        }
+      ]
+    },
+    {
+      "name": "Cook\u2019s Road",
+      "priorPoints": [
+        [
+          -1212.995,
+          -113.458
+        ],
+        [
+          -1189.525,
+          -99.239
+        ],
+        [
+          -1145.802,
+          -65.888
+        ],
+        [
+          -1125.68,
+          -51.579
+        ],
+        [
+          -1099.202,
+          -36.329
+        ],
+        [
+          -1068.934,
+          -18.582
+        ],
+        [
+          -1048.269,
+          -11.715
+        ],
+        [
+          -1025.733,
+          -4.528
+        ],
+        [
+          -1008.879,
+          -0.901
+        ],
+        [
+          -995.3680036530446,
+          5.339111284545475
+        ],
+        [
+          -979.683,
+          13.904
+        ],
+        [
+          -975.23,
+          31.609
+        ],
+        [
+          -962.894,
+          47.119
+        ]
+      ],
+      "points": [
+        [
+          -1212.995,
+          -113.458
+        ],
+        [
+          -1189.525,
+          -99.239
+        ],
+        [
+          -1145.802,
+          -65.888
+        ],
+        [
+          -1125.68,
+          -51.579
+        ],
+        [
+          -1099.202,
+          -36.329
+        ],
+        [
+          -1068.934,
+          -18.582
+        ],
+        [
+          -1048.269,
+          -11.715
+        ],
+        [
+          -1025.733,
+          -4.528
+        ],
+        [
+          -1008.879,
+          -0.901
+        ],
+        [
+          -995.3680036530446,
+          5.339111284545475
+        ],
+        [
+          -989.683,
+          13.904
+        ],
+        [
+          -985.23,
+          31.609
+        ],
+        [
+          -960.743,
+          58.065
+        ]
+      ],
+      "width": 5,
+      "priorBridgeSpans": [
+        {
+          "id": "hunts-lane-connection-0",
+          "points": [
+            [
+              -995.3680036530446,
+              5.339111284545475
+            ],
+            [
+              -979.683,
+              13.904
+            ],
+            [
+              -977.8120787921861,
+              21.342728943261978
+            ]
+          ],
+          "style": "deck",
+          "height": 1.5,
+          "provisional": true,
+          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge."
+        }
+      ],
+      "bridgeSpans": [
+        {
+          "id": "hunts-lane-connection-0",
+          "points": [
+            [
+              -995.3680036530446,
+              5.339111284545475
+            ],
+            [
+              -989.683,
+              13.904
+            ],
+            [
+              -985.23,
+              31.609
+            ]
+          ],
+          "style": "deck",
+          "height": 1.5,
+          "provisional": true,
+          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge.",
+          "alignmentEvidence": "Provisional Cook\u2019s Road connection follows the reviewed route and reaches dry land beyond corrected Bow Back River bank; deck versus culvert remains unresolved."
+        }
+      ]
+    }
+  ]
+}

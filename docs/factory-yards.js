@@ -80,9 +80,9 @@ export function factoryYards({THREE,scene,materials:m,data,level,box,cylinder,li
       const a=track.points[i-1],b=track.points[i],n=Math.ceil(Math.hypot(b[0]-a[0],b[1]-a[1]));
       for(let j=0;j<n;j++)run.push([a[0]+(b[0]-a[0])*j/n,a[1]+(b[1]-a[1])*j/n]);
     }
-    run.push(track.points.at(-1));return run;
+    run.push(track.points.at(-1));return {run,gauge:track.gauge??1.1,sleeperWidth:track.sleeperWidth??1.8};
   });
-  for(const [x,z] of trackRuns.flat()) {
+  for(const [x,z] of trackRuns.flatMap(track=>track.run)) {
     const ix=Math.floor(x),iz=Math.floor(z);
     for(const [dx,dz] of [[0,0],[1,0],[0,1],[1,1]])required.add(`${ix+dx},${iz+dz}`);
   }
@@ -103,14 +103,14 @@ export function factoryYards({THREE,scene,materials:m,data,level,box,cylinder,li
     return (at(0,0)*(1-u)+at(1,0)*u)*(1-v)+(at(0,1)*(1-u)+at(1,1)*u)*v;
   }
   let trackMetres=0;
-  for(const run of trackRuns)for(let i=1;i<run.length;i++) {
+  for(const {run,gauge,sleeperWidth} of trackRuns)for(let i=1;i<run.length;i++) {
     const a=run[i-1],b=run[i],dx=b[0]-a[0],dz=b[1]-a[1],length=Math.hypot(dx,dz);
     if(length<.001)continue;
     trackMetres+=length;
     const x=(a[0]+b[0])/2,z=(a[1]+b[1])/2,y=stockLevel(x,z);
-    const sleeper=box(scene,x,y+.01,z,.15,.045,1.8,m.wood);sleeper.rotation.y=-Math.atan2(dz,dx);
+    const sleeper=box(scene,x,y+.01,z,.15,.045,sleeperWidth,m.wood);sleeper.rotation.y=-Math.atan2(dz,dx);
     for(const side of [-1,1]) {
-      const rail=box(scene,x-side*dz/length*.55,y+.055,z+side*dx/length*.55,length+.02,.065,.045,m.iron);
+      const rail=box(scene,x-side*dz/length*gauge/2,y+.055,z+side*dx/length*gauge/2,length+.02,.065,.045,m.iron);
       rail.rotation.y=-Math.atan2(dz,dx);
     }
   }

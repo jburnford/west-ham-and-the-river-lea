@@ -1,5 +1,61 @@
 # Factory buildings — mapped coverage and refinement, 27 September 2026
 
+29 September Ritchie/Crown/western-trades continuation: thirty-seven ranges
+in twenty-three groups follow supplied exteriors, with one directly traced
+southern Crown/Johnson roof. All thirty-eight existing ranges and their height
+and roof profiles remain. Two chimney bases are independently mapped; four
+western shafts remain explicitly inferred and move with their corrected parents.
+The complete large Crown roof 609 is retained after native-map hatch review.
+Totals:544 ranges, 88 chimneys, 493 source-linked ranges at 42 sites,thirteen
+direct traces and two provisional transfers. Site230 tenant identity and the
+Crown/Johnson northern alterations remain documented uncertainties.
+
+29 September Jeffrey/Marshgate/Alderson continuation: twenty-five ranges in
+seventeen groups now follow supplied OS exteriors. The western ropewalk,
+missing from the extract, is traced directly from OS. One unsupported
+Alderson cross-workshop is removed from the mapped open yard. Three chimney
+bases follow independent OS symbols, retaining their previous heights. Totals:
+544 ranges, 88 chimneys, 456 source-linked ranges at thirty-seven sites, twelve
+direct traces and two provisional transfers. Inherited chemical-room divisions
+and minor omitted sheds/plant remain explicit uncertainties.
+
+29 September mill/brush/brewery/mineral-water continuation: twenty retained
+ranges in nineteen groups follow 43 supplied source polygons. Three chimneys
+move with the reviewed plans; two Smith shafts fit independently mapped bases.
+The corn mill’s northern water interface is interpreted as a covered millrace;
+Goad explicitly labels Smith’s warehouse overhang. Both water heads remain
+unchanged. The erroneous diagonal road through the mill is replaced by two
+separate mapped approaches. Totals: 545 ranges, 88 chimneys, 431 source-linked
+ranges at thirty-seven sites, eleven direct traces and two provisional transfers.
+
+
+29 September Cook/Bow/Magnet/lime continuation: 48 retained ranges in 37 groups
+follow 75 supplied source polygons. Three Cook chimney bases are source-linked;
+the fourth transfers within its export range. Two shafts are narrowed so their
+square plinths fit, while all heights remain unchanged. Two existing lime kilns
+fit their mapped circular envelopes. High Street, Cook’s Road and ten Bow Back
+River bank controls are reconciled locally. Totals: 545 ranges, 88 chimneys,
+411 source-linked ranges at thirty-three sites, eleven direct traces and two
+provisional transfers. Kiln architecture and minor omitted plant remain deferred.
+
+
+29 September Bow Flour/rubber/felt continuation: twelve ranges in eleven groups
+follow 23 supplied source polygons. Two industrial envelopes over domestic
+terraces and their unsupported chimney are removed; one separate northwest
+rubber room is restored. Bow Road/bridge and the Albion Wharf bank are reconciled
+locally with the OS map. Current totals: 43 sites, 545 ranges, 88 chimneys,
+363 source-linked ranges at twenty-nine sites, eleven direct traces and two
+provisional transfers. All retained elevations and roof parameters survive;
+the 32 m mill and 24 m felt chimneys transfer within their corrected parents.
+
+29 September Ratner/Albion continuation: seven ranges now follow six supplied
+OS source polygons. Ratner's open northern court and Albion's passage are
+preserved. A model over the disused-soap-yard boundary and its unsupported
+inferred chimney are removed, with prior records and evidence retained. Totals:
+43 sites, 546 ranges, 89 chimneys, 351 source-linked ranges at twenty-six sites,
+eleven direct traces and two provisional local transfers. Existing elevations
+and roofs are retained; Ratner's inferred 28 m chimney moves within its parent.
+
 29 September mill/wharf continuation: all eight existing House/Clock Mill and
 bonded-wharf ranges now follow supplied OS outlines. District totals remain
 547 ranges, 43 sites and 90 chimneys; 344 ranges are source-linked at twenty-four

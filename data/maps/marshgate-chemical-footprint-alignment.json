@@ -1,0 +1,2666 @@
+{
+  "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg; cached OS London five-foot mosaic",
+  "sourceCRS": "EPSG:3857 reprojected through BNG; scene origin E538900,N183209",
+  "method": "Explicit reviewed chemical-works exteriors, two retained interpreted roof divisions, and independently mapped square chimney plinth; existing source-linked west/east ranges and all prior elevations/roof parameters retained.",
+  "groups": [
+    {
+      "id": "chemical-west-drying",
+      "modelIds": [
+        "site939-880"
+      ],
+      "sourceFids": [
+        546576
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -848.0081411919091,
+              -267.7406431589043
+            ],
+            [
+              -847.7757337104995,
+              -267.3315497264848
+            ],
+            [
+              -846.0354228207143,
+              -265.3282464639051
+            ],
+            [
+              -846.2130931494758,
+              -264.895317751565
+            ],
+            [
+              -847.1878419838613,
+              -263.9808683551382
+            ],
+            [
+              -847.2254701757338,
+              -263.8465862997109
+            ],
+            [
+              -847.7228551098378,
+              -263.77423023205483
+            ],
+            [
+              -851.3884230776457,
+              -260.55576502502663
+            ],
+            [
+              -851.8002737528877,
+              -260.34692180424463
+            ],
+            [
+              -854.51451064297,
+              -263.2349681164487
+            ],
+            [
+              -854.526875373791,
+              -263.7266160097788
+            ],
+            [
+              -853.5607362625888,
+              -264.60923547827406
+            ],
+            [
+              -853.4178015097277,
+              -265.0934592774138
+            ],
+            [
+              -854.6087206623051,
+              -266.40381486719707
+            ],
+            [
+              -854.7504859229084,
+              -266.8895793458796
+            ],
+            [
+              -850.5669277568813,
+              -270.2040861574933
+            ],
+            [
+              -850.5125208414393,
+              -270.23777547391364
+            ],
+            [
+              -847.9965017784853,
+              -267.7669681655243
+            ]
+          ]
+        ]
+      ],
+      "reconciledPolygons": [
+        [
+          [
+            [
+              -847.997,
+              -267.767
+            ],
+            [
+              -850.513,
+              -270.238
+            ],
+            [
+              -850.567,
+              -270.204
+            ],
+            [
+              -854.75,
+              -266.89
+            ],
+            [
+              -854.609,
+              -266.404
+            ],
+            [
+              -853.418,
+              -265.093
+            ],
+            [
+              -853.561,
+              -264.609
+            ],
+            [
+              -854.527,
+              -263.727
+            ],
+            [
+              -854.515,
+              -263.235
+            ],
+            [
+              -851.8,
+              -260.347
+            ],
+            [
+              -851.388,
+              -260.556
+            ],
+            [
+              -847.723,
+              -263.774
+            ],
+            [
+              -847.225,
+              -263.847
+            ],
+            [
+              -847.188,
+              -263.981
+            ],
+            [
+              -846.213,
+              -264.895
+            ],
+            [
+              -846.035,
+              -265.328
+            ],
+            [
+              -847.776,
+              -267.332
+            ],
+            [
+              -848.008,
+              -267.741
+            ]
+          ]
+        ]
+      ],
+      "previousUnionIoU": 0.44645170677134083,
+      "additional": false,
+      "division": "Retained two-floor western drying body below the open yard 884. Its stepped west and south edges remain. The touching northeast one-floor cap is deferred separately, rather than raised to this range's two-floor height."
+    },
+    {
+      "id": "chemical-south-drying",
+      "modelIds": [
+        "site939-914"
+      ],
+      "sourceFids": [
+        194335
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -819.8587011044146,
+              -243.05627780628856
+            ],
+            [
+              -819.999070150312,
+              -242.56954070017673
+            ],
+            [
+              -824.8909630168928,
+              -237.52439273317577
+            ],
+            [
+              -825.3107457841979,
+              -237.28920337749878
+            ],
+            [
+              -826.1454554034863,
+              -237.69300610764185
+            ],
+            [
+              -826.795067202067,
+              -237.66404976323247
+            ],
+            [
+              -827.2212899897713,
+              -237.8351181486505
+            ],
+            [
+              -828.4875148325227,
+              -239.07029146439163
+            ],
+            [
+              -828.436244625249,
+              -240.11280509020435
+            ],
+            [
+              -829.6756997434422,
+              -241.36133591167163
+            ],
+            [
+              -829.7071797673125,
+              -241.8433193967794
+            ],
+            [
+              -821.29217552091,
+              -250.84948636504123
+            ],
+            [
+              -820.7799695557915,
+              -250.98618840548443
+            ],
+            [
+              -818.2455043583177,
+              -248.57632678787922
+            ],
+            [
+              -818.2419113260694,
+              -248.0906893463689
+            ],
+            [
+              -819.0797726771561,
+              -247.08603873598622
+            ],
+            [
+              -819.2814462364186,
+              -246.71730321092764
+            ],
+            [
+              -819.7555070478702,
+              -246.5505002688733
+            ],
+            [
+              -821.2856047593523,
+              -244.96171472070273
+            ],
+            [
+              -821.314462873037,
+              -244.53167698235484
+            ],
+            [
+              -820.7674699667841,
+              -243.85052312607877
+            ],
+            [
+              -820.3426778378198,
+              -243.69139351247577
+            ],
+            [
+              -820.1260215509683,
+              -243.2260512195062
+            ]
+          ]
+        ]
+      ],
+      "reconciledPolygons": [
+        [
+          [
+            [
+              -820.126,
+              -243.226
+            ],
+            [
+              -820.343,
+              -243.691
+            ],
+            [
+              -820.767,
+              -243.851
+            ],
+            [
+              -821.314,
+              -244.532
+            ],
+            [
+              -821.286,
+              -244.962
+            ],
+            [
+              -819.756,
+              -246.551
+            ],
+            [
+              -819.281,
+              -246.717
+            ],
+            [
+              -819.08,
+              -247.086
+            ],
+            [
+              -818.242,
+              -248.091
+            ],
+            [
+              -818.246,
+              -248.576
+            ],
+            [
+              -820.78,
+              -250.986
+            ],
+            [
+              -821.292,
+              -250.849
+            ],
+            [
+              -829.707,
+              -241.843
+            ],
+            [
+              -829.676,
+              -241.361
+            ],
+            [
+              -828.436,
+              -240.113
+            ],
+            [
+              -828.488,
+              -239.07
+            ],
+            [
+              -827.221,
+              -237.835
+            ],
+            [
+              -826.795,
+              -237.664
+            ],
+            [
+              -826.145,
+              -237.693
+            ],
+            [
+              -825.311,
+              -237.289
+            ],
+            [
+              -824.891,
+              -237.524
+            ],
+            [
+              -819.999,
+              -242.57
+            ],
+            [
+              -819.859,
+              -243.056
+            ]
+          ]
+        ]
+      ],
+      "previousUnionIoU": 0.32475769788917014,
+      "additional": false,
+      "division": "The separate Goad 914 drying house south of the western process ranges follows the stepped OS body. Its east notch around the separately mapped small plant symbol remains open; the southern timber shed and open flank strips are not absorbed into this roof."
+    },
+    {
+      "id": "chemical-middle",
+      "modelIds": [
+        "site939-918",
+        "site939-920"
+      ],
+      "sourceFids": [
+        21207
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -831.6881517602596,
+              -277.3651349095162
+            ],
+            [
+              -816.959608260775,
+              -260.29186263494194
+            ],
+            [
+              -816.7786384932697,
+              -259.81318628549343
+            ],
+            [
+              -817.281341300346,
+              -259.06872508412926
+            ],
+            [
+              -823.5591956371209,
+              -253.486342380289
+            ],
+            [
+              -824.0413902844302,
+              -253.46484447625699
+            ],
+            [
+              -829.4490684614284,
+              -259.9191722839023
+            ],
+            [
+              -830.2214748016559,
+              -260.4071955801919
+            ],
+            [
+              -839.030124967685,
+              -270.31823436851846
+            ],
+            [
+              -839.2039847082924,
+              -270.705928247422
+            ],
+            [
+              -839.1068381924415,
+              -271.21645749540767
+            ],
+            [
+              -838.973415930639,
+              -271.49657561135245
+            ],
+            [
+              -832.2047234477941,
+              -277.22383487428306
+            ],
+            [
+              -831.7314333065879,
+              -277.36634498555213
+            ]
+          ]
+        ]
+      ],
+      "reconciledPolygons": [
+        [
+          [
+            [
+              -831.731,
+              -277.366
+            ],
+            [
+              -832.205,
+              -277.224
+            ],
+            [
+              -838.973,
+              -271.497
+            ],
+            [
+              -839.107,
+              -271.216
+            ],
+            [
+              -839.204,
+              -270.706
+            ],
+            [
+              -839.03,
+              -270.318
+            ],
+            [
+              -830.221,
+              -260.407
+            ],
+            [
+              -829.449,
+              -259.919
+            ],
+            [
+              -824.041,
+              -253.465
+            ],
+            [
+              -823.559,
+              -253.486
+            ],
+            [
+              -817.281,
+              -259.069
+            ],
+            [
+              -816.779,
+              -259.813
+            ],
+            [
+              -816.96,
+              -260.292
+            ],
+            [
+              -831.688,
+              -277.365
+            ]
+          ]
+        ]
+      ],
+      "previousUnionIoU": 0.7245725287677117,
+      "additional": false,
+      "division": "Complete middle brick process body. The inherited model IDs 918/920 and south-bay allocation are retained as interpreted roof compartments: Goad places 920 on the broad brick body and 918/922 on the adjoining western timber process rooms. Exact internal room identification and the inherited transverse cut are unresolved; neither ID establishes a surveyed OS party wall.",
+      "divisionParameters": {
+        "frameAngleDegrees": -40.78265253594507,
+        "localZCut": -734.4791166023047,
+        "northernDepthFraction": 0.8059701492537313,
+        "evidence": "Inherited 26-pixel south roof depth fitted at the southern end of the 134-pixel middle range; conflicting Goad room labels and exact party wall remain unresolved."
+      }
+    },
+    {
+      "id": "chemical-east-engine",
+      "modelIds": [
+        "site939-928"
+      ],
+      "sourceFids": [
+        788233,
+        994006
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -794.4566035669995,
+              -294.5114330141223
+            ],
+            [
+              -794.0268022962846,
+              -294.3102290043025
+            ],
+            [
+              -788.4495521569625,
+              -288.0399087764672
+            ],
+            [
+              -788.5846524121007,
+              -287.55150044802576
+            ],
+            [
+              -788.8443865984445,
+              -287.23846986872377
+            ],
+            [
+              -788.8567580010276,
+              -287.2382474045153
+            ],
+            [
+              -789.3410911293468,
+              -287.08314684481593
+            ],
+            [
+              -789.9640146262245,
+              -286.4836535064969
+            ],
+            [
+              -790.1657986629289,
+              -286.054934801301
+            ],
+            [
+              -790.6355400284519,
+              -285.9071474499069
+            ],
+            [
+              -791.0653421424795,
+              -286.1083515425562
+            ],
+            [
+              -796.558126288699,
+              -292.43970375007484
+            ],
+            [
+              -796.6406935459236,
+              -292.69688928627875
+            ],
+            [
+              -794.6358397465665,
+              -294.44877742853714
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -798.0373239167966,
+              -294.2790361070656
+            ],
+            [
+              -796.7294216693845,
+              -295.45648449944565
+            ],
+            [
+              -796.5190144270891,
+              -295.87622430030024
+            ],
+            [
+              -796.1019362140214,
+              -296.09653974691173
+            ],
+            [
+              -795.6237244691001,
+              -296.2050574643654
+            ],
+            [
+              -794.5074329602066,
+              -294.84804031118983
+            ],
+            [
+              -794.4566035669995,
+              -294.5114330141223
+            ],
+            [
+              -794.6358397465665,
+              -294.44877742853714
+            ],
+            [
+              -796.6406935459236,
+              -292.69688928627875
+            ],
+            [
+              -796.9966566434596,
+              -292.83188624319155
+            ],
+            [
+              -797.8783308786806,
+              -293.79262645932613
+            ]
+          ]
+        ]
+      ],
+      "reconciledPolygons": [
+        [
+          [
+            [
+              -795.624,
+              -296.205
+            ],
+            [
+              -796.102,
+              -296.097
+            ],
+            [
+              -796.519,
+              -295.876
+            ],
+            [
+              -796.729,
+              -295.456
+            ],
+            [
+              -798.037,
+              -294.279
+            ],
+            [
+              -797.878,
+              -293.793
+            ],
+            [
+              -796.997,
+              -292.832
+            ],
+            [
+              -796.641,
+              -292.697
+            ],
+            [
+              -796.558,
+              -292.44
+            ],
+            [
+              -791.065,
+              -286.108
+            ],
+            [
+              -790.636,
+              -285.907
+            ],
+            [
+              -790.166,
+              -286.055
+            ],
+            [
+              -789.964,
+              -286.484
+            ],
+            [
+              -789.341,
+              -287.083
+            ],
+            [
+              -788.857,
+              -287.238
+            ],
+            [
+              -788.844,
+              -287.238
+            ],
+            [
+              -788.585,
+              -287.552
+            ],
+            [
+              -788.45,
+              -288.04
+            ],
+            [
+              -794.027,
+              -294.31
+            ],
+            [
+              -794.457,
+              -294.511
+            ],
+            [
+              -794.507,
+              -294.848
+            ]
+          ]
+        ]
+      ],
+      "previousUnionIoU": 0.10272463892283962,
+      "additional": false,
+      "division": "Complete eastern engine/boiler band adjoining the already source-linked eastern chemical range. The touching northern small room joins the longer hatched engine/boiler room 928. The separate southern square chimney symbol and northern yard/tank symbols remain distinct."
+    },
+    {
+      "id": "chemical-rectifying",
+      "modelIds": [
+        "site939-934"
+      ],
+      "sourceFids": [
+        280205,
+        762991
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -779.0270386176417,
+              -269.68399989505997
+            ],
+            [
+              -779.1678910637274,
+              -269.20044535561465
+            ],
+            [
+              -782.2028688651044,
+              -266.62394653609954
+            ],
+            [
+              -782.6793213714845,
+              -266.77721292804927
+            ],
+            [
+              -791.3516160531435,
+              -276.8227167231962
+            ],
+            [
+              -790.8721636850387,
+              -277.6061741322046
+            ],
+            [
+              -788.1820627020206,
+              -279.9002472589491
+            ],
+            [
+              -787.9699363097316,
+              -279.9716488253325
+            ],
+            [
+              -779.1657147626393,
+              -270.0582183287479
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -787.9699363097316,
+              -279.9716488253325
+            ],
+            [
+              -786.8060329772998,
+              -281.27333628741326
+            ],
+            [
+              -786.3130994746462,
+              -281.45207750058034
+            ],
+            [
+              -785.8840768361697,
+              -281.233759519062
+            ],
+            [
+              -777.2217059491668,
+              -271.1740204265807
+            ],
+            [
+              -777.422104104422,
+              -270.754169856722
+            ],
+            [
+              -778.8728678841144,
+              -269.67658278369345
+            ],
+            [
+              -779.0270386176417,
+              -269.68399989505997
+            ],
+            [
+              -779.1657147626393,
+              -270.0582183287479
+            ]
+          ]
+        ]
+      ],
+      "reconciledPolygons": [
+        [
+          [
+            [
+              -777.422,
+              -270.754
+            ],
+            [
+              -777.222,
+              -271.174
+            ],
+            [
+              -785.884,
+              -281.234
+            ],
+            [
+              -786.313,
+              -281.452
+            ],
+            [
+              -786.806,
+              -281.273
+            ],
+            [
+              -787.97,
+              -279.972
+            ],
+            [
+              -788.182,
+              -279.9
+            ],
+            [
+              -790.872,
+              -277.606
+            ],
+            [
+              -791.352,
+              -276.823
+            ],
+            [
+              -782.679,
+              -266.777
+            ],
+            [
+              -782.203,
+              -266.624
+            ],
+            [
+              -779.168,
+              -269.2
+            ],
+            [
+              -779.027,
+              -269.684
+            ],
+            [
+              -778.873,
+              -269.677
+            ]
+          ]
+        ]
+      ],
+      "previousUnionIoU": 0.09242830578961277,
+      "additional": false,
+      "division": "Separate Goad RECTIFYING range 934 east of the main works includes its narrow eastern yellow compartment and broader brick body. Both supplied touching outlines belong to this retained range; prior height and roof interpretation retained."
+    },
+    {
+      "id": "chemical-riverside",
+      "modelIds": [
+        "site939-936",
+        "site939-938"
+      ],
+      "sourceFids": [
+        155012
+      ],
+      "sourcePolygons": [
+        [
+          [
+            [
+              -797.3949020609725,
+              -230.8409890800831
+            ],
+            [
+              -796.8992979123723,
+              -230.7090778517304
+            ],
+            [
+              -788.3073969734833,
+              -222.53556683735223
+            ],
+            [
+              -788.3669769708067,
+              -221.95716670475667
+            ],
+            [
+              -792.3534008243587,
+              -217.88932550809113
+            ],
+            [
+              -792.9459494720213,
+              -217.8070006237831
+            ],
+            [
+              -801.5171305070398,
+              -225.98947783652693
+            ],
+            [
+              -801.534941609716,
+              -226.48145565507002
+            ],
+            [
+              -797.6082723806612,
+              -230.62243655213388
+            ]
+          ]
+        ]
+      ],
+      "reconciledPolygons": [
+        [
+          [
+            [
+              -797.608,
+              -230.622
+            ],
+            [
+              -801.535,
+              -226.481
+            ],
+            [
+              -801.517,
+              -225.989
+            ],
+            [
+              -792.946,
+              -217.807
+            ],
+            [
+              -792.353,
+              -217.889
+            ],
+            [
+              -788.367,
+              -221.957
+            ],
+            [
+              -788.307,
+              -222.536
+            ],
+            [
+              -796.899,
+              -230.709
+            ],
+            [
+              -797.395,
+              -230.841
+            ]
+          ]
+        ]
+      ],
+      "previousUnionIoU": 0.45010708082960366,
+      "additional": false,
+      "division": "Separate southern yard block beside the creek, with Goad north room 936 and south room 938 retained as two roof compartments. The shared OS exterior remains complete and the rest of the yard stays open. The transverse room division is fitted from the Goad boundary at pixel y1748 between outer endpoints y1709 and y1777; OS does not establish that party wall.",
+      "divisionParameters": {
+        "frameAngleDegrees": -46.43166925303891,
+        "localZCut": -729.5930268140528,
+        "northernDepthFraction": 0.5735294117647058,
+        "evidence": "Goad drawn north/south boundary y1748 between outer endpoints y1709/y1777; fitted proportion, not a measured OS party wall."
+      }
+    }
+  ],
+  "buildings": [
+    {
+      "modelId": "site939-880",
+      "siteId": 939,
+      "name": "West drying house",
+      "groupId": "chemical-west-drying",
+      "sourceFids": [
+        546576
+      ],
+      "sourceFid": 546576,
+      "worldFootprint": [
+        [
+          -847.997,
+          -267.767
+        ],
+        [
+          -850.513,
+          -270.238
+        ],
+        [
+          -850.567,
+          -270.204
+        ],
+        [
+          -854.75,
+          -266.89
+        ],
+        [
+          -854.609,
+          -266.404
+        ],
+        [
+          -853.418,
+          -265.093
+        ],
+        [
+          -853.561,
+          -264.609
+        ],
+        [
+          -854.527,
+          -263.727
+        ],
+        [
+          -854.515,
+          -263.235
+        ],
+        [
+          -851.8,
+          -260.347
+        ],
+        [
+          -851.388,
+          -260.556
+        ],
+        [
+          -847.723,
+          -263.774
+        ],
+        [
+          -847.225,
+          -263.847
+        ],
+        [
+          -847.188,
+          -263.981
+        ],
+        [
+          -846.213,
+          -264.895
+        ],
+        [
+          -846.035,
+          -265.328
+        ],
+        [
+          -847.776,
+          -267.332
+        ],
+        [
+          -848.008,
+          -267.741
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -856.703,
+          -263.157
+        ],
+        [
+          -850.791,
+          -268.131
+        ],
+        [
+          -846.749,
+          -263.328
+        ],
+        [
+          -852.661,
+          -258.353
+        ]
+      ],
+      "priorRotationDegrees": -40.0776,
+      "footprintRotationDegrees": -38.38817889754075,
+      "preservedHeight": 6.9,
+      "preservedRoofRise": 1.6949394289183977,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit raw OS/source/model and original July 1893 Goad F3 comparison; prior heights and roof parameters retained. Retained two-floor western drying body below the open yard 884. Its stepped west and south edges remain. The touching northeast one-floor cap is deferred separately, rather than raised to this range's two-floor height.",
+      "comparison": {
+        "centroidShiftMetres": 2.2984710846438747,
+        "areaRatio": 0.9951484501019089,
+        "axisChangeDegrees": 1.6894211024592494
+      }
+    },
+    {
+      "modelId": "site939-914",
+      "siteId": 939,
+      "name": "South drying house",
+      "groupId": "chemical-south-drying",
+      "sourceFids": [
+        194335
+      ],
+      "sourceFid": 194335,
+      "worldFootprint": [
+        [
+          -820.126,
+          -243.226
+        ],
+        [
+          -820.343,
+          -243.691
+        ],
+        [
+          -820.767,
+          -243.851
+        ],
+        [
+          -821.314,
+          -244.532
+        ],
+        [
+          -821.286,
+          -244.962
+        ],
+        [
+          -819.756,
+          -246.551
+        ],
+        [
+          -819.281,
+          -246.717
+        ],
+        [
+          -819.08,
+          -247.086
+        ],
+        [
+          -818.242,
+          -248.091
+        ],
+        [
+          -818.246,
+          -248.576
+        ],
+        [
+          -820.78,
+          -250.986
+        ],
+        [
+          -821.292,
+          -250.849
+        ],
+        [
+          -829.707,
+          -241.843
+        ],
+        [
+          -829.676,
+          -241.361
+        ],
+        [
+          -828.436,
+          -240.113
+        ],
+        [
+          -828.488,
+          -239.07
+        ],
+        [
+          -827.221,
+          -237.835
+        ],
+        [
+          -826.795,
+          -237.664
+        ],
+        [
+          -826.145,
+          -237.693
+        ],
+        [
+          -825.311,
+          -237.289
+        ],
+        [
+          -824.891,
+          -237.524
+        ],
+        [
+          -819.999,
+          -242.57
+        ],
+        [
+          -819.859,
+          -243.056
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -833.805,
+          -237.457
+        ],
+        [
+          -818.533,
+          -250.307
+        ],
+        [
+          -813.559,
+          -244.396
+        ],
+        [
+          -828.831,
+          -231.545
+        ]
+      ],
+      "priorRotationDegrees": -40.0776,
+      "footprintRotationDegrees": -46.942989748036275,
+      "preservedHeight": 6.9,
+      "preservedRoofRise": 2.0860792971303654,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit raw OS/source/model and original July 1893 Goad F3 comparison; prior heights and roof parameters retained. The separate Goad 914 drying house south of the western process ranges follows the stepped OS body. Its east notch around the separately mapped small plant symbol remains open; the southern timber shed and open flank strips are not absorbed into this roof.",
+      "comparison": {
+        "centroidShiftMetres": 2.806551124937803,
+        "areaRatio": 0.4893311080244062,
+        "axisChangeDegrees": -6.865389748036279
+      }
+    },
+    {
+      "modelId": "site939-918",
+      "siteId": 939,
+      "name": "Middle chemical range",
+      "groupId": "chemical-middle",
+      "sourceFids": [
+        21207
+      ],
+      "sourceFid": 21207,
+      "worldFootprint": [
+        [
+          -832.205,
+          -277.224
+        ],
+        [
+          -838.973,
+          -271.497
+        ],
+        [
+          -839.107,
+          -271.216
+        ],
+        [
+          -839.204,
+          -270.706
+        ],
+        [
+          -839.03,
+          -270.318
+        ],
+        [
+          -830.221,
+          -260.407
+        ],
+        [
+          -829.449,
+          -259.919
+        ],
+        [
+          -826.803,
+          -256.762
+        ],
+        [
+          -819.414,
+          -263.137
+        ],
+        [
+          -831.688,
+          -277.365
+        ],
+        [
+          -831.731,
+          -277.366
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -837.904,
+          -268.912
+        ],
+        [
+          -830.638,
+          -275.026
+        ],
+        [
+          -816.751,
+          -258.522
+        ],
+        [
+          -824.018,
+          -252.407
+        ]
+      ],
+      "priorRotationDegrees": -40.0776,
+      "footprintRotationDegrees": -40.78265253594507,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 2.5641391360560584,
+      "preservedRoofAxis": "z",
+      "preservedRoofBays": 1,
+      "review": "Explicit raw OS/source/model and original July 1893 Goad F3 comparison; prior heights and roof parameters retained. Complete middle brick process body. The inherited model IDs 918/920 and south-bay allocation are retained as interpreted roof compartments: Goad places 920 on the broad brick body and 918/922 on the adjoining western timber process rooms. Exact internal room identification and the inherited transverse cut are unresolved; neither ID establishes a surveyed OS party wall.",
+      "comparison": {
+        "centroidShiftMetres": 4.037082884953059,
+        "areaRatio": 0.9281104216342327,
+        "axisChangeDegrees": -0.7050525359450717
+      }
+    },
+    {
+      "modelId": "site939-920",
+      "siteId": 939,
+      "name": "Middle south bay",
+      "groupId": "chemical-middle",
+      "sourceFids": [
+        21207
+      ],
+      "sourceFid": 21207,
+      "worldFootprint": [
+        [
+          -824.041,
+          -253.465
+        ],
+        [
+          -823.559,
+          -253.486
+        ],
+        [
+          -817.281,
+          -259.069
+        ],
+        [
+          -816.779,
+          -259.813
+        ],
+        [
+          -816.96,
+          -260.292
+        ],
+        [
+          -819.414,
+          -263.137
+        ],
+        [
+          -826.803,
+          -256.762
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -826.064,
+          -254.573
+        ],
+        [
+          -818.675,
+          -260.791
+        ],
+        [
+          -815.98,
+          -257.589
+        ],
+        [
+          -823.37,
+          -251.371
+        ]
+      ],
+      "priorRotationDegrees": -40.0776,
+      "footprintRotationDegrees": -40.78265253594507,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.1299596192789658,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit raw OS/source/model and original July 1893 Goad F3 comparison; prior heights and roof parameters retained. Complete middle brick process body. The inherited model IDs 918/920 and south-bay allocation are retained as interpreted roof compartments: Goad places 920 on the broad brick body and 918/922 on the adjoining western timber process rooms. Exact internal room identification and the inherited transverse cut are unresolved; neither ID establishes a surveyed OS party wall.",
+      "comparison": {
+        "centroidShiftMetres": 2.221354649666846,
+        "areaRatio": 1.0920426231666254,
+        "axisChangeDegrees": -0.7050525359450717
+      }
+    },
+    {
+      "modelId": "site939-928",
+      "siteId": 939,
+      "name": "Eastern engine room",
+      "groupId": "chemical-east-engine",
+      "sourceFids": [
+        788233,
+        994006
+      ],
+      "worldFootprint": [
+        [
+          -795.624,
+          -296.205
+        ],
+        [
+          -796.102,
+          -296.097
+        ],
+        [
+          -796.519,
+          -295.876
+        ],
+        [
+          -796.729,
+          -295.456
+        ],
+        [
+          -798.037,
+          -294.279
+        ],
+        [
+          -797.878,
+          -293.793
+        ],
+        [
+          -796.997,
+          -292.832
+        ],
+        [
+          -796.641,
+          -292.697
+        ],
+        [
+          -796.558,
+          -292.44
+        ],
+        [
+          -791.065,
+          -286.108
+        ],
+        [
+          -790.636,
+          -285.907
+        ],
+        [
+          -790.166,
+          -286.055
+        ],
+        [
+          -789.964,
+          -286.484
+        ],
+        [
+          -789.341,
+          -287.083
+        ],
+        [
+          -788.857,
+          -287.238
+        ],
+        [
+          -788.844,
+          -287.238
+        ],
+        [
+          -788.585,
+          -287.552
+        ],
+        [
+          -788.45,
+          -288.04
+        ],
+        [
+          -794.027,
+          -294.31
+        ],
+        [
+          -794.457,
+          -294.511
+        ],
+        [
+          -794.507,
+          -294.848
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -795.17,
+          -294.722
+        ],
+        [
+          -792.338,
+          -297.105
+        ],
+        [
+          -786.327,
+          -289.962
+        ],
+        [
+          -789.16,
+          -287.578
+        ]
+      ],
+      "priorRotationDegrees": -40.0776,
+      "footprintRotationDegrees": -41.55802157017471,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.0,
+      "preservedRoofAxis": "z",
+      "preservedRoofBays": 1,
+      "review": "Explicit raw OS/source/model and original July 1893 Goad F3 comparison; prior heights and roof parameters retained. Complete eastern engine/boiler band adjoining the already source-linked eastern chemical range. The touching northern small room joins the longer hatched engine/boiler room 928. The separate southern square chimney symbol and northern yard/tank symbols remain distinct.",
+      "comparison": {
+        "centroidShiftMetres": 2.812064866140367,
+        "areaRatio": 1.0365109909390715,
+        "axisChangeDegrees": -1.4804215701747125
+      }
+    },
+    {
+      "modelId": "site939-934",
+      "siteId": 939,
+      "name": "Rectifying house",
+      "groupId": "chemical-rectifying",
+      "sourceFids": [
+        280205,
+        762991
+      ],
+      "worldFootprint": [
+        [
+          -777.422,
+          -270.754
+        ],
+        [
+          -777.222,
+          -271.174
+        ],
+        [
+          -785.884,
+          -281.234
+        ],
+        [
+          -786.313,
+          -281.452
+        ],
+        [
+          -786.806,
+          -281.273
+        ],
+        [
+          -787.97,
+          -279.972
+        ],
+        [
+          -788.182,
+          -279.9
+        ],
+        [
+          -790.872,
+          -277.606
+        ],
+        [
+          -791.352,
+          -276.823
+        ],
+        [
+          -782.679,
+          -266.777
+        ],
+        [
+          -782.203,
+          -266.624
+        ],
+        [
+          -779.168,
+          -269.2
+        ],
+        [
+          -779.027,
+          -269.684
+        ],
+        [
+          -778.873,
+          -269.677
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -784.907,
+          -277.781
+        ],
+        [
+          -780.596,
+          -281.408
+        ],
+        [
+          -770.233,
+          -269.092
+        ],
+        [
+          -774.544,
+          -265.465
+        ]
+      ],
+      "priorRotationDegrees": -40.0776,
+      "footprintRotationDegrees": -40.804985059263835,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.5210994874909949,
+      "preservedRoofAxis": "z",
+      "preservedRoofBays": 1,
+      "review": "Explicit raw OS/source/model and original July 1893 Goad F3 comparison; prior heights and roof parameters retained. Separate Goad RECTIFYING range 934 east of the main works includes its narrow eastern yellow compartment and broader brick body. Both supplied touching outlines belong to this retained range; prior height and roof interpretation retained.",
+      "comparison": {
+        "centroidShiftMetres": 6.771855820231494,
+        "areaRatio": 1.0763580506615376,
+        "axisChangeDegrees": -0.7273850592638382
+      }
+    },
+    {
+      "modelId": "site939-936",
+      "siteId": 939,
+      "name": "Riverside north workshop",
+      "groupId": "chemical-riverside",
+      "sourceFids": [
+        155012
+      ],
+      "sourceFid": 155012,
+      "worldFootprint": [
+        [
+          -801.535,
+          -226.481
+        ],
+        [
+          -801.517,
+          -225.989
+        ],
+        [
+          -796.523,
+          -221.221
+        ],
+        [
+          -791.964,
+          -226.014
+        ],
+        [
+          -796.899,
+          -230.709
+        ],
+        [
+          -797.395,
+          -230.841
+        ],
+        [
+          -797.608,
+          -230.622
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -804.877,
+          -228.569
+        ],
+        [
+          -799.827,
+          -232.818
+        ],
+        [
+          -794.646,
+          -226.659
+        ],
+        [
+          -799.695,
+          -222.41
+        ]
+      ],
+      "priorRotationDegrees": -40.0776,
+      "footprintRotationDegrees": -46.43166925303891,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.7818593996322032,
+      "preservedRoofAxis": "z",
+      "preservedRoofBays": 1,
+      "review": "Explicit raw OS/source/model and original July 1893 Goad F3 comparison; prior heights and roof parameters retained. Separate southern yard block beside the creek, with Goad north room 936 and south room 938 retained as two roof compartments. The shared OS exterior remains complete and the rest of the yard stays open. The transverse room division is fitted from the Goad boundary at pixel y1748 between outer endpoints y1709 and y1777; OS does not establish that party wall.",
+      "comparison": {
+        "centroidShiftMetres": 3.2616928393133957,
+        "areaRatio": 0.9011994939986439,
+        "axisChangeDegrees": -6.354069253038915
+      }
+    },
+    {
+      "modelId": "site939-938",
+      "siteId": 939,
+      "name": "Riverside south workshop",
+      "groupId": "chemical-riverside",
+      "sourceFids": [
+        155012
+      ],
+      "sourceFid": 155012,
+      "worldFootprint": [
+        [
+          -792.946,
+          -217.807
+        ],
+        [
+          -792.353,
+          -217.889
+        ],
+        [
+          -788.367,
+          -221.957
+        ],
+        [
+          -788.307,
+          -222.536
+        ],
+        [
+          -791.964,
+          -226.014
+        ],
+        [
+          -796.523,
+          -221.221
+        ]
+      ],
+      "worldHoles": [],
+      "priorFootprint": [
+        [
+          -799.535,
+          -222.466
+        ],
+        [
+          -793.87,
+          -227.234
+        ],
+        [
+          -790.864,
+          -223.662
+        ],
+        [
+          -796.53,
+          -218.895
+        ]
+      ],
+      "priorRotationDegrees": -40.0776,
+      "footprintRotationDegrees": -46.43166925303891,
+      "preservedHeight": 3.8,
+      "preservedRoofRise": 1.2603395753495865,
+      "preservedRoofAxis": "x",
+      "preservedRoofBays": 1,
+      "review": "Explicit raw OS/source/model and original July 1893 Goad F3 comparison; prior heights and roof parameters retained. Separate southern yard block beside the creek, with Goad north room 936 and south room 938 retained as two roof compartments. The shared OS exterior remains complete and the rest of the yard stays open. The transverse room division is fitted from the Goad boundary at pixel y1748 between outer endpoints y1709 and y1777; OS does not establish that party wall.",
+      "comparison": {
+        "centroidShiftMetres": 3.166047003589616,
+        "areaRatio": 1.0216848021924874,
+        "axisChangeDegrees": -6.354069253038915
+      }
+    }
+  ],
+  "structures": [
+    {
+      "id": "stack-939-1756-1440",
+      "sourceFid": 1102599,
+      "sourcePolygons": [
+        [
+          [
+            [
+              -788.8443865984445,
+              -287.23846986872377
+            ],
+            [
+              -788.2537324993173,
+              -286.58423997001955
+            ],
+            [
+              -788.0514165195636,
+              -286.13567668007454
+            ],
+            [
+              -788.2475274135359,
+              -285.711743488675
+            ],
+            [
+              -788.9422446036479,
+              -285.1404372481629
+            ],
+            [
+              -789.4673707922921,
+              -285.2293860502541
+            ],
+            [
+              -790.0193089711247,
+              -285.9150226509664
+            ],
+            [
+              -790.1657986629289,
+              -286.054934801301
+            ],
+            [
+              -789.9640146262245,
+              -286.4836535064969
+            ],
+            [
+              -789.3410911293468,
+              -287.08314684481593
+            ],
+            [
+              -788.8567580010276,
+              -287.2382474045153
+            ]
+          ]
+        ]
+      ],
+      "centre": [
+        -789.077,
+        -286.162
+      ],
+      "rotation": -40.231772294678514,
+      "radius": 0.582,
+      "priorRadius": 1.05,
+      "priorCentre": [
+        -789.477,
+        -285.16
+      ],
+      "preservedHeight": 22,
+      "profileEvidence": "Full rotated square plinth, half-side 1.2 times interpreted shaft radius, fitted inside the independent OS square symbol at the rounded mapped centroid. The symbol locates the base but establishes no measured shaft diameter. Retained square section and 22 m height remain typological estimates; no printed shaft height established.",
+      "review": "Original Goad F3 pixel1756,1440 is the square chimney symbol immediately SOUTH of engine/boiler room928. OS1102599 occupies the same separate southern square. Northern symbols983100/994006 are not substituted by proximity. The inherited Marine glue engine / boilers name is geographically misleading here; retained pending a separate use/name review."
+    }
+  ],
+  "renderChanges": [
+    {
+      "modelId": "site939-912",
+      "baseline": "reference/footprint-model-alignment/marshgate-trades-before.json",
+      "neighborModelIds": [
+        "site939-880"
+      ],
+      "priorRenderPolygons": [
+        {
+          "outer": [
+            [
+              -842.359,
+              -259.118
+            ],
+            [
+              -842.548,
+              -259.174
+            ],
+            [
+              -846.979,
+              -263.601
+            ],
+            [
+              -846.749,
+              -263.328
+            ],
+            [
+              -852.661,
+              -258.353
+            ],
+            [
+              -853.174,
+              -258.962
+            ],
+            [
+              -854.237,
+              -257.994
+            ],
+            [
+              -854.156,
+              -257.571
+            ],
+            [
+              -836.668,
+              -240.82
+            ],
+            [
+              -836.251,
+              -241.058
+            ],
+            [
+              -830.667,
+              -246.668
+            ],
+            [
+              -830.531,
+              -247.163
+            ],
+            [
+              -834.546,
+              -251.22
+            ],
+            [
+              -834.778,
+              -251.629
+            ],
+            [
+              -835.201,
+              -251.665
+            ],
+            [
+              -837.392,
+              -253.843
+            ],
+            [
+              -837.559,
+              -254.321
+            ],
+            [
+              -837.989,
+              -254.522
+            ],
+            [
+              -839.856,
+              -256.389
+            ],
+            [
+              -839.855,
+              -256.621
+            ],
+            [
+              -840.34,
+              -256.762
+            ],
+            [
+              -840.48,
+              -257.212
+            ],
+            [
+              -840.953,
+              -257.396
+            ],
+            [
+              -842.228,
+              -258.636
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "expectedRenderPolygons": [
+        {
+          "outer": [
+            [
+              -854.237,
+              -257.994
+            ],
+            [
+              -854.156,
+              -257.571
+            ],
+            [
+              -836.668,
+              -240.82
+            ],
+            [
+              -836.251,
+              -241.058
+            ],
+            [
+              -830.667,
+              -246.668
+            ],
+            [
+              -830.531,
+              -247.163
+            ],
+            [
+              -834.546,
+              -251.22
+            ],
+            [
+              -834.778,
+              -251.629
+            ],
+            [
+              -835.201,
+              -251.665
+            ],
+            [
+              -837.392,
+              -253.843
+            ],
+            [
+              -837.559,
+              -254.321
+            ],
+            [
+              -837.989,
+              -254.522
+            ],
+            [
+              -839.856,
+              -256.389
+            ],
+            [
+              -839.855,
+              -256.621
+            ],
+            [
+              -840.34,
+              -256.762
+            ],
+            [
+              -840.48,
+              -257.212
+            ],
+            [
+              -840.953,
+              -257.396
+            ],
+            [
+              -842.228,
+              -258.636
+            ],
+            [
+              -842.359,
+              -259.118
+            ],
+            [
+              -842.548,
+              -259.174
+            ],
+            [
+              -847.225,
+              -263.847
+            ],
+            [
+              -847.723,
+              -263.774
+            ],
+            [
+              -851.388,
+              -260.556
+            ],
+            [
+              -851.8,
+              -260.347
+            ],
+            [
+              -851.958,
+              -260.069
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "preservedFootprint": [
+        [
+          -840.48,
+          -257.212
+        ],
+        [
+          -840.34,
+          -256.762
+        ],
+        [
+          -839.855,
+          -256.621
+        ],
+        [
+          -839.856,
+          -256.389
+        ],
+        [
+          -837.989,
+          -254.522
+        ],
+        [
+          -837.559,
+          -254.321
+        ],
+        [
+          -837.392,
+          -253.843
+        ],
+        [
+          -835.201,
+          -251.665
+        ],
+        [
+          -834.778,
+          -251.629
+        ],
+        [
+          -834.546,
+          -251.22
+        ],
+        [
+          -830.531,
+          -247.163
+        ],
+        [
+          -830.667,
+          -246.668
+        ],
+        [
+          -836.251,
+          -241.058
+        ],
+        [
+          -836.668,
+          -240.82
+        ],
+        [
+          -854.156,
+          -257.571
+        ],
+        [
+          -854.237,
+          -257.994
+        ],
+        [
+          -851.958,
+          -260.069
+        ],
+        [
+          -851.8,
+          -260.347
+        ],
+        [
+          -851.388,
+          -260.556
+        ],
+        [
+          -847.723,
+          -263.774
+        ],
+        [
+          -847.225,
+          -263.847
+        ],
+        [
+          -842.548,
+          -259.174
+        ],
+        [
+          -842.359,
+          -259.118
+        ],
+        [
+          -842.228,
+          -258.636
+        ],
+        [
+          -840.953,
+          -257.396
+        ]
+      ],
+      "preservedWorldHoles": [],
+      "preservedProfile": {
+        "height": 3.8,
+        "roofRise": 2.9987389896249463,
+        "roofAxis": "z",
+        "roofBays": 1,
+        "rotation": -45.8244
+      },
+      "addedAreaM2": 6.895088931590126,
+      "removedAreaM2": 8.093159006841495e-05,
+      "maximumAddedAreaM2": 6.895089931590126,
+      "maximumRemovedAreaM2": 8.193159006841495e-05,
+      "changeBounds": [
+        -854.237,
+        -263.847,
+        -842.548,
+        -257.994
+      ],
+      "precisionGridMetres": 0.001,
+      "roundingBoundaryBufferMetres": 0.0015,
+      "maximumRoundingAreaM2": 0.0005451293338846818,
+      "evidence": "The retained source-linked western process body 912 is unchanged. Correcting the taller western drying range 880 removes its previous misplaced overlap and restores the western process roof along that interface. Expected rendering is derived from the immutable authored exterior minus the declared higher-priority reviewed neighbours, then rounded to the renderer's 1 mm grid. Tiny additional edge slivers are bounded rounding changes on the unchanged exterior; no footprint or elevation correction is authorized."
+    },
+    {
+      "modelId": "site939-926",
+      "baseline": "reference/footprint-model-alignment/marshgate-trades-before.json",
+      "neighborModelIds": [
+        "site790-888",
+        "site790-890s",
+        "site790-892",
+        "site790-886s"
+      ],
+      "priorRenderPolygons": [
+        {
+          "outer": [
+            [
+              -807.215,
+              -298.0
+            ],
+            [
+              -815.098,
+              -291.367
+            ],
+            [
+              -815.432,
+              -291.763
+            ],
+            [
+              -818.582,
+              -289.113
+            ],
+            [
+              -818.612,
+              -289.035
+            ],
+            [
+              -819.255,
+              -288.455
+            ],
+            [
+              -819.527,
+              -288.092
+            ],
+            [
+              -819.37,
+              -287.818
+            ],
+            [
+              -810.327,
+              -277.563
+            ],
+            [
+              -810.095,
+              -277.148
+            ],
+            [
+              -809.741,
+              -276.868
+            ],
+            [
+              -808.692,
+              -275.425
+            ],
+            [
+              -808.248,
+              -275.303
+            ],
+            [
+              -806.485,
+              -273.356
+            ],
+            [
+              -806.387,
+              -272.788
+            ],
+            [
+              -806.188,
+              -272.667
+            ],
+            [
+              -804.355,
+              -270.748
+            ],
+            [
+              -803.812,
+              -270.86
+            ],
+            [
+              -789.169,
+              -283.597
+            ],
+            [
+              -789.232,
+              -284.185
+            ],
+            [
+              -789.87,
+              -284.81
+            ],
+            [
+              -790.636,
+              -285.907
+            ],
+            [
+              -791.065,
+              -286.108
+            ],
+            [
+              -796.558,
+              -292.44
+            ],
+            [
+              -796.641,
+              -292.697
+            ],
+            [
+              -796.997,
+              -292.832
+            ],
+            [
+              -797.878,
+              -293.793
+            ],
+            [
+              -798.037,
+              -294.279
+            ],
+            [
+              -804.093,
+              -301.14
+            ],
+            [
+              -806.614,
+              -299.019
+            ],
+            [
+              -806.988,
+              -299.463
+            ],
+            [
+              -807.833,
+              -298.735
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "expectedRenderPolygons": [
+        {
+          "outer": [
+            [
+              -810.327,
+              -277.563
+            ],
+            [
+              -810.095,
+              -277.148
+            ],
+            [
+              -809.741,
+              -276.868
+            ],
+            [
+              -808.692,
+              -275.425
+            ],
+            [
+              -808.248,
+              -275.303
+            ],
+            [
+              -806.485,
+              -273.356
+            ],
+            [
+              -806.387,
+              -272.788
+            ],
+            [
+              -806.188,
+              -272.667
+            ],
+            [
+              -804.355,
+              -270.748
+            ],
+            [
+              -803.812,
+              -270.86
+            ],
+            [
+              -789.169,
+              -283.597
+            ],
+            [
+              -789.232,
+              -284.185
+            ],
+            [
+              -789.87,
+              -284.81
+            ],
+            [
+              -790.636,
+              -285.907
+            ],
+            [
+              -791.065,
+              -286.108
+            ],
+            [
+              -796.558,
+              -292.44
+            ],
+            [
+              -796.641,
+              -292.697
+            ],
+            [
+              -796.997,
+              -292.832
+            ],
+            [
+              -797.878,
+              -293.793
+            ],
+            [
+              -798.037,
+              -294.279
+            ],
+            [
+              -804.322,
+              -301.399
+            ],
+            [
+              -804.827,
+              -301.325
+            ],
+            [
+              -816.566,
+              -291.21
+            ],
+            [
+              -816.706,
+              -290.723
+            ],
+            [
+              -818.088,
+              -289.61
+            ],
+            [
+              -818.415,
+              -289.54
+            ],
+            [
+              -818.408,
+              -289.456
+            ],
+            [
+              -818.612,
+              -289.035
+            ],
+            [
+              -819.255,
+              -288.455
+            ],
+            [
+              -819.527,
+              -288.092
+            ],
+            [
+              -819.37,
+              -287.818
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "preservedFootprint": [
+        [
+          -804.322,
+          -301.399
+        ],
+        [
+          -798.037,
+          -294.279
+        ],
+        [
+          -797.878,
+          -293.793
+        ],
+        [
+          -796.997,
+          -292.832
+        ],
+        [
+          -796.641,
+          -292.697
+        ],
+        [
+          -796.558,
+          -292.44
+        ],
+        [
+          -791.065,
+          -286.108
+        ],
+        [
+          -790.636,
+          -285.907
+        ],
+        [
+          -789.87,
+          -284.81
+        ],
+        [
+          -789.232,
+          -284.185
+        ],
+        [
+          -789.169,
+          -283.597
+        ],
+        [
+          -803.812,
+          -270.86
+        ],
+        [
+          -804.355,
+          -270.748
+        ],
+        [
+          -806.188,
+          -272.667
+        ],
+        [
+          -806.387,
+          -272.788
+        ],
+        [
+          -806.485,
+          -273.356
+        ],
+        [
+          -808.248,
+          -275.303
+        ],
+        [
+          -808.692,
+          -275.425
+        ],
+        [
+          -809.741,
+          -276.868
+        ],
+        [
+          -810.095,
+          -277.148
+        ],
+        [
+          -810.327,
+          -277.563
+        ],
+        [
+          -819.37,
+          -287.818
+        ],
+        [
+          -819.527,
+          -288.092
+        ],
+        [
+          -819.255,
+          -288.455
+        ],
+        [
+          -818.612,
+          -289.035
+        ],
+        [
+          -818.415,
+          -289.54
+        ],
+        [
+          -818.088,
+          -289.61
+        ],
+        [
+          -816.706,
+          -290.723
+        ],
+        [
+          -816.566,
+          -291.21
+        ],
+        [
+          -804.827,
+          -301.325
+        ]
+      ],
+      "preservedWorldHoles": [],
+      "preservedProfile": {
+        "height": 3.8,
+        "roofRise": 2.803169055518922,
+        "roofAxis": "x",
+        "roofBays": 2,
+        "rotation": -41.02
+      },
+      "addedAreaM2": 11.790365031628411,
+      "removedAreaM2": 0.0017095316285209029,
+      "maximumAddedAreaM2": 11.79036603162841,
+      "maximumRemovedAreaM2": 0.0017105316285209028,
+      "changeBounds": [
+        -818.612,
+        -301.399,
+        -798.037,
+        -289.035
+      ],
+      "precisionGridMetres": 0.001,
+      "roundingBoundaryBufferMetres": 0.0015,
+      "maximumRoundingAreaM2": 0.0012846235423776542,
+      "evidence": "The retained source-linked eastern chemical body 926 is unchanged. Correcting adjoining Jeffrey process ranges 888/890s/892 restores previously clipped northern process roof; the corrected covered-coppers 886s interface contributes a tiny bounded new corner clip. Expected rendering is derived from the immutable authored exterior minus the declared higher-priority reviewed neighbours, then rounded to the renderer's 1 mm grid. Tiny additional edge slivers are bounded rounding changes on the unchanged exterior; no footprint or elevation correction is authorized."
+    }
+  ],
+  "preservedSourceLinkedBuildings": [
+    {
+      "modelId": "site939-912",
+      "sourceFid": 23412
+    },
+    {
+      "modelId": "site939-926",
+      "sourceFid": 7029
+    }
+  ],
+  "mapReview": [
+    "Cached georeferenced OS London five-foot 1893 mosaic: raw map, source outlines and prior model overlays inspected.",
+    "Original July 1893 Goad volume F sheet3: chemical works rooms880/914/920/928/934/936/938 and square chimney south of engine room inspected."
+  ],
+  "evidenceImages": [
+    "reference/footprint-model-alignment/marshgate-chemical-raw.png",
+    "reference/footprint-model-alignment/marshgate-chemical-source.png",
+    "reference/footprint-model-alignment/marshgate-chemical-models.png",
+    "reference/footprint-model-alignment/marshgate-chemical-goad.png",
+    "reference/footprint-model-alignment/marshgate-chemical-goad-west.png",
+    "reference/footprint-model-alignment/marshgate-chemical-goad-chimney.png",
+    "reference/footprint-model-alignment/marshgate-chemical-after-models.png"
+  ],
+  "deferred": [
+    {
+      "sourceFids": [
+        954335
+      ],
+      "reason": "Touching northeast cap of west drying house is the separate one-floor part on Goad880. No separate existing range; do not enlarge the two-floor retained roof over it."
+    },
+    {
+      "sourceFids": [
+        993338,
+        814511
+      ],
+      "reason": "Small plant/tank symbol in the southern drying-house east notch and separate southern timber shed915 have no existing plant/range counterpart; retained mapped context without unsupported elevations."
+    },
+    {
+      "sourceFids": [
+        975256,
+        1022505,
+        1050895,
+        1255197,
+        1255644
+      ],
+      "reason": "Small western process/furnace/yard symbols beside source-linked west range remain separate mapped context; no reliable corresponding existing volume or measured height."
+    },
+    {
+      "sourceFids": [
+        983100,
+        988407,
+        1135005
+      ],
+      "reason": "Northern engine-yard/tank square and tiny chemical-range appendages have no independently identified existing full-height counterpart. They are not assigned to the nearest engine roof or chimney."
+    },
+    {
+      "feature": "Inherited site939-918/920 internal labels and Marine glue chimney name",
+      "reason": "Goad identifies middle920, adjoining timber918/922, and the chimney south of chemical engine928. Existing useful geometry/elevations preserved; exact room/name correction deferred rather than speculative reclassification."
+    }
+  ]
+}

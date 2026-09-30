@@ -1,0 +1,204 @@
+{
+  "source": "Cached OS London five-foot 1893 map; supplied outlines 6296, 664578, 783709, 6191, 247343 and 970043",
+  "evidenceImage": "reference/footprint-model-alignment/bow-flour-context-before.png",
+  "road": {
+    "name": "Stratford High Street",
+    "priorPoints": [
+      [
+        -1126.085,
+        180.542
+      ],
+      [
+        -1042.32,
+        111.42
+      ],
+      [
+        -943.775,
+        38.182
+      ],
+      [
+        -830.854,
+        -54.016
+      ],
+      [
+        -771.719,
+        -117.611
+      ],
+      [
+        -699.226,
+        -190.143
+      ],
+      [
+        -630.22,
+        -274.865
+      ],
+      [
+        -535.116,
+        -405.572
+      ],
+      [
+        -452.582,
+        -519.224
+      ],
+      [
+        -395.436,
+        -608.046
+      ],
+      [
+        -370.61,
+        -653.283
+      ]
+    ],
+    "priorSourcePixels": [
+      [
+        1000.002,
+        2270.001
+      ],
+      [
+        1230.001,
+        2090.001
+      ],
+      [
+        1500.002,
+        1900.001
+      ],
+      [
+        1810.004,
+        1660.002
+      ],
+      [
+        1973.47,
+        1493.087
+      ],
+      [
+        2173.47,
+        1303.085
+      ],
+      [
+        2365.002,
+        1080.002
+      ],
+      [
+        2630.002,
+        735.001
+      ],
+      [
+        2860.004,
+        435.002
+      ],
+      [
+        3020.003,
+        200.003
+      ],
+      [
+        3090.001,
+        80.003
+      ]
+    ],
+    "priorBridgeSpans": [
+      {
+        "id": "bow-bridge",
+        "points": [
+          [
+            -1055.066,
+            121.939
+          ],
+          [
+            -1024.07,
+            97.858
+          ]
+        ],
+        "style": "stone-arch",
+        "archCount": 1,
+        "height": 4.8,
+        "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+      },
+      {
+        "id": "pegshole-bridge",
+        "points": [
+          [
+            -782.633,
+            -101.814
+          ],
+          [
+            -758.345,
+            -125.991
+          ]
+        ],
+        "style": "stone-arch",
+        "archCount": 2,
+        "height": 3.0,
+        "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+      },
+      {
+        "id": "st-thomas-bridge",
+        "points": [
+          [
+            -680.549,
+            -208.859
+          ],
+          [
+            -669.764,
+            -223.003
+          ]
+        ],
+        "style": "brick-arch",
+        "archCount": 1,
+        "height": 2.6,
+        "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+      },
+      {
+        "id": "st-michaels-bridge",
+        "points": [
+          [
+            -642.802,
+            -258.364
+          ],
+          [
+            -624.837,
+            -282.264
+          ]
+        ],
+        "style": "stone-arch",
+        "archCount": 1,
+        "height": 2.8,
+        "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+      }
+    ],
+    "offset": [
+      5.7,
+      7.0
+    ],
+    "review": "First two road controls and Bow Bridge span moved 5.7 m east and 7 m south to the visible Bow Road carriageway. The former line ran along the north frontage and through the mill. Retain the interpreted 12 m carriageway and all eastern controls/bridges."
+  },
+  "bank": {
+    "riverId": 10022,
+    "polygonIndex": 0,
+    "ringIndex": 0,
+    "replacements": [
+      {
+        "vertex": 100,
+        "priorPoint": [
+          -1104.4800994172692,
+          71.32319705944974
+        ],
+        "point": [
+          -1104.4800994172692,
+          69.32319705944974
+        ]
+      },
+      {
+        "vertex": 101,
+        "priorPoint": [
+          -1084.6190045056865,
+          81.91266269708285
+        ],
+        "point": [
+          -1084.6190045056865,
+          79.91266269708285
+        ]
+      }
+    ],
+    "review": "Two wharf-side bank controls move 2 m north to follow the mapped riverside wall and clear the supplied Albion Wharf exterior. Opposite bank and remaining channel controls retained; this is local map reconciliation, not a surveyed shoreline."
+  }
+}

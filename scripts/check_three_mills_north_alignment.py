@@ -7,6 +7,7 @@ from shapely.geometry import Polygon, Point, LineString, box
 from shapely.ops import unary_union
 from factory_map_sources import mosaic
 from factory_street_clearance import street_clearances
+from factory_alignment_checks import later_reviews, reviewed_ids
 
 ROOT = Path(__file__).resolve().parents[1]
 load = lambda p:json.loads((ROOT/p).read_text())
@@ -114,10 +115,7 @@ for c in r['tanks']:
 a,b=r['tanks']
 assert Point(a['x'],a['z']).distance(Point(b['x'],b['z']))>a['radius']+b['radius']+.1
 # Preserve untouched ranges, allowing the separately checked southern and landmark continuations.
-south_path = ROOT/'data/maps/three-mills-south-footprint-alignment.json'
-south_ids = {c['modelId'] for c in load(south_path)['buildings']} if south_path.exists() else set()
-landmark_path=ROOT/'data/maps/three-mills-landmark-footprint-alignment.json'
-if landmark_path.exists():south_ids.update(c['modelId'] for c in load(landmark_path)['buildings'])
+south_ids=reviewed_ids(later_reviews(s,'three-mills-north'))
 before_path=ROOT/'reference/footprint-model-alignment/three-mills-before.json'
 if before_path.exists():
     before=load(before_path)

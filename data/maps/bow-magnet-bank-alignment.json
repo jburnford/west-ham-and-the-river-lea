@@ -1,0 +1,120 @@
+{
+  "riverId": 17,
+  "polygonIndex": 0,
+  "ringIndex": 0,
+  "source": "Cached OS London five-foot 1893 map and reviewed Bow/Magnet supplied building outlines",
+  "evidenceImage": "reference/footprint-model-alignment/bow-magnet-context-before.png",
+  "review": "Reconcile ten works-side controls 5.5 m west to the mapped wharf wall. The old GIS bank overlaps full granary and works exteriors. Opposite bank and remaining channel vertices retained; local map reconciliation, not a surveyed shoreline. The final control also moves 2.04 m north to keep the tidal/retained channel junction disjoint.",
+  "replacements": [
+    {
+      "vertex": 4,
+      "priorPoint": [
+        -912.94,
+        -98.69
+      ],
+      "point": [
+        -918.44,
+        -98.69
+      ]
+    },
+    {
+      "vertex": 5,
+      "priorPoint": [
+        -917.4,
+        -96.79
+      ],
+      "point": [
+        -922.9,
+        -96.79
+      ]
+    },
+    {
+      "vertex": 6,
+      "priorPoint": [
+        -939.43,
+        -66.92
+      ],
+      "point": [
+        -944.93,
+        -66.92
+      ]
+    },
+    {
+      "vertex": 7,
+      "priorPoint": [
+        -959.53,
+        -35.22
+      ],
+      "point": [
+        -965.03,
+        -35.22
+      ]
+    },
+    {
+      "vertex": 8,
+      "priorPoint": [
+        -956.1,
+        -29.08
+      ],
+      "point": [
+        -961.6,
+        -29.08
+      ]
+    },
+    {
+      "vertex": 9,
+      "priorPoint": [
+        -967.14,
+        6.5
+      ],
+      "point": [
+        -972.64,
+        6.5
+      ]
+    },
+    {
+      "vertex": 10,
+      "priorPoint": [
+        -995.49,
+        35.98
+      ],
+      "point": [
+        -1000.99,
+        35.98
+      ]
+    },
+    {
+      "vertex": 11,
+      "priorPoint": [
+        -1004.42,
+        47.35
+      ],
+      "point": [
+        -1009.92,
+        47.35
+      ]
+    },
+    {
+      "vertex": 12,
+      "priorPoint": [
+        -1021.33,
+        71.07
+      ],
+      "point": [
+        -1026.83,
+        71.07
+      ]
+    },
+    {
+      "vertex": 13,
+      "priorPoint": [
+        -1035.74,
+        85.04
+      ],
+      "point": [
+        -1041.24,
+        83
+      ]
+    }
+  ]
+}

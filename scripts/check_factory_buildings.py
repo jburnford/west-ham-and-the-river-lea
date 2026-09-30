@@ -25,7 +25,14 @@ for b in rows:
     assert parts and all(p.is_valid and p.area > .1 for p in parts), b['id']
     p = unary_union(parts)
     assert p.difference(Polygon(b['footprint']).buffer(.003)).area < .02, b['id']
-    if b['id'] not in {'howards-644', 'house-main', 'house-tail', 'clock-kilns'}:
+    if b['id'] in {'site257-mill','site258-dry'}:
+        interface=b['waterInterface']
+        river=next(r for r in plan['rivers'] if r['id']==interface['riverId'])
+        local=unary_union([Polygon(q[0],q[1:]) for q in river['polygons']])
+        assert b['waterReview']
+        assert abs(p.intersection(local).area-interface['observedOverlapAreaM2'])<.02,b['id']
+        assert p.intersection(water.difference(local)).area<.01,b['id']
+    elif b['id'] not in {'howards-644', 'house-main', 'house-tail', 'clock-kilns'}:
         assert p.intersection(water).area < 1, ('Unreviewed river obstruction', b['id'])
     else:
         assert b.get('waterReview'), b['id']

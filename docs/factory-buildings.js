@@ -46,7 +46,7 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
     }
     return result;
   }
-  const counts={sites:data.sites.length,ranges:0,roofPlanes:0,windows:0,holders:data.holders.length,siteRanges:{},chimneys:0,chimneysWithMappedHeights:0,siteChimneys:{},chimneyTops:[],tanks:[],landmarks:[]};
+  const counts={sites:data.sites.length,ranges:0,roofPlanes:0,windows:0,holders:data.holders.length,siteRanges:{},chimneys:0,chimneysWithMappedHeights:0,siteChimneys:{},chimneyTops:[],tanks:[],kilns:[],landmarks:[]};
   for(const b of data.buildings) {
     const angle=b.rotation*Math.PI/180,c=Math.cos(angle),s=Math.sin(angle);
     const toLocal=([x,z])=>[(x-b.x)*c+(z-b.z)*s,-(x-b.x)*s+(z-b.z)*c];
@@ -246,6 +246,7 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
     } else {
       cylinder(scene,p.x,.1,p.z,p.radius,p.radius,p.height,p.kind==='kiln'?stock:m.iron,20);
       if(p.kind==='tank')counts.tanks.push({id:p.id,position:[p.x,.1,p.z],radius:p.radius,height:p.height});
+      if(p.kind==='kiln')counts.kilns.push({id:p.id,position:[p.x,.1,p.z],radius:p.radius,height:p.height});
     }
   }
   return {...counts,batchedMeshes:batches.size};

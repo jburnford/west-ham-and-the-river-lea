@@ -6,7 +6,8 @@ from prepare_ink_works_alignment import rings
 
 
 def record_group(group_id, fids, source, models, ids, names, target, parts, angle,
-                 division=None, additional=False):
+                 division=None, additional=False,
+                 review_prefix='Explicit OS/Goad F17 match; previous elevations and roofs retained. '):
     assert len(ids)==len(names)==len(parts)
     raw = unary_union([source[f] for f in fids])
     prior = unary_union([Polygon(models[id]['footprint']) for id in ids])
@@ -27,7 +28,7 @@ def record_group(group_id, fids, source, models, ids, names, target, parts, angl
             footprintRotationDegrees=angle, preservedHeight=b['height'],
             preservedRoofRise=b['roofRise'], preservedRoofAxis=b['roofAxis'],
             preservedRoofBays=b['roofBays'],
-            review='Explicit OS/Goad F17 match; previous elevations and roofs retained. '+(division or 'Supplied exterior retained.'),
+            review=review_prefix+(division or 'Supplied exterior retained.'),
             comparison=dict(centroidShiftMetres=old.centroid.distance(p.centroid),
                 areaRatio=p.area/old.area, axisChangeDegrees=angle-b['rotation'])))
     return group, corrections

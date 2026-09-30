@@ -26,7 +26,7 @@ for file in ['docs/data/factory-buildings.json','docs/data/high-street-frontages
     for b in read(file)['buildings']:mask.append(local(b['footprint']).buffer(2))
 for b in read('docs/data/housing-detail.json')['rows']:mask.append(local(b['footprint']).buffer(4))
 for s in read('docs/data/factory-buildings.json')['structures']:
-    if s['kind']=='tank' and s['siteId']==9001:
+    if (s['kind']=='tank' and s['siteId']==9001) or (s['kind']=='kiln' and 'sourceFootprintFid' in s):
         mask.append(Point(ox+s['x'],oz-s['z']).buffer(s['radius']+1))
 plan=read('docs/data/ground-plan.json')
 for b in plan['neighbourhood']['houses']:mask.append(local(b['footprint']).buffer(2))

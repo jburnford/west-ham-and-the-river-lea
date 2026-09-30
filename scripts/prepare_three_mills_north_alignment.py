@@ -139,6 +139,10 @@ def build():
     for road in [lane,entrance,passage]:
         _,_,pixel=mosaic(road['sourceBounds']);road['sourcePixels']=pixel(road['points']).round(3).tolist()
     roads['roads']=[q for q in roads['roads'] if q['name']!=passage['name']]+[passage]
+    later=ROOT/'data/maps/remaining-trades-context-alignment.json'
+    if later.exists():
+        from prepare_remaining_trades_context import apply_context
+        apply_context(roads,json.loads(later.read_text()),names={'Three Mills Lane'})
     (ROOT/'data/maps/district-road-traces.json').write_text(json.dumps(roads,indent=2)+'\n')
     print('Three Mills north: 20 source-linked ranges, one direct trace, one provisional local transfer, one added room, one mapped chimney and two tanks.')
 

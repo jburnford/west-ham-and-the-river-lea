@@ -86,6 +86,10 @@ def build():
     branch['bridgeSpans']=[span]
     for road in [lane,branch]:
         _,_,pixel=mosaic(road['sourceBounds']);road['sourcePixels']=pixel(road['points']).round(3).tolist()
+    later=ROOT/'data/maps/remaining-trades-context-alignment.json'
+    if later.exists():
+        from prepare_remaining_trades_context import apply_context
+        apply_context(roads,json.loads(later.read_text()),names={'Three Mills Lane'})
     (ROOT/'data/maps/district-road-traces.json').write_text(json.dumps(roads,indent=2)+'\n')
     print('Three Mills landmarks: eight existing ranges in six groups; mapped facade/tower/cap anchors and corrected mill-court routes.')
 

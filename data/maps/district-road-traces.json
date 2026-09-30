@@ -36,16 +36,20 @@
       "sheet": "scene",
       "points": [
         [
-          -1126.085,
-          180.542
+          -1120.385,
+          187.542
         ],
         [
-          -1042.32,
-          111.42
+          -1036.62,
+          118.42
         ],
         [
-          -943.775,
-          38.182
+          -940.775,
+          42.182
+        ],
+        [
+          -875,
+          -17.971572
         ],
         [
           -830.854,
@@ -83,16 +87,20 @@
       "pixelWidth": 4864,
       "sourcePixels": [
         [
-          1000.002,
-          2270.001
+          1014.8,
+          2289.265
         ],
         [
-          1230.001,
-          2090.001
+          1244.799,
+          2109.266
         ],
         [
-          1500.002,
-          1900.001
+          1507.767,
+          1910.991
+        ],
+        [
+          1688.808,
+          1753.828
         ],
         [
           1810.004,
@@ -143,18 +151,19 @@
           "id": "bow-bridge",
           "points": [
             [
-              -1055.066,
-              121.939
+              -1049.366,
+              128.939
             ],
             [
-              -1024.07,
-              97.858
+              -1018.37,
+              104.858
             ]
           ],
           "style": "stone-arch",
           "archCount": 1,
           "height": 4.8,
-          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates.",
+          "alignmentEvidence": "First two road controls and Bow Bridge span moved 5.7 m east and 7 m south to the visible Bow Road carriageway. The former line ran along the north frontage and through the mill. Retain the interpreted 12 m carriageway and all eastern controls/bridges."
         },
         {
           "id": "pegshole-bridge",
@@ -354,7 +363,25 @@
             80.003
           ]
         ]
-      }
+      },
+      "bowFlourAlignment": {
+        "register": "data/maps/bow-flour-context-alignment.json",
+        "review": "First two road controls and Bow Bridge span moved 5.7 m east and 7 m south to the visible Bow Road carriageway. The former line ran along the north frontage and through the mill. Retain the interpreted 12 m carriageway and all eastern controls/bridges."
+      },
+      "bowMagnetAlignment": {
+        "register": "data/maps/bow-magnet-context-alignment.json",
+        "review": "OS carriageway reconciliation retains interpreted widths. High Street control 2 moves 3 m east and 4 m south. Cook\u2019s Road last bend moves 10 m west and joins the revised High Street centreline; earlier controls and Bow Bridge are retained. An intermediate control rejoins the original eastern segment before the previously reviewed starch works frontage."
+      },
+      "buildingClearanceReviews": [
+        {
+          "id": "bow-brewery-west-frontage",
+          "modelIds": [
+            "west-259-2"
+          ],
+          "shoulderWidth": 0.78,
+          "evidence": "OS brewery west frontage source5599 is 6.787 m from the retained High Street centreline. Keep the 12 m carriageway and complete shaded exterior; the interpreted pavement narrows locally to 0.78 m instead of trimming 0.600 m\u00b2 from the building."
+        }
+      ]
     },
     {
       "name": "Stratford High Street \u2014 Channelsea approach",
@@ -1534,24 +1561,40 @@
       "sheet": "scene",
       "points": [
         [
-          -830.854,
-          -54.016
+          -816.083,
+          -58.503
         ],
         [
-          -852.125,
-          -83.147
+          -828.805,
+          -74.497
         ],
         [
-          -863.993,
-          -108.82
+          -837.354,
+          -87.634
         ],
         [
-          -865.714,
-          -131.055
+          -842.141,
+          -99.388
         ],
         [
-          -876.365,
-          -153.048
+          -845.099,
+          -112.305
+        ],
+        [
+          -847.393,
+          -128.211
+        ],
+        [
+          -855.559,
+          -140.987
+        ],
+        [
+          -866.279,
+          -151.836
+        ],
+        [
+          -878.538,
+          -164.501
         ],
         [
           -891.852,
@@ -1560,117 +1603,53 @@
         [
           -901.658,
           -193.21
-        ],
-        [
-          -887.078,
-          -204.747
-        ],
-        [
-          -859.679,
-          -224.06
-        ],
-        [
-          -850.68,
-          -235.445
-        ],
-        [
-          -849.072,
-          -244.773
-        ],
-        [
-          -877.732,
-          -271.845
-        ],
-        [
-          -908.202,
-          -297.012
-        ],
-        [
-          -931.331,
-          -326.091
-        ],
-        [
-          -950.942,
-          -362.693
-        ],
-        [
-          -968.591,
-          -395.635
-        ],
-        [
-          -990.01,
-          -430.331
         ]
       ],
       "pixelWidth": 4864,
       "sourcePixels": [
         [
-          1810,
-          1660
+          1850.002,
+          1649.001
         ],
         [
-          1755,
-          1580
+          1817.002,
+          1605.002
         ],
         [
-          1725,
-          1510
+          1795.001,
+          1569.001
         ],
         [
-          1722,
-          1450
+          1783.003,
+          1537.0
         ],
         [
-          1695,
-          1390
+          1776.001,
+          1502.001
         ],
         [
-          1655,
-          1330
+          1771.002,
+          1459.002
         ],
         [
-          1630,
-          1280
+          1750.002,
+          1424.001
         ],
         [
-          1670,
-          1250
+          1722.003,
+          1394.003
         ],
         [
-          1745,
-          1200
+          1690.002,
+          1359.001
         ],
         [
-          1770,
-          1170
+          1655.004,
+          1330.0
         ],
         [
-          1775,
-          1145
-        ],
-        [
-          1700,
-          1070
-        ],
-        [
-          1620,
-          1000
-        ],
-        [
-          1560,
-          920
-        ],
-        [
-          1510,
-          820
-        ],
-        [
-          1465,
-          730
-        ],
-        [
-          1410,
-          635
+          1630.002,
+          1280.002
         ]
       ],
       "sourceBounds": [
@@ -1689,20 +1668,32 @@
           "id": "marshgate-lane-connection-0",
           "points": [
             [
-              -852.2051184026079,
-              -83.32031308983436
+              -837.354,
+              -87.634
             ],
             [
-              -857.9819309678737,
-              -95.81678334498001
+              -842.141,
+              -99.388
+            ],
+            [
+              -845.099,
+              -112.305
             ]
           ],
           "style": "deck",
           "height": 1.5,
           "provisional": true,
-          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge."
+          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge. Existing provisional crossing moved onto the mapped eastern lane; both endpoints relocated, with one intervening road control to follow its bend. Identity, deck style, 1.5 m height and uncertainty retained. Exact bank alignment and deck versus culvert remain unresolved."
         }
-      ]
+      ],
+      "millBrushAlignment": {
+        "register": "data/maps/mill-brush-context-alignment.json",
+        "review": "OS and Goad show separate approaches around St Thomas/Barry mill. Remove the old diagonal shortcut through the mill; keep western controls0\u20136 and trace the northern frontage passage/bend. The mill courts and covered water interface do not establish a public carriageway or new bridge between these arms. Width remains interpreted."
+      },
+      "remainingTradesContextAlignment": {
+        "register": "data/maps/remaining-trades-context-alignment.json",
+        "review": "Re-read the complete unmodified OS mosaic. The southern Marshgate arm previously ran through Crown/Johnson instead of the public street east of its walls. Follow that street and keep the last two mill approach controls and the separate northern arm. At the ornamental moulding shed, Three Mills Lane follows the middle of the mapped street a little south of the former western bridge approach. Retain both 7 m carriageways and ordinary 1.1 m shoulders. No building clearance exception, new road link, or river change is introduced."
+      }
     },
     {
       "name": "Cook\u2019s Road",
@@ -1749,16 +1740,16 @@
           5.339111284545475
         ],
         [
-          -979.683,
+          -989.683,
           13.904
         ],
         [
-          -975.23,
+          -985.23,
           31.609
         ],
         [
-          -962.894,
-          47.119
+          -960.743,
+          58.065
         ]
       ],
       "pixelWidth": 1024,
@@ -1804,16 +1795,16 @@
           527.791
         ],
         [
-          637.335,
-          552.001
+          610.478,
+          551.27
         ],
         [
-          648.003,
-          600.001
+          621.146,
+          599.27
         ],
         [
-          680.002,
-          642.667
+          684.98,
+          672.298
         ]
       ],
       "width": 5,
@@ -1830,18 +1821,19 @@
               5.339111284545475
             ],
             [
-              -979.683,
+              -989.683,
               13.904
             ],
             [
-              -977.8120787921861,
-              21.342728943261978
+              -985.23,
+              31.609
             ]
           ],
           "style": "deck",
           "height": 1.5,
           "provisional": true,
-          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge."
+          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge.",
+          "alignmentEvidence": "Provisional Cook\u2019s Road connection follows the reviewed route and reaches dry land beyond corrected Bow Back River bank; deck versus culvert remains unresolved."
         }
       ],
       "nameEvidence": "Cook\u2019s Road on 1893 OS, corroborated by Wessex Archaeology / Crossrail XPM09 historic building recording, section 3.1.6\u20137.",
@@ -2088,6 +2080,10 @@
           ]
         ],
         "evidence": "Northern centreline re-read between the roadside stores and opposite mapped edge. Earlier trace followed the southern kerb and cut the stores. Sawmill frontage from mosaic pixel 400,458 and the bridge approach retained."
+      },
+      "bowMagnetAlignment": {
+        "register": "data/maps/bow-magnet-context-alignment.json",
+        "review": "OS carriageway reconciliation retains interpreted widths. High Street control 2 moves 3 m east and 4 m south. Cook\u2019s Road last bend moves 10 m west and joins the revised High Street centreline; earlier controls and Bow Bridge are retained. An intermediate control rejoins the original eastern segment before the previously reviewed starch works frontage."
       }
     },
     {
@@ -2352,12 +2348,12 @@
           426.205
         ],
         [
-          -699.02,
-          412.203
+          -698.185,
+          415.523
         ],
         [
-          -654.419,
-          409.132
+          -653.986,
+          411.349
         ],
         [
           -624.903,
@@ -2411,12 +2407,12 @@
           2960.002
         ],
         [
-          2130.002,
-          2925.002
+          2132.001,
+          2934.002
         ],
         [
-          2250.001,
-          2920.001
+          2251.002,
+          2926.002
         ],
         [
           2330.003,
@@ -2471,8 +2467,8 @@
           "id": "three-mills-lea-bridge",
           "points": [
             [
-              -680.436,
-              410.923
+              -680.162,
+              413.821
             ],
             [
               -624.903,
@@ -2482,7 +2478,7 @@
           "style": "deck",
           "archCount": 1,
           "height": 2.2,
-          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates. Only the western endpoint of the existing Lea bridge moves onto the re-read approach; eastern endpoint, identity, deck style, single arch and 2.2 m estimated height retained."
         }
       ],
       "threeMillsNorthAlignment": {
@@ -2706,7 +2702,11 @@
           "shoulderWidth": 0.9,
           "evidence": "Re-read OS mill-court bend retains the 7 m carriageway. A 0.9 m pavement allowance at the kiln/tail pinch preserves both supplied walls; minimum opposing exterior gap is 9.469 m."
         }
-      ]
+      ],
+      "remainingTradesContextAlignment": {
+        "register": "data/maps/remaining-trades-context-alignment.json",
+        "review": "Re-read the complete unmodified OS mosaic. The southern Marshgate arm previously ran through Crown/Johnson instead of the public street east of its walls. Follow that street and keep the last two mill approach controls and the separate northern arm. At the ornamental moulding shed, Three Mills Lane follows the middle of the mapped street a little south of the former western bridge approach. Retain both 7 m carriageways and ordinary 1.1 m shoulders. No building clearance exception, new road link, or river change is introduced."
+      }
     },
     {
       "name": "Three Mills Lane beside distillery",
@@ -3112,6 +3112,143 @@
           2846.694
         ]
       ]
+    },
+    {
+      "name": "Marshgate Lane \u2014 northern arm",
+      "sheet": "scene",
+      "points": [
+        [
+          -868,
+          -201
+        ],
+        [
+          -865,
+          -208
+        ],
+        [
+          -858,
+          -217
+        ],
+        [
+          -847,
+          -226
+        ],
+        [
+          -840,
+          -230
+        ],
+        [
+          -840,
+          -234
+        ],
+        [
+          -847,
+          -243.5
+        ],
+        [
+          -877.732,
+          -271.845
+        ],
+        [
+          -908.202,
+          -297.012
+        ],
+        [
+          -929.099,
+          -326.152
+        ],
+        [
+          -933.112,
+          -336.812
+        ],
+        [
+          -945.733,
+          -362.835
+        ],
+        [
+          -964.498,
+          -395.746
+        ],
+        [
+          -976.586,
+          -415.842
+        ]
+      ],
+      "pixelWidth": 4864,
+      "sourcePixels": [
+        [
+          1720.97,
+          1261.488
+        ],
+        [
+          1729.538,
+          1242.858
+        ],
+        [
+          1748.996,
+          1219.135
+        ],
+        [
+          1779.197,
+          1195.705
+        ],
+        [
+          1798.29,
+          1185.446
+        ],
+        [
+          1798.582,
+          1174.675
+        ],
+        [
+          1780.475,
+          1148.58
+        ],
+        [
+          1700.004,
+          1070.002
+        ],
+        [
+          1620.003,
+          1000.001
+        ],
+        [
+          1566.003,
+          920.001
+        ],
+        [
+          1556.002,
+          891.002
+        ],
+        [
+          1524.003,
+          820.001
+        ],
+        [
+          1476.003,
+          730.002
+        ],
+        [
+          1445.002,
+          675.001
+        ]
+      ],
+      "sourceBounds": [
+        -1450,
+        -650,
+        250,
+        600
+      ],
+      "width": 7,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "OS and Goad show separate approaches around St Thomas/Barry mill. Remove the old diagonal shortcut through the mill; keep western controls0\u20136 and trace the northern frontage passage/bend. The mill courts and covered water interface do not establish a public carriageway or new bridge between these arms. Width remains interpreted.",
+      "surfaceEvidence": "Interpreted paving; no street-specific adoption record.",
+      "bridgeSpans": [],
+      "aldersonRopeAlignment": {
+        "register": "data/maps/alderson-rope-context-alignment.json",
+        "review": "Raw OS five-foot map re-read along the lane between the eastern rope-works wall and the eastern street edge. Preserve northern-arm controls0\u20138, then fit the south bend clear of the mapped drying house and follow the eastern rope frontage to the lane head at the railway underpass boundary. The former tail cut through the mapped eastern rope roof and extended into the railway. Existing interpreted 7 m carriageway and normal 1.1 m shoulder retained; no new road connection or bridge inferred."
+      }
     }
   ],
   "notes": [

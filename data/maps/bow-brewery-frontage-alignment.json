@@ -1,0 +1,14 @@
+{
+  "road": "Stratford High Street",
+  "id": "bow-brewery-west-frontage",
+  "modelIds": [
+    "west-259-2"
+  ],
+  "shoulderWidth": 0.78,
+  "sourceFootprintFids": [
+    5599,
+    396988
+  ],
+  "evidence": "OS brewery west frontage source5599 is 6.787 m from the retained High Street centreline. Keep the 12 m carriageway and complete shaded exterior; the interpreted pavement narrows locally to 0.78 m instead of trimming 0.600 m\u00b2 from the building.",
+  "evidenceImage": "reference/footprint-model-alignment/bow-brewery-context-before.png"
+}

@@ -56,6 +56,11 @@ corrected ranges, the mill-court bend and eastern footpath. Counts remain
 85 surfaces, 36 clear routes and 160 stock groups; all factory tanks remain
 excluded. No working-yard envelope or additional stock type is introduced.
 
+Ratner/Albion refreshes exclusions around the mapped courts and removes the
+unsupported soap-yard building/chimney obstacles. Existing yard envelopes remain.
+The regenerated layer has 85 surfaces, 36 clear routes and 161 stock groups;
+one additional group fits the corrected open space. Stock remains typological.
+
 The first yard refinement replaces the repeated four-metre mud texture and
 grid-based colour noise on industrial parcels. A single district surface map
 now gives each yard uneven, non-repeating colour, dirt at building edges,
@@ -142,3 +147,29 @@ surface overlap and circulation/stock clearances. The fixed cameras in
 Three Mills, both gasworks and the original bridge view. Before/after captures
 are kept in the local `review/` folder. Preview Sugar House Lane at
 <http://localhost:4175/?view=sugar>.
+
+
+The Bow Flour/rubber/felt continuation regenerates exclusions for 545 ranges,
+two corrected chimney locations, the removed domestic process chimney and local
+Bow Road/wharf-bank corrections. Counts remain 85 yard surfaces, 36 wear routes
+and 161 stock groups. No additional yard envelope is introduced.
+
+The Cook/Bow/Magnet/lime continuation updates exclusions for 48 corrected
+ranges, four Cook chimneys, two fitted lime kilns and the local road/bank
+changes. Kiln bodies now exclude loose stock and wear routes. Final counts:
+85 yard surfaces, 38 wear routes and 153 stock groups. Housing remains
+196 rows, 3,204 houses and 3,191 rear yards.
+
+The mill/brush/brewery/mineral-water continuation updates exclusions for twenty
+corrected ranges, three moved chimneys and the separate Marshgate approaches.
+The brewery court stays open; the church is no longer covered by mineral-water
+factory models. Yards: 85 surfaces, 35 wear routes, 153 stock groups. Housing
+remains 196 rows, 3,204 houses and 3,191 rear yards.
+
+Jeffrey/Marshgate/Alderson continuation regenerates exclusions for544 ranges,
+three corrected chimney bases and the reviewed northern Marshgate lane:
+85 yard surfaces,36 clear wear routes and153 stock groups.
+
+The Ritchie/Crown/western-trades pass rebuilds exclusions for all 544 ranges,
+including the complete Crown roof 609 and the corrected local road approaches.
+Totals are 85 surfaces, 37 clear wear routes and 151 stock groups.

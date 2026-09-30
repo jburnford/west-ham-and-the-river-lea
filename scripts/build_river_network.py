@@ -77,7 +77,8 @@ def build():
     height = np.where(water, .06-.25-.17*np.minimum(inside, 9), height)
     # Existing site envelopes and road corridors keep their ground datum. These
     # are industrial plots, not evidence for continuous walls along every plot.
-    sites = unary_union([Polygon(p[0], p[1:]) for s in plan['sites'] for p in s['polygons']])
+    east_context=json.loads((ROOT/'data/maps/east-channelsea-context-alignment.json').read_text())
+    sites = unary_union([Polygon(p[0], p[1:]) for s in plan['sites']+east_context['additionalYards'] for p in s['polygons']])
     roads = unary_union([LineString(r['route']).buffer(r['width']/2+2)
                          for r in infrastructure['roads']])
     built = contains_xy(sites.union(roads), X, Z)

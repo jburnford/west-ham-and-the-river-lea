@@ -459,6 +459,7 @@ function buildScene() {
   }
   // One deliberately simple chimney per chosen site. Locations/heights are study assumptions.
   for (const id of [874, 875, 876, 1125, 562, 965]) {
+    if (surveyedFactories.has(id)) continue;
     const b = data.factoryStudies.find(b => b.siteId === id) || data.neighbourhood.mappedFactories.find(b => b.siteId === id);
     if (b) { cylinder(scene, b.x, 0.15, b.z, 1.5, 2.1, 36, materials.brick); cylinder(scene, b.x, 35, b.z, 1.9, 1.9, 1.4, materials.brick); }
   }

@@ -1,0 +1,253 @@
+{
+  "source": "Cached OS London five-foot 1893 map and July 1893 Goad F3",
+  "evidenceImage": "reference/footprint-model-alignment/mill-brush-route-split-proposal.png",
+  "review": "OS and Goad show separate approaches around St Thomas/Barry mill. Remove the old diagonal shortcut through the mill; keep western controls0\u20136 and trace the northern frontage passage/bend. The mill courts and covered water interface do not establish a public carriageway or new bridge between these arms. Width remains interpreted.",
+  "road": {
+    "name": "Marshgate Lane",
+    "priorPoints": [
+      [
+        -830.854,
+        -54.016
+      ],
+      [
+        -852.125,
+        -83.147
+      ],
+      [
+        -863.993,
+        -108.82
+      ],
+      [
+        -865.714,
+        -131.055
+      ],
+      [
+        -876.365,
+        -153.048
+      ],
+      [
+        -891.852,
+        -174.909
+      ],
+      [
+        -901.658,
+        -193.21
+      ],
+      [
+        -887.078,
+        -204.747
+      ],
+      [
+        -859.679,
+        -224.06
+      ],
+      [
+        -850.68,
+        -235.445
+      ],
+      [
+        -849.072,
+        -244.773
+      ],
+      [
+        -877.732,
+        -271.845
+      ],
+      [
+        -908.202,
+        -297.012
+      ],
+      [
+        -931.331,
+        -326.091
+      ],
+      [
+        -950.942,
+        -362.693
+      ],
+      [
+        -968.591,
+        -395.635
+      ],
+      [
+        -990.01,
+        -430.331
+      ]
+    ],
+    "points": [
+      [
+        -830.854,
+        -54.016
+      ],
+      [
+        -852.125,
+        -83.147
+      ],
+      [
+        -863.993,
+        -108.82
+      ],
+      [
+        -865.714,
+        -131.055
+      ],
+      [
+        -876.365,
+        -153.048
+      ],
+      [
+        -891.852,
+        -174.909
+      ],
+      [
+        -901.658,
+        -193.21
+      ]
+    ],
+    "priorBridgeSpans": [
+      {
+        "id": "marshgate-lane-connection-0",
+        "points": [
+          [
+            -852.2051184026079,
+            -83.32031308983436
+          ],
+          [
+            -857.9819309678737,
+            -95.81678334498001
+          ]
+        ],
+        "style": "deck",
+        "height": 1.5,
+        "provisional": true,
+        "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge."
+      }
+    ],
+    "width": 7
+  },
+  "additionalRoad": {
+    "name": "Marshgate Lane \u2014 northern arm",
+    "sheet": "scene",
+    "points": [
+      [
+        -868,
+        -201
+      ],
+      [
+        -865,
+        -208
+      ],
+      [
+        -858,
+        -217
+      ],
+      [
+        -847,
+        -226
+      ],
+      [
+        -840,
+        -230
+      ],
+      [
+        -840,
+        -234
+      ],
+      [
+        -847,
+        -243.5
+      ],
+      [
+        -877.732,
+        -271.845
+      ],
+      [
+        -908.202,
+        -297.012
+      ],
+      [
+        -931.331,
+        -326.091
+      ],
+      [
+        -950.942,
+        -362.693
+      ],
+      [
+        -968.591,
+        -395.635
+      ],
+      [
+        -990.01,
+        -430.331
+      ]
+    ],
+    "pixelWidth": 4864,
+    "sourcePixels": [
+      [
+        1720.97,
+        1261.488
+      ],
+      [
+        1729.538,
+        1242.858
+      ],
+      [
+        1748.996,
+        1219.135
+      ],
+      [
+        1779.197,
+        1195.705
+      ],
+      [
+        1798.29,
+        1185.446
+      ],
+      [
+        1798.582,
+        1174.675
+      ],
+      [
+        1780.475,
+        1148.58
+      ],
+      [
+        1700.004,
+        1070.002
+      ],
+      [
+        1620.003,
+        1000.001
+      ],
+      [
+        1560.004,
+        920.002
+      ],
+      [
+        1510.002,
+        820.002
+      ],
+      [
+        1465.002,
+        730.001
+      ],
+      [
+        1410.003,
+        635.001
+      ]
+    ],
+    "sourceBounds": [
+      -1450,
+      -650,
+      250,
+      600
+    ],
+    "width": 7,
+    "kind": "street",
+    "surface": "macadam",
+    "alignmentEvidence": "OS and Goad show separate approaches around St Thomas/Barry mill. Remove the old diagonal shortcut through the mill; keep western controls0\u20136 and trace the northern frontage passage/bend. The mill courts and covered water interface do not establish a public carriageway or new bridge between these arms. Width remains interpreted.",
+    "surfaceEvidence": "Interpreted paving; no street-specific adoption record.",
+    "bridgeSpans": []
+  }
+}

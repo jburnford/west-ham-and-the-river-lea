@@ -209,7 +209,7 @@ def build():
     output = ROOT / 'docs/data/ground-plan.json'
     # Reviewed local bank reconciliation; retain the opposite bank and the
     # old millrace instead of trimming the mapped factory walls to the old GIS.
-    for bank_name in ['city-mills-bank-alignment.json', 'west-sugar-bank-alignment.json', 'bow-works-bank-alignment.json', 'hunt-works-bank-alignment.json']:
+    for bank_name in ['city-mills-bank-alignment.json', 'west-sugar-bank-alignment.json', 'bow-works-bank-alignment.json', 'hunt-works-bank-alignment.json', 'bow-magnet-bank-alignment.json']:
         bank_path = ROOT/'data/maps'/bank_name
         correction = json.loads(bank_path.read_text())
         river = next(r for r in result['rivers'] if r['id']==correction['riverId'])
@@ -219,6 +219,9 @@ def build():
             ring[change['vertex']] = change['point']
         assert all(Polygon(p[0],p[1:]).is_valid for p in river['polygons'])
         river['bankAlignment'] = correction
+    from prepare_east_channelsea_context import apply_water_context
+    east_context=json.loads((ROOT/'data/maps/east-channelsea-context-alignment.json').read_text())
+    apply_water_context(result,east_context)
     result['neighbourhood'] = neighbourhood()
     context=result['neighbourhood']
     context['mill']={'name':'Abbey Mill (Corn)','siteId':252,'x':-11.97,'z':-58.22,'width':14,'depth':8,'height':11.5,'rotation':11.7,

@@ -30,7 +30,7 @@ holders = unary_union([Point(h['x'], h['z']).buffer(h['radius'])
 chimneys = unary_union([Point(s['x'],s['z']).buffer(s['radius']*1.2)
     for s in factories['structures'] if s['kind']=='chimney'])
 tanks = unary_union([Point(s['x'],s['z']).buffer(s['radius'])
-    for s in factories['structures'] if s['kind']=='tank'])
+    for s in factories['structures'] if s['kind'] in {'tank','kiln'}])
 blocked = unary_union([buildings, water, roads, holders, chimneys, tanks])
 used = Polygon()
 stocks = routes = 0
@@ -69,7 +69,10 @@ assert sawmill_surface.bounds[0]<-1190, 'Sawmill parcel still clipped at former 
 for track in yards['tracks']:
     route=LineString(track['points'])
     assert route.buffer(.95).intersection(blocked).area<.01, ('Track obstruction',track['id'])
-    assert sawmill_surface.buffer(.02).covers(route), ('Track outside sawmill',track['id'])
+    track_surface=polygons(next(s for s in yards['sites'] if s['id']==track.get('siteId',797))['polygons'])
+    assert track_surface.buffer(.02).covers(route), ('Track outside its mapped yard',track['id'])
+    if 'sourceTrackId' in track:
+        assert track['gauge']==1.435 and track['sleeperWidth']==2.4
     assert all(Polygon(s['footprint']).distance(route)>2.9 for s in sawmill['stock']), ('Timber obstructs track',track['id'])
 assert 'oilwharf-6' not in {b['id'] for b in factories['buildings']}, 'Yard track misclassified as building'
 print(f"{len(yards['sites'])} valid yard surfaces, {routes} clear wear routes, {stocks} stock groups; mapped roads, buildings, water and holders clear.")
