@@ -1,0 +1,26 @@
+{
+  "name": "chapman-andre-1777",
+  "format": "webp",
+  "minzoom": 6,
+  "maxzoom": 16,
+  "bounds": [
+    -0.06335572433223097,
+    51.447822385915444,
+    0.19955292943064915,
+    51.57689604307152
+  ],
+  "tiles": 2541,
+  "megabytes": 11.2,
+  "source": "Chapman and Andr\u00e9, A Map of the County of Essex from an Actual Survey taken in 1772, 73 & 1774 (published 1777), south-west sheet, two inches to the mile",
+  "attribution": "Chapman & Andr\u00e9 1777. Reproduced with the permission of the National Library of Scotland",
+  "georeferencing": {
+    "method": "affine least squares on control points",
+    "rms_ground_m": 80.38345907543079,
+    "max_residual_ground_m": 137.58344641842368,
+    "leave_one_out_rms_m": 117.6433687432764,
+    "ground_scale_m_per_px": 2.071750217252932,
+    "rotation_deg": -0.23995991628871052,
+    "control_points": 11,
+    "gcps_file": "data/maps/chapman-andre-1777-gcps.json"
+  }
+}

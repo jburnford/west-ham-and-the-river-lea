@@ -1,0 +1,237 @@
+{
+ "sheet": "Chapman and André, A Map of the County of Essex from an Actual Survey taken in 1772, 73 & 1774 (published 1777), south-west sheet, two inches to the mile",
+ "source": "National Library of Scotland, https://maps.nls.uk/view/262718288, via IIIF service https://map-view.nls.uk/iiif/2/26271%2F262718288",
+ "attribution": "Chapman & André 1777. Reproduced with the permission of the National Library of Scotland",
+ "scan": "reference/nls-chapman-andre-1777/nls-262718288-chapman-andre-essex-sw.jpg",
+ "scan_size_px": [
+  9497,
+  7553
+ ],
+ "method": "Affine least squares, scan pixel to EPSG:3857, on church symbols and the Royal Observatory read from the scan against present-day coordinates from OpenStreetMap (way centroids).",
+ "date": "2026-09-29",
+ "gcps": [
+  {
+   "name": "West Ham, All Saints",
+   "px": [
+    2858,
+    2262
+   ],
+   "lonlat": [
+    0.0087,
+    51.53644
+   ],
+   "residual_m": 29.8,
+   "residual_dx_dy_m": [
+    2.0,
+    -29.8
+   ],
+   "loo_m": 34.4
+  },
+  {
+   "name": "Barking, St Margaret",
+   "px": [
+    5123,
+    2323
+   ],
+   "lonlat": [
+    0.07584,
+    51.53552
+   ],
+   "residual_m": 62.2,
+   "residual_dx_dy_m": [
+    -40.3,
+    -47.4
+   ],
+   "loo_m": 69.8
+  },
+  {
+   "name": "Dagenham, SS Peter & Paul",
+   "px": [
+    7965,
+    2170
+   ],
+   "lonlat": [
+    0.16212,
+    51.53973
+   ],
+   "residual_m": 66.2,
+   "residual_dx_dy_m": [
+    45.7,
+    48.0
+   ],
+   "loo_m": 100.9
+  },
+  {
+   "name": "Leyton, St Mary",
+   "px": [
+    2018,
+    818
+   ],
+   "lonlat": [
+    -0.01505,
+    51.56378
+   ],
+   "residual_m": 85.8,
+   "residual_dx_dy_m": [
+    84.9,
+    12.4
+   ],
+   "loo_m": 129.8
+  },
+  {
+   "name": "Wanstead, St Mary (old church site)",
+   "px": [
+    3634,
+    410
+   ],
+   "lonlat": [
+    0.03256,
+    51.57131
+   ],
+   "residual_m": 44.3,
+   "residual_dx_dy_m": [
+    30.6,
+    -32.0
+   ],
+   "loo_m": 64.4
+  },
+  {
+   "name": "Royal Observatory, Greenwich",
+   "px": [
+    2513,
+    5335
+   ],
+   "lonlat": [
+    -0.00197,
+    51.47795
+   ],
+   "residual_m": 107.5,
+   "residual_dx_dy_m": [
+    4.4,
+    -107.4
+   ],
+   "loo_m": 183.2
+  },
+  {
+   "name": "East Ham, St Mary Magdalene",
+   "px": [
+    4575,
+    3045
+   ],
+   "lonlat": [
+    0.0588,
+    51.52226
+   ],
+   "residual_m": 78.9,
+   "residual_dx_dy_m": [
+    -78.8,
+    -3.9
+   ],
+   "loo_m": 87.7
+  },
+  {
+   "name": "Rainham, St Helen & St Giles",
+   "px": [
+    8940,
+    3295
+   ],
+   "lonlat": [
+    0.19062,
+    51.51832
+   ],
+   "confidence": "low: symbol among buildings",
+   "residual_m": 9.4,
+   "residual_dx_dy_m": [
+    9.2,
+    -2.1
+   ],
+   "loo_m": 19.8
+  },
+  {
+   "name": "Little Ilford, St Mary",
+   "px": [
+    4570,
+    1652
+   ],
+   "lonlat": [
+    0.05955,
+    51.54843
+   ],
+   "residual_m": 28.7,
+   "residual_dx_dy_m": [
+    -28.6,
+    -2.1
+   ],
+   "loo_m": 33.1
+  },
+  {
+   "name": "Bow, St Mary",
+   "px": [
+    2068,
+    2712
+   ],
+   "lonlat": [
+    -0.01667,
+    51.52881
+   ],
+   "confidence": "Middlesex margin, schematic",
+   "residual_m": 137.6,
+   "residual_dx_dy_m": [
+    -114.4,
+    76.4
+   ],
+   "loo_m": 166.6
+  },
+  {
+   "name": "Greenwich, St Alfege",
+   "px": [
+    2215,
+    5290
+   ],
+   "lonlat": [
+    -0.00971,
+    51.4805
+   ],
+   "confidence": "Kent margin, schematic",
+   "residual_m": 122.4,
+   "residual_dx_dy_m": [
+    85.4,
+    87.7
+   ],
+   "loo_m": 211.0
+  }
+ ],
+ "tiles": {
+  "out": "docs/maps/tiles/chapman-andre-1777",
+  "minzoom": 6,
+  "maxzoom": 16,
+  "format": "webp",
+  "quality": 82
+ },
+ "affine_px_to_3857": [
+  [
+   3.3301517168300614,
+   -0.013947058686328617,
+   -8520.687279369382
+  ],
+  [
+   0.030304068156212758,
+   -3.360139089184486,
+   6724299.825256111
+  ]
+ ],
+ "fit": {
+  "rms_ground_m": 80.38345907543079,
+  "max_residual_ground_m": 137.58344641842368,
+  "leave_one_out_rms_m": 117.6433687432764,
+  "ground_scale_m_per_px": 2.071750217252932,
+  "rotation_deg": -0.23995991628871052
+ },
+ "neat_line": {
+  "left": 470,
+  "right": 9230,
+  "top": 178,
+  "bottom": 6970,
+  "note": "inner rule of the graduated left border; sheet trimmed at the top edge (an interior join); right edge at the sheet's own margin line; bottom above the latitude graduation and mile scale"
+ }
+}
