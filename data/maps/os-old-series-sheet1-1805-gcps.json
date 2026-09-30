@@ -1,0 +1,221 @@
+{
+ "sheet": "Ordnance Survey One-inch Old Series, Sheet 1 (Essex and the Thames estuary), published 18 April 1805 by Lt Col Mudge, Tower of London",
+ "scan": "reference/author-supplied-2026-09-25/os-old-series-sheet1-essex-1805.jpg (8758 x 6262 px, two engraved plates joined at about x=4450)",
+ "method": "Affine least squares, scan pixel to EPSG:3857, on parish-church crosses read from the scan against present-day church coordinates from OpenStreetMap (way centroids). Second-order terms were tested and rejected: leave-one-out error rose from 105 m to 477 m.",
+ "rms_ground_m": 82.7,
+ "max_residual_ground_m": 124,
+ "leave_one_out_rms_m": 105,
+ "ground_scale_m_per_px": 6.6,
+ "px_per_mile": 243.9,
+ "rotation_deg": -0.2,
+ "neat_line": {
+  "left": 96,
+  "right": 8658,
+  "top": 74,
+  "bottom_left": 5818,
+  "bottom_right": 5818,
+  "seam": 4450,
+  "note": "inside the graduated latitude/longitude borders; mile scale and imprint below 5818 are excluded"
+ },
+ "affine_px_to_3857": [
+  [
+   10.613216707797031,
+   -0.037120083026983774,
+   -9525.795909547329
+  ],
+  [
+   -0.0010010796857894935,
+   -10.503173794910253,
+   6758207.369629101
+  ]
+ ],
+ "gcps": [
+  {
+   "name": "West Ham, All Saints",
+   "px": [
+    991,
+    3949
+   ],
+   "lonlat": [
+    0.0087,
+    51.53644
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "East Ham, St Mary Magdalene",
+   "px": [
+    1524,
+    4186
+   ],
+   "lonlat": [
+    0.0588,
+    51.52226
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "Woolwich, St Mary Magdalene",
+   "px": [
+    1546,
+    4698
+   ],
+   "lonlat": [
+    0.05948,
+    51.49296
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "Charlton, St Luke",
+   "px": [
+    1300,
+    4893
+   ],
+   "lonlat": [
+    0.03576,
+    51.48181
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "Lee, old St Margaret",
+   "px": [
+    926,
+    5186
+   ],
+   "lonlat": [
+    0.00084,
+    51.46282
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "Eltham, St John",
+   "px": [
+    1462,
+    5388
+   ],
+   "lonlat": [
+    0.05169,
+    51.45121
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "Dagenham, SS Peter & Paul",
+   "px": [
+    2612,
+    3911
+   ],
+   "lonlat": [
+    0.16212,
+    51.53973
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "Chingford, All Saints (old)",
+   "px": [
+    730,
+    2476
+   ],
+   "lonlat": [
+    -0.01701,
+    51.6225
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "Walthamstow, St Mary",
+   "px": [
+    797,
+    3119
+   ],
+   "lonlat": [
+    -0.01182,
+    51.58506
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "Woodford, St Mary",
+   "px": [
+    1125,
+    2900
+   ],
+   "lonlat": [
+    0.02017,
+    51.59795
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "Stepney, St Dunstan",
+   "px": [
+    462,
+    4274
+   ],
+   "lonlat": [
+    -0.04166,
+    51.51686
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "Mountnessing, St Giles",
+   "px": [
+    4903,
+    2125
+   ],
+   "lonlat": [
+    0.38088,
+    51.6439
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "Fobbing, St Michael",
+   "px": [
+    5893,
+    4095
+   ],
+   "lonlat": [
+    0.47526,
+    51.52787
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "South Hanningfield, St Peter",
+   "px": [
+    6361,
+    1922
+   ],
+   "lonlat": [
+    0.5204,
+    51.65423
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  },
+  {
+   "name": "Leyton, St Mary",
+   "px": [
+    740,
+    3485
+   ],
+   "lonlat": [
+    -0.01505,
+    51.56378
+   ],
+   "source": "OpenStreetMap way centroid, 2026-09-29"
+  }
+ ],
+ "excluded": [
+  {
+   "name": "Greenwich",
+   "reason": "cross ambiguous between St Alfege and St Paul Deptford at this scale"
+  }
+ ],
+ "date": "2026-09-29"
+}

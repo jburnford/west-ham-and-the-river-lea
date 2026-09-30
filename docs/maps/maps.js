@@ -22,14 +22,19 @@ if (!window.matchMedia('(max-width: 820px)').matches) L.control.scale({ position
 L.control.attribution({ position: 'bottomright', prefix: false }).addAttribution(cfg.credit).addTo(map);
 
 function tileLayer(path, edition, pane) {
-  return L.tileLayer(`${tileBase}/${path}/{z}/{x}/{y}.png`, {
+  // `path` is relative to the NLS tile base unless the edition carries its own `url` template
+  // (used for layers hosted with the site, such as the georeferenced 1805 sheet).
+  const url = edition.url || `${tileBase}/${path}/{z}/{x}/{y}.png`;
+  const options = {
     pane, minZoom: 6, maxZoom: 20, maxNativeZoom: edition.maxNative, minNativeZoom: edition.minZoom,
     className: `edition edition-${edition.id}`, crossOrigin: false, updateWhenIdle: true, keepBuffer: 2
-  });
+  };
+  if (edition.bounds) options.bounds = L.latLngBounds([edition.bounds[1], edition.bounds[0]], [edition.bounds[3], edition.bounds[2]]);
+  return L.tileLayer(url, options);
 }
 // One entry per edition: a group of tile layers (county series) or a single one, addressed uniformly.
 function makeEdition(edition, pane) {
-  const paths = edition.paths || [edition.path];
+  const paths = edition.paths || [edition.path || edition.id];
   const layers = paths.map((p) => tileLayer(p, edition, pane));
   const group = L.layerGroup(layers);
   group.setOpacity = (o) => layers.forEach((l) => l.setOpacity(o));

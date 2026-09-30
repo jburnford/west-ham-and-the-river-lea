@@ -57,7 +57,7 @@
       "url": "https://mapseries-tilesets.s3.amazonaws.com/os/one-inch-old-series-all",
       "minzoom": 6,
       "maxzoom": 9,
-      "notes": "NLS serves this layer only to zoom 9 (overview resolution). Earliest OS coverage of West Ham."
+      "notes": "NLS serves this layer only to zoom 9 (overview resolution). Earliest OS coverage of West Ham. Superseded for the website by the author-supplied Sheet 1 scan, georeferenced in data/maps/os-old-series-sheet1-1805-gcps.json and tiled by scripts/georef_sheet1_1805.py to docs/maps/tiles/os-old-series-sheet1-1805 (zooms 6-14)."
     },
     {
       "id": "os-six-inch-essex-1st",

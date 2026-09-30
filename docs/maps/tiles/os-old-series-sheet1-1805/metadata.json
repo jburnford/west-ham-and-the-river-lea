@@ -1,0 +1,21 @@
+{
+  "name": "os-old-series-sheet1-1805",
+  "format": "webp",
+  "minzoom": 6,
+  "maxzoom": 14,
+  "bounds": [
+    -0.07835906979532178,
+    51.42652805402362,
+    0.7398586435628214,
+    51.763246325795386
+  ],
+  "tiles": 1370,
+  "source": "Ordnance Survey One-inch Old Series, Sheet 1 (Essex and the Thames), published 18 April 1805 by Lt Col Mudge, Tower of London; author-supplied scan",
+  "georeferencing": {
+    "method": "affine least squares on parish-church crosses vs OpenStreetMap church coordinates",
+    "rms_ground_m": 82.7,
+    "control_points": 15,
+    "gcps_file": "data/maps/os-old-series-sheet1-1805-gcps.json"
+  },
+  "attribution": "OS Old Series Sheet 1, 1805 (out of copyright); georeferenced 2026 for West Ham and the River Lea"
+}

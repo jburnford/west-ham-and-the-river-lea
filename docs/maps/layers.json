@@ -4,57 +4,273 @@
     "nls": "https://mapseries-tilesets.s3.amazonaws.com",
     "local": "./tiles"
   },
-  "credit": "Historic maps: <a href=\"https://maps.nls.uk/\">Reproduced with the permission of the National Library of Scotland</a>",
-  "home": { "center": [51.5345, 0.0035], "zoom": 15 },
+  "credit": "Historic maps: <a href=\"https://maps.nls.uk/\">Reproduced with the permission of the National Library of Scotland</a> · 1805 sheet: British Library copy, georeferenced for this site",
+  "home": {
+    "center": [
+      51.5345,
+      0.0035
+    ],
+    "zoom": 15
+  },
   "layers": [
-    { "id": "skeleton-1848", "year": 1849, "label": "1848–51", "title": "Skeleton survey, 12 inches to the mile",
-      "path": "os/town-england/London-5280", "local": "os-london-skeleton-5280", "minZoom": 10, "maxNative": 18,
-      "note": "Roads, watercourses and bench marks only, surveyed for the Metropolitan Commission of Sewers before the railways and factories. Identification and date provisional." },
-    { "id": "five-foot-1860s", "year": 1867, "label": "c.1862–75", "title": "Five feet to the mile, first edition",
-      "path": "os/town-england/London-1870s", "local": "os-london-town-plan-1860s", "minZoom": 10, "maxNative": 19,
-      "note": "The most detailed early survey. Coverage is partial: sheets east of Stratford and around the docks are missing from the scanned set. Around Abbey Mills the sewer is drawn but the pumping station is not yet built." },
-    { "id": "six-inch-1st", "year": 1870, "label": "1863–76", "title": "Six-inch, first edition",
-      "paths": ["os/six-inch-essex", "os/six-inch-middlesex", "os/six-inch-kent"], "locals": ["os-six-inch-essex-1st", "os-six-inch-middlesex-1st", "os-six-inch-kent-1st"], "minZoom": 10, "maxNative": 17,
-      "note": "County sheets for Essex, Middlesex and Kent joined at the Lea and the Thames. West Ham Abbey print works, chemical and tar works appear; much of the marsh is still open." },
-    { "id": "six-inch-2nd", "year": 1896, "label": "1888–1913", "title": "Six-inch, second edition",
-      "path": "os/6inchsecond", "local": "os-six-inch-2nd", "minZoom": 10, "maxNative": 17,
-      "note": "A seamless mosaic; individual sheets carry different revision dates within the range." },
-    { "id": "five-foot-1893", "year": 1894, "label": "1893–96", "title": "Five feet to the mile, revision of 1891–95",
-      "path": "london_1890s", "local": "os-london-five-foot-1893", "minZoom": 10, "maxNative": 18, "default": true,
-      "note": "The book's central decade at the largest scale: every house, yard and gasholder. The same series gives the panorama its ground plan." },
-    { "id": "25-inch-london", "year": 1900, "label": "1890s–1910s", "title": "25-inch, London sheets",
-      "path": "25_inch/london", "local": "os-25-inch-london", "minZoom": 10, "maxNative": 18,
-      "note": "Later revisions of the 1:2,500 series. A gap over Poplar, Bow Creek, Canning Town and Silvertown is real: those sheets are not in the scanned set, so use the five-foot plan there." },
-    { "id": "one-inch-1897", "year": 1898, "label": "1897–1909", "title": "One-inch, Revised New Series, coloured",
-      "path": "os/1inch_revised", "local": "os-one-inch-revised-coloured", "minZoom": 9, "maxNative": 16,
-      "note": "The regional view: West Ham within the industrial fringe of London." },
-    { "id": "bartholomew-1900", "year": 1902, "label": "1897–1907", "title": "Bartholomew half-inch",
-      "path": "bartholomew_great_britain", "local": "bartholomew-half-inch-gb", "minZoom": 8, "maxNative": 15,
-      "note": "A commercial map with layer colouring for height; the low marshland reads clearly." },
-    { "id": "one-inch-third", "year": 1908, "label": "1903–13", "title": "One-inch, Third Edition, coloured",
-      "path": "1inch_3rd_col_eng", "local": "os-one-inch-third-coloured", "minZoom": 9, "maxNative": 17,
-      "note": "The last pre-war one-inch revision." },
-    { "id": "popular-1920", "year": 1920, "label": "1919–26", "title": "One-inch, Popular Edition",
-      "path": "os/popular-england", "local": "os-popular-england", "minZoom": 9, "maxNative": 15,
-      "note": "Just after the book's period; the bookend for comparison." }
+    {
+      "id": "old-series-1805",
+      "year": 1805,
+      "label": "1805",
+      "title": "One-inch Old Series, Sheet 1",
+      "url": "./tiles/os-old-series-sheet1-1805/{z}/{x}/{y}.webp",
+      "minZoom": 6,
+      "maxNative": 14,
+      "bounds": [
+        -0.0784,
+        51.4265,
+        0.7399,
+        51.7632
+      ],
+      "note": "The first Ordnance Survey map of the district, engraved at one inch to the mile and published in April 1805, before the docks, the railways and almost all the factories. Georeferenced for this site from a scan of the British Library copy by fitting fifteen parish churches; positions are good to about 80 m, which is close to the survey's own accuracy at this scale."
+    },
+    {
+      "id": "skeleton-1848",
+      "year": 1849,
+      "label": "1848–51",
+      "title": "Skeleton survey, 12 inches to the mile",
+      "path": "os/town-england/London-5280",
+      "local": "os-london-skeleton-5280",
+      "minZoom": 10,
+      "maxNative": 18,
+      "note": "Roads, watercourses and bench marks only, surveyed for the Metropolitan Commission of Sewers before the railways and factories. Identification and date provisional."
+    },
+    {
+      "id": "five-foot-1860s",
+      "year": 1867,
+      "label": "c.1862–75",
+      "title": "Five feet to the mile, first edition",
+      "path": "os/town-england/London-1870s",
+      "local": "os-london-town-plan-1860s",
+      "minZoom": 10,
+      "maxNative": 19,
+      "note": "The most detailed early survey. Coverage is partial: sheets east of Stratford and around the docks are missing from the scanned set. Around Abbey Mills the sewer is drawn but the pumping station is not yet built."
+    },
+    {
+      "id": "six-inch-1st",
+      "year": 1870,
+      "label": "1863–76",
+      "title": "Six-inch, first edition",
+      "paths": [
+        "os/six-inch-essex",
+        "os/six-inch-middlesex",
+        "os/six-inch-kent"
+      ],
+      "locals": [
+        "os-six-inch-essex-1st",
+        "os-six-inch-middlesex-1st",
+        "os-six-inch-kent-1st"
+      ],
+      "minZoom": 10,
+      "maxNative": 17,
+      "note": "County sheets for Essex, Middlesex and Kent joined at the Lea and the Thames. West Ham Abbey print works, chemical and tar works appear; much of the marsh is still open."
+    },
+    {
+      "id": "six-inch-2nd",
+      "year": 1896,
+      "label": "1888–1913",
+      "title": "Six-inch, second edition",
+      "path": "os/6inchsecond",
+      "local": "os-six-inch-2nd",
+      "minZoom": 10,
+      "maxNative": 17,
+      "note": "A seamless mosaic; individual sheets carry different revision dates within the range."
+    },
+    {
+      "id": "five-foot-1893",
+      "year": 1894,
+      "label": "1893–96",
+      "title": "Five feet to the mile, revision of 1891–95",
+      "path": "london_1890s",
+      "local": "os-london-five-foot-1893",
+      "minZoom": 10,
+      "maxNative": 18,
+      "default": true,
+      "note": "The book's central decade at the largest scale: every house, yard and gasholder. The same series gives the panorama its ground plan."
+    },
+    {
+      "id": "25-inch-london",
+      "year": 1900,
+      "label": "1890s–1910s",
+      "title": "25-inch, London sheets",
+      "path": "25_inch/london",
+      "local": "os-25-inch-london",
+      "minZoom": 10,
+      "maxNative": 18,
+      "note": "Later revisions of the 1:2,500 series. A gap over Poplar, Bow Creek, Canning Town and Silvertown is real: those sheets are not in the scanned set, so use the five-foot plan there."
+    },
+    {
+      "id": "one-inch-1897",
+      "year": 1898,
+      "label": "1897–1909",
+      "title": "One-inch, Revised New Series, coloured",
+      "path": "os/1inch_revised",
+      "local": "os-one-inch-revised-coloured",
+      "minZoom": 9,
+      "maxNative": 16,
+      "note": "The regional view: West Ham within the industrial fringe of London."
+    },
+    {
+      "id": "bartholomew-1900",
+      "year": 1902,
+      "label": "1897–1907",
+      "title": "Bartholomew half-inch",
+      "path": "bartholomew_great_britain",
+      "local": "bartholomew-half-inch-gb",
+      "minZoom": 8,
+      "maxNative": 15,
+      "note": "A commercial map with layer colouring for height; the low marshland reads clearly."
+    },
+    {
+      "id": "one-inch-third",
+      "year": 1908,
+      "label": "1903–13",
+      "title": "One-inch, Third Edition, coloured",
+      "path": "1inch_3rd_col_eng",
+      "local": "os-one-inch-third-coloured",
+      "minZoom": 9,
+      "maxNative": 17,
+      "note": "The last pre-war one-inch revision."
+    },
+    {
+      "id": "popular-1920",
+      "year": 1920,
+      "label": "1919–26",
+      "title": "One-inch, Popular Edition",
+      "path": "os/popular-england",
+      "local": "os-popular-england",
+      "minZoom": 9,
+      "maxNative": 15,
+      "note": "Just after the book's period; the bookend for comparison."
+    }
   ],
   "vectors": [
-    { "id": "industry-1865", "title": "Industrial sites, 1865–75", "file": "data/Industry_1865-75.geojson", "kind": "industry", "credit": "Jim Clifford with Steven Langlois and Anne Riitta Janhunen" },
-    { "id": "industry-1893", "title": "Industrial sites, 1893–95", "file": "data/Industry_1893-95.geojson", "kind": "industry", "default": true },
-    { "id": "water-1870", "title": "Water, first-series OS (1860s–70s)", "file": "data/Water_First_Series.geojson", "kind": "water" },
-    { "id": "water-1895", "title": "Water, 1890s revision", "file": "data/Water_1895.geojson", "kind": "water" },
-    { "id": "docks", "title": "Docks", "file": "data/Docks.geojson", "kind": "dock" },
-    { "id": "rail-1870", "title": "Railways, 1870", "file": "data/Rail_1870.geojson", "kind": "rail", "credit": "OpenHistoricalMap contributors" },
-    { "id": "rail-1895", "title": "Railways, 1895", "file": "data/Rail_1895.geojson", "kind": "rail" },
-    { "id": "westham-1911", "title": "County Borough of West Ham, 1911", "file": "data/WestHam_1911.geojson", "kind": "boundary", "default": true },
-    { "id": "lcc", "title": "London County Council boundary", "file": "data/LCC_Border.geojson", "kind": "lcc" }
+    {
+      "id": "industry-1865",
+      "title": "Industrial sites, 1865–75",
+      "file": "data/Industry_1865-75.geojson",
+      "kind": "industry",
+      "credit": "Jim Clifford with Steven Langlois and Anne Riitta Janhunen"
+    },
+    {
+      "id": "industry-1893",
+      "title": "Industrial sites, 1893–95",
+      "file": "data/Industry_1893-95.geojson",
+      "kind": "industry",
+      "default": true
+    },
+    {
+      "id": "water-1870",
+      "title": "Water, first-series OS (1860s–70s)",
+      "file": "data/Water_First_Series.geojson",
+      "kind": "water"
+    },
+    {
+      "id": "water-1895",
+      "title": "Water, 1890s revision",
+      "file": "data/Water_1895.geojson",
+      "kind": "water"
+    },
+    {
+      "id": "docks",
+      "title": "Docks",
+      "file": "data/Docks.geojson",
+      "kind": "dock"
+    },
+    {
+      "id": "rail-1870",
+      "title": "Railways, 1870",
+      "file": "data/Rail_1870.geojson",
+      "kind": "rail",
+      "credit": "OpenHistoricalMap contributors"
+    },
+    {
+      "id": "rail-1895",
+      "title": "Railways, 1895",
+      "file": "data/Rail_1895.geojson",
+      "kind": "rail"
+    },
+    {
+      "id": "westham-1911",
+      "title": "County Borough of West Ham, 1911",
+      "file": "data/WestHam_1911.geojson",
+      "kind": "boundary",
+      "default": true
+    },
+    {
+      "id": "lcc",
+      "title": "London County Council boundary",
+      "file": "data/LCC_Border.geojson",
+      "kind": "lcc"
+    }
   ],
   "places": [
-    { "id": "abbey-mills", "title": "Abbey Mills and the Channelsea", "center": [51.5318, -0.0037], "zoom": 17, "text": "The sewer crossing where the panorama stands. Compare the empty marsh of 1848 with the works of 1893.", "link": "../", "linkText": "Stand on the crossing" },
-    { "id": "stratford", "title": "Stratford", "center": [51.5417, -0.0028], "zoom": 16, "text": "Broadway, the station and the railway works that made Stratford an industrial town." },
-    { "id": "three-mills", "title": "Three Mills", "center": [51.5257, -0.0061], "zoom": 17, "text": "Tide mills on the Lea, older than any factory here." },
-    { "id": "canning-town", "title": "Canning Town", "center": [51.5145, 0.0080], "zoom": 16, "text": "Housing built on the marsh below high-water mark, beside the works it served." },
-    { "id": "silvertown", "title": "Silvertown", "center": [51.5005, 0.0350], "zoom": 16, "text": "Sugar, rubber, chemicals and the open drain in Wilton Street." },
-    { "id": "royal-docks", "title": "The Royal Docks", "center": [51.5075, 0.0450], "zoom": 15, "text": "Victoria Dock of 1855 and the Royal Albert of 1880, cut through the Plaistow marshes." }
+    {
+      "id": "abbey-mills",
+      "title": "Abbey Mills and the Channelsea",
+      "center": [
+        51.5318,
+        -0.0037
+      ],
+      "zoom": 17,
+      "text": "The sewer crossing where the panorama stands. Compare the empty marsh of 1848 with the works of 1893.",
+      "link": "../",
+      "linkText": "Stand on the crossing"
+    },
+    {
+      "id": "stratford",
+      "title": "Stratford",
+      "center": [
+        51.5417,
+        -0.0028
+      ],
+      "zoom": 16,
+      "text": "Broadway, the station and the railway works that made Stratford an industrial town."
+    },
+    {
+      "id": "three-mills",
+      "title": "Three Mills",
+      "center": [
+        51.5257,
+        -0.0061
+      ],
+      "zoom": 17,
+      "text": "Tide mills on the Lea, older than any factory here."
+    },
+    {
+      "id": "canning-town",
+      "title": "Canning Town",
+      "center": [
+        51.5145,
+        0.008
+      ],
+      "zoom": 16,
+      "text": "Housing built on the marsh below high-water mark, beside the works it served."
+    },
+    {
+      "id": "silvertown",
+      "title": "Silvertown",
+      "center": [
+        51.5005,
+        0.035
+      ],
+      "zoom": 16,
+      "text": "Sugar, rubber, chemicals and the open drain in Wilton Street."
+    },
+    {
+      "id": "royal-docks",
+      "title": "The Royal Docks",
+      "center": [
+        51.5075,
+        0.045
+      ],
+      "zoom": 15,
+      "text": "Victoria Dock of 1855 and the Royal Albert of 1880, cut through the Plaistow marshes."
+    }
   ]
 }
