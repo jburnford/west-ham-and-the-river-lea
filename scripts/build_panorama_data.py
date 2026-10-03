@@ -6,6 +6,7 @@ from pathlib import Path
 
 from pyproj import Transformer
 from shapely.geometry import shape, box, Polygon, Point, MultiPoint, LineString
+from shapely.geometry.polygon import orient
 from shapely.ops import transform, triangulate, unary_union
 from shapely.affinity import rotate
 from housing_frontages import split_at_streets
@@ -13,6 +14,103 @@ from housing_frontages import split_at_streets
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = (538900, 183209)  # Historic England's approximate bridge grid reference
 project = Transformer.from_crs(4326, 27700, always_xy=True).transform
+SEWER_WATER_SETBACK = 1.5  # metres between drawn water and the earth bank; the end wall stands in it
+SEWER_BANK_LATTICE = (2, 0)  # x, z phase (mod 12 m) of the bank sample grid
+
+
+def drawn_water(result):
+    """Water surfaces as docs/app.js and docs/river-system.js draw them.
+
+    The tidal shelves, retained channels, ditches, pools and regional water are
+    derived later (build_river_network.py, build_river_system.py) from this
+    plan's rivers, not from the sewer, so the previous build's files are read
+    here. Rerun this script after those builders change the water. Without
+    them, fall back to the mapped rivers widened by the 5 m tidal shelf.
+    """
+    out = ROOT/'docs/data'
+    rings = lambda polygons: [Polygon(p[0], p[1:]).buffer(0) for p in polygons]
+    rivers = [p for f in result['rivers'] for p in f['polygons']]
+    try:
+        network = json.loads((out/'river-network.json').read_text())
+        system = json.loads((out/'river-system-1900.json').read_text())
+        west = json.loads((out/'factory-buildings.json').read_text())['westContext']['rivers']
+        terrain = json.loads((out/'river-terrain.json').read_text())
+    except FileNotFoundError:
+        return unary_union(rings(rivers)).buffer(5)
+    retained = set(network['retainedWaterChannelIds']) | set(network.get('isolatedWaterChannelIds') or [])
+    shapes = rings(network['tide']['polygons'])
+    shapes += rings([p for c in network['reviewedConnections']['connections'] if not c['tidalDisplay'] for p in c['polygons']])
+    shapes += rings([p for f in result['rivers']+west if f['id'] in retained for p in f['polygons']])
+    shapes += rings([p for f in network['marshDitches']['features'] for p in f['renderPolygons']])
+    shapes += rings(system['waterPolygons'])
+    shapes += [Polygon([(x+rx*math.cos(i*math.pi/16), z+rz*math.sin(i*math.pi/16)) for i in range(32)])
+               for x, z, rx, rz in terrain.get('pools', [])]
+    return unary_union(shapes)
+
+
+def densify_bank_ends(piece, line, obstacles, step=2):
+    """Add outline vertices along obstacle-facing ends, every 2 m and at the
+    crest edge, so the triangulated bank keeps its full profile up to the end
+    wall instead of sagging to the toe height between distant corners."""
+    edges = [o.boundary.buffer(.02) for o in obstacles.values()]
+    crest = line.buffer(7.5, join_style=2).boundary
+
+    def ring(coords):
+        out = []
+        for a, b in zip(coords[:-1], coords[1:]):
+            out.append(a)
+            segment = LineString([a, b])
+            if not any(e.covers(segment) for e in edges):
+                continue
+            cut = segment.intersection(crest)
+            stops = {segment.project(Point(p)) for g in getattr(cut, 'geoms', [cut]) if not g.is_empty for p in g.coords}
+            n = int(segment.length//step)
+            stops.update(segment.length*i/(n+1) for i in range(1, n+1))
+            for t in sorted(stops):
+                if .2 < t < segment.length-.2:
+                    p = segment.interpolate(t)
+                    out.append((p.x, p.y))
+        out.append(coords[-1])
+        return out
+    return Polygon(ring(list(piece.exterior.coords)), [ring(list(h.coords)) for h in piece.interiors])
+
+
+def sewer_bank_ends(pieces, line, obstacles, height):
+    """Runs of bank outline that face an obstacle, for the brick end walls.
+
+    Each run follows the outline with positive signed area in (x, z), so for a
+    step (dx, dz) the obstacle lies towards (dz, -dx). Points carry the bank
+    height in the same [x, y, z] convention as the bank triangles; chainage is
+    where the run crosses the sewer centreline.
+    """
+    ends = []
+    for kind, obstacle in obstacles.items():
+        edge = obstacle.boundary.buffer(.02)
+        for piece in pieces:
+            for ring in [piece.exterior, *piece.interiors]:
+                coords = list(ring.coords)[:-1]
+                n = len(coords)
+                on = [edge.covers(LineString([coords[i], coords[(i+1) % n]])) for i in range(n)]
+                if all(on) or not any(on):
+                    continue
+                start = next(i for i in range(n) if on[i] and not on[i-1])
+                run = []
+                for k in range(n+1):
+                    i = (start+k) % n
+                    if on[i] and k < n:
+                        run.append(i)
+                        continue
+                    if run:
+                        points = [coords[j] for j in run]+[coords[(run[-1]+1) % n]]
+                        path = LineString(points)
+                        if path.length > 1:
+                            # Chainage where the end crosses the sewer centreline.
+                            cross = path.intersection(line)
+                            at = cross if cross.geom_type == 'Point' else path.interpolate(.5, normalized=True)
+                            ends.append({'kind': kind, 'chainage': round(line.project(at), 2),
+                                         'points': [[round(x, 2), height(x, z), round(z, 2)] for x, z in points]})
+                        run = []
+    return sorted(ends, key=lambda e: e['chainage'])
 
 
 def neighbourhood():
@@ -239,25 +337,41 @@ def build():
     for f in result['factoryStudies']+context['mappedFactories']:
         if f['siteId'] in facades:f['facade']=dict(facades[f['siteId']],evidence='Facade treatment interpreted from the period photographs; not a documented elevation.')
     line=LineString(context['sewer']['route'])
-    # Earth banks stop at waterways and the railway corridor; the elevated crest spans them.
+    # Earth banks stop at the water the browser actually draws and at the railway
+    # corridor; the elevated crest spans them. Bank ends get brick end walls
+    # (docs/sewer-crossing.js), so no open wedge or bare ground lies under the deck.
     water=unary_union([Polygon(p[0],p[1:]) for f in result['rivers'] for p in f['polygons']])
     rail=unary_union([LineString(r['route']).buffer(6) for r in context['railways']])
-    bridge_opening=line.intersection(Point(0,0).buffer(55)).buffer(24)
-    bank=line.buffer(22,join_style=2).difference(water.buffer(2).union(rail).union(bridge_opening))
+    drawn=drawn_water(result)
+    # The embankment fills small marsh pools rather than bridging them.
+    drawn=unary_union([g for g in getattr(drawn,'geoms',[drawn]) if g.area>=50])
+    obstacles={'water':drawn.buffer(SEWER_WATER_SETBACK),'railway':rail}
+    bank=line.buffer(22,join_style=2).difference(unary_union(list(obstacles.values())))
     crest=line.buffer(7.5,join_style=2)
     context['sewer']['crest']=[[[[round(x,2),round(z,2)] for x,z in crest.exterior.coords]]]
-    pieces=[bank] if bank.geom_type=='Polygon' else list(bank.geoms)
+    # Drop slivers left between water bodies; they cannot carry an embankment.
+    pieces=[densify_bank_ends(p,line,obstacles) for p in getattr(bank,'geoms',[bank]) if p.area>=20]
+    bank=unary_union(pieces)
+    bank_height=lambda x,z:round(max(0,min(7.25,(22-line.distance(Point(x,z)))*7.25/14.5)),2)
     context['sewer']['banks']=[]
     for piece in pieces:
         samples=list(piece.exterior.coords)
         for hole in piece.interiors:samples.extend(hole.coords)
         minx,minz,maxx,maxz=piece.bounds
-        for x in range(int(minx),int(maxx)+1,12):
-            for z in range(int(minz),int(maxz)+1,12):
+        # One fixed 12 m lattice for every piece, so moving a bank end only
+        # re-triangulates near that end. Its phase keeps the High Street
+        # stretch on the lattice it was first triangulated on.
+        x0,z0=int(minx)-(int(minx)-SEWER_BANK_LATTICE[0])%12,int(minz)-(int(minz)-SEWER_BANK_LATTICE[1])%12
+        for x in range(x0,int(maxx)+1,12):
+            for z in range(z0,int(maxz)+1,12):
                 if piece.contains(Point(x,z)):samples.append((x,z))
         for tri in triangulate(MultiPoint(samples)):
             if piece.covers(tri):
-                context['sewer']['banks'].append([[round(x,2),round(max(0,min(7.25,(22-line.distance(Point(x,z)))*7.25/14.5)),2),round(z,2)] for x,z in list(tri.exterior.coords)[:3][::-1]])
+                context['sewer']['banks'].append([[round(x,2),bank_height(x,z),round(z,2)] for x,z in list(tri.exterior.coords)[:3][::-1]])
+    context['sewer']['bankEnds']=sewer_bank_ends([orient(p) for p in pieces],line,obstacles,bank_height)
+    context['sewer']['bankEndsEvidence']=('Bank ends follow the drawn water edge, set back '+str(SEWER_WATER_SETBACK)+' m, and the 6 m railway corridor. '
+        'The position of each end is derived from the mapped channel and railway; the brick end wall, its 0.8 m thickness and its '
+        'footing are interpreted, not a surveyed abutment.')
     garden=Polygon(context['garden']['footprint']).difference(water.buffer(8)).difference(bank)
     access=unary_union([LineString(r['route']).buffer(r['width']/2+1) for r in context['garden']['accessCorridors']])
     garden=garden.difference(access)

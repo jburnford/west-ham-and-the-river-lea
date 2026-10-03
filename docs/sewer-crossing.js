@@ -108,8 +108,9 @@ export function sewerCrossing({ THREE, scene, sewer, crossing, level, materials 
     }
   }
   // Foundations follow local ground; their tops follow the sewer, independently.
-  // Bank locations checked against the mapped river; no new in-channel pier.
-  for (const d of [-spec.halfLength + 1, spec.halfLength - 1]) {
+  // Each abutment stands just proud of the brick end wall where the earth bank
+  // stops at the drawn Channelsea; no new in-channel pier.
+  for (const d of abutmentStations(sewer, origin, spec)) {
     const p = point(d),
       a = point(d - 0.1),
       b = point(d + 0.1);
@@ -134,6 +135,7 @@ export function sewerCrossing({ THREE, scene, sewer, crossing, level, materials 
     );
     support.rotation.y = -angle;
   }
+  const endWalls = bankEndWalls({ THREE, scene, sewer, cover, level, material: materials.brick });
   group.updateMatrixWorld(true);
   for (const kind of ['enclosure', 'abutment']) {
     const extent = new THREE.Box3();
@@ -146,5 +148,93 @@ export function sewerCrossing({ THREE, scene, sewer, crossing, level, materials 
     });
     bounds[kind] = { count, min: extent.min.toArray(), max: extent.max.toArray() };
   }
-  return { status: spec.status, floodReady: false, deckHeight: cover([0, 0]), bounds };
+  return { status: spec.status, floodReady: false, deckHeight: cover([0, 0]), bounds, endWalls };
+}
+
+// End wall form, not a surveyed abutment: thickness, coping and footing are interpretation.
+export const endWallAssumptions = Object.freeze({ thickness: 0.8, coping: 0.1, foundationEmbedment: 0.6 });
+
+// Abutment centres relative to the Channelsea anchor. The bank end chainages
+// come from the builder (neighbourhood.sewer.bankEnds); without them, keep the
+// earlier positions one metre inside the enclosure ends.
+function abutmentStations(sewer, origin, spec) {
+  const fallback = [-spec.halfLength + 1, spec.halfLength - 1];
+  const ends = (sewer.bankEnds || []).filter((e) => e.kind === 'water').map((e) => e.chainage - origin);
+  const west = Math.max(...ends.filter((d) => d < 0 && d > -spec.halfLength));
+  const east = Math.min(...ends.filter((d) => d > 0 && d < spec.halfLength));
+  if (!Number.isFinite(west) || !Number.isFinite(east)) return fallback;
+  const face = endWallAssumptions.thickness + 0.2;
+  return [west + face - spec.abutmentLength / 2, east - face + spec.abutmentLength / 2];
+}
+
+// Brick end walls where the earth bank stops at drawn water or the railway
+// corridor, so the bank does not end in an open wedge under the deck. Each run
+// keeps the bank on its left: for a step (dx, dz) the wall faces (dz, -dx).
+// Wall tops follow the bank surface exactly as app.js lifts the bank vertices.
+function bankEndWalls({ THREE, scene, sewer, cover, level, material }) {
+  const spec = endWallAssumptions;
+  const ends = sewer.bankEnds || [];
+  const positions = [];
+  const push = (a, b, c, normal) => {
+    const u = [b[0] - a[0], b[1] - a[1], b[2] - a[2]],
+      v = [c[0] - a[0], c[1] - a[1], c[2] - a[2]];
+    const n = [u[1] * v[2] - u[2] * v[1], u[2] * v[0] - u[0] * v[2], u[0] * v[1] - u[1] * v[0]];
+    const ordered = n[0] * normal[0] + n[1] * normal[1] + n[2] * normal[2] >= 0 ? [a, b, c] : [a, c, b];
+    for (const p of ordered) positions.push(...p);
+  };
+  const quad = (a, b, c, d, normal) => {
+    push(a, b, c, normal);
+    push(a, c, d, normal);
+  };
+  let walls = 0;
+  for (const end of ends) {
+    const points = end.points;
+    if (points.length < 2) continue;
+    const outward = points.map((_, i) => {
+      const a = points[Math.max(0, i - 1)],
+        b = points[Math.min(points.length - 1, i + 1)];
+      const dx = b[0] - a[0],
+        dz = b[2] - a[2],
+        n = Math.hypot(dx, dz) || 1;
+      return [dz / n, -dx / n];
+    });
+    const sections = points.map(([x, y, z], i) => {
+      const fx = x + outward[i][0] * spec.thickness,
+        fz = z + outward[i][1] * spec.thickness;
+      const ground = level(x, z),
+        top = (y * cover([x, z])) / sewer.height + (1 - y / sewer.height) * ground + spec.coping;
+      const bottom = Math.min(ground, level(fx, fz)) - spec.foundationEmbedment;
+      return {
+        backTop: [x, top, z],
+        backBottom: [x, bottom, z],
+        frontTop: [fx, top, fz],
+        frontBottom: [fx, bottom, fz],
+        out: [outward[i][0], 0, outward[i][1]],
+      };
+    });
+    for (let i = 1; i < sections.length; i++) {
+      const a = sections[i - 1],
+        b = sections[i];
+      const out = [a.out[0] + b.out[0], 0, a.out[2] + b.out[2]];
+      quad(a.frontBottom, b.frontBottom, b.frontTop, a.frontTop, out);
+      quad(a.backBottom, b.backBottom, b.backTop, a.backTop, [-out[0], 0, -out[2]]);
+      quad(a.backTop, b.backTop, b.frontTop, a.frontTop, [0, 1, 0]);
+    }
+    for (const [s, sign] of [
+      [sections[0], -1],
+      [sections[sections.length - 1], 1],
+    ]) {
+      const along = [-s.out[2] * sign, 0, s.out[0] * sign];
+      quad(s.backBottom, s.frontBottom, s.frontTop, s.backTop, along);
+    }
+    walls++;
+  }
+  if (!walls) return { count: 0 };
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+  geometry.computeVertexNormals();
+  const mesh = new THREE.Mesh(geometry, material);
+  mesh.name = 'bank-end-wall';
+  scene.add(mesh);
+  return { count: walls, kinds: [...new Set(ends.map((e) => e.kind))].sort() };
 }
