@@ -136,6 +136,7 @@ export function sewerCrossing({ THREE, scene, sewer, crossing, level, materials 
     support.rotation.y = -angle;
   }
   const endWalls = bankEndWalls({ THREE, scene, sewer, cover, level, material: materials.brick });
+  const roadArches = sewerRoadArches({ THREE, scene, sewer, cover, level, material: materials.brick });
   group.updateMatrixWorld(true);
   for (const kind of ['enclosure', 'abutment']) {
     const extent = new THREE.Box3();
@@ -148,7 +149,7 @@ export function sewerCrossing({ THREE, scene, sewer, crossing, level, materials 
     });
     bounds[kind] = { count, min: extent.min.toArray(), max: extent.max.toArray() };
   }
-  return { status: spec.status, floodReady: false, deckHeight: cover([0, 0]), bounds, endWalls };
+  return { status: spec.status, floodReady: false, deckHeight: cover([0, 0]), bounds, endWalls, roadArches };
 }
 
 // End wall form, not a surveyed abutment: thickness, coping and footing are interpretation.
@@ -167,13 +168,8 @@ function abutmentStations(sewer, origin, spec) {
   return [west + face - spec.abutmentLength / 2, east - face + spec.abutmentLength / 2];
 }
 
-// Brick end walls where the earth bank stops at drawn water or the railway
-// corridor, so the bank does not end in an open wedge under the deck. Each run
-// keeps the bank on its left: for a step (dx, dz) the wall faces (dz, -dx).
-// Wall tops follow the bank surface exactly as app.js lifts the bank vertices.
-function bankEndWalls({ THREE, scene, sewer, cover, level, material }) {
-  const spec = endWallAssumptions;
-  const ends = sewer.bankEnds || [];
+// Triangle soup whose faces are wound to face a hint direction.
+function faceSink() {
   const positions = [];
   const push = (a, b, c, normal) => {
     const u = [b[0] - a[0], b[1] - a[1], b[2] - a[2]],
@@ -186,6 +182,17 @@ function bankEndWalls({ THREE, scene, sewer, cover, level, material }) {
     push(a, b, c, normal);
     push(a, c, d, normal);
   };
+  return { positions, push, quad };
+}
+
+// Brick end walls where the earth bank stops at drawn water, the railway
+// corridor or a street, so the bank does not end in an open wedge. Each run
+// keeps the bank on its left: for a step (dx, dz) the wall faces (dz, -dx).
+// Wall tops follow the bank surface exactly as app.js lifts the bank vertices.
+function bankEndWalls({ THREE, scene, sewer, cover, level, material }) {
+  const spec = endWallAssumptions;
+  const ends = sewer.bankEnds || [];
+  const { positions, quad } = faceSink();
   let walls = 0;
   for (const end of ends) {
     const points = end.points;
@@ -237,4 +244,156 @@ function bankEndWalls({ THREE, scene, sewer, cover, level, material }) {
   mesh.name = 'bank-end-wall';
   scene.add(mesh);
   return { count: walls, kinds: [...new Set(ends.map((e) => e.kind))].sort() };
+}
+
+// Street arch under the deck, not a documented structure: the segmental form,
+// the 3 m springing above the road, the ring depth and the skew are interpretation.
+export const roadArchAssumptions = Object.freeze({
+  springingAboveRoad: 3,
+  crownBelowDeck: 0.75,
+  minimumRise: 0.8,
+  ringDepth: 0.56,
+  ringProjection: 0.1,
+  wallEmbedment: 0.4,
+});
+
+// Where a street passes under the sewer (bankEnds of kind 'road' with a
+// roadAxis), carry the deck across the opening on a brick skew arch. It springs
+// from the front faces of the two bank end walls, its portals lie along the
+// deck edges (parallel to the sewer) and its top is hidden in the deck slab.
+function sewerRoadArches({ THREE, scene, sewer, cover, level, material }) {
+  const spec = roadArchAssumptions,
+    wall = endWallAssumptions.thickness;
+  const openings = new Map();
+  for (const end of sewer.bankEnds || []) {
+    if (end.kind !== 'road' || !end.roadAxis) continue;
+    const key = `${end.road}|${end.roadAxis.flat().join(',')}`;
+    if (!openings.has(key)) openings.set(key, { ...end, runs: [] });
+    openings.get(key).runs.push(end.points);
+  }
+  const { positions, push, quad } = faceSink();
+  const deckSlab = (x, z) => cover([x, z]) - 0.5; // underside of the 0.48 m deck slab in app.js
+  const arches = [];
+  for (const opening of openings.values()) {
+    const [A, B] = opening.roadAxis;
+    const C = [(A[0] + B[0]) / 2, (A[1] + B[1]) / 2],
+      L = Math.hypot(B[0] - A[0], B[1] - A[1]);
+    const u = [(B[0] - A[0]) / L, (B[1] - A[1]) / L],
+      n = [-u[1], u[0]];
+    // Sewer direction on the route segment nearest the crossing.
+    let s = null,
+      best = Infinity;
+    for (let i = 1; i < sewer.route.length; i++) {
+      const a = sewer.route[i - 1],
+        b = sewer.route[i],
+        dx = b[0] - a[0],
+        dz = b[1] - a[1],
+        len = Math.hypot(dx, dz);
+      const t = Math.min(1, Math.max(0, ((C[0] - a[0]) * dx + (C[1] - a[1]) * dz) / (len * len)));
+      const d = Math.hypot(C[0] - a[0] - t * dx, C[1] - a[1] - t * dz);
+      if (d < best) [best, s] = [d, [dx / len, dz / len]];
+    }
+    const su = s[0] * u[0] + s[1] * u[1],
+      sn = s[0] * n[0] + s[1] * n[1];
+    if (Math.abs(sn) < 0.3) continue; // street nearly parallel to the sewer: no arch
+    const local = ([x, z]) => [(x - C[0]) * u[0] + (z - C[1]) * u[1], (x - C[0]) * n[0] + (z - C[1]) * n[1]];
+    // Wall front faces: the bank end runs beside the deck, less the wall thickness.
+    const faces = { [-1]: [], [1]: [] };
+    for (const run of opening.runs)
+      for (const [x, , z] of run) {
+        const [a, t] = local([x, z]);
+        if (Math.abs(a) <= L / 2 + 2 && t !== 0) faces[Math.sign(t)].push(Math.abs(t) - wall);
+      }
+    const median = (v) => v.sort((p, q) => p - q)[Math.floor(v.length / 2)];
+    const fallback = opening.roadWidth / 2 + 0.7;
+    const left = faces[-1].length ? median(faces[-1]) : fallback,
+      right = faces[1].length ? median(faces[1]) : fallback;
+    const span = left + right,
+      tc = (right - left) / 2;
+    const world = (a, t, y) => [C[0] + u[0] * a + n[0] * t, y, C[1] + u[1] * a + n[1] * t];
+    const road = Math.max(
+      ...[-1, 0, 1].flatMap((k) =>
+        [-L / 2, 0, L / 2].map((a) => {
+          const [x, , z] = world(a, (k * opening.roadWidth) / 2, 0);
+          return level(x, z);
+        })
+      )
+    );
+    const deck = Math.min(...[A, B, C].map((p) => deckSlab(...p)));
+    const crown = deck - spec.crownBelowDeck;
+    const rise = Math.max(spec.minimumRise, Math.min(span / 2, crown - road - spec.springingAboveRoad));
+    const springing = crown - rise,
+      radius = (span * span) / 4 / (2 * rise) + rise / 2,
+      half = Math.asin(Math.min(1, span / 2 / radius));
+    const arc = (r, steps = 20) =>
+      Array.from({ length: steps + 1 }, (_, i) => {
+        const angle = -half + (2 * half * i) / steps;
+        return [tc + r * Math.sin(angle), crown - radius + r * Math.cos(angle)];
+      });
+    // Portals pass through the deck-edge ends of the axis, parallel to the sewer.
+    const k = su / sn,
+      portal = (end, t) => end * (L / 2) + t * k;
+    const outwardShift = spec.ringProjection / Math.abs(sn);
+    const extrude = (contour, aAt, topY) => {
+      // contour in (t, y); aAt(end, t) gives the along position of each cap.
+      let area = 0;
+      for (let i = 0; i < contour.length; i++) {
+        const [t0, y0] = contour[i],
+          [t1, y1] = contour[(i + 1) % contour.length];
+        area += t0 * y1 - t1 * y0;
+      }
+      const sign = area > 0 ? 1 : -1;
+      const at = (end, [t, y]) => {
+        const p = world(aAt(end, t), t, y);
+        if (topY && y >= topY - 1e-6) p[1] = deckSlab(p[0], p[2]) + 0.2;
+        return p;
+      };
+      for (let i = 0; i < contour.length; i++) {
+        const p = contour[i],
+          q = contour[(i + 1) % contour.length];
+        const nt = sign * (q[1] - p[1]),
+          ny = -sign * (q[0] - p[0]);
+        quad(at(-1, p), at(-1, q), at(1, q), at(1, p), [n[0] * nt, ny, n[1] * nt]);
+      }
+      const triangles = THREE.ShapeUtils.triangulateShape(
+        contour.map(([t, y]) => new THREE.Vector2(t, y)),
+        []
+      );
+      for (const end of [-1, 1])
+        for (const tri of triangles) push(...tri.map((i) => at(end, contour[i])), [end * u[0], 0, end * u[1]]);
+    };
+    // Spandrel block: from the springing to inside the deck slab, minus the intrados.
+    const outer = span / 2 + spec.wallEmbedment,
+      top = deck + 0.2;
+    extrude(
+      [[tc - outer, springing], ...arc(radius), [tc + outer, springing], [tc + outer, top], [tc - outer, top]],
+      portal,
+      top
+    );
+    // Arch ring standing slightly proud of each portal face.
+    const ring = [...arc(radius + spec.ringDepth), ...arc(radius).reverse()];
+    for (const end of [-1, 1])
+      extrude(ring, (side, t) => portal(end, t) + (side === end ? end * outwardShift : 0), null);
+    const edge = opening.roadWidth / 2;
+    const clearanceAt = (t) => {
+      const dt = t - tc;
+      return Math.abs(dt) >= span / 2 ? springing - road : crown - radius + Math.sqrt(radius * radius - dt * dt) - road;
+    };
+    arches.push({
+      road: opening.road,
+      span: +span.toFixed(2),
+      rise: +rise.toFixed(2),
+      crownClearance: +(crown - road).toFixed(2),
+      edgeClearance: +Math.min(clearanceAt(-edge), clearanceAt(edge)).toFixed(2),
+      skewDegrees: +((Math.acos(Math.abs(sn)) * 180) / Math.PI).toFixed(1),
+    });
+  }
+  if (!arches.length) return { count: 0 };
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+  geometry.computeVertexNormals();
+  const mesh = new THREE.Mesh(geometry, material);
+  mesh.name = 'sewer-road-arch';
+  scene.add(mesh);
+  return { count: arches.length, arches };
 }
