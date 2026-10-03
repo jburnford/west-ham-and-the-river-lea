@@ -158,7 +158,17 @@ def surface(points,old,bank=True):
     out=blend_surface(points,old,bank)
     return fill_behind_walls(points,out)
 
-def blend_surface(points,old,bank=True):
+# Recorded raised shore edges: the river system's interpreted canal faces
+# (Limehouse Cut), the river network's interpretive retaining edges, and the
+# reviewed river-system terrain patches whose recorded shore transition is no
+# wider than the lip itself. Every other shore is an earth or canal-earth bank.
+MASONRY_REACH_M=1.5;LIP_M=.6;lip_vertices={}
+masonry=shapely.union_all([LineString(r['route']) for r in system['bankSections']['canalFacingRoutes']]+[LineString(r) for r in network['retainingEdges']['routes'] if len(r)>1])
+steep_patches=[t for t in system['bankSections']['terrainPatches'] if t['config']['shoreTransitionMetres'][1]<=LIP_M]
+masonry_zone=masonry.buffer(MASONRY_REACH_M);patch_zone=geometry([p for t in steep_patches for p in t['polygons']])
+raised_shore=masonry_zone.union(patch_zone)
+for zone in (masonry_zone,patch_zone,raised_shore):shapely.prepare(zone)
+def blend_surface(points,old,bank=True,key='groundMesh'):
     w=weight(points);out=np.asarray(old,dtype=float).copy();selected=w>0
     if not selected.any():return out
     p=points[selected];g=base(p);wet=shapely.contains_xy(water,p[:,0],p[:,1]);old_y=out[selected]
@@ -172,7 +182,18 @@ def blend_surface(points,old,bank=True):
             # Preserve a wet-side bank face, then crest, then dry-side toe.
             rise=np.clip(d/3,0,1);rise=rise*rise*(3-2*rise)
             levels=g[margin]+inland*(crest-g[margin])
-            rise[(d<.6)&(old_y[margin]>network['waterLevel']+.5)]=1
+            # An existing raised lip is kept only on a recorded raised shore
+            # edge: lifted to the crest against masonry (canal faces, retaining
+            # walls, whose copings follow the crest), held at its reviewed
+            # height (never above the crest) in a steep-shore patch. Earth and
+            # canal-earth banks take the smoothstep face above.
+            lip=np.flatnonzero((d<LIP_M)&(old_y[margin]>network['waterLevel']+.5))
+            q=p[margin][lip];wall=shapely.contains_xy(masonry_zone,q[:,0],q[:,1])
+            held=~wall&shapely.contains_xy(patch_zone,q[:,0],q[:,1])
+            levels[lip[held]]=np.minimum(levels[lip[held]],old_y[margin][lip[held]])
+            tally=lip_vertices.setdefault(key,{'liftedToCrest':0,'heldAtReviewedHeight':0})
+            tally['liftedToCrest']+=int(wall.sum());tally['heldAtReviewedHeight']+=int(held.sum());lip=lip[wall|held]
+            rise[lip]=1
             levels=(network['waterLevel']+.02)*(1-rise)+levels*rise
             g[margin]=levels
     # Bed and drain-water vertices retain their native geometry and levels.
@@ -220,10 +241,40 @@ def clear_wall_faces(points,new,blended,triangles):
         if np.array_equal(before,new):break
     return new
 
+# Junction end caps: where a river-network channel end meets the drawn
+# river-system water, the network bank takes the same earth face as the
+# system's own banks (water edge, smoothstep to the existing ground over
+# 3 m), so no end-cap triangle leans over the system water. Recorded raised
+# shore edges keep their height; no vertex is lowered more than 2.4 m below
+# a mesh neighbour, so the cap never forms a new step.
+END_FACE_M=3;system_water=geometry(system['waterPolygons']);shapely.prepare(system_water);end_caps={}
+def cap_junction_ends(points,new,triangles):
+    edge=network['waterLevel']+.02;pts=shapely.points(points)
+    near=np.flatnonzero(shapely.dwithin(system_water,pts,END_FACE_M))
+    near=near[(new[near]>edge)&~shapely.contains_xy(raised_shore,points[near,0],points[near,1])]
+    d=shapely.distance(system_water.boundary,pts[near]);d[shapely.contains_xy(system_water,points[near,0],points[near,1])]=0
+    s=np.clip(d/END_FACE_M,0,1);s=s*s*(3-2*s)
+    cap=edge+s*(new[near]-edge);lower=cap<new[near]-1e-6;near=near[lower]
+    out=new.copy();out[near]=cap[lower]
+    if not len(near):return out
+    moved=np.zeros(len(new),bool);moved[near]=True
+    tri=triangles[moved[triangles].any(axis=1)]
+    edges=np.unique(np.sort(np.concatenate([tri[:,[0,1]],tri[:,[1,2]],tri[:,[2,0]]]),axis=1),axis=0)
+    for _ in range(50):
+        before=out.copy()
+        for u,v in ((0,1),(1,0)):
+            a=edges[:,u];b=edges[:,v];sel=moved[a]
+            np.maximum.at(out,a[sel],np.minimum(new[a[sel]],out[b[sel]]-2.4))
+        if np.array_equal(before,out):break
+    changed=abs(out-new)>1e-6
+    end_caps.update({'loweredVertices':int(changed.sum()),'maxLoweringMetres':float((new-out).max())})
+    return out
+
 files={};stats={}
 def export_heights(key,points,old,preserve=None,triangles=None):
-    blended=blend_surface(points,old);new=fill_behind_walls(points,blended.copy())
+    blended=blend_surface(points,old,key=key);new=fill_behind_walls(points,blended.copy())
     if triangles is not None:new=clear_wall_faces(points,new,blended,triangles)
+    if key=='network':new=cap_junction_ends(points,new,triangles)
     if preserve is not None:
         # Wall fill stands no steeper than 1:1.5 above preserved tidal mud.
         grid=(core['height'],core['width']);dist,nearest=distance_transform_edt(~preserve.reshape(grid),return_indices=True)
@@ -298,6 +349,12 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
     'retainingEdgeFill':{'crestMethod':f'1.65 m interpretive crest blended to the observed along-bank crest by the marsh weight {WALL_INLAND_M} m behind the wall; {WALL_MEAN_M} m running mean along the wall; grade-limited upper envelope at {WALL_GRADE} m per metre',
         'fillMethod':f'land side filled level with the coping to {WALL_TOP_M} m from the wall line, then falling at 1:{WALL_BATTER} to the surrounding ground (at most {WALL_REACH_M} m); never lowers ground; water, street corridors and building footprints excluded; battered at the same slope down to unwalled shoreline and to preserved intertidal mud; in the river-network mesh, land vertices of triangles straddling a wall are held down so no ground stands more than {WALL_TOE_M} m above low water at the water face, and no filled vertex stands more than 2.4 m above a mesh neighbour',
         'evidence':'Mapped: the shoreline and GIS industrial plot edges that the interpretive wall routes follow (river-network retainingEdges; the walls themselves are not a surveyed inventory), and the high-confidence wall_top/embankment_top spot heights behind the along-bank crest profile. Estimated: the coping grade between readings, the berm width and batter, and the fill itself; no surveyed section of any wall or its backfill.'},
+    'shoreLip':{'method':f'bank vertices within {LIP_M} m of the regional shoreline whose previous height stood more than 0.5 m above low water are lifted to the full crest only within {MASONRY_REACH_M} m of a recorded masonry edge (river-system canalFacingRoutes, river-network retainingEdges), and keep their previous reviewed height (capped at the crest) inside a reviewed terrain patch whose recorded shore transition is no wider than {LIP_M} m; all other shores take the 0-3 m smoothstep earth face',
+        'lipVertices':lip_vertices,'steepShorePatches':[t['id'] for t in steep_patches],
+        'evidence':'Mapped: the shorelines, the interpreted canal-face and retaining-edge routes, and the reviewed patch outlines. Recorded in the bank policy: earth and canal-earth profiles elsewhere ("no continuous masonry assumed on Hackney Cut"). Estimated: the 1.5 m reach of a masonry edge and the smoothstep face itself; no surveyed bank section.'},
+    'junctionEndCaps':{'method':f'river-network vertices within {END_FACE_M} m of drawn river-system water (waterPolygons) are capped at the water edge (low water + 0.02 m) rising by smoothstep to their existing height {END_FACE_M} m from that water; recorded raised shore edges excluded; no vertex lowered more than 2.4 m below a mesh neighbour',
+        **end_caps,
+        'evidence':'Mapped: the river-system water polygons and the network channel ends that meet them. Estimated: the earth face at each junction, taken from the system bank face rather than from any survey of the confluence banks.'},
     'railwaySlopes':railways,
     'continuousBanks':{'profileCount':len(banks.lines),'sourceIds':banks.accepted_ids,'heightStatus':'observed crests interpolate along bank; unsampled components inferred'},
     'probes':[{'name':name,'scenePosition':[e-538900,183209-n],'groundSceneY':float(base(np.array([[e-538900,183209-n]]))[0])} for name,e,n in [('Pudding–City marsh',537650,184100),('Western neighbouring marsh',537300,184100),('Northern Mill Meads',538550,183200),('Abbey marsh',539200,182900),('Western Plaistow',539800,181800)]],
