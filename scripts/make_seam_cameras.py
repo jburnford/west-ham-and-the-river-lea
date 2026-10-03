@@ -70,9 +70,10 @@ def main():
         cameras.append({'label': f"bridge-{b['id']}-span", 'position': [mx - uz * 45, 1.5, mz + ux * 45], 'target': [mx, b['height'] / 2, mz], 'fov': 60})
 
     # Railway toes: every 300 m along each route, looking at the embankment from 35 m off.
-    for r in infra['railways']:
+    for n, r in enumerate(infra['railways']):
         for i, (x, z, ux, uz) in enumerate(along(r['route'], 300)):
-            cameras.append({'label': f"rail-{r['name'].split(' ')[0].lower()}-{i}", 'position': [x - uz * 35, 2.5, z + ux * 35], 'target': [x, r.get('formationHeight', 5) / 2, z], 'fov': 60})
+            # Railway names share first words (several begin "Great"), so index by railway too.
+            cameras.append({'label': f"rail-{n}-{r['name'].split(' ')[0].lower()}-{i}", 'position': [x - uz * 35, 2.5, z + ux * 35], 'target': [x, r.get('formationHeight', 5) / 2, z], 'fov': 60})
 
     # Sewer toes: every 200 m along the route, both sides.
     for i, (x, z, ux, uz) in enumerate(along(gp['neighbourhood']['sewer']['route'], 200)):
