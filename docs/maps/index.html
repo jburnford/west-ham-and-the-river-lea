@@ -1,85 +1,127 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0f1716">
-  <meta name="description" content="Fourteen map editions of West Ham, 1777 to 1963, stacked on the same ground, with the industrial sites, docks, water and railways from Jim Clifford’s West Ham and the River Lea.">
-  <title>Historic maps · West Ham & the River Lea</title>
-  <link rel="preload" href="../fonts/caslon-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../fonts/archivo-100-900-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
-  <link rel="stylesheet" href="maps.css">
-</head>
-<body>
-  <a class="skip" href="#panel">Skip to the map controls</a>
-  <header class="site">
-    <a class="brand" href="../"><span class="brand-title">West Ham <em>&amp;</em> the River Lea</span><span class="brand-sub">Jim Clifford · a landscape in progress</span></a>
-    <nav class="site-nav" aria-label="Site">
-      <a href="../">Panorama</a>
-      <a href="./" aria-current="page">Historic maps</a>
-      <a href="../#evidence" class="hide-mobile">How do we know?</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#0f1716" />
+    <meta
+      name="description"
+      content="Fourteen map editions of West Ham, 1777 to 1963, stacked on the same ground, with the industrial sites, docks, water and railways from Jim Clifford’s West Ham and the River Lea."
+    />
+    <title>Historic maps · West Ham & the River Lea</title>
+    <link rel="preload" href="../fonts/caslon-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../fonts/archivo-100-900-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="maps.css" />
+  </head>
+  <body>
+    <a class="skip" href="#panel">Skip to the map controls</a>
+    <header class="site">
+      <a class="brand" href="../"
+        ><span class="brand-title">West Ham <em>&amp;</em> the River Lea</span
+        ><span class="brand-sub">Jim Clifford · a landscape in progress</span></a
+      >
+      <nav class="site-nav" aria-label="Site">
+        <a href="../">Panorama</a>
+        <a href="./" aria-current="page">Historic maps</a>
+        <a href="../#evidence" class="hide-mobile">How do we know?</a>
+      </nav>
+    </header>
 
-  <main class="app">
-    <div id="map" role="application" aria-label="Historic maps of West Ham. Use the controls to choose editions; drag to pan; plus and minus to zoom."></div>
+    <main class="app">
+      <div
+        id="map"
+        role="application"
+        aria-label="Historic maps of West Ham. Use the controls to choose editions; drag to pan; plus and minus to zoom."
+      ></div>
 
-    <aside class="panel" id="panel" aria-label="Map layers and places">
-      <button type="button" class="panel-toggle" id="panel-toggle" aria-expanded="true" aria-controls="panel-body">Layers &amp; places <span aria-hidden="true">▾</span></button>
-      <div class="panel-body" id="panel-body">
-        <p class="eyebrow">Historic maps · 1777–1963</p>
-        <h1>West Ham, sheet by sheet</h1>
-        <p class="lede">Fourteen map editions on the same ground, from Chapman and André’s county survey of 1777 to the Ordnance Survey’s post-war plans. Scrub the timeline, stack editions, or slide two dates against each other.</p>
+      <aside class="panel" id="panel" aria-label="Map layers and places">
+        <button type="button" class="panel-toggle" id="panel-toggle" aria-expanded="true" aria-controls="panel-body">
+          Layers &amp; places <span aria-hidden="true">▾</span>
+        </button>
+        <div class="panel-body" id="panel-body">
+          <p class="eyebrow">Historic maps · 1777–1963</p>
+          <h1>West Ham, sheet by sheet</h1>
+          <p class="lede">
+            Fourteen map editions on the same ground, from Chapman and André’s county survey of 1777 to the Ordnance
+            Survey’s post-war plans. Scrub the timeline, stack editions, or slide two dates against each other.
+          </p>
 
-        <div class="mode" role="group" aria-label="Viewing mode">
-          <button type="button" data-mode="stack" aria-pressed="true">Stack</button>
-          <button type="button" data-mode="compare" aria-pressed="false">Compare</button>
-        </div>
-
-        <section class="block compare-only" id="compare-block" hidden>
-          <h2>Compare two editions</h2>
-          <div class="compare-selects">
-            <label>Left of the divider<select id="cmp-left"></select></label>
-            <label>Right of the divider<select id="cmp-right"></select></label>
+          <div class="mode" role="group" aria-label="Viewing mode">
+            <button type="button" data-mode="stack" aria-pressed="true">Stack</button>
+            <button type="button" data-mode="compare" aria-pressed="false">Compare</button>
           </div>
-          <p class="hint">Drag the handle on the map. The timeline sets the right-hand edition.</p>
-        </section>
 
-        <section class="block">
-          <h2>Editions</h2>
-          <ol id="layer-list" class="layers"></ol>
-        </section>
+          <section class="block compare-only" id="compare-block" hidden>
+            <h2>Compare two editions</h2>
+            <div class="compare-selects">
+              <label>Left of the divider<select id="cmp-left"></select></label>
+              <label>Right of the divider<select id="cmp-right"></select></label>
+            </div>
+            <p class="hint">Drag the handle on the map. The timeline sets the right-hand edition.</p>
+          </section>
 
-        <section class="block">
-          <h2>From the book’s GIS</h2>
-          <ul id="vector-list" class="vectors"></ul>
-          <details class="legend-details"><summary>Key to industry types</summary><div id="legend" class="legend"></div></details>
-        </section>
+          <section class="block">
+            <h2>Editions</h2>
+            <ol id="layer-list" class="layers"></ol>
+          </section>
 
-        <section class="block">
-          <h2>Places</h2>
-          <div id="places" class="places"></div>
-        </section>
+          <section class="block">
+            <h2>From the book’s GIS</h2>
+            <ul id="vector-list" class="vectors"></ul>
+            <details class="legend-details">
+              <summary>Key to industry types</summary>
+              <div id="legend" class="legend"></div>
+            </details>
+          </section>
 
-        <section class="block">
-          <h2>Reference</h2>
-          <label class="check"><input type="checkbox" id="modern"> <span>Modern streets underneath <small>(Esri tiles, external)</small></span></label>
-        </section>
+          <section class="block">
+            <h2>Places</h2>
+            <div id="places" class="places"></div>
+          </section>
 
-        <p class="small credits">Historic maps reproduced with the permission of the <a href="https://maps.nls.uk/">National Library of Scotland</a> (CC-BY). The 1777 Chapman and André sheet (NLS) and the 1805 Ordnance Survey sheet (British Library copy) are out of copyright and were georeferenced for this site. Series dates are the range of each edition; individual sheets carry their own survey and revision dates. Industrial sites, water and docks from the author’s GIS; railways from OpenHistoricalMap contributors. Map engine: <a href="https://leafletjs.com/">Leaflet</a>, BSD licence.</p>
+          <section class="block">
+            <h2>Reference</h2>
+            <label class="check"
+              ><input type="checkbox" id="modern" />
+              <span>Modern streets underneath <small>(Esri tiles, external)</small></span></label
+            >
+          </section>
+
+          <p class="small credits">
+            Historic maps reproduced with the permission of the
+            <a href="https://maps.nls.uk/">National Library of Scotland</a> (CC-BY). The 1777 Chapman and André sheet
+            (NLS) and the 1805 Ordnance Survey sheet (British Library copy) are out of copyright and were georeferenced
+            for this site. Series dates are the range of each edition; individual sheets carry their own survey and
+            revision dates. Industrial sites, water and docks from the author’s GIS; railways from OpenHistoricalMap
+            contributors. Map engine: <a href="https://leafletjs.com/">Leaflet</a>, BSD licence.
+          </p>
+        </div>
+      </aside>
+
+      <div class="timeline" id="timeline" role="group" aria-label="Timeline of editions">
+        <input
+          type="range"
+          id="time"
+          min="0"
+          max="9"
+          value="4"
+          step="1"
+          aria-label="Edition by date"
+          list="time-ticks"
+        />
+        <div class="ticks" id="ticks" aria-hidden="true"></div>
+        <output id="time-label" for="time"></output>
       </div>
-    </aside>
+    </main>
 
-    <div class="timeline" id="timeline" role="group" aria-label="Timeline of editions">
-      <input type="range" id="time" min="0" max="9" value="4" step="1" aria-label="Edition by date" list="time-ticks">
-      <div class="ticks" id="ticks" aria-hidden="true"></div>
-      <output id="time-label" for="time"></output>
-    </div>
-  </main>
-
-  <noscript><p class="no-script">The map viewer needs JavaScript. The map editions can be browsed directly at the National Library of Scotland: maps.nls.uk.</p></noscript>
-  <script src="../vendor/leaflet/leaflet.js"></script>
-  <script type="module" src="maps.js"></script>
-</body>
+    <noscript
+      ><p class="no-script">
+        The map viewer needs JavaScript. The map editions can be browsed directly at the National Library of Scotland:
+        maps.nls.uk.
+      </p></noscript
+    >
+    <script src="../vendor/leaflet/leaflet.js"></script>
+    <script type="module" src="maps.js"></script>
+  </body>
 </html>
