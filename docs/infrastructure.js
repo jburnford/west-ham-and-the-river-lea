@@ -216,6 +216,6 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
     roadBridges: infra.roadBridges.length,
     namedBridges: infra.roadBridges.map((b) => b.id || b.name),
     raisedRailways: infra.railways.length,
-    railFormationHeight: 5.5,
+    railFormationHeights: Object.fromEntries(infra.railways.map((r) => [r.name, r.formationHeight])),
   };
 }

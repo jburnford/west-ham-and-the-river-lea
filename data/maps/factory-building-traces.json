@@ -2000,6 +2000,8 @@
       ],
       "floorMark": "3",
       "material": "wood",
+      "finish": "pale",
+      "finishEvidence": "Pale weatherboard reading of the old mill in the period photographs; an interpretation, not a recorded finish.",
       "roof": "gable",
       "footprintEvidence": "Individual range envelope interpreted from GoadF3. Small recesses simplified.",
       "heightEvidence": "Estimated from mapped floor annotation; no surveyed metre height.",

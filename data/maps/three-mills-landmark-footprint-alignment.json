@@ -2132,6 +2132,7 @@
         "axisChangeDegrees": 5.953899989886288
       },
       "landmarkDetails": {
+        "kind": "mill-house",
         "houseFacades": [
           [
             [
@@ -2566,6 +2567,7 @@
         "axisChangeDegrees": 0.6262071660912127
       },
       "landmarkDetails": {
+        "kind": "kilns-and-tower",
         "kilnCaps": [
           {
             "centre": [

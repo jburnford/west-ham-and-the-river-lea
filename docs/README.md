@@ -1,6 +1,6 @@
 # docs — published front end
 
-The redesigned front end for the Channelsea panorama, published by GitHub Pages. The 3D scene, materials, terrain, infrastructure and bridge-movement modules are unchanged from the previous front end, which is preserved in `docs0/`; only the page, styling and interaction layer are new.
+The redesigned front end for the Channelsea panorama, published by GitHub Pages. The 3D scene, materials, terrain, infrastructure and bridge-movement modules are unchanged from the previous front end, which is preserved at the git tag `docs0-original-frontend`; only the page, styling and interaction layer are new.
 
 ## What changed
 
@@ -29,9 +29,9 @@ From the repository root:
 python3 -m http.server 4173 --bind 127.0.0.1 --directory docs
 ```
 
-Open http://localhost:4173/. The previous front end can be served the same way from `docs0/`.
+Open http://localhost:4173/.
 
-`docs/data`, `docs/vendor` and `docs/assets` are real copies, as GitHub Pages requires; the generators under `scripts/` continue to write into `docs/data/`. `docs0/` carries its own identical copies.
+`docs/data`, `docs/vendor` and `docs/assets` are real copies, as GitHub Pages requires; the generators under `scripts/` continue to write into `docs/data/`.
 
 ## Regenerating the poster
 

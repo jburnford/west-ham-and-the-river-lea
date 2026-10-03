@@ -408,7 +408,6 @@ export function factoryYards({ THREE, scene, materials: m, data, level, box, cyl
     trackMetres: Math.round(trackMetres),
     connectedTrackMetres: Math.round(connectedTrackMetres),
     formationTriangles: earthTriangles.length,
-    surfaceTriangles: 0,
     atlasSize: canvas.width,
     workingGrids,
     openWorkingCells,

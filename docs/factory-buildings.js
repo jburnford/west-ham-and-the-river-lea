@@ -98,7 +98,7 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
     const world = ([u, v], y) => [b.x + u * c - v * s, y + (b.landscapeLift ?? 0), b.z + u * s + v * c];
     const base = b.baseHeight ?? 0.12,
       h = b.height,
-      wall = b.id === 'howards-644' ? pale : walls[b.material] || stock;
+      wall = b.finish === 'pale' ? pale : walls[b.material] || stock;
     const roofMaterial = b.roofMaterial === 'iron' ? ironRoof : m.roof;
     const axis = b.roofAxis === 'x' ? 1 : 0;
     const lo = b.localBounds[0][axis],
@@ -264,12 +264,13 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
     counts.ranges++;
     counts.roofPlanes += b.roofBays * 2;
     counts.siteRanges[b.siteId] = (counts.siteRanges[b.siteId] || 0) + 1;
-    if (b.id === 'house-main' || b.id === 'clock') {
+    // Landmark treatments are chosen by the data's landmarkDetails.kind, never by building ID.
+    if (b.landmarkDetails?.kind === 'mill-house') {
       const g = new THREE.Group();
       g.position.set(b.x, b.landscapeLift ?? 0, b.z);
       g.rotation.y = -angle;
       scene.add(g);
-      if (b.id === 'house-main') {
+      {
         // Weatherboarded central upper facade and attic dormers: surviving mill character.
         const facades = b.landmarkDetails?.houseFacades;
         if (facades)
@@ -301,7 +302,7 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
         }
       }
     }
-    if (b.id === 'clock-kilns') {
+    if (b.landmarkDetails?.kind === 'kilns-and-tower') {
       const g = new THREE.Group();
       g.position.set(b.x, b.landscapeLift ?? 0, b.z);
       g.rotation.y = -angle;

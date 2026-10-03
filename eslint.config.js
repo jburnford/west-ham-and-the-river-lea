@@ -1,5 +1,5 @@
 // Lint the hand-written front end and the Node check scripts. Vendor, data and
-// the archived docs0 front end are excluded. Rules stay close to ESLint's
+// generated files are excluded. Rules stay close to ESLint's
 // recommended set: the aim is to catch real mistakes, not to impose style,
 // which Prettier handles.
 import js from '@eslint/js';
@@ -9,8 +9,6 @@ export default [
   {
     ignores: [
       'docs/vendor/**',
-      'docs0/**',
-      'docs2/**',
       'docs/data/**',
       'node_modules/**',
       'exports/**',
