@@ -353,10 +353,14 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
       g.position.set(p.x, p.landscapeLift ?? 0, p.z);
       g.rotation.y = (-p.rotation * Math.PI) / 180;
       scene.add(g);
+      // Vessel size and step come from the register where the OS was fitted; otherwise the study default.
+      const step = p.spacing ?? 9,
+        length = p.boxLength ?? 7,
+        width = p.boxWidth ?? 6;
       for (let i = 0; i < p.count; i++) {
-        const x = (i - (p.count - 1) / 2) * 9;
-        box(g, x, 0.2, 0, 7, 1.8, 6, m.iron);
-        box(g, x, 2, 0, 7.3, 0.15, 6.3, m.dark);
+        const x = (i - (p.count - 1) / 2) * step;
+        box(g, x, 0.2, 0, length, 1.8, width, m.iron);
+        box(g, x, 2, 0, length + 0.3, 0.15, width + 0.3, m.dark);
       }
     } else if (p.kind === 'chimney') {
       const g = new THREE.Group();

@@ -64,12 +64,27 @@ def model_polygons():
     models += [('study', b['siteId'], rect(b)) for b in gp['factoryStudies']]
     models += [('southwest-range', b['siteId'], rect(b)) for b in sw['industrialRanges']]
     models.append(('mill', 'abbey-mill', rect(n['mill'])))
-    models += [('holder', h['id'], Point(h['x'], h['z']).buffer(h['radius'])) for h in n['holders'] + fb['holders']]
+    # Holders: sites with individually registered holders supersede the map-traced neighbourhood circles,
+    # exactly as app.js renders them.
+    registered_holder_sites = {h['siteId'] for h in fb['holders']}
+    models += [('holder', h['id'], Point(h['x'], h['z']).buffer(h['radius'])) for h in n['holders'] if h['siteId'] not in registered_holder_sites]
+    models += [('holder', h['id'], Point(h['x'], h['z']).buffer(h['radius'])) for h in fb['holders']]
+    # Plant counts as cover too: purifier vessel rows, tanks, kilns and chimneys occupy mapped ground.
+    for s in fb['structures']:
+        if s['kind'] == 'purifierBank':
+            step, length, width = s.get('spacing', 9), s.get('boxLength', 7), s.get('boxWidth', 6)
+            a = -math.radians(s.get('rotation', 0))
+            c, si = math.cos(a), math.sin(a)
+            for i in range(s['count']):
+                u = (i - (s['count'] - 1) / 2) * step
+                models.append(('structure', s['id'], rect({'x': s['x'] + u * c, 'z': s['z'] + u * si, 'width': length, 'depth': width, 'rotation': s.get('rotation', 0)})))
+        elif s.get('radius'):
+            models.append(('structure', s['id'], Point(s['x'], s['z']).buffer(s['radius'] * (1.2 if s['kind'] == 'chimney' else 1))))
     models = [(k, i, g) for k, i, g in models if g is not None]
     sites = {s['id']: (s['name'], unary_union([poly(r) for r in s['polygons'] if poly(r)])) for s in gp['sites']}
     registered = {s['id'] for s in fb['sites']}
     # Started zones: registered sites plus a neighbourhood around modelled buildings (not the generated rear outbuildings).
-    core = [g for k, _, g in models if k not in ('housing-rear',)]
+    core = [g for k, _, g in models if k not in ('housing-rear', 'structure')]
     started = unary_union([sites[i][1] for i in registered if i in sites] + [g.buffer(NEIGHBOURHOOD) for g in core])
     return models, sites, started
 
@@ -97,7 +112,7 @@ def main():
     fp_union = unary_union([Polygon() if False else gpd.GeoSeries.from_wkt([r['wkt']])[0] for r in rows]) if rows else Polygon()
     unsupported = []
     for k, i, g in models:
-        if not g.intersects(box(*WINDOW)) or k == 'housing-rear':
+        if not g.intersects(box(*WINDOW)) or k in ('housing-rear', 'structure'):
             continue
         cov = g.intersection(fp_union).area / g.area if g.area else 1
         if cov < .3:

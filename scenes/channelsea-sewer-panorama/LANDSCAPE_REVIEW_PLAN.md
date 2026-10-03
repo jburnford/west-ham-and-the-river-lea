@@ -94,6 +94,17 @@ Parent: give the regional ground a marsh treatment driven by that plan (ditch li
 3. Elevation fixes land before building additions in the same area, so new buildings seat on final ground.
 4. Each completed site or fix is a separate commit with its own smoke comparison and review screenshots.
 
+## Progress
+
+3 October 2026, afternoon:
+
+- W0 tooling committed: `footprint_gap_audit.py` (now counts plant as cover and honours holder supersession), `render_views.py`, `make_seam_cameras.py`; 119 seam views rendered.
+- W1 done: 68 images catalogued; none shows the core industrial zones, four are in scope (northern streets), five flood photographs are all outside the area. Model conflicts to follow up: the eastern "Warton Road" is probably West Ham Lane; the model's "Angel Lane" is misplaced; the High Street has setts but no tram rails; Livingstone Road bays.
+- W4 done: 25 flood accounts, 1824–1928; the 1897 and 1904 surges and the Three Mills flood marker are the plausibility checks; Map 15's flood zone is a 2009 Environment Agency risk zone, not a historical extent.
+- W2 numeric done: every new cliff comes from four rules in `build_main_landscape.py` (yard edges without slopes, road corridors without side slopes, a shore-edge rule applied everywhere, mud cells beside lifted neighbours); retaining walls never had fill and their crest is under-weighted; the junction fins are river-network end caps lifted into river-system water; tufts are placed correctly and the sewer-bridge view was from inside the raised bank; objects outside the detailed tile float because the 10 m level raster ignores crests. Ten-item fix list in `elevation-numeric.md`. Decision pending with the author on who changes the landscape builder.
+- W3 site 924 done and committed: 25 buildings added from source outlines, 9 unsupported ranges removed, purifier rows refitted to the 44 mapped vessels (renderer reads vessel size and step from the register), scrubbers and holders 1–4 moved to circle fits. Missing area at the site fell from 9,026 to 3,022 m², the remainder being column bases and yard fittings. Retort-house re-registration deferred. Register: `data/maps/bromley-gasworks-footprint-alignment.json`.
+- W2 visual sweep in progress.
+
 ## Done when
 
 - The author's screenshot view and the 40 sweep views show no floating objects, sheared slabs or unintended cliffs.

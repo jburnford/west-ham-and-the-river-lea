@@ -88,7 +88,8 @@ def build():
                        'data/maps/western-trades-footprint-alignment.json',
                        'data/maps/east-channelsea-south-footprint-alignment.json',
                        'data/maps/east-channelsea-upper-footprint-alignment.json',
-                       'data/maps/east-channelsea-north-footprint-alignment.json']
+                       'data/maps/east-channelsea-north-footprint-alignment.json',
+                       'data/maps/bromley-gasworks-footprint-alignment.json']
     compounds = [json.loads((ROOT/path).read_text()) for path in group_registers]
     structure_alignment = {}
     map_traces = {}
@@ -116,6 +117,9 @@ def build():
         fitted_plant = register.get('tanks', []) + register.get('mappedPlants', [])
         raw['structures'] = [s for s in raw['structures'] if s['id'] not in {t['id'] for t in fitted_plant}] + fitted_plant
         raw['structures'] += register.get('additionalStructures', [])
+        for move in register.get('holderAdjustments', []):
+            holder = next(h for h in raw['holders'] if h['id'] == move['id'])
+            holder.update(x=move['x'], z=move['z'], positionEvidence=move['positionEvidence'])
         assert not set(aligned).intersection(b['modelId'] for b in register['buildings'])
         assert not set(structure_alignment).intersection(s['id'] for s in register['structures'])
         aligned.update({b['modelId']: b for b in register['buildings']})

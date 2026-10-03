@@ -1,0 +1,2737 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-03",
+  "site": 924,
+  "name": "Bromley-by-Bow gasworks",
+  "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg (project extract west-ham-buffer-buildings-bng.geojson.gz); cached NLS OS London five-foot VIII.42, revised 1893",
+  "sourceCRS": "EPSG:27700 to scene origin E538900,N183209; x east, z south, metres",
+  "method": "Bromley gasworks 3 October 2026: OS-led audit of the 1891-96 footprints without models. Long purifier-block sheds, the lodge at B.M. 18.45, the south-west leg of the riverside L-range and small yard and garden buildings added from source outlines; purifier vessel rows refitted to the 44 mapped vessels; scrubber tanks and holders 1-4 moved to circle fits of the mapped column bases. Heights, storeys and roof forms are explicit estimates: the OS gives plan only, no Goad sheet covers the site and no photograph of the works buildings has been found. Retort-house envelopes left for a later pass.",
+  "evidenceNotes": [
+    "Most of the remaining mapped area at this site is plant (purifier vessels, holder column bases, an overhead coal gantry), not buildings; see reference/photo-review-2026-10-03/reports/site-924-proposal.md (local).",
+    "Holder bromley-9 is drawn on the 1893 OS with its 24 column bases; it does not post-date the survey."
+  ],
+  "buildings": [],
+  "structures": [],
+  "removedBuildings": [
+    {
+      "id": "site924-os-7",
+      "reason": "25 x 13 m envelope at (-377, 1001) on open ground; no OS building or GeoPackage outline under it (support 0.0). The nearby building at B.M. 18.45 is proposed as b924-lodge-bm1845."
+    },
+    {
+      "id": "site924-os-8",
+      "reason": "17 x 6 m envelope about 12 m north-east of the real building at B.M. 18.45 (support 0.0)."
+    },
+    {
+      "id": "site924-os-11",
+      "reason": "Sits on open ground south-east of the L-range (support 0.0); the missing south-western leg of the L is fid 17304."
+    },
+    {
+      "id": "site924-os-10",
+      "reason": "Both arms of the L-range are poorly registered (IoU 0.20 and 0.17) and cross each other; os-12 has an unexplained 11 m eaves."
+    },
+    {
+      "id": "site924-os-12",
+      "reason": "Both arms of the L-range are poorly registered (IoU 0.20 and 0.17) and cross each other; os-12 has an unexplained 11 m eaves."
+    },
+    {
+      "id": "site924-os-1",
+      "reason": "os-1 is a two-storey 18 x 22 m block over an UNSHADED walled enclosure (an open yard on the OS; support 0.08). Only the small shaded rooms inside it are roofed."
+    },
+    {
+      "id": "site924-os-2",
+      "reason": "os-1 is a two-storey 18 x 22 m block over an UNSHADED walled enclosure (an open yard on the OS; support 0.08). Only the small shaded rooms inside it are roofed."
+    },
+    {
+      "id": "site924-os-5",
+      "reason": "os-6 (24 x 17 m) lies over an unshaded enclosure (support 0.03); os-5 (47 x 10 m) over-extends a row of small rooms on the south boundary (support 0.22)."
+    },
+    {
+      "id": "site924-os-6",
+      "reason": "os-6 (24 x 17 m) lies over an unshaded enclosure (support 0.03); os-5 (47 x 10 m) over-extends a row of small rooms on the south boundary (support 0.22)."
+    }
+  ],
+  "additionalBuildings": [
+    {
+      "id": "b924-purifier-shed-e-west",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley eastern purifier block \u2014 west, beside the scrubber enclosure shed",
+      "worldFootprint": [
+        [
+          -489.773,
+          1031.446
+        ],
+        [
+          -495.644,
+          1037.43
+        ],
+        [
+          -495.661,
+          1038.012
+        ],
+        [
+          -452.517,
+          1081.386
+        ],
+        [
+          -452.111,
+          1081.181
+        ],
+        [
+          -446.244,
+          1075.229
+        ],
+        [
+          -446.067,
+          1074.763
+        ],
+        [
+          -447.667,
+          1073.213
+        ],
+        [
+          -448.575,
+          1073.452
+        ],
+        [
+          -454.144,
+          1067.8
+        ],
+        [
+          -453.927,
+          1067.377
+        ],
+        [
+          -454.155,
+          1066.545
+        ],
+        [
+          -455.27,
+          1066.751
+        ],
+        [
+          -460.804,
+          1061.108
+        ],
+        [
+          -460.546,
+          1060.267
+        ],
+        [
+          -460.813,
+          1059.88
+        ],
+        [
+          -461.371,
+          1059.834
+        ],
+        [
+          -461.718,
+          1060.118
+        ],
+        [
+          -467.628,
+          1054.196
+        ],
+        [
+          -467.301,
+          1053.42
+        ],
+        [
+          -467.587,
+          1053.075
+        ],
+        [
+          -468.476,
+          1053.299
+        ],
+        [
+          -474.169,
+          1047.762
+        ],
+        [
+          -474.243,
+          1047.342
+        ],
+        [
+          -473.974,
+          1046.982
+        ],
+        [
+          -474.127,
+          1046.505
+        ],
+        [
+          -474.475,
+          1046.205
+        ],
+        [
+          -475.378,
+          1046.437
+        ],
+        [
+          -481.24,
+          1040.53
+        ],
+        [
+          -480.93,
+          1040.207
+        ],
+        [
+          -481.233,
+          1039.381
+        ],
+        [
+          -482.2,
+          1039.56
+        ],
+        [
+          -487.885,
+          1034.003
+        ],
+        [
+          -487.692,
+          1033.1
+        ],
+        [
+          -489.087,
+          1031.44
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 45.15,
+      "eavesHeight": 5.0,
+      "roofRise": 2.5,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        5993
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 5993), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Long roofed (shaded) range set between parallel rows of rectangular purifier vessels in the eastern purifier block; OS five-foot plan, London VIII.42, revised 1893; OS internal notches along the long walls (pipe or valve connections) are kept in the outline.",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. Single tall storey kept above the c2 m purifier vessels either side; 5.0 m eaves chosen for realism, not evidence.",
+      "roofEvidence": "Pitched roof along the range is an interpretation. Sheds serving purifiers were usually ventilated; a ridge ventilator would be appropriate but the renderer has no ventilator option, so a plain gable is proposed. Slate/iron covering not established.",
+      "functionEvidence": "Covered shed between purifier rows; probably lime/oxide store or revivifying floor, possibly also housing valves. Function is an interpretation from layout; no label on the OS."
+    },
+    {
+      "id": "b924-purifier-shed-e-centre",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley eastern purifier block \u2014 centre shed",
+      "worldFootprint": [
+        [
+          -466.441,
+          1008.397
+        ],
+        [
+          -478.024,
+          1019.842
+        ],
+        [
+          -478.233,
+          1020.263
+        ],
+        [
+          -478.066,
+          1020.741
+        ],
+        [
+          -476.767,
+          1021.903
+        ],
+        [
+          -475.922,
+          1021.733
+        ],
+        [
+          -470.266,
+          1027.289
+        ],
+        [
+          -470.386,
+          1028.133
+        ],
+        [
+          -470.091,
+          1028.48
+        ],
+        [
+          -469.249,
+          1028.305
+        ],
+        [
+          -463.311,
+          1034.196
+        ],
+        [
+          -463.431,
+          1035.04
+        ],
+        [
+          -463.188,
+          1035.451
+        ],
+        [
+          -462.225,
+          1035.275
+        ],
+        [
+          -456.814,
+          1040.488
+        ],
+        [
+          -456.602,
+          1040.9
+        ],
+        [
+          -456.879,
+          1041.742
+        ],
+        [
+          -456.519,
+          1042.023
+        ],
+        [
+          -455.547,
+          1041.856
+        ],
+        [
+          -449.646,
+          1047.803
+        ],
+        [
+          -449.845,
+          1048.718
+        ],
+        [
+          -449.481,
+          1048.986
+        ],
+        [
+          -448.629,
+          1048.795
+        ],
+        [
+          -442.979,
+          1054.377
+        ],
+        [
+          -443.254,
+          1055.217
+        ],
+        [
+          -443.01,
+          1055.631
+        ],
+        [
+          -442.526,
+          1055.76
+        ],
+        [
+          -442.103,
+          1055.521
+        ],
+        [
+          -441.686,
+          1055.711
+        ],
+        [
+          -436.075,
+          1061.347
+        ],
+        [
+          -436.346,
+          1061.691
+        ],
+        [
+          -436.346,
+          1062.194
+        ],
+        [
+          -435.101,
+          1063.431
+        ],
+        [
+          -434.506,
+          1063.484
+        ],
+        [
+          -422.947,
+          1052.034
+        ],
+        [
+          -422.915,
+          1051.435
+        ],
+        [
+          -424.094,
+          1050.171
+        ],
+        [
+          -424.579,
+          1050.05
+        ],
+        [
+          -425.291,
+          1050.368
+        ],
+        [
+          -430.926,
+          1044.791
+        ],
+        [
+          -430.679,
+          1044.078
+        ],
+        [
+          -430.839,
+          1043.592
+        ],
+        [
+          -431.145,
+          1043.315
+        ],
+        [
+          -432.035,
+          1043.648
+        ],
+        [
+          -437.669,
+          1038.081
+        ],
+        [
+          -437.757,
+          1037.66
+        ],
+        [
+          -437.487,
+          1037.298
+        ],
+        [
+          -437.652,
+          1036.816
+        ],
+        [
+          -438.031,
+          1036.565
+        ],
+        [
+          -438.864,
+          1036.878
+        ],
+        [
+          -444.798,
+          1030.953
+        ],
+        [
+          -444.427,
+          1030.137
+        ],
+        [
+          -444.664,
+          1029.766
+        ],
+        [
+          -445.144,
+          1029.612
+        ],
+        [
+          -445.918,
+          1029.84
+        ],
+        [
+          -451.181,
+          1024.519
+        ],
+        [
+          -450.912,
+          1023.804
+        ],
+        [
+          -451.067,
+          1023.332
+        ],
+        [
+          -451.483,
+          1023.098
+        ],
+        [
+          -452.318,
+          1023.396
+        ],
+        [
+          -452.704,
+          1023.178
+        ],
+        [
+          -458.288,
+          1017.529
+        ],
+        [
+          -457.957,
+          1016.621
+        ],
+        [
+          -458.245,
+          1016.269
+        ],
+        [
+          -458.727,
+          1016.286
+        ],
+        [
+          -459.079,
+          1016.584
+        ],
+        [
+          -464.768,
+          1011.043
+        ],
+        [
+          -464.927,
+          1010.634
+        ],
+        [
+          -464.71,
+          1009.774
+        ],
+        [
+          -465.948,
+          1008.528
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 44.86,
+      "eavesHeight": 5.5,
+      "roofRise": 3.6,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        2076
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 2076), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Long roofed (shaded) range set between parallel rows of rectangular purifier vessels in the eastern purifier block; OS five-foot plan, London VIII.42, revised 1893; OS internal notches along the long walls (pipe or valve connections) are kept in the outline.",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. Single tall storey kept above the c2 m purifier vessels either side; 5.5 m eaves chosen for realism, not evidence.",
+      "roofEvidence": "Pitched roof along the range is an interpretation. Sheds serving purifiers were usually ventilated; a ridge ventilator would be appropriate but the renderer has no ventilator option, so a plain gable is proposed. Slate/iron covering not established.",
+      "functionEvidence": "Covered shed between purifier rows; probably lime/oxide store or revivifying floor, possibly also housing valves. Function is an interpretation from layout; no label on the OS."
+    },
+    {
+      "id": "b924-purifier-shed-e-east",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley eastern purifier block \u2014 east shed",
+      "worldFootprint": [
+        [
+          -448.929,
+          990.368
+        ],
+        [
+          -455.16,
+          996.674
+        ],
+        [
+          -455.327,
+          997.147
+        ],
+        [
+          -455.088,
+          997.563
+        ],
+        [
+          -453.85,
+          998.798
+        ],
+        [
+          -453.425,
+          999.015
+        ],
+        [
+          -453.043,
+          998.755
+        ],
+        [
+          -452.626,
+          998.877
+        ],
+        [
+          -447.382,
+          1004.24
+        ],
+        [
+          -447.177,
+          1005.5
+        ],
+        [
+          -446.665,
+          1005.626
+        ],
+        [
+          -446.269,
+          1005.397
+        ],
+        [
+          -440.295,
+          1011.291
+        ],
+        [
+          -440.416,
+          1012.262
+        ],
+        [
+          -439.652,
+          1012.604
+        ],
+        [
+          -439.238,
+          1012.368
+        ],
+        [
+          -433.714,
+          1018.035
+        ],
+        [
+          -433.896,
+          1018.483
+        ],
+        [
+          -433.742,
+          1018.959
+        ],
+        [
+          -433.263,
+          1019.124
+        ],
+        [
+          -432.774,
+          1018.936
+        ],
+        [
+          -432.366,
+          1019.173
+        ],
+        [
+          -426.795,
+          1024.818
+        ],
+        [
+          -426.799,
+          1025.651
+        ],
+        [
+          -426.517,
+          1025.999
+        ],
+        [
+          -425.534,
+          1025.992
+        ],
+        [
+          -419.909,
+          1031.575
+        ],
+        [
+          -419.968,
+          1032.481
+        ],
+        [
+          -419.63,
+          1032.78
+        ],
+        [
+          -418.798,
+          1032.633
+        ],
+        [
+          -412.874,
+          1038.552
+        ],
+        [
+          -413.124,
+          1038.893
+        ],
+        [
+          -413.099,
+          1039.506
+        ],
+        [
+          -411.782,
+          1040.668
+        ],
+        [
+          -411.301,
+          1040.534
+        ],
+        [
+          -405.347,
+          1034.626
+        ],
+        [
+          -405.439,
+          1034.073
+        ],
+        [
+          -448.499,
+          990.569
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 45.22,
+      "eavesHeight": 5.0,
+      "roofRise": 2.5,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        5702
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 5702), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Long roofed (shaded) range set between parallel rows of rectangular purifier vessels in the eastern purifier block; OS five-foot plan, London VIII.42, revised 1893; OS internal notches along the long walls (pipe or valve connections) are kept in the outline.",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. Single tall storey kept above the c2 m purifier vessels either side; 5.0 m eaves chosen for realism, not evidence.",
+      "roofEvidence": "Pitched roof along the range is an interpretation. Sheds serving purifiers were usually ventilated; a ridge ventilator would be appropriate but the renderer has no ventilator option, so a plain gable is proposed. Slate/iron covering not established.",
+      "functionEvidence": "Covered shed between purifier rows; probably lime/oxide store or revivifying floor, possibly also housing valves. Function is an interpretation from layout; no label on the OS."
+    },
+    {
+      "id": "b924-purifier-shed-w-west",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley western purifier block \u2014 west shed",
+      "worldFootprint": [
+        [
+          -590.571,
+          1132.698
+        ],
+        [
+          -593.813,
+          1135.695
+        ],
+        [
+          -594.814,
+          1135.953
+        ],
+        [
+          -597.526,
+          1138.862
+        ],
+        [
+          -597.303,
+          1139.268
+        ],
+        [
+          -553.855,
+          1182.395
+        ],
+        [
+          -552.955,
+          1182.174
+        ],
+        [
+          -547.087,
+          1176.202
+        ],
+        [
+          -547.257,
+          1175.718
+        ],
+        [
+          -548.429,
+          1174.41
+        ],
+        [
+          -548.857,
+          1174.211
+        ],
+        [
+          -549.267,
+          1174.439
+        ],
+        [
+          -549.632,
+          1174.337
+        ],
+        [
+          -555.22,
+          1168.694
+        ],
+        [
+          -554.933,
+          1168.325
+        ],
+        [
+          -555.395,
+          1167.515
+        ],
+        [
+          -556.359,
+          1167.819
+        ],
+        [
+          -561.92,
+          1162.162
+        ],
+        [
+          -561.757,
+          1161.287
+        ],
+        [
+          -562.003,
+          1160.874
+        ],
+        [
+          -563.036,
+          1160.992
+        ],
+        [
+          -568.703,
+          1155.428
+        ],
+        [
+          -568.872,
+          1155.062
+        ],
+        [
+          -568.648,
+          1154.172
+        ],
+        [
+          -569.04,
+          1153.901
+        ],
+        [
+          -569.864,
+          1154.219
+        ],
+        [
+          -575.725,
+          1148.195
+        ],
+        [
+          -582.412,
+          1141.833
+        ],
+        [
+          -582.54,
+          1141.483
+        ],
+        [
+          -582.302,
+          1140.642
+        ],
+        [
+          -582.665,
+          1140.369
+        ],
+        [
+          -583.491,
+          1140.68
+        ],
+        [
+          -589.12,
+          1135.099
+        ],
+        [
+          -589.191,
+          1134.611
+        ],
+        [
+          -588.955,
+          1134.209
+        ],
+        [
+          -590.076,
+          1132.83
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 44.79,
+      "eavesHeight": 5.0,
+      "roofRise": 2.5,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        5731
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 5731), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Long roofed (shaded) range set between parallel rows of rectangular purifier vessels in the western purifier block; OS five-foot plan, London VIII.42, revised 1893; OS internal notches along the long walls (pipe or valve connections) are kept in the outline.",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. Single tall storey kept above the c2 m purifier vessels either side; 5.0 m eaves chosen for realism, not evidence.",
+      "roofEvidence": "Pitched roof along the range is an interpretation. Sheds serving purifiers were usually ventilated; a ridge ventilator would be appropriate but the renderer has no ventilator option, so a plain gable is proposed. Slate/iron covering not established.",
+      "functionEvidence": "Covered shed between purifier rows; probably lime/oxide store or revivifying floor, possibly also housing valves. Function is an interpretation from layout; no label on the OS."
+    },
+    {
+      "id": "b924-purifier-shed-w-centre",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley western purifier block \u2014 centre shed",
+      "worldFootprint": [
+        [
+          -552.606,
+          1125.117
+        ],
+        [
+          -553.147,
+          1124.88
+        ],
+        [
+          -553.303,
+          1124.393
+        ],
+        [
+          -559.454,
+          1118.192
+        ],
+        [
+          -559.093,
+          1117.901
+        ],
+        [
+          -559.171,
+          1117.353
+        ],
+        [
+          -559.588,
+          1117.121
+        ],
+        [
+          -560.496,
+          1117.223
+        ],
+        [
+          -566.056,
+          1111.569
+        ],
+        [
+          -565.768,
+          1110.849
+        ],
+        [
+          -565.987,
+          1110.435
+        ],
+        [
+          -566.94,
+          1109.508
+        ],
+        [
+          -567.429,
+          1109.382
+        ],
+        [
+          -579.258,
+          1121.245
+        ],
+        [
+          -579.085,
+          1121.727
+        ],
+        [
+          -578.132,
+          1122.617
+        ],
+        [
+          -577.709,
+          1122.84
+        ],
+        [
+          -577.226,
+          1122.672
+        ],
+        [
+          -576.871,
+          1122.813
+        ],
+        [
+          -571.257,
+          1128.412
+        ],
+        [
+          -571.462,
+          1128.837
+        ],
+        [
+          -571.315,
+          1129.314
+        ],
+        [
+          -570.899,
+          1129.548
+        ],
+        [
+          -570.483,
+          1129.3
+        ],
+        [
+          -570.074,
+          1129.532
+        ],
+        [
+          -564.499,
+          1135.171
+        ],
+        [
+          -564.327,
+          1135.591
+        ],
+        [
+          -564.514,
+          1136.012
+        ],
+        [
+          -564.232,
+          1136.355
+        ],
+        [
+          -563.242,
+          1136.361
+        ],
+        [
+          -557.685,
+          1142.002
+        ],
+        [
+          -557.635,
+          1142.937
+        ],
+        [
+          -557.206,
+          1143.149
+        ],
+        [
+          -556.794,
+          1142.919
+        ],
+        [
+          -551.172,
+          1148.492
+        ],
+        [
+          -550.925,
+          1148.901
+        ],
+        [
+          -551.153,
+          1149.335
+        ],
+        [
+          -550.954,
+          1149.779
+        ],
+        [
+          -549.618,
+          1150.025
+        ],
+        [
+          -544.039,
+          1155.661
+        ],
+        [
+          -544.334,
+          1156.027
+        ],
+        [
+          -544.209,
+          1156.563
+        ],
+        [
+          -543.166,
+          1156.583
+        ],
+        [
+          -537.543,
+          1162.167
+        ],
+        [
+          -537.621,
+          1163.022
+        ],
+        [
+          -536.084,
+          1164.586
+        ],
+        [
+          -535.548,
+          1164.451
+        ],
+        [
+          -524.416,
+          1153.166
+        ],
+        [
+          -524.297,
+          1152.675
+        ],
+        [
+          -526.007,
+          1151.237
+        ],
+        [
+          -526.838,
+          1151.425
+        ],
+        [
+          -532.105,
+          1146.094
+        ],
+        [
+          -532.288,
+          1145.644
+        ],
+        [
+          -532.026,
+          1145.291
+        ],
+        [
+          -532.121,
+          1144.713
+        ],
+        [
+          -532.479,
+          1144.472
+        ],
+        [
+          -533.387,
+          1144.702
+        ],
+        [
+          -538.952,
+          1139.08
+        ],
+        [
+          -539.115,
+          1138.729
+        ],
+        [
+          -538.764,
+          1138.431
+        ],
+        [
+          -538.933,
+          1137.947
+        ],
+        [
+          -539.308,
+          1137.7
+        ],
+        [
+          -540.212,
+          1137.809
+        ],
+        [
+          -545.768,
+          1132.163
+        ],
+        [
+          -545.855,
+          1131.745
+        ],
+        [
+          -545.573,
+          1131.386
+        ],
+        [
+          -545.781,
+          1130.921
+        ],
+        [
+          -546.758,
+          1131.093
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 44.97,
+      "eavesHeight": 5.5,
+      "roofRise": 3.6,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        2093
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 2093), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Long roofed (shaded) range set between parallel rows of rectangular purifier vessels in the western purifier block; OS five-foot plan, London VIII.42, revised 1893; OS internal notches along the long walls (pipe or valve connections) are kept in the outline.",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. Single tall storey kept above the c2 m purifier vessels either side; 5.5 m eaves chosen for realism, not evidence.",
+      "roofEvidence": "Pitched roof along the range is an interpretation. Sheds serving purifiers were usually ventilated; a ridge ventilator would be appropriate but the renderer has no ventilator option, so a plain gable is proposed. Slate/iron covering not established.",
+      "functionEvidence": "Covered shed between purifier rows; probably lime/oxide store or revivifying floor, possibly also housing valves. Function is an interpretation from layout; no label on the OS."
+    },
+    {
+      "id": "b924-purifier-shed-w-east",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley western purifier block \u2014 east shed",
+      "worldFootprint": [
+        [
+          -549.727,
+          1091.691
+        ],
+        [
+          -555.626,
+          1097.521
+        ],
+        [
+          -556.13,
+          1098.275
+        ],
+        [
+          -555.002,
+          1099.647
+        ],
+        [
+          -554.097,
+          1099.824
+        ],
+        [
+          -553.821,
+          1099.478
+        ],
+        [
+          -548.268,
+          1105.176
+        ],
+        [
+          -548.095,
+          1105.57
+        ],
+        [
+          -548.342,
+          1105.947
+        ],
+        [
+          -548.113,
+          1106.358
+        ],
+        [
+          -547.131,
+          1106.345
+        ],
+        [
+          -534.772,
+          1118.891
+        ],
+        [
+          -534.651,
+          1119.93
+        ],
+        [
+          -533.599,
+          1120.08
+        ],
+        [
+          -521.175,
+          1132.58
+        ],
+        [
+          -521.176,
+          1133.433
+        ],
+        [
+          -520.825,
+          1133.707
+        ],
+        [
+          -519.951,
+          1133.779
+        ],
+        [
+          -514.392,
+          1139.417
+        ],
+        [
+          -514.432,
+          1140.327
+        ],
+        [
+          -513.13,
+          1141.531
+        ],
+        [
+          -512.582,
+          1141.448
+        ],
+        [
+          -509.403,
+          1138.385
+        ],
+        [
+          -506.505,
+          1135.061
+        ],
+        [
+          -549.231,
+          1091.823
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 45.34,
+      "eavesHeight": 5.0,
+      "roofRise": 2.5,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        5777
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 5777), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Long roofed (shaded) range set between parallel rows of rectangular purifier vessels in the western purifier block; OS five-foot plan, London VIII.42, revised 1893; OS internal notches along the long walls (pipe or valve connections) are kept in the outline.",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. Single tall storey kept above the c2 m purifier vessels either side; 5.0 m eaves chosen for realism, not evidence.",
+      "roofEvidence": "Pitched roof along the range is an interpretation. Sheds serving purifiers were usually ventilated; a ridge ventilator would be appropriate but the renderer has no ventilator option, so a plain gable is proposed. Slate/iron covering not established.",
+      "functionEvidence": "Covered shed between purifier rows; probably lime/oxide store or revivifying floor, possibly also housing valves. Function is an interpretation from layout; no label on the OS."
+    },
+    {
+      "id": "b924-l-range-sw-leg",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley riverside L-range \u2014 south-western leg",
+      "worldFootprint": [
+        [
+          -573.282,
+          1034.396
+        ],
+        [
+          -580.656,
+          1027.635
+        ],
+        [
+          -587.171,
+          1034.216
+        ],
+        [
+          -587.025,
+          1034.696
+        ],
+        [
+          -567.649,
+          1053.276
+        ],
+        [
+          -567.076,
+          1053.2
+        ],
+        [
+          -561.204,
+          1047.221
+        ],
+        [
+          -560.967,
+          1046.376
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 43.8,
+      "eavesHeight": 5.5,
+      "roofRise": 2.6,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        17304
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 17304), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. South-western leg of the shaded L-shaped range on OS five-foot plan, London VIII.42, revised 1893; replaces legacy envelope site924-os-11, which sits on open ground south-east of the L.",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. 5.5 m is proposed for all three arms of the L so the range reads as one building (legacy os-10 is 3.8 m, os-12 is 11 m with no recorded reason).",
+      "roofEvidence": "Gable along the leg is an interpretation; OS gives plan only.",
+      "functionEvidence": "Part of the L-shaped range between the purifiers and the river; workshops, stores or engine house \u2014 function not labelled."
+    },
+    {
+      "id": "b924-lodge-bm1845",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley works building at B.M. 18.45 (lodge, office or meter house)",
+      "worldFootprint": [
+        [
+          -350.204,
+          1003.021
+        ],
+        [
+          -348.033,
+          1005.141
+        ],
+        [
+          -347.934,
+          1005.707
+        ],
+        [
+          -347.531,
+          1005.825
+        ],
+        [
+          -346.294,
+          1007.063
+        ],
+        [
+          -345.817,
+          1007.195
+        ],
+        [
+          -343.833,
+          1009.645
+        ],
+        [
+          -343.382,
+          1009.692
+        ],
+        [
+          -341.821,
+          1011.267
+        ],
+        [
+          -341.678,
+          1011.747
+        ],
+        [
+          -340.309,
+          1012.862
+        ],
+        [
+          -339.685,
+          1012.84
+        ],
+        [
+          -339.617,
+          1012.415
+        ],
+        [
+          -334.163,
+          1007.284
+        ],
+        [
+          -333.681,
+          1007.141
+        ],
+        [
+          -333.833,
+          1006.394
+        ],
+        [
+          -339.115,
+          1001.096
+        ],
+        [
+          -339.582,
+          1000.962
+        ],
+        [
+          -339.754,
+          1000.419
+        ],
+        [
+          -350.647,
+          989.487
+        ],
+        [
+          -351.131,
+          989.666
+        ],
+        [
+          -357.338,
+          995.904
+        ],
+        [
+          -356.582,
+          996.608
+        ],
+        [
+          -356.426,
+          997.095
+        ],
+        [
+          -356.005,
+          997.299
+        ],
+        [
+          -350.512,
+          1003.009
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 45.1,
+      "eavesHeight": 6.9,
+      "roofRise": 2.6,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        47882,
+        194440
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 47882, 194440), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Main room and second room merged across the OS division line; OS five-foot plan, London VIII.42, revised 1893; replaces legacy site924-os-8 (about 12 m off) and supersedes site924-os-7 (open ground). Unshaded yard compartments and small adjuncts (1001269, 1015116, 899855) are left unmodelled.",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. Two storeys (builder default 6.9 m eaves) is a judgement for an office/lodge type; one tall storey is equally plausible.",
+      "roofEvidence": "Plain gable along the long axis; a hipped slate roof would be likelier for a lodge but is not a renderer option.",
+      "functionEvidence": "Two-room shaded building beside the internal road with unshaded yard compartments on its south-west side; reads as an office/lodge or meter house. Unidentified."
+    },
+    {
+      "id": "b924-tramway-building",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley building beside the tramway, south of the eastern purifiers",
+      "worldFootprint": [
+        [
+          -463.941,
+          1120.338
+        ],
+        [
+          -462.675,
+          1118.79
+        ],
+        [
+          -465.911,
+          1115.209
+        ],
+        [
+          -466.514,
+          1115.277
+        ],
+        [
+          -471.687,
+          1120.069
+        ],
+        [
+          -471.873,
+          1120.526
+        ],
+        [
+          -468.507,
+          1124.043
+        ],
+        [
+          -468.647,
+          1124.54
+        ],
+        [
+          -468.486,
+          1125.022
+        ],
+        [
+          -462.364,
+          1131.353
+        ],
+        [
+          -461.936,
+          1131.571
+        ],
+        [
+          -461.041,
+          1131.321
+        ],
+        [
+          -460.672,
+          1131.597
+        ],
+        [
+          -460.193,
+          1131.585
+        ],
+        [
+          -458.67,
+          1129.983
+        ],
+        [
+          -458.766,
+          1129.435
+        ],
+        [
+          -457.5,
+          1128.196
+        ],
+        [
+          -457.742,
+          1127.574
+        ],
+        [
+          -457.584,
+          1127.089
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 47.9,
+      "eavesHeight": 4.5,
+      "roofRise": 2.0,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        246252,
+        655514
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 246252, 655514), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Two shaded rooms merged; OS five-foot plan, London VIII.42, revised 1893; detached small squares 1068907 and 1085427 left out.",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. Single storey.",
+      "roofEvidence": "Gable along the long axis is an interpretation.",
+      "functionEvidence": "Small two-part works building next to the internal tramway; function unidentified (store, smithy or valve house)."
+    },
+    {
+      "id": "b924-yard-sw-shed",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley north-west yard \u2014 south-western shed",
+      "worldFootprint": [
+        [
+          -475.873,
+          721.342
+        ],
+        [
+          -481.416,
+          722.307
+        ],
+        [
+          -480.149,
+          729.312
+        ],
+        [
+          -474.681,
+          728.402
+        ],
+        [
+          -475.669,
+          721.774
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 80.12,
+      "eavesHeight": 3.2,
+      "roofRise": 1.5,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        657383
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 657383), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Shaded room inside the unshaded walled yard; OS five-foot plan, London VIII.42, revised 1893; 963950 (8.8 m\u00b2) left as a minor adjunct.",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Small gable; interpretation.",
+      "functionEvidence": "Small shed in the corner of the unroofed walled yard north of range 3."
+    },
+    {
+      "id": "b924-riverside-hut",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley riverside hut by Bow Creek",
+      "worldFootprint": [
+        [
+          -519.598,
+          677.04
+        ],
+        [
+          -524.06,
+          680.209
+        ],
+        [
+          -524.179,
+          680.698
+        ],
+        [
+          -520.325,
+          686.236
+        ],
+        [
+          -519.834,
+          686.372
+        ],
+        [
+          -515.427,
+          683.242
+        ],
+        [
+          -515.35,
+          682.8
+        ],
+        [
+          -519.168,
+          677.238
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 55.16,
+      "eavesHeight": 3.2,
+      "roofRise": 1.6,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        598518
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 598518), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Single shaded footprint; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Small gable; interpretation.",
+      "functionEvidence": "Isolated small shaded building near the creek bank; use unknown."
+    },
+    {
+      "id": "b924-road-shed",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley shed at the foot of the road embankment",
+      "worldFootprint": [
+        [
+          -473.116,
+          756.036
+        ],
+        [
+          -473.081,
+          760.0
+        ],
+        [
+          -472.745,
+          760.214
+        ],
+        [
+          -469.088,
+          759.965
+        ],
+        [
+          -469.115,
+          756.227
+        ],
+        [
+          -469.36,
+          755.933
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 89.5,
+      "eavesHeight": 3.0,
+      "roofRise": 1.2,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        881589
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 881589), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Single shaded footprint; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Small gable; interpretation.",
+      "functionEvidence": "Small shaded square at the toe of the embanked road; hut or gate shelter."
+    },
+    {
+      "id": "b924-weighbridge-hut",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley weighbridge hut (W.M.)",
+      "worldFootprint": [
+        [
+          -388.492,
+          938.09
+        ],
+        [
+          -391.403,
+          938.986
+        ],
+        [
+          -391.725,
+          939.292
+        ],
+        [
+          -390.9,
+          942.257
+        ],
+        [
+          -390.471,
+          942.481
+        ],
+        [
+          -387.562,
+          941.57
+        ],
+        [
+          -387.237,
+          941.264
+        ],
+        [
+          -388.142,
+          938.367
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -17.36,
+      "eavesHeight": 3.0,
+      "roofRise": 1.2,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        912126
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 912126), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Single shaded footprint next to the printed W.M. label; OS five-foot plan, London VIII.42, revised 1893; the 4.6 m\u00b2 feature 1042059 is the machine or its pit and is skipped.",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Small gable; interpretation.",
+      "functionEvidence": "Small hut beside the OS \"W.M.\" (weighing machine) label on the northern works road."
+    },
+    {
+      "id": "b924-garden-curved-outbuilding",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley manager's garden \u2014 curved-end outbuilding",
+      "worldFootprint": [
+        [
+          -315.898,
+          849.16
+        ],
+        [
+          -315.684,
+          847.331
+        ],
+        [
+          -316.786,
+          847.49
+        ],
+        [
+          -318.928,
+          849.098
+        ],
+        [
+          -321.597,
+          857.461
+        ],
+        [
+          -330.71,
+          857.732
+        ],
+        [
+          -331.507,
+          858.153
+        ],
+        [
+          -332.535,
+          859.616
+        ],
+        [
+          -332.492,
+          860.267
+        ],
+        [
+          -319.114,
+          860.054
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -35.92,
+      "eavesHeight": 3.4,
+      "roofRise": 1.8,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        301504
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 301504), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Single shaded footprint with a rounded end; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Gable along the range; the rounded end is kept only in plan.",
+      "functionEvidence": "Outbuilding on the east side of the walled garden that surrounds legacy range os-4 (the house); the rounded end suggests a stable, coach-house or shelter."
+    },
+    {
+      "id": "b924-garden-gate-outbuildings",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley manager's garden \u2014 outbuildings by the east gate",
+      "worldFootprint": [
+        [
+          -302.501,
+          853.993
+        ],
+        [
+          -298.965,
+          841.704
+        ],
+        [
+          -299.251,
+          841.34
+        ],
+        [
+          -304.099,
+          840.024
+        ],
+        [
+          -304.432,
+          840.354
+        ],
+        [
+          -307.981,
+          852.031
+        ],
+        [
+          -307.827,
+          852.516
+        ],
+        [
+          -305.565,
+          853.334
+        ],
+        [
+          -305.01,
+          853.238
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -73.95,
+      "eavesHeight": 3.4,
+      "roofRise": 1.6,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        478934,
+        841491
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 478934, 841491), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Two shaded rooms merged; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Gable; interpretation.",
+      "functionEvidence": "Shaded outbuildings at the garden's north-east corner by the embankment; the unshaded subdivided cells beside them are skipped."
+    },
+    {
+      "id": "b924-glasshouse",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley manager's garden \u2014 glasshouse",
+      "worldFootprint": [
+        [
+          -315.757,
+          780.156
+        ],
+        [
+          -296.004,
+          779.752
+        ],
+        [
+          -295.423,
+          778.723
+        ],
+        [
+          -294.865,
+          776.258
+        ],
+        [
+          -295.124,
+          775.879
+        ],
+        [
+          -314.746,
+          776.264
+        ],
+        [
+          -315.857,
+          776.445
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -1.17,
+      "eavesHeight": 2.2,
+      "roofRise": 1.3,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "wood",
+      "roof": "lean",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        175437
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 175437), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Cross-hatched footprint on OS five-foot plan, London VIII.42, revised 1893; the small shaded room at its west end is 877669 (separate record).",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. Low glasshouse height.",
+      "roofEvidence": "Lean-to against the north (road-side) wall; glazed roof requested through the existing roofGlazing flag.",
+      "roofGlazing": true,
+      "functionEvidence": "Cross-hatched long range along the garden's north wall; OS cross-hatching of this kind marks a glasshouse."
+    },
+    {
+      "id": "b924-potting-shed",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley manager's garden \u2014 shed at the glasshouse end",
+      "worldFootprint": [
+        [
+          -320.317,
+          776.509
+        ],
+        [
+          -320.377,
+          779.279
+        ],
+        [
+          -320.195,
+          780.251
+        ],
+        [
+          -315.683,
+          780.163
+        ],
+        [
+          -315.682,
+          777.261
+        ],
+        [
+          -316.074,
+          776.391
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -1.12,
+      "eavesHeight": 2.6,
+      "roofRise": 0.9,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "lean",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        877669
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 877669), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Single shaded footprint; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Lean-to; interpretation.",
+      "functionEvidence": "Small shaded room at the west end of the glasshouse."
+    },
+    {
+      "id": "b924-l-range-nw-arm",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley riverside L-range \u2014 north-western arm",
+      "worldFootprint": [
+        [
+          -556.297,
+          1016.854
+        ],
+        [
+          -556.479,
+          1016.386
+        ],
+        [
+          -563.118,
+          1009.951
+        ],
+        [
+          -563.385,
+          1009.948
+        ],
+        [
+          -580.573,
+          1027.641
+        ],
+        [
+          -573.282,
+          1034.396
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -45.89,
+      "eavesHeight": 5.5,
+      "roofRise": 2.6,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        19326
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 19326), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Re-registration of legacy site924-os-10 (IoU 0.20 with this source) to its source outline; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. Common 5.5 m eaves for the L.",
+      "roofEvidence": "Gable; interpretation.",
+      "functionEvidence": "As b924-l-range-sw-leg."
+    },
+    {
+      "id": "b924-l-range-ne-arm",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley riverside L-range \u2014 north-eastern arm",
+      "worldFootprint": [
+        [
+          -563.118,
+          1009.951
+        ],
+        [
+          -556.479,
+          1016.386
+        ],
+        [
+          -556.297,
+          1016.854
+        ],
+        [
+          -543.94,
+          1028.744
+        ],
+        [
+          -543.464,
+          1028.593
+        ],
+        [
+          -537.262,
+          1022.327
+        ],
+        [
+          -537.339,
+          1021.78
+        ],
+        [
+          -556.335,
+          1003.397
+        ],
+        [
+          -556.767,
+          1003.21
+        ],
+        [
+          -562.986,
+          1009.456
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 44.06,
+      "eavesHeight": 5.5,
+      "roofRise": 2.6,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        17810
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 17810), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Re-registration of legacy site924-os-12 (IoU 0.17) to its source outline; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. os-12 currently has 11 m eaves and 4 roof bays on a 9 m span with no recorded evidence; 5.5 m proposed.",
+      "roofEvidence": "Gable; interpretation.",
+      "functionEvidence": "As b924-l-range-sw-leg."
+    },
+    {
+      "id": "b924-yard-se-shed",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley north-west yard \u2014 south-eastern shed",
+      "worldFootprint": [
+        [
+          -464.108,
+          719.001
+        ],
+        [
+          -469.345,
+          719.893
+        ],
+        [
+          -469.639,
+          720.22
+        ],
+        [
+          -468.425,
+          727.26
+        ],
+        [
+          -462.555,
+          726.316
+        ],
+        [
+          -463.833,
+          719.342
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 80.21,
+      "eavesHeight": 3.2,
+      "roofRise": 1.5,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        617272
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 617272), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Replaces part of legacy os-1/os-2; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Small gable; interpretation.",
+      "functionEvidence": "Small shed in the walled yard."
+    },
+    {
+      "id": "b924-yard-mid-shed",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley north-west yard \u2014 narrow middle shed",
+      "worldFootprint": [
+        [
+          -472.288,
+          716.109
+        ],
+        [
+          -474.551,
+          716.445
+        ],
+        [
+          -474.873,
+          716.758
+        ],
+        [
+          -473.616,
+          724.361
+        ],
+        [
+          -470.837,
+          724.006
+        ],
+        [
+          -470.735,
+          723.447
+        ],
+        [
+          -471.957,
+          716.406
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 80.61,
+      "eavesHeight": 3.0,
+      "roofRise": 1.0,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        827984
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 827984), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Replaces part of legacy os-1/os-2; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Small gable; interpretation.",
+      "functionEvidence": "Narrow shed in the walled yard."
+    },
+    {
+      "id": "b924-yard-top-shed",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley north-west yard \u2014 detached small shed",
+      "worldFootprint": [
+        [
+          -469.459,
+          700.709
+        ],
+        [
+          -472.816,
+          701.214
+        ],
+        [
+          -473.124,
+          701.538
+        ],
+        [
+          -472.7,
+          704.302
+        ],
+        [
+          -472.349,
+          704.591
+        ],
+        [
+          -469.099,
+          704.018
+        ],
+        [
+          -468.71,
+          703.768
+        ],
+        [
+          -469.133,
+          701.008
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -8.72,
+      "eavesHeight": 2.8,
+      "roofRise": 1.0,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        911279
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 911279), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Replaces part of legacy os-1; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Small gable; interpretation.",
+      "functionEvidence": "Small detached shed in the walled yard."
+    },
+    {
+      "id": "b924-south-boundary-l",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley south boundary \u2014 L-shaped outbuilding",
+      "worldFootprint": [
+        [
+          -320.156,
+          873.608
+        ],
+        [
+          -320.062,
+          882.622
+        ],
+        [
+          -316.967,
+          882.747
+        ],
+        [
+          -316.863,
+          868.307
+        ],
+        [
+          -323.99,
+          868.439
+        ],
+        [
+          -323.975,
+          873.143
+        ],
+        [
+          -320.366,
+          873.176
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -89.58,
+      "eavesHeight": 3.5,
+      "roofRise": 1.6,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        296758
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 296758), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Replaces part of legacy os-5/os-6; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Gable; interpretation.",
+      "functionEvidence": "Outbuilding on the south boundary of the yard south of the garden."
+    },
+    {
+      "id": "b924-south-boundary-row",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley south boundary \u2014 row of small rooms",
+      "worldFootprint": [
+        [
+          -336.236,
+          882.864
+        ],
+        [
+          -320.062,
+          882.622
+        ],
+        [
+          -320.192,
+          877.833
+        ],
+        [
+          -336.563,
+          878.057
+        ],
+        [
+          -336.607,
+          882.699
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -0.78,
+      "eavesHeight": 3.2,
+      "roofRise": 1.2,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "lean",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        825931,
+        841350,
+        910854,
+        859404
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 825931, 841350, 910854, 859404), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Four shaded rooms merged across OS division lines; replaces most of legacy os-5; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Lean-to against the boundary wall; interpretation.",
+      "functionEvidence": "Row of small rooms against the south boundary wall (stores, stalls or privies)."
+    },
+    {
+      "id": "b924-south-boundary-west",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley south boundary \u2014 western outbuilding",
+      "worldFootprint": [
+        [
+          -360.62,
+          875.16
+        ],
+        [
+          -360.369,
+          874.786
+        ],
+        [
+          -360.4,
+          873.537
+        ],
+        [
+          -364.019,
+          873.483
+        ],
+        [
+          -364.492,
+          873.65
+        ],
+        [
+          -364.21,
+          880.451
+        ],
+        [
+          -360.956,
+          880.356
+        ],
+        [
+          -360.826,
+          879.868
+        ],
+        [
+          -361.235,
+          875.792
+        ],
+        [
+          -361.171,
+          875.238
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 88.33,
+      "eavesHeight": 3.0,
+      "roofRise": 1.2,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        873798,
+        996188
+      ],
+      "footprintEvidence": "Source outline from the author's 1891\u201396 OS building GeoPackage (sourceFids 873798, 996188), merged across OS internal division lines where listed and simplified at 0.15 m; checked against the cached NLS five-foot 1893 mosaic. Replaces the western end of legacy os-5; OS five-foot plan, London VIII.42, revised 1893; ",
+      "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
+      "roofEvidence": "Gable; interpretation.",
+      "functionEvidence": "Small detached outbuilding at the west end of the boundary."
+    }
+  ],
+  "removedStructures": [
+    {
+      "id": "purifiers-0",
+      "reason": "The four existing purifierBank structures are placed on the long purifier sheds, not on the vessel rows: purifiers-1 sits on shed 2076, purifiers-3 on shed 5777, purifiers-2 between shed 2093 and its west row; purifiers-0 is about 6 m off the eastern north row and has 7 vessels where the OS has 8. Existing renderer boxes are 7 x 6 m at a 9 m step; the mapped vessels are about 6.5 x 12 m at 8.7\u20139.7 m."
+    },
+    {
+      "id": "purifiers-1",
+      "reason": "The four existing purifierBank structures are placed on the long purifier sheds, not on the vessel rows: purifiers-1 sits on shed 2076, purifiers-3 on shed 5777, purifiers-2 between shed 2093 and its west row; purifiers-0 is about 6 m off the eastern north row and has 7 vessels where the OS has 8. Existing renderer boxes are 7 x 6 m at a 9 m step; the mapped vessels are about 6.5 x 12 m at 8.7\u20139.7 m."
+    },
+    {
+      "id": "purifiers-2",
+      "reason": "The four existing purifierBank structures are placed on the long purifier sheds, not on the vessel rows: purifiers-1 sits on shed 2076, purifiers-3 on shed 5777, purifiers-2 between shed 2093 and its west row; purifiers-0 is about 6 m off the eastern north row and has 7 vessels where the OS has 8. Existing renderer boxes are 7 x 6 m at a 9 m step; the mapped vessels are about 6.5 x 12 m at 8.7\u20139.7 m."
+    },
+    {
+      "id": "purifiers-3",
+      "reason": "The four existing purifierBank structures are placed on the long purifier sheds, not on the vessel rows: purifiers-1 sits on shed 2076, purifiers-3 on shed 5777, purifiers-2 between shed 2093 and its west row; purifiers-0 is about 6 m off the eastern north row and has 7 vessels where the OS has 8. Existing renderer boxes are 7 x 6 m at a 9 m step; the mapped vessels are about 6.5 x 12 m at 8.7\u20139.7 m."
+    }
+  ],
+  "additionalStructures": [
+    {
+      "id": "b924-purifiers-e-north",
+      "siteId": 924,
+      "kind": "purifierBank",
+      "x": -485.23,
+      "z": 1001.46,
+      "count": 8,
+      "rotation": -45.11,
+      "spacing": 8.7,
+      "boxLength": 6.44,
+      "boxWidth": 12.16,
+      "source": "os-1893",
+      "sourceFids": [
+        190028,
+        205528,
+        194110,
+        176493,
+        197774,
+        193920,
+        185285,
+        194144
+      ],
+      "evidence": "Row of 8 shaded rectangular purifier vessels on OS VIII.42 (1893), fitted to the GeoPackage outlines: mean step 8.7 m, vessel 6.44 x 12.16 m, max off-row residual 0.08 m. Vessel height (~2 m) and lids are interpretation."
+    },
+    {
+      "id": "b924-purifiers-e-west-inner",
+      "siteId": 924,
+      "kind": "purifierBank",
+      "x": -462.2,
+      "z": 1047.53,
+      "count": 6,
+      "rotation": 45.07,
+      "spacing": 9.56,
+      "boxLength": 6.49,
+      "boxWidth": 11.87,
+      "source": "os-1893",
+      "sourceFids": [
+        223965,
+        178345,
+        225336,
+        165279,
+        192015,
+        189499
+      ],
+      "evidence": "Row of 6 shaded rectangular purifier vessels on OS VIII.42 (1893), fitted to the GeoPackage outlines: mean step 9.56 m, vessel 6.49 x 11.87 m, max off-row residual 0.03 m. Vessel height (~2 m) and lids are interpretation."
+    },
+    {
+      "id": "b924-purifiers-e-east-inner",
+      "siteId": 924,
+      "kind": "purifierBank",
+      "x": -439.09,
+      "z": 1024.5,
+      "count": 6,
+      "rotation": 44.89,
+      "spacing": 9.61,
+      "boxLength": 6.51,
+      "boxWidth": 11.69,
+      "source": "os-1893",
+      "sourceFids": [
+        252997,
+        205519,
+        209613,
+        180282,
+        190224,
+        195436
+      ],
+      "evidence": "Row of 6 shaded rectangular purifier vessels on OS VIII.42 (1893), fitted to the GeoPackage outlines: mean step 9.61 m, vessel 6.51 x 11.69 m, max off-row residual 0.02 m. Vessel height (~2 m) and lids are interpretation."
+    },
+    {
+      "id": "b924-purifiers-w-outer-west",
+      "siteId": 924,
+      "kind": "purifierBank",
+      "x": -581.38,
+      "z": 1166.92,
+      "count": 6,
+      "rotation": 44.92,
+      "spacing": 9.72,
+      "boxLength": 6.66,
+      "boxWidth": 12.09,
+      "source": "os-1893",
+      "sourceFids": [
+        187833,
+        169489,
+        180903,
+        186721,
+        186113,
+        195485
+      ],
+      "evidence": "Row of 6 shaded rectangular purifier vessels on OS VIII.42 (1893), fitted to the GeoPackage outlines: mean step 9.72 m, vessel 6.66 x 12.09 m, max off-row residual 0.08 m. Vessel height (~2 m) and lids are interpretation."
+    },
+    {
+      "id": "b924-purifiers-w-west-inner",
+      "siteId": 924,
+      "kind": "purifierBank",
+      "x": -563.22,
+      "z": 1148.53,
+      "count": 6,
+      "rotation": 45.12,
+      "spacing": 9.66,
+      "boxLength": 6.45,
+      "boxWidth": 11.95,
+      "source": "os-1893",
+      "sourceFids": [
+        196552,
+        208912,
+        196561,
+        176931,
+        202270,
+        177765
+      ],
+      "evidence": "Row of 6 shaded rectangular purifier vessels on OS VIII.42 (1893), fitted to the GeoPackage outlines: mean step 9.66 m, vessel 6.45 x 11.95 m, max off-row residual 0.04 m. Vessel height (~2 m) and lids are interpretation."
+    },
+    {
+      "id": "b924-purifiers-w-east-inner",
+      "siteId": 924,
+      "kind": "purifierBank",
+      "x": -540.34,
+      "z": 1125.46,
+      "count": 6,
+      "rotation": 45.26,
+      "spacing": 9.62,
+      "boxLength": 6.49,
+      "boxWidth": 11.75,
+      "source": "os-1893",
+      "sourceFids": [
+        224891,
+        227585,
+        205504,
+        181974,
+        195953,
+        194205
+      ],
+      "evidence": "Row of 6 shaded rectangular purifier vessels on OS VIII.42 (1893), fitted to the GeoPackage outlines: mean step 9.62 m, vessel 6.49 x 11.75 m, max off-row residual 0.05 m. Vessel height (~2 m) and lids are interpretation."
+    },
+    {
+      "id": "b924-purifiers-w-outer-east",
+      "siteId": 924,
+      "kind": "purifierBank",
+      "x": -523.51,
+      "z": 1108.61,
+      "count": 6,
+      "rotation": 45.34,
+      "spacing": 9.63,
+      "boxLength": 6.5,
+      "boxWidth": 11.53,
+      "source": "os-1893",
+      "sourceFids": [
+        225442,
+        218884,
+        207569,
+        194725,
+        206268,
+        218730
+      ],
+      "evidence": "Row of 6 shaded rectangular purifier vessels on OS VIII.42 (1893), fitted to the GeoPackage outlines: mean step 9.63 m, vessel 6.5 x 11.53 m, max off-row residual 0.05 m. Vessel height (~2 m) and lids are interpretation."
+    }
+  ],
+  "tanks": [
+    {
+      "id": "bromley-scrubber-0",
+      "siteId": 924,
+      "kind": "tank",
+      "x": -496.75,
+      "z": 1045.6,
+      "radius": 3.55,
+      "height": 6,
+      "source": "os-1893",
+      "evidence": "Row of circular apparatus on 1893 OS. Vessel type and height inferred.",
+      "positionEvidence": "Unshaded circle on the OS with no GeoPackage outline; centre extrapolated at the mapped 10.2 m step. Check against the mosaic before use."
+    },
+    {
+      "id": "bromley-scrubber-1",
+      "siteId": 924,
+      "kind": "tank",
+      "x": -489.56,
+      "z": 1052.85,
+      "radius": 3.55,
+      "height": 6,
+      "source": "os-1893",
+      "evidence": "Row of circular apparatus on 1893 OS. Vessel type and height inferred.",
+      "positionEvidence": "Unshaded circle on the OS with no GeoPackage outline; centre extrapolated at the mapped 10.2 m step. Check against the mosaic before use."
+    },
+    {
+      "id": "bromley-scrubber-2",
+      "siteId": 924,
+      "kind": "tank",
+      "x": -482.36,
+      "z": 1060.09,
+      "radius": 3.55,
+      "height": 6,
+      "source": "os-1893",
+      "evidence": "Row of circular apparatus on 1893 OS. Vessel type and height inferred.",
+      "positionEvidence": "Centre of GeoPackage circle 672791"
+    },
+    {
+      "id": "bromley-scrubber-3",
+      "siteId": 924,
+      "kind": "tank",
+      "x": -474.91,
+      "z": 1067.44,
+      "radius": 3.55,
+      "height": 6,
+      "source": "os-1893",
+      "evidence": "Row of circular apparatus on 1893 OS. Vessel type and height inferred.",
+      "positionEvidence": "Centre of GeoPackage circle 690861"
+    },
+    {
+      "id": "bromley-scrubber-4",
+      "siteId": 924,
+      "kind": "tank",
+      "x": -467.86,
+      "z": 1074.76,
+      "radius": 3.55,
+      "height": 6,
+      "source": "os-1893",
+      "evidence": "Row of circular apparatus on 1893 OS. Vessel type and height inferred.",
+      "positionEvidence": "Centre of GeoPackage circle 676604"
+    },
+    {
+      "id": "bromley-scrubber-5",
+      "siteId": 924,
+      "kind": "tank",
+      "x": -460.77,
+      "z": 1081.84,
+      "radius": 3.55,
+      "height": 6,
+      "source": "os-1893",
+      "evidence": "Row of circular apparatus on 1893 OS. Vessel type and height inferred.",
+      "positionEvidence": "Centre of GeoPackage circle 679941"
+    }
+  ],
+  "holderAdjustments": [
+    {
+      "id": "bromley-1",
+      "x": -345.8,
+      "z": 731.8,
+      "positionEvidence": "Circle fits to the GeoPackage column bases (24\u201330 per ring) put the centres at bromley-1 (-345.8, 731.8), bromley-2 (-399.9, 682.7), bromley-3 (-384.8, 607.9), bromley-4 (-272.2, 707.4): shifts of 4.3, 7.1, 6.9 and 3.1 m from the current hand-read centres. GeoPackage holder-tank polygon centroids agree within 1.6 m. bromley-5 to -9 are within 1.6 m already."
+    },
+    {
+      "id": "bromley-2",
+      "x": -399.9,
+      "z": 682.7,
+      "positionEvidence": "Circle fits to the GeoPackage column bases (24\u201330 per ring) put the centres at bromley-1 (-345.8, 731.8), bromley-2 (-399.9, 682.7), bromley-3 (-384.8, 607.9), bromley-4 (-272.2, 707.4): shifts of 4.3, 7.1, 6.9 and 3.1 m from the current hand-read centres. GeoPackage holder-tank polygon centroids agree within 1.6 m. bromley-5 to -9 are within 1.6 m already."
+    },
+    {
+      "id": "bromley-3",
+      "x": -384.8,
+      "z": 607.9,
+      "positionEvidence": "Circle fits to the GeoPackage column bases (24\u201330 per ring) put the centres at bromley-1 (-345.8, 731.8), bromley-2 (-399.9, 682.7), bromley-3 (-384.8, 607.9), bromley-4 (-272.2, 707.4): shifts of 4.3, 7.1, 6.9 and 3.1 m from the current hand-read centres. GeoPackage holder-tank polygon centroids agree within 1.6 m. bromley-5 to -9 are within 1.6 m already."
+    },
+    {
+      "id": "bromley-4",
+      "x": -272.2,
+      "z": 707.4,
+      "positionEvidence": "Circle fits to the GeoPackage column bases (24\u201330 per ring) put the centres at bromley-1 (-345.8, 731.8), bromley-2 (-399.9, 682.7), bromley-3 (-384.8, 607.9), bromley-4 (-272.2, 707.4): shifts of 4.3, 7.1, 6.9 and 3.1 m from the current hand-read centres. GeoPackage holder-tank polygon centroids agree within 1.6 m. bromley-5 to -9 are within 1.6 m already."
+    }
+  ],
+  "groups": []
+}
