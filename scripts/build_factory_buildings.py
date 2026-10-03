@@ -89,7 +89,8 @@ def build():
                        'data/maps/east-channelsea-south-footprint-alignment.json',
                        'data/maps/east-channelsea-upper-footprint-alignment.json',
                        'data/maps/east-channelsea-north-footprint-alignment.json',
-                       'data/maps/bromley-gasworks-footprint-alignment.json']
+                       'data/maps/bromley-gasworks-footprint-alignment.json',
+                       'data/maps/leather-cloth-footprint-alignment.json']
     compounds = [json.loads((ROOT/path).read_text()) for path in group_registers]
     structure_alignment = {}
     map_traces = {}
