@@ -117,7 +117,7 @@ Opus can be relied on for the 3D modelling if at least four of the six tasks mer
 | T2 | | | | |
 | T3 | | | | |
 | T4 | | | | |
-| T5 | | | | |
+| T5 | 233k, 81 min | merged | 0 edits; premise correction accepted | Agent showed the brief was partly wrong: no regional polygon overshot its banks, and the Bromley "rectangle" is the real Limehouse Cut head drawn in an opaque pale material. Fixed by sharing the network water material and trimming 588.6 m² of overlap with network water at 9 junctions (now 0). Two new builder assertions. Renders confirm the seams gone and water reflective. Open: hash cascade (`river-system-1900.json` hash stored in elevation-audit, elevation-trial, main-landscape, lower-lea landscape), and the river system must be rebuilt after T1 and T6 change `ground-plan.json` and `factory-buildings.json`; geopackage export not regenerated. |
 | T6 | | | | |
 
 ## Also pending, not part of the trial
