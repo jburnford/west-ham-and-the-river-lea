@@ -2073,8 +2073,8 @@
       "sheet": "22",
       "depth": 6.6,
       "houseCount": 12,
-      "street": "Warton Road upper housing",
-      "frontStreet": "Warton Road upper housing",
+      "street": "Ward Road",
+      "frontStreet": "Ward Road",
       "reviewArea": "northwest",
       "maxYardDepth": 32
     },
@@ -2123,8 +2123,8 @@
       "sheet": "scene",
       "depth": 6.2,
       "houseCount": 5,
-      "street": "Warton Road",
-      "frontStreet": "Warton Road",
+      "street": "West Ham Lane",
+      "frontStreet": "West Ham Lane",
       "reviewArea": "northeast",
       "maxYardDepth": 32,
       "sourceAxisBeforeStreetFit": [
@@ -2183,8 +2183,8 @@
       "sheet": "scene",
       "depth": 6.2,
       "houseCount": 6,
-      "street": "Warton Road",
-      "frontStreet": "Warton Road",
+      "street": "West Ham Lane",
+      "frontStreet": "West Ham Lane",
       "reviewArea": "northeast",
       "maxYardDepth": 32,
       "sourceAxisBeforeStreetFit": [
@@ -2243,8 +2243,8 @@
       "sheet": "scene",
       "depth": 6.2,
       "houseCount": 12,
-      "street": "Warton Road",
-      "frontStreet": "Warton Road",
+      "street": "West Ham Lane",
+      "frontStreet": "West Ham Lane",
       "reviewArea": "northeast",
       "maxYardDepth": 32,
       "sourceAxisBeforeStreetFit": [
@@ -2303,8 +2303,8 @@
       "sheet": "scene",
       "depth": 6.2,
       "houseCount": 8,
-      "street": "Warton Road",
-      "frontStreet": "Warton Road",
+      "street": "West Ham Lane",
+      "frontStreet": "West Ham Lane",
       "reviewArea": "northeast",
       "maxYardDepth": 32,
       "sourceAxisBeforeStreetFit": [
@@ -2363,8 +2363,8 @@
       "sheet": "scene",
       "depth": 6.2,
       "houseCount": 9,
-      "street": "Warton Road",
-      "frontStreet": "Warton Road",
+      "street": "West Ham Lane",
+      "frontStreet": "West Ham Lane",
       "reviewArea": "northeast",
       "maxYardDepth": 32,
       "sourceAxisBeforeStreetFit": [
@@ -2423,8 +2423,8 @@
       "sheet": "scene",
       "depth": 6.2,
       "houseCount": 9,
-      "street": "Warton Road",
-      "frontStreet": "Warton Road",
+      "street": "West Ham Lane",
+      "frontStreet": "West Ham Lane",
       "reviewArea": "northeast",
       "maxYardDepth": 32,
       "sourceAxisBeforeStreetFit": [
@@ -2543,8 +2543,8 @@
       "sheet": "scene",
       "depth": 6.2,
       "houseCount": 8,
-      "street": "Warton Road",
-      "frontStreet": "Warton Road",
+      "street": "West Ham Lane",
+      "frontStreet": "West Ham Lane",
       "reviewArea": "northeast",
       "maxYardDepth": 32,
       "sourceAxisBeforeStreetFit": [
@@ -4141,7 +4141,7 @@
       "alignmentEvidence": "Centreline re-read with the district housing block review."
     },
     {
-      "name": "Warton Road upper housing",
+      "name": "Ward Road",
       "points": [
         [
           574,
@@ -4162,7 +4162,7 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
-      "alignmentEvidence": "Centreline re-read with the district housing block review."
+      "alignmentEvidence": "Centreline re-read with the district housing block review. Name corrected October 2026 (was \"Warton Road upper housing\"): OS London five-foot 1893\u201396 mosaic (NLS os-london-five-foot-1893, zoom 18), crop centred on scene (-320,-775), prints \"WARD ROAD\" on the only street between the same two streets (the road to the north and Stratford High Street), parallel to this trace; EPFL OS text layer \"WARD\" (-369,-790), \"ROAD\" (-330,-750). Estimated: the traced centreline lies about 15\u201330 m north-east of the printed carriageway, across a yard and buildings, on both the mosaic and the saved VIII.22 scan; geometry not corrected."
     },
     {
       "name": "Carpenters Road upper housing",
