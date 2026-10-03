@@ -80,7 +80,85 @@ def base(points):
         for j in np.unique(matches[1]):result[matches[0][matches[1]==j]]=pads[j]['groundSceneY']
     return road_levels(points,result)
 
+# Retaining walls are masonry: the coping runs level or in gentle grades, and
+# the land behind is filled to it. The crest follows the observed along-bank
+# profile where the marsh reconstruction applies 6 m behind the wall (otherwise
+# the original 1.65 m interpretive crest), averaged along the wall and limited
+# to a gentle grade. Land side = side with fewer wet samples 1-5 m out.
+retaining=network['retainingEdges'];WALL_MEAN_M=20;WALL_GRADE=.02;WALL_INLAND_M=6
+WALL_TOP_M=3.4;WALL_BATTER=1.5;WALL_REACH_M=10
+wall_levels=[];wall_rows=[]
+for route_index,route in enumerate(retaining['routes']):
+    p=np.array(route,dtype=float);seg=np.diff(p,axis=0);length=np.linalg.norm(seg,axis=1);chain=np.r_[0,np.cumsum(length)]
+    usable=length>1e-9;unit=np.zeros_like(seg);unit[usable]=seg[usable]/length[usable,None];left=np.column_stack([-unit[:,1],unit[:,0]])
+    if not usable.any():wall_levels.append([float(retaining['crestHeight'])]*len(p));continue
+    # Densely sampled stations carry the along-wall averages.
+    n=max(2,int(np.ceil(chain[-1]))+1);s=np.linspace(0,chain[-1],n)
+    k=np.clip(np.searchsorted(chain,s,side='right')-1,0,len(seg)-1)
+    k=np.flatnonzero(usable)[np.abs(np.flatnonzero(usable)[None,:]-k[:,None]).argmin(axis=1)]
+    q=np.column_stack([np.interp(s,chain,p[:,0]),np.interp(s,chain,p[:,1])]);nq=left[k]
+    wet=[sum(shapely.contains_xy(water,*(q+sign*o*nq).T).sum() for o in range(1,6)) for sign in (1,-1)]
+    side=1 if wet[0]<=wet[1] else -1;nq=side*nq
+    bank_crest=banks.crest(np.column_stack([538900+q[:,0],183209-q[:,1]]))-offset
+    raw=retaining['crestHeight']+weight(q+WALL_INLAND_M*nq)*(bank_crest-retaining['crestHeight'])
+    half=WALL_MEAN_M/2;mean=np.array([raw[abs(s-x)<=half].mean() for x in s])
+    at=np.interp(chain,s,mean)
+    # Grade-limited upper envelope: adjacent copings differ by at most 2 cm per metre.
+    crest=(at[None,:]-WALL_GRADE*abs(chain[:,None]-chain[None,:])).max(axis=1)
+    wall_levels.append(crest.tolist())
+    for j in np.flatnonzero(usable):
+        wall_rows.append((p[j],p[j+1],crest[j],crest[j+1],side*left[j],route_index))
+wall_a=np.array([r[0] for r in wall_rows]);wall_b=np.array([r[1] for r in wall_rows]);wall_crest=np.array([[r[2],r[3]] for r in wall_rows])
+wall_normal=np.array([r[4] for r in wall_rows]);wall_route=np.array([r[5] for r in wall_rows])
+wall_tree=shapely.STRtree(shapely.linestrings(np.stack([wall_a,wall_b],axis=1)))
+# Street corridors keep their own observed levels and building footprints keep
+# their premises ground; the fill never overrides either.
+factory=read('docs/data/factory-buildings.json');footprints=[]
+for b in factory['buildings']:
+    footprints+=[Polygon(p['outer'],p.get('holes',[])).buffer(0) for p in b.get('renderPolygons') or []]
+footprints+=[shapely.Point(h['x'],h['z']).buffer(h['radius']) for h in factory['holders']]
+footprints+=[Polygon(b['footprint']).buffer(0) for k in ('mappedFactories','houses','terraces') for b in plan['neighbourhood'][k] if b.get('footprint')]
+wall_exclusion=shapely.union_all([fit[1] for fit in road_fits]+footprints);shapely.prepare(wall_exclusion)
+# Where no wall stands (beyond wall ends, ditch mouths) the fill is battered
+# down to the water's edge at the same 1:1.5, so it never stands as a cliff.
+wall_lines=shapely.union_all([LineString(r) for r in retaining['routes'] if len(r)>1])
+open_shore=water.boundary.intersection(wall_lines.buffer(WALL_REACH_M+WALL_TOP_M+5)).difference(wall_lines.buffer(.3))
+def wall_fill(points):
+    """Land-side fill level behind retaining walls (-inf where none applies).
+
+    Level with the coping for 3.4 m from the wall line (the 0.32 m wall plus a
+    3 m berm top), then falling at 1:1.5 until it meets the surrounding ground.
+    """
+    level=np.full(len(points),-np.inf)
+    pi,si=wall_tree.query(shapely.points(points),predicate='dwithin',distance=WALL_REACH_M)
+    if not len(pi):return level
+    a=wall_a[si];ab=wall_b[si]-a;ap=points[pi]-a
+    t=np.clip((ap*ab).sum(axis=1)/(ab*ab).sum(axis=1),0,1);d=np.linalg.norm(ap-t[:,None]*ab,axis=1)
+    # The nearest segment of each wall decides which side a point is on.
+    order=np.lexsort((d,wall_route[si],pi));pi,si,t,d,ap=pi[order],si[order],t[order],d[order],ap[order]
+    first=np.r_[True,(pi[1:]!=pi[:-1])|(wall_route[si][1:]!=wall_route[si][:-1])]
+    land=first&((ap*wall_normal[si]).sum(axis=1)>0)
+    crest=wall_crest[si,0]+t*(wall_crest[si,1]-wall_crest[si,0])
+    np.maximum.at(level,pi[land],(crest-np.maximum(0,d-WALL_TOP_M)/WALL_BATTER)[land])
+    level[shapely.contains_xy(wall_exclusion,points[:,0],points[:,1])]=-np.inf
+    some=np.flatnonzero(np.isfinite(level))
+    if len(some) and not open_shore.is_empty:
+        cap=network['waterLevel']+.02+shapely.distance(shapely.points(points[some]),open_shore)/WALL_BATTER
+        level[some]=np.minimum(level[some],cap)
+    return level
+
+def fill_behind_walls(points,out):
+    fill=wall_fill(points);raise_=np.flatnonzero(fill>out)
+    if len(raise_):
+        dry=~shapely.contains_xy(water,points[raise_,0],points[raise_,1])
+        out[raise_[dry]]=fill[raise_[dry]]
+    return out
+
 def surface(points,old,bank=True):
+    out=blend_surface(points,old,bank)
+    return fill_behind_walls(points,out)
+
+def blend_surface(points,old,bank=True):
     w=weight(points);out=np.asarray(old,dtype=float).copy();selected=w>0
     if not selected.any():return out
     p=points[selected];g=base(p);wet=shapely.contains_xy(water,p[:,0],p[:,1]);old_y=out[selected]
@@ -102,10 +180,55 @@ def surface(points,old,bank=True):
     out[out_indices]=old_y[use]+w[selected][use]*(g[use]-old_y[use])
     return out
 
+WALL_HALF_M=retaining['width']/2;WALL_TOE_M=.3
+wall_body=wall_lines.buffer(WALL_HALF_M)
+def clear_wall_faces(points,new,blended,triangles):
+    """Mesh triangles straddle the thin wall; a raised land vertex would drag
+    a ground wedge up the wall's water face. Lower such vertices (never below
+    the unfilled level) until no ground stands more than 0.3 m above low water,
+    or above its unfilled height, at the face."""
+    raised=new>blended+1e-6
+    tri=triangles[raised[triangles].any(axis=1)]
+    if not len(tri):return new
+    polygons=shapely.polygons(points[tri]);cross=shapely.intersects(polygons,wall_body)
+    tri=tri[cross];polygons=polygons[cross]
+    pieces,owner=shapely.get_parts(shapely.difference(polygons,wall_body),return_index=True)
+    outside=np.flatnonzero(shapely.area(pieces)>1e-9);pieces=pieces[outside];owner=owner[outside]
+    wet=shapely.contains_xy(water,*shapely.get_coordinates(shapely.point_on_surface(pieces)).T)
+    pieces=pieces[wet];owner=owner[wet]
+    coords,which=shapely.get_coordinates(pieces,return_index=True);owner=owner[which]
+    t=tri[owner];a=points[t[:,0]];b=points[t[:,1]];c=points[t[:,2]]
+    m=np.stack([b-a,c-a],axis=2);det=np.linalg.det(m);ok=abs(det)>1e-12
+    uv=np.zeros((len(t),2));uv[ok]=np.linalg.solve(m[ok],(coords-a)[ok][...,None])[...,0]
+    bary=np.clip(np.column_stack([1-uv.sum(axis=1),uv]),0,1)
+    limit=np.maximum(network['waterLevel']+WALL_TOE_M,(bary*blended[t]).sum(axis=1))
+    excess=(bary*new[t]).sum(axis=1)-limit
+    allowed=new.copy()
+    for k in range(3):
+        v=t[:,k];sel=ok&(excess>0)&raised[v]&(bary[:,k]>1e-6)
+        np.minimum.at(allowed,v[sel],new[v[sel]]-excess[sel]/bary[sel,k])
+    new=np.maximum(blended,allowed)
+    # No fill-raised vertex may stand more than 2.4 m above a mesh neighbour,
+    # so the fill itself never forms a vertical step (> 2.5 m over < 3 m).
+    edges=np.unique(np.sort(np.concatenate([triangles[:,[0,1]],triangles[:,[1,2]],triangles[:,[2,0]]]),axis=1),axis=0)
+    edges=edges[raised[edges].any(axis=1)]
+    for _ in range(20):
+        before=new.copy()
+        for u,v in ((0,1),(1,0)):
+            sel=raised[edges[:,v]];np.minimum.at(new,edges[sel,v],new[edges[sel,u]]+2.4)
+        new=np.maximum(blended,new)
+        if np.array_equal(before,new):break
+    return new
+
 files={};stats={}
-def export_heights(key,points,old,preserve=None):
-    new=surface(points,old)
-    if preserve is not None:new[preserve]=old[preserve]
+def export_heights(key,points,old,preserve=None,triangles=None):
+    blended=blend_surface(points,old);new=fill_behind_walls(points,blended.copy())
+    if triangles is not None:new=clear_wall_faces(points,new,blended,triangles)
+    if preserve is not None:
+        # Wall fill stands no steeper than 1:1.5 above preserved tidal mud.
+        grid=(core['height'],core['width']);dist,nearest=distance_transform_edt(~preserve.reshape(grid),return_indices=True)
+        cap=old[np.ravel_multi_index(tuple(nearest),grid)].ravel()+dist.ravel()*core['step']/WALL_BATTER
+        new=np.maximum(blended,np.minimum(new,cap));new[preserve]=old[preserve]
     name=f'main-landscape-1900.{key}.f32';new.astype('<f4').tofile(OUT/name);files[key]=name
     changed=abs(new-old)>1e-6;stats[key]={'vertices':len(old),'changedVertices':int(changed.sum()),'changeRangeMetres':[float((new-old).min()),float((new-old).max())]}
     print(key,stats[key],flush=True)
@@ -125,7 +248,8 @@ for key,description in [('network',network),('system',system)]:
     if key=='network':
         old=old_historic(p[:,[0,2]],old)
         indices=np.array(system['coreBedCorrections'],dtype=int);old[indices]=np.minimum(-.7,old[indices])
-    export_heights(key,p[:,[0,2]],old)
+    index_path=ROOT/'docs/data'/description['indexFile'];inputs.append(index_path)
+    export_heights(key,p[:,[0,2]],old,triangles=np.fromfile(index_path,'<u4').reshape(-1,3).astype(np.int64))
 p=read('docs/data/'+historic['files']['extension'],True).reshape(-1,3);export_heights('extension',p[:,[0,2]],p[:,1])
 # Vertical canal faces retain their submerged foot and follow the coping above.
 p=read('docs/data/'+system['faceFile'],True).reshape(-1,3);old=p[:,1].copy();w=weight(p[:,[0,2]]);bng=np.column_stack([538900+p[:,0],183209-p[:,2]])
@@ -148,11 +272,7 @@ mesh.tofile(OUT/'main-landscape-1900.background.f32');files['groundMesh']='main-
 # Scene sampling for objects outside the original detailed grids.
 east,north=np.meshgrid(np.arange(e0+step/2,e1,step),np.arange(n1-step/2,n0,-step));points=np.column_stack([east.ravel()-538900,183209-north.ravel()]);values=base(points).reshape(shape)
 values.astype('<f4').tofile(OUT/'main-landscape-1900.level.f32');files['level']='main-landscape-1900.level.f32';support.astype('<f4').tofile(OUT/'main-landscape-1900.weight.f32');files['weight']='main-landscape-1900.weight.f32'
-# Retaining edges use the same observed longitudinal crest profile.
-wall_levels=[]
-for route in network['retainingEdges']['routes']:
-    p=np.array(route);bng=np.column_stack([538900+p[:,0],183209-p[:,1]]);w=weight(p)
-    wall_levels.append((network['retainingEdges']['crestHeight']+w*(banks.crest(bng)-offset-network['retainingEdges']['crestHeight'])).tolist())
+# Retaining-edge crests (wall_levels) are computed above with the land-side fill.
 # Refitting railway toes leaves every formation station unchanged.
 railways=[]
 for adjustment in system.get('railwayGroundAdjustments',[]):
@@ -174,10 +294,15 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
     'replacements':stats,'groundMeshVertices':len(mesh),'groundMeshAreaM2':area.area,
     'replacementBaseGround':rings(original_base.difference(outline)),'replacementRegionalGround':rings(original_regional.difference(outline)),
     'roadControlIds':sorted({id for fit in road_fits for id in fit[-1]}),
-    'siteGround':pads,'retainingEdgeCrests':wall_levels,'railwaySlopes':railways,
+    'siteGround':pads,'retainingEdgeCrests':wall_levels,
+    'retainingEdgeFill':{'crestMethod':f'1.65 m interpretive crest blended to the observed along-bank crest by the marsh weight {WALL_INLAND_M} m behind the wall; {WALL_MEAN_M} m running mean along the wall; grade-limited upper envelope at {WALL_GRADE} m per metre',
+        'fillMethod':f'land side filled level with the coping to {WALL_TOP_M} m from the wall line, then falling at 1:{WALL_BATTER} to the surrounding ground (at most {WALL_REACH_M} m); never lowers ground; water, street corridors and building footprints excluded; battered at the same slope down to unwalled shoreline and to preserved intertidal mud; in the river-network mesh, land vertices of triangles straddling a wall are held down so no ground stands more than {WALL_TOE_M} m above low water at the water face, and no filled vertex stands more than 2.4 m above a mesh neighbour',
+        'evidence':'Mapped: the shoreline and GIS industrial plot edges that the interpretive wall routes follow (river-network retainingEdges; the walls themselves are not a surveyed inventory), and the high-confidence wall_top/embankment_top spot heights behind the along-bank crest profile. Estimated: the coping grade between readings, the berm width and batter, and the fill itself; no surveyed section of any wall or its backfill.'},
+    'railwaySlopes':railways,
     'continuousBanks':{'profileCount':len(banks.lines),'sourceIds':banks.accepted_ids,'heightStatus':'observed crests interpolate along bank; unsampled components inferred'},
     'probes':[{'name':name,'scenePosition':[e-538900,183209-n],'groundSceneY':float(base(np.array([[e-538900,183209-n]]))[0])} for name,e,n in [('Pudding–City marsh',537650,184100),('Western neighbouring marsh',537300,184100),('Northern Mill Meads',538550,183200),('Abbey marsh',539200,182900),('Western Plaistow',539800,181800)]],
-    'limitations':['Site pads without yard readings use a conservative premises estimate, not a measured fill thickness.','Existing railway grades, sewer cover, channel beds and water levels retained.','The flood solver has not been recalibrated to these visible geometry changes.'],
+    'limitations':['Site pads without yard readings use a conservative premises estimate, not a measured fill thickness.','Existing railway grades, sewer cover, channel beds and water levels retained.','The flood solver has not been recalibrated to these visible geometry changes.',
+        'Wall fill is limited by the 1 m river-network mesh, whose triangles straddle the 0.32 m walls: a narrow gutter (median 0.7 m deep) remains in the first metre behind many walls. Building footprints are not filled, so buildings standing within 3 m of a wall keep their premises ground. Walls in the Channelsea core stand on preserved tidal mud and have no fill.'],
     'inputHashes':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [*inputs,Path(__file__).resolve(),ROOT/'scripts/regional_continuous_structures.py']}}
 (OUT/'main-landscape-1900.json').write_text(json.dumps(result,separators=(',',':'))+'\n')
 print('MAIN LANDSCAPE:',len(mesh)//3,'new background triangles;',len(pads),'premises levels',flush=True)
