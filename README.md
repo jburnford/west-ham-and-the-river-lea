@@ -62,6 +62,18 @@ python3 scripts/export_geopackage.py --verify        # footprints, water, roads 
 
 Scene-Y rasters hold the renderer's vertical unit; the `*-odn.tif` variants add the provisional ODN offset from `terrain-1900.json`, which is a working assumption rather than a survey calibration. `exports/` is ignored by git; regenerate after changing the model data. See [GIS export notes](scenes/channelsea-sewer-panorama/GIS_EXPORTS.md) and the [portability plan](MODEL_PORTABILITY_PLAN.md).
 
+## glTF export of the 3D scene
+
+The procedural detail (facades, chimneys, barges, yard surfaces) exists only once the browser has built the scene, so the glTF export drives headless Chromium against the local site with `?export=1`. In that mode `app.js` keeps the vertex buffers on the CPU and tags every object with a layer name. With the site served on port 4173:
+
+```sh
+npm run export:gltf:list                                   # layers with triangle counts
+python3 scripts/export_gltf.py factory-buildings housing   # chosen layers → exports/gltf/<layer>.glb
+npm run export:gltf                                        # every layer, then scripts/check_gltf.py
+```
+
+Files are binary glTF 2.0 with the scene origin, axes and placement rule in `asset.extras`, so Blender (with BlenderGIS), Godot, Unity or Unreal can place them against the GeoTIFF and GeoPackage exports. Each layer embeds its procedural textures as PNG; the custom weathering shaders and river reflections do not travel. Layers: `ground`, `terrain`, `yards`, `infrastructure`, `trees`, `factory-buildings`, `study-buildings`, `waterfront`, `gas-holders`, `housing`, `sewer`. The terrain and ground layers are several million triangles each; export them only when needed. Needs Python Playwright with Chromium.
+
 Browser checks cover view selection, bounded camera movement, keyboard/pointer controls, zoom, map/evidence dialogs, mobile overflow and WebGL failure. Screenshots and the latest report are in [review/](scenes/channelsea-sewer-panorama/review/). These are software-rendered Chromium checks, not a physical-phone performance assessment.
 
 The scene renders on interaction and resize, with a timed animation loop only while movement is held. Static meshes are batched by material. A 512 × 384 reflection pass follows the camera; the directional shadow map is rendered once for the static scene. The latest focused terrain review records 20 main-pass draw calls (about 4.2 million triangles), plus 19 reflection-pass calls. These are separate rendering costs. Terrain data and a generated mud texture add to the local renderer and scene data. Phone and website development are currently deferred at the author’s request.

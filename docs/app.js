@@ -36,6 +36,8 @@ const lite = requestedQuality
   : new URLSearchParams(location.search).has('flood') ||
     (matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 900) ||
     (navigator.deviceMemory !== undefined && navigator.deviceMemory <= 4);
+// ?export=1 keeps vertex buffers on the CPU and tags scene layers so scripts/export_gltf.py can write glTF.
+const exportMode = new URLSearchParams(location.search).has('export');
 
 // Camera poses. `hero` is the arrival view; the poster frame was rendered at `arrival`.
 const poses = {
@@ -722,6 +724,17 @@ function buildScene() {
   const materials = surfaces.materials;
   const random = createRandom(73);
   const surface = (polygons, material, y) => flatSurface(THREE, scene, polygons, material, y);
+  // Layer tags on everything added to the scene. They serve the glTF export and the diagnostic;
+  // rendering ignores them. Each mark names what follows until the next mark.
+  let layerStart = scene.children.length,
+    layerName = null;
+  const mark = (name) => {
+    if (layerName)
+      for (const child of scene.children.slice(layerStart)) child.traverse((o) => (o.userData.layer ??= layerName));
+    layerStart = scene.children.length;
+    layerName = name;
+  };
+  mark('ground');
   surface(data.riverNetwork.baseGround, materials.land, -0.1);
   historicGround({ THREE, scene, material: materials.land, elevation: data.elevation });
   mainLandscapeGround({ THREE, scene, material: materials.land, landscape: data.mainLandscape });
@@ -763,6 +776,7 @@ function buildScene() {
   const box = (parent, ...args) => libBox(THREE, parent, ...args);
   const cylinder = (parent, ...args) => libCylinder(THREE, parent, ...args);
   const beam = (parent, ...args) => libBeam(THREE, parent, ...args);
+  mark('terrain');
   const terrain = terrainDetails({
     THREE,
     scene,
@@ -775,6 +789,7 @@ function buildScene() {
     density: lite ? 0.3 : 1,
   });
   scene.userData.gardenReview = terrain.gardenReview;
+  mark('yards');
   scene.userData.factoryYards = factoryYards({
     THREE,
     scene,
@@ -785,7 +800,9 @@ function buildScene() {
     cylinder,
     lite,
   });
+  mark('infrastructure');
   scene.userData.infrastructure = infrastructure({ THREE, scene, materials, data, box, level: terrain.level });
+  mark('trees');
   scene.userData.mappedTrees = mappedTrees({ THREE, scene, data, level: terrain.level, beam });
   surfaces.weather(terrain.terrainMaterial);
   data.terrain.review = {
@@ -800,6 +817,7 @@ function buildScene() {
   };
   const detail = photoDetails({ THREE, scene, materials, box, cylinder, beam, random });
   const surveyedFactories = new Set(data.factoryBuildings.sites.map((s) => s.id));
+  mark('factory-buildings');
   scene.userData.factoryBuildings = factoryBuildings({
     THREE,
     scene,
@@ -826,6 +844,7 @@ function buildScene() {
     box,
     beam,
   });
+  mark('study-buildings');
   for (const b of data.factoryStudies) if (!surveyedFactories.has(b.siteId)) detail.factory(b);
   for (const b of data.neighbourhood.mappedFactories) {
     if (surveyedFactories.has(b.siteId)) continue;
@@ -855,6 +874,7 @@ function buildScene() {
     }
   }
   // Barge placements interpret the 1900 photograph and are recorded in the ground plan, not here.
+  mark('waterfront');
   const barges = data.neighbourhood.barges.map((b) => [b.x, b.z, b.heading, b.laden]);
   for (const spec of barges) detail.barge(...spec);
   surfaces.excludeBargeHolds(barges);
@@ -875,22 +895,26 @@ function buildScene() {
     },
   });
   detail.mill(data.neighbourhood.mill);
+  mark('gas-holders');
   // Sites with individually registered holders supersede their earlier map-traced circles.
   const registeredHolderSites = new Set(data.factoryBuildings.holders.map((h) => h.siteId));
   [
     ...data.neighbourhood.holders.filter((h) => !registeredHolderSites.has(h.siteId)),
     ...data.factoryBuildings.holders,
   ].forEach((h) => detail.holder(h));
+  mark('housing');
   data.neighbourhood.houses.forEach((h) => detail.houses(h));
   data.neighbourhood.terraces.forEach((h) => detail.terrace(h));
   // Author-supplied southwest context: distant terraces and works around
   // Three Mills/Bromley. Row axes and industrial ranges remain approximate.
   data.southwest.rows.forEach((h) => detail.terrace(h));
   scene.userData.housingDetails = housingDetails({ THREE, scene, materials, data, level: terrain.level, box });
+  mark('study-buildings');
   for (const b of data.southwest.industrialRanges) {
     if (surveyedFactories.has(b.siteId)) continue;
     detail.factory({ ...b, width: b.depth, depth: b.width, rotation: b.rotation - 90, mapped: true });
   }
+  mark('sewer');
   // Continuous elevated sewer: mapped bends, interpreted bank profile and distant extensions.
   const sewer = data.neighbourhood.sewer;
   const cover = (x, z) => sewerSurfaceHeight(x, z, sewer, data.infrastructure.sewerHighStreet);
@@ -969,19 +993,30 @@ function buildScene() {
       box(scene, edge[i - 1][0], ha, edge[i - 1][1], 0.1, 1.1, 0.1, materials.iron);
     }
   }
+  mark(null);
   // Static scene: combine surfaces by material so detail does not cost a draw call per window.
   // Two passes with preallocated typed arrays: the previous push-into-JS-array build held
   // several times the final buffer size in memory, which is what mobile browsers ran out of.
   scene.updateMatrixWorld(true);
   const batches = new Map(),
     originals = [];
+  // Export keeps layers separable at the cost of more draw calls; the live page batches per material only.
+  const batchKey = (object) =>
+    exportMode ? `${object.material.uuid}|${object.userData.layer || 'untagged'}` : object.material;
+  const materialName = (material) =>
+    Object.keys(materials).find((key) => materials[key] === material) || material.userData.surface || 'material';
   scene.traverse((object) => {
     if (!object.isMesh || object.userData.keepIndexed) return;
     originals.push(object);
     const count = object.geometry.index ? object.geometry.index.count : object.geometry.getAttribute('position').count;
-    const batch = batches.get(object.material) || { count: 0, offset: 0 };
+    const batch = batches.get(batchKey(object)) || {
+      count: 0,
+      offset: 0,
+      material: object.material,
+      layer: object.userData.layer || 'untagged',
+    };
     batch.count += count;
-    batches.set(object.material, batch);
+    batches.set(batchKey(object), batch);
   });
   for (const batch of batches.values()) {
     batch.position = new Float32Array(batch.count * 3);
@@ -992,7 +1027,7 @@ function buildScene() {
     const geometry = object.geometry.index ? object.geometry.toNonIndexed() : object.geometry.clone();
     if (!object.material.userData.preserveUV) surfaces.metricUV(geometry, object.geometry);
     geometry.applyMatrix4(object.matrixWorld);
-    const batch = batches.get(object.material),
+    const batch = batches.get(batchKey(object)),
       count = geometry.getAttribute('position').count;
     for (const [name, size] of [
       ['position', 3],
@@ -1007,7 +1042,8 @@ function buildScene() {
     object.removeFromParent();
     object.geometry.dispose();
   }
-  for (const [material, batch] of batches) {
+  for (const batch of batches.values()) {
+    const material = batch.material;
     const geometry = new THREE.BufferGeometry();
     for (const [name, size] of [
       ['position', 3],
@@ -1018,6 +1054,8 @@ function buildScene() {
     geometry.computeBoundingSphere();
     surfaces.weather(material);
     const mesh = new THREE.Mesh(geometry, material);
+    mesh.name = `batch:${materialName(material)}`;
+    mesh.userData.layer = batch.layer;
     mesh.castShadow = ![
       materials.ground,
       materials.land,
@@ -1075,11 +1113,12 @@ function buildScene() {
   const releaseArray = function () {
     this.array = null;
   };
-  scene.traverse((object) => {
-    if (!object.isMesh) return;
-    for (const attribute of Object.values(object.geometry.attributes)) attribute.onUpload(releaseArray);
-    object.geometry.index?.onUpload(releaseArray);
-  });
+  if (!exportMode)
+    scene.traverse((object) => {
+      if (!object.isMesh) return;
+      for (const attribute of Object.values(object.geometry.attributes)) attribute.onUpload(releaseArray);
+      object.geometry.index?.onUpload(releaseArray);
+    });
   regionalPlans = regionalFootprints({
     THREE,
     scene,
@@ -1240,6 +1279,10 @@ try {
   try {
     buildScene();
     paint(1);
+    if (exportMode) {
+      const { installSceneExport } = await import('./scene-export.js');
+      installSceneExport({ THREE, scene, origin: data.origin, revision: window.sceneRevision });
+    }
     $$('[data-walk],[data-side],#travel-toggle,#destination').forEach((b) => (b.disabled = false));
     // First frame is drawn by resize(); reveal it over the poster, then ease into the hero view.
     requestAnimationFrame(() => {

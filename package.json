@@ -11,12 +11,15 @@
     "export:gis": "python3 scripts/export_terrain_geotiff.py --verify && python3 scripts/export_geopackage.py --verify",
     "lint": "eslint docs scripts",
     "format": "prettier --write \"docs/**/*.{js,css,html}\" \"scripts/**/*.mjs\" eslint.config.js",
-    "format:check": "prettier --check \"docs/**/*.{js,css,html}\" \"scripts/**/*.mjs\" eslint.config.js"
+    "format:check": "prettier --check \"docs/**/*.{js,css,html}\" \"scripts/**/*.mjs\" eslint.config.js",
+    "export:gltf": "python3 scripts/export_gltf.py --all && python3 scripts/check_gltf.py",
+    "export:gltf:list": "python3 scripts/export_gltf.py --list"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
     "eslint": "^9.39.5",
     "globals": "^17.13.0",
-    "prettier": "^3.9.9"
+    "prettier": "^3.9.9",
+    "three": "^0.180.0"
   }
 }
