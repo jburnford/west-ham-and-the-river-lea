@@ -113,7 +113,7 @@ Opus can be relied on for the 3D modelling if at least four of the six tasks mer
 
 | Task | Agent tokens | Outcome | Parent interventions | Notes |
 |---|---|---|---|---|
-| T1 | | | | |
+| T1 | 314k, 69 min | merged | 0 edits; 1 scope extension accepted | Banks now stop 1.5 m from drawn water at all 4 crossings, brick end walls close them, Channelsea abutments moved to the real bank ends. Agent added two keys (`bankEnds`, `bankEndsEvidence`) beyond the stated arrays, justified. Found that GIS rivers were the wrong clipping basis and used the drawn water instead. Correctly identified sewer-toe-6s as an Abbey Lane road-opening wedge outside its scope (follow-up). Rendered and inspected its own views. Open: Mill Mead path (x≈−37) now buried under 44 m of bank; stale `infrastructure.json` hashes in 6 derived files; no piers at the 3 non-Channelsea crossings. |
 | T2 | | | | |
 | T3 | | | | |
 | T4 | | | | |
@@ -121,6 +121,8 @@ Opus can be relied on for the 3D modelling if at least four of the six tasks mer
 | T6 | | | | |
 
 ## Also pending, not part of the trial
+
+- From T1: the Abbey Lane and Mill Meads works road openings through the sewer bank still end in open wedges (sewer-toe-6s); extend the end walls there, which needs `build_panorama_data.py` to read road routes or an `app.js` change. Decide whether the Mill Mead riverbank path gets an opening through the extended bank. `review_smoke.py` times out at its 60 s wait even on base files; lengthen the wait.
 
 - Re-render the 14 railway sweep views lost to the label collision (`cameras-seams.json` now has unique labels).
 - Road names: the eastern "Warton Road" is probably West Ham Lane; the model's "Angel Lane" is misplaced; the High Street lacks tram rails (horse trams, no wires, correct for 1900).
