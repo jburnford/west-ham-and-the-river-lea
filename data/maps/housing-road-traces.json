@@ -686,7 +686,7 @@
       }
     },
     {
-      "name": "Warton Road",
+      "name": "West Ham Lane",
       "sheet": "22",
       "points": [
         [
@@ -723,7 +723,7 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer. Name corrected October 2026 (was \"Warton Road\"): OS London five-foot 1893\u201396 mosaic (NLS os-london-five-foot-1893, zoom 18), crops centred on scene (260,-830) and (320,-680), prints \"WEST HAM LANE\" along this street at about (248,-868) and (365,-640); the EPFL OS text layer has \"HAM\" (235,-889), \"LANE\" (258,-859), \"WEST\" (352,-692) and \"LANE\" (386,-614). No WARTON label is printed on this street; WARTON ROAD is printed at (-744,-758)/(-688,-677), on Warton Road northern section. Estimated: the traced centreline lies about 5\u201350 m west of the printed carriageway (traced at the VIII.22 sheet edge; the lane straddles the VIII.23 join) and south of Paul Street runs over the Arthingworth Street east frontage; geometry not corrected."
     },
     {
       "name": "Angel Lane",
@@ -747,7 +747,7 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer. Name unverified, flagged October 2026: on the OS London five-foot 1893\u201396 mosaic (crop centred on scene (-30,-760)) and on the saved VIII.22 scan this trace crosses house plots in the block bounded by Bridge Road, Devon Terrace and Albion Street and follows no printed street; nearest printed names are RAILWAY PLACE, MOUNT PLACE, DEVON TERRACE and ALBION STREET. ANGEL LANE is printed about 600 m north, near scene (-72,-1357) (crop centred (-80,-1300)), with Angel Lane Bridge at (-77,-1482). Name left unchanged pending a geometry decision."
     },
     {
       "name": "Angel Lane block passage",
@@ -767,7 +767,7 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit. Name unverified, flagged October 2026: on the OS London five-foot 1893\u201396 mosaic (crop centred on scene (-30,-760)) and on the saved VIII.22 scan this trace crosses house plots in the block bounded by Bridge Road, Devon Terrace and Albion Street and follows no printed street; nearest printed names are RAILWAY PLACE, MOUNT PLACE, DEVON TERRACE and ALBION STREET. ANGEL LANE is printed about 600 m north, near scene (-72,-1357) (crop centred (-80,-1300)), with Angel Lane Bridge at (-77,-1482). Name left unchanged pending a geometry decision."
     },
     {
       "name": "Albion Street",
