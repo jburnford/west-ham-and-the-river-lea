@@ -126,7 +126,7 @@ Opus can be relied on for the 3D modelling if at least four of the six tasks mer
 
 - From T1 and T1b: decide whether the Mill Mead riverbank path (x≈−37) gets an opening through the extended sewer bank; shorten the 44 m wing walls at the road arches if they read as too long. `review_smoke.py` times out at its 60 s wait even on base files; lengthen the wait. After the landscape tasks land, run one rebuild cascade: river system (reads `ground-plan.json` and `factory-buildings.json`, both changed), main landscape, flood field, geopackage export, and the stale `inputHashes` in the derived files.
 
-- Re-render the 14 railway sweep views lost to the label collision (`cameras-seams.json` now has unique labels).
+- Railway sweep views re-rendered from main after T1–T7 (26 views, `reference/photo-review-2026-10-03/views-rail-rerender/`, 3 October 2026); not yet re-audited.
 - Road geometry (from T7): retrace West Ham Lane and Ward Road onto the printed carriageways; delete or retrace the two Angel Lane routes; decide whether the seven `district-*-east-return` rows front Arthingworth Street; `build_infrastructure.py` on unchanged inputs changes 160k road-mesh leaves, so a clean rebuild needs its own task. The High Street tram rails (horse trams, no wires, correct for 1900) remain.
 - Retort-house re-registration at Bromley (moves 24 flues and the boiler stack).
 - Flood plausibility runs against the 1897 and 1904 accounts once the landscape fixes land.
