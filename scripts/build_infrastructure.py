@@ -8,6 +8,7 @@ from shapely.ops import unary_union, triangulate
 from shapely import affinity, segmentize, constrained_delaunay_triangles
 from great_eastern import build_great_eastern
 from abbey_support import station_footprints
+from manor_road import evidence as manor_evidence, road_trace, align_railway
 
 ROOT=Path(__file__).resolve().parents[1]
 def read(path):return json.loads((ROOT/path).read_text())
@@ -24,6 +25,8 @@ housing_names={r['name'] for r in housing_roads}|set(housing_review.get('removeR
 traces['roads']=[r for r in traces['roads'] if r['name'] not in housing_names]+housing_roads
 station=read('docs/data/abbey-station-plan.json')
 traces['roads']=[r for r in traces['roads'] if r['name'] not in station['replaceRoadNames']]+station['accessPaths']
+manor=manor_evidence()
+traces['roads'].append(road_trace(manor))
 sheets=read('data/maps/os-neighbourhood-traces.json')['sheets']
 project=Transformer.from_crs(4326,27700,always_xy=True).transform
 fits={}
@@ -115,6 +118,7 @@ for tri in data['neighbourhood']['sewer']['banks']:
 railways=[]
 branch_connection=read('data/maps/woolwich-northern-connection.json')
 for r in data['neighbourhood']['railways']:
+    r=align_railway(r,manor)
     if r['name']=='Great Eastern Railway, Woolwich branch':
         r={**r,'route':[branch_connection['existingBranchStart'],*r['route'][1:]],
            'evidence':r['evidence']+' '+branch_connection['alignmentNote']}
@@ -145,8 +149,14 @@ for r in data['neighbourhood']['railways']:
     railways.append({**r,'formationHeight':height,'embankment':mesh,'crossings':crossings,'evidence':r['evidence']+' Raised formation at 5.5 m above local marsh datum, side slopes and bridge details interpreted from author direction; not surveyed levels.'})
 railways.append(build_great_eastern(water,roads,buildings,sewer))
 from woolwich_connection import build_woolwich_connection
+from stratford_station_rail_alignment import station_formation_obstacles
 branch_road_clearance=unary_union([LineString(r['route']).buffer(r['width']/2) for r in routes])
-railways.append(build_woolwich_connection(water,branch_road_clearance,buildings,railways[-1]))
+station_bank_obstacles=station_formation_obstacles(branch_connection,railways[-1]['route'])
+railways.append(build_woolwich_connection(water,branch_road_clearance,buildings,railways[-1],station_bank_obstacles))
+from north_london_connection import build_north_london_connection, apply_mainline_crossing
+northern=build_north_london_connection(water,branch_road_clearance,buildings,railways[-1])
+railways[-2]=apply_mainline_crossing(railways[-2],northern,water,branch_road_clearance,buildings)
+railways.append(northern)
 result={'sources':'data/maps/road-traces.json; data/maps/district-road-traces.json; data/maps/great-eastern-mainline.json; OS housing registration; southwest holder registration',
         'limitations':'Centrelines approximate; widths, paving, railway levels and bridge structures interpreted. Registration can differ by tens of metres. Buildings and waterways clipped out of road surface; named mapped crossings bridged separately.',
         'roads':routes,'roadTriangles':triangles(roads),'shoulderTriangles':triangles(shoulder),'pathTriangles':triangles(path),'roadBridges':bridges,'railways':railways,'sewerBanks':sewer_banks}
@@ -177,7 +187,9 @@ result['districtSources']=district['sources']
 result['districtNotes']=district['notes']
 result['housingSources']=housing['sources']
 result['housingNotes']='Street-facing envelopes and junction breaks audited together. Rear plots are not treated as lanes. Widths and facades remain approximate; see housing-road-traces.json for corrections and omissions.'
-assert all(r['formationHeight']>4 for r in railways)
+assert all(r['formationHeight']>4 or
+           (r.get('id')=='north-london-connection' and r['formationHeight']==3)
+           for r in railways)
 assert all(math.isfinite(v) for r in railways for t in r['embankment'] for p in t for v in p)
 (ROOT/'docs/data/infrastructure.json').write_text(json.dumps(result,separators=(',',':'))+'\n')
 print(f"Infrastructure: {len(routes)} street/lane traces, {len(bridges)} road crossing segments, {len(railways)} raised railway routes; road/building/water checks passed.")

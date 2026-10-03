@@ -3249,6 +3249,142 @@
         "register": "data/maps/alderson-rope-context-alignment.json",
         "review": "Raw OS five-foot map re-read along the lane between the eastern rope-works wall and the eastern street edge. Preserve northern-arm controls0\u20138, then fit the south bend clear of the mapped drying house and follow the eastern rope frontage to the lane head at the railway underpass boundary. The former tail cut through the mapped eastern rope roof and extended into the railway. Existing interpreted 7 m carriageway and normal 1.1 m shoulder retained; no new road connection or bridge inferred."
       }
+    },
+    {
+      "name": "Mill Meads works road",
+      "sheet": "scene",
+      "points": [
+        [
+          91.67,
+          -96.37
+        ],
+        [
+          96.632,
+          -68.177
+        ],
+        [
+          101.486,
+          -40.456
+        ],
+        [
+          108.929,
+          0.191
+        ],
+        [
+          114.828,
+          25.284
+        ],
+        [
+          119.659,
+          38.521
+        ],
+        [
+          120.173,
+          43.707
+        ],
+        [
+          116.828,
+          57.539
+        ],
+        [
+          112.499,
+          76.227
+        ],
+        [
+          107.68,
+          104.213
+        ],
+        [
+          102.32,
+          139.641
+        ],
+        [
+          101.441,
+          161.949
+        ],
+        [
+          99.446,
+          184.287
+        ],
+        [
+          97.569,
+          197.337
+        ]
+      ],
+      "width": 6,
+      "kind": "street",
+      "surface": "setts",
+      "pixelWidth": 1280,
+      "sourceBounds": [
+        -100,
+        -200,
+        235,
+        330
+      ],
+      "sourcePixels": [
+        [
+          706.75,
+          333.719
+        ],
+        [
+          718.004,
+          410.0
+        ],
+        [
+          729.002,
+          485.002
+        ],
+        [
+          746.004,
+          595.0
+        ],
+        [
+          760.002,
+          663.002
+        ],
+        [
+          772.003,
+          699.001
+        ],
+        [
+          773.002,
+          713.003
+        ],
+        [
+          763.002,
+          750.001
+        ],
+        [
+          750.002,
+          800.002
+        ],
+        [
+          735.002,
+          875.002
+        ],
+        [
+          718.003,
+          970.001
+        ],
+        [
+          714.003,
+          1030.002
+        ],
+        [
+          707.003,
+          1090.002
+        ],
+        [
+          701.003,
+          1125.002
+        ]
+      ],
+      "bridgeSpans": [],
+      "alignmentEvidence": "OS works lane re-read at native scale, ending at the chemical entrance. The former southern extension cut across shaded chemical roofs and does not establish a through road or bridge.",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked.",
+      "eastChannelseaContextAlignment": {
+        "register": "data/maps/east-channelsea-context-alignment.json"
+      }
     }
   ],
   "notes": [

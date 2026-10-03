@@ -1,0 +1,102 @@
+{
+  "epoch": "1900",
+  "id": "city-mill-bank-and-ground",
+  "name": "Eastern bank from Old Lea into City Mill River and low ground toward Waterworks River",
+  "reviewBoundsBNG": [
+    537610,
+    184170,
+    538030,
+    184430
+  ],
+  "reviewOutlineBNG": [
+    [
+      537631.145,
+      184421.546
+    ],
+    [
+      538003.123,
+      184431.645
+    ],
+    [
+      538009.477,
+      184197.903
+    ],
+    [
+      537637.482,
+      184187.804
+    ]
+  ],
+  "boundaryReview": {
+    "mosaic": "reference/spot-heights/mosaics/m18_131060_87128.png",
+    "registration": "reference/spot-heights/mosaics/m18_131060_87128.json",
+    "detailCrop": "reference/river-height-review-2026-10-01/m18_131060_87128_zoom_94_540_s8.png",
+    "nativePixels": [
+      [
+        -50,
+        300
+      ],
+      [
+        950,
+        300
+      ],
+      [
+        950,
+        930
+      ],
+      [
+        -50,
+        930
+      ]
+    ],
+    "note": "Review window clipped to the single dry compartment east of City Mill River and west of Waterworks River. North and south limits are uncertainty transitions, not mapped banks."
+  },
+  "outlineTransitionMetres": [
+    0,
+    12
+  ],
+  "interiorPointBNG": [
+    537687.125,
+    184333.955
+  ],
+  "bankReachIds": [
+    "Lower_River_Lea-15",
+    "Lower_River_Lea-7"
+  ],
+  "bankControlIds": [
+    "sh_537664_184398",
+    "sh_537740_184274"
+  ],
+  "marshControlIds": [
+    "sh_537687_184334",
+    "sh_537793_184215"
+  ],
+  "meshCellMetres": 4,
+  "bankTransitionMetres": [
+    3,
+    5
+  ],
+  "shoreTransitionMetres": [
+    0,
+    0.8
+  ],
+  "southernBlendNorthings": [
+    184100,
+    184130
+  ],
+  "northernBlendNorthings": [
+    184450,
+    184480
+  ],
+  "westernBlendEastings": [
+    537560,
+    537580
+  ],
+  "method": "Interpolate the two bank-surface observations and two ground observations separately along northing within the same dry compartment. Retain the raised Old Lea\u2013City Mill margin and join it to lower ground behind the bank. Bound the field fit by the rivers and fade its unsurveyed north/south limits over 12m.",
+  "limitations": [
+    "The observations establish local bank and ground levels, not a continuous maximum defence crest.",
+    "Two ground dots constrain a local field estimate; cross-valley slope and unsurveyed bank sections remain interpreted.",
+    "The bank-to-ground transition is interpreted from dot distances and hatching, not a surveyed cross-section.",
+    "Waterworks-side ground and water-edge slope remain provisional; do not copy the City Mill bank height onto the opposite side of the field.",
+    "Datum conversion, bed and water heights remain provisional; this surface is not applied to the flood solver."
+  ]
+}

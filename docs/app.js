@@ -8,12 +8,16 @@ import { housingDetails } from './housing.js';
 import { regionalFootprints } from './regional-footprints.js';
 import { wallRiverVista } from './wall-river-vista.js';
 import { sewerSurfaceHeight } from './sewer-levels.js';
+import { sewerCrossing } from './sewer-crossing.js';
 import { realism } from './realism.js';
 import { lighting } from './lighting.js';
 import { infrastructure } from './infrastructure.js';
 import { mappedTrees } from './mapped-trees.js';
 import { loadTerrain, terrainDetails } from './terrain-details.js';
 import { loadRiverNetwork, riverNetwork } from './river-network.js';
+import { loadRiverSystem, applyRiverSystem, riverSystem, installRiverExplorer } from './river-system.js';
+import { loadMainLandscape, applyMainLandscape, mainLandscapeGround } from './main-landscape.js';
+import { loadHistoricElevation, applyHistoricElevation, historicGround } from './historic-elevation.js';
 import { tideControls } from './tides.js';
 import { createDistrictNavigator, districtViews, factoryViews, viewPose } from './district-navigation.js';
 
@@ -26,7 +30,8 @@ const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // Override for testing with ?quality=lite or ?quality=full.
 const requestedQuality = new URLSearchParams(location.search).get('quality');
 const lite = requestedQuality ? requestedQuality === 'lite'
-  : (matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 900)
+  : new URLSearchParams(location.search).has('flood')
+    || (matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 900)
     || (navigator.deviceMemory !== undefined && navigator.deviceMemory <= 4);
 
 // Camera poses. `hero` is the arrival view; the poster frame was rendered at `arrival`.
@@ -44,7 +49,7 @@ const poses = {
 const state = { ...poses.arrival };
 let activeStop = 'hero', pendingArrival = true;
 
-let renderer, scene, camera, data, walker, surfaces, tide, regionalPlans;
+let renderer, scene, camera, data, walker, surfaces, tide, regionalPlans, setFloodWater;
 const plans = [];
 const host = $('#panorama');
 
@@ -290,8 +295,11 @@ function update() {
     destinationCount: destinations.size,
     activeStop, tweening: Boolean(tweenFrame), movement: walker?.snapshot(),
     reflection: surfaces?.reflectionStats, terrain: data?.terrain?.review, lighting: scene?.userData.lighting,
+    elevation: data?.elevation?.review, mainLandscape: data?.mainLandscape?.review,
+    sewerCrossing: scene?.userData.sewerCrossing,
     infrastructure: scene?.userData.infrastructure, mappedTrees: scene?.userData.mappedTrees,
     riverNetwork: scene?.userData.riverNetwork,
+    riverSystem: scene?.userData.riverSystem,
     tide: tide?.snapshot(),
     tideObjects: scene?.userData.tideObjects,
     gardens: scene?.userData.gardenReview,
@@ -339,6 +347,8 @@ function buildPlan(container, { viewBox, labels = true, markerRadius = 8, stroke
     class:file===region.overview?'regional-building-plan':'regional-water-plan'
   });
   [...data.rivers, ...data.factoryBuildings.westContext.rivers].forEach(r => element('path', { d: planPath(r.polygons), fill: '#9bb8b7', 'fill-rule': 'evenodd' }));
+  data.riverNetwork.reviewedConnections.connections.forEach(r=>element('path',{d:planPath(r.polygons),fill:'#9bb8b7','fill-rule':'evenodd'}));
+  element('path',{d:planPath(data.riverSystem.waterPolygons),fill:'#9bb8b7','fill-rule':'evenodd'});
   for(const r of data.infrastructure.railways)if(r.northernWater)element('path',{d:planPath(r.northernWater),fill:'#9bb8b7','fill-rule':'evenodd'});
   for(const ditch of data.riverNetwork.marshDitches.features)element('path',{d:planPath(ditch.renderPolygons),fill:'#809796','fill-rule':'evenodd'});
   element('polygon',{points:data.stationPlan.worldFootprint.map(p=>p.join(',')).join(' '),fill:'#79634e'});
@@ -415,11 +425,15 @@ function buildScene() {
     }
   }
   surface(data.riverNetwork.baseGround, materials.land, -.1);
+  historicGround({THREE,scene,material:materials.land,elevation:data.elevation});
+  mainLandscapeGround({THREE,scene,material:materials.land,landscape:data.mainLandscape});
   scene.userData.riverNetwork = riverNetwork({ THREE, scene, materials, data: data.riverNetwork, surfaces });
+  scene.userData.riverSystem = riverSystem({THREE,scene,data:data.riverSystem,materials,surfaces});
   // Water belongs to waterways, not the rectangular boundary of a terrain tile.
   // A blanket plane exposed a straight water seam where that tile tapered down.
   surface(data.riverNetwork.tide.polygons, materials.water, data.riverNetwork.waterLevel);
-  const retainedIds = new Set(data.riverNetwork.retainedWaterChannelIds);
+  surface(data.riverNetwork.reviewedConnections.connections.filter(r=>!r.tidalDisplay).flatMap(r=>r.polygons),materials.water,data.riverNetwork.waterLevel);
+  const retainedIds = new Set([...data.riverNetwork.retainedWaterChannelIds,...(data.riverNetwork.isolatedWaterChannelIds??[])]);
   surface([...data.rivers,...data.factoryBuildings.westContext.rivers]
     .filter(r=>retainedIds.has(r.id)).flatMap(r=>r.polygons),materials.water,data.riverNetwork.waterLevel);
   surface(data.riverNetwork.marshDitches.features.flatMap(f=>f.renderPolygons),materials.water,data.riverNetwork.waterLevel);
@@ -461,7 +475,7 @@ function buildScene() {
   for (const id of [874, 875, 876, 1125, 562, 965]) {
     if (surveyedFactories.has(id)) continue;
     const b = data.factoryStudies.find(b => b.siteId === id) || data.neighbourhood.mappedFactories.find(b => b.siteId === id);
-    if (b) { cylinder(scene, b.x, 0.15, b.z, 1.5, 2.1, 36, materials.brick); cylinder(scene, b.x, 35, b.z, 1.9, 1.9, 1.4, materials.brick); }
+    if (b) { cylinder(scene, b.x, 0.15+(b.landscapeLift??0), b.z, 1.5, 2.1, 36, materials.brick); cylinder(scene, b.x, 35+(b.landscapeLift??0), b.z, 1.9, 1.9, 1.4, materials.brick); }
   }
   const barges = [[20,49,-10,true],[25,73,8,true],[-26,37,5,false],[-35,95,-8,true]];
   for (const spec of barges) detail.barge(...spec);
@@ -495,7 +509,7 @@ function buildScene() {
   crestGeometry.setAttribute('position',new THREE.Float32BufferAttribute(crestVertices,3));crestGeometry.computeVertexNormals();
   scene.add(new THREE.Mesh(crestGeometry,materials.stone));
   const bankGeometry = new THREE.BufferGeometry();
-  const sewerBanks = data.infrastructure.sewerBanks.map(tri=>tri.map(([x,y,z])=>[x,y*cover(x,z)/sewer.height,z]));
+  const sewerBanks = data.infrastructure.sewerBanks.map(tri=>tri.map(([x,y,z])=>[x,y*cover(x,z)/sewer.height+(1-y/sewer.height)*(data.mainLandscape?.level(x,z,0)??0),z]));
   bankGeometry.setAttribute('position', new THREE.Float32BufferAttribute(sewerBanks.flat(2), 3));
   bankGeometry.setAttribute('uv', new THREE.Float32BufferAttribute(sewerBanks.flat().flatMap(([x, _, z]) => [x / 5500, -z / 5500]), 2));
   bankGeometry.computeVertexNormals(); scene.add(new THREE.Mesh(bankGeometry, materials.ground));
@@ -511,10 +525,12 @@ function buildScene() {
       const {group,length}=routeSegment(p,q),ha=cover(...p),hb=cover(...q);
       // Enclosed cover remains below the carriageway at High Street.
       group.position.y=(ha+hb)/2;group.rotation.z=Math.atan2(hb-ha,length);
-      box(group,0,-.5,0,length,.48,15,materials.stone);
+      box(group,0,-.5,0,length,.48,sewer.crestWidth,materials.stone);
     }
   }
   // Join the parapets at bends so walking closer does not reveal gaps between segments.
+  scene.userData.sewerCrossing = sewerCrossing({THREE,scene,sewer,
+    crossing:data.infrastructure.sewerHighStreet,level:terrain.level,materials});
   for (const edge of data.infrastructure.sewerRailEdges) {
     for (let i = 1; i < edge.length; i++) {
       const { group, length } = routeSegment(edge[i - 1], edge[i]);
@@ -566,17 +582,33 @@ function buildScene() {
     if (o.material === materials.tidalWater) tidalMeshes.push(o);
     if (o.material.userData.tidalFloat) floatingMeshes.push(o);
   });
-  tide = tideControls({ config: data.riverNetwork.tide, render: update, apply: state => {
+  const applyTideState = state => {
     for (const mesh of tidalMeshes) {
       mesh.position.y = state.level - state.low;
       mesh.visible = state.level > state.low + .00001;
     }
     for (const mesh of floatingMeshes) mesh.position.y = state.level - state.low;
-    if (scene.userData.tideObjects?.waterOffsets[0] !== state.level - state.low) renderer.shadowMap.needsUpdate = true;
+    if (!scene.userData.floodSimplifiedWater && scene.userData.tideObjects?.waterOffsets[0] !== state.level - state.low) renderer.shadowMap.needsUpdate = true;
     surfaces.setTideLevel(state.level);
     scene.userData.tideObjects = { waterOffsets: tidalMeshes.map(o=>o.position.y),
       bargeOffsets: floatingMeshes.map(o=>o.position.y) };
-  } });
+  };
+  tide = tideControls({ config: data.riverNetwork.tide, render: update, apply: applyTideState });
+  const floodWaterMeshes=[];
+  scene.traverse(object=>{
+    if(object.isMesh && [materials.water,materials.tidalWater].includes(object.material))
+      floodWaterMeshes.push([object,object.material]);
+  });
+  const plainFloodWater=new THREE.MeshStandardMaterial({color:0x477987,roughness:.9});
+  setFloodWater = levelODN => {
+    if(tide.snapshot().playing)tide.pause();
+    const current = tide.snapshot();
+    // Depth colours carry the information in this experiment. Avoid rendering
+    // the whole district twice more for reflections at each slider movement.
+    scene.userData.floodSimplifiedWater=levelODN!==null;
+    for(const [mesh,original] of floodWaterMeshes)mesh.material=levelODN===null?original:plainFloodWater;
+    applyTideState(levelODN === null ? current : {...current, level:levelODN-data.elevation.meta.verticalReference.odnMinusSceneYMetres});
+  };
   // Only object transforms change during the tide: release the CPU copy of every vertex
   // buffer once it has been uploaded, roughly halving the retained memory.
   const releaseArray = function () { this.array = null; };
@@ -585,7 +617,7 @@ function buildScene() {
     for (const attribute of Object.values(object.geometry.attributes)) attribute.onUpload(releaseArray);
     object.geometry.index?.onUpload(releaseArray);
   });
-  regionalPlans=regionalFootprints({THREE,scene,data:data.regionalFootprints,level:terrain.level,landMaterial:materials.land,existingGround:data.riverNetwork.baseGround,lite,render:()=>requestAnimationFrame(update)});
+  regionalPlans=regionalFootprints({THREE,scene,data:data.regionalFootprints,level:terrain.level,landMaterial:materials.land,existingGround:data.riverNetwork.baseGround,regionalGround:data.riverSystem.regionalGround,landscapeActive:Boolean(data.mainLandscape),lite,render:()=>requestAnimationFrame(update)});
   host.append(renderer.domElement);
   renderer.domElement.setAttribute('aria-hidden', 'true');
   renderer.domElement.addEventListener('webglcontextlost', e => {
@@ -644,9 +676,9 @@ async function load(url, type = 'json') {
 update();
 try {
   loadingText.textContent = 'Fetching the ground plan';
-  const [groundPlan, terrain, southwest, infrastructureData, trees, network, factories, frontages, yards, housing, regional, stationPlan] = await Promise.all([
+  const [groundPlan, terrain, southwest, infrastructureData, trees, network, factories, frontages, yards, housing, regional, stationPlan, elevation, system, mainLandscape] = await Promise.all([
     load('./data/ground-plan.json'), loadTerrain(load), load('./data/southwest-context.json'),
-    load('./data/infrastructure.json'), load('./data/mapped-trees.json'), loadRiverNetwork(load), load('./data/factory-buildings.json'), load('./data/high-street-frontages.json'),load('./data/factory-yards.json'),load('./data/housing-detail.json'),load('./data/regional-footprints/index.json'),load('./data/abbey-station-plan.json')]);
+    load('./data/infrastructure.json'), load('./data/mapped-trees.json'), loadRiverNetwork(load), load('./data/factory-buildings.json'), load('./data/high-street-frontages.json'),load('./data/factory-yards.json'),load('./data/housing-detail.json'),load('./data/regional-footprints/index.json'),load('./data/abbey-station-plan.json'),loadHistoricElevation(load),loadRiverSystem(load),loadMainLandscape(load)]);
   data = groundPlan; data.terrain = terrain; data.southwest = southwest; data.infrastructure = infrastructureData; data.mappedTrees = trees;
   data.riverNetwork = network;
   data.factoryBuildings = factories;
@@ -655,6 +687,11 @@ try {
   data.housingDetail = housing;
   data.regionalFootprints = regional;
   data.stationPlan = stationPlan;
+  data.elevation = elevation;
+  applyHistoricElevation(data);
+  data.riverSystem = system;
+  applyRiverSystem(data);
+  applyMainLandscape(data,mainLandscape);
   data.neighbourhood.terraces = housing.rows.filter(r=>r.group==='district');
   data.southwest.rows = housing.rows.filter(r=>r.group==='southwest');
   walker = createDistrictNavigator(data.neighbourhood.sewer);
@@ -675,7 +712,7 @@ try {
       if (requestedView) {
         $('#destination').value = requestedView.id;
         travelTo(requestedView);
-      } else if (!new URLSearchParams(location.search).has('film') && !new URLSearchParams(location.search).has('river-review')) {
+      } else if (!new URLSearchParams(location.search).has('film') && !new URLSearchParams(location.search).has('river-review') && !new URLSearchParams(location.search).has('flood') && !new URLSearchParams(location.search).has('rivers')) {
         goTo(poses[activeStop] || poses.hero, activeStop === 'hero' ? 4200 : 1800);
       }
       setTimeout(() => $('#poster')?.remove(), 2400);
@@ -691,7 +728,15 @@ try {
     }
     // The optional film uses the same scene, with its own unrestricted camera.
     // Keep the ordinary bridge controls and reader experience unchanged.
-    if (new URLSearchParams(location.search).has('film')) {
+    if (new URLSearchParams(location.search).has('rivers')) {
+      interruptTween();stopWalking();stepObserver.disconnect();pendingArrival=false;
+      installRiverExplorer({views:[...destinations.values()],travel:travelTo});
+    } else if (new URLSearchParams(location.search).has('flood')) {
+      if(data.elevation?.meta.epoch !== '1900')throw Error('Landscape flooding requires the 1900 terrain');
+      interruptTween();stopWalking();stepObserver.disconnect();pendingArrival=false;
+      const {installLandscapeFlood}=await import('./landscape-flood.js');
+      await installLandscapeFlood({THREE,scene,load,render:update,travel:travelTo,setWater:setFloodWater});
+    } else if (new URLSearchParams(location.search).has('film')) {
       const { installFilm } = await import('./social-film.js');
       await installFilm({ THREE, renderer, scene, surfaces, stop: () => {
         interruptTween(); stopWalking(); stepObserver.disconnect();
@@ -701,7 +746,7 @@ try {
   } catch (error) {
     renderer = null;
     stall('This browser could not open the 3D view. The still image stays, and you can explore the location map and read the stories.');
-    console.warn('3D view unavailable:', error.message);
+    console.warn('3D view unavailable:', error.stack || error.message);
   }
   update();
 } catch (error) {

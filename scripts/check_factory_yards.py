@@ -70,7 +70,14 @@ for track in yards['tracks']:
     route=LineString(track['points'])
     assert route.buffer(.95).intersection(blocked).area<.01, ('Track obstruction',track['id'])
     track_surface=polygons(next(s for s in yards['sites'] if s['id']==track.get('siteId',797))['polygons'])
-    assert track_surface.buffer(.02).covers(route), ('Track outside its mapped yard',track['id'])
+    if track.get('sourceNodes'):
+        # Mapped junction leads continue beyond the yard parcel to the branch.
+        # Connectivity, source controls, grades and formation are checked by
+        # check_east_depot_tracks.py; never trim them back into isolated stubs.
+        assert track['siteId']==13011 and len(track['sourceNodes'])==2
+        assert route.buffer(1.2,cap_style=2).intersection(blocked).area<.01,track['id']
+    else:
+        assert track_surface.buffer(.02).covers(route), ('Track outside its mapped yard',track['id'])
     if 'sourceTrackId' in track:
         assert track['gauge']==1.435 and track['sleeperWidth']==2.4
     assert all(Polygon(s['footprint']).distance(route)>2.9 for s in sawmill['stock']), ('Timber obstructs track',track['id'])

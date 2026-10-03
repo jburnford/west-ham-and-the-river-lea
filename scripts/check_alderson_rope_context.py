@@ -1,4 +1,5 @@
 """Check the corrected OS lane against mapped rope and neighbouring roofs."""
+from prepare_east_channelsea_context import prior_rivers
 import argparse
 import hashlib
 import json
@@ -37,7 +38,7 @@ assert world(r['road']['reviewedSourcePixels']).round(3).tolist() == north['poin
 _, _, source_pixel = mosaic(north['sourceBounds'])
 assert source_pixel(north['points']).round(3).tolist() == north['sourcePixels']
 scene = load('docs/data/factory-buildings.json')
-assert digest(load('docs/data/ground-plan.json')['rivers']) == r['retainedRiverGeometrySha256']['ground']
+assert digest(prior_rivers(load('docs/data/ground-plan.json')['rivers'],load('data/maps/east-channelsea-context-alignment.json'))) == r['retainedRiverGeometrySha256']['ground']
 assert digest(scene['westContext']['rivers']) == r['retainedRiverGeometrySha256']['west']
 streets, _ = street_clearances(roads)
 line = LineString(north['points'])

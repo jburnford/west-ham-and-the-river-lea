@@ -1,6 +1,7 @@
 // Approximate mapped streets and rail corridors; surfaces/levels are interpretations.
 import { highStreetSurfaceHeight } from './sewer-levels.js';
 import { greatEastern } from './great-eastern.js';
+import { roadProfileHeight } from './road-levels.js';
 export function infrastructure({THREE,scene,materials:m,data,box,level}) {
   const infra=data.infrastructure,[x0,z0,x1,z1]=data.terrain.bounds;
   // Original code-generated paving: no modern blacktop or painted road markings.
@@ -32,9 +33,20 @@ export function infrastructure({THREE,scene,materials:m,data,box,level}) {
   const path=m.ground.clone();path.color.set('#9b9078');
   const ballast=m.stone.clone();ballast.color.set('#605e55');
   const earth=m.ground.clone();earth.color.set('#777463');
+  const profiles=infra.roads.map(r=>r.elevationProfile).filter(Boolean);
+  const profileHeight=(x,z)=>{
+    for(const p of profiles) {
+      const y=roadProfileHeight(x,z,p,data.elevation?.meta.epoch);
+      if(y!==null)return y;
+    }
+    return null;
+  };
   const ground=(x,z)=>{
-    let h=x>=x0&&x<=x1&&z>=z0&&z<=z1?Math.max(.12,level(x,z)):.12;
-    h=Math.max(h,highStreetSurfaceHeight(x,z,infra.sewerHighStreet)-.065);
+    const measured=profileHeight(x,z);
+    if(measured!==null)return measured-.065;
+    let h=data.mainLandscape?.weight(x,z)>0?level(x,z):x>=x0&&x<=x1&&z>=z0&&z<=z1?Math.max(.12,level(x,z)):.12;
+    const highStreet=highStreetSurfaceHeight(x,z,infra.sewerHighStreet);
+    if(!data.mainLandscape||highStreet>.1850001)h=Math.max(h,highStreet-.065);
     for(const bridge of infra.roadBridges)for(let i=1;i<bridge.route.length;i++) {
       const a=bridge.route[i-1],b=bridge.route[i],dx=b[0]-a[0],dz=b[1]-a[1];
       const t=Math.max(0,Math.min(1,((x-a[0])*dx+(z-a[1])*dz)/(dx*dx+dz*dz)));

@@ -331,19 +331,19 @@
     },
     {
       "name": "Barnby Street",
-      "sheet": "22",
+      "sheet": "scene",
       "points": [
         [
-          1189,
-          780
+          1.844,
+          -620.385
         ],
         [
-          1354,
-          727
+          100.922,
+          -659.487
         ],
         [
-          1690,
-          603
+          300.472,
+          -741.076
         ]
       ],
       "pixelWidth": 1888,
@@ -351,27 +351,50 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      "alignmentEvidence": "Bounded native OS street controls beside reviewed Bridge Road housing roofs; retain all other source controls and interpreted width. No roof clipping used to resolve the former street registration error.",
+      "sourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "sourcePixels": [
+        [
+          504,
+          708
+        ],
+        [
+          773,
+          610
+        ],
+        [
+          1315,
+          405
+        ]
+      ],
+      "eastChannelseaContextAlignment": {
+        "register": "data/maps/east-channelsea-context-alignment.json"
+      }
     },
     {
       "name": "Hotham Street",
-      "sheet": "22",
+      "sheet": "scene",
       "points": [
         [
-          1213,
-          868
+          24.162,
+          -556.961
         ],
         [
-          1367,
-          815
+          110.67,
+          -589.33
         ],
         [
-          1400,
-          815
+          130.46,
+          -589.87
         ],
         [
-          1708,
-          699
+          313.31,
+          -664.33
         ]
       ],
       "pixelWidth": 1888,
@@ -379,27 +402,30 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      "alignmentEvidence": "Retain the mapped street approach and all later controls; end its unsupported western carriageway stub at the corrected Bridge Road junction. No roof trimming or width change.",
+      "eastChannelseaContextAlignment": {
+        "register": "data/maps/east-channelsea-context-alignment.json"
+      }
     },
     {
       "name": "Randal Street",
-      "sheet": "22",
+      "sheet": "scene",
       "points": [
         [
-          1245,
-          965
+          52.534,
+          -502.409
         ],
         [
-          1395,
-          912
+          129.05,
+          -531.75
         ],
         [
-          1440,
-          905
+          155.93,
+          -536.68
         ],
         [
-          1723,
-          804
+          324.04,
+          -601.76
         ]
       ],
       "pixelWidth": 1888,
@@ -407,23 +433,26 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      "alignmentEvidence": "Retain the mapped street approach and all later controls; end its unsupported western carriageway stub at the corrected Bridge Road junction. No roof trimming or width change.",
+      "eastChannelseaContextAlignment": {
+        "register": "data/maps/east-channelsea-context-alignment.json"
+      }
     },
     {
       "name": "Canning Street",
-      "sheet": "22",
+      "sheet": "scene",
       "points": [
         [
-          1280,
-          1065
+          74.351,
+          -442.653
         ],
         [
-          1428,
-          1015
+          150.53,
+          -470.67
         ],
         [
-          1732,
-          912
+          331.21,
+          -537.29
         ]
       ],
       "pixelWidth": 1888,
@@ -431,23 +460,26 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      "alignmentEvidence": "Retain the mapped street approach and all later controls; end its unsupported western carriageway stub at the corrected Bridge Road junction. No roof trimming or width change.",
+      "eastChannelseaContextAlignment": {
+        "register": "data/maps/east-channelsea-context-alignment.json"
+      }
     },
     {
       "name": "Leywick Street",
-      "sheet": "22",
+      "sheet": "scene",
       "points": [
         [
-          1305,
-          1090
+          81.118,
+          -424.919
         ],
         [
-          1470,
-          1035
+          176.06,
+          -459.39
         ],
         [
-          1700,
-          957
+          312.75,
+          -509.84
         ]
       ],
       "pixelWidth": 1888,
@@ -455,23 +487,26 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      "alignmentEvidence": "Retain the mapped street approach and all later controls; end its unsupported western carriageway stub at the corrected Bridge Road junction. No roof trimming or width change.",
+      "eastChannelseaContextAlignment": {
+        "register": "data/maps/east-channelsea-context-alignment.json"
+      }
     },
     {
       "name": "Morley Street",
-      "sheet": "22",
+      "sheet": "scene",
       "points": [
         [
-          1325,
-          1180
+          96.972,
+          -384.026
         ],
         [
-          1480,
-          1132
+          191.535,
+          -423.197
         ],
         [
-          1690,
-          1058
+          307.837,
+          -472.431
         ]
       ],
       "pixelWidth": 1888,
@@ -479,43 +514,46 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      "alignmentEvidence": "Native Morley carriageway re-read between the two roof fronts, with an exact Bridge Road junction and shared St Thomas terminal. Earlier controls followed the southern roof/garden boundary; interpreted width retained.",
+      "eastChannelseaContextAlignment": {
+        "register": "data/maps/east-channelsea-context-alignment.json"
+      }
     },
     {
       "name": "Bridge Road",
-      "sheet": "22",
+      "sheet": "scene",
       "points": [
         [
-          1105,
-          527
+          -81.923,
+          -756.5
         ],
         [
-          1131,
-          645
+          -39.07,
+          -687.012
         ],
         [
-          1162,
-          758
+          1.841,
+          -620.472
         ],
         [
-          1194,
-          856
+          21.303,
+          -562.335
         ],
         [
-          1229,
-          951
+          51.132,
+          -506.265
         ],
         [
-          1261,
-          1050
+          72.471,
+          -447.579
         ],
         [
-          1294,
-          1144
+          93.728,
+          -391.877
         ],
         [
-          1308,
-          1188
+          104.494,
+          -365.822
         ]
       ],
       "pixelWidth": 1888,
@@ -523,39 +561,82 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+      "alignmentEvidence": "Native OS Bridge Road carriageway east of the railway re-read at all eight original control latitudes. Earlier registered centreline crossed rear plots and occupied railway. Distinguish Bridge Road west of the terrace strip from parallel Barry Place east of that strip. Interpreted 8 m width retained.",
+      "sourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "sourcePixels": [
+        [
+          289,
+          335.2679233823643
+        ],
+        [
+          399,
+          525.5576817362085
+        ],
+        [
+          504,
+          707.7648405311093
+        ],
+        [
+          552,
+          865.7595696144916
+        ],
+        [
+          628,
+          1018.9535276571039
+        ],
+        [
+          681,
+          1178.5622646243128
+        ],
+        [
+          734,
+          1330.1282841104833
+        ],
+        [
+          761,
+          1401.0843529905692
+        ]
+      ],
+      "eastChannelseaContextAlignment": {
+        "register": "data/maps/east-channelsea-context-alignment.json"
+      }
     },
     {
       "name": "St Thomas Road",
-      "sheet": "22",
+      "sheet": "scene",
       "points": [
         [
-          1190,
-          495
+          -0.75,
+          -777.88
         ],
         [
-          1230,
-          595
+          24.88,
+          -718.7
         ],
         [
-          1309,
-          709
+          74.14,
+          -651.79
         ],
         [
-          1351,
-          812
+          118.425,
+          -591.336
         ],
         [
-          1388,
-          910
+          146.073,
+          -533.411
         ],
         [
-          1429,
-          1009
+          168.901,
+          -474.759
         ],
         [
-          1476,
-          1129
+          191.535,
+          -423.197
         ]
       ],
       "pixelWidth": 1888,
@@ -563,7 +644,46 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+      "alignmentEvidence": "Bounded native OS street controls beside reviewed Bridge Road housing roofs; retain all other source controls and interpreted width. No roof clipping used to resolve the former street registration error.",
+      "sourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "sourcePixels": [
+        [
+          508.6086868164475,
+          283.66920334847765
+        ],
+        [
+          573.1032105675497,
+          444.93340806528255
+        ],
+        [
+          700.4984346928248,
+          628.7547087629808
+        ],
+        [
+          815,
+          794.8205786093912
+        ],
+        [
+          885,
+          952.8480935961534
+        ],
+        [
+          942,
+          1112.4797414926877
+        ],
+        [
+          999,
+          1253
+        ]
+      ],
+      "eastChannelseaContextAlignment": {
+        "register": "data/maps/east-channelsea-context-alignment.json"
+      }
     },
     {
       "name": "Warton Road",

@@ -1236,9 +1236,15 @@
    "priority_key_m": 1074.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-da"
+   ],
+   "assigned": {
+    "opus-da": "2026-10-03T02:51:33Z"
+   },
+   "done": {
+    "opus-da": "2026-10-03T03:06:30Z"
+   },
    "priority_rank": 45
   },
   {
@@ -1282,9 +1288,18 @@
    "priority_key_m": 1130.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cp",
+    "opus-cs"
+   ],
+   "assigned": {
+    "opus-cp": "2026-10-02T23:47:05Z",
+    "opus-cs": "2026-10-03T00:27:05Z"
+   },
+   "done": {
+    "opus-cp": "2026-10-03T00:04:30Z",
+    "opus-cs": "2026-10-03T00:33:56Z"
+   },
    "priority_rank": 47
   },
   {
@@ -1328,9 +1343,18 @@
    "priority_key_m": 1167.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cq",
+    "opus-cr"
+   ],
+   "assigned": {
+    "opus-cq": "2026-10-02T23:47:05Z",
+    "opus-cr": "2026-10-03T00:16:24Z"
+   },
+   "done": {
+    "opus-cq": "2026-10-03T00:06:01Z",
+    "opus-cr": "2026-10-03T00:32:19Z"
+   },
    "priority_rank": 49
   },
   {
@@ -1348,9 +1372,18 @@
    "priority_key_m": 1180.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-db",
+    "opus-dd"
+   ],
+   "assigned": {
+    "opus-db": "2026-10-03T03:10:14Z",
+    "opus-dd": "2026-10-03T03:37:02Z"
+   },
+   "done": {
+    "opus-db": "2026-10-03T03:30:53Z",
+    "opus-dd": "2026-10-03T03:45:28Z"
+   },
    "priority_rank": 50
   },
   {
@@ -1368,9 +1401,18 @@
    "priority_key_m": 1198.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bw",
+    "opus-ca"
+   ],
+   "assigned": {
+    "opus-bw": "2026-09-30T06:54:36Z",
+    "opus-ca": "2026-09-30T14:29:07Z"
+   },
+   "done": {
+    "opus-bw": "2026-09-30T07:10:44Z",
+    "opus-ca": "2026-09-30T14:39:11Z"
+   },
    "priority_rank": 51
   },
   {
@@ -1388,9 +1430,15 @@
    "priority_key_m": 1209.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-db"
+   ],
+   "assigned": {
+    "opus-db": "2026-10-03T03:10:14Z"
+   },
+   "done": {
+    "opus-db": "2026-10-03T03:25:11Z"
+   },
    "priority_rank": 52
   },
   {
@@ -1408,9 +1456,18 @@
    "priority_key_m": 1220.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-dc",
+    "opus-de"
+   ],
+   "assigned": {
+    "opus-dc": "2026-10-03T03:23:10Z",
+    "opus-de": "2026-10-03T03:47:59Z"
+   },
+   "done": {
+    "opus-dc": "2026-10-03T03:37:37Z",
+    "opus-de": "2026-10-03T03:59:22Z"
+   },
    "priority_rank": 53
   },
   {
@@ -1428,9 +1485,18 @@
    "priority_key_m": 1225.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cz",
+    "opus-db"
+   ],
+   "assigned": {
+    "opus-cz": "2026-10-03T02:43:50Z",
+    "opus-db": "2026-10-03T03:10:14Z"
+   },
+   "done": {
+    "opus-cz": "2026-10-03T03:04:20Z",
+    "opus-db": "2026-10-03T03:15:33Z"
+   },
    "priority_rank": 54
   },
   {
@@ -1448,9 +1514,15 @@
    "priority_key_m": 1229.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cp"
+   ],
+   "assigned": {
+    "opus-cp": "2026-10-02T23:47:05Z"
+   },
+   "done": {
+    "opus-cp": "2026-10-03T00:10:45Z"
+   },
    "priority_rank": 55
   },
   {
@@ -1494,9 +1566,15 @@
    "priority_key_m": 1254.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cb"
+   ],
+   "assigned": {
+    "opus-cb": "2026-09-30T15:04:37Z"
+   },
+   "done": {
+    "opus-cb": "2026-09-30T15:35:47Z"
+   },
    "priority_rank": 57
   },
   {
@@ -1514,9 +1592,15 @@
    "priority_key_m": 1302.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-db"
+   ],
+   "assigned": {
+    "opus-db": "2026-10-03T03:10:14Z"
+   },
+   "done": {
+    "opus-db": "2026-10-03T03:22:01Z"
+   },
    "priority_rank": 58
   },
   {
@@ -1534,9 +1618,15 @@
    "priority_key_m": 1321.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-dd"
+   ],
+   "assigned": {
+    "opus-dd": "2026-10-03T03:37:02Z"
+   },
+   "done": {
+    "opus-dd": "2026-10-03T03:50:03Z"
+   },
    "priority_rank": 59
   },
   {
@@ -1554,9 +1644,15 @@
    "priority_key_m": 1381.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cq"
+   ],
+   "assigned": {
+    "opus-cq": "2026-10-02T23:47:05Z"
+   },
+   "done": {
+    "opus-cq": "2026-10-02T23:59:49Z"
+   },
    "priority_rank": 60
   },
   {
@@ -1574,9 +1670,15 @@
    "priority_key_m": 1386.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cr"
+   ],
+   "assigned": {
+    "opus-cr": "2026-10-03T00:16:24Z"
+   },
+   "done": {
+    "opus-cr": "2026-10-03T00:39:07Z"
+   },
    "priority_rank": 61
   },
   {
@@ -1594,9 +1696,15 @@
    "priority_key_m": 1407.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bz"
+   ],
+   "assigned": {
+    "opus-bz": "2026-09-30T14:29:07Z"
+   },
+   "done": {
+    "opus-bz": "2026-09-30T14:45:37Z"
+   },
    "priority_rank": 62
   },
   {
@@ -1614,9 +1722,15 @@
    "priority_key_m": 1446.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-dc"
+   ],
+   "assigned": {
+    "opus-dc": "2026-10-03T03:23:10Z"
+   },
+   "done": {
+    "opus-dc": "2026-10-03T03:32:13Z"
+   },
    "priority_rank": 63
   },
   {
@@ -1634,9 +1748,18 @@
    "priority_key_m": 1471.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cd",
+    "opus-cg"
+   ],
+   "assigned": {
+    "opus-cd": "2026-09-30T15:37:17Z",
+    "opus-cg": "2026-09-30T16:11:13Z"
+   },
+   "done": {
+    "opus-cd": "2026-09-30T16:03:31Z",
+    "opus-cg": "2026-09-30T17:11:39Z"
+   },
    "priority_rank": 64
   },
   {
@@ -1654,9 +1777,15 @@
    "priority_key_m": 1570.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cq"
+   ],
+   "assigned": {
+    "opus-cq": "2026-10-02T23:47:05Z"
+   },
+   "done": {
+    "opus-cq": "2026-10-03T00:15:22Z"
+   },
    "priority_rank": 65
   },
   {
@@ -1752,9 +1881,15 @@
    "priority_key_m": 293.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ca"
+   ],
+   "assigned": {
+    "opus-ca": "2026-09-30T14:29:07Z"
+   },
+   "done": {
+    "opus-ca": "2026-09-30T15:03:33Z"
+   },
    "priority_rank": 69
   },
   {
@@ -1876,9 +2011,15 @@
    "priority_key_m": 579.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bv"
+   ],
+   "assigned": {
+    "opus-bv": "2026-09-30T06:37:57Z"
+   },
+   "done": {
+    "opus-bv": "2026-09-30T06:59:12Z"
+   },
    "priority_rank": 74
   },
   {
@@ -2087,9 +2228,15 @@
    "priority_key_m": 849.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cp"
+   ],
+   "assigned": {
+    "opus-cp": "2026-10-02T23:47:05Z"
+   },
+   "done": {
+    "opus-cp": "2026-10-03T00:21:00Z"
+   },
    "priority_rank": 82
   },
   {
@@ -2107,9 +2254,15 @@
    "priority_key_m": 865.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-br"
+   ],
+   "assigned": {
+    "opus-br": "2026-09-30T05:34:36Z"
+   },
+   "done": {
+    "opus-br": "2026-09-30T06:00:52Z"
+   },
    "priority_rank": 83
   },
   {
@@ -2153,9 +2306,18 @@
    "priority_key_m": 892.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bc",
+    "opus-bf"
+   ],
+   "assigned": {
+    "opus-bc": "2026-09-29T18:18:07Z",
+    "opus-bf": "2026-09-29T18:52:34Z"
+   },
+   "done": {
+    "opus-bc": "2026-09-29T18:40:38Z",
+    "opus-bf": "2026-09-29T19:20:01Z"
+   },
    "priority_rank": 85
   },
   {
@@ -2254,9 +2416,15 @@
    "priority_key_m": 1017.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-az"
+   ],
+   "assigned": {
+    "opus-az": "2026-09-29T17:23:38Z"
+   },
+   "done": {
+    "opus-az": "2026-09-29T17:31:14Z"
+   },
    "priority_rank": 89
   },
   {
@@ -2352,9 +2520,15 @@
    "priority_key_m": 1151.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bn"
+   ],
+   "assigned": {
+    "opus-bn": "2026-09-29T20:53:42Z"
+   },
+   "done": {
+    "opus-bn": "2026-09-29T21:06:20Z"
+   },
    "priority_rank": 93
   },
   {
@@ -2424,9 +2598,15 @@
    "priority_key_m": 1183.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-au"
+   ],
+   "assigned": {
+    "opus-au": "2026-09-29T16:24:44Z"
+   },
+   "done": {
+    "opus-au": "2026-09-29T16:47:55Z"
+   },
    "priority_rank": 96
   },
   {
@@ -2444,9 +2624,18 @@
    "priority_key_m": 1198.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-aw",
+    "opus-az"
+   ],
+   "assigned": {
+    "opus-aw": "2026-09-29T16:50:46Z",
+    "opus-az": "2026-09-29T17:23:38Z"
+   },
+   "done": {
+    "opus-aw": "2026-09-29T16:58:45Z",
+    "opus-az": "2026-09-29T17:35:36Z"
+   },
    "priority_rank": 97
   },
   {
@@ -2574,9 +2763,15 @@
    "priority_key_m": 1413.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-as"
+   ],
+   "assigned": {
+    "opus-as": "2026-09-29T15:55:43Z"
+   },
+   "done": {
+    "opus-as": "2026-09-29T16:26:00Z"
+   },
    "priority_rank": 102
   },
   {
@@ -2672,9 +2867,15 @@
    "priority_key_m": 1437.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bi"
+   ],
+   "assigned": {
+    "opus-bi": "2026-09-29T19:45:10Z"
+   },
+   "done": {
+    "opus-bi": "2026-09-29T20:09:44Z"
+   },
    "priority_rank": 106
   },
   {
@@ -2744,9 +2945,15 @@
    "priority_key_m": 1463.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-aw"
+   ],
+   "assigned": {
+    "opus-aw": "2026-09-29T16:50:46Z"
+   },
+   "done": {
+    "opus-aw": "2026-09-29T17:10:48Z"
+   },
    "priority_rank": 109
   },
   {
@@ -2817,12 +3024,17 @@
    "available": true,
    "skip_reason": null,
    "readers": [
-    "opus-aq"
+    "opus-aq",
+    "opus-as"
    ],
    "assigned": {
-    "opus-aq": "2026-09-29T15:23:10Z"
+    "opus-aq": "2026-09-29T15:23:10Z",
+    "opus-as": "2026-09-29T15:55:43Z"
    },
-   "done": {},
+   "done": {
+    "opus-aq": "2026-09-29T15:54:18Z",
+    "opus-as": "2026-09-29T16:03:41Z"
+   },
    "priority_rank": 112
   },
   {
@@ -2996,9 +3208,18 @@
    "priority_key_m": 1723.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bg",
+    "opus-bj"
+   ],
+   "assigned": {
+    "opus-bg": "2026-09-29T19:21:28Z",
+    "opus-bj": "2026-09-29T19:48:54Z"
+   },
+   "done": {
+    "opus-bg": "2026-09-29T19:34:20Z",
+    "opus-bj": "2026-09-29T19:57:05Z"
+   },
    "priority_rank": 119
   },
   {
@@ -3045,9 +3266,15 @@
    "priority_key_m": 1744.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ba"
+   ],
+   "assigned": {
+    "opus-ba": "2026-09-29T17:47:25Z"
+   },
+   "done": {
+    "opus-ba": "2026-09-29T18:07:59Z"
+   },
    "priority_rank": 121
   },
   {
@@ -3117,9 +3344,15 @@
    "priority_key_m": 1811.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-aw"
+   ],
+   "assigned": {
+    "opus-aw": "2026-09-29T16:50:46Z"
+   },
+   "done": {
+    "opus-aw": "2026-09-29T17:05:03Z"
+   },
    "priority_rank": 124
   },
   {
@@ -3193,13 +3426,16 @@
    "available": true,
    "skip_reason": null,
    "readers": [
-    "opus-aq"
+    "opus-aq",
+    "opus-au"
    ],
    "assigned": {
-    "opus-aq": "2026-09-29T15:23:10Z"
+    "opus-aq": "2026-09-29T15:23:10Z",
+    "opus-au": "2026-09-29T16:24:44Z"
    },
    "done": {
-    "opus-aq": "2026-09-29T15:37:58Z"
+    "opus-aq": "2026-09-29T15:37:58Z",
+    "opus-au": "2026-09-29T16:35:23Z"
    },
    "priority_rank": 127
   },
@@ -3247,9 +3483,18 @@
    "priority_key_m": 1919.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-as",
+    "opus-av"
+   ],
+   "assigned": {
+    "opus-as": "2026-09-29T15:55:43Z",
+    "opus-av": "2026-09-29T16:27:17Z"
+   },
+   "done": {
+    "opus-as": "2026-09-29T16:15:39Z",
+    "opus-av": "2026-09-29T16:33:44Z"
+   },
    "priority_rank": 129
   },
   {
@@ -3403,9 +3648,18 @@
    "priority_key_m": 2027.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bl",
+    "opus-bo"
+   ],
+   "assigned": {
+    "opus-bl": "2026-09-29T20:16:21Z",
+    "opus-bo": "2026-09-30T05:02:56Z"
+   },
+   "done": {
+    "opus-bl": "2026-09-29T20:31:09Z",
+    "opus-bo": "2026-09-30T05:10:02Z"
+   },
    "priority_rank": 135
   },
   {
@@ -3530,9 +3784,18 @@
    "priority_key_m": 2085.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ba",
+    "opus-bd"
+   ],
+   "assigned": {
+    "opus-ba": "2026-09-29T17:47:25Z",
+    "opus-bd": "2026-09-29T18:19:34Z"
+   },
+   "done": {
+    "opus-ba": "2026-09-29T18:14:35Z",
+    "opus-bd": "2026-09-29T18:29:41Z"
+   },
    "priority_rank": 140
   },
   {
@@ -3550,9 +3813,15 @@
    "priority_key_m": 2159.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-as"
+   ],
+   "assigned": {
+    "opus-as": "2026-09-29T15:55:43Z"
+   },
+   "done": {
+    "opus-as": "2026-09-29T16:10:22Z"
+   },
    "priority_rank": 141
   },
   {
@@ -3596,9 +3865,15 @@
    "priority_key_m": 2179.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ax"
+   ],
+   "assigned": {
+    "opus-ax": "2026-09-29T16:53:49Z"
+   },
+   "done": {
+    "opus-ax": "2026-09-29T17:03:00Z"
+   },
    "priority_rank": 143
   },
   {
@@ -3772,9 +4047,15 @@
    "priority_key_m": 2304.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-av"
+   ],
+   "assigned": {
+    "opus-av": "2026-09-29T16:27:17Z"
+   },
+   "done": {
+    "opus-av": "2026-09-29T16:49:10Z"
+   },
    "priority_rank": 150
   },
   {
@@ -3873,9 +4154,18 @@
    "priority_key_m": 2424.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-av",
+    "opus-aw"
+   ],
+   "assigned": {
+    "opus-av": "2026-09-29T16:27:17Z",
+    "opus-aw": "2026-09-29T16:50:46Z"
+   },
+   "done": {
+    "opus-av": "2026-09-29T16:47:02Z",
+    "opus-aw": "2026-09-29T17:22:05Z"
+   },
    "priority_rank": 154
   },
   {
@@ -3951,9 +4241,15 @@
    "priority_key_m": 2457.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-au"
+   ],
+   "assigned": {
+    "opus-au": "2026-09-29T16:24:44Z"
+   },
+   "done": {
+    "opus-au": "2026-09-29T16:44:42Z"
+   },
    "priority_rank": 157
   },
   {
@@ -4078,9 +4374,15 @@
    "priority_key_m": 2617.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-as"
+   ],
+   "assigned": {
+    "opus-as": "2026-09-29T15:55:43Z"
+   },
+   "done": {
+    "opus-as": "2026-09-29T16:21:39Z"
+   },
    "priority_rank": 162
   },
   {
@@ -4150,9 +4452,18 @@
    "priority_key_m": 2631.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-au",
+    "opus-ax"
+   ],
+   "assigned": {
+    "opus-au": "2026-09-29T16:24:44Z",
+    "opus-ax": "2026-09-29T16:53:49Z"
+   },
+   "done": {
+    "opus-au": "2026-09-29T16:40:44Z",
+    "opus-ax": "2026-09-29T16:58:45Z"
+   },
    "priority_rank": 165
   },
   {
@@ -4196,9 +4507,15 @@
    "priority_key_m": 2693.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ax"
+   ],
+   "assigned": {
+    "opus-ax": "2026-09-29T16:53:49Z"
+   },
+   "done": {
+    "opus-ax": "2026-09-29T17:07:41Z"
+   },
    "priority_rank": 167
   },
   {
@@ -4268,9 +4585,15 @@
    "priority_key_m": 2824.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-av"
+   ],
+   "assigned": {
+    "opus-av": "2026-09-29T16:27:17Z"
+   },
+   "done": {
+    "opus-av": "2026-09-29T16:41:22Z"
+   },
    "priority_rank": 170
   },
   {
@@ -4343,9 +4666,15 @@
    "priority_key_m": 3031.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-aw"
+   ],
+   "assigned": {
+    "opus-aw": "2026-09-29T16:50:46Z"
+   },
+   "done": {
+    "opus-aw": "2026-09-29T17:15:37Z"
+   },
    "priority_rank": 173
   },
   {
@@ -4363,9 +4692,15 @@
    "priority_key_m": 3082.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-au"
+   ],
+   "assigned": {
+    "opus-au": "2026-09-29T16:24:44Z"
+   },
+   "done": {
+    "opus-au": "2026-09-29T16:52:20Z"
+   },
    "priority_rank": 174
   },
   {
@@ -4383,9 +4718,15 @@
    "priority_key_m": 3251.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ay"
+   ],
+   "assigned": {
+    "opus-ay": "2026-09-29T17:19:56Z"
+   },
+   "done": {
+    "opus-ay": "2026-09-29T17:42:03Z"
+   },
    "priority_rank": 175
   },
   {
@@ -4403,9 +4744,18 @@
    "priority_key_m": 7.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cr",
+    "opus-cu"
+   ],
+   "assigned": {
+    "opus-cr": "2026-10-03T00:16:24Z",
+    "opus-cu": "2026-10-03T01:06:42Z"
+   },
+   "done": {
+    "opus-cr": "2026-10-03T00:57:17Z",
+    "opus-cu": "2026-10-03T01:17:47Z"
+   },
    "priority_rank": 176
   },
   {
@@ -4423,9 +4773,18 @@
    "priority_key_m": 14.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cs",
+    "opus-ct"
+   ],
+   "assigned": {
+    "opus-cs": "2026-10-03T00:27:05Z",
+    "opus-ct": "2026-10-03T00:58:57Z"
+   },
+   "done": {
+    "opus-cs": "2026-10-03T00:52:13Z",
+    "opus-ct": "2026-10-03T01:10:51Z"
+   },
    "priority_rank": 177
   },
   {
@@ -4443,9 +4802,15 @@
    "priority_key_m": 22.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ct"
+   ],
+   "assigned": {
+    "opus-ct": "2026-10-03T00:58:57Z"
+   },
+   "done": {
+    "opus-ct": "2026-10-03T01:15:51Z"
+   },
    "priority_rank": 178
   },
   {
@@ -4463,9 +4828,18 @@
    "priority_key_m": 30.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cw",
+    "opus-cx"
+   ],
+   "assigned": {
+    "opus-cw": "2026-10-03T01:39:49Z",
+    "opus-cx": "2026-10-03T02:07:03Z"
+   },
+   "done": {
+    "opus-cw": "2026-10-03T01:57:53Z",
+    "opus-cx": "2026-10-03T02:16:13Z"
+   },
    "priority_rank": 179
   },
   {
@@ -4483,9 +4857,18 @@
    "priority_key_m": 31.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cb",
+    "opus-cd"
+   ],
+   "assigned": {
+    "opus-cb": "2026-09-30T15:04:37Z",
+    "opus-cd": "2026-09-30T15:37:17Z"
+   },
+   "done": {
+    "opus-cb": "2026-09-30T15:30:19Z",
+    "opus-cd": "2026-09-30T15:47:50Z"
+   },
    "priority_rank": 180
   },
   {
@@ -4503,9 +4886,18 @@
    "priority_key_m": 37.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cy",
+    "opus-da"
+   ],
+   "assigned": {
+    "opus-cy": "2026-10-03T02:16:07Z",
+    "opus-da": "2026-10-03T02:51:33Z"
+   },
+   "done": {
+    "opus-cy": "2026-10-03T02:45:56Z",
+    "opus-da": "2026-10-03T03:01:25Z"
+   },
    "priority_rank": 181
   },
   {
@@ -4523,9 +4915,18 @@
    "priority_key_m": 39.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bz",
+    "opus-cc"
+   ],
+   "assigned": {
+    "opus-bz": "2026-09-30T14:29:07Z",
+    "opus-cc": "2026-09-30T15:06:03Z"
+   },
+   "done": {
+    "opus-bz": "2026-09-30T14:53:15Z",
+    "opus-cc": "2026-09-30T15:19:56Z"
+   },
    "priority_rank": 182
   },
   {
@@ -4543,9 +4944,18 @@
    "priority_key_m": 45.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-da",
+    "opus-dc"
+   ],
+   "assigned": {
+    "opus-da": "2026-10-03T02:51:33Z",
+    "opus-dc": "2026-10-03T03:23:10Z"
+   },
+   "done": {
+    "opus-da": "2026-10-03T03:11:25Z",
+    "opus-dc": "2026-10-03T03:29:11Z"
+   },
    "priority_rank": 183
   },
   {
@@ -4563,9 +4973,15 @@
    "priority_key_m": 47.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bu"
+   ],
+   "assigned": {
+    "opus-bu": "2026-09-30T06:22:12Z"
+   },
+   "done": {
+    "opus-bu": "2026-09-30T06:48:19Z"
+   },
    "priority_rank": 184
   },
   {
@@ -4583,9 +4999,18 @@
    "priority_key_m": 53.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-dd",
+    "opus-df"
+   ],
+   "assigned": {
+    "opus-dd": "2026-10-03T03:37:02Z",
+    "opus-df": "2026-10-03T04:05:29Z"
+   },
+   "done": {
+    "opus-dd": "2026-10-03T03:53:31Z",
+    "opus-df": "2026-10-03T04:10:31Z"
+   },
    "priority_rank": 185
   },
   {
@@ -4603,9 +5028,15 @@
    "priority_key_m": 55.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bt"
+   ],
+   "assigned": {
+    "opus-bt": "2026-09-30T06:08:09Z"
+   },
+   "done": {
+    "opus-bt": "2026-09-30T06:20:35Z"
+   },
    "priority_rank": 186
   },
   {
@@ -4623,9 +5054,15 @@
    "priority_key_m": 62.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bq"
+   ],
+   "assigned": {
+    "opus-bq": "2026-09-30T05:30:17Z"
+   },
+   "done": {
+    "opus-bq": "2026-09-30T05:51:01Z"
+   },
    "priority_rank": 187
   },
   {
@@ -4643,9 +5080,18 @@
    "priority_key_m": 70.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bp",
+    "opus-br"
+   ],
+   "assigned": {
+    "opus-bp": "2026-09-30T05:02:56Z",
+    "opus-br": "2026-09-30T05:34:36Z"
+   },
+   "done": {
+    "opus-bp": "2026-09-30T05:28:13Z",
+    "opus-br": "2026-09-30T05:42:27Z"
+   },
    "priority_rank": 188
   },
   {
@@ -4663,9 +5109,15 @@
    "priority_key_m": 78.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bp"
+   ],
+   "assigned": {
+    "opus-bp": "2026-09-30T05:02:56Z"
+   },
+   "done": {
+    "opus-bp": "2026-09-30T05:33:43Z"
+   },
    "priority_rank": 189
   },
   {
@@ -4683,9 +5135,15 @@
    "priority_key_m": 86.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-br"
+   ],
+   "assigned": {
+    "opus-br": "2026-09-30T05:34:36Z"
+   },
+   "done": {
+    "opus-br": "2026-09-30T05:56:46Z"
+   },
    "priority_rank": 190
   },
   {
@@ -4703,9 +5161,18 @@
    "priority_key_m": 94.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bt",
+    "opus-bv"
+   ],
+   "assigned": {
+    "opus-bt": "2026-09-30T06:08:09Z",
+    "opus-bv": "2026-09-30T06:37:57Z"
+   },
+   "done": {
+    "opus-bt": "2026-09-30T06:26:19Z",
+    "opus-bv": "2026-09-30T06:52:42Z"
+   },
    "priority_rank": 191
   },
   {
@@ -4723,9 +5190,15 @@
    "priority_key_m": 99.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cp"
+   ],
+   "assigned": {
+    "opus-cp": "2026-10-02T23:47:05Z"
+   },
+   "done": {
+    "opus-cp": "2026-10-03T00:25:53Z"
+   },
    "priority_rank": 192
   },
   {
@@ -4743,9 +5216,15 @@
    "priority_key_m": 106.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cq"
+   ],
+   "assigned": {
+    "opus-cq": "2026-10-02T23:47:05Z"
+   },
+   "done": {
+    "opus-cq": "2026-10-03T00:10:31Z"
+   },
    "priority_rank": 193
   },
   {
@@ -4763,9 +5242,15 @@
    "priority_key_m": 114.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cr"
+   ],
+   "assigned": {
+    "opus-cr": "2026-10-03T00:16:24Z"
+   },
+   "done": {
+    "opus-cr": "2026-10-03T00:48:38Z"
+   },
    "priority_rank": 194
   },
   {
@@ -4843,9 +5328,15 @@
    "priority_key_m": 157.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-de"
+   ],
+   "assigned": {
+    "opus-de": "2026-10-03T03:47:59Z"
+   },
+   "done": {
+    "opus-de": "2026-10-03T04:12:41Z"
+   },
    "priority_rank": 198
   },
   {
@@ -4923,9 +5414,18 @@
    "priority_key_m": 189.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cf",
+    "opus-ch"
+   ],
+   "assigned": {
+    "opus-cf": "2026-09-30T16:07:15Z",
+    "opus-ch": "2026-09-30T16:35:01Z"
+   },
+   "done": {
+    "opus-cf": "2026-09-30T16:29:34Z",
+    "opus-ch": "2026-09-30T16:44:29Z"
+   },
    "priority_rank": 202
   },
   {
@@ -4943,9 +5443,15 @@
    "priority_key_m": 198.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cd"
+   ],
+   "assigned": {
+    "opus-cd": "2026-09-30T15:37:17Z"
+   },
+   "done": {
+    "opus-cd": "2026-09-30T16:10:12Z"
+   },
    "priority_rank": 203
   },
   {
@@ -4963,9 +5469,15 @@
    "priority_key_m": 277.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cs"
+   ],
+   "assigned": {
+    "opus-cs": "2026-10-03T00:27:05Z"
+   },
+   "done": {
+    "opus-cs": "2026-10-03T00:39:57Z"
+   },
    "priority_rank": 204
   },
   {
@@ -4983,9 +5495,15 @@
    "priority_key_m": 285.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cs"
+   ],
+   "assigned": {
+    "opus-cs": "2026-10-03T00:27:05Z"
+   },
+   "done": {
+    "opus-cs": "2026-10-03T00:44:41Z"
+   },
    "priority_rank": 205
   },
   {
@@ -5003,9 +5521,18 @@
    "priority_key_m": 292.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ct",
+    "opus-cv"
+   ],
+   "assigned": {
+    "opus-ct": "2026-10-03T00:58:57Z",
+    "opus-cv": "2026-10-03T01:35:36Z"
+   },
+   "done": {
+    "opus-ct": "2026-10-03T01:21:47Z",
+    "opus-cv": "2026-10-03T01:47:13Z"
+   },
    "priority_rank": 206
   },
   {
@@ -5023,9 +5550,15 @@
    "priority_key_m": 296.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cs"
+   ],
+   "assigned": {
+    "opus-cs": "2026-10-03T00:27:05Z"
+   },
+   "done": {
+    "opus-cs": "2026-10-03T00:57:32Z"
+   },
    "priority_rank": 207
   },
   {
@@ -5043,9 +5576,15 @@
    "priority_key_m": 300.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cu"
+   ],
+   "assigned": {
+    "opus-cu": "2026-10-03T01:06:42Z"
+   },
+   "done": {
+    "opus-cu": "2026-10-03T01:22:52Z"
+   },
    "priority_rank": 208
   },
   {
@@ -5063,9 +5602,15 @@
    "priority_key_m": 308.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cw"
+   ],
+   "assigned": {
+    "opus-cw": "2026-10-03T01:39:49Z"
+   },
+   "done": {
+    "opus-cw": "2026-10-03T01:53:35Z"
+   },
    "priority_rank": 209
   },
   {
@@ -5083,9 +5628,15 @@
    "priority_key_m": 315.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cx"
+   ],
+   "assigned": {
+    "opus-cx": "2026-10-03T02:07:03Z"
+   },
+   "done": {
+    "opus-cx": "2026-10-03T02:35:04Z"
+   },
    "priority_rank": 210
   },
   {
@@ -5103,9 +5654,18 @@
    "priority_key_m": 317.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-by",
+    "opus-bz"
+   ],
+   "assigned": {
+    "opus-by": "2026-09-30T07:23:50Z",
+    "opus-bz": "2026-09-30T14:29:07Z"
+   },
+   "done": {
+    "opus-by": "2026-09-30T07:37:39Z",
+    "opus-bz": "2026-09-30T14:37:20Z"
+   },
    "priority_rank": 211
   },
   {
@@ -5123,9 +5683,15 @@
    "priority_key_m": 323.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cz"
+   ],
+   "assigned": {
+    "opus-cz": "2026-10-03T02:43:50Z"
+   },
+   "done": {
+    "opus-cz": "2026-10-03T02:59:11Z"
+   },
    "priority_rank": 212
   },
   {
@@ -5143,9 +5709,18 @@
    "priority_key_m": 325.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bu",
+    "opus-bw"
+   ],
+   "assigned": {
+    "opus-bu": "2026-09-30T06:22:12Z",
+    "opus-bw": "2026-09-30T06:54:36Z"
+   },
+   "done": {
+    "opus-bu": "2026-09-30T06:43:08Z",
+    "opus-bw": "2026-09-30T07:05:31Z"
+   },
    "priority_rank": 213
   },
   {
@@ -5163,9 +5738,15 @@
    "priority_key_m": 331.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-dc"
+   ],
+   "assigned": {
+    "opus-dc": "2026-10-03T03:23:10Z"
+   },
+   "done": {
+    "opus-dc": "2026-10-03T03:41:39Z"
+   },
    "priority_rank": 214
   },
   {
@@ -5183,9 +5764,15 @@
    "priority_key_m": 332.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bq"
+   ],
+   "assigned": {
+    "opus-bq": "2026-09-30T05:30:17Z"
+   },
+   "done": {
+    "opus-bq": "2026-09-30T05:56:32Z"
+   },
    "priority_rank": 215
   },
   {
@@ -5203,9 +5790,15 @@
    "priority_key_m": 338.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-de"
+   ],
+   "assigned": {
+    "opus-de": "2026-10-03T03:47:59Z"
+   },
+   "done": {
+    "opus-de": "2026-10-03T04:03:52Z"
+   },
    "priority_rank": 216
   },
   {
@@ -5223,9 +5816,15 @@
    "priority_key_m": 340.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bn"
+   ],
+   "assigned": {
+    "opus-bn": "2026-09-29T20:53:42Z"
+   },
+   "done": {
+    "opus-bn": "2026-09-29T21:10:43Z"
+   },
    "priority_rank": 217
   },
   {
@@ -5243,9 +5842,15 @@
    "priority_key_m": 348.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bl"
+   ],
+   "assigned": {
+    "opus-bl": "2026-09-29T20:16:21Z"
+   },
+   "done": {
+    "opus-bl": "2026-09-29T20:43:11Z"
+   },
    "priority_rank": 218
   },
   {
@@ -5263,9 +5868,15 @@
    "priority_key_m": 356.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bj"
+   ],
+   "assigned": {
+    "opus-bj": "2026-09-29T19:48:54Z"
+   },
+   "done": {
+    "opus-bj": "2026-09-29T20:07:01Z"
+   },
    "priority_rank": 219
   },
   {
@@ -5283,9 +5894,15 @@
    "priority_key_m": 364.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bj"
+   ],
+   "assigned": {
+    "opus-bj": "2026-09-29T19:48:54Z"
+   },
+   "done": {
+    "opus-bj": "2026-09-29T20:11:17Z"
+   },
    "priority_rank": 220
   },
   {
@@ -5323,9 +5940,18 @@
    "priority_key_m": 371.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cc",
+    "opus-ce"
+   ],
+   "assigned": {
+    "opus-cc": "2026-09-30T15:06:03Z",
+    "opus-ce": "2026-09-30T15:37:17Z"
+   },
+   "done": {
+    "opus-cc": "2026-09-30T15:24:29Z",
+    "opus-ce": "2026-09-30T15:48:39Z"
+   },
    "priority_rank": 222
   },
   {
@@ -5343,9 +5969,15 @@
    "priority_key_m": 372.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bl"
+   ],
+   "assigned": {
+    "opus-bl": "2026-09-29T20:16:21Z"
+   },
+   "done": {
+    "opus-bl": "2026-09-29T20:49:35Z"
+   },
    "priority_rank": 223
   },
   {
@@ -5363,9 +5995,18 @@
    "priority_key_m": 379.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bo",
+    "opus-bq"
+   ],
+   "assigned": {
+    "opus-bo": "2026-09-30T05:02:56Z",
+    "opus-bq": "2026-09-30T05:30:17Z"
+   },
+   "done": {
+    "opus-bo": "2026-09-30T05:15:01Z",
+    "opus-bq": "2026-09-30T05:37:31Z"
+   },
    "priority_rank": 224
   },
   {
@@ -5383,9 +6024,15 @@
    "priority_key_m": 384.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bf"
+   ],
+   "assigned": {
+    "opus-bf": "2026-09-29T18:52:34Z"
+   },
+   "done": {
+    "opus-bf": "2026-09-29T19:01:21Z"
+   },
    "priority_rank": 225
   },
   {
@@ -5403,9 +6050,15 @@
    "priority_key_m": 391.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bf"
+   ],
+   "assigned": {
+    "opus-bf": "2026-09-29T18:52:34Z"
+   },
+   "done": {
+    "opus-bf": "2026-09-29T19:04:49Z"
+   },
    "priority_rank": 226
   },
   {
@@ -5423,9 +6076,15 @@
    "priority_key_m": 399.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cr"
+   ],
+   "assigned": {
+    "opus-cr": "2026-10-03T00:16:24Z"
+   },
+   "done": {
+    "opus-cr": "2026-10-03T01:05:21Z"
+   },
    "priority_rank": 227
   },
   {
@@ -5583,9 +6242,15 @@
    "priority_key_m": 473.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cm"
+   ],
+   "assigned": {
+    "opus-cm": "2026-09-30T18:17:17Z"
+   },
+   "done": {
+    "opus-cm": "2026-09-30T18:53:45Z"
+   },
    "priority_rank": 235
   },
   {
@@ -5603,9 +6268,18 @@
    "priority_key_m": 482.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cg",
+    "opus-ck"
+   ],
+   "assigned": {
+    "opus-cg": "2026-09-30T16:11:13Z",
+    "opus-ck": "2026-09-30T17:39:15Z"
+   },
+   "done": {
+    "opus-cg": "2026-09-30T17:20:51Z",
+    "opus-ck": "2026-09-30T17:51:09Z"
+   },
    "priority_rank": 236
   },
   {
@@ -5623,9 +6297,15 @@
    "priority_key_m": 484.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ct"
+   ],
+   "assigned": {
+    "opus-ct": "2026-10-03T00:58:57Z"
+   },
+   "done": {
+    "opus-ct": "2026-10-03T01:29:18Z"
+   },
    "priority_rank": 237
   },
   {
@@ -5663,9 +6343,15 @@
    "priority_key_m": 563.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cu"
+   ],
+   "assigned": {
+    "opus-cu": "2026-10-03T01:06:42Z"
+   },
+   "done": {
+    "opus-cu": "2026-10-03T01:28:38Z"
+   },
    "priority_rank": 239
   },
   {
@@ -5683,9 +6369,15 @@
    "priority_key_m": 570.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cv"
+   ],
+   "assigned": {
+    "opus-cv": "2026-10-03T01:35:36Z"
+   },
+   "done": {
+    "opus-cv": "2026-10-03T02:03:46Z"
+   },
    "priority_rank": 240
   },
   {
@@ -5703,9 +6395,18 @@
    "priority_key_m": 570.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cu",
+    "opus-cw"
+   ],
+   "assigned": {
+    "opus-cu": "2026-10-03T01:06:42Z",
+    "opus-cw": "2026-10-03T01:39:49Z"
+   },
+   "done": {
+    "opus-cu": "2026-10-03T01:38:38Z",
+    "opus-cw": "2026-10-03T01:47:25Z"
+   },
    "priority_rank": 241
   },
   {
@@ -5723,9 +6424,18 @@
    "priority_key_m": 575.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ce",
+    "opus-cf"
+   ],
+   "assigned": {
+    "opus-ce": "2026-09-30T15:37:17Z",
+    "opus-cf": "2026-09-30T16:07:15Z"
+   },
+   "done": {
+    "opus-ce": "2026-09-30T16:06:08Z",
+    "opus-cf": "2026-09-30T16:16:27Z"
+   },
    "priority_rank": 242
   },
   {
@@ -5743,9 +6453,15 @@
    "priority_key_m": 578.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cv"
+   ],
+   "assigned": {
+    "opus-cv": "2026-10-03T01:35:36Z"
+   },
+   "done": {
+    "opus-cv": "2026-10-03T02:09:00Z"
+   },
    "priority_rank": 243
   },
   {
@@ -5763,9 +6479,15 @@
    "priority_key_m": 586.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cw"
+   ],
+   "assigned": {
+    "opus-cw": "2026-10-03T01:39:49Z"
+   },
+   "done": {
+    "opus-cw": "2026-10-03T02:06:08Z"
+   },
    "priority_rank": 244
   },
   {
@@ -5783,9 +6505,15 @@
    "priority_key_m": 593.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cx"
+   ],
+   "assigned": {
+    "opus-cx": "2026-10-03T02:07:03Z"
+   },
+   "done": {
+    "opus-cx": "2026-10-03T02:42:53Z"
+   },
    "priority_rank": 245
   },
   {
@@ -5803,9 +6531,15 @@
    "priority_key_m": 601.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cz"
+   ],
+   "assigned": {
+    "opus-cz": "2026-10-03T02:43:50Z"
+   },
+   "done": {
+    "opus-cz": "2026-10-03T02:55:49Z"
+   },
    "priority_rank": 246
   },
   {
@@ -5823,9 +6557,15 @@
    "priority_key_m": 602.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bu"
+   ],
+   "assigned": {
+    "opus-bu": "2026-09-30T06:22:12Z"
+   },
+   "done": {
+    "opus-bu": "2026-09-30T06:53:37Z"
+   },
    "priority_rank": 247
   },
   {
@@ -5843,9 +6583,15 @@
    "priority_key_m": 609.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-da"
+   ],
+   "assigned": {
+    "opus-da": "2026-10-03T02:51:33Z"
+   },
+   "done": {
+    "opus-da": "2026-10-03T03:15:51Z"
+   },
    "priority_rank": 248
   },
   {
@@ -5863,9 +6609,18 @@
    "priority_key_m": 610.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-br",
+    "opus-bt"
+   ],
+   "assigned": {
+    "opus-br": "2026-09-30T05:34:36Z",
+    "opus-bt": "2026-09-30T06:08:09Z"
+   },
+   "done": {
+    "opus-br": "2026-09-30T05:48:35Z",
+    "opus-bt": "2026-09-30T06:16:11Z"
+   },
    "priority_rank": 249
   },
   {
@@ -5883,9 +6638,15 @@
    "priority_key_m": 616.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-dd"
+   ],
+   "assigned": {
+    "opus-dd": "2026-10-03T03:37:02Z"
+   },
+   "done": {
+    "opus-dd": "2026-10-03T03:57:31Z"
+   },
    "priority_rank": 250
   },
   {
@@ -5903,9 +6664,15 @@
    "priority_key_m": 618.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bm"
+   ],
+   "assigned": {
+    "opus-bm": "2026-09-29T20:50:29Z"
+   },
+   "done": {
+    "opus-bm": "2026-09-29T21:11:22Z"
+   },
    "priority_rank": 251
   },
   {
@@ -5943,9 +6710,15 @@
    "priority_key_m": 626.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bi"
+   ],
+   "assigned": {
+    "opus-bi": "2026-09-29T19:45:10Z"
+   },
+   "done": {
+    "opus-bi": "2026-09-29T19:51:25Z"
+   },
    "priority_rank": 253
   },
   {
@@ -5963,9 +6736,18 @@
    "priority_key_m": 631.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ca",
+    "opus-cb"
+   ],
+   "assigned": {
+    "opus-ca": "2026-09-30T14:29:07Z",
+    "opus-cb": "2026-09-30T15:04:37Z"
+   },
+   "done": {
+    "opus-ca": "2026-09-30T14:53:40Z",
+    "opus-cb": "2026-09-30T15:13:49Z"
+   },
    "priority_rank": 254
   },
   {
@@ -6110,9 +6892,18 @@
    "priority_key_m": 665.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bi",
+    "opus-bk"
+   ],
+   "assigned": {
+    "opus-bi": "2026-09-29T19:45:10Z",
+    "opus-bk": "2026-09-29T20:15:44Z"
+   },
+   "done": {
+    "opus-bi": "2026-09-29T20:04:06Z",
+    "opus-bk": "2026-09-29T20:51:31Z"
+   },
    "priority_rank": 260
   },
   {
@@ -6130,9 +6921,15 @@
    "priority_key_m": 669.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bd"
+   ],
+   "assigned": {
+    "opus-bd": "2026-09-29T18:19:34Z"
+   },
+   "done": {
+    "opus-bd": "2026-09-29T18:42:02Z"
+   },
    "priority_rank": 261
   },
   {
@@ -6150,9 +6947,15 @@
    "priority_key_m": 676.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bf"
+   ],
+   "assigned": {
+    "opus-bf": "2026-09-29T18:52:34Z"
+   },
+   "done": {
+    "opus-bf": "2026-09-29T19:08:24Z"
+   },
    "priority_rank": 262
   },
   {
@@ -6170,9 +6973,15 @@
    "priority_key_m": 684.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ct"
+   ],
+   "assigned": {
+    "opus-ct": "2026-10-03T00:58:57Z"
+   },
+   "done": {
+    "opus-ct": "2026-10-03T01:34:13Z"
+   },
    "priority_rank": 263
   },
   {
@@ -6190,9 +6999,15 @@
    "priority_key_m": 687.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cv"
+   ],
+   "assigned": {
+    "opus-cv": "2026-10-03T01:35:36Z"
+   },
+   "done": {
+    "opus-cv": "2026-10-03T02:15:02Z"
+   },
    "priority_rank": 264
   },
   {
@@ -6310,9 +7125,15 @@
    "priority_key_m": 737.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cu"
+   ],
+   "assigned": {
+    "opus-cu": "2026-10-03T01:06:42Z"
+   },
+   "done": {
+    "opus-cu": "2026-10-03T01:34:23Z"
+   },
    "priority_rank": 270
   },
   {
@@ -6390,9 +7211,15 @@
    "priority_key_m": 758.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cn"
+   ],
+   "assigned": {
+    "opus-cn": "2026-09-30T18:40:03Z"
+   },
+   "done": {
+    "opus-cn": "2026-09-30T19:02:19Z"
+   },
    "priority_rank": 274
   },
   {
@@ -6410,9 +7237,18 @@
    "priority_key_m": 766.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cn",
+    "opus-cq"
+   ],
+   "assigned": {
+    "opus-cn": "2026-09-30T18:40:03Z",
+    "opus-cq": "2026-10-02T23:47:05Z"
+   },
+   "done": {
+    "opus-cn": "2026-09-30T18:57:48Z",
+    "opus-cq": "2026-10-02T23:56:15Z"
+   },
    "priority_rank": 275
   },
   {
@@ -6430,9 +7266,15 @@
    "priority_key_m": 769.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cd"
+   ],
+   "assigned": {
+    "opus-cd": "2026-09-30T15:37:17Z"
+   },
+   "done": {
+    "opus-cd": "2026-09-30T15:57:05Z"
+   },
    "priority_rank": 276
   },
   {
@@ -6470,9 +7312,15 @@
    "priority_key_m": 828.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cg"
+   ],
+   "assigned": {
+    "opus-cg": "2026-09-30T16:11:13Z"
+   },
+   "done": {
+    "opus-cg": "2026-09-30T17:38:07Z"
+   },
    "priority_rank": 278
   },
   {
@@ -6490,9 +7338,15 @@
    "priority_key_m": 884.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cx"
+   ],
+   "assigned": {
+    "opus-cx": "2026-10-03T02:07:03Z"
+   },
+   "done": {
+    "opus-cx": "2026-10-03T02:24:15Z"
+   },
    "priority_rank": 279
   },
   {
@@ -6510,9 +7364,15 @@
    "priority_key_m": 888.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bt"
+   ],
+   "assigned": {
+    "opus-bt": "2026-09-30T06:08:09Z"
+   },
+   "done": {
+    "opus-bt": "2026-09-30T06:31:28Z"
+   },
    "priority_rank": 280
   },
   {
@@ -6530,9 +7390,15 @@
    "priority_key_m": 896.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bn"
+   ],
+   "assigned": {
+    "opus-bn": "2026-09-29T20:53:42Z"
+   },
+   "done": {
+    "opus-bn": "2026-09-29T21:15:19Z"
+   },
    "priority_rank": 281
   },
   {
@@ -6550,9 +7416,15 @@
    "priority_key_m": 904.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bi"
+   ],
+   "assigned": {
+    "opus-bi": "2026-09-29T19:45:10Z"
+   },
+   "done": {
+    "opus-bi": "2026-09-29T19:58:47Z"
+   },
    "priority_rank": 282
   },
   {
@@ -6570,9 +7442,15 @@
    "priority_key_m": 907.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bz"
+   ],
+   "assigned": {
+    "opus-bz": "2026-09-30T14:29:07Z"
+   },
+   "done": {
+    "opus-bz": "2026-09-30T14:59:20Z"
+   },
    "priority_rank": 283
   },
   {
@@ -6772,9 +7650,15 @@
    "priority_key_m": 954.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bb"
+   ],
+   "assigned": {
+    "opus-bb": "2026-09-29T17:50:02Z"
+   },
+   "done": {
+    "opus-bb": "2026-09-29T17:57:31Z"
+   },
    "priority_rank": 291
   },
   {
@@ -6792,9 +7676,18 @@
    "priority_key_m": 961.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-be",
+    "opus-bh"
+   ],
+   "assigned": {
+    "opus-be": "2026-09-29T18:51:22Z",
+    "opus-bh": "2026-09-29T19:22:39Z"
+   },
+   "done": {
+    "opus-be": "2026-09-29T19:11:58Z",
+    "opus-bh": "2026-09-29T19:43:37Z"
+   },
    "priority_rank": 292
   },
   {
@@ -6812,9 +7705,18 @@
    "priority_key_m": 969.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cv",
+    "opus-cy"
+   ],
+   "assigned": {
+    "opus-cv": "2026-10-03T01:35:36Z",
+    "opus-cy": "2026-10-03T02:16:07Z"
+   },
+   "done": {
+    "opus-cv": "2026-10-03T01:55:46Z",
+    "opus-cy": "2026-10-03T02:26:15Z"
+   },
    "priority_rank": 293
   },
   {
@@ -6832,9 +7734,15 @@
    "priority_key_m": 973.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cf"
+   ],
+   "assigned": {
+    "opus-cf": "2026-09-30T16:07:15Z"
+   },
+   "done": {
+    "opus-cf": "2026-09-30T16:20:08Z"
+   },
    "priority_rank": 294
   },
   {
@@ -6912,9 +7820,15 @@
    "priority_key_m": 1008.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cw"
+   ],
+   "assigned": {
+    "opus-cw": "2026-10-03T01:39:49Z"
+   },
+   "done": {
+    "opus-cw": "2026-10-03T02:03:22Z"
+   },
    "priority_rank": 298
   },
   {
@@ -6932,9 +7846,15 @@
    "priority_key_m": 1008.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cc"
+   ],
+   "assigned": {
+    "opus-cc": "2026-09-30T15:06:03Z"
+   },
+   "done": {
+    "opus-cc": "2026-09-30T15:27:42Z"
+   },
    "priority_rank": 299
   },
   {
@@ -7112,9 +8032,15 @@
    "priority_key_m": 1119.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cy"
+   ],
+   "assigned": {
+    "opus-cy": "2026-10-03T02:16:07Z"
+   },
+   "done": {
+    "opus-cy": "2026-10-03T02:33:47Z"
+   },
    "priority_rank": 308
   },
   {
@@ -7132,9 +8058,15 @@
    "priority_key_m": 1171.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cf"
+   ],
+   "assigned": {
+    "opus-cf": "2026-09-30T16:07:15Z"
+   },
+   "done": {
+    "opus-cf": "2026-09-30T16:22:57Z"
+   },
    "priority_rank": 309
   },
   {
@@ -7172,9 +8104,15 @@
    "priority_key_m": 1174.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-br"
+   ],
+   "assigned": {
+    "opus-br": "2026-09-30T05:34:36Z"
+   },
+   "done": {
+    "opus-br": "2026-09-30T06:07:11Z"
+   },
    "priority_rank": 311
   },
   {
@@ -7192,9 +8130,18 @@
    "priority_key_m": 1181.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bm",
+    "opus-bp"
+   ],
+   "assigned": {
+    "opus-bm": "2026-09-29T20:50:29Z",
+    "opus-bp": "2026-09-30T05:02:56Z"
+   },
+   "done": {
+    "opus-bm": "2026-09-29T21:00:53Z",
+    "opus-bp": "2026-09-30T05:12:22Z"
+   },
    "priority_rank": 312
   },
   {
@@ -7212,9 +8159,15 @@
    "priority_key_m": 1188.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bw"
+   ],
+   "assigned": {
+    "opus-bw": "2026-09-30T06:54:36Z"
+   },
+   "done": {
+    "opus-bw": "2026-09-30T07:19:50Z"
+   },
    "priority_rank": 313
   },
   {
@@ -7232,9 +8185,15 @@
    "priority_key_m": 1189.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bg"
+   ],
+   "assigned": {
+    "opus-bg": "2026-09-29T19:21:28Z"
+   },
+   "done": {
+    "opus-bg": "2026-09-29T19:29:03Z"
+   },
    "priority_rank": 314
   },
   {
@@ -7434,9 +8393,15 @@
    "priority_key_m": 1239.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ay"
+   ],
+   "assigned": {
+    "opus-ay": "2026-09-29T17:19:56Z"
+   },
+   "done": {
+    "opus-ay": "2026-09-29T17:39:27Z"
+   },
    "priority_rank": 322
   },
   {
@@ -7454,9 +8419,15 @@
    "priority_key_m": 1247.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bd"
+   ],
+   "assigned": {
+    "opus-bd": "2026-09-29T18:19:34Z"
+   },
+   "done": {
+    "opus-bd": "2026-09-29T18:49:43Z"
+   },
    "priority_rank": 323
   },
   {
@@ -7474,9 +8445,18 @@
    "priority_key_m": 1254.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cx",
+    "opus-cz"
+   ],
+   "assigned": {
+    "opus-cx": "2026-10-03T02:07:03Z",
+    "opus-cz": "2026-10-03T02:43:50Z"
+   },
+   "done": {
+    "opus-cx": "2026-10-03T02:30:23Z",
+    "opus-cz": "2026-10-03T02:51:43Z"
+   },
    "priority_rank": 324
   },
   {
@@ -7534,9 +8514,15 @@
    "priority_key_m": 1284.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cy"
+   ],
+   "assigned": {
+    "opus-cy": "2026-10-03T02:16:07Z"
+   },
+   "done": {
+    "opus-cy": "2026-10-03T02:38:57Z"
+   },
    "priority_rank": 327
   },
   {
@@ -7734,9 +8720,15 @@
    "priority_key_m": 1374.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cz"
+   ],
+   "assigned": {
+    "opus-cz": "2026-10-03T02:43:50Z"
+   },
+   "done": {
+    "opus-cz": "2026-10-03T03:09:15Z"
+   },
    "priority_rank": 337
   },
   {
@@ -7794,9 +8786,18 @@
    "priority_key_m": 1459.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bq",
+    "opus-bs"
+   ],
+   "assigned": {
+    "opus-bq": "2026-09-30T05:30:17Z",
+    "opus-bs": "2026-09-30T05:57:27Z"
+   },
+   "done": {
+    "opus-bq": "2026-09-30T05:42:49Z",
+    "opus-bs": "2026-09-30T06:04:17Z"
+   },
    "priority_rank": 340
   },
   {
@@ -7834,9 +8835,15 @@
    "priority_key_m": 1467.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bk"
+   ],
+   "assigned": {
+    "opus-bk": "2026-09-29T20:15:44Z"
+   },
+   "done": {
+    "opus-bk": "2026-09-29T20:40:26Z"
+   },
    "priority_rank": 342
   },
   {
@@ -7854,9 +8861,15 @@
    "priority_key_m": 1470.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bv"
+   ],
+   "assigned": {
+    "opus-bv": "2026-09-30T06:37:57Z"
+   },
+   "done": {
+    "opus-bv": "2026-09-30T07:13:51Z"
+   },
    "priority_rank": 343
   },
   {
@@ -8059,9 +9072,15 @@
    "priority_key_m": 1524.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ax"
+   ],
+   "assigned": {
+    "opus-ax": "2026-09-29T16:53:49Z"
+   },
+   "done": {
+    "opus-ax": "2026-09-29T17:18:34Z"
+   },
    "priority_rank": 351
   },
   {
@@ -8079,9 +9098,15 @@
    "priority_key_m": 1532.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bc"
+   ],
+   "assigned": {
+    "opus-bc": "2026-09-29T18:18:07Z"
+   },
+   "done": {
+    "opus-bc": "2026-09-29T18:50:50Z"
+   },
    "priority_rank": 352
   },
   {
@@ -8099,9 +9124,15 @@
    "priority_key_m": 1539.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cy"
+   ],
+   "assigned": {
+    "opus-cy": "2026-10-03T02:16:07Z"
+   },
+   "done": {
+    "opus-cy": "2026-10-03T02:50:30Z"
+   },
    "priority_rank": 353
   },
   {
@@ -8119,9 +9150,15 @@
    "priority_key_m": 1564.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-da"
+   ],
+   "assigned": {
+    "opus-da": "2026-10-03T02:51:33Z"
+   },
+   "done": {
+    "opus-da": "2026-10-03T03:22:08Z"
+   },
    "priority_rank": 354
   },
   {
@@ -8159,9 +9196,15 @@
    "priority_key_m": 1638.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-dc"
+   ],
+   "assigned": {
+    "opus-dc": "2026-10-03T03:23:10Z"
+   },
+   "done": {
+    "opus-dc": "2026-10-03T03:47:03Z"
+   },
    "priority_rank": 356
   },
   {
@@ -8179,9 +9222,15 @@
    "priority_key_m": 1745.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bq"
+   ],
+   "assigned": {
+    "opus-bq": "2026-09-30T05:30:17Z"
+   },
+   "done": {
+    "opus-bq": "2026-09-30T05:46:57Z"
+   },
    "priority_rank": 357
   },
   {
@@ -8199,9 +9248,18 @@
    "priority_key_m": 1753.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bk",
+    "opus-bn"
+   ],
+   "assigned": {
+    "opus-bk": "2026-09-29T20:15:44Z",
+    "opus-bn": "2026-09-29T20:53:32Z"
+   },
+   "done": {
+    "opus-bk": "2026-09-29T20:45:58Z",
+    "opus-bn": "2026-09-29T21:02:30Z"
+   },
    "priority_rank": 358
   },
   {
@@ -8219,9 +9277,15 @@
    "priority_key_m": 1754.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bv"
+   ],
+   "assigned": {
+    "opus-bv": "2026-09-30T06:37:57Z"
+   },
+   "done": {
+    "opus-bv": "2026-09-30T07:15:37Z"
+   },
    "priority_rank": 359
   },
   {
@@ -8424,9 +9488,18 @@
    "priority_key_m": 1809.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ax",
+    "opus-ay"
+   ],
+   "assigned": {
+    "opus-ax": "2026-09-29T16:53:49Z",
+    "opus-ay": "2026-09-29T17:19:56Z"
+   },
+   "done": {
+    "opus-ax": "2026-09-29T17:13:24Z",
+    "opus-ay": "2026-09-29T17:30:01Z"
+   },
    "priority_rank": 367
   },
   {
@@ -8470,9 +9543,15 @@
    "priority_key_m": 1817.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bc"
+   ],
+   "assigned": {
+    "opus-bc": "2026-09-29T18:18:07Z"
+   },
+   "done": {
+    "opus-bc": "2026-09-29T18:46:10Z"
+   },
    "priority_rank": 369
   },
   {
@@ -8490,9 +9569,15 @@
    "priority_key_m": 1824.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-db"
+   ],
+   "assigned": {
+    "opus-db": "2026-10-03T03:10:14Z"
+   },
+   "done": {
+    "opus-db": "2026-10-03T03:35:56Z"
+   },
    "priority_rank": 370
   },
   {
@@ -8510,9 +9595,15 @@
    "priority_key_m": 1846.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-dd"
+   ],
+   "assigned": {
+    "opus-dd": "2026-10-03T03:37:02Z"
+   },
+   "done": {
+    "opus-dd": "2026-10-03T04:04:27Z"
+   },
    "priority_rank": 371
   },
   {
@@ -8530,9 +9621,15 @@
    "priority_key_m": 1847.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bl"
+   ],
+   "assigned": {
+    "opus-bl": "2026-09-29T20:16:21Z"
+   },
+   "done": {
+    "opus-bl": "2026-09-29T20:37:11Z"
+   },
    "priority_rank": 372
   },
   {
@@ -8570,9 +9667,15 @@
    "priority_key_m": 1920.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-be"
+   ],
+   "assigned": {
+    "opus-be": "2026-09-29T18:51:22Z"
+   },
+   "done": {
+    "opus-be": "2026-09-29T19:17:18Z"
+   },
    "priority_rank": 374
   },
   {
@@ -8590,9 +9693,15 @@
    "priority_key_m": 2030.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bs"
+   ],
+   "assigned": {
+    "opus-bs": "2026-09-30T05:57:27Z"
+   },
+   "done": {
+    "opus-bs": "2026-09-30T06:08:12Z"
+   },
    "priority_rank": 375
   },
   {
@@ -8610,9 +9719,15 @@
    "priority_key_m": 2031.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bc"
+   ],
+   "assigned": {
+    "opus-bc": "2026-09-29T18:18:07Z"
+   },
+   "done": {
+    "opus-bc": "2026-09-29T18:32:07Z"
+   },
    "priority_rank": 376
   },
   {
@@ -8630,9 +9745,15 @@
    "priority_key_m": 2038.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bx"
+   ],
+   "assigned": {
+    "opus-bx": "2026-09-30T07:16:53Z"
+   },
+   "done": {
+    "opus-bx": "2026-09-30T07:33:34Z"
+   },
    "priority_rank": 377
   },
   {
@@ -8650,9 +9771,15 @@
    "priority_key_m": 2038.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bm"
+   ],
+   "assigned": {
+    "opus-bm": "2026-09-29T20:50:29Z"
+   },
+   "done": {
+    "opus-bm": "2026-09-29T21:05:39Z"
+   },
    "priority_rank": 378
   },
   {
@@ -8670,9 +9797,15 @@
    "priority_key_m": 2046.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bh"
+   ],
+   "assigned": {
+    "opus-bh": "2026-09-29T19:22:39Z"
+   },
+   "done": {
+    "opus-bh": "2026-09-29T19:28:51Z"
+   },
    "priority_rank": 379
   },
   {
@@ -8852,9 +9985,18 @@
    "priority_key_m": 2094.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ay",
+    "opus-ba"
+   ],
+   "assigned": {
+    "opus-ay": "2026-09-29T17:19:56Z",
+    "opus-ba": "2026-09-29T17:47:25Z"
+   },
+   "done": {
+    "opus-ay": "2026-09-29T17:35:58Z",
+    "opus-ba": "2026-09-29T17:58:00Z"
+   },
    "priority_rank": 386
   },
   {
@@ -8872,9 +10014,18 @@
    "priority_key_m": 2102.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bd",
+    "opus-be"
+   ],
+   "assigned": {
+    "opus-bd": "2026-09-29T18:19:34Z",
+    "opus-be": "2026-09-29T18:51:22Z"
+   },
+   "done": {
+    "opus-bd": "2026-09-29T18:37:11Z",
+    "opus-be": "2026-09-29T19:00:14Z"
+   },
    "priority_rank": 387
   },
   {
@@ -8892,9 +10043,15 @@
    "priority_key_m": 2102.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bh"
+   ],
+   "assigned": {
+    "opus-bh": "2026-09-29T19:22:39Z"
+   },
+   "done": {
+    "opus-bh": "2026-09-29T19:32:31Z"
+   },
    "priority_rank": 388
   },
   {
@@ -8952,9 +10109,15 @@
    "priority_key_m": 2128.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bm"
+   ],
+   "assigned": {
+    "opus-bm": "2026-09-29T20:51:10Z"
+   },
+   "done": {
+    "opus-bm": "2026-09-29T21:15:15Z"
+   },
    "priority_rank": 391
   },
   {
@@ -8972,9 +10135,15 @@
    "priority_key_m": 2174.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ba"
+   ],
+   "assigned": {
+    "opus-ba": "2026-09-29T17:47:25Z"
+   },
+   "done": {
+    "opus-ba": "2026-09-29T18:17:56Z"
+   },
    "priority_rank": 392
   },
   {
@@ -9052,9 +10221,15 @@
    "priority_key_m": 2316.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bt"
+   ],
+   "assigned": {
+    "opus-bt": "2026-09-30T06:08:09Z"
+   },
+   "done": {
+    "opus-bt": "2026-09-30T06:36:40Z"
+   },
    "priority_rank": 396
   },
   {
@@ -9072,9 +10247,15 @@
    "priority_key_m": 2323.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-by"
+   ],
+   "assigned": {
+    "opus-by": "2026-09-30T07:23:50Z"
+   },
+   "done": {
+    "opus-by": "2026-09-30T07:40:04Z"
+   },
    "priority_rank": 397
   },
   {
@@ -9092,9 +10273,15 @@
    "priority_key_m": 2324.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bo"
+   ],
+   "assigned": {
+    "opus-bo": "2026-09-30T05:02:56Z"
+   },
+   "done": {
+    "opus-bo": "2026-09-30T05:24:58Z"
+   },
    "priority_rank": 398
   },
   {
@@ -9112,9 +10299,18 @@
    "priority_key_m": 2332.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bj",
+    "opus-bl"
+   ],
+   "assigned": {
+    "opus-bj": "2026-09-29T19:48:54Z",
+    "opus-bl": "2026-09-29T20:16:21Z"
+   },
+   "done": {
+    "opus-bj": "2026-09-29T20:01:55Z",
+    "opus-bl": "2026-09-29T20:25:06Z"
+   },
    "priority_rank": 399
   },
   {
@@ -9158,9 +10354,15 @@
    "priority_key_m": 2343.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-az"
+   ],
+   "assigned": {
+    "opus-az": "2026-09-29T17:23:38Z"
+   },
+   "done": {
+    "opus-az": "2026-09-29T17:39:08Z"
+   },
    "priority_rank": 401
   },
   {
@@ -9285,9 +10487,18 @@
    "priority_key_m": 2379.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-az",
+    "opus-bb"
+   ],
+   "assigned": {
+    "opus-az": "2026-09-29T17:23:38Z",
+    "opus-bb": "2026-09-29T17:50:02Z"
+   },
+   "done": {
+    "opus-az": "2026-09-29T17:48:38Z",
+    "opus-bb": "2026-09-29T18:04:39Z"
+   },
    "priority_rank": 406
   },
   {
@@ -9331,9 +10542,15 @@
    "priority_key_m": 2387.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-be"
+   ],
+   "assigned": {
+    "opus-be": "2026-09-29T18:51:22Z"
+   },
+   "done": {
+    "opus-be": "2026-09-29T19:07:18Z"
+   },
    "priority_rank": 408
   },
   {
@@ -9351,9 +10568,15 @@
    "priority_key_m": 2388.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bk"
+   ],
+   "assigned": {
+    "opus-bk": "2026-09-29T20:15:44Z"
+   },
+   "done": {
+    "opus-bk": "2026-09-29T20:26:07Z"
+   },
    "priority_rank": 409
   },
   {
@@ -9391,9 +10614,15 @@
    "priority_key_m": 2411.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bo"
+   ],
+   "assigned": {
+    "opus-bo": "2026-09-30T05:02:56Z"
+   },
+   "done": {
+    "opus-bo": "2026-09-30T05:29:11Z"
+   },
    "priority_rank": 411
   },
   {
@@ -9471,9 +10700,15 @@
    "priority_key_m": 2533.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-az"
+   ],
+   "assigned": {
+    "opus-az": "2026-09-29T17:23:38Z"
+   },
+   "done": {
+    "opus-az": "2026-09-29T17:42:03Z"
+   },
    "priority_rank": 415
   },
   {
@@ -9511,9 +10746,18 @@
    "priority_key_m": 2602.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bw",
+    "opus-by"
+   ],
+   "assigned": {
+    "opus-bw": "2026-09-30T06:54:36Z",
+    "opus-by": "2026-09-30T07:23:50Z"
+   },
+   "done": {
+    "opus-bw": "2026-09-30T07:15:58Z",
+    "opus-by": "2026-09-30T07:33:21Z"
+   },
    "priority_rank": 417
   },
   {
@@ -9531,9 +10775,15 @@
    "priority_key_m": 2607.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cb"
+   ],
+   "assigned": {
+    "opus-cb": "2026-09-30T15:04:37Z"
+   },
+   "done": {
+    "opus-cb": "2026-09-30T15:17:40Z"
+   },
    "priority_rank": 418
   },
   {
@@ -9551,9 +10801,15 @@
    "priority_key_m": 2610.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bs"
+   ],
+   "assigned": {
+    "opus-bs": "2026-09-30T05:57:27Z"
+   },
+   "done": {
+    "opus-bs": "2026-09-30T06:14:22Z"
+   },
    "priority_rank": 419
   },
   {
@@ -9571,9 +10827,15 @@
    "priority_key_m": 2618.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bp"
+   ],
+   "assigned": {
+    "opus-bp": "2026-09-30T05:02:56Z"
+   },
+   "done": {
+    "opus-bp": "2026-09-30T05:17:34Z"
+   },
    "priority_rank": 420
   },
   {
@@ -9591,9 +10853,15 @@
    "priority_key_m": 2626.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bj"
+   ],
+   "assigned": {
+    "opus-bj": "2026-09-29T19:48:54Z"
+   },
+   "done": {
+    "opus-bj": "2026-09-29T20:15:01Z"
+   },
    "priority_rank": 421
   },
   {
@@ -9611,9 +10879,15 @@
    "priority_key_m": 2633.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bh"
+   ],
+   "assigned": {
+    "opus-bh": "2026-09-29T19:22:39Z"
+   },
+   "done": {
+    "opus-bh": "2026-09-29T19:35:22Z"
+   },
    "priority_rank": 422
   },
   {
@@ -9631,9 +10905,15 @@
    "priority_key_m": 2641.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bg"
+   ],
+   "assigned": {
+    "opus-bg": "2026-09-29T19:21:28Z"
+   },
+   "done": {
+    "opus-bg": "2026-09-29T19:37:44Z"
+   },
    "priority_rank": 423
   },
   {
@@ -9651,9 +10931,15 @@
    "priority_key_m": 2649.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bg"
+   ],
+   "assigned": {
+    "opus-bg": "2026-09-29T19:21:28Z"
+   },
+   "done": {
+    "opus-bg": "2026-09-29T19:41:49Z"
+   },
    "priority_rank": 424
   },
   {
@@ -9671,9 +10957,18 @@
    "priority_key_m": 2657.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bh",
+    "opus-bi"
+   ],
+   "assigned": {
+    "opus-bh": "2026-09-29T19:22:39Z",
+    "opus-bi": "2026-09-29T19:45:10Z"
+   },
+   "done": {
+    "opus-bh": "2026-09-29T19:38:58Z",
+    "opus-bi": "2026-09-29T20:14:19Z"
+   },
    "priority_rank": 425
   },
   {
@@ -9691,9 +10986,18 @@
    "priority_key_m": 2664.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bb",
+    "opus-bc"
+   ],
+   "assigned": {
+    "opus-bb": "2026-09-29T17:50:02Z",
+    "opus-bc": "2026-09-29T18:18:07Z"
+   },
+   "done": {
+    "opus-bb": "2026-09-29T18:09:09Z",
+    "opus-bc": "2026-09-29T18:28:13Z"
+   },
    "priority_rank": 426
   },
   {
@@ -9711,9 +11015,15 @@
    "priority_key_m": 2665.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bk"
+   ],
+   "assigned": {
+    "opus-bk": "2026-09-29T20:15:44Z"
+   },
+   "done": {
+    "opus-bk": "2026-09-29T20:32:15Z"
+   },
    "priority_rank": 427
   },
   {
@@ -9731,9 +11041,18 @@
    "priority_key_m": 2672.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bf",
+    "opus-bg"
+   ],
+   "assigned": {
+    "opus-bf": "2026-09-29T18:52:34Z",
+    "opus-bg": "2026-09-29T19:21:28Z"
+   },
+   "done": {
+    "opus-bf": "2026-09-29T19:13:27Z",
+    "opus-bg": "2026-09-29T19:47:27Z"
+   },
    "priority_rank": 428
   },
   {
@@ -9751,9 +11070,15 @@
    "priority_key_m": 2673.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bo"
+   ],
+   "assigned": {
+    "opus-bo": "2026-09-30T05:02:56Z"
+   },
+   "done": {
+    "opus-bo": "2026-09-30T05:19:36Z"
+   },
    "priority_rank": 429
   },
   {
@@ -9791,9 +11116,15 @@
    "priority_key_m": 2694.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bs"
+   ],
+   "assigned": {
+    "opus-bs": "2026-09-30T05:57:27Z"
+   },
+   "done": {
+    "opus-bs": "2026-09-30T06:21:04Z"
+   },
    "priority_rank": 431
   },
   {
@@ -9851,9 +11182,15 @@
    "priority_key_m": 2739.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ba"
+   ],
+   "assigned": {
+    "opus-ba": "2026-09-29T17:47:25Z"
+   },
+   "done": {
+    "opus-ba": "2026-09-29T18:02:29Z"
+   },
    "priority_rank": 434
   },
   {
@@ -9871,9 +11208,15 @@
    "priority_key_m": 2745.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ch"
+   ],
+   "assigned": {
+    "opus-ch": "2026-09-30T16:35:01Z"
+   },
+   "done": {
+    "opus-ch": "2026-09-30T16:57:55Z"
+   },
    "priority_rank": 435
   },
   {
@@ -9911,9 +11254,15 @@
    "priority_key_m": 2887.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ca"
+   ],
+   "assigned": {
+    "opus-ca": "2026-09-30T14:29:07Z"
+   },
+   "done": {
+    "opus-ca": "2026-09-30T14:45:45Z"
+   },
    "priority_rank": 437
   },
   {
@@ -9931,9 +11280,15 @@
    "priority_key_m": 2892.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cc"
+   ],
+   "assigned": {
+    "opus-cc": "2026-09-30T15:06:03Z"
+   },
+   "done": {
+    "opus-cc": "2026-09-30T15:35:57Z"
+   },
    "priority_rank": 438
   },
   {
@@ -9951,9 +11306,18 @@
    "priority_key_m": 2895.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bv",
+    "opus-bx"
+   ],
+   "assigned": {
+    "opus-bv": "2026-09-30T06:37:57Z",
+    "opus-bx": "2026-09-30T07:16:53Z"
+   },
+   "done": {
+    "opus-bv": "2026-09-30T07:09:12Z",
+    "opus-bx": "2026-09-30T07:29:40Z"
+   },
    "priority_rank": 439
   },
   {
@@ -9971,9 +11335,18 @@
    "priority_key_m": 2903.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bs",
+    "opus-bu"
+   ],
+   "assigned": {
+    "opus-bs": "2026-09-30T05:57:27Z",
+    "opus-bu": "2026-09-30T06:22:12Z"
+   },
+   "done": {
+    "opus-bs": "2026-09-30T06:18:21Z",
+    "opus-bu": "2026-09-30T06:32:02Z"
+   },
    "priority_rank": 440
   },
   {
@@ -10031,9 +11404,15 @@
    "priority_key_m": 2911.6,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bp"
+   ],
+   "assigned": {
+    "opus-bp": "2026-09-30T05:02:56Z"
+   },
+   "done": {
+    "opus-bp": "2026-09-30T05:22:07Z"
+   },
    "priority_rank": 443
   },
   {
@@ -10197,9 +11576,15 @@
    "priority_key_m": 2937.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ci"
+   ],
+   "assigned": {
+    "opus-ci": "2026-09-30T16:59:20Z"
+   },
+   "done": {
+    "opus-ci": "2026-09-30T17:19:40Z"
+   },
    "priority_rank": 451
   },
   {
@@ -10317,9 +11702,15 @@
    "priority_key_m": 2959.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bb"
+   ],
+   "assigned": {
+    "opus-bb": "2026-09-29T17:50:02Z"
+   },
+   "done": {
+    "opus-bb": "2026-09-29T18:12:38Z"
+   },
    "priority_rank": 457
   },
   {
@@ -10377,9 +11768,15 @@
    "priority_key_m": 2969.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ch"
+   ],
+   "assigned": {
+    "opus-ch": "2026-09-30T16:35:01Z"
+   },
+   "done": {
+    "opus-ch": "2026-09-30T16:54:48Z"
+   },
    "priority_rank": 460
   },
   {
@@ -10503,9 +11900,15 @@
    "priority_key_m": 3060.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-av"
+   ],
+   "assigned": {
+    "opus-av": "2026-09-29T16:27:17Z"
+   },
+   "done": {
+    "opus-av": "2026-09-29T16:38:25Z"
+   },
    "priority_rank": 466
   },
   {
@@ -10523,9 +11926,15 @@
    "priority_key_m": 3142.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ck"
+   ],
+   "assigned": {
+    "opus-ck": "2026-09-30T17:39:15Z"
+   },
+   "done": {
+    "opus-ck": "2026-09-30T18:00:06Z"
+   },
    "priority_rank": 467
   },
   {
@@ -10543,9 +11952,18 @@
    "priority_key_m": 3148.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ci",
+    "opus-cj"
+   ],
+   "assigned": {
+    "opus-ci": "2026-09-30T16:59:20Z",
+    "opus-cj": "2026-09-30T17:21:02Z"
+   },
+   "done": {
+    "opus-ci": "2026-09-30T17:14:33Z",
+    "opus-cj": "2026-09-30T17:29:26Z"
+   },
    "priority_rank": 468
   },
   {
@@ -10563,9 +11981,15 @@
    "priority_key_m": 3162.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ay"
+   ],
+   "assigned": {
+    "opus-ay": "2026-09-29T17:19:56Z"
+   },
+   "done": {
+    "opus-ay": "2026-09-29T17:46:10Z"
+   },
    "priority_rank": 469
   },
   {
@@ -10583,9 +12007,15 @@
    "priority_key_m": 3173.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cc"
+   ],
+   "assigned": {
+    "opus-cc": "2026-09-30T15:06:03Z"
+   },
+   "done": {
+    "opus-cc": "2026-09-30T15:32:25Z"
+   },
    "priority_rank": 470
   },
   {
@@ -10603,9 +12033,15 @@
    "priority_key_m": 3178.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ce"
+   ],
+   "assigned": {
+    "opus-ce": "2026-09-30T15:37:17Z"
+   },
+   "done": {
+    "opus-ce": "2026-09-30T15:55:41Z"
+   },
    "priority_rank": 471
   },
   {
@@ -10623,9 +12059,15 @@
    "priority_key_m": 3181.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bz"
+   ],
+   "assigned": {
+    "opus-bz": "2026-09-30T14:29:07Z"
+   },
+   "done": {
+    "opus-bz": "2026-09-30T15:04:57Z"
+   },
    "priority_rank": 472
   },
   {
@@ -10643,9 +12085,15 @@
    "priority_key_m": 3189.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bd"
+   ],
+   "assigned": {
+    "opus-bd": "2026-09-29T18:19:34Z"
+   },
+   "done": {
+    "opus-bd": "2026-09-29T18:44:56Z"
+   },
    "priority_rank": 473
   },
   {
@@ -10663,9 +12111,15 @@
    "priority_key_m": 3189.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bw"
+   ],
+   "assigned": {
+    "opus-bw": "2026-09-30T06:54:36Z"
+   },
+   "done": {
+    "opus-bw": "2026-09-30T07:22:49Z"
+   },
    "priority_rank": 474
   },
   {
@@ -10723,9 +12177,15 @@
    "priority_key_m": 3197.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bu"
+   ],
+   "assigned": {
+    "opus-bu": "2026-09-30T06:22:12Z"
+   },
+   "done": {
+    "opus-bu": "2026-09-30T06:35:40Z"
+   },
    "priority_rank": 477
   },
   {
@@ -10763,9 +12223,18 @@
    "priority_key_m": 3204.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ch",
+    "opus-ci"
+   ],
+   "assigned": {
+    "opus-ch": "2026-09-30T16:35:01Z",
+    "opus-ci": "2026-09-30T16:59:20Z"
+   },
+   "done": {
+    "opus-ch": "2026-09-30T16:50:57Z",
+    "opus-ci": "2026-09-30T17:04:37Z"
+   },
    "priority_rank": 479
   },
   {
@@ -10963,9 +12432,15 @@
    "priority_key_m": 3285.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-bb"
+   ],
+   "assigned": {
+    "opus-bb": "2026-09-29T17:50:02Z"
+   },
+   "done": {
+    "opus-bb": "2026-09-29T18:16:40Z"
+   },
    "priority_rank": 489
   },
   {
@@ -11043,9 +12518,15 @@
    "priority_key_m": 3340.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cj"
+   ],
+   "assigned": {
+    "opus-cj": "2026-09-30T17:21:02Z"
+   },
+   "done": {
+    "opus-cj": "2026-09-30T17:52:12Z"
+   },
    "priority_rank": 493
   },
   {
@@ -11063,9 +12544,15 @@
    "priority_key_m": 3360.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cl"
+   ],
+   "assigned": {
+    "opus-cl": "2026-09-30T17:53:28Z"
+   },
+   "done": {
+    "opus-cl": "2026-09-30T18:27:49Z"
+   },
    "priority_rank": 494
   },
   {
@@ -11083,9 +12570,15 @@
    "priority_key_m": 3370.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ci"
+   ],
+   "assigned": {
+    "opus-ci": "2026-09-30T16:59:20Z"
+   },
+   "done": {
+    "opus-ci": "2026-09-30T17:09:51Z"
+   },
    "priority_rank": 495
   },
   {
@@ -11123,9 +12616,15 @@
    "priority_key_m": 3427.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-be"
+   ],
+   "assigned": {
+    "opus-be": "2026-09-29T18:51:22Z"
+   },
+   "done": {
+    "opus-be": "2026-09-29T19:21:19Z"
+   },
    "priority_rank": 497
   },
   {
@@ -11143,9 +12642,15 @@
    "priority_key_m": 3446.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ch"
+   ],
+   "assigned": {
+    "opus-ch": "2026-09-30T16:35:01Z"
+   },
+   "done": {
+    "opus-ch": "2026-09-30T16:47:10Z"
+   },
    "priority_rank": 498
   },
   {
@@ -11163,9 +12668,15 @@
    "priority_key_m": 3458.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ce"
+   ],
+   "assigned": {
+    "opus-ce": "2026-09-30T15:37:17Z"
+   },
+   "done": {
+    "opus-ce": "2026-09-30T16:01:25Z"
+   },
    "priority_rank": 499
   },
   {
@@ -11183,9 +12694,15 @@
    "priority_key_m": 3463.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cg"
+   ],
+   "assigned": {
+    "opus-cg": "2026-09-30T16:11:13Z"
+   },
+   "done": {
+    "opus-cg": "2026-09-30T17:24:54Z"
+   },
    "priority_rank": 500
   },
   {
@@ -11203,9 +12720,15 @@
    "priority_key_m": 3466.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cd"
+   ],
+   "assigned": {
+    "opus-cd": "2026-09-30T15:37:17Z"
+   },
+   "done": {
+    "opus-cd": "2026-09-30T15:51:54Z"
+   },
    "priority_rank": 501
   },
   {
@@ -11223,9 +12746,15 @@
    "priority_key_m": 3474.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cb"
+   ],
+   "assigned": {
+    "opus-cb": "2026-09-30T15:04:37Z"
+   },
+   "done": {
+    "opus-cb": "2026-09-30T15:22:37Z"
+   },
    "priority_rank": 502
   },
   {
@@ -11283,9 +12812,15 @@
    "priority_key_m": 3482.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ca"
+   ],
+   "assigned": {
+    "opus-ca": "2026-09-30T14:29:07Z"
+   },
+   "done": {
+    "opus-ca": "2026-09-30T14:48:45Z"
+   },
    "priority_rank": 505
   },
   {
@@ -11503,9 +13038,18 @@
    "priority_key_m": 3546.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cl",
+    "opus-cn"
+   ],
+   "assigned": {
+    "opus-cl": "2026-09-30T17:53:28Z",
+    "opus-cn": "2026-09-30T18:40:03Z"
+   },
+   "done": {
+    "opus-cl": "2026-09-30T18:21:10Z",
+    "opus-cn": "2026-09-30T18:50:59Z"
+   },
    "priority_rank": 516
   },
   {
@@ -11543,9 +13087,18 @@
    "priority_key_m": 3550.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cj",
+    "opus-cl"
+   ],
+   "assigned": {
+    "opus-cj": "2026-09-30T17:21:02Z",
+    "opus-cl": "2026-09-30T17:53:28Z"
+   },
+   "done": {
+    "opus-cj": "2026-09-30T17:45:28Z",
+    "opus-cl": "2026-09-30T18:08:16Z"
+   },
    "priority_rank": 518
   },
   {
@@ -11583,9 +13136,15 @@
    "priority_key_m": 3587.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cm"
+   ],
+   "assigned": {
+    "opus-cm": "2026-09-30T18:17:17Z"
+   },
+   "done": {
+    "opus-cm": "2026-09-30T18:46:26Z"
+   },
    "priority_rank": 520
   },
   {
@@ -11603,9 +13162,15 @@
    "priority_key_m": 3601.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ci"
+   ],
+   "assigned": {
+    "opus-ci": "2026-09-30T16:59:20Z"
+   },
+   "done": {
+    "opus-ci": "2026-09-30T17:07:11Z"
+   },
    "priority_rank": 521
   },
   {
@@ -11683,9 +13248,15 @@
    "priority_key_m": 3744.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cg"
+   ],
+   "assigned": {
+    "opus-cg": "2026-09-30T16:11:13Z"
+   },
+   "done": {
+    "opus-cg": "2026-09-30T17:31:04Z"
+   },
    "priority_rank": 525
   },
   {
@@ -11703,9 +13274,18 @@
    "priority_key_m": 3744.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ck",
+    "opus-cm"
+   ],
+   "assigned": {
+    "opus-ck": "2026-09-30T17:39:15Z",
+    "opus-cm": "2026-09-30T18:17:17Z"
+   },
+   "done": {
+    "opus-ck": "2026-09-30T18:06:20Z",
+    "opus-cm": "2026-09-30T18:26:27Z"
+   },
    "priority_rank": 526
   },
   {
@@ -11743,9 +13323,15 @@
    "priority_key_m": 3752.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cf"
+   ],
+   "assigned": {
+    "opus-cf": "2026-09-30T16:07:15Z"
+   },
+   "done": {
+    "opus-cf": "2026-09-30T16:32:58Z"
+   },
    "priority_rank": 528
   },
   {
@@ -11763,9 +13349,15 @@
    "priority_key_m": 3760.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ce"
+   ],
+   "assigned": {
+    "opus-ce": "2026-09-30T15:37:17Z"
+   },
+   "done": {
+    "opus-ce": "2026-09-30T15:53:21Z"
+   },
    "priority_rank": 529
   },
   {
@@ -11783,9 +13375,18 @@
    "priority_key_m": 3762.1,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cm",
+    "opus-cp"
+   ],
+   "assigned": {
+    "opus-cm": "2026-09-30T18:17:17Z",
+    "opus-cp": "2026-10-02T23:47:05Z"
+   },
+   "done": {
+    "opus-cm": "2026-09-30T18:40:57Z",
+    "opus-cp": "2026-10-02T23:58:21Z"
+   },
    "priority_rank": 530
   },
   {
@@ -11863,9 +13464,15 @@
    "priority_key_m": 3770.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cj"
+   ],
+   "assigned": {
+    "opus-cj": "2026-09-30T17:21:02Z"
+   },
+   "done": {
+    "opus-cj": "2026-09-30T17:38:58Z"
+   },
    "priority_rank": 534
   },
   {
@@ -12183,9 +13790,15 @@
    "priority_key_m": 3949.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cm"
+   ],
+   "assigned": {
+    "opus-cm": "2026-09-30T18:17:17Z"
+   },
+   "done": {
+    "opus-cm": "2026-09-30T18:31:58Z"
+   },
    "priority_rank": 550
   },
   {
@@ -12203,9 +13816,15 @@
    "priority_key_m": 3954.0,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ck"
+   ],
+   "assigned": {
+    "opus-ck": "2026-09-30T17:39:15Z"
+   },
+   "done": {
+    "opus-ck": "2026-09-30T18:10:32Z"
+   },
    "priority_rank": 551
   },
   {
@@ -12263,9 +13882,15 @@
    "priority_key_m": 3999.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cj"
+   ],
+   "assigned": {
+    "opus-cj": "2026-09-30T17:21:02Z"
+   },
+   "done": {
+    "opus-cj": "2026-09-30T17:33:20Z"
+   },
    "priority_rank": 554
   },
   {
@@ -12583,9 +14208,15 @@
    "priority_key_m": 4148.7,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cl"
+   ],
+   "assigned": {
+    "opus-cl": "2026-09-30T17:53:28Z"
+   },
+   "done": {
+    "opus-cl": "2026-09-30T18:38:29Z"
+   },
    "priority_rank": 570
   },
   {
@@ -12643,9 +14274,15 @@
    "priority_key_m": 4172.4,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-ck"
+   ],
+   "assigned": {
+    "opus-ck": "2026-09-30T17:39:15Z"
+   },
+   "done": {
+    "opus-ck": "2026-09-30T18:15:32Z"
+   },
    "priority_rank": 573
   },
   {
@@ -12903,9 +14540,15 @@
    "priority_key_m": 4357.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-cl"
+   ],
+   "assigned": {
+    "opus-cl": "2026-09-30T17:53:28Z"
+   },
+   "done": {
+    "opus-cl": "2026-09-30T18:33:54Z"
+   },
    "priority_rank": 586
   },
   {
@@ -16491,7 +18134,9 @@
    "assigned": {
     "opus-ar": "2026-09-29T15:40:45Z"
    },
-   "done": {},
+   "done": {
+    "opus-ar": "2026-09-29T15:54:39Z"
+   },
    "layer": "os-25-inch-london",
    "priority_rank": 755
   },
@@ -16516,7 +18161,9 @@
    "assigned": {
     "opus-ar": "2026-09-29T15:40:45Z"
    },
-   "done": {},
+   "done": {
+    "opus-ar": "2026-09-29T15:59:29Z"
+   },
    "layer": "os-25-inch-london",
    "priority_rank": 756
   },
@@ -16568,7 +18215,9 @@
    "assigned": {
     "opus-ar": "2026-09-29T15:40:45Z"
    },
-   "done": {},
+   "done": {
+    "opus-ar": "2026-09-29T16:01:07Z"
+   },
    "layer": "os-25-inch-london",
    "priority_rank": 758
   },
@@ -16588,13 +18237,16 @@
    "available": true,
    "skip_reason": null,
    "readers": [
-    "opus-ar"
+    "opus-ar",
+    "opus-at"
    ],
    "assigned": {
-    "opus-ar": "2026-09-29T15:40:45Z"
+    "opus-ar": "2026-09-29T15:40:45Z",
+    "opus-at": "2026-09-29T16:02:53Z"
    },
    "done": {
-    "opus-ar": "2026-09-29T15:48:47Z"
+    "opus-ar": "2026-09-29T15:48:47Z",
+    "opus-at": "2026-09-29T16:06:31Z"
    },
    "layer": "os-25-inch-london",
    "priority_rank": 759
@@ -16620,7 +18272,9 @@
    "assigned": {
     "opus-ar": "2026-09-29T15:40:45Z"
    },
-   "done": {},
+   "done": {
+    "opus-ar": "2026-09-29T15:56:50Z"
+   },
    "layer": "os-25-inch-london",
    "priority_rank": 760
   },
@@ -16660,9 +18314,15 @@
    "priority_key_m": 3984.2,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-at"
+   ],
+   "assigned": {
+    "opus-at": "2026-09-29T16:02:53Z"
+   },
+   "done": {
+    "opus-at": "2026-09-29T16:07:59Z"
+   },
    "layer": "os-25-inch-london",
    "priority_rank": 762
   },
@@ -16681,9 +18341,15 @@
    "priority_key_m": 3990.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-at"
+   ],
+   "assigned": {
+    "opus-at": "2026-09-29T16:02:53Z"
+   },
+   "done": {
+    "opus-at": "2026-09-29T16:13:58Z"
+   },
    "layer": "os-25-inch-london",
    "priority_rank": 763
   },
@@ -16723,9 +18389,15 @@
    "priority_key_m": 4068.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-at"
+   ],
+   "assigned": {
+    "opus-at": "2026-09-29T16:02:53Z"
+   },
+   "done": {
+    "opus-at": "2026-09-29T16:16:02Z"
+   },
    "layer": "os-25-inch-london",
    "priority_rank": 765
   },
@@ -16744,9 +18416,15 @@
    "priority_key_m": 4094.3,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-at"
+   ],
+   "assigned": {
+    "opus-at": "2026-09-29T16:02:53Z"
+   },
+   "done": {
+    "opus-at": "2026-09-29T16:10:09Z"
+   },
    "layer": "os-25-inch-london",
    "priority_rank": 766
   },
@@ -16891,9 +18569,15 @@
    "priority_key_m": 4220.8,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-at"
+   ],
+   "assigned": {
+    "opus-at": "2026-09-29T16:02:53Z"
+   },
+   "done": {
+    "opus-at": "2026-09-29T16:11:40Z"
+   },
    "layer": "os-25-inch-london",
    "priority_rank": 773
   },
@@ -16975,9 +18659,15 @@
    "priority_key_m": 4255.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-at"
+   ],
+   "assigned": {
+    "opus-at": "2026-09-29T16:02:53Z"
+   },
+   "done": {
+    "opus-at": "2026-09-29T16:18:15Z"
+   },
    "layer": "os-25-inch-london",
    "priority_rank": 777
   },
@@ -17206,9 +18896,15 @@
    "priority_key_m": 4452.9,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-at"
+   ],
+   "assigned": {
+    "opus-at": "2026-09-29T16:02:53Z"
+   },
+   "done": {
+    "opus-at": "2026-09-29T16:21:03Z"
+   },
    "layer": "os-25-inch-london",
    "priority_rank": 788
   },
@@ -17479,9 +19175,15 @@
    "priority_key_m": 4659.5,
    "available": true,
    "skip_reason": null,
-   "readers": [],
-   "assigned": {},
-   "done": {},
+   "readers": [
+    "opus-at"
+   ],
+   "assigned": {
+    "opus-at": "2026-09-29T16:02:53Z"
+   },
+   "done": {
+    "opus-at": "2026-09-29T16:23:19Z"
+   },
    "layer": "os-25-inch-london",
    "priority_rank": 801
   },
@@ -37580,7 +39282,7 @@
    "priority_rank": 1717
   }
  ],
- "updated": "2026-09-29T15:52:36Z",
+ "updated": "2026-10-03T14:55:49Z",
  "layers": {
   "os-london-five-foot-1893": {
    "prefix": "m18",

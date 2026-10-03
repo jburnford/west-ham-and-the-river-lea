@@ -108,6 +108,12 @@ export function realism(THREE, renderer, scene, data, options = {}) {
   const contactMap = new THREE.CanvasTexture(contactCanvas);
 
   const noise = `
+    // Finite district atlases must not stretch their edge pixels across the
+    // regional landscape. Clamp-to-edge sampling alone repeats those marks.
+    float atlasCoverage(vec2 uv) {
+      vec2 inside=step(vec2(0.0),uv)*step(uv,vec2(1.0));
+      return inside.x*inside.y;
+    }
     float grainHash(vec2 p) { return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453); }
     float grainNoise(vec2 p) {
       vec2 i=floor(p), f=fract(p); f=f*f*(3.0-2.0*f);
@@ -160,10 +166,10 @@ export function realism(THREE, renderer, scene, data, options = {}) {
         diffuseColor.rgb *= .76 + patches*.26;
         ${shared&&material.userData.yardAtlas?`vec2 yardUv=(surfacePosition.xz-yardBounds.xy)/yardBounds.zw;
           vec4 yard=texture2D(yardAtlas,vec2(yardUv.x,1.0-yardUv.y));
-          diffuseColor.rgb=mix(diffuseColor.rgb,yard.rgb*vec3(.402,.371,.323),yard.a);`:''}
+          diffuseColor.rgb=mix(diffuseColor.rgb,yard.rgb*vec3(.402,.371,.323),yard.a*atlasCoverage(yardUv));`:''}
         vec2 contactUv=vec2((surfacePosition.x+1600.0)/2250.0,1.0-(surfacePosition.z+1050.0)/2750.0);
         float contact=texture2D(contactMap,clamp(contactUv,vec2(0),vec2(1))).r;
-        diffuseColor.rgb *= 1.0-(1.0-contact)*.65*(1.0-smoothstep(.0,3.0,surfacePosition.y));
+        diffuseColor.rgb *= 1.0-(1.0-contact)*atlasCoverage(contactUv)*.65*(1.0-smoothstep(.0,3.0,surfacePosition.y));
         ${wall ? `float baseDamp=1.0-smoothstep(.0,3.2,surfacePosition.y);
           float runs=grainNoise(surfacePosition.xz*2.2+surfacePosition.y*.035);
           diffuseColor.rgb *= (1.0-.28*baseDamp)*(.83+.22*runs);` : ''}
@@ -274,6 +280,7 @@ export function realism(THREE, renderer, scene, data, options = {}) {
   const moving = reflector(materials.tidalWater, () => tideHeight);
   const reflectionStats = {};
   function reflect(camera) {
+    if(scene.userData.floodSimplifiedWater){reflectionStats.planes=0;return;}
     fixed.reflect(camera);
     const animated = tideHeight > data.riverNetwork.waterLevel + .00001;
     if (animated) moving.reflect(camera);

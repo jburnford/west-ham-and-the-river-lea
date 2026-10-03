@@ -50,7 +50,7 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
   for(const b of data.buildings) {
     const angle=b.rotation*Math.PI/180,c=Math.cos(angle),s=Math.sin(angle);
     const toLocal=([x,z])=>[(x-b.x)*c+(z-b.z)*s,-(x-b.x)*s+(z-b.z)*c];
-    const world=([u,v],y)=>[b.x+u*c-v*s,y,b.z+u*s+v*c];
+    const world=([u,v],y)=>[b.x+u*c-v*s,y+(b.landscapeLift??0),b.z+u*s+v*c];
     const base=b.baseHeight??.12,h=b.height,wall=b.id==='howards-644'?pale:(walls[b.material]||stock);
     const roofMaterial=b.roofMaterial==='iron'?ironRoof:m.roof;
     const axis=b.roofAxis==='x'?1:0;
@@ -154,13 +154,13 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
     counts.ranges++;counts.roofPlanes+=b.roofBays*2;
     counts.siteRanges[b.siteId]=(counts.siteRanges[b.siteId]||0)+1;
     if(b.id==='house-main'||b.id==='clock') {
-      const g=new THREE.Group();g.position.set(b.x,0,b.z);g.rotation.y=-angle;scene.add(g);
+      const g=new THREE.Group();g.position.set(b.x,b.landscapeLift??0,b.z);g.rotation.y=-angle;scene.add(g);
       if(b.id==='house-main') {
         // Weatherboarded central upper facade and attic dormers: surviving mill character.
         const facades=b.landmarkDetails?.houseFacades;
         if(facades)for(const [a,z] of facades) {
           const face=new THREE.Group(),length=Math.hypot(z[0]-a[0],z[1]-a[1]);
-          face.position.set((a[0]+z[0])/2,0,(a[1]+z[1])/2);
+          face.position.set((a[0]+z[0])/2,b.landscapeLift??0,(a[1]+z[1])/2);
           face.rotation.y=-Math.atan2(z[1]-a[1],z[0]-a[0]);scene.add(face);
           box(face,0,2.2,0,length,h-2.2,.10,pale);
           for(let x=-length*.4;x<=length*.41;x+=length*.2)for(const y of [3.1,6.2,8.1])
@@ -183,7 +183,7 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
       }
     }
     if(b.id==='clock-kilns') {
-      const g=new THREE.Group();g.position.set(b.x,0,b.z);g.rotation.y=-angle;scene.add(g);
+      const g=new THREE.Group();g.position.set(b.x,b.landscapeLift??0,b.z);g.rotation.y=-angle;scene.add(g);
       const detail=b.landmarkDetails;
       if(detail?.kilnCaps)for(const cap of detail.kilnCaps) {
         const [x,z]=toLocal(cap.centre);cylinder(g,x,b.height,z,.4,cap.radius,cap.height,m.roof,16);
@@ -209,10 +209,10 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
   }
   for(const p of data.structures) {
     if(p.kind==='purifierBank') {
-      const g=new THREE.Group();g.position.set(p.x,0,p.z);g.rotation.y=-p.rotation*Math.PI/180;scene.add(g);
+      const g=new THREE.Group();g.position.set(p.x,p.landscapeLift??0,p.z);g.rotation.y=-p.rotation*Math.PI/180;scene.add(g);
       for(let i=0;i<p.count;i++){const x=(i-(p.count-1)/2)*9;box(g,x,.2,0,7,1.8,6,m.iron);box(g,x,2,0,7.3,.15,6.3,m.dark);}
     } else if(p.kind==='chimney') {
-      const g=new THREE.Group();g.name=p.id;g.position.set(p.x,p.baseHeight??.34,p.z);
+      const g=new THREE.Group();g.name=p.id;g.position.set(p.x,(p.baseHeight??.34)+(p.landscapeLift??0),p.z);
       g.rotation.y=-(p.rotation??0)*Math.PI/180;scene.add(g);
       const iron=p.material==='iron',material=iron?m.iron:stock;
       const sides=p.section==='square'?4:16,turn=sides===4?Math.PI/4:0;
@@ -242,11 +242,11 @@ export function factoryBuildings({ THREE, scene, materials: m, data, box, cylind
       const lip=new THREE.Mesh(geometry,material);lip.receiveShadow=true;lip.castShadow=true;g.add(lip);
       counts.chimneys++;if(p.mappedHeightFeet)counts.chimneysWithMappedHeights++;
       counts.siteChimneys[p.siteId]=(counts.siteChimneys[p.siteId]||0)+1;
-      counts.chimneyTops.push({id:p.id,position:[p.x,(p.baseHeight??.34)+p.height,p.z],section:p.section,material:p.material});
+      counts.chimneyTops.push({id:p.id,position:[p.x,(p.baseHeight??.34)+(p.landscapeLift??0)+p.height,p.z],section:p.section,material:p.material});
     } else {
-      cylinder(scene,p.x,.1,p.z,p.radius,p.radius,p.height,p.kind==='kiln'?stock:m.iron,20);
-      if(p.kind==='tank')counts.tanks.push({id:p.id,position:[p.x,.1,p.z],radius:p.radius,height:p.height});
-      if(p.kind==='kiln')counts.kilns.push({id:p.id,position:[p.x,.1,p.z],radius:p.radius,height:p.height});
+      cylinder(scene,p.x,.1+(p.landscapeLift??0),p.z,p.radius,p.radius,p.height,p.kind==='kiln'?stock:m.iron,20);
+      if(p.kind==='tank')counts.tanks.push({id:p.id,position:[p.x,.1+(p.landscapeLift??0),p.z],radius:p.radius,height:p.height});
+      if(p.kind==='kiln')counts.kilns.push({id:p.id,position:[p.x,.1+(p.landscapeLift??0),p.z],radius:p.radius,height:p.height});
     }
   }
   return {...counts,batchedMeshes:batches.size};

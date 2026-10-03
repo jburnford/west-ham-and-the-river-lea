@@ -1,4 +1,5 @@
 """Check mapped approach separation, unchanged streams and brewery frontage."""
+from prepare_east_channelsea_context import prior_rivers
 import math
 from shapely.geometry import Polygon, LineString
 from shapely.ops import unary_union
@@ -28,7 +29,7 @@ street,frontages=street_clearances(roads)
 for b in load('data/maps/mill-brush-footprint-alignment.json')['buildings']:
     assert Polygon(b['worldFootprint'],b['worldHoles']).intersection(street).area<.01,b['modelId']
 prior=load('reference/footprint-model-alignment/mill-brush-brewery-ground-before.json')
-assert load('docs/data/ground-plan.json')['rivers']==prior['rivers'], 'Water heads moved despite millrace/overhang evidence'
+assert prior_rivers(load('docs/data/ground-plan.json')['rivers'],load('data/maps/east-channelsea-context-alignment.json'))==prior['rivers'], 'Water heads moved despite millrace/overhang evidence'
 infra=load('docs/data/infrastructure.json')
 for road in [west,north]:
     actual=next(q for q in infra['roads'] if q['name']==road['name'])

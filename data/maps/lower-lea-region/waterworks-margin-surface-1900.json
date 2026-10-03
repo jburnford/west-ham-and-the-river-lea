@@ -1,0 +1,111 @@
+{
+  "epoch": "1900",
+  "id": "waterworks-east-margin",
+  "name": "Waterworks River eastern margin above the railway",
+  "surfaceMode": "bank-margin",
+  "reviewBoundsBNG": [
+    537600,
+    184790,
+    537720,
+    185025
+  ],
+  "interiorPointBNG": [
+    537668.64,
+    184905.58
+  ],
+  "bankReachIds": [
+    "Lower_River_Lea-5"
+  ],
+  "bankControlIds": [
+    "sh_537680_184985",
+    "sh_537669_184906",
+    "sh_537655_184828"
+  ],
+  "marshControlIds": [],
+  "meshCellMetres": 4,
+  "bankTransitionMetres": [
+    2,
+    6
+  ],
+  "shoreTransitionMetres": [
+    0,
+    0.3
+  ],
+  "southernBlendNorthings": [
+    184790,
+    184810
+  ],
+  "northernBlendNorthings": [
+    185005,
+    185025
+  ],
+  "westernBlendEastings": [
+    537600,
+    537620
+  ],
+  "shorelineReview": {
+    "reachId": "Lower_River_Lea-5",
+    "mosaic": "reference/spot-heights/mosaics/m18_131057_87122.png",
+    "registration": "reference/spot-heights/mosaics/m18_131057_87122.json",
+    "landExclusionPixels": [
+      [
+        835,
+        665
+      ],
+      [
+        830,
+        675
+      ],
+      [
+        818,
+        691
+      ],
+      [
+        813,
+        711
+      ],
+      [
+        809,
+        735
+      ],
+      [
+        808,
+        750
+      ],
+      [
+        808,
+        763
+      ],
+      [
+        812,
+        778
+      ],
+      [
+        808,
+        793
+      ],
+      [
+        806,
+        820
+      ],
+      [
+        950,
+        820
+      ],
+      [
+        950,
+        665
+      ]
+    ],
+    "method": "Clip only the small source-water overrun east of the inspected five-foot bank line around the 15.2ft dot. Do not add water, change the opposite bank or connect neighbouring ditches.",
+    "maximumRemovedAreaM2": 50
+  },
+  "method": "Interpolate three reviewed eastern-margin heights along northing, confined to a 6m strip in the same dry compartment. This narrow strip stays west of the parallel mapped drains. Use a short illustrative water-edge slope so near-edge ground dots retain their actual elevations. Taper into provisional landward ground and at both ends.",
+  "limitations": [
+    "These are local margin observations; no continuous flood-defence crest is established.",
+    "The source-water outline is locally reconciled to the native map near the 15.2ft dot; source and corrected geometries remain separately recorded.",
+    "The 0.3m shore transition and landward slope are display interpretations, not surveyed bank cross-sections.",
+    "Parallel drains and the higher Channelsea bank are excluded from this elevation fit.",
+    "Datum conversion, river water and bed levels remain provisional; flood solver unchanged."
+  ]
+}

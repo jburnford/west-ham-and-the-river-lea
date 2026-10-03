@@ -18,9 +18,9 @@ r = load('data/maps/east-channelsea-upper-footprint-alignment.json')
 before = load(BASELINE)
 scene = load('docs/data/factory-buildings.json')
 expected = {'east-upper-'+key for key, *_ in SPECS}
-pending_water = {'east-upper-victoria-corn-main', 'east-upper-caledonian-riverside'}
+pending_water = {'east-upper-victoria-corn-main', 'east-upper-caledonian-riverside', 'east-upper-globe-riverside'}
 # Authoring checks permit only these explicitly identified bank conflicts.
-# Published checks require the independently reviewed bank to clear both roofs.
+# Published checks require the independently reviewed bank to clear all three roofs.
 check_register('east-channelsea-upper', expected, len(SPECS), 0,
     'east-channelsea-before', preflight=args.preflight,
     permitted_water=pending_water if args.preflight else (),
@@ -46,6 +46,12 @@ for key, site, fids, name, height, floors, evidence in SPECS:
     assert b['siteId'] == c['siteId'] == site and b['name'] == c['name'] == name
     assert g['modelIds'] == [ident] and g['sourceFids'] == fids
     assert g['additional'] is True and g['previousUnionIoU'] == 0
+    reconciliation = g.get('sourceReconciliation')
+    if ident == 'east-upper-globe-south-central':
+        assert reconciliation['excludedSourceFids'] == [9303]
+        assert 1.02 < reconciliation['removedAreaM2'] < 1.03
+    else:
+        assert reconciliation is None
     assert c['additionalModel'] is True and c['priorFootprint'] == []
     assert g['sourcePolygons'] == [rings(polygon(shape(source[str(fid)]))) for fid in fids]
     assert c['worldFootprint'] == b['worldFootprint'] and c['worldHoles'] == b['worldHoles']
@@ -85,4 +91,4 @@ if not args.preflight:
         assert b['material'] == c['material'] and b['roof'] == c['roof']
         assert b['heightEvidence'] == c['heightEvidence'] and b['roofEvidence'] == c['roofEvidence']
 print(f'Eastern upper strip: {len(SPECS)} source-linked additions, {len(r["additionalSites"])} named sites, declared elevation estimates, platform/working-yard exclusions and globally unique source IDs pass.'+
-      (' Two explicit river-bank conflicts require independent context reconciliation before published checks.' if args.preflight else ''))
+      (' Three explicit river-bank conflicts require independent context reconciliation before published checks.' if args.preflight else ''))

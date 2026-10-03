@@ -301,11 +301,11 @@
     },
     {
       "layer": "os/london_2500",
-      "reason": "1:2,500 National Grid mapping of the 1950s (Allotment Gardens, post-war detail); outside 1800-1920"
+      "reason": "1:1,250/1:2,500 National Grid mapping, 1947-63 (later sheets); outside 1800-1920 so not downloaded, but streamed on the maps page since 30 September 2026 as national-grid-later"
     },
     {
       "layer": "london_1940s",
-      "reason": "1940s London; outside the period"
+      "reason": "1:1,250/1:2,500 National Grid mapping, 1947-63 (earlier sheets); outside 1800-1920 so not downloaded, but streamed on the maps page since 30 September 2026 as national-grid-early"
     },
     {
       "layer": "gsgs3906, newpopular, land_uti_eng, one-inch-agricultural",

@@ -22,12 +22,16 @@ assert set(meta['tidalChannelIds']).isdisjoint(retained)
 assert 0 in meta['tidalChannelIds'],'Bow Creek must remain tidal'
 x,y,z=positions.T
 channels={r['id']:unary_union([Polygon(p[0],p[1:]) for p in r['polygons']]) for r in ground['rivers']+factory['westContext']['rivers']}
-tidal=unary_union([g for k,g in channels.items() if k not in retained])
+isolated=set(meta['isolatedWaterChannelIds'])
+assert isolated=={1301,1302,1303}
+assert isolated.isdisjoint(meta['tidalChannelIds'])
+tidal=unary_union([g for k,g in channels.items() if k not in retained|isolated])
 old=unary_union([g for k,g in channels.items() if k in retained])
 tide=unary_union([Polygon(p[0],p[1:]) for p in meta['tide']['polygons']])
 drains=unary_union([Polygon(p[0],p[1:]) for f in meta['marshDitches']['features'] for p in f['renderPolygons']])
 marsh=unary_union([Polygon(p[0],p[1:]) for p in meta['marshDitches']['marshPolygons']])
 assert tide.is_valid
+assert tide.intersection(unary_union([g for k,g in channels.items() if k in isolated])).area<.001,'Animated tide entered isolated eastern water'
 assert tide.intersection(old).area<.001,'Animated tide entered retained Old Lea'
 assert tide.intersection(drains.union(marsh)).area<.001,'Animated tide entered marsh or isolated drains'
 assert tidal.difference(tide).area<.001,'Animated tide missed a tidal channel'

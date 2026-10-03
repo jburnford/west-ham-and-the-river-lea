@@ -1,0 +1,29 @@
+{
+  "authority": "User clarification, 2 October 2026: river, railway and sewer embankments are continuous features; map readings control profiles rather than isolated raised patches.",
+  "bankBaseWidthMetres": 14,
+  "bankCrestWidthMetres": 6,
+  "bankObservationMatchMetres": 20,
+  "shoreSamplingMetres": 4,
+  "policy": "Follow the shoreline of the joined water polygons, preserving confluences and mapped open source boundaries. Associate each usable crest/wall-top observation with one nearest shoreline only. Interpolate by distance along that shoreline, including around closed island banks. Continue endpoint levels beyond the last reading. Components without their own reading use a smooth regional crest estimate from nearby eligible bank readings, explicitly marked as inferred continuation. No bank-foot or benchmark reading establishes a crest.",
+  "railwayPolicy": "Continuous longitudinal formation profiles on the existing mapped routes and footprints. Interpolate direct railway readings by chainage, holding endpoint readings beyond their range; retain the existing interpreted formation where no usable rail readings exist. Bridge/crossing footprints remain openings in earthworks.",
+  "sewerPolicy": "Full mapped centreline, flat crest and side slopes; retain the existing High Street surface-cover profile and inferred end extension. River spans are separate elevated cover surfaces and never hydraulic ground cells. This is exterior geometry, not sewer invert or flow capacity.",
+  "limitations": [
+    "Continuity is a reconstruction assumption supported by mapped linear features, not a survey of every crest or breach.",
+    "Bank widths and cross-sections are interpreted. Unanchored shoreline components and long endpoint continuations remain height estimates.",
+    "The fine structural mesh is authoritative for narrow visible features; the 10 m ground raster alone cannot encode their flood-blocking topology.",
+    "Detailed-scene and hydraulic integration remain separate. No unreviewed mill/gate opening is closed."
+  ],
+  "excludedRailwayControlIds": [
+    "sh_538907_182862"
+  ],
+  "surfaceReview": [
+    {
+      "id": "sh_538907_182862",
+      "valueFeet": 11.3,
+      "decision": "Do not use as railway formation control",
+      "reason": "Viewed full source mosaic: dot at approximately pixel190,752 lies on the F.P. north of the northern railway-bank hatching. Reader note already says road north of railway; the railway setting is inconsistent with the mapped dot. Retain footpath level for later path geometry reconciliation.",
+      "source": "reference/spot-heights/mosaics/m18_131072_87143.png",
+      "sourceSha256": "feadabb3cea52a71b825475de81a16b0c14aa677359608e014671b14e84705e3"
+    }
+  ]
+}

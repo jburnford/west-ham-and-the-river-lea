@@ -1,4 +1,5 @@
 """Verify the mapped streets, preserved context and explicit roof clipping effects."""
+from prepare_east_channelsea_context import prior_rivers
 import argparse
 import hashlib
 import json
@@ -23,8 +24,10 @@ def check(preflight=False):
     actual = {r['name']:r for r in roads['roads']}
     old = {r['name']:r for r in prior['roads']}
     changed = {r['name'] for r in register['roads']}
-    assert set(actual) == set(old)
-    for name in set(actual)-changed:
+    eastern=load('data/maps/east-channelsea-context-alignment.json')['road']['preparedRoad']
+    assert actual[eastern['name']]==eastern
+    assert set(actual) == set(old)|{eastern['name']}
+    for name in set(actual)-changed-{eastern['name']}:
         assert actual[name] == old[name], name
     for correction in register['roads']:
         road = actual[correction['name']]
@@ -93,7 +96,7 @@ def check(preflight=False):
     assert all(r['changeAreaM2'] < 0 for r in effects), 'No new exclusion of an unreviewed neighbour'
     ground = load('docs/data/ground-plan.json')
     scene = load('docs/data/factory-buildings.json')
-    assert digest(ground['rivers']) == register['retainedRiverGeometrySha256']['ground']
+    assert digest(prior_rivers(ground['rivers'],load('data/maps/east-channelsea-context-alignment.json'))) == register['retainedRiverGeometrySha256']['ground']
     assert digest(scene['westContext']['rivers']) == register['retainedRiverGeometrySha256']['west']
     water = unary_union([Polygon(p[0],p[1:]) for r in ground['rivers']+scene['westContext']['rivers'] for p in r['polygons']])
     for correction in register['roads']:

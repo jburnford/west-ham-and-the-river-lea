@@ -1,0 +1,114 @@
+{
+  "epoch": "1900",
+  "id": "potters-ditch-low-ground",
+  "name": "Low ground north of Potter's Ditch, west of the Channelsea",
+  "reviewBoundsBNG": [
+    537630,
+    185220,
+    537715,
+    185330
+  ],
+  "reviewOutlineBNG": [
+    [
+      537635.4,
+      185321.573
+    ],
+    [
+      537701.229,
+      185323.359
+    ],
+    [
+      537710.49,
+      185228.949
+    ],
+    [
+      537650.983,
+      185227.334
+    ],
+    [
+      537642.689,
+      185258.663
+    ],
+    [
+      537636.205,
+      185291.897
+    ]
+  ],
+  "boundaryReview": {
+    "mosaic": "reference/spot-heights/mosaics/m18_131057_87119.png",
+    "registration": "reference/spot-heights/mosaics/m18_131057_87119.json",
+    "detailCrop": "reference/river-height-review-2026-10-02/m18_131057_87119_zoom_870_305_s3.png",
+    "nativePixels": [
+      [
+        795,
+        180
+      ],
+      [
+        972,
+        180
+      ],
+      [
+        990,
+        435
+      ],
+      [
+        830,
+        435
+      ],
+      [
+        810,
+        350
+      ],
+      [
+        795,
+        260
+      ]
+    ],
+    "note": "Local review envelope in the eastern part of the field; clipped to the dry compartment north of Potter\u2019s Ditch and west of Channelsea. The western edge is an uncertainty transition, not a mapped embankment."
+  },
+  "outlineTransitionMetres": [
+    0,
+    10
+  ],
+  "interiorPointBNG": [
+    537691.18,
+    185241.046
+  ],
+  "bankReachIds": [
+    "Lower_River_Lea-10"
+  ],
+  "bankControlIds": [],
+  "marshControlIds": [
+    "sh_537688_185311",
+    "sh_537692_185240"
+  ],
+  "meshCellMetres": 4,
+  "bankTransitionMetres": [
+    6,
+    18
+  ],
+  "shoreTransitionMetres": [
+    0,
+    0.3
+  ],
+  "southernBlendNorthings": [
+    185190,
+    185210
+  ],
+  "northernBlendNorthings": [
+    185340,
+    185360
+  ],
+  "westernBlendEastings": [
+    537600,
+    537620
+  ],
+  "method": "Interpolate the two local ground observations along northing within a restricted dry compartment, with a ten-metre blend at the review boundary. Do not borrow higher bank heights from across Potter\u2019s Ditch or Channelsea.",
+  "limitations": [
+    "Two margin/ground dots constrain this local surface; the unmeasured interior and cross-valley slope remain interpreted.",
+    "The western review edge is an uncertainty transition, not a historical embankment.",
+    "Water-side slopes and the 0.3m shoreline transition are illustrative; neither a continuous crest nor a surveyed cross-section is established.",
+    "The northern bridge, nearby building and raised works bank lie outside this correction.",
+    "Datum conversion, bed and water heights remain provisional. This surface is not applied to the flood solver."
+  ]
+}

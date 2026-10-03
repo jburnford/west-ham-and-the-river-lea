@@ -1,0 +1,35 @@
+{
+  "epoch": "1900",
+  "bounds": [0, 520, 540, 680],
+  "cellSizeMetres": 2,
+  "durationSeconds": 3600,
+  "frameIntervalSeconds": 60,
+  "railFormationODN": 1.6,
+  "railFormationRangeODN": [1.0, 1.9],
+  "railTopHalfWidth": 4.3,
+  "railFootHalfWidth": 12,
+  "bridgeRoofAllowanceMetres": 0.5,
+  "railAboveFormationMetres": 0.46,
+  "westernChannelSlope": 0.0005,
+  "channelTopWidthMetres": 5,
+  "channelBedWidthMetres": 2,
+  "manningField": 0.055,
+  "manningChannel": 0.035,
+  "culvertManning": 0.025,
+  "culvertEntranceExitLoss": 1.5,
+  "testPumpCapacityM3s": 0.08,
+  "limitations": [
+    "Controlled experiment on a bounded 1900 reconstruction, not a reconstruction of the 1888, 1897, 1904 or 1928 floods.",
+    "North and south boundaries are closed test boundaries. Only the two channel ends exchange water with prescribed reservoirs; the western reservoir is not a confirmed historical outfall.",
+    "Unsupported ground is estimated separately on each side from reviewed nearby field heights; its mask is retained. No modern ground or inherited flat scaffold is silently treated as surveyed terrain.",
+    "Road surface uses reviewed map spots; its profile is held at end values beyond the reviewed section inside this small domain.",
+    "Both local railway routes use a provisional common formation between 1.0 and 1.9 m ODN. At 1.6 m, the southern road bridge permits about 3.46 m below its assumed soffit to rail top. Grade between that bridge and this domain remains an assumption.",
+    "Drain sections, culvert roughness/losses and gate behaviour are assumed. The test pump is a sensitivity control, not the capacity or location of an identified historical pump.",
+    "Local-inertial surface flow omits advection, waves, sediment, sewer networks and infiltration. Do not use for fast dam-break flow or design.",
+    "The existing 3D landscape remains a separate visual reconstruction; this page uses the demo's corrected hydraulic surface."
+  ],
+  "methodSources": [
+    {"title":"Bates, Horritt & Fewtrell (2010), local-inertial shallow-water formulation","url":"https://doi.org/10.1016/j.jhydrol.2010.03.027"},
+    {"title":"US EPA SWMM Reference Manual, Volume II: Hydraulics (conduit friction and opening losses)","url":"https://www.epa.gov/water-research/storm-water-management-model-swmm"}
+  ]
+}

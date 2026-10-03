@@ -1,10 +1,10 @@
 // Flat historical plans. No building heights are inferred from the source polygons.
-export function regionalFootprints({ THREE, scene, data, level, landMaterial, existingGround, lite, render }) {
+export function regionalFootprints({ THREE, scene, data, level, landMaterial, existingGround, regionalGround, landscapeActive=false, lite, render }) {
   const group = new THREE.Group(); group.name = 'Regional historical building plans'; scene.add(group);
   const asset = file => window.sceneAssetUrl?.(`./data/regional-footprints/${file}`) || `./data/regional-footprints/${file}`;
   const loader = new THREE.TextureLoader();
   const stats = { sourceFootprints: data.sourceFootprints, tiles: data.tiles.length, enabled: true,
-    overviewReady: false, loadedDetailTiles: 0, loading: 0, failedTiles: [], ground: 'provisional flat plan' };
+    overviewReady: false, loadedDetailTiles: 0, loading: 0, failedTiles: [], ground: landscapeActive?'historical marsh surface with estimated premises':'provisional flat plan' };
   const setupTexture = texture => { texture.colorSpace = THREE.SRGBColorSpace; texture.anisotropy = 2; return texture; };
   const overview = setupTexture(loader.load(asset(data.overview), () => { stats.overviewReady = true; render(); }));
   const material = new THREE.MeshBasicMaterial({ map: overview, transparent: true, alphaTest: .08,
@@ -18,7 +18,12 @@ export function regionalFootprints({ THREE, scene, data, level, landMaterial, ex
   ],[Infinity,Infinity,-Infinity,-Infinity]);
   const outline=new THREE.Shape([[-25000,-25000],[25000,-25000],[25000,25000],[-25000,25000]].map(([x,z])=>new THREE.Vector2(x,-z)));
   outline.holes.push(new THREE.Path([[core[0],core[1]],[core[2],core[1]],[core[2],core[3]],[core[0],core[3]]].map(([x,z])=>new THREE.Vector2(x,-z))));
-  const groundGeometry = new THREE.ShapeGeometry(outline);
+  const groundShapes=regionalGround?.map(rings=>{
+    const shape=new THREE.Shape(rings[0].map(([x,z])=>new THREE.Vector2(x,-z)));
+    for(const ring of rings.slice(1))shape.holes.push(new THREE.Path(ring.map(([x,z])=>new THREE.Vector2(x,-z))));
+    return shape;
+  });
+  const groundGeometry = new THREE.ShapeGeometry(groundShapes||outline);
   groundGeometry.rotateX(-Math.PI/2);groundGeometry.translate(0,-.1,0);
   const ground = new THREE.Mesh(groundGeometry,landMaterial);
   ground.name='Provisional regional ground'; scene.add(ground);
@@ -40,7 +45,7 @@ export function regionalFootprints({ THREE, scene, data, level, landMaterial, ex
     const detailUV=geometry.attributes.uv.array.slice();
     for(let i=0;i<positions.count;i++) {
       const x=positions.getX(i),z=positions.getZ(i);
-      positions.setY(i,Math.max(-.06,level(x,z)+.025));
+      positions.setY(i,landscapeActive?level(x,z)+.025:Math.max(-.06,level(x,z)+.025));
       detailUV[i*2]=(x-a)/(c-a);detailUV[i*2+1]=1-(z-b)/(d-b);
       coarseUV[i*2]=(x-x0)/(x1-x0);coarseUV[i*2+1]=1-(z-z0)/(z1-z0);
     }

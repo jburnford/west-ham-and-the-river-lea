@@ -49,15 +49,18 @@ export function riverNetwork({ THREE, scene, materials, data, surfaces }) {
   const walls=data.retainingEdges,vertices=[];
   const tri=(a,b,c)=>vertices.push(...a,...b,...c);
   const quad=(a,b,c,d)=>{tri(a,b,c);tri(a,c,d);};
-  for(const route of walls.routes)for(let i=1;i<route.length;i++) {
+  for(const [routeIndex,route] of walls.routes.entries())for(let i=1;i<route.length;i++) {
     const a=route[i-1],b=route[i],dx=b[0]-a[0],dz=b[1]-a[1],len=Math.hypot(dx,dz),nx=-dz/len*walls.width/2,nz=dx/len*walls.width/2;
     const ring=[[a[0]+nx,a[1]+nz],[b[0]+nx,b[1]+nz],[b[0]-nx,b[1]-nz],[a[0]-nx,a[1]-nz]];
     const at=(p,y)=>[p[0],y,p[1]];
-    for(let j=0;j<4;j++)quad(at(ring[j],walls.baseHeight),at(ring[j],walls.crestHeight),at(ring[(j+1)%4],walls.crestHeight),at(ring[(j+1)%4],walls.baseHeight));
-    quad(...ring.map(p=>at(p,walls.crestHeight)).reverse());
+    const profile=walls.crestProfiles?.[routeIndex],tops=profile?[profile[i-1],profile[i],profile[i],profile[i-1]]:ring.map(()=>walls.crestHeight);
+    for(let j=0;j<4;j++)quad(at(ring[j],walls.baseHeight),at(ring[j],tops[j]),at(ring[(j+1)%4],tops[(j+1)%4]),at(ring[(j+1)%4],walls.baseHeight));
+    quad(...ring.map((p,j)=>at(p,tops[j])).reverse());
   }
   const wallGeometry=new THREE.BufferGeometry();wallGeometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));wallGeometry.computeVertexNormals();
   const wallMaterial=materials.brick.clone();wallMaterial.color.set('#787366');wallMaterial.side=THREE.DoubleSide;
   const wallMesh=new THREE.Mesh(wallGeometry,wallMaterial);wallMesh.name='Interpreted tidal retaining edges';scene.add(wallMesh);
-  return { channels: data.channels.length, vertices: data.vertices, triangles: data.triangles };
+  return { channels: data.channels.length, vertices: data.vertices, triangles: data.triangles,
+    reviewedConnections:data.reviewedConnections.connections.map(r=>({id:r.id,category:r.category,capacity:r.capacity})),
+    deferredConnections:data.reviewedConnections.deferred };
 }

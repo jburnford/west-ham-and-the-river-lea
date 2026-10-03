@@ -13,6 +13,7 @@ export function housingDetails({THREE,scene,materials:m,data,level,box}) {
   const network=data.riverNetwork.positions;
   for(let i=0;i<network.length;i+=3){const key=`${network[i]},${network[i+2]}`;if(required.has(key))sampled.set(key,network[i+1]);}
   function ground(x,z) {
+    if(data.mainLandscape?.weight(x,z)>0)return level(x,z);
     const [bx,bz,ex,ez]=data.terrain.bounds;
     if(x>=bx&&x<=ex&&z>=bz&&z<=ez)return level(x,z);
     const ix=Math.floor(x),iz=Math.floor(z),u=x-ix,v=z-iz,at=(a,b)=>sampled.get(`${ix+a},${iz+b}`)??-.1;

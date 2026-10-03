@@ -1,0 +1,2816 @@
+{
+  "baseline": "reference/footprint-model-alignment/east-bridge-road-housing-before.json",
+  "barnbyBaseline": "reference/footprint-model-alignment/east-barnby-housing-before.json",
+  "frontageBaseline": "reference/footprint-model-alignment/east-st-thomas-frontage-housing-before.json",
+  "returnBaseline": "reference/footprint-model-alignment/east-bridge-road-block-return-housing-before.json",
+  "source": "Unmodified cached OS London five-foot 1893 mosaic",
+  "method": "Native roof-body axes re-read at the affected Bridge Road junction/frontages. Roof shading, street gaps and corner returns distinguish the bodies from back plots. IDs and height estimates retained; range lengths/centres/angles follow mapped roofs. House counts are estimates from mapped range lengths; one prior long terrace is a single corner body. No road-buffer trimming used.",
+  "rows": [
+    {
+      "id": "district-hotham-randal-west-return",
+      "priorReview": {
+        "id": "district-hotham-randal-west-return",
+        "axis": [
+          [
+            117.342,
+            -571.354
+          ],
+          [
+            130.499,
+            -539.276
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6.2,
+        "houseCount": 8,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "sourceAxisBeforeStreetFit": [
+          [
+            138.94235758572066,
+            -580.1623183205994
+          ],
+          [
+            154.4244195156392,
+            -549.1390419523068
+          ]
+        ],
+        "x": 123.9205,
+        "z": -555.315,
+        "width": 34.671382046292955,
+        "rotation": -67.69869518991517,
+        "group": "district",
+        "wallHeight": 6.4,
+        "districtReviewed": true,
+        "sourceSheet": "scene",
+        "addedReturn": true,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "block": "district-hotham-randal"
+      },
+      "priorPublishedRow": {
+        "id": "district-hotham-randal-west-return",
+        "axis": [
+          [
+            117.342,
+            -571.354
+          ],
+          [
+            130.499,
+            -539.276
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6.2,
+        "houseCount": 6,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "sourceAxisBeforeStreetFit": [
+          [
+            138.94235758572066,
+            -580.1623183205994
+          ],
+          [
+            154.4244195156392,
+            -549.1390419523068
+          ]
+        ],
+        "x": 120.977,
+        "z": -549.316,
+        "width": 25.804215550589362,
+        "rotation": -67.69869518991517,
+        "group": "district",
+        "wallHeight": 6.4,
+        "districtReviewed": true,
+        "sourceSheet": "scene",
+        "addedReturn": true,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "block": "district-hotham-randal",
+        "fitAdjustment": {
+          "offsetM": 5,
+          "sourceWidthM": 34.671382046292955,
+          "retainedWidthM": 25.804215550589362
+        },
+        "sourceCentre": [
+          120.97693850390075,
+          -549.3156578582053
+        ],
+        "frontSign": -1,
+        "frontageShiftM": 0,
+        "bays": 6,
+        "footprint": [
+          [
+            128.74117945036414,
+            -538.5553354058468
+          ],
+          [
+            123.00493277480757,
+            -536.20257658328
+          ],
+          [
+            113.21282054963585,
+            -560.0766645941533
+          ],
+          [
+            118.94906722519244,
+            -562.42942341672
+          ]
+        ]
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          799,
+          853
+        ],
+        [
+          828,
+          927
+        ]
+      ],
+      "worldAxis": [
+        [
+          113.064,
+          -569.585
+        ],
+        [
+          124.604,
+          -542.422
+        ]
+      ],
+      "geometry": {
+        "x": 118.834,
+        "z": -556.0035,
+        "width": 29.51271198992056,
+        "rotation": -66.98214623754563,
+        "depth": 6.2
+      },
+      "houseCount": 6,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "district-randal-skelton-west-return",
+      "priorReview": {
+        "id": "district-randal-skelton-west-return",
+        "axis": [
+          [
+            140.514,
+            -516.622
+          ],
+          [
+            155.117,
+            -484.007
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6.2,
+        "houseCount": 9,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "sourceAxisBeforeStreetFit": [
+          [
+            162.28937489322428,
+            -526.3402028463075
+          ],
+          [
+            178.71786953084307,
+            -494.6055188291598
+          ]
+        ],
+        "x": 147.8155,
+        "z": -500.31449999999995,
+        "width": 35.73493856158139,
+        "rotation": -65.88008709690588,
+        "group": "district",
+        "wallHeight": 6.4,
+        "districtReviewed": true,
+        "sourceSheet": "scene",
+        "addedReturn": true,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "block": "district-randal-skelton"
+      },
+      "priorPublishedRow": {
+        "id": "district-randal-skelton-west-return",
+        "axis": [
+          [
+            140.514,
+            -516.622
+          ],
+          [
+            155.117,
+            -484.007
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6.2,
+        "houseCount": 9,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "sourceAxisBeforeStreetFit": [
+          [
+            162.28937489322428,
+            -526.3402028463075
+          ],
+          [
+            178.71786953084307,
+            -494.6055188291598
+          ]
+        ],
+        "x": 149.883,
+        "z": -501.24,
+        "width": 35.73493856158139,
+        "rotation": -65.88008709690588,
+        "group": "district",
+        "wallHeight": 6.4,
+        "districtReviewed": true,
+        "sourceSheet": "scene",
+        "addedReturn": true,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "block": "district-randal-skelton",
+        "fitAdjustment": {
+          "offsetM": 0,
+          "sourceWidthM": 35.73493856158139,
+          "retainedWidthM": 35.73493856158139
+        },
+        "sourceCentre": [
+          149.8834588743882,
+          -501.2404053638721
+        ],
+        "frontSign": -1,
+        "frontageShiftM": 0,
+        "bays": 9,
+        "footprint": [
+          [
+            160.01384584666388,
+            -486.199307830717
+          ],
+          [
+            154.35515415333612,
+            -483.6656921692831
+          ],
+          [
+            139.75215415333614,
+            -516.280692169283
+          ],
+          [
+            145.4108458466639,
+            -518.8143078307169
+          ]
+        ]
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          856,
+          1000
+        ],
+        [
+          882,
+          1068
+        ]
+      ],
+      "worldAxis": [
+        [
+          135.763,
+          -515.62
+        ],
+        [
+          146.127,
+          -490.652
+        ]
+      ],
+      "geometry": {
+        "x": 140.945,
+        "z": -503.13599999999997,
+        "width": 27.033562843250998,
+        "rotation": -67.45708673496775,
+        "depth": 6.2
+      },
+      "houseCount": 6,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "district-leywick-morley-east-west-return",
+      "priorReview": {
+        "id": "district-leywick-morley-east-west-return",
+        "axis": [
+          [
+            172.065,
+            -444.46
+          ],
+          [
+            184.793,
+            -414.488
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6.2,
+        "houseCount": 8,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32,
+        "sourceAxisBeforeStreetFit": [
+          [
+            185.28537388021658,
+            -448.7584471841669
+          ],
+          [
+            185.72254506784762,
+            -416.19816190354413
+          ]
+        ],
+        "x": 178.429,
+        "z": -429.474,
+        "width": 32.56259768507419,
+        "rotation": -66.99086368563225
+      },
+      "priorPublishedRow": {
+        "id": "district-leywick-morley-east-west-return",
+        "axis": [
+          [
+            172.065,
+            -444.46
+          ],
+          [
+            184.793,
+            -414.488
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6.2,
+        "houseCount": 8,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "sourceAxisBeforeStreetFit": [
+          [
+            185.28537388021658,
+            -448.7584471841669
+          ],
+          [
+            185.72254506784762,
+            -416.19816190354413
+          ]
+        ],
+        "x": 178.307,
+        "z": -429.762,
+        "width": 31.936398182255267,
+        "rotation": -66.99086368563225,
+        "group": "district",
+        "wallHeight": 6.4,
+        "districtReviewed": true,
+        "sourceSheet": "scene",
+        "addedReturn": true,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "block": "district-leywick-morley-east",
+        "fitAdjustment": {
+          "offsetM": 0,
+          "sourceWidthM": 32.56259768507419,
+          "retainedWidthM": 31.936398182255267
+        },
+        "sourceCentre": [
+          178.30661622477172,
+          -429.7621903292852
+        ],
+        "frontSign": 1,
+        "frontageShiftM": 0,
+        "bays": 8,
+        "footprint": [
+          [
+            187.40198808713356,
+            -416.2759118381649
+          ],
+          [
+            181.69524436240985,
+            -413.8524688204056
+          ],
+          [
+            169.21201191286642,
+            -443.2480881618351
+          ],
+          [
+            174.91875563759012,
+            -445.6715311795944
+          ]
+        ]
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          932,
+          1180
+        ],
+        [
+          955,
+          1236
+        ]
+      ],
+      "worldAxis": [
+        [
+          165.866,
+          -449.602
+        ],
+        [
+          174.992,
+          -429.057
+        ]
+      ],
+      "geometry": {
+        "x": 170.429,
+        "z": -439.3295,
+        "width": 22.480678392788725,
+        "rotation": -66.04941481352294,
+        "depth": 6.2
+      },
+      "houseCount": 5,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-32",
+      "priorReview": {
+        "x": 187.7475441644954,
+        "z": -685.732148206084,
+        "width": 196.53,
+        "depth": 6.6,
+        "rotation": 22.44,
+        "footprint": [
+          [
+            92.88,
+            -658.03
+          ],
+          [
+            274.52,
+            -733.06
+          ],
+          [
+            277.72,
+            -725.3
+          ],
+          [
+            96.08,
+            -650.27
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-32",
+        "street": "Barnby Street",
+        "wallHeight": 6.4,
+        "bays": 38,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+        "group": "district",
+        "houseCount": 48,
+        "frontStreet": "Barnby Street",
+        "frontSign": 1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-paul-barnby"
+      },
+      "priorPublishedRow": {
+        "x": 187.748,
+        "z": -685.732,
+        "width": 196.53,
+        "depth": 6.6,
+        "rotation": 22.44,
+        "footprint": [
+          [
+            277.3126897625717,
+            -726.2914202711808
+          ],
+          [
+            279.832013635538,
+            -720.1911737824639
+          ],
+          [
+            98.18331023742824,
+            -645.1725797288192
+          ],
+          [
+            95.66398636446199,
+            -651.272826217536
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-32",
+        "street": "Barnby Street",
+        "wallHeight": 6.4,
+        "bays": 48,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+        "group": "district",
+        "houseCount": 48,
+        "frontStreet": "Barnby Street",
+        "frontSign": 1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-paul-barnby",
+        "sourceCentre": [
+          187.7475441644954,
+          -685.732148206084
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        350,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          805,
+          568
+        ],
+        [
+          1215,
+          413
+        ]
+      ],
+      "worldAxis": [
+        [
+          112.4,
+          -675.397
+        ],
+        [
+          263.352,
+          -737.088
+        ]
+      ],
+      "geometry": {
+        "x": 187.87599999999998,
+        "z": -706.2425000000001,
+        "width": 163.071413144671,
+        "rotation": 22.228832031737657,
+        "depth": 6.6
+      },
+      "houseCount": 35,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-33",
+      "priorReview": {
+        "x": 195.49065244176398,
+        "z": -670.2041647733809,
+        "width": 191.75,
+        "depth": 6.6,
+        "rotation": 22.22,
+        "footprint": [
+          [
+            106.76,
+            -633.87
+          ],
+          [
+            284.27,
+            -706.39
+          ],
+          [
+            287.45,
+            -698.61
+          ],
+          [
+            109.94,
+            -626.09
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-33",
+        "street": "Barnby Street",
+        "wallHeight": 6.4,
+        "bays": 37,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+        "group": "district",
+        "houseCount": 48,
+        "frontStreet": "Barnby Street",
+        "frontSign": -1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-barnby-hotham"
+      },
+      "priorPublishedRow": {
+        "x": 195.491,
+        "z": -670.204,
+        "width": 191.75,
+        "depth": 6.6,
+        "rotation": 22.22,
+        "footprint": [
+          [
+            282.99825078412357,
+            -709.515406553372
+          ],
+          [
+            285.4941328778544,
+            -703.405531548579
+          ],
+          [
+            107.98374921587644,
+            -630.8925934466279
+          ],
+          [
+            105.48786712214566,
+            -637.0024684514209
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-33",
+        "street": "Barnby Street",
+        "wallHeight": 6.4,
+        "bays": 48,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+        "group": "district",
+        "houseCount": 48,
+        "frontStreet": "Barnby Street",
+        "frontSign": -1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-barnby-hotham",
+        "sourceCentre": [
+          195.49065244176398,
+          -670.2041647733809
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        350,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          830,
+          610
+        ],
+        [
+          1140,
+          498
+        ]
+      ],
+      "worldAxis": [
+        [
+          122.128,
+          -660.067
+        ],
+        [
+          236.315,
+          -704.784
+        ]
+      ],
+      "geometry": {
+        "x": 179.2215,
+        "z": -682.4255,
+        "width": 122.63066932052519,
+        "rotation": 21.385907429098083,
+        "depth": 6.6
+      },
+      "houseCount": 27,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-26-part-1",
+      "priorReview": {
+        "id": "os-row-26-part-1",
+        "x": 137.44527738585307,
+        "z": -396.35412560194675,
+        "width": 78.16,
+        "rotation": 19.28,
+        "depth": 6.6,
+        "houseCount": 20,
+        "frontStreet": "Morley Street",
+        "street": "Morley Street",
+        "frontSign": 1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": 137.445,
+        "z": -396.354,
+        "width": 78.16,
+        "depth": 6.6,
+        "rotation": 19.28,
+        "footprint": [
+          [
+            173.24363740173618,
+            -412.3725505018093
+          ],
+          [
+            175.4228578994897,
+            -406.14270315037516
+          ],
+          [
+            101.6463625982638,
+            -380.33544949819066
+          ],
+          [
+            99.46714210051027,
+            -386.5652968496248
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-26-part-1",
+        "street": "Morley Street",
+        "wallHeight": 6.4,
+        "bays": 20,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": "Frontage audit: main building envelope re-read from the source sheet; earlier axis overlapped a carriageway or rear plot.",
+        "sourceRowId": "os-row-26",
+        "junctionAudit": {
+          "streets": [
+            "St Thomas Road"
+          ],
+          "retainedFraction": 0.969,
+          "evidence": "Coarse row envelope divided at map-traced street junctions; individual end-house footprints remain approximate."
+        },
+        "group": "district",
+        "houseCount": 20,
+        "frontStreet": "Morley Street",
+        "frontSign": 1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-leywick-morley-west",
+        "sourceCentre": [
+          137.44527738585307,
+          -396.35412560194675
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          774,
+          1305
+        ],
+        [
+          892,
+          1263
+        ]
+      ],
+      "worldAxis": [
+        [
+          108.355,
+          -401.609
+        ],
+        [
+          151.828,
+          -418.396
+        ]
+      ],
+      "geometry": {
+        "x": 130.0915,
+        "z": -410.0025,
+        "width": 46.60155681948835,
+        "rotation": 21.113954314144603,
+        "depth": 6.6
+      },
+      "houseCount": 10,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-39-part-1",
+      "priorReview": {
+        "id": "os-row-39-part-1",
+        "x": 39.16968900431823,
+        "z": -630.691947371491,
+        "width": 69.91,
+        "rotation": 21.9,
+        "depth": 6.6,
+        "houseCount": 17,
+        "frontStreet": "Barnby Street",
+        "street": "Barnby Street",
+        "frontSign": 1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": 39.17,
+        "z": -630.692,
+        "width": 69.91,
+        "depth": 6.6,
+        "rotation": 21.9,
+        "footprint": [
+          [
+            70.37165657253658,
+            -646.7916475778038
+          ],
+          [
+            72.83337593753691,
+            -640.667928302071
+          ],
+          [
+            7.968343427463427,
+            -614.5923524221962
+          ],
+          [
+            5.506624062463089,
+            -620.716071697929
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-39-part-1",
+        "street": "Barnby Street",
+        "wallHeight": 6.4,
+        "bays": 17,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": null,
+        "sourceRowId": "os-row-39",
+        "junctionAudit": {
+          "streets": [
+            "St Thomas Road"
+          ],
+          "retainedFraction": 0.9,
+          "evidence": "Coarse row envelope divided at map-traced street junctions; individual end-house footprints remain approximate."
+        },
+        "group": "district",
+        "houseCount": 17,
+        "frontStreet": "Barnby Street",
+        "frontSign": 1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-bridge-albion",
+        "sourceCentre": [
+          39.16968900431823,
+          -630.691947371491
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          548,
+          656
+        ],
+        [
+          564,
+          650
+        ]
+      ],
+      "worldAxis": [
+        [
+          17.685,
+          -640.127
+        ],
+        [
+          23.576,
+          -642.517
+        ]
+      ],
+      "geometry": {
+        "x": 20.630499999999998,
+        "z": -641.322,
+        "width": 6.357356447455223,
+        "rotation": 22.082572439274834,
+        "depth": 6.6
+      },
+      "houseCount": 1,
+      "classification": "One mapped shaded Barnby/Barry corner body; formerly mistaken for a continuous terrace over unshaded gardens."
+    },
+    {
+      "id": "os-row-40-part-1",
+      "priorReview": {
+        "id": "os-row-40-part-1",
+        "x": 47.34769253397286,
+        "z": -610.9636329495053,
+        "width": 74.58,
+        "rotation": 19.83,
+        "depth": 6.6,
+        "houseCount": 20,
+        "frontStreet": "Barnby Street",
+        "street": "Barnby Street",
+        "frontSign": -1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": 47.348,
+        "z": -610.964,
+        "width": 74.58,
+        "depth": 6.6,
+        "rotation": 19.83,
+        "footprint": [
+          [
+            81.30736449907121,
+            -626.7182268239105
+          ],
+          [
+            83.54628591660354,
+            -620.5095851942049
+          ],
+          [
+            13.388635500928785,
+            -595.2097731760896
+          ],
+          [
+            11.14971408339646,
+            -601.4184148057952
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-40-part-1",
+        "street": "Barnby Street",
+        "wallHeight": 6.4,
+        "bays": 20,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": "Main wall envelope corrected onto the mapped street-facing houses, clear of the carriageway.",
+        "sourceRowId": "os-row-40",
+        "junctionAudit": {
+          "streets": [
+            "St Thomas Road"
+          ],
+          "retainedFraction": 0.868,
+          "evidence": "Coarse row envelope divided at map-traced street junctions; individual end-house footprints remain approximate."
+        },
+        "group": "district",
+        "houseCount": 20,
+        "frontStreet": "Barnby Street",
+        "frontSign": -1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-bridge-barnby",
+        "sourceCentre": [
+          47.34769253397286,
+          -610.9636329495053
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          555,
+          739
+        ],
+        [
+          710,
+          685
+        ]
+      ],
+      "worldAxis": [
+        [
+          21.132,
+          -609.401
+        ],
+        [
+          78.247,
+          -631.016
+        ]
+      ],
+      "geometry": {
+        "x": 49.6895,
+        "z": -620.2085,
+        "width": 61.068252390255935,
+        "rotation": 20.728997753089207,
+        "depth": 6.6
+      },
+      "houseCount": 13,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-41-part-1",
+      "priorReview": {
+        "id": "os-row-41-part-1",
+        "x": 59.31076837909868,
+        "z": -582.3853562795164,
+        "width": 75.55,
+        "rotation": 20.2,
+        "depth": 6.6,
+        "houseCount": 20,
+        "frontStreet": "Hotham Street",
+        "street": "Hotham Street",
+        "frontSign": 1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": 59.311,
+        "z": -582.385,
+        "width": 75.55,
+        "depth": 6.6,
+        "rotation": 20.2,
+        "footprint": [
+          [
+            93.62308987804705,
+            -598.5256664422761
+          ],
+          [
+            95.90205799143739,
+            -592.3316124920631
+          ],
+          [
+            24.998910121952946,
+            -566.2443335577238
+          ],
+          [
+            22.71994200856261,
+            -572.4383875079369
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-41-part-1",
+        "street": "Hotham Street",
+        "wallHeight": 6.4,
+        "bays": 20,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": null,
+        "sourceRowId": "os-row-41",
+        "junctionAudit": {
+          "streets": [
+            "St Thomas Road"
+          ],
+          "retainedFraction": 0.858,
+          "evidence": "Coarse row envelope divided at map-traced street junctions; individual end-house footprints remain approximate."
+        },
+        "group": "district",
+        "houseCount": 20,
+        "frontStreet": "Hotham Street",
+        "frontSign": 1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-bridge-barnby",
+        "sourceCentre": [
+          59.31076837909868,
+          -582.3853562795164
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          577,
+          826
+        ],
+        [
+          715,
+          779
+        ]
+      ],
+      "worldAxis": [
+        [
+          30.2,
+          -577.343
+        ],
+        [
+          81.062,
+          -596.188
+        ]
+      ],
+      "geometry": {
+        "x": 55.631,
+        "z": -586.7655,
+        "width": 54.24091692624675,
+        "rotation": 20.3302908959045,
+        "depth": 6.6
+      },
+      "houseCount": 12,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-42-part-1",
+      "priorReview": {
+        "id": "os-row-42-part-1",
+        "x": 68.56540196212146,
+        "z": -561.6332248066577,
+        "width": 74.94,
+        "rotation": 20.46,
+        "depth": 6.6,
+        "houseCount": 20,
+        "frontStreet": "Hotham Street",
+        "street": "Hotham Street",
+        "frontSign": -1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": 68.565,
+        "z": -561.633,
+        "width": 74.94,
+        "depth": 6.6,
+        "rotation": 20.46,
+        "footprint": [
+          [
+            102.51773331162892,
+            -577.8225892680884
+          ],
+          [
+            104.82478558940491,
+            -571.6389406859317
+          ],
+          [
+            34.61226668837107,
+            -545.4434107319116
+          ],
+          [
+            32.30521441059508,
+            -551.6270593140683
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-42-part-1",
+        "street": "Hotham Street",
+        "wallHeight": 6.4,
+        "bays": 20,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": null,
+        "sourceRowId": "os-row-42",
+        "junctionAudit": {
+          "streets": [
+            "St Thomas Road"
+          ],
+          "retainedFraction": 0.862,
+          "evidence": "Coarse row envelope divided at map-traced street junctions; individual end-house footprints remain approximate."
+        },
+        "group": "district",
+        "houseCount": 20,
+        "frontStreet": "Hotham Street",
+        "frontSign": -1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-bridge-hotham",
+        "sourceCentre": [
+          68.56540196212146,
+          -561.6332248066577
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          650,
+          875
+        ],
+        [
+          742,
+          843
+        ]
+      ],
+      "worldAxis": [
+        [
+          57.855,
+          -559.904
+        ],
+        [
+          91.757,
+          -572.715
+        ]
+      ],
+      "geometry": {
+        "x": 74.806,
+        "z": -566.3095000000001,
+        "width": 36.24178975988909,
+        "rotation": 20.70074197082703,
+        "depth": 6.6
+      },
+      "houseCount": 8,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-43-part-1",
+      "priorReview": {
+        "id": "os-row-43-part-1",
+        "x": 81.87033035475024,
+        "z": -526.1889361119239,
+        "width": 77.15,
+        "rotation": 20.85,
+        "depth": 6.6,
+        "houseCount": 20,
+        "frontStreet": "Randal Street",
+        "street": "Randal Street",
+        "frontSign": 1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": 81.87,
+        "z": -526.189,
+        "width": 77.15,
+        "depth": 6.6,
+        "rotation": 20.85,
+        "footprint": [
+          [
+            116.744388124286,
+            -543.0026158501572
+          ],
+          [
+            119.09347739245445,
+            -536.8348140042663
+          ],
+          [
+            46.995611875714005,
+            -509.37538414984266
+          ],
+          [
+            44.64652260754556,
+            -515.5431859957337
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-43-part-1",
+        "street": "Randal Street",
+        "wallHeight": 6.4,
+        "bays": 20,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": null,
+        "sourceRowId": "os-row-43",
+        "junctionAudit": {
+          "streets": [
+            "St Thomas Road"
+          ],
+          "retainedFraction": 0.906,
+          "evidence": "Coarse row envelope divided at map-traced street junctions; individual end-house footprints remain approximate."
+        },
+        "group": "district",
+        "houseCount": 20,
+        "frontStreet": "Randal Street",
+        "frontSign": 1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-bridge-hotham",
+        "sourceCentre": [
+          81.87033035475024,
+          -526.1889361119239
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          675,
+          953
+        ],
+        [
+          773,
+          922
+        ]
+      ],
+      "worldAxis": [
+        [
+          67.948,
+          -531.216
+        ],
+        [
+          104.092,
+          -543.717
+        ]
+      ],
+      "geometry": {
+        "x": 86.02,
+        "z": -537.4665,
+        "width": 38.244787056538826,
+        "rotation": 19.07879034591294,
+        "depth": 6.6
+      },
+      "houseCount": 8,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-44-part-1",
+      "priorReview": {
+        "id": "os-row-44-part-1",
+        "x": 90.54570979643982,
+        "z": -505.0695450338576,
+        "width": 77.89,
+        "rotation": 21.12,
+        "depth": 6.6,
+        "houseCount": 20,
+        "frontStreet": "Randal Street",
+        "street": "Randal Street",
+        "frontSign": -1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": 90.546,
+        "z": -505.07,
+        "width": 77.89,
+        "depth": 6.6,
+        "rotation": 21.12,
+        "footprint": [
+          [
+            125.685915190927,
+            -522.1810895437567
+          ],
+          [
+            128.06404335036828,
+            -516.0244259621345
+          ],
+          [
+            55.406084809073015,
+            -487.95891045624336
+          ],
+          [
+            53.027956649631726,
+            -494.1155740378655
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-44-part-1",
+        "street": "Randal Street",
+        "wallHeight": 6.4,
+        "bays": 20,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": null,
+        "sourceRowId": "os-row-44",
+        "junctionAudit": {
+          "streets": [
+            "St Thomas Road"
+          ],
+          "retainedFraction": 0.927,
+          "evidence": "Coarse row envelope divided at map-traced street junctions; individual end-house footprints remain approximate."
+        },
+        "group": "district",
+        "houseCount": 20,
+        "frontStreet": "Randal Street",
+        "frontSign": -1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-bridge-randal",
+        "sourceCentre": [
+          90.54570979643982,
+          -505.0695450338576
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          710,
+          1030
+        ],
+        [
+          793,
+          1002
+        ]
+      ],
+      "worldAxis": [
+        [
+          81.751,
+          -503.001
+        ],
+        [
+          112.345,
+          -514.236
+        ]
+      ],
+      "geometry": {
+        "x": 97.048,
+        "z": -508.6185,
+        "width": 32.59168699223776,
+        "rotation": 20.164692594623713,
+        "depth": 6.6
+      },
+      "houseCount": 7,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-45-part-1",
+      "priorReview": {
+        "id": "os-row-45-part-1",
+        "x": 103.94515969605254,
+        "z": -472.6433137771848,
+        "width": 79.64,
+        "rotation": 19.82,
+        "depth": 6.6,
+        "houseCount": 20,
+        "frontStreet": "Canning Street",
+        "street": "Canning Street",
+        "frontSign": 1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": 103.945,
+        "z": -472.643,
+        "width": 79.64,
+        "depth": 6.6,
+        "rotation": 19.82,
+        "footprint": [
+          [
+            140.28724266169897,
+            -489.24913736900265
+          ],
+          [
+            142.52508043275094,
+            -483.0401050683576
+          ],
+          [
+            67.60275733830102,
+            -456.0368626309973
+          ],
+          [
+            65.36491956724905,
+            -462.24589493164234
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-45-part-1",
+        "street": "Canning Street",
+        "wallHeight": 6.4,
+        "bays": 20,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": null,
+        "sourceRowId": "os-row-45",
+        "junctionAudit": {
+          "streets": [
+            "St Thomas Road"
+          ],
+          "retainedFraction": 0.992,
+          "evidence": "Coarse row envelope divided at map-traced street junctions; individual end-house footprints remain approximate."
+        },
+        "group": "district",
+        "houseCount": 20,
+        "frontStreet": "Canning Street",
+        "frontSign": 1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-bridge-randal",
+        "sourceCentre": [
+          103.94515969605254,
+          -472.6433137771848
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          716,
+          1128
+        ],
+        [
+          850,
+          1084
+        ]
+      ],
+      "worldAxis": [
+        [
+          84.979,
+          -466.697
+        ],
+        [
+          134.384,
+          -484.389
+        ]
+      ],
+      "geometry": {
+        "x": 109.6815,
+        "z": -475.543,
+        "width": 52.47724162911003,
+        "rotation": 19.70251734336688,
+        "depth": 6.6
+      },
+      "houseCount": 11,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-46",
+      "priorReview": {
+        "id": "os-row-46",
+        "x": 112.22121059089687,
+        "z": -444.5155191132337,
+        "width": 80.44,
+        "rotation": 20.23,
+        "depth": 6.6,
+        "houseCount": 20,
+        "frontStreet": "Leywick Street",
+        "street": "Leywick Street",
+        "frontSign": 1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": 112.221,
+        "z": -444.516,
+        "width": 80.44,
+        "depth": 6.6,
+        "rotation": 20.23,
+        "footprint": [
+          [
+            148.81880701753482,
+            -461.5200854357792
+          ],
+          [
+            151.10101801744528,
+            -455.3272255994929
+          ],
+          [
+            75.62319298246518,
+            -427.51191456422083
+          ],
+          [
+            73.34098198255472,
+            -433.7047744005071
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-46",
+        "street": "Leywick Street",
+        "wallHeight": 6.4,
+        "bays": 20,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": "Main wall envelope corrected onto the mapped street-facing houses, clear of the carriageway.",
+        "group": "district",
+        "houseCount": 20,
+        "frontStreet": "Leywick Street",
+        "frontSign": 1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 32,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "sourceCentre": [
+          112.22121059089687,
+          -444.5155191132337
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          712,
+          1209
+        ],
+        [
+          885,
+          1150
+        ]
+      ],
+      "worldAxis": [
+        [
+          84.313,
+          -436.6
+        ],
+        [
+          148.076,
+          -460.255
+        ]
+      ],
+      "geometry": {
+        "x": 116.1945,
+        "z": -448.4275,
+        "width": 68.00940518781206,
+        "rotation": 20.354006278207752,
+        "depth": 6.6
+      },
+      "houseCount": 15,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-47",
+      "priorReview": {
+        "id": "os-row-47",
+        "x": -12.874752981393996,
+        "z": -653.6995489315311,
+        "width": 40.71,
+        "rotation": -68.62,
+        "depth": 6.6,
+        "houseCount": 10,
+        "frontStreet": "Bridge Road",
+        "street": "Bridge Road",
+        "frontSign": 1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": -12.875,
+        "z": -653.7,
+        "width": 40.71,
+        "depth": 6.6,
+        "rotation": -68.62,
+        "footprint": [
+          [
+            -2.3816445648504327,
+            -635.9487883030026
+          ],
+          [
+            -8.527453190918273,
+            -633.5427466716608
+          ],
+          [
+            -23.368355435149567,
+            -671.4512116969975
+          ],
+          [
+            -17.222546809081727,
+            -673.8572533283393
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-47",
+        "street": "Bridge Road",
+        "wallHeight": 6.4,
+        "bays": 10,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": "Main Bridge Road frontage; earlier axis lay on the back of the terrace.",
+        "group": "district",
+        "houseCount": 10,
+        "frontStreet": "Bridge Road",
+        "frontSign": 1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-bridge-albion",
+        "sourceCentre": [
+          -12.874752981393996,
+          -653.6995489315311
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          469,
+          570
+        ],
+        [
+          505,
+          666
+        ]
+      ],
+      "worldAxis": [
+        [
+          -12.578,
+          -671.234
+        ],
+        [
+          1.789,
+          -635.979
+        ]
+      ],
+      "geometry": {
+        "x": -5.3945,
+        "z": -653.6065000000001,
+        "width": 38.07001069083117,
+        "rotation": -67.8282855474625,
+        "depth": 6.6
+      },
+      "houseCount": 8,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-48-part-1",
+      "priorReview": {
+        "id": "os-row-48-part-1",
+        "x": 9.409427384938729,
+        "z": -591.8824785234674,
+        "width": 25.31,
+        "rotation": -65.61,
+        "depth": 6.6,
+        "houseCount": 7,
+        "frontStreet": "Bridge Road",
+        "street": "Bridge Road",
+        "frontSign": 1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": 9.409,
+        "z": -591.882,
+        "width": 25.31,
+        "depth": 6.6,
+        "rotation": -65.61,
+        "footprint": [
+          [
+            17.640319005868257,
+            -581.719106099952
+          ],
+          [
+            11.629331073953212,
+            -578.9936659369009
+          ],
+          [
+            1.1776809941317428,
+            -602.0448939000479
+          ],
+          [
+            7.188668926046789,
+            -604.770334063099
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-48-part-1",
+        "street": "Bridge Road",
+        "wallHeight": 6.4,
+        "bays": 7,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": null,
+        "sourceRowId": "os-row-48",
+        "junctionAudit": {
+          "streets": [
+            "Barnby Street"
+          ],
+          "retainedFraction": 0.779,
+          "evidence": "Coarse row envelope divided at map-traced street junctions; individual end-house footprints remain approximate."
+        },
+        "group": "district",
+        "houseCount": 7,
+        "frontStreet": "Bridge Road",
+        "frontSign": 1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-bridge-barnby",
+        "sourceCentre": [
+          9.409427384938729,
+          -591.8824785234674
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          543,
+          746
+        ],
+        [
+          563,
+          813
+        ]
+      ],
+      "worldAxis": [
+        [
+          16.738,
+          -606.682
+        ],
+        [
+          24.859,
+          -582.024
+        ]
+      ],
+      "geometry": {
+        "x": 20.7985,
+        "z": -594.3530000000001,
+        "width": 25.960886059609,
+        "rotation": -71.7709368242764,
+        "depth": 6.6
+      },
+      "houseCount": 6,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-49-part-1",
+      "priorReview": {
+        "id": "os-row-49-part-1",
+        "x": 27.612585257123524,
+        "z": -538.9238317901337,
+        "width": 28.93,
+        "rotation": -71.38,
+        "depth": 6.6,
+        "houseCount": 8,
+        "frontStreet": "Bridge Road",
+        "street": "Bridge Road",
+        "frontSign": 1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": 27.613,
+        "z": -538.924,
+        "width": 28.93,
+        "depth": 6.6,
+        "rotation": -71.38,
+        "footprint": [
+          [
+            35.35879978337993,
+            -526.2697986930905
+          ],
+          [
+            29.104263487891455,
+            -524.1624838783517
+          ],
+          [
+            19.86720021662007,
+            -551.5782013069095
+          ],
+          [
+            26.121736512108544,
+            -553.6855161216482
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-49-part-1",
+        "street": "Bridge Road",
+        "wallHeight": 6.4,
+        "bays": 8,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": null,
+        "sourceRowId": "os-row-49",
+        "junctionAudit": {
+          "streets": [
+            "Hotham Street"
+          ],
+          "retainedFraction": 0.943,
+          "evidence": "Coarse row envelope divided at map-traced street junctions; individual end-house footprints remain approximate."
+        },
+        "group": "district",
+        "houseCount": 8,
+        "frontStreet": "Bridge Road",
+        "frontSign": 1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-bridge-hotham",
+        "sourceCentre": [
+          27.612585257123524,
+          -538.9238317901337
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          603,
+          901
+        ],
+        [
+          635,
+          985
+        ]
+      ],
+      "worldAxis": [
+        [
+          40.634,
+          -549.778
+        ],
+        [
+          53.392,
+          -518.935
+        ]
+      ],
+      "geometry": {
+        "x": 47.013000000000005,
+        "z": -534.3565,
+        "width": 33.377495607070415,
+        "rotation": -67.52789478595946,
+        "depth": 6.6
+      },
+      "houseCount": 7,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "os-row-50",
+      "priorReview": {
+        "id": "os-row-50",
+        "x": 48.398225991912305,
+        "z": -481.49637403854115,
+        "width": 27.26,
+        "rotation": -69.16,
+        "depth": 6.6,
+        "houseCount": 8,
+        "frontStreet": "Bridge Road",
+        "street": "Bridge Road",
+        "frontSign": 1,
+        "group": "district",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32
+      },
+      "priorPublishedRow": {
+        "x": 48.398,
+        "z": -481.496,
+        "width": 27.26,
+        "depth": 6.6,
+        "rotation": -69.16,
+        "footprint": [
+          [
+            56.33110795659932,
+            -469.9317145422235
+          ],
+          [
+            50.16289621122991,
+            -467.5837017943265
+          ],
+          [
+            40.46489204340069,
+            -493.06028545777644
+          ],
+          [
+            46.63310378877009,
+            -495.4082982056735
+          ]
+        ],
+        "sourceSheet": "22",
+        "id": "os-row-50",
+        "street": "Bridge Road",
+        "wallHeight": 6.4,
+        "bays": 8,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "frontageAudit": null,
+        "group": "district",
+        "houseCount": 8,
+        "frontStreet": "Bridge Road",
+        "frontSign": 1,
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "districtReviewed": true,
+        "addedReturn": false,
+        "block": "district-bridge-randal",
+        "sourceCentre": [
+          48.398225991912305,
+          -481.49637403854115
+        ],
+        "frontageShiftM": 0
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          676,
+          1059
+        ],
+        [
+          702,
+          1132
+        ]
+      ],
+      "worldAxis": [
+        [
+          69.396,
+          -491.894
+        ],
+        [
+          79.811,
+          -465.071
+        ]
+      ],
+      "geometry": {
+        "x": 74.6035,
+        "z": -478.4825,
+        "width": 28.774043059674444,
+        "rotation": -68.77949719263832,
+        "depth": 6.6
+      },
+      "houseCount": 6,
+      "classification": "Mapped shaded roof band; perpendicular corner bodies and unshaded gardens excluded."
+    },
+    {
+      "id": "district-leywick-morley-west-west-return",
+      "priorReview": {
+        "id": "district-leywick-morley-west-west-return",
+        "axis": [
+          [
+            77.004,
+            -404.089
+          ],
+          [
+            84.724,
+            -381.994
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6.2,
+        "houseCount": 6,
+        "street": "Bridge Road",
+        "frontStreet": "Bridge Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32,
+        "sourceAxisBeforeStreetFit": [
+          [
+            100.63592348754305,
+            -411.866595851938
+          ],
+          [
+            101.9689833585677,
+            -388.49989348864653
+          ]
+        ],
+        "x": 80.864,
+        "z": -393.04150000000004,
+        "width": 23.4048590040615,
+        "rotation": -70.74056913776153
+      },
+      "priorPublishedRow": {
+        "id": "district-leywick-morley-west-west-return",
+        "axis": [
+          [
+            77.004,
+            -404.089
+          ],
+          [
+            84.724,
+            -381.994
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6.2,
+        "houseCount": 6,
+        "street": "Bridge Road",
+        "frontStreet": "Bridge Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "sourceAxisBeforeStreetFit": [
+          [
+            100.63592348754305,
+            -411.866595851938
+          ],
+          [
+            101.9689833585677,
+            -388.49989348864653
+          ]
+        ],
+        "x": 80.864,
+        "z": -393.042,
+        "width": 23.4048590040615,
+        "rotation": -70.74056913776153,
+        "group": "district",
+        "wallHeight": 6.4,
+        "districtReviewed": true,
+        "sourceSheet": "scene",
+        "addedReturn": true,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "block": "district-leywick-morley-west",
+        "fitAdjustment": {
+          "offsetM": 0,
+          "sourceWidthM": 23.4048590040615,
+          "retainedWidthM": 23.4048590040615
+        },
+        "sourceCentre": [
+          80.864,
+          -393.04150000000004
+        ],
+        "frontSign": 1,
+        "frontageShiftM": 0,
+        "bays": 6,
+        "footprint": [
+          [
+            87.65050769603499,
+            -383.0170227161525
+          ],
+          [
+            81.79749230396502,
+            -380.9719772838475
+          ],
+          [
+            74.07749230396502,
+            -403.06697728384745
+          ],
+          [
+            79.930507696035,
+            -405.11202271615247
+          ]
+        ]
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          689.9806812640886,
+          1296.0104218263602
+        ],
+        [
+          709.0913036623269,
+          1356.078553377601
+        ]
+      ],
+      "worldAxis": [
+        [
+          77.004,
+          -404.08949999999993
+        ],
+        [
+          84.724,
+          -381.9945
+        ]
+      ],
+      "geometry": {
+        "x": 80.864,
+        "z": -393.042,
+        "width": 23.4048590040615,
+        "depth": 6.2,
+        "rotation": -70.74056913776153
+      },
+      "houseCount": 6,
+      "retainedPublishedGeometry": true,
+      "classification": "Preserve the exact previously published perpendicular corner body in the two affected housing blocks. This is bounded preservation of earlier mapped work, not a new mapping claim. All later reviewed roof bodies and carriageways clear these existing shapes; repeating automatic fitting from the original broader axis would change established geometry and fit order."
+    },
+    {
+      "id": "district-leywick-morley-east-east-return",
+      "priorReview": {
+        "id": "district-leywick-morley-east-east-return",
+        "axis": [
+          [
+            322.12,
+            -463.241
+          ],
+          [
+            317.649,
+            -430.456
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6.2,
+        "houseCount": 8,
+        "street": "Warton Road",
+        "frontStreet": "Warton Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32,
+        "sourceAxisBeforeStreetFit": [
+          [
+            248.00025517052984,
+            -473.0084217149147
+          ],
+          [
+            250.22319941251843,
+            -439.99370957762176
+          ]
+        ],
+        "x": 319.8845,
+        "z": -446.8485,
+        "width": 33.08845819919686,
+        "rotation": -97.76571192796263
+      },
+      "priorPublishedRow": {
+        "id": "district-leywick-morley-east-east-return",
+        "axis": [
+          [
+            322.12,
+            -463.241
+          ],
+          [
+            317.649,
+            -430.456
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6.2,
+        "houseCount": 8,
+        "street": "Warton Road",
+        "frontStreet": "Warton Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "sourceAxisBeforeStreetFit": [
+          [
+            248.00025517052984,
+            -473.0084217149147
+          ],
+          [
+            250.22319941251843,
+            -439.99370957762176
+          ]
+        ],
+        "x": 319.885,
+        "z": -446.849,
+        "width": 33.08845819919686,
+        "rotation": -97.76571192796263,
+        "group": "district",
+        "wallHeight": 6.4,
+        "districtReviewed": true,
+        "sourceSheet": "scene",
+        "addedReturn": true,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "block": "district-leywick-morley-east",
+        "fitAdjustment": {
+          "offsetM": 0,
+          "sourceWidthM": 33.08845819919686,
+          "retainedWidthM": 33.08845819919686
+        },
+        "sourceCentre": [
+          319.8845,
+          -446.8485
+        ],
+        "frontSign": -1,
+        "frontageShiftM": 0,
+        "bays": 8,
+        "footprint": [
+          [
+            320.7210695300202,
+            -430.0376197996425
+          ],
+          [
+            314.5779304699798,
+            -430.8753802003575
+          ],
+          [
+            319.0489304699798,
+            -463.66038020035745
+          ],
+          [
+            325.1920695300202,
+            -462.8226197996425
+          ]
+        ]
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          1352.6889209202443,
+          1154.8029016985788
+        ],
+        [
+          1338.2659000541826,
+          1242.7593833054466
+        ]
+      ],
+      "worldAxis": [
+        [
+          322.1205,
+          -463.2415
+        ],
+        [
+          317.6495,
+          -430.4565
+        ]
+      ],
+      "geometry": {
+        "x": 319.885,
+        "z": -446.849,
+        "width": 33.08845819919686,
+        "depth": 6.2,
+        "rotation": -97.76571192796263
+      },
+      "houseCount": 8,
+      "retainedPublishedGeometry": true,
+      "classification": "Preserve the exact previously published perpendicular corner body in the two affected housing blocks. This is bounded preservation of earlier mapped work, not a new mapping claim. All later reviewed roof bodies and carriageways clear these existing shapes; repeating automatic fitting from the original broader axis would change established geometry and fit order."
+    }
+  ],
+  "evidenceImages": [
+    "reference/footprint-model-alignment/east-bridge-road-housing-raw.png",
+    "reference/footprint-model-alignment/east-bridge-road-housing-after.png",
+    "reference/footprint-model-alignment/east-barnby-housing-after.png"
+  ],
+  "suppressedRows": [
+    {
+      "id": "district-leywick-morley-west-east-return",
+      "priorReview": {
+        "id": "district-leywick-morley-west-east-return",
+        "axis": [
+          [
+            160.205,
+            -432.989
+          ],
+          [
+            169.149,
+            -411.929
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6.2,
+        "houseCount": 6,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32,
+        "sourceAxisBeforeStreetFit": [
+          [
+            160.83892183660964,
+            -433.2565722376727
+          ],
+          [
+            170.08198106758078,
+            -412.3260375974187
+          ]
+        ],
+        "x": 164.67700000000002,
+        "z": -422.45899999999995,
+        "width": 22.88053181200122,
+        "rotation": -66.989488063164
+      },
+      "priorPublishedRow": {
+        "id": "district-leywick-morley-west-east-return",
+        "axis": [
+          [
+            160.205,
+            -432.989
+          ],
+          [
+            169.149,
+            -411.929
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6.2,
+        "houseCount": 6,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "sourceAxisBeforeStreetFit": [
+          [
+            160.83892183660964,
+            -433.2565722376727
+          ],
+          [
+            170.08198106758078,
+            -412.3260375974187
+          ]
+        ],
+        "x": 164.677,
+        "z": -422.459,
+        "width": 22.88053181200122,
+        "rotation": -66.989488063164,
+        "group": "district",
+        "wallHeight": 6.4,
+        "districtReviewed": true,
+        "sourceSheet": "scene",
+        "addedReturn": true,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "block": "district-leywick-morley-west",
+        "fitAdjustment": {
+          "offsetM": 0,
+          "sourceWidthM": 22.88053181200122,
+          "retainedWidthM": 22.88053181200122
+        },
+        "sourceCentre": [
+          164.67700000000002,
+          -422.45899999999995
+        ],
+        "frontSign": -1,
+        "frontageShiftM": 0,
+        "bays": 6,
+        "footprint": [
+          [
+            172.00234276914648,
+            -413.14079001553876
+          ],
+          [
+            166.2956572308535,
+            -410.71720998446125
+          ],
+          [
+            157.3516572308535,
+            -431.77720998446125
+          ],
+          [
+            163.0583427691465,
+            -434.20079001553876
+          ]
+        ]
+      },
+      "reason": "The native OS shows one frontage band, already represented by a separate registered row. This second parallel envelope lies in unshaded rear gardens and projections; suppress the duplicate rather than moving it onto the existing frontage."
+    },
+    {
+      "id": "district-rokeby-barnby",
+      "priorReview": {
+        "id": "district-rokeby-barnby",
+        "axis": [
+          [
+            80.56,
+            -618.408
+          ],
+          [
+            89.527,
+            -598.082
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6,
+        "houseCount": 6,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32,
+        "sourceAxisBeforeStreetFit": [
+          [
+            80.12239585947177,
+            -618.2115927952502
+          ],
+          [
+            89.52358796710898,
+            -598.083322948558
+          ]
+        ],
+        "x": 85.0435,
+        "z": -608.245,
+        "width": 22.216060969487838,
+        "rotation": -66.1948892801311
+      },
+      "priorPublishedRow": {
+        "id": "district-rokeby-barnby",
+        "axis": [
+          [
+            80.56,
+            -618.408
+          ],
+          [
+            89.527,
+            -598.082
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6,
+        "houseCount": 6,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "sourceAxisBeforeStreetFit": [
+          [
+            80.12239585947177,
+            -618.2115927952502
+          ],
+          [
+            89.52358796710898,
+            -598.083322948558
+          ]
+        ],
+        "x": 85.043,
+        "z": -608.245,
+        "width": 22.216060969487838,
+        "rotation": -66.1948892801311,
+        "group": "district",
+        "wallHeight": 6.4,
+        "districtReviewed": true,
+        "sourceSheet": "scene",
+        "addedReturn": true,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "block": "district-bridge-barnby",
+        "fitAdjustment": {
+          "offsetM": 0,
+          "sourceWidthM": 22.216060969487838,
+          "retainedWidthM": 22.216060969487838
+        },
+        "sourceCentre": [
+          85.0435,
+          -608.245
+        ],
+        "frontSign": -1,
+        "frontageShiftM": 0,
+        "bays": 6,
+        "footprint": [
+          [
+            92.27127100525377,
+            -599.2928807243978
+          ],
+          [
+            86.78172899474625,
+            -596.8711192756022
+          ],
+          [
+            77.81472899474625,
+            -617.1971192756022
+          ],
+          [
+            83.30427100525377,
+            -619.6188807243979
+          ]
+        ]
+      },
+      "reason": "The native OS shows one frontage band, already represented by a separate registered row. This second parallel envelope lies in unshaded rear gardens and projections; suppress the duplicate rather than moving it onto the existing frontage."
+    },
+    {
+      "id": "district-rokeby-hotham",
+      "priorReview": {
+        "id": "district-rokeby-hotham",
+        "axis": [
+          [
+            101.615,
+            -569.381
+          ],
+          [
+            112.637,
+            -542.507
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6,
+        "houseCount": 7,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32,
+        "sourceAxisBeforeStreetFit": [
+          [
+            101.42707511957927,
+            -569.3040355390651
+          ],
+          [
+            112.65073413786467,
+            -542.5133769277202
+          ]
+        ],
+        "x": 107.126,
+        "z": -555.944,
+        "width": 29.04645176265083,
+        "rotation": -67.69969093018362
+      },
+      "priorPublishedRow": {
+        "id": "district-rokeby-hotham",
+        "axis": [
+          [
+            101.615,
+            -569.381
+          ],
+          [
+            112.637,
+            -542.507
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6,
+        "houseCount": 7,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "sourceAxisBeforeStreetFit": [
+          [
+            101.42707511957927,
+            -569.3040355390651
+          ],
+          [
+            112.65073413786467,
+            -542.5133769277202
+          ]
+        ],
+        "x": 107.126,
+        "z": -555.944,
+        "width": 29.04645176265083,
+        "rotation": -67.69969093018362,
+        "group": "district",
+        "wallHeight": 6.4,
+        "districtReviewed": true,
+        "sourceSheet": "scene",
+        "addedReturn": true,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "block": "district-bridge-hotham",
+        "fitAdjustment": {
+          "offsetM": 0,
+          "sourceWidthM": 29.04645176265083,
+          "retainedWidthM": 29.04645176265083
+        },
+        "sourceCentre": [
+          107.126,
+          -555.944
+        ],
+        "frontSign": -1,
+        "frontageShiftM": 0,
+        "bays": 7,
+        "footprint": [
+          [
+            115.41262301443192,
+            -543.6453834511077
+          ],
+          [
+            109.8613769855681,
+            -541.3686165488922
+          ],
+          [
+            98.8393769855681,
+            -568.2426165488922
+          ],
+          [
+            104.39062301443191,
+            -570.5193834511077
+          ]
+        ]
+      },
+      "reason": "The native OS shows one frontage band, already represented by a separate registered row. This second parallel envelope lies in unshaded rear gardens and projections; suppress the duplicate rather than moving it onto the existing frontage."
+    },
+    {
+      "id": "district-rokeby-randal",
+      "priorReview": {
+        "id": "district-rokeby-randal",
+        "axis": [
+          [
+            125.016,
+            -513.796
+          ],
+          [
+            136.191,
+            -488.835
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6,
+        "houseCount": 7,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 32,
+        "sourceAxisBeforeStreetFit": [
+          [
+            124.69276433361912,
+            -513.649853386994
+          ],
+          [
+            136.18528614962545,
+            -488.8339483001931
+          ]
+        ],
+        "x": 130.6035,
+        "z": -501.31550000000004,
+        "width": 27.34834814024429,
+        "rotation": -65.8820134665157
+      },
+      "priorPublishedRow": {
+        "id": "district-rokeby-randal",
+        "axis": [
+          [
+            125.016,
+            -513.796
+          ],
+          [
+            136.191,
+            -488.835
+          ]
+        ],
+        "sheet": "scene",
+        "depth": 6,
+        "houseCount": 7,
+        "street": "St Thomas Road",
+        "frontStreet": "St Thomas Road",
+        "reviewArea": "northeast",
+        "maxYardDepth": 80,
+        "sourceAxisBeforeStreetFit": [
+          [
+            124.69276433361912,
+            -513.649853386994
+          ],
+          [
+            136.18528614962545,
+            -488.8339483001931
+          ]
+        ],
+        "x": 130.603,
+        "z": -501.316,
+        "width": 27.34834814024429,
+        "rotation": -65.8820134665157,
+        "group": "district",
+        "wallHeight": 6.4,
+        "districtReviewed": true,
+        "sourceSheet": "scene",
+        "addedReturn": true,
+        "evidence": "District housing review from the saved OS VIII.22 and VIII.32 originals, author overview and NLS five-foot map. Block membership and missing street fronts were re-read; house counts, main-body depth, elevations and fit to the scene remain visual estimates.",
+        "block": "district-bridge-randal",
+        "fitAdjustment": {
+          "offsetM": 0,
+          "sourceWidthM": 27.34834814024429,
+          "retainedWidthM": 27.34834814024429
+        },
+        "sourceCentre": [
+          130.6035,
+          -501.31550000000004
+        ],
+        "frontSign": -1,
+        "frontageShiftM": 0,
+        "bays": 7,
+        "footprint": [
+          [
+            138.92861784229143,
+            -490.061351003069
+          ],
+          [
+            133.4523821577086,
+            -487.6096489969309
+          ],
+          [
+            122.27738215770859,
+            -512.5706489969309
+          ],
+          [
+            127.75361784229143,
+            -515.022351003069
+          ]
+        ]
+      },
+      "reason": "The native OS shows one frontage band, already represented by a separate registered row. This second parallel envelope lies in unshaded rear gardens and projections; suppress the duplicate rather than moving it onto the existing frontage."
+    }
+  ],
+  "cornerReconciliations": {
+    "os-row-26-part-1": [
+      "district-leywick-morley-east-west-return"
+    ],
+    "os-row-41-part-1": [
+      "district-barnby-hotham-west-return"
+    ],
+    "os-row-43-part-1": [
+      "os-row-49-part-1",
+      "district-hotham-randal-west-return"
+    ],
+    "os-row-45-part-1": [
+      "os-row-50"
+    ]
+  },
+  "cornerReconciliationEvidence": "Main transverse hatch bands end before the separately represented perpendicular corner roofs. Surviving corners are reviewed or preserved as recorded per row; four explicitly registered garden duplicates are suppressed. No blanket shared-roof overlap exception."
+}

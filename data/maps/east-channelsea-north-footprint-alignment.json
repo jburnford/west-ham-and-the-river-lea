@@ -4571,6 +4571,67 @@
       "heightEvidence": "New estimated 5.5 m eaves; no measured height or fire-insurance storey annotation is available. The OS map supplies plan geometry only.",
       "roofEvidence": "Simple pitched industrial roofs and repeated bays are new modelling interpretations; exact ridge height, pitch, material and internal roof arrangement are not established by the OS plan.",
       "footprintSource": "os-1893-direct-trace"
+    },
+    {
+      "id": "east-north-abbey-south-direct",
+      "siteId": 253,
+      "source": "os-1893",
+      "name": "Abbey Chemical Works \u2014 directly traced southern roof",
+      "worldFootprint": [
+        [
+          47.448,
+          -96.652
+        ],
+        [
+          53.348,
+          -98.744
+        ],
+        [
+          54.045,
+          -97.761
+        ],
+        [
+          65.401,
+          -103.234
+        ],
+        [
+          61.876,
+          -110.936
+        ],
+        [
+          60.077,
+          -115.455
+        ],
+        [
+          56.353,
+          -114.127
+        ],
+        [
+          56.433,
+          -111.195
+        ],
+        [
+          52.059,
+          -111.819
+        ],
+        [
+          42.027,
+          -108.35
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -23.54003926951451,
+      "eavesHeight": 5.0,
+      "roofRise": 1.6683812525625128,
+      "roofAxis": "x",
+      "roofBays": 2,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintEvidence": "Complete diagonally hatched southern Abbey Chemical roof omitted from the supplied building extract. Native wall and hatch review establishes the large enclosing roof, including its small northern projection. Source 831918 is an internal small enclosure or roof symbol, not a substitute for this enclosing exterior. The domestic Abbey Lane frontage and surrounding unshaded yard remain separate. Exterior reviewed against the raw cached OS five-foot map; industrial parcel polygons are never extruded.",
+      "heightEvidence": "New estimated 5 m eaves; no measured height or fire-insurance storey annotation is available. The OS map supplies plan geometry only.",
+      "roofEvidence": "Simple pitched industrial roofs and repeated bays are new modelling interpretations; exact ridge height, pitch, material and internal roof arrangement are not established by the OS plan.",
+      "footprintSource": "os-1893-direct-trace"
     }
   ],
   "groups": [
@@ -18610,6 +18671,68 @@
       "roofEvidence": "Simple pitched industrial roofs and repeated bays are new modelling interpretations; exact ridge height, pitch, material and internal roof arrangement are not established by the OS plan.",
       "footprintSource": "os-1893-direct-trace",
       "modelId": "east-north-hardware-main-direct"
+    },
+    {
+      "id": "east-north-abbey-south-direct",
+      "siteId": 253,
+      "source": "os-1893",
+      "name": "Abbey Chemical Works \u2014 directly traced southern roof",
+      "worldFootprint": [
+        [
+          47.448,
+          -96.652
+        ],
+        [
+          53.348,
+          -98.744
+        ],
+        [
+          54.045,
+          -97.761
+        ],
+        [
+          65.401,
+          -103.234
+        ],
+        [
+          61.876,
+          -110.936
+        ],
+        [
+          60.077,
+          -115.455
+        ],
+        [
+          56.353,
+          -114.127
+        ],
+        [
+          56.433,
+          -111.195
+        ],
+        [
+          52.059,
+          -111.819
+        ],
+        [
+          42.027,
+          -108.35
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -23.54003926951451,
+      "eavesHeight": 5.0,
+      "roofRise": 1.6683812525625128,
+      "roofAxis": "x",
+      "roofBays": 2,
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintEvidence": "Complete diagonally hatched southern Abbey Chemical roof omitted from the supplied building extract. Native wall and hatch review establishes the large enclosing roof, including its small northern projection. Source 831918 is an internal small enclosure or roof symbol, not a substitute for this enclosing exterior. The domestic Abbey Lane frontage and surrounding unshaded yard remain separate. Exterior reviewed against the raw cached OS five-foot map; industrial parcel polygons are never extruded.",
+      "heightEvidence": "New estimated 5 m eaves; no measured height or fire-insurance storey annotation is available. The OS map supplies plan geometry only.",
+      "roofEvidence": "Simple pitched industrial roofs and repeated bays are new modelling interpretations; exact ridge height, pitch, material and internal roof arrangement are not established by the OS plan.",
+      "footprintSource": "os-1893-direct-trace",
+      "modelId": "east-north-abbey-south-direct"
     }
   ],
   "directMapTraces": [
@@ -18722,6 +18845,104 @@
       ],
       "sourceBoundaryReconciliationAreaM2": 17.165089023779778,
       "evidence": "Native pixel grid and raw hatching inspected; this large L-shaped roof has no supplied source exterior. Neighbour source walls control the shared boundaries. No open courtyard polygon or nearest source is substituted."
+    },
+    {
+      "modelId": "east-north-abbey-south-direct",
+      "mosaicBounds": [
+        -120,
+        -350,
+        240,
+        120
+      ],
+      "nativePixels": [
+        [
+          574.3,
+          809.8
+        ],
+        [
+          601.5,
+          801.2
+        ],
+        [
+          613.2,
+          803.2
+        ],
+        [
+          613.2,
+          795.3
+        ],
+        [
+          623.3,
+          792.0
+        ],
+        [
+          627.8,
+          804.3
+        ],
+        [
+          636.7,
+          825.3
+        ],
+        [
+          605.8,
+          839.2
+        ],
+        [
+          604.0,
+          836.5
+        ],
+        [
+          588.0,
+          841.7
+        ]
+      ],
+      "rawWorldFootprint": [
+        [
+          42.02675769128837,
+          -108.35020893200999
+        ],
+        [
+          52.05947929166723,
+          -111.81850858830148
+        ],
+        [
+          56.43289402103983,
+          -111.19543885643361
+        ],
+        [
+          56.35267370613292,
+          -114.12706909509143
+        ],
+        [
+          60.0769706685096,
+          -115.45450263441307
+        ],
+        [
+          61.8761458452791,
+          -110.93588189978618
+        ],
+        [
+          65.40074081660714,
+          -103.23354720772477
+        ],
+        [
+          54.04520111437887,
+          -97.76075145602226
+        ],
+        [
+          53.3480742466636,
+          -98.74437852454139
+        ],
+        [
+          47.44789337180555,
+          -96.65180431614863
+        ]
+      ],
+      "excludedSourceFids": [],
+      "internalSourceSymbols": [
+        831918
+      ],
+      "evidence": "Native OS patch shows continuous diagonal roof hatching inside the enclosing southern roof outline, matching neighbouring source-mapped roofs. The extract contains only small symbol 831918 and omits the enclosing building. The supplied symbol partly crosses the mapped west wall, so its geometry does not control the enclosing exterior. Trace the outside hatch/wall boundary; material, height and roof arrangement remain estimates."
     }
   ],
   "evidenceImages": [
@@ -18742,7 +18963,10 @@
     "reference/footprint-model-alignment/east-channelsea-north-bleach-source.png",
     "reference/footprint-model-alignment/east-channelsea-north-bleach-after.png",
     "reference/footprint-model-alignment/east-channelsea-north-hardware-grid.png",
-    "reference/footprint-model-alignment/east-channelsea-north-brush-water.png"
+    "reference/footprint-model-alignment/east-channelsea-north-brush-water.png",
+    "reference/footprint-model-alignment/east-channelsea-north-abbey-south-grid.png",
+    "reference/footprint-model-alignment/east-channelsea-north-abbey-south-native.png",
+    "reference/footprint-model-alignment/east-channelsea-north-abbey-south-after.png"
   ],
   "openCourtReviews": [
     {
@@ -18812,7 +19036,6 @@
         933151,
         886014,
         905774,
-        831918,
         877726,
         957798,
         664000,

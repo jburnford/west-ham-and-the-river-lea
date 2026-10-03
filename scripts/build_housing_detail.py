@@ -55,6 +55,8 @@ def build():
     original,blocks=mapped_refinement(original)
     from district_housing import apply_review
     original,blocks=apply_review(original,blocks)
+    from east_bridge_housing import apply_review as apply_east_bridge_review, SUPPRESSED_IDS
+    original=apply_east_bridge_review(original)
     rows=[]
     housing=[rect(r) for r in original]+[rect(r) for r in ground['neighbourhood']['houses']]
     factory=unary_union([Polygon(p['outer'],p['holes']) for b in factories['buildings']+frontages['buildings'] for p in b['renderPolygons']])
@@ -70,7 +72,9 @@ def build():
     original=fit_additions(original,landscape.union(unary_union([line.buffer(width/2+.25,cap_style=2,join_style=2) for _,line,width in road_lines])))
     fitted={r['id']:r for r in original}
     for block in load('data/maps/district-housing-review.json')['blocks']:
-        if 'boundary' not in block:blocks['district-'+block['id']]=unary_union([rect(fitted[id]) for id in block['members']]).convex_hull
+        if 'boundary' not in block:
+            assert set(block['members'])-set(fitted)<=SUPPRESSED_IDS
+            blocks['district-'+block['id']]=unary_union([rect(fitted[id]) for id in block['members'] if id in fitted]).convex_hull
     housing=[rect(r) for r in original]+[rect(r) for r in ground['neighbourhood']['houses']]
     for index,row in enumerate(original):
         theta=math.radians(-row['rotation']);u=(math.cos(theta),math.sin(theta));normal=(-u[1],u[0])

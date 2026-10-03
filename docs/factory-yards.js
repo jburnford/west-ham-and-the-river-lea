@@ -44,8 +44,21 @@ export function factoryYards({THREE,scene,materials:m,data,level,box,cylinder,li
     }
     ctx.restore();
   }
+  // OS-mapped open working grids stay on the existing ground surface. Their
+  // boundary appearance is interpreted; no roof or apparatus elevation is
+  // inferred from the empty cells.
+  let workingGrids=0,openWorkingCells=0,workingGridBoundaries=0;
+  for(const grid of yards.workingGrids??[]) {
+    ctx.save();shape([[grid.worldOutline]]);ctx.clip('evenodd');
+    ctx.strokeStyle=grid.lineColour;ctx.lineWidth=grid.lineWidth;
+    ctx.lineJoin='round';ctx.lineCap='butt';
+    for(const divider of grid.dividers){path(divider.points);ctx.stroke();workingGridBoundaries++;}
+    workingGrids++;openWorkingCells+=grid.cells.filter(cell=>cell.open).length;
+    ctx.restore();
+  }
   ctx.save();ctx.strokeStyle='rgba(91,84,69,.34)';ctx.lineWidth=2;ctx.lineCap='round';
-  // Low yard tracks lie on a worn working strip, not a railway embankment.
+  // Ground-level tracks leave a worn strip; connected depot approaches also
+  // have a separately modelled, interpreted formation above this yard surface.
   for(const track of yards.tracks){path(track.points);ctx.stroke();}
   ctx.restore();
   // Let grass intrude into exposed margins with a variable-width feather.
@@ -76,11 +89,17 @@ export function factoryYards({THREE,scene,materials:m,data,level,box,cylinder,li
   const required=new Set(),sampled=new Map();
   const trackRuns=yards.tracks.map(track=>{
     const run=[];
+    const point=(i,t=0)=>{
+      const a=track.points[i],b=track.points[Math.min(i+1,track.points.length-1)];
+      const height=values=>values?values[i]+((values[i+1]??values[i])-values[i])*t:null;
+      return [a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,
+        height(track.formationHeights),height(track.railTopHeights)];
+    };
     for(let i=1;i<track.points.length;i++) {
       const a=track.points[i-1],b=track.points[i],n=Math.ceil(Math.hypot(b[0]-a[0],b[1]-a[1]));
-      for(let j=0;j<n;j++)run.push([a[0]+(b[0]-a[0])*j/n,a[1]+(b[1]-a[1])*j/n]);
+      for(let j=0;j<n;j++)run.push(point(i-1,j/n));
     }
-    run.push(track.points.at(-1));return {run,gauge:track.gauge??1.1,sleeperWidth:track.sleeperWidth??1.8};
+    run.push(point(track.points.length-1));return {run,gauge:track.gauge??1.1,sleeperWidth:track.sleeperWidth??1.8};
   });
   for(const [x,z] of trackRuns.flatMap(track=>track.run)) {
     const ix=Math.floor(x),iz=Math.floor(z);
@@ -96,24 +115,49 @@ export function factoryYards({THREE,scene,materials:m,data,level,box,cylinder,li
     if(required.has(key))sampled.set(key,network[i+1]);
   }
   function stockLevel(x,z) {
+    if(data.mainLandscape?.weight(x,z)>0)return level(x,z);
     const [bx,bz,ex,ez]=data.terrain.bounds;
     if(x>=bx&&x<=ex&&z>=bz&&z<=ez)return level(x,z);
     const ix=Math.floor(x),iz=Math.floor(z),u=x-ix,v=z-iz;
     const at=(dx,dz)=>sampled.get(`${ix+dx},${iz+dz}`)??-.1;
     return (at(0,0)*(1-u)+at(1,0)*u)*(1-v)+(at(0,1)*(1-u)+at(1,1)*u)*v;
   }
-  let trackMetres=0;
+  const earthTriangles=yards.tracks.flatMap(track=>track.formationTriangles??[]);
+  const ballastTriangles=[];
+  function meshTriangles(triangles,material) {
+    if(!triangles.length)return;
+    const geometry=new THREE.BufferGeometry();
+    geometry.setAttribute('position',new THREE.Float32BufferAttribute(triangles.flat(2),3));
+    geometry.computeVertexNormals();
+    const mesh=new THREE.Mesh(geometry,material);mesh.receiveShadow=true;scene.add(mesh);
+  }
+  const formationMaterial=m.ground.clone();formationMaterial.side=THREE.DoubleSide;
+  meshTriangles(earthTriangles,formationMaterial);
+  let trackMetres=0,connectedTrackMetres=0;
   for(const {run,gauge,sleeperWidth} of trackRuns)for(let i=1;i<run.length;i++) {
     const a=run[i-1],b=run[i],dx=b[0]-a[0],dz=b[1]-a[1],length=Math.hypot(dx,dz);
     if(length<.001)continue;
     trackMetres+=length;
     const x=(a[0]+b[0])/2,z=(a[1]+b[1])/2,y=stockLevel(x,z);
-    const sleeper=box(scene,x,y+.01,z,.15,.045,sleeperWidth,m.wood);sleeper.rotation.y=-Math.atan2(dz,dx);
+    const connected=a[3]!==null&&b[3]!==null;
+    const railTop=connected?(a[3]+b[3])/2:y+.12;
+    const sleeper=box(scene,x,connected?railTop-.22:y+.01,z,.15,connected?.15:.045,sleeperWidth,m.wood);
+    sleeper.rotation.y=-Math.atan2(dz,dx);
+    if(connected) {
+      connectedTrackMetres+=length;
+      const edge=(p,side)=>[p[0]-dz/length*side*1.4,p[2]+.18,p[1]+dx/length*side*1.4];
+      const corners=[edge(a,-1),edge(a,1),edge(b,1),edge(b,-1)];
+      ballastTriangles.push([corners[0],corners[1],corners[2]],[corners[0],corners[2],corners[3]]);
+    }
     for(const side of [-1,1]) {
-      const rail=box(scene,x-side*dz/length*gauge/2,y+.055,z+side*dx/length*gauge/2,length+.02,.065,.045,m.iron);
-      rail.rotation.y=-Math.atan2(dz,dx);
+      const rise=connected?b[3]-a[3]:0,depth=connected?.13:.065;
+      const rail=box(scene,x-side*dz/length*gauge/2,railTop-depth,z+side*dx/length*gauge/2,
+        Math.hypot(length,rise)+.02,depth,connected?.09:.045,m.iron);
+      rail.quaternion.setFromUnitVectors(new THREE.Vector3(1,0,0),new THREE.Vector3(dx,rise,dz).normalize());
     }
   }
+  const trackBallast=m.stone.clone();trackBallast.color.set('#69685e');trackBallast.side=THREE.DoubleSide;
+  meshTriangles(ballastTriangles,trackBallast);
   // Fresh sawn timber reads differently from dark wharf planking. Three shared
   // materials keep the individual boards batchable with restrained variation.
   const lumber=['#b9a079','#aa916d','#c7b28b'].map(color=>{
@@ -174,5 +218,7 @@ export function factoryYards({THREE,scene,materials:m,data,level,box,cylinder,li
       }
     }
   }
-  return {...yards.counts,stockGroups:stocks,timberStacks,trackMetres:Math.round(trackMetres),surfaceTriangles:0,atlasSize:canvas.width};
+  return {...yards.counts,stockGroups:stocks,timberStacks,trackMetres:Math.round(trackMetres),
+    connectedTrackMetres:Math.round(connectedTrackMetres),formationTriangles:earthTriangles.length,surfaceTriangles:0,atlasSize:canvas.width,
+    workingGrids,openWorkingCells,workingGridBoundaries};
 }

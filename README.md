@@ -18,7 +18,10 @@ The site has no build step or runtime external requests. Three.js 0.180.0 and it
 
 ## What works
 
-- District exploration: choose **Fly over the district** or select 77 destinations including all 43 factory groups from **Fly to**. WASD or the pad moves, Q/E or Lower/Higher changes height, and the speed selector controls travel speed. Click the expanded map to fly to a location. Home/reset or **Return to the bridge** restores bridge movement. Flight is a viewing tool with no building collisions.
+- [Regional Lower Lea review](docs/lower-lea-region.html): explore the broader river source, 2003 relief, historical height observations and candidate connection gaps from Lea Bridge to the Thames. This is the evidence/terrain preview for extending the 1900 model; the regional relief has not yet been historically corrected or made into a flood simulation.
+- [Flood the 3D landscape](docs/index.html?flood=1): raise a uniform river level over a 1.22 km² test area, compare the dry scene and inspect views of Three Mills and the sewer crossing. Water reaches only connected ground across the modelled banks. This first geometric version omits flow timing, rainfall and drainage; existing interpreted terrain and structure heights are retained.
+- Interactive [flood experiment](docs/flood-demo.html): run a one-hour rising-water, western-surge or rainfall scenario around the c1900 Manor Road drainage crossing; compare a working culvert with a blockage, replay results and download the selected frame. These are controlled experiments on a bounded historical terrain model, not calibrated reconstructions of individual floods. See the [model and validation notes](scenes/channelsea-sewer-panorama/TOPOGRAPHY_RESEARCH.md#interactive-flood-demo).
+- District exploration: choose **Fly over the district** or select 99 destinations including all 63 factory groups from **Fly to**. WASD or the pad moves, Q/E or Lower/Higher changes height, and the speed selector controls travel speed. Click the expanded map to fly to a location. Home/reset or **Return to the bridge** restores bridge movement. Flight is a viewing tool with no building collisions.
 - Bounded bridge movement: WASD or hold the direction buttons; north/south buttons cross the walkway. Drag/arrow keys turn, plus/minus zoom, and Home/reset restores position and view.
 - Six story views: working river, Abbey Mills, Bromley gasworks, homes beside West Ham Gas Works, northern streets and the corn mill.
 - Location map showing the live camera position, movement boundary and horizontal field of view.
@@ -45,9 +48,6 @@ node scripts/check_bridge_movement.mjs # bounds, crest clearance and fixed eye h
 python3 scripts/check_panorama.py       # needs Python Playwright + Chromium; server running
 ```
 
-Browser checks cover view selection, bounded camera movement, keyboard/pointer controls, zoom, map/evidence dialogs, mobile overflow and WebGL failure. Screenshots and the latest report are in [review/](scenes/channelsea-sewer-panorama/review/). These are software-rendered Chromium checks, not a physical-phone performance assessment.
-
-The scene renders on interaction and resize, with a timed animation loop only while movement is held. Static meshes are batched by material. A 512 × 384 reflection pass follows the camera; the directional shadow map is rendered once for the static scene. The latest focused terrain review records 20 main-pass draw calls (about 4.2 million triangles), plus 19 reflection-pass calls. These are separate rendering costs. Terrain data and a generated mud texture add to the local renderer and scene data. Phone and website development are currently deferred at the author’s request.
 `npm test` runs every `scripts/check_*.mjs` and summarises passes and failures (no npm packages are installed; the scripts only need Node).
 
 ## GIS exports
@@ -62,6 +62,9 @@ python3 scripts/export_geopackage.py --verify        # footprints, water, roads 
 
 Scene-Y rasters hold the renderer's vertical unit; the `*-odn.tif` variants add the provisional ODN offset from `terrain-1900.json`, which is a working assumption rather than a survey calibration. `exports/` is ignored by git; regenerate after changing the model data. See [GIS export notes](scenes/channelsea-sewer-panorama/GIS_EXPORTS.md) and the [portability plan](MODEL_PORTABILITY_PLAN.md).
 
+Browser checks cover view selection, bounded camera movement, keyboard/pointer controls, zoom, map/evidence dialogs, mobile overflow and WebGL failure. Screenshots and the latest report are in [review/](scenes/channelsea-sewer-panorama/review/). These are software-rendered Chromium checks, not a physical-phone performance assessment.
+
+The scene renders on interaction and resize, with a timed animation loop only while movement is held. Static meshes are batched by material. A 512 × 384 reflection pass follows the camera; the directional shadow map is rendered once for the static scene. The latest focused terrain review records 20 main-pass draw calls (about 4.2 million triangles), plus 19 reflection-pass calls. These are separate rendering costs. Terrain data and a generated mud texture add to the local renderer and scene data. Phone and website development are currently deferred at the author’s request.
 
 London VIII.32, VIII.22 and VIII.42 have now been inspected. The author’s wider OS screenshot extends housing coverage eastwards. The scene also includes the continuous raised sewer, mapped railway routes, seven factory-range studies, interpreted gardens and Abbey Mill without a windmill. See the local reference ledger. Next research priority: improve sheet registration with multiple control points, identify individual factory buildings in figures 3 and 4, and fit photograph landmarks to the camera. The bridge was rebuilt during 1900–1902; a final scene date must account for that change.
 
@@ -94,6 +97,78 @@ The [completed factory coverage pass](scenes/channelsea-sewer-panorama/FACTORY_B
 The [district street and bridge pass](scenes/channelsea-sewer-panorama/STREETS_AND_BRIDGES.md) adds High Street, Sugar House Lane and connecting streets, with the five pre-1933 High Street crossings. Use **Fly to → Bridges** for close views. Three lane connections remain provisional, and the western Three Mills approach has a documented housing-registration gap.
 
 ## Current modelling checkpoint
+
+A [dated elevation model](scenes/channelsea-sewer-panorama/TOPOGRAPHY_RESEARCH.md)
+now adjusts about 26.9 hectares around Abbey Mills, Mill Mead and
+Plaistow Level using thirteen reviewed 1890s ground observations and three Manor
+Road surface heights, with a provisional ODN reference. Four ground interpolation
+areas and a separate road profile preserve intervening structures; about 16.5
+hectares has full interpolation support. The 1900
+surface keeps source dates, uncertainty and coverage separate; the future 1850
+scenario requires its own observations and period geometry. The principal flood
+cases are 1888, 1897, 1904 and 1928, before the major 1930s works; 1898 is a
+secondary rainfall case. Absolute Three Mills flood levels remain unresolved. Use
+`?terrainEpoch=baseline` to compare the earlier inferred terrain. Rebuild the
+overlay with `python3 scripts/build_historic_elevation.py` after changing its
+terrain/infrastructure inputs, then regenerate the scene manifest.
+
+The 1900 terrain also includes about 206 m of the mapped Plaistow drain east of
+Manor Road. Source traces and four sluice locations are retained in
+`data/maps/historic-drainage-1900.json`. Its bed and standing-water levels are
+explicit assumptions; the possible railway/road culvert is not an enabled
+flood connection. Run `python3 scripts/check_historic_drainage.py` alongside
+the elevation checks and `python3 -u scripts/review_historic_elevation.py --drainage-only`
+for the baseline, revised-ground and tide comparison.
+
+The [drainage connection review](docs/drainage-connections.html) compares five
+possible connection/gate scenarios without calculating flood levels or flows.
+The candidate crossing is about 45 m long and intersects two railway routes.
+About 182 m of Manor Road is now restored at the crossing, profiled from three
+1890s road spot heights (6.6, 6.2 and 6.5 feet). Its local ground and adjoining
+railway alignment have been adjusted together. Railway formation height and
+culvert dimensions remain provisional; east-to-west passage is the preferred
+connection scenario, with blockage and reverse flow retained for comparison.
+Rebuild this review with `python3 scripts/build_drainage_connections.py`, check
+it with `node scripts/check_drainage_connections.mjs`, and use the terrain
+browser review's `--connections-only` option to exercise the interactive page.
+Use `--manor-only` for the road/railway views, and run
+`python3 scripts/check_manor_road.py` plus `node scripts/check_manor_road.mjs`
+to check source heights, ground contact, railway clearance and epoch isolation.
+The same review now includes four provisional culvert sections, with road-cover
+checks and a deeper alternative requiring approach-channel excavation. Its working
+opening is 0.9 m wide by 0.6 m high; these dimensions are assumptions. A mapped
+road-over-rail bridge farther south exposes a conflict in the inherited constant
+railway height, so that formation must be revised before hydraulic use. Run
+`node scripts/check_culvert_section.mjs` to check the section scenarios.
+
+The eastern strip between Channelsea and the Woolwich railway now has 137
+individually reviewed roof ranges across twenty additional factory/context sites.
+These replace the repeated sketch blocks and rough frontage envelopes with OS
+exteriors, including three roofs traced directly where the supplied extract was
+incomplete. Open courts remain open. The district now has 681 ranges at 63 sites;
+627 ranges use supplied footprints and sixteen use direct map traces.
+New eaves, storeys and gables are explicit estimates; this pass does not assert
+fire-insurance coverage. Use **Fly to → Channelsea — eastern works and market**.
+The next context pass adds the mapped open ground at Stratford, Caledonian and
+Halling wharves, preserving the earlier yards and their stock. Victoria Stone
+Works now has its twenty open working cells marked on the ground; their exact
+apparatus and construction remain unresolved.
+
+The supplied GIS railway layer also exposed the missing northwest connection.
+That route now joins the Woolwich branch through the mapped Stratford low-level
+underpass, with interpreted heights and a short continuation of the Great Eastern
+main line. The eleven depot sidings share three complete throat segments with
+matched rail heights. Use **Fly to → Stratford — northern railway connections**.
+Junction layout is checked against the large-scale OS sheets; the GIS supplies
+the broad routes. A closer station review corrects the running pair past
+Stratford Market's covered structures and preserves the mapped booking-bridge
+crossing, with earth slopes kept clear of the station bodies.
+The paired street review also corrects eighteen housing roof bands and removes
+four duplicate envelopes drawn over rear gardens. Housing heights and household
+counts remain estimates.
+The detailed source and validation record is in
+[FOOTPRINT_ALIGNMENT.md](scenes/channelsea-sewer-panorama/FOOTPRINT_ALIGNMENT.md).
+
 
 The regional plan layer now covers historic West Ham plus a 3 km buffer, while
 existing 3D buildings are progressively matched to the supplied footprints.

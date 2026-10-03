@@ -1,0 +1,7163 @@
+[
+  {
+    "id": "sh_537573_185570",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 16.8,
+    "heightODNMetres": 4.7244,
+    "positionBNG": [
+      537571.73,
+      185569.67
+    ],
+    "usedInMappedLayer": true,
+    "notes": "east bank of the Lea at the ditch junction; dot above figures, 8x"
+  },
+  {
+    "id": "sh_537448_185530",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.6,
+    "heightODNMetres": 4.66344,
+    "positionBNG": [
+      537447.56,
+      185530.48
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Templemills Road east of the embankment hatching; dot left of figures, 8x"
+  },
+  {
+    "id": "sh_537648_185504",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.4,
+    "heightODNMetres": 4.60248,
+    "positionBNG": [
+      537657.6,
+      185504.81
+    ],
+    "usedInMappedLayer": false,
+    "notes": "bank between the two channels east of the bridge (C.D.); dot left of figures, 8x"
+  },
+  {
+    "id": "sh_537519_185495",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.8,
+    "heightODNMetres": 4.4196,
+    "positionBNG": [
+      537519.24,
+      185494.56
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Templemills Road west of Templemills Bridge; dot below-right of figures, 8x"
+  },
+  {
+    "id": "sh_537596_185408",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 16.9,
+    "heightODNMetres": 4.75488,
+    "positionBNG": [
+      537596.41,
+      185407.57
+    ],
+    "usedInMappedLayer": false,
+    "notes": "yard of the cottages south of Templemills Bridge; dot above-right of figures at a fence corner, 8x"
+  },
+  {
+    "id": "sh_537854_185282",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.4,
+    "heightODNMetres": 3.99288,
+    "positionBNG": [
+      537853.65,
+      185282.02
+    ],
+    "usedInMappedLayer": false,
+    "notes": "track south of the embanked channel; dot above figures, 8x"
+  },
+  {
+    "id": "sh_537773_185267",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.1,
+    "heightODNMetres": 4.20624,
+    "positionBNG": [
+      537773.29,
+      185266.85
+    ],
+    "usedInMappedLayer": false,
+    "notes": "track south of the embanked channel; dot above-left of figures, 8x"
+  },
+  {
+    "id": "sh_537674_185070",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 17.8,
+    "heightODNMetres": 5.0292,
+    "positionBNG": [
+      537673.11,
+      185070.16
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Waterworks River east embankment; dot in the bank hatching left of figures; 7x"
+  },
+  {
+    "id": "sh_538206_185009",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 16.3,
+    "heightODNMetres": 4.572,
+    "positionBNG": [
+      538206.11,
+      185008.73
+    ],
+    "usedInMappedLayer": false,
+    "notes": "High Meads Loop; figures at 800,312 outside the hatching; dot on the rails at 769,296"
+  },
+  {
+    "id": "sh_538147_184956",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 15.9,
+    "heightODNMetres": 4.45008,
+    "positionBNG": [
+      538147.24,
+      184956.27
+    ],
+    "usedInMappedLayer": false,
+    "notes": "G.E.R. High Meads Loop embankment; figures NW of the rails at 570-585,420; isolated dot on the rails at 607,433; confirmed at 6x"
+  },
+  {
+    "id": "sh_537095_184901",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 22.6,
+    "heightODNMetres": 6.49224,
+    "positionBNG": [
+      537095.0,
+      184901.0
+    ],
+    "usedInMappedLayer": true,
+    "notes": "road/fence beside the railway (Victoria Park line) at the west side; dot above-right of figures"
+  },
+  {
+    "id": "sh_538084_184900",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 15.7,
+    "heightODNMetres": 4.38912,
+    "positionBNG": [
+      538083.99,
+      184900.34
+    ],
+    "usedInMappedLayer": false,
+    "notes": "High Meads Loop by 'HIGH'; figures at 455,587; dot on the rails at 433,579; confirmed at 6x"
+  },
+  {
+    "id": "sh_537146_184841",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 21.4,
+    "heightODNMetres": 6.12648,
+    "positionBNG": [
+      537145.75,
+      184841.12
+    ],
+    "usedInMappedLayer": true,
+    "notes": "track beside the railway, south of the marsh; dot above-right of figures"
+  },
+  {
+    "id": "sh_537655_184828",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 15.2,
+    "heightODNMetres": 4.23672,
+    "positionBNG": [
+      537654.72,
+      184828.72
+    ],
+    "usedInMappedLayer": true,
+    "notes": "west bank of Waterworks River just below the py ~737 sheet join; dot on the bank line left of figures, 8x"
+  },
+  {
+    "id": "sh_537968_184799",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 15.8,
+    "heightODNMetres": 4.4196,
+    "positionBNG": [
+      537967.64,
+      184799.07
+    ],
+    "usedInMappedLayer": false,
+    "notes": "beside the G.E.R. south of High Meads Junction (same figure as m18_131063_87125 at 113,76 there); digits clear at 6-8x; figures written outside the embankment hatching with the survey dot on the rails (the standard railway pattern, also seen on m18_131063_87122); position = that dot"
+  },
+  {
+    "id": "sh_537196_184782",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 21.5,
+    "heightODNMetres": 6.15696,
+    "positionBNG": [
+      537195.91,
+      184782.52
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Hackney Cut west towing path; dot left of figures; last digit 5 at 14x"
+  },
+  {
+    "id": "sh_537906_184747",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 15.7,
+    "heightODNMetres": 4.38912,
+    "positionBNG": [
+      537905.78,
+      184746.62
+    ],
+    "usedInMappedLayer": false,
+    "notes": "G.E.R. High Meads Loop; digits clear at 6-8x; figures written outside the embankment hatching with the survey dot on the rails (the standard railway pattern, also seen on m18_131063_87122); position = that dot"
+  },
+  {
+    "id": "sh_537676_184686",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 14.8,
+    "heightODNMetres": 4.1148,
+    "positionBNG": [
+      537675.53,
+      184686.04
+    ],
+    "usedInMappedLayer": true,
+    "notes": "bank by the Waterworks River, east of the county boundary; dot below-left of figures at 6x"
+  },
+  {
+    "id": "sh_537863_184678",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 16.5,
+    "heightODNMetres": 4.63296,
+    "positionBNG": [
+      537863.34,
+      184678.27
+    ],
+    "usedInMappedLayer": false,
+    "notes": "G.E.R. High Meads Loop; digits clear at 6-8x; figures written outside the embankment hatching with the survey dot on the rails (the standard railway pattern, also seen on m18_131063_87122); position = that dot"
+  },
+  {
+    "id": "sh_537805_184616",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 16.8,
+    "heightODNMetres": 4.7244,
+    "positionBNG": [
+      537805.48,
+      184615.81
+    ],
+    "usedInMappedLayer": false,
+    "notes": "on the G.E.R. line east of Lea Junction; dot upper-left of the figures on the rails"
+  },
+  {
+    "id": "sh_537684_184605",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 14.7,
+    "heightODNMetres": 4.08432,
+    "positionBNG": [
+      537684.05,
+      184605.22
+    ],
+    "usedInMappedLayer": true,
+    "notes": "bank of the Waterworks River by 'C.C. at L.W.'; dot above-left of figures at 6x"
+  },
+  {
+    "id": "sh_537734_184580",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 16.6,
+    "heightODNMetres": 4.66344,
+    "positionBNG": [
+      537733.75,
+      184579.83
+    ],
+    "usedInMappedLayer": false,
+    "notes": "on railway lines at Lea Junction; dot above figures on the rail, 8x"
+  },
+  {
+    "id": "sh_538134_184535",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 16.8,
+    "heightODNMetres": 4.7244,
+    "positionBNG": [
+      538133.77,
+      184534.89
+    ],
+    "usedInMappedLayer": true,
+    "notes": "north river bank where the wall bends SE; dot left of figures, confirmed at 6x"
+  },
+  {
+    "id": "sh_538054_184534",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 17.2,
+    "heightODNMetres": 4.84632,
+    "positionBNG": [
+      538054.13,
+      184533.83
+    ],
+    "usedInMappedLayer": true,
+    "notes": "north river bank below the B.M.; dot left of figures, confirmed at 6x"
+  },
+  {
+    "id": "sh_537906_184533",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 17.1,
+    "heightODNMetres": 4.81584,
+    "positionBNG": [
+      537905.52,
+      184532.64
+    ],
+    "usedInMappedLayer": true,
+    "notes": "dot on top of the Channel Sea bank (within the hatching), figures below-left, 6x"
+  },
+  {
+    "id": "sh_537107_184529",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.9,
+    "heightODNMetres": 4.45008,
+    "positionBNG": [
+      537106.54,
+      184528.82
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same road in front of Tallow Works; isolated dot 5 px left of the figure; 5 flat-topped, 9 with one upper counter in raw pixels"
+  },
+  {
+    "id": "sh_538208_184504",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 16.9,
+    "heightODNMetres": 4.75488,
+    "positionBNG": [
+      538208.32,
+      184503.87
+    ],
+    "usedInMappedLayer": true,
+    "notes": "north bank of the river further SE, on the hatched bank; dot upper-left of figures; final 9 confirmed at 8x"
+  },
+  {
+    "id": "sh_537161_184474",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.1,
+    "heightODNMetres": 4.51104,
+    "positionBNG": [
+      537161.29,
+      184474.36
+    ],
+    "usedInMappedLayer": false,
+    "notes": "overlap strip with 87128: junction at the east end of White Post Lane by Davey Road; isolated dot above-left"
+  },
+  {
+    "id": "sh_537664_184398",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 17.4,
+    "heightODNMetres": 4.90728,
+    "positionBNG": [
+      537663.407,
+      184398.659
+    ],
+    "usedInMappedLayer": true,
+    "notes": "dot on the crest of the western embankment of the channel, 6x (overlap)"
+  },
+  {
+    "id": "sh_537941_184394",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.8,
+    "heightODNMetres": 4.4196,
+    "positionBNG": [
+      537940.79,
+      184394.49
+    ],
+    "usedInMappedLayer": false,
+    "notes": "north end of Carpenter's Road by the signal box; dot left of figures; confirmed at 6x"
+  },
+  {
+    "id": "sh_537195_184352",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 21.8,
+    "heightODNMetres": 6.2484,
+    "positionBNG": [
+      537195.43,
+      184352.39
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Hertford Union Canal north towing path; dot above figures"
+  },
+  {
+    "id": "sh_537624_184335",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 18.6,
+    "heightODNMetres": 5.27304,
+    "positionBNG": [
+      537624.17,
+      184335.59
+    ],
+    "usedInMappedLayer": true,
+    "notes": "dot on the crest of the embankment south of the 'C.C. at L.W.' boundary, figures right, 6x"
+  },
+  {
+    "id": "sh_537374_184324",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 22.6,
+    "heightODNMetres": 6.49224,
+    "positionBNG": [
+      537374.5,
+      184324.31
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Hackney Cut east towing path; dot left of figures, 'h' of Path below"
+  },
+  {
+    "id": "sh_538062_184289",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 13.1,
+    "heightODNMetres": 3.59664,
+    "positionBNG": [
+      538062.28,
+      184289.01
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Carpenter's Road; dot in the carriageway just left of the E of CARPENTER'S, SW of the figures"
+  },
+  {
+    "id": "sh_537581_184283",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 19.1,
+    "heightODNMetres": 5.42544,
+    "positionBNG": [
+      537581.47,
+      184283.38
+    ],
+    "usedInMappedLayer": true,
+    "notes": "dot at the crest of the embankment hatching, figures right, 10x"
+  },
+  {
+    "id": "sh_537740_184274",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 16.7,
+    "heightODNMetres": 4.69392,
+    "positionBNG": [
+      537739.758,
+      184273.748
+    ],
+    "usedInMappedLayer": true,
+    "notes": "dot on the embankment, figures to the right ending ~2 px inside the east edge, 6x (overlap)"
+  },
+  {
+    "id": "sh_538137_184254",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 12.7,
+    "heightODNMetres": 3.47472,
+    "positionBNG": [
+      538137.32,
+      184253.73
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Carpenter's Road opposite the Goods Depot; dot between the R and O of ROAD, above the figures"
+  },
+  {
+    "id": "sh_537385_184245",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 22.6,
+    "heightODNMetres": 6.49224,
+    "positionBNG": [
+      537385.34,
+      184244.78
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Hackney Cut east towing path; dot left of figures"
+  },
+  {
+    "id": "sh_538462_184223",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 12.5,
+    "heightODNMetres": 3.41376,
+    "positionBNG": [
+      538461.66,
+      184222.84
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road south of the Woolwich Branch; dot below-left of figures at 8x (the F.P below has its own dot at 636,902)"
+  },
+  {
+    "id": "sh_537519_184158",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 17.2,
+    "heightODNMetres": 4.84632,
+    "positionBNG": [
+      537518.8,
+      184157.85
+    ],
+    "usedInMappedLayer": true,
+    "notes": "dot on the embankment crest near the south edge, figures right, 6x"
+  },
+  {
+    "id": "sh_537381_184152",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 22.3,
+    "heightODNMetres": 6.4008,
+    "positionBNG": [
+      537380.79,
+      184152.45
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Hackney Cut east towing path near the south edge (figure whole); dot left of figures"
+  },
+  {
+    "id": "sh_537845_184152",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 16.5,
+    "heightODNMetres": 4.63296,
+    "positionBNG": [
+      537844.51,
+      184151.65
+    ],
+    "usedInMappedLayer": true,
+    "notes": "dot on the embankment crest, figures right, 10x"
+  },
+  {
+    "id": "sh_538171_184147",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 12.8,
+    "heightODNMetres": 3.5052,
+    "positionBNG": [
+      538171.13,
+      184146.79
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road between Chemical Works and Hudson Bay Works; dot above-right of figures at 6x"
+  },
+  {
+    "id": "sh_538145_184082",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 13.3,
+    "heightODNMetres": 3.6576,
+    "positionBNG": [
+      538144.98,
+      184081.84
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Warton Road by the Oil & Chemical Works; dot above-right of figures at 6x (F.P dot at 519,520 not used)"
+  },
+  {
+    "id": "sh_537840_184078",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 13.2,
+    "heightODNMetres": 3.62712,
+    "positionBNG": [
+      537840.19,
+      184078.01
+    ],
+    "usedInMappedLayer": true,
+    "notes": "dot at the crest of the east embankment, figures right, 10x"
+  },
+  {
+    "id": "sh_538302_184060",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 13.4,
+    "heightODNMetres": 3.68808,
+    "positionBNG": [
+      538301.92,
+      184060.31
+    ],
+    "usedInMappedLayer": false,
+    "notes": "yard/road east of the railway by the London Spinning Mills; dot left of figures at 6x"
+  },
+  {
+    "id": "sh_538340_184016",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 13.6,
+    "heightODNMetres": 3.74904,
+    "positionBNG": [
+      538339.62,
+      184015.85
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Carpenter's Road footway; dot above-left, 10x"
+  },
+  {
+    "id": "sh_538143_184013",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.7,
+    "heightODNMetres": 4.08432,
+    "positionBNG": [
+      538143.11,
+      184013.47
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Warton Road by the Varnish Works; dot above-left of figures at 6x"
+  },
+  {
+    "id": "sh_537431_183971",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 17.1,
+    "heightODNMetres": 4.81584,
+    "positionBNG": [
+      537430.96,
+      183971.49
+    ],
+    "usedInMappedLayer": true,
+    "notes": "east of the Cut, by the bridge/culvert where the embanked path crosses the ditch; dot left of figures, 8x"
+  },
+  {
+    "id": "sh_538381_183956",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 13.9,
+    "heightODNMetres": 3.84048,
+    "positionBNG": [
+      538380.52,
+      183956.07
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Carpenters Road by the Mission Ch.; dot below-left of figures at 8x (the dot at 404,57 is the E\u00b7N interpunct of C\u00b7A\u00b7R\u00b7P\u00b7E\u00b7N\u00b7T\u00b7E\u00b7R'S, not used)"
+  },
+  {
+    "id": "sh_538420_183923",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.0,
+    "heightODNMetres": 3.87096,
+    "positionBNG": [
+      538420.09,
+      183922.61
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Carpenter's Road; dot above-right of the figures, 10x"
+  },
+  {
+    "id": "sh_538222_183879",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.3,
+    "heightODNMetres": 3.9624,
+    "positionBNG": [
+      538222.35,
+      183878.98
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Warton Road south of the railway; dot below-left of figures"
+  },
+  {
+    "id": "sh_538470_183866",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.4,
+    "heightODNMetres": 3.99288,
+    "positionBNG": [
+      538470.28,
+      183865.87
+    ],
+    "usedInMappedLayer": false,
+    "notes": "junction by the Baptist Chapel; dot above-left"
+  },
+  {
+    "id": "sh_538554_183857",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 18.3,
+    "heightODNMetres": 5.1816,
+    "positionBNG": [
+      538553.92,
+      183856.83
+    ],
+    "usedInMappedLayer": false,
+    "notes": "High Street tramway; dot on the rail left of figures at 6x (F.P dot at 856,370 not used)"
+  },
+  {
+    "id": "sh_537851_183856",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 16.7,
+    "heightODNMetres": 4.69392,
+    "positionBNG": [
+      537851.06,
+      183855.7
+    ],
+    "usedInMappedLayer": true,
+    "notes": "east bank of the City Mill River (bank top); dot/tick on the bank left of figure"
+  },
+  {
+    "id": "sh_537685_183831",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 13.9,
+    "heightODNMetres": 3.84048,
+    "positionBNG": [
+      537684.56,
+      183831.32
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Marshgate Lane at its west end; dot left of figure, clear of the lane lettering"
+  },
+  {
+    "id": "sh_538289_183828",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.1,
+    "heightODNMetres": 3.90144,
+    "positionBNG": [
+      538288.9,
+      183827.57
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road junction by Biggerstaff Street; dot above-left of figures"
+  },
+  {
+    "id": "sh_537427_183821",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 33.6,
+    "heightODNMetres": 9.84504,
+    "positionBNG": [
+      537427.11,
+      183820.38
+    ],
+    "usedInMappedLayer": false,
+    "notes": "crest of the Northern Outfall Sewer bank east of the Lea, between the hatched slopes; dot above-right of the figure; both 3s identical at 9x"
+  },
+  {
+    "id": "sh_538602_183806",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 9.9,
+    "heightODNMetres": 2.62128,
+    "positionBNG": [
+      538601.84,
+      183806.27
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Channel Sea side, by the School; dot below-left"
+  },
+  {
+    "id": "sh_537504_183799",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 33.7,
+    "heightODNMetres": 9.87552,
+    "positionBNG": [
+      537504.12,
+      183799.32
+    ],
+    "usedInMappedLayer": false,
+    "notes": "railway embankment top east of the bridge; dot above-left of figure"
+  },
+  {
+    "id": "sh_538331_183797",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.5,
+    "heightODNMetres": 4.02336,
+    "positionBNG": [
+      538330.68,
+      183797.27
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road south of Preston Road; dot above-left; cut by the east edge of m18_131063_87134"
+  },
+  {
+    "id": "sh_537900_183795",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 13.0,
+    "heightODNMetres": 3.56616,
+    "positionBNG": [
+      537899.61,
+      183795.2
+    ],
+    "usedInMappedLayer": true,
+    "notes": "east bank of City Mill River (marsh side); dot left of figures on the bank"
+  },
+  {
+    "id": "sh_538371_183765",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.3,
+    "heightODNMetres": 3.9624,
+    "positionBNG": [
+      538370.64,
+      183765.49
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road at Robertson Road corner; dot above-left"
+  },
+  {
+    "id": "sh_538470_183755",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.3,
+    "heightODNMetres": 4.572,
+    "positionBNG": [
+      538469.76,
+      183755.2
+    ],
+    "usedInMappedLayer": false,
+    "notes": "High Street tramway at West Street; dot between the rails above-left of figures at 6x (F.P dots below not used)"
+  },
+  {
+    "id": "sh_537958_183741",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 17.1,
+    "heightODNMetres": 4.81584,
+    "positionBNG": [
+      537957.56,
+      183740.58
+    ],
+    "usedInMappedLayer": true,
+    "notes": "City Mill River bank top by the GER; dot/tick left of figures on the bank line"
+  },
+  {
+    "id": "sh_537765_183699",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 17.0,
+    "heightODNMetres": 4.78536,
+    "positionBNG": [
+      537765.23,
+      183698.71
+    ],
+    "usedInMappedLayer": true,
+    "notes": "path/bank east of the viaduct; dot above-right; clear at 8x"
+  },
+  {
+    "id": "sh_538065_183665",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 11.6,
+    "heightODNMetres": 3.13944,
+    "positionBNG": [
+      538065.47,
+      183665.28
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Northern Outfall Sewer embankment path near its west end; dot right of figures; same mark appears at 293,64 in m18_131063_87137"
+  },
+  {
+    "id": "sh_538530_183620",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.0,
+    "heightODNMetres": 4.17576,
+    "positionBNG": [
+      538529.93,
+      183619.93
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Union Street junction; dot above-left"
+  },
+  {
+    "id": "sh_538420_183584",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 20.1,
+    "heightODNMetres": 5.73024,
+    "positionBNG": [
+      538419.52,
+      183583.94
+    ],
+    "usedInMappedLayer": false,
+    "notes": "open space north of Livingstone Road"
+  },
+  {
+    "id": "sh_538571_183561",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 9.4,
+    "heightODNMetres": 2.46888,
+    "positionBNG": [
+      538570.56,
+      183561.14
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Stanley Road south end"
+  },
+  {
+    "id": "sh_538145_183543",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.3,
+    "heightODNMetres": 4.572,
+    "positionBNG": [
+      538145.48,
+      183543.43
+    ],
+    "usedInMappedLayer": false,
+    "notes": "lane east of Marshgate Lane Works; dot left of figures"
+  },
+  {
+    "id": "sh_538554_183488",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.6,
+    "heightODNMetres": 2.22504,
+    "positionBNG": [
+      538553.94,
+      183487.71
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Livingstone Road south side at Stanley Road"
+  },
+  {
+    "id": "sh_538181_183479",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 16.0,
+    "heightODNMetres": 4.48056,
+    "positionBNG": [
+      538181.48,
+      183479.05
+    ],
+    "usedInMappedLayer": true,
+    "notes": "yard at City Mills; dot left of figures"
+  },
+  {
+    "id": "sh_538333_183472",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 12.5,
+    "heightODNMetres": 3.41376,
+    "positionBNG": [
+      538332.65,
+      183472.21
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road east of the school; dot above-left"
+  },
+  {
+    "id": "sh_537982_183457",
+    "family": "bank-or-embankment",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.2,
+    "heightODNMetres": 4.54152,
+    "positionBNG": [
+      537981.78,
+      183456.91
+    ],
+    "usedInMappedLayer": false,
+    "notes": "the lane opposite the Brush & Fibre Works; survey dot 18 px east of the figure across the lane edge line, separate from the hydrant dot (\u00b7H at 822,628)"
+  },
+  {
+    "id": "sh_538382_183446",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 10.8,
+    "heightODNMetres": 2.8956,
+    "positionBNG": [
+      538381.57,
+      183446.25
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Roberts Road / Napier Road"
+  },
+  {
+    "id": "sh_538165_183446",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 16.3,
+    "heightODNMetres": 4.572,
+    "positionBNG": [
+      538165.26,
+      183445.93
+    ],
+    "usedInMappedLayer": true,
+    "notes": "yard south of City Mills; dot left of figures"
+  },
+  {
+    "id": "sh_538012_183391",
+    "family": "bank-or-embankment",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.5,
+    "heightODNMetres": 4.63296,
+    "positionBNG": [
+      538012.37,
+      183391.49
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Marshgate Lane at the south corner of St Thomas's Mills; dot 10 px NW of the figure, inside the dotted footway edge; 5 flat-topped"
+  },
+  {
+    "id": "sh_538491_183382",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 10.3,
+    "heightODNMetres": 2.7432,
+    "positionBNG": [
+      538491.29,
+      183382.21
+    ],
+    "usedInMappedLayer": false,
+    "notes": "duplicate"
+  },
+  {
+    "id": "sh_538551_183371",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.9,
+    "heightODNMetres": 2.31648,
+    "positionBNG": [
+      538551.17,
+      183371.03
+    ],
+    "usedInMappedLayer": false,
+    "notes": "duplicate"
+  },
+  {
+    "id": "sh_538161_183355",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 17.4,
+    "heightODNMetres": 4.90728,
+    "positionBNG": [
+      538161.04,
+      183354.83
+    ],
+    "usedInMappedLayer": false,
+    "notes": "High Street east of Pegs Hole Bridge"
+  },
+  {
+    "id": "sh_538797_183347",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 9.5,
+    "heightODNMetres": 2.49936,
+    "positionBNG": [
+      538796.83,
+      183346.73
+    ],
+    "usedInMappedLayer": false,
+    "notes": "duplicate"
+  },
+  {
+    "id": "sh_538055_183341",
+    "family": "bank-or-embankment",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 17.8,
+    "heightODNMetres": 5.0292,
+    "positionBNG": [
+      538054.04,
+      183337.96
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Marshgate Lane"
+  },
+  {
+    "id": "sh_538573_183321",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.6,
+    "heightODNMetres": 2.22504,
+    "positionBNG": [
+      538573.21,
+      183320.75
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Abbey Lane; duplicate of m18_131069_87140 (overlap column)"
+  },
+  {
+    "id": "sh_538644_183320",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.0,
+    "heightODNMetres": 2.04216,
+    "positionBNG": [
+      538644.16,
+      183320.09
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Abbey Lane; dot confirmed at 4x"
+  },
+  {
+    "id": "sh_538996_183304",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.6,
+    "heightODNMetres": 4.66344,
+    "positionBNG": [
+      538996.07,
+      183304.46
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Abbey Road at the foot of the bridge road junction; separate dot left of the figures, 8x"
+  },
+  {
+    "id": "sh_538078_183283",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.0,
+    "heightODNMetres": 4.48056,
+    "positionBNG": [
+      538077.73,
+      183282.75
+    ],
+    "usedInMappedLayer": false,
+    "notes": "High Street by P.H./P.O."
+  },
+  {
+    "id": "sh_538944_183274",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.2,
+    "heightODNMetres": 4.23672,
+    "positionBNG": [
+      538944.03,
+      183274.07
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Abbey Road east of Abbey Mill; separate dot left of the figures, 8x"
+  },
+  {
+    "id": "sh_538874_183253",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.5,
+    "heightODNMetres": 4.02336,
+    "positionBNG": [
+      538874.06,
+      183252.65
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Abbey Road west of the Abbey Mill bridge, by the Highest Point to which the O.T. flow; separate dot above the figures, 8x"
+  },
+  {
+    "id": "sh_539019_183171",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 31.6,
+    "heightODNMetres": 9.23544,
+    "positionBNG": [
+      539019.46,
+      183171.03
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Northern Outfall Sewer crest where the lane meets it, west of Stirling Chemical Works; separate dot above-left of the figures, 8x"
+  },
+  {
+    "id": "sh_538858_183162",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 18.9,
+    "heightODNMetres": 5.36448,
+    "positionBNG": [
+      538858.47,
+      183162.17
+    ],
+    "usedInMappedLayer": true,
+    "notes": "embankment path; the dot is RIGHT of the figures here (4x check)"
+  },
+  {
+    "id": "sh_539092_183155",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 31.4,
+    "heightODNMetres": 9.17448,
+    "positionBNG": [
+      539092.5,
+      183155.2
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Northern Outfall Sewer crest south of Stirling Chemical Works; separate dot above-left of the figures, 8x"
+  },
+  {
+    "id": "sh_539184_183135",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 31.7,
+    "heightODNMetres": 9.26592,
+    "positionBNG": [
+      539184.21,
+      183134.77
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Northern Outfall Sewer crest east of Manor Road; separate dot left of the figures, 8x"
+  },
+  {
+    "id": "sh_538851_183132",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 17.4,
+    "heightODNMetres": 4.90728,
+    "positionBNG": [
+      538850.73,
+      183132.0
+    ],
+    "usedInMappedLayer": true,
+    "notes": "embankment west of Channelsea"
+  },
+  {
+    "id": "sh_539012_183113",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 22.4,
+    "heightODNMetres": 6.43128,
+    "positionBNG": [
+      539012.3,
+      183112.9
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road on the hatched bank west of Phoenix Black Works; dot right of figure beside the road edge; 8x"
+  },
+  {
+    "id": "sh_538999_183042",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.2,
+    "heightODNMetres": 3.93192,
+    "positionBNG": [
+      538999.17,
+      183041.6
+    ],
+    "usedInMappedLayer": true,
+    "notes": "lane south of the Printing Ink Works by the W.M.; dot above; 8x"
+  },
+  {
+    "id": "sh_539353_183024",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 13.2,
+    "heightODNMetres": 3.62712,
+    "positionBNG": [
+      539352.84,
+      183023.81
+    ],
+    "usedInMappedLayer": false,
+    "notes": "LT&SR embankment, dot on the rails above-left of figure; 8x"
+  },
+  {
+    "id": "sh_538890_183022",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 17.4,
+    "heightODNMetres": 4.90728,
+    "positionBNG": [
+      538890.03,
+      183022.46
+    ],
+    "usedInMappedLayer": true,
+    "notes": "river wall at West Ham works, east bank of Channelsea"
+  },
+  {
+    "id": "sh_539315_183009",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 14.5,
+    "heightODNMetres": 4.02336,
+    "positionBNG": [
+      539314.71,
+      183008.84
+    ],
+    "usedInMappedLayer": false,
+    "notes": "LT&SR embankment, dot on rails above-left; 8x"
+  },
+  {
+    "id": "sh_538780_183000",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.4,
+    "heightODNMetres": 4.90728,
+    "positionBNG": [
+      538780.24,
+      182999.96
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Long Wall top"
+  },
+  {
+    "id": "sh_539170_182980",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.7,
+    "heightODNMetres": 1.34112,
+    "positionBNG": [
+      539169.91,
+      182979.8
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Manor Road north of the LT&SR bridge; dot above; 8x"
+  },
+  {
+    "id": "sh_539241_182978",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 17.3,
+    "heightODNMetres": 4.8768,
+    "positionBNG": [
+      539241.26,
+      182978.41
+    ],
+    "usedInMappedLayer": false,
+    "notes": "LT&SR embankment west of the sheet join; dot above-left on the crest; 8x"
+  },
+  {
+    "id": "sh_538345_182967",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 16.7,
+    "heightODNMetres": 4.69392,
+    "positionBNG": [
+      538345.49,
+      182966.75
+    ],
+    "usedInMappedLayer": true,
+    "notes": "east of the river wall; dot above"
+  },
+  {
+    "id": "sh_538885_182963",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.9,
+    "heightODNMetres": 5.05968,
+    "positionBNG": [
+      538884.77,
+      182963.08
+    ],
+    "usedInMappedLayer": true,
+    "notes": "river wall, east bank"
+  },
+  {
+    "id": "sh_539124_182961",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 19.9,
+    "heightODNMetres": 5.66928,
+    "positionBNG": [
+      539123.51,
+      182960.95
+    ],
+    "usedInMappedLayer": false,
+    "notes": "railway embankment by F.W./F.B.; dot above-left at the bank top; 8x"
+  },
+  {
+    "id": "sh_539166_182924",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.3,
+    "heightODNMetres": 1.2192,
+    "positionBNG": [
+      539165.72,
+      182924.35
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Manor Road south of the bridge; dot left; 8x"
+  },
+  {
+    "id": "sh_539168_182873",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.1,
+    "heightODNMetres": 1.46304,
+    "positionBNG": [
+      539168.38,
+      182872.8
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Manor Road south; dot above; 8x"
+  },
+  {
+    "id": "sh_538907_182862",
+    "family": "road",
+    "setting": "footpath beside railway",
+    "surfaceReview": {
+      "id": "sh_538907_182862",
+      "valueFeet": 11.3,
+      "decision": "Do not use as railway formation control",
+      "reason": "Viewed full source mosaic: dot at approximately pixel190,752 lies on the F.P. north of the northern railway-bank hatching. Reader note already says road north of railway; the railway setting is inconsistent with the mapped dot. Retain footpath level for later path geometry reconciliation.",
+      "source": "reference/spot-heights/mosaics/m18_131072_87143.png",
+      "sourceSha256": "feadabb3cea52a71b825475de81a16b0c14aa677359608e014671b14e84705e3"
+    },
+    "valueFeet": 11.3,
+    "heightODNMetres": 3.048,
+    "positionBNG": [
+      538906.7,
+      182862.29
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road north of railway"
+  },
+  {
+    "id": "sh_538809_182802",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 10.7,
+    "heightODNMetres": 2.86512,
+    "positionBNG": [
+      538809.11,
+      182802.05
+    ],
+    "usedInMappedLayer": false,
+    "notes": "south of railway"
+  },
+  {
+    "id": "sh_539172_182787",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.6,
+    "heightODNMetres": 1.61544,
+    "positionBNG": [
+      539171.84,
+      182787.25
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Manor Road near the Sluice; dot above; 8x"
+  },
+  {
+    "id": "sh_538385_182711",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.9,
+    "heightODNMetres": 4.14528,
+    "positionBNG": [
+      538384.86,
+      182710.62
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road round the Distillery; dot above-right of figures"
+  },
+  {
+    "id": "sh_538443_182706",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 15.1,
+    "heightODNMetres": 4.20624,
+    "positionBNG": [
+      538443.44,
+      182706.28
+    ],
+    "usedInMappedLayer": true,
+    "notes": "river wall path; dot above-left"
+  },
+  {
+    "id": "sh_539174_182706",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.2,
+    "heightODNMetres": 1.49352,
+    "positionBNG": [
+      539174.07,
+      182705.82
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Manor Road, between M and A of the lettering; dot left-above figures; 8x"
+  },
+  {
+    "id": "sh_539996_182651",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.8,
+    "heightODNMetres": 1.6764,
+    "positionBNG": [
+      539995.96,
+      182650.78
+    ],
+    "usedInMappedLayer": false,
+    "notes": "E-W road at the west edge; dot above; leading 6 plainly differs from the closed final 8 at 10x"
+  },
+  {
+    "id": "sh_539937_182637",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.3,
+    "heightODNMetres": 1.2192,
+    "positionBNG": [
+      539936.76,
+      182636.89
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Grange Road; dot left of figure, after the final E of GRANGE (not between letters); 5x/8x"
+  },
+  {
+    "id": "sh_539178_182606",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.5,
+    "heightODNMetres": 1.58496,
+    "positionBNG": [
+      539178.11,
+      182605.83
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Manor Road in the gap between MANOR and ROAD; dot above-left; flat-topped 5"
+  },
+  {
+    "id": "sh_539736_182604",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.0,
+    "heightODNMetres": 1.12776,
+    "positionBNG": [
+      539736.01,
+      182603.88
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same E-W street further east; dot left of figure; 6x"
+  },
+  {
+    "id": "sh_539662_182598",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.2,
+    "heightODNMetres": 0.57912,
+    "positionBNG": [
+      539661.88,
+      182598.12
+    ],
+    "usedInMappedLayer": false,
+    "notes": "E-W street east of Merton Road, between the kerb lines; dot left of figure; 6x"
+  },
+  {
+    "id": "sh_538447_182575",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 18.2,
+    "heightODNMetres": 5.15112,
+    "positionBNG": [
+      538447.39,
+      182575.27
+    ],
+    "usedInMappedLayer": true,
+    "notes": "gasworks ground; dot left"
+  },
+  {
+    "id": "sh_540166_182564",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 13.5,
+    "heightODNMetres": 3.71856,
+    "positionBNG": [
+      540166.41,
+      182564.48
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Whitwell Road at George Street; dot above-left; flat-topped 5"
+  },
+  {
+    "id": "sh_538829_182551",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.3,
+    "heightODNMetres": 1.524,
+    "positionBNG": [
+      538829.39,
+      182550.6
+    ],
+    "usedInMappedLayer": false,
+    "notes": "marsh footpath; dot left"
+  },
+  {
+    "id": "sh_538464_182507",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 16.0,
+    "heightODNMetres": 4.48056,
+    "positionBNG": [
+      538464.32,
+      182507.21
+    ],
+    "usedInMappedLayer": true,
+    "notes": "gasworks ground; dot left"
+  },
+  {
+    "id": "sh_540016_182503",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.9,
+    "heightODNMetres": 1.40208,
+    "positionBNG": [
+      540016.41,
+      182503.14
+    ],
+    "usedInMappedLayer": false,
+    "notes": "south end of Suffolk Road by F.P.; dot above-left of figure; 8x"
+  },
+  {
+    "id": "sh_538817_182491",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.1,
+    "heightODNMetres": 1.46304,
+    "positionBNG": [
+      538817.04,
+      182491.39
+    ],
+    "usedInMappedLayer": false,
+    "notes": "marsh footpath; dot below-left"
+  },
+  {
+    "id": "sh_538522_182438",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.3,
+    "heightODNMetres": 4.572,
+    "positionBNG": [
+      538522.25,
+      182438.4
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same road further east, by the gasholders; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_538592_182437",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.0,
+    "heightODNMetres": 3.87096,
+    "positionBNG": [
+      538592.11,
+      182436.78
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same road beside the cross-hatched structure; dot below figure on the footway; 8x"
+  },
+  {
+    "id": "sh_538462_182436",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 21.1,
+    "heightODNMetres": 6.03504,
+    "positionBNG": [
+      538461.6,
+      182436.38
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road just east of the foot of the hatched approach embankment, descending east; dot above figure; 8x"
+  },
+  {
+    "id": "sh_538413_182436",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 26.3,
+    "heightODNMetres": 7.62,
+    "positionBNG": [
+      538413.19,
+      182436.17
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road on the hatched approach embankment east of the bridge; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_538801_182413",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.6,
+    "heightODNMetres": 1.31064,
+    "positionBNG": [
+      538800.76,
+      182412.58
+    ],
+    "usedInMappedLayer": false,
+    "notes": "dotted track; dot left of figure; final 6 matches the open-topped known 6 at 6-8x"
+  },
+  {
+    "id": "sh_538477_182383",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 17.7,
+    "heightODNMetres": 4.99872,
+    "positionBNG": [
+      538477.21,
+      182382.94
+    ],
+    "usedInMappedLayer": true,
+    "notes": "dotted road inside the gas works, south of the main road; dot above figure; 8x"
+  },
+  {
+    "id": "sh_538694_182378",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.7,
+    "heightODNMetres": 1.64592,
+    "positionBNG": [
+      538694.08,
+      182378.09
+    ],
+    "usedInMappedLayer": false,
+    "notes": "SSW road; dot 17 px left of figure on the west side of the road, 8x"
+  },
+  {
+    "id": "sh_539702_182359",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      539701.97,
+      182358.91
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Hermit Road carriageway south of the F.P.; isolated dot in the road on the figure row (F.P. has its own dot at 756,608); 6x"
+  },
+  {
+    "id": "sh_538492_182336",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 17.2,
+    "heightODNMetres": 4.84632,
+    "positionBNG": [
+      538491.53,
+      182335.79
+    ],
+    "usedInMappedLayer": true,
+    "notes": "junction of dotted gas works roads; dot above figure; 8x"
+  },
+  {
+    "id": "sh_538724_182318",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.9,
+    "heightODNMetres": 1.09728,
+    "positionBNG": [
+      538724.39,
+      182318.37
+    ],
+    "usedInMappedLayer": false,
+    "notes": "ESE road; dot left of figure on the road, 8x"
+  },
+  {
+    "id": "sh_538352_182314",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 19.0,
+    "heightODNMetres": 5.39496,
+    "positionBNG": [
+      538351.9,
+      182314.16
+    ],
+    "usedInMappedLayer": false,
+    "notes": "crest of hatched bank east of Bow Creek; dot above-left; 10x"
+  },
+  {
+    "id": "sh_538674_182312",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.0,
+    "heightODNMetres": 1.43256,
+    "positionBNG": [
+      538673.92,
+      182311.79
+    ],
+    "usedInMappedLayer": false,
+    "notes": "dotted road SSW; dot left of figure, 8x"
+  },
+  {
+    "id": "sh_540394_182309",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 10.5,
+    "heightODNMetres": 2.80416,
+    "positionBNG": [
+      540394.17,
+      182309.4
+    ],
+    "usedInMappedLayer": false,
+    "notes": "tramway road by P.O.; dot on rail up-left of figure; 9x"
+  },
+  {
+    "id": "sh_540148_182306",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.4,
+    "heightODNMetres": 0.64008,
+    "positionBNG": [
+      540148.1,
+      182305.82
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Chargeable Lane by the L of LANE; dot above; 6x"
+  },
+  {
+    "id": "sh_539705_182295",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.0,
+    "heightODNMetres": 1.12776,
+    "positionBNG": [
+      539704.61,
+      182294.6
+    ],
+    "usedInMappedLayer": false,
+    "notes": "HERMIT ROAD between the terraces south of the School; dot above; flat 5 at 12x"
+  },
+  {
+    "id": "sh_539116_182290",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 13.5,
+    "heightODNMetres": 3.71856,
+    "positionBNG": [
+      539116.31,
+      182290.46
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Manor Road on the south hatched ramp just below the sheet join; dot above-left"
+  },
+  {
+    "id": "sh_540206_182283",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.9,
+    "heightODNMetres": 0.79248,
+    "positionBNG": [
+      540206.08,
+      182283.09
+    ],
+    "usedInMappedLayer": false,
+    "notes": "east end of Chargeable Lane below MASON STREET; dot left; 9 closed with tail at 6x"
+  },
+  {
+    "id": "sh_538525_182269",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 16.7,
+    "heightODNMetres": 4.69392,
+    "positionBNG": [
+      538525.0,
+      182268.92
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Gas Works near the W.M.; dot left of figure; 6x"
+  },
+  {
+    "id": "sh_538470_182269",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 17.0,
+    "heightODNMetres": 4.78536,
+    "positionBNG": [
+      538470.45,
+      182268.73
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Gas Works, dot on the dotted road edge just south of the py~764 join; 8x"
+  },
+  {
+    "id": "sh_540456_182263",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.1,
+    "heightODNMetres": 3.90144,
+    "positionBNG": [
+      540456.28,
+      182263.32
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street east of Smithy; dot above figure"
+  },
+  {
+    "id": "sh_538455_182228",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 17.0,
+    "heightODNMetres": 4.78536,
+    "positionBNG": [
+      538454.61,
+      182228.18
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Gas Works, dotted road junction; dot above-left; 6x"
+  },
+  {
+    "id": "sh_540495_182213",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 11.8,
+    "heightODNMetres": 3.2004,
+    "positionBNG": [
+      540495.16,
+      182212.89
+    ],
+    "usedInMappedLayer": false,
+    "notes": "New Barn Street; dot lower-left"
+  },
+  {
+    "id": "sh_539155_182207",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.1,
+    "heightODNMetres": 1.46304,
+    "positionBNG": [
+      539154.9,
+      182207.2
+    ],
+    "usedInMappedLayer": false,
+    "notes": "east road at grade south of the approach; dot above figure"
+  },
+  {
+    "id": "sh_540385_182207",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.2,
+    "heightODNMetres": 1.49352,
+    "positionBNG": [
+      540385.46,
+      182206.88
+    ],
+    "usedInMappedLayer": false,
+    "notes": "junction south of James Street by F.P.; dot above-left"
+  },
+  {
+    "id": "sh_538572_182205",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 16.4,
+    "heightODNMetres": 4.60248,
+    "positionBNG": [
+      538572.17,
+      182205.29
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Gas Works, on the dotted track beside the B.M.18\u00b745 building; dot above-left; 6x"
+  },
+  {
+    "id": "sh_539552_182193",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.2,
+    "heightODNMetres": 0.57912,
+    "positionBNG": [
+      539552.36,
+      182192.84
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Exing Road at Boulton Road; dot above-left of figures at 343,305, 6x"
+  },
+  {
+    "id": "sh_539906_182184",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.5,
+    "heightODNMetres": 0.97536,
+    "positionBNG": [
+      539906.02,
+      182184.37
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Chargeable Street at its junction with Blanche Street; dot directly above, clear of the lettering column; 8x"
+  },
+  {
+    "id": "sh_539710_182180",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.6,
+    "heightODNMetres": 0.70104,
+    "positionBNG": [
+      539710.24,
+      182180.1
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Hermit Road at Boulton Road; dot above figures at 763,352, 6x"
+  },
+  {
+    "id": "sh_540595_182170",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.2,
+    "heightODNMetres": 4.54152,
+    "positionBNG": [
+      540594.67,
+      182169.95
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road/lane south of the Nursery north of Cumberland; dot above-left; notably higher than the streets to the west"
+  },
+  {
+    "id": "sh_539156_182168",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.0,
+    "heightODNMetres": 1.43256,
+    "positionBNG": [
+      539156.41,
+      182167.74
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road east of the railway at a building corner; dot left of figures; 8x"
+  },
+  {
+    "id": "sh_538394_182167",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 17.3,
+    "heightODNMetres": 4.8768,
+    "positionBNG": [
+      538393.71,
+      182167.09
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Gas Works yard beside the retort house; dot directly above figure; 8x"
+  },
+  {
+    "id": "sh_540418_182164",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.3,
+    "heightODNMetres": 1.524,
+    "positionBNG": [
+      540418.29,
+      182164.33
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street corner east of the School; dot upper-left"
+  },
+  {
+    "id": "sh_540676_182146",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.3,
+    "heightODNMetres": 3.9624,
+    "positionBNG": [
+      540676.16,
+      182145.83
+    ],
+    "usedInMappedLayer": false,
+    "notes": "lane by the field-boundary angle; dot left of figure"
+  },
+  {
+    "id": "sh_538667_182140",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.9,
+    "heightODNMetres": 1.70688,
+    "positionBNG": [
+      538667.43,
+      182140.01
+    ],
+    "usedInMappedLayer": false,
+    "notes": "NW-SE road just SE of the footbridge/culvert crossing; dot above-left; 9 open below at 14x"
+  },
+  {
+    "id": "sh_540042_182136",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      540041.99,
+      182135.93
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Croydon Road below the B.M.9\u00b760; own dot left of figure; 8x"
+  },
+  {
+    "id": "sh_539976_182129",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.5,
+    "heightODNMetres": 1.58496,
+    "positionBNG": [
+      539975.7,
+      182129.08
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Croydon Road; dot directly above the figure in the word gap between CROYDON and ROAD; 8x"
+  },
+  {
+    "id": "sh_540448_182123",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.3,
+    "heightODNMetres": 1.524,
+    "positionBNG": [
+      540448.12,
+      182122.81
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Seaton Street; dot upper-left"
+  },
+  {
+    "id": "sh_540748_182109",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.7,
+    "heightODNMetres": 4.08432,
+    "positionBNG": [
+      540748.31,
+      182109.2
+    ],
+    "usedInMappedLayer": false,
+    "notes": "dotted-edge lane crossing the open ground; dot in lane above figure"
+  },
+  {
+    "id": "sh_538705_182105",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.1,
+    "heightODNMetres": 1.76784,
+    "positionBNG": [
+      538704.9,
+      182104.63
+    ],
+    "usedInMappedLayer": false,
+    "notes": "NW-SE road; dot above-left; 8x"
+  },
+  {
+    "id": "sh_540828_182102",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.3,
+    "heightODNMetres": 3.9624,
+    "positionBNG": [
+      540828.2,
+      182102.13
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same lane further east; dot in lane above figure"
+  },
+  {
+    "id": "sh_540899_182097",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 11.5,
+    "heightODNMetres": 3.10896,
+    "positionBNG": [
+      540899.28,
+      182097.41
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same lane east; dot in lane above figure; flat-topped 5"
+  },
+  {
+    "id": "sh_539220_182097",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.9,
+    "heightODNMetres": 1.40208,
+    "positionBNG": [
+      539220.29,
+      182097.18
+    ],
+    "usedInMappedLayer": false,
+    "notes": "N end of Malmesbury Road where it meets the marsh; dot left of figures; H. with its own dot below-right; 8x"
+  },
+  {
+    "id": "sh_540365_182089",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.3,
+    "heightODNMetres": 0.9144,
+    "positionBNG": [
+      540365.08,
+      182088.57
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Forty Acre Lane north part (between dotted and solid edges); dot above"
+  },
+  {
+    "id": "sh_539122_182084",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.5,
+    "heightODNMetres": 1.28016,
+    "positionBNG": [
+      539122.21,
+      182084.09
+    ],
+    "usedInMappedLayer": false,
+    "notes": "S end of Manor Road at the Randall Street junction; dot below figures, separate from the F.P. dot at 708,571; 8x"
+  },
+  {
+    "id": "sh_538419_182083",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 17.1,
+    "heightODNMetres": 4.81584,
+    "positionBNG": [
+      538418.71,
+      182083.45
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Gas Works yard by the TRAMWAY; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_540541_182064",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.2,
+    "heightODNMetres": 1.79832,
+    "positionBNG": [
+      540541.35,
+      182064.46
+    ],
+    "usedInMappedLayer": false,
+    "notes": "New Barn Street south; dot left in the carriageway"
+  },
+  {
+    "id": "sh_539534_182050",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.5,
+    "heightODNMetres": 0.67056,
+    "positionBNG": [
+      539533.56,
+      182050.06
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Exing Road at Tyas Road; dot left of figures at 290,683, 6x"
+  },
+  {
+    "id": "sh_540510_182041",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.7,
+    "heightODNMetres": 1.64592,
+    "positionBNG": [
+      540509.6,
+      182040.93
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street lettered ..R K at the top edge beside F.P.; dot left-above figures; 6x"
+  },
+  {
+    "id": "sh_538772_182040",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.5,
+    "heightODNMetres": 1.58496,
+    "positionBNG": [
+      538772.22,
+      182039.6
+    ],
+    "usedInMappedLayer": false,
+    "notes": "NW-SE road; dot above-left; flat-topped 5 at 14x"
+  },
+  {
+    "id": "sh_540299_182030",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.8,
+    "heightODNMetres": 0.762,
+    "positionBNG": [
+      540299.47,
+      182029.99
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Forty Acre Lane near H; dot left; final 8 distinct from the leading 3"
+  },
+  {
+    "id": "sh_539099_182028",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.1,
+    "heightODNMetres": 1.15824,
+    "positionBNG": [
+      539098.78,
+      182028.48
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road running SW from the Manor Road junction; dot above figures; 8x"
+  },
+  {
+    "id": "sh_539380_182028",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.5,
+    "heightODNMetres": 1.58496,
+    "positionBNG": [
+      539379.97,
+      182028.2
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street between two terrace rows (dotted kerb lines x ~625/640), north end; dot above figure; 12x/22x"
+  },
+  {
+    "id": "sh_538280_182024",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 18.6,
+    "heightODNMetres": 5.27304,
+    "positionBNG": [
+      538280.3,
+      182023.59
+    ],
+    "usedInMappedLayer": false,
+    "notes": "east bank, dot just east of the hatched crest; final 6 open-topped at 7x and 12x against the closed 8 of the same figure"
+  },
+  {
+    "id": "sh_539143_182016",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.2,
+    "heightODNMetres": 1.18872,
+    "positionBNG": [
+      539143.07,
+      182015.94
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road along the west side of the G.E.R.; dot above-left of figures; 8x"
+  },
+  {
+    "id": "sh_538796_182016",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.3,
+    "heightODNMetres": 1.524,
+    "positionBNG": [
+      538796.34,
+      182015.75
+    ],
+    "usedInMappedLayer": false,
+    "notes": "NW-SE road near the junction with the track east; dot above-left; 3 open-left at 14x"
+  },
+  {
+    "id": "sh_539902_182004",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.9,
+    "heightODNMetres": 1.40208,
+    "positionBNG": [
+      539901.68,
+      182004.09
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Star Lane / Barking Road junction; dot left of figure; 12x"
+  },
+  {
+    "id": "sh_540539_182004",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.3,
+    "heightODNMetres": 1.524,
+    "positionBNG": [
+      540538.56,
+      182003.65
+    ],
+    "usedInMappedLayer": false,
+    "notes": "junction of the ..RK street and the diagonal STREET; dot left-above; open-topped 6 and open-left 3 at 8x"
+  },
+  {
+    "id": "sh_539534_181999",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.9,
+    "heightODNMetres": 1.09728,
+    "positionBNG": [
+      539533.84,
+      181999.36
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street junction south of Tyas Road; dot left of figures at 287,821"
+  },
+  {
+    "id": "sh_539588_181998",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.3,
+    "heightODNMetres": 0.6096,
+    "positionBNG": [
+      539587.69,
+      181997.87
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Hermit Road side street junction (Tyas Road south side); dot left of figures at 430,827; both 3s alike"
+  },
+  {
+    "id": "sh_539642_181996",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.3,
+    "heightODNMetres": 0.6096,
+    "positionBNG": [
+      539642.13,
+      181995.83
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road north of Carlton Street; dot left of figures at 575,836"
+  },
+  {
+    "id": "sh_539703_181995",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.9,
+    "heightODNMetres": 1.09728,
+    "positionBNG": [
+      539703.42,
+      181994.73
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Hermit Road at Star Lane; dot above-left of figures at 738,852"
+  },
+  {
+    "id": "sh_539079_181983",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.6,
+    "heightODNMetres": 1.00584,
+    "positionBNG": [
+      539078.8,
+      181982.61
+    ],
+    "usedInMappedLayer": false,
+    "notes": "New Road / Randall Street corner; dot above figures, distinct from the F.P. trailing dot; 8x"
+  },
+  {
+    "id": "sh_541098_181978",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.9,
+    "heightODNMetres": 1.09728,
+    "positionBNG": [
+      541097.57,
+      181977.91
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Regent's Lane by the terrace end; dot above figure; 9 at 10x"
+  },
+  {
+    "id": "sh_540185_181977",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.3,
+    "heightODNMetres": 1.2192,
+    "positionBNG": [
+      540185.11,
+      181976.98
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Star Lane by H; dot left-below"
+  },
+  {
+    "id": "sh_538532_181970",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.8,
+    "heightODNMetres": 5.0292,
+    "positionBNG": [
+      538532.05,
+      181969.53
+    ],
+    "usedInMappedLayer": false,
+    "notes": "west wall of the DOCK, dot just inside the wall line; 8 clear at 20x"
+  },
+  {
+    "id": "sh_539383_181968",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.5,
+    "heightODNMetres": 1.58496,
+    "positionBNG": [
+      539383.12,
+      181967.79
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same street further south; dot above figure; 12x/22x"
+  },
+  {
+    "id": "sh_539959_181957",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.3,
+    "heightODNMetres": 1.8288,
+    "positionBNG": [
+      539959.33,
+      181957.39
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Barking Road tramway south of the Zion Gospel Hall; dot above-left; 12x"
+  },
+  {
+    "id": "sh_540234_181952",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.9,
+    "heightODNMetres": 0.79248,
+    "positionBNG": [
+      540234.46,
+      181952.09
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Forty Acre Lane by the plot corner; dot above-left"
+  },
+  {
+    "id": "sh_540056_181949",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.9,
+    "heightODNMetres": 1.40208,
+    "positionBNG": [
+      540056.15,
+      181948.6
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Edward Street / Alexandra Street corner; dot below-left of figure"
+  },
+  {
+    "id": "sh_539154_181942",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.4,
+    "heightODNMetres": 1.24968,
+    "positionBNG": [
+      539153.89,
+      181941.87
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Stephenson Street by the railway, dot right of figures before the S of the street name (not between letters); 8x"
+  },
+  {
+    "id": "sh_539591_181941",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.9,
+    "heightODNMetres": 0.79248,
+    "positionBNG": [
+      539590.93,
+      181940.93
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street between terraces south of the 3\u00b73 junction; dot above-left of figures at 428,987, 8x"
+  },
+  {
+    "id": "sh_538219_181924",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 14.0,
+    "heightODNMetres": 3.87096,
+    "positionBNG": [
+      538218.76,
+      181924.41
+    ],
+    "usedInMappedLayer": false,
+    "notes": "open premises ground east of Bruce Road beside the tanks, toward the Lea; dot above; 6x"
+  },
+  {
+    "id": "sh_539071_181920",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.7,
+    "heightODNMetres": 1.03632,
+    "positionBNG": [
+      539071.01,
+      181920.36
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Tucker Street east end at the corner; dot right of figures; 8x"
+  },
+  {
+    "id": "sh_539022_181918",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.8,
+    "heightODNMetres": 1.0668,
+    "positionBNG": [
+      539022.3,
+      181917.54
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Tucker Street, dot left of figures between the kerb lines; 8x"
+  },
+  {
+    "id": "sh_539900_181913",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.9,
+    "heightODNMetres": 2.01168,
+    "positionBNG": [
+      539899.71,
+      181913.02
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Barking Road tramway near the B of BARKING; dot on the rail above-left; final 9 with tail at 14x"
+  },
+  {
+    "id": "sh_538908_181912",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.7,
+    "heightODNMetres": 1.34112,
+    "positionBNG": [
+      538908.2,
+      181911.91
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street between terrace blocks at the SE corner (dotted kerbs); dot left; flat-topped 5 at 14x; figure whole above the south edge"
+  },
+  {
+    "id": "sh_539388_181911",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.6,
+    "heightODNMetres": 1.61544,
+    "positionBNG": [
+      539387.65,
+      181911.21
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Avondale Road at Liverpool Road; dot above figures 643,276 after the final E of AVONDALE; clear 8x"
+  },
+  {
+    "id": "sh_540620_181908",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.8,
+    "heightODNMetres": 1.3716,
+    "positionBNG": [
+      540620.16,
+      181908.4
+    ],
+    "usedInMappedLayer": false,
+    "notes": "diagonal STREET further south-east, between its dotted SW edge and solid NE line; dot left-above; 8 closed at 6x"
+  },
+  {
+    "id": "sh_540089_181906",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      540088.84,
+      181905.79
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Alexandra Street at Fisher Street; dot below-left of figure"
+  },
+  {
+    "id": "sh_540192_181904",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.9,
+    "heightODNMetres": 0.79248,
+    "positionBNG": [
+      540192.14,
+      181904.18
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Forty Acre Lane continuation SW beside the terrace, above B.M.5\u00b796; dot above figure, 8x"
+  },
+  {
+    "id": "sh_538159_181899",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.2,
+    "heightODNMetres": 3.93192,
+    "positionBNG": [
+      538159.29,
+      181899.2
+    ],
+    "usedInMappedLayer": false,
+    "notes": "south STREET at Bruce Road; dot right of figures; F.P. dot above-left is separate; 6x"
+  },
+  {
+    "id": "sh_541097_181881",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.8,
+    "heightODNMetres": 1.3716,
+    "positionBNG": [
+      541096.9,
+      181881.49
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Regent's Lane between terraces; dot above-left; flat-topped 5, closed 8 at 8-10x"
+  },
+  {
+    "id": "sh_538266_181876",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 15.7,
+    "heightODNMetres": 4.38912,
+    "positionBNG": [
+      538266.44,
+      181876.11
+    ],
+    "usedInMappedLayer": true,
+    "notes": "St Leonard's Wharf (Oil Works), dot on the double line south of the tank circles; 8x"
+  },
+  {
+    "id": "sh_538628_181874",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.8,
+    "heightODNMetres": 5.0292,
+    "positionBNG": [
+      538627.95,
+      181874.08
+    ],
+    "usedInMappedLayer": false,
+    "notes": "dock wall further SE; dot above-right of figure; 8 closed loops at 16x"
+  },
+  {
+    "id": "sh_539080_181853",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.0,
+    "heightODNMetres": 1.12776,
+    "positionBNG": [
+      539080.49,
+      181853.01
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Bidder Street at Wellington Street; dot above figures 582,410; clear 8x"
+  },
+  {
+    "id": "sh_540677_181843",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.6,
+    "heightODNMetres": 1.61544,
+    "positionBNG": [
+      540677.45,
+      181843.49
+    ],
+    "usedInMappedLayer": false,
+    "notes": "junction of the diagonal road and the north-south dotted-edge road west of Hogg Hall Farm; dot above-left; both 6 open at 8x"
+  },
+  {
+    "id": "sh_538689_181841",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.9,
+    "heightODNMetres": 5.05968,
+    "positionBNG": [
+      538689.01,
+      181840.82
+    ],
+    "usedInMappedLayer": true,
+    "notes": "channel wall at the Swing Bridge; dot on the wall line left of figures at 313,418, 6x"
+  },
+  {
+    "id": "sh_539792_181832",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.0,
+    "heightODNMetres": 2.04216,
+    "positionBNG": [
+      539792.19,
+      181832.3
+    ],
+    "usedInMappedLayer": false,
+    "notes": "tramway road; dot on/under the tram rail, 8x"
+  },
+  {
+    "id": "sh_540146_181832",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.4,
+    "heightODNMetres": 0.94488,
+    "positionBNG": [
+      540146.1,
+      181831.77
+    ],
+    "usedInMappedLayer": false,
+    "notes": "curving road running south from Forty Acre Lane; dot above figure, 8x"
+  },
+  {
+    "id": "sh_540677_181821",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.9,
+    "heightODNMetres": 1.70688,
+    "positionBNG": [
+      540676.95,
+      181821.18
+    ],
+    "usedInMappedLayer": false,
+    "notes": "north-south dotted-edge road west of Hogg Hall Farm; dot above figure; 8x"
+  },
+  {
+    "id": "sh_540487_181811",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      540486.53,
+      181811.09
+    ],
+    "usedInMappedLayer": false,
+    "notes": "south end of New Barn Street at its west edge; dot above figures; 6x"
+  },
+  {
+    "id": "sh_539749_181800",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.0,
+    "heightODNMetres": 1.43256,
+    "positionBNG": [
+      539749.01,
+      181799.78
+    ],
+    "usedInMappedLayer": false,
+    "notes": "tramway road; dot on rail; G-6 and oval 0, 8x"
+  },
+  {
+    "id": "sh_538735_181795",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.9,
+    "heightODNMetres": 5.05968,
+    "positionBNG": [
+      538735.33,
+      181794.91
+    ],
+    "usedInMappedLayer": true,
+    "notes": "north wall of Bow Creek SE of the Swing Bridge; dot on the wall line left of figures at 440,543"
+  },
+  {
+    "id": "sh_539924_181779",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.9,
+    "heightODNMetres": 1.70688,
+    "positionBNG": [
+      539923.88,
+      181779.21
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road / Morgan Street junction; dot above-left, distinct from the F.P. and its own dot above"
+  },
+  {
+    "id": "sh_540596_181775",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.1,
+    "heightODNMetres": 2.07264,
+    "positionBNG": [
+      540595.55,
+      181774.72
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road between the B and E of BECKTON; dot above; 6x"
+  },
+  {
+    "id": "sh_540542_181773",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.1,
+    "heightODNMetres": 2.07264,
+    "positionBNG": [
+      540541.96,
+      181773.24
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road; dot left-above; 6x"
+  },
+  {
+    "id": "sh_540673_181772",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.5,
+    "heightODNMetres": 2.19456,
+    "positionBNG": [
+      540673.09,
+      181772.41
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road near the east edge, figures whole to px ~1018; dot above-right; flat-topped 5 at 6x"
+  },
+  {
+    "id": "sh_538417_181771",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.8,
+    "heightODNMetres": 5.0292,
+    "positionBNG": [
+      538416.8,
+      181770.62
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Islay Wharf river wall at H.W.M.O.T.; dot left-above figure on the wall line"
+  },
+  {
+    "id": "sh_540462_181770",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.1,
+    "heightODNMetres": 2.07264,
+    "positionBNG": [
+      540461.97,
+      181769.91
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road at the New Barn Street junction; dot left-above; 6x"
+  },
+  {
+    "id": "sh_540488_181770",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.2,
+    "heightODNMetres": 2.10312,
+    "positionBNG": [
+      540488.04,
+      181769.89
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road; dot left-above; 6x"
+  },
+  {
+    "id": "sh_539200_181769",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.0,
+    "heightODNMetres": 1.43256,
+    "positionBNG": [
+      539200.11,
+      181768.99
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Stephenson Street; confirmed in m18_131075_87155"
+  },
+  {
+    "id": "sh_539705_181768",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.2,
+    "heightODNMetres": 1.49352,
+    "positionBNG": [
+      539705.19,
+      181767.99
+    ],
+    "usedInMappedLayer": false,
+    "notes": "tramway road by the Methodist Chapel (Primitive); dot just south of the tram rails, 8x"
+  },
+  {
+    "id": "sh_540810_181767",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.3,
+    "heightODNMetres": 2.1336,
+    "positionBNG": [
+      540810.44,
+      181766.56
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road along the north edge between R\u00b7O\u00b7A lettering; dot above figure at 3 px from the top edge, figure whole"
+  },
+  {
+    "id": "sh_540391_181765",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.0,
+    "heightODNMetres": 2.04216,
+    "positionBNG": [
+      540390.97,
+      181764.98
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road; dot left-above; oval upright 0 at 6x"
+  },
+  {
+    "id": "sh_540887_181764",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.2,
+    "heightODNMetres": 2.10312,
+    "positionBNG": [
+      540886.96,
+      181764.22
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road; dot above-left, after the D of ROAD; 8x"
+  },
+  {
+    "id": "sh_540948_181762",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.3,
+    "heightODNMetres": 2.1336,
+    "positionBNG": [
+      540948.25,
+      181762.21
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road east; dot above-left; 3 open at 8x"
+  },
+  {
+    "id": "sh_540304_181760",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.3,
+    "heightODNMetres": 2.1336,
+    "positionBNG": [
+      540304.19,
+      181760.23
+    ],
+    "usedInMappedLayer": false,
+    "notes": "ROAD continuing east across the marsh; dot above-left; final 3 differs from the leading 8, 8x"
+  },
+  {
+    "id": "sh_541029_181758",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.0,
+    "heightODNMetres": 2.04216,
+    "positionBNG": [
+      541028.81,
+      181758.13
+    ],
+    "usedInMappedLayer": false,
+    "notes": "tree-lined road; dot above figure; 10x"
+  },
+  {
+    "id": "sh_540252_181757",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.9,
+    "heightODNMetres": 2.01168,
+    "positionBNG": [
+      540252.07,
+      181757.24
+    ],
+    "usedInMappedLayer": false,
+    "notes": "ROAD at the head of Richard Street, just east of the x~637 join; dot above-left, 8x"
+  },
+  {
+    "id": "sh_540231_181755",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.8,
+    "heightODNMetres": 1.9812,
+    "positionBNG": [
+      540230.52,
+      181755.16
+    ],
+    "usedInMappedLayer": false,
+    "notes": "ROAD above the Richard Street terrace; dot left of figure; final 8 at 8x"
+  },
+  {
+    "id": "sh_541115_181754",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.6,
+    "heightODNMetres": 1.92024,
+    "positionBNG": [
+      541114.97,
+      181753.83
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road at Toll Gates over the drain; dot above figure; 10x"
+  },
+  {
+    "id": "sh_541187_181750",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.1,
+    "heightODNMetres": 2.07264,
+    "positionBNG": [
+      541187.33,
+      181750.27
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road east of Toll Gates; dot left of figure; 7x"
+  },
+  {
+    "id": "sh_538710_181750",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.5,
+    "heightODNMetres": 4.93776,
+    "positionBNG": [
+      538710.48,
+      181750.03
+    ],
+    "usedInMappedLayer": true,
+    "notes": "south wall of Bow Creek at a notch in the wall line; dot on the corner left of figures at 363,664"
+  },
+  {
+    "id": "sh_540173_181750",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.5,
+    "heightODNMetres": 1.88976,
+    "positionBNG": [
+      540172.88,
+      181749.67
+    ],
+    "usedInMappedLayer": false,
+    "notes": "ROAD at the head of Corner Street; separate dot above-left, the F.P. below has its own dot; 8x"
+  },
+  {
+    "id": "sh_538800_181746",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.9,
+    "heightODNMetres": 5.05968,
+    "positionBNG": [
+      538799.6,
+      181746.14
+    ],
+    "usedInMappedLayer": true,
+    "notes": "north wall of Bow Creek (Mud below it); dot on the wall line left of figures at 600,680"
+  },
+  {
+    "id": "sh_540090_181746",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.4,
+    "heightODNMetres": 1.85928,
+    "positionBNG": [
+      540090.39,
+      181745.96
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road east; dot above-left of figure"
+  },
+  {
+    "id": "sh_540067_181745",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.5,
+    "heightODNMetres": 1.88976,
+    "positionBNG": [
+      540067.47,
+      181745.33
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road; dot above-left"
+  },
+  {
+    "id": "sh_540027_181743",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.8,
+    "heightODNMetres": 1.9812,
+    "positionBNG": [
+      540026.99,
+      181743.1
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road; dot left of figure after the N of BECKTON (no interpuncts); 8 closed at 20x"
+  },
+  {
+    "id": "sh_539948_181743",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.8,
+    "heightODNMetres": 1.6764,
+    "positionBNG": [
+      539948.08,
+      181742.54
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Beckton Road; dot left of the K of BECKTON (no interpuncts in BECKTON) above-right of figure; final 8 closed vs open leading 6 at 12x"
+  },
+  {
+    "id": "sh_541369_181741",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      541368.61,
+      181740.82
+    ],
+    "usedInMappedLayer": false,
+    "notes": "on the E-W road lettered R O A D, between the A and the D, + marker in the carriageway between the pecked lines; figure 7 written 35 px SE just south of the road's south fence, the only figure near the marker; confirmed at 5x"
+  },
+  {
+    "id": "sh_539397_181728",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.3,
+    "heightODNMetres": 1.8288,
+    "positionBNG": [
+      539397.32,
+      181728.33
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Liverpool Road at the Malmesbury Road junction; dot above figures 655,764, after the D of ROAD; clear 8x"
+  },
+  {
+    "id": "sh_539218_181726",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.0,
+    "heightODNMetres": 1.43256,
+    "positionBNG": [
+      539217.69,
+      181725.64
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Stephenson Street S part; confirmed in m18_131075_87155"
+  },
+  {
+    "id": "sh_538664_181725",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 12.3,
+    "heightODNMetres": 3.3528,
+    "positionBNG": [
+      538664.23,
+      181725.17
+    ],
+    "usedInMappedLayer": false,
+    "notes": "works yard on the Bow Creek bank, E of the buildings; dot left of figure"
+  },
+  {
+    "id": "sh_539738_181724",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.9,
+    "heightODNMetres": 0.79248,
+    "positionBNG": [
+      539737.78,
+      181724.36
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Maud Street / Mary Street / Aviary Street junction; isolated dot left-below figure, distinct from the F.P.'s own trailing dot at ~798,797; 14x"
+  },
+  {
+    "id": "sh_540044_181720",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      540044.23,
+      181719.96
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street junction south of Beckton Road below F.P.; dot above figure"
+  },
+  {
+    "id": "sh_539635_181715",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.3,
+    "heightODNMetres": 1.8288,
+    "positionBNG": [
+      539635.13,
+      181715.05
+    ],
+    "usedInMappedLayer": false,
+    "notes": "tramway road by the Bank (survey-station triangles near); dot on rail, 8x"
+  },
+  {
+    "id": "sh_539396_181713",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.2,
+    "heightODNMetres": 1.79832,
+    "positionBNG": [
+      539396.45,
+      181712.71
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Liverpool Road; dot above 652,811; same pixels confirmed at 8x in the mosaic to the south"
+  },
+  {
+    "id": "sh_538868_181700",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.2,
+    "heightODNMetres": 4.84632,
+    "positionBNG": [
+      538867.89,
+      181700.46
+    ],
+    "usedInMappedLayer": true,
+    "notes": "on the jetty/quay strip in front of the sewage works; dot on its line above figures at 768,815"
+  },
+  {
+    "id": "sh_538911_181679",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 15.9,
+    "heightODNMetres": 4.45008,
+    "positionBNG": [
+      538911.31,
+      181678.99
+    ],
+    "usedInMappedLayer": true,
+    "notes": "bank of the side channel (Mud) at the sewage works outfall; dot on the line left of figures at 890,868"
+  },
+  {
+    "id": "sh_539142_181678",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.1,
+    "heightODNMetres": 1.76784,
+    "positionBNG": [
+      539142.28,
+      181677.51
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Junction Street; confirmed at 12x in m18_131072_87158"
+  },
+  {
+    "id": "sh_538249_181669",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 9.5,
+    "heightODNMetres": 2.49936,
+    "positionBNG": [
+      538249.36,
+      181668.92
+    ],
+    "usedInMappedLayer": false,
+    "notes": "junction of ..Y HALL ROAD and LEVEN ROAD; dot left of figures, 12 px off the HALL letter line so not an interpunct; flat-topped 5"
+  },
+  {
+    "id": "sh_538637_181664",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 12.3,
+    "heightODNMetres": 3.3528,
+    "positionBNG": [
+      538636.84,
+      181664.34
+    ],
+    "usedInMappedLayer": false,
+    "notes": "works yard, Bow Creek bank; dot left of figure"
+  },
+  {
+    "id": "sh_540058_181664",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.2,
+    "heightODNMetres": 1.49352,
+    "positionBNG": [
+      540057.74,
+      181663.81
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Bradley Street by CHERRY, below the sheet join; dot above figure"
+  },
+  {
+    "id": "sh_539642_181662",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.3,
+    "heightODNMetres": 1.8288,
+    "positionBNG": [
+      539642.18,
+      181661.87
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street running south from the tramway, east of the P.H.; dot directly above figure on the sheet-join line, figure below the join; 8x"
+  },
+  {
+    "id": "sh_539244_181662",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      539243.65,
+      181661.86
+    ],
+    "usedInMappedLayer": false,
+    "notes": "N end of Stephenson Street by the P.H.; confirmed at 12x in m18_131075_87158"
+  },
+  {
+    "id": "sh_538827_181661",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.5,
+    "heightODNMetres": 4.93776,
+    "positionBNG": [
+      538826.71,
+      181660.7
+    ],
+    "usedInMappedLayer": true,
+    "notes": "south wall of Bow Creek at a corner of the wall line; dot left of figures at 668,910"
+  },
+  {
+    "id": "sh_538943_181653",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.5,
+    "heightODNMetres": 4.93776,
+    "positionBNG": [
+      538943.3,
+      181653.49
+    ],
+    "usedInMappedLayer": true,
+    "notes": "bank of the side channel (Mud) by the C. marks; dot on the line junction above figures at 963,944"
+  },
+  {
+    "id": "sh_539125_181646",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.4,
+    "heightODNMetres": 1.85928,
+    "positionBNG": [
+      539125.27,
+      181645.71
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Junction Street / Charlotte Street; confirmed at 12x in m18_131072_87158"
+  },
+  {
+    "id": "sh_538625_181641",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 10.6,
+    "heightODNMetres": 2.83464,
+    "positionBNG": [
+      538624.81,
+      181641.07
+    ],
+    "usedInMappedLayer": false,
+    "notes": "works yard south of B.M.12\u00b778; dot well left of figure between dotted boundaries; round-topped 6"
+  },
+  {
+    "id": "sh_539398_181639",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.4,
+    "heightODNMetres": 2.16408,
+    "positionBNG": [
+      539398.48,
+      181638.83
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Liverpool Road beside the L&NWR depot, below the horizontal join; dot 652,1010; figures whole to y ~1018; confirmed at 8x in the mosaic to the south"
+  },
+  {
+    "id": "sh_539698_181625",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.5,
+    "heightODNMetres": 1.58496,
+    "positionBNG": [
+      539698.33,
+      181624.59
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Lawrence Street; dot left of figure; G-shaped 6 and flat-topped 5 at 12x/14x"
+  },
+  {
+    "id": "sh_539799_181624",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.2,
+    "heightODNMetres": 1.79832,
+    "positionBNG": [
+      539798.55,
+      181623.64
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Lawrence Street at Peter Street; dot left of figures, 12x"
+  },
+  {
+    "id": "sh_539505_181620",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.3,
+    "heightODNMetres": 1.8288,
+    "positionBNG": [
+      539504.66,
+      181619.58
+    ],
+    "usedInMappedLayer": false,
+    "notes": "tramway road by Ward Boundary lettering; dot on the tram rail left of figure, 8x"
+  },
+  {
+    "id": "sh_539177_181619",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      539176.9,
+      181619.14
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Bidder Street corner; confirmed at 12x in m18_131075_87158"
+  },
+  {
+    "id": "sh_538884_181618",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 16.7,
+    "heightODNMetres": 4.69392,
+    "positionBNG": [
+      538883.81,
+      181617.68
+    ],
+    "usedInMappedLayer": true,
+    "notes": "west bank of Bow Creek at the head of the ladder-hatched wall running SSW; dot left of figures (overlap strip with 131072_87158)"
+  },
+  {
+    "id": "sh_539651_181613",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.4,
+    "heightODNMetres": 1.85928,
+    "positionBNG": [
+      539651.33,
+      181613.46
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Rathbone Street at Lawrence Street; dot left-below figure, 8x"
+  },
+  {
+    "id": "sh_539094_181611",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 15.2,
+    "heightODNMetres": 4.23672,
+    "positionBNG": [
+      539093.63,
+      181611.16
+    ],
+    "usedInMappedLayer": false,
+    "notes": "wharf entrance at south end of Shipwright St / Wharf Street, dot at a building corner below figures; 8x"
+  },
+  {
+    "id": "sh_539016_181611",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.5,
+    "heightODNMetres": 4.93776,
+    "positionBNG": [
+      539016.36,
+      181610.53
+    ],
+    "usedInMappedLayer": true,
+    "notes": "river wall along the Lea Shipbuilding Yard frontage, dot on the wall line 392,290 with figures NE; clear 8x"
+  },
+  {
+    "id": "sh_541081_181606",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.7,
+    "heightODNMetres": 1.34112,
+    "positionBNG": [
+      541080.71,
+      181606.14
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Prince Regent's Lane north continuation, dotted-edge track east of the tree row; dot left of figure; 10x"
+  },
+  {
+    "id": "sh_540058_181592",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.1,
+    "heightODNMetres": 0.85344,
+    "positionBNG": [
+      540058.42,
+      181591.6
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Forty Acre Lane at Thomas Street; dot above figures at 885,429, 6x"
+  },
+  {
+    "id": "sh_538599_181577",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 11.4,
+    "heightODNMetres": 3.07848,
+    "positionBNG": [
+      538598.62,
+      181577.2
+    ],
+    "usedInMappedLayer": false,
+    "notes": "inside the works enclosure labelled Poplar, E of the long buildings; dot well left of figure; 4 clear at 16x"
+  },
+  {
+    "id": "sh_538202_181572",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 9.3,
+    "heightODNMetres": 2.4384,
+    "positionBNG": [
+      538201.73,
+      181571.59
+    ],
+    "usedInMappedLayer": false,
+    "notes": "junction of Dewberry Street and Abbott Road near survey triangle and F.P; dot above-left of figures"
+  },
+  {
+    "id": "sh_538548_181563",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 11.5,
+    "heightODNMetres": 3.10896,
+    "positionBNG": [
+      538547.98,
+      181562.82
+    ],
+    "usedInMappedLayer": false,
+    "notes": "gas works ground beside the hatched double line (siding/wall) west of the works building; dot right of figure"
+  },
+  {
+    "id": "sh_539657_181560",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.7,
+    "heightODNMetres": 1.64592,
+    "positionBNG": [
+      539656.89,
+      181560.3
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Clarkson Street / Rathbone Street junction; isolated dot left of figure at 5x/8x"
+  },
+  {
+    "id": "sh_540006_181552",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.7,
+    "heightODNMetres": 0.73152,
+    "positionBNG": [
+      540006.14,
+      181551.52
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Forty Acre Lane at Trinity Street; figures at 730,526, dot right, separate from the F.P. dot, 6x"
+  },
+  {
+    "id": "sh_539300_181550",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.4,
+    "heightODNMetres": 1.85928,
+    "positionBNG": [
+      539299.97,
+      181550.32
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Stephenson Street S end beside the railway; dot upper-left 381,473; clear 8x"
+  },
+  {
+    "id": "sh_541076_181543",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.8,
+    "heightODNMetres": 1.3716,
+    "positionBNG": [
+      541075.75,
+      181543.21
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Prince Regent's Lane north, dot on the track 20 px west of figure (figure written east of the dotted edge); closed 8 at 10x"
+  },
+  {
+    "id": "sh_538421_181539",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 11.5,
+    "heightODNMetres": 3.10896,
+    "positionBNG": [
+      538421.25,
+      181538.93
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Leven Road near its NW end, between the terrace front and the dotted kerb; dot left of figure"
+  },
+  {
+    "id": "sh_539149_181533",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 16.5,
+    "heightODNMetres": 4.63296,
+    "positionBNG": [
+      539149.03,
+      181532.99
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Crown Wharf, beside the siding/tramway into the wharf; dot above-right 740,509; clear 8x"
+  },
+  {
+    "id": "sh_540632_181528",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.7,
+    "heightODNMetres": 1.95072,
+    "positionBNG": [
+      540631.63,
+      181527.56
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road just north of the school frontage; dot left of figures; 8x"
+  },
+  {
+    "id": "sh_540077_181516",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.6,
+    "heightODNMetres": 1.31064,
+    "positionBNG": [
+      540076.77,
+      181515.95
+    ],
+    "usedInMappedLayer": false,
+    "notes": "junction by L.B. and St John's Road; figures at 932,632, dot above-left; 5 flat top, 6 rounded"
+  },
+  {
+    "id": "sh_539967_181513",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 3.7,
+    "heightODNMetres": 0.73152,
+    "positionBNG": [
+      539967.15,
+      181513.3
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Vincent Street east end at Forty Acre Lane; figures at 646,617, dot below-left, 6x"
+  },
+  {
+    "id": "sh_539495_181506",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.3,
+    "heightODNMetres": 2.1336,
+    "positionBNG": [
+      539495.23,
+      181506.26
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Woodstock Street north end; dot below-left, separate from the F.P. dot at 142,606; 8 vs 3 distinct at 12x"
+  },
+  {
+    "id": "sh_539838_181505",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.7,
+    "heightODNMetres": 1.34112,
+    "positionBNG": [
+      539838.32,
+      181504.74
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Vincent Street west end; dot above figures at 289,643, 6x"
+  },
+  {
+    "id": "sh_539448_181492",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      539448.33,
+      181491.6
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Burnham Street at the west edge (figure whole, x 8-22); dot left of figure; oval 0, 8x"
+  },
+  {
+    "id": "sh_539250_181488",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.5,
+    "heightODNMetres": 4.63296,
+    "positionBNG": [
+      539249.89,
+      181488.39
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same lane E of 16\u00b76; dot upper-left 242,636; clear 8x"
+  },
+  {
+    "id": "sh_538405_181488",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.1,
+    "heightODNMetres": 2.07264,
+    "positionBNG": [
+      538404.75,
+      181488.33
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street junction south of the Leven Road terrace; dot above-left of figure"
+  },
+  {
+    "id": "sh_538860_181486",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.5,
+    "heightODNMetres": 1.88976,
+    "positionBNG": [
+      538859.97,
+      181486.26
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street corner by the school, NE end of Oban Street; dot left of figures, separate from the F.P. dot at 742,605; 8x"
+  },
+  {
+    "id": "sh_540639_181481",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.8,
+    "heightODNMetres": 1.9812,
+    "positionBNG": [
+      540639.15,
+      181481.42
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road at the Sophia Road junction; dot left of figures; hydrant H with its own dot at 905,735 is separate; 6x"
+  },
+  {
+    "id": "sh_538432_181476",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.9,
+    "heightODNMetres": 2.01168,
+    "positionBNG": [
+      538432.27,
+      181476.45
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street junction east of B.M.9\u00b737; dot left of figure"
+  },
+  {
+    "id": "sh_538910_181465",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.6,
+    "heightODNMetres": 1.92024,
+    "positionBNG": [
+      538910.47,
+      181464.61
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street south of the school; dot left of figures (overlap with 131072_87158)"
+  },
+  {
+    "id": "sh_539972_181458",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.3,
+    "heightODNMetres": 0.9144,
+    "positionBNG": [
+      539972.23,
+      181457.53
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Hemsworth Street / Forty Acre Lane; distinct dot below-right of figure, between the two F.P.s' own dots"
+  },
+  {
+    "id": "sh_540457_181454",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.8,
+    "heightODNMetres": 1.6764,
+    "positionBNG": [
+      540457.16,
+      181454.38
+    ],
+    "usedInMappedLayer": false,
+    "notes": "on the lane at the 'Sl.' (sluice) where the drain meets it by Ceylon Mills; dot just above the figures, separate from the Sl. period; 6 open, 8 closed at 10x"
+  },
+  {
+    "id": "sh_539014_181449",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 16.6,
+    "heightODNMetres": 4.66344,
+    "positionBNG": [
+      539014.45,
+      181448.69
+    ],
+    "usedInMappedLayer": false,
+    "notes": "west corner of Creek Wharf beside B.M.19\u00b701; dot right of figures; 6x"
+  },
+  {
+    "id": "sh_540216_181444",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      540216.44,
+      181444.26
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Ford's Park Road / Pacific Road junction; dot upper-left; 12x"
+  },
+  {
+    "id": "sh_538961_181444",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.3,
+    "heightODNMetres": 2.1336,
+    "positionBNG": [
+      538961.32,
+      181444.08
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street corner by H. at the NE end of the Moness Street terrace; dot below-left (overlap with 131072_87158)"
+  },
+  {
+    "id": "sh_539331_181429",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 17.0,
+    "heightODNMetres": 4.78536,
+    "positionBNG": [
+      539330.86,
+      181428.75
+    ],
+    "usedInMappedLayer": false,
+    "notes": "G.E.R. Goods & Coal Depot, dot on the outer rail/boundary line at 455,803 with figures below; depot ground here is made ground at 17-19 ft, not marsh"
+  },
+  {
+    "id": "sh_539534_181426",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.9,
+    "heightODNMetres": 2.01168,
+    "positionBNG": [
+      539533.78,
+      181426.26
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Woodstock Street; dot above-left, 8x"
+  },
+  {
+    "id": "sh_538563_181421",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.4,
+    "heightODNMetres": 1.85928,
+    "positionBNG": [
+      538562.85,
+      181420.75
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Abbott Road; dot above figure, F.P. below with its own dot at 684,780"
+  },
+  {
+    "id": "sh_540286_181408",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.6,
+    "heightODNMetres": 1.61544,
+    "positionBNG": [
+      540286.47,
+      181408.17
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Ford's Park Road east, between the terraces (east of the vertical join); dot upper-left; 12x"
+  },
+  {
+    "id": "sh_538626_181396",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.7,
+    "heightODNMetres": 1.95072,
+    "positionBNG": [
+      538625.99,
+      181396.38
+    ],
+    "usedInMappedLayer": false,
+    "notes": "junction by L.B.O., north-east; survey dot directly above figure, separate from the F.P.'s own dot (872,67); 12x"
+  },
+  {
+    "id": "sh_540633_181396",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      540633.29,
+      181395.78
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road at its south end near the Russell Road corner; dot above figures (centroid); 6x"
+  },
+  {
+    "id": "sh_538458_181383",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.3,
+    "heightODNMetres": 1.8288,
+    "positionBNG": [
+      538458.45,
+      181383.36
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Ettrick Street / Aberfeldy Street corner; dot left of figure"
+  },
+  {
+    "id": "sh_540345_181378",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      540344.98,
+      181377.9
+    ],
+    "usedInMappedLayer": false,
+    "notes": "east end of the same street by the H; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_539683_181376",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.8,
+    "heightODNMetres": 1.6764,
+    "positionBNG": [
+      539682.82,
+      181375.82
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Rathbone Street south end; dot above-right; G-shaped 6, final closed 8 plainly different at 12x"
+  },
+  {
+    "id": "sh_538713_181361",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.8,
+    "heightODNMetres": 1.9812,
+    "positionBNG": [
+      538712.71,
+      181361.32
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road (R O A D lettering) south of the terraces; dot above figures; 8x"
+  },
+  {
+    "id": "sh_539969_181359",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.9,
+    "heightODNMetres": 1.40208,
+    "positionBNG": [
+      539969.36,
+      181358.81
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Forty Acre Lane at the Roscoe Street end, by L.B.; dot above-left"
+  },
+  {
+    "id": "sh_539933_181353",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.8,
+    "heightODNMetres": 1.3716,
+    "positionBNG": [
+      539932.65,
+      181352.6
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Roscoe Street east end; dot above figure; both loops of 8 closed at 12x"
+  },
+  {
+    "id": "sh_539332_181349",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.7,
+    "heightODNMetres": 4.99872,
+    "positionBNG": [
+      539332.31,
+      181348.73
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Cooperage Wharf edge on the Bow Creek loop; dot 3-4 px inside the wharf/bank line, figure below; 8x"
+  },
+  {
+    "id": "sh_541407_181342",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      541406.52,
+      181342.13
+    ],
+    "usedInMappedLayer": false,
+    "notes": "north-east corner of the unmade road (dotted edges) east of Tree in Pound Lane; dot inside the road near the corner, figure written 12-18 px to the east outside the outer edge line; dot larger than the edge dots"
+  },
+  {
+    "id": "sh_539823_181333",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.7,
+    "heightODNMetres": 1.64592,
+    "positionBNG": [
+      539822.74,
+      181333.41
+    ],
+    "usedInMappedLayer": false,
+    "notes": "E end of Roscoe Street; dot above-left of figures after the final E of ROSCOE (not between letters); 8x"
+  },
+  {
+    "id": "sh_539530_181332",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.8,
+    "heightODNMetres": 2.286,
+    "positionBNG": [
+      539530.38,
+      181331.88
+    ],
+    "usedInMappedLayer": false,
+    "notes": "side street east of Victoria Dock Road; dot left of figure; both 8s match, 8x"
+  },
+  {
+    "id": "sh_538793_181328",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.0,
+    "heightODNMetres": 2.04216,
+    "positionBNG": [
+      538792.79,
+      181327.65
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road junction east of the Mission Room block; dot below-left of the F.P., separate from the F.P.'s own dot; figures at 549,277"
+  },
+  {
+    "id": "sh_539759_181323",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.8,
+    "heightODNMetres": 1.6764,
+    "positionBNG": [
+      539758.95,
+      181323.3
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Roscoe Street; dot left of figures; open-top 6 at 22x"
+  },
+  {
+    "id": "sh_539090_181315",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 23.3,
+    "heightODNMetres": 6.7056,
+    "positionBNG": [
+      539090.0,
+      181314.97
+    ],
+    "usedInMappedLayer": false,
+    "notes": "railway curving from the wharf sidings onto the Swing Bridge; dot on the rail above figure (S.P. beside); about 5 ft above the wharf, no hatching at the dot"
+  },
+  {
+    "id": "sh_539687_181313",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.4,
+    "heightODNMetres": 2.16408,
+    "positionBNG": [
+      539687.15,
+      181313.15
+    ],
+    "usedInMappedLayer": false,
+    "notes": "junction by the Methodist (United Free) Chapel and survey triangle; dot left of figures; 8x"
+  },
+  {
+    "id": "sh_539498_181310",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.9,
+    "heightODNMetres": 2.31648,
+    "positionBNG": [
+      539497.83,
+      181309.81
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Dock Road; lone dot after the O of VICTORIA (the lettering has no interpuncts), left-below figure; 8x/14x"
+  },
+  {
+    "id": "sh_538845_181308",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.4,
+    "heightODNMetres": 1.85928,
+    "positionBNG": [
+      538844.73,
+      181307.89
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Abbott Road / Moness Street junction; dot left of figures at 690,328"
+  },
+  {
+    "id": "sh_539323_181301",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 19.5,
+    "heightODNMetres": 5.54736,
+    "positionBNG": [
+      539322.81,
+      181301.29
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Cooperage Wharf; dot at the end of a boundary line left of figure, 8x"
+  },
+  {
+    "id": "sh_538986_181299",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.4,
+    "heightODNMetres": 3.99288,
+    "positionBNG": [
+      538986.14,
+      181299.13
+    ],
+    "usedInMappedLayer": false,
+    "notes": "wide road at the foot of the Iron Bridge ramp, south of Portree Street; dot above figure, 8x"
+  },
+  {
+    "id": "sh_539948_181298",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.6,
+    "heightODNMetres": 1.31064,
+    "positionBNG": [
+      539947.95,
+      181297.66
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street between the Forty Acre Lane and Greenville blocks; dot above-left; 6 G-shaped at 12x"
+  },
+  {
+    "id": "sh_539167_181297",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 23.1,
+    "heightODNMetres": 6.64464,
+    "positionBNG": [
+      539167.24,
+      181296.65
+    ],
+    "usedInMappedLayer": false,
+    "notes": "railway on the narrow bank between the Lea channel and Bow Creek east of the Swing Bridge, hatched slopes both sides; dot between the rails right of figure, 8x"
+  },
+  {
+    "id": "sh_538875_181295",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.0,
+    "heightODNMetres": 2.04216,
+    "positionBNG": [
+      538874.88,
+      181294.97
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road junction at the foot of Moness Street; dot above figures at 762,370"
+  },
+  {
+    "id": "sh_540346_181294",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      540346.01,
+      181293.53
+    ],
+    "usedInMappedLayer": false,
+    "notes": "west end of the road north of the terraces, by the H; dot left of figure, separate from the survey triangle at 852,480; 8x"
+  },
+  {
+    "id": "sh_541430_181292",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      541429.52,
+      181292.24
+    ],
+    "usedInMappedLayer": false,
+    "notes": "north end of Baxter Road (unmade road with dotted edges) east of the fields; dot directly above the figure; clear at 8x"
+  },
+  {
+    "id": "sh_541175_181288",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.1,
+    "heightODNMetres": 1.15824,
+    "positionBNG": [
+      541174.65,
+      181288.31
+    ],
+    "usedInMappedLayer": false,
+    "notes": "dotted-edge road running ENE; dot in the road, figure 18 px below-right"
+  },
+  {
+    "id": "sh_538897_181287",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.9,
+    "heightODNMetres": 2.31648,
+    "positionBNG": [
+      538896.88,
+      181287.21
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road east of the Moness Street junction; dot left of figures at 826,390"
+  },
+  {
+    "id": "sh_538492_181277",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      538492.45,
+      181277.1
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Aberfeldy Street at the Culloden Street corner by F.P.; dot left; 6x"
+  },
+  {
+    "id": "sh_538660_181276",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.6,
+    "heightODNMetres": 1.92024,
+    "positionBNG": [
+      538660.1,
+      181276.1
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Benledi Street at the Blair Street corner by F.P.; dot left; G-shaped 6 at 12x"
+  },
+  {
+    "id": "sh_538957_181260",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.5,
+    "heightODNMetres": 4.02336,
+    "positionBNG": [
+      538956.66,
+      181260.06
+    ],
+    "usedInMappedLayer": false,
+    "notes": "East India Dock Road east end; dot above-left of figures at 988,470"
+  },
+  {
+    "id": "sh_539044_181259",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 18.4,
+    "heightODNMetres": 5.21208,
+    "positionBNG": [
+      539043.86,
+      181258.73
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Railway Wharf sidings at grade; dot between rails right of figure, 8x"
+  },
+  {
+    "id": "sh_539882_181254",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.3,
+    "heightODNMetres": 1.2192,
+    "positionBNG": [
+      539881.73,
+      181253.86
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Boyd Road at Ford Street / Greenville Street; dot left of figure; hollow survey-station triangle at ~384,522 is separate"
+  },
+  {
+    "id": "sh_539316_181248",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 17.2,
+    "heightODNMetres": 4.84632,
+    "positionBNG": [
+      539315.7,
+      181247.97
+    ],
+    "usedInMappedLayer": false,
+    "notes": "by the Sack & Bag Works, Orchard Place side; dot on the boundary line left of figure, 8x"
+  },
+  {
+    "id": "sh_539910_181244",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.3,
+    "heightODNMetres": 1.2192,
+    "positionBNG": [
+      539910.31,
+      181244.24
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Boyd Road / Portland Road junction; dot above figure; 3 open-left at 12x"
+  },
+  {
+    "id": "sh_541019_181244",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.8,
+    "heightODNMetres": 1.3716,
+    "positionBNG": [
+      541019.24,
+      181244.06
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road between the terrace rows; dot left of figure; 8 at 8x and 20x"
+  },
+  {
+    "id": "sh_541454_181241",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      541454.05,
+      181240.54
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Baxter Road just north of the B of BAXTER; dot directly above the figure; clear at 8x"
+  },
+  {
+    "id": "sh_540314_181238",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      540313.89,
+      181238.28
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road between terrace blocks west of B.M.9\u00b743; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_539539_181238",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.1,
+    "heightODNMetres": 2.07264,
+    "positionBNG": [
+      539539.48,
+      181237.76
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Dock Road at the level crossing of the sidings; lone dot after the K of DOCK, above-left of figure; 8x"
+  },
+  {
+    "id": "sh_540619_181229",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      540619.02,
+      181229.44
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Freemasons Road at Hartington (Road) corner; dot above-left, F.P dot at 843,668 separate; 8x"
+  },
+  {
+    "id": "sh_538870_181225",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.0,
+    "heightODNMetres": 4.17576,
+    "positionBNG": [
+      538870.09,
+      181224.99
+    ],
+    "usedInMappedLayer": false,
+    "notes": "East India Dock Road at Orchard Street; dot left of figures at 748,552"
+  },
+  {
+    "id": "sh_538677_181225",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 9.1,
+    "heightODNMetres": 2.37744,
+    "positionBNG": [
+      538677.33,
+      181224.75
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Benledi Street at Dunkeld Street; dot left of figures at 235,540"
+  },
+  {
+    "id": "sh_541127_181220",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.0,
+    "heightODNMetres": 1.12776,
+    "positionBNG": [
+      541127.2,
+      181219.56
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road junction east of Prince Regent's Lane; dot left of figure"
+  },
+  {
+    "id": "sh_540884_181203",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.5,
+    "heightODNMetres": 1.58496,
+    "positionBNG": [
+      540884.24,
+      181202.6
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Argyle Road; dot left of figure"
+  },
+  {
+    "id": "sh_538797_181200",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.0,
+    "heightODNMetres": 4.17576,
+    "positionBNG": [
+      538796.64,
+      181200.32
+    ],
+    "usedInMappedLayer": false,
+    "notes": "East India Dock Road opposite All Hallows Church; dot left of figures at 555,613"
+  },
+  {
+    "id": "sh_540628_181186",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.9,
+    "heightODNMetres": 1.70688,
+    "positionBNG": [
+      540628.01,
+      181186.1
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Freemasons Road east of the P.H.; dot left of figure, F.P dot separate at ~868,780; 9 loop with tail at 12x"
+  },
+  {
+    "id": "sh_539301_181178",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.1,
+    "heightODNMetres": 4.51104,
+    "positionBNG": [
+      539300.86,
+      181178.08
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Orchard Place; dot above figure, 8x"
+  },
+  {
+    "id": "sh_541157_181169",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.0,
+    "heightODNMetres": 1.12776,
+    "positionBNG": [
+      541157.3,
+      181168.75
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road west of the terrace block; dot left of figure"
+  },
+  {
+    "id": "sh_541623_181159",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      541622.82,
+      181159.41
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Alnwick Road further ESE, between its dotted edges; dot upper-left of figure; clear at 8x"
+  },
+  {
+    "id": "sh_540717_181159",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.7,
+    "heightODNMetres": 1.34112,
+    "positionBNG": [
+      540716.89,
+      181159.14
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road north of the School; dot left of figure"
+  },
+  {
+    "id": "sh_539909_181157",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.9,
+    "heightODNMetres": 1.09728,
+    "positionBNG": [
+      539909.16,
+      181157.27
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Western Road / Lansdowne Road junction; dot above figure"
+  },
+  {
+    "id": "sh_540552_181153",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      540552.03,
+      181153.09
+    ],
+    "usedInMappedLayer": false,
+    "notes": "..amson Road; dot left-above; 5x"
+  },
+  {
+    "id": "sh_540475_181151",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.2,
+    "heightODNMetres": 1.49352,
+    "positionBNG": [
+      540474.99,
+      181150.71
+    ],
+    "usedInMappedLayer": false,
+    "notes": "..amson Road; dot left-above; 5x"
+  },
+  {
+    "id": "sh_539576_181145",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.2,
+    "heightODNMetres": 2.10312,
+    "positionBNG": [
+      539575.55,
+      181145.0
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Dock Road E side south of Hallsville Road; dot above-left; closed-top 8 at 14x and 22x"
+  },
+  {
+    "id": "sh_540261_181142",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.8,
+    "heightODNMetres": 1.3716,
+    "positionBNG": [
+      540261.4,
+      181142.46
+    ],
+    "usedInMappedLayer": false,
+    "notes": "footpath/road junction by F.P. just west of the sheet join; dot above figure; 8 clear at 6x"
+  },
+  {
+    "id": "sh_540336_181141",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.8,
+    "heightODNMetres": 1.3716,
+    "positionBNG": [
+      540336.18,
+      181141.49
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road south of the terraces (R\u00b7O\u00b7A\u00b7D lettering nearby); dot left of figure; 8 clear at 6x/8x"
+  },
+  {
+    "id": "sh_540637_181141",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.7,
+    "heightODNMetres": 1.64592,
+    "positionBNG": [
+      540637.0,
+      181141.17
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Freemasons Road south; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_539961_181138",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.1,
+    "heightODNMetres": 1.15824,
+    "positionBNG": [
+      539961.29,
+      181137.9
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Lansdowne Road at Addison Road; dot after the L of LANSDOWNE below figure (no other interpuncts in this lettering)"
+  },
+  {
+    "id": "sh_541447_181125",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.7,
+    "heightODNMetres": 1.34112,
+    "positionBNG": [
+      541446.84,
+      181124.79
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road at the south edge (lettered ..AD) between its dotted edges; dot left of the figure; clear at 8x and 12x"
+  },
+  {
+    "id": "sh_538957_181122",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 15.7,
+    "heightODNMetres": 4.38912,
+    "positionBNG": [
+      538956.62,
+      181122.03
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Great Eastern rails at the turntable junction east of Orchard Street; figures at 972,828, dot on the rail below"
+  },
+  {
+    "id": "sh_540131_181119",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      540130.56,
+      181118.79
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road at the south end of Albany Road; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_541187_181119",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.3,
+    "heightODNMetres": 1.2192,
+    "positionBNG": [
+      541186.81,
+      181118.77
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road by the Congl. Chapel; isolated dot 9 px NW of the figure, separate from the F.P. dot to its right; open 3 at 8x and 12x"
+  },
+  {
+    "id": "sh_540010_181118",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.5,
+    "heightODNMetres": 1.28016,
+    "positionBNG": [
+      540010.25,
+      181118.44
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Lansdowne Road at Sandford Street; dot after the D of LANSDOWNE below figure"
+  },
+  {
+    "id": "sh_540183_181110",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.3,
+    "heightODNMetres": 1.524,
+    "positionBNG": [
+      540183.44,
+      181110.21
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road east of B.M.6\u00b732; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_539013_181110",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 15.8,
+    "heightODNMetres": 4.4196,
+    "positionBNG": [
+      539013.29,
+      181110.02
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Railway Wharf beside the Crane among the sidings; dot left of figure, 8x"
+  },
+  {
+    "id": "sh_539590_181110",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 9.1,
+    "heightODNMetres": 2.37744,
+    "positionBNG": [
+      539589.56,
+      181109.84
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Dock Road E side; dot above figures; 8x"
+  },
+  {
+    "id": "sh_541683_181108",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      541683.12,
+      181107.59
+    ],
+    "usedInMappedLayer": false,
+    "notes": "east end of Prince of Wales Road where it turns north-east along the ditch; dot right of figure; clear at 7x"
+  },
+  {
+    "id": "sh_539844_181100",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.7,
+    "heightODNMetres": 1.03632,
+    "positionBNG": [
+      539844.07,
+      181099.75
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Boyd Road / St Luke's Square south, by John Street; dot above figure"
+  },
+  {
+    "id": "sh_540654_181089",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.5,
+    "heightODNMetres": 1.28016,
+    "positionBNG": [
+      540654.01,
+      181089.28
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road by the Infants' school at Coolfin Road east end; dot above-left; both 5s flat-topped at 12x"
+  },
+  {
+    "id": "sh_539718_181081",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      539717.5,
+      181080.79
+    ],
+    "usedInMappedLayer": false,
+    "notes": "George Street / John Street corner; dot above-left of figures, F.P. dot separate below; 8x"
+  },
+  {
+    "id": "sh_538920_181076",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.4,
+    "heightODNMetres": 4.60248,
+    "positionBNG": [
+      538919.6,
+      181076.25
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Orchard Street; dot left-below figure beside the hatched dock wall"
+  },
+  {
+    "id": "sh_541212_181070",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.1,
+    "heightODNMetres": 1.46304,
+    "positionBNG": [
+      541212.38,
+      181069.97
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street corner by the P.H. south of the chapel; dot upper-left; 8x"
+  },
+  {
+    "id": "sh_539861_181057",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.6,
+    "heightODNMetres": 1.00584,
+    "positionBNG": [
+      539861.07,
+      181057.12
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Catherine Street west end by F.P.; dot left; G-shaped 6 at 12x"
+  },
+  {
+    "id": "sh_539836_181057",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.8,
+    "heightODNMetres": 1.0668,
+    "positionBNG": [
+      539836.5,
+      181056.81
+    ],
+    "usedInMappedLayer": false,
+    "notes": "junction of that street with Catherine Street by L.B.; dot left; both loops of 8 closed at 8x/12x"
+  },
+  {
+    "id": "sh_539612_181054",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.1,
+    "heightODNMetres": 2.07264,
+    "positionBNG": [
+      539612.32,
+      181053.99
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same road further south, by the corner of George Street block; dot above-left; 12x"
+  },
+  {
+    "id": "sh_540671_181049",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.4,
+    "heightODNMetres": 1.24968,
+    "positionBNG": [
+      540670.63,
+      181049.25
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road south-east of the school; dot left"
+  },
+  {
+    "id": "sh_541224_181041",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.5,
+    "heightODNMetres": 1.28016,
+    "positionBNG": [
+      541223.79,
+      181041.3
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street west of the School, just west of the px ~152 join; dot directly above the figure; both 5s flat-topped in raw pixels (12x rounds them)"
+  },
+  {
+    "id": "sh_539266_181035",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.2,
+    "heightODNMetres": 4.23672,
+    "positionBNG": [
+      539266.03,
+      181035.2
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Orchard Place by the School; dot above-right of figure"
+  },
+  {
+    "id": "sh_541329_181012",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.4,
+    "heightODNMetres": 1.24968,
+    "positionBNG": [
+      541328.93,
+      181011.53
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Leyes Road at the West Road corner; isolated dot 10 px E of the figure"
+  },
+  {
+    "id": "sh_541391_181010",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.7,
+    "heightODNMetres": 1.34112,
+    "positionBNG": [
+      541391.19,
+      181009.55
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Leyes Road; isolated dot 10 px E of the figure"
+  },
+  {
+    "id": "sh_541448_181008",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.0,
+    "heightODNMetres": 1.43256,
+    "positionBNG": [
+      541448.24,
+      181007.79
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Leyes Road; isolated dot 10 px E of the figure; open G-shaped 6"
+  },
+  {
+    "id": "sh_541506_181006",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.0,
+    "heightODNMetres": 1.43256,
+    "positionBNG": [
+      541505.64,
+      181006.42
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Leyes Road between the E and the figure (LEYES has no interpuncts); dot 9 px W of the figure"
+  },
+  {
+    "id": "sh_539874_181006",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 4.8,
+    "heightODNMetres": 1.0668,
+    "positionBNG": [
+      539873.65,
+      181006.19
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Alice Street at Sarah Street; dot left; 12x"
+  },
+  {
+    "id": "sh_541570_181005",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.1,
+    "heightODNMetres": 1.46304,
+    "positionBNG": [
+      541570.12,
+      181005.24
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Leyes Road; dot right of figure; leading digit a 6 with one lower counter in raw pixels (reads as 8 at 2x)"
+  },
+  {
+    "id": "sh_541661_181003",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.5,
+    "heightODNMetres": 1.58496,
+    "positionBNG": [
+      541661.45,
+      181002.95
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Leyes Road east part; dot left of figure; 6 hook top, 5 flat top bar with right side open (raw)"
+  },
+  {
+    "id": "sh_541280_181001",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.4,
+    "heightODNMetres": 1.24968,
+    "positionBNG": [
+      541280.41,
+      181001.26
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Leyes Road by the School; isolated dot 11 px E of the figure"
+  },
+  {
+    "id": "sh_539638_181000",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.7,
+    "heightODNMetres": 1.64592,
+    "positionBNG": [
+      539637.83,
+      181000.08
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road beside the railway at the west end of Smith Street; dot above; 12x"
+  },
+  {
+    "id": "sh_538947_180997",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.8,
+    "heightODNMetres": 4.7244,
+    "positionBNG": [
+      538947.47,
+      180996.76
+    ],
+    "usedInMappedLayer": false,
+    "notes": "south end of Orchard Street by the B.S.; dot above-left; faint '14' at 920,401 is not a height"
+  },
+  {
+    "id": "sh_539251_180993",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.5,
+    "heightODNMetres": 4.32816,
+    "positionBNG": [
+      539251.18,
+      180992.81
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Orchard Place, Leamouth; dot below figure (overlap with 131075_87164)"
+  },
+  {
+    "id": "sh_541244_180992",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.7,
+    "heightODNMetres": 1.34112,
+    "positionBNG": [
+      541243.78,
+      180992.44
+    ],
+    "usedInMappedLayer": false,
+    "notes": "lane by the School below B.M.8\u00b727; dot left; 8x"
+  },
+  {
+    "id": "sh_538912_180963",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 15.7,
+    "heightODNMetres": 4.38912,
+    "positionBNG": [
+      538911.51,
+      180963.45
+    ],
+    "usedInMappedLayer": false,
+    "notes": "lock side at the dock entrance by the capstans (Cn.); dot below-left of figure"
+  },
+  {
+    "id": "sh_541122_180962",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.5,
+    "heightODNMetres": 1.58496,
+    "positionBNG": [
+      541121.69,
+      180961.93
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road north of the dock railway at Winton Road; dot left; round 6, flat 5 at 8x"
+  },
+  {
+    "id": "sh_541055_180962",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.2,
+    "heightODNMetres": 1.49352,
+    "positionBNG": [
+      541055.39,
+      180961.57
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road north of the dock railway; dot left; 8x"
+  },
+  {
+    "id": "sh_540977_180959",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.2,
+    "heightODNMetres": 1.49352,
+    "positionBNG": [
+      540977.41,
+      180959.22
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Dock Road at the east edge; dot left; figure ends ~1019, whole"
+  },
+  {
+    "id": "sh_540912_180959",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.1,
+    "heightODNMetres": 1.76784,
+    "positionBNG": [
+      540911.5,
+      180958.51
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Dock Road by Tr.; dot left"
+  },
+  {
+    "id": "sh_541851_180958",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 9.9,
+    "heightODNMetres": 2.62128,
+    "positionBNG": [
+      541850.82,
+      180958.45
+    ],
+    "usedInMappedLayer": false,
+    "notes": "G.E.R. Beckton Branch bank where the marsh road ends at the railway fence; figure on the road end, isolated dot 16 px SE on the bank crest between the hatched slope and the rails; 8x"
+  },
+  {
+    "id": "sh_541193_180958",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      541193.15,
+      180957.78
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road at the foot of Gregory Road by the railway; dot upper-left; 8x"
+  },
+  {
+    "id": "sh_540865_180956",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.7,
+    "heightODNMetres": 1.64592,
+    "positionBNG": [
+      540865.18,
+      180956.3
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Dock Road by the survey triangle; dot left-above"
+  },
+  {
+    "id": "sh_539671_180954",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.8,
+    "heightODNMetres": 1.6764,
+    "positionBNG": [
+      539671.33,
+      180953.81
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road east of the railway near the level crossing; dot above-left; final 8 two closed loops, distinct from the 6 at 12x/22x"
+  },
+  {
+    "id": "sh_540171_180949",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.0,
+    "heightODNMetres": 1.43256,
+    "positionBNG": [
+      540171.37,
+      180949.37
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Queen's Road at King Street; dot above-left"
+  },
+  {
+    "id": "sh_540588_180939",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.6,
+    "heightODNMetres": 1.61544,
+    "positionBNG": [
+      540587.76,
+      180938.77
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Dock Road at Hill Street; dot upper-left"
+  },
+  {
+    "id": "sh_539007_180937",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.5,
+    "heightODNMetres": 4.93776,
+    "positionBNG": [
+      539007.22,
+      180937.09
+    ],
+    "usedInMappedLayer": false,
+    "notes": "North Quay west end by the Swing Bridge (dock quay); dot left of figure"
+  },
+  {
+    "id": "sh_540536_180935",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.6,
+    "heightODNMetres": 1.61544,
+    "positionBNG": [
+      540536.47,
+      180934.56
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Dock Road at Wightman Street; dot upper-left"
+  },
+  {
+    "id": "sh_539223_180930",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.1,
+    "heightODNMetres": 4.51104,
+    "positionBNG": [
+      539222.73,
+      180929.99
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Orchard Place at Orchard House / L.B.; dot below-left"
+  },
+  {
+    "id": "sh_540485_180929",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.6,
+    "heightODNMetres": 1.61544,
+    "positionBNG": [
+      540485.21,
+      180929.43
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Dock Road at Young Street; dot upper-left"
+  },
+  {
+    "id": "sh_541337_180925",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 9.0,
+    "heightODNMetres": 2.34696,
+    "positionBNG": [
+      541337.29,
+      180925.01
+    ],
+    "usedInMappedLayer": false,
+    "notes": "railway land between the fence and the G.E.R. tracks south of the Allotment Gardens; dot 8 px W of the figure"
+  },
+  {
+    "id": "sh_540433_180924",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      540432.65,
+      180923.89
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Dock Road at Custom Street; dot upper-left"
+  },
+  {
+    "id": "sh_540384_180918",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.5,
+    "heightODNMetres": 1.58496,
+    "positionBNG": [
+      540384.21,
+      180917.6
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same road by a survey triangle and F.P (own dot left of its letters); dot above-left of figures"
+  },
+  {
+    "id": "sh_540321_180910",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.2,
+    "heightODNMetres": 1.49352,
+    "positionBNG": [
+      540320.97,
+      180909.91
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same road east of the join (north of the Royal Albert & Victoria channel); dot above-left"
+  },
+  {
+    "id": "sh_540057_180909",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.1,
+    "heightODNMetres": 1.15824,
+    "positionBNG": [
+      540056.81,
+      180909.06
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Hack Road / King Street corner; dot above-left; 12x"
+  },
+  {
+    "id": "sh_541418_180909",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 9.5,
+    "heightODNMetres": 2.49936,
+    "positionBNG": [
+      541417.84,
+      180908.67
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Connaught Road carriageway west end (road between the north footway dotted line and the hatched slope to the railway); dot right of figure; 8x"
+  },
+  {
+    "id": "sh_541498_180907",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 9.5,
+    "heightODNMetres": 2.49936,
+    "positionBNG": [
+      541498.19,
+      180907.37
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Connaught Road; dot left of figure; 8x (same mark as on m18_131099_87167)"
+  },
+  {
+    "id": "sh_541661_180904",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 9.8,
+    "heightODNMetres": 2.5908,
+    "positionBNG": [
+      541661.24,
+      180903.62
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Connaught Road east of the F.P. junction; dot right of figure; 8 two counters"
+  },
+  {
+    "id": "sh_540258_180900",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.6,
+    "heightODNMetres": 1.61544,
+    "positionBNG": [
+      540258.39,
+      180900.5
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same road west of the vertical sheet join; dot left of figures"
+  },
+  {
+    "id": "sh_541699_180900",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 9.7,
+    "heightODNMetres": 2.56032,
+    "positionBNG": [
+      541699.35,
+      180899.6
+    ],
+    "usedInMappedLayer": false,
+    "notes": "G.E.R. Beckton Branch at grade east of Connaught Road; dot between the rails of the track about 12 px below the figure"
+  },
+  {
+    "id": "sh_540189_180891",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.4,
+    "heightODNMetres": 1.55448,
+    "positionBNG": [
+      540189.36,
+      180891.17
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road along the north side of the Albert & Victoria Docks Cut railway, by L.B.; dot left of figures"
+  },
+  {
+    "id": "sh_540671_180881",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 7.0,
+    "heightODNMetres": 1.73736,
+    "positionBNG": [
+      540670.94,
+      180881.14
+    ],
+    "usedInMappedLayer": false,
+    "notes": "on the rails of the sidings south of the Docks Cut; dot left of figure on a rail; 10x"
+  },
+  {
+    "id": "sh_539762_180878",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.7,
+    "heightODNMetres": 1.34112,
+    "positionBNG": [
+      539762.22,
+      180877.99
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road on the north side of the Woolwich G.E.R. branch (Victoria Dock Road); dot left of figure; 8x"
+  },
+  {
+    "id": "sh_540125_180877",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.9,
+    "heightODNMetres": 1.40208,
+    "positionBNG": [
+      540124.74,
+      180877.12
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same road beside the railway; dot left of figures"
+  },
+  {
+    "id": "sh_539728_180863",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.4,
+    "heightODNMetres": 1.85928,
+    "positionBNG": [
+      539727.72,
+      180862.6
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street in front of the same P.H.; dot above-left; 12x"
+  },
+  {
+    "id": "sh_540068_180862",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.9,
+    "heightODNMetres": 1.40208,
+    "positionBNG": [
+      540068.16,
+      180862.28
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Dock Road east, by the Presbyterian Chapel; dot left; 12x"
+  },
+  {
+    "id": "sh_539814_180855",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.5,
+    "heightODNMetres": 1.28016,
+    "positionBNG": [
+      539814.34,
+      180854.75
+    ],
+    "usedInMappedLayer": false,
+    "notes": "same road beside the rails, below F.P.; dot left of figure; 12x"
+  },
+  {
+    "id": "sh_541650_180851",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 13.5,
+    "heightODNMetres": 3.71856,
+    "positionBNG": [
+      541650.04,
+      180851.29
+    ],
+    "usedInMappedLayer": false,
+    "notes": "raised road from Connaught Road south past the P.H. (hatched bank on its east side down to the marsh); dot above the final digit; final 5 flat top bar with right side open below in raw pixels; 8x"
+  },
+  {
+    "id": "sh_539813_180828",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.7,
+    "heightODNMetres": 2.25552,
+    "positionBNG": [
+      539812.53,
+      180828.32
+    ],
+    "usedInMappedLayer": false,
+    "notes": "street corner on the south side of the railway; dot above; 8 two loops at 12x"
+  },
+  {
+    "id": "sh_540679_180822",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 10.2,
+    "heightODNMetres": 2.71272,
+    "positionBNG": [
+      540678.9,
+      180822.39
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Custom House premises south of the railway; figure written in a small building outline, dot left of it on the ground"
+  },
+  {
+    "id": "sh_541192_180820",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 19.0,
+    "heightODNMetres": 5.39496,
+    "positionBNG": [
+      541191.56,
+      180820.45
+    ],
+    "usedInMappedLayer": false,
+    "notes": "quay roadway north of No.2 Warehouse; dot left of figure"
+  },
+  {
+    "id": "sh_541271_180820",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 18.0,
+    "heightODNMetres": 5.09016,
+    "positionBNG": [
+      541270.91,
+      180820.42
+    ],
+    "usedInMappedLayer": false,
+    "notes": "dock premises between the sidings and No. 3 Warehouse; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_541117_180819",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 19.6,
+    "heightODNMetres": 5.57784,
+    "positionBNG": [
+      541116.71,
+      180819.48
+    ],
+    "usedInMappedLayer": false,
+    "notes": "quay roadway north of No.1 Warehouse; dot left of figure; 6 open-topped at 12x"
+  },
+  {
+    "id": "sh_541050_180818",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 20.3,
+    "heightODNMetres": 5.7912,
+    "positionBNG": [
+      541050.08,
+      180817.63
+    ],
+    "usedInMappedLayer": false,
+    "notes": "quay roadway between L. Warehouse and V. Warehouse; dot left of figure; 3 open-left at 12x"
+  },
+  {
+    "id": "sh_540966_180816",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 20.9,
+    "heightODNMetres": 5.97408,
+    "positionBNG": [
+      540965.93,
+      180815.86
+    ],
+    "usedInMappedLayer": false,
+    "notes": "quay roadway between L. Warehouse and T. Warehouse; dot left of figure"
+  },
+  {
+    "id": "sh_540878_180812",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 21.2,
+    "heightODNMetres": 6.06552,
+    "positionBNG": [
+      540878.12,
+      180812.12
+    ],
+    "usedInMappedLayer": false,
+    "notes": "quay north of T. Warehouse; dot left; 12x"
+  },
+  {
+    "id": "sh_540300_180807",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 6.9,
+    "heightODNMetres": 1.70688,
+    "positionBNG": [
+      540300.46,
+      180807.1
+    ],
+    "usedInMappedLayer": false,
+    "notes": "south end of the same yard beside buildings, south of the railway; dot above figures; figures end about 2 px above the bottom edge but are whole"
+  },
+  {
+    "id": "sh_539890_180805",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 9.8,
+    "heightODNMetres": 2.5908,
+    "positionBNG": [
+      539889.81,
+      180804.88
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road south of the railway east of Post Office; dot left of figures"
+  },
+  {
+    "id": "sh_540793_180805",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 21.3,
+    "heightODNMetres": 6.096,
+    "positionBNG": [
+      540793.02,
+      180804.56
+    ],
+    "usedInMappedLayer": false,
+    "notes": "quay south of Custom House between rail lines; dot left; 12x"
+  },
+  {
+    "id": "sh_539251_180802",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 10.5,
+    "heightODNMetres": 2.80416,
+    "positionBNG": [
+      539251.28,
+      180802.21
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Orchard Place south of the P.H.; dot above-left, 8x"
+  },
+  {
+    "id": "sh_540699_180799",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 21.9,
+    "heightODNMetres": 6.27888,
+    "positionBNG": [
+      540698.93,
+      180798.61
+    ],
+    "usedInMappedLayer": false,
+    "notes": "quay between the rail lines and the warehouse line, Royal Victoria Dock north side; dot left; 12x"
+  },
+  {
+    "id": "sh_541624_180798",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.3,
+    "heightODNMetres": 4.572,
+    "positionBNG": [
+      541624.31,
+      180798.49
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road south of the P.H. just north of the railway lines, where it reaches the Connaught Road approach; dot above the leading 1/6"
+  },
+  {
+    "id": "sh_540624_180793",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 22.1,
+    "heightODNMetres": 6.33984,
+    "positionBNG": [
+      540624.2,
+      180793.2
+    ],
+    "usedInMappedLayer": false,
+    "notes": "dock quay south of K. Warehouse near the sheds; dot left of figure; 12x"
+  },
+  {
+    "id": "sh_539042_180790",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 15.6,
+    "heightODNMetres": 4.35864,
+    "positionBNG": [
+      539041.98,
+      180789.79
+    ],
+    "usedInMappedLayer": false,
+    "notes": "quay head at the south of East India Dock Basin (entrance to the dock); dot on the quay edge line above figure"
+  },
+  {
+    "id": "sh_539653_180789",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 16.2,
+    "heightODNMetres": 4.54152,
+    "positionBNG": [
+      539653.39,
+      180788.72
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Thames Iron Works yard, made ground; dot left of figure; digits end ~3 px above the south edge but are complete at 12x"
+  },
+  {
+    "id": "sh_541312_180785",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 18.3,
+    "heightODNMetres": 5.1816,
+    "positionBNG": [
+      541312.12,
+      180785.16
+    ],
+    "usedInMappedLayer": false,
+    "notes": "quay apron between Nos 3-5 Warehouses at the head of the dock, about 25 px from the quay wall; dot right of figure; 8x"
+  },
+  {
+    "id": "sh_540548_180785",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 21.7,
+    "heightODNMetres": 6.21792,
+    "positionBNG": [
+      540547.69,
+      180784.77
+    ],
+    "usedInMappedLayer": false,
+    "notes": "dock quay south of K. Warehouse; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_539335_180780",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 10.5,
+    "heightODNMetres": 2.80416,
+    "positionBNG": [
+      539335.43,
+      180780.0
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Orchard Place beside B.M.12\u00b737; dot left of figure, 8x"
+  },
+  {
+    "id": "sh_540468_180778",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 21.9,
+    "heightODNMetres": 6.27888,
+    "positionBNG": [
+      540468.15,
+      180778.48
+    ],
+    "usedInMappedLayer": false,
+    "notes": "dock quay between S. and X. Warehouses beside the sidings; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_540386_180769",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 21.6,
+    "heightODNMetres": 6.18744,
+    "positionBNG": [
+      540386.45,
+      180769.16
+    ],
+    "usedInMappedLayer": false,
+    "notes": "dock quay south of S. Warehouse; dot left"
+  },
+  {
+    "id": "sh_539756_180763",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.6,
+    "heightODNMetres": 1.61544,
+    "positionBNG": [
+      539756.1,
+      180763.12
+    ],
+    "usedInMappedLayer": false,
+    "notes": "North Woolwich Road at Union Street; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_540309_180761",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 21.3,
+    "heightODNMetres": 6.096,
+    "positionBNG": [
+      540309.17,
+      180761.45
+    ],
+    "usedInMappedLayer": false,
+    "notes": "dock quay north of the Crane and warehouses, south of the S. Warehouse; dot upper-left"
+  },
+  {
+    "id": "sh_539855_180730",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.7,
+    "heightODNMetres": 1.34112,
+    "positionBNG": [
+      539855.16,
+      180730.36
+    ],
+    "usedInMappedLayer": false,
+    "notes": "south end of Peto Street at the Cricket Ground road; dot left of figures"
+  },
+  {
+    "id": "sh_541611_180722",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 20.1,
+    "heightODNMetres": 5.73024,
+    "positionBNG": [
+      541610.62,
+      180721.75
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road west of the Seamen's Hospital rising toward the Connaught bridge; dot above figure between the footway lines; 8x"
+  },
+  {
+    "id": "sh_541859_180722",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 18.2,
+    "heightODNMetres": 5.15112,
+    "positionBNG": [
+      541858.92,
+      180721.62
+    ],
+    "usedInMappedLayer": false,
+    "notes": "north quay of Royal Albert Dock west of No.33 Warehouse; dot touching the drawn quay-edge line (about 2 px quay side, at the coping), just SE of the hydrant '\u00b7H' at 272,585; figure written over the dock below the edge line. Dot ON the edge wall line -> wall_top"
+  },
+  {
+    "id": "sh_541303_180708",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 18.3,
+    "heightODNMetres": 5.1816,
+    "positionBNG": [
+      541303.1,
+      180707.62
+    ],
+    "usedInMappedLayer": false,
+    "notes": "east quay wall of the dock head west of Nos 7-8 Warehouses; dot a bump on the wall line left of figure (raw pixels); 8x"
+  },
+  {
+    "id": "sh_539488_180702",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 14.9,
+    "heightODNMetres": 4.14528,
+    "positionBNG": [
+      539487.69,
+      180702.06
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Trinity Buoy Wharf yard east of the buildings; dot above figure, 8x"
+  },
+  {
+    "id": "sh_540320_180696",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 19.6,
+    "heightODNMetres": 5.57784,
+    "positionBNG": [
+      540319.93,
+      180695.61
+    ],
+    "usedInMappedLayer": false,
+    "notes": "figure written over the dock water, dot on the west wall of the E. Warehouse jetty; open-topped 6 at 14x"
+  },
+  {
+    "id": "sh_540040_180669",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 18.5,
+    "heightODNMetres": 5.24256,
+    "positionBNG": [
+      540039.78,
+      180668.56
+    ],
+    "usedInMappedLayer": false,
+    "notes": "M.R. Goods & Coal Depot beside the sidings; dot above-left"
+  },
+  {
+    "id": "sh_541317_180665",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 18.2,
+    "heightODNMetres": 5.15112,
+    "positionBNG": [
+      541316.58,
+      180665.26
+    ],
+    "usedInMappedLayer": false,
+    "notes": "curved quay wall at the south-west corner of the warehouse block; dot a bump on the wall line left of figure (raw pixels); 8x"
+  },
+  {
+    "id": "sh_541641_180658",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 22.8,
+    "heightODNMetres": 6.5532,
+    "positionBNG": [
+      541640.9,
+      180657.94
+    ],
+    "usedInMappedLayer": false,
+    "notes": "dock premises just east of the east parapet wall of the Connaught bridge approach, north end; dot above-left of figure; 12x clear. The approach road itself carries no figure here"
+  },
+  {
+    "id": "sh_541681_180631",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 18.3,
+    "heightODNMetres": 5.1816,
+    "positionBNG": [
+      541681.33,
+      180630.73
+    ],
+    "usedInMappedLayer": false,
+    "notes": "north quay wall of the Connaught passage east of the bridge; dot on the wall line at the start of the figure; 8x"
+  },
+  {
+    "id": "sh_539898_180591",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.3,
+    "heightODNMetres": 1.8288,
+    "positionBNG": [
+      539897.55,
+      180591.45
+    ],
+    "usedInMappedLayer": false,
+    "notes": "North Woolwich Road at the L.B. corner by the P.H.; dot left of figures"
+  },
+  {
+    "id": "sh_540066_180591",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 18.2,
+    "heightODNMetres": 5.15112,
+    "positionBNG": [
+      540066.14,
+      180590.89
+    ],
+    "usedInMappedLayer": false,
+    "notes": "M.R. Goods & Coal Depot south end; dot above-left"
+  },
+  {
+    "id": "sh_541370_180584",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 16.9,
+    "heightODNMetres": 4.75488,
+    "positionBNG": [
+      541370.42,
+      180584.45
+    ],
+    "usedInMappedLayer": false,
+    "notes": "south quay: corner of the jetty/pier head east of the rail approach; dot just inside the wall corner right of the figure; 8x + raw: 6 open upper right with lower counter, 9 upper counter only"
+  },
+  {
+    "id": "sh_541499_180582",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 18.4,
+    "heightODNMetres": 5.21208,
+    "positionBNG": [
+      541499.07,
+      180582.4
+    ],
+    "usedInMappedLayer": false,
+    "notes": "south quay wall corner vertex (same mark as on m18_131099_87167)"
+  },
+  {
+    "id": "sh_541552_180581",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 18.3,
+    "heightODNMetres": 5.1816,
+    "positionBNG": [
+      541551.76,
+      180581.2
+    ],
+    "usedInMappedLayer": false,
+    "notes": "south quay wall line (same mark as on m18_131099_87167)"
+  },
+  {
+    "id": "sh_541621_180579",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 18.4,
+    "heightODNMetres": 5.21208,
+    "positionBNG": [
+      541620.73,
+      180579.53
+    ],
+    "usedInMappedLayer": false,
+    "notes": "quay-wall vertex west of the Connaught bridge (M.P.s nearby); dot at the vertex above figure; 8x"
+  },
+  {
+    "id": "sh_541702_180574",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 18.4,
+    "heightODNMetres": 5.21208,
+    "positionBNG": [
+      541701.72,
+      180574.08
+    ],
+    "usedInMappedLayer": false,
+    "notes": "open quay apron east of the bridge, about 40 m back from the quay edge; dot left of figure; 8x"
+  },
+  {
+    "id": "sh_541462_180568",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 28.2,
+    "heightODNMetres": 8.19912,
+    "positionBNG": [
+      541461.98,
+      180567.68
+    ],
+    "usedInMappedLayer": false,
+    "notes": "hatched earth bank/mound south of the south quay; dot inside the hatching west of the figure, about 10 ft above the quay; 8x + raw (8 two counters). Setting judged from the hatching; crest vs slope not certain"
+  },
+  {
+    "id": "sh_540336_180566",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 19.3,
+    "heightODNMetres": 5.4864,
+    "positionBNG": [
+      540335.91,
+      180565.54
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Coal Depot jetty NW corner, dot at wall corner; M.P. below is mooring post"
+  },
+  {
+    "id": "sh_539601_180552",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 17.5,
+    "heightODNMetres": 4.93776,
+    "positionBNG": [
+      539600.96,
+      180552.27
+    ],
+    "usedInMappedLayer": true,
+    "notes": "quay at the head of the western DRY DOCK entrance; dot below-left of figure; 8x"
+  },
+  {
+    "id": "sh_541316_180523",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 17.5,
+    "heightODNMetres": 4.93776,
+    "positionBNG": [
+      541316.05,
+      180523.3
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Timber Yard sidings on the quay, at grade; clear dot at the crossing of the N-S and E-W tracks just left of the figure"
+  },
+  {
+    "id": "sh_539975_180488",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 16.2,
+    "heightODNMetres": 4.54152,
+    "positionBNG": [
+      539975.45,
+      180488.44
+    ],
+    "usedInMappedLayer": false,
+    "notes": "on the rails at the NW end of the Swing Bridge; dot below-left; 8x"
+  },
+  {
+    "id": "sh_540347_180484",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 19.1,
+    "heightODNMetres": 5.42544,
+    "positionBNG": [
+      540346.64,
+      180483.81
+    ],
+    "usedInMappedLayer": false,
+    "notes": "written over water in the inlet, dot on the jetty wall east of figure"
+  },
+  {
+    "id": "sh_540011_180454",
+    "family": "railway",
+    "setting": "railway",
+    "surfaceReview": null,
+    "valueFeet": 16.6,
+    "heightODNMetres": 4.66344,
+    "positionBNG": [
+      540011.43,
+      180453.75
+    ],
+    "usedInMappedLayer": false,
+    "notes": "on the rails at the SE end of the Swing Bridge; dot left; 8x"
+  },
+  {
+    "id": "sh_539693_180450",
+    "family": "wall",
+    "setting": "wall_top",
+    "surfaceReview": null,
+    "valueFeet": 16.9,
+    "heightODNMetres": 4.75488,
+    "positionBNG": [
+      539693.36,
+      180450.21
+    ],
+    "usedInMappedLayer": true,
+    "notes": "river-wall quay by the crane; dot at the wall corner above-right of the figure; 9 closed with tail vs open 6 at 12x"
+  },
+  {
+    "id": "sh_540083_180391",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.8,
+    "heightODNMetres": 2.286,
+    "positionBNG": [
+      540082.64,
+      180390.88
+    ],
+    "usedInMappedLayer": false,
+    "notes": "by Fire Alarm beside the North Woolwich railway; dot left of figure"
+  },
+  {
+    "id": "sh_541790_180380",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 15.8,
+    "heightODNMetres": 4.4196,
+    "positionBNG": [
+      541789.86,
+      180379.56
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Connaught Road on its raised approach, hatched banks both sides (overlap with 131102_87170); clear dot left of figure"
+  },
+  {
+    "id": "sh_540363_180379",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 18.4,
+    "heightODNMetres": 5.21208,
+    "positionBNG": [
+      540362.59,
+      180378.53
+    ],
+    "usedInMappedLayer": false,
+    "notes": "between No.18 Warehouse and sheds; dot up-left of figure"
+  },
+  {
+    "id": "sh_541276_180351",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 8.7,
+    "heightODNMetres": 2.25552,
+    "positionBNG": [
+      541275.96,
+      180350.51
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road east of the OS sheet join (px ~918), north of the curving bank by the Engine House; dot left of figure"
+  },
+  {
+    "id": "sh_541347_180348",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.6,
+    "heightODNMetres": 1.92024,
+    "positionBNG": [
+      541346.64,
+      180347.65
+    ],
+    "usedInMappedLayer": false,
+    "notes": "east end of the same road at the gateway toward the Silvertown side; clear dot left of figure; 6 lower counter"
+  },
+  {
+    "id": "sh_541423_180326",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 5.8,
+    "heightODNMetres": 1.3716,
+    "positionBNG": [
+      541422.89,
+      180325.61
+    ],
+    "usedInMappedLayer": false,
+    "notes": "double-line road/track along the foot of the dock-estate bank; dot on the road's south edge line above-left of the figure; 5 flat-topped"
+  },
+  {
+    "id": "sh_541492_180325",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.3,
+    "heightODNMetres": 1.524,
+    "positionBNG": [
+      541491.72,
+      180324.56
+    ],
+    "usedInMappedLayer": false,
+    "notes": "bank-foot road along the south side of the marsh bank, west of where the bank hatching ends (x~70); dot 2 px below the road's south edge line, figure below; Silvertown, flush with the marsh"
+  },
+  {
+    "id": "sh_541537_180301",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.0,
+    "heightODNMetres": 1.43256,
+    "positionBNG": [
+      541537.2,
+      180301.3
+    ],
+    "usedInMappedLayer": false,
+    "notes": "west end of Oriental Road by the F.P. (overlap with 131099_87170); clear dot left of figure"
+  },
+  {
+    "id": "sh_541585_180298",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.1,
+    "heightODNMetres": 1.46304,
+    "positionBNG": [
+      541584.43,
+      180297.78
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Oriental Road; dot directly under the O of ORIENTAL, 8 px above the figure, not between letters so not an interpunct"
+  },
+  {
+    "id": "sh_541727_180298",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.5,
+    "heightODNMetres": 1.58496,
+    "positionBNG": [
+      541727.13,
+      180297.67
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Oriental Road east part; clear dot above figure away from lettering; 5 has a flat top with right side open below it"
+  },
+  {
+    "id": "sh_540758_180296",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.5,
+    "heightODNMetres": 1.88976,
+    "positionBNG": [
+      540757.94,
+      180295.64
+    ],
+    "usedInMappedLayer": false,
+    "notes": "road corner east of the School; dot above figure; flat 5 at 8x"
+  },
+  {
+    "id": "sh_540547_180280",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 7.4,
+    "heightODNMetres": 1.85928,
+    "positionBNG": [
+      540547.12,
+      180280.14
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Evelyn Road at a side road; dot above the 7; 10x and 12x"
+  },
+  {
+    "id": "sh_540272_180263",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.9,
+    "heightODNMetres": 1.70688,
+    "positionBNG": [
+      540272.28,
+      180262.52
+    ],
+    "usedInMappedLayer": false,
+    "notes": "North Woolwich Road east part; dot left of figure"
+  },
+  {
+    "id": "sh_540348_180260",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 6.9,
+    "heightODNMetres": 1.70688,
+    "positionBNG": [
+      540347.97,
+      180260.15
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Clyde Road; dot left of figure"
+  },
+  {
+    "id": "sh_537539_185731",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 16.8,
+    "heightODNMetres": 4.7244,
+    "positionBNG": [
+      537539.44,
+      185731.01
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Direct map reading: dot on eastern Waterworks bank/path strip, above the 16.8 figure. Separate from the 16.8 reading farther south near the ditch junction."
+  },
+  {
+    "id": "sh_536945_184780",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.7,
+    "heightODNMetres": 4.69392,
+    "positionBNG": [
+      536945.282,
+      184780.019
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Victoria Road at Prince Edward Road; separate dot left, distinct from B.M.17.30."
+  },
+  {
+    "id": "sh_536988_184689",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.5,
+    "heightODNMetres": 4.63296,
+    "positionBNG": [
+      536987.564,
+      184689.088
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Prince Edward Road at Felstead Street; separate dot above-right of 16.5."
+  },
+  {
+    "id": "sh_537051_184665",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 17.1,
+    "heightODNMetres": 4.81584,
+    "positionBNG": [
+      537051.488,
+      184665.197
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Wansbeck Road at Wallis Road; separate dot above 17.1."
+  },
+  {
+    "id": "sh_537033_184521",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 17.2,
+    "heightODNMetres": 4.84632,
+    "positionBNG": [
+      537033.428,
+      184520.657
+    ],
+    "usedInMappedLayer": false,
+    "notes": "White Post Lane by works; separate dot above-left of 17.2."
+  },
+  {
+    "id": "sh_536790_185487",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.1,
+    "heightODNMetres": 4.20624,
+    "positionBNG": [
+      536789.628,
+      185486.723
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Homerton Road western unhatched lane; separate dot inside the road above the figure."
+  },
+  {
+    "id": "sh_536869_185494",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.0,
+    "heightODNMetres": 4.17576,
+    "positionBNG": [
+      536869.436,
+      185494.443
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Homerton Road; separate dot to the right of M inside dotted road edges."
+  },
+  {
+    "id": "sh_536955_185505",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 14.8,
+    "heightODNMetres": 4.1148,
+    "positionBNG": [
+      536955.125,
+      185504.921
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Homerton Road; separate dot beside N inside dotted road edges."
+  },
+  {
+    "id": "sh_537035_185514",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.4,
+    "heightODNMetres": 4.29768,
+    "positionBNG": [
+      537034.892,
+      185514.127
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Homerton Road; separate dot between A and D inside dotted road edges."
+  },
+  {
+    "id": "sh_537115_185525",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.4,
+    "heightODNMetres": 4.29768,
+    "positionBNG": [
+      537114.62,
+      185524.818
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Homerton Road west of bridge approach; separate dot inside unhatched lane."
+  },
+  {
+    "id": "sh_537191_185535",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 15.2,
+    "heightODNMetres": 4.23672,
+    "positionBNG": [
+      537191.392,
+      185534.689
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Homerton Road before the hatched bridge approach begins; separate dot inside road."
+  },
+  {
+    "id": "sh_537116_185407",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.7,
+    "heightODNMetres": 4.69392,
+    "positionBNG": [
+      537115.947,
+      185406.811
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Temple Mills Road; separate dot in the unhatched lane, west of the adjoining drain."
+  },
+  {
+    "id": "sh_537212_185519",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 17.2,
+    "heightODNMetres": 4.84632,
+    "positionBNG": [
+      537211.905,
+      185519.282
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Temple Mills Road branch south of Homerton Road; separate dot inside unhatched lane, away from the bridge deck."
+  },
+  {
+    "id": "sh_537047_185259",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 17.1,
+    "heightODNMetres": 4.81584,
+    "positionBNG": [
+      537046.609,
+      185259.422
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Temple Mill Lane north of Wick Lane Bridge; separate dot inside unhatched lane beyond the approach."
+  },
+  {
+    "id": "sh_537143_185481",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.7,
+    "heightODNMetres": 4.69392,
+    "positionBNG": [
+      537142.609,
+      185480.659
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Temple Mills Road bend, west of the adjoining drain. Full map, 6x dot crop and 3x drain context resolve the figure as 16.7 with a separate dot inside the lane; the nearby B.M.16.49 is a different feature."
+  },
+  {
+    "id": "sh_536882_185062",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 22.0,
+    "heightODNMetres": 6.30936,
+    "positionBNG": [
+      536881.86,
+      185061.57
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Road at the north edge by the Hackney Cut (junction north of Plover Street); dot left of the figure"
+  },
+  {
+    "id": "sh_536823_185031",
+    "family": "road",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 19.4,
+    "heightODNMetres": 5.51688,
+    "positionBNG": [
+      536822.75,
+      185031.39
+    ],
+    "usedInMappedLayer": false,
+    "notes": "Road at the north-west (..OAD lettering), dot up-left of the figure"
+  },
+  {
+    "id": "sh_537045_184964",
+    "family": "bank-or-embankment",
+    "setting": "embankment_top",
+    "surfaceReview": null,
+    "valueFeet": 22.5,
+    "heightODNMetres": 6.46176,
+    "positionBNG": [
+      537044.53,
+      184964.24
+    ],
+    "usedInMappedLayer": true,
+    "notes": "Hackney Cut east towing path at the top of the hatched bank; dot ~6 px east of the water-edge line (no wall drawn), figure written in the Cut; flat-topped 5"
+  },
+  {
+    "id": "sh_537888_183583",
+    "family": "bank-or-embankment",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 17.6,
+    "heightODNMetres": 4.96824,
+    "positionBNG": [
+      537887.5,
+      183583.2
+    ],
+    "usedInMappedLayer": false,
+    "notes": "lane running south from under the G.E.R. bridge toward Marshgate Lane, east of the Soap Works premises; dot 14 px east of the figure, across the lane's west edge line and beside the narrow hatched strip on its east side; S.P. at 530,267 is separate; final 6 G-shaped (open top right) at 8x and 12x"
+  },
+  {
+    "id": "sh_537834_183541",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 17.1,
+    "heightODNMetres": 4.81584,
+    "positionBNG": [
+      537834.29,
+      183540.91
+    ],
+    "usedInMappedLayer": false,
+    "notes": "works ground at the north corner of the long works buildings along the south foot of the G.E.R. embankment (continuous with the East London Soap Works premises lettered to the south-west); dot 2 px off the building corner, about 20 px (7 m) south of the bank-hatching toe, so ground near the bank foot rather than the bank"
+  },
+  {
+    "id": "sh_537932_183520",
+    "family": "bank-or-embankment",
+    "setting": "street",
+    "surfaceReview": null,
+    "valueFeet": 16.5,
+    "heightODNMetres": 4.63296,
+    "positionBNG": [
+      537932.04,
+      183519.8
+    ],
+    "usedInMappedLayer": false,
+    "notes": "the same lane further south-east (west of the Rope Works); dot 18 px NE of the figure, across the lane's west edge line, between it and the narrow hatched strip; 5 flat-topped"
+  },
+  {
+    "id": "sh_537776_183488",
+    "family": "yard",
+    "setting": "yard",
+    "surfaceReview": null,
+    "valueFeet": 16.0,
+    "heightODNMetres": 4.48056,
+    "positionBNG": [
+      537776.34,
+      183487.91
+    ],
+    "usedInMappedLayer": false,
+    "notes": "East London Soap Works premises along the G.E.R. bank foot; dot at the north corner of a works building, figure written over the end of the bank hatching; raw pixels: 6 one lower counter, 0 one central counter"
+  }
+]

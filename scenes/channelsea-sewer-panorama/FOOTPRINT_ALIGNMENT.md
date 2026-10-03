@@ -1,5 +1,35 @@
 # Matching 3D models to regional footprints
 
+## Current continuation: eastern Channelsea strip — 30 September 2026
+
+The author clarified that the whole area **east of Channelsea and west of the
+north–south Woolwich railway** still looked like a rough sketch. This expands
+the task from correcting existing factory ranges to recovering the mapped
+industrial roofs, market buildings, open working grounds, sidings and local
+watercourses throughout that strip. West Ham Gas Works 873 is west of the river;
+its remaining fifteen ranges are paused and have not been changed in this pass.
+
+The three registers add **137 roofs: 134 source-linked and 3 directly traced**:
+`east-channelsea-upper` contributes 15, `east-channelsea-south` 84 and
+`east-channelsea-north` 38. The rebuilt runtime has **681 ranges at 63 sites**,
+with 627 source-linked ranges and 16 direct traces, or 643 reviewed ranges.
+It retains 88 chimneys, 20 with mapped height evidence. The paired context adds
+three stock-free working yards, 11 siding paths and three isolated local
+watercourses, with 15 existing bank controls corrected. The missing northern
+railway and depot junctions are integrated, with the northern underpass
+confirmed on native OS. Eight bounded street corrections and the paired housing
+review are recorded below. All eleven final browser views passed and were
+visually inspected. Housing regeneration passes with 18 corrected roof bodies,
+two preserved corners and four suppressed garden duplicates. Final verification
+is recorded below; earlier sections retain their dated pass totals.
+
+This is an OS-led review of native georeferenced five-foot mapping and the
+supplied source polygons. No original Goad/fire-insurance coverage has been
+established for these new eastern additions. Their low eaves, floor counts,
+materials and pitched/bayed roofs are declared modelling estimates. Detailed
+scope, exclusions and the remaining validation are recorded at the end of
+this document.
+
 First implementation pass, 28 September 2026: 26 factory ranges at nine sites
 now use individual outlines from the author's `london_buildings_1891-96_corr_v1.gpkg`.
 The initial emphasis is Slater & Palmer / Marshgate Mills (11 ink-works ranges),
@@ -1621,3 +1651,232 @@ Current coverage:493 source-linked +13 directly traced =506 of544 ranges
 reviewed. Thirty-six remain unaligned and two provisional. Thirty-seven sites
 have all current ranges reviewed; six retain work. Ancillary buildings and
 uncertain elevation/room details remain separate from that progress measure.
+
+
+## Eastern Channelsea / Woolwich railway strip continuation
+
+The author’s clarified priority is the complete strip between Channelsea and
+the north–south railway, including omitted mapped buildings and context. Two
+GPT-6.1 Sol agents authored the upper and northern compounds; the parent
+prepared the southern compounds and integrated the registers. A third Sol
+agent reviewed the works road, banks, watercourses, open yards and depot
+sidings. Independent native-map review checks roof hatching and compound
+identity; proximity alone does not establish a building’s use or tenant.
+
+All three footprint registers share immutable `east-channelsea-before.json`
+and the 6,855-shape `east-channelsea-source-shapes.json` cache. They retain raw
+source identities and supplied polygons. Routine builds consume saved JSON;
+private source extracts, cached map tiles and comparison images are needed
+only for authoring and evidence review.
+
+| Register | Current authoring scope | Evidence and limits |
+| --- | --- | --- |
+| `east-channelsea-upper-footprint-alignment.json` | 15 added source-linked roofs at 7 sites | Globe Mill (Crushing), Victoria Stone Works, Victoria Mills (Corn), Stratford Market (Vegetables), Caledonian/Halling/Stratford wharves; open working grounds and platforms excluded |
+| `east-channelsea-south-footprint-alignment.json` | 84 added roofs at 7 sites: 83 source-linked and 1 direct OS trace | Stirling, Phoenix Black, Printing Ink, West Ham Chemical, Abbey Mills Chemical, Oil/Stearine and Abbey Stores Yard; the direct 875 outline restores a shaded roof missing from the extract |
+| `east-channelsea-north-footprint-alignment.json` | 38 added roofs at 6 sites: 36 source-linked and 2 direct OS traces | Brush Works, Hardware Manufactory, Langthorn Chemical, Varnish/Japan, Abbey Bleaching/Chemical/Old Abbey Candle and eastern Abbey Road frontage; mapped courts retained and local tenancy boundaries unresolved |
+
+The upper review now includes all clearly shaded Globe compound roofs: the
+labelled crushing mill and western range, three southern compartments along
+the Moat, the long riverside range and the small detached western building.
+The sources 39385/9303 wavy shared seam overlaps by 1.023 m²; an explicit
+reconciliation assigns the overlap to 9303 without losing the complete exterior.
+Native labels confirm **Crushing** and **Halling Wharf**. Mill elevations
+remain interpreted.
+
+The southern review preserves the unshaded courts and lanes. Sources 1640,
+22943 and 7552 are diagonally hatched roof compartments across an OS sheet
+join; native inspection confirms they are roofs. The direct West Ham Chemical
+trace follows the shaded main body and leaves the northwest recess and
+northeastern yard open. Detached eastern ancillary roofs have uncertain tenant
+attribution. Six generic 36 m sketch chimneys are suppressed at the newly
+surveyed southern sites; no new stack height is asserted from a tiny symbol.
+
+`east-channelsea-context-alignment.json` records the paired context review:
+Mill Meads works road follows mapped controls at its retained width; bounded
+controls along river 13’s eastern bank clear the solid riverside walls while
+preserving the opposite bank and channel terminals. The current register
+contains 15 replacement controls, including the Globe riverside follow-up.
+Three isolated water polygons restore the Globe/Langthorn western moat,
+Brush Works eastern moat and eastern chemical-works drain. Three stock-free
+working envelopes restore the Stratford goods/coal depot, Abbey Stores Yard
+and shared Globe Mill/Victoria Stone riverside compound. Regenerated yards
+now total 88 surfaces, 32 wear routes and 168 stock groups; no stock is added
+to the new yards. Eleven siding paths form fourteen rendered siding segments,
+following the depot’s native track fan, with interpreted 1.435 m rail gauge
+and 2.4 m sleepers. Their spacing, rail section and elevation are estimates.
+Connected depot junctions now use a 130 m level approach at 5.5 m formation
+height and 5.96 m rail-top height, followed by a 240 m outward grade. The built
+formation contains 10,259 clipped triangles; 408 rail-bank clearance checks
+pass. The focused depot join was visually inspected and passed.
+
+Eight streets now have bounded native-map corrections: Bridge Road, Barnby, St Thomas,
+Hotham, Randal, Canning, Leywick and Morley. Housing review currently records
+18 native roof-body corrections and two preserved corners. Four parallel
+envelopes over gardens are explicitly suppressed: each real frontage already
+has a separate row. Barnby and Morley carriageways and the St Thomas terminal
+are map-reviewed; all housing frontages pass. The rebuilt housing has 192 rows,
+3,034 estimated houses, 2,991 rear yards, 2,899 sculleries and 2,787 privies.
+
+Unshaded northern Globe frames, Victoria Stone’s 20-cell working grid, station
+platform/strip 2832 and passenger outline 1539 remain explicitly classified or
+deferred as context. Tiny stairs, equipment and possible chimney bases are
+not automatically extruded. The current mapped-street/housing follow-up does
+not establish every dwelling frontage or exact historical tenancy boundary. Complete source-linked roof coverage does not establish
+complete architecture, plant, stock or surveyed elevations.
+
+Current validation status: upper authoring preflight and byte-idempotence pass,
+with valid render-rounded polygons and unchanged immutable baseline/cache.
+Independent upper/south native-map review found no clear roof/yard or site
+identity error. The 137 new roofs comprise 134 source-linked ranges and 3
+OS traces. Current runtime counts are 681 ranges/63 sites, 627 source-linked
+plus 16 direct traces (643 reviewed), 88 chimneys and 20 mapped heights.
+All eight eastern building views passed and were visually inspected, with
+all 137 added ranges confirmed in the renderer. Northern railway and context
+integration are complete, and the revised depot join passes visual review.
+All eleven final browser views passed and were visually inspected. The
+verified revision and complete validation results are recorded below.
+
+Rebuild ground-plan and factories before dependent infrastructure, yards,
+housing and regional layers; regenerate the river network before the manifest.
+Run all earlier checks plus `check_east_channelsea_upper_alignment.py`,
+`check_east_channelsea_south_alignment.py`,
+`check_east_channelsea_north_alignment.py` and `check_east_channelsea_context.py`.
+The focused browser command is:
+
+```sh
+python3 scripts/review_factory_buildings.py --east-channelsea-only --software-gl --url http://127.0.0.1:4175
+```
+
+The eight completed building views cover the overall strip,
+northern/middle/southern plans, riverfront, wharves, Stirling close view and
+Abbey frontage. Their assertions confirmed registered building/site IDs and
+current generated totals. All three final railway views also passed visual
+review at revision `00f727032dd6`. Evidence remains
+private under `reference/footprint-model-alignment/east-channelsea-*` and
+`strip-{middle,south}-*`; final captures belong under the scene’s `review/`.
+
+
+### Northern railway connection and OS-confirmed underpass
+
+The user’s railway review exposed a missing northwestern running-line route,
+in addition to depot sidings. `north-london-connection.json` follows repository
+`Rail_1895.geojson` ways 198582978, 198582965 and the upper part of 198582968,
+reprojected through BNG. It restores the North London/Victoria Park route from
+scene x=-1700 to an actual emitted Woolwich station near existing control 11.
+All four rail heads, the station normal and formation level coincide at that
+join. The earlier southern connector chord remains separate.
+
+Native OS labels and line continuity establish the junction interpretation:
+Victoria Park rails end at the western side of the uninterrupted diagonal
+Great Eastern rails and resume east toward Stratford Station Low Level. This
+supports an underpass; a GIS centreline intersection is not an at-grade turnout.
+The new lower formation is interpreted at 3.0 m beneath the existing 8.5 m GE
+formation, giving 4.39 m from the lower rail head to the upper deck soffit.
+Exact historical levels, detailed points/signalling and bridge construction
+remain unmeasured. The connected route is 1744.6 m, within 3.60 m of the generalized
+GIS, with maximum interpreted grade 1.11%.
+
+`north_london_connection.py` reads the saved register for routine builds and
+provides the northern route plus `apply_mainline_crossing`. The latter retains
+every original GE station, centreline point and chainage, appends 90.3 m toward
+GIS way 198781682, and opens only a bounded lower railway passage through the
+old earth. New abutment faces close the earth cut; the upper deck spans it
+without piers in the lower rail corridor. The preserved OS endpoint differs
+from the generalized GIS by 25.885 m; the append reconciles that difference and
+ends on GIS, without shifting earlier controls. Existing/additional water is
+excluded from fill and published without duplicate channel faces.
+
+`check_north_london_connection.py --preflight` verifies GIS IDs/hash/deviation,
+exact four-rail-head joining, grades, clear buildings and water/road openings,
+the immutable GE prefix, bounded extension and closed underpass cut. Authoring
+preflight and the published railway check pass; the register is byte-idempotent
+after integration. The depot join also passes focused visual review after
+its revised approach/grade. Final combined validation and all eleven browser
+views are complete at `00f727032dd6`. Private evidence:
+`north-london-gis-before-after.png` and `north-london-junction-native.png`.
+
+
+Final verification, 30 September 2026: **54 geometry/preservation checks pass,
+with no new failures**. The remaining High Street frontage01/roads failure is
+pre-existing: its 134.175 m² overlap was reproduced using only pre-integration
+commit `3be0a50`. It needs a separate review. All eleven final SwiftShader views
+passed without browser or shader errors and were visually inspected, including
+the northwest connection, underpass and depot throat. Reports are
+`review/east-channelsea-validation.json` and
+`review/east-channelsea-alignment-checks.json`.
+
+Final asset revision: **`00f727032dd6`**. All 25 module and 139 asset hashes match;
+the browser confirmed that revision. Regional context has 234,354 visible source
+features in 115 tiles (4.00 MB). River geometry has 22 source features,
+604,191 vertices and 1,188,366 triangles. Yards retain 88 surfaces, 32 wear routes
+and 168 stock groups. Housing has 192 rows, 3,034 estimated houses, 2,991 rear
+yards, 2,899 sculleries and 2,787 privies. Housing/context preparations are
+byte-idempotent. Local preview remains on port 4175; no deployment or commit.
+
+
+## 30 September continuation: wharf ground and Stratford station corridor
+
+Three native OS working-ground traces add Stratford, Caledonian and Halling
+wharves. Their published surfaces total 4,266.78 m² after all source roofs,
+rendered buildings, roads, river banks and earlier yard surfaces are excluded.
+All 88 prior yard records and siding records remain exact. Current totals are
+91 surfaces, 34 interpreted wear routes and 168 stock groups; no stock is added.
+The register is `data/maps/east-wharf-yards.json`. Full native pixel coordinates,
+source exclusions, the immutable prior-yard snapshot and evidence image are
+recorded there. The surfaces do not assert complete wharf tenure boundaries.
+
+Victoria Stone Works now has its mapped twenty-cell open working grid:
+`data/maps/victoria-stone-working-grid.json`. Thirty individually reviewed line
+intersections produce twenty cells and 49 unique boundaries over 892.79 m².
+These are drawn on the existing ground atlas. Apparatus, material and elevation
+remain unresolved; there is no inferred roof, raised slab or tank contents.
+
+The station review exposed an earlier railway misregistration: the old route
+crossed source 1539, a shaded covered station-associated body, for 95.11 m.
+This was not the separate white platform to its east. Controls 12–15 now follow
+the native running pair between the station structures. Controls 16–18 retain
+the earlier Market correction; controls 0–11 and 19–20 remain exact. Source
+1539 now has 14.15 m centreline clearance. The northern waiting/platform bodies
+also clear the complete running crest. Station-body identity does not establish
+its precise function, enclosure/canopy form, roof profile or elevation.
+
+Fourteen independently reviewed station source features bound the interpreted
+earth slopes. This is a formation-only mask: it keeps the full 4.5 m half-width
+crest and its shoulder, preserves the ordinary building-clearance assertion,
+and creates no new retaining-wall edges at the station cuts. At the booking
+bridge, native rails disappear under the covered outline and resume beyond it.
+That supported overlap in plan remains; it is not used to force a railway detour
+or infer station architecture/levels. The source register and replay module are
+`stationFormationReview` in `woolwich-northern-connection.json` and
+`scripts/stratford_station_rail_alignment.py`.
+
+The northwestern connection retargets the corrected emitted station and still
+has an exact four-rail-head join. Its resulting length is 1,745.0 m; the GIS
+maximum deviation is 3.60 m. The Great Eastern extension retains its original
+route/station prefix and the interpreted underpass clearance remains 4.39 m.
+All eleven depot stems still connect through three throats; the 130 m level
+approach, 240 m grade, 10,259 formation triangles and all 408 bank-clearance
+samples pass unchanged. Every non-rail infrastructure field remains exact.
+Factory regeneration changed only two source-evidence strings: all 681 ranges,
+profiles, sites, chimneys and other metadata remain exact.
+
+All nine targeted source, clearance, preservation and railway checks pass;
+see `review/east-working-context-validation.json`. All six final browser views
+pass without browser or shader errors and were visually inspected: wharves,
+working grid, station plan, northern network, underpass and depot throat.
+`review/east-working-context-checks.json` confirms served revision **`6d92fd6dcc67`**,
+91 surfaces, one working grid, twenty cells and 49 boundaries. All 25 module
+and 139 asset hashes match. The earlier 55-check checkpoint remains historical;
+its separately documented High Street frontage failure was not part of this
+bounded continuation.
+
+Further source work remains at the station canopies/covered bodies and the
+Short Road/Prospect Road domestic frontage. The water audit found no local GIS
+dock polygon in this strip. A short blue L-shaped channel beside Abbey Mills
+Chemical Works 876, north/west of source 7552, is absent from current water:
+approximately [-8,268] → [20,264] → [24,266] → [25,278]. The western end is closed,
+with about 15 m of dry ground before the main river. The southern blue end stops
+at a sheet seam; continuing walls and a footbridge do not establish hydraulic
+continuity. No water geometry was changed. Native evidence is
+`reference/footprint-model-alignment/east-chemical-water-detail.png` and the
+current-water comparison is `east-chemical-water-overlay.png` beside it.

@@ -1443,28 +1443,32 @@
               -269.653
             ],
             [
-              -32.406,
-              -269.728
+              -32.511,
+              -269.699
             ],
             [
-              -32.323,
-              -269.909
+              -32.445,
+              -269.97
             ],
             [
-              -32.477,
-              -270.38
+              -32.594,
+              -270.461
             ],
             [
-              -32.297,
-              -270.814
+              -32.347,
+              -270.813
             ],
             [
-              -26.563,
-              -273.259
+              -26.614,
+              -273.257
             ],
             [
-              -26.285,
-              -273.608
+              -26.335,
+              -273.607
+            ],
+            [
+              -26.288,
+              -273.615
             ],
             [
               -26.361,
@@ -1507,44 +1511,72 @@
               -259.918
             ],
             [
-              -30.184,
-              -260.27
+              -30.19,
+              -260.264
             ],
             [
-              -30.268,
-              -260.55
+              -30.234,
+              -260.269
             ],
             [
-              -31.476,
-              -261.158
+              -30.312,
+              -260.571
             ],
             [
-              -32.385,
-              -263.44
+              -30.524,
+              -260.678
+            ],
+            [
+              -31.23,
+              -260.908
+            ],
+            [
+              -31.554,
+              -261.235
+            ],
+            [
+              -32.502,
+              -263.439
+            ],
+            [
+              -32.329,
+              -263.881
             ],
             [
               -32.314,
               -264.0
             ],
             [
-              -31.901,
-              -264.816
+              -32.174,
+              -264.276
             ],
             [
-              -30.725,
-              -265.528
+              -31.979,
+              -264.776
             ],
             [
-              -30.675,
-              -265.946
+              -31.67,
+              -265.097
             ],
             [
-              -31.908,
-              -269.115
+              -30.966,
+              -265.382
             ],
             [
-              -32.261,
-              -269.394
+              -30.776,
+              -265.497
+            ],
+            [
+              -30.8,
+              -265.948
+            ],
+            [
+              -31.809,
+              -268.698
+            ],
+            [
+              -32.378,
+              -269.391
             ],
             [
               -32.396,
@@ -1555,7 +1587,14 @@
       ],
       "previousUnionIoU": 0,
       "additional": true,
-      "division": "Central shaded roof compartment of the continuous Globe Mill body along the north bank of the Moat. Retain the supplied party walls and recessed eastern seam rather than filling the working lane north."
+      "division": "Central shaded roof compartment of the continuous Globe Mill body along the north bank of the Moat. Retain the supplied party walls and recessed eastern seam rather than filling the working lane north.",
+      "sourceReconciliation": {
+        "excludedSourceFids": [
+          9303
+        ],
+        "removedAreaM2": 1.0226203746855447,
+        "evidence": "Adjacent supplied39385 and9303 overlap by1.023m\u00b2 along their separately digitized wavy shared roof seam. Native OS shows one party-wall seam and a continuous southern roof exterior. Assign the overlap to9303 and subtract it from39385; preserve every exterior point and the complete compound union."
+      }
     },
     {
       "id": "east-upper-globe-south-east",
@@ -6599,7 +6638,7 @@
       ],
       "previousUnionIoU": 0,
       "additional": true,
-      "division": "Long shaded roof explicitly labelled Stratford Market (Vegetables), beside the Great Eastern Goods & Coal Depot and Woolwich branch. The thin western source2832 and northern passenger station/platform1539 have distinct unshaded platform outlines and are deferred rather than asserted as enclosed brick sheds."
+      "division": "Long shaded roof explicitly labelled Stratford Market (Vegetables), beside the Great Eastern Goods & Coal Depot and Woolwich branch. Western source2832 is a separate narrow track-side/loading strip whose complete continuous roof is not established. Northern source1539 is a shaded mapped covered station-associated body, distinct from the white platform immediately east; its precise enclosure, canopy arrangement and height remain unresolved. Both features are deferred for separate context/architectural interpretation rather than included in this market roof."
     },
     {
       "id": "east-upper-caledonian-riverside",
@@ -7838,28 +7877,32 @@
           -269.653
         ],
         [
-          -32.406,
-          -269.728
+          -32.511,
+          -269.699
         ],
         [
-          -32.323,
-          -269.909
+          -32.445,
+          -269.97
         ],
         [
-          -32.477,
-          -270.38
+          -32.594,
+          -270.461
         ],
         [
-          -32.297,
-          -270.814
+          -32.347,
+          -270.813
         ],
         [
-          -26.563,
-          -273.259
+          -26.614,
+          -273.257
         ],
         [
-          -26.285,
-          -273.608
+          -26.335,
+          -273.607
+        ],
+        [
+          -26.288,
+          -273.615
         ],
         [
           -26.361,
@@ -7902,44 +7945,72 @@
           -259.918
         ],
         [
-          -30.184,
-          -260.27
+          -30.19,
+          -260.264
         ],
         [
-          -30.268,
-          -260.55
+          -30.234,
+          -260.269
         ],
         [
-          -31.476,
-          -261.158
+          -30.312,
+          -260.571
         ],
         [
-          -32.385,
-          -263.44
+          -30.524,
+          -260.678
+        ],
+        [
+          -31.23,
+          -260.908
+        ],
+        [
+          -31.554,
+          -261.235
+        ],
+        [
+          -32.502,
+          -263.439
+        ],
+        [
+          -32.329,
+          -263.881
         ],
         [
           -32.314,
           -264.0
         ],
         [
-          -31.901,
-          -264.816
+          -32.174,
+          -264.276
         ],
         [
-          -30.725,
-          -265.528
+          -31.979,
+          -264.776
         ],
         [
-          -30.675,
-          -265.946
+          -31.67,
+          -265.097
         ],
         [
-          -31.908,
-          -269.115
+          -30.966,
+          -265.382
         ],
         [
-          -32.261,
-          -269.394
+          -30.776,
+          -265.497
+        ],
+        [
+          -30.8,
+          -265.948
+        ],
+        [
+          -31.809,
+          -268.698
+        ],
+        [
+          -32.378,
+          -269.391
         ],
         [
           -32.396,
@@ -7956,7 +8027,7 @@
       "preservedRoofBays": 1,
       "review": "Raw georeferenced OS five-foot plan and source outlines inspected. Newly added range; elevation and roof profile are declared interpretations. Central shaded roof compartment of the continuous Globe Mill body along the north bank of the Moat. Retain the supplied party walls and recessed eastern seam rather than filling the working lane north.",
       "comparison": {
-        "centroidShiftMetres": 0.0001951129564961964,
+        "centroidShiftMetres": 0.0001776726854990932,
         "areaRatio": 1.0,
         "axisChangeDegrees": 0.0
       },
@@ -10516,7 +10587,7 @@
       "preservedRoofRise": 3.1212726597411593,
       "preservedRoofAxis": "z",
       "preservedRoofBays": 2,
-      "review": "Raw georeferenced OS five-foot plan and source outlines inspected. Newly added range; elevation and roof profile are declared interpretations. Long shaded roof explicitly labelled Stratford Market (Vegetables), beside the Great Eastern Goods & Coal Depot and Woolwich branch. The thin western source2832 and northern passenger station/platform1539 have distinct unshaded platform outlines and are deferred rather than asserted as enclosed brick sheds.",
+      "review": "Raw georeferenced OS five-foot plan and source outlines inspected. Newly added range; elevation and roof profile are declared interpretations. Long shaded roof explicitly labelled Stratford Market (Vegetables), beside the Great Eastern Goods & Coal Depot and Woolwich branch. Western source2832 is a separate narrow track-side/loading strip whose complete continuous roof is not established. Northern source1539 is a shaded mapped covered station-associated body, distinct from the white platform immediately east; its precise enclosure, canopy arrangement and height remain unresolved. Both features are deferred for separate context/architectural interpretation rather than included in this market roof.",
       "comparison": {
         "centroidShiftMetres": 0.00048215843623573016,
         "areaRatio": 1.0,
@@ -11503,28 +11574,32 @@
           -269.653
         ],
         [
-          -32.406,
-          -269.728
+          -32.511,
+          -269.699
         ],
         [
-          -32.323,
-          -269.909
+          -32.445,
+          -269.97
         ],
         [
-          -32.477,
-          -270.38
+          -32.594,
+          -270.461
         ],
         [
-          -32.297,
-          -270.814
+          -32.347,
+          -270.813
         ],
         [
-          -26.563,
-          -273.259
+          -26.614,
+          -273.257
         ],
         [
-          -26.285,
-          -273.608
+          -26.335,
+          -273.607
+        ],
+        [
+          -26.288,
+          -273.615
         ],
         [
           -26.361,
@@ -11567,44 +11642,72 @@
           -259.918
         ],
         [
-          -30.184,
-          -260.27
+          -30.19,
+          -260.264
         ],
         [
-          -30.268,
-          -260.55
+          -30.234,
+          -260.269
         ],
         [
-          -31.476,
-          -261.158
+          -30.312,
+          -260.571
         ],
         [
-          -32.385,
-          -263.44
+          -30.524,
+          -260.678
+        ],
+        [
+          -31.23,
+          -260.908
+        ],
+        [
+          -31.554,
+          -261.235
+        ],
+        [
+          -32.502,
+          -263.439
+        ],
+        [
+          -32.329,
+          -263.881
         ],
         [
           -32.314,
           -264.0
         ],
         [
-          -31.901,
-          -264.816
+          -32.174,
+          -264.276
         ],
         [
-          -30.725,
-          -265.528
+          -31.979,
+          -264.776
         ],
         [
-          -30.675,
-          -265.946
+          -31.67,
+          -265.097
         ],
         [
-          -31.908,
-          -269.115
+          -30.966,
+          -265.382
         ],
         [
-          -32.261,
-          -269.394
+          -30.776,
+          -265.497
+        ],
+        [
+          -30.8,
+          -265.948
+        ],
+        [
+          -31.809,
+          -268.698
+        ],
+        [
+          -32.378,
+          -269.391
         ],
         [
           -32.396,
@@ -14132,7 +14235,7 @@
       "roofRise": 3.1212726597411593,
       "roofAxis": "z",
       "roofBays": 2,
-      "footprintEvidence": "Long shaded roof explicitly labelled Stratford Market (Vegetables), beside the Great Eastern Goods & Coal Depot and Woolwich branch. The thin western source2832 and northern passenger station/platform1539 have distinct unshaded platform outlines and are deferred rather than asserted as enclosed brick sheds. The supplied OS exterior is independently registered; no industrial parcel is extruded.",
+      "footprintEvidence": "Long shaded roof explicitly labelled Stratford Market (Vegetables), beside the Great Eastern Goods & Coal Depot and Woolwich branch. Western source2832 is a separate narrow track-side/loading strip whose complete continuous roof is not established. Northern source1539 is a shaded mapped covered station-associated body, distinct from the white platform immediately east; its precise enclosure, canopy arrangement and height remain unresolved. Both features are deferred for separate context/architectural interpretation rather than included in this market roof. The supplied OS exterior is independently registered; no industrial parcel is extruded.",
       "heightEvidence": "New interpreted 1-floor profile; metric eaves height is a conservative modelling estimate. The OS footprint does not supply storey count or measured elevation.",
       "roofEvidence": "New interpreted industrial pitched roof and repeated bays. Exact pitch, ridge levels, building materials and roof arrangement are not measured by this plan."
     },
@@ -14537,6 +14640,8 @@
     "reference/footprint-model-alignment/east-channelsea-upper-after.png",
     "reference/footprint-model-alignment/east-channelsea-upper-globe-raw.png",
     "reference/footprint-model-alignment/east-channelsea-upper-globe-source.png",
+    "reference/footprint-model-alignment/east-channelsea-upper-globe-before.png",
+    "reference/footprint-model-alignment/east-channelsea-upper-globe-after.png",
     "reference/footprint-model-alignment/east-channelsea-upper-station-raw.png",
     "reference/footprint-model-alignment/east-channelsea-upper-station-source.png",
     "reference/footprint-model-alignment/east-channelsea-upper-victoria-raw.png",
@@ -14546,7 +14651,8 @@
     {
       "modelIds": [
         "east-upper-victoria-corn-main",
-        "east-upper-caledonian-riverside"
+        "east-upper-caledonian-riverside",
+        "east-upper-globe-riverside"
       ],
       "feature": "Existing Channelsea bank",
       "evidence": "The current generalized river edge intersects complete OS riverside roof outlines. Raw OS shows a clear bank/wharf boundary alongside these buildings. Retain full roof exteriors; coordinate a local river-bank correction before final rendering checks."
@@ -14557,17 +14663,17 @@
       "sourceFids": [
         2832
       ],
-      "reason": "Long unshaded western Stratford Market loading-platform/strip. Source polygon alone does not prove an enclosed roof; preserve as station platform context pending specific canopy/roof classification."
+      "reason": "Long narrow western Stratford Market track-side/loading strip, distinct from the main shaded market roof79. The source polygon does not establish a complete continuous roof; retain for bounded loading/platform context pending separate canopy/roof classification."
     },
     {
       "sourceFids": [
         1539
       ],
-      "reason": "Northern Stratford Market passenger station/platform outline is a distinct unshaded strip on the OS. Review station structures and raised platforms with rail context; no enclosed factory extrusion inferred."
+      "reason": "Northern Stratford Market Station feature is a solid shaded mapped covered body, distinct from the white platform/track-side space immediately east. Exact enclosure versus canopy, architectural function, roof arrangement and height remain unresolved. Defer its 3D interpretation with the station railway context; do not classify it as an unshaded open platform."
     },
     {
       "feature": "Victoria Stone Works 20-cell grid",
-      "reason": "Unshaded working grid in the open eastern yard; model as low plant/working surfaces only after apparatus review, not as a permanent blanket roof."
+      "reason": "Twenty unshaded cells are now registered in data/maps/victoria-stone-working-grid.json and drawn as ground-level boundaries. Apparatus identity, material and elevation remain deferred; no blanket roof is inferred."
     },
     {
       "feature": "Open Great Eastern Goods & Coal Depot",

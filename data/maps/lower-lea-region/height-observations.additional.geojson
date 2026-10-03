@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "name": "Additional directly reviewed historical height observations",
+  "crs_note": "GeoJSON WGS84; survey positions also retained in British National Grid properties. Original snapshot remains immutable.",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.017557740211486816,
+          51.55370708253335
+        ]
+      },
+      "properties": {
+        "id": "sh_537539_185731",
+        "type": "spot",
+        "value_ft": 16.8,
+        "raw": "16\u00b78",
+        "confidence": "high",
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "disputed": false,
+        "bng_e": 537539.44,
+        "bng_n": 185731.01,
+        "layer": "os-london-five-foot-1893",
+        "survey_dates": "1891\u201395 (published 1893\u201396)",
+        "datum": "OD Liverpool",
+        "observationSource": "data/maps/lower-lea-region/height-observations.additional.geojson",
+        "reviewDate": "2026-10-02",
+        "mosaic": "reference/spot-heights/mosaics/m18_131057_87113.png",
+        "registration": "reference/spot-heights/mosaics/m18_131057_87113.json",
+        "mapPixel": [
+          567,
+          606
+        ],
+        "notes": "Direct map reading: dot on eastern Waterworks bank/path strip, above the 16.8 figure. Separate from the 16.8 reading farther south near the ditch junction."
+      }
+    }
+  ]
+}

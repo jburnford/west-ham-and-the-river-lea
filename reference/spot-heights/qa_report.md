@@ -1,17 +1,17 @@
 # Spot-height merge: QA report
 
-4393 readings in 235 files (195 mosaics; readers: opus-a 7, opus-aa 5, opus-ab 5, opus-ac 5, opus-ad 5, opus-ae 5, opus-af 5, opus-ag 5, opus-ah 5, opus-ai 5, opus-aj 5, opus-ak 5, opus-al 8, opus-am 5, opus-an 8, opus-ao 5, opus-ap 8, opus-aq 2, opus-b 8, opus-c 6, opus-d 6, opus-e 6, opus-f 6, opus-g 6, opus-h 6, opus-i 6, opus-j 6, opus-k 6, opus-l 5, opus-m 5, opus-n 5, opus-o 5, opus-p 5, opus-q 5, opus-r 5, opus-s 5, opus-t 5, opus-u 5, opus-v 5, opus-w 5, opus-x 5, opus-y 5, opus-z 5) -> **2256 distinct marks**.
+10257 readings in 560 files (455 mosaics; readers: opus-a 7, opus-aa 5, opus-ab 5, opus-ac 5, opus-ad 5, opus-ae 5, opus-af 5, opus-ag 5, opus-ah 5, opus-ai 5, opus-aj 5, opus-ak 5, opus-al 8, opus-am 5, opus-an 8, opus-ao 5, opus-ap 8, opus-aq 5, opus-ar 8, opus-as 5, opus-at 9, opus-au 5, opus-av 5, opus-aw 5, opus-ax 5, opus-ay 5, opus-az 5, opus-b 8, opus-ba 5, opus-bb 5, opus-bc 5, opus-bd 5, opus-be 5, opus-bf 5, opus-bg 5, opus-bh 5, opus-bi 5, opus-bj 5, opus-bk 5, opus-bl 5, opus-bm 4, opus-bn 4, opus-bo 5, opus-bp 5, opus-bq 5, opus-br 5, opus-bs 5, opus-bt 5, opus-bu 5, opus-bv 5, opus-bw 5, opus-bx 2, opus-by 3, opus-bz 5, opus-c 6, opus-ca 5, opus-cb 5, opus-cc 5, opus-cd 5, opus-ce 5, opus-cf 5, opus-cg 5, opus-ch 5, opus-ci 5, opus-cj 5, opus-ck 5, opus-cl 5, opus-cm 5, opus-cn 3, opus-cp 5, opus-cq 5, opus-cr 5, opus-cs 5, opus-ct 5, opus-cu 5, opus-cv 5, opus-cw 5, opus-cx 5, opus-cy 5, opus-cz 5, opus-d 6, opus-da 5, opus-db 5, opus-dc 5, opus-dd 5, opus-de 3, opus-df 1, opus-e 6, opus-f 6, opus-g 6, opus-h 6, opus-i 6, opus-j 6, opus-k 6, opus-l 5, opus-m 5, opus-n 5, opus-o 5, opus-p 5, opus-q 5, opus-r 5, opus-s 5, opus-t 5, opus-u 5, opus-v 5, opus-w 5, opus-x 5, opus-y 5, opus-z 5) -> **4764 distinct marks**.
 Clustering: same type, within 6 m, value within 0.15 ft; same-file readings never merged; disagreeing values at one spot flagged as disputed.
 
 ## Marks by type and confidence
 
 | type | n | high | medium | low | disputed | range ft |
 |---|---:|---:|---:|---:|---:|---|
-| bench_mark | 512 | 425 | 61 | 26 | 11 | 4.25-48.57 |
-| spot | 1744 | 1012 | 679 | 53 | 35 | 2.90-52.00 |
+| bench_mark | 1105 | 919 | 127 | 59 | 36 | 4.25-70.59 |
+| spot | 3659 | 2132 | 1407 | 120 | 96 | 2.90-66.50 |
 
-Marks seen by 1 / 2 / 3+ readers: 1094 / 768 / 394; seen in more than one mosaic: 977.
-Position spread of repeated readings (max distance from mark centre): median 0.4 m, 90th pct 1.4 m, max 4.8 m.
+Marks seen by 1 / 2 / 3+ readers: 1896 / 1699 / 1169; seen in more than one mosaic: 2413.
+Position spread of repeated readings (max distance from mark centre): median 0.3 m, 90th pct 1.5 m, max 7.1 m.
 
 ## Marks by layer
 
@@ -19,174 +19,376 @@ Primary layer of each mark (the winning reading's; five-foot first). 1890s layer
 
 | layer | scale | epoch | n | spot | bench_mark | high | medium | low | disputed | also on another layer | median ft | range ft |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| five-foot | 1:1056 | 1890s | 2192 | 1698 | 494 | 1385 | 728 | 79 | 46 | 0 | 17.4 | 2.90-48.57 |
-| 25-inch | 1:2500 | 1890s | 64 | 46 | 18 | 52 | 12 | 0 | 0 | 0 | 28.0 | 4.00-52.00 |
+| five-foot | 1:1056 | 1890s | 4660 | 3582 | 1078 | 2965 | 1517 | 178 | 132 | 10 | 21.9 | 2.90-70.59 |
+| 25-inch | 1:2500 | 1890s | 104 | 77 | 27 | 86 | 17 | 1 | 0 | 0 | 30.0 | 4.00-65.70 |
 
 ## Marks by setting
 
 | setting | n | spot | bench_mark | high | medium | low | from reader | inferred | of which value fallback | setting conflict | median ft | range ft |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| marsh | 69 | 68 | 1 | 55 | 14 | 0 | 46 | 23 | 18 | 14 | 6.3 | 2.90-16.50 |
-| open_ground | 53 | 50 | 3 | 38 | 14 | 1 | 14 | 39 | 13 | 12 | 28.1 | 10.70-35.00 |
-| street | 1224 | 1223 | 1 | 687 | 497 | 40 | 696 | 528 | 0 | 32 | 18.0 | 2.90-52.00 |
-| yard | 90 | 86 | 4 | 56 | 30 | 4 | 62 | 28 | 0 | 19 | 16.8 | 6.10-29.10 |
-| embankment_top | 124 | 117 | 7 | 88 | 35 | 1 | 27 | 97 | 0 | 27 | 17.2 | 6.20-39.10 |
-| embankment_foot | 15 | 10 | 5 | 14 | 1 | 0 | 6 | 9 | 0 | 5 | 13.0 | 3.40-18.00 |
-| wall_top | 97 | 81 | 16 | 52 | 41 | 4 | 77 | 20 | 0 | 8 | 17.4 | 13.87-24.35 |
-| bridge | 78 | 46 | 32 | 52 | 25 | 1 | 26 | 52 | 0 | 10 | 25.0 | 5.46-48.57 |
-| railway | 37 | 35 | 2 | 23 | 11 | 3 | 13 | 24 | 0 | 5 | 16.6 | 7.00-32.10 |
-| building | 423 | 17 | 406 | 343 | 58 | 22 | 243 | 180 | 0 | 13 | 19.1 | 4.50-40.82 |
-| other | 32 | 2 | 30 | 23 | 8 | 1 | 32 | 0 | 0 | 5 | 7.7 | 4.25-35.00 |
-| unknown | 14 | 9 | 5 | 6 | 6 | 2 | 0 | 0 | 0 | 0 | 15.5 | 8.80-32.20 |
+| marsh | 127 | 126 | 1 | 101 | 23 | 3 | 105 | 22 | 18 | 16 | 6.3 | 2.90-16.50 |
+| open_ground | 175 | 172 | 3 | 135 | 32 | 8 | 139 | 36 | 12 | 20 | 32.0 | 6.30-58.70 |
+| street | 2681 | 2680 | 1 | 1492 | 1099 | 90 | 2232 | 449 | 0 | 57 | 25.0 | 2.90-64.10 |
+| yard | 163 | 160 | 3 | 116 | 42 | 5 | 140 | 23 | 0 | 34 | 17.2 | 6.10-52.70 |
+| embankment_top | 188 | 179 | 9 | 135 | 50 | 3 | 104 | 84 | 0 | 34 | 18.1 | 6.20-66.50 |
+| embankment_foot | 35 | 30 | 5 | 27 | 8 | 0 | 26 | 9 | 0 | 12 | 13.3 | 3.40-33.80 |
+| wall_top | 159 | 135 | 24 | 83 | 71 | 5 | 142 | 17 | 0 | 11 | 17.7 | 14.34-42.60 |
+| bridge | 137 | 67 | 70 | 92 | 42 | 3 | 94 | 43 | 0 | 16 | 29.1 | 5.46-70.59 |
+| railway | 57 | 55 | 2 | 37 | 15 | 5 | 34 | 23 | 0 | 10 | 16.3 | 4.00-63.60 |
+| building | 896 | 36 | 860 | 734 | 115 | 47 | 740 | 156 | 0 | 30 | 23.7 | 4.50-65.14 |
+| other | 133 | 11 | 122 | 93 | 32 | 8 | 133 | 0 | 0 | 15 | 17.5 | 4.25-65.70 |
+| unknown | 13 | 8 | 5 | 6 | 5 | 2 | 0 | 0 | 0 | 0 | 15.9 | 8.80-32.20 |
 
-Setting from readers for 1242 marks, inferred from notes (spot_height_setting.py) for 1000, unknown for 14 (0.6%).
+Setting from readers for 3889 marks, inferred from notes (spot_height_setting.py) for 862, unknown for 13 (0.3%).
 
 ## Inter-reader agreement (mosaics read by two or more readers)
 
 | mosaic | readers | both | value agrees (<=0.15) | exact | only A | only B | pos. spread median / max m |
 |---|---|---:|---:|---:|---:|---:|---|
+| m18_131045_87134 | opus-cu / opus-cw | 19 | 19 | 19 | 1 | 1 | 0.4 / 5.8 |
+| m18_131048_87131 | opus-ct / opus-cv | 19 | 17 | 17 | 0 | 0 | 0.4 / 1.2 |
+| m18_131051_87113 | opus-dd / opus-df | 11 | 11 | 11 | 0 | 0 | 0.4 / 0.7 |
+| m18_131051_87116 | opus-da / opus-dc | 15 | 13 | 13 | 0 | 0 | 0.4 / 0.8 |
+| m18_131051_87119 | opus-cy / opus-da | 14 | 14 | 13 | 0 | 0 | 0.0 / 1.2 |
+| m18_131051_87122 | opus-cw / opus-cx | 13 | 13 | 13 | 0 | 0 | 0.4 / 0.8 |
+| m18_131051_87128 | opus-cs / opus-ct | 16 | 16 | 16 | 1 | 1 | 0.4 / 4.0 |
+| m18_131051_87131 | opus-cr / opus-cu | 14 | 14 | 14 | 0 | 0 | 0.2 / 3.3 |
+| m18_131051_87149 | opus-cv / opus-cy | 21 | 21 | 21 | 1 | 1 | 0.5 / 1.2 |
+| m18_131051_87152 | opus-cx / opus-cz | 15 | 15 | 15 | 0 | 0 | 0.5 / 1.2 |
+| m18_131054_87116 | opus-cz / opus-db | 14 | 14 | 14 | 0 | 0 | 0.4 / 1.1 |
 | m18_131054_87125 | opus-g / opus-k | 17 | 17 | 17 | 0 | 0 | 0.5 / 6.0 |
 | m18_131054_87128 | opus-h / opus-j | 16 | 16 | 16 | 0 | 0 | 0.4 / 1.1 |
+| m18_131054_87134 | opus-cq / opus-cr | 22 | 21 | 21 | 0 | 0 | 0.4 / 5.6 |
+| m18_131054_87149 | opus-be / opus-bh | 20 | 20 | 20 | 2 | 2 | 0.8 / 5.6 |
+| m18_131054_87161 | opus-bd / opus-be | 37 | 37 | 37 | 3 | 3 | 1.1 / 5.8 |
+| m18_131054_87167 | opus-bf / opus-bg | 36 | 36 | 36 | 2 | 2 | 0.5 / 5.3 |
 | m18_131057_87125 | opus-d / opus-f | 15 | 15 | 15 | 0 | 0 | 0.4 / 1.1 |
+| m18_131057_87158 | opus-ax / opus-ay | 38 | 35 | 34 | 3 | 3 | 0.4 / 5.9 |
+| m18_131057_87161 | opus-ay / opus-ba | 37 | 37 | 37 | 1 | 1 | 0.4 / 5.6 |
+| m18_131057_87164 | opus-az / opus-bb | 39 | 37 | 37 | 2 | 1 | 0.5 / 5.5 |
+| m18_131057_87167 | opus-bb / opus-bc | 28 | 27 | 27 | 0 | 0 | 0.4 / 1.1 |
 | m18_131060_87128 | opus-c / opus-e | 15 | 15 | 15 | 0 | 0 | 0.5 / 1.9 |
 | m18_131060_87134 | opus-h / opus-i | 14 | 14 | 14 | 1 | 1 | 1.2 / 3.7 |
+| m18_131060_87137 | opus-cp / opus-cs | 11 | 11 | 11 | 0 | 0 | 0.0 / 0.8 |
+| m18_131060_87143 | opus-bc / opus-bf | 42 | 41 | 41 | 1 | 1 | 0.5 / 5.4 |
+| m18_131060_87149 | opus-aw / opus-az | 32 | 32 | 32 | 0 | 0 | 0.6 / 3.2 |
+| m18_131060_87158 | opus-aq / opus-au | 34 | 34 | 34 | 0 | 0 | 0.4 / 5.8 |
+| m18_131060_87164 | opus-av / opus-aw | 31 | 31 | 30 | 2 | 2 | 0.8 / 4.2 |
+| m18_131063_87113 | opus-db / opus-dd | 17 | 14 | 14 | 0 | 0 | 0.4 / 3.2 |
+| m18_131066_87113 | opus-dc / opus-de | 24 | 23 | 23 | 0 | 0 | 0.4 / 3.3 |
 | m18_131066_87134 | opus-b / opus-d | 25 | 24 | 24 | 2 | 3 | 0.7 / 2.5 |
 | m18_131066_87167 | opus-aj / opus-am | 35 | 35 | 34 | 1 | 0 | 0.4 / 2.0 |
 | m18_131069_87125 | opus-e / opus-g | 31 | 31 | 31 | 0 | 0 | 0.7 / 5.8 |
 | m18_131069_87128 | opus-f / opus-h | 34 | 34 | 34 | 0 | 0 | 0.8 / 7.9 |
 | m18_131069_87131 | opus-g / opus-k | 34 | 34 | 34 | 0 | 0 | 0.4 / 3.0 |
+| m18_131072_87110 | opus-cf / opus-ch | 12 | 12 | 12 | 1 | 1 | 0.4 / 4.5 |
+| m18_131072_87113 | opus-cd / opus-cg | 26 | 25 | 25 | 0 | 0 | 0.4 / 4.2 |
 | m18_131072_87128 | opus-i / opus-l | 35 | 35 | 35 | 1 | 1 | 0.7 / 4.8 |
+| m18_131072_87134 | opus-bw / opus-ca | 22 | 22 | 21 | 0 | 0 | 0.4 / 2.3 |
 | m18_131072_87146 | opus-ag / opus-ai | 14 | 14 | 14 | 1 | 1 | 0.4 / 2.4 |
 | m18_131072_87149 | opus-ab / opus-ad | 18 | 17 | 17 | 0 | 0 | 0.4 / 2.3 |
 | m18_131072_87158 | opus-v / opus-x | 31 | 30 | 30 | 0 | 0 | 0.4 / 5.3 |
+| m18_131075_87104 | opus-cn / opus-cq | 23 | 22 | 22 | 2 | 2 | 0.4 / 5.8 |
+| m18_131075_87107 | opus-cg / opus-ck | 24 | 23 | 23 | 1 | 2 | 0.4 / 1.6 |
+| m18_131075_87113 | opus-cb / opus-cd | 23 | 23 | 23 | 0 | 0 | 0.4 / 4.3 |
+| m18_131075_87116 | opus-bz / opus-cc | 18 | 14 | 14 | 4 | 4 | 0.4 / 9.3 |
+| m18_131075_87128 | opus-bp / opus-br | 24 | 24 | 24 | 0 | 0 | 0.4 / 2.3 |
+| m18_131075_87137 | opus-bt / opus-bv | 26 | 25 | 23 | 0 | 0 | 0.2 / 4.0 |
 | m18_131075_87143 | opus-ao / opus-aq | 22 | 22 | 22 | 0 | 0 | 0.7 / 2.6 |
 | m18_131075_87146 | opus-af / opus-ah | 20 | 20 | 20 | 0 | 0 | 0.4 / 4.8 |
 | m18_131075_87152 | opus-aa / opus-x | 15 | 15 | 14 | 1 | 0 | 0.0 / 0.7 |
+| m18_131078_87107 | opus-ce / opus-cf | 13 | 13 | 13 | 3 | 3 | 0.4 / 0.7 |
+| m18_131078_87110 | opus-cc / opus-ce | 14 | 12 | 12 | 1 | 1 | 0.4 / 3.0 |
+| m18_131078_87113 | opus-by / opus-bz | 15 | 14 | 13 | 0 | 0 | 0.4 / 5.1 |
+| m18_131078_87116 | opus-bu / opus-bw | 22 | 21 | 20 | 1 | 0 | 0.2 / 1.5 |
+| m18_131078_87137 | opus-bo / opus-bq | 21 | 21 | 21 | 1 | 1 | 0.4 / 6.7 |
 | m18_131078_87149 | opus-ac / opus-ae | 13 | 13 | 13 | 3 | 3 | 0.8 / 5.1 |
 | m18_131078_87158 | opus-w / opus-y | 31 | 31 | 31 | 2 | 2 | 0.5 / 4.3 |
 | m18_131078_87164 | opus-aa / opus-ac | 27 | 26 | 26 | 0 | 0 | 0.4 / 5.9 |
+| m18_131081_87110 | opus-ca / opus-cb | 17 | 17 | 17 | 1 | 1 | 0.0 / 0.8 |
+| m18_131081_87116 | opus-br / opus-bt | 24 | 24 | 24 | 0 | 0 | 0.4 / 1.5 |
 | m18_131081_87134 | opus-u / opus-v | 28 | 28 | 28 | 0 | 0 | 0.8 / 6.0 |
+| m18_131081_87137 | opus-bi / opus-bk | 23 | 22 | 22 | 0 | 0 | 0.5 / 6.4 |
 | m18_131081_87155 | opus-ab / opus-z | 29 | 29 | 29 | 0 | 0 | 0.4 / 3.7 |
 | m18_131081_87158 | opus-y / opus-z | 31 | 30 | 30 | 0 | 0 | 0.4 / 2.0 |
 | m18_131084_87122 | opus-s / opus-u | 15 | 15 | 15 | 1 | 1 | 0.5 / 1.5 |
 | m18_131084_87128 | opus-o / opus-q | 15 | 13 | 13 | 1 | 1 | 0.4 / 5.5 |
+| m18_131084_87146 | opus-aq / opus-as | 28 | 27 | 27 | 0 | 0 | 0.4 / 4.1 |
 | m18_131084_87155 | opus-ad / opus-af | 24 | 24 | 24 | 0 | 0 | 0.7 / 4.2 |
 | m18_131084_87161 | opus-ae / opus-ag | 17 | 15 | 14 | 0 | 0 | 0.4 / 1.7 |
+| m18_131087_87116 | opus-bm / opus-bp | 24 | 22 | 22 | 1 | 1 | 0.5 / 10.5 |
 | m18_131087_87128 | opus-l / opus-o | 19 | 18 | 18 | 2 | 2 | 0.5 / 4.1 |
 | m18_131087_87137 | opus-q / opus-s | 20 | 20 | 20 | 2 | 2 | 0.5 / 3.7 |
+| m18_131087_87140 | opus-bg / opus-bj | 27 | 27 | 27 | 2 | 2 | 0.4 / 5.7 |
+| m18_131087_87149 | opus-as / opus-av | 27 | 27 | 27 | 3 | 3 | 1.2 / 4.2 |
 | m18_131087_87158 | opus-ai / opus-aj | 20 | 20 | 20 | 0 | 0 | 0.4 / 0.8 |
 | m18_131087_87164 | opus-am / opus-ao | 23 | 22 | 22 | 0 | 0 | 0.4 / 2.1 |
+| m18_131090_87113 | opus-bq / opus-bs | 22 | 21 | 19 | 0 | 0 | 0.4 / 3.2 |
 | m18_131090_87128 | opus-k / opus-m | 24 | 24 | 23 | 0 | 0 | 0.4 / 3.3 |
 | m18_131090_87140 | opus-t / opus-w | 17 | 17 | 17 | 1 | 1 | 0.4 / 0.7 |
+| m18_131090_87143 | opus-bl / opus-bo | 20 | 20 | 20 | 0 | 0 | 0.5 / 1.1 |
+| m18_131090_87146 | opus-ba / opus-bd | 25 | 23 | 23 | 2 | 2 | 0.8 / 7.4 |
+| m18_131090_87158 | opus-au / opus-ax | 19 | 19 | 19 | 0 | 0 | 0.0 / 0.5 |
+| m18_131093_87116 | opus-bk / opus-bn | 18 | 17 | 16 | 0 | 0 | 0.4 / 4.1 |
 | m18_131093_87134 | opus-m / opus-n | 20 | 20 | 19 | 0 | 0 | 0.4 / 4.5 |
 | m18_131096_87134 | opus-n / opus-p | 25 | 23 | 22 | 0 | 0 | 0.8 / 5.6 |
 | m18_131096_87137 | opus-r / opus-t | 15 | 15 | 15 | 0 | 0 | 0.7 / 1.9 |
+| m18_131099_87119 | opus-bj / opus-bl | 19 | 19 | 18 | 1 | 1 | 0.5 / 5.3 |
 | m18_131099_87128 | opus-p / opus-r | 22 | 21 | 21 | 0 | 0 | 1.1 / 2.2 |
+| m18_131099_87161 | opus-ci / opus-cj | 12 | 11 | 11 | 0 | 0 | 0.2 / 6.0 |
+| m18_131099_87167 | opus-cl / opus-cn | 28 | 27 | 27 | 0 | 0 | 0.4 / 1.5 |
+| m18_131099_87170 | opus-cm / opus-cp | 21 | 21 | 21 | 1 | 1 | 0.4 / 0.8 |
+| m18_131102_87113 | opus-bw / opus-by | 22 | 21 | 21 | 0 | 0 | 0.4 / 2.0 |
+| m18_131102_87134 | opus-bh / opus-bi | 23 | 22 | 21 | 0 | 0 | 0.7 / 3.0 |
+| m18_131102_87158 | opus-ch / opus-ci | 7 | 7 | 7 | 0 | 0 | 0.4 / 2.6 |
+| m18_131102_87164 | opus-cj / opus-cl | 12 | 11 | 11 | 3 | 3 | 0.6 / 1.6 |
+| m18_131102_87167 | opus-ck / opus-cm | 17 | 16 | 16 | 0 | 0 | 0.5 / 1.5 |
+| m18_131105_87116 | opus-bv / opus-bx | 17 | 17 | 16 | 0 | 0 | 0.5 / 4.9 |
+| m18_131105_87119 | opus-bs / opus-bu | 15 | 15 | 15 | 0 | 0 | 0.4 / 3.9 |
 | q18_131099_87146 | opus-ak / opus-al | 7 | 7 | 7 | 0 | 0 | 0.5 / 1.2 |
 | q18_131099_87155 | opus-al / opus-an | 4 | 4 | 4 | 0 | 0 | 0.6 / 0.8 |
+| q18_131105_87128 | opus-ap / opus-ar | 12 | 12 | 12 | 0 | 0 | 0.4 / 1.1 |
 | q18_131105_87131 | opus-an / opus-ap | 5 | 5 | 5 | 1 | 2 | 1.1 / 1.5 |
+| q18_131108_87128 | opus-ar / opus-at | 11 | 11 | 11 | 0 | 1 | 0.7 / 1.5 |
 
-Overall: value agreement 828/842 = 98.3% (exact 97.6%); marks found by both readers 842/882 = 95.5%; position spread median 0.5 m.
+Overall: value agreement 2178/2234 = 97.5% (exact 96.6%); marks found by both readers 2234/2368 = 94.3%; position spread median 0.4 m.
 
 ### Disputes
+- sh_536644_184206 spot: opus-ct 46·0 vs opus-cv 48·0
+- sh_536601_184205 spot: opus-ct 47·6 vs opus-cv 47·8
+- sh_537035_185514 spot: opus-da 16·4 vs opus-dc 15·4
+- sh_536869_185495 spot: opus-da 16·0 vs opus-dc 15·0
+- sh_537265_183772 spot: opus-cq 21·8 vs opus-cr 21·6
+- sh_537537_181623 spot: opus-ax 18·5 vs opus-ay 16·5
+- sh_537558_181569 bench_mark: opus-ax B.M.18·58 vs opus-ay B.M.16·56
+- sh_537769_181539 spot: opus-ax 16·6 vs opus-ay 18·6
+- sh_537666_180891 spot: opus-az 20·6 vs opus-bb 20·8
+- sh_537473_180886 bench_mark: opus-az B.M.13·88 vs opus-bb B.M.13·68
+- sh_537835_180486 bench_mark: opus-bb B.M.19·85 vs opus-bc B.M.19·65
+- sh_537782_182876 bench_mark: opus-bc B.M.33·11 vs opus-bf B.M.38·11
+- sh_538117_185944 spot: opus-db 34·6 vs opus-dd 34·8
+- sh_538245_185769 spot: opus-db 28·1 vs opus-dd 26·1
+- sh_538256_185638 spot: opus-db 22·8 vs opus-dd 22·3
+- sh_538256_185638 spot: opus-dc 22·8 vs opus-de 22·3
 - sh_538578_183745 spot: opus-b 10·9 vs opus-d 10·2
+- sh_538794_185769 spot: opus-cd 29·6 vs opus-cg 29·8
 - sh_539126_182432 spot: opus-ab 11·6 vs opus-ad 11·8
 - sh_538997_181536 spot: opus-v 18·6 vs opus-x 13·6
+- sh_539382_186829 spot: opus-cn 63·6 vs opus-cq 68·6
+- sh_539160_186538 bench_mark: opus-cg B.M.56·38 vs opus-ck B.M.58·38
+- sh_539415_185507 spot: opus-bz 38·7 vs opus-cc 36·7
+- sh_539340_185490 spot: opus-bz 36·2 vs opus-cc 35·2
+- sh_539359_185410 spot: opus-bz 36·8 vs opus-cc 36·6
+- sh_539288_185388 spot: opus-bz 36·0 vs opus-cc 35·0
+- sh_539129_183471 spot: opus-bt 15·0 vs opus-bv 16·0
+- sh_539451_186088 spot: opus-cc 50·6 vs opus-ce 50·8
+- sh_539643_186039 spot: opus-cc 48·8 vs opus-ce 48·6
+- sh_539591_186008 spot: opus-by 47·6 vs opus-bz 47·8
+- sh_539415_185507 spot: opus-bu 38·7 vs opus-bw 36·7
 - sh_539716_180909 spot: opus-aa 5·6 vs opus-ac 5·8
+- sh_539970_183610 spot: opus-bi 18·2 vs opus-bk 16·2
 - sh_540048_181519 bench_mark: opus-y B.M.6·66 vs opus-z B.M.6·86
 - sh_540178_184435 spot: opus-o 35·6 vs opus-q 35·0
 - sh_540015_184251 spot: opus-o 30·6 vs opus-q 30·0
+- sh_540061_182533 spot: opus-aq 5·8 vs opus-as 6·8
 - sh_540172_181108 bench_mark: opus-ae B.M.6·32 vs opus-ag B.M.8·32
 - sh_540060_181099 spot: opus-ae 5·8 vs opus-ag 5·6
+- sh_540512_185713 spot: opus-bm 40·8 vs opus-bp 40·6
+- sh_540209_185440 spot: opus-bm 40·9 vs opus-bp 40·0
 - sh_540237_184432 spot: opus-l 34·8 vs opus-o 34·6
 - sh_540689_180999 spot: opus-am 6·6 vs opus-ao 5·6
+- sh_540512_185713 spot: opus-bq 40·8 vs opus-bs 40·6
+- sh_540876_182732 spot: opus-ba 19·3 vs opus-bd 19·8
+- sh_540733_182600 spot: opus-ba 26·7 vs opus-bd 28·7
+- sh_540876_185523 spot: opus-bk 37·3 vs opus-bn 37·8
 - sh_541443_184060 spot: opus-n 29·8 vs opus-p 29·3
 - sh_541260_183806 bench_mark: opus-n B.M.35·78 vs opus-p B.M.3?·78
-- sh_541739_184607 spot: opus-p 35·8 vs opus-r 35·3
+- sh_541740_184607 spot: opus-p 35·8 vs opus-r 35·3
+- sh_541546_181381 spot: opus-ci 6·5 vs opus-cj 5·5
+- sh_541584_180905 spot: opus-cl 9·8 vs opus-cn 9·6
+- sh_541934_185733 spot: opus-bw 39·3 vs opus-by 39·8
+- sh_541977_183754 spot: opus-bh 28·6 vs opus-bi 28·8
+- sh_541860_180924 spot: opus-cj 5·6 vs opus-cl 6·8
+- sh_541860_180924 spot: opus-ck 5·8 vs opus-cm 5·6
 
 ## Cross-reader agreement on shared marks (any mosaic, including overlap strips)
 
-1162 marks read by 2+ readers: value agreement (<= 0.15 ft) 1128/1162 = 97.1%, exact 1116/1162 = 96.0%; distance between readers' positions median 0.5 m, max 7.9 m.
+2868 marks read by 2+ readers: value agreement (<= 0.15 ft) 2769/2868 = 96.5%, exact 2728/2868 = 95.1%; distance between readers' positions median 0.5 m, max 10.5 m.
 These come from overlap strips between neighbouring mosaics read by different readers; they are not a substitute for full double reads of whole mosaics.
 
 ## All disputed marks
 
-- sh_538255_185638 spot values {'opus-h': [22.3], 'opus-i': [22.8]} (opus-h:m18_131063_87116@952,142=22.3(m); opus-i:m18_131066_87116@174,137=22.8(m))
-- sh_537953_185588 spot values {'opus-h': [15.4], 'opus-i': [16.4]} (opus-h:m18_131063_87116@132,254=15.4(h); opus-i:m18_131060_87116@899,253=16.4(l))
+- sh_539382_186829 spot values {'opus-cg': [63.6], 'opus-cn': [63.6], 'opus-cq': [68.6]} (opus-cn:m18_131075_87104@990,86=63.6(l); opus-cq:m18_131075_87104@990,86=68.6(l); opus-cg:m18_131078_87104@223,87=63.6(l))
+- sh_539160_186538 bench_mark values {'opus-cg': [56.38], 'opus-ck': [58.38], 'opus-cn': [58.38], 'opus-cq': [58.38]} (opus-cn:m18_131075_87104@370,852=58.38(h); opus-cq:m18_131075_87104@373,855=58.38(h); opus-ck:m18_131075_87107@371,86=58.38(m); opus-cg:m18_131075_87107@371,85=56.38(l))
+- sh_541916_186200 spot values {'opus-cb': [44.3], 'opus-cc': [44.8]} (opus-cb:m18_131102_87110@843,436=44.3(h); opus-cc:m18_131105_87110@74,436=44.8(h))
+- sh_539451_186088 spot values {'opus-cc': [50.6], 'opus-ce': [50.8]} (opus-cc:m18_131078_87110@354,552=50.6(l); opus-ce:m18_131078_87110@354,552=50.8(l))
+- sh_539643_186039 spot values {'opus-ca': [48.6], 'opus-cb': [48.6], 'opus-cc': [48.8], 'opus-ce': [48.6]} (opus-cb:m18_131081_87110@99,698=48.6(h); opus-cc:m18_131078_87110@867,698=48.8(l); opus-ce:m18_131078_87110@866,698=48.6(l); opus-ca:m18_131081_87110@99,698=48.6(l))
+- sh_539591_186008 spot values {'opus-by': [47.6], 'opus-bz': [47.8], 'opus-cc': [47.8], 'opus-ce': [47.8]} (opus-cc:m18_131078_87110@723,777=47.8(h); opus-bz:m18_131078_87113@723,10=47.8(h); opus-ce:m18_131078_87110@723,777=47.8(m); opus-by:m18_131078_87113@723,10=47.6(l))
+- sh_541683_185984 bench_mark values {'opus-bt': [46.13], 'opus-bw': [46.13], 'opus-by': [46.13], 'opus-cb': [46.19]} (opus-by:m18_131099_87110@968,1000=46.13(h); opus-bt:m18_131099_87113@969,233=46.13(h); opus-bw:m18_131102_87113@200,233=46.13(h); opus-by:m18_131102_87113@201,231=46.13(h); opus-cb:m18_131102_87110@200,999=46.19(l))
+- sh_541148_185983 spot values {'opus-bs': [46.7], 'opus-bx': [48.7]} (opus-bs:m18_131096_87113@297,192=46.7(m); opus-bx:m18_131096_87110@297,961=48.7(l))
+- sh_540131_185982 spot values {'opus-bt': [47.6], 'opus-bz': [47.8]} (opus-bt:m18_131084_87113@637,120=47.6(h); opus-bz:m18_131084_87110@637,888=47.8(m))
+- sh_538117_185944 spot values {'opus-db': [34.6], 'opus-dd': [34.8]} (opus-db:m18_131063_87113@598,75=34.6(l); opus-dd:m18_131063_87113@599,74=34.8(l))
+- sh_542801_185943 bench_mark values {'opus-ce': [29.66], 'opus-cg': [29.86]} (opus-ce:m18_131111_87113@897,428=29.66(l); opus-cg:m18_131114_87113@127,423=29.86(l))
+- sh_540803_185804 spot values {'opus-bq': [41.9], 'opus-bs': [41.8]} (opus-bq:m18_131090_87113@894,649=41.9(h); opus-bq:m18_131093_87113@126,649=41.9(h); opus-bs:m18_131090_87113@894,649=41.8(m))
+- sh_541982_185790 bench_mark values {'opus-bs': [41.06], 'opus-bv': [41.06], 'opus-bw': [41.05], 'opus-bx': [41.06], 'opus-by': [41.05], 'opus-ca': [41.06]} (opus-bw:m18_131102_87113@987,776=41.05(m); opus-bs:m18_131102_87116@987,9=41.06(m); opus-ca:m18_131105_87113@220,776=41.06(m); opus-bx:m18_131105_87116@219,10=41.06(m); opus-by:m18_131102_87113@988,777=41.05(l); opus-bv:m18_131105_87116@221,10=41.06(l))
+- sh_540201_185787 spot values {'opus-br': [42.6], 'opus-bt': [42.8]} (opus-bt:m18_131084_87113@810,651=42.8(l); opus-br:m18_131087_87113@41,650=42.6(l))
+- sh_538245_185769 spot values {'opus-db': [28.1], 'opus-dc': [28.1], 'opus-dd': [26.1], 'opus-de': [28.1]} (opus-dd:m18_131063_87113@928,554=26.1(m); opus-dc:m18_131066_87113@160,554=28.1(m); opus-de:m18_131066_87113@160,555=28.1(m); opus-db:m18_131063_87113@928,553=28.1(l))
+- sh_538794_185769 spot values {'opus-cd': [29.6], 'opus-cg': [29.8], 'opus-dd': [29.6]} (opus-dd:m18_131069_87113@867,596=29.6(h); opus-cd:m18_131072_87113@99,596=29.6(l); opus-cg:m18_131072_87113@99,597=29.8(l))
+- sh_539376_185749 spot values {'opus-by': [41.5], 'opus-bz': [41.6], 'opus-cb': [41.5], 'opus-cd': [41.5]} (opus-cd:m18_131075_87113@895,694=41.5(m); opus-by:m18_131078_87113@127,685=41.5(m); opus-bz:m18_131078_87113@127,694=41.6(m); opus-cb:m18_131075_87113@896,694=41.5(l))
+- sh_541934_185733 spot values {'opus-bs': [39.8], 'opus-bv': [39.8], 'opus-bw': [39.3], 'opus-bx': [39.8], 'opus-by': [39.8], 'opus-ca': [39.8]} (opus-by:m18_131102_87113@856,928=39.8(m); opus-bv:m18_131105_87116@88,159=39.8(m); opus-bx:m18_131105_87116@87,159=39.8(m); opus-bw:m18_131102_87113@855,926=39.3(l); opus-bs:m18_131102_87116@856,159=39.8(l); opus-ca:m18_131105_87113@88,927=39.8(l))
+- sh_540823_185732 spot values {'opus-bk': [40.9], 'opus-bn': [40.8], 'opus-bq': [40.9], 'opus-bs': [40.8]} (opus-bq:m18_131090_87113@943,845=40.9(h); opus-bq:m18_131093_87113@175,845=40.9(h); opus-bs:m18_131090_87113@942,845=40.8(m); opus-bk:m18_131090_87116@942,77=40.9(m); opus-bk:m18_131093_87116@174,77=40.9(m); opus-bn:m18_131093_87116@174,76=40.8(l))
+- sh_541796_185727 bench_mark values {'opus-bs': [36.47], 'opus-bw': [38.47], 'opus-by': [38.47]} (opus-bw:m18_131102_87113@484,931=38.47(l); opus-by:m18_131102_87113@484,930=38.47(l); opus-bs:m18_131102_87116@484,163=36.47(l))
+- sh_541441_185724 bench_mark values {'opus-bo': [38.88], 'opus-bt': [36.88]} (opus-bt:m18_131099_87113@297,912=36.88(l); opus-bo:m18_131099_87116@297,145=38.88(l))
+- sh_540512_185713 spot values {'opus-bk': [40.8], 'opus-bm': [40.8], 'opus-bp': [40.6], 'opus-bq': [40.8], 'opus-br': [40.8], 'opus-bs': [40.6]} (opus-br:m18_131087_87113@873,873=40.8(h); opus-bm:m18_131087_87116@872,105=40.8(h); opus-bq:m18_131090_87113@105,873=40.8(h); opus-bs:m18_131090_87113@104,873=40.6(h); opus-bk:m18_131090_87116@105,105=40.8(h); opus-bp:m18_131087_87116@872,106=40.6(l))
+- sh_538256_185638 spot values {'opus-db': [22.8], 'opus-dc': [22.8], 'opus-dd': [22.3], 'opus-de': [22.3], 'opus-h': [22.3], 'opus-i': [22.8]} (opus-dd:m18_131063_87113@953,910=22.3(m); opus-h:m18_131063_87116@952,142=22.3(m); opus-dc:m18_131066_87113@186,911=22.8(m); opus-i:m18_131066_87116@174,137=22.8(m); opus-db:m18_131063_87113@947,904=22.8(l); opus-de:m18_131066_87113@185,910=22.3(l))
+- sh_542017_185620 bench_mark values {'opus-bv': [39.56], 'opus-bx': [39.66]} (opus-bv:m18_131105_87116@302,468=39.56(m); opus-bx:m18_131105_87116@301,467=39.66(m))
+- sh_539432_185599 bench_mark values {'opus-bu': [39.46], 'opus-bw': [39.48]} (opus-bu:m18_131078_87116@267,331=39.46(h); opus-bw:m18_131078_87116@267,331=39.48(l))
+- sh_537953_185588 spot values {'opus-db': [15.4], 'opus-dd': [15.4], 'opus-h': [15.4], 'opus-i': [16.4]} (opus-db:m18_131060_87113@899,1021=15.4(h); opus-db:m18_131063_87113@131,1021=15.4(h); opus-dd:m18_131063_87113@131,1020=15.4(h); opus-h:m18_131063_87116@132,254=15.4(h); opus-i:m18_131060_87116@899,253=16.4(l))
+- sh_540876_185523 spot values {'opus-bk': [37.3], 'opus-bn': [37.8]} (opus-bk:m18_131093_87116@300,645=37.3(l); opus-bn:m18_131093_87116@300,645=37.8(l))
+- sh_537035_185514 spot values {'opus-da': [16.4], 'opus-dc': [15.4]} (opus-dc:m18_131051_87116@731,385=15.4(m); opus-da:m18_131051_87116@731,385=16.4(l))
+- sh_539415_185507 spot values {'opus-bu': [38.7], 'opus-bw': [36.7], 'opus-bz': [38.7], 'opus-cc': [36.7]} (opus-bz:m18_131075_87116@982,578=38.7(l); opus-cc:m18_131075_87116@982,578=36.7(l); opus-bu:m18_131078_87116@214,579=38.7(l); opus-bw:m18_131078_87116@214,579=36.7(l))
+- sh_536869_185495 spot values {'opus-da': [16.0], 'opus-dc': [15.0]} (opus-dc:m18_131051_87116@285,426=15.0(m); opus-da:m18_131051_87116@285,425=16.0(l))
+- sh_539340_185490 spot values {'opus-bu': [36.2], 'opus-bz': [36.2], 'opus-cc': [35.2]} (opus-bz:m18_131075_87116@782,622=36.2(m); opus-cc:m18_131075_87116@783,622=35.2(l); opus-bu:m18_131078_87116@3,617=36.2(l))
+- sh_542076_185473 spot values {'opus-bs': [32.6], 'opus-bu': [32.6], 'opus-bv': [32.9], 'opus-bx': [32.9]} (opus-bs:m18_131105_87119@452,99=32.6(m); opus-bv:m18_131105_87116@446,867=32.9(l); opus-bx:m18_131105_87116@446,868=32.9(l); opus-bu:m18_131105_87119@452,107=32.6(l))
+- sh_542531_185452 spot values {'opus-bw': [35.1], 'opus-bz': [36.1], 'opus-cb': [35.1], 'opus-cd': [35.1]} (opus-bz:m18_131108_87116@901,960=36.1(m); opus-bw:m18_131108_87119@901,191=35.1(m); opus-cd:m18_131111_87116@133,960=35.1(m); opus-cb:m18_131111_87119@133,191=35.1(m))
+- sh_540209_185440 spot values {'opus-bg': [40.9], 'opus-bi': [40.9], 'opus-bm': [40.9], 'opus-bn': [40.9], 'opus-bp': [40.0]} (opus-bm:m18_131087_87116@39,817=40.9(h); opus-bn:m18_131084_87116@807,817=40.9(m); opus-bi:m18_131084_87119@808,50=40.9(m); opus-bp:m18_131087_87116@39,817=40.0(m); opus-bg:m18_131087_87119@39,50=40.9(l))
+- sh_541426_185431 bench_mark values {'opus-bj': [35.56], 'opus-bl': [35.66], 'opus-bo': [35.56]} (opus-bo:m18_131099_87116@236,933=35.56(m); opus-bl:m18_131099_87119@236,167=35.66(m); opus-bj:m18_131099_87119@236,166=35.56(l))
+- sh_540933_185424 bench_mark values {'opus-bk': [37.87], 'opus-bn': [37.87], 'opus-t': [37.57]} (opus-bk:m18_131093_87116@445,915=37.87(h); opus-bn:m18_131093_87116@445,915=37.87(h); opus-t:m18_131093_87119@446,148=37.57(l))
+- sh_539359_185410 spot values {'opus-bq': [36.6], 'opus-bu': [36.6], 'opus-bw': [36.6], 'opus-bz': [36.8], 'opus-cc': [36.6]} (opus-bu:m18_131078_87116@55,835=36.6(h); opus-bz:m18_131075_87116@823,835=36.8(m); opus-bu:m18_131075_87119@824,67=36.6(m); opus-cc:m18_131075_87116@823,835=36.6(l); opus-bw:m18_131078_87116@56,835=36.6(l); opus-bq:m18_131078_87119@56,67=36.6(l))
+- sh_539722_185391 bench_mark values {'opus-bm': [38.46], 'opus-br': [38.48], 'opus-bt': [38.48]} (opus-br:m18_131081_87116@259,915=38.48(h); opus-bt:m18_131081_87116@260,915=38.48(h); opus-bm:m18_131081_87119@263,146=38.46(m))
+- sh_539288_185388 spot values {'opus-bu': [36.0], 'opus-bz': [36.0], 'opus-cc': [35.0]} (opus-bz:m18_131075_87116@631,890=36.0(m); opus-bu:m18_131075_87119@631,124=36.0(m); opus-cc:m18_131075_87116@632,891=35.0(l))
+- sh_540030_185386 spot values {'opus-bi': [36.0], 'opus-bn': [38.0]} (opus-bn:m18_131084_87116@323,950=38.0(l); opus-bi:m18_131084_87119@321,182=36.0(l))
+- sh_540175_185372 bench_mark values {'opus-bi': [41.39], 'opus-bn': [41.58]} (opus-bn:m18_131084_87116@709,998=41.58(m); opus-bi:m18_131084_87119@711,230=41.39(l))
+- sh_537084_185334 spot values {'opus-cy': [16.8], 'opus-cz': [16.9], 'opus-da': [16.9], 'opus-db': [16.9], 'opus-dc': [16.9], 'opus-j': [16.9]} (opus-da:m18_131051_87116@849,874=16.9(m); opus-da:m18_131051_87119@849,107=16.9(m); opus-cz:m18_131054_87116@81,874=16.9(m); opus-dc:m18_131051_87116@849,874=16.9(l); opus-cy:m18_131051_87119@849,106=16.8(l); opus-db:m18_131054_87116@82,874=16.9(l); opus-j:m18_131054_87119@82,106=16.9(l))
+- sh_539131_185176 bench_mark values {'opus-bu': [33.69], 'opus-j': [33.59]} (opus-j:m18_131072_87119@962,680=33.59(h); opus-bu:m18_131075_87119@194,682=33.69(l))
+- sh_539549_185066 spot values {'opus-bn': [34.8], 'opus-bq': [34.6]} (opus-bq:m18_131078_87119@542,1009=34.6(l); opus-bn:m18_131078_87122@541,241=34.8(l))
+- sh_536994_185027 spot values {'opus-cw': [21.9], 'opus-cx': [21.9], 'opus-cy': [21.8], 'opus-da': [21.8]} (opus-da:m18_131051_87119@586,925=21.8(m); opus-cy:m18_131051_87119@586,925=21.8(l); opus-cw:m18_131051_87122@587,157=21.9(l); opus-cx:m18_131051_87122@586,157=21.9(l))
 - sh_540256_184948 bench_mark values {'opus-q': [33.57], 'opus-s': [35.57], 'opus-u': [35.57]} (opus-s:m18_131084_87122@896,612=35.57(h); opus-u:m18_131084_87122@895,611=35.57(m); opus-q:m18_131087_87122@127,609=33.57(m))
 - sh_540587_184805 bench_mark values {'opus-l': [34.28], 'opus-n': [34.23], 'opus-o': [34.23], 'opus-q': [34.23]} (opus-n:m18_131087_87125@1003,256=34.23(h); opus-q:m18_131087_87122@1015,1015=34.23(m); opus-o:m18_131090_87122@238,1021=34.23(m); opus-l:m18_131090_87125@237,256=34.28(l))
 - sh_541353_184609 spot values {'opus-m': [31.3], 'opus-n': [31.9]} (opus-n:m18_131096_87125@746,839=31.9(l); opus-m:m18_131096_87128@746,71=31.3(l))
-- sh_541739_184607 spot values {'opus-p': [35.8], 'opus-r': [35.3]} (opus-r:m18_131099_87125@1015,872=35.3(l); opus-p:m18_131099_87128@1016,106=35.8(l); opus-r:m18_131099_87128@1015,104=35.3(l))
+- sh_541740_184607 spot values {'opus-bg': [35.8], 'opus-bh': [35.8], 'opus-p': [35.8], 'opus-r': [35.3]} (opus-bg:m18_131102_87128@248,104=35.8(m); opus-r:m18_131099_87125@1015,872=35.3(l); opus-p:m18_131099_87128@1016,106=35.8(l); opus-r:m18_131099_87128@1015,104=35.3(l); opus-bh:m18_131102_87125@250,872=35.8(l))
+- sh_539441_184562 bench_mark values {'opus-bj': [31.08], 'opus-bl': [31.08], 'opus-bp': [31.08], 'opus-bq': [31.09], 'opus-br': [31.08]} (opus-br:m18_131075_87128@978,54=31.08(h); opus-bl:m18_131078_87125@212,823=31.08(h); opus-bj:m18_131078_87128@215,55=31.08(h); opus-bp:m18_131075_87128@982,56=31.08(m); opus-bq:m18_131075_87125@980,824=31.09(l))
 - sh_540690_184492 bench_mark values {'opus-k': [36.36], 'opus-m': [36.38]} (opus-k:m18_131090_87128@492,337=36.36(l); opus-m:m18_131090_87128@491,335=36.38(l))
 - sh_540178_184435 spot values {'opus-o': [35.6], 'opus-q': [35.0]} (opus-o:m18_131084_87128@649,452=35.6(m); opus-q:m18_131084_87128@649,452=35.0(l))
 - sh_540237_184432 spot values {'opus-l': [34.8], 'opus-o': [34.6], 'opus-q': [34.6]} (opus-q:m18_131084_87128@809,461=34.6(m); opus-o:m18_131084_87128@808,461=34.6(l); opus-l:m18_131087_87128@37,466=34.8(l); opus-o:m18_131087_87128@40,466=34.6(l))
 - sh_540015_184251 spot values {'opus-o': [30.6], 'opus-q': [30.0], 'opus-s': [30.0]} (opus-s:m18_131081_87128@966,935=30.0(h); opus-s:m18_131081_87131@965,167=30.0(h); opus-q:m18_131084_87128@197,934=30.0(h); opus-o:m18_131084_87128@197,934=30.6(m); opus-o:m18_131084_87131@197,166=30.6(m))
 - sh_538897_184218 bench_mark values {'opus-i': [20.79], 'opus-j': [20.19], 'opus-l': [20.79]} (opus-j:m18_131072_87131@262,172=20.19(h); opus-i:m18_131072_87128@261,940=20.79(m); opus-l:m18_131072_87128@263,939=20.79(l))
+- sh_536644_184206 spot values {'opus-ct': [46.0], 'opus-cu': [48.0], 'opus-cv': [48.0]} (opus-cu:m18_131048_87128@354,807=48.0(l); opus-ct:m18_131048_87131@354,40=46.0(l); opus-cv:m18_131048_87131@354,40=48.0(l))
+- sh_536601_184205 spot values {'opus-ct': [47.6], 'opus-cu': [47.6], 'opus-cv': [47.8]} (opus-cv:m18_131048_87131@239,41=47.8(h); opus-cu:m18_131048_87128@239,809=47.6(l); opus-ct:m18_131048_87131@238,41=47.6(l))
+- sh_541732_184134 bench_mark values {'opus-bg': [28.57], 'opus-p': [29.57]} (opus-p:m18_131099_87131@961,610=29.57(h); opus-bg:m18_131102_87131@192,609=28.57(h))
 - sh_541443_184060 spot values {'opus-m': [29.8], 'opus-n': [29.8], 'opus-p': [29.3, 29.8], 'opus-r': [29.9]} (opus-m:m18_131096_87131@942,777=29.8(l); opus-n:m18_131096_87134@947,24=29.8(l); opus-p:m18_131096_87134@950,22=29.3(l); opus-p:m18_131099_87131@176,784=29.8(l); opus-r:m18_131099_87134@181,24=29.9(l))
 - sh_540872_184026 spot values {'opus-k': [33.6], 'opus-l': [33.6], 'opus-m': [33.6], 'opus-n': [33.5]} (opus-m:m18_131093_87134@179,69=33.6(m); opus-k:m18_131090_87131@947,838=33.6(l); opus-l:m18_131090_87134@947,70=33.6(l); opus-k:m18_131093_87131@179,837=33.6(l); opus-n:m18_131093_87134@178,69=33.5(l))
 - sh_541360_183972 bench_mark values {'opus-m': [33.94], 'opus-n': [33.94], 'opus-p': [33.84]} (opus-m:m18_131096_87131@716,1019=33.94(h); opus-n:m18_131096_87134@717,250=33.94(m); opus-p:m18_131096_87134@716,249=33.84(l))
+- sh_539218_183963 spot values {'opus-bp': [23.5], 'opus-br': [28.5]} (opus-bp:m18_131075_87131@338,883=23.5(l); opus-br:m18_131075_87134@337,115=28.5(l))
 - sh_540268_183929 spot values {'opus-n': [30.6], 'opus-q': [30.8]} (opus-q:m18_131084_87134@851,285=30.8(h); opus-n:m18_131087_87134@83,283=30.6(l))
+- sh_541716_183907 spot values {'opus-bh': [28.7], 'opus-bi': [28.7], 'opus-r': [26.7]} (opus-bh:m18_131102_87134@132,452=28.7(h); opus-bi:m18_131102_87134@133,452=28.7(h); opus-r:m18_131099_87134@901,452=26.7(l))
 - sh_540305_183890 spot values {'opus-n': [26.3], 'opus-q': [28.3]} (opus-q:m18_131084_87134@950,392=28.3(m); opus-n:m18_131087_87134@180,394=26.3(m))
 - sh_541260_183806 bench_mark values {'opus-n': [35.78], 'opus-p': [30.78]} (opus-n:m18_131096_87134@436,690=35.78(l); opus-p:m18_131096_87134@435,690=30.78(l))
+- sh_537265_183772 spot values {'opus-cq': [21.8], 'opus-cr': [21.6]} (opus-cq:m18_131054_87134@456,486=21.8(m); opus-cr:m18_131054_87134@456,486=21.6(m))
+- sh_541977_183754 spot values {'opus-an': [29], 'opus-bh': [28.6], 'opus-bi': [28.8], 'opus-bk': [28.8]} (opus-bk:m18_131102_87137@821,115=28.8(h); opus-bi:m18_131102_87134@821,883=28.8(m); opus-bh:m18_131102_87134@820,883=28.6(l); opus-an:q18_131105_87134@52,887=29(h); opus-an:q18_131105_87137@52,119=29(h))
+- sh_541848_183753 bench_mark values {'opus-bh': [26.84], 'opus-bi': [26.94], 'opus-bk': [26.64]} (opus-bi:m18_131102_87134@476,875=26.94(h); opus-bh:m18_131102_87134@474,874=26.84(m); opus-bk:m18_131102_87137@474,109=26.64(l))
 - sh_538578_183745 spot values {'opus-b': [10.9], 'opus-d': [10.2]} (opus-b:m18_131066_87134@908,653=10.9(l); opus-d:m18_131066_87134@909,655=10.2(l); opus-b:m18_131069_87134@141,653=10.9(l))
 - sh_540596_183716 spot values {'opus-l': [25.8], 'opus-n': [25.6], 'opus-p': [25.6], 'opus-q': [25.6], 'opus-s': [25.6]} (opus-n:m18_131087_87134@951,882=25.6(h); opus-l:m18_131090_87134@183,882=25.8(h); opus-p:m18_131090_87137@182,114=25.6(h); opus-s:m18_131087_87137@951,114=25.6(m); opus-q:m18_131087_87137@951,114=25.6(l))
 - sh_538397_183656 spot values {'opus-a': [21.3], 'opus-b': [21.9], 'opus-d': [21.9]} (opus-d:m18_131066_87134@416,878=21.9(m); opus-a:m18_131066_87137@418,113=21.3(m); opus-b:m18_131066_87134@414,881=21.9(l))
+- sh_539124_183656 bench_mark values {'opus-br': [13.78], 'opus-bt': [13.78], 'opus-bv': [13.78], 'opus-bw': [13.76], 'opus-bz': [13.78], 'opus-ca': [13.78]} (opus-ca:m18_131072_87134@833,935=13.78(h); opus-bt:m18_131075_87137@64,167=13.78(h); opus-bz:m18_131072_87137@832,167=13.78(m); opus-bw:m18_131072_87134@832,935=13.76(l); opus-br:m18_131075_87134@64,935=13.78(l); opus-bv:m18_131075_87137@66,168=13.78(l))
 - sh_538486_183653 spot values {'opus-a': [15.8], 'opus-b': [15.6], 'opus-d': [15.6]} (opus-b:m18_131066_87134@653,897=15.6(m); opus-d:m18_131066_87134@654,897=15.6(m); opus-a:m18_131066_87137@653,125=15.8(m))
+- sh_539970_183610 spot values {'opus-bi': [18.2], 'opus-bk': [16.2], 'opus-s': [18.2]} (opus-bi:m18_131081_87137@796,352=18.2(h); opus-s:m18_131084_87137@28,353=18.2(h); opus-bk:m18_131081_87137@796,354=16.2(l))
+- sh_539394_183525 spot values {'opus-bo': [11.9], 'opus-bq': [11.9], 'opus-bt': [11.9], 'opus-bv': [11.8]} (opus-bv:m18_131075_87137@779,540=11.8(m); opus-bo:m18_131078_87137@11,540=11.9(m); opus-bt:m18_131075_87137@779,540=11.9(l); opus-bq:m18_131078_87137@11,540=11.9(l))
+- sh_539129_183471 spot values {'opus-bt': [15.0], 'opus-bv': [16.0], 'opus-bz': [15.0]} (opus-bz:m18_131072_87137@832,665=15.0(h); opus-bt:m18_131075_87137@64,665=15.0(h); opus-bv:m18_131075_87137@64,665=16.0(m))
+- sh_539215_183467 spot values {'opus-bt': [11.9], 'opus-bv': [11.8]} (opus-bt:m18_131075_87137@294,683=11.9(h); opus-bv:m18_131075_87137@294,683=11.8(l))
+- sh_536566_183376 spot values {'opus-cs': [42.8], 'opus-cu': [42.6]} (opus-cu:m18_131045_87137@851,734=42.6(h); opus-cs:m18_131048_87137@84,733=42.8(m))
+- sh_537054_183330 spot values {'opus-cq': [30.6], 'opus-cr': [30.5]} (opus-cr:m18_131051_87140@624,124=30.5(h); opus-cq:m18_131051_87137@624,892=30.6(l))
+- sh_541446_183297 spot values {'opus-bh': [28.0], 'opus-bk': [23.0]} (opus-bk:m18_131099_87140@130,539=23.0(m); opus-bh:m18_131096_87140@898,540=28.0(l))
+- sh_541241_183133 spot values {'opus-bh': [21.8], 'opus-bm': [21.6]} (opus-bh:m18_131096_87140@336,965=21.8(h); opus-bm:m18_131096_87143@335,197=21.6(l))
+- sh_538047_183035 spot values {'opus-a': [14.7], 'opus-b': [14.7], 'opus-bc': [14.7], 'opus-bf': [14.7], 'opus-cp': [14.1]} (opus-bc:m18_131060_87143@966,223=14.7(h); opus-bf:m18_131060_87143@966,223=14.7(h); opus-a:m18_131063_87140@199,992=14.7(h); opus-b:m18_131063_87143@199,223=14.7(h); opus-cp:m18_131060_87140@966,991=14.1(l))
+- sh_540301_182933 spot values {'opus-aw': [21.8], 'opus-ba': [21.3]} (opus-ba:m18_131087_87143@100,664=21.3(m); opus-aw:m18_131084_87143@864,665=21.8(l))
+- sh_537782_182876 bench_mark values {'opus-bc': [33.11], 'opus-bf': [38.11]} (opus-bc:m18_131060_87143@244,632=33.11(h); opus-bf:m18_131057_87143@1011,633=38.11(m); opus-bf:m18_131060_87143@243,633=38.11(m))
+- sh_540862_182845 spot values {'opus-ba': [19.6], 'opus-be': [19.8], 'opus-bl': [19.8], 'opus-bo': [19.8]} (opus-bl:m18_131090_87143@829,942=19.8(m); opus-bo:m18_131090_87143@831,943=19.8(m); opus-ba:m18_131090_87146@832,176=19.6(m); opus-bl:m18_131093_87143@61,942=19.8(m); opus-be:m18_131093_87146@60,175=19.8(m))
+- sh_536625_182803 spot values {'opus-ct': [41.9], 'opus-cv': [41.8]} (opus-cv:m18_131045_87143@970,746=41.8(h); opus-ct:m18_131048_87143@203,746=41.9(l))
+- sh_540876_182732 spot values {'opus-ba': [19.3], 'opus-bd': [19.8], 'opus-be': [19.3]} (opus-ba:m18_131090_87146@862,485=19.3(m); opus-be:m18_131093_87146@94,485=19.3(m); opus-bd:m18_131090_87146@857,476=19.8(l))
+- sh_537983_182720 spot values {'opus-az': [35.3], 'opus-b': [35.8]} (opus-az:m18_131060_87146@766,294=35.3(m); opus-b:m18_131063_87146@9,302=35.8(l))
+- sh_538025_182655 spot values {'opus-az': [35.3], 'opus-b': [35.8]} (opus-az:m18_131060_87146@878,477=35.3(m); opus-b:m18_131063_87146@110,478=35.8(l))
+- sh_540733_182600 spot values {'opus-ax': [28.7], 'opus-ba': [26.7], 'opus-bd': [28.7]} (opus-bd:m18_131090_87146@466,826=28.7(m); opus-ba:m18_131090_87146@462,823=26.7(l); opus-ax:m18_131090_87149@468,57=28.7(l))
 - sh_539767_182564 spot values {'opus-ac': [5.0], 'opus-ae': [5.0, 6.0], 'opus-ah': [5.0], 'opus-aj': [5.0]} (opus-ah:m18_131078_87146@942,851=5.0(h); opus-aj:m18_131081_87146@174,850=5.0(h); opus-ac:m18_131078_87149@943,84=5.0(l); opus-ae:m18_131078_87149@942,82=5.0(l); opus-ae:m18_131081_87149@174,82=6.0(l))
+- sh_540061_182533 spot values {'opus-ae': [5.8], 'opus-ai': [5.8], 'opus-aj': [5.8], 'opus-aq': [5.8], 'opus-as': [6.8]} (opus-aj:m18_131081_87146@961,955=5.8(h); opus-ae:m18_131081_87149@962,187=5.8(h); opus-aq:m18_131084_87146@193,955=5.8(h); opus-ai:m18_131084_87149@194,187=5.8(h); opus-as:m18_131084_87146@194,955=6.8(l))
 - sh_538304_182442 spot values {'opus-ah': [16.3], 'opus-ao': [15.3]} (opus-ao:m18_131063_87149@845,303=15.3(m); opus-ah:m18_131066_87149@77,303=16.3(l))
 - sh_538640_182438 spot values {'opus-ad': [5.8], 'opus-ah': [5.6]} (opus-ah:m18_131066_87149@977,339=5.6(l); opus-ad:m18_131069_87149@210,339=5.8(l))
 - sh_539126_182432 spot values {'opus-ab': [11.6], 'opus-ad': [11.8]} (opus-ab:m18_131072_87149@746,390=11.6(l); opus-ad:m18_131072_87149@746,391=11.8(l))
 - sh_538872_182281 spot values {'opus-aa': [5.8], 'opus-ab': [5.6], 'opus-ad': [5.6], 'opus-x': [5.6]} (opus-x:m18_131072_87152@52,10=5.6(h); opus-ad:m18_131069_87149@821,778=5.6(m); opus-aa:m18_131069_87152@820,10=5.8(m); opus-ad:m18_131072_87149@52,778=5.6(m); opus-ab:m18_131072_87149@53,778=5.6(l))
 - sh_538868_182279 bench_mark values {'opus-aa': [7.38], 'opus-ab': [7.36], 'opus-ad': [7.36], 'opus-x': [7.38]} (opus-aa:m18_131069_87152@809,17=7.38(m); opus-x:m18_131072_87152@42,16=7.38(m); opus-ad:m18_131069_87149@812,784=7.36(l); opus-ab:m18_131072_87149@43,785=7.36(l); opus-ad:m18_131072_87149@44,784=7.36(l))
-- sh_540303_182260 spot values {'opus-af': [6.5], 'opus-ai': [5.5], 'opus-am': [5.5]} (opus-ai:m18_131084_87149@822,941=5.5(h); opus-af:m18_131084_87152@822,172=6.5(h); opus-am:m18_131087_87152@54,173=5.5(h))
+- sh_540303_182260 spot values {'opus-af': [6.5], 'opus-ai': [5.5], 'opus-am': [5.5], 'opus-as': [5.5], 'opus-av': [5.5]} (opus-ai:m18_131084_87149@822,941=5.5(h); opus-af:m18_131084_87152@822,172=6.5(h); opus-as:m18_131087_87149@54,940=5.5(h); opus-av:m18_131087_87149@54,941=5.5(h); opus-am:m18_131087_87152@54,173=5.5(h))
 - sh_538335_182238 spot values {'opus-ae': [18.5], 'opus-ah': [15.5], 'opus-ai': [18.5], 'opus-ao': [15.5]} (opus-ai:m18_131063_87152@912,88=18.5(h); opus-ao:m18_131063_87149@912,855=15.5(m); opus-ah:m18_131066_87149@144,854=15.5(m); opus-ae:m18_131066_87152@144,86=18.5(l))
 - sh_538301_182170 spot values {'opus-ae': [16.1], 'opus-ai': [18.1]} (opus-ai:m18_131063_87152@820,266=18.1(h); opus-ae:m18_131066_87152@44,266=16.1(l))
 - sh_539482_182024 spot values {'opus-aa': [4.6], 'opus-x': [4.5], 'opus-y': [4.5]} (opus-x:m18_131075_87152@905,746=4.5(h); opus-y:m18_131078_87152@138,746=4.5(h); opus-aa:m18_131075_87152@905,746=4.6(l))
 - sh_539957_182011 spot values {'opus-aa': [5.6], 'opus-ab': [5.5], 'opus-z': [5.5]} (opus-ab:m18_131081_87155@643,50=5.5(h); opus-z:m18_131081_87155@643,50=5.5(h); opus-aa:m18_131081_87152@643,818=5.6(l))
 - sh_539802_181999 spot values {'opus-aa': [6.5], 'opus-ab': [6.5], 'opus-w': [6.8], 'opus-y': [6.5], 'opus-z': [6.5]} (opus-aa:m18_131081_87152@226,839=6.5(h); opus-ab:m18_131081_87155@226,71=6.5(h); opus-z:m18_131081_87155@226,71=6.5(h); opus-y:m18_131078_87152@994,835=6.5(l); opus-w:m18_131078_87155@995,71=6.8(l))
 - sh_538575_181928 spot values {'opus-ab': [17.9], 'opus-ae': [17.8]} (opus-ae:m18_131066_87152@766,940=17.8(h); opus-ab:m18_131066_87155@766,172=17.9(l))
+- sh_537231_181886 bench_mark values {'opus-bc': [25.86], 'opus-bd': [25.66], 'opus-cx': [25.86], 'opus-cy': [25.86], 'opus-cz': [25.86]} (opus-cz:m18_131051_87152@991,953=25.86(h); opus-bd:m18_131054_87152@229,954=25.66(h); opus-bc:m18_131054_87155@228,186=25.86(h); opus-cy:m18_131051_87155@995,189=25.86(m); opus-cx:m18_131051_87152@994,953=25.86(l))
+- sh_537537_181623 spot values {'opus-ax': [18.5], 'opus-ay': [16.5]} (opus-ax:m18_131057_87155@261,916=18.5(m); opus-ax:m18_131057_87158@261,148=18.5(m); opus-ay:m18_131057_87158@261,147=16.5(l))
+- sh_537558_181569 bench_mark values {'opus-ax': [18.58], 'opus-ay': [16.56]} (opus-ax:m18_131057_87158@314,295=18.58(h); opus-ay:m18_131057_87158@315,296=16.56(l))
 - sh_538340_181563 spot values {'opus-ab': [6.3], 'opus-ag': [8.3]} (opus-ag:m18_131063_87158@877,367=8.3(m); opus-ab:m18_131066_87158@109,367=6.3(l))
+- sh_537769_181539 spot values {'opus-aq': [18.6], 'opus-au': [18.6], 'opus-ax': [16.6], 'opus-ay': [18.6]} (opus-aq:m18_131060_87158@110,390=18.6(h); opus-au:m18_131060_87158@111,390=18.6(h); opus-ay:m18_131057_87158@879,391=18.6(m); opus-ax:m18_131057_87158@880,390=16.6(l))
 - sh_538997_181536 spot values {'opus-v': [18.6], 'opus-x': [13.6]} (opus-v:m18_131072_87158@334,490=18.6(m); opus-x:m18_131072_87158@334,490=13.6(l))
 - sh_540048_181519 bench_mark values {'opus-ac': [6.86], 'opus-y': [6.66], 'opus-z': [6.86]} (opus-y:m18_131081_87158@850,613=6.66(m); opus-z:m18_131081_87158@850,610=6.86(l); opus-ac:m18_131084_87158@83,613=6.86(l))
+- sh_536948_181466 bench_mark values {'opus-db': [25.38], 'opus-dd': [25.36]} (opus-db:m18_131051_87158@204,526=25.38(h); opus-dd:m18_131048_87158@970,527=25.36(l))
 - sh_540175_181462 spot values {'opus-ac': [6.6], 'opus-ae': [6.5], 'opus-ag': [6.6]} (opus-ac:m18_131084_87158@420,777=6.6(m); opus-ag:m18_131084_87161@419,8=6.6(m); opus-ae:m18_131084_87161@422,9=6.5(l))
+- sh_537815_181461 bench_mark values {'opus-aq': [21.84], 'opus-au': [21.84], 'opus-ax': [21.94], 'opus-ay': [21.84]} (opus-ax:m18_131057_87158@997,602=21.94(h); opus-ay:m18_131057_87158@997,604=21.84(h); opus-aq:m18_131060_87158@229,603=21.84(h); opus-au:m18_131060_87158@229,604=21.84(h))
+- sh_541546_181381 spot values {'opus-ci': [6.5], 'opus-cj': [5.5]} (opus-cj:m18_131099_87161@253,328=5.5(h); opus-ci:m18_131099_87161@253,328=6.5(l))
 - sh_540172_181108 bench_mark values {'opus-ae': [6.32], 'opus-ag': [8.32]} (opus-ag:m18_131084_87161@385,960=8.32(m); opus-ag:m18_131084_87164@385,192=8.32(m); opus-ae:m18_131084_87161@386,964=6.32(l))
 - sh_540060_181099 spot values {'opus-ac': [6.8], 'opus-ae': [5.8], 'opus-ag': [5.6], 'opus-z': [6.6]} (opus-ag:m18_131084_87161@84,977=5.6(m); opus-ag:m18_131084_87164@84,209=5.6(m); opus-z:m18_131081_87161@852,977=6.6(l); opus-ac:m18_131081_87164@853,210=6.8(l); opus-ae:m18_131084_87161@84,977=5.8(l))
 - sh_538491_181092 bench_mark values {'opus-ac': [16.89], 'opus-af': [16.69]} (opus-ac:m18_131066_87161@481,879=16.89(h); opus-af:m18_131066_87164@480,109=16.69(m))
 - sh_538273_181043 spot values {'opus-ah': [16.8], 'opus-am': [16.9]} (opus-am:m18_131063_87164@659,232=16.9(m); opus-ah:m18_131063_87161@658,990=16.8(l))
-- sh_540689_180999 spot values {'opus-am': [6.6], 'opus-ao': [5.6]} (opus-am:m18_131087_87164@996,523=6.6(l); opus-ao:m18_131087_87164@997,523=5.6(l))
+- sh_540689_180999 spot values {'opus-am': [6.6], 'opus-ao': [5.6], 'opus-aw': [5.6]} (opus-aw:m18_131090_87164@228,523=5.6(m); opus-am:m18_131087_87164@996,523=6.6(l); opus-ao:m18_131087_87164@997,523=5.6(l))
+- sh_541860_180924 spot values {'opus-cj': [5.6], 'opus-ck': [5.8], 'opus-cl': [6.8], 'opus-cm': [5.6]} (opus-cm:m18_131102_87167@295,45=5.6(m); opus-cj:m18_131102_87164@295,813=5.6(l); opus-cl:m18_131102_87164@296,815=6.8(l); opus-ck:m18_131102_87167@297,47=5.8(l))
 - sh_539716_180909 spot values {'opus-aa': [5.6], 'opus-ac': [5.8]} (opus-ac:m18_131078_87164@682,694=5.8(h); opus-aa:m18_131078_87164@682,693=5.6(l))
+- sh_541584_180905 spot values {'opus-cj': [9.8], 'opus-cl': [9.8], 'opus-cn': [9.6]} (opus-cn:m18_131099_87167@320,75=9.6(m); opus-cj:m18_131099_87164@320,843=9.8(l); opus-cl:m18_131099_87167@322,75=9.8(l))
+- sh_537666_180891 spot values {'opus-az': [20.6], 'opus-bb': [20.8]} (opus-az:m18_131057_87164@554,594=20.6(l); opus-bb:m18_131057_87164@554,592=20.8(l))
+- sh_537473_180886 bench_mark values {'opus-az': [13.88], 'opus-bb': [13.68], 'opus-be': [13.88]} (opus-be:m18_131054_87164@805,590=13.88(l); opus-az:m18_131057_87164@36,590=13.88(l); opus-bb:m18_131057_87164@36,590=13.68(l))
+- sh_537933_180833 bench_mark values {'opus-av': [24.84], 'opus-aw': [24.94]} (opus-av:m18_131060_87164@500,766=24.84(h); opus-aw:m18_131060_87164@498,769=24.94(l))
 - sh_539711_180831 spot values {'opus-aa': [6.9], 'opus-ac': [6.9], 'opus-ae': [6.8]} (opus-ac:m18_131078_87164@664,902=6.9(h); opus-aa:m18_131078_87164@664,903=6.9(m); opus-ae:m18_131078_87167@664,135=6.8(l))
+- sh_538115_180747 spot values {'opus-am': [16.6], 'opus-as': [16.6], 'opus-av': [18.6], 'opus-aw': [18.6], 'opus-ax': [18.6]} (opus-av:m18_131060_87164@987,1010=18.6(h); opus-aw:m18_131060_87164@978,1011=18.6(h); opus-ax:m18_131060_87167@978,244=18.6(h); opus-am:m18_131063_87164@210,1011=16.6(h); opus-as:m18_131063_87167@210,243=16.6(h))
 - sh_538479_180707 bench_mark values {'opus-aj': [14.05], 'opus-am': [14.06]} (opus-am:m18_131066_87167@418,379=14.06(h); opus-aj:m18_131066_87167@419,379=14.05(l))
+- sh_538329_180538 spot values {'opus-aj': [7.3], 'opus-as': [17.3]} (opus-as:m18_131063_87167@774,822=17.3(h); opus-aj:m18_131066_87167@5,820=7.3(m))
+- sh_537835_180486 bench_mark values {'opus-ax': [19.85], 'opus-bb': [19.85], 'opus-bc': [19.65]} (opus-bc:m18_131057_87167@977,926=19.65(h); opus-ax:m18_131060_87167@210,923=19.85(h); opus-bb:m18_131057_87167@978,926=19.85(l))
 
 ## Value histogram (2 ft bins, distinct marks)
 
 ```
-    2-4   ft   28 ####
-    4-6   ft  160 #######################
-    6-8   ft  262 #####################################
-    8-10  ft  119 #################
-   10-12  ft   73 ##########
-   12-14  ft   98 ##############
-   14-16  ft  174 #########################
-   16-18  ft  280 ########################################
-   18-20  ft  145 #####################
-   20-22  ft   87 ############
-   22-24  ft   84 ############
-   24-26  ft   74 ###########
-   26-28  ft   89 #############
-   28-30  ft  103 ###############
-   30-32  ft  142 ####################
-   32-34  ft  169 ########################
-   34-36  ft  130 ###################
-   36-38  ft   25 ####
-   38-40  ft    5 #
-   40-42  ft    3 
-   42-44  ft    0 
-   44-46  ft    0 
-   46-48  ft    1 
-   48-50  ft    2 
-   50-52  ft    2 
-   52-54  ft    1 
+    2-4   ft   30 ###
+    4-6   ft  219 #####################
+    6-8   ft  364 ###################################
+    8-10  ft  174 #################
+   10-12  ft  127 ############
+   12-14  ft  175 #################
+   14-16  ft  291 ############################
+   16-18  ft  418 ########################################
+   18-20  ft  319 ###############################
+   20-22  ft  254 ########################
+   22-24  ft  235 ######################
+   24-26  ft  146 ##############
+   26-28  ft  162 ################
+   28-30  ft  200 ###################
+   30-32  ft  230 ######################
+   32-34  ft  335 ################################
+   34-36  ft  268 ##########################
+   36-38  ft  164 ################
+   38-40  ft  111 ###########
+   40-42  ft  115 ###########
+   42-44  ft  117 ###########
+   44-46  ft   56 #####
+   46-48  ft   58 ######
+   48-50  ft   60 ######
+   50-52  ft   41 ####
+   52-54  ft   24 ##
+   54-56  ft   15 #
+   56-58  ft    9 #
+   58-60  ft   12 #
+   60-62  ft   14 #
+   62-64  ft   12 #
+   64-66  ft    7 #
+   66-68  ft    1 
+   68-70  ft    0 
+   70-72  ft    1 
 ```
 
 ## Rule checks (per reading)
@@ -194,9 +396,73 @@ These come from overlap strips between neighbouring mosaics read by different re
 All readings pass: five-foot spots 1 dp / bench marks 2 dp, 25-inch spots 0 dp / bench marks 1 dp, skeleton spots and bench marks 1 dp; raw matches value_ft; values 0-120 ft.
 
 Different types at the same spot:
+- sh_539447_183777 bench_mark B.M.19·84 and sh_539446_183774 spot 16·8 within 3 m (one mark typed two ways?)
 - sh_539014_181449 spot 16·6 and sh_539017_181447 bench_mark B.M.19·01 within 3 m (one mark typed two ways?)
+- sh_542519_180384 bench_mark B.M.8·48 and sh_542521_180382 spot 6·4 within 3 m (one mark typed two ways?)
 
-## Unreadable regions reported: 290
+## Unreadable regions reported: 793
+- m18_131045_87116.opus-dd.json: [1008, 18, 1024, 32] figure '22·.' cut by the east edge (Hackney Cut towing path side); whole on the eastern neighbour
+- m18_131045_87116.opus-dd.json: [0, 688, 4, 700] tail of a figure cut by the west edge
+- m18_131045_87122.opus-cz.json: [0, 330, 6, 345] B of B.M.42·25 cut by the west mosaic edge; pheon beyond the edge (no west neighbour mosaic)
+- m18_131045_87125.opus-cx.json: [1004, 505, 1024, 522] B.M. text ('B.M.3..') cut by the east edge; value and pheon on the neighbouring mosaic
+- m18_131045_87128.opus-cw.json: [1004, 802, 1024, 816] figure '47·' on the main park drive cut by the east edge after the decimal point; whole in the eastern neighbour
+- m18_131045_87131.opus-cv.json: [1005, 36, 1024, 48] figure '47·' with its dot at the east edge, decimal cut (whole on 131048_87131)
+- m18_131045_87134.opus-cu.json: [249, 0, 257, 1024] vertical sheet join px ~253 (missed by the tool)
+- m18_131045_87137.opus-cu.json: [0, 359, 1024, 367] horizontal sheet join py ~362-364 (missed by the tool)
+- m18_131045_87137.opus-cu.json: [248, 0, 257, 1024] vertical sheet join px ~251-254 (missed by the tool)
+- m18_131045_87155.opus-dc.json: [0, 954, 1024, 962] pale band / sheet join at py ~957-960; B.M.27·19 pheon sits on it
+- m18_131048_87113.opus-de.json: [1005, 72, 1024, 88] isolated round dot at 1013,80 on open marsh with no figure inside the mosaic; any figure would be on the east neighbour
+- m18_131048_87116.opus-dc.json: [0, 795, 25, 825] B.M. text cut by the west edge (only '·99' visible), pheon at ~17,820; value on the western neighbour
+- m18_131048_87116.opus-dc.json: [0, 534, 1024, 541] horizontal OS sheet join at py ~537 (no figures on it)
+- m18_131048_87119.opus-cz.json: [0, 28, 14, 52] B.M. figure ending '·99' with a K-like pheon at ~20,48 on Homerton Road, its leading digits cut by the west mosaic edge (whole on m18_131045_87119)
+- m18_131048_87122.opus-cx.json: [1004, 855, 1024, 868] 17·2 ends ~2 px from the east edge (digits whole; recorded as a reading)
+- m18_131048_87125.opus-cw.json: [0, 437, 24, 449] B.M. figure ('9.83') cut by the west edge; whole in the western neighbour
+- m18_131048_87125.opus-cw.json: [1000, 88, 1024, 100] 17.2 ends 2-3 px inside the east edge (recorded, medium)
+- m18_131048_87128.opus-cu.json: [0, 748, 4, 762] 'B' of B.M.48·48 cut by the west edge; pheon not in mosaic
+- m18_131048_87128.opus-cu.json: [0, 930, 1024, 938] horizontal sheet join (tint step) py ~934
+- m18_131048_87131.opus-ct.json: [0, 850, 13, 862] '·84' decimals of a figure (probably a B.M.) cut by the west edge; the rest is on the neighbouring mosaic
+- m18_131048_87131.opus-ct.json: [0, 164, 1024, 172] sheet join at py ~168 (tint step); no figure cut by it
+- m18_131048_87131.opus-cv.json: [0, 846, 12, 862] figure '·84' cut by the west edge (decimals of a figure whose integer part is on 131045_87131)
+- m18_131048_87134.opus-cs.json: [0, 82, 14, 94] figure ending ·84 at the west edge in Victoria Park ground; leading digits off-mosaic (probably a B.M.)
+- m18_131048_87134.opus-cs.json: [545, 1000, 582, 1024] B.M.42·46 of Libra Road: pheon at ~569,1011 inside but the text is cut by the south edge (read whole on m18_131048_87137)
+- m18_131048_87134.opus-cs.json: [1012, 545, 1024, 560] isolated survey-like dot at ~1020,552 on the east edge with no figure inside the mosaic; figure presumably on the eastern neighbour
+- m18_131048_87137.opus-cs.json: [0, 880, 16, 892] figure x3·5 on Roman Road cut by the west edge (ink in column 0); whole on the western neighbour
+- m18_131048_87137.opus-cs.json: [998, 436, 1024, 464] B.M.44·8x north of the P.O. cut by the east edge; final decimal and pheon off-mosaic
+- m18_131048_87140.opus-cs.json: [0, 114, 16, 124] figure x3·5 on Roman Road cut by the west edge (same as the edge figure on m18_131048_87137)
+- m18_131048_87143.opus-ct.json: [0, 818, 4, 834] figure 40·5 begins at the west edge; a leading part or its dot may be on the neighbouring mosaic
+- m18_131048_87143.opus-ct.json: [0, 560, 1024, 568] sheet join at py ~564 (tint step); no figure cut by it
+- m18_131048_87149.opus-cw.json: [0, 498, 6, 510] final digit of a figure on Bridge Street cut by the west edge; whole in the western neighbour
+- m18_131048_87152.opus-cy.json: [990, 478, 1024, 500] B.M.33·6x at the east edge: text runs to the mosaic edge and the last decimal is cut; pheon at about 1014,497. Whole on the neighbouring mosaic to the east
+- m18_131048_87155.opus-da.json: [0, 318, 22, 342] B.M. '?4·48' at the west edge: 'B' and the leading digit cut by the edge, pheon not on this mosaic
+- m18_131048_87155.opus-da.json: [985, 598, 1024, 626] B.M.30·?? at the east edge: decimals cut by the edge (pheon at ~998,603 on the frontage)
+- m18_131048_87158.opus-dd.json: [118, 1016, 162, 1024] B.M.32·19 text clipped by the south edge (also recorded as a low reading)
+- m18_131048_87158.opus-dd.json: [950, 1015, 995, 1024] B.M.28·.1 text by the Limehouse Cut clipped by the south edge; no pheon in this mosaic; whole on the mosaic to the south
+- m18_131051_87116.opus-da.json: [715, 1012, 770, 1024] B.M.15·69 text touches the south edge (recorded; clearer on m18_131051_87119)
+- m18_131051_87116.opus-dc.json: [715, 1012, 770, 1024] B.M.15·69 text and pheon touch the south mosaic edge; read but bases may be clipped by 1 px
+- m18_131051_87116.opus-dc.json: [0, 535, 1024, 541] horizontal OS sheet join at py ~538 (no figures on it)
+- m18_131051_87128.opus-cs.json: [1010, 302, 1024, 322] text beginning "B" cut by the east edge beside an F.P. (possibly a B.M.); whole on the eastern neighbour
+- m18_131051_87128.opus-ct.json: [1012, 300, 1024, 320] 'B' (probably B.M.) text cut by the east edge; value lies on the neighbouring mosaic
+- m18_131051_87128.opus-ct.json: [0, 930, 1024, 940] sheet join at py ~935 (tint step); no figures cut by it
+- m18_131051_87131.opus-cr.json: [870, 1016, 900, 1024] tops of a figure and its dot cut by the south edge (whole on m18_131051_87134, read there as 24·6)
+- m18_131051_87131.opus-cr.json: [0, 122, 4, 134] B.M. letters of B.M.46·75 cut by the west edge
+- m18_131051_87131.opus-cr.json: [0, 164, 1024, 172] OS sheet join (horizontal), no figures cut by it
+- m18_131051_87131.opus-cu.json: [0, 110, 6, 136] 'B.' of B.M.46·75 cut by the west edge (value recorded low)
+- m18_131051_87131.opus-cu.json: [876, 1018, 918, 1024] figure tops cut by the south edge
+- m18_131051_87131.opus-cu.json: [0, 163, 1024, 171] horizontal sheet join (tint step), py ~166-168
+- m18_131051_87134.opus-cr.json: [0, 590, 14, 602] '?7·5' with leading digit cut by the west edge
+- m18_131051_87134.opus-cr.json: [0, 638, 14, 656] 'B.M. ?·15' cut by the west edge
+- m18_131051_87134.opus-cr.json: [1016, 428, 1024, 436] end of B.M.28·65 text within 3 px of the east edge
+- m18_131051_87140.opus-cr.json: [240, 0, 292, 10] B.M.42·75: figures touch the north edge; the B.M. letters lie beyond it
+- m18_131051_87143.opus-cr.json: [0, 559, 1024, 567] OS sheet join (horizontal), no figures cut by it
+- m18_131051_87143.opus-cr.json: [290, 1012, 314, 1024] 42·8 ends 2 px above the south edge; its dot, if any, may be beyond the edge
+- m18_131051_87146.opus-ct.json: [0, 325, 9, 336] '·2' end of a tramway figure cut by the west edge; the rest is on the neighbouring mosaic
+- m18_131051_87149.opus-cy.json: [1016, 455, 1024, 480] pheon of B.M.34·15 probably beyond the east edge (on the neighbouring mosaic)
+- m18_131051_87155.opus-cy.json: [0, 688, 12, 702] figure fragment '..00' cut by the west edge beside the church (whole on the neighbouring mosaic)
+- m18_131051_87158.opus-db.json: [195, 1004, 252, 1024] B.M.28·3x text by Burdett Road Bridge cut by the south edge (digits run to the last pixel row); whole on the neighbour to the south
+- m18_131051_87158.opus-db.json: [0, 484, 10, 497] figure ending in 6 cut by the west edge (Burdett Road side)
+- m18_131051_87158.opus-db.json: [990, 815, 1024, 832] B.M. text on Latham Street cut by the east edge (pheon at ~994,828); value on the neighbour to the east
+- m18_131054_87113.opus-dc.json: [544, 0, 552, 1024] vertical OS sheet join at px ~547-548 (no figure on it)
+- m18_131054_87113.opus-dc.json: [1000, 120, 1024, 175] B.M.18·66 pheon not on this mosaic; text ends ~3 px from east edge
 - m18_131054_87119.opus-j.json: [543, 0, 549, 1024] vertical sheet join at px ~546 (no figures on it)
 - m18_131054_87122.opus-h.json: [0, 732, 1024, 744] horizontal sheet join at py~738 (line + tint step; not reported by the tool)
 - m18_131054_87122.opus-h.json: [542, 0, 550, 1024] vertical sheet join at px~546 (line + tint step; reported weak by the tool only for y 768-1024)
@@ -212,16 +478,111 @@ Different types at the same spot:
 - m18_131054_87128.opus-j.json: [0, 932, 1024, 942] horizontal sheet join at py ~937 (no figures on it)
 - m18_131054_87131.opus-j.json: [120, 1016, 160, 1024] figure (tops of digits only) cut by the south edge beside the Northern Outfall Sewer / Wick Lane
 - m18_131054_87131.opus-j.json: [0, 165, 1024, 175] horizontal sheet join at py ~170 (no figures on it)
+- m18_131054_87134.opus-cq.json: [1008, 90, 1024, 108] dot and italic lettering cut by the east edge above B.S. (boundary stone); possibly part of a figure; read it in the eastern neighbour
+- m18_131054_87134.opus-cr.json: [1004, 88, 1024, 118] '·9' / 'B. S' lettering cut by the east edge; not a recognisable height
+- m18_131054_87134.opus-cr.json: [538, 0, 546, 1024] OS sheet join, vertical, tint change; figures near it (17·8, B.M.30·55) checked at zoom
+- m18_131054_87143.opus-bf.json: [0, 556, 1024, 570] sheet join py ~563
+- m18_131054_87143.opus-bf.json: [536, 0, 546, 1024] sheet join px ~541
+- m18_131054_87143.opus-bf.json: [1010, 565, 1024, 590] figure cut by east edge (whole in m18_131057_87143)
+- m18_131054_87143.opus-bf.json: [1000, 985, 1024, 1003] 46·5 ends within 2 px of the east edge
+- m18_131054_87146.opus-bf.json: [533, 0, 545, 1024] sheet join px ~536-541
+- m18_131054_87146.opus-bf.json: [0, 695, 14, 712] figure 'x·6' cut by west edge
+- m18_131054_87146.opus-bf.json: [995, 880, 1024, 918] B.M. text cut by east edge (value off-mosaic); pheon at ~998,912
+- m18_131054_87146.opus-bf.json: [1000, 218, 1024, 236] 46·5 ends within 2 px of the east edge
+- m18_131054_87149.opus-be.json: [998, 112, 1024, 128] B.M. lettering at east edge; its value is off the mosaic
+- m18_131054_87149.opus-be.json: [0, 854, 14, 867] figure ?3·86 cut by west edge (leading digit missing)
+- m18_131054_87149.opus-be.json: [530, 0, 538, 1024] vertical OS sheet join
+- m18_131054_87149.opus-be.json: [0, 756, 1024, 764] horizontal OS sheet join
+- m18_131054_87149.opus-bh.json: [1000, 110, 1024, 130] B.M. text cut by the east edge; value on the neighbour
+- m18_131054_87149.opus-bh.json: [0, 852, 30, 868] figure '..3·86' cut by the west edge
+- m18_131054_87149.opus-bh.json: [0, 755, 1024, 766] horizontal sheet join (1-2 px offset)
+- m18_131054_87149.opus-bh.json: [530, 0, 538, 1024] vertical sheet join
+- m18_131054_87152.opus-bd.json: [0, 84, 20, 96] figure '?3·86' on Fairfoot Road cut by the west edge (leading digit missing)
+- m18_131054_87152.opus-bd.json: [530, 0, 538, 1024] vertical sheet join
+- m18_131054_87155.opus-bc.json: [534, 0, 540, 1024] vertical sheet join at px ~537
+- m18_131054_87155.opus-bc.json: [0, 960, 1024, 966] horizontal sheet join at py ~963
+- m18_131054_87155.opus-bc.json: [590, 1014, 610, 1024] 22·0 touches the south edge
+- m18_131054_87155.opus-bc.json: [868, 1015, 886, 1024] 15·7 touches the south edge
+- m18_131054_87155.opus-bc.json: [560, 880, 1024, 960] Limehouse Cut water; no heights
+- m18_131054_87158.opus-bc.json: [534, 0, 540, 1024] vertical sheet join at px ~537
+- m18_131054_87158.opus-bc.json: [0, 190, 1024, 196] horizontal join/tint step at py ~193
+- m18_131054_87158.opus-bc.json: [0, 420, 900, 560] Limehouse Cut water (diagonal band SW-NE); no heights on the water
+- m18_131054_87158.opus-bc.json: [405, 1008, 440, 1024] B.M.22·62 at the south edge; its pheon lies beyond the edge
+- m18_131054_87161.opus-bd.json: [0, 434, 14, 450] figure '?3·0' cut by the west edge (leading digit clipped)
+- m18_131054_87161.opus-bd.json: [736, 1012, 756, 1024] 17·6 digits end within 1 px of the south edge (reading kept, medium)
+- m18_131054_87161.opus-bd.json: [530, 0, 537, 1024] vertical sheet join
+- m18_131054_87161.opus-be.json: [0, 428, 18, 442] figure ?3·0 cut by west edge (leading digit missing)
+- m18_131054_87161.opus-be.json: [1004, 954, 1024, 970] B.M.15·98 final digit touches east edge; pheon probably off mosaic
+- m18_131054_87161.opus-be.json: [735, 1012, 756, 1024] 17·6 clipped by south edge
+- m18_131054_87161.opus-be.json: [528, 0, 538, 1024] OS sheet join (tint step), 1-2 px offsets
+- m18_131054_87164.opus-be.json: [1000, 0, 1024, 6] pheon of B.M.15·89 cut by north edge
+- m18_131054_87164.opus-be.json: [1004, 182, 1024, 200] B.M.15·98 final digit touches east edge; pheon off mosaic
+- m18_131054_87164.opus-be.json: [85, 1010, 115, 1024] B.M.14·78 at south edge, pheon not on mosaic
+- m18_131054_87164.opus-be.json: [0, 380, 1024, 390] horizontal OS sheet join
+- m18_131054_87164.opus-be.json: [528, 0, 538, 1024] vertical OS sheet join
+- m18_131054_87167.opus-bf.json: [526, 0, 538, 1024] sheet join px ~531
+- m18_131054_87167.opus-bf.json: [0, 950, 22, 972] B.M. 'x9·87' cut by west edge
+- m18_131054_87167.opus-bf.json: [100, 700, 1024, 1024] West India Dock basin water, no heights
+- m18_131054_87167.opus-bg.json: [529, 0, 537, 1024] OS sheet join (vertical, tint step)
+- m18_131054_87167.opus-bg.json: [0, 964, 16, 978] B.M. figure ?9·87 cut by the west edge (pheon at 22,971 visible); leading digit on the neighbouring mosaic
 - m18_131057_87116.opus-j.json: [630, 470, 715, 530] dense lettering and boundary-stone symbols at Templemills Bridge; pheon of B.M.19·23 not identifiable
 - m18_131057_87116.opus-j.json: [0, 530, 1024, 540] horizontal sheet join at py ~535 (no figures on it)
 - m18_131057_87119.opus-g.json: [1005, 456, 1024, 470] B.M. value cut by east edge (pheon at about 998,462)
 - m18_131057_87122.opus-f.json: [0, 734, 1024, 740] weak horizontal sheet join (tint step) not detected by the tool; no figure is cut by it
 - m18_131057_87131.opus-g.json: [0, 624, 3, 636] B of B.M.22·84 cut by west edge (digits whole, recorded)
+- m18_131057_87137.opus-cp.json: [1016, 516, 1024, 528] figure '1..' cut by the east edge (whole on m18_131060_87137)
+- m18_131057_87140.opus-cp.json: [455, 0, 492, 6] figure '14·1' cut by the north edge (whole on m18_131057_87137)
+- m18_131057_87143.opus-bf.json: [0, 556, 1024, 570] sheet join py ~563 (tint step); figures near it checked at zoom
+- m18_131057_87149.opus-bb.json: [1010, 245, 1024, 270] figure 29.. cut by east edge (dot at ~1021,251)
+- m18_131057_87149.opus-bb.json: [0, 757, 1024, 765] horizontal OS sheet join
+- m18_131057_87152.opus-ay.json: [300, 1014, 326, 1024] 22·8 clipped by the south edge (whole in the 87155 row)
+- m18_131057_87155.opus-ax.json: [0, 950, 1024, 958] weak horizontal sheet join at py ~954 (no figures on it)
+- m18_131057_87155.opus-ax.json: [90, 1010, 360, 1024] 15·7 and 17·9 touch the south edge
+- m18_131057_87155.opus-ax.json: [820, 1008, 880, 1024] B.M.22·43 text touches the south edge
+- m18_131057_87158.opus-ax.json: [0, 392, 8, 406] figure cut by the west edge (only '·8' visible)
+- m18_131057_87158.opus-ax.json: [1016, 580, 1024, 596] 19·4 ends at the east edge; last digit may be clipped
+- m18_131057_87158.opus-ay.json: [0, 393, 8, 409] figure cut by west edge (only a final 8 visible)
+- m18_131057_87158.opus-ay.json: [1000, 580, 1024, 596] 19·4 ends within 1-2 px of east edge
+- m18_131057_87158.opus-ay.json: [0, 184, 1024, 192] horizontal sheet join (tint step), no figures cut
+- m18_131057_87158.opus-ay.json: [316, 300, 334, 312] B.M.16·5x decimals crossed by building hatching
+- m18_131057_87161.opus-ay.json: [330, 0, 378, 5] B.M.16·02 cut by north edge (whole in m18_131057_87158)
+- m18_131057_87161.opus-ba.json: [340, 0, 390, 6] figure '16·02' (2 dp, a B.M. value) cut by the north edge; its B.M. text and pheon are presumably on the northern neighbour
+- m18_131057_87164.opus-az.json: [0, 0, 1024, 3] north edge: B.M.15·89 pheon partly cut
+- m18_131057_87164.opus-az.json: [0, 586, 10, 600] B.M.13·88 text starts at west edge (B.M. prefix partly cut) over hatching
+- m18_131057_87164.opus-bb.json: [230, 0, 250, 4] pheon of B.M.15·89 cut by north edge
+- m18_131057_87164.opus-bb.json: [0, 386, 1024, 394] horizontal sheet join reported by tool
+- m18_131057_87167.opus-bc.json: [0, 880, 1024, 1024] West India Dock water south of the quay edge (edge falls from py ~880 west to ~960 east); blank, no heights
+- m18_131060_87110.opus-de.json: [0, 338, 1024, 346] OS sheet join (neat line) at py ~342; no figure crosses it
+- m18_131060_87113.opus-db.json: [1005, 780, 1024, 796] figure '1..' with its dot on the fence cut by the east edge (whole on m18_131063_87113)
 - m18_131060_87116.opus-i.json: [1010, 10, 1024, 30] figure beginning '16' cut by the east edge (dot at ~1015,19)
 - m18_131060_87116.opus-i.json: [0, 530, 1024, 545] sheet join
 - m18_131060_87128.opus-c.json: [990, 578, 1024, 596] B.M. value cut by the east edge (B.M.14·76, read on m18_131063_87128); its pheon at 964,597 is inside this mosaic
 - m18_131060_87128.opus-e.json: [990, 578, 1024, 592] B.M. figure cut by the east edge (pheon at 965,596 inside); read in the eastern neighbour
+- m18_131060_87143.opus-bc.json: [0, 528, 15, 548] B.M. '…·61' cut by the west edge (integer part outside the mosaic)
+- m18_131060_87143.opus-bc.json: [1012, 266, 1024, 278] figure '14·…' cut by the east edge
+- m18_131060_87143.opus-bc.json: [525, 0, 550, 6] 22·1 touches the north edge; digit tops clipped
+- m18_131060_87143.opus-bc.json: [0, 559, 1024, 566] sheet join at py ~562
+- m18_131060_87143.opus-bc.json: [600, 60, 1024, 200] river Lea water between the banks (no heights)
+- m18_131060_87143.opus-bf.json: [0, 556, 1024, 570] sheet join py ~563
+- m18_131060_87143.opus-bf.json: [1008, 262, 1024, 280] figure '14·' cut by east edge
+- m18_131060_87143.opus-bf.json: [0, 530, 14, 552] B.M. 'x·61' cut by west edge (whole in m18_131057_87143)
+- m18_131060_87143.opus-bf.json: [520, 0, 550, 8] 22·1 touches the north edge
+- m18_131060_87146.opus-az.json: [1000, 405, 1024, 440] 32·0 final digit and B.M.34·.. text cut by east edge (pheon at ~1001,424)
+- m18_131060_87146.opus-az.json: [245, 1010, 265, 1024] lone dot at south edge, figure presumably in south neighbour
+- m18_131060_87149.opus-aw.json: [0, 755, 1024, 770] horizontal sheet join py ~762 (tint step), no figures cut by it
+- m18_131060_87149.opus-az.json: [0, 756, 1024, 766] sheet join (1-2 px offsets); no figures on it
+- m18_131060_87152.opus-as.json: [1000, 584, 1024, 600] figure '2…' with its dot at ~1004,592 cut by the east edge (St Leonard's Road)
+- m18_131060_87152.opus-as.json: [745, 1012, 775, 1024] 16·4 clipped by the south edge
 - m18_131060_87158.opus-aq.json: [1008, 595, 1024, 630] lone dot at 1013,603 by the east edge with no figure inside the mosaic (figure presumably east of the edge)
+- m18_131060_87158.opus-au.json: [1008, 595, 1024, 628] figure cut by east edge: lone dot at 1015,604 and glyph at 1022,620; whole in the eastern neighbour
+- m18_131060_87164.opus-av.json: [0, 388, 1024, 396] sheet join, tint step
+- m18_131060_87164.opus-aw.json: [0, 386, 1024, 394] horizontal sheet join py ~390; no figure cut
+- m18_131060_87164.opus-aw.json: [950, 0, 975, 12] 21·7 within 2 px of the north edge; recorded
+- m18_131060_87164.opus-aw.json: [0, 968, 20, 980] 19·7 within 2 px of the west edge; recorded
+- m18_131060_87167.opus-ax.json: [0, 200, 16, 214] 19·7 touches the west edge; leading digit may be clipped
+- m18_131063_87113.opus-db.json: [995, 336, 1024, 350] B.M.35·.. text cut by the east edge (pheon at ~990,332); whole on the neighbour to the east
+- m18_131063_87113.opus-db.json: [838, 0, 840, 1024] vertical OS sheet join at px ~838 (no figures cross it)
+- m18_131063_87113.opus-dd.json: [985, 328, 1024, 350] B.M.35·.. text cut by the east edge (pheon at ~991,332 inside); value on the neighbouring mosaic
 - m18_131063_87116.opus-h.json: [0, 530, 840, 542] horizontal sheet join at py~536 (tint step; darker sheet to the south)
 - m18_131063_87116.opus-h.json: [832, 0, 842, 1024] vertical sheet join at px~837 (line + tint step)
 - m18_131063_87116.opus-h.json: [935, 0, 960, 25] possible pheon at 943,13 with no B.M. text inside the mosaic; text probably north of the edge
@@ -240,160 +601,3 @@ Different types at the same spot:
 - m18_131063_87164.opus-am.json: [988, 982, 1024, 996] B.M.12·04 text cut by east edge, pheon outside the mosaic (read whole in 131066_87167)
 - m18_131063_87164.opus-am.json: [1008, 164, 1024, 176] 15·4 ends ~1 px from east edge
 - m18_131063_87164.opus-am.json: [320, 1014, 400, 1024] 16·9 and B.M.16·68 touch the bottom edge
-- m18_131063_87164.opus-am.json: [818, 0, 828, 1024] vertical sheet join at px ~822-824
-- m18_131066_87116.opus-i.json: [165, 0, 190, 20] pheon at the north edge, B.M. text off-mosaic
-- m18_131066_87116.opus-i.json: [0, 538, 1024, 548] horizontal sheet join
-- m18_131066_87116.opus-i.json: [63, 0, 73, 1024] vertical sheet join
-- m18_131066_87119.opus-f.json: [64, 0, 74, 1024] vertical sheet join with strong tint step; western sheet nearly blank, no figures cut
-- m18_131066_87125.opus-c.json: [995, 380, 1024, 405] B.M. with pheon (arrow at 1000,399) whose value is cut by the east edge of the mosaic; read it on the mosaic to the east
-- m18_131066_87128.opus-d.json: [515, 1015, 540, 1024] figure 12·6 (?) cut by the south edge
-- m18_131066_87131.opus-e.json: [0, 162, 1024, 174] sheet join at py ~168; possible 1-2 px offsets; no figures on it
-- m18_131066_87131.opus-e.json: [60, 0, 68, 1024] probable vertical sheet join or fold at px ~64; no figures on it
-- m18_131066_87134.opus-b.json: [990, 150, 1024, 190] figure '18·?' cut by the east edge; read it in m18_131069_87134
-- m18_131066_87134.opus-d.json: [1010, 165, 1024, 180] 18·4 ends at the east edge; a clipped trailing digit cannot be excluded
-- m18_131066_87146.opus-b.json: [990, 215, 1024, 240] B.M. 15·9? in the crane oval, cut by the east edge; needs m18_131069_87146
-- m18_131066_87146.opus-b.json: [0, 100, 12, 120] figure '·2' (21·2 on Three Mills Bridge) cut by the west edge; read in m18_131063_87146
-- m18_131066_87149.opus-ah.json: [318, 1006, 352, 1024] B.M. figure (B.M.20·?) cut by the south edge beside a pheon at ~345,1020
-- m18_131066_87152.opus-ae.json: [0, 350, 4, 366] B.M. letters of B.M.17·19 cut by the west edge
-- m18_131066_87152.opus-ae.json: [110, 1014, 150, 1024] B.M.18·45 text clipped by the south edge
-- m18_131066_87152.opus-ae.json: [985, 566, 1024, 586] B.M. figure cut by the east edge (only B.M.1 visible); pheon at ~987,571
-- m18_131066_87152.opus-ae.json: [55, 0, 61, 1024] probable vertical sheet join at px ~57-59
-- m18_131066_87161.opus-ac.json: [372, 1016, 395, 1024] figure '1?·1' cut by the bottom edge
-- m18_131066_87161.opus-ac.json: [54, 0, 61, 1024] probable sheet join at px ~57
-- m18_131066_87161.opus-ac.json: [688, 0, 706, 8] 7·4 within 1 px of top edge; dot may be off-sheet
-- m18_131066_87164.opus-af.json: [0, 534, 20, 560] B.M. '?2·53' cut by the west edge (B and leading digit lost); pheon at ~4,538 on house front; whole in the western neighbour
-- m18_131066_87164.opus-af.json: [300, 330, 1024, 560] East India Dock basin water, no heights
-- m18_131066_87167.opus-aj.json: [0, 400, 20, 420] 7·7 at the west edge; its survey dot may lie outside the mosaic
-- m18_131066_87167.opus-aj.json: [0, 815, 16, 838] 7·3 starts at the west edge; leading digit may be clipped
-- m18_131066_87167.opus-am.json: [0, 822, 12, 836] figure "?7·3" cut by west edge (leading digit may be missing); read in western neighbour
-- m18_131066_87167.opus-am.json: [0, 584, 20, 600] B.M.19·67 text begins at the west edge; recorded but check against neighbour
-- m18_131066_87167.opus-am.json: [0, 400, 20, 416] 7·7 begins ~3 px from west edge; recorded but a leading digit cannot be excluded
-- m18_131066_87167.opus-am.json: [48, 0, 58, 1024] vertical sheet join at px ~52-54
-- m18_131069_87122.opus-f.json: [998, 590, 1024, 606] B.M. text by Waddington Road cut by east edge; value beyond edge
-- m18_131069_87122.opus-f.json: [0, 739, 1024, 745] weak horizontal sheet join (tint step) not detected by the tool; no figure cut
-- m18_131069_87128.opus-f.json: [0, 932, 1024, 942] horizontal sheet join with tint change; 16·0 at 414,930 just above it reads clearly
-- m18_131069_87128.opus-f.json: [1004, 886, 1024, 906] figure '18·?' with dot at 1002,897 cut by east edge
-- m18_131069_87128.opus-f.json: [0, 1010, 12, 1024] figure ending '·0' cut by west edge / south-west corner
-- m18_131069_87128.opus-f.json: [395, 1012, 445, 1024] B.M.19·20 text within 3-7 px of south edge; pheon probably in the mosaic to the south
-- m18_131069_87128.opus-h.json: [1006, 886, 1024, 904] figure '18·?' cut by the east edge (dot at 1001,896)
-- m18_131069_87128.opus-h.json: [0, 1010, 12, 1024] figure '·0' cut by the west/south corner
-- m18_131069_87128.opus-h.json: [0, 932, 1024, 944] horizontal sheet join, tint change and 1-2 px offsets
-- m18_131069_87128.opus-h.json: [70, 230, 100, 255] 24·2 partly obscured by rails; dot not separable from rails
-- m18_131069_87131.opus-g.json: [1012, 120, 1024, 136] figure '16..' cut by east edge (dot at 1001,127)
-- m18_131069_87131.opus-g.json: [1008, 688, 1024, 706] B.M.15·2? cut by east edge; pheon probably at 988,707
-- m18_131069_87131.opus-g.json: [1006, 960, 1024, 976] 13·5 clipped at east edge (recorded low)
-- m18_131069_87131.opus-g.json: [910, 1016, 930, 1024] figure 13·5? cut by south edge
-- m18_131069_87131.opus-g.json: [0, 246, 8, 258] figure ending '·0' cut by west edge
-- m18_131069_87131.opus-k.json: [0, 248, 10, 260] figure '·0' cut by west edge on Kennard Road
-- m18_131069_87131.opus-k.json: [1016, 120, 1024, 136] figure '16...' cut by east edge
-- m18_131069_87131.opus-k.json: [1008, 688, 1024, 704] B.M.15·2. cut by east edge (pheon at 988,706 inside)
-- m18_131069_87131.opus-k.json: [1010, 958, 1024, 975] 13·5 trailing digit at the east edge, possibly clipped
-- m18_131069_87131.opus-k.json: [895, 1015, 925, 1024] figure '13·5' cut by south edge
-- m18_131069_87131.opus-k.json: [0, 164, 1024, 174] horizontal sheet join at py ~168-170; no figure crosses it
-- m18_131069_87134.opus-b.json: [995, 450, 1024, 480] figure '13·?' cut by the east edge, dot at about 1009,469; needs the mosaic to the east
-- m18_131069_87158.opus-x.json: [110, 1012, 145, 1024] marks cut by the S edge (possible figure below)
-- m18_131069_87167.opus-af.json: [415, 0, 440, 8] 17·0 touches the north edge; read whole but recorded medium
-- m18_131069_87167.opus-af.json: [300, 90, 1024, 400] East India (Export) Dock basin water, no heights
-- m18_131069_87167.opus-af.json: [200, 560, 1024, 1024] River Thames, no heights
-- m18_131072_87119.opus-j.json: [0, 22, 10, 58] west edge: pheon at ~8,30 whose B.M. text lies off-mosaic, and a figure ending '5' at ~2,52 cut by the edge
-- m18_131072_87122.opus-i.json: [0, 737, 1024, 747] sheet join; 1-2 px offsets
-- m18_131072_87125.opus-h.json: [0, 340, 4, 366] 'B' of B.M.40·27 clipped by the west edge (value whole)
-- m18_131072_87128.opus-i.json: [370, 1015, 400, 1024] figure (possibly 17·8) and a dot cut by the south edge
-- m18_131072_87128.opus-i.json: [0, 934, 1024, 944] sheet join; 1-2 px offsets
-- m18_131072_87128.opus-l.json: [370, 1012, 400, 1024] figure (17·6?) and a pheon-like mark cut by the south edge
-- m18_131072_87128.opus-l.json: [0, 885, 5, 900] pheon of B.M.20·32 cut by the west edge
-- m18_131072_87128.opus-l.json: [0, 930, 1024, 945] horizontal sheet join; 1-2 px offsets
-- m18_131072_87131.opus-j.json: [960, 0, 1010, 5] bench-mark figures ('21·31'?) cut by the north edge; pheon at ~985,22 on Mark Street; whole on the mosaic to the north
-- m18_131072_87131.opus-j.json: [1010, 380, 1024, 395] figure '25..' cut by the east edge (West Ham Lane / Aldworth Road)
-- m18_131072_87131.opus-j.json: [1015, 705, 1024, 725] figure cut by the east edge
-- m18_131072_87131.opus-j.json: [0, 790, 10, 806] figure '?·3' with dot at ~4,805 cut by the west edge
-- m18_131072_87131.opus-j.json: [145, 1018, 170, 1024] figure (13·5?) cut by the south edge in Albion Street
-- m18_131072_87131.opus-j.json: [0, 168, 1024, 176] horizontal sheet join at py ~172; B.M.20·19 pheon lies on it
-- m18_131072_87143.opus-ao.json: [0, 656, 14, 672] figure reading 7·1 at west edge, a leading digit may be cut off (it is whole in the western neighbour)
-- m18_131072_87143.opus-ao.json: [0, 564, 1024, 572] horizontal sheet join
-- m18_131072_87146.opus-ag.json: [0, 52, 10, 68] figure ('..8', probably a B.M. value with its pheon at ~15,60 by the S.B.) cut by the west edge
-- m18_131072_87146.opus-ai.json: [0, 52, 20, 70] figure '..8' and a pheon beside 'S.B.' cut by the west edge (B.M. text lies in the western neighbour)
-- m18_131072_87149.opus-ab.json: [0, 760, 1024, 770] sheet join with tint step and 2-5 px line offsets; no figures cut
-- m18_131072_87152.opus-x.json: [0, 0, 1024, 3] grey strip along N edge
-- m18_131072_87155.opus-v.json: [0, 804, 6, 818] figure cut by the W edge (final 2 visible); lies in the mosaic to the west
-- m18_131072_87158.opus-v.json: [0, 36, 6, 50] figure cut by the W edge (final digit 2 visible)
-- m18_131072_87158.opus-v.json: [0, 594, 30, 606] B.M.9·18 (digits whole, B. and pheon beyond the W edge); read it in the mosaic to the west
-- m18_131072_87158.opus-v.json: [1004, 630, 1024, 642] 16·5 cut by the E edge; whole in m18_131075_87158
-- m18_131072_87158.opus-v.json: [650, 1008, 690, 1024] 34·5 within 4 px of the S edge, faint; check in the mosaic to the south
-- m18_131072_87158.opus-x.json: [0, 35, 10, 55] figure '2' cut by W edge
-- m18_131072_87158.opus-x.json: [0, 590, 30, 610] B.M.?9·18 cut by W edge, pheon off mosaic
-- m18_131072_87158.opus-x.json: [1000, 630, 1024, 650] figure '16..' cut by E edge, dot at 1008,637
-- m18_131072_87158.opus-x.json: [655, 1012, 680, 1024] 34·5 touches S edge
-- m18_131072_87161.opus-w.json: [0, 744, 4, 760] leading digit of 16·0 against the west edge; value recorded as read
-- m18_131072_87164.opus-z.json: [1005, 835, 1024, 870] B.M.10·98 text cut by the east edge (whole in 131075_87164)
-- m18_131072_87164.opus-z.json: [1008, 318, 1024, 340] 15·2 ends 1 px from the east edge; recorded, confidence lowered
-- m18_131072_87164.opus-z.json: [830, 388, 1024, 398] horizontal sheet join py~393 (east part)
-- m18_131072_87167.opus-ad.json: [1005, 85, 1024, 100] B.M. text cut by the east edge (Orchard Place)
-- m18_131072_87167.opus-ad.json: [995, 430, 1024, 462] B.M.18·1x text and pheon at the east edge by the Crane; final digit may be clipped
-- m18_131075_87143.opus-ao.json: [338, 556, 352, 574] faint rotated lettering at the sheet-join corner, illegible at 8x
-- m18_131075_87143.opus-ao.json: [348, 0, 356, 1024] vertical sheet join
-- m18_131075_87143.opus-ao.json: [0, 566, 1024, 574] horizontal sheet join
-- m18_131075_87146.opus-af.json: [1000, 680, 1024, 700] B.M. text cut by the east edge; whole in the eastern neighbour
-- m18_131075_87146.opus-af.json: [1012, 766, 1024, 786] isolated dot at ~1021,776 whose figure lies beyond the east edge
-- m18_131075_87146.opus-ah.json: [1000, 682, 1024, 696] B.M. figure (B.M.5..) cut by east edge beside the ditch
-- m18_131075_87146.opus-ah.json: [1015, 770, 1024, 784] survey dot at 1022,777 whose figure lies beyond the east edge
-- m18_131075_87146.opus-ah.json: [0, 876, 6, 892] figure fragment cut by west edge
-- m18_131075_87149.opus-aa.json: [1016, 0, 1024, 16] isolated survey dot at 1022,9 whose figure lies beyond the east edge
-- m18_131075_87152.opus-x.json: [625, 1012, 650, 1024] 'M' lettering cut by S edge
-- m18_131075_87158.opus-v.json: [160, 0, 185, 4] bottom of a figure cut by the north edge; whole in the mosaic to the north
-- m18_131075_87158.opus-v.json: [640, 0, 710, 10] 7·3 and B.M.9·25 text touch the north edge (B.M. tops clipped); whole in the mosaic to the north
-- m18_131075_87161.opus-w.json: [0, 266, 18, 286] figure '·48' (probably a B.M. value) cut by the west edge
-- m18_131075_87161.opus-w.json: [1006, 552, 1024, 572] 'B.M.' text at the east edge, value off the mosaic
-- m18_131075_87161.opus-w.json: [336, 0, 346, 1024] vertical sheet join (tint step); no figures on it
-- m18_131075_87164.opus-z.json: [340, 0, 350, 1024] vertical sheet join px~345
-- m18_131075_87164.opus-z.json: [0, 388, 1024, 398] horizontal sheet join py~393
-- m18_131078_87149.opus-ac.json: [0, 764, 1024, 772] sheet join at py ~768
-- m18_131078_87149.opus-ac.json: [745, 1012, 775, 1024] B.M. on Hermit Road with value cut by the bottom edge
-- m18_131078_87149.opus-ac.json: [425, 0, 452, 10] 5·0 within 1 px of the top edge; its dot may be off-sheet
-- m18_131078_87149.opus-ae.json: [745, 1010, 780, 1024] B.M. figure on Hermit Road cut by the south edge (only B.M. and tops of digits visible)
-- m18_131078_87149.opus-ae.json: [310, 1012, 350, 1024] B.M.6·59 text touches south edge; base of digits clipped 1-2 px
-- m18_131078_87149.opus-ae.json: [0, 764, 1024, 772] horizontal sheet join (tint step) at py ~768
-- m18_131078_87155.opus-w.json: [1005, 945, 1024, 966] spot height '5·?' with dot at ~1019,963 cut by east edge
-- m18_131078_87155.opus-w.json: [790, 1008, 830, 1024] 'B.M.' text at bottom edge, value off the mosaic
-- m18_131078_87155.opus-w.json: [0, 962, 1024, 968] horizontal sheet join (tint step); figures 7·6 at 336,958 and 7·3 at 540,965 sit against it
-- m18_131078_87155.opus-w.json: [90, 0, 135, 4] pheon of B.M.8·64 probably above the top edge
-- m18_131078_87158.opus-w.json: [1005, 180, 1024, 200] spot height '5·?' with dot ~1019,194 cut by east edge (final digit at x 1022-1024)
-- m18_131078_87158.opus-w.json: [0, 194, 1024, 200] horizontal sheet join; 7·6 at 337,192 and 7·3 dot at 540,198 sit against it
-- m18_131078_87158.opus-y.json: [1005, 180, 1024, 200] figure 5·? cut by east edge (whole in m18_131081_87158)
-- m18_131078_87158.opus-y.json: [0, 194, 1024, 200] horizontal sheet join, tint step
-- m18_131078_87164.opus-aa.json: [1008, 682, 1024, 702] B.M. text ('B' over '6..') cut by the east edge
-- m18_131078_87164.opus-ac.json: [1014, 684, 1024, 704] B.M. figure 'B / 6..' cut by east edge
-- m18_131078_87164.opus-ac.json: [0, 386, 720, 396] sheet join tint step at py ~391
-- m18_131078_87167.opus-ae.json: [1000, 420, 1024, 440] B.M. at the east edge; its value is off the mosaic
-- m18_131081_87131.opus-s.json: [1008, 528, 1024, 546] isolated dot at 1019,537 by east edge; its figure is beyond the mosaic edge
-- m18_131081_87149.opus-ae.json: [0, 764, 1024, 772] horizontal sheet join at py ~768
-- m18_131081_87149.opus-ae.json: [1016, 790, 1024, 810] 3·6 figure ends 4 px from the east edge; CHARGEABLE lettering cut
-- m18_131081_87155.opus-ab.json: [20, 1010, 80, 1024] B.M. text cut by the bottom edge (value off-mosaic)
-- m18_131081_87155.opus-ab.json: [0, 960, 1024, 970] sheet join with tint change; 5·8 dot lies on it
-- m18_131081_87155.opus-z.json: [0, 960, 1024, 970] horizontal sheet join py~964-966 (tint step)
-- m18_131081_87155.opus-z.json: [20, 1012, 70, 1024] B.M. text cut by south edge (B.M.6·84, whole in 87158)
-- m18_131081_87158.opus-y.json: [0, 195, 1024, 201] horizontal sheet join, tint step
-- m18_131081_87158.opus-z.json: [0, 192, 1024, 202] horizontal sheet join py~197 (tint step, 1-2 px offsets possible)
-- m18_131081_87161.opus-z.json: [625, 0, 650, 6] figure (4·3, whole in 87158) cut by north edge; its dot at ~643,4
-- m18_131081_87164.opus-ac.json: [1010, 805, 1024, 818] figure '5·?' cut by the east edge
-- m18_131081_87164.opus-ac.json: [0, 384, 700, 392] sheet join tint step at py ~388
-- m18_131081_87164.opus-ac.json: [330, 0, 350, 8] 4·6 at top edge; dot may be off-sheet
-- m18_131081_87167.opus-ag.json: [1004, 34, 1024, 50] figure '5·..' cut by the east edge (its dot at ~1008,42)
-- m18_131081_87170.opus-ao.json: [0, 524, 16, 538] 17·1 figure starts 2 px from west edge; its dot may lie beyond the edge
-- m18_131081_87170.opus-ao.json: [0, 588, 1024, 594] horizontal sheet join
-- m18_131084_87137.opus-s.json: [1004, 652, 1024, 670] figure 24·? cut by east edge
-- m18_131084_87137.opus-s.json: [1004, 862, 1024, 885] bench mark B.M.31·?? cut by east edge (pheon ~1020,833)
-- m18_131084_87137.opus-s.json: [0, 974, 14, 990] figure ?·4 cut by west edge
-- m18_131084_87149.opus-ai.json: [985, 510, 1008, 530] figure 13·6 overlapped by rotated ABBEY STREET lettering and pavement dots; leading digit uncertain
-- m18_131084_87155.opus-ad.json: [1012, 742, 1024, 762] figure beginning '8' with its dot at (1019,746) cut by the east edge
-- m18_131084_87155.opus-af.json: [1012, 740, 1024, 760] figure (leading 8 with dot at ~1022,745) cut by east edge; belongs to the eastern neighbour
-- m18_131084_87158.opus-ac.json: [0, 192, 1024, 202] sheet join at py ~197
-- m18_131084_87158.opus-ac.json: [633, 0, 641, 1024] vertical sheet join at px ~637
-- m18_131084_87158.opus-ac.json: [862, 1010, 885, 1024] 7·0 within 2 px of the bottom edge
-- m18_131084_87161.opus-ae.json: [1006, 860, 1024, 882] spot height 5·x cut by the east edge
-- m18_131084_87161.opus-ae.json: [630, 0, 638, 1024] vertical sheet join at px ~634
-- m18_131084_87161.opus-ag.json: [1008, 860, 1024, 878] figure '5·..' cut by the east edge (between R·O lettering of ..CK'S ROAD); read it on the eastern neighbour
-- m18_131084_87164.opus-ag.json: [1008, 94, 1024, 110] figure '5·..' cut by the east edge
-- m18_131084_87164.opus-ag.json: [0, 388, 1024, 396] horizontal sheet join at py ~392
-- m18_131084_87164.opus-ag.json: [630, 0, 638, 1024] vertical sheet join at px ~633-634, sheet content differs across it
-- m18_131084_87167.opus-am.json: [0, 610, 8, 626] figure (ending in 5) cut by the west edge

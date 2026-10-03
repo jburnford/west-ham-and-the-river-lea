@@ -1,0 +1,97 @@
+{
+  "geometryEpoch": "1900",
+  "observationEpoch": "1890s",
+  "mosaic": "m18_131075_87146",
+  "name": "Manor Road \u2014 drainage crossing",
+  "pixels": [
+    [
+      131,
+      205
+    ],
+    [
+      131,
+      425
+    ],
+    [
+      131,
+      590
+    ],
+    [
+      131,
+      635
+    ],
+    [
+      131,
+      694
+    ]
+  ],
+  "widthMetres": 6,
+  "shoulderMetres": 1.1,
+  "groundFeatherMetres": 2,
+  "surface": "macadam",
+  "continuityAssumption": "1890s mapped road and railway alignment provisionally continued to 1900; no automatic backdating to 1850 or other flood years.",
+  "heightStatus": "Road spot heights interpolated along carriageway using shared provisional Liverpool-to-ODN conversion; paving width, shoulders and local earthwork shape interpreted.",
+  "controls": [
+    {
+      "pixel": [
+        128,
+        205
+      ],
+      "valueFeet": 6.6
+    },
+    {
+      "pixel": [
+        128,
+        425
+      ],
+      "valueFeet": 6.2
+    },
+    {
+      "pixel": [
+        131,
+        694
+      ],
+      "valueFeet": 6.5
+    }
+  ],
+  "readers": [
+    "reference/spot-heights/readings/m18_131075_87146.opus-af.json",
+    "reference/spot-heights/readings/m18_131075_87146.opus-ah.json"
+  ],
+  "excludedBenchmark": {
+    "pixel": [
+      121,
+      368
+    ],
+    "valueFeet": 6.2,
+    "reason": "Kerb/edge mark; not a carriageway surface control."
+  },
+  "railway": {
+    "name": "Great Eastern Railway, Woolwich branch",
+    "pixels": [
+      [
+        91,
+        205
+      ],
+      [
+        91,
+        425
+      ],
+      [
+        91,
+        590
+      ],
+      [
+        90,
+        635
+      ],
+      [
+        87,
+        694
+      ]
+    ],
+    "joinLengthMetres": 80,
+    "heightStatus": "Inherited 5.5 m scene formation remains provisional; nearby S.P. symbols are signal posts, not height readings."
+  },
+  "endPolicy": "Bounded review section, not historical road termini. Rounded ground transitions extend 6.1 m beyond ends; end heights held within transitions."
+}

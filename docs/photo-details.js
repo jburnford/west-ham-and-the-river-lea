@@ -43,7 +43,7 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
     beam(parent,[x-.5,y+h*.82,z],[x+.5,y+h*.82,z],.055,m.iron);
   }
   function station(plan) {
-    const g=new THREE.Group();g.name='Abbey Mills pumping station';g.position.set(plan.centre[0],0,plan.centre[1]);
+    const g=new THREE.Group();g.name='Abbey Mills pumping station';g.position.set(plan.centre[0],plan.landscapeLift??0,plan.centre[1]);
     const theta=plan.angleDegrees*Math.PI/180;g.rotation.y=-theta;scene.add(g);
     const L=plan.mainLength,D=plan.crossLength,mainDepth=plan.mainDepth,crossWidth=plan.crossWidth,offset=plan.mainOffsetZ;
     const brickLight=m.brick.clone();brickLight.color.set('#b9ac82');
@@ -195,7 +195,7 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
     return g;
   }
   function factory(b) {
-    const g=new THREE.Group();g.position.set(b.x,.15,b.z);scene.add(g);
+    const g=new THREE.Group();g.position.set(b.x,.15+(b.landscapeLift??0),b.z);scene.add(g);
     g.rotation.y=(b.rotation||0)*Math.PI/180;
     // Keep the mapped envelope. Roof divisions/elevations are comparative studies,
     // not identifications of individual buildings in the historic photographs.
@@ -336,7 +336,7 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
     }
   }
   function holder(spec) {
-    const g=new THREE.Group();g.position.set(spec.x,0,spec.z);g.scale.set(spec.radius/31,spec.height/28,spec.radius/31);scene.add(g);
+    const g=new THREE.Group();g.position.set(spec.x,spec.landscapeLift??0,spec.z);g.scale.set(spec.radius/31,spec.height/28,spec.radius/31);scene.add(g);
     const bellTop=spec.bellHeight*28/spec.height;
     cylinder(g,0,0,0,30,30,2,m.stone,56);cylinder(g,0,2,0,28,28,bellTop-2,m.bell,56);
     cylinder(g,0,bellTop,0,24,28,1.8,m.bell,56);
@@ -361,7 +361,7 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
     return g;
   }
   function houses(spec) {
-    const g=new THREE.Group();g.position.set(spec.x,0,spec.z);g.rotation.y=spec.rotation*Math.PI/180;scene.add(g);
+    const g=new THREE.Group();g.position.set(spec.x,spec.landscapeLift??0,spec.z);g.rotation.y=spec.rotation*Math.PI/180;scene.add(g);
     const w=spec.width,d=spec.depth,h=spec.wallHeight;
     box(g,0,0,0,w,h,d,brickLight);roofLoft(g,[[h,w+.7,d+.7],[h+3,w-5,1]]);
     box(g,0,h+2.95,0,w-5,.1,1,m.roof);
@@ -381,7 +381,7 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
     return g;
   }
   function terrace(spec) {
-    const g=new THREE.Group();g.position.set(spec.x,0,spec.z);g.rotation.y=spec.rotation*Math.PI/180;scene.add(g);
+    const g=new THREE.Group();g.position.set(spec.x,spec.landscapeLift??0,spec.z);g.rotation.y=spec.rotation*Math.PI/180;scene.add(g);
     const w=spec.width,d=spec.depth,h=spec.wallHeight,bay=w/spec.bays,front=spec.frontSign??1;
     // A continuous party-wall terrace; household divisions and elevations are interpreted.
     box(g,0,0,0,w,h,d,brickLight);
@@ -422,7 +422,7 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
     return g;
   }
   function mill(spec) {
-    const g=new THREE.Group();g.position.set(spec.x,0,spec.z);g.rotation.y=spec.rotation*Math.PI/180;scene.add(g);
+    const g=new THREE.Group();g.position.set(spec.x,spec.landscapeLift??0,spec.z);g.rotation.y=spec.rotation*Math.PI/180;scene.add(g);
     const w=spec.width,d=spec.depth,h=spec.height;
     const boarding=m.wood.clone();boarding.color.set('#9a9e93');
     const boardsDark=m.wood.clone();boardsDark.color.set('#666d65');

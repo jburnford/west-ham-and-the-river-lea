@@ -1,0 +1,78 @@
+{
+  "geometryEpoch": "1900",
+  "defaultCase": "working",
+  "status": "Provisional section scenarios, not surveyed culvert geometry or a structural/hydraulic design.",
+  "routePolicy": "Use the existing 45 m crossing chord; it is a search corridor, not a verified barrel alignment.",
+  "inletReference": "Continue the assumed rendered eastern drain bed to the crossing entrance; the intervening unrendered reach has no surveyed invert.",
+  "roofThicknessMetres": 0.15,
+  "minimumCoverMetres": 0.25,
+  "coverPolicy": "Modelling allowance above roof, not a historical specification or structural adequacy check.",
+  "sectionShape": "rectangular equivalent opening; masonry shape, material and number of barrels unknown",
+  "cases": [
+    {
+      "id": "compact",
+      "name": "Small opening",
+      "widthMetres": 0.6,
+      "heightMetres": 0.45,
+      "inletLoweringMetres": 0,
+      "eastToWestSlope": 0.001
+    },
+    {
+      "id": "working",
+      "name": "Working section",
+      "widthMetres": 0.9,
+      "heightMetres": 0.6,
+      "inletLoweringMetres": 0,
+      "eastToWestSlope": 0.002
+    },
+    {
+      "id": "large-shallow",
+      "name": "Larger opening, same bed",
+      "widthMetres": 1.2,
+      "heightMetres": 0.9,
+      "inletLoweringMetres": 0,
+      "eastToWestSlope": 0.002
+    },
+    {
+      "id": "large-deep",
+      "name": "Larger opening, lower bed",
+      "widthMetres": 1.2,
+      "heightMetres": 0.9,
+      "inletLoweringMetres": 0.3,
+      "eastToWestSlope": 0.002
+    }
+  ],
+  "railwayHeightReview": {
+    "mosaic": "m18_131072_87149",
+    "readers": [
+      "reference/spot-heights/readings/m18_131072_87149.opus-ab.json",
+      "reference/spot-heights/readings/m18_131072_87149.opus-ad.json"
+    ],
+    "roadBridgeSpots": [
+      {
+        "pixel": [
+          743,
+          593
+        ],
+        "valueFeet": 21.2
+      },
+      {
+        "pixel": [
+          862,
+          608
+        ],
+        "valueFeet": 20.8
+      }
+    ],
+    "interpretation": "Map shows the road crossing over the railway. Linear interpolation between road bridge spots is a provisional deck profile. The inherited constant railway formation exceeds this deck estimate even before adding rails or requiring clearance. It must not be used as a calibrated flood barrier.",
+    "action": "Review the longitudinal railway profile and road bridge together; the bridge gives a local constraint, not a measured track height at the drainage crossing."
+  },
+  "hydraulicReady": false,
+  "limitations": [
+    "Western outfall and channel bed remain unresolved.",
+    "Positive bed gradient does not prove water will flow: upstream and downstream water levels and gate operation are still required.",
+    "No discharge or capacity inferred from opening area.",
+    "The deeper case requires a revised approach channel; not connected automatically to the existing rendered bed.",
+    "Cases apply only to the 1900 reconstruction; other years require period review."
+  ]
+}

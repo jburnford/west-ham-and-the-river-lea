@@ -1,0 +1,268 @@
+{
+  "targetEpoch": "1900",
+  "reviewDate": "2026-10-02",
+  "workingStandard": "The author considers the initial supported holdout errors (about 0.23 m ground and 0.25 m streets) close to the required accuracy. Use this as a first-pass baseline; prioritise sparse coverage, large discrepancies and consequential bank/structure/flow-path joins over marginal residual improvements.",
+  "streetInterpretation": "Street dots constrain the developed surface. Lanes through marsh can approximate neighbouring ground where better evidence is absent. The author expects lanes often to be only slightly raised and ordinary historical street fill generally limited; test local exceptions without imposing a fixed fill correction.",
+  "scope": "These are review decisions for an interpolation experiment. No new 3D terrain or flood-solver levels have been applied.",
+  "targetedChecks": [
+    {
+      "id": "sh_540148_182306",
+      "sourceFeet": 3.4,
+      "surface": "Chargeable Lane",
+      "mosaic": "reference/spot-heights/mosaics/m18_131084_87149.png",
+      "registration": "reference/spot-heights/mosaics/m18_131084_87149.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/m18_131084_87149_zoom_411_806_s8.png",
+      "inspectedPixel": [
+        411,
+        806
+      ],
+      "finding": "Full mosaic and 8x crop inspected. The 3.4 figure and separate dot above it lie within the lane, beside the L of LANE. No bank hatching surrounds this dot. Nearby lane readings are also low, while some streets to the north are higher.",
+      "decision": "Retain the existing 3.4 ft road observation. Its approximately +2.15 m holdout prediction error is a warning about smoothing over local relief, not a reason to raise or reject the observed lane. No adjoining marsh height or fill thickness is established by this dot."
+    },
+    {
+      "id": "sh_537434_182618",
+      "sourceFeet": 44.9,
+      "surface": "Campbell Road beside the railway cutting, south of the bridge",
+      "mosaic": "reference/spot-heights/mosaics/m18_131054_87146.png",
+      "registration": "reference/spot-heights/mosaics/m18_131054_87146.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131054_87146_zoom_824_534_s8.png",
+      "contextCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131054_87146_zoom_800_450_s3.png",
+      "inspectedPixel": [
+        824,
+        534
+      ],
+      "finding": "Full mosaic, 8x dot crop and 3x context inspected. 44.9 is clear and its dot lies in Campbell Road beside the railway cutting, south of the bridge. Nearby bridge-area readings reach 45.0 ft; adjoining roads are lower. This is a real recorded local high point, not a digit error. The map does not by itself quantify natural relief versus made ground.",
+      "decision": "Retain 44.9 ft as a road-surface constraint. Its roughly -2.19 m held-out prediction discrepancy flags the need to preserve local street profiles and railway-cutting geometry. Do not lower it to neighbouring street averages or extend the road level onto the railway floor."
+    }
+  ],
+  "floodInterpretation": "The author accepts about 30 cm as a useful working terrain accuracy target because historical high-water levels and other flood inputs are imprecise. The reported 23\u201325 cm holdout errors are averages on supported predictions, not a universal 30 cm error bound. Evaluate plausible water-level ranges against broad historical flood extent and flow routes; prioritise consequential barriers and connections rather than an exact inundation outline. Regional hydraulic calibration remains unfinished.",
+  "eligibilityReviews": [
+    {
+      "id": "sh_538062_184289",
+      "expectedValueFeet": 13.1,
+      "setting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131063_87128.png",
+      "registration": "reference/spot-heights/mosaics/m18_131063_87128.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/m18_131063_87128_zoom_330_688_s8.png",
+      "inspectedPixel": [
+        330,
+        688
+      ],
+      "review": "Full mosaic and 8x crop inspected. Clear height figure with the recorded dot in the carriageway of Carpenter\u2019s Road, below the goods depot and the separately hatched high-level railway. Confirm street surface classification; retain the existing source position within the working positional tolerance. Street level may constrain developed ground; do not propagate it onto the railway formation."
+    },
+    {
+      "id": "sh_538137_184254",
+      "expectedValueFeet": 12.7,
+      "setting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131063_87128.png",
+      "registration": "reference/spot-heights/mosaics/m18_131063_87128.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/m18_131063_87128_zoom_529_787_s8.png",
+      "inspectedPixel": [
+        529,
+        787
+      ],
+      "review": "Full mosaic and 8x crop inspected. Clear height figure with the recorded dot in the carriageway of Carpenter\u2019s Road, below the goods depot and the separately hatched high-level railway. Confirm street surface classification; retain the existing source position within the working positional tolerance. Street level may constrain developed ground; do not propagate it onto the railway formation."
+    },
+    {
+      "id": "sh_537095_184901",
+      "expectedValueFeet": 22.6,
+      "setting": "street",
+      "reviewedSetting": "embankment_top",
+      "mosaic": "reference/spot-heights/mosaics/m18_131051_87122.png",
+      "registration": "reference/spot-heights/mosaics/m18_131051_87122.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131051_87122_840_507_6x.png",
+      "inspectedPixel": [
+        840,
+        507
+      ],
+      "review": "Hackney Cut Navigation west bank/towpath. Full map explicitly labels the canal; earlier inferred notes called this a railway-side road. The 22.6 dot lies between bank hatching and the outer boundary. Keep as a bank surface, separate from ordinary street or marsh."
+    },
+    {
+      "id": "sh_537146_184841",
+      "expectedValueFeet": 21.4,
+      "setting": "open_ground",
+      "reviewedSetting": "embankment_top",
+      "mosaic": "reference/spot-heights/mosaics/m18_131051_87122.png",
+      "registration": "reference/spot-heights/mosaics/m18_131051_87122.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131051_87122_980_670_6x.png",
+      "inspectedPixel": [
+        980,
+        670
+      ],
+      "review": "Hackney Cut Navigation west bank/towpath beside Atlas Dye Works. Clear 21.4 dot between bank hatching and outer boundary. Earlier inferred railway-track ground classification was incorrect. Keep bank surface separate from ordinary ground."
+    },
+    {
+      "id": "sh_537448_185530",
+      "expectedValueFeet": 16.6,
+      "setting": "street",
+      "reviewedSetting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87116.png",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87116.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131057_87116_305_371_6x.png",
+      "inspectedPixel": [
+        305,
+        371
+      ],
+      "review": "Clear road dot east of the hatched River Lea bridge approach, on unhatched Templemills Road. Use recorded street level without assumed fill subtraction; do not extend across adjoining water.",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537519_185495",
+      "expectedValueFeet": 15.8,
+      "setting": "street",
+      "reviewedSetting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87116.png",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87116.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131057_87116_495_473_6x.png",
+      "inspectedPixel": [
+        495,
+        473
+      ],
+      "review": "Clear road dot within unhatched Templemills Road west of Templemills Bridge and the trough. Distinct from bridge deck and benchmarks.",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537817_185541",
+      "expectedValueFeet": 15.4,
+      "setting": "street",
+      "reviewedSetting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131060_87116.png",
+      "registration": "reference/spot-heights/mosaics/m18_131060_87116.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131060_87116_530_370_6x.png",
+      "inspectedPixel": [
+        530,
+        370
+      ],
+      "review": "Clear dot within Temple Mills Lane, between flanking drains, below C.C.D. boundary crossing. Ordinary lane surface; flanking drains must remain interpolation exclusions.",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537737_185522",
+      "expectedValueFeet": 15.1,
+      "setting": "street",
+      "reviewedSetting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131060_87116.png",
+      "registration": "reference/spot-heights/mosaics/m18_131060_87116.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131060_87116_313_414_6x.png",
+      "inspectedPixel": [
+        313,
+        414
+      ],
+      "review": "Clear separate dot within Temple Mills Lane between flanking drains, beside T. Keep lane level; do not interpolate over the blue drains.",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_538093_185578",
+      "expectedValueFeet": 16.9,
+      "setting": "street",
+      "reviewedSetting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131063_87116.png",
+      "registration": "reference/spot-heights/mosaics/m18_131063_87116.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/east-temple-mills/m18_131063_87116_506_291_6x.png",
+      "inspectedPixel": [
+        506,
+        291
+      ],
+      "review": "Clear separate dot inside Temple Mill Lane at the end of the two flanking drains; distinct from H. and boundary dots. Ordinary lane surface beyond the ditch ends.",
+      "reviewArea": "eastern",
+      "reviewBatch": "eastern-temple-mills"
+    },
+    {
+      "id": "sh_538122_185509",
+      "expectedValueFeet": 17.1,
+      "setting": "street",
+      "reviewedSetting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131063_87116.png",
+      "registration": "reference/spot-heights/mosaics/m18_131063_87116.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/east-temple-mills/m18_131063_87116_580_477_6x.png",
+      "inspectedPixel": [
+        580,
+        477
+      ],
+      "review": "Clear separate dot right of 17.1 inside Temple Mill Lane beside the terrace; separate from the fence benchmark and boundary dots.",
+      "reviewArea": "eastern",
+      "reviewBatch": "eastern-temple-mills"
+    },
+    {
+      "id": "sh_538165_185318",
+      "expectedValueFeet": 15.9,
+      "setting": "street",
+      "reviewedSetting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131063_87119.png",
+      "registration": "reference/spot-heights/mosaics/m18_131063_87119.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/east-temple-mills/m18_131063_87119_681_231_6x.png",
+      "inspectedPixel": [
+        681,
+        231
+      ],
+      "review": "Clear separate dot in the road junction below B.M.17.61. The benchmark is on the fence corner and is not this road height.",
+      "reviewArea": "eastern",
+      "reviewBatch": "eastern-temple-mills"
+    },
+    {
+      "id": "sh_538096_185297",
+      "expectedValueFeet": 15.7,
+      "setting": "street",
+      "reviewedSetting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131063_87119.png",
+      "registration": "reference/spot-heights/mosaics/m18_131063_87119.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/east-temple-mills/m18_131063_87119_493_280_6x.png",
+      "inspectedPixel": [
+        493,
+        280
+      ],
+      "review": "Clear separate dot above-left of 15.7 within the access road south of Wycliffe Road; no embankment hatching at the dot.",
+      "reviewArea": "eastern",
+      "reviewBatch": "eastern-temple-mills"
+    },
+    {
+      "id": "sh_537773_185267",
+      "expectedValueFeet": 15.1,
+      "setting": "open_ground",
+      "reviewedSetting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131060_87119.png",
+      "registration": "reference/spot-heights/mosaics/m18_131060_87119.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/east-temple-mills/m18_131060_87119_393_337_6x.png",
+      "inspectedPixel": [
+        393,
+        337
+      ],
+      "review": "Separate dot on the unhatched access track south of the embanked area, between the track edges. Use track surface, not a height-based open-ground inference or the bank crest.",
+      "reviewArea": "eastern",
+      "reviewBatch": "eastern-temple-mills"
+    },
+    {
+      "id": "sh_537854_185282",
+      "expectedValueFeet": 14.4,
+      "setting": "marsh",
+      "reviewedSetting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131060_87119.png",
+      "registration": "reference/spot-heights/mosaics/m18_131060_87119.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/east-temple-mills/m18_131060_87119_610_302_6x.png",
+      "inspectedPixel": [
+        610,
+        302
+      ],
+      "review": "Separate dot within the unhatched access track west of the Artificial Manure Works. Treat as track surface, preserving the measured 14.4 ft without assumed fill correction.",
+      "reviewArea": "eastern",
+      "reviewBatch": "eastern-temple-mills"
+    },
+    {
+      "id": "sh_537933_185280",
+      "expectedValueFeet": 14.4,
+      "setting": "marsh",
+      "reviewedSetting": "street",
+      "mosaic": "reference/spot-heights/mosaics/m18_131060_87119.png",
+      "registration": "reference/spot-heights/mosaics/m18_131060_87119.json",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/east-temple-mills/m18_131060_87119_825_314_6x.png",
+      "inspectedPixel": [
+        825,
+        314
+      ],
+      "review": "Separate dot in the access track in front of the Artificial Manure Works, clear of the building, bank and benchmark. Resolve the ground/street classification as track/road surface; measured value unchanged.",
+      "reviewArea": "eastern",
+      "reviewBatch": "eastern-temple-mills",
+      "surfaceConflictResolution": "Direct source review identifies the dot on the access track, resolving the previous marsh/street conflict as street. Original setting and conflict flag preserved."
+    }
+  ]
+}

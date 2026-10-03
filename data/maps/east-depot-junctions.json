@@ -1,0 +1,206 @@
+{
+  "source": "Native cached georeferenced OS London five-foot 1893 map; no Goad coverage claimed",
+  "method": "Restore mapped depot fan throats and exact running-track connection. Upstream eleven stems retain reviewed source routes, while final paired stem tips converge onto common mapped switch nodes. Height and formation construction are explicitly interpreted.",
+  "sourceContextRegister": "data/maps/east-channelsea-context-alignment.json",
+  "reviewedSourceBounds": [
+    -220,
+    -650,
+    160,
+    -245
+  ],
+  "reviewedSourcePixels": {
+    "westernThroat": [
+      [
+        800,
+        827
+      ],
+      [
+        844,
+        832
+      ],
+      [
+        885,
+        846
+      ],
+      [
+        919,
+        870
+      ],
+      [
+        950,
+        903
+      ],
+      [
+        977,
+        938
+      ]
+    ],
+    "easternThroat": [
+      [
+        950,
+        878
+      ],
+      [
+        957,
+        887
+      ],
+      [
+        964,
+        914
+      ],
+      [
+        977,
+        938
+      ]
+    ],
+    "branchApproach": [
+      [
+        977,
+        938
+      ],
+      [
+        992,
+        974
+      ]
+    ]
+  },
+  "worldControls": {
+    "westernThroat": [
+      [
+        23.131,
+        -386.651
+      ],
+      [
+        39.551,
+        -385.243
+      ],
+      [
+        54.947,
+        -380.466
+      ],
+      [
+        67.84,
+        -371.906
+      ],
+      [
+        79.709,
+        -359.976
+      ],
+      [
+        90.109,
+        -347.263
+      ]
+    ],
+    "easternThroat": [
+      [
+        79.455,
+        -369.253
+      ],
+      [
+        82.151,
+        -365.985
+      ],
+      [
+        85.029,
+        -356.037
+      ],
+      [
+        90.109,
+        -347.263
+      ]
+    ],
+    "branchApproach": [
+      [
+        90.109,
+        -347.263
+      ],
+      [
+        96.056,
+        -334.057
+      ]
+    ]
+  },
+  "sourceSidingEndpoints": {
+    "east-depot-0-0": [
+      23.131,
+      -386.651
+    ],
+    "east-depot-1-0": [
+      23.311,
+      -388.341
+    ],
+    "east-depot-1-1": [
+      22.951,
+      -384.96
+    ],
+    "east-depot-2-0": [
+      23.367,
+      -388.334
+    ],
+    "east-depot-2-1": [
+      22.895,
+      -384.967
+    ],
+    "east-depot-3-0": [
+      23.53,
+      -388.303
+    ],
+    "east-depot-3-1": [
+      22.732,
+      -384.998
+    ],
+    "east-depot-4-0": [
+      80.275,
+      -370.742
+    ],
+    "east-depot-4-1": [
+      78.634,
+      -367.764
+    ],
+    "east-depot-5-0": [
+      80.65,
+      -370.462
+    ],
+    "east-depot-5-1": [
+      78.26,
+      -368.044
+    ]
+  },
+  "branchJoin": {
+    "railwayName": "Great Eastern Railway, Woolwich branch",
+    "chainageMetres": 70,
+    "trackOffsetMetres": 1.8,
+    "gauge": 1.435,
+    "railTopAboveFormationMetres": 0.46,
+    "evidence": "Join the western running track using the existing first branch segment normal and +1.8 m centre offset. The shared box helper uses y as bottom: ordinary branch rails begin at formation+0.33 m and have 0.13 m depth, hence rail top is formation+0.46 m. The detailed branch uses the same+0.46 m rail-top datum. This renderer datum is not a surveyed historic rail level."
+  },
+  "profile": {
+    "gradeLengthMetres": 240,
+    "maximumGradient": 0.035,
+    "yardFormationHeight": 0,
+    "groundHeight": -0.1,
+    "crestHalfWidthMetres": 1.5,
+    "sideSlopeHorizontalPerVertical": 1.5,
+    "evidence": "The OS fixes plan geometry and has local benchmarks around 14\u201318 ft, but does not establish this model grade. Hold existing branch formation of 5.5 m over a shared level approach derived from all siding intersections with both the ordinary and northern-connection branch banks, including sleeper width and a full station margin. This prevents rails disappearing below the existing bank/ballast. Keep a long linear 240 m transition farther outward, resolving the inherited level difference at about 1:44. Equal graph distance gives shared junctions identical formation and rail-top levels. These levels and earth slopes are explicit model interpretations, not an original railway gradient.",
+    "minimumLevelApproachMetres": 35,
+    "bankOverlapSleeperAllowanceMetres": 1.25,
+    "bankRailwayIds": [
+      "woolwich-northern-connection"
+    ]
+  },
+  "evidenceImages": [
+    "reference/footprint-model-alignment/east-channelsea-market-rail-raw.png",
+    "reference/footprint-model-alignment/east-channelsea-depot-throat-audit.png",
+    "reference/footprint-model-alignment/east-depot-junction-proposal.png",
+    "reference/footprint-model-alignment/east-depot-junction-after.png",
+    "reference/footprint-model-alignment/east-depot-bridge-road-audit.png",
+    "reference/footprint-model-alignment/east-depot-junction-detail-after.png",
+    "scenes/channelsea-sewer-panorama/review/east-depot-throat.png"
+  ],
+  "junctionTreatment": {
+    "finalStraightMetres": 4,
+    "method": "Retain every upstream source control; curve only within the final 14 m approach, followed by 4 m exactly along the receiving track tangent. Shared node plan centre, both gauge rail endpoints and formation/rail-top levels therefore coincide. These short turnout curves interpret the mapped converging fan; no surveyed switch specification is asserted.",
+    "maximumApproachLengthMetres": 14,
+    "maximumRoutedStemBoundaryShiftMetres": 3.5
+  }
+}

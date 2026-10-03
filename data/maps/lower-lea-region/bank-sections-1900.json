@@ -1,0 +1,34 @@
+{
+  "epoch": "1900",
+  "status": "Interpreted cross-sections following period-map shorelines; not surveyed crest or bed elevations",
+  "referenceLevelSceneY": 0.06,
+  "earth": {
+    "offsetsMetres": [0, 1, 3, 5.5, 8, 14],
+    "heightsAboveWaterMetres": [0.02, 0.25, 0.95, 1.5, 1.45, -0.16],
+    "sediment": [1, 1, 0.75, 0.1, 0, 0]
+  },
+  "canalEarth": {
+    "offsetsMetres": [0, 0.7, 2, 3.5, 5.5, 8, 14],
+    "heightsAboveWaterMetres": [0.02, 0.55, 1.2, 1.2, 1.05, 0.6, -0.16],
+    "sediment": [0.9, 0.65, 0.1, 0, 0, 0, 0],
+    "note": "Steeper maintained canal banks; no continuous masonry assumed on Hackney Cut. Bank-top ground does not establish a public towpath."
+  },
+  "canalFaced": {
+    "sourceIndices": [550, 509, 510, 511, 505, 506, 507, 508],
+    "offsetsMetres": [0, 0.45, 1.5, 3.5, 5.5, 8, 14],
+    "heightsAboveWaterMetres": [1.25, 1.25, 1.22, 1.2, 0.95, 0.55, -0.16],
+    "sediment": [0, 0, 0, 0, 0, 0, 0],
+    "materialAssumption": "Weathered brick face with stone coping on the confined Limehouse Cut. Material and height are provisional, not an inventory of surviving walls.",
+    "evidence": "reference/lower-lea-connection-review/limehouse-cut-network.png; confined urban canal margins, wharves and crossings. This does not establish identical masonry along every frontage."
+  },
+  "bed": {"shoreDepthMetres": 0.35, "riverDepthMetres": 2.2, "canalDepthMetres": 1.7, "note": "Illustrative submerged cross-section; no historical bathymetry is claimed."},
+  "naturalOverrideReachIds": ["Water_1895-521"],
+  "mesh": {"shoreSegmentMetres": 2, "sectionOffsetsMetres": [0, 0.45, 0.7, 1.5, 2, 3, 3.5, 5.5, 8, 11, 14]},
+  "policy": [
+    "Preserve the detailed core and all building, bridge and sewer elevations.",
+    "Model the shoreline of the union, not a bank around every source polygon; confluences and through-building passages stay open.",
+    "Leave source clipping boundaries open rather than constructing dams across the upstream river or the Thames context window.",
+    "Mills, gates and locks retain unassigned capacities, crests, sills and operating states.",
+    "Do not import concrete flood works or river alignments from the 1930s."
+  ]
+}

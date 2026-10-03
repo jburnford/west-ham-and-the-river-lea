@@ -1,0 +1,56 @@
+{
+  "epoch": "1900",
+  "id": "old-lea-east-bank-margin",
+  "name": "Old Lea eastern bank and Pudding Mill River head",
+  "surfaceMode": "bank-margin",
+  "reviewBoundsBNG": [
+    537450,
+    184055,
+    537800,
+    184390
+  ],
+  "interiorPointBNG": [
+    537650,
+    184270
+  ],
+  "bankReachIds": [
+    "Lower_River_Lea-15",
+    "Lower_River_Lea-8"
+  ],
+  "bankControlIds": [
+    "sh_537624_184335",
+    "sh_537570_184224",
+    "sh_537519_184158",
+    "sh_537519_184078"
+  ],
+  "marshControlIds": [],
+  "meshCellMetres": 4,
+  "bankTransitionMetres": [
+    3,
+    14
+  ],
+  "shoreTransitionMetres": [
+    0,
+    1.5
+  ],
+  "southernBlendNorthings": [
+    184055,
+    184073
+  ],
+  "northernBlendNorthings": [
+    184355,
+    184390
+  ],
+  "westernBlendEastings": [
+    537450,
+    537470
+  ],
+  "method": "Select the dry compartment east of the Old Lea and Pudding Mill River head, then restrict correction to its 14m bank strip. Interpolate four reviewed bank-margin heights along northing, following the fork onto Pudding Mill River. Fit the surveyed margin, blend toward illustrative water and existing landward ground, and taper before Knobshill Cottage and at the northern end.",
+  "limitations": [
+    "The four dots measure local bank-margin surfaces, not a surveyed continuous maximum crest.",
+    "The landward slope and its meeting with unreconstructed marsh ground remain provisional; no marsh-ground elevation is inferred from these bank dots.",
+    "The source-datum conversion remains the existing provisional reference.",
+    "Bed and water levels remain illustrative; this surface is not applied to the flood solver.",
+    "The 11.2ft and 10.8ft points across the Waterworks channel are excluded; the lower 12.1ft and 13.5ft observations farther south are not used in this bank fit."
+  ]
+}

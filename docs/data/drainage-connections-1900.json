@@ -1,0 +1,911 @@
+{
+  "geometryEpoch": "1900",
+  "defaultScenario": "east-to-west",
+  "purpose": "Connectivity sensitivity only. No water levels, discharge or inundation predictions.",
+  "crossingRoutePolicy": "Straight chord between mapped western trace endpoint and eastern channel start. Approximate search corridor, not a surveyed culvert alignment.",
+  "roadContext": {
+    "name": "Manor Road",
+    "mosaic": "m18_131075_87146",
+    "pixels": [
+      [
+        131,
+        205
+      ],
+      [
+        131,
+        425
+      ],
+      [
+        131,
+        590
+      ],
+      [
+        131,
+        635
+      ],
+      [
+        131,
+        694
+      ]
+    ],
+    "status": "Bounded 1900 carriageway restored in 3D, with a profile from three 1890s road spot heights. Railway alignment locally retraced; railway formation height remains provisional.",
+    "route": [
+      [
+        272.76,
+        421.32
+      ],
+      [
+        275.0,
+        502.97
+      ],
+      [
+        276.67,
+        564.21
+      ],
+      [
+        277.13,
+        580.91
+      ],
+      [
+        277.73,
+        602.81
+      ]
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "evidence-only",
+      "name": "Mapped channel only",
+      "westernPassage": false,
+      "crossing": "closed",
+      "description": "Only the identifiable eastern channel is connected. Unknown links are excluded, which does not establish that they were historically blocked."
+    },
+    {
+      "id": "crossing-blocked",
+      "name": "Crossing blocked",
+      "westernPassage": true,
+      "crossing": "closed",
+      "description": "Assume the western feature is a drain and its sluices pass water, but the railway/road crossing is blocked."
+    },
+    {
+      "id": "east-to-west",
+      "name": "East to west \u2014 working model",
+      "westernPassage": true,
+      "crossing": "east-to-west",
+      "description": "Preferred reconstruction: culverted drainage passes water east to west when western water levels permit, with controls preventing return flow. Nearby ground levels and mapped sluices support this interpretation; pipe dimensions and gate mechanism remain provisional. Arrows indicate intended passage, not continuous flow."
+    },
+    {
+      "id": "west-to-east",
+      "name": "One-way: west to east",
+      "westernPassage": true,
+      "crossing": "west-to-east",
+      "description": "Assume the opposite gate orientation, with western sluices passing water. Direction is a scenario, not historical evidence."
+    },
+    {
+      "id": "both-ways",
+      "name": "Unrestricted connection",
+      "westernPassage": true,
+      "crossing": "both",
+      "description": "Assume an open crossing in both directions and passing western sluices. This is an upper bound on possible connections, not on flood extent or flow capacity."
+    }
+  ],
+  "evidenceReview": [
+    {
+      "source": "West Ham: a study in social and industrial problems (1907), printed p29 note1, PDF p53",
+      "file": "reference/topography-research-2026-09-28/flood-evidence/west-ham-outer-london-inquiry-1907.pdf",
+      "finding": "Describes replacement of marsh watercourses by building sites and shortcomings in sewer capacity and pumping exposed by the 1888 flood.",
+      "modelUse": "Do not assume surviving mapped drains provide a free gravity outfall. Does not supply the local culvert dimensions or invert."
+    },
+    {
+      "source": "Jim Clifford, West Ham and the River Lea, chapter6, PDF p182 and note21",
+      "file": "West Ham and the River Lea_ A Social and E - Jim Clifford.pdf",
+      "finding": "Reports pump stoppage when flooding extinguished the fires in 1875 and 1888; the 1888 pump house required a fire engine to drain it.",
+      "modelUse": "Future flood scenarios must consider pumping failure separately from channel connectivity; no pump link or capacity assigned here."
+    },
+    {
+      "source": "1848-51 skeleton survey, s18_131072_87146 and s18_131075_87146",
+      "finding": "Railway and Marsh Lane are visible, but internal field drainage is sparsely represented.",
+      "modelUse": "No nineteenth-century drain disappearance or construction date inferred from omission. Do not copy the 1900 graph into 1850."
+    },
+    {
+      "source": "Essex Archives catalogue D/Z346/11321/1036",
+      "url": "https://www.essexarchivesonline.co.uk/result_details.aspx?ThisRecordsOffSet=1&id=1201477",
+      "finding": "A Manor Road drainage agreement is with Hackney Borough Council, dated18June1906.",
+      "modelUse": "Rejected as confirmation of this West Ham crossing; same road name is insufficient."
+    }
+  ],
+  "requiredBeforeHydraulics": [
+    "Represent the probable culverted connection and test uncertainty in the western drainage route",
+    "Constrain or bracket invert, opening size and barrel route",
+    "Test plausible sluice operation, blockage and return-flow cases for each event",
+    "Constrain railway formation and drainage crossing levels; road profile now tied to three map spot heights",
+    "Trace beyond the map boundary to a confirmed outfall or pumping system",
+    "Add period-specific pumping capacity, operation and failure scenarios"
+  ],
+  "hydraulicReady": false,
+  "workingInterpretation": {
+    "status": "preferred engineering inference, not surveyed pipe detail",
+    "connection": "Ditches on opposite sides of the embankment, their alignment and mapped sluices support a probable culverted drainage connection. Treating them as disconnected is a sensitivity case, not the preferred reconstruction.",
+    "intendedDirection": "east-to-west",
+    "levelEvidence": {
+      "easternGroundFeet": [
+        6.3,
+        6.4
+      ],
+      "westernGroundFeet": [
+        4.5,
+        4.9
+      ],
+      "controlIds": [
+        "sh_539244_182605",
+        "sh_539367_182599",
+        "sh_538923_182626",
+        "sh_538982_182621"
+      ],
+      "interpretation": "Ground beside this reach is approximately 0.4\u20130.6 m higher to the east. This supports the preferred direction but does not measure invert slope or water-level difference."
+    },
+    "gateInterpretation": "The one-way scenario approximates successful controlled drainage. A sluice label alone does not establish a flap gate, automatic operation, or constant east-to-west flow. High downstream water can stop drainage; ineffective or open controls may allow return flow."
+  },
+  "nodes": [
+    {
+      "id": "west-junction",
+      "name": "Western sluice",
+      "position": [
+        31.8291,
+        584.656
+      ],
+      "invertODNMetres": null,
+      "kind": "sluice-location",
+      "outfallConfirmed": false
+    },
+    {
+      "id": "middle-junction",
+      "name": "Middle sluice",
+      "position": [
+        171.4724,
+        584.5487
+      ],
+      "invertODNMetres": null,
+      "kind": "sluice-location",
+      "outfallConfirmed": false
+    },
+    {
+      "id": "railway-west",
+      "name": "Railway-side sluice",
+      "position": [
+        242.3729,
+        576.2927
+      ],
+      "invertODNMetres": null,
+      "kind": "sluice-location",
+      "outfallConfirmed": false
+    },
+    {
+      "id": "manor-east",
+      "name": "Eastern channel entrance",
+      "position": [
+        287.3983,
+        575.0591
+      ],
+      "invertODNMetres": null,
+      "kind": "channel-entrance",
+      "outfallConfirmed": false
+    },
+    {
+      "id": "east-trace-boundary",
+      "name": "Trace continues beyond review",
+      "position": [
+        594.1144,
+        583.7303
+      ],
+      "invertODNMetres": null,
+      "kind": "trace-boundary",
+      "outfallConfirmed": false
+    },
+    {
+      "id": "manor-road-north",
+      "name": "Northern sluice \u2014 unconnected",
+      "position": [
+        283.4115,
+        429.5732
+      ],
+      "invertODNMetres": null,
+      "kind": "sluice-location",
+      "outfallConfirmed": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "west-first",
+      "from": "west-junction",
+      "to": "middle-junction",
+      "route": [
+        [
+          31.8291,
+          584.656
+        ],
+        [
+          83.9957,
+          585.8288
+        ],
+        [
+          171.4724,
+          584.5487
+        ]
+      ],
+      "kind": "candidate-drain",
+      "lengthMetres": 139.6658474139491,
+      "invertODNMetres": null,
+      "capacityM3s": null
+    },
+    {
+      "id": "west-second",
+      "from": "middle-junction",
+      "to": "railway-west",
+      "route": [
+        [
+          171.4724,
+          584.5487
+        ],
+        [
+          242.3729,
+          576.2927
+        ]
+      ],
+      "kind": "candidate-drain",
+      "lengthMetres": 71.37956595728221,
+      "invertODNMetres": null,
+      "capacityM3s": null
+    },
+    {
+      "id": "crossing",
+      "from": "railway-west",
+      "to": "manor-east",
+      "route": [
+        [
+          242.3729,
+          576.2927
+        ],
+        [
+          287.3983,
+          575.0591
+        ]
+      ],
+      "kind": "possible-culvert",
+      "lengthMetres": 45.042295835359035,
+      "invertODNMetres": null,
+      "capacityM3s": null
+    },
+    {
+      "id": "east-channel",
+      "from": "manor-east",
+      "to": "east-trace-boundary",
+      "route": [
+        [
+          287.3983,
+          575.0591
+        ],
+        [
+          319.41,
+          574.5532
+        ],
+        [
+          358.6343,
+          579.0492
+        ],
+        [
+          421.9849,
+          580.6547
+        ],
+        [
+          443.6793,
+          584.1453
+        ],
+        [
+          462.9986,
+          582.501
+        ],
+        [
+          485.3253,
+          581.8883
+        ],
+        [
+          522.4652,
+          578.269
+        ],
+        [
+          554.1456,
+          579.2564
+        ],
+        [
+          570.2177,
+          581.4151
+        ],
+        [
+          594.1144,
+          583.7303
+        ]
+      ],
+      "kind": "mapped-channel",
+      "lengthMetres": 307.8020774144866,
+      "invertODNMetres": null,
+      "capacityM3s": null
+    }
+  ],
+  "railways": [
+    {
+      "name": "Great Eastern Railway, Woolwich branch",
+      "route": [
+        [
+          260.68573201640675,
+          400.0
+        ],
+        [
+          257.8748013364384,
+          421.73048198304605
+        ],
+        [
+          260.1118834579829,
+          503.38008192536654
+        ],
+        [
+          261.7897036075592,
+          564.6181400280911
+        ],
+        [
+          261.8751807693625,
+          581.3297514127335
+        ],
+        [
+          261.35879037401173,
+          603.2578320623725
+        ],
+        [
+          262.5736512364511,
+          640.0
+        ]
+      ]
+    },
+    {
+      "name": "London, Tilbury and Southend Railway",
+      "route": []
+    },
+    {
+      "name": "Abbey Mills junction curve",
+      "route": [
+        [
+          139.3034899328859,
+          400.0
+        ],
+        [
+          153.43,
+          407.74
+        ],
+        [
+          193.6,
+          444.4
+        ],
+        [
+          221.84,
+          484.98
+        ],
+        [
+          241.57,
+          523.39
+        ],
+        [
+          250.97,
+          558.5
+        ],
+        [
+          252.23,
+          604.61
+        ]
+      ]
+    },
+    {
+      "name": "Great Eastern Railway \u2014 main line",
+      "route": []
+    },
+    {
+      "name": "Great Eastern Railway \u2014 Woolwich branch northern connection",
+      "route": []
+    },
+    {
+      "name": "North London / Victoria Park branch connection",
+      "route": []
+    }
+  ],
+  "crossingAudit": {
+    "lengthMetres": 45.042295835359035,
+    "railwayIntersections": [
+      {
+        "name": "Great Eastern Railway, Woolwich branch",
+        "position": [
+          261.84668810295153,
+          575.759159709324
+        ],
+        "sceneFormationHeight": 5.5,
+        "heightStatus": "inherited interpretation, not a surveyed crossing level"
+      },
+      {
+        "name": "Abbey Mills junction curve",
+        "position": [
+          251.44940726603502,
+          576.0440230451394
+        ],
+        "sceneFormationHeight": 5.5,
+        "heightStatus": "inherited interpretation, not a surveyed crossing level"
+      }
+    ],
+    "nearestModelRoadMetres": 0.0,
+    "roadGeometryPresentAtCrossing": true,
+    "roadHeightStatus": "Road spot heights interpolated along carriageway using shared provisional Liverpool-to-ODN conversion; paving width, shoulders and local earthwork shape interpreted.",
+    "warning": "Manor Road is restored here with map-based road heights. Railway height and the culvert section remain provisional; the road surface does not establish a hydraulic opening."
+  },
+  "renderedReach": {
+    "id": "plaistow-east-drain",
+    "route": [
+      [
+        315.0,
+        574.6228938619316
+      ],
+      [
+        319.41,
+        574.5532
+      ],
+      [
+        358.6343,
+        579.0492
+      ],
+      [
+        421.9849,
+        580.6547
+      ],
+      [
+        443.6793,
+        584.1453
+      ],
+      [
+        462.9986,
+        582.501
+      ],
+      [
+        485.3253,
+        581.8883
+      ],
+      [
+        520.0,
+        578.509234851467
+      ]
+    ],
+    "lengthMetres": 205.79925543220034,
+    "bedSceneY": -1.3115392923355103,
+    "waterSceneY": -1.0115392923355102,
+    "modifiedGridNodes": 1021,
+    "boundaryIsPhysical": false,
+    "hydraulicConnection": null
+  },
+  "observationEpoch": "1890s",
+  "inputHashes": {
+    "data/maps/historic-drainage-1900.json": "43418976b15ad24a51127053c0c170962e9f420a160e382c19c6f54818072492",
+    "reference/spot-heights/mosaics/m18_131075_87146.json": "aa590916086a2d74cb75f826b621854b0c6894ebbf1610d32cad6ab38874b350",
+    "reference/spot-heights/mosaics/m18_131075_87146.png": "cd2c4f4e4ccec160f6181069d286d6f5de4a591bd89988882f56f8d678c926e9",
+    "reference/spot-heights/mosaics/m18_131072_87146.json": "ea238c07c62ae4c552b45297c043b48027d6ab6ebfa89633747e182af5f3bd89",
+    "reference/spot-heights/mosaics/m18_131072_87146.png": "db6827dee9be1e2d53840307d32d75283faeab06dc49861e3850786ee336ac5f",
+    "data/maps/drainage-connections-1900.json": "3a6a13d827abae4bfc3872c75593171aa26074793c367b09609c12544c51e15f",
+    "docs/data/infrastructure.json": "91ffdfed79f0c862d78f4b2260097d85210f5da0bea44868f03b94d20993caea",
+    "docs/data/drainage-1900.json": "7db76c0afd4e3ab12b78f8f0e6f802bedb22e70149c89cba4631fc96b60e7ed6",
+    "docs/data/terrain-1900.json": "858cb645d41bebb0492aa36da747e0de929f709146212a78c2c19089cabd432a",
+    "reference/spot-heights/mosaics-1848/s18_131072_87146.png": "1dd17c0c168a491cf982f6587b34fcf9822632c07255028ee13fca8369813eb7",
+    "reference/spot-heights/mosaics-1848/s18_131075_87146.png": "4cef3a0cf86cdf760cf32960c6b4bf239b094d22abd656f81f6f39401a478e8b",
+    "reference/topography-research-2026-09-28/flood-evidence/west-ham-outer-london-inquiry-1907.pdf": "c58565689408bc15c554ff41127d967e5463fc71d027ad74df66eff07946df62",
+    "West Ham and the River Lea_ A Social and E - Jim Clifford.pdf": "5c83c17848828df7d7770068a7e3c44c7f667b488ef4c6028668f870f860261f",
+    "data/maps/culvert-section-1900.json": "c3697695114d75f26eaefe3b35968904e3e659f63f71159b02736e251df7d31e",
+    "reference/spot-heights/mosaics/m18_131072_87149.json": "d87ec47640e47ec178424980e28df9dd40f8558f2cfe2d90e5a71f4793971a41",
+    "reference/spot-heights/mosaics/m18_131072_87149.png": "542542e77645a3f629e8b958e62f76321f80c08b741f0b942aa51da78938cbb9",
+    "reference/spot-heights/readings/m18_131072_87149.opus-ab.json": "7cddfbfe2cbd56f9498f628b45684b85e7f55fb43ac671286409f41d8613d12d",
+    "reference/spot-heights/readings/m18_131072_87149.opus-ad.json": "4716bfdd0a9043c6102bd8cf121b8c20b7db78984593b98e63cd7178dc376bb2"
+  },
+  "culvertSection": {
+    "geometryEpoch": "1900",
+    "defaultCase": "working",
+    "status": "Provisional section scenarios, not surveyed culvert geometry or a structural/hydraulic design.",
+    "routePolicy": "Use the existing 45 m crossing chord; it is a search corridor, not a verified barrel alignment.",
+    "inletReference": "Continue the assumed rendered eastern drain bed to the crossing entrance; the intervening unrendered reach has no surveyed invert.",
+    "roofThicknessMetres": 0.15,
+    "minimumCoverMetres": 0.25,
+    "coverPolicy": "Modelling allowance above roof, not a historical specification or structural adequacy check.",
+    "sectionShape": "rectangular equivalent opening; masonry shape, material and number of barrels unknown",
+    "cases": [
+      {
+        "id": "compact",
+        "name": "Small opening",
+        "widthMetres": 0.6,
+        "heightMetres": 0.45,
+        "inletLoweringMetres": 0,
+        "eastToWestSlope": 0.001,
+        "eastInvertODN": 0.5239007076644897,
+        "westInvertODN": 0.4788584118291307,
+        "fallEastToWestMetres": 0.045042295835359014,
+        "openingAreaM2": 0.27,
+        "minimumRoadCoverMetres": 0.44222761541078615,
+        "fitsCoverAssumption": true,
+        "approachRegradingRequired": false,
+        "capacityM3s": null,
+        "hydraulicallyEnabled": false
+      },
+      {
+        "id": "working",
+        "name": "Working section",
+        "widthMetres": 0.9,
+        "heightMetres": 0.6,
+        "inletLoweringMetres": 0,
+        "eastToWestSlope": 0.002,
+        "eastInvertODN": 0.5239007076644897,
+        "westInvertODN": 0.4338161159937716,
+        "fallEastToWestMetres": 0.09008459167071808,
+        "openingAreaM2": 0.54,
+        "minimumRoadCoverMetres": 0.29855062286800593,
+        "fitsCoverAssumption": true,
+        "approachRegradingRequired": false,
+        "capacityM3s": null,
+        "hydraulicallyEnabled": false
+      },
+      {
+        "id": "large-shallow",
+        "name": "Larger opening, same bed",
+        "widthMetres": 1.2,
+        "heightMetres": 0.9,
+        "inletLoweringMetres": 0,
+        "eastToWestSlope": 0.002,
+        "eastInvertODN": 0.5239007076644897,
+        "westInvertODN": 0.4338161159937716,
+        "fallEastToWestMetres": 0.09008459167071808,
+        "openingAreaM2": 1.08,
+        "minimumRoadCoverMetres": -0.001449377131994084,
+        "fitsCoverAssumption": false,
+        "approachRegradingRequired": false,
+        "capacityM3s": null,
+        "hydraulicallyEnabled": false
+      },
+      {
+        "id": "large-deep",
+        "name": "Larger opening, lower bed",
+        "widthMetres": 1.2,
+        "heightMetres": 0.9,
+        "inletLoweringMetres": 0.3,
+        "eastToWestSlope": 0.002,
+        "eastInvertODN": 0.22390070766448972,
+        "westInvertODN": 0.13381611599377163,
+        "fallEastToWestMetres": 0.09008459167071808,
+        "openingAreaM2": 1.08,
+        "minimumRoadCoverMetres": 0.29855062286800593,
+        "fitsCoverAssumption": true,
+        "approachRegradingRequired": true,
+        "capacityM3s": null,
+        "hydraulicallyEnabled": false
+      }
+    ],
+    "railwayHeightReview": {
+      "mosaic": "m18_131072_87149",
+      "readers": [
+        "reference/spot-heights/readings/m18_131072_87149.opus-ab.json",
+        "reference/spot-heights/readings/m18_131072_87149.opus-ad.json"
+      ],
+      "roadBridgeSpots": [
+        {
+          "pixel": [
+            743,
+            593
+          ],
+          "valueFeet": 21.2
+        },
+        {
+          "pixel": [
+            862,
+            608
+          ],
+          "valueFeet": 20.8
+        }
+      ],
+      "interpretation": "Map shows the road crossing over the railway. Linear interpolation between road bridge spots is a provisional deck profile. The inherited constant railway formation exceeds this deck estimate even before adding rails or requiring clearance. It must not be used as a calibrated flood barrier.",
+      "action": "Review the longitudinal railway profile and road bridge together; the bridge gives a local constraint, not a measured track height at the drainage crossing.",
+      "spots": [
+        {
+          "pixel": [
+            743,
+            593
+          ],
+          "valueFeet": 21.2,
+          "position": [
+            226.46257645846345,
+            851.9591120327823
+          ],
+          "heightODN": 6.06552
+        },
+        {
+          "pixel": [
+            862,
+            608
+          ],
+          "valueFeet": 20.8,
+          "position": [
+            270.89872417389415,
+            856.3134919037111
+          ],
+          "heightODN": 5.9436
+        }
+      ],
+      "crossingPosition": [
+        243.9325692673691,
+        853.6710287704691
+      ],
+      "deckEstimateODN": 6.01758736783526,
+      "inheritedFormationODN": 7.33544,
+      "formationAboveDeckMetres": 1.3178526321647404,
+      "distanceFromDrainCrossingMetres": 277.3827136642117,
+      "constantFormationConflictsWithRoadBridge": true,
+      "calibratedFloodBarrier": false
+    },
+    "hydraulicReady": false,
+    "limitations": [
+      "Western outfall and channel bed remain unresolved.",
+      "Positive bed gradient does not prove water will flow: upstream and downstream water levels and gate operation are still required.",
+      "No discharge or capacity inferred from opening area.",
+      "The deeper case requires a revised approach channel; not connected automatically to the existing rendered bed.",
+      "Cases apply only to the 1900 reconstruction; other years require period review."
+    ],
+    "lengthMetres": 45.042295835359035,
+    "route": [
+      [
+        242.3729,
+        576.2927
+      ],
+      [
+        287.3983,
+        575.0591
+      ]
+    ],
+    "assumedApproachBedODN": 0.5239007076644897,
+    "roadSpan": {
+      "stations": [
+        30.519288378095844,
+        30.601288378096278,
+        30.683288378096712,
+        30.765288378097146,
+        30.84728837809758,
+        30.929288378098015,
+        31.01128837809845,
+        31.093288378098883,
+        31.175288378099317,
+        31.25728837809975,
+        31.339288378100186,
+        31.42128837810062,
+        31.503288378101054,
+        31.585288378101488,
+        31.667288378101922,
+        31.749288378102356,
+        31.83128837810279,
+        31.913288378103225,
+        31.99528837810366,
+        32.07728837810409,
+        32.15928837810453,
+        32.24128837810496,
+        32.323288378105396,
+        32.40528837810583,
+        32.487288378106264,
+        32.5692883781067,
+        32.65128837810713,
+        32.73328837810757,
+        32.815288378108,
+        32.897288378108435,
+        32.97928837810887,
+        33.0612883781093,
+        33.14328837810974,
+        33.22528837811017,
+        33.307288378110606,
+        33.38928837811104,
+        33.471288378111474,
+        33.55328837811191,
+        33.63528837811234,
+        33.71728837811278,
+        33.79928837811321,
+        33.881288378113645,
+        33.96328837811408,
+        34.04528837811451,
+        34.12728837811495,
+        34.20928837811538,
+        34.291288378115816,
+        34.37328837811625,
+        34.45528837811668,
+        34.53728837811711,
+        34.619288378117545,
+        34.70128837811798,
+        34.783288378118414,
+        34.86528837811885,
+        34.94728837811928,
+        35.029288378119716,
+        35.11128837812015,
+        35.193288378120585,
+        35.27528837812102,
+        35.35728837812145,
+        35.43928837812189,
+        35.52128837812232,
+        35.603288378122755,
+        35.68528837812319,
+        35.767288378123624,
+        35.84928837812406,
+        35.93128837812449,
+        36.013288378124926,
+        36.09528837812536,
+        36.177288378125795,
+        36.25928837812623,
+        36.34128837812666,
+        36.4232883781271,
+        36.50528837812753,
+        36.587288378127965,
+        36.6692883781284,
+        36.751288378128834,
+        36.83328837812927,
+        36.9152883781297,
+        36.997288378130136,
+        37.07928837813057,
+        37.161288378131005,
+        37.24328837813144,
+        37.32528837813187,
+        37.40728837813231,
+        37.48928837813274,
+        37.571288378133175,
+        37.65328837813361,
+        37.735288378134044,
+        37.81728837813448,
+        37.89928837813491,
+        37.981288378135346,
+        38.06328837813578,
+        38.145288378136215,
+        38.22728837813665,
+        38.30928837813708,
+        38.39128837813752,
+        38.47328837813795,
+        38.555288378138385,
+        38.63728837813882,
+        38.719288378139254
+      ],
+      "surfaceODN": [
+        1.559805291181019,
+        1.5598052914253893,
+        1.5598052916697598,
+        1.55980529191413,
+        1.5598052921585004,
+        1.5598052924028707,
+        1.559805292647241,
+        1.5598052928916115,
+        1.5598052931359818,
+        1.5598052933803521,
+        1.5598052936247226,
+        1.559805293869093,
+        1.5598052941134632,
+        1.5598052943578338,
+        1.559805294602204,
+        1.5598052948465744,
+        1.559805295090945,
+        1.5598052953353152,
+        1.5598052955796855,
+        1.5598052958240558,
+        1.5598052960684263,
+        1.5598052963127966,
+        1.5598052965571672,
+        1.5598052968015375,
+        1.5598052970459078,
+        1.559805297290278,
+        1.5598052975346484,
+        1.5598052977790189,
+        1.5598052980233892,
+        1.5598052982677597,
+        1.55980529851213,
+        1.5598052987565003,
+        1.5598052990008706,
+        1.5598052992452411,
+        1.5598052994896114,
+        1.559805299733982,
+        1.5598052999783523,
+        1.5598053002227226,
+        1.5598053004670929,
+        1.5598053007114634,
+        1.5598053009558337,
+        1.559805301200204,
+        1.5598053014445745,
+        1.5598053016889448,
+        1.5598053019333151,
+        1.5598053021776854,
+        1.559805302422056,
+        1.5598053026664263,
+        1.5598053029107966,
+        1.559805303155167,
+        1.5598053033995374,
+        1.5598053036439077,
+        1.559805303888278,
+        1.5598053041326485,
+        1.5598053043770188,
+        1.5598053046213893,
+        1.5598053048657596,
+        1.55980530511013,
+        1.5598053053545002,
+        1.5598053055988708,
+        1.559805305843241,
+        1.5598053060876116,
+        1.5598053063319819,
+        1.5598053065763522,
+        1.5598053068207225,
+        1.5598053070650928,
+        1.5598053073094633,
+        1.5598053075538336,
+        1.5598053077982041,
+        1.5598053080425744,
+        1.5598053082869447,
+        1.559805308531315,
+        1.5598053087756856,
+        1.5598053090200559,
+        1.5598053092644262,
+        1.5598053095087967,
+        1.559805309753167,
+        1.5598053099975373,
+        1.5598053102419078,
+        1.559805310486278,
+        1.5598053107306484,
+        1.559805310975019,
+        1.5598053112193893,
+        1.5598053114637596,
+        1.5598053117081299,
+        1.5598053119525002,
+        1.5598053121968707,
+        1.559805312441241,
+        1.5598053126856115,
+        1.5598053129299818,
+        1.5598053131743521,
+        1.5598053134187224,
+        1.559805313663093,
+        1.5598053139074632,
+        1.5598053141518338,
+        1.559805314396204,
+        1.5598053146405744,
+        1.5598053148849447,
+        1.559805315129315,
+        1.5598053153736855,
+        1.559805315618056
+      ]
+    },
+    "railwayCrossings": [
+      {
+        "name": "Great Eastern Railway, Woolwich branch",
+        "station": 19.48109566529644,
+        "formationODN": 7.33544
+      },
+      {
+        "name": "Abbey Mills junction curve",
+        "station": 9.079913236274098,
+        "formationODN": 7.33544
+      }
+    ],
+    "verticalReference": {
+      "id": "channelsea-crest-v1",
+      "datum": "ODN",
+      "status": "provisional",
+      "historicCrestFeet": 31.6,
+      "liverpoolToNewlynFeet": -1.3,
+      "sceneCrestY": 7.4,
+      "odnMinusSceneYMetres": 1.83544,
+      "estimatedUncertaintyMetres": 0.3,
+      "evidence": "OS local correction TQ3883/TQ3983 and 2003 crest comparison. Historic Liverpool attribution and benchmark identity remain conditional; this is not a survey calibration.",
+      "comparison": "reference/topography-research-2026-09-28/channelsea-height-anchor/comparison.json"
+    },
+    "inputHashes": {
+      "data/maps/culvert-section-1900.json": "c3697695114d75f26eaefe3b35968904e3e659f63f71159b02736e251df7d31e",
+      "reference/spot-heights/mosaics/m18_131072_87149.json": "d87ec47640e47ec178424980e28df9dd40f8558f2cfe2d90e5a71f4793971a41",
+      "reference/spot-heights/mosaics/m18_131072_87149.png": "542542e77645a3f629e8b958e62f76321f80c08b741f0b942aa51da78938cbb9",
+      "reference/spot-heights/readings/m18_131072_87149.opus-ab.json": "7cddfbfe2cbd56f9498f628b45684b85e7f55fb43ac671286409f41d8613d12d",
+      "reference/spot-heights/readings/m18_131072_87149.opus-ad.json": "4716bfdd0a9043c6102bd8cf121b8c20b7db78984593b98e63cd7178dc376bb2"
+    }
+  }
+}

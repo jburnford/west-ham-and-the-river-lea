@@ -15,14 +15,20 @@
   },
   "retainedRailwayRoutesSha256": "87199dbc965e0d8711e770348fa824d9896e8ad11bb07e879459ce9d8653b09c",
   "evidenceImages": [
+    "reference/footprint-model-alignment/east-channelsea-bridge-road-raw.png",
+    "reference/footprint-model-alignment/east-channelsea-bridge-road-after.png",
     "reference/footprint-model-alignment/east-channelsea-bank-upper-raw.png",
     "reference/footprint-model-alignment/east-channelsea-bank-upper-after.png",
     "reference/footprint-model-alignment/east-channelsea-bank-lower-raw.png",
     "reference/footprint-model-alignment/east-channelsea-bank-lower-after.png",
+    "reference/footprint-model-alignment/east-channelsea-market-rail-raw.png",
+    "reference/footprint-model-alignment/east-channelsea-market-rail-after.png",
     "reference/footprint-model-alignment/east-channelsea-context-north-raw.png",
     "reference/footprint-model-alignment/east-channelsea-context-north-after.png",
     "reference/footprint-model-alignment/east-channelsea-context-south-raw.png",
-    "reference/footprint-model-alignment/east-channelsea-context-south-after.png"
+    "reference/footprint-model-alignment/east-channelsea-context-south-after.png",
+    "reference/footprint-model-alignment/stratford-station-rail-native.png",
+    "reference/footprint-model-alignment/stratford-station-rail-after.png"
   ],
   "road": {
     "name": "Mill Meads works road",
@@ -282,6 +288,1034 @@
     "ordinaryShoulderWidth": 1.1,
     "review": "Retain the Abbey Lane junction and interpreted 6 m width. Fit the eastern industrial frontage and stop at the mapped entrance; no road is inferred through the retained southern roofs or to the separate footbridge."
   },
+  "roadCorrections": [
+    {
+      "name": "Bridge Road",
+      "path": "data/maps/housing-road-traces.json",
+      "baseline": "reference/footprint-model-alignment/east-channelsea-bridge-road-before.json",
+      "baselineSha256": "7ac7733ee4267278c507d00c0aefb26ae09de678aa7f3005fe4c24d624d35c81",
+      "priorRecord": {
+        "name": "Bridge Road",
+        "sheet": "22",
+        "points": [
+          [
+            1105,
+            527
+          ],
+          [
+            1131,
+            645
+          ],
+          [
+            1162,
+            758
+          ],
+          [
+            1194,
+            856
+          ],
+          [
+            1229,
+            951
+          ],
+          [
+            1261,
+            1050
+          ],
+          [
+            1294,
+            1144
+          ],
+          [
+            1308,
+            1188
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 8,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+      },
+      "priorRoute": [
+        [
+          -51.21,
+          -757.34
+        ],
+        [
+          -33.68,
+          -687.16
+        ],
+        [
+          -13.24,
+          -620.06
+        ],
+        [
+          7.56,
+          -561.96
+        ],
+        [
+          30.11,
+          -505.69
+        ],
+        [
+          50.93,
+          -446.99
+        ],
+        [
+          72.26,
+          -391.29
+        ],
+        [
+          81.38,
+          -365.19
+        ]
+      ],
+      "record": {
+        "name": "Bridge Road",
+        "sheet": "scene",
+        "points": [
+          [
+            -81.923,
+            -756.5
+          ],
+          [
+            -39.07,
+            -687.012
+          ],
+          [
+            1.841,
+            -620.472
+          ],
+          [
+            21.303,
+            -562.335
+          ],
+          [
+            51.132,
+            -506.265
+          ],
+          [
+            72.471,
+            -447.579
+          ],
+          [
+            93.728,
+            -391.877
+          ],
+          [
+            104.494,
+            -365.822
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 8,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Native OS Bridge Road carriageway east of the railway re-read at all eight original control latitudes. Earlier registered centreline crossed rear plots and occupied railway. Distinguish Bridge Road west of the terrace strip from parallel Barry Place east of that strip. Interpreted 8 m width retained.",
+        "sourceBounds": [
+          -110,
+          -820,
+          170,
+          -250
+        ],
+        "sourcePixels": [
+          [
+            289,
+            335.2679233823643
+          ],
+          [
+            399,
+            525.5576817362085
+          ],
+          [
+            504,
+            707.7648405311093
+          ],
+          [
+            552,
+            865.7595696144916
+          ],
+          [
+            628,
+            1018.9535276571039
+          ],
+          [
+            681,
+            1178.5622646243128
+          ],
+          [
+            734,
+            1330.1282841104833
+          ],
+          [
+            761,
+            1401.0843529905692
+          ]
+        ],
+        "eastChannelseaContextAlignment": {
+          "register": "data/maps/east-channelsea-context-alignment.json"
+        }
+      },
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          289,
+          335.2679233823643
+        ],
+        [
+          399,
+          525.5576817362085
+        ],
+        [
+          504,
+          707.7648405311093
+        ],
+        [
+          552,
+          865.7595696144916
+        ],
+        [
+          628,
+          1018.9535276571039
+        ],
+        [
+          681,
+          1178.5622646243128
+        ],
+        [
+          734,
+          1330.1282841104833
+        ],
+        [
+          761,
+          1401.0843529905692
+        ]
+      ]
+    },
+    {
+      "name": "Barnby Street",
+      "path": "data/maps/housing-road-traces.json",
+      "baseline": "reference/footprint-model-alignment/east-channelsea-crossstreet-roads-before.json",
+      "priorRecord": {
+        "name": "Barnby Street",
+        "sheet": "22",
+        "points": [
+          [
+            1189,
+            780
+          ],
+          [
+            1354,
+            727
+          ],
+          [
+            1690,
+            603
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      },
+      "priorRoute": [
+        [
+          3.32,
+          -607.35
+        ],
+        [
+          101.43,
+          -641.76
+        ],
+        [
+          300.94,
+          -721.48
+        ]
+      ],
+      "record": {
+        "name": "Barnby Street",
+        "sheet": "scene",
+        "points": [
+          [
+            1.844,
+            -620.385
+          ],
+          [
+            100.922,
+            -659.487
+          ],
+          [
+            300.472,
+            -741.076
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Bounded native OS street controls beside reviewed Bridge Road housing roofs; retain all other source controls and interpreted width. No roof clipping used to resolve the former street registration error.",
+        "sourceBounds": [
+          -110,
+          -820,
+          170,
+          -250
+        ],
+        "sourcePixels": [
+          [
+            504,
+            708
+          ],
+          [
+            773,
+            610
+          ],
+          [
+            1315,
+            405
+          ]
+        ],
+        "eastChannelseaContextAlignment": {
+          "register": "data/maps/east-channelsea-context-alignment.json"
+        }
+      },
+      "changedControlIndices": [
+        0,
+        1,
+        2
+      ],
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          504,
+          708
+        ],
+        [
+          773,
+          610
+        ],
+        [
+          1315,
+          405
+        ]
+      ]
+    },
+    {
+      "name": "St Thomas Road",
+      "path": "data/maps/housing-road-traces.json",
+      "baseline": "reference/footprint-model-alignment/east-channelsea-crossstreet-roads-before.json",
+      "priorRecord": {
+        "name": "St Thomas Road",
+        "sheet": "22",
+        "points": [
+          [
+            1190,
+            495
+          ],
+          [
+            1230,
+            595
+          ],
+          [
+            1309,
+            709
+          ],
+          [
+            1351,
+            812
+          ],
+          [
+            1388,
+            910
+          ],
+          [
+            1429,
+            1009
+          ],
+          [
+            1476,
+            1129
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+      },
+      "priorRoute": [
+        [
+          -0.75,
+          -777.88
+        ],
+        [
+          24.88,
+          -718.7
+        ],
+        [
+          74.14,
+          -651.79
+        ],
+        [
+          101.02,
+          -590.86
+        ],
+        [
+          124.82,
+          -532.83
+        ],
+        [
+          151.04,
+          -474.27
+        ],
+        [
+          181.2,
+          -403.25
+        ]
+      ],
+      "record": {
+        "name": "St Thomas Road",
+        "sheet": "scene",
+        "points": [
+          [
+            -0.75,
+            -777.88
+          ],
+          [
+            24.88,
+            -718.7
+          ],
+          [
+            74.14,
+            -651.79
+          ],
+          [
+            118.425,
+            -591.336
+          ],
+          [
+            146.073,
+            -533.411
+          ],
+          [
+            168.901,
+            -474.759
+          ],
+          [
+            191.535,
+            -423.197
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Bounded native OS street controls beside reviewed Bridge Road housing roofs; retain all other source controls and interpreted width. No roof clipping used to resolve the former street registration error.",
+        "sourceBounds": [
+          -110,
+          -820,
+          170,
+          -250
+        ],
+        "sourcePixels": [
+          [
+            508.6086868164475,
+            283.66920334847765
+          ],
+          [
+            573.1032105675497,
+            444.93340806528255
+          ],
+          [
+            700.4984346928248,
+            628.7547087629808
+          ],
+          [
+            815,
+            794.8205786093912
+          ],
+          [
+            885,
+            952.8480935961534
+          ],
+          [
+            942,
+            1112.4797414926877
+          ],
+          [
+            999,
+            1253
+          ]
+        ],
+        "eastChannelseaContextAlignment": {
+          "register": "data/maps/east-channelsea-context-alignment.json"
+        }
+      },
+      "changedControlIndices": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          508.6086868164475,
+          283.66920334847765
+        ],
+        [
+          573.1032105675497,
+          444.93340806528255
+        ],
+        [
+          700.4984346928248,
+          628.7547087629808
+        ],
+        [
+          815,
+          794.8205786093912
+        ],
+        [
+          885,
+          952.8480935961534
+        ],
+        [
+          942,
+          1112.4797414926877
+        ],
+        [
+          999,
+          1253
+        ]
+      ]
+    },
+    {
+      "name": "Hotham Street",
+      "path": "data/maps/housing-road-traces.json",
+      "baseline": "reference/footprint-model-alignment/east-channelsea-western-road-stubs-before.json",
+      "priorRecord": {
+        "name": "Hotham Street",
+        "sheet": "22",
+        "points": [
+          [
+            1213,
+            868
+          ],
+          [
+            1367,
+            815
+          ],
+          [
+            1400,
+            815
+          ],
+          [
+            1708,
+            699
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      },
+      "priorRoute": [
+        [
+          19.16,
+          -555.09
+        ],
+        [
+          110.67,
+          -589.33
+        ],
+        [
+          130.46,
+          -589.87
+        ],
+        [
+          313.31,
+          -664.33
+        ]
+      ],
+      "record": {
+        "name": "Hotham Street",
+        "sheet": "scene",
+        "points": [
+          [
+            24.162,
+            -556.961
+          ],
+          [
+            110.67,
+            -589.33
+          ],
+          [
+            130.46,
+            -589.87
+          ],
+          [
+            313.31,
+            -664.33
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Retain the mapped street approach and all later controls; end its unsupported western carriageway stub at the corrected Bridge Road junction. No roof trimming or width change.",
+        "eastChannelseaContextAlignment": {
+          "register": "data/maps/east-channelsea-context-alignment.json"
+        }
+      },
+      "changedControlIndices": [
+        0
+      ],
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          559.2877125587181,
+          880.444925535361
+        ],
+        [
+          794.025067249096,
+          799.6523081619126
+        ],
+        [
+          847.2202271206336,
+          799.6573209296322
+        ],
+        [
+          1343.8338239361747,
+          612.6294970504664
+        ]
+      ],
+      "junctionMethod": "Intersection of retained cross-street approach with native-corrected Bridge Road centreline."
+    },
+    {
+      "name": "Randal Street",
+      "path": "data/maps/housing-road-traces.json",
+      "baseline": "reference/footprint-model-alignment/east-channelsea-western-road-stubs-before.json",
+      "priorRecord": {
+        "name": "Randal Street",
+        "sheet": "22",
+        "points": [
+          [
+            1245,
+            965
+          ],
+          [
+            1395,
+            912
+          ],
+          [
+            1440,
+            905
+          ],
+          [
+            1723,
+            804
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      },
+      "priorRoute": [
+        [
+          39.94,
+          -497.58
+        ],
+        [
+          129.05,
+          -531.75
+        ],
+        [
+          155.93,
+          -536.68
+        ],
+        [
+          324.04,
+          -601.76
+        ]
+      ],
+      "record": {
+        "name": "Randal Street",
+        "sheet": "scene",
+        "points": [
+          [
+            52.534,
+            -502.409
+          ],
+          [
+            129.05,
+            -531.75
+          ],
+          [
+            155.93,
+            -536.68
+          ],
+          [
+            324.04,
+            -601.76
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Retain the mapped street approach and all later controls; end its unsupported western carriageway stub at the corrected Bridge Road junction. No roof trimming or width change.",
+        "eastChannelseaContextAlignment": {
+          "register": "data/maps/east-channelsea-context-alignment.json"
+        }
+      },
+      "changedControlIndices": [
+        0
+      ],
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          631.4839354412561,
+          1029.4414795286561
+        ],
+        [
+          839.158456458922,
+          956.0683832893562
+        ],
+        [
+          911.7192733481853,
+          944.774405000437
+        ],
+        [
+          1368.0462316653416,
+          781.9224719553018
+        ]
+      ],
+      "junctionMethod": "Intersection of retained cross-street approach with native-corrected Bridge Road centreline."
+    },
+    {
+      "name": "Canning Street",
+      "path": "data/maps/housing-road-traces.json",
+      "baseline": "reference/footprint-model-alignment/east-channelsea-western-road-stubs-before.json",
+      "priorRecord": {
+        "name": "Canning Street",
+        "sheet": "22",
+        "points": [
+          [
+            1280,
+            1065
+          ],
+          [
+            1428,
+            1015
+          ],
+          [
+            1732,
+            912
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      },
+      "priorRoute": [
+        [
+          62.57,
+          -438.32
+        ],
+        [
+          150.53,
+          -470.67
+        ],
+        [
+          331.21,
+          -537.29
+        ]
+      ],
+      "record": {
+        "name": "Canning Street",
+        "sheet": "scene",
+        "points": [
+          [
+            74.351,
+            -442.653
+          ],
+          [
+            150.53,
+            -470.67
+          ],
+          [
+            331.21,
+            -537.29
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Retain the mapped street approach and all later controls; end its unsupported western carriageway stub at the corrected Bridge Road junction. No roof trimming or width change.",
+        "eastChannelseaContextAlignment": {
+          "register": "data/maps/east-channelsea-context-alignment.json"
+        }
+      },
+      "changedControlIndices": [
+        0
+      ],
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          685.689954699553,
+          1191.9674995263938
+        ],
+        [
+          892.3597293569841,
+          1122.136628518433
+        ],
+        [
+          1382.5561872633152,
+          956.0670959380519
+        ]
+      ],
+      "junctionMethod": "Intersection of retained cross-street approach with native-corrected Bridge Road centreline."
+    },
+    {
+      "name": "Leywick Street",
+      "path": "data/maps/housing-road-traces.json",
+      "baseline": "reference/footprint-model-alignment/east-channelsea-western-road-stubs-before.json",
+      "priorRecord": {
+        "name": "Leywick Street",
+        "sheet": "22",
+        "points": [
+          [
+            1305,
+            1090
+          ],
+          [
+            1470,
+            1035
+          ],
+          [
+            1700,
+            957
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      },
+      "priorRoute": [
+        [
+          77.98,
+          -423.78
+        ],
+        [
+          176.06,
+          -459.39
+        ],
+        [
+          312.75,
+          -509.84
+        ]
+      ],
+      "record": {
+        "name": "Leywick Street",
+        "sheet": "scene",
+        "points": [
+          [
+            81.118,
+            -424.919
+          ],
+          [
+            176.06,
+            -459.39
+          ],
+          [
+            312.75,
+            -509.84
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Retain the mapped street approach and all later controls; end its unsupported western carriageway stub at the corrected Bridge Road junction. No roof trimming or width change.",
+        "eastChannelseaContextAlignment": {
+          "register": "data/maps/east-channelsea-context-alignment.json"
+        }
+      },
+      "changedControlIndices": [
+        0
+      ],
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          702.5616877513185,
+          1240.2221343914844
+        ],
+        [
+          960.1011791320237,
+          1154.3955907327952
+        ],
+        [
+          1330.9522525170162,
+          1028.6251258916338
+        ]
+      ],
+      "junctionMethod": "Intersection of retained cross-street approach with native-corrected Bridge Road centreline."
+    },
+    {
+      "name": "Morley Street",
+      "path": "data/maps/housing-road-traces.json",
+      "baseline": "reference/footprint-model-alignment/east-channelsea-western-road-stubs-before.json",
+      "priorRecord": {
+        "name": "Morley Street",
+        "sheet": "22",
+        "points": [
+          [
+            1325,
+            1180
+          ],
+          [
+            1480,
+            1132
+          ],
+          [
+            1690,
+            1058
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      },
+      "priorRoute": [
+        [
+          91.45,
+          -370.26
+        ],
+        [
+          183.65,
+          -401.52
+        ],
+        [
+          308.41,
+          -449.25
+        ]
+      ],
+      "record": {
+        "name": "Morley Street",
+        "sheet": "scene",
+        "points": [
+          [
+            96.972,
+            -384.026
+          ],
+          [
+            191.535,
+            -423.197
+          ],
+          [
+            307.837,
+            -472.431
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Native Morley carriageway re-read between the two roof fronts, with an exact Bridge Road junction and shared St Thomas terminal. Earlier controls followed the southern roof/garden boundary; interpreted width retained.",
+        "eastChannelseaContextAlignment": {
+          "register": "data/maps/east-channelsea-context-alignment.json"
+        }
+      },
+      "changedControlIndices": [
+        0,
+        1,
+        2
+      ],
+      "reviewedSourceBounds": [
+        -110,
+        -820,
+        170,
+        -250
+      ],
+      "reviewedSourcePixels": [
+        [
+          742.1371592659726,
+          1351.5108060171021
+        ],
+        [
+          999.0026287103954,
+          1253.0011468468751
+        ],
+        [
+          1315.0015500246138,
+          1129.001827088619
+        ]
+      ],
+      "junctionMethod": "Intersection of native Morley carriageway with Bridge Road centreline."
+    }
+  ],
   "additionalRivers": [
     {
       "id": 1301,
@@ -1311,6 +2345,184 @@
       "surface": "cinder",
       "allowStock": false,
       "evidence": "OS-labelled open working compound. Parcel is a yard extent, not a roof; mapped buildings, water, streets and siding corridors must be subtracted by the yard builder. Surface material is interpreted; no blanket stock scattering."
+    },
+    {
+      "id": 13013,
+      "name": "Globe Mill / Victoria Stone riverside compound",
+      "polygons": [
+        [
+          [
+            [
+              -136.884,
+              -370.021
+            ],
+            [
+              -97.62,
+              -377.407
+            ],
+            [
+              -52.863,
+              -374.546
+            ],
+            [
+              -12.913,
+              -370.439
+            ],
+            [
+              33.494,
+              -361.682
+            ],
+            [
+              57.18,
+              -339.678
+            ],
+            [
+              72.523,
+              -309.647
+            ],
+            [
+              80.965,
+              -286.854
+            ],
+            [
+              69.584,
+              -280.972
+            ],
+            [
+              61.649,
+              -285.211
+            ],
+            [
+              60.834,
+              -287.788
+            ],
+            [
+              30.611,
+              -276.563
+            ],
+            [
+              -59.878,
+              -236.209
+            ],
+            [
+              -69.41,
+              -230.75
+            ],
+            [
+              -86.253,
+              -234.003
+            ],
+            [
+              -103.377,
+              -274.756
+            ],
+            [
+              -113.591,
+              -307.899
+            ],
+            [
+              -125.483,
+              -334.311
+            ],
+            [
+              -134.026,
+              -360.815
+            ]
+          ]
+        ]
+      ],
+      "reviewedSourceBounds": [
+        -220,
+        -650,
+        160,
+        -245
+      ],
+      "reviewedSourcePixels": [
+        [
+          369,
+          860
+        ],
+        [
+          475,
+          843
+        ],
+        [
+          595,
+          854
+        ],
+        [
+          702,
+          868
+        ],
+        [
+          826,
+          895
+        ],
+        [
+          888,
+          956
+        ],
+        [
+          927,
+          1038
+        ],
+        [
+          948,
+          1100
+        ],
+        [
+          917,
+          1115
+        ],
+        [
+          896,
+          1103
+        ],
+        [
+          894,
+          1096
+        ],
+        [
+          812,
+          1124
+        ],
+        [
+          566,
+          1226
+        ],
+        [
+          540,
+          1240
+        ],
+        [
+          495,
+          1230
+        ],
+        [
+          452,
+          1119
+        ],
+        [
+          427,
+          1029
+        ],
+        [
+          397,
+          957
+        ],
+        [
+          376,
+          885
+        ]
+      ],
+      "surface": "earth",
+      "allowStock": false,
+      "evidence": "OS-labelled open working compound. Parcel is a yard extent, not a roof; mapped buildings, water, streets and siding corridors must be subtracted by the yard builder. Surface material is interpreted; no blanket stock scattering.",
+      "siteIds": [
+        9003,
+        9004
+      ],
+      "tenantDivisionEvidence": "Whole OS industrial compound beside the river and north of the Moat; Globe Mill and Victoria Stone tenancy divider is not established. Shared yard extent restores working ground without inventing a parcel divider."
     },
     {
       "id": 9008,
@@ -2709,6 +3921,78 @@
           "evidence": "Native OS bank edge beside the solid riverside exterior. The old independently registered channel edge entered the wall; only the river-facing east-bank control is corrected."
         },
         {
+          "vertex": 25,
+          "priorPoint": [
+            -87.45,
+            -263.19
+          ],
+          "point": [
+            -88.912,
+            -263.15
+          ],
+          "reviewedSourceBounds": [
+            -110,
+            -245,
+            20,
+            -100
+          ],
+          "reviewedSourcePixels": [
+            [
+              234,
+              127.31798178105608
+            ]
+          ],
+          "evidence": "Native OS bank edge beside the solid riverside exterior. The old independently registered channel edge entered the wall; only the river-facing east-bank control is corrected."
+        },
+        {
+          "vertex": 26,
+          "priorPoint": [
+            -82.07,
+            -249.2
+          ],
+          "point": [
+            -85.177,
+            -249.115
+          ],
+          "reviewedSourceBounds": [
+            -110,
+            -245,
+            20,
+            -100
+          ],
+          "reviewedSourcePixels": [
+            [
+              243,
+              165.38645202417652
+            ]
+          ],
+          "evidence": "Native OS bank edge beside the solid riverside exterior. The old independently registered channel edge entered the wall; only the river-facing east-bank control is corrected."
+        },
+        {
+          "vertex": 27,
+          "priorPoint": [
+            -80.79,
+            -242.78
+          ],
+          "point": [
+            -83.513,
+            -242.705
+          ],
+          "reviewedSourceBounds": [
+            -110,
+            -245,
+            20,
+            -100
+          ],
+          "reviewedSourcePixels": [
+            [
+              247,
+              182.7684916460259
+            ]
+          ],
+          "evidence": "Native OS bank edge beside the solid riverside exterior. The old independently registered channel edge entered the wall; only the river-facing east-bank control is corrected."
+        },
+        {
           "vertex": 28,
           "priorPoint": [
             -79.08,
@@ -2904,6 +4188,7 @@
       "sourceFids": [
         4975,
         24043,
+        9468,
         31499,
         3926,
         13676,
@@ -2912,8 +4197,8 @@
         57354
       ],
       "priorAreaM2": 9993.007100000006,
-      "areaM2": 9571.585840000003,
-      "review": "Re-read only the native OS eastern Channelsea bank at Victoria/Corn/Caledonian and Langthorn/Abbey chemical walls. Twelve existing controls corrected; opposite-bank controls, ring length, river terminals and every other existing river retained. These are solid shaded riverside ranges, not over-water roofs. No building trimming or blanket water exception.",
+      "areaM2": 9493.332943999998,
+      "review": "Re-read only the native OS eastern Channelsea bank at Victoria/Corn/Caledonian and Globe/Langthorn/Abbey chemical walls. Fifteen existing controls corrected; opposite-bank controls, ring length, river terminals and every other existing river retained. These are solid shaded riverside ranges, not over-water roofs. No building trimming or blanket water exception.",
       "sourceRoofWaterAreasM2": [
         {
           "sourceFid": 4975,
@@ -2923,6 +4208,11 @@
         {
           "sourceFid": 24043,
           "priorArea": 33.21198052891864,
+          "area": 0.0
+        },
+        {
+          "sourceFid": 9468,
+          "priorArea": 33.578143925805435,
           "area": 0.0
         },
         {
@@ -2957,5 +4247,2431 @@
         }
       ]
     }
-  ]
+  ],
+  "railCorrection": {
+    "path": "data/maps/woolwich-northern-connection.json",
+    "baseline": "reference/footprint-model-alignment/east-channelsea-woolwich-northern-before.json",
+    "baselineSha256": "74b4e8865306e304bf6f7f155320095ba88099b2458955a91d29fa6e72a5e09f",
+    "priorRecord": {
+      "id": "woolwich-northern-connection",
+      "name": "Great Eastern Railway \u2014 Woolwich branch northern connection",
+      "route": [
+        [
+          -536.925,
+          -1022.455
+        ],
+        [
+          -515.766,
+          -1042.716
+        ],
+        [
+          -492.213,
+          -1057.362
+        ],
+        [
+          -459.537,
+          -1070.61
+        ],
+        [
+          -422.555,
+          -1077.385
+        ],
+        [
+          -385.393,
+          -1077.575
+        ],
+        [
+          -350.505,
+          -1070.29
+        ],
+        [
+          -315.459,
+          -1057.242
+        ],
+        [
+          -285.208,
+          -1038.297
+        ],
+        [
+          -263.856,
+          -1012.518
+        ],
+        [
+          -246.292,
+          -974.279
+        ],
+        [
+          -216.657,
+          -917.422
+        ],
+        [
+          -181.866,
+          -853.291
+        ],
+        [
+          -142.835,
+          -785.156
+        ],
+        [
+          -102.107,
+          -715.418
+        ],
+        [
+          -63.029,
+          -645.635
+        ],
+        [
+          -24.798,
+          -576.652
+        ],
+        [
+          14.282,
+          -506.868
+        ],
+        [
+          45.041,
+          -439.327
+        ],
+        [
+          67.119,
+          -387.202
+        ],
+        [
+          74,
+          -367.58
+        ]
+      ],
+      "tracks": 2,
+      "trackSpacing": 3.6,
+      "gauge": 1.435,
+      "crestHalfWidth": 4.5,
+      "baseHalfWidth": 17,
+      "formationHeight": 5.5,
+      "joinHeight": 8.5,
+      "mainlineJoinChainage": 1387.8622711486566,
+      "mainlineTrackOffset": 3.6,
+      "source": {
+        "map": "Archived NLS OS London five-foot map, 1893 revision / 1894 publication",
+        "bounds": [
+          -550,
+          -1500,
+          160,
+          -340
+        ],
+        "imageSize": [
+          923,
+          1500
+        ],
+        "tracePixels": [
+          [
+            76,
+            597
+          ],
+          [
+            105,
+            580
+          ],
+          [
+            145,
+            565
+          ],
+          [
+            190,
+            558
+          ],
+          [
+            235,
+            559
+          ],
+          [
+            277,
+            569
+          ],
+          [
+            319,
+            586
+          ],
+          [
+            355,
+            610
+          ],
+          [
+            380,
+            642
+          ],
+          [
+            400,
+            689
+          ],
+          [
+            434,
+            759
+          ],
+          [
+            474,
+            838
+          ],
+          [
+            519,
+            922
+          ],
+          [
+            566,
+            1008
+          ],
+          [
+            611,
+            1094
+          ],
+          [
+            655,
+            1179
+          ],
+          [
+            700,
+            1265
+          ],
+          [
+            735,
+            1348
+          ],
+          [
+            760,
+            1412
+          ]
+        ],
+        "registration": "Georeferenced NLS tiles; first point aligned to the outer main-line track pair and last point to the existing branch."
+      },
+      "evidence": "Mapped Woolwich-branch curve and running-line corridor south past Stratford Market. Two tracks, a smooth grade to the main line, bridge girders and earth slopes are interpreted; this is not a complete Stratford track/signalling plan.",
+      "existingBranchStart": [
+        74,
+        -367.58
+      ],
+      "alignmentNote": "The old independently registered northern branch endpoint was 28.37 m east of the mapped rail corridor. Shift it west and blend into the next existing station, avoiding the Bridge Road terrace frontage."
+    },
+    "record": {
+      "id": "woolwich-northern-connection",
+      "name": "Great Eastern Railway \u2014 Woolwich branch northern connection",
+      "route": [
+        [
+          -536.925,
+          -1022.455
+        ],
+        [
+          -515.766,
+          -1042.716
+        ],
+        [
+          -492.213,
+          -1057.362
+        ],
+        [
+          -459.537,
+          -1070.61
+        ],
+        [
+          -422.555,
+          -1077.385
+        ],
+        [
+          -385.393,
+          -1077.575
+        ],
+        [
+          -350.505,
+          -1070.29
+        ],
+        [
+          -315.459,
+          -1057.242
+        ],
+        [
+          -285.208,
+          -1038.297
+        ],
+        [
+          -263.856,
+          -1012.518
+        ],
+        [
+          -246.292,
+          -974.279
+        ],
+        [
+          -216.657,
+          -917.422
+        ],
+        [
+          -176.527,
+          -853.436
+        ],
+        [
+          -127.02,
+          -785.588
+        ],
+        [
+          -74.119,
+          -716.183
+        ],
+        [
+          -37.771,
+          -646.325
+        ],
+        [
+          -9.257,
+          -577.077
+        ],
+        [
+          29.138,
+          -507.274
+        ],
+        [
+          51.47,
+          -439.502
+        ],
+        [
+          67.119,
+          -387.202
+        ],
+        [
+          74,
+          -367.58
+        ]
+      ],
+      "tracks": 2,
+      "trackSpacing": 3.6,
+      "gauge": 1.435,
+      "crestHalfWidth": 4.5,
+      "baseHalfWidth": 17,
+      "formationHeight": 5.5,
+      "joinHeight": 8.5,
+      "mainlineJoinChainage": 1387.8622711486566,
+      "mainlineTrackOffset": 3.6,
+      "source": {
+        "map": "Archived NLS OS London five-foot map, 1893 revision / 1894 publication",
+        "bounds": [
+          -550,
+          -1500,
+          160,
+          -340
+        ],
+        "imageSize": [
+          923,
+          1500
+        ],
+        "tracePixels": [
+          [
+            76,
+            597
+          ],
+          [
+            105,
+            580
+          ],
+          [
+            145,
+            565
+          ],
+          [
+            190,
+            558
+          ],
+          [
+            235,
+            559
+          ],
+          [
+            277,
+            569
+          ],
+          [
+            319,
+            586
+          ],
+          [
+            355,
+            610
+          ],
+          [
+            380,
+            642
+          ],
+          [
+            400,
+            689
+          ],
+          [
+            434,
+            759
+          ],
+          [
+            474,
+            838
+          ],
+          [
+            519,
+            922
+          ],
+          [
+            566,
+            1008
+          ],
+          [
+            611,
+            1094
+          ],
+          [
+            655,
+            1179
+          ],
+          [
+            700,
+            1265
+          ],
+          [
+            735,
+            1348
+          ],
+          [
+            760,
+            1412
+          ]
+        ],
+        "registration": "Georeferenced NLS tiles; first point aligned to the outer main-line track pair and last point to the existing branch."
+      },
+      "evidence": "Mapped Woolwich-branch curve and running-line corridor south past Stratford Market. Two tracks, a smooth grade to the main line, bridge girders and earth slopes are interpreted; this is not a complete Stratford track/signalling plan.",
+      "existingBranchStart": [
+        74,
+        -367.58
+      ],
+      "alignmentNote": "The old independently registered northern branch endpoint was 28.37 m east of the mapped rail corridor. Shift it west and blend into the next existing station, avoiding the Bridge Road terrace frontage.",
+      "eastChannelseaRailAlignment": {
+        "register": "data/maps/east-channelsea-context-alignment.json",
+        "review": "Native OS running-line corridor east of Stratford Market roof79 and shaded station body1539. Re-read seven controls12\u201318; station controls12\u201315 follow the running pair between station bodies. Mainline join/curve controls0\u201311 and branch tail19\u201320 retained. Gauge, spacing, formation profile and join levels retained. Mapped station bodies bound only interpreted bank toes; unresolved booking-office bridge approach keeps rail support."
+      },
+      "stationFormationReview": {
+        "source": "reference/historic-building-footprints-2026-09-28/current-scene-buildings-bng.geojson",
+        "sourceSha256": "432dbc5ff3b8591c0885ad3eb86b9a353c3c98da7bd7cc4ab3a6b59f65394363",
+        "sourceTransform": [
+          1,
+          0,
+          0,
+          -1,
+          -538900,
+          183209
+        ],
+        "sourceFeatureIds": [
+          1539,
+          66331,
+          50615,
+          803279,
+          977663,
+          778814,
+          1057916,
+          68571,
+          837163,
+          150512,
+          281895,
+          885148,
+          1053094,
+          1055163
+        ],
+        "bookingFeatureIds": [
+          50615,
+          803279,
+          977663,
+          778814,
+          1057916
+        ],
+        "reviewedSourceBounds": [
+          -260,
+          -940,
+          100,
+          -580
+        ],
+        "controls": [
+          {
+            "index": 12,
+            "priorPoint": [
+              -181.866,
+              -853.291
+            ],
+            "point": [
+              -176.527,
+              -853.436
+            ],
+            "reviewedSourceBounds": [
+              -260,
+              -940,
+              100,
+              -580
+            ],
+            "reviewedSourcePixels": [
+              [
+                298.0,
+                323.24350325159463
+              ]
+            ]
+          },
+          {
+            "index": 13,
+            "priorPoint": [
+              -142.835,
+              -785.156
+            ],
+            "point": [
+              -127.02,
+              -785.588
+            ],
+            "reviewedSourceBounds": [
+              -260,
+              -940,
+              100,
+              -580
+            ],
+            "reviewedSourcePixels": [
+              [
+                426.0,
+                509.61105687229474
+              ]
+            ]
+          },
+          {
+            "index": 14,
+            "priorPoint": [
+              -102.107,
+              -715.418
+            ],
+            "point": [
+              -74.119,
+              -716.183
+            ],
+            "reviewedSourceBounds": [
+              -260,
+              -940,
+              100,
+              -580
+            ],
+            "reviewedSourcePixels": [
+              [
+                563.0,
+                700.4186706702258
+              ]
+            ]
+          },
+          {
+            "index": 15,
+            "priorPoint": [
+              -46.514,
+              -646.086
+            ],
+            "point": [
+              -37.771,
+              -646.325
+            ],
+            "reviewedSourceBounds": [
+              -260,
+              -940,
+              100,
+              -580
+            ],
+            "reviewedSourcePixels": [
+              [
+                655.5,
+                891.2257530663193
+              ]
+            ]
+          }
+        ],
+        "stationBodies": [
+          {
+            "sourceFid": 1539,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -110.92319735116325,
+                      -735.892017307051
+                    ],
+                    [
+                      -68.3494573738426,
+                      -678.4766278892639
+                    ],
+                    [
+                      -68.17159034335054,
+                      -677.9957647728734
+                    ],
+                    [
+                      -68.45762508152984,
+                      -677.6269583137473
+                    ],
+                    [
+                      -77.8590482706204,
+                      -670.7552396188839
+                    ],
+                    [
+                      -78.28181778546423,
+                      -670.9626827366883
+                    ],
+                    [
+                      -82.71638716582675,
+                      -677.1596308878507
+                    ],
+                    [
+                      -83.04737710568588,
+                      -677.4235287619522
+                    ],
+                    [
+                      -83.212682480691,
+                      -677.91760596534
+                    ],
+                    [
+                      -119.91087907669134,
+                      -727.4971982538118
+                    ],
+                    [
+                      -120.2506899869768,
+                      -727.7660896035377
+                    ],
+                    [
+                      -134.12660154234618,
+                      -747.0444273827015
+                    ],
+                    [
+                      -133.94355421862565,
+                      -747.465170152369
+                    ],
+                    [
+                      -124.74643114453647,
+                      -753.9613413075567
+                    ],
+                    [
+                      -124.25100801733788,
+                      -753.799708987237
+                    ],
+                    [
+                      -112.73687853699084,
+                      -738.4485299258959
+                    ],
+                    [
+                      -112.75162326020654,
+                      -738.4072282867855
+                    ],
+                    [
+                      -112.66363766335417,
+                      -737.8841518693371
+                    ],
+                    [
+                      -111.34539593372028,
+                      -736.1011481200694
+                    ],
+                    [
+                      -110.92319735116325,
+                      -735.892017307051
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 66331,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -71.05765619128942,
+                      -673.9317780797719
+                    ],
+                    [
+                      -70.56175102305133,
+                      -673.8029291689745
+                    ],
+                    [
+                      -67.98332841286901,
+                      -670.1501876522088
+                    ],
+                    [
+                      -67.593651309493,
+                      -670.0523889159085
+                    ],
+                    [
+                      -63.87514541717246,
+                      -672.5665276864311
+                    ],
+                    [
+                      -63.31683760590386,
+                      -672.6594863358769
+                    ],
+                    [
+                      -60.421491072978824,
+                      -668.6735708678025
+                    ],
+                    [
+                      -60.508967868285254,
+                      -668.1354545831564
+                    ],
+                    [
+                      -64.16794086107984,
+                      -665.537989855744
+                    ],
+                    [
+                      -64.20800503646024,
+                      -665.2255901505705
+                    ],
+                    [
+                      -63.46190485381521,
+                      -664.0543890504632
+                    ],
+                    [
+                      -63.59630695777014,
+                      -663.5676728835679
+                    ],
+                    [
+                      -69.37499671103433,
+                      -659.9307786133722
+                    ],
+                    [
+                      -69.85851652303245,
+                      -659.9220583128626
+                    ],
+                    [
+                      -77.08902416948695,
+                      -669.5558530806447
+                    ],
+                    [
+                      -77.18189413193613,
+                      -670.1103559533367
+                    ],
+                    [
+                      -71.3877220491413,
+                      -673.7191011629766
+                    ],
+                    [
+                      -71.05765619128942,
+                      -673.9317780797719
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 50615,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -172.12376039649826,
+                      -850.7540658367216
+                    ],
+                    [
+                      -172.19139277457725,
+                      -850.7522177713108
+                    ],
+                    [
+                      -172.4898632192053,
+                      -851.0887599538546
+                    ],
+                    [
+                      -174.06090280460194,
+                      -852.0038906971458
+                    ],
+                    [
+                      -174.60736260190606,
+                      -851.9067064188421
+                    ],
+                    [
+                      -175.43565548979677,
+                      -851.482326167752
+                    ],
+                    [
+                      -178.33013263111934,
+                      -846.3439094359637
+                    ],
+                    [
+                      -178.43560188706033,
+                      -845.8130245492212
+                    ],
+                    [
+                      -178.34350695670582,
+                      -845.2663709693006
+                    ],
+                    [
+                      -177.83977219718508,
+                      -844.4992414323497
+                    ],
+                    [
+                      -176.68103954358958,
+                      -843.8152456099633
+                    ],
+                    [
+                      -176.26053517358378,
+                      -843.6201572932769
+                    ],
+                    [
+                      -176.49735678639263,
+                      -842.6454008545261
+                    ],
+                    [
+                      -176.77294435258955,
+                      -842.2762570944615
+                    ],
+                    [
+                      -176.89077899209224,
+                      -841.9152252901695
+                    ],
+                    [
+                      -177.1245958354557,
+                      -841.9164513667929
+                    ],
+                    [
+                      -178.71076040051412,
+                      -839.1651573157869
+                    ],
+                    [
+                      -178.75517277582549,
+                      -839.1583101889119
+                    ],
+                    [
+                      -182.67147329309955,
+                      -841.3971333348891
+                    ],
+                    [
+                      -183.16502817254514,
+                      -841.5368819514406
+                    ],
+                    [
+                      -186.96305382973514,
+                      -843.9353054543026
+                    ],
+                    [
+                      -186.8936573335668,
+                      -844.4957775007933
+                    ],
+                    [
+                      -178.1594985827105,
+                      -859.2518675869214
+                    ],
+                    [
+                      -177.68049123394303,
+                      -859.3847408225411
+                    ],
+                    [
+                      -170.08728704671375,
+                      -854.6205559059745
+                    ],
+                    [
+                      -170.05722080846317,
+                      -854.3884757557535
+                    ],
+                    [
+                      -170.95811913639773,
+                      -852.8245185428532
+                    ],
+                    [
+                      -171.0877252490027,
+                      -852.4700840740115
+                    ],
+                    [
+                      -171.29819895431865,
+                      -852.3825642598676
+                    ],
+                    [
+                      -172.12376039649826,
+                      -850.7540658367216
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 803279,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -172.19139277457725,
+                      -850.7522177713108
+                    ],
+                    [
+                      -172.3316118514631,
+                      -850.2654504590319
+                    ],
+                    [
+                      -173.35941738332622,
+                      -848.1917383108521
+                    ],
+                    [
+                      -173.6718056582613,
+                      -847.9113401504583
+                    ],
+                    [
+                      -173.83403110865038,
+                      -847.4684163031634
+                    ],
+                    [
+                      -174.1138714660192,
+                      -847.1351810813649
+                    ],
+                    [
+                      -174.45766839093994,
+                      -846.1991905713803
+                    ],
+                    [
+                      -174.7651356032584,
+                      -845.9211726714857
+                    ],
+                    [
+                      -175.8710472381208,
+                      -843.9240566570079
+                    ],
+                    [
+                      -176.18088555289432,
+                      -843.6084484924795
+                    ],
+                    [
+                      -176.26053517358378,
+                      -843.6201572932769
+                    ],
+                    [
+                      -176.68103954358958,
+                      -843.8152456099633
+                    ],
+                    [
+                      -177.83977219718508,
+                      -844.4992414323497
+                    ],
+                    [
+                      -178.34350695670582,
+                      -845.2663709693006
+                    ],
+                    [
+                      -178.43560188706033,
+                      -845.8130245492212
+                    ],
+                    [
+                      -178.33013263111934,
+                      -846.3439094359637
+                    ],
+                    [
+                      -175.43565548979677,
+                      -851.482326167752
+                    ],
+                    [
+                      -174.60736260190606,
+                      -851.9067064188421
+                    ],
+                    [
+                      -174.06090280460194,
+                      -852.0038906971458
+                    ],
+                    [
+                      -172.4898632192053,
+                      -851.0887599538546
+                    ],
+                    [
+                      -172.19139277457725,
+                      -850.7522177713108
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 977663,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -168.79687046003528,
+                      -850.3724163939478
+                    ],
+                    [
+                      -168.86450284393504,
+                      -850.3705682832515
+                    ],
+                    [
+                      -168.85461724898778,
+                      -850.472070246411
+                    ],
+                    [
+                      -169.0716954426607,
+                      -850.887775913754
+                    ],
+                    [
+                      -169.49347100534942,
+                      -851.0959730372415
+                    ],
+                    [
+                      -169.64814687811304,
+                      -851.4435350600397
+                    ],
+                    [
+                      -170.26012785709463,
+                      -852.057643494627
+                    ],
+                    [
+                      -171.0877252490027,
+                      -852.4700840740115
+                    ],
+                    [
+                      -170.95811913639773,
+                      -852.8245185428532
+                    ],
+                    [
+                      -170.05722080846317,
+                      -854.3884757557535
+                    ],
+                    [
+                      -169.48287976253778,
+                      -854.3211263328558
+                    ],
+                    [
+                      -168.19105119467713,
+                      -853.1513290388393
+                    ],
+                    [
+                      -167.14110793930013,
+                      -851.7100327395019
+                    ],
+                    [
+                      -167.1410848624073,
+                      -851.7003209017566
+                    ],
+                    [
+                      -167.48497681878507,
+                      -851.541658365808
+                    ],
+                    [
+                      -168.51722402870655,
+                      -850.7247559521347
+                    ],
+                    [
+                      -168.79687046003528,
+                      -850.3724163939478
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 778814,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -170.95384175574873,
+                      -849.6031443858519
+                    ],
+                    [
+                      -170.9538512758445,
+                      -849.604683529702
+                    ],
+                    [
+                      -170.94642423070036,
+                      -849.7721697876696
+                    ],
+                    [
+                      -170.9462952198228,
+                      -849.7735847838339
+                    ],
+                    [
+                      -170.94533308630344,
+                      -849.7746326862834
+                    ],
+                    [
+                      -169.70324023626745,
+                      -851.0072163487202
+                    ],
+                    [
+                      -169.70213882788084,
+                      -851.0082090826472
+                    ],
+                    [
+                      -169.70080004050396,
+                      -851.0088487854227
+                    ],
+                    [
+                      -169.49484055815265,
+                      -851.0953975214506
+                    ],
+                    [
+                      -169.49347333412152,
+                      -851.0958969492931
+                    ],
+                    [
+                      -169.49213920417242,
+                      -851.0953156317119
+                    ],
+                    [
+                      -169.07316409470513,
+                      -850.8885008731158
+                    ],
+                    [
+                      -169.07175786281005,
+                      -850.8877123604761
+                    ],
+                    [
+                      -169.07093848381191,
+                      -850.8863263356616
+                    ],
+                    [
+                      -168.85530941665638,
+                      -850.473395748355
+                    ],
+                    [
+                      -168.8546870338032,
+                      -850.4720496300724
+                    ],
+                    [
+                      -168.85425997118,
+                      -850.4691032856936
+                    ],
+                    [
+                      -168.85425986314658,
+                      -850.4691032998962
+                    ],
+                    [
+                      -168.85425038344692,
+                      -850.4690050095669
+                    ],
+                    [
+                      -168.85309234715533,
+                      -850.4630912719294
+                    ],
+                    [
+                      -168.85136562609114,
+                      -850.4573172485107
+                    ],
+                    [
+                      -168.84908644785173,
+                      -850.4517371958354
+                    ],
+                    [
+                      -168.8462762318086,
+                      -850.4464035558631
+                    ],
+                    [
+                      -168.84296138817444,
+                      -850.4413664542953
+                    ],
+                    [
+                      -168.83917306934018,
+                      -850.4366732322378
+                    ],
+                    [
+                      -168.8349468774395,
+                      -850.4323679914232
+                    ],
+                    [
+                      -168.8303225300042,
+                      -850.4284911962459
+                    ],
+                    [
+                      -168.8253434856888,
+                      -850.4250792774837
+                    ],
+                    [
+                      -168.82005653739907,
+                      -850.42216430197
+                    ],
+                    [
+                      -168.81451137084514,
+                      -850.4197736593196
+                    ],
+                    [
+                      -168.808760099113,
+                      -850.4179298224044
+                    ],
+                    [
+                      -168.80285677185748,
+                      -850.4166501158033
+                    ],
+                    [
+                      -168.79685686796438,
+                      -850.4159465701086
+                    ],
+                    [
+                      -168.7908167737769,
+                      -850.4158257948584
+                    ],
+                    [
+                      -168.78479325340595,
+                      -850.4162889230647
+                    ],
+                    [
+                      -168.77884291508235,
+                      -850.41733160289
+                    ],
+                    [
+                      -168.77302167960443,
+                      -850.4189440393238
+                    ],
+                    [
+                      -168.76738425390795,
+                      -850.4211110756733
+                    ],
+                    [
+                      -168.76198361825664,
+                      -850.4238123448449
+                    ],
+                    [
+                      -168.75687052682042,
+                      -850.4270224632346
+                    ],
+                    [
+                      -168.75209303211886,
+                      -850.4307112614624
+                    ],
+                    [
+                      -168.74769603239838,
+                      -850.4348440746544
+                    ],
+                    [
+                      -168.74372085009236,
+                      -850.4393820585101
+                    ],
+                    [
+                      -168.5183388160076,
+                      -850.7233513799729
+                    ],
+                    [
+                      -168.51715073664673,
+                      -850.7246829321957
+                    ],
+                    [
+                      -168.5158170456998,
+                      -850.7258694124175
+                    ],
+                    [
+                      -167.48642663494684,
+                      -851.5405110068386
+                    ],
+                    [
+                      -167.48491913988255,
+                      -851.5415649419301
+                    ],
+                    [
+                      -167.48329710657708,
+                      -851.5424333419069
+                    ],
+                    [
+                      -167.1424652269343,
+                      -851.6996840367792
+                    ],
+                    [
+                      -167.14109355048276,
+                      -851.7002375810407
+                    ],
+                    [
+                      -167.13986540026963,
+                      -851.6994147080695
+                    ],
+                    [
+                      -166.77853717817925,
+                      -851.4309083055123
+                    ],
+                    [
+                      -166.7771895402111,
+                      -851.4297830349533
+                    ],
+                    [
+                      -166.77597816113848,
+                      -851.4285129592754
+                    ],
+                    [
+                      -163.91069112648256,
+                      -848.0614358689054
+                    ],
+                    [
+                      -163.90674812882207,
+                      -848.0572160587762
+                    ],
+                    [
+                      -163.9024298270233,
+                      -848.0533790815971
+                    ],
+                    [
+                      -163.8977734169457,
+                      -848.0499579878524
+                    ],
+                    [
+                      -163.54922971175984,
+                      -847.8179717968451
+                    ],
+                    [
+                      -163.54797632910777,
+                      -847.8170420476818
+                    ],
+                    [
+                      -163.54748626996297,
+                      -847.8155627037631
+                    ],
+                    [
+                      -163.44411092658993,
+                      -847.4402386472211
+                    ],
+                    [
+                      -163.44231296144426,
+                      -847.4347300405498
+                    ],
+                    [
+                      -163.44000856834464,
+                      -847.4294124011067
+                    ],
+                    [
+                      -163.43721776653547,
+                      -847.4243319221423
+                    ],
+                    [
+                      -163.4339648009045,
+                      -847.4195327422931
+                    ],
+                    [
+                      -163.43027793127112,
+                      -847.4150565522723
+                    ],
+                    [
+                      -163.42618918674998,
+                      -847.410942241142
+                    ],
+                    [
+                      -163.4217340882169,
+                      -847.407225547824
+                    ],
+                    [
+                      -163.41695133876055,
+                      -847.4039387630182
+                    ],
+                    [
+                      -163.41188248817343,
+                      -847.4011104410165
+                    ],
+                    [
+                      -163.0312914197566,
+                      -847.2114115396398
+                    ],
+                    [
+                      -163.03003513126168,
+                      -847.210708976665
+                    ],
+                    [
+                      -163.03001642681193,
+                      -847.20927247277
+                    ],
+                    [
+                      -163.04625211306848,
+                      -846.7413077853853
+                    ],
+                    [
+                      -163.0463706862647,
+                      -846.7398686213419
+                    ],
+                    [
+                      -163.04744916968048,
+                      -846.7389051243081
+                    ],
+                    [
+                      -164.42463688727003,
+                      -845.6211898089969
+                    ],
+                    [
+                      -164.42587296501733,
+                      -845.6202851872076
+                    ],
+                    [
+                      -164.42740517482162,
+                      -845.6202351059765
+                    ],
+                    [
+                      -164.63445516605861,
+                      -845.6238014954724
+                    ],
+                    [
+                      -164.64083493908402,
+                      -845.6235852501122
+                    ],
+                    [
+                      -164.64715915673878,
+                      -845.6227192022488
+                    ],
+                    [
+                      -164.65336146310437,
+                      -845.621212438331
+                    ],
+                    [
+                      -164.65937678155024,
+                      -845.619080766337
+                    ],
+                    [
+                      -164.6651419971604,
+                      -845.6163465529098
+                    ],
+                    [
+                      -164.67059661983512,
+                      -845.613038489013
+                    ],
+                    [
+                      -164.6756834172411,
+                      -845.609191276948
+                    ],
+                    [
+                      -164.6803490172606,
+                      -845.6048452905961
+                    ],
+                    [
+                      -164.68454446690157,
+                      -845.6000461262884
+                    ],
+                    [
+                      -164.68822574603837,
+                      -845.594844139996
+                    ],
+                    [
+                      -164.6913542294642,
+                      -845.589293908386
+                    ],
+                    [
+                      -164.8829167552758,
+                      -845.204555138771
+                    ],
+                    [
+                      -164.88357914448716,
+                      -845.203360690095
+                    ],
+                    [
+                      -164.8846159739187,
+                      -845.2024697259185
+                    ],
+                    [
+                      -165.91825737431645,
+                      -844.3909387169406
+                    ],
+                    [
+                      -165.91955189185683,
+                      -844.3900261975359
+                    ],
+                    [
+                      -165.92112923262175,
+                      -844.3898699751007
+                    ],
+                    [
+                      -166.40669107309077,
+                      -844.3669239770388
+                    ],
+                    [
+                      -166.4082107145805,
+                      -844.3669278033194
+                    ],
+                    [
+                      -166.40926882228814,
+                      -844.3680155811599
+                    ],
+                    [
+                      -169.6198606978869,
+                      -848.0161965626758
+                    ],
+                    [
+                      -169.6207473889226,
+                      -848.0173036688939
+                    ],
+                    [
+                      -169.62078278127592,
+                      -848.0187202985398
+                    ],
+                    [
+                      -169.6176831633784,
+                      -848.1628412601422
+                    ],
+                    [
+                      -169.617871454102,
+                      -848.1691825257731
+                    ],
+                    [
+                      -169.61870683240704,
+                      -848.1754715287243
+                    ],
+                    [
+                      -169.62018059554975,
+                      -848.181642750802
+                    ],
+                    [
+                      -169.6222773909103,
+                      -848.1876319015864
+                    ],
+                    [
+                      -169.62497537524905,
+                      -848.1933765974827
+                    ],
+                    [
+                      -169.62824644241482,
+                      -848.1988169862307
+                    ],
+                    [
+                      -169.63205651647877,
+                      -848.2038963945815
+                    ],
+                    [
+                      -169.6363659063354,
+                      -848.2085619119462
+                    ],
+                    [
+                      -170.25357207946945,
+                      -848.8118456567754
+                    ],
+                    [
+                      -170.2546274352353,
+                      -848.8129881358473
+                    ],
+                    [
+                      -170.25467447482515,
+                      -848.8145409988356
+                    ],
+                    [
+                      -170.25060260051396,
+                      -849.0096651599742
+                    ],
+                    [
+                      -170.25076545355842,
+                      -849.0156313288608
+                    ],
+                    [
+                      -170.25150126952212,
+                      -849.0215543312952
+                    ],
+                    [
+                      -170.25280326406937,
+                      -849.027379561041
+                    ],
+                    [
+                      -170.25465943245217,
+                      -849.0330533009837
+                    ],
+                    [
+                      -170.25705266033765,
+                      -849.0385232423432
+                    ],
+                    [
+                      -170.25996088213287,
+                      -849.0437389556319
+                    ],
+                    [
+                      -170.26335728296544,
+                      -849.0486523414147
+                    ],
+                    [
+                      -170.26721054781228,
+                      -849.0532181063318
+                    ],
+                    [
+                      -170.2714851484634,
+                      -849.0573941461626
+                    ],
+                    [
+                      -170.276141672628,
+                      -849.0611419604975
+                    ],
+                    [
+                      -170.28113718610257,
+                      -849.0644269943004
+                    ],
+                    [
+                      -170.28642562916502,
+                      -849.0672189592733
+                    ],
+                    [
+                      -170.6781856090529,
+                      -849.2505937928217
+                    ],
+                    [
+                      -170.6794702115003,
+                      -849.2512704453547
+                    ],
+                    [
+                      -170.68041508027818,
+                      -849.252371042443
+                    ],
+                    [
+                      -170.95295695436653,
+                      -849.6018834660063
+                    ],
+                    [
+                      -170.95384175574873,
+                      -849.6031443858519
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 1057916,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -170.94636021368206,
+                      -849.7736134224106
+                    ],
+                    [
+                      -171.3685755515471,
+                      -849.9827143895673
+                    ],
+                    [
+                      -171.97741373523604,
+                      -850.5957475994364
+                    ],
+                    [
+                      -172.12376039649826,
+                      -850.7540658367216
+                    ],
+                    [
+                      -171.29819895431865,
+                      -852.3825642598676
+                    ],
+                    [
+                      -171.0877252490027,
+                      -852.4700840740115
+                    ],
+                    [
+                      -170.26012785709463,
+                      -852.057643494627
+                    ],
+                    [
+                      -169.64814687811304,
+                      -851.4435350600397
+                    ],
+                    [
+                      -169.49347100534942,
+                      -851.0959730372415
+                    ],
+                    [
+                      -169.7021792557789,
+                      -851.0082692068536
+                    ],
+                    [
+                      -170.94636021368206,
+                      -849.7736134224106
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 68571,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -178.69417149724904,
+                      -838.558034156682
+                    ],
+                    [
+                      -178.71076040051412,
+                      -839.1651573157869
+                    ],
+                    [
+                      -177.1245958354557,
+                      -841.9164513667929
+                    ],
+                    [
+                      -176.89077899209224,
+                      -841.9152252901695
+                    ],
+                    [
+                      -156.7261895366246,
+                      -812.6466355453595
+                    ],
+                    [
+                      -156.52278808807023,
+                      -812.3629402265069
+                    ],
+                    [
+                      -156.44494765938725,
+                      -811.8136580971186
+                    ],
+                    [
+                      -156.1264712656848,
+                      -811.4835298277321
+                    ],
+                    [
+                      -156.02539224585053,
+                      -811.4989177405951
+                    ],
+                    [
+                      -155.93673002067953,
+                      -811.0660208947957
+                    ],
+                    [
+                      -155.4686669613002,
+                      -810.3174808705808
+                    ],
+                    [
+                      -155.30297529697418,
+                      -809.8309378386475
+                    ],
+                    [
+                      -155.3765135833528,
+                      -809.801628572226
+                    ],
+                    [
+                      -156.43061305955052,
+                      -808.9900148847955
+                    ],
+                    [
+                      -156.87659209384583,
+                      -808.834474151954
+                    ],
+                    [
+                      -157.63141459436156,
+                      -808.3496194241452
+                    ],
+                    [
+                      -157.99571110936813,
+                      -808.6171138075879
+                    ],
+                    [
+                      -178.3549889025744,
+                      -838.3044052877231
+                    ],
+                    [
+                      -178.69417149724904,
+                      -838.558034156682
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 837163,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -144.02108693588525,
+                      -818.037799208134
+                    ],
+                    [
+                      -144.44330606237054,
+                      -818.246899404272
+                    ],
+                    [
+                      -146.74219172808807,
+                      -820.9283239840297
+                    ],
+                    [
+                      -146.74373737559654,
+                      -821.4208411255968
+                    ],
+                    [
+                      -143.50376877607778,
+                      -824.4149770786171
+                    ],
+                    [
+                      -142.91096466733143,
+                      -824.4565684496774
+                    ],
+                    [
+                      -142.70718668634072,
+                      -824.111903236655
+                    ],
+                    [
+                      -140.3852779023582,
+                      -821.4195371151436
+                    ],
+                    [
+                      -140.38424908008892,
+                      -821.1750921024941
+                    ],
+                    [
+                      -140.7090076135937,
+                      -820.9740199737134
+                    ],
+                    [
+                      -144.02108693588525,
+                      -818.037799208134
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 150512,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -140.38424908008892,
+                      -821.1750921024941
+                    ],
+                    [
+                      -139.96168804401532,
+                      -820.9889585073688
+                    ],
+                    [
+                      -129.80055600509513,
+                      -809.3294025744544
+                    ],
+                    [
+                      -129.6193004164379,
+                      -808.8641750431852
+                    ],
+                    [
+                      -129.6221560796257,
+                      -808.7775799382944
+                    ],
+                    [
+                      -130.0339200021699,
+                      -808.568641918595
+                    ],
+                    [
+                      -133.07319307141006,
+                      -805.972561242641
+                    ],
+                    [
+                      -133.26084066031035,
+                      -805.707730395603
+                    ],
+                    [
+                      -133.6906002719188,
+                      -805.9088884535595
+                    ],
+                    [
+                      -140.94847966707312,
+                      -814.2441147967475
+                    ],
+                    [
+                      -141.07560051663313,
+                      -814.7199594241101
+                    ],
+                    [
+                      -141.49243172619026,
+                      -814.9243819583207
+                    ],
+                    [
+                      -143.8445325116627,
+                      -817.5534355170676
+                    ],
+                    [
+                      -144.02146894554608,
+                      -818.0196031251107
+                    ],
+                    [
+                      -144.02108693588525,
+                      -818.037799208134
+                    ],
+                    [
+                      -140.7090076135937,
+                      -820.9740199737134
+                    ],
+                    [
+                      -140.38424908008892,
+                      -821.1750921024941
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 281895,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -129.6221560796257,
+                      -808.7775799382944
+                    ],
+                    [
+                      -129.19206736283377,
+                      -808.5793952715467
+                    ],
+                    [
+                      -124.86939947784413,
+                      -803.5440692981356
+                    ],
+                    [
+                      -124.68947479187045,
+                      -803.0703725323547
+                    ],
+                    [
+                      -124.32697607786395,
+                      -802.8642993425601
+                    ],
+                    [
+                      -121.44689961627591,
+                      -799.4875160865486
+                    ],
+                    [
+                      -121.29772011982277,
+                      -799.0123091426794
+                    ],
+                    [
+                      -121.2990845835302,
+                      -798.9462407199317
+                    ],
+                    [
+                      -121.61287298856769,
+                      -798.8782756013679
+                    ],
+                    [
+                      -123.33863759075757,
+                      -797.480214898882
+                    ],
+                    [
+                      -123.54882307862863,
+                      -797.0619998861221
+                    ],
+                    [
+                      -123.97144128044602,
+                      -796.923074434977
+                    ],
+                    [
+                      -124.94145954260603,
+                      -796.0112968074973
+                    ],
+                    [
+                      -125.37154948373791,
+                      -796.2094816562021
+                    ],
+                    [
+                      -128.24335642985534,
+                      -799.5875309568946
+                    ],
+                    [
+                      -128.41398706915788,
+                      -799.9993078234256
+                    ],
+                    [
+                      -128.82533803861588,
+                      -800.215756112826
+                    ],
+                    [
+                      -133.11671467358246,
+                      -805.3013725778437
+                    ],
+                    [
+                      -133.26084066031035,
+                      -805.707730395603
+                    ],
+                    [
+                      -133.07319307141006,
+                      -805.972561242641
+                    ],
+                    [
+                      -130.0339200021699,
+                      -808.568641918595
+                    ],
+                    [
+                      -129.6221560796257,
+                      -808.7775799382944
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 885148,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -122.3529615214793,
+                      -795.406960329914
+                    ],
+                    [
+                      -122.37448183412198,
+                      -795.7835689262138
+                    ],
+                    [
+                      -123.18485294166021,
+                      -796.7915348474053
+                    ],
+                    [
+                      -123.54882307862863,
+                      -797.0619998861221
+                    ],
+                    [
+                      -123.33863759075757,
+                      -797.480214898882
+                    ],
+                    [
+                      -121.61287298856769,
+                      -798.8782756013679
+                    ],
+                    [
+                      -121.2990845835302,
+                      -798.9462407199317
+                    ],
+                    [
+                      -120.93511445005424,
+                      -798.6757759410539
+                    ],
+                    [
+                      -117.99209097609855,
+                      -794.1300938386703
+                    ],
+                    [
+                      -117.96225273224991,
+                      -793.5825430863188
+                    ],
+                    [
+                      -118.3970239837654,
+                      -793.409518041648
+                    ],
+                    [
+                      -119.07640775246546,
+                      -792.8906597066671
+                    ],
+                    [
+                      -119.61292796442285,
+                      -792.8334976384649
+                    ],
+                    [
+                      -120.15396610181779,
+                      -793.5196788421599
+                    ],
+                    [
+                      -120.5129153552698,
+                      -793.778845711844
+                    ],
+                    [
+                      -120.88656659680419,
+                      -793.7593154234928
+                    ],
+                    [
+                      -121.927079940564,
+                      -795.2062836883706
+                    ],
+                    [
+                      -122.3529615214793,
+                      -795.406960329914
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 1053094,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -120.88656659680419,
+                      -793.7593154234928
+                    ],
+                    [
+                      -121.0967342951335,
+                      -793.3413597977487
+                    ],
+                    [
+                      -121.77854910865426,
+                      -792.814217982057
+                    ],
+                    [
+                      -122.26605276484042,
+                      -792.7630087791476
+                    ],
+                    [
+                      -123.47403521614615,
+                      -794.0765184980701
+                    ],
+                    [
+                      -123.54454273311421,
+                      -794.4292614241713
+                    ],
+                    [
+                      -122.55265851283912,
+                      -795.3056943080155
+                    ],
+                    [
+                      -122.3529615214793,
+                      -795.406960329914
+                    ],
+                    [
+                      -121.927079940564,
+                      -795.2062836883706
+                    ],
+                    [
+                      -120.88656659680419,
+                      -793.7593154234928
+                    ]
+                  ]
+                ]
+              ]
+            }
+          },
+          {
+            "sourceFid": 1055163,
+            "geometry": {
+              "type": "MultiPolygon",
+              "coordinates": [
+                [
+                  [
+                    [
+                      -123.54882307862863,
+                      -797.0619998861221
+                    ],
+                    [
+                      -123.18485294166021,
+                      -796.7915348474053
+                    ],
+                    [
+                      -122.37448183412198,
+                      -795.7835689262138
+                    ],
+                    [
+                      -122.3529615214793,
+                      -795.406960329914
+                    ],
+                    [
+                      -122.55265851283912,
+                      -795.3056943080155
+                    ],
+                    [
+                      -123.54454273311421,
+                      -794.4292614241713
+                    ],
+                    [
+                      -123.97430370072834,
+                      -794.630419162102
+                    ],
+                    [
+                      -124.84907046833541,
+                      -795.591308958421
+                    ],
+                    [
+                      -124.94145954260603,
+                      -796.0112968074973
+                    ],
+                    [
+                      -123.97144128044602,
+                      -796.923074434977
+                    ],
+                    [
+                      -123.54882307862863,
+                      -797.0619998861221
+                    ]
+                  ]
+                ]
+              ]
+            }
+          }
+        ],
+        "bankOnly": true,
+        "preservedCrestShoulderMetres": 0.51,
+        "evidence": "Native OS running rails east of the shaded western station body1539 and between the northern waiting-room/platform bodies. Station formation slopes stop at these mapped bodies. No roof height, new retaining wall, platform architecture or complete station track layout is asserted.",
+        "bookingLimit": "Booking-office bodies at the road bridge span the apparent rail approach. Their precise over-track function/height remains unresolved; the interpreted running crest and a0.51m shoulder survive here. Source intersection is not permission to move native rails or remove their support.",
+        "evidenceImages": [
+          "reference/footprint-model-alignment/stratford-station-rail-native.png",
+          "reference/footprint-model-alignment/stratford-station-rail-after.png"
+        ]
+      }
+    },
+    "replacements": [
+      {
+        "index": 12,
+        "priorPoint": [
+          -181.866,
+          -853.291
+        ],
+        "point": [
+          -176.527,
+          -853.436
+        ],
+        "reviewedSourceBounds": [
+          -260,
+          -940,
+          100,
+          -580
+        ],
+        "reviewedSourcePixels": [
+          [
+            298.0,
+            323.24350325159463
+          ]
+        ]
+      },
+      {
+        "index": 13,
+        "priorPoint": [
+          -142.835,
+          -785.156
+        ],
+        "point": [
+          -127.02,
+          -785.588
+        ],
+        "reviewedSourceBounds": [
+          -260,
+          -940,
+          100,
+          -580
+        ],
+        "reviewedSourcePixels": [
+          [
+            426.0,
+            509.61105687229474
+          ]
+        ]
+      },
+      {
+        "index": 14,
+        "priorPoint": [
+          -102.107,
+          -715.418
+        ],
+        "point": [
+          -74.119,
+          -716.183
+        ],
+        "reviewedSourceBounds": [
+          -260,
+          -940,
+          100,
+          -580
+        ],
+        "reviewedSourcePixels": [
+          [
+            563.0,
+            700.4186706702258
+          ]
+        ]
+      },
+      {
+        "index": 15,
+        "priorPoint": [
+          -63.029,
+          -645.635
+        ],
+        "point": [
+          -37.771,
+          -646.325
+        ],
+        "reviewedSourceBounds": [
+          -260,
+          -940,
+          100,
+          -580
+        ],
+        "reviewedSourcePixels": [
+          [
+            655.5,
+            891.2257530663193
+          ]
+        ]
+      },
+      {
+        "index": 16,
+        "priorPoint": [
+          -24.798,
+          -576.652
+        ],
+        "point": [
+          -9.257,
+          -577.077
+        ],
+        "reviewedSourceBounds": [
+          -220,
+          -650,
+          160,
+          -245
+        ],
+        "reviewedSourcePixels": [
+          [
+            727,
+            311.8107200313851
+          ]
+        ]
+      },
+      {
+        "index": 17,
+        "priorPoint": [
+          14.282,
+          -506.868
+        ],
+        "point": [
+          29.138,
+          -507.274
+        ],
+        "reviewedSourceBounds": [
+          -220,
+          -650,
+          160,
+          -245
+        ],
+        "reviewedSourcePixels": [
+          [
+            825,
+            502.6150384563899
+          ]
+        ]
+      },
+      {
+        "index": 18,
+        "priorPoint": [
+          45.041,
+          -439.327
+        ],
+        "point": [
+          51.47,
+          -439.502
+        ],
+        "reviewedSourceBounds": [
+          -220,
+          -650,
+          160,
+          -245
+        ],
+        "reviewedSourcePixels": [
+          [
+            880,
+            686.764024427822
+          ]
+        ]
+      }
+    ],
+    "review": "Native OS running-line corridor east of Stratford Market roof79 and shaded station body1539. Re-read seven controls12\u201318; station controls12\u201315 follow the running pair between station bodies. Mainline join/curve controls0\u201311 and branch tail19\u201320 retained. Gauge, spacing, formation profile and join levels retained. Mapped station bodies bound only interpreted bank toes; unresolved booking-office bridge approach keeps rail support.",
+    "stationReview": {
+      "baseline": "reference/footprint-model-alignment/stratford-station-rail-before.json",
+      "baselineSha256": "9dd369b79fcae9781e73de1c519d42258b5544506ac44a783d38700af38fb3ee",
+      "changedControlIndices": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "replacements": [
+        {
+          "index": 12,
+          "priorPoint": [
+            -181.866,
+            -853.291
+          ],
+          "point": [
+            -176.527,
+            -853.436
+          ],
+          "reviewedSourceBounds": [
+            -260,
+            -940,
+            100,
+            -580
+          ],
+          "reviewedSourcePixels": [
+            [
+              298.0,
+              323.24350325159463
+            ]
+          ]
+        },
+        {
+          "index": 13,
+          "priorPoint": [
+            -142.835,
+            -785.156
+          ],
+          "point": [
+            -127.02,
+            -785.588
+          ],
+          "reviewedSourceBounds": [
+            -260,
+            -940,
+            100,
+            -580
+          ],
+          "reviewedSourcePixels": [
+            [
+              426.0,
+              509.61105687229474
+            ]
+          ]
+        },
+        {
+          "index": 14,
+          "priorPoint": [
+            -102.107,
+            -715.418
+          ],
+          "point": [
+            -74.119,
+            -716.183
+          ],
+          "reviewedSourceBounds": [
+            -260,
+            -940,
+            100,
+            -580
+          ],
+          "reviewedSourcePixels": [
+            [
+              563.0,
+              700.4186706702258
+            ]
+          ]
+        },
+        {
+          "index": 15,
+          "priorPoint": [
+            -46.514,
+            -646.086
+          ],
+          "point": [
+            -37.771,
+            -646.325
+          ],
+          "reviewedSourceBounds": [
+            -260,
+            -940,
+            100,
+            -580
+          ],
+          "reviewedSourcePixels": [
+            [
+              655.5,
+              891.2257530663193
+            ]
+          ]
+        }
+      ],
+      "review": "Native OS running rails east of the shaded western station body1539 and between the northern waiting-room/platform bodies. Station formation slopes stop at these mapped bodies. No roof height, new retaining wall, platform architecture or complete station track layout is asserted.",
+      "bookingLimit": "Booking-office bodies at the road bridge span the apparent rail approach. Their precise over-track function/height remains unresolved; the interpreted running crest and a0.51m shoulder survive here. Source intersection is not permission to move native rails or remove their support."
+    }
+  }
 }

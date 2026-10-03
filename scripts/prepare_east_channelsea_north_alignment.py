@@ -105,6 +105,9 @@ SPECS = [
 HARDWARE_PIXELS = [[585.38, 390.15], [612.60, 381.16], [618.15, 397.44],
     [626.5, 415.2], [643.5, 407.2], [657.5, 454.5], [647.0, 460.5],
     [658.5, 481.0], [692.5, 461.0], [706.0, 483.0], [644.5, 519.0]]
+ABBEY_SOUTH_PIXELS = [[574.3, 809.8], [601.5, 801.2], [613.2, 803.2],
+    [613.2, 795.3], [623.3, 792.0], [627.8, 804.3], [636.7, 825.3],
+    [605.8, 839.2], [604.0, 836.5], [588.0, 841.7]]
 
 
 def profile(target, ident, site, name, height, evidence):
@@ -170,32 +173,43 @@ def build():
         'Large shaded L-shaped hardware roof omitted from the supplied building extract. Trace its exterior from native OS pixels, registering its northern shared wall to the Brush source and excluding the separately source-mapped southern transverse room/steps. The eastern court remains open.')
     direct['footprintSource'] = 'os-1893-direct-trace'
     additions.append(direct)
+    raw_abbey = Polygon(to_world(ABBEY_SOUTH_PIXELS))
+    abbey = profile(polygon(set_precision(raw_abbey, .001)),
+        'east-north-abbey-south-direct', 253,
+        'Abbey Chemical Works — directly traced southern roof', 5.0,
+        'Complete diagonally hatched southern Abbey Chemical roof omitted from the supplied building extract. Native wall and hatch review establishes the large enclosing roof, including its small northern projection. Source 831918 is an internal small enclosure or roof symbol, not a substitute for this enclosing exterior. The domestic Abbey Lane frontage and surrounding unshaded yard remain separate.')
+    abbey['footprintSource'] = 'os-1893-direct-trace'
+    additions.append(abbey)
     result = dict(source='Author-supplied london_buildings_1891-96_corr_v1.gpkg; native cached OS London five-foot mosaic',
         sourceCRS='EPSG:3857 reprojected through BNG; scene origin E538900,N183209', baseline=BASELINE,
         method='Replace northern Channelsea–railway sketch blocks with independently reviewed shaded roof exteriors at Brush, Hardware, Langthorn, Varnish/Japan and Abbey works, plus the missing Abbey Road frontage roofs. Every new height and roof form is estimated; no original fire-insurance coverage is asserted. Open courts, moat, railway ground and domestic frontage stay distinct.',
         additionalSites=[dict(id=site, name=name, sources=['os-1893'], coverage='Individual OS-mapped ranges',
             notes='Roof exteriors are mapped; new heights, roof forms, materials and process-room identities are estimates. Site 253 retains the supplied Bleaching/chemical grouping although OS separately labels Abbey Chemical and Old Abbey Candle Works. Context ID9009 is a model grouping, not an original cadastral parcel ID.') for site, name in SITE_NAMES.items()],
         additionalBuildings=additions, groups=groups, buildings=rows, structures=[],
-        mapTracedBuildings=[dict(direct, modelId=direct['id'])],
+        mapTracedBuildings=[dict(b, modelId=b['id']) for b in [direct, abbey]],
         directMapTraces=[dict(modelId=direct['id'], mosaicBounds=BOUNDS, nativePixels=HARDWARE_PIXELS,
             excludedSourceFids=[6805, 664984, 384628, 1097233, 1024082],
             rawWorldFootprint=rings(raw_hardware)[0], sourceBoundaryReconciliationAreaM2=raw_hardware.intersection(neighbours).area,
-            evidence='Native pixel grid and raw hatching inspected; this large L-shaped roof has no supplied source exterior. Neighbour source walls control the shared boundaries. No open courtyard polygon or nearest source is substituted.')],
+            evidence='Native pixel grid and raw hatching inspected; this large L-shaped roof has no supplied source exterior. Neighbour source walls control the shared boundaries. No open courtyard polygon or nearest source is substituted.'),
+            dict(modelId=abbey['id'], mosaicBounds=BOUNDS, nativePixels=ABBEY_SOUTH_PIXELS,
+                rawWorldFootprint=rings(raw_abbey)[0], excludedSourceFids=[],
+                internalSourceSymbols=[831918],
+                evidence='Native OS patch shows continuous diagonal roof hatching inside the enclosing southern roof outline, matching neighbouring source-mapped roofs. The extract contains only small symbol 831918 and omits the enclosing building. The supplied symbol partly crosses the mapped west wall, so its geometry does not control the enclosing exterior. Trace the outside hatch/wall boundary; material, height and roof arrangement remain estimates.')],
         evidenceImages=[f'reference/footprint-model-alignment/east-channelsea-north-{s}.png' for s in ['raw', 'source', 'models', 'after']]
             +[f'reference/footprint-model-alignment/east-channelsea-north-{site}-{s}.png' for site in ['brush-hardware', 'langthorn', 'varnish', 'bleach'] for s in ['raw', 'source', 'after']]
-            +['reference/footprint-model-alignment/east-channelsea-north-hardware-grid.png', 'reference/footprint-model-alignment/east-channelsea-north-brush-water.png'],
+            +['reference/footprint-model-alignment/east-channelsea-north-hardware-grid.png', 'reference/footprint-model-alignment/east-channelsea-north-brush-water.png', 'reference/footprint-model-alignment/east-channelsea-north-abbey-south-grid.png', 'reference/footprint-model-alignment/east-channelsea-north-abbey-south-native.png', 'reference/footprint-model-alignment/east-channelsea-north-abbey-south-after.png'],
         openCourtReviews=[dict(worldPoint=[5, -222], evidence='Unshaded Langthorn eastern court inside the labelled works, below the northern roof and east of the central hall.'),
             dict(worldPoint=[76, -247], evidence='Unshaded eastern Hardware court beside the main L-shaped body; the small independently mapped yard room is separate.'),
             dict(worldPoint=[31, -106], evidence='Unshaded Abbey Chemical works southern court, between the central shaded body and the Abbey Lane domestic row.')],
         excludedContext=[dict(sourceFids=[763616, 755784, 758385, 788681, 748547, 775554, 768865, 758786, 558092, 674517, 258434],
             reason='Separate Abbey Lane domestic frontage and returns; existing refined housing is not duplicated as factory roofs.'),
             dict(sourceFids=[11904], reason='Separate unshaded outlined former St Mary’s Abbey site beside the eastern lane; not a manufacturing roof.')],
-        deferred=[dict(sourceFids=[950740, 1034495, 1010855, 1107451, 1030235, 975118, 1051015, 700003, 863588, 841028, 883606, 892241, 955971, 875039, 457114, 933151, 886014, 905774, 831918, 877726, 957798, 664000, 284852, 777060, 779356, 915686],
+        deferred=[dict(sourceFids=[950740, 1034495, 1010855, 1107451, 1030235, 975118, 1051015, 700003, 863588, 841028, 883606, 892241, 955971, 875039, 457114, 933151, 886014, 905774, 877726, 957798, 664000, 284852, 777060, 779356, 915686],
             reason='Tiny stairs, chimney/equipment bases, interior enclosures and unattached ancillary symbols require classification; no full-height building or tall chimney is inferred merely from a small source polygon.'),
             dict(feature='Building storeys and roofs', reason='Original fire-insurance coverage has not been established. New low eaves and gable bays are declared estimates, not transcribed floor counts.'),
             dict(feature='Langthorn/Varnish and Abbey tenancy divisions', reason='Supplied industrial parcels and printed OS works names differ locally. Roof geometry is independently mapped; exact historic tenant and process boundaries remain unresolved.')])
     (ROOT/f'data/maps/{NAME}-footprint-alignment.json').write_text(json.dumps(result, indent=2)+'\n')
-    print(f'{NAME}: {len(rows)} source-linked roofs plus one directly traced Hardware roof; six sites, estimated profiles and open courts.')
+    print(f'{NAME}: {len(rows)} source-linked roofs plus two directly traced roofs; six sites, estimated profiles and open courts.')
 
 
 if __name__ == '__main__':

@@ -13,6 +13,7 @@ from shapely import contains_xy
 from shapely.geometry import Polygon, LineString, box
 from shapely.ops import unary_union
 from marsh_ditches import apply_sections
+from core_river_connections import build as reviewed_connections, combined as connection_geometry
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'docs/data'
@@ -122,6 +123,9 @@ edge_distance = np.minimum.reduce([X-x[0],x[-1]-X,Z-z[0],z[-1]-Z])
 blend = smooth(0, 3, edge_distance)
 height = height*blend + (-.1)*(1-blend)
 height,ditch_mud,marsh_active=apply_sections(X,Z,height)
+passages=connection_geometry(reviewed_connections(data['rivers']))
+passage_mask=contains_xy(passages,X,Z)
+height[passage_mask]=np.minimum(height[passage_mask],-.7)
 
 # Depth, moisture and bank mask for physically distinct material responses.
 depth = np.clip((.06-height)/2.4, 0, 1)

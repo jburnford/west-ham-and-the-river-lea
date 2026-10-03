@@ -1,0 +1,22 @@
+{
+  "snapshotDate": "2026-10-01",
+  "files": {
+    "Lower_River_Lea.geojson": {
+      "source": "/home/jic823/swipe_map/site/data/Lower_River_Lea.geojson",
+      "sha256": "30c5d32e8bc4194d1c2a95827f7d598dac17043f9c9513857bccf6b2c78621ff"
+    },
+    "Water_First_Series.geojson": {
+      "source": "/home/jic823/swipe_map/site/data/Water_First_Series.geojson",
+      "sha256": "aa03fd5b939ad0072bdc8f2b567dd10e6e807a9158ac37248f5d7645b02d2392"
+    },
+    "Water_1895.geojson": {
+      "source": "/home/jic823/swipe_map/site/data/Water_1895.geojson",
+      "sha256": "5c8ed9e94922f3c054371e5a3254abca5784638eb9e53e71ee187837325dc5fe"
+    },
+    "TQ_TidalWater.geojson": {
+      "source": "/home/jic823/swipe_map/site/data/TQ_TidalWater.geojson",
+      "sha256": "134b8888a2e8336dbd581214e2671f163f4c3a85044e3a11e6489ced12bd5081"
+    }
+  },
+  "policy": "Original source bytes retained. Derived geometry repairs are audited separately; layer names alone do not verify dates."
+}

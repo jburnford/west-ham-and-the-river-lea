@@ -9,7 +9,9 @@ infra=load('docs/data/infrastructure.json');factories=load('docs/data/factory-bu
 original=ground['neighbourhood']['terraces']+sw['rows']
 survey=load('data/maps/mill-meads-housing.json')
 district=load('data/maps/district-housing-review.json')
-assert {r['id'] for r in original}|{r['id'] for r in survey['rows']}|{r['id'] for r in district['rows']}=={r['id'] for r in detail['rows']}
+from east_bridge_housing import SUPPRESSED_IDS
+expected_ids={r['id'] for r in original}|{r['id'] for r in survey['rows']}|{r['id'] for r in district['rows']}
+assert expected_ids-SUPPRESSED_IDS=={r['id'] for r in detail['rows']}
 rows={r['id']:r for r in detail['rows']}
 assert all(rows[id].get('districtReviewed') for id in district['reviewedOriginalRows'])
 assert set(district['reviewedOriginalRows'])=={r['id'] for r in original if r['id'] not in {p['id'] for p in survey['rows']}}
@@ -31,7 +33,16 @@ assert sum(p.area for p in courts)-forecourts.area<.01,'Overlapping forecourts'
 assert forecourts.intersection(yards.union(houses).union(roads).union(water)).area<.01,'Overlapping court surface'
 assert len(plots)>len(original)*10,'Missing household plots'
 assert len(detail['extensions'])>len(plots)*.8,'Missing sculleries'
-assert all(2.7<=r['width']/r['bays']<=6 for r in detail['rows']),'Unexpected household width'
+corner=next(r for r in load('data/maps/east-bridge-road-housing.json')['rows'] if r['id']=='os-row-39-part-1')
+for r in detail['rows']:
+    if r['id']==corner['id']:
+        # The OS review replaces a fictitious garden-end terrace with one
+        # mapped corner body, whose 6.36 m width exceeds the terrace-bay limit.
+        assert r['bays']==corner['houseCount']==1
+        assert abs(r['width']-corner['geometry']['width'])<.005
+        assert 6<r['width']<7
+    else:
+        assert 2.7<=r['width']/r['bays']<=6,('Unexpected household width',r['id'])
 for id in district.get('focusedReview',{}).get('addedRows',[])+district.get('focusedReview',{}).get('revisedRows',[]):
     assert rect(rows[id]).intersection(roads).area<.05,('Re-traced housing overlaps full carriageway',id)
 # Biggerstaff's carriageway belongs between its two terrace fronts, not behind

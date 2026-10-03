@@ -1,0 +1,138 @@
+{
+  "id": "lower-lea-marsh-substrate",
+  "epochOfEvidence": "1848\u201351",
+  "targetEpoch": "1900",
+  "reviewFile": "data/maps/lower-lea-region/marsh-baseline-1848-review.json",
+  "outlineBNG": [
+    [
+      536200,
+      187000
+    ],
+    [
+      537150,
+      187000
+    ],
+    [
+      537600,
+      186100
+    ],
+    [
+      538080,
+      185700
+    ],
+    [
+      538230,
+      185250
+    ],
+    [
+      538450,
+      184800
+    ],
+    [
+      538600,
+      184300
+    ],
+    [
+      538650,
+      183950
+    ],
+    [
+      539050,
+      183450
+    ],
+    [
+      539400,
+      183150
+    ],
+    [
+      539900,
+      182850
+    ],
+    [
+      540350,
+      182600
+    ],
+    [
+      541200,
+      182100
+    ],
+    [
+      541850,
+      181650
+    ],
+    [
+      542000,
+      181200
+    ],
+    [
+      542000,
+      180000
+    ],
+    [
+      539300,
+      180000
+    ],
+    [
+      538950,
+      180550
+    ],
+    [
+      538400,
+      181200
+    ],
+    [
+      537900,
+      181650
+    ],
+    [
+      538200,
+      182300
+    ],
+    [
+      538230,
+      182800
+    ],
+    [
+      538000,
+      183150
+    ],
+    [
+      537250,
+      183650
+    ],
+    [
+      536950,
+      184200
+    ],
+    [
+      536650,
+      185100
+    ],
+    [
+      536300,
+      186000
+    ],
+    [
+      536200,
+      187000
+    ]
+  ],
+  "outlineStatus": "Provisional broad lowland envelope interpreted from the author\u2019s 1805 marsh map, book and registered 1848\u201351 regional atlas. Not a surveyed marsh boundary or hydraulic boundary. Local ground evidence takes precedence.",
+  "edgeTransitionMetres": 120,
+  "interpolation": {
+    "method": "inverse distance weighting of all accepted early proxies with smooth Gaussian distance taper",
+    "smoothingMetres": 100,
+    "distanceTaperMetres": 600,
+    "power": 2,
+    "outsidePointHull": "estimated continuation, explicitly not measured support"
+  },
+  "policy": "Underlying marsh is a regional early-evidence surface across the whole lowland envelope, including later developed plots. Modern fill never supplies its interior baseline. Add later roads, yards, railways and bank/wall surfaces only within their own mapped footprints and evidence reach.",
+  "regionalInterpretation": "Northern Hackney/Temple 14\u201315 ft; Stratford about 11\u201313 ft, with lower eastern-lane observations; northern Mill Meads about 8 ft; Abbey/Plaistow marsh generally 4\u20136 ft. Each estimate is representative rather than an exact floor reading.",
+  "limitations": [
+    "Envelope edges are approximate. The transition is a modelling blend into adjoining non-marsh terrain, not a natural escarpment.",
+    "Southern Mill Meads has sparse early interior evidence; compare its later reviewed 7.3/7.7 ft ground readings before inferring a uniform southward drop.",
+    "River crossing by regional interpolation expresses a broad substrate trend, not flood connectivity. Surface-specific corrections remain confined to dry land.",
+    "Factory sites without usable yard readings retain an explicitly uncertain substrate estimate; a building footprint alone does not establish fill height."
+  ],
+  "laterGroundPolicy": "Only accepted observations explicitly classified marsh, or independently reviewed ground, constrain the substrate. Unreviewed open-ground/premises and embankment-foot levels remain separate surface evidence. Corrections from the modern-derived outer model cannot propagate into the fully early-evidence interior."
+}

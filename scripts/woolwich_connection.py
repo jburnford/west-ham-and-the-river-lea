@@ -11,7 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def parts(g,kind='Polygon'):
     return [p for p in getattr(g,'geoms',[g]) if p.geom_type==kind and not p.is_empty]
 
-def build_woolwich_connection(water,roads,buildings,mainline):
+def build_woolwich_connection(water,roads,buildings,mainline,station_formation_obstacles=None):
     raw=json.loads((ROOT/'data/maps/woolwich-northern-connection.json').read_text())
     points=np.array(raw['route']);dist=np.r_[0,np.cumsum(np.linalg.norm(np.diff(points,axis=0),axis=1))]
     main=LineString(mainline['route']);s=raw['mainlineJoinChainage']
@@ -30,6 +30,13 @@ def build_woolwich_connection(water,roads,buildings,mainline):
     obstruction=corridor.intersection(buildings).area
     assert obstruction<1, f'Northern branch overlaps buildings: {obstruction:.1f} m²'
     footprint=line.buffer(base,cap_style=2,join_style=2).difference(openings).difference(buildings.buffer(.5))
+    # Native station bodies bound interpreted earth toes only. The ordinary
+    # building/crest assertion above remains intact. At the booking bridge the
+    # reviewed obstacle already excludes the running crest and its shoulder.
+    station_cut = (Polygon() if station_formation_obstacles is None
+                   else station_formation_obstacles.buffer(.5))
+    prior_earth_area=footprint.area
+    footprint=footprint.difference(station_cut)
     # Dense transverse strips give the banks a flat crest and sloping toes;
     # polygon clipping preserves bridge openings at roads and waterways.
     stations=[]
@@ -53,6 +60,9 @@ def build_woolwich_connection(water,roads,buildings,mainline):
         for ring in [polygon.exterior,*polygon.interiors]:
             for a,b in zip(ring.coords,list(ring.coords)[1:]):
                 ha,hb=bank_height(*a),bank_height(*b)
+                edge=LineString([a,b])
+                if not station_cut.is_empty and edge.intersection(station_cut.boundary.buffer(.005)).length>.9*edge.length:
+                    continue  # No invented elevated retaining wall at station.
                 if max(ha,hb)>.5:walls.append([[a[0],ha,a[1]],[b[0],hb,b[1]]])
     bridges=[]
     for cut in parts(line.intersection(openings),'LineString'):
@@ -63,4 +73,7 @@ def build_woolwich_connection(water,roads,buildings,mainline):
             'stations':stations,'embankment':mesh,'retainingEdges':walls,'bridges':bridges,
             'crossings':[],'length':line.length,'footprint':[[[list(q) for q in r.coords] for r in [p.exterior,*p.interiors]] for p in parts(footprint)],
             'northernWater':[],'northernBanks':[],
+            'stationFormationExclusionApplied':{'bankOnly':True,'priorEarthAreaM2':prior_earth_area,
+                'excludedEarthAreaM2':prior_earth_area-footprint.area,
+                'preservedCrestShoulderMetres':raw.get('stationFormationReview',{}).get('preservedCrestShoulderMetres',0)},
             'connection':{'mainlinePoint':raw['route'][0],'branchPoint':raw['route'][-1],'mainlineHeight':raw['joinHeight'],'branchHeight':raw['formationHeight']}}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "activeEpoch": "1900",
+  "epochs": {
+    "1900": {
+      "targetYear": 1900,
+      "status": "expanded-ground-pass",
+      "asset": "terrain-1900.json"
+    },
+    "1850": {
+      "targetYear": 1850,
+      "status": "awaiting-observations-and-period-geometry",
+      "asset": null
+    },
+    "1897": {
+      "targetYear": 1897,
+      "status": "awaiting-period-geometry-review",
+      "asset": null
+    },
+    "1898": {
+      "targetYear": 1898,
+      "status": "awaiting-period-geometry-review",
+      "asset": null
+    },
+    "1904": {
+      "targetYear": 1904,
+      "status": "awaiting-period-geometry-review",
+      "asset": null
+    },
+    "1888": {
+      "targetYear": 1888,
+      "status": "awaiting-observations-and-period-geometry",
+      "asset": null
+    },
+    "1928": {
+      "targetYear": 1928,
+      "status": "awaiting-observations-and-period-geometry",
+      "asset": null
+    }
+  }
+}

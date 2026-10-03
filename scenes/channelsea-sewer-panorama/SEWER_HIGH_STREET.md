@@ -37,6 +37,43 @@ remaining eastern extension is still the earlier skyline interpretation.
 The sewer's railway crossing and river aqueduct structures need separate
 period evidence; they are not settled by this High Street correction.
 
+## Channelsea enclosure and elevation dependencies — 30 September 2026
+
+The author identified the crossing as a platform without its sewer. Inspection
+found only the 0.48 m fascia in the current renderer and the saved earlier
+renderer; no enclosure was being rendered. This was not traced to deletion
+by the new terrain overlay. `docs/sewer-crossing.js` now adds an enclosed
+girder mass beneath the deck and two bank abutments. The local photograph
+`reference/Images and Figures/NewNewhamImages/Channelsea River & Abbey Mills Pumping Station.jpg`
+shows the deep stiffened girder face, but does not provide surveyed dimensions
+or a securely established pre-rebuilding date.
+
+[Historic England 1392549](https://historicengland.org.uk/listing/the-list/list-entry/1392549?section=official-list-entry)
+describes the 1900–02 rebuilding, with five nine-foot sewers replacing three,
+and two central piers. This repair does not backdate those five barrels or
+assign central pier locations to the earlier crossing. The 60 m exterior
+reach, 2.9 m enclosure depth below the existing 0.5 m cover, plate spacing,
+bank abutment sections and foundation embedment are working assumptions.
+The enclosure follows every existing route bend; bank support footprints
+lie outside the mapped waterways. Internal sections and hydraulic inverts
+remain unknown. This is provisional exterior massing, not a calibrated
+hydraulic obstruction or a finished reconstruction of either bridge phase.
+
+The deck, enclosure and support tops share `sewerSurfaceHeight`; the walking
+camera already follows the same Channelsea crest reference. Foundation bottoms
+sample the local ground at the support centre and corners. A change to sewer
+height moves the structure and walker together; a ground change adjusts the
+support height without moving the sewer. A support whose ground rises above
+its bearing now fails visibly instead of silently creating inverted geometry.
+
+`node scripts/check_sewer_crossing.mjs` raycasts the actual generated enclosure
+below both channels and across the walking width, including the joined bends,
+then changes sewer and ground levels independently to
+check these relationships. `review_historic_elevation.py --sewer-only` renders
+both river faces in baseline and 1900 modes, checks the enclosure and support
+geometry diagnostics, and retains the high-tide and surrounding-infrastructure
+checks. The standard terrain review now includes these exterior views too.
+
 Rebuild ground plan, infrastructure and High Street data in that order. Run
 `check_scene_data.py`, `check_district_streets.py`,
 `check_sewer_high_street.mjs`, and `review_wall_river_vista.py`. The latter now

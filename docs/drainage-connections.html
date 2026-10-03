@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Plaistow drainage connections — 1900 study</title>
+  <style>
+    :root{color-scheme:light;font:17px/1.55 system-ui,sans-serif;color:#243a34;background:#f6f3ea}
+    body{max-width:1040px;margin:0 auto;padding:30px 22px}h1{font:normal clamp(1.8rem,4vw,2.7rem)/1.15 Georgia,serif;max-width:800px}
+    a{color:#246f65}header p{max-width:780px}.controls{display:flex;gap:24px;flex-wrap:wrap;margin:25px 0}label{display:grid;gap:7px;font-weight:600}
+    select{padding:10px;border:1px solid #9fa99d;border-radius:4px;background:white;font:inherit;max-width:100%}
+    figure{margin:0;background:#fffcf5;border:1px solid #d4d8c8;border-radius:6px;padding:12px}svg{display:block;width:100%;height:auto}
+    .railway{fill:none;stroke:#b7aa96;stroke-width:5}.road{fill:none;stroke:#c9c4b7;stroke-width:6}.map-label{font-size:11px;fill:#555e53}.node-label{font-size:12px;fill:#203d33;font-weight:bold}
+    .node{cursor:pointer}.node:focus circle{stroke:#a05725;stroke-width:3}figcaption{font-size:.88rem;margin:8px 10px;color:#536057}
+    #result{font-weight:650}.note{border-left:3px solid #ac864c;padding:3px 18px;margin:24px 0;background:#f0ecdf}.note p{margin:10px 0}
+    footer{font-size:.9rem;border-top:1px solid #d4d8c8;padding-top:18px;margin-top:28px}small{display:block;color:#526457}
+    @media(max-width:600px){body{padding:20px 12px}.controls{display:grid;gap:14px}select{width:100%}figure{padding:2px}}
+  </style>
+</head>
+<body>
+  <header><a href="./">← Return to the landscape</a> · <a href="./flood-demo.html">Try the flood experiment →</a><small>1900 reconstruction · drainage study</small>
+    <h1>How could water cross the railway and Manor Road?</h1>
+    <p>Our working reconstruction drains water east to west through a culvert beneath the embankment. Ditches on both sides, mapped sluices and nearby ground levels support that interpretation. Compare it with blocked or ineffective controls; the pipe dimensions and gate mechanism remain provisional.</p>
+  </header>
+  <div class="controls"><label>Connection assumption<select id="scenario"></select></label><label>Start from<select id="start"></select></label></div>
+  <p id="description"></p>
+  <figure><svg id="network" viewBox="-25 380 710 295" role="img" aria-label="Drainage connections and railway crossings"></svg>
+    <figcaption>Solid: mapped eastern channel. Dashed: uncertain route or culvert. Green: possible passage from the selected location under this assumption. Pale green: the reach modelled in 3D. Arrows show permitted directions in the scenario, not observed currents. Select a node to change the starting point.</figcaption>
+  </figure>
+  <p id="result" aria-live="polite">Loading the connection model…</p>
+  <div class="note"><p><strong>This is a connection study, not a flood prediction.</strong> It calculates no discharge, flood depth or timing. Trace boundaries are not confirmed outfalls. The disconnected northern sluice has no reviewed connecting trace.</p><p id="crossing"></p><p id="road-warning"></p></div>
+  <h2>What could fit beneath the road?</h2>
+  <p>The road profile constrains the space available. These alternative culvert sections continue the assumed eastern drain bed towards the west. Their dimensions, gradient, 0.15 m roof and 0.25 m cover allowance are modelling assumptions, not recovered engineering specifications.</p>
+  <div class="controls"><label>Culvert section<select id="culvert-case"></select></label></div>
+  <figure><svg id="culvert-section" viewBox="0 0 790 350" role="img" aria-label="Longitudinal culvert section beneath Manor Road"></svg>
+    <figcaption>Dashed opening: assumed rectangular equivalent, not an identified pipe shape. Solid road: profile from map spot heights. Vertical scale is enlarged; railway heights are off scale and uncalibrated. No water level is shown.</figcaption>
+  </figure>
+  <p id="culvert-result" aria-live="polite"></p>
+  <div class="note"><p id="railway-height-review"></p><p>A downward bed slope permits gravity drainage only when water levels and gate operation allow it. The western outfall remains unresolved, and no flow capacity is assigned. Choosing a section here does not excavate the landscape or open a hydraulic connection.</p></div>
+  <footer><p>The 1907 West Ham inquiry (p.29, note 1) describes lost open drainage and inadequate sewers and pumps after the 1888 flood. Chapter 6 of Jim Clifford’s <em>West Ham and the River Lea</em> records pumping failures during floods. Neither source establishes this culvert’s dimensions.</p>
+    <p>The 1848–51 skeleton map is too sparse here to establish continuity or disappearance of these field drains. These scenarios apply to the 1900 reconstruction only.</p>
+    <a href="./data/drainage-connections-1900.json">Evidence, assumptions and model data</a>
+  </footer>
+  <script type="module" src="./drainage-connections.js"></script>
+</body>
+</html>

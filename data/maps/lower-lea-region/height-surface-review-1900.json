@@ -1,0 +1,914 @@
+{
+  "schemaVersion": 1,
+  "targetEpoch": "1900",
+  "reviewDate": "2026-10-02",
+  "sourceSnapshot": "data/maps/lower-lea-region/height-observations.snapshot.geojson",
+  "sourceSnapshotSHA256": "1f3f1b90cc2b3ac090447a34067dcf282143d9886f33ab7e30238dda68efe638",
+  "method": "Direct inspection of full native five-foot mosaics and 8x detail crops; locate survey dots relative to mapped banks, hatching, path edges and unbuilt ground. Source figures retained in feet and source datum.",
+  "policy": "Reviewed observations update the derived regional height inventory. They do not independently lift rendered banks, flatten marshes, imply water levels or assign a crest to a spot on a slope. Reconstruct adjoining surfaces and structures together in a subsequent terrain pass. No cross-epoch averaging.",
+  "observations": [
+    {
+      "id": "sh_537196_184782",
+      "expectedValueFeet": 21.5,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "canal-towpath",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537195.91,
+        184782.52
+      ],
+      "mapPixel": [
+        343,
+        64
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131054_87125.png",
+      "mosaicSHA256": "057389e0ccd5b02f08c2e5130a6c1c060ede376de07b46a0b9dc84681a2c0241",
+      "registration": "reference/spot-heights/mosaics/m18_131054_87125.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131054_87125_zoom_343_64_s8.png",
+      "review": "Dot lies within the narrow towing-path strip on the EAST side of Hackney Cut. Previous west-bank description is wrong; 21.5 is clear.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537195.73,
+        "bng_n": 184782.33,
+        "notes": "Hackney Cut west towing path; dot left of figures; last digit 5 at 14x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 6.5532,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537280_184556",
+      "expectedValueFeet": 22.0,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "canal-towpath",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537280.19,
+        184556.47
+      ],
+      "mapPixel": [
+        553,
+        679
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131054_87125.png",
+      "mosaicSHA256": "057389e0ccd5b02f08c2e5130a6c1c060ede376de07b46a0b9dc84681a2c0241",
+      "registration": "reference/spot-heights/mosaics/m18_131054_87125.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131054_87125_zoom_553_679_s8.png",
+      "review": "Dot lies between the canal edge and the outer towing-path line on the east side, below the railway. 22.0 is clear.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537280.38,
+        "bng_n": 184556.29,
+        "notes": "towing path east of the Cut south of the GER; dot left of figures; 7x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 6.7056,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537573_184727",
+      "expectedValueFeet": 14.0,
+      "sourceType": "spot",
+      "setting": "marsh",
+      "surfaceRole": "adjacent-ground",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537572.6,
+        184727.37
+      ],
+      "mapPixel": [
+        583,
+        240
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87125.png",
+      "mosaicSHA256": "ebdba0b0fb0b653a5a0053656a9e4ab1c38bc30541981100db78cd86d2617b2c",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87125.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87125_zoom_583_240_s8.png",
+      "review": "Dot in open low ground between the track and Waterworks River, clear of bank hatching; 14.0 is clear.",
+      "original": {
+        "setting": "marsh",
+        "setting_conflict": false,
+        "bng_e": 537572.79,
+        "bng_n": 184727.32,
+        "notes": "open ground near south edge; dot left of figures, figures wholly inside, 8x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 4.2672,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537559_185650",
+      "expectedValueFeet": 16.7,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-path",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537558.39,
+        185649.86
+      ],
+      "mapPixel": [
+        612,
+        58
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87116.png",
+      "mosaicSHA256": "03737dcff268109fec30993d72f8f4ecad103cc7521ccbd979a49eae37b2599a",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87116.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87116_zoom_612_58_s8.png",
+      "review": "Dot on the strip between the river edge and parallel path line, east of Waterworks River. 16.7 is clear. This is the local bank/path surface, not a surveyed maximum crest.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537558.58,
+        "bng_n": 185649.68,
+        "notes": "east bank of the River Lea by the county boundary, beside a track; dot above figures, 8x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.09016,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537573_185570",
+      "expectedValueFeet": 16.8,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-path",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537571.73,
+        185569.67
+      ],
+      "mapPixel": [
+        642,
+        275
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87116.png",
+      "mosaicSHA256": "03737dcff268109fec30993d72f8f4ecad103cc7521ccbd979a49eae37b2599a",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87116.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87116_zoom_645_273_s8.png",
+      "review": "Dot on bank/path strip at the ditch junction east of Waterworks River. 16.8 is clear; dot just below the old locator.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537573.02,
+        "bng_n": 185570.26,
+        "notes": "east bank of the Lea at the ditch junction; dot above figures, 8x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.12064,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537648_185504",
+      "expectedValueFeet": 16.4,
+      "sourceType": "spot",
+      "setting": "street",
+      "surfaceRole": "lane-between-ditches",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537657.6,
+        185504.81
+      ],
+      "mapPixel": [
+        868,
+        456
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87116.png",
+      "mosaicSHA256": "03737dcff268109fec30993d72f8f4ecad103cc7521ccbd979a49eae37b2599a",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87116.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87116_zoom_868_456_s8.png",
+      "review": "Dot lies in Temple Mill Lane between the two parallel ditches, not on a distinct bank crest. Original locator843,457 lies about25pixels west of the visible survey dot; corrected to868,456.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537648.5,
+        "bng_n": 185504.01,
+        "notes": "bank between the two channels east of the bridge (C.D.); dot left of figures, 8x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 4.99872,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537638_185226",
+      "expectedValueFeet": 17.8,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-surface",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537638.02,
+        185225.13
+      ],
+      "mapPixel": [
+        795,
+        440
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87119.png",
+      "mosaicSHA256": "b88d3eedbf2698f4b57b7d7111797b68d4979c6506b810c6948f097cb9f930ca",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87119.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87119_zoom_795_440_s8.png",
+      "review": "Dot within the hatched bank at the Waterworks/Potter\u2019s Ditch bend. 17.8 is clear. Use at this position; map does not establish an entire uniform crest. A closer review locates the dot centre at795,440, two pixels below the earlier locator.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537638.19,
+        "bng_n": 185225.5,
+        "notes": "embankment corner at the head of Waterworks River; dot in the bank hatching below figures; 7x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.42544,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537692_185240",
+      "expectedValueFeet": 15.1,
+      "sourceType": "spot",
+      "setting": "marsh",
+      "surfaceRole": "adjacent-ground",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537691.18,
+        185241.046
+      ],
+      "mapPixel": [
+        939,
+        401
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87119.png",
+      "mosaicSHA256": "b88d3eedbf2698f4b57b7d7111797b68d4979c6506b810c6948f097cb9f930ca",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87119.json",
+      "detailCrop": "reference/river-height-review-2026-10-02/m18_131057_87119_zoom_939_401_s8.png",
+      "review": "Dot is clearly on dry ground northwest of the Channelsea and Potter's Ditch junction, north of the ditch. Locator refined from 940,404 to the dot centre at 939,401. The hatched raised works bank lies across water to the south and east and must remain separate.",
+      "original": {
+        "setting": "marsh",
+        "setting_conflict": false,
+        "bng_e": 537691.76,
+        "bng_n": 185240.13,
+        "notes": "marsh corner at Potter's Ditch / Channel Sea River; dot right of figures; 7x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 4.60248,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537624_184335",
+      "expectedValueFeet": 18.6,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-margin",
+      "valueConfidence": "high",
+      "surfaceConfidence": "medium",
+      "positionBNG": [
+        537624.17,
+        184335.59
+      ],
+      "mapPixel": [
+        693,
+        531
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87128.png",
+      "mosaicSHA256": "bd79be170d5e8058024105212df7e282ba86e9d7fac048188da432c6645f243f",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87128.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87128_zoom_693_531_s8.png",
+      "review": "Dot at the landward margin of River Lea bank hatching. 18.6 is clear; retain as a local margin height, not a marsh-wide or uniform crest elevation.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537624.36,
+        "bng_n": 184335.41,
+        "notes": "dot on the crest of the embankment south of the 'C.C. at L.W.' boundary, figures right, 6x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.66928,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537570_184224",
+      "expectedValueFeet": 17.1,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-margin",
+      "valueConfidence": "high",
+      "surfaceConfidence": "medium",
+      "positionBNG": [
+        537569.86,
+        184224.21
+      ],
+      "mapPixel": [
+        539,
+        827
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87128.png",
+      "mosaicSHA256": "bd79be170d5e8058024105212df7e282ba86e9d7fac048188da432c6645f243f",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87128.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87128_zoom_539_827_s8.png",
+      "review": "17.1 dot at the landward bank margin. Nearby B.M.12.98 is a separate benchmark on the bank face; it must not be treated as a marsh-floor measurement.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537570.05,
+        "bng_n": 184224.03,
+        "notes": "dot on the embankment crest, figures right, 10x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.21208,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537687_184334",
+      "expectedValueFeet": 11.2,
+      "sourceType": "spot",
+      "setting": "marsh",
+      "surfaceRole": "adjacent-ground",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537687.12,
+        184333.96
+      ],
+      "mapPixel": [
+        94,
+        540
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131060_87128.png",
+      "mosaicSHA256": "a1f4d3bbf2574fc750bb18c3b9b22b1f21d1d34368ce2743826843ad1d03e101",
+      "registration": "reference/spot-heights/mosaics/m18_131060_87128.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131060_87128_zoom_94_540_s8.png",
+      "review": "11.2 dot just outside the landward ends of City Mill River bank hatching, in the broad unbuilt strip between rivers. Reclassify the source bank-top category as adjacent low ground; do not raise the bank crest from it. Full-mosaic comparison and source-water overlay resolve the earlier channel-name and side ambiguity.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": true,
+        "bng_e": 537687.31,
+        "bng_n": 184333.9,
+        "notes": "dot on the embankment edge, figures right, 6x (overlap)"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 3.41376,
+      "appliedToTerrain": false,
+      "terrainUse": "Resolved: both low-ground dots are on the east side of City Mill River in the same dry compartment west of Waterworks River. Fit only in this compartment, separately from higher western Old Lea controls.",
+      "priorTerrainUse": "Withheld: overlay places this low-margin dot on the opposite side of the mapped Waterworks channel from the western bank controls. Reconcile channel and foreshore boundaries before assigning a terrain compartment."
+    },
+    {
+      "id": "sh_537793_184215",
+      "expectedValueFeet": 10.8,
+      "sourceType": "spot",
+      "setting": "marsh",
+      "surfaceRole": "adjacent-ground",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537793.47,
+        184215.06
+      ],
+      "mapPixel": [
+        371,
+        868
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131060_87128.png",
+      "mosaicSHA256": "a1f4d3bbf2574fc750bb18c3b9b22b1f21d1d34368ce2743826843ad1d03e101",
+      "registration": "reference/spot-heights/mosaics/m18_131060_87128.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131060_87128_zoom_371_868_s8.png",
+      "review": "10.8 dot outside the landward ends of City Mill River bank hatching, on the unbuilt ground between rivers. Existing source notes already say open marsh at the foot; resolve the contradictory bank-top category in favour of the visible dot. Full-mosaic comparison and source-water overlay resolve the earlier channel-name and side ambiguity.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": true,
+        "bng_e": 537793.4,
+        "bng_n": 184215.24,
+        "notes": "open marsh at the foot of the embanked bank; dot left of figures; 0 and 8 clear at 8x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 3.29184,
+      "appliedToTerrain": false,
+      "terrainUse": "Resolved: both low-ground dots are on the east side of City Mill River in the same dry compartment west of Waterworks River. Fit only in this compartment, separately from higher western Old Lea controls.",
+      "priorTerrainUse": "Withheld: overlay places this low-margin dot on the opposite side of the mapped Waterworks channel from the western bank controls. Reconcile channel and foreshore boundaries before assigning a terrain compartment."
+    },
+    {
+      "id": "sh_537516_184670",
+      "expectedValueFeet": 13.3,
+      "sourceType": "spot",
+      "setting": "marsh",
+      "surfaceRole": "adjacent-ground",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537516.08,
+        184670.15
+      ],
+      "mapPixel": [
+        427,
+        390
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87125.png",
+      "mosaicSHA256": "ebdba0b0fb0b653a5a0053656a9e4ab1c38bc30541981100db78cd86d2617b2c",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87125.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87125_zoom_427_390_s8.png",
+      "review": "Clearly visible dot in open field inside the track bend north of the railway and west of the River Lea/Waterworks corridor; no bank hatching, road or structure under the dot. 13.3 confirmed at8x. Same dry compartment as reviewed14.0ft field mark.",
+      "original": {
+        "setting": "marsh",
+        "setting_conflict": false,
+        "bng_e": 537516.28,
+        "bng_n": 184669.97,
+        "notes": "open marsh (Hackney/Old Ford marsh) inside the track bend; dot left of figures at 6x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 4.05384,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537519_184158",
+      "expectedValueFeet": 17.2,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-margin",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537518.8,
+        184157.85
+      ],
+      "mapPixel": [
+        397,
+        234
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87131.png",
+      "mosaicSHA256": "f38a2b8c7a07f94f92a6c032f7a5a9ac77b5738aa804902f6ca8508b65559220",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87131.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87131_zoom_397_234_s8.png",
+      "review": "17.2 is clear; the survey dot lies in the eastern Old Lea bank hatching immediately above the Pudding Mill River fork. It measures a local bank-margin surface, not a proven maximum crest.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537519.17,
+        "bng_n": 184157.68,
+        "notes": "dot on the embankment crest near the south edge, figures right, 6x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.24256,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537519_184078",
+      "expectedValueFeet": 17.3,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-margin",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537518.35,
+        184078.01
+      ],
+      "mapPixel": [
+        390,
+        449
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87131.png",
+      "mosaicSHA256": "f38a2b8c7a07f94f92a6c032f7a5a9ac77b5738aa804902f6ca8508b65559220",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87131.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87131_zoom_390_449_s8.png",
+      "review": "17.3 is clear; the survey dot lies in bank hatching on the EAST side of the narrow Pudding Mill River head, below its fork from the Old Lea and north of Knobshill Cottage. Do not assign this dot to the main Old Lea bank farther west.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537518.54,
+        "bng_n": 184077.83,
+        "notes": "embankment top; dot in the bank hatching left of figures; 7x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.27304,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537494_184017",
+      "expectedValueFeet": 12.1,
+      "sourceType": "spot",
+      "setting": "marsh",
+      "surfaceRole": "adjacent-ground",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537493.93,
+        184017.57
+      ],
+      "mapPixel": [
+        320,
+        610
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87131.png",
+      "mosaicSHA256": "f38a2b8c7a07f94f92a6c032f7a5a9ac77b5738aa804902f6ca8508b65559220",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87131.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87131_zoom_320_610_s8.png",
+      "review": "The 12.1 dot is on open low ground between the Old Lea and Pudding Mill River, north of the mapped ditch opposite Knobshill Cottage. It is outside both bank hatchings and is not a bank-crest reading. Use locally within this dry compartment only.",
+      "original": {
+        "setting": "marsh",
+        "setting_conflict": false,
+        "bng_e": 537494.12,
+        "bng_n": 184017.39,
+        "notes": "open marsh; dot left of figures; 7x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 3.68808,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537458_184621",
+      "expectedValueFeet": 13.0,
+      "sourceType": "spot",
+      "setting": "embankment_foot",
+      "surfaceRole": "adjacent-ground",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537458.22,
+        184621.43
+      ],
+      "mapPixel": [
+        268,
+        517
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87125.png",
+      "mosaicSHA256": "ebdba0b0fb0b653a5a0053656a9e4ab1c38bc30541981100db78cd86d2617b2c",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87125.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87125_zoom_268_517_s8.png",
+      "review": "Clear ground-height dot immediately NORTH of the railway boundary/embankment hatching. This is ground at the embankment foot, not railway formation or crest. Apply with the adjoining marsh and railway toe in one coordinated surface pass.",
+      "original": {
+        "setting": "embankment_foot",
+        "setting_conflict": false,
+        "bng_e": 537458.42,
+        "bng_n": 184621.07,
+        "notes": "north foot of the G.E.R. embankment; dot left of figures at 6x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 3.9624,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537374_184619",
+      "expectedValueFeet": 13.3,
+      "sourceType": "spot",
+      "setting": "embankment_foot",
+      "surfaceRole": "adjacent-ground",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537373.41,
+        184619.14
+      ],
+      "mapPixel": [
+        808,
+        517
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131054_87125.png",
+      "mosaicSHA256": "057389e0ccd5b02f08c2e5130a6c1c060ede376de07b46a0b9dc84681a2c0241",
+      "registration": "reference/spot-heights/mosaics/m18_131054_87125.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131054_87125_zoom_808_517_s8.png",
+      "review": "Clear ground-height dot immediately NORTH of the railway boundary/embankment hatching. This is ground at the embankment foot, not railway formation or crest. Apply with the adjoining marsh and railway toe in one coordinated surface pass.",
+      "original": {
+        "setting": "embankment_foot",
+        "setting_conflict": false,
+        "bng_e": 537373.6,
+        "bng_n": 184619.14,
+        "notes": "marsh at the north foot of the GER Park Branch embankment; dot left of figures; 7x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 4.05384,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537680_184985",
+      "expectedValueFeet": 14.6,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-margin",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537679.89,
+        184984.96
+      ],
+      "mapPixel": [
+        890,
+        322
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87122.png",
+      "mosaicSHA256": "e131ae9bb971db617142346abc61c4f00d6b54b684741cfc44b25832b59f565a",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87122.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87122_zoom_890_322_s8.png",
+      "review": "Dot is on the landward side of the EAST Waterworks River edge, west of the narrow drainage strips. It measures the local margin, not a demonstrated embankment crest. Retain legacy bank setting for inventory grouping only. The 15.2ft original west-bank description is wrong; the source river polygon overlaps that dot and is locally clipped against the inspected map line before fitting.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": true,
+        "bng_e": 537680.27,
+        "bng_n": 184984.78,
+        "notes": "east bank of Waterworks River; dot above figures (the dot at 869,319 is on the boundary line and not used), 8x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 4.45008,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537669_184906",
+      "expectedValueFeet": 14.7,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-margin",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537668.64,
+        184905.58
+      ],
+      "mapPixel": [
+        854,
+        535
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87122.png",
+      "mosaicSHA256": "e131ae9bb971db617142346abc61c4f00d6b54b684741cfc44b25832b59f565a",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87122.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87122_zoom_854_535_s8.png",
+      "review": "Dot is on the landward side of the EAST Waterworks River edge, west of the narrow drainage strips. It measures the local margin, not a demonstrated embankment crest. Retain legacy bank setting for inventory grouping only. The 15.2ft original west-bank description is wrong; the source river polygon overlaps that dot and is locally clipped against the inspected map line before fitting.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": true,
+        "bng_e": 537668.83,
+        "bng_n": 184905.58,
+        "notes": "east bank of Waterworks River; dot on the bank line left of figures, 8x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 4.48056,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537655_184828",
+      "expectedValueFeet": 15.2,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-margin",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537654.72,
+        184828.72
+      ],
+      "mapPixel": [
+        811,
+        741
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87122.png",
+      "mosaicSHA256": "e131ae9bb971db617142346abc61c4f00d6b54b684741cfc44b25832b59f565a",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87122.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87122_zoom_811_741_s8.png",
+      "review": "Dot is on the landward side of the EAST Waterworks River edge, west of the narrow drainage strips. It measures the local margin, not a demonstrated embankment crest. Retain legacy bank setting for inventory grouping only. The 15.2ft original west-bank description is wrong; the source river polygon overlaps that dot and is locally clipped against the inspected map line before fitting.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": true,
+        "bng_e": 537655.1,
+        "bng_n": 184828.36,
+        "notes": "west bank of Waterworks River just below the py ~737 sheet join; dot on the bank line left of figures, 8x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 4.63296,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537659_185146",
+      "expectedValueFeet": 18.0,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-margin",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537658.78,
+        185145.88
+      ],
+      "mapPixel": [
+        845,
+        655
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87119.png",
+      "mosaicSHA256": "b88d3eedbf2698f4b57b7d7111797b68d4979c6506b810c6948f097cb9f930ca",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87119.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87119_zoom_845_655_s8.png",
+      "review": "The visible survey dot is within the eastern Waterworks bank hatching beside the Artificial Manure Works. Use the dot, not the number printed farther east. This is a local bank surface, not a surveyed continuous maximum crest.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537659.34,
+        "bng_n": 185145.71,
+        "notes": "Waterworks River bank; figures in open ground east of the bank, dot in the embankment hatching 25 px west, 7x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.4864,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537674_185070",
+      "expectedValueFeet": 17.8,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-margin",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537673.11,
+        185070.16
+      ],
+      "mapPixel": [
+        878,
+        860
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87119.png",
+      "mosaicSHA256": "b88d3eedbf2698f4b57b7d7111797b68d4979c6506b810c6948f097cb9f930ca",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87119.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87119_zoom_878_860_s8.png",
+      "review": "The visible survey dot is within the eastern Waterworks bank hatching beside the Artificial Manure Works. Use the dot, not the number printed farther east. This is a local bank surface, not a surveyed continuous maximum crest.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": true,
+        "bng_e": 537673.5,
+        "bng_n": 185069.71,
+        "notes": "Waterworks River east embankment; dot in the bank hatching left of figures; 7x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.42544,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537672_185146",
+      "expectedValueFeet": 18.0,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-margin",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537658.78,
+        185145.88
+      ],
+      "mapPixel": [
+        845,
+        655
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87119.png",
+      "mosaicSHA256": "b88d3eedbf2698f4b57b7d7111797b68d4979c6506b810c6948f097cb9f930ca",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87119.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87119_zoom_845_655_s8.png",
+      "review": "The old location was the centre of the printed 18.0, not a separate ground dot. The enlarged map resolves the actual dot at845,655 in bank hatching. Retain this source entry as a duplicate of sh_537659_185146; it is not independent evidence.",
+      "original": {
+        "setting": "open_ground",
+        "setting_conflict": false,
+        "bng_e": 537671.98,
+        "bng_n": 185146.05,
+        "notes": "ground east of the Waterworks River bank; no dot found; position = centre of figures; 7x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.4864,
+      "appliedToTerrain": false,
+      "duplicateOf": "sh_537659_185146",
+      "terrainUse": "Withheld duplicate transcription of the same 18.0ft survey dot; apply sh_537659_185146 only."
+    },
+    {
+      "id": "sh_537539_185731",
+      "expectedValueFeet": 16.8,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-path",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537539.44,
+        185731.01
+      ],
+      "mapPixel": [
+        567,
+        606
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87113.png",
+      "mosaicSHA256": "4f1736d22e8c922313b8058bb9af403e08521a90d6df6852062afc6604f3b5aa",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87113.json",
+      "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87113_zoom_567_606_s8.png",
+      "review": "16.8 is clear. The dot sits between the blue river edge and the parallel path boundary, north of the small building and benchmark. It measures the local bank/path surface, not a maximum flood crest. Newly transcribed from the map, independently of the immutable legacy snapshot.",
+      "observationSource": "data/maps/lower-lea-region/height-observations.additional.geojson",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537539.44,
+        "bng_n": 185731.01,
+        "notes": "Direct map reading: dot on eastern Waterworks bank/path strip, above the 16.8 figure. Separate from the 16.8 reading farther south near the ditch junction."
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.12064,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537688_185311",
+      "expectedValueFeet": 14.6,
+      "sourceType": "spot",
+      "setting": "open_ground",
+      "surfaceRole": "adjacent-ground",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537687.036,
+        185311.466
+      ],
+      "mapPixel": [
+        933,
+        211
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131057_87119.png",
+      "mosaicSHA256": "b88d3eedbf2698f4b57b7d7111797b68d4979c6506b810c6948f097cb9f930ca",
+      "registration": "reference/spot-heights/mosaics/m18_131057_87119.json",
+      "detailCrop": "reference/river-height-review-2026-10-02/m18_131057_87119_zoom_933_211_s8.png",
+      "review": "Dot touches the landward side of the western Channelsea edge, below the northern connecting watercourse. Local ground/margin observation, outside the eastern bank hatching; not a surveyed defence crest.",
+      "original": {
+        "setting": "open_ground",
+        "setting_conflict": true,
+        "bng_e": 537687.78,
+        "bng_n": 185311.39,
+        "notes": "path/field edge in the south-east; dot on the line right of figures, 8x"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 4.45008,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537664_184398",
+      "expectedValueFeet": 17.4,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-margin",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537663.407,
+        184398.659
+      ],
+      "mapPixel": [
+        35,
+        364
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131060_87128.png",
+      "mosaicSHA256": "a1f4d3bbf2574fc750bb18c3b9b22b1f21d1d34368ce2743826843ad1d03e101",
+      "registration": "reference/spot-heights/mosaics/m18_131060_87128.json",
+      "detailCrop": "reference/river-height-review-2026-10-02/m18_131060_87128_zoom_35_364_s8.png",
+      "review": "Dot lies within the eastern bank hatching on the Old Lea continuation into City Mill River, upstream of the GIS reach boundary. Separate from low ground beyond the landward edge. Local bank-surface elevation, not proof of a continuous maximum defence crest.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537664.1,
+        "bng_n": 184398.37,
+        "notes": "dot on the crest of the western embankment of the channel, 6x (overlap)"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.30352,
+      "appliedToTerrain": false
+    },
+    {
+      "id": "sh_537740_184274",
+      "expectedValueFeet": 16.7,
+      "sourceType": "spot",
+      "setting": "embankment_top",
+      "surfaceRole": "bank-margin",
+      "valueConfidence": "high",
+      "surfaceConfidence": "high",
+      "positionBNG": [
+        537739.758,
+        184273.748
+      ],
+      "mapPixel": [
+        231,
+        706
+      ],
+      "mosaic": "reference/spot-heights/mosaics/m18_131060_87128.png",
+      "mosaicSHA256": "a1f4d3bbf2574fc750bb18c3b9b22b1f21d1d34368ce2743826843ad1d03e101",
+      "registration": "reference/spot-heights/mosaics/m18_131060_87128.json",
+      "detailCrop": "reference/river-height-review-2026-10-02/m18_131060_87128_zoom_231_706_s8.png",
+      "review": "Dot lies within eastern City Mill River bank hatching, separate from the lower ground dots beyond the landward edge. Local bank-surface elevation, not proof of a continuous maximum defence crest.",
+      "original": {
+        "setting": "embankment_top",
+        "setting_conflict": false,
+        "bng_e": 537739.82,
+        "bng_n": 184273.56,
+        "notes": "dot on the embankment, figures to the right ending ~2 px inside the east edge, 6x (overlap)"
+      },
+      "sourceDatum": "OD Liverpool",
+      "heightMetresSourceDatum": 5.09016,
+      "appliedToTerrain": false
+    }
+  ]
+}

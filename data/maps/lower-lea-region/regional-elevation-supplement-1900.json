@@ -1,0 +1,3981 @@
+{
+  "schemaVersion": 1,
+  "targetEpoch": "1900",
+  "reviewDate": "2026-10-02",
+  "sourceLayer": "os-london-five-foot-1893",
+  "surveyDates": "1891-95 (published 1893-96)",
+  "datum": "OD Liverpool",
+  "positionConvention": "Native pixel centres: mapPixel + 0.5, existing OS tile registration; original snapshot unchanged.",
+  "scope": "Targeted regional gap review, not exhaustive transcription. Full context mosaics and selected 6x\u201312x crops inspected; source reading manifest completion remains unchanged.",
+  "sources": {
+    "m18_131045_87125": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131045_87125.png",
+      "registration": "reference/spot-heights/mosaics/m18_131045_87125.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131045_87125.png": "39fb19ad3175365e384d0796821e75ea03ef66e9459307f22ec9ce31e39ce148",
+        "reference/spot-heights/mosaics/m18_131045_87125.json": "919b6f73a9defb3957000d4ff3a0b6afd42b4a2b734e54616ed48546ca07aafa"
+      }
+    },
+    "m18_131045_87128": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131045_87128.png",
+      "registration": "reference/spot-heights/mosaics/m18_131045_87128.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131045_87128.png": "cc2a2c6d8ac17c6075b6d8d4123b40682f651451a33b37123a116df1325a9797",
+        "reference/spot-heights/mosaics/m18_131045_87128.json": "c0add95a660ef4b5f37f8dd483d5619d034d3a3f22df9c5abd7f26496b4d7bb4"
+      }
+    },
+    "m18_131045_87131": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131045_87131.png",
+      "registration": "reference/spot-heights/mosaics/m18_131045_87131.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131045_87131.png": "225d95a34d7444c07bc22a3b068485a9c468b03a5d3e7c83c580b459f85fc6c9",
+        "reference/spot-heights/mosaics/m18_131045_87131.json": "8926755f22e917b843f90fdc3ebc7e781e3ffe04df8851a039802372db8ea556"
+      }
+    },
+    "m18_131048_87125": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131048_87125.png",
+      "registration": "reference/spot-heights/mosaics/m18_131048_87125.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131048_87125.png": "38b453aa82116b60ef5ddb26566b6ca7f806f5cbf7a48fdd2b053482ed40da46",
+        "reference/spot-heights/mosaics/m18_131048_87125.json": "8e46221c295daada8af037e8f244044c1d1b63e1156445e5c2fdfd141f1fa3a2"
+      }
+    },
+    "m18_131048_87128": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131048_87128.png",
+      "registration": "reference/spot-heights/mosaics/m18_131048_87128.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131048_87128.png": "fed55d0fb45f5f3836cfdf4e7cca63c39ac8c20c84a61d97c1d5786e88bf6117",
+        "reference/spot-heights/mosaics/m18_131048_87128.json": "e95868a6b99bfb266f3217cb1389ca9e4e11276f64d43d82031a97991f02d5be"
+      }
+    },
+    "m18_131048_87131": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131048_87131.png",
+      "registration": "reference/spot-heights/mosaics/m18_131048_87131.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131048_87131.png": "84e22b2e13299e1641cfe6717444b240813c16719d893a0a24bdfb44ee4ef1af",
+        "reference/spot-heights/mosaics/m18_131048_87131.json": "5949ed0a061d47a7aacd1c6a71765b8c7c583a8ecaa0d083b44d450e4f53f47c"
+      }
+    },
+    "m18_131051_87125": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131051_87125.png",
+      "registration": "reference/spot-heights/mosaics/m18_131051_87125.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131051_87125.png": "ce50ba5409710bffd22a7d5016476144789a4296b45314988ba3ddf82d07c8ee",
+        "reference/spot-heights/mosaics/m18_131051_87125.json": "9d8cb2314f50006a36c6feb4523d89e168694ced3becba2b2745e77ef66b07ff"
+      }
+    },
+    "m18_131051_87128": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131051_87128.png",
+      "registration": "reference/spot-heights/mosaics/m18_131051_87128.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131051_87128.png": "8d207fec1e9cc80e83f9ebc38ab7e6e7ab1bd8de9230cb6bc790d69b1da5703b",
+        "reference/spot-heights/mosaics/m18_131051_87128.json": "af28ff18f53e8ebea7e73f50a0c023aa3da41d53c87c95636e0c72077eb6bfdc"
+      }
+    },
+    "m18_131051_87116": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131051_87116.png",
+      "registration": "reference/spot-heights/mosaics/m18_131051_87116.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131051_87116.png": "867bd492e6f317083cd8b5ce630534c9101fe8086e711990a201948174161cd8",
+        "reference/spot-heights/mosaics/m18_131051_87116.json": "4ddb6573e89a7a3e4449f2684df12d3492c5fd504299150e33c1e8fa59bbf28b"
+      }
+    },
+    "m18_131054_87116": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131054_87116.png",
+      "registration": "reference/spot-heights/mosaics/m18_131054_87116.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131054_87116.png": "b005f4faf21dd7d4ab6e3655545fea096251a2407a0f73c8603640dddcc92b8e",
+        "reference/spot-heights/mosaics/m18_131054_87116.json": "14d90f476180b5f06c2d153e6976ada1b3a421e07b3371a969ef1fcc5afce518"
+      }
+    },
+    "m18_131051_87119": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131051_87119.png",
+      "registration": "reference/spot-heights/mosaics/m18_131051_87119.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131051_87119.png": "29239c44c81d12ad85d067648cd593934fd8088144a0a965abe0cb970ec6947b",
+        "reference/spot-heights/mosaics/m18_131051_87119.json": "876ad5b383060c0c103b2d9c4d9fe2ff08d673b4cf1ebdf4808850016f4aa534"
+      }
+    },
+    "m18_131054_87110": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131054_87110.png",
+      "registration": "reference/spot-heights/mosaics/m18_131054_87110.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131054_87110.png": "f9c00be055c6e91aac182797eb870f2943cc5b8ca9d098800af26e82ba3e7186",
+        "reference/spot-heights/mosaics/m18_131054_87110.json": "2347548c099b04dac34d56e0d57af4d61b8b14c1152f702bd5c2e3c032dd1bb5"
+      }
+    },
+    "m18_131048_87110": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131048_87110.png",
+      "registration": "reference/spot-heights/mosaics/m18_131048_87110.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131048_87110.png": "09841961159a5e293ee3e06fbc4b5a9668f063cbb97166d12006770218c5c2b6",
+        "reference/spot-heights/mosaics/m18_131048_87110.json": "c895e02432ec69edea22a447618d825af28af81671fc2f64ff2e4dbf500cb985"
+      }
+    },
+    "m18_131051_87110": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131051_87110.png",
+      "registration": "reference/spot-heights/mosaics/m18_131051_87110.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131051_87110.png": "835d135df14408bf266e307baeefe0281373231e8ba41cda024289e6b542fa11",
+        "reference/spot-heights/mosaics/m18_131051_87110.json": "8339c4b6f2888fb2719bebfaa4171820fd3b89827ce58156149d4b93bb9639d9"
+      }
+    },
+    "m18_131051_87113": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131051_87113.png",
+      "registration": "reference/spot-heights/mosaics/m18_131051_87113.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131051_87113.png": "de4288d76d75e012b517c4ba5622ed501fdc3dd5540397a3c0205e3fe90f4078",
+        "reference/spot-heights/mosaics/m18_131051_87113.json": "67070db639f0be61436b07c8682cb13fe3d5c531746ebcc7628ba6f9364e6e81"
+      }
+    },
+    "m18_131045_87107": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131045_87107.png",
+      "registration": "reference/spot-heights/mosaics/m18_131045_87107.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131045_87107.png": "2b5a9f5af5f1db8728be706bfacb2cfc9bc39500c2a70968c83d2e75363fc510",
+        "reference/spot-heights/mosaics/m18_131045_87107.json": "33a3150b89c7f7b2187055cc42f11fad56165658651105d22378cead704ce938"
+      }
+    },
+    "m18_131048_87107": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131048_87107.png",
+      "registration": "reference/spot-heights/mosaics/m18_131048_87107.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131048_87107.png": "7ebded27eb8b826d0c26df9710703e3b4ce28d4b1f3b5268eba676f085eed171",
+        "reference/spot-heights/mosaics/m18_131048_87107.json": "792e2c6ec61911ffc59f07309528f8d91280286d436eb569bd5bbb208d029213"
+      }
+    },
+    "m18_131051_87107": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131051_87107.png",
+      "registration": "reference/spot-heights/mosaics/m18_131051_87107.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131051_87107.png": "9ea2913119f5e73ded4d23347128f6b41bfe90d18e4773cc7e062ee426362879",
+        "reference/spot-heights/mosaics/m18_131051_87107.json": "6cec5a73cf918fdee062dfec643854edb52a9f249faf946b32c719f727fd3e1d"
+      }
+    },
+    "m18_131054_87107": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131054_87107.png",
+      "registration": "reference/spot-heights/mosaics/m18_131054_87107.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131054_87107.png": "aa1e07693f2e798a5666f4257081dca8aa3ef528a36fb7fb4e684b92b221baca",
+        "reference/spot-heights/mosaics/m18_131054_87107.json": "f1822f1ff5ccdc24c721aa733fda3b55dac8793cc995cc864bdb8f1739e973f2"
+      }
+    },
+    "m18_131042_87104": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131042_87104.png",
+      "registration": "reference/spot-heights/mosaics/m18_131042_87104.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131042_87104.png": "9c3daaa528ba648627584163ee018181bfe90f5d9301e49734113314b4e84e8f",
+        "reference/spot-heights/mosaics/m18_131042_87104.json": "085b5ece83e124ae7647129e8c77a53e051b9fe78f77246c66c1dadbef4f21c0"
+      },
+      "acquisition": "30 adjoining NLS native zoom-18 tiles downloaded on 2026-10-02: x131042\u2013131044, y87104\u201387113; remaining overlap tiles already cached. Original build_mosaic/sidecar registration, no resampling or new georeferencing.",
+      "tileUrlTemplate": "https://mapseries-tilesets.s3.amazonaws.com/london_1890s/18/{x}/{y}.png"
+    },
+    "m18_131042_87107": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131042_87107.png",
+      "registration": "reference/spot-heights/mosaics/m18_131042_87107.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131042_87107.png": "0c82749e7f8cc9308072a601c9ebe584e7b28b3e1b5da78db533ea45872ae372",
+        "reference/spot-heights/mosaics/m18_131042_87107.json": "4b37a0fa7f40de88bab5a5a72cc07d12eb7f807414caaeb1e1ece42f034a0ae9"
+      },
+      "acquisition": "30 adjoining NLS native zoom-18 tiles downloaded on 2026-10-02: x131042\u2013131044, y87104\u201387113; remaining overlap tiles already cached. Original build_mosaic/sidecar registration, no resampling or new georeferencing.",
+      "tileUrlTemplate": "https://mapseries-tilesets.s3.amazonaws.com/london_1890s/18/{x}/{y}.png"
+    },
+    "m18_131042_87110": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131042_87110.png",
+      "registration": "reference/spot-heights/mosaics/m18_131042_87110.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131042_87110.png": "4929269d2d572d03dd1597ad6f862b59e8d7d91ec1b7154ca33ed6d6908b8475",
+        "reference/spot-heights/mosaics/m18_131042_87110.json": "fe51e82ccc433816f3d57c76f40b93af22bf33da1f4f9079ff6cce2d8da1b72c"
+      },
+      "acquisition": "30 adjoining NLS native zoom-18 tiles downloaded on 2026-10-02: x131042\u2013131044, y87104\u201387113; remaining overlap tiles already cached. Original build_mosaic/sidecar registration, no resampling or new georeferencing.",
+      "tileUrlTemplate": "https://mapseries-tilesets.s3.amazonaws.com/london_1890s/18/{x}/{y}.png"
+    },
+    "m18_131060_87116": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131060_87116.png",
+      "registration": "reference/spot-heights/mosaics/m18_131060_87116.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131060_87116.png": "82ccc7f0076d63235aa18d4eb519cdf2de5ffe6cd26b7f851260a8966a2099a7",
+        "reference/spot-heights/mosaics/m18_131060_87116.json": "9cfaecf699fce91d87a58db0ab9ea2d0f08bbd28ea36f7329f404b208e4cd0f3"
+      }
+    },
+    "m18_131063_87116": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131063_87116.png",
+      "registration": "reference/spot-heights/mosaics/m18_131063_87116.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131063_87116.png": "6d1887fe15594d6bd0ae18e8fa9b18f8ebdb852701dd4c7150cba18c5de4a280",
+        "reference/spot-heights/mosaics/m18_131063_87116.json": "113670294be526eb1a7218ac93d78d2ccf0e99c772eb058892fc686e10e161e6"
+      }
+    },
+    "m18_131060_87119": {
+      "mosaic": "reference/spot-heights/mosaics/m18_131060_87119.png",
+      "registration": "reference/spot-heights/mosaics/m18_131060_87119.json",
+      "hashes": {
+        "reference/spot-heights/mosaics/m18_131060_87119.png": "ae174cc31a458ec032a40cf1a494ab1e06108da2c4bcf00ae526d8b7550db8aa",
+        "reference/spot-heights/mosaics/m18_131060_87119.json": "e14722908a0a6d0325b62771711ac313ee9e8f2254bc8eb0b7c95b242f453fe9"
+      }
+    }
+  },
+  "observations": [
+    {
+      "id": "sh_536309_184747",
+      "mosaic": "m18_131045_87125",
+      "mapPixel": [
+        262,
+        94
+      ],
+      "valueFeet": 23.2,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Wick Road at Brookfield Road; separate dot above-left of 23.2.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131045_87125_273_98_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536371_184739",
+      "mosaic": "m18_131045_87125",
+      "mapPixel": [
+        426,
+        121
+      ],
+      "valueFeet": 21.5,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Wick Road at Homer Road; separate dot above-left of 21.5.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131045_87125_438_125_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536483_184714",
+      "mosaic": "m18_131045_87125",
+      "mapPixel": [
+        726,
+        196
+      ],
+      "valueFeet": 22.7,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Wick Road beside the urinal and park entrance; separate dot above 22.7.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131045_87125_731_204_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536363_184564",
+      "mosaic": "m18_131045_87125",
+      "mapPixel": [
+        392,
+        591
+      ],
+      "valueFeet": 35.5,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Victoria Park Road at Brookfield Road; dot right of 35.5, distinct from B.M.36.79.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131045_87125_375_590_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536350_184523",
+      "mosaic": "m18_131045_87125",
+      "mapPixel": [
+        354,
+        701
+      ],
+      "valueFeet": 39.6,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "park-path-or-church-ground",
+      "review": "St Augustine\u2019s church grounds/path west of the church; separate dot above-left of 39.6, not the building benchmark.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131045_87125_369_704_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536416_184533",
+      "mosaic": "m18_131045_87125",
+      "mapPixel": [
+        534,
+        678
+      ],
+      "valueFeet": 42.5,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "park-path-or-church-ground",
+      "review": "Park path beside St Augustine\u2019s church, outside the building; separate dot above-right of 42.5.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131045_87125_530_687_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536276_184701",
+      "mosaic": "m18_131045_87125",
+      "mapPixel": [
+        170,
+        217
+      ],
+      "valueFeet": 30.0,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Brookfield Road northwest branch; 30.0 with dot above, final digit a closed zero at 6x.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131045_87125_174_224_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536278_184275",
+      "mosaic": "m18_131045_87128",
+      "mapPixel": [
+        145,
+        597
+      ],
+      "valueFeet": 45.6,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "park-path-or-church-ground",
+      "review": "Unmade path junction in Victoria Park west of cricket ground; dot above-left.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131045_87128_154_605_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536341_184225",
+      "mosaic": "m18_131045_87128",
+      "mapPixel": [
+        310,
+        735
+      ],
+      "valueFeet": 45.7,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "park-path-or-church-ground",
+      "review": "Victoria Park path by planted enclosure; dot above 45.7.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131045_87128_315_744_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536464_184194",
+      "mosaic": "m18_131045_87128",
+      "mapPixel": [
+        637,
+        827
+      ],
+      "valueFeet": 46.6,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "park-path-or-church-ground",
+      "review": "Victoria Park east-west path south of cricket ground; dot above-left of 46.6.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131045_87128_650_834_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536305_184138",
+      "mosaic": "m18_131045_87128",
+      "mapPixel": [
+        206,
+        968
+      ],
+      "valueFeet": 46.3,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "park-path-or-church-ground",
+      "review": "Victoria Park north-south path northwest of Bathing Lake; separate dot above 46.3.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131045_87128_205_976_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536691_184734",
+      "mosaic": "m18_131048_87125",
+      "mapPixel": [
+        519,
+        157
+      ],
+      "valueFeet": 21.4,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Victoria Road at the north end of Riseholme Street; separate dot below-left of 21.4.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131048_87125_530_154_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536755_184748",
+      "mosaic": "m18_131048_87125",
+      "mapPixel": [
+        692,
+        125
+      ],
+      "valueFeet": 19.5,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Victoria Road at Chapman Road; 19.5 confirmed at 8x, dot above figure inside carriageway.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131048_87125_zoom_696_132_s8.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536630_184630",
+      "mosaic": "m18_131048_87125",
+      "mapPixel": [
+        346,
+        433
+      ],
+      "valueFeet": 26.0,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Riseholme Street; figure east of road, survey dot to its west inside the road; not the adjoining railway.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131048_87125_374_428_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536625_184590",
+      "mosaic": "m18_131048_87125",
+      "mapPixel": [
+        330,
+        541
+      ],
+      "valueFeet": 30.6,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Riseholme Street approaching Cassland Road; separate dot above-left of 30.6.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131048_87125_342_546_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536557_184201",
+      "mosaic": "m18_131048_87128",
+      "mapPixel": [
+        121,
+        816
+      ],
+      "valueFeet": 47.5,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "park-path-or-church-ground",
+      "review": "Victoria Park east-west path; separate dot left of 47.5.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131048_87128_133_815_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536601_184204",
+      "mosaic": "m18_131048_87128",
+      "mapPixel": [
+        239,
+        810
+      ],
+      "valueFeet": 47.8,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "park-path-or-church-ground",
+      "review": "Victoria Park east-west path at the northern path junction; separate dot left of 47.8.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131048_87128_249_808_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536714_184201",
+      "mosaic": "m18_131048_87128",
+      "mapPixel": [
+        541,
+        827
+      ],
+      "valueFeet": 47.5,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "park-path-or-church-ground",
+      "review": "Victoria Park east-west path at planted-enclosure corner; separate dot above-left. Final digit 5 checked at 12x.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131048_87128_zoom_555_830_s12.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536774_184185",
+      "mosaic": "m18_131048_87128",
+      "mapPixel": [
+        703,
+        874
+      ],
+      "valueFeet": 47.3,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "park-path-or-church-ground",
+      "review": "Victoria Park path junction west of Morpeth Lodge; separate dot above 47.3.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131048_87128_700_884_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536811_184351",
+      "mosaic": "m18_131048_87128",
+      "mapPixel": [
+        813,
+        430
+      ],
+      "valueFeet": 40.9,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Cassland Road beside park; figure west of boundary but separate dot lies east in the carriageway.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131048_87128_791_433_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536858_184264",
+      "mosaic": "m18_131048_87128",
+      "mapPixel": [
+        932,
+        668
+      ],
+      "valueFeet": 39.7,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Cassland Road beside park and housing; separate dot above 39.7.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131048_87128_935_677_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536821_184171",
+      "mosaic": "m18_131048_87128",
+      "mapPixel": [
+        827,
+        915
+      ],
+      "valueFeet": 43.6,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Road beside Morpeth Lodge; dot above-left of 43.6 in roadway, not B.M.46.75.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131048_87128_837_921_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536945_184780",
+      "mosaic": "m18_131051_87125",
+      "mapPixel": [
+        437,
+        52
+      ],
+      "valueFeet": 16.7,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Victoria Road at Prince Edward Road; separate dot left, distinct from B.M.17.30.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131051_87125_450_52_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536988_184689",
+      "mosaic": "m18_131051_87125",
+      "mapPixel": [
+        544,
+        300
+      ],
+      "valueFeet": 16.5,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Prince Edward Road at Felstead Street; separate dot above-right of 16.5.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131051_87125_530_305_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_537051_184665",
+      "mosaic": "m18_131051_87125",
+      "mapPixel": [
+        714,
+        369
+      ],
+      "valueFeet": 17.1,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Wansbeck Road at Wallis Road; separate dot above 17.1.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131051_87125_714_379_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_537033_184521",
+      "mosaic": "m18_131051_87125",
+      "mapPixel": [
+        655,
+        757
+      ],
+      "valueFeet": 17.2,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "White Post Lane by works; separate dot above-left of 17.2.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131051_87125_665_768_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536970_184484",
+      "mosaic": "m18_131051_87125",
+      "mapPixel": [
+        483,
+        850
+      ],
+      "valueFeet": 16.4,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "White Post Lane opposite chemical works; separate dot below-left of 16.4.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131051_87125_490_844_6x.png",
+      "reviewArea": "western"
+    },
+    {
+      "id": "sh_536790_185487",
+      "mosaic": "m18_131051_87116",
+      "mapPixel": [
+        70,
+        441
+      ],
+      "valueFeet": 15.1,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Homerton Road western unhatched lane; separate dot inside the road above the figure.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131051_87116_71_451_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_536869_185494",
+      "mosaic": "m18_131051_87116",
+      "mapPixel": [
+        285,
+        426
+      ],
+      "valueFeet": 15.0,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Homerton Road; separate dot to the right of M inside dotted road edges.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131051_87116_286_430_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_536955_185505",
+      "mosaic": "m18_131051_87116",
+      "mapPixel": [
+        516,
+        404
+      ],
+      "valueFeet": 14.8,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Homerton Road; separate dot beside N inside dotted road edges.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131051_87116_524_411_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537035_185514",
+      "mosaic": "m18_131051_87116",
+      "mapPixel": [
+        731,
+        385
+      ],
+      "valueFeet": 15.4,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Homerton Road; separate dot between A and D inside dotted road edges.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131051_87116_737_389_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537115_185525",
+      "mosaic": "m18_131054_87116",
+      "mapPixel": [
+        178,
+        362
+      ],
+      "valueFeet": 15.4,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Homerton Road west of bridge approach; separate dot inside unhatched lane.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131054_87116_179_369_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537191_185535",
+      "mosaic": "m18_131054_87116",
+      "mapPixel": [
+        385,
+        341
+      ],
+      "valueFeet": 15.2,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Homerton Road before the hatched bridge approach begins; separate dot inside road.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131054_87116_392_347_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537116_185407",
+      "mosaic": "m18_131054_87116",
+      "mapPixel": [
+        173,
+        680
+      ],
+      "valueFeet": 16.7,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Temple Mills Road; separate dot in the unhatched lane, west of the adjoining drain.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131054_87116_190_679_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537212_185519",
+      "mosaic": "m18_131054_87116",
+      "mapPixel": [
+        439,
+        384
+      ],
+      "valueFeet": 17.2,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Temple Mills Road branch south of Homerton Road; separate dot inside unhatched lane, away from the bridge deck.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131054_87116_446_391_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537047_185259",
+      "mosaic": "m18_131051_87119",
+      "mapPixel": [
+        744,
+        304
+      ],
+      "valueFeet": 17.1,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Temple Mill Lane north of Wick Lane Bridge; separate dot inside unhatched lane beyond the approach.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131051_87119_764_301_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537161_185652",
+      "mosaic": "m18_131054_87116",
+      "mapPixel": [
+        313,
+        22
+      ],
+      "valueFeet": 15.7,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Ground on marsh side south of the Old Lea bend; separate dot outside the river outline, no crest hatching. River margin, not channel bed.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131054_87116_320_30_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537248_185605",
+      "mosaic": "m18_131054_87116",
+      "mapPixel": [
+        543,
+        156
+      ],
+      "valueFeet": 14.9,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Open marsh south of the Old Lea bend; separate dot above-right of figure, just west of sheet seam. Seam is not a water boundary.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131054_87116_534_156_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537105_186159",
+      "mosaic": "m18_131054_87110",
+      "mapPixel": [
+        197,
+        188
+      ],
+      "valueFeet": 16.9,
+      "setting": "open_ground",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Unhatched ground east of Waterworks River and west of the sidings boundary; separate dot lies clear of the river outline. Does not establish river-bank crest or railway formation.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131054_87110_211_191_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_537143_185481",
+      "mosaic": "m18_131054_87116",
+      "mapPixel": [
+        250,
+        483
+      ],
+      "valueFeet": 16.7,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Temple Mills Road bend, west of the adjoining drain. Full map, 6x dot crop and 3x drain context resolve the figure as 16.7 with a separate dot inside the lane; the nearby B.M.16.49 is a different feature.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/m18_131054_87116_243_484_6x.png",
+      "reviewArea": "northern"
+    },
+    {
+      "id": "sh_536495_186107",
+      "mosaic": "m18_131048_87110",
+      "mapPixel": [
+        91,
+        284
+      ],
+      "valueFeet": 15.4,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Hackney Marsh interior: separate survey dot and clear figure on open, unhatched ground, away from river/canal banks and railway formation.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131048_87110_105_285_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536565_186065",
+      "mosaic": "m18_131048_87110",
+      "mapPixel": [
+        277,
+        404
+      ],
+      "valueFeet": 15.5,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Hackney Marsh interior: separate survey dot and clear figure on open, unhatched ground, away from river/canal banks and railway formation.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131048_87110_289_403_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536657_186004",
+      "mosaic": "m18_131048_87110",
+      "mapPixel": [
+        520,
+        573
+      ],
+      "valueFeet": 15.2,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Hackney Marsh interior: separate survey dot and clear figure on open, unhatched ground, away from river/canal banks and railway formation.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131048_87110_529_578_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536702_185981",
+      "mosaic": "m18_131048_87110",
+      "mapPixel": [
+        639,
+        638
+      ],
+      "valueFeet": 15.1,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Hackney Marsh interior: separate survey dot and clear figure on open, unhatched ground, away from river/canal banks and railway formation.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131048_87110_651_639_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536774_185945",
+      "mosaic": "m18_131051_87110",
+      "mapPixel": [
+        61,
+        741
+      ],
+      "valueFeet": 14.4,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Hackney Marsh interior: separate survey dot and clear figure on open, unhatched ground, away from river/canal banks and railway formation. The nearby open triangle is a separate survey symbol; this reading has its own dot.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131051_87110_75_741_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536843_185907",
+      "mosaic": "m18_131051_87110",
+      "mapPixel": [
+        245,
+        849
+      ],
+      "valueFeet": 14.6,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Hackney Marsh interior: separate survey dot and clear figure on open, unhatched ground, away from river/canal banks and railway formation.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131051_87110_257_849_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536896_185877",
+      "mosaic": "m18_131051_87110",
+      "mapPixel": [
+        383,
+        933
+      ],
+      "valueFeet": 14.8,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Hackney Marsh interior: separate survey dot and clear figure on open, unhatched ground, away from river/canal banks and railway formation.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131051_87110_397_934_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_537045_185730",
+      "mosaic": "m18_131051_87113",
+      "mapPixel": [
+        773,
+        572
+      ],
+      "valueFeet": 15.8,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Hackney Marsh interior: separate survey dot and clear figure on open, unhatched ground, away from river/canal banks and railway formation.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131051_87113_781_578_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536899_185757",
+      "mosaic": "m18_131051_87113",
+      "mapPixel": [
+        383,
+        490
+      ],
+      "valueFeet": 15.3,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-path",
+      "review": "Unlabelled dotted path across Hackney Marsh toward Homerton Road: separate dot between the path edges, with no embankment hatching. Retain path-surface elevation as near-ground evidence; no assumed fill subtraction and no bank-crest role.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131051_87113_399_490_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536855_185695",
+      "mosaic": "m18_131051_87113",
+      "mapPixel": [
+        260,
+        652
+      ],
+      "valueFeet": 15.3,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-path",
+      "review": "Unlabelled dotted path across Hackney Marsh toward Homerton Road: separate dot between the path edges, with no embankment hatching. Retain path-surface elevation as near-ground evidence; no assumed fill subtraction and no bank-crest role.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131051_87113_276_653_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536809_185629",
+      "mosaic": "m18_131051_87113",
+      "mapPixel": [
+        132,
+        826
+      ],
+      "valueFeet": 15.2,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-path",
+      "review": "Unlabelled dotted path across Hackney Marsh toward Homerton Road: separate dot between the path edges, with no embankment hatching. Retain path-surface elevation as near-ground evidence; no assumed fill subtraction and no bank-crest role.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131051_87113_146_828_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536763_185564",
+      "mosaic": "m18_131051_87116",
+      "mapPixel": [
+        3,
+        230
+      ],
+      "valueFeet": 14.5,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-path",
+      "review": "Unlabelled dotted path across Hackney Marsh toward Homerton Road: separate dot between the path edges, with no embankment hatching. Retain path-surface elevation as near-ground evidence; no assumed fill subtraction and no bank-crest role.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131051_87116_20_234_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536287_186233",
+      "mosaic": "m18_131045_87107",
+      "mapPixel": [
+        310,
+        698
+      ],
+      "valueFeet": 17.1,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Hackney Marsh interior: separate survey dot and clear figure on open, unhatched ground, away from river/canal banks and railway formation.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131045_87107_323_698_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536358_186193",
+      "mosaic": "m18_131045_87107",
+      "mapPixel": [
+        496,
+        810
+      ],
+      "valueFeet": 16.5,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Hackney Marsh interior: separate survey dot and clear figure on open, unhatched ground, away from river/canal banks and railway formation.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131045_87107_511_809_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536450_186133",
+      "mosaic": "m18_131045_87107",
+      "mapPixel": [
+        741,
+        979
+      ],
+      "valueFeet": 14.9,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Hackney Marsh interior: separate survey dot and clear figure on open, unhatched ground, away from river/canal banks and railway formation.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131045_87107_748_985_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "hackney-marsh-interior"
+    },
+    {
+      "id": "sh_536073_186346",
+      "mosaic": "m18_131042_87107",
+      "mapPixel": [
+        510,
+        377
+      ],
+      "valueFeet": 17.9,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Open marsh east of the Water Works Bridge, beyond the channel-bank outline; separate dot above the figure, not the bridge or bank benchmark.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/bricklock/m18_131042_87107_510_383_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "bricklock-cow-bridge"
+    },
+    {
+      "id": "sh_536148_186309",
+      "mosaic": "m18_131042_87107",
+      "mapPixel": [
+        709,
+        484
+      ],
+      "valueFeet": 17.4,
+      "setting": "marsh",
+      "confidence": "high",
+      "surfaceRole": "marsh-ground",
+      "review": "Open Hackney Marsh, clear separate dot above-right of the figure; continues the interior survey traverse.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/bricklock/m18_131042_87107_702_490_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "bricklock-cow-bridge"
+    },
+    {
+      "id": "sh_535935_186156",
+      "mosaic": "m18_131042_87110",
+      "mapPixel": [
+        125,
+        111
+      ],
+      "valueFeet": 20.9,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Separate dot inside the road junction west of Cow Bridge, away from the bridge and bank hatching.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/bricklock/m18_131042_87110_121_116_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "bricklock-cow-bridge"
+    },
+    {
+      "id": "sh_536010_186126",
+      "mosaic": "m18_131042_87110",
+      "mapPixel": [
+        325,
+        198
+      ],
+      "valueFeet": 20.9,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Separate dot in Maindee Street north of Maiwand Road, between dotted carriageway edges.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/bricklock/m18_131042_87110_331_205_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "bricklock-cow-bridge"
+    },
+    {
+      "id": "sh_536031_186067",
+      "mosaic": "m18_131042_87110",
+      "mapPixel": [
+        377,
+        360
+      ],
+      "valueFeet": 21.0,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Separate dot at Maindee Street / Maiwand Road junction, above the figure.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/bricklock/m18_131042_87110_376_364_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "bricklock-cow-bridge"
+    },
+    {
+      "id": "sh_536099_185913",
+      "mosaic": "m18_131042_87110",
+      "mapPixel": [
+        549,
+        778
+      ],
+      "valueFeet": 22.0,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Separate dot at Pepin Road / Elmcroft Street junction, above the figure.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/bricklock/m18_131042_87110_547_788_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "bricklock-cow-bridge"
+    },
+    {
+      "id": "sh_536143_185875",
+      "mosaic": "m18_131042_87110",
+      "mapPixel": [
+        665,
+        885
+      ],
+      "valueFeet": 21.8,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Separate dot on Elmcroft Street southeast of Pepin Road; inside carriageway and above-left of figure.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/bricklock/m18_131042_87110_675_892_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "bricklock-cow-bridge"
+    },
+    {
+      "id": "sh_536019_185904",
+      "mosaic": "m18_131042_87110",
+      "mapPixel": [
+        334,
+        796
+      ],
+      "valueFeet": 22.9,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "Separate dot on Pepin Road west of Elmcroft Street, above-right of the figure.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/bricklock/m18_131042_87110_330_801_6x.png",
+      "reviewArea": "northern",
+      "reviewBatch": "bricklock-cow-bridge"
+    }
+  ],
+  "terrainExclusions": [
+    {
+      "id": "victoria-park-bathing-lake",
+      "mosaic": "m18_131045_87131",
+      "kind": "lake-and-margin",
+      "pixels": [
+        [
+          199,
+          599
+        ],
+        [
+          198,
+          567
+        ],
+        [
+          210,
+          542
+        ],
+        [
+          242,
+          502
+        ],
+        [
+          281,
+          468
+        ],
+        [
+          323,
+          438
+        ],
+        [
+          362,
+          407
+        ],
+        [
+          388,
+          378
+        ],
+        [
+          401,
+          352
+        ],
+        [
+          422,
+          333
+        ],
+        [
+          452,
+          320
+        ],
+        [
+          486,
+          309
+        ],
+        [
+          523,
+          291
+        ],
+        [
+          560,
+          274
+        ],
+        [
+          595,
+          251
+        ],
+        [
+          628,
+          236
+        ],
+        [
+          664,
+          221
+        ],
+        [
+          698,
+          207
+        ],
+        [
+          727,
+          203
+        ],
+        [
+          755,
+          211
+        ],
+        [
+          779,
+          231
+        ],
+        [
+          802,
+          254
+        ],
+        [
+          814,
+          277
+        ],
+        [
+          817,
+          296
+        ],
+        [
+          811,
+          320
+        ],
+        [
+          795,
+          344
+        ],
+        [
+          766,
+          366
+        ],
+        [
+          737,
+          380
+        ],
+        [
+          704,
+          391
+        ],
+        [
+          675,
+          408
+        ],
+        [
+          647,
+          428
+        ],
+        [
+          620,
+          451
+        ],
+        [
+          596,
+          468
+        ],
+        [
+          568,
+          477
+        ],
+        [
+          546,
+          486
+        ],
+        [
+          530,
+          510
+        ],
+        [
+          514,
+          538
+        ],
+        [
+          491,
+          560
+        ],
+        [
+          464,
+          574
+        ],
+        [
+          435,
+          580
+        ],
+        [
+          405,
+          591
+        ],
+        [
+          374,
+          610
+        ],
+        [
+          343,
+          620
+        ],
+        [
+          304,
+          628
+        ],
+        [
+          268,
+          628
+        ],
+        [
+          238,
+          624
+        ],
+        [
+          215,
+          616
+        ]
+      ],
+      "note": "Conservative Bathing Lake and immediate planted-margin exclusion from the inspected five-foot map. This is an interpolation exclusion envelope, not a precise shoreline; no water level or bathymetry inferred."
+    },
+    {
+      "id": "hertford-union-west-envelope",
+      "mosaic": "m18_131048_87131",
+      "kind": "canal-and-structures",
+      "pixels": [
+        [
+          0,
+          948
+        ],
+        [
+          104,
+          878
+        ],
+        [
+          233,
+          790
+        ],
+        [
+          390,
+          681
+        ],
+        [
+          527,
+          588
+        ],
+        [
+          554,
+          577
+        ],
+        [
+          608,
+          588
+        ],
+        [
+          648,
+          560
+        ],
+        [
+          730,
+          500
+        ],
+        [
+          842,
+          414
+        ],
+        [
+          935,
+          349
+        ],
+        [
+          1024,
+          287
+        ],
+        [
+          1024,
+          371
+        ],
+        [
+          932,
+          432
+        ],
+        [
+          851,
+          489
+        ],
+        [
+          775,
+          541
+        ],
+        [
+          713,
+          583
+        ],
+        [
+          690,
+          602
+        ],
+        [
+          691,
+          655
+        ],
+        [
+          644,
+          689
+        ],
+        [
+          586,
+          699
+        ],
+        [
+          559,
+          721
+        ],
+        [
+          540,
+          721
+        ],
+        [
+          417,
+          806
+        ],
+        [
+          327,
+          870
+        ],
+        [
+          233,
+          934
+        ],
+        [
+          116,
+          1018
+        ],
+        [
+          107,
+          1024
+        ],
+        [
+          0,
+          1024
+        ]
+      ],
+      "note": "Conservative envelope includes the canal, towpaths and lock structures; the dry dock needs its own footprint before terrain extension reaches it. Withheld from general ground interpolation, not a surveyed water polygon or impermeable barrier."
+    },
+    {
+      "id": "hertford-union-east-envelope",
+      "mosaic": "m18_131051_87128",
+      "kind": "canal-and-structures",
+      "pixels": [
+        [
+          395,
+          1024
+        ],
+        [
+          425,
+          934
+        ],
+        [
+          498,
+          890
+        ],
+        [
+          582,
+          822
+        ],
+        [
+          643,
+          792
+        ],
+        [
+          674,
+          765
+        ],
+        [
+          726,
+          734
+        ],
+        [
+          744,
+          708
+        ],
+        [
+          794,
+          683
+        ],
+        [
+          815,
+          654
+        ],
+        [
+          845,
+          623
+        ],
+        [
+          911,
+          579
+        ],
+        [
+          1024,
+          500
+        ],
+        [
+          1024,
+          615
+        ],
+        [
+          949,
+          666
+        ],
+        [
+          895,
+          693
+        ],
+        [
+          851,
+          707
+        ],
+        [
+          807,
+          741
+        ],
+        [
+          771,
+          765
+        ],
+        [
+          744,
+          774
+        ],
+        [
+          716,
+          799
+        ],
+        [
+          651,
+          849
+        ],
+        [
+          566,
+          910
+        ],
+        [
+          489,
+          967
+        ],
+        [
+          412,
+          1024
+        ]
+      ],
+      "note": "Conservative envelope around the canal, Bottom Lock and towpath. No bank height, water level or gate state inferred."
+    },
+    {
+      "id": "wansbeck-road-water-pocket",
+      "mosaic": "m18_131051_87128",
+      "kind": "mapped-water",
+      "pixels": [
+        [
+          298,
+          534
+        ],
+        [
+          322,
+          527
+        ],
+        [
+          347,
+          520
+        ],
+        [
+          370,
+          515
+        ],
+        [
+          375,
+          519
+        ],
+        [
+          379,
+          535
+        ],
+        [
+          375,
+          541
+        ],
+        [
+          363,
+          541
+        ],
+        [
+          350,
+          548
+        ],
+        [
+          325,
+          557
+        ],
+        [
+          307,
+          563
+        ]
+      ],
+      "note": "Small blue water pocket west of Wansbeck Road. Withheld from ground interpolation; no hydraulic connection inferred."
+    },
+    {
+      "id": "north-london-rail-water-sliver",
+      "mosaic": "m18_131051_87128",
+      "kind": "mapped-water",
+      "pixels": [
+        [
+          402,
+          838
+        ],
+        [
+          409,
+          840
+        ],
+        [
+          417,
+          862
+        ],
+        [
+          418,
+          879
+        ],
+        [
+          412,
+          880
+        ],
+        [
+          406,
+          857
+        ]
+      ],
+      "note": "Narrow blue water feature beside the railway north of the canal. Withheld from ground interpolation; no hydraulic connection inferred."
+    },
+    {
+      "id": "temple-mills-western-drain",
+      "mosaic": "m18_131054_87116",
+      "kind": "mapped-drain-envelope",
+      "pixels": [
+        [
+          325.64,
+          1008.96
+        ],
+        [
+          330.92,
+          991.0
+        ],
+        [
+          333.0,
+          973.29
+        ],
+        [
+          333.0,
+          942.81
+        ],
+        [
+          331.06,
+          917.62
+        ],
+        [
+          334.78,
+          906.48
+        ],
+        [
+          342.73,
+          878.64
+        ],
+        [
+          351.72,
+          856.68
+        ],
+        [
+          359.25,
+          831.93
+        ],
+        [
+          354.58,
+          817.91
+        ],
+        [
+          341.33,
+          795.5
+        ],
+        [
+          328.42,
+          772.65
+        ],
+        [
+          315.33,
+          746.49
+        ],
+        [
+          295.17,
+          716.24
+        ],
+        [
+          274.37,
+          684.55
+        ],
+        [
+          266.68,
+          668.2
+        ],
+        [
+          256.82,
+          635.65
+        ],
+        [
+          248.86,
+          604.82
+        ],
+        [
+          243.95,
+          583.21
+        ],
+        [
+          242.04,
+          563.16
+        ],
+        [
+          245.97,
+          538.61
+        ],
+        [
+          247.78,
+          517.79
+        ],
+        [
+          264.08,
+          506.63
+        ],
+        [
+          278.55,
+          503.02
+        ],
+        [
+          317.69,
+          503.99
+        ],
+        [
+          358.9,
+          508.01
+        ],
+        [
+          395.58,
+          505.98
+        ],
+        [
+          429.64,
+          499.96
+        ],
+        [
+          466.92,
+          496.94
+        ],
+        [
+          501.29,
+          486.83
+        ],
+        [
+          530.06,
+          479.89
+        ],
+        [
+          550.94,
+          475.91
+        ],
+        [
+          549.06,
+          466.09
+        ],
+        [
+          527.94,
+          470.11
+        ],
+        [
+          498.71,
+          477.17
+        ],
+        [
+          465.08,
+          487.06
+        ],
+        [
+          428.36,
+          490.04
+        ],
+        [
+          394.42,
+          496.02
+        ],
+        [
+          359.1,
+          497.99
+        ],
+        [
+          318.31,
+          494.01
+        ],
+        [
+          277.45,
+          492.98
+        ],
+        [
+          259.92,
+          497.37
+        ],
+        [
+          238.22,
+          512.21
+        ],
+        [
+          236.03,
+          537.39
+        ],
+        [
+          231.96,
+          562.84
+        ],
+        [
+          234.05,
+          584.79
+        ],
+        [
+          239.14,
+          607.18
+        ],
+        [
+          247.18,
+          638.35
+        ],
+        [
+          257.32,
+          671.8
+        ],
+        [
+          265.63,
+          689.45
+        ],
+        [
+          286.83,
+          721.76
+        ],
+        [
+          306.67,
+          751.51
+        ],
+        [
+          319.58,
+          777.35
+        ],
+        [
+          332.67,
+          800.5
+        ],
+        [
+          345.42,
+          822.09
+        ],
+        [
+          348.75,
+          832.07
+        ],
+        [
+          342.28,
+          853.32
+        ],
+        [
+          333.27,
+          875.36
+        ],
+        [
+          325.22,
+          903.52
+        ],
+        [
+          320.94,
+          916.38
+        ],
+        [
+          323.0,
+          943.19
+        ],
+        [
+          323.0,
+          972.71
+        ],
+        [
+          321.08,
+          989.0
+        ],
+        [
+          316.36,
+          1005.04
+        ],
+        [
+          307.64,
+          1020.55
+        ],
+        [
+          316.36,
+          1025.45
+        ],
+        [
+          325.64,
+          1008.96
+        ]
+      ],
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/northern/temple-mills-drain-context-3x.png",
+      "note": "Uncoloured double-line drain west of Temple Mills, connecting toward the blue channel at the sheet seam; omitted by existing network. Conservative five-native-pixel half-width trace prevents trial triangles crossing it. Extends to this mosaic edge only; downstream tracing remains incomplete. Interpolation exclusion, not a calibrated hydraulic width, barrier, water level or bed.",
+      "contextCrop": "reference/regional-elevation-review-2026-10-02/northern/temple-mills-drain-lower-3x.png"
+    },
+    {
+      "id": "waterworks-cow-bridge-corridor",
+      "mosaic": "m18_131042_87107",
+      "kind": "canal-bank-waste-channel-envelope",
+      "pixels": [
+        [
+          -24.0,
+          259.02
+        ],
+        [
+          127.22,
+          332.47
+        ],
+        [
+          199.25,
+          388.81
+        ],
+        [
+          231.05,
+          447.86
+        ],
+        [
+          264.28,
+          538.76
+        ],
+        [
+          298.24,
+          645.62
+        ],
+        [
+          323.15,
+          716.38
+        ],
+        [
+          342.95,
+          783.68
+        ],
+        [
+          363.24,
+          854.71
+        ],
+        [
+          390.01,
+          922.67
+        ],
+        [
+          428.3,
+          1001.31
+        ],
+        [
+          461.65,
+          1048.0
+        ],
+        [
+          661.14,
+          1048.0
+        ],
+        [
+          621.03,
+          983.38
+        ],
+        [
+          581.08,
+          901.53
+        ],
+        [
+          547.03,
+          810.07
+        ],
+        [
+          537.45,
+          768.9
+        ],
+        [
+          522.28,
+          694.04
+        ],
+        [
+          495.43,
+          607.54
+        ],
+        [
+          472.8,
+          464.82
+        ],
+        [
+          457.84,
+          327.2
+        ],
+        [
+          435.87,
+          153.5
+        ],
+        [
+          421.08,
+          -24.0
+        ],
+        [
+          297.83,
+          -24.0
+        ],
+        [
+          317.46,
+          202.81
+        ],
+        [
+          300.41,
+          233.81
+        ],
+        [
+          274.54,
+          261.54
+        ],
+        [
+          248.91,
+          288.44
+        ],
+        [
+          214.38,
+          264.07
+        ],
+        [
+          152.44,
+          224.56
+        ],
+        [
+          79.24,
+          207.51
+        ],
+        [
+          -24.0,
+          144.09
+        ],
+        [
+          -24.0,
+          259.02
+        ]
+      ],
+      "note": "Conservative native-map envelope around Hackney Cut Navigation, its banks/towpath and the adjacent East London Water Works Waste Channel. Includes bridge interfaces where shown. Prevents ordinary-ground interpolation crossing canal, raised banks or the omitted parallel channel; not an exact shoreline, hydraulic barrier, water level or bathymetry. Extends only across this reviewed mosaic. Envelope expanded by 24 native pixels (about 9 m) to include bank-outline and join margins; this is an intentional interpolation setback, not a measured channel width.",
+      "nativeTracePixels": [
+        [
+          0,
+          244
+        ],
+        [
+          140,
+          312
+        ],
+        [
+          218,
+          373
+        ],
+        [
+          253,
+          438
+        ],
+        [
+          287,
+          531
+        ],
+        [
+          321,
+          638
+        ],
+        [
+          346,
+          709
+        ],
+        [
+          366,
+          777
+        ],
+        [
+          386,
+          847
+        ],
+        [
+          412,
+          913
+        ],
+        [
+          449,
+          989
+        ],
+        [
+          474,
+          1024
+        ],
+        [
+          618,
+          1024
+        ],
+        [
+          600,
+          995
+        ],
+        [
+          559,
+          911
+        ],
+        [
+          524,
+          817
+        ],
+        [
+          514,
+          774
+        ],
+        [
+          499,
+          700
+        ],
+        [
+          472,
+          613
+        ],
+        [
+          449,
+          468
+        ],
+        [
+          434,
+          330
+        ],
+        [
+          412,
+          156
+        ],
+        [
+          399,
+          0
+        ],
+        [
+          324,
+          0
+        ],
+        [
+          342,
+          208
+        ],
+        [
+          320,
+          248
+        ],
+        [
+          292,
+          278
+        ],
+        [
+          252,
+          320
+        ],
+        [
+          201,
+          284
+        ],
+        [
+          143,
+          247
+        ],
+        [
+          70,
+          230
+        ],
+        [
+          0,
+          187
+        ]
+      ],
+      "marginNativePixels": 24
+    },
+    {
+      "id": "cow-bridge-bricklock-corridor",
+      "mosaic": "m18_131042_87110",
+      "kind": "canal-bank-waste-channel-envelope",
+      "pixels": [
+        [
+          329.63,
+          -24.0
+        ],
+        [
+          363.32,
+          86.9
+        ],
+        [
+          390.08,
+          154.84
+        ],
+        [
+          430.88,
+          235.42
+        ],
+        [
+          481.05,
+          322.46
+        ],
+        [
+          536.89,
+          393.8
+        ],
+        [
+          607.96,
+          466.94
+        ],
+        [
+          689.05,
+          529.78
+        ],
+        [
+          765.71,
+          592.5
+        ],
+        [
+          844.55,
+          658.37
+        ],
+        [
+          935.55,
+          735.37
+        ],
+        [
+          1048.0,
+          829.33
+        ],
+        [
+          1048.0,
+          577.78
+        ],
+        [
+          949.97,
+          506.48
+        ],
+        [
+          861.97,
+          444.48
+        ],
+        [
+          785.66,
+          388.99
+        ],
+        [
+          716.35,
+          332.37
+        ],
+        [
+          660.62,
+          273.76
+        ],
+        [
+          615.32,
+          209.18
+        ],
+        [
+          572.7,
+          133.62
+        ],
+        [
+          543.45,
+          60.03
+        ],
+        [
+          533.27,
+          -24.0
+        ],
+        [
+          329.63,
+          -24.0
+        ]
+      ],
+      "note": "Conservative native-map envelope around Hackney Cut Navigation, its banks/towpath and the adjacent East London Water Works Waste Channel. Includes bridge interfaces where shown. Prevents ordinary-ground interpolation crossing canal, raised banks or the omitted parallel channel; not an exact shoreline, hydraulic barrier, water level or bathymetry. Extends only across this reviewed mosaic. Envelope expanded by 24 native pixels (about 9 m) to include bank-outline and join margins; this is an intentional interpolation setback, not a measured channel width.",
+      "nativeTracePixels": [
+        [
+          362,
+          0
+        ],
+        [
+          386,
+          79
+        ],
+        [
+          412,
+          145
+        ],
+        [
+          452,
+          224
+        ],
+        [
+          501,
+          309
+        ],
+        [
+          555,
+          378
+        ],
+        [
+          624,
+          449
+        ],
+        [
+          704,
+          511
+        ],
+        [
+          781,
+          574
+        ],
+        [
+          860,
+          640
+        ],
+        [
+          951,
+          717
+        ],
+        [
+          1024,
+          778
+        ],
+        [
+          1024,
+          590
+        ],
+        [
+          936,
+          526
+        ],
+        [
+          848,
+          464
+        ],
+        [
+          771,
+          408
+        ],
+        [
+          700,
+          350
+        ],
+        [
+          642,
+          289
+        ],
+        [
+          595,
+          222
+        ],
+        [
+          551,
+          144
+        ],
+        [
+          520,
+          66
+        ],
+        [
+          512,
+          0
+        ]
+      ],
+      "marginNativePixels": 24
+    },
+    {
+      "id": "east-temple-lane-north-drains",
+      "mosaic": "m18_131060_87116",
+      "kind": "mapped-drain-envelope",
+      "pixels": [
+        [
+          429.81,
+          76.26
+        ],
+        [
+          413.8,
+          -2.0
+        ],
+        [
+          394.2,
+          2.0
+        ],
+        [
+          412.26,
+          90.27
+        ],
+        [
+          414.25,
+          97.89
+        ],
+        [
+          -2.19,
+          216.31
+        ],
+        [
+          2.19,
+          231.69
+        ],
+        [
+          418.3,
+          113.37
+        ],
+        [
+          446.32,
+          220.53
+        ],
+        [
+          470.26,
+          312.29
+        ],
+        [
+          480.33,
+          360.1
+        ],
+        [
+          248.33,
+          405.16
+        ],
+        [
+          -1.63,
+          451.15
+        ],
+        [
+          1.63,
+          468.85
+        ],
+        [
+          251.67,
+          422.84
+        ],
+        [
+          494.11,
+          375.76
+        ],
+        [
+          532.59,
+          364.62
+        ],
+        [
+          722.63,
+          305.61
+        ],
+        [
+          848.98,
+          267.5
+        ],
+        [
+          904.81,
+          245.17
+        ],
+        [
+          1028.26,
+          178.93
+        ],
+        [
+          1019.74,
+          163.07
+        ],
+        [
+          897.19,
+          228.83
+        ],
+        [
+          843.02,
+          250.5
+        ],
+        [
+          717.37,
+          288.39
+        ],
+        [
+          527.41,
+          347.38
+        ],
+        [
+          499.77,
+          355.38
+        ],
+        [
+          489.74,
+          307.71
+        ],
+        [
+          465.68,
+          215.48
+        ],
+        [
+          433.37,
+          91.95
+        ],
+        [
+          682.57,
+          7.58
+        ],
+        [
+          677.43,
+          -7.58
+        ],
+        [
+          429.81,
+          76.26
+        ]
+      ],
+      "nativeTraces": [
+        {
+          "halfWidthPixels": 9,
+          "centreline": [
+            [
+              0,
+              460
+            ],
+            [
+              250,
+              414
+            ],
+            [
+              492,
+              367
+            ],
+            [
+              530,
+              356
+            ],
+            [
+              720,
+              297
+            ],
+            [
+              846,
+              259
+            ],
+            [
+              901,
+              237
+            ],
+            [
+              1024,
+              171
+            ]
+          ]
+        },
+        {
+          "halfWidthPixels": 10,
+          "centreline": [
+            [
+              404,
+              0
+            ],
+            [
+              422,
+              88
+            ],
+            [
+              456,
+              218
+            ],
+            [
+              480,
+              310
+            ],
+            [
+              492,
+              367
+            ]
+          ]
+        },
+        {
+          "halfWidthPixels": 8,
+          "centreline": [
+            [
+              0,
+              224
+            ],
+            [
+              422,
+              104
+            ]
+          ]
+        },
+        {
+          "halfWidthPixels": 8,
+          "centreline": [
+            [
+              426,
+              86
+            ],
+            [
+              680,
+              0
+            ]
+          ]
+        }
+      ],
+      "note": "Native-map review of the lane-flanking or field drain, including its uncoloured continuation where shown. Conservative interpolation exclusion only; does not establish water level, bed, flow capacity or an impermeable flood barrier. Ends at the reviewed extent; preserve lane dots and dry spaces between separate drains."
+    },
+    {
+      "id": "east-temple-lane-south-drain",
+      "mosaic": "m18_131060_87116",
+      "kind": "mapped-drain-envelope",
+      "pixels": [
+        [
+          173.12,
+          461.9
+        ],
+        [
+          234.15,
+          448.89
+        ],
+        [
+          251.12,
+          445.9
+        ],
+        [
+          493.36,
+          396.85
+        ],
+        [
+          531.64,
+          386.77
+        ],
+        [
+          645.85,
+          351.71
+        ],
+        [
+          801.76,
+          298.74
+        ],
+        [
+          875.27,
+          278.6
+        ],
+        [
+          1026.89,
+          195.26
+        ],
+        [
+          1021.11,
+          184.74
+        ],
+        [
+          870.73,
+          267.4
+        ],
+        [
+          798.24,
+          287.26
+        ],
+        [
+          642.15,
+          340.29
+        ],
+        [
+          528.36,
+          375.23
+        ],
+        [
+          490.64,
+          385.15
+        ],
+        [
+          248.88,
+          434.1
+        ],
+        [
+          231.85,
+          437.11
+        ],
+        [
+          170.88,
+          450.1
+        ],
+        [
+          39.01,
+          472.08
+        ],
+        [
+          40.99,
+          483.92
+        ],
+        [
+          173.12,
+          461.9
+        ]
+      ],
+      "nativeTraces": [
+        {
+          "halfWidthPixels": 6,
+          "centreline": [
+            [
+              40,
+              478
+            ],
+            [
+              172,
+              456
+            ],
+            [
+              233,
+              443
+            ],
+            [
+              250,
+              440
+            ],
+            [
+              492,
+              391
+            ],
+            [
+              530,
+              381
+            ],
+            [
+              644,
+              346
+            ],
+            [
+              800,
+              293
+            ],
+            [
+              873,
+              273
+            ],
+            [
+              1024,
+              190
+            ]
+          ]
+        }
+      ],
+      "note": "Native-map review of the lane-flanking or field drain, including its uncoloured continuation where shown. Conservative interpolation exclusion only; does not establish water level, bed, flow capacity or an impermeable flood barrier. Ends at the reviewed extent; preserve lane dots and dry spaces between separate drains."
+    },
+    {
+      "id": "east-temple-lane-central-cross-drain",
+      "mosaic": "m18_131060_87116",
+      "kind": "mapped-drain-envelope",
+      "pixels": [
+        [
+          521.4,
+          508.66
+        ],
+        [
+          533.47,
+          545.89
+        ],
+        [
+          557.46,
+          613.84
+        ],
+        [
+          571.41,
+          658.67
+        ],
+        [
+          588.59,
+          653.33
+        ],
+        [
+          574.54,
+          608.16
+        ],
+        [
+          550.53,
+          540.11
+        ],
+        [
+          538.6,
+          503.34
+        ],
+        [
+          504.63,
+          388.45
+        ],
+        [
+          487.37,
+          393.55
+        ],
+        [
+          521.4,
+          508.66
+        ]
+      ],
+      "nativeTraces": [
+        {
+          "halfWidthPixels": 9,
+          "centreline": [
+            [
+              496,
+              391
+            ],
+            [
+              530,
+              506
+            ],
+            [
+              542,
+              543
+            ],
+            [
+              566,
+              611
+            ],
+            [
+              580,
+              656
+            ]
+          ]
+        }
+      ],
+      "note": "Native-map review of the lane-flanking or field drain, including its uncoloured continuation where shown. Conservative interpolation exclusion only; does not establish water level, bed, flow capacity or an impermeable flood barrier. Ends at the reviewed extent; preserve lane dots and dry spaces between separate drains."
+    },
+    {
+      "id": "east-temple-lane-eastern-cross-drain",
+      "mosaic": "m18_131060_87116",
+      "kind": "mapped-drain-envelope",
+      "pixels": [
+        [
+          915.58,
+          391.79
+        ],
+        [
+          974.09,
+          519.26
+        ],
+        [
+          1025.77,
+          505.77
+        ],
+        [
+          1022.23,
+          492.23
+        ],
+        [
+          981.91,
+          502.74
+        ],
+        [
+          928.42,
+          386.21
+        ],
+        [
+          881.48,
+          271.35
+        ],
+        [
+          868.52,
+          276.65
+        ],
+        [
+          915.58,
+          391.79
+        ]
+      ],
+      "nativeTraces": [
+        {
+          "halfWidthPixels": 7,
+          "centreline": [
+            [
+              875,
+              274
+            ],
+            [
+              922,
+              389
+            ],
+            [
+              978,
+              511
+            ],
+            [
+              1024,
+              499
+            ]
+          ]
+        }
+      ],
+      "note": "Native-map review of the lane-flanking or field drain, including its uncoloured continuation where shown. Conservative interpolation exclusion only; does not establish water level, bed, flow capacity or an impermeable flood barrier. Ends at the reviewed extent; preserve lane dots and dry spaces between separate drains."
+    },
+    {
+      "id": "east-temple-lane-southern-field-drain",
+      "mosaic": "m18_131060_87116",
+      "kind": "mapped-drain-envelope",
+      "pixels": [
+        [
+          199.7,
+          814.21
+        ],
+        [
+          331.24,
+          759.4
+        ],
+        [
+          460.18,
+          713.42
+        ],
+        [
+          583.17,
+          664.42
+        ],
+        [
+          766.05,
+          599.47
+        ],
+        [
+          884.14,
+          556.43
+        ],
+        [
+          981.21,
+          519.41
+        ],
+        [
+          974.79,
+          502.59
+        ],
+        [
+          877.86,
+          539.57
+        ],
+        [
+          759.95,
+          582.53
+        ],
+        [
+          576.83,
+          647.58
+        ],
+        [
+          453.82,
+          696.58
+        ],
+        [
+          324.76,
+          742.6
+        ],
+        [
+          192.3,
+          797.79
+        ],
+        [
+          89.07,
+          847.9
+        ],
+        [
+          96.93,
+          864.1
+        ],
+        [
+          199.7,
+          814.21
+        ]
+      ],
+      "nativeTraces": [
+        {
+          "halfWidthPixels": 9,
+          "centreline": [
+            [
+              93,
+              856
+            ],
+            [
+              196,
+              806
+            ],
+            [
+              328,
+              751
+            ],
+            [
+              457,
+              705
+            ],
+            [
+              580,
+              656
+            ],
+            [
+              763,
+              591
+            ],
+            [
+              881,
+              548
+            ],
+            [
+              978,
+              511
+            ]
+          ]
+        }
+      ],
+      "note": "Native-map review of the lane-flanking or field drain, including its uncoloured continuation where shown. Conservative interpolation exclusion only; does not establish water level, bed, flow capacity or an impermeable flood barrier. Ends at the reviewed extent; preserve lane dots and dry spaces between separate drains."
+    },
+    {
+      "id": "east-temple-lane-bend-north-drain-1",
+      "mosaic": "m18_131063_87116",
+      "kind": "mapped-drain-envelope",
+      "pixels": [
+        [
+          268.84,
+          125.36
+        ],
+        [
+          281.02,
+          152.16
+        ],
+        [
+          271.52,
+          160.3
+        ],
+        [
+          211.47,
+          190.82
+        ],
+        [
+          105.09,
+          241.52
+        ],
+        [
+          -2.34,
+          274.35
+        ],
+        [
+          2.34,
+          289.65
+        ],
+        [
+          110.91,
+          256.48
+        ],
+        [
+          218.53,
+          205.18
+        ],
+        [
+          280.48,
+          173.7
+        ],
+        [
+          295.21,
+          161.07
+        ],
+        [
+          290.0,
+          155.0
+        ],
+        [
+          296.37,
+          152.1
+        ],
+        [
+          281.16,
+          118.64
+        ],
+        [
+          244.76,
+          62.02
+        ],
+        [
+          195.62,
+          -4.17
+        ],
+        [
+          184.38,
+          4.17
+        ],
+        [
+          233.24,
+          69.98
+        ],
+        [
+          268.84,
+          125.36
+        ]
+      ],
+      "nativeTraces": [
+        {
+          "halfWidthPixels": 8,
+          "centreline": [
+            [
+              0,
+              282
+            ],
+            [
+              108,
+              249
+            ],
+            [
+              215,
+              198
+            ],
+            [
+              276,
+              167
+            ],
+            [
+              290,
+              155
+            ]
+          ]
+        },
+        {
+          "halfWidthPixels": 7,
+          "centreline": [
+            [
+              190,
+              0
+            ],
+            [
+              239,
+              66
+            ],
+            [
+              275,
+              122
+            ],
+            [
+              290,
+              155
+            ]
+          ]
+        },
+        {
+          "halfWidthPixels": 7,
+          "centreline": [
+            [
+              332,
+              151
+            ],
+            [
+              395,
+              197
+            ],
+            [
+              454,
+              240
+            ],
+            [
+              507,
+              282
+            ]
+          ]
+        }
+      ],
+      "note": "Native-map review of the lane-flanking or field drain, including its uncoloured continuation where shown. Conservative interpolation exclusion only; does not establish water level, bed, flow capacity or an impermeable flood barrier. Ends at the reviewed extent; preserve lane dots and dry spaces between separate drains."
+    },
+    {
+      "id": "east-temple-lane-bend-north-drain-2",
+      "mosaic": "m18_131063_87116",
+      "kind": "mapped-drain-envelope",
+      "pixels": [
+        [
+          502.65,
+          287.49
+        ],
+        [
+          511.35,
+          276.51
+        ],
+        [
+          458.24,
+          234.43
+        ],
+        [
+          399.13,
+          191.34
+        ],
+        [
+          336.13,
+          145.35
+        ],
+        [
+          327.87,
+          156.65
+        ],
+        [
+          390.87,
+          202.65
+        ],
+        [
+          449.76,
+          245.57
+        ],
+        [
+          502.65,
+          287.49
+        ]
+      ],
+      "nativeTraces": [
+        {
+          "halfWidthPixels": 8,
+          "centreline": [
+            [
+              0,
+              282
+            ],
+            [
+              108,
+              249
+            ],
+            [
+              215,
+              198
+            ],
+            [
+              276,
+              167
+            ],
+            [
+              290,
+              155
+            ]
+          ]
+        },
+        {
+          "halfWidthPixels": 7,
+          "centreline": [
+            [
+              190,
+              0
+            ],
+            [
+              239,
+              66
+            ],
+            [
+              275,
+              122
+            ],
+            [
+              290,
+              155
+            ]
+          ]
+        },
+        {
+          "halfWidthPixels": 7,
+          "centreline": [
+            [
+              332,
+              151
+            ],
+            [
+              395,
+              197
+            ],
+            [
+              454,
+              240
+            ],
+            [
+              507,
+              282
+            ]
+          ]
+        }
+      ],
+      "note": "Native-map review of the lane-flanking or field drain, including its uncoloured continuation where shown. Conservative interpolation exclusion only; does not establish water level, bed, flow capacity or an impermeable flood barrier. Ends at the reviewed extent; preserve lane dots and dry spaces between separate drains."
+    },
+    {
+      "id": "east-temple-lane-bend-south-drain",
+      "mosaic": "m18_131063_87116",
+      "kind": "mapped-drain-envelope",
+      "pixels": [
+        [
+          108.26,
+          283.58
+        ],
+        [
+          215.78,
+          230.32
+        ],
+        [
+          274.07,
+          198.16
+        ],
+        [
+          300.64,
+          181.08
+        ],
+        [
+          319.1,
+          181.92
+        ],
+        [
+          391.54,
+          228.91
+        ],
+        [
+          451.29,
+          274.72
+        ],
+        [
+          492.24,
+          307.67
+        ],
+        [
+          499.76,
+          298.33
+        ],
+        [
+          458.71,
+          265.28
+        ],
+        [
+          398.46,
+          219.09
+        ],
+        [
+          322.9,
+          170.08
+        ],
+        [
+          297.36,
+          168.92
+        ],
+        [
+          267.93,
+          187.84
+        ],
+        [
+          210.22,
+          219.68
+        ],
+        [
+          103.74,
+          272.42
+        ],
+        [
+          -1.83,
+          306.29
+        ],
+        [
+          1.83,
+          317.71
+        ],
+        [
+          108.26,
+          283.58
+        ]
+      ],
+      "nativeTraces": [
+        {
+          "halfWidthPixels": 6,
+          "centreline": [
+            [
+              0,
+              312
+            ],
+            [
+              106,
+              278
+            ],
+            [
+              213,
+              225
+            ],
+            [
+              271,
+              193
+            ],
+            [
+              299,
+              175
+            ],
+            [
+              321,
+              176
+            ],
+            [
+              395,
+              224
+            ],
+            [
+              455,
+              270
+            ],
+            [
+              496,
+              303
+            ]
+          ]
+        }
+      ],
+      "note": "Native-map review of the lane-flanking or field drain, including its uncoloured continuation where shown. Conservative interpolation exclusion only; does not establish water level, bed, flow capacity or an impermeable flood barrier. Ends at the reviewed extent; preserve lane dots and dry spaces between separate drains."
+    },
+    {
+      "id": "east-temple-lane-terrace-field-drain",
+      "mosaic": "m18_131063_87116",
+      "kind": "mapped-drain-envelope",
+      "pixels": [
+        [
+          202.66,
+          507.28
+        ],
+        [
+          183.52,
+          518.76
+        ],
+        [
+          95.26,
+          551.48
+        ],
+        [
+          -2.69,
+          586.47
+        ],
+        [
+          2.69,
+          601.53
+        ],
+        [
+          100.74,
+          566.52
+        ],
+        [
+          190.48,
+          533.24
+        ],
+        [
+          216.12,
+          517.86
+        ],
+        [
+          215.69,
+          517.16
+        ],
+        [
+          364.18,
+          468.65
+        ],
+        [
+          455.19,
+          438.65
+        ],
+        [
+          450.81,
+          425.35
+        ],
+        [
+          359.82,
+          455.35
+        ],
+        [
+          215.81,
+          502.39
+        ],
+        [
+          174.41,
+          410.2
+        ],
+        [
+          117.44,
+          276.26
+        ],
+        [
+          104.56,
+          281.74
+        ],
+        [
+          161.59,
+          415.8
+        ],
+        [
+          202.66,
+          507.28
+        ]
+      ],
+      "nativeTraces": [
+        {
+          "halfWidthPixels": 7,
+          "centreline": [
+            [
+              111,
+              279
+            ],
+            [
+              168,
+              413
+            ],
+            [
+              212,
+              511
+            ],
+            [
+              362,
+              462
+            ],
+            [
+              453,
+              432
+            ]
+          ]
+        },
+        {
+          "halfWidthPixels": 8,
+          "centreline": [
+            [
+              212,
+              511
+            ],
+            [
+              187,
+              526
+            ],
+            [
+              98,
+              559
+            ],
+            [
+              0,
+              594
+            ]
+          ]
+        }
+      ],
+      "note": "Native-map review of the lane-flanking or field drain, including its uncoloured continuation where shown. Conservative interpolation exclusion only; does not establish water level, bed, flow capacity or an impermeable flood barrier. Ends at the reviewed extent; preserve lane dots and dry spaces between separate drains."
+    },
+    {
+      "id": "east-temple-northern-hatched-bank-west",
+      "mosaic": "m18_131060_87119",
+      "kind": "mapped-bank-envelope",
+      "pixels": [
+        [
+          400.07,
+          179.6
+        ],
+        [
+          608.14,
+          124.58
+        ],
+        [
+          820.15,
+          65.58
+        ],
+        [
+          1027.08,
+          10.6
+        ],
+        [
+          1020.92,
+          -12.6
+        ],
+        [
+          813.85,
+          42.42
+        ],
+        [
+          601.86,
+          101.42
+        ],
+        [
+          393.93,
+          156.4
+        ],
+        [
+          204.93,
+          206.4
+        ],
+        [
+          211.07,
+          229.6
+        ],
+        [
+          400.07,
+          179.6
+        ]
+      ],
+      "nativeTraces": [
+        {
+          "halfWidthPixels": 12,
+          "centreline": [
+            [
+              208,
+              218
+            ],
+            [
+              397,
+              168
+            ],
+            [
+              605,
+              113
+            ],
+            [
+              817,
+              54
+            ],
+            [
+              1024,
+              -1
+            ]
+          ]
+        }
+      ],
+      "note": "Native-map review of the hatched bank separating the northern fields from the southern developed area. Conservative interpolation exclusion only; does not establish water level, bed, flow capacity or an impermeable flood barrier. Ends at the reviewed extent; preserve lane dots and dry spaces between separate drains."
+    },
+    {
+      "id": "east-temple-northern-hatched-bank-east",
+      "mosaic": "m18_131063_87116",
+      "kind": "mapped-bank-envelope",
+      "pixels": [
+        [
+          187.04,
+          798.61
+        ],
+        [
+          302.27,
+          769.55
+        ],
+        [
+          423.36,
+          731.52
+        ],
+        [
+          583.11,
+          688.59
+        ],
+        [
+          576.89,
+          665.41
+        ],
+        [
+          416.64,
+          708.48
+        ],
+        [
+          295.73,
+          746.45
+        ],
+        [
+          180.96,
+          775.39
+        ],
+        [
+          -3.15,
+          825.42
+        ],
+        [
+          3.15,
+          848.58
+        ],
+        [
+          187.04,
+          798.61
+        ]
+      ],
+      "nativeTraces": [
+        {
+          "halfWidthPixels": 12,
+          "centreline": [
+            [
+              0,
+              837
+            ],
+            [
+              184,
+              787
+            ],
+            [
+              299,
+              758
+            ],
+            [
+              420,
+              720
+            ],
+            [
+              580,
+              677
+            ]
+          ]
+        }
+      ],
+      "note": "Native-map review of the hatched bank separating the northern fields from the southern developed area. Conservative interpolation exclusion only; does not establish water level, bed, flow capacity or an impermeable flood barrier. Ends at the reviewed extent; preserve lane dots and dry spaces between separate drains."
+    },
+    {
+      "id": "east-temple-access-track-north-drain",
+      "mosaic": "m18_131060_87119",
+      "kind": "mapped-drain-envelope",
+      "pixels": [
+        [
+          314.08,
+          345.88
+        ],
+        [
+          394.01,
+          329.9
+        ],
+        [
+          520.83,
+          302.94
+        ],
+        [
+          650.61,
+          286.96
+        ],
+        [
+          757.6,
+          273.96
+        ],
+        [
+          756.4,
+          264.04
+        ],
+        [
+          649.39,
+          277.04
+        ],
+        [
+          519.17,
+          293.06
+        ],
+        [
+          391.99,
+          320.1
+        ],
+        [
+          311.92,
+          336.12
+        ],
+        [
+          233.82,
+          355.14
+        ],
+        [
+          236.18,
+          364.86
+        ],
+        [
+          314.08,
+          345.88
+        ]
+      ],
+      "nativeTraces": [
+        {
+          "halfWidthPixels": 5,
+          "centreline": [
+            [
+              235,
+              360
+            ],
+            [
+              313,
+              341
+            ],
+            [
+              393,
+              325
+            ],
+            [
+              520,
+              298
+            ],
+            [
+              650,
+              282
+            ],
+            [
+              757,
+              269
+            ]
+          ]
+        }
+      ],
+      "note": "Native-map review of the lane-flanking or field drain, including its uncoloured continuation where shown. Conservative interpolation exclusion only; does not establish water level, bed, flow capacity or an impermeable flood barrier. Ends at the reviewed extent; preserve lane dots and dry spaces between separate drains."
+    }
+  ],
+  "withheldCandidates": [
+    {
+      "mosaic": "m18_131048_87125",
+      "figurePixel": [
+        499,
+        655
+      ],
+      "valueFeet": 37.0,
+      "reason": "Only likely dot is the C interpunct in Cassland Road; retain for later dot review."
+    },
+    {
+      "mosaic": "m18_131048_87125",
+      "figurePixel": [
+        624,
+        727
+      ],
+      "valueFeet": 39.2,
+      "reason": "Likely road-dot association with G interpunct, not the park lettering position; not admitted as park ground."
+    },
+    {
+      "mosaic": "m18_131048_87128",
+      "figurePixel": [
+        364,
+        809
+      ],
+      "valueFeetCandidates": [
+        46.0,
+        48.0
+      ],
+      "reason": "Digit 6/8 unresolved at 12x. Excluded instead of choosing a value from neighbouring path heights."
+    },
+    {
+      "mosaic": "m18_131057_87113",
+      "mapPixel": [
+        955,
+        84
+      ],
+      "valueFeet": 15.7,
+      "reason": "Figure beside a diagonal boundary, but no clearly separate dot in inspected crop. Not added."
+    },
+    {
+      "mosaic": "m18_131054_87110",
+      "mapPixel": [
+        322,
+        188
+      ],
+      "reason": "Boundary-associated 18.5/18.6 figure; digit and exact surface role need further review. Not added."
+    },
+    {
+      "mosaic": "m18_131054_87110",
+      "mapPixel": [
+        489,
+        58
+      ],
+      "valueFeet": 18.1,
+      "reason": "Boundary-associated dot near sidings; ground versus boundary/formation role remains unresolved. Not added."
+    },
+    {
+      "mosaic": "m18_131045_87107",
+      "mapPixel": [
+        125,
+        594
+      ],
+      "reason": "Separate ground dot is clear, but the terminal digit in 16.8/16.9 is unresolved at native resolution. Withheld in this targeted pass; other unambiguous interior points provide coverage.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/hackney-marsh/m18_131045_87107_118_601_6x.png"
+    },
+    {
+      "mosaic": "m18_131042_87110",
+      "reason": "Additional 21.1, 21.4, 22.1 and 22.8 figures were inspected but their dot/letter association remains less secure. Not added in this targeted coverage pass."
+    }
+  ],
+  "overlapChecks": [
+    {
+      "id": "sh_537107_184529",
+      "mosaic": "m18_131051_87125",
+      "mapPixel": [
+        852,
+        740
+      ],
+      "valueFeet": 15.9,
+      "setting": "street",
+      "confidence": "high",
+      "surfaceRole": "street",
+      "review": "White Post Lane east of Wansbeck Road; separate dot left of 15.9, distinct from B.M.17.09.",
+      "reviewCrop": "reference/regional-elevation-review-2026-10-02/western/m18_131051_87125_859_739_6x.png",
+      "decision": "Same 15.9ft observation already exists as sh_537107_184529; exclude supplemental copy to avoid duplicate weighting."
+    }
+  ],
+  "outlierDecisions": [
+    {
+      "id": "sh_536970_184484",
+      "initialHoldoutErrorMetres": 1.6881,
+      "decision": "Retain the clear 16.4 ft White Post Lane dot. The map places it east of the railway beside the chemical works; the large held-out prediction draws on sparse surrounding controls across strong local relief. Do not raise the observed lane to a neighbouring average."
+    },
+    {
+      "id": "sh_536416_184533",
+      "initialHoldoutErrorMetres": -1.4718,
+      "decision": "Retain the clear 42.5 ft park-path dot beside St Augustine\u2019s church. It is distinct from the church building and lower 39.6 ft church-ground dot. Reconcile the local park-edge slope when joining terrain; do not infer a reading error from the holdout residual."
+    },
+    {
+      "id": "sh_536811_184351",
+      "initialHoldoutErrorMetres": -1.4,
+      "decision": "Retain the clear 40.9 ft Cassland Road dot. The figure is printed on the park side, but its survey dot is in the roadway to the east. Preserve this position and local road profile when reconciling the park margin and railway cutting."
+    }
+  ],
+  "coverageReviews": [
+    {
+      "batch": "hackney-marsh-interior",
+      "maps": [
+        "m18_131048_87107",
+        "m18_131051_87107",
+        "m18_131054_87107"
+      ],
+      "finding": "Inspected full context. The first is almost blank marsh without interior height dots; the second has river-edge heights; the third is chiefly Templemills Sidings. These do not supply new interior marsh controls around the isolated Waterworks River point. Keep that gap explicit; do not use railway or bank levels as marsh."
+    },
+    {
+      "batch": "bricklock-cow-bridge",
+      "maps": [
+        "m18_131042_87104",
+        "m18_131042_87107",
+        "m18_131042_87110"
+      ],
+      "finding": "New adjoining source strip: northern filtering beds and banks kept separate, two additional interior marsh dots continue the nearly straight traverse, and six clear street dots constrain developed ground west of the canal. No off-traverse marsh dots found in this strip."
+    },
+    {
+      "batch": "eastern-temple-mills",
+      "maps": [
+        "m18_131060_87116",
+        "m18_131063_87116",
+        "m18_131060_87119",
+        "m18_131063_87119"
+      ],
+      "finding": "Seven existing lane/access-track readings reviewed. Previously unmasked flanking/field drains and a hatched bank strip intercept most proposed broad triangles. The southern brick-field drain/pool remains outside this supported expansion and must be traced before support reaches it."
+    }
+  ]
+}

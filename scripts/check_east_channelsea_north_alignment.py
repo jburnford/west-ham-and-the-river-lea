@@ -23,11 +23,12 @@ def check(preflight=False):
     groups = {g['id']: g for g in r['groups']}
     expected = {'east-north-'+key for key, *_ in SPECS}
     direct_id = 'east-north-hardware-main-direct'
-    assert len(additions) == 37 and len(groups) == len(rows) == len(expected) == 36
+    abbey_id = 'east-north-abbey-south-direct'
+    assert len(additions) == 38 and len(groups) == len(rows) == len(expected) == 36
     assert set(rows) == set(groups) == expected
-    assert set(additions) == expected | {direct_id}
+    assert set(additions) == expected | {direct_id, abbey_id}
     assert {s['id'] for s in r['additionalSites']} == set(SITE_NAMES)
-    assert {b['modelId'] for b in r['mapTracedBuildings']} == {direct_id}
+    assert {b['modelId'] for b in r['mapTracedBuildings']} == {direct_id, abbey_id}
     assert not any(r.get(key) for key in ['removedBuildings', 'removedStructures', 'structures', 'tanks', 'locallyTransferredBuildings'])
     assert not set(additions).intersection(b['id'] for b in before['buildings'])
     shapes = {ident: Polygon(b['worldFootprint'], b['worldHoles']) for ident, b in additions.items()}
@@ -78,6 +79,24 @@ def check(preflight=False):
     assert expected_direct.symmetric_difference(shapes[direct_id]).area < .1
     assert expected_direct.hausdorff_distance(shapes[direct_id]) < .0015
     assert 600 < shapes[direct_id].area < 1500, shapes[direct_id].area
+    abbey_trace = r['directMapTraces'][1]
+    assert abbey_trace['modelId'] == abbey_id and abbey_trace['nativePixels']
+    assert abbey_trace['internalSourceSymbols'] == [831918]
+    assert not abbey_trace['excludedSourceFids']
+    abbey_raw = Polygon(abbey_trace['rawWorldFootprint'])
+    assert abbey_raw.symmetric_difference(shapes[abbey_id]).area < .1
+    assert abbey_raw.hausdorff_distance(shapes[abbey_id]) < .0015
+    assert 200 < shapes[abbey_id].area < 700, shapes[abbey_id].area
+    for ident, height in [(direct_id, 5.5), (abbey_id, 5.0)]:
+        assert shapes[ident].is_valid and not shapes[ident].interiors
+        assert additions[ident]['eavesHeight'] == height
+        assert additions[ident]['footprintSource'] == 'os-1893-direct-trace'
+        assert 'estimated' in additions[ident]['heightEvidence']
+        assert 'interpretations' in additions[ident]['roofEvidence']
+    cached = load('reference/footprint-model-alignment/east-channelsea-source-shapes.json')
+    symbol = shape(cached['831918'])
+    assert shapes[abbey_id].covers(symbol.centroid)
+    assert shapes[abbey_id].intersection(symbol).area/symbol.area > .7
 
     all_used = {}
     for path in sorted((ROOT/'data/maps').glob('*footprint-alignment.json')):
@@ -105,7 +124,7 @@ def check(preflight=False):
             if f['properties']['sourceFid'] in own_fids}
         assert set(original) == set(own_fids)
         assert all(original[fid].symmetric_difference(sources[fid]).area < .000001 for fid in own_fids)
-    print(f'{NAME}: 37 new roofs, full source provenance, bounded Brush north-edge reconciliation, direct Hardware trace, interpreted profiles and open courts pass.')
+    print(f'{NAME}: 38 new roofs, full source provenance, bounded Brush north-edge reconciliation, direct Hardware/Abbey traces, interpreted profiles and open courts pass.')
 
     streets, frontages = street_clearances(load('data/maps/district-road-traces.json')['roads'])
     context = load('data/maps/east-channelsea-context-alignment.json')
@@ -151,7 +170,7 @@ def check(preflight=False):
             assert actual['footprint'] == old['footprint'], old['id']
             for field in ['height', 'roofRise', 'roofAxis', 'roofBays', 'rotation']:
                 assert actual[field] == old[field], (old['id'], field)
-        assert sum(b['siteId'] in SITE_NAMES for b in models.values()) == 37
+        assert sum(b['siteId'] in SITE_NAMES for b in models.values()) == 38
     print(f'{NAME}: roads, water, neighbouring ranges and existing housing clear'+(' (authoring preflight).' if preflight else '; published profiles/rendering and existing exteriors retained.'))
 
 

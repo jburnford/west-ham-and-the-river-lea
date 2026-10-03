@@ -1,0 +1,375 @@
+{
+  "schemaVersion": 1,
+  "activeEpoch": "1900",
+  "coordinateSystem": {
+    "horizontal": "EPSG:27700",
+    "sceneOriginBNG": [
+      538900,
+      183209
+    ],
+    "sceneAxes": "x east, z south"
+  },
+  "verticalReference": {
+    "id": "channelsea-crest-v1",
+    "datum": "ODN",
+    "status": "provisional",
+    "historicCrestFeet": 31.6,
+    "liverpoolToNewlynFeet": -1.3,
+    "sceneCrestY": 7.4,
+    "odnMinusSceneYMetres": 1.83544,
+    "estimatedUncertaintyMetres": 0.3,
+    "evidence": "OS local correction TQ3883/TQ3983 and 2003 crest comparison. Historic Liverpool attribution and benchmark identity remain conditional; this is not a survey calibration.",
+    "comparison": "reference/topography-research-2026-09-28/channelsea-height-anchor/comparison.json"
+  },
+  "observationSources": {
+    "os-london-five-foot-1893": {
+      "surveyYears": [
+        1891,
+        1895
+      ],
+      "publicationYears": [
+        1893,
+        1896
+      ],
+      "epoch": "1890s",
+      "datumStatus": "Liverpool per collection; sheet margin unverified"
+    },
+    "os-25-inch-london": {
+      "surveyYears": [
+        1893,
+        1896
+      ],
+      "publicationYears": [
+        1893,
+        1896
+      ],
+      "epoch": "1890s",
+      "datumStatus": "Liverpool per collection; edition inferred"
+    },
+    "os-london-skeleton-5280": {
+      "surveyYears": [
+        1848,
+        1851
+      ],
+      "publicationYears": null,
+      "epoch": "1848-51",
+      "datumStatus": "Liverpool inferred; requires independent verification"
+    }
+  },
+  "epochs": {
+    "1900": {
+      "targetYear": 1900,
+      "status": "expanded-ground-pass",
+      "geometryEpoch": "1900",
+      "allowedObservationEpochs": [
+        "1890s"
+      ],
+      "continuityAssumption": "1890s surveyed open-ground levels provisionally continued to 1900. No later DTM is used as historical ground.",
+      "trialBounds": [
+        -510,
+        -320,
+        550,
+        835
+      ],
+      "cellSizeMetres": 1,
+      "controlIds": [
+        "sh_538598_183427",
+        "sh_538661_183378",
+        "sh_538506_182847",
+        "sh_538520_182791",
+        "sh_538923_182626",
+        "sh_538982_182621",
+        "sh_538960_182471",
+        "sh_539032_182447",
+        "sh_539228_182782",
+        "sh_539306_182788",
+        "sh_539386_182793",
+        "sh_539244_182605",
+        "sh_539367_182599"
+      ],
+      "surfaceReviews": {
+        "sh_538598_183427": "Native 6x crop and 2x context viewed: dot at outer foot of sewer hatching, outside crest; ground constraint, not sewer height.",
+        "sh_538661_183378": "Native 6x crop and 2x context viewed: dot at foot of sewer slope northwest of holder; low ground, not crest.",
+        "sh_538506_182847": "Native 6x crop viewed: 7.7 dot east of the path and embankment hatching, on open ground.",
+        "sh_538520_182791": "Native 6x crop viewed: 7.3 dot east of path and hatching, on open ground.",
+        "sh_538923_182626": "6x native crop: 4.5 with separate dot on ground west of the sluice bend; not a sluice invert or water-level reading.",
+        "sh_538982_182621": "6x native crop and 2x context: 4.9 with separate dot south of the double-line drain, distinct from nearby BM7.72; local ground reference.",
+        "sh_538960_182471": "6x native crop and 2x context: 5.7 at ground/footpath margin beside a ditch; no raised bank hatching. Ground approximation, with ditch corridor protected.",
+        "sh_539032_182447": "6x native crop and 2x context: 5.5 with separate dot at ditch/footpath junction; local ground reference, not water elevation; drainage geometry protected.",
+        "sh_539228_182782": "6x native crop: 4.7 with dot at the plot/drain boundary near the sluice; no embankment hatching. Approximate adjacent field ground, not a surveyed channel invert.",
+        "sh_539306_182788": "6x native crop: 3.9 with dot on the same plot/drain boundary; no bank hatching. Keep local ground interpretation distinct from water levels.",
+        "sh_539386_182793": "6x native crop: 4.9 with dot on the same plot/drain boundary; no bank hatching. Ground interpretation; preserve ditch geometry.",
+        "sh_539244_182605": "6x native crop and context: 6.3 with isolated dot between dotted plot edges east of Manor Road, south of the water-filled ditch.",
+        "sh_539367_182599": "6x native crop and context: 6.4 with isolated dot in open Plaistow Level south of blue ditch; no structure or wall at dot."
+      },
+      "surface": "marsh/open ground only",
+      "method": "Inverse-distance interpolation within four independently bounded ground zones; preserve structures and drainage corridors; feather each zone to the earlier scaffold without blending across the intervening waterways or transport corridors.",
+      "zones": [
+        {
+          "id": "northwest-low-ground",
+          "controlIds": [
+            "sh_538598_183427",
+            "sh_538661_183378"
+          ],
+          "maximumDistanceMetres": 160,
+          "supportBounds": [
+            -510,
+            -320,
+            -70,
+            450
+          ],
+          "boundaryFeatherMetres": 20
+        },
+        {
+          "id": "mill-mead-south",
+          "controlIds": [
+            "sh_538506_182847",
+            "sh_538520_182791"
+          ],
+          "maximumDistanceMetres": 230,
+          "supportBounds": [
+            -510,
+            -320,
+            -70,
+            450
+          ],
+          "boundaryFeatherMetres": 20
+        },
+        {
+          "id": "plaistow-level-west",
+          "controlIds": [
+            "sh_538923_182626",
+            "sh_538982_182621",
+            "sh_538960_182471",
+            "sh_539032_182447"
+          ],
+          "maximumDistanceMetres": 180,
+          "supportBounds": [
+            -85,
+            515,
+            195,
+            835
+          ],
+          "boundaryFeatherMetres": 25,
+          "evidence": "Low ground south of LT&SR and west of Manor Road; bounded independently from Mill Mead and the eastern marsh."
+        },
+        {
+          "id": "plaistow-level-east",
+          "controlIds": [
+            "sh_539228_182782",
+            "sh_539306_182788",
+            "sh_539386_182793",
+            "sh_539244_182605",
+            "sh_539367_182599"
+          ],
+          "maximumDistanceMetres": 180,
+          "supportBounds": [
+            280,
+            365,
+            550,
+            720
+          ],
+          "boundaryFeatherMetres": 25,
+          "evidence": "Ground east of Manor Road; retain ditch corridors and do not blend across the road/rail corridor."
+        }
+      ],
+      "edgeFeatherMetres": 20,
+      "protectionFeatherMetres": 8,
+      "groundUncertaintyMetres": 0.5,
+      "barrierHeights": "Existing interpreted river, sewer and railway barriers retained; not validated flood defences.",
+      "protectionConflictReviews": {
+        "sh_538598_183427": "Source dot is at sewer embankment foot; rendered bank triangles and gasworks site overlap it. Use as adjacent-ground evidence, not a forced bank fit. Rendered bank section requires separate correction.",
+        "sh_538661_183378": "Source dot is at embankment foot outside gasholder. Rendered sewer slope overlaps it; preserve crest/structures and retain adjacent-ground use pending bank-section refinement.",
+        "sh_538506_182847": "Ground dot near interpreted Three Mills site boundary; transition rather than exact fit is acceptable at this stage. Do not flatten industrial pad."
+      },
+      "accuracyPolicy": "Very good to excellent reconstruction using reviewed source readings and documented approximations. Prioritise consequential datum, barrier and connectivity uncertainties over exact fitting of every point.",
+      "surfaceConflictResolutions": {
+        "sh_538960_182471": {
+          "useAs": "adjacent-ground-approximation",
+          "reason": "Readers agree on height and position; disagree only marsh versus unmade path. Native map review shows no raised earthwork. Use as approximate local ground with 0.5m working ground uncertainty; preserve the original classification conflict."
+        },
+        "sh_539032_182447": {
+          "useAs": "adjacent-ground-approximation",
+          "reason": "Readers agree on height and position; disagree only marsh versus unmade path. Native map review shows no raised earthwork. Use as approximate local ground with 0.5m working ground uncertainty; preserve the original classification conflict."
+        }
+      }
+    },
+    "1850": {
+      "targetYear": 1850,
+      "status": "awaiting-observations-and-period-geometry",
+      "geometryEpoch": null,
+      "allowedObservationEpochs": [
+        "1848-51"
+      ],
+      "continuityAssumption": "1848-51 survey brackets the target year; retain this date range. Do not import 1890s fill, sewer, railway or drainage geometry.",
+      "controlIds": []
+    },
+    "1897": {
+      "targetYear": 1897,
+      "status": "awaiting-period-geometry-review",
+      "geometryEpoch": null,
+      "allowedObservationEpochs": [
+        "1890s"
+      ],
+      "continuityAssumption": "Review intervening ground, bridge, defence and drainage changes before reusing the 1900 ground reconstruction.",
+      "controlIds": []
+    },
+    "1898": {
+      "targetYear": 1898,
+      "status": "awaiting-period-geometry-review",
+      "geometryEpoch": null,
+      "allowedObservationEpochs": [
+        "1890s"
+      ],
+      "continuityAssumption": "Review intervening ground, bridge, defence and drainage changes before reusing the 1900 ground reconstruction.",
+      "controlIds": []
+    },
+    "1904": {
+      "targetYear": 1904,
+      "status": "awaiting-period-geometry-review",
+      "geometryEpoch": null,
+      "allowedObservationEpochs": [
+        "1890s"
+      ],
+      "continuityAssumption": "Review intervening ground, bridge, defence and drainage changes before reusing the 1900 ground reconstruction.",
+      "controlIds": []
+    },
+    "1888": {
+      "targetYear": 1888,
+      "status": "awaiting-observations-and-period-geometry",
+      "geometryEpoch": null,
+      "allowedObservationEpochs": [],
+      "controlIds": [],
+      "continuityAssumption": "Select dated observations and review event-year channel, fill, pumping, bridge and defence changes before reusing any other terrain epoch."
+    },
+    "1928": {
+      "targetYear": 1928,
+      "status": "awaiting-observations-and-period-geometry",
+      "geometryEpoch": null,
+      "allowedObservationEpochs": [],
+      "controlIds": [],
+      "continuityAssumption": "Select dated observations and review event-year channel, fill, pumping, bridge and defence changes before reusing any other terrain epoch."
+    }
+  },
+  "temporalPolicy": {
+    "mergeAcrossEpochs": false,
+    "interpolateBetweenEpochs": false,
+    "unknownConstructionDates": "unknown; never inferred from the target year",
+    "fallback": "unsupported cells retain explicitly labelled scene scaffold, not observations from another date",
+    "changes": "Compare common-datum surfaces only where both epochs have support; retain each source reading and uncertainty."
+  },
+  "floodScenarios": [
+    {
+      "id": "historic-flood-1888",
+      "eventDate": null,
+      "mechanism": "heavy-rainfall-reported; principal event chronology under review",
+      "role": "modelling-target",
+      "evidenceRecord": "data/maps/historic-flood-events.json#1888-07-30-rainfall-sequence",
+      "terrainEpoch": null,
+      "waterLevelODNMetres": null,
+      "hydrograph": null,
+      "status": "year-selected-exact-event-level-and-geometry-pending",
+      "requirements": [
+        "Resolve principal 1888 event chronology and locate reported railway/cellar/low-ground inundation",
+        "Review event-year channel, ground, bridge and defence geometry",
+        "Obtain site-specific river/tide levels and rainfall where available",
+        "Resolve sluices, culverts, drainage connections and documented failures",
+        "Retain ground, barrier and water-level uncertainty separately"
+      ],
+      "existingTideAnimation": "illustrative only; neither a flood boundary condition nor historical validation",
+      "eventYear": 1888,
+      "reportedInitialStormDate": "1888-07-30"
+    },
+    {
+      "id": "historic-flood-1897",
+      "eventDate": "1897-11-29",
+      "mechanism": "tidal-storm-surge",
+      "role": "modelling-target",
+      "evidenceRecord": "data/maps/historic-flood-events.json#1897-11-29",
+      "terrainEpoch": null,
+      "waterLevelODNMetres": null,
+      "hydrograph": null,
+      "status": "event-confirmed-level-and-geometry-pending",
+      "requirements": [
+        "Establish Three Mills mark location, vertical datum and measured separation",
+        "Review event-year channel, ground, bridge and defence geometry",
+        "Obtain site-specific river/tide levels and rainfall where available",
+        "Resolve sluices, culverts, drainage connections and documented failures",
+        "Retain ground, barrier and water-level uncertainty separately"
+      ],
+      "existingTideAnimation": "illustrative only; neither a flood boundary condition nor historical validation"
+    },
+    {
+      "id": "historic-flood-1898",
+      "eventDate": "1898-10-29",
+      "mechanism": "heavy-rainfall",
+      "role": "separate-research-event",
+      "evidenceRecord": "data/maps/historic-flood-events.json#1898-10-29",
+      "terrainEpoch": null,
+      "waterLevelODNMetres": null,
+      "hydrograph": null,
+      "status": "event-confirmed-level-and-geometry-pending",
+      "requirements": [
+        "Establish Three Mills mark location, vertical datum and measured separation",
+        "Review event-year channel, ground, bridge and defence geometry",
+        "Obtain site-specific river/tide levels and rainfall where available",
+        "Resolve sluices, culverts, drainage connections and documented failures",
+        "Retain ground, barrier and water-level uncertainty separately"
+      ],
+      "existingTideAnimation": "illustrative only; neither a flood boundary condition nor historical validation"
+    },
+    {
+      "id": "historic-flood-1904",
+      "eventDate": "1904-12-30",
+      "mechanism": "tidal-storm-surge",
+      "role": "modelling-target",
+      "evidenceRecord": "data/maps/historic-flood-events.json#1904-12-30",
+      "terrainEpoch": null,
+      "waterLevelODNMetres": null,
+      "hydrograph": null,
+      "status": "event-confirmed-level-and-geometry-pending",
+      "requirements": [
+        "Establish Three Mills mark location, vertical datum and measured separation",
+        "Review event-year channel, ground, bridge and defence geometry",
+        "Obtain site-specific river/tide levels and rainfall where available",
+        "Resolve sluices, culverts, drainage connections and documented failures",
+        "Retain ground, barrier and water-level uncertainty separately"
+      ],
+      "existingTideAnimation": "illustrative only; neither a flood boundary condition nor historical validation"
+    },
+    {
+      "id": "historic-flood-1928",
+      "eventDate": "1928-01-07",
+      "mechanism": "tidal-storm-surge",
+      "role": "modelling-target",
+      "evidenceRecord": "data/maps/historic-flood-events.json#1928-01-07",
+      "terrainEpoch": null,
+      "waterLevelODNMetres": null,
+      "hydrograph": null,
+      "status": "event-confirmed-level-and-geometry-pending",
+      "requirements": [
+        "Establish Three Mills mark location, vertical datum and measured separation",
+        "Review event-year channel, ground, bridge and defence geometry",
+        "Obtain site-specific river/tide levels and rainfall where available",
+        "Resolve sluices, culverts, drainage connections and documented failures",
+        "Retain ground, barrier and water-level uncertainty separately"
+      ],
+      "existingTideAnimation": "illustrative only; neither a flood boundary condition nor historical validation",
+      "additionalRoles": [
+        "flood-mark-calibration"
+      ]
+    }
+  ],
+  "floodStudyScope": {
+    "principalYears": [
+      1888,
+      1897,
+      1904,
+      1928
+    ],
+    "secondaryYears": [
+      1898
+    ],
+    "engineeringComparisonBoundary": "1930s Lower Lea works"
+  }
+}

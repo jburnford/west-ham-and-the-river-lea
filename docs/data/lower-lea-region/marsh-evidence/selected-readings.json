@@ -1,0 +1,2411 @@
+{
+  "schemaVersion": 1,
+  "status": "selected regional evidence review; not a complete transcription of the skeleton layer",
+  "sourceEpoch": "1848\u201351",
+  "sourceLayer": "os-london-skeleton-5280",
+  "sourceInventory": {
+    "cachedMosaics": 857,
+    "formallyCompletedReaderMosaicsAtStart": 0,
+    "searchAtlasesViewed": 14,
+    "selectedReadings": 57,
+    "baselineReadings": 45
+  },
+  "policy": "The author authorizes representative use of sparse marsh and low-lane levels across the marsh regions established in the book. Retain surface role and date; these are proxies for field interiors. Later surface-specific evidence may raise developed ground. No modern fill is used to define historical marsh relief.",
+  "bookEvidence": {
+    "path": "West Ham and the River Lea_ A Social and E - Jim Clifford.pdf",
+    "pdfPagesOneBased": [
+      35,
+      42,
+      43,
+      45
+    ],
+    "note": "Map 2 (1805) and Marshlands and Early Industry establish broad marsh extent; book describes continued open marsh and development on former marsh. They do not establish point heights or exact model boundaries."
+  },
+  "regions": [
+    {
+      "id": "hackney-temple",
+      "description": "Footpaths and Temple Mill/Homerton roads across Hackney Marsh, away from the river-bank path and bridge crest. Low-road proxy for regional marsh; no blanket fill subtraction.",
+      "observationIds": [
+        "early-001",
+        "early-002",
+        "early-003",
+        "early-004",
+        "early-005",
+        "early-006",
+        "early-007",
+        "early-053"
+      ],
+      "observedRangeFeet": [
+        13.5,
+        15.4
+      ],
+      "medianFeet": 14.8,
+      "count": 8
+    },
+    {
+      "id": "leyton-north",
+      "description": "Marsh Lane low end distinguished from its rise toward Church Lane and the Leyton terrace.",
+      "observationIds": [
+        "early-052"
+      ],
+      "observedRangeFeet": [
+        15.2,
+        15.2
+      ],
+      "medianFeet": 15.2,
+      "count": 1
+    },
+    {
+      "id": "stratford-west",
+      "description": "Low path across southern Hackney/Stratford marsh or Marsh Gate Lane margin, distinct from the reservoir and river embankments.",
+      "observationIds": [
+        "early-008",
+        "early-010",
+        "early-011",
+        "early-012",
+        "early-013"
+      ],
+      "observedRangeFeet": [
+        10.9,
+        12.7
+      ],
+      "medianFeet": 12.1,
+      "count": 5
+    },
+    {
+      "id": "stratford-east",
+      "description": "Minor dead-end lane east of Waterworks River and north of the railway; low lane surface used as a marsh proxy.",
+      "observationIds": [
+        "early-014",
+        "early-015"
+      ],
+      "observedRangeFeet": [
+        10.5,
+        10.7
+      ],
+      "medianFeet": 10.6,
+      "count": 2
+    },
+    {
+      "id": "mill-meads",
+      "description": "Abbey Mill Lane along northern Mill Meads; lane figures around 8 ft are distinct from 15\u201316 ft Three Mills Wall River banks.",
+      "observationIds": [
+        "early-016",
+        "early-017",
+        "early-018",
+        "early-019"
+      ],
+      "observedRangeFeet": [
+        7.9,
+        8.6
+      ],
+      "medianFeet": 8.4,
+      "count": 4
+    },
+    {
+      "id": "abbey-marsh",
+      "description": "Low lane/path on West Ham Abbey Marsh east of Abbey Creek, beside but distinct from the North Woolwich railway.",
+      "observationIds": [
+        "early-020",
+        "early-021",
+        "early-022",
+        "early-023",
+        "early-024",
+        "early-025",
+        "early-026",
+        "early-027",
+        "early-028"
+      ],
+      "observedRangeFeet": [
+        4.4,
+        5.8
+      ],
+      "medianFeet": 4.7,
+      "count": 9
+    },
+    {
+      "id": "plaistow-west",
+      "description": "Star Lane/Forty Acres Lane on the low Plaistow marsh; ordinary lane surface, not the higher Barking Road or a benchmark.",
+      "observationIds": [
+        "early-029",
+        "early-030",
+        "early-031",
+        "early-032",
+        "early-033",
+        "early-034",
+        "early-035",
+        "early-036"
+      ],
+      "observedRangeFeet": [
+        3.4,
+        4.9
+      ],
+      "medianFeet": 4.1,
+      "count": 8
+    },
+    {
+      "id": "plaistow-east",
+      "description": "Green Lane/Dirty Lane/Prince Regent Lane across Plaistow Marsh; low lanes used as representative ground proxies.",
+      "observationIds": [
+        "early-037",
+        "early-038",
+        "early-039",
+        "early-040",
+        "early-041",
+        "early-042"
+      ],
+      "observedRangeFeet": [
+        4.6,
+        5.7
+      ],
+      "medianFeet": 4.95,
+      "count": 6
+    },
+    {
+      "id": "thames-marsh",
+      "description": "Southern Green Lane across Plaistow Marsh before dock construction; not a Thames flood-wall crest.",
+      "observationIds": [
+        "early-056",
+        "early-057"
+      ],
+      "observedRangeFeet": [
+        5.6,
+        6.2
+      ],
+      "medianFeet": 5.9,
+      "count": 2
+    }
+  ],
+  "observations": [
+    {
+      "id": "early-001",
+      "region": "hackney-temple",
+      "role": "lane-proxy",
+      "mosaic": "s18_131051_87113",
+      "pixel": [
+        145,
+        166
+      ],
+      "valueFeet": 14.6,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-01.png",
+      "detailPanel": 0,
+      "detailBounds": [
+        80,
+        131,
+        210,
+        201
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "14\u00b76",
+      "baselineUse": true,
+      "notes": "Footpaths and Temple Mill/Homerton roads across Hackney Marsh, away from the river-bank path and bridge crest. Low-road proxy for regional marsh; no blanket fill subtraction.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        536806.8991231325,
+        185874.52270600415
+      ],
+      "provisionalODNMetres": 4.05384,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131051_87113.json": "82078189b66c67e608622a0a0c7062bdd46b97ae258e6a2adba86a6199d04414",
+        "reference/spot-heights/mosaics-1848/s18_131051_87113.png": "60aea4cc8da6710b2d92aac9659d81318b3200a65bfc07a8016f1fb31f5605a6",
+        "reference/marsh-baseline-1848-2026-10-02/details-01.png": "c722cfa384cd1b59bf6d1be405168e974008c0f2ca0b02c3e4f1aaba2addf4c7"
+      }
+    },
+    {
+      "id": "early-002",
+      "region": "hackney-temple",
+      "role": "lane-proxy",
+      "mosaic": "s18_131051_87113",
+      "pixel": [
+        242,
+        360
+      ],
+      "valueFeet": 14.7,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-01.png",
+      "detailPanel": 1,
+      "detailBounds": [
+        177,
+        325,
+        307,
+        395
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "14\u00b77",
+      "baselineUse": true,
+      "notes": "Footpaths and Temple Mill/Homerton roads across Hackney Marsh, away from the river-bank path and bridge crest. Low-road proxy for regional marsh; no blanket fill subtraction.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        536844.9111452922,
+        185803.53953284177
+      ],
+      "provisionalODNMetres": 4.08432,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131051_87113.json": "82078189b66c67e608622a0a0c7062bdd46b97ae258e6a2adba86a6199d04414",
+        "reference/spot-heights/mosaics-1848/s18_131051_87113.png": "60aea4cc8da6710b2d92aac9659d81318b3200a65bfc07a8016f1fb31f5605a6",
+        "reference/marsh-baseline-1848-2026-10-02/details-01.png": "c722cfa384cd1b59bf6d1be405168e974008c0f2ca0b02c3e4f1aaba2addf4c7"
+      }
+    },
+    {
+      "id": "early-003",
+      "region": "hackney-temple",
+      "role": "lane-proxy",
+      "mosaic": "s18_131051_87113",
+      "pixel": [
+        381,
+        458
+      ],
+      "valueFeet": 15.0,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-01.png",
+      "detailPanel": 2,
+      "detailBounds": [
+        316,
+        423,
+        446,
+        493
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "15\u00b70",
+      "baselineUse": true,
+      "notes": "Footpaths and Temple Mill/Homerton roads across Hackney Marsh, away from the river-bank path and bridge crest. Low-road proxy for regional marsh; no blanket fill subtraction.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        536897.5825254808,
+        185768.58462989872
+      ],
+      "provisionalODNMetres": 4.17576,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131051_87113.json": "82078189b66c67e608622a0a0c7062bdd46b97ae258e6a2adba86a6199d04414",
+        "reference/spot-heights/mosaics-1848/s18_131051_87113.png": "60aea4cc8da6710b2d92aac9659d81318b3200a65bfc07a8016f1fb31f5605a6",
+        "reference/marsh-baseline-1848-2026-10-02/details-01.png": "c722cfa384cd1b59bf6d1be405168e974008c0f2ca0b02c3e4f1aaba2addf4c7"
+      }
+    },
+    {
+      "id": "early-004",
+      "region": "hackney-temple",
+      "role": "lane-proxy",
+      "mosaic": "s18_131051_87113",
+      "pixel": [
+        290,
+        572
+      ],
+      "valueFeet": 14.9,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-01.png",
+      "detailPanel": 3,
+      "detailBounds": [
+        225,
+        537,
+        355,
+        607
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "14\u00b79",
+      "baselineUse": true,
+      "notes": "Footpaths and Temple Mill/Homerton roads across Hackney Marsh, away from the river-bank path and bridge crest. Low-road proxy for regional marsh; no blanket fill subtraction.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        536864.8821200167,
+        185725.38761612866
+      ],
+      "provisionalODNMetres": 4.1452800000000005,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131051_87113.json": "82078189b66c67e608622a0a0c7062bdd46b97ae258e6a2adba86a6199d04414",
+        "reference/spot-heights/mosaics-1848/s18_131051_87113.png": "60aea4cc8da6710b2d92aac9659d81318b3200a65bfc07a8016f1fb31f5605a6",
+        "reference/marsh-baseline-1848-2026-10-02/details-01.png": "c722cfa384cd1b59bf6d1be405168e974008c0f2ca0b02c3e4f1aaba2addf4c7"
+      }
+    },
+    {
+      "id": "early-005",
+      "region": "hackney-temple",
+      "role": "lane-proxy",
+      "mosaic": "s18_131054_87116",
+      "pixel": [
+        244,
+        467
+      ],
+      "valueFeet": 13.5,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-01.png",
+      "detailPanel": 4,
+      "detailBounds": [
+        179,
+        432,
+        309,
+        502
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "13\u00b75",
+      "baselineUse": true,
+      "notes": "Footpaths and Temple Mill/Homerton roads across Hackney Marsh, away from the river-bank path and bridge crest. Low-road proxy for regional marsh; no blanket fill subtraction.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537140.0264368376,
+        185486.71442031645
+      ],
+      "provisionalODNMetres": 3.71856,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131054_87116.json": "8493a155ebb3391f4087aacee62d75d2b0406a4baaaad9ab377d701257d4ddef",
+        "reference/spot-heights/mosaics-1848/s18_131054_87116.png": "822af07c75c0a5e36d996c4fa8132a389342a5a67d43f748c6c4101460a71bed",
+        "reference/marsh-baseline-1848-2026-10-02/details-01.png": "c722cfa384cd1b59bf6d1be405168e974008c0f2ca0b02c3e4f1aaba2addf4c7"
+      }
+    },
+    {
+      "id": "early-006",
+      "region": "hackney-temple",
+      "role": "lane-proxy",
+      "mosaic": "s18_131054_87116",
+      "pixel": [
+        160,
+        663
+      ],
+      "valueFeet": 13.7,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-01.png",
+      "detailPanel": 5,
+      "detailBounds": [
+        95,
+        628,
+        225,
+        698
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "13\u00b77",
+      "baselineUse": true,
+      "notes": "Footpaths and Temple Mill/Homerton roads across Hackney Marsh, away from the river-bank path and bridge crest. Low-road proxy for regional marsh; no blanket fill subtraction.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537110.7512311547,
+        185413.16696500807
+      ],
+      "provisionalODNMetres": 3.7795199999999998,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131054_87116.json": "8493a155ebb3391f4087aacee62d75d2b0406a4baaaad9ab377d701257d4ddef",
+        "reference/spot-heights/mosaics-1848/s18_131054_87116.png": "822af07c75c0a5e36d996c4fa8132a389342a5a67d43f748c6c4101460a71bed",
+        "reference/marsh-baseline-1848-2026-10-02/details-01.png": "c722cfa384cd1b59bf6d1be405168e974008c0f2ca0b02c3e4f1aaba2addf4c7"
+      }
+    },
+    {
+      "id": "early-007",
+      "region": "hackney-temple",
+      "role": "lane-proxy",
+      "mosaic": "s18_131054_87116",
+      "pixel": [
+        379,
+        326
+      ],
+      "valueFeet": 15.2,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-01.png",
+      "detailPanel": 6,
+      "detailBounds": [
+        314,
+        291,
+        444,
+        361
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "15\u00b72",
+      "baselineUse": true,
+      "notes": "Footpaths and Temple Mill/Homerton roads across Hackney Marsh, away from the river-bank path and bridge crest. Low-road proxy for regional marsh; no blanket fill subtraction.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537188.8188765969,
+        185540.37270360388
+      ],
+      "provisionalODNMetres": 4.23672,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131054_87116.json": "8493a155ebb3391f4087aacee62d75d2b0406a4baaaad9ab377d701257d4ddef",
+        "reference/spot-heights/mosaics-1848/s18_131054_87116.png": "822af07c75c0a5e36d996c4fa8132a389342a5a67d43f748c6c4101460a71bed",
+        "reference/marsh-baseline-1848-2026-10-02/details-01.png": "c722cfa384cd1b59bf6d1be405168e974008c0f2ca0b02c3e4f1aaba2addf4c7"
+      }
+    },
+    {
+      "id": "early-008",
+      "region": "stratford-west",
+      "role": "lane-proxy",
+      "mosaic": "s18_131057_87125",
+      "pixel": [
+        530,
+        295
+      ],
+      "valueFeet": 11.6,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-01.png",
+      "detailPanel": 7,
+      "detailBounds": [
+        474,
+        260,
+        604,
+        330
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "11\u00b76",
+      "baselineUse": true,
+      "notes": "Low path across southern Hackney/Stratford marsh or Marsh Gate Lane margin, distinct from the reservoir and river embankments.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537553.4416741438,
+        184706.43366792845
+      ],
+      "provisionalODNMetres": 3.13944,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131057_87125.json": "43bf06a16bb68ed07e9fd92efd69d97357bb428eddbb76e6cb70eb481e5bad29",
+        "reference/spot-heights/mosaics-1848/s18_131057_87125.png": "69fe4f0a1cba494539ec751d6908ab6a11e3f16b0d13a31b4b5bb77d1bb429e2",
+        "reference/marsh-baseline-1848-2026-10-02/details-01.png": "c722cfa384cd1b59bf6d1be405168e974008c0f2ca0b02c3e4f1aaba2addf4c7"
+      }
+    },
+    {
+      "id": "early-009",
+      "region": "stratford-west",
+      "role": "crossing",
+      "mosaic": "s18_131057_87125",
+      "pixel": [
+        377,
+        450
+      ],
+      "valueFeet": 12.9,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-02.png",
+      "detailPanel": 0,
+      "detailBounds": [
+        312,
+        415,
+        442,
+        485
+      ],
+      "valueConfidence": "medium",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "12\u00b79",
+      "baselineUse": false,
+      "notes": "Low path across southern Hackney/Stratford marsh or Marsh Gate Lane margin, distinct from the reservoir and river embankments. This selected comparison is excluded from marsh fitting: crossing.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537498.0899253858,
+        184647.38801119145
+      ],
+      "provisionalODNMetres": 3.53568,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131057_87125.json": "43bf06a16bb68ed07e9fd92efd69d97357bb428eddbb76e6cb70eb481e5bad29",
+        "reference/spot-heights/mosaics-1848/s18_131057_87125.png": "69fe4f0a1cba494539ec751d6908ab6a11e3f16b0d13a31b4b5bb77d1bb429e2",
+        "reference/marsh-baseline-1848-2026-10-02/details-02.png": "1c591b0ef3f9e76dfe3af29e1f137d70239b203597e0133ea6864d8a82baa8c6"
+      }
+    },
+    {
+      "id": "early-010",
+      "region": "stratford-west",
+      "role": "lane-proxy",
+      "mosaic": "s18_131057_87125",
+      "pixel": [
+        213,
+        603
+      ],
+      "valueFeet": 10.9,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-02.png",
+      "detailPanel": 1,
+      "detailBounds": [
+        148,
+        568,
+        278,
+        638
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "10\u00b79",
+      "baselineUse": true,
+      "notes": "Low path across southern Hackney/Stratford marsh or Marsh Gate Lane margin, distinct from the reservoir and river embankments.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537438.6251752556,
+        184588.97354304214
+      ],
+      "provisionalODNMetres": 2.9260800000000002,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131057_87125.json": "43bf06a16bb68ed07e9fd92efd69d97357bb428eddbb76e6cb70eb481e5bad29",
+        "reference/spot-heights/mosaics-1848/s18_131057_87125.png": "69fe4f0a1cba494539ec751d6908ab6a11e3f16b0d13a31b4b5bb77d1bb429e2",
+        "reference/marsh-baseline-1848-2026-10-02/details-02.png": "1c591b0ef3f9e76dfe3af29e1f137d70239b203597e0133ea6864d8a82baa8c6"
+      }
+    },
+    {
+      "id": "early-011",
+      "region": "stratford-west",
+      "role": "ground-margin",
+      "mosaic": "s18_131060_87134",
+      "pixel": [
+        166,
+        614
+      ],
+      "valueFeet": 12.1,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-02.png",
+      "detailPanel": 2,
+      "detailBounds": [
+        72,
+        580,
+        202,
+        650
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "12\u00b71",
+      "baselineUse": true,
+      "notes": "Low path across southern Hackney/Stratford marsh or Marsh Gate Lane margin, distinct from the reservoir and river embankments.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537730.112602782,
+        183737.3089655828
+      ],
+      "provisionalODNMetres": 3.2918399999999997,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131060_87134.json": "0a5afd8327b0c1ca1d506aa6547cdc0c823a782f10eb223bf0004e8ed7571f42",
+        "reference/spot-heights/mosaics-1848/s18_131060_87134.png": "7bfc131046746044979ccfb26354c8c88e41d8a88119b7a5b986187d593ccc03",
+        "reference/marsh-baseline-1848-2026-10-02/details-02.png": "1c591b0ef3f9e76dfe3af29e1f137d70239b203597e0133ea6864d8a82baa8c6"
+      }
+    },
+    {
+      "id": "early-012",
+      "region": "stratford-west",
+      "role": "lane-proxy",
+      "mosaic": "s18_131060_87134",
+      "pixel": [
+        62,
+        382
+      ],
+      "valueFeet": 12.4,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-02.png",
+      "detailPanel": 3,
+      "detailBounds": [
+        -3,
+        347,
+        127,
+        417
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "12\u00b74",
+      "baselineUse": true,
+      "notes": "Low path across southern Hackney/Stratford marsh or Marsh Gate Lane margin, distinct from the reservoir and river embankments.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537689.0871803849,
+        183822.34494463215
+      ],
+      "provisionalODNMetres": 3.38328,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131060_87134.json": "0a5afd8327b0c1ca1d506aa6547cdc0c823a782f10eb223bf0004e8ed7571f42",
+        "reference/spot-heights/mosaics-1848/s18_131060_87134.png": "7bfc131046746044979ccfb26354c8c88e41d8a88119b7a5b986187d593ccc03",
+        "reference/marsh-baseline-1848-2026-10-02/details-02.png": "1c591b0ef3f9e76dfe3af29e1f137d70239b203597e0133ea6864d8a82baa8c6"
+      }
+    },
+    {
+      "id": "early-013",
+      "region": "stratford-west",
+      "role": "lane-proxy",
+      "mosaic": "s18_131060_87134",
+      "pixel": [
+        200,
+        547
+      ],
+      "valueFeet": 12.7,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-02.png",
+      "detailPanel": 4,
+      "detailBounds": [
+        140,
+        512,
+        270,
+        582
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "12\u00b77",
+      "baselineUse": true,
+      "notes": "Low path across southern Hackney/Stratford marsh or Marsh Gate Lane margin, distinct from the reservoir and river embankments.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537742.0871264243,
+        183762.5130964929
+      ],
+      "provisionalODNMetres": 3.4747199999999996,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131060_87134.json": "0a5afd8327b0c1ca1d506aa6547cdc0c823a782f10eb223bf0004e8ed7571f42",
+        "reference/spot-heights/mosaics-1848/s18_131060_87134.png": "7bfc131046746044979ccfb26354c8c88e41d8a88119b7a5b986187d593ccc03",
+        "reference/marsh-baseline-1848-2026-10-02/details-02.png": "1c591b0ef3f9e76dfe3af29e1f137d70239b203597e0133ea6864d8a82baa8c6"
+      }
+    },
+    {
+      "id": "early-014",
+      "region": "stratford-east",
+      "role": "lane-proxy",
+      "mosaic": "s18_131063_87131",
+      "pixel": [
+        517,
+        538
+      ],
+      "valueFeet": 10.5,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-02.png",
+      "detailPanel": 5,
+      "detailBounds": [
+        452,
+        503,
+        582,
+        573
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "10\u00b75",
+      "baselineUse": true,
+      "notes": "Minor dead-end lane east of Waterworks River and north of the railway; low lane surface used as a marsh proxy.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        538137.8912994374,
+        184061.7838069332
+      ],
+      "provisionalODNMetres": 2.80416,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131063_87131.json": "0b547723b0c8abde1f35fb5036d80d88f9a678a99b441b641f30f69f5ffe5a3a",
+        "reference/spot-heights/mosaics-1848/s18_131063_87131.png": "786e6d5481fc5c795e6ca1b4f3c540a0f9f1a3ab6e3f3de2d6bd4f6b802151ad",
+        "reference/marsh-baseline-1848-2026-10-02/details-02.png": "1c591b0ef3f9e76dfe3af29e1f137d70239b203597e0133ea6864d8a82baa8c6"
+      }
+    },
+    {
+      "id": "early-015",
+      "region": "stratford-east",
+      "role": "lane-proxy",
+      "mosaic": "s18_131063_87131",
+      "pixel": [
+        541,
+        800
+      ],
+      "valueFeet": 10.7,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-02.png",
+      "detailPanel": 6,
+      "detailBounds": [
+        476,
+        765,
+        606,
+        835
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "10\u00b77",
+      "baselineUse": true,
+      "notes": "Minor dead-end lane east of Waterworks River and north of the railway; low lane surface used as a marsh proxy.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        538149.4646292279,
+        183964.81397549825
+      ],
+      "provisionalODNMetres": 2.8651199999999997,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131063_87131.json": "0b547723b0c8abde1f35fb5036d80d88f9a678a99b441b641f30f69f5ffe5a3a",
+        "reference/spot-heights/mosaics-1848/s18_131063_87131.png": "786e6d5481fc5c795e6ca1b4f3c540a0f9f1a3ab6e3f3de2d6bd4f6b802151ad",
+        "reference/marsh-baseline-1848-2026-10-02/details-02.png": "1c591b0ef3f9e76dfe3af29e1f137d70239b203597e0133ea6864d8a82baa8c6"
+      }
+    },
+    {
+      "id": "early-016",
+      "region": "mill-meads",
+      "role": "lane-proxy",
+      "mosaic": "s18_131066_87140",
+      "pixel": [
+        651,
+        128
+      ],
+      "valueFeet": 8.4,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-02.png",
+      "detailPanel": 7,
+      "detailBounds": [
+        586,
+        93,
+        716,
+        163
+      ],
+      "valueConfidence": "medium",
+      "positionConfidence": "medium",
+      "positionNote": "Figure at lane bend/edge; independent survey dot not securely distinguished. Value clear; location approximate.",
+      "raw": "8\u00b74",
+      "baselineUse": true,
+      "notes": "Abbey Mill Lane along northern Mill Meads; lane figures around 8 ft are distinct from 15\u201316 ft Three Mills Wall River banks.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        538492.6075964995,
+        183368.1317176135
+      ],
+      "provisionalODNMetres": 2.1640800000000002,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131066_87140.json": "fa53a3049aa01ca12caf0b2de908f7cef22035f92519d62b493dce45fa333a49",
+        "reference/spot-heights/mosaics-1848/s18_131066_87140.png": "033a91814ac34a3a80c6dc65e1a6d7cc94d5586ba92506a0a3bd2b1c316e35d4",
+        "reference/marsh-baseline-1848-2026-10-02/details-02.png": "1c591b0ef3f9e76dfe3af29e1f137d70239b203597e0133ea6864d8a82baa8c6"
+      }
+    },
+    {
+      "id": "early-017",
+      "region": "mill-meads",
+      "role": "lane-proxy",
+      "mosaic": "s18_131066_87140",
+      "pixel": [
+        819,
+        121
+      ],
+      "valueFeet": 8.6,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-03.png",
+      "detailPanel": 0,
+      "detailBounds": [
+        754,
+        86,
+        884,
+        156
+      ],
+      "valueConfidence": "medium",
+      "positionConfidence": "medium",
+      "positionNote": "Figure at lane bend/edge; independent survey dot not securely distinguished. Value clear; location approximate.",
+      "raw": "8\u00b76",
+      "baselineUse": true,
+      "notes": "Abbey Mill Lane along northern Mill Meads; lane figures around 8 ft are distinct from 15\u201316 ft Three Mills Wall River banks.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        538555.0421703196,
+        183372.4344169852
+      ],
+      "provisionalODNMetres": 2.22504,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131066_87140.json": "fa53a3049aa01ca12caf0b2de908f7cef22035f92519d62b493dce45fa333a49",
+        "reference/spot-heights/mosaics-1848/s18_131066_87140.png": "033a91814ac34a3a80c6dc65e1a6d7cc94d5586ba92506a0a3bd2b1c316e35d4",
+        "reference/marsh-baseline-1848-2026-10-02/details-03.png": "9d9c3bd715c5f65de5e6077de0610587165403aa89c04a239b910c9acbbf9a63"
+      }
+    },
+    {
+      "id": "early-018",
+      "region": "mill-meads",
+      "role": "lane-proxy",
+      "mosaic": "s18_131066_87140",
+      "pixel": [
+        817,
+        280
+      ],
+      "valueFeet": 8.4,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-03.png",
+      "detailPanel": 1,
+      "detailBounds": [
+        752,
+        245,
+        882,
+        315
+      ],
+      "valueConfidence": "medium",
+      "positionConfidence": "medium",
+      "positionNote": "Figure at lane bend/edge; independent survey dot not securely distinguished. Value clear; location approximate.",
+      "raw": "8\u00b74",
+      "baselineUse": true,
+      "notes": "Abbey Mill Lane along northern Mill Meads; lane figures around 8 ft are distinct from 15\u201316 ft Three Mills Wall River banks.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        538555.9079560626,
+        183313.41074255377
+      ],
+      "provisionalODNMetres": 2.1640800000000002,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131066_87140.json": "fa53a3049aa01ca12caf0b2de908f7cef22035f92519d62b493dce45fa333a49",
+        "reference/spot-heights/mosaics-1848/s18_131066_87140.png": "033a91814ac34a3a80c6dc65e1a6d7cc94d5586ba92506a0a3bd2b1c316e35d4",
+        "reference/marsh-baseline-1848-2026-10-02/details-03.png": "9d9c3bd715c5f65de5e6077de0610587165403aa89c04a239b910c9acbbf9a63"
+      }
+    },
+    {
+      "id": "early-019",
+      "region": "mill-meads",
+      "role": "lane-proxy",
+      "mosaic": "s18_131069_87140",
+      "pixel": [
+        618,
+        227
+      ],
+      "valueFeet": 7.9,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-03.png",
+      "detailPanel": 2,
+      "detailBounds": [
+        553,
+        192,
+        683,
+        262
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "7\u00b79",
+      "baselineUse": true,
+      "notes": "Abbey Mill Lane along northern Mill Meads; lane figures around 8 ft are distinct from 15\u201316 ft Three Mills Wall River banks.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        538767.072805857,
+        183338.8592643778
+      ],
+      "provisionalODNMetres": 2.01168,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131069_87140.json": "11bd00127f0aa739d12a352d1ced30b8c1aead2186d2e47d9cef1bc9995e7be5",
+        "reference/spot-heights/mosaics-1848/s18_131069_87140.png": "5bba7fe25672e80a64ec38f330ef1451b87613b44367aba90739868da74d8a58",
+        "reference/marsh-baseline-1848-2026-10-02/details-03.png": "9d9c3bd715c5f65de5e6077de0610587165403aa89c04a239b910c9acbbf9a63"
+      }
+    },
+    {
+      "id": "early-020",
+      "region": "abbey-marsh",
+      "role": "lane-proxy",
+      "mosaic": "s18_131072_87143",
+      "pixel": [
+        607,
+        397
+      ],
+      "valueFeet": 5.8,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-03.png",
+      "detailPanel": 3,
+      "detailBounds": [
+        542,
+        362,
+        672,
+        432
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "5\u00b78",
+      "baselineUse": true,
+      "notes": "Low lane/path on West Ham Abbey Marsh east of Abbey Creek, beside but distinct from the North Woolwich railway.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539058.2525907347,
+        182998.46857606637
+      ],
+      "provisionalODNMetres": 1.3716000000000002,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131072_87143.json": "0998fad8253983a3b31cfc8bcea61154ff1366f9ddbfb5e25421250829c18d85",
+        "reference/spot-heights/mosaics-1848/s18_131072_87143.png": "04e509d9756279331ee1ae1b4695cb552052e361024ad01dda251be07ea48c42",
+        "reference/marsh-baseline-1848-2026-10-02/details-03.png": "9d9c3bd715c5f65de5e6077de0610587165403aa89c04a239b910c9acbbf9a63"
+      }
+    },
+    {
+      "id": "early-021",
+      "region": "abbey-marsh",
+      "role": "lane-proxy",
+      "mosaic": "s18_131072_87143",
+      "pixel": [
+        659,
+        560
+      ],
+      "valueFeet": 5.6,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-03.png",
+      "detailPanel": 4,
+      "detailBounds": [
+        594,
+        525,
+        724,
+        595
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "5\u00b76",
+      "baselineUse": true,
+      "notes": "Low lane/path on West Ham Abbey Marsh east of Abbey Creek, beside but distinct from the North Woolwich railway.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539079.2575238458,
+        182938.50611199945
+      ],
+      "provisionalODNMetres": 1.31064,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131072_87143.json": "0998fad8253983a3b31cfc8bcea61154ff1366f9ddbfb5e25421250829c18d85",
+        "reference/spot-heights/mosaics-1848/s18_131072_87143.png": "04e509d9756279331ee1ae1b4695cb552052e361024ad01dda251be07ea48c42",
+        "reference/marsh-baseline-1848-2026-10-02/details-03.png": "9d9c3bd715c5f65de5e6077de0610587165403aa89c04a239b910c9acbbf9a63"
+      }
+    },
+    {
+      "id": "early-022",
+      "region": "abbey-marsh",
+      "role": "lane-proxy",
+      "mosaic": "s18_131072_87143",
+      "pixel": [
+        754,
+        647
+      ],
+      "valueFeet": 5.1,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-03.png",
+      "detailPanel": 5,
+      "detailBounds": [
+        689,
+        612,
+        819,
+        682
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "5\u00b71",
+      "baselineUse": true,
+      "notes": "Low lane/path on West Ham Abbey Marsh east of Abbey Creek, beside but distinct from the North Woolwich railway.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539115.4903367694,
+        182907.18665474124
+      ],
+      "provisionalODNMetres": 1.15824,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131072_87143.json": "0998fad8253983a3b31cfc8bcea61154ff1366f9ddbfb5e25421250829c18d85",
+        "reference/spot-heights/mosaics-1848/s18_131072_87143.png": "04e509d9756279331ee1ae1b4695cb552052e361024ad01dda251be07ea48c42",
+        "reference/marsh-baseline-1848-2026-10-02/details-03.png": "9d9c3bd715c5f65de5e6077de0610587165403aa89c04a239b910c9acbbf9a63"
+      }
+    },
+    {
+      "id": "early-023",
+      "region": "abbey-marsh",
+      "role": "lane-proxy",
+      "mosaic": "s18_131072_87146",
+      "pixel": [
+        779,
+        256
+      ],
+      "valueFeet": 4.6,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-03.png",
+      "detailPanel": 6,
+      "detailBounds": [
+        714,
+        221,
+        844,
+        291
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b76",
+      "baselineUse": true,
+      "notes": "Low lane/path on West Ham Abbey Marsh east of Abbey Creek, beside but distinct from the North Woolwich railway.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539128.6253072555,
+        182767.52625477768
+      ],
+      "provisionalODNMetres": 1.00584,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131072_87146.json": "0da6aa7198ba32585d6217197e397671182237dc06256637ffa1a0428d039d83",
+        "reference/spot-heights/mosaics-1848/s18_131072_87146.png": "1dd17c0c168a491cf982f6587b34fcf9822632c07255028ee13fca8369813eb7",
+        "reference/marsh-baseline-1848-2026-10-02/details-03.png": "9d9c3bd715c5f65de5e6077de0610587165403aa89c04a239b910c9acbbf9a63"
+      }
+    },
+    {
+      "id": "early-024",
+      "region": "abbey-marsh",
+      "role": "lane-proxy",
+      "mosaic": "s18_131072_87146",
+      "pixel": [
+        826,
+        622
+      ],
+      "valueFeet": 4.6,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-03.png",
+      "detailPanel": 7,
+      "detailBounds": [
+        761,
+        587,
+        891,
+        657
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b76",
+      "baselineUse": true,
+      "notes": "Low lane/path on West Ham Abbey Marsh east of Abbey Creek, beside but distinct from the North Woolwich railway.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539149.835434402,
+        182632.16887733783
+      ],
+      "provisionalODNMetres": 1.00584,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131072_87146.json": "0da6aa7198ba32585d6217197e397671182237dc06256637ffa1a0428d039d83",
+        "reference/spot-heights/mosaics-1848/s18_131072_87146.png": "1dd17c0c168a491cf982f6587b34fcf9822632c07255028ee13fca8369813eb7",
+        "reference/marsh-baseline-1848-2026-10-02/details-03.png": "9d9c3bd715c5f65de5e6077de0610587165403aa89c04a239b910c9acbbf9a63"
+      }
+    },
+    {
+      "id": "early-025",
+      "region": "abbey-marsh",
+      "role": "lane-proxy",
+      "mosaic": "s18_131072_87146",
+      "pixel": [
+        791,
+        954
+      ],
+      "valueFeet": 4.5,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-04.png",
+      "detailPanel": 0,
+      "detailBounds": [
+        726,
+        919,
+        856,
+        989
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b75",
+      "baselineUse": true,
+      "notes": "Low lane/path on West Ham Abbey Marsh east of Abbey Creek, beside but distinct from the North Woolwich railway.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539140.1869343003,
+        182508.59117686428
+      ],
+      "provisionalODNMetres": 0.9753600000000001,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131072_87146.json": "0da6aa7198ba32585d6217197e397671182237dc06256637ffa1a0428d039d83",
+        "reference/spot-heights/mosaics-1848/s18_131072_87146.png": "1dd17c0c168a491cf982f6587b34fcf9822632c07255028ee13fca8369813eb7",
+        "reference/marsh-baseline-1848-2026-10-02/details-04.png": "4ff9a59cb2817ae3664c0188f34c94bfa355a0cbf5d845daf4a3048ee99a39df"
+      }
+    },
+    {
+      "id": "early-026",
+      "region": "abbey-marsh",
+      "role": "lane-proxy",
+      "mosaic": "s18_131072_87152",
+      "pixel": [
+        657,
+        103
+      ],
+      "valueFeet": 4.4,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-04.png",
+      "detailPanel": 1,
+      "detailBounds": [
+        592,
+        68,
+        722,
+        138
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b74",
+      "baselineUse": true,
+      "notes": "Low lane/path on West Ham Abbey Marsh east of Abbey Creek, beside but distinct from the North Woolwich railway.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539097.284707931,
+        182252.980140195
+      ],
+      "provisionalODNMetres": 0.9448800000000002,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131072_87152.json": "82484ecdbc0a3b332e12948f13ce0557078be4586e7bc0638d55b37e332282cf",
+        "reference/spot-heights/mosaics-1848/s18_131072_87152.png": "d8a82bdeee0390ff57a2d76a362cc57a1cdf38cc89cc277a0b91283a171bc1fb",
+        "reference/marsh-baseline-1848-2026-10-02/details-04.png": "4ff9a59cb2817ae3664c0188f34c94bfa355a0cbf5d845daf4a3048ee99a39df"
+      }
+    },
+    {
+      "id": "early-027",
+      "region": "abbey-marsh",
+      "role": "lane-proxy",
+      "mosaic": "s18_131072_87152",
+      "pixel": [
+        710,
+        557
+      ],
+      "valueFeet": 4.7,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-04.png",
+      "detailPanel": 2,
+      "detailBounds": [
+        645,
+        522,
+        775,
+        592
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b77",
+      "baselineUse": true,
+      "notes": "Low lane/path on West Ham Abbey Marsh east of Abbey Creek, beside but distinct from the North Woolwich railway.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539121.6229365926,
+        182085.00611792546
+      ],
+      "provisionalODNMetres": 1.0363200000000001,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131072_87152.json": "82484ecdbc0a3b332e12948f13ce0557078be4586e7bc0638d55b37e332282cf",
+        "reference/spot-heights/mosaics-1848/s18_131072_87152.png": "d8a82bdeee0390ff57a2d76a362cc57a1cdf38cc89cc277a0b91283a171bc1fb",
+        "reference/marsh-baseline-1848-2026-10-02/details-04.png": "4ff9a59cb2817ae3664c0188f34c94bfa355a0cbf5d845daf4a3048ee99a39df"
+      }
+    },
+    {
+      "id": "early-028",
+      "region": "abbey-marsh",
+      "role": "lane-proxy",
+      "mosaic": "s18_131072_87152",
+      "pixel": [
+        777,
+        860
+      ],
+      "valueFeet": 5.0,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-04.png",
+      "detailPanel": 3,
+      "detailBounds": [
+        712,
+        825,
+        842,
+        895
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "5\u00b70",
+      "baselineUse": true,
+      "notes": "Low lane/path on West Ham Abbey Marsh east of Abbey Creek, beside but distinct from the North Woolwich railway.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539149.6376172858,
+        181973.21943991276
+      ],
+      "provisionalODNMetres": 1.12776,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131072_87152.json": "82484ecdbc0a3b332e12948f13ce0557078be4586e7bc0638d55b37e332282cf",
+        "reference/spot-heights/mosaics-1848/s18_131072_87152.png": "d8a82bdeee0390ff57a2d76a362cc57a1cdf38cc89cc277a0b91283a171bc1fb",
+        "reference/marsh-baseline-1848-2026-10-02/details-04.png": "4ff9a59cb2817ae3664c0188f34c94bfa355a0cbf5d845daf4a3048ee99a39df"
+      }
+    },
+    {
+      "id": "early-029",
+      "region": "plaistow-west",
+      "role": "lane-proxy",
+      "mosaic": "s18_131078_87155",
+      "pixel": [
+        294,
+        38
+      ],
+      "valueFeet": 3.9,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-04.png",
+      "detailPanel": 4,
+      "detailBounds": [
+        229,
+        3,
+        359,
+        73
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "3\u00b79",
+      "baselineUse": true,
+      "notes": "Star Lane/Forty Acres Lane on the low Plaistow marsh; ordinary lane surface, not the higher Barking Road or a benchmark.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539540.970753883,
+        182004.0124879736
+      ],
+      "provisionalODNMetres": 0.79248,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131078_87155.json": "15d29a674cbaf7139da1fcd535de09b19310679e83991410c9efd55dddff2841",
+        "reference/spot-heights/mosaics-1848/s18_131078_87155.png": "769de14201ac8588100d0c3c91085670227de20c91a054d7e99abc9f6890dcc4",
+        "reference/marsh-baseline-1848-2026-10-02/details-04.png": "4ff9a59cb2817ae3664c0188f34c94bfa355a0cbf5d845daf4a3048ee99a39df"
+      }
+    },
+    {
+      "id": "early-030",
+      "region": "plaistow-west",
+      "role": "lane-proxy",
+      "mosaic": "s18_131078_87155",
+      "pixel": [
+        445,
+        63
+      ],
+      "valueFeet": 3.4,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-04.png",
+      "detailPanel": 5,
+      "detailBounds": [
+        380,
+        28,
+        510,
+        98
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "3\u00b74",
+      "baselineUse": true,
+      "notes": "Star Lane/Forty Acres Lane on the low Plaistow marsh; ordinary lane surface, not the higher Barking Road or a benchmark.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539597.4215459072,
+        181996.27660997747
+      ],
+      "provisionalODNMetres": 0.6400799999999999,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131078_87155.json": "15d29a674cbaf7139da1fcd535de09b19310679e83991410c9efd55dddff2841",
+        "reference/spot-heights/mosaics-1848/s18_131078_87155.png": "769de14201ac8588100d0c3c91085670227de20c91a054d7e99abc9f6890dcc4",
+        "reference/marsh-baseline-1848-2026-10-02/details-04.png": "4ff9a59cb2817ae3664c0188f34c94bfa355a0cbf5d845daf4a3048ee99a39df"
+      }
+    },
+    {
+      "id": "early-031",
+      "region": "plaistow-west",
+      "role": "lane-proxy",
+      "mosaic": "s18_131078_87155",
+      "pixel": [
+        640,
+        72
+      ],
+      "valueFeet": 3.8,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-04.png",
+      "detailPanel": 6,
+      "detailBounds": [
+        575,
+        37,
+        705,
+        107
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "3\u00b78",
+      "baselineUse": true,
+      "notes": "Star Lane/Forty Acres Lane on the low Plaistow marsh; ordinary lane surface, not the higher Barking Road or a benchmark.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539670.0842499656,
+        181994.93054536066
+      ],
+      "provisionalODNMetres": 0.762,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131078_87155.json": "15d29a674cbaf7139da1fcd535de09b19310679e83991410c9efd55dddff2841",
+        "reference/spot-heights/mosaics-1848/s18_131078_87155.png": "769de14201ac8588100d0c3c91085670227de20c91a054d7e99abc9f6890dcc4",
+        "reference/marsh-baseline-1848-2026-10-02/details-04.png": "4ff9a59cb2817ae3664c0188f34c94bfa355a0cbf5d845daf4a3048ee99a39df"
+      }
+    },
+    {
+      "id": "early-032",
+      "region": "plaistow-west",
+      "role": "lane-proxy",
+      "mosaic": "s18_131081_87155",
+      "pixel": [
+        396,
+        76
+      ],
+      "valueFeet": 4.7,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-04.png",
+      "detailPanel": 7,
+      "detailBounds": [
+        331,
+        41,
+        461,
+        111
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b77",
+      "baselineUse": true,
+      "notes": "Star Lane/Forty Acres Lane on the low Plaistow marsh; ordinary lane surface, not the higher Barking Road or a benchmark.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539865.1361279406,
+        181998.8108947907
+      ],
+      "provisionalODNMetres": 1.0363200000000001,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131081_87155.json": "ea2f4a08b816c5117b756d6edb2fc1b271eca1c9e5a2fd00c30471233a19dadb",
+        "reference/spot-heights/mosaics-1848/s18_131081_87155.png": "b0d341d1b0551fae9f41b09dd9c2445749006949d1cb3ec910696e1c3579a8f9",
+        "reference/marsh-baseline-1848-2026-10-02/details-04.png": "4ff9a59cb2817ae3664c0188f34c94bfa355a0cbf5d845daf4a3048ee99a39df"
+      }
+    },
+    {
+      "id": "early-033",
+      "region": "plaistow-west",
+      "role": "lane-proxy",
+      "mosaic": "s18_131081_87155",
+      "pixel": [
+        615,
+        56
+      ],
+      "valueFeet": 4.7,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-05.png",
+      "detailPanel": 0,
+      "detailBounds": [
+        550,
+        21,
+        680,
+        91
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b77",
+      "baselineUse": true,
+      "notes": "Star Lane/Forty Acres Lane on the low Plaistow marsh; ordinary lane surface, not the higher Barking Road or a benchmark.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539946.4343145972,
+        182008.4791941031
+      ],
+      "provisionalODNMetres": 1.0363200000000001,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131081_87155.json": "ea2f4a08b816c5117b756d6edb2fc1b271eca1c9e5a2fd00c30471233a19dadb",
+        "reference/spot-heights/mosaics-1848/s18_131081_87155.png": "b0d341d1b0551fae9f41b09dd9c2445749006949d1cb3ec910696e1c3579a8f9",
+        "reference/marsh-baseline-1848-2026-10-02/details-05.png": "adc4f2be65f6811e35aee1cc11d366579540ed3f8516fdadb169d89d8ba97603"
+      }
+    },
+    {
+      "id": "early-034",
+      "region": "plaistow-west",
+      "role": "lane-proxy",
+      "mosaic": "s18_131081_87161",
+      "pixel": [
+        631,
+        195
+      ],
+      "valueFeet": 4.0,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-05.png",
+      "detailPanel": 1,
+      "detailBounds": [
+        566,
+        160,
+        696,
+        230
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b70",
+      "baselineUse": true,
+      "notes": "Star Lane/Forty Acres Lane on the low Plaistow marsh; ordinary lane surface, not the higher Barking Road or a benchmark.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539969.5171638906,
+        181386.86336870247
+      ],
+      "provisionalODNMetres": 0.8229600000000001,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131081_87161.json": "5e36ecca6bdbe0eef368303d547a616c76993b9f64a554fa9642fdff8da64f20",
+        "reference/spot-heights/mosaics-1848/s18_131081_87161.png": "03d2df2918026b8bb4b236ab1bbc6aa1e256765906338f09faf61a74823ef8d5",
+        "reference/marsh-baseline-1848-2026-10-02/details-05.png": "adc4f2be65f6811e35aee1cc11d366579540ed3f8516fdadb169d89d8ba97603"
+      }
+    },
+    {
+      "id": "early-035",
+      "region": "plaistow-west",
+      "role": "lane-proxy",
+      "mosaic": "s18_131081_87161",
+      "pixel": [
+        393,
+        556
+      ],
+      "valueFeet": 4.2,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-05.png",
+      "detailPanel": 2,
+      "detailBounds": [
+        328,
+        521,
+        458,
+        591
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b72",
+      "baselineUse": true,
+      "notes": "Star Lane/Forty Acres Lane on the low Plaistow marsh; ordinary lane surface, not the higher Barking Road or a benchmark.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539884.6220342959,
+        181250.4065462171
+      ],
+      "provisionalODNMetres": 0.8839200000000002,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131081_87161.json": "5e36ecca6bdbe0eef368303d547a616c76993b9f64a554fa9642fdff8da64f20",
+        "reference/spot-heights/mosaics-1848/s18_131081_87161.png": "03d2df2918026b8bb4b236ab1bbc6aa1e256765906338f09faf61a74823ef8d5",
+        "reference/marsh-baseline-1848-2026-10-02/details-05.png": "adc4f2be65f6811e35aee1cc11d366579540ed3f8516fdadb169d89d8ba97603"
+      }
+    },
+    {
+      "id": "early-036",
+      "region": "plaistow-west",
+      "role": "lane-proxy",
+      "mosaic": "s18_131081_87161",
+      "pixel": [
+        320,
+        779
+      ],
+      "valueFeet": 4.9,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-05.png",
+      "detailPanel": 3,
+      "detailBounds": [
+        255,
+        744,
+        385,
+        814
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b79",
+      "baselineUse": true,
+      "notes": "Star Lane/Forty Acres Lane on the low Plaistow marsh; ordinary lane surface, not the higher Barking Road or a benchmark.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539859.7290182344,
+        181166.8704765911
+      ],
+      "provisionalODNMetres": 1.0972800000000003,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131081_87161.json": "5e36ecca6bdbe0eef368303d547a616c76993b9f64a554fa9642fdff8da64f20",
+        "reference/spot-heights/mosaics-1848/s18_131081_87161.png": "03d2df2918026b8bb4b236ab1bbc6aa1e256765906338f09faf61a74823ef8d5",
+        "reference/marsh-baseline-1848-2026-10-02/details-05.png": "adc4f2be65f6811e35aee1cc11d366579540ed3f8516fdadb169d89d8ba97603"
+      }
+    },
+    {
+      "id": "early-037",
+      "region": "plaistow-east",
+      "role": "lane-proxy",
+      "mosaic": "s18_131087_87164",
+      "pixel": [
+        432,
+        166
+      ],
+      "valueFeet": 5.7,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-05.png",
+      "detailPanel": 4,
+      "detailBounds": [
+        367,
+        131,
+        497,
+        201
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "5\u00b77",
+      "baselineUse": true,
+      "notes": "Green Lane/Dirty Lane/Prince Regent Lane across Plaistow Marsh; low lanes used as representative ground proxies.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        540474.7369794892,
+        181126.24635256972
+      ],
+      "provisionalODNMetres": 1.34112,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131087_87164.json": "20fd1e544c97053cac41c232d7dc0d0c00856c3935e0b4f6a5221d744538f4e0",
+        "reference/spot-heights/mosaics-1848/s18_131087_87164.png": "0fff9c331e31bd9f959da4206e5f8bc094b0378cc27c33024c17b9559c845967",
+        "reference/marsh-baseline-1848-2026-10-02/details-05.png": "adc4f2be65f6811e35aee1cc11d366579540ed3f8516fdadb169d89d8ba97603"
+      }
+    },
+    {
+      "id": "early-038",
+      "region": "plaistow-east",
+      "role": "lane-proxy",
+      "mosaic": "s18_131087_87164",
+      "pixel": [
+        650,
+        174
+      ],
+      "valueFeet": 5.2,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-05.png",
+      "detailPanel": 5,
+      "detailBounds": [
+        585,
+        139,
+        715,
+        209
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "5\u00b72",
+      "baselineUse": true,
+      "notes": "Green Lane/Dirty Lane/Prince Regent Lane across Plaistow Marsh; low lanes used as representative ground proxies.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        540555.9637787407,
+        181125.5200776222
+      ],
+      "provisionalODNMetres": 1.1887200000000002,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131087_87164.json": "20fd1e544c97053cac41c232d7dc0d0c00856c3935e0b4f6a5221d744538f4e0",
+        "reference/spot-heights/mosaics-1848/s18_131087_87164.png": "0fff9c331e31bd9f959da4206e5f8bc094b0378cc27c33024c17b9559c845967",
+        "reference/marsh-baseline-1848-2026-10-02/details-05.png": "adc4f2be65f6811e35aee1cc11d366579540ed3f8516fdadb169d89d8ba97603"
+      }
+    },
+    {
+      "id": "early-039",
+      "region": "plaistow-east",
+      "role": "lane-proxy",
+      "mosaic": "s18_131087_87164",
+      "pixel": [
+        171,
+        576
+      ],
+      "valueFeet": 5.6,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-05.png",
+      "detailPanel": 6,
+      "detailBounds": [
+        106,
+        541,
+        236,
+        611
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "5\u00b76",
+      "baselineUse": true,
+      "notes": "Green Lane/Dirty Lane/Prince Regent Lane across Plaistow Marsh; low lanes used as representative ground proxies.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        540381.7915325774,
+        180971.34524958977
+      ],
+      "provisionalODNMetres": 1.31064,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131087_87164.json": "20fd1e544c97053cac41c232d7dc0d0c00856c3935e0b4f6a5221d744538f4e0",
+        "reference/spot-heights/mosaics-1848/s18_131087_87164.png": "0fff9c331e31bd9f959da4206e5f8bc094b0378cc27c33024c17b9559c845967",
+        "reference/marsh-baseline-1848-2026-10-02/details-05.png": "adc4f2be65f6811e35aee1cc11d366579540ed3f8516fdadb169d89d8ba97603"
+      }
+    },
+    {
+      "id": "early-040",
+      "region": "plaistow-east",
+      "role": "lane-proxy",
+      "mosaic": "s18_131087_87164",
+      "pixel": [
+        926,
+        326
+      ],
+      "valueFeet": 4.7,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-05.png",
+      "detailPanel": 7,
+      "detailBounds": [
+        861,
+        291,
+        991,
+        361
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b77",
+      "baselineUse": true,
+      "notes": "Green Lane/Dirty Lane/Prince Regent Lane across Plaistow Marsh; low lanes used as representative ground proxies.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        540660.2593929213,
+        181071.93171573099
+      ],
+      "provisionalODNMetres": 1.0363200000000001,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131087_87164.json": "20fd1e544c97053cac41c232d7dc0d0c00856c3935e0b4f6a5221d744538f4e0",
+        "reference/spot-heights/mosaics-1848/s18_131087_87164.png": "0fff9c331e31bd9f959da4206e5f8bc094b0378cc27c33024c17b9559c845967",
+        "reference/marsh-baseline-1848-2026-10-02/details-05.png": "adc4f2be65f6811e35aee1cc11d366579540ed3f8516fdadb169d89d8ba97603"
+      }
+    },
+    {
+      "id": "early-041",
+      "region": "plaistow-east",
+      "role": "lane-proxy",
+      "mosaic": "s18_131093_87164",
+      "pixel": [
+        729,
+        106
+      ],
+      "valueFeet": 4.6,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-06.png",
+      "detailPanel": 0,
+      "detailBounds": [
+        664,
+        71,
+        794,
+        141
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b76",
+      "baselineUse": true,
+      "notes": "Green Lane/Dirty Lane/Prince Regent Lane across Plaistow Marsh; low lanes used as representative ground proxies.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        541156.402875043,
+        181167.42802817252
+      ],
+      "provisionalODNMetres": 1.00584,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131093_87164.json": "74fe8b959339c835f3e2e7a3a0aac4293556e9ab55de6f61fc6a347e1867395a",
+        "reference/spot-heights/mosaics-1848/s18_131093_87164.png": "fa7119db5ff31b73dd04c0967c2c0c477c0992cd8a5051c37c00f17f8fac5971",
+        "reference/marsh-baseline-1848-2026-10-02/details-06.png": "b4f187202d73ab2c88285583c7b7da7e76322f18cf4e723a41e8c731ce89eee1"
+      }
+    },
+    {
+      "id": "early-042",
+      "region": "plaistow-east",
+      "role": "lane-proxy",
+      "mosaic": "s18_131093_87164",
+      "pixel": [
+        860,
+        349
+      ],
+      "valueFeet": 4.7,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-06.png",
+      "detailPanel": 1,
+      "detailBounds": [
+        795,
+        314,
+        925,
+        384
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "4\u00b77",
+      "baselineUse": true,
+      "notes": "Green Lane/Dirty Lane/Prince Regent Lane across Plaistow Marsh; low lanes used as representative ground proxies.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        541207.6706687763,
+        181078.5677258424
+      ],
+      "provisionalODNMetres": 1.0363200000000001,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131093_87164.json": "74fe8b959339c835f3e2e7a3a0aac4293556e9ab55de6f61fc6a347e1867395a",
+        "reference/spot-heights/mosaics-1848/s18_131093_87164.png": "fa7119db5ff31b73dd04c0967c2c0c477c0992cd8a5051c37c00f17f8fac5971",
+        "reference/marsh-baseline-1848-2026-10-02/details-06.png": "b4f187202d73ab2c88285583c7b7da7e76322f18cf4e723a41e8c731ce89eee1"
+      }
+    },
+    {
+      "id": "early-043",
+      "region": "mill-meads",
+      "role": "bank",
+      "mosaic": "s18_131066_87140",
+      "pixel": [
+        76,
+        339
+      ],
+      "valueFeet": 15.9,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-06.png",
+      "detailPanel": 2,
+      "detailBounds": [
+        11,
+        304,
+        141,
+        374
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "15\u00b79",
+      "baselineUse": false,
+      "notes": "Abbey Mill Lane along northern Mill Meads; lane figures around 8 ft are distinct from 15\u201316 ft Three Mills Wall River banks. This selected comparison is excluded from marsh fitting: bank.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        538280.8073440462,
+        183284.0014041018
+      ],
+      "provisionalODNMetres": 4.45008,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131066_87140.json": "fa53a3049aa01ca12caf0b2de908f7cef22035f92519d62b493dce45fa333a49",
+        "reference/spot-heights/mosaics-1848/s18_131066_87140.png": "033a91814ac34a3a80c6dc65e1a6d7cc94d5586ba92506a0a3bd2b1c316e35d4",
+        "reference/marsh-baseline-1848-2026-10-02/details-06.png": "b4f187202d73ab2c88285583c7b7da7e76322f18cf4e723a41e8c731ce89eee1"
+      }
+    },
+    {
+      "id": "early-044",
+      "region": "mill-meads",
+      "role": "bank",
+      "mosaic": "s18_131066_87140",
+      "pixel": [
+        195,
+        614
+      ],
+      "valueFeet": 16.4,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-06.png",
+      "detailPanel": 3,
+      "detailBounds": [
+        130,
+        579,
+        260,
+        649
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "16\u00b74",
+      "baselineUse": false,
+      "notes": "Abbey Mill Lane along northern Mill Meads; lane figures around 8 ft are distinct from 15\u201316 ft Three Mills Wall River banks. This selected comparison is excluded from marsh fitting: bank.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        538327.8625184135,
+        183183.15527588443
+      ],
+      "provisionalODNMetres": 4.60248,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131066_87140.json": "fa53a3049aa01ca12caf0b2de908f7cef22035f92519d62b493dce45fa333a49",
+        "reference/spot-heights/mosaics-1848/s18_131066_87140.png": "033a91814ac34a3a80c6dc65e1a6d7cc94d5586ba92506a0a3bd2b1c316e35d4",
+        "reference/marsh-baseline-1848-2026-10-02/details-06.png": "b4f187202d73ab2c88285583c7b7da7e76322f18cf4e723a41e8c731ce89eee1"
+      }
+    },
+    {
+      "id": "early-045",
+      "region": "stratford-west",
+      "role": "bank",
+      "mosaic": "s18_131060_87128",
+      "pixel": [
+        183,
+        185
+      ],
+      "valueFeet": 15.3,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-06.png",
+      "detailPanel": 4,
+      "detailBounds": [
+        118,
+        150,
+        248,
+        220
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "15\u00b73",
+      "baselineUse": false,
+      "notes": "Low path across southern Hackney/Stratford marsh or Marsh Gate Lane margin, distinct from the reservoir and river embankments. This selected comparison is excluded from marsh fitting: bank.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537716.6583835008,
+        184466.56255131384
+      ],
+      "provisionalODNMetres": 4.2672,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131060_87128.json": "61b3bac355c20176f1d49c1ecbbbad9b7dba8ebd71c697a6a77f35e7bd9cf4e8",
+        "reference/spot-heights/mosaics-1848/s18_131060_87128.png": "806624455f72210fbb1814f48868f5354e7e1e5c5b21a63b05a292620c674a0d",
+        "reference/marsh-baseline-1848-2026-10-02/details-06.png": "b4f187202d73ab2c88285583c7b7da7e76322f18cf4e723a41e8c731ce89eee1"
+      }
+    },
+    {
+      "id": "early-046",
+      "region": "stratford-west",
+      "role": "bank",
+      "mosaic": "s18_131060_87128",
+      "pixel": [
+        544,
+        469
+      ],
+      "valueFeet": 15.4,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-06.png",
+      "detailPanel": 5,
+      "detailBounds": [
+        479,
+        434,
+        609,
+        504
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "15\u00b74",
+      "baselineUse": false,
+      "notes": "Low path across southern Hackney/Stratford marsh or Marsh Gate Lane margin, distinct from the reservoir and river embankments. This selected comparison is excluded from marsh fitting: bank.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537853.8025718628,
+        184364.84014044632
+      ],
+      "provisionalODNMetres": 4.29768,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131060_87128.json": "61b3bac355c20176f1d49c1ecbbbad9b7dba8ebd71c697a6a77f35e7bd9cf4e8",
+        "reference/spot-heights/mosaics-1848/s18_131060_87128.png": "806624455f72210fbb1814f48868f5354e7e1e5c5b21a63b05a292620c674a0d",
+        "reference/marsh-baseline-1848-2026-10-02/details-06.png": "b4f187202d73ab2c88285583c7b7da7e76322f18cf4e723a41e8c731ce89eee1"
+      }
+    },
+    {
+      "id": "early-047",
+      "region": "stratford-east",
+      "role": "major-road",
+      "mosaic": "s18_131066_87134",
+      "pixel": [
+        483,
+        781
+      ],
+      "valueFeet": 16.8,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-06.png",
+      "detailPanel": 6,
+      "detailBounds": [
+        418,
+        746,
+        548,
+        816
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "16\u00b78",
+      "baselineUse": false,
+      "notes": "Minor dead-end lane east of Waterworks River and north of the railway; low lane surface used as a marsh proxy. This selected comparison is excluded from marsh fitting: major-road.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        538421.1697890429,
+        183694.0880366207
+      ],
+      "provisionalODNMetres": 4.7244,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131066_87134.json": "3a60d9a6f95997696b50e8381c3caf129c29969de2001392c92c134f11d4896e",
+        "reference/spot-heights/mosaics-1848/s18_131066_87134.png": "63d8b6dcc5b2aca5f435536a5c3c5f660d9842fccb943a658d7d7206458b90f3",
+        "reference/marsh-baseline-1848-2026-10-02/details-06.png": "b4f187202d73ab2c88285583c7b7da7e76322f18cf4e723a41e8c731ce89eee1"
+      }
+    },
+    {
+      "id": "early-048",
+      "region": "stratford-east",
+      "role": "major-road",
+      "mosaic": "s18_131066_87134",
+      "pixel": [
+        975,
+        197
+      ],
+      "valueFeet": 18.4,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-06.png",
+      "detailPanel": 7,
+      "detailBounds": [
+        910,
+        162,
+        1040,
+        232
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "18\u00b74",
+      "baselineUse": false,
+      "notes": "Minor dead-end lane east of Waterworks River and north of the railway; low lane surface used as a marsh proxy. This selected comparison is excluded from marsh fitting: major-road.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        538598.2942356856,
+        183915.77836702816
+      ],
+      "provisionalODNMetres": 5.212079999999999,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131066_87134.json": "3a60d9a6f95997696b50e8381c3caf129c29969de2001392c92c134f11d4896e",
+        "reference/spot-heights/mosaics-1848/s18_131066_87134.png": "63d8b6dcc5b2aca5f435536a5c3c5f660d9842fccb943a658d7d7206458b90f3",
+        "reference/marsh-baseline-1848-2026-10-02/details-06.png": "b4f187202d73ab2c88285583c7b7da7e76322f18cf4e723a41e8c731ce89eee1"
+      }
+    },
+    {
+      "id": "early-049",
+      "region": "mill-meads",
+      "role": "benchmark",
+      "mosaic": "s18_131069_87140",
+      "pixel": [
+        94,
+        267
+      ],
+      "valueFeet": 8.5,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-07.png",
+      "detailPanel": 0,
+      "detailBounds": [
+        29,
+        232,
+        159,
+        302
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "8\u00b75",
+      "baselineUse": false,
+      "notes": "Abbey Mill Lane along northern Mill Meads; lane figures around 8 ft are distinct from 15\u201316 ft Three Mills Wall River banks. This selected comparison is excluded from marsh fitting: benchmark.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        538572.519029236,
+        183318.69179142528
+      ],
+      "provisionalODNMetres": 2.19456,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131069_87140.json": "11bd00127f0aa739d12a352d1ced30b8c1aead2186d2e47d9cef1bc9995e7be5",
+        "reference/spot-heights/mosaics-1848/s18_131069_87140.png": "5bba7fe25672e80a64ec38f330ef1451b87613b44367aba90739868da74d8a58",
+        "reference/marsh-baseline-1848-2026-10-02/details-07.png": "f7e484fc9f7429ef4f7cc8a9394683bc876b1a619f7cfc3484a2084ca4840a3f"
+      }
+    },
+    {
+      "id": "early-050",
+      "region": "plaistow-west",
+      "role": "major-road",
+      "mosaic": "s18_131081_87155",
+      "pixel": [
+        220,
+        493
+      ],
+      "valueFeet": 9.2,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-07.png",
+      "detailPanel": 1,
+      "detailBounds": [
+        155,
+        458,
+        285,
+        528
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "9\u00b72",
+      "baselineUse": false,
+      "notes": "Star Lane/Forty Acres Lane on the low Plaistow marsh; ordinary lane surface, not the higher Barking Road or a benchmark. This selected comparison is excluded from marsh fitting: major-road.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        539803.8956888667,
+        181842.2195078277
+      ],
+      "provisionalODNMetres": 2.40792,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131081_87155.json": "ea2f4a08b816c5117b756d6edb2fc1b271eca1c9e5a2fd00c30471233a19dadb",
+        "reference/spot-heights/mosaics-1848/s18_131081_87155.png": "b0d341d1b0551fae9f41b09dd9c2445749006949d1cb3ec910696e1c3579a8f9",
+        "reference/marsh-baseline-1848-2026-10-02/details-07.png": "f7e484fc9f7429ef4f7cc8a9394683bc876b1a619f7cfc3484a2084ca4840a3f"
+      }
+    },
+    {
+      "id": "early-051",
+      "region": "plaistow-east",
+      "role": "benchmark",
+      "mosaic": "s18_131087_87164",
+      "pixel": [
+        218,
+        178
+      ],
+      "valueFeet": 9.4,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-07.png",
+      "detailPanel": 2,
+      "detailBounds": [
+        153,
+        143,
+        283,
+        213
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "9\u00b74",
+      "baselineUse": false,
+      "notes": "Green Lane/Dirty Lane/Prince Regent Lane across Plaistow Marsh; low lanes used as representative ground proxies. This selected comparison is excluded from marsh fitting: benchmark.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        540395.2042917497,
+        181119.5899747805
+      ],
+      "provisionalODNMetres": 2.46888,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131087_87164.json": "20fd1e544c97053cac41c232d7dc0d0c00856c3935e0b4f6a5221d744538f4e0",
+        "reference/spot-heights/mosaics-1848/s18_131087_87164.png": "0fff9c331e31bd9f959da4206e5f8bc094b0378cc27c33024c17b9559c845967",
+        "reference/marsh-baseline-1848-2026-10-02/details-07.png": "f7e484fc9f7429ef4f7cc8a9394683bc876b1a619f7cfc3484a2084ca4840a3f"
+      }
+    },
+    {
+      "id": "early-052",
+      "region": "leyton-north",
+      "role": "lane-proxy",
+      "mosaic": "s18_131054_87101",
+      "pixel": [
+        94,
+        380
+      ],
+      "valueFeet": 15.2,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-08.png",
+      "detailPanel": 0,
+      "detailBounds": [
+        29,
+        345,
+        159,
+        415
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "15\u00b72",
+      "baselineUse": true,
+      "notes": "Marsh Lane low end distinguished from its rise toward Church Lane and the Leyton terrace.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537044.8940981692,
+        186941.651381228
+      ],
+      "provisionalODNMetres": 4.23672,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131054_87101.json": "1f90902baad641b018ddcd54b6748ae336b8b5d1e77a88735bbdf80e83b651bd",
+        "reference/spot-heights/mosaics-1848/s18_131054_87101.png": "1981f152e0d8dc2fa0b80a2fdfec3525749e0ff16d141b89a0f619dc494ca558",
+        "reference/marsh-baseline-1848-2026-10-02/details-08.png": "3f855b7899eaf8eb99d3faf4ee993f525654ee090d8e3aee686f625cb9092892"
+      }
+    },
+    {
+      "id": "early-053",
+      "region": "hackney-temple",
+      "role": "lane-proxy",
+      "mosaic": "s18_131057_87110",
+      "pixel": [
+        857,
+        790
+      ],
+      "valueFeet": 15.4,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-08.png",
+      "detailPanel": 1,
+      "detailBounds": [
+        792,
+        755,
+        922,
+        825
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "15\u00b74",
+      "baselineUse": true,
+      "notes": "Footpaths and Temple Mill/Homerton roads across Hackney Marsh, away from the river-bank path and bridge crest. Low-road proxy for regional marsh; no blanket fill subtraction.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537641.41401577,
+        185950.54104474426
+      ],
+      "provisionalODNMetres": 4.29768,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131057_87110.json": "8c3935451f1c454bffc26882c8aa17fd79c1cb45b725d1ea523e9fa3d3a28baa",
+        "reference/spot-heights/mosaics-1848/s18_131057_87110.png": "a745be8228b60a26d941fe87be2aff3611697e2aa6f930df0f44802e6049471a",
+        "reference/marsh-baseline-1848-2026-10-02/details-08.png": "3f855b7899eaf8eb99d3faf4ee993f525654ee090d8e3aee686f625cb9092892"
+      }
+    },
+    {
+      "id": "early-054",
+      "region": "leyton-north",
+      "role": "terrace-road",
+      "mosaic": "s18_131054_87101",
+      "pixel": [
+        505,
+        180
+      ],
+      "valueFeet": 28.0,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-08.png",
+      "detailPanel": 2,
+      "detailBounds": [
+        440,
+        145,
+        570,
+        215
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "28\u00b70",
+      "baselineUse": false,
+      "notes": "Marsh Lane low end distinguished from its rise toward Church Lane and the Leyton terrace. This selected comparison is excluded from marsh fitting: terrace-road.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537195.6946435131,
+        187019.94705455698
+      ],
+      "provisionalODNMetres": 8.138160000000001,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131054_87101.json": "1f90902baad641b018ddcd54b6748ae336b8b5d1e77a88735bbdf80e83b651bd",
+        "reference/spot-heights/mosaics-1848/s18_131054_87101.png": "1981f152e0d8dc2fa0b80a2fdfec3525749e0ff16d141b89a0f619dc494ca558",
+        "reference/marsh-baseline-1848-2026-10-02/details-08.png": "3f855b7899eaf8eb99d3faf4ee993f525654ee090d8e3aee686f625cb9092892"
+      }
+    },
+    {
+      "id": "early-055",
+      "region": "leyton-north",
+      "role": "terrace-road",
+      "mosaic": "s18_131054_87101",
+      "pixel": [
+        715,
+        26
+      ],
+      "valueFeet": 38.5,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-08.png",
+      "detailPanel": 3,
+      "detailBounds": [
+        650,
+        -9,
+        780,
+        61
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "38\u00b75",
+      "baselineUse": false,
+      "notes": "Marsh Lane low end distinguished from its rise toward Church Lane and the Leyton terrace. This selected comparison is excluded from marsh fitting: terrace-road.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        537272.2243077124,
+        187079.16562658
+      ],
+      "provisionalODNMetres": 11.338560000000001,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131054_87101.json": "1f90902baad641b018ddcd54b6748ae336b8b5d1e77a88735bbdf80e83b651bd",
+        "reference/spot-heights/mosaics-1848/s18_131054_87101.png": "1981f152e0d8dc2fa0b80a2fdfec3525749e0ff16d141b89a0f619dc494ca558",
+        "reference/marsh-baseline-1848-2026-10-02/details-08.png": "3f855b7899eaf8eb99d3faf4ee993f525654ee090d8e3aee686f625cb9092892"
+      }
+    },
+    {
+      "id": "early-056",
+      "region": "thames-marsh",
+      "role": "lane-proxy",
+      "mosaic": "s18_131084_87170",
+      "pixel": [
+        604,
+        136
+      ],
+      "valueFeet": 6.2,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/early-056-detail.png",
+      "detailPanel": 0,
+      "detailBounds": [
+        550,
+        105,
+        750,
+        180
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "6\u00b72",
+      "baselineUse": true,
+      "notes": "Southern Green Lane across Plaistow Marsh before dock construction; not a Thames flood-wall crest.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        540268.323398958,
+        180560.97912251484
+      ],
+      "provisionalODNMetres": 1.4935200000000002,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131084_87170.json": "e8582d67872595a186e5ff09d8bd418265ecd26687326c0b6627deb4c558c9b5",
+        "reference/spot-heights/mosaics-1848/s18_131084_87170.png": "f4d7533d2d7c277ee73a62ab7391c8077bf57b730b795443bb0370e06e8578cc",
+        "reference/marsh-baseline-1848-2026-10-02/early-056-detail.png": "bb640648f6586477eab2c87e56047fba85cfe4a622de21b5057375b11034dfe2"
+      }
+    },
+    {
+      "id": "early-057",
+      "region": "thames-marsh",
+      "role": "lane-proxy",
+      "mosaic": "s18_131084_87170",
+      "pixel": [
+        619,
+        334
+      ],
+      "valueFeet": 5.6,
+      "detailCrop": "reference/marsh-baseline-1848-2026-10-02/details-08.png",
+      "detailPanel": 5,
+      "detailBounds": [
+        554,
+        299,
+        684,
+        369
+      ],
+      "valueConfidence": "high",
+      "positionConfidence": "medium",
+      "positionNote": "Map position manually located at visible dot where identifiable, otherwise at printed level. Coordinates locate evidence, not a new surveyed position; allow approximately 3 m picking uncertainty.",
+      "raw": "5\u00b76",
+      "baselineUse": true,
+      "notes": "Southern Green Lane across Plaistow Marsh before dock construction; not a Thames flood-wall crest.",
+      "sourceEpoch": "1848\u201351",
+      "sourceLayer": "os-london-skeleton-5280",
+      "datum": "historical OD Liverpool inferred; margin not verified",
+      "positionBNG": [
+        540275.9363328833,
+        180487.61630238354
+      ],
+      "provisionalODNMetres": 1.31064,
+      "reviewMethod": "Full mosaic or registered search atlas and six-times native detail viewed successfully. Surface classified using the wider map. Not an exhaustive sheet transcription.",
+      "sourceHashes": {
+        "reference/spot-heights/mosaics-1848/s18_131084_87170.json": "e8582d67872595a186e5ff09d8bd418265ecd26687326c0b6627deb4c558c9b5",
+        "reference/spot-heights/mosaics-1848/s18_131084_87170.png": "f4d7533d2d7c277ee73a62ab7391c8077bf57b730b795443bb0370e06e8578cc",
+        "reference/marsh-baseline-1848-2026-10-02/details-08.png": "3f855b7899eaf8eb99d3faf4ee993f525654ee090d8e3aee686f625cb9092892"
+      }
+    }
+  ],
+  "limitations": [
+    "Most accepted values measure low lanes or margins, not surveyed field interiors. No uniform 30 cm accuracy is established.",
+    "Datum and map registration remain provisional; no independent calibration has been performed.",
+    "Benchmarks, riverbanks, crossings and major raised roads are retained as comparisons, excluded from the underlying marsh surface.",
+    "The blank interiors are a lack of levelling marks, not evidence for modern terrain.",
+    "Source epoch remains 1848\u201351; the working 1900 substrate uses the author\u2019s continuity assumption."
+  ]
+}

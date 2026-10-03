@@ -1,0 +1,59 @@
+{
+  "epoch": "1900",
+  "id": "north-railway-marsh",
+  "name": "Marsh north of the railway, west of the Old Lea",
+  "reviewBoundsBNG": [
+    537330,
+    184598,
+    537680,
+    184840
+  ],
+  "interiorPointBNG": [
+    537550,
+    184700
+  ],
+  "bankReachIds": [
+    "Lower_River_Lea-15"
+  ],
+  "bankControlIds": [],
+  "marshControlIds": [
+    "sh_537573_184727",
+    "sh_537516_184670",
+    "sh_537458_184621",
+    "sh_537374_184619"
+  ],
+  "meshCellMetres": 4,
+  "bankTransitionMetres": [
+    6,
+    18
+  ],
+  "shoreTransitionMetres": [
+    0,
+    1.5
+  ],
+  "southernBlendNorthings": [
+    184570,
+    184590
+  ],
+  "method": "Interpolate four reviewed ground dots in plan using inverse squared distance within the shared dry compartment. Two dots measure ground at the railway foot. Exclude the railway footprint from the ground mesh and fit its northern toe vertices to this same surface while preserving the track formation. Natural river margins slope to illustrative water. Fade the outer western and northern review edges into provisional surroundings.",
+  "limitations": [
+    "Four ground dots constrain this local patch; two are railway-foot readings. Interpolation between them remains an estimate, not a regional elevation calibration.",
+    "No bank-crest measurement is applied here; river-edge slopes are interpreted and meet the reconstructed adjacent ground.",
+    "Western and northern fades are modelling transitions. Railway toe heights share the ground field; formation height remains the prior interpretation.",
+    "Existing source-datum conversion remains provisional.",
+    "River water and submerged beds remain illustrative; flood solver unchanged.",
+    "The 11.2/10.8ft ground dots belong to the separate City Mill\u2013Waterworks compartment, not this western Old Lea marsh."
+  ],
+  "northernBlendNorthings": [
+    184790,
+    184840
+  ],
+  "westernBlendEastings": [
+    537330,
+    537350
+  ],
+  "groundInterpolation": "inverse-distance-squared",
+  "integratedRailwayIds": [
+    "north-london-connection"
+  ]
+}

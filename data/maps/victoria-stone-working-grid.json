@@ -1,0 +1,1560 @@
+{
+  "id": "victoria-stone-working-grid",
+  "siteId": 9004,
+  "yardId": 13013,
+  "name": "Victoria Stone Works open working grid",
+  "source": "os-1893",
+  "sourceFids": [],
+  "sourceGeometryKind": "direct native OS line trace",
+  "register": "data/maps/victoria-stone-working-grid.json",
+  "reviewedSourceBounds": [
+    -140,
+    -395,
+    95,
+    -235
+  ],
+  "reviewedSourcePixels": [
+    [
+      [
+        335,
+        224
+      ],
+      [
+        354,
+        218
+      ],
+      [
+        373,
+        211
+      ],
+      [
+        391,
+        205
+      ],
+      [
+        410,
+        198
+      ],
+      [
+        425,
+        189
+      ]
+    ],
+    [
+      [
+        341,
+        240
+      ],
+      [
+        360,
+        233
+      ],
+      [
+        378,
+        226
+      ],
+      [
+        396,
+        219
+      ],
+      [
+        415,
+        212
+      ],
+      [
+        432,
+        206
+      ]
+    ],
+    [
+      [
+        348,
+        256
+      ],
+      [
+        366,
+        249
+      ],
+      [
+        384,
+        243
+      ],
+      [
+        402,
+        236
+      ],
+      [
+        421,
+        229
+      ],
+      [
+        438,
+        223
+      ]
+    ],
+    [
+      [
+        354,
+        272
+      ],
+      [
+        372,
+        266
+      ],
+      [
+        391,
+        259
+      ],
+      [
+        409,
+        253
+      ],
+      [
+        427,
+        246
+      ],
+      [
+        444,
+        240
+      ]
+    ],
+    [
+      [
+        359,
+        287
+      ],
+      [
+        378,
+        281
+      ],
+      [
+        396,
+        274
+      ],
+      [
+        414,
+        267
+      ],
+      [
+        432,
+        261
+      ],
+      [
+        449,
+        255
+      ]
+    ]
+  ],
+  "worldNodes": [
+    [
+      [
+        -52.951,
+        -323.296
+      ],
+      [
+        -45.943,
+        -325.716
+      ],
+      [
+        -38.946,
+        -328.507
+      ],
+      [
+        -32.31,
+        -330.917
+      ],
+      [
+        -25.312,
+        -333.708
+      ],
+      [
+        -19.823,
+        -337.2
+      ]
+    ],
+    [
+      [
+        -50.557,
+        -317.42
+      ],
+      [
+        -43.559,
+        -320.211
+      ],
+      [
+        -36.933,
+        -322.992
+      ],
+      [
+        -30.307,
+        -325.772
+      ],
+      [
+        -23.31,
+        -328.563
+      ],
+      [
+        -17.046,
+        -330.963
+      ]
+    ],
+    [
+      [
+        -47.79,
+        -311.554
+      ],
+      [
+        -41.164,
+        -314.335
+      ],
+      [
+        -34.528,
+        -316.745
+      ],
+      [
+        -27.903,
+        -319.525
+      ],
+      [
+        -20.905,
+        -322.316
+      ],
+      [
+        -14.641,
+        -324.716
+      ]
+    ],
+    [
+      [
+        -45.395,
+        -305.678
+      ],
+      [
+        -38.759,
+        -308.088
+      ],
+      [
+        -31.762,
+        -310.878
+      ],
+      [
+        -25.126,
+        -313.288
+      ],
+      [
+        -18.5,
+        -316.069
+      ],
+      [
+        -12.236,
+        -318.468
+      ]
+    ],
+    [
+      [
+        -43.383,
+        -300.163
+      ],
+      [
+        -36.375,
+        -302.583
+      ],
+      [
+        -29.749,
+        -305.363
+      ],
+      [
+        -23.123,
+        -308.144
+      ],
+      [
+        -16.487,
+        -310.554
+      ],
+      [
+        -10.224,
+        -312.953
+      ]
+    ]
+  ],
+  "worldOutline": [
+    [
+      -52.951,
+      -323.296
+    ],
+    [
+      -45.943,
+      -325.716
+    ],
+    [
+      -38.946,
+      -328.507
+    ],
+    [
+      -32.31,
+      -330.917
+    ],
+    [
+      -25.312,
+      -333.708
+    ],
+    [
+      -19.823,
+      -337.2
+    ],
+    [
+      -17.046,
+      -330.963
+    ],
+    [
+      -14.641,
+      -324.716
+    ],
+    [
+      -12.236,
+      -318.468
+    ],
+    [
+      -10.224,
+      -312.953
+    ],
+    [
+      -16.487,
+      -310.554
+    ],
+    [
+      -23.123,
+      -308.144
+    ],
+    [
+      -29.749,
+      -305.363
+    ],
+    [
+      -36.375,
+      -302.583
+    ],
+    [
+      -43.383,
+      -300.163
+    ],
+    [
+      -45.395,
+      -305.678
+    ],
+    [
+      -47.79,
+      -311.554
+    ],
+    [
+      -50.557,
+      -317.42
+    ]
+  ],
+  "areaM2": 892.7906810000002,
+  "rows": 4,
+  "columns": 5,
+  "cells": [
+    {
+      "id": "victoria-stone-cell-1-1",
+      "row": 0,
+      "column": 0,
+      "worldOutline": [
+        [
+          -52.951,
+          -323.296
+        ],
+        [
+          -45.943,
+          -325.716
+        ],
+        [
+          -43.559,
+          -320.211
+        ],
+        [
+          -50.557,
+          -317.42
+        ]
+      ],
+      "areaM2": 46.075110999999936,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-1-2",
+      "row": 0,
+      "column": 1,
+      "worldOutline": [
+        [
+          -45.943,
+          -325.716
+        ],
+        [
+          -38.946,
+          -328.507
+        ],
+        [
+          -36.933,
+          -322.992
+        ],
+        [
+          -43.559,
+          -320.211
+        ]
+      ],
+      "areaM2": 43.656385999999934,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-1-3",
+      "row": 0,
+      "column": 2,
+      "worldOutline": [
+        [
+          -38.946,
+          -328.507
+        ],
+        [
+          -32.31,
+          -330.917
+        ],
+        [
+          -30.307,
+          -325.772
+        ],
+        [
+          -36.933,
+          -322.992
+        ]
+      ],
+      "areaM2": 40.55398999999983,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-1-4",
+      "row": 0,
+      "column": 3,
+      "worldOutline": [
+        [
+          -32.31,
+          -330.917
+        ],
+        [
+          -25.312,
+          -333.708
+        ],
+        [
+          -23.31,
+          -328.563
+        ],
+        [
+          -30.307,
+          -325.772
+        ]
+      ],
+      "areaM2": 41.59111500000014,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-1-5",
+      "row": 0,
+      "column": 4,
+      "worldOutline": [
+        [
+          -25.312,
+          -333.708
+        ],
+        [
+          -19.823,
+          -337.2
+        ],
+        [
+          -17.046,
+          -330.963
+        ],
+        [
+          -23.31,
+          -328.563
+        ]
+      ],
+      "areaM2": 40.48262850000002,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-2-1",
+      "row": 1,
+      "column": 0,
+      "worldOutline": [
+        [
+          -50.557,
+          -317.42
+        ],
+        [
+          -43.559,
+          -320.211
+        ],
+        [
+          -41.164,
+          -314.335
+        ],
+        [
+          -47.79,
+          -311.554
+        ]
+      ],
+      "areaM2": 47.18391800000027,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-2-2",
+      "row": 1,
+      "column": 1,
+      "worldOutline": [
+        [
+          -43.559,
+          -320.211
+        ],
+        [
+          -36.933,
+          -322.992
+        ],
+        [
+          -34.528,
+          -316.745
+        ],
+        [
+          -41.164,
+          -314.335
+        ]
+      ],
+      "areaM2": 46.42300650000019,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-2-3",
+      "row": 1,
+      "column": 2,
+      "worldOutline": [
+        [
+          -36.933,
+          -322.992
+        ],
+        [
+          -30.307,
+          -325.772
+        ],
+        [
+          -27.903,
+          -319.525
+        ],
+        [
+          -34.528,
+          -316.745
+        ]
+      ],
+      "areaM2": 48.07400850000003,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-2-4",
+      "row": 1,
+      "column": 3,
+      "worldOutline": [
+        [
+          -30.307,
+          -325.772
+        ],
+        [
+          -23.31,
+          -328.563
+        ],
+        [
+          -20.905,
+          -322.316
+        ],
+        [
+          -27.903,
+          -319.525
+        ]
+      ],
+      "areaM2": 50.42434200000008,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-2-5",
+      "row": 1,
+      "column": 4,
+      "worldOutline": [
+        [
+          -23.31,
+          -328.563
+        ],
+        [
+          -17.046,
+          -330.963
+        ],
+        [
+          -14.641,
+          -324.716
+        ],
+        [
+          -20.905,
+          -322.316
+        ]
+      ],
+      "areaM2": 44.90320800000016,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-3-1",
+      "row": 2,
+      "column": 0,
+      "worldOutline": [
+        [
+          -47.79,
+          -311.554
+        ],
+        [
+          -41.164,
+          -314.335
+        ],
+        [
+          -38.759,
+          -308.088
+        ],
+        [
+          -45.395,
+          -305.678
+        ]
+      ],
+      "areaM2": 46.423006499999815,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-3-2",
+      "row": 2,
+      "column": 1,
+      "worldOutline": [
+        [
+          -41.164,
+          -314.335
+        ],
+        [
+          -34.528,
+          -316.745
+        ],
+        [
+          -31.762,
+          -310.878
+        ],
+        [
+          -38.759,
+          -308.088
+        ]
+      ],
+      "areaM2": 48.00984049999991,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-3-3",
+      "row": 2,
+      "column": 2,
+      "worldOutline": [
+        [
+          -34.528,
+          -316.745
+        ],
+        [
+          -27.903,
+          -319.525
+        ],
+        [
+          -25.126,
+          -313.288
+        ],
+        [
+          -31.762,
+          -310.878
+        ]
+      ],
+      "areaM2": 47.31982849999994,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-3-4",
+      "row": 2,
+      "column": 3,
+      "worldOutline": [
+        [
+          -27.903,
+          -319.525
+        ],
+        [
+          -20.905,
+          -322.316
+        ],
+        [
+          -18.5,
+          -316.069
+        ],
+        [
+          -25.126,
+          -313.288
+        ]
+      ],
+      "areaM2": 49.739029999999744,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-3-5",
+      "row": 2,
+      "column": 4,
+      "worldOutline": [
+        [
+          -20.905,
+          -322.316
+        ],
+        [
+          -14.641,
+          -324.716
+        ],
+        [
+          -12.236,
+          -318.468
+        ],
+        [
+          -18.5,
+          -316.069
+        ]
+      ],
+      "areaM2": 44.90513749999988,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-4-1",
+      "row": 3,
+      "column": 0,
+      "worldOutline": [
+        [
+          -45.395,
+          -305.678
+        ],
+        [
+          -38.759,
+          -308.088
+        ],
+        [
+          -36.375,
+          -302.583
+        ],
+        [
+          -43.383,
+          -300.163
+        ]
+      ],
+      "areaM2": 42.89739,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-4-2",
+      "row": 3,
+      "column": 1,
+      "worldOutline": [
+        [
+          -38.759,
+          -308.088
+        ],
+        [
+          -31.762,
+          -310.878
+        ],
+        [
+          -29.749,
+          -305.363
+        ],
+        [
+          -36.375,
+          -302.583
+        ]
+      ],
+      "areaM2": 43.65418749999988,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-4-3",
+      "row": 3,
+      "column": 2,
+      "worldOutline": [
+        [
+          -31.762,
+          -310.878
+        ],
+        [
+          -25.126,
+          -313.288
+        ],
+        [
+          -23.123,
+          -308.144
+        ],
+        [
+          -29.749,
+          -305.363
+        ]
+      ],
+      "areaM2": 40.5516785,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-4-4",
+      "row": 3,
+      "column": 3,
+      "worldOutline": [
+        [
+          -25.126,
+          -313.288
+        ],
+        [
+          -18.5,
+          -316.069
+        ],
+        [
+          -16.487,
+          -310.554
+        ],
+        [
+          -23.123,
+          -308.144
+        ]
+      ],
+      "areaM2": 40.55167850000015,
+      "open": true
+    },
+    {
+      "id": "victoria-stone-cell-4-5",
+      "row": 3,
+      "column": 4,
+      "worldOutline": [
+        [
+          -18.5,
+          -316.069
+        ],
+        [
+          -12.236,
+          -318.468
+        ],
+        [
+          -10.224,
+          -312.953
+        ],
+        [
+          -16.487,
+          -310.554
+        ]
+      ],
+      "areaM2": 39.37119000000027,
+      "open": true
+    }
+  ],
+  "dividers": [
+    {
+      "id": "victoria-stone-boundary-h-0-0",
+      "points": [
+        [
+          -52.951,
+          -323.296
+        ],
+        [
+          -45.943,
+          -325.716
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-h-0-1",
+      "points": [
+        [
+          -45.943,
+          -325.716
+        ],
+        [
+          -38.946,
+          -328.507
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-h-0-2",
+      "points": [
+        [
+          -38.946,
+          -328.507
+        ],
+        [
+          -32.31,
+          -330.917
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-h-0-3",
+      "points": [
+        [
+          -32.31,
+          -330.917
+        ],
+        [
+          -25.312,
+          -333.708
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-h-0-4",
+      "points": [
+        [
+          -25.312,
+          -333.708
+        ],
+        [
+          -19.823,
+          -337.2
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-h-1-0",
+      "points": [
+        [
+          -50.557,
+          -317.42
+        ],
+        [
+          -43.559,
+          -320.211
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-1-1",
+      "points": [
+        [
+          -43.559,
+          -320.211
+        ],
+        [
+          -36.933,
+          -322.992
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-1-2",
+      "points": [
+        [
+          -36.933,
+          -322.992
+        ],
+        [
+          -30.307,
+          -325.772
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-1-3",
+      "points": [
+        [
+          -30.307,
+          -325.772
+        ],
+        [
+          -23.31,
+          -328.563
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-1-4",
+      "points": [
+        [
+          -23.31,
+          -328.563
+        ],
+        [
+          -17.046,
+          -330.963
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-2-0",
+      "points": [
+        [
+          -47.79,
+          -311.554
+        ],
+        [
+          -41.164,
+          -314.335
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-2-1",
+      "points": [
+        [
+          -41.164,
+          -314.335
+        ],
+        [
+          -34.528,
+          -316.745
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-2-2",
+      "points": [
+        [
+          -34.528,
+          -316.745
+        ],
+        [
+          -27.903,
+          -319.525
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-2-3",
+      "points": [
+        [
+          -27.903,
+          -319.525
+        ],
+        [
+          -20.905,
+          -322.316
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-2-4",
+      "points": [
+        [
+          -20.905,
+          -322.316
+        ],
+        [
+          -14.641,
+          -324.716
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-3-0",
+      "points": [
+        [
+          -45.395,
+          -305.678
+        ],
+        [
+          -38.759,
+          -308.088
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-3-1",
+      "points": [
+        [
+          -38.759,
+          -308.088
+        ],
+        [
+          -31.762,
+          -310.878
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-3-2",
+      "points": [
+        [
+          -31.762,
+          -310.878
+        ],
+        [
+          -25.126,
+          -313.288
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-3-3",
+      "points": [
+        [
+          -25.126,
+          -313.288
+        ],
+        [
+          -18.5,
+          -316.069
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-3-4",
+      "points": [
+        [
+          -18.5,
+          -316.069
+        ],
+        [
+          -12.236,
+          -318.468
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-h-4-0",
+      "points": [
+        [
+          -43.383,
+          -300.163
+        ],
+        [
+          -36.375,
+          -302.583
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-h-4-1",
+      "points": [
+        [
+          -36.375,
+          -302.583
+        ],
+        [
+          -29.749,
+          -305.363
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-h-4-2",
+      "points": [
+        [
+          -29.749,
+          -305.363
+        ],
+        [
+          -23.123,
+          -308.144
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-h-4-3",
+      "points": [
+        [
+          -23.123,
+          -308.144
+        ],
+        [
+          -16.487,
+          -310.554
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-h-4-4",
+      "points": [
+        [
+          -16.487,
+          -310.554
+        ],
+        [
+          -10.224,
+          -312.953
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-v-0-0",
+      "points": [
+        [
+          -52.951,
+          -323.296
+        ],
+        [
+          -50.557,
+          -317.42
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-v-0-1",
+      "points": [
+        [
+          -50.557,
+          -317.42
+        ],
+        [
+          -47.79,
+          -311.554
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-v-0-2",
+      "points": [
+        [
+          -47.79,
+          -311.554
+        ],
+        [
+          -45.395,
+          -305.678
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-v-0-3",
+      "points": [
+        [
+          -45.395,
+          -305.678
+        ],
+        [
+          -43.383,
+          -300.163
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-v-1-0",
+      "points": [
+        [
+          -45.943,
+          -325.716
+        ],
+        [
+          -43.559,
+          -320.211
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-1-1",
+      "points": [
+        [
+          -43.559,
+          -320.211
+        ],
+        [
+          -41.164,
+          -314.335
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-1-2",
+      "points": [
+        [
+          -41.164,
+          -314.335
+        ],
+        [
+          -38.759,
+          -308.088
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-1-3",
+      "points": [
+        [
+          -38.759,
+          -308.088
+        ],
+        [
+          -36.375,
+          -302.583
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-2-0",
+      "points": [
+        [
+          -38.946,
+          -328.507
+        ],
+        [
+          -36.933,
+          -322.992
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-2-1",
+      "points": [
+        [
+          -36.933,
+          -322.992
+        ],
+        [
+          -34.528,
+          -316.745
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-2-2",
+      "points": [
+        [
+          -34.528,
+          -316.745
+        ],
+        [
+          -31.762,
+          -310.878
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-2-3",
+      "points": [
+        [
+          -31.762,
+          -310.878
+        ],
+        [
+          -29.749,
+          -305.363
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-3-0",
+      "points": [
+        [
+          -32.31,
+          -330.917
+        ],
+        [
+          -30.307,
+          -325.772
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-3-1",
+      "points": [
+        [
+          -30.307,
+          -325.772
+        ],
+        [
+          -27.903,
+          -319.525
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-3-2",
+      "points": [
+        [
+          -27.903,
+          -319.525
+        ],
+        [
+          -25.126,
+          -313.288
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-3-3",
+      "points": [
+        [
+          -25.126,
+          -313.288
+        ],
+        [
+          -23.123,
+          -308.144
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-4-0",
+      "points": [
+        [
+          -25.312,
+          -333.708
+        ],
+        [
+          -23.31,
+          -328.563
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-4-1",
+      "points": [
+        [
+          -23.31,
+          -328.563
+        ],
+        [
+          -20.905,
+          -322.316
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-4-2",
+      "points": [
+        [
+          -20.905,
+          -322.316
+        ],
+        [
+          -18.5,
+          -316.069
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-4-3",
+      "points": [
+        [
+          -18.5,
+          -316.069
+        ],
+        [
+          -16.487,
+          -310.554
+        ]
+      ],
+      "exterior": false
+    },
+    {
+      "id": "victoria-stone-boundary-v-5-0",
+      "points": [
+        [
+          -19.823,
+          -337.2
+        ],
+        [
+          -17.046,
+          -330.963
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-v-5-1",
+      "points": [
+        [
+          -17.046,
+          -330.963
+        ],
+        [
+          -14.641,
+          -324.716
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-v-5-2",
+      "points": [
+        [
+          -14.641,
+          -324.716
+        ],
+        [
+          -12.236,
+          -318.468
+        ]
+      ],
+      "exterior": true
+    },
+    {
+      "id": "victoria-stone-boundary-v-5-3",
+      "points": [
+        [
+          -12.236,
+          -318.468
+        ],
+        [
+          -10.224,
+          -312.953
+        ]
+      ],
+      "exterior": true
+    }
+  ],
+  "representation": "ground-atlas-lines",
+  "lineWidth": 0.28,
+  "lineColour": "#68645a",
+  "addedHeight": 0,
+  "material": "interpreted subdued stone/ground boundary colour",
+  "classification": "Mapped open twenty-cell working grid; exact apparatus unresolved",
+  "planEvidence": "Five columns and four rows of unshaded cells east of the diagonally hatched Victoria Stone western shed. Native wall/line crossings were inspected individually; the source building extract contains no polygon for the grid. Keep all interiors open and the neighbouring access lanes clear.",
+  "heightEvidence": "No added elevation. Boundaries are drawn on the existing ground surface; apparatus height is not established by the OS plan.",
+  "appearanceEvidence": "Line width and stone/ground colour are interpreted display choices, not measured wall thickness or identified construction material. No roof, enclosure, tank contents or exact production process is asserted.",
+  "evidenceImages": [
+    "reference/footprint-model-alignment/victoria-stone-working-grid-raw.png",
+    "reference/footprint-model-alignment/victoria-stone-working-grid-after.png"
+  ]
+}

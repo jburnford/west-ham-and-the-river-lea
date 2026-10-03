@@ -1,0 +1,54 @@
+{
+  "epoch": "1900",
+  "id": "waterworks-upper-bank",
+  "name": "Waterworks bank beside the Artificial Manure Works",
+  "surfaceMode": "bank-margin",
+  "reviewBoundsBNG": [
+    537600,
+    185040,
+    537720,
+    185250
+  ],
+  "interiorPointBNG": [
+    537658.78,
+    185145.88
+  ],
+  "bankReachIds": [
+    "Lower_River_Lea-5"
+  ],
+  "bankControlIds": [
+    "sh_537638_185226",
+    "sh_537659_185146",
+    "sh_537674_185070"
+  ],
+  "marshControlIds": [],
+  "meshCellMetres": 4,
+  "bankTransitionMetres": [
+    3.5,
+    6
+  ],
+  "shoreTransitionMetres": [
+    0,
+    0.3
+  ],
+  "southernBlendNorthings": [
+    185040,
+    185055
+  ],
+  "northernBlendNorthings": [
+    185235,
+    185250
+  ],
+  "westernBlendEastings": [
+    537600,
+    537620
+  ],
+  "method": "Interpolate the three distinct surveyed bank-surface dots along northing in the dry compartment south of Potters Ditch and west of the Artificial Manure Works. Confine the correction to a 6m bank strip. Keep it separate from the lower margin across the connecting watercourse. Blend into provisional landward ground and at review ends.",
+  "limitations": [
+    "Hatching and spot heights establish a raised bank surface here, but the dots do not measure a continuous maximum flood-defence crest.",
+    "The two 18.0ft inventory entries describe one dot; only the canonical bank entry is applied.",
+    "The 15.1ft Potter\u2019s Ditch observation lies across water and is not used in this bank fit.",
+    "Water-edge and landward slopes remain interpreted; factory yards and buildings are outside this narrow correction.",
+    "Datum conversion, water and riverbed heights remain provisional. This patch is not applied to the flood solver."
+  ]
+}

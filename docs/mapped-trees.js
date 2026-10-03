@@ -20,7 +20,7 @@ export function mappedTrees({THREE,scene,data,level,beam}) {
   const [x0,z0,x1,z1]=data.terrain.bounds;
   for(const spec of data.mappedTrees.trees) {
     const {x,z,height:h,crownRadius:r}=spec;
-    const y=x>=x0&&x<=x1&&z>=z0&&z<=z1?Math.max(.05,level(x,z)):0;
+    const y=data.mainLandscape?.weight(x,z)>0?level(x,z):x>=x0&&x<=x1&&z>=z0&&z<=z1?Math.max(.05,level(x,z)):0;
     const lean=(rnd()-.5)*.7;
     beam(scene,[x,y,z],[x+lean,y+h*.62,z+.15],.19+rnd()*.1,bark);
     for(let j=0;j<9;j++) {

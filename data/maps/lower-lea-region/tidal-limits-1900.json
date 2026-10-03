@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "targetEpoch": "1900",
+  "status": "evidence constraints; not applied to display or solver",
+  "interpretation": "Mapped upstream extent of ordinary tides, not an elevation, flood maximum, impermeable boundary or proof of a particular gate state. Exceptional event limits must be evaluated separately.",
+  "source": {
+    "authorScreenshot": "data/maps/lower-lea-region/evidence/temple-mills-ordinary-tide-limits-user-map.png",
+    "sha256": "fa73939aec867fa1b9533a09eb33b3b70743682729e539061b8191f0ce1e9fb2",
+    "received": "2026-10-01",
+    "registeredCrop": "reference/lower-lea-connection-review/upper-channelsea-os-london-five-foot-1893.png",
+    "registeredCropSHA256": "6a37ea1f5a264d82e33055b84fb09e982172bc66bd63f23552c72057dccdd05a",
+    "registration": "reference/lower-lea-connection-review/map-crops.json",
+    "layer": "os-london-five-foot-1893",
+    "individualSheetDate": null,
+    "dateNote": "1893\u201396 layer association; individual sheet survey/revision date not verified. Do not propagate to 1848\u201350 without checking that epoch."
+  },
+  "observations": [
+    {
+      "id": "temple-mills-old-lea-ordinary-tide-limit",
+      "label": "Highest point to which Ordinary Tides flow",
+      "channelDescription": "Western River Lea, southwest of Templemills Road; dotted line crosses the channel.",
+      "mapPixelLine": [
+        [
+          111,
+          548
+        ],
+        [
+          185,
+          548
+        ]
+      ],
+      "lineBNG": [
+        [
+          537431.96,
+          185481.25
+        ],
+        [
+          537459.48,
+          185481.99
+        ]
+      ],
+      "positionBNG": [
+        537446.09,
+        185481.63
+      ],
+      "positionMethod": "Approximate native-crop digitisation; bilinear interpolation of registered BNG corners.",
+      "interpretationToleranceMetres": 5,
+      "candidateReachIds": [
+        "Lower_River_Lea-16"
+      ],
+      "associationStatus": "Cross-channel dotted line intersects the existing River Lea polygon.",
+      "waterLevelODN": null,
+      "activeInSolver": false
+    },
+    {
+      "id": "temple-mills-eastern-ordinary-tide-annotation",
+      "label": "Highest point to which Ordinary Tides flow",
+      "channelDescription": "Eastern annotation beside Temple Mills bridge/channel complex, adjacent to Channelsea; separate labelled weir lies to the west on Waterworks River.",
+      "mapPixelLocator": [
+        564,
+        563
+      ],
+      "positionBNG": [
+        537600.58,
+        185480.25
+      ],
+      "positionMethod": "Approximate annotation locator on registered crop, not a digitised hydraulic cross-section.",
+      "interpretationToleranceMetres": 15,
+      "candidateReachIds": [
+        "Lower_River_Lea-10"
+      ],
+      "nearbyControlIds": [
+        "temple-mills-weir"
+      ],
+      "associationStatus": "Locator falls in Channelsea source polygon. Exact leader/limit placement and relationship to neighbouring Waterworks weir need detailed verification; do not apply one shared cutoff to both channels.",
+      "waterLevelODN": null,
+      "activeInSolver": false
+    }
+  ],
+  "modelUse": [
+    "Check ordinary tidal extent by individual channel when tidal propagation is implemented.",
+    "Retain upstream freshwater flow and existing mill/weir restrictions.",
+    "Calibrate against independent water levels and bed/crest evidence; nearby OS spot heights and benchmarks are not tide elevations.",
+    "Keep ordinary-tide constraints separate from the 1888, 1897, 1904 and 1928 event evidence."
+  ]
+}

@@ -1,5 +1,11 @@
 # Factory working surfaces
 
+Current eastern-strip checkpoint: 91 working surfaces, 34 wear routes and 168
+stock groups, with twenty mapped open cells at Victoria Stone Works. The three
+wharf additions and the earlier depot/stores/Globe-Victoria yards contain no
+stock. See the latest continuation below; earlier totals and browser revisions
+are dated checkpoints.
+
 29 September cooperage continuation: a separately recorded OS/Goad envelope
 restores the Chippindale cooperage yard omitted from the original industrial
 parcels. Yard 96401 belongs to factory site 964 and supplies about 3,946 m² of
@@ -173,3 +179,99 @@ three corrected chimney bases and the reviewed northern Marshgate lane:
 The Ritchie/Crown/western-trades pass rebuilds exclusions for all 544 ranges,
 including the complete Crown roof 609 and the corrected local road approaches.
 Totals are 85 surfaces, 37 clear wear routes and 151 stock groups.
+
+
+## Eastern Channelsea strip checkpoint — 30 September 2026
+
+The rebuilt layer has **88 working surfaces, 32 clear wear routes and 168 stock
+groups**, with exclusions regenerated for 681 building ranges and the corrected
+local road, banks and watercourses. Three additional stock-free working
+envelopes restore the Stratford Market goods/coal depot, Abbey Stores Yard and
+shared Globe Mill/Victoria Stone riverside compound. These are mapped working
+ground interpretations, not roofs, cadastral parcels or exact tenancy claims.
+No stock is added to any of the three new yards. Building, road, water,
+chimney and siding clearances remain required.
+
+The paired register is `data/maps/east-channelsea-context-alignment.json`.
+Eleven siding paths form fourteen rendered segments following the native OS
+depot fan, with connected junctions saved in `east-depot-junctions.json`. A
+shared 130 m level approach keeps the rails above both existing branch banks
+and ballast at 5.5 m formation height and 5.96 m rail-top height; a 240 m grade
+then descends outward through the depot. The layer includes 10,259 clipped
+formation triangles, and 408 rail-bank clearance checks pass. Their rendered
+gauge is an interpreted 1.435 m with 2.4 m sleepers; rail section, elevation,
+gradient and paired track spacing remain modelling estimates. The revised
+depot join was visually inspected and passed. Three isolated local water polygons
+restore the two moat sections and eastern chemical-works drain. Fifteen
+controls correct the existing eastern Channelsea bank beside solid mapped
+walls, retaining the opposite bank and channel terminals.
+
+The separate northwestern running line is integrated from repository
+GIS in `north-london-connection.json`; native OS confirms its passage under the
+Great Eastern into the Stratford Low Level/Woolwich corridor. The interpreted
+3 m lower formation and existing 8.5 m upper formation yield 4.39 m rail-head-to-
+soffit clearance. The bounded GE append and earth opening preserve its earlier
+route/station prefix, with abutment faces closing the new cut. These are
+running lines, distinct from the fourteen depot siding segments.
+
+Eight streets now have bounded native-map corrections: Bridge Road, Barnby, St Thomas,
+Hotham, Randal, Canning, Leywick and Morley. The paired housing review has
+18 native roof-body corrections, two exact preserved corner bodies and
+four suppressed duplicates over unshaded rear gardens. The
+Barnby follow-up is complete and the housing rebuild passes: 192 rows, 3,034
+estimated houses, 2,991 rear yards, 2,899 sculleries and 2,787 privies. Yard
+exclusions have been regenerated against these final house bodies.
+
+Railway/context integration is complete. Eight eastern building views and the
+three final railway views passed and were visually inspected. Final combined
+validation and the browser-confirmed revision are recorded below.
+
+
+Final verification, 30 September 2026: **54 geometry/preservation checks pass,
+with no new failures**. The remaining High Street frontage01/roads failure is
+pre-existing: its 134.175 m² overlap was reproduced using only pre-integration
+commit `3be0a50`. It needs a separate review. All eleven final SwiftShader views
+passed without browser or shader errors and were visually inspected, including
+the northwest connection, underpass and depot throat. Reports are
+`review/east-channelsea-validation.json` and
+`review/east-channelsea-alignment-checks.json`.
+
+Final asset revision: **`00f727032dd6`**. All 25 module and 139 asset hashes match;
+the browser confirmed that revision. Regional context has 234,354 visible source
+features in 115 tiles (4.00 MB). River geometry has 22 source features,
+604,191 vertices and 1,188,366 triangles. Yards retain 88 surfaces, 32 wear routes
+and 168 stock groups. Housing has 192 rows, 3,034 estimated houses, 2,991 rear
+yards, 2,899 sculleries and 2,787 privies. Housing/context preparations are
+byte-idempotent. Local preview remains on port 4175; no deployment or commit.
+
+## 30 September continuation: wharf ground and open working cells
+
+`east-wharf-yards.json` adds the visible open working ground at Stratford Wharf
+(9007, 1,668.07 m²), Caledonian Wharf (9005, 1,517.18 m²) and Halling Wharf
+(9006, 1,081.53 m²). Native OS traces follow the exposed ground around roofs and
+rear plots; these are not claims about complete tenure boundaries. All supplied
+building outlines are excluded, including roofs not yet represented in 3D.
+The final surfaces also clear rendered buildings, roads and water. Existing
+yards retain priority: all 88 earlier yard records and their stock remain exact.
+The total is 91 surfaces, 34 clear interpreted wear routes and 168 stock groups.
+None of the three new wharves receives inferred commodity stock.
+
+`victoria-stone-working-grid.json` registers the twenty unshaded working cells
+at Victoria Stone Works as 30 native line intersections and 49 unique boundary
+segments. Their union is 892.79 m². The renderer draws the boundaries on the
+existing ground atlas. It adds no roof, slab or apparatus elevation; the exact
+production equipment and construction material remain unresolved. Line width,
+colour, wharf surface material and wear are display interpretations.
+
+Preparation/check scripts are `prepare_east_wharf_yards.py`,
+`check_east_wharf_yards.py`, `prepare_victoria_stone_grid.py` and
+`check_victoria_stone_grid.py`. Both preparations reproduce their registers
+exactly. Checks cover native registration, open-cell topology, all source roofs,
+roads, water, tracks and the unchanged earlier yards. Native review images are
+`reference/footprint-model-alignment/east-wharf-yards-os.png` and
+`victoria-stone-working-grid-{raw,after}.png` in the same directory.
+
+Final validation: all nine targeted checks and six browser views pass at
+`6d92fd6dcc67`; no browser or shader errors. Railway station corrections retain
+the exact earlier yard and siding records. See the latest continuation in
+`FOOTPRINT_ALIGNMENT.md` for station evidence and remaining source gaps.

@@ -1,0 +1,33 @@
+{
+  "epoch": "1900",
+  "purpose": "Complete the mapped river system before expanding flood calculations. Geometry is separate from hydraulic operation.",
+  "primaryLayer": "Lower_River_Lea",
+  "supplementaryReaches": [
+    {"name": "Hackney Cut / Lee Navigation", "sourceIndices": [512, 513, 515, 516, 517, 518, 521], "role": "navigation"},
+    {"name": "Limehouse Cut", "sourceIndices": [550, 509, 510, 511, 505, 506, 507, 508], "role": "navigation"}
+  ],
+  "mappedCrossings": [
+    {"a": 550, "b": 509, "width": 12, "category": "bridge-passage", "evidence": "limehouse-cut-network"},
+    {"a": 511, "b": 505, "width": 12, "category": "bridge-passage", "evidence": "limehouse-cut-network"},
+    {"a": 505, "b": 506, "width": 12, "category": "bridge-passage", "evidence": "limehouse-cut-network"},
+    {"a": 506, "b": 507, "width": 12, "category": "bridge-passage", "evidence": "limehouse-cut-network"},
+    {"a": 507, "b": 508, "width": 4, "category": "controlled-passage", "evidence": "bow-locks-junction-os-london-five-foot-1893", "note": "Bromley / Tide Lock approach; precise 1900 operation unresolved. Do not merge with the separate Bow Locks creek connection."},
+    {"a": 512, "b": 513, "width": 14, "category": "bridge-passage", "evidence": "lea-bridge-head"},
+    {"a": 513, "b": 515, "width": 14, "category": "bridge-passage", "evidence": "hackney-crossings"},
+    {"a": 515, "b": 516, "width": 14, "category": "bridge-passage", "evidence": "hackney-crossings"},
+    {"a": 516, "b": 517, "width": 14, "category": "bridge-passage", "evidence": "hackney-crossings"},
+    {"a": 517, "b": 518, "width": 16, "category": "bridge-passage", "evidence": "old-ford-network", "note": "Continuous Hackney Cut under the railway and road. Old Ford lock and lateral flood gate farther south are separate controls."}
+  ],
+  "traces": [
+    {"id": "lea-bridge-river", "name": "Lea Bridge to the Old Lea", "panel": "lea-bridge-head", "width": 20, "role": "river", "category": "mapped-channel", "joins": ["Water_1895-521", "Lower_River_Lea-20"], "pixels": [[413,593],[435,619],[455,637],[480,638],[510,645],[550,660],[580,666],[612,657],[652,641],[679,641],[702,652],[724,671],[745,678]], "note": "River route through the waterworks; no filtering-bed polygons included. Width approximate; structures at Lea Bridge remain controls, not unrestricted flow."},
+    {"id": "lea-bridge-navigation", "name": "Lea Bridge lock to Hackney Cut", "panel": "lea-bridge-head", "width": 12, "role": "navigation", "category": "lock-passage", "joins": ["Water_1895-512"], "pixels": [[443,625],[458,662],[477,684],[511,701],[542,713]], "note": "Mapped lock route separate from the Old Lea branch. Water-level difference, sill and gate state unassigned."},
+    {"id": "channelsea-works-passage", "name": "Channelsea beside the Artificial Manure Works", "panel": "channelsea-route", "width": 7, "role": "river", "category": "works-passage", "joins": ["Lower_River_Lea-10", "Lower_River_Lea-11"], "pixels": [[350,340],[376,349],[397,357],[406,370],[408,384],[403,400],[388,418],[372,431],[358,444],[352,454],[357,470],[369,488],[375,511],[376,548],[377,595],[379,641],[386,685],[396,718],[395,741],[387,762]], "note": "Curved mapped passage east of works and beside filtering beds. Potter's Ditch link to Waterworks already exists in source reach 10. Open/covered transitions and conveyance remain unresolved; no straight endpoint shortcut."}
+  ],
+  "thamesContext": {
+    "panel": "six-inch-south", "cropOrigin": [800,2000],
+    "pixels": [[0,280],[65,199],[121,146],[171,128],[218,118],[276,98],[329,90],[334,72],[361,80],[380,94],[437,97],[495,124],[548,145],[596,158],[628,166],[640,158],[649,137],[657,103],[660,68],[642,35],[610,12],[668,9],[682,43],[692,90],[679,151],[675,181],[690,205],[722,236],[762,280],[787,303],[815,312],[844,324],[870,326],[876,339],[856,366],[836,385],[850,422],[875,450],[901,480],[937,521],[968,560],[615,560],[577,517],[551,478],[524,448],[506,416],[471,388],[443,362],[420,342],[391,323],[364,310],[331,299],[301,295],[273,301],[248,312],[224,330],[205,349],[176,380],[152,413],[132,452],[113,497],[98,540],[94,560],[0,560]],
+    "note": "Period-map water polygon around the Bow Creek mouth. Context reach ends at crop edges; not a Thames boundary condition or bathymetric survey. Docks and lock entrances excluded."
+  },
+  "sectionAssumption": "New water uses the existing illustrative scene datum. Beds and bank sections are provisional display geometry; no capacity, gate state or regional flood level is assigned.",
+  "dateNote": "Six-inch mosaic sheet dates vary within 1888–1913. Source layer attribution and existing 1893–96 detail support a provisional c1900 network; individual structure operation remains dated separately."
+}

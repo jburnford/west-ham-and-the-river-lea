@@ -1,0 +1,54 @@
+{
+  "epoch": "1900",
+  "id": "temple-mills-bank-path",
+  "name": "Waterworks River bank path north of Temple Mills",
+  "surfaceMode": "bank-margin",
+  "reviewBoundsBNG": [
+    537470,
+    185540,
+    537620,
+    185765
+  ],
+  "interiorPointBNG": [
+    537558.39,
+    185649.86
+  ],
+  "bankReachIds": [
+    "Lower_River_Lea-6"
+  ],
+  "bankControlIds": [
+    "sh_537539_185731",
+    "sh_537559_185650",
+    "sh_537573_185570"
+  ],
+  "marshControlIds": [],
+  "meshCellMetres": 4,
+  "bankTransitionMetres": [
+    5.5,
+    8
+  ],
+  "shoreTransitionMetres": [
+    0,
+    1.5
+  ],
+  "southernBlendNorthings": [
+    185540,
+    185555
+  ],
+  "northernBlendNorthings": [
+    185745,
+    185765
+  ],
+  "westernBlendEastings": [
+    537470,
+    537490
+  ],
+  "method": "Fit three measured bank/path surfaces along northing within the dry strip east of Waterworks River. Keep the correction within 8m of the mapped river and taper before Templemills Bridge and the northern buildings. The bank/path is part of the same ground surface, with interpreted water-side and landward slopes.",
+  "limitations": [
+    "The surveyed dots measure bank/path surfaces; they do not establish a continuous maximum defence crest.",
+    "The nearby road, bridge, weir and benchmark heights are separate observations and are not averaged into this bank profile.",
+    "Path width and cross-section remain interpreted; nearby building footprints and bridge surfaces are outside the correction.",
+    "The new northern 16.8ft observation is stored in a reviewed supplement; the original snapshot is unchanged.",
+    "Datum conversion, bed and water heights remain provisional. This surface is not applied to the flood solver."
+  ]
+}

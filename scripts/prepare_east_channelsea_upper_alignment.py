@@ -43,7 +43,7 @@ SPECS = [
     ('victoria-corn-main', 497, [4975, 304906], 'Victoria Mills corn mill and attached projection', 6.9, 2,
      'Shaded riverside corn-mill body immediately west of the printed Victoria Mills (Corn) label. Include the attached southeastern projection; keep the northern Caledonian Wharf shed under its own reviewed site identity.'),
     ('stratford-market-roof', 9002, [79], 'Stratford Market covered vegetable-market range', 6.0, 1,
-     'Long shaded roof explicitly labelled Stratford Market (Vegetables), beside the Great Eastern Goods & Coal Depot and Woolwich branch. The thin western source2832 and northern passenger station/platform1539 have distinct unshaded platform outlines and are deferred rather than asserted as enclosed brick sheds.'),
+     'Long shaded roof explicitly labelled Stratford Market (Vegetables), beside the Great Eastern Goods & Coal Depot and Woolwich branch. Western source2832 is a separate narrow track-side/loading strip whose complete continuous roof is not established. Northern source1539 is a shaded mapped covered station-associated body, distinct from the white platform immediately east; its precise enclosure, canopy arrangement and height remain unresolved. Both features are deferred for separate context/architectural interpretation rather than included in this market roof.'),
     ('caledonian-riverside', 9005, [24043], 'Caledonian Wharf riverside shed', 3.8, 1,
      'Small shaded riverside body on the southern edge of the labelled Caledonian Wharf, immediately north of the independently mapped Victoria corn mill. Exact wharf tenure boundary remains approximate; the OS building identity is distinct.'),
     ('caledonian-east', 9005, [82361], 'Caledonian Wharf eastern covered strip', 3.8, 1,
@@ -71,7 +71,10 @@ def build():
     for key, site, fids, name, height, storeys, evidence in SPECS:
         ident = 'east-upper-'+key
         assert ident not in previous_ids
-        target = polygon(set_precision(unary_union([source[fid] for fid in fids]), .001))
+        raw = unary_union([source[fid] for fid in fids])
+        exclusions = [9303] if key == 'globe-south-central' else []
+        reconciled = raw.difference(unary_union([source[fid] for fid in exclusions])) if exclusions else raw
+        target = polygon(set_precision(reconciled, .001))
         angle = axis(target, 0)
         local = affinity.rotate(target, -angle, origin=(0, 0))
         x0, z0, x1, z1 = local.bounds
@@ -93,6 +96,10 @@ def build():
             [ident], [name], target, [target], angle, evidence, additional=True,
             review_prefix='Raw georeferenced OS five-foot plan and source outlines inspected. Newly added range; elevation and roof profile are declared interpretations. ')
         g['previousUnionIoU'] = 0
+        if exclusions:
+            g['sourceReconciliation'] = dict(excludedSourceFids=exclusions,
+                removedAreaM2=raw.area-reconciled.area,
+                evidence='Adjacent supplied39385 and9303 overlap by1.023m² along their separately digitized wavy shared roof seam. Native OS shows one party-wall seam and a continuous southern roof exterior. Assign the overlap to9303 and subtract it from39385; preserve every exterior point and the complete compound union.')
         for row in rows:
             row.update(priorFootprint=[], additionalModel=True,
                 profileEvidence=addition['heightEvidence']+' '+addition['roofEvidence'])
@@ -107,13 +114,13 @@ def build():
         method='Restore independently reviewed enclosed industrial/market roofs east of Channelsea and west of the north–south railway. Exteriors are map/source evidence; every new roof/elevation profile is explicitly interpreted. Open wharf yards, railway sidings and unshaded plant/platform outlines remain context.',
         groups=groups, buildings=buildings, structures=[], additionalBuildings=additions, additionalSites=sites,
         evidenceImages=[f'reference/footprint-model-alignment/east-channelsea-upper-{s}.png' for s in
-            ['raw', 'source', 'before', 'after', 'globe-raw', 'globe-source', 'station-raw', 'station-source', 'victoria-raw', 'victoria-source']],
-        pendingContext=[dict(modelIds=['east-upper-victoria-corn-main','east-upper-caledonian-riverside'],
+            ['raw', 'source', 'before', 'after', 'globe-raw', 'globe-source', 'globe-before', 'globe-after', 'station-raw', 'station-source', 'victoria-raw', 'victoria-source']],
+        pendingContext=[dict(modelIds=['east-upper-victoria-corn-main','east-upper-caledonian-riverside','east-upper-globe-riverside'],
             feature='Existing Channelsea bank',
             evidence='The current generalized river edge intersects complete OS riverside roof outlines. Raw OS shows a clear bank/wharf boundary alongside these buildings. Retain full roof exteriors; coordinate a local river-bank correction before final rendering checks.')],
-        deferred=[dict(sourceFids=[2832], reason='Long unshaded western Stratford Market loading-platform/strip. Source polygon alone does not prove an enclosed roof; preserve as station platform context pending specific canopy/roof classification.'),
-            dict(sourceFids=[1539], reason='Northern Stratford Market passenger station/platform outline is a distinct unshaded strip on the OS. Review station structures and raised platforms with rail context; no enclosed factory extrusion inferred.'),
-            dict(feature='Victoria Stone Works 20-cell grid', reason='Unshaded working grid in the open eastern yard; model as low plant/working surfaces only after apparatus review, not as a permanent blanket roof.'),
+        deferred=[dict(sourceFids=[2832], reason='Long narrow western Stratford Market track-side/loading strip, distinct from the main shaded market roof79. The source polygon does not establish a complete continuous roof; retain for bounded loading/platform context pending separate canopy/roof classification.'),
+            dict(sourceFids=[1539], reason='Northern Stratford Market Station feature is a solid shaded mapped covered body, distinct from the white platform/track-side space immediately east. Exact enclosure versus canopy, architectural function, roof arrangement and height remain unresolved. Defer its 3D interpretation with the station railway context; do not classify it as an unshaded open platform.'),
+            dict(feature='Victoria Stone Works 20-cell grid', reason='Twenty unshaded cells are now registered in data/maps/victoria-stone-working-grid.json and drawn as ground-level boundaries. Apparatus identity, material and elevation remain deferred; no blanket roof is inferred.'),
             dict(feature='Open Great Eastern Goods & Coal Depot', reason='Sidings, buffers, fans and working lanes are clearly mapped but open. Railway context review is separate from these enclosed roof additions.'),
             dict(feature='Globe northern working strip', reason='Unshaded divided outline immediately north of the shaded crushing ranges. Preserve as low ancillary/context frames pending classification; no invented full-height northern roof.'),
             dict(feature='Stratford Wharf domestic frontage', reason='Short Road/Prospect Road rear yards and repeated dwelling outlines are distinct from the northern warehouse. Housing should be reviewed in its own pass.'),

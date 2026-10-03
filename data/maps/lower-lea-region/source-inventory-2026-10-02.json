@@ -1,0 +1,1079 @@
+{
+  "capturedAtUTC": "2026-10-02T23:35:41.783795+00:00",
+  "liveSHA256": "00c2cce5de01094dfed9413edd4e3d507e6e96093ec3a841198d12610abbbfed",
+  "liveCount": 4173,
+  "frozenSnapshotCount": 4152,
+  "auditCount": 4001,
+  "newInWindow": [
+    {
+      "id": "sh_539294_186848",
+      "type": "spot",
+      "value_ft": 63.6,
+      "raw": "63\u00b76",
+      "confidence": "medium",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131075_87104"
+      ],
+      "bng_e": 539293.84,
+      "bng_n": 186847.98,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131075_87104@755,29=63.6(m)"
+      ],
+      "notes": "road junction at the north edge; dot upper-left of figure; leading 3 open at middle-left in raw pixels; final 6 open-topped at 8x/10x (alt 63\u00b78)",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539343_186840",
+      "type": "spot",
+      "value_ft": 64.1,
+      "raw": "64\u00b71",
+      "confidence": "high",
+      "n_readings": 2,
+      "readers": [
+        "opus-cg",
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131075_87104",
+        "m18_131078_87104"
+      ],
+      "bng_e": 539342.79,
+      "bng_n": 186840.41,
+      "spread_m": 0.37,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131075_87104@887,53=64.1(h)",
+        "opus-cg:m18_131078_87104@117,53=64.1(h)"
+      ],
+      "notes": "road north of Park Grove Road near the railway; isolated dot upper-left of figure on the carriageway",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539068_186839",
+      "type": "spot",
+      "value_ft": 62.0,
+      "raw": "62\u00b70",
+      "confidence": "high",
+      "n_readings": 2,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104",
+        "m18_131075_87104"
+      ],
+      "bng_e": 539067.85,
+      "bng_n": 186839.18,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@915,36=62.0(h)",
+        "opus-cn:m18_131075_87104@147,36=62.0(h)"
+      ],
+      "notes": "junction of Short Road with the road running NW (overlap strip with 131075_87104); isolated dot below-left, separate from F.P\u00b7",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_538938_186822",
+      "type": "spot",
+      "value_ft": 60.4,
+      "raw": "60\u00b74",
+      "confidence": "high",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104"
+      ],
+      "bng_e": 538938.47,
+      "bng_n": 186821.9,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@566,73=60.4(h)"
+      ],
+      "notes": "road running NE beside the railway by the Mission Hall; isolated dot above-right of figure",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_538854_186820",
+      "type": "spot",
+      "value_ft": 60.3,
+      "raw": "60\u00b73",
+      "confidence": "high",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104"
+      ],
+      "bng_e": 538854.43,
+      "bng_n": 186819.97,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@340,72=60.3(h)"
+      ],
+      "notes": "road at the north edge (\u2026AD) by Ashville Road; isolated dot above-right of figure",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539248_186820",
+      "type": "spot",
+      "value_ft": 63.7,
+      "raw": "63\u00b77",
+      "confidence": "low",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131075_87104"
+      ],
+      "bng_e": 539247.73,
+      "bng_n": 186819.62,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131075_87104@629,102=63.7(l)"
+      ],
+      "notes": "wide road north of Park Grove Road; dot directly above figure; second digit 3 or 8 unsettled (10x looks closed like the 8 of 58\u00b77, raw pixels light at the middle-left like a 3); alt 68\u00b77",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539203_186797",
+      "type": "bench_mark",
+      "value_ft": 65.14,
+      "raw": "B.M.65\u00b714",
+      "confidence": "high",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131075_87104"
+      ],
+      "bng_e": 539202.59,
+      "bng_n": 186796.85,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131075_87104@506,160=65.14(h)"
+      ],
+      "notes": "B.M. on the corner of the house block at Woodlands Road / Granleigh Road; pheon drawn like a 'K' ~22 px W of text; decimals 14 clear at 12x; text crosses the py ~148 join area",
+      "setting": "building",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539188_186787",
+      "type": "spot",
+      "value_ft": 63.3,
+      "raw": "63\u00b73",
+      "confidence": "medium",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131075_87104"
+      ],
+      "bng_e": 539187.61,
+      "bng_n": 186786.79,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131075_87104@465,186=63.3(m)"
+      ],
+      "notes": "Granleigh Road at its east end by Woodlands Road; dot upper-left of figure lies between the O and A of ROAD, possibly an interpunct; F.P marks above and below",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539038_186775",
+      "type": "spot",
+      "value_ft": 61.7,
+      "raw": "61\u00b77",
+      "confidence": "medium",
+      "n_readings": 2,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104",
+        "m18_131075_87104"
+      ],
+      "bng_e": 539037.98,
+      "bng_n": 186775.27,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@830,206=61.7(m)",
+        "opus-cn:m18_131075_87104@62,206=61.7(m)"
+      ],
+      "notes": "beside the road east of Norman Road north of Granleigh Road (overlap strip); only nearby dot is the F.P. mark's own dot, so centre of figures",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539369_186766",
+      "type": "spot",
+      "value_ft": 62.4,
+      "raw": "62\u00b74",
+      "confidence": "high",
+      "n_readings": 2,
+      "readers": [
+        "opus-cg",
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131075_87104",
+        "m18_131078_87104"
+      ],
+      "bng_e": 539369.21,
+      "bng_n": 186765.62,
+      "spread_m": 0.26,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cg:m18_131078_87104@183,257=62.4(h)",
+        "opus-cn:m18_131075_87104@952,256=62.4(m)"
+      ],
+      "notes": "High Road tramway at the Park Grove Road corner; tick on the rail right of the figure",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_538891_186755",
+      "type": "spot",
+      "value_ft": 59.5,
+      "raw": "59\u00b75",
+      "confidence": "high",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104"
+      ],
+      "bng_e": 538891.18,
+      "bng_n": 186755.29,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@434,249=59.5(h)"
+      ],
+      "notes": "Norman Road side of the Ashville Road block, carriageway between kerb lines; dot above-left of figure",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539135_186754",
+      "type": "spot",
+      "value_ft": 63.3,
+      "raw": "63\u00b73",
+      "confidence": "medium",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131075_87104"
+      ],
+      "bng_e": 539135.31,
+      "bng_n": 186753.81,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131075_87104@322,271=63.3(m)"
+      ],
+      "notes": "Granleigh Road; no dot of its own found at 7x, only the kerb dotted line above; position = centre of figures; both 3s open at middle-left",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539078_186732",
+      "type": "spot",
+      "value_ft": 62.5,
+      "raw": "62\u00b75",
+      "confidence": "medium",
+      "n_readings": 2,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104",
+        "m18_131075_87104"
+      ],
+      "bng_e": 539078.22,
+      "bng_n": 186732.39,
+      "spread_m": 0.19,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@935,324=62.5(m)",
+        "opus-cn:m18_131075_87104@167,325=62.5(m)"
+      ],
+      "notes": "Granleigh Road (overlap strip); dot between G and R of G\u00b7RANLEIGH beside the figure",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_538998_186731",
+      "type": "spot",
+      "value_ft": 61.4,
+      "raw": "61\u00b74",
+      "confidence": "medium",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104"
+      ],
+      "bng_e": 538998.27,
+      "bng_n": 186730.76,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@720,323=61.4(m)"
+      ],
+      "notes": "Norman Road at Granleigh Road; dot after the last letter N of NORMAN, beside the figure (treated as survey dot)",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_538861_186727",
+      "type": "bench_mark",
+      "value_ft": 60.4,
+      "raw": "B.M.60\u00b740",
+      "confidence": "high",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104"
+      ],
+      "bng_e": 538861.44,
+      "bng_n": 186727.01,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@352,323=60.4(h)"
+      ],
+      "notes": "B.M. on the frontage wall line of the plots; 'K'-shaped pheon ~15 px SE of text; decimals 40 clear at 6x/12x",
+      "setting": "building",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_538940_186719",
+      "type": "spot",
+      "value_ft": 57.9,
+      "raw": "57\u00b79",
+      "confidence": "medium",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104"
+      ],
+      "bng_e": 538940.18,
+      "bng_n": 186718.78,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@563,351=57.9(m)"
+      ],
+      "notes": "railway near grade (ground beside it 58-60); figure written ~35 px E outside the bank hatching and fence, isolated dot on the track; attribution medium",
+      "setting": "railway",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539020_186704",
+      "type": "spot",
+      "value_ft": 61.4,
+      "raw": "61\u00b74",
+      "confidence": "high",
+      "n_readings": 2,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104",
+        "m18_131075_87104"
+      ],
+      "bng_e": 539020.22,
+      "bng_n": 186703.53,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@777,398=61.4(h)",
+        "opus-cn:m18_131075_87104@9,398=61.4(h)"
+      ],
+      "notes": "road junction by St Augustine's Church (overlap strip); isolated dot left of figure",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539036_186691",
+      "type": "bench_mark",
+      "value_ft": 64.42,
+      "raw": "B.M.64\u00b742",
+      "confidence": "high",
+      "n_readings": 2,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104",
+        "m18_131075_87104"
+      ],
+      "bng_e": 539036.37,
+      "bng_n": 186691.35,
+      "spread_m": 0.19,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@819,432=64.42(h)",
+        "opus-cn:m18_131075_87104@52,432=64.42(h)"
+      ],
+      "notes": "B.M. on the corner of the house block south of the church road (overlap strip); pheon ~15 px S of text; decimals 42 clear",
+      "setting": "building",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_538839_186691",
+      "type": "spot",
+      "value_ft": 59.3,
+      "raw": "59\u00b73",
+      "confidence": "high",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104"
+      ],
+      "bng_e": 538838.62,
+      "bng_n": 186690.76,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@288,419=59.3(h)"
+      ],
+      "notes": "road SE of Ashville Road; dot above-right of the leading digit",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_538900_186691",
+      "type": "spot",
+      "value_ft": 58.7,
+      "raw": "58\u00b77",
+      "confidence": "high",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104"
+      ],
+      "bng_e": 538899.65,
+      "bng_n": 186690.57,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@452,424=58.7(h)"
+      ],
+      "notes": "unbuilt land between the Ashville Road plots and the railway; dot on the plot boundary line just W of figure",
+      "setting": "open_ground",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539348_186655",
+      "type": "bench_mark",
+      "value_ft": 60.63,
+      "raw": "B.M.60\u00b763",
+      "confidence": "high",
+      "n_readings": 2,
+      "readers": [
+        "opus-cg",
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131075_87104",
+        "m18_131078_87104"
+      ],
+      "bng_e": 539348.24,
+      "bng_n": 186655.37,
+      "spread_m": 0.37,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131075_87104@887,553=60.63(h)",
+        "opus-cg:m18_131078_87104@119,551=60.63(h)"
+      ],
+      "notes": "B.M. on the house corner at the High Road by the F.P.; pheon ~15 px N of text next to the F.P letters; decimals 63 clear at 6x/12x (6 open-topped, 3 open)",
+      "setting": "building",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539056_186654",
+      "type": "spot",
+      "value_ft": 60.7,
+      "raw": "60\u00b77",
+      "confidence": "medium",
+      "n_readings": 2,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104",
+        "m18_131075_87104"
+      ],
+      "bng_e": 539055.8,
+      "bng_n": 186654.4,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@869,533=60.7(m)",
+        "opus-cn:m18_131075_87104@101,533=60.7(m)"
+      ],
+      "notes": "Mayville Road by St Augustine's Church (overlap strip); dot left of figure with \u00b7F.P's own dot close by",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539339_186647",
+      "type": "spot",
+      "value_ft": 59.4,
+      "raw": "59\u00b74",
+      "confidence": "high",
+      "n_readings": 2,
+      "readers": [
+        "opus-cg",
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131075_87104",
+        "m18_131078_87104"
+      ],
+      "bng_e": 539338.62,
+      "bng_n": 186646.76,
+      "spread_m": 0.26,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cg:m18_131078_87104@92,574=59.4(h)",
+        "opus-cn:m18_131075_87104@861,575=59.4(m)"
+      ],
+      "notes": "High Road tramway at the Lansdowne Road junction; tick on the rail right of the figure",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_538789_186629",
+      "type": "spot",
+      "value_ft": 58.9,
+      "raw": "58\u00b79",
+      "confidence": "high",
+      "n_readings": 1,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104"
+      ],
+      "bng_e": 538788.97,
+      "bng_n": 186628.54,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@150,583=58.9(h)"
+      ],
+      "notes": "junction of Ashville Road and the avenue on the west; isolated dot below-right of figure, separate from F.P\u00b7",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539092_186608",
+      "type": "spot",
+      "value_ft": 60.2,
+      "raw": "60\u00b72",
+      "confidence": "medium",
+      "n_readings": 2,
+      "readers": [
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104",
+        "m18_131075_87104"
+      ],
+      "bng_e": 539092.44,
+      "bng_n": 186607.53,
+      "spread_m": 0.0,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@964,662=60.2(m)",
+        "opus-cn:m18_131075_87104@196,662=60.2(m)"
+      ],
+      "notes": "Mayville Road (overlap strip); dot right after the V of MAYVILLE beside the figure",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539320_186594",
+      "type": "spot",
+      "value_ft": 57.1,
+      "raw": "57\u00b71",
+      "confidence": "high",
+      "n_readings": 2,
+      "readers": [
+        "opus-cg",
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131075_87104",
+        "m18_131078_87104"
+      ],
+      "bng_e": 539320.17,
+      "bng_n": 186593.74,
+      "spread_m": 0.37,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cg:m18_131078_87104@40,716=57.1(h)",
+        "opus-cn:m18_131075_87104@806,716=57.1(m)"
+      ],
+      "notes": "High Road tramway by the P.H. and Fire Station; tick on the rail left of the figure",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_538780_186533",
+      "type": "bench_mark",
+      "value_ft": 70.59,
+      "raw": "B.M.70\u00b759",
+      "confidence": "high",
+      "n_readings": 2,
+      "readers": [
+        "opus-cm",
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104",
+        "m18_131072_87107"
+      ],
+      "bng_e": 538779.68,
+      "bng_n": 186533.09,
+      "spread_m": 0.56,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@118,841=70.59(h)",
+        "opus-cm:m18_131072_87107@118,70=70.59(m)"
+      ],
+      "notes": "B.M. on the parapet of the Cathall Road bridge over the railway branch; pheon ~12 px W of text; decimals 59 at 6x/12x (raw pixels: stem under a flat top bar = 5)",
+      "setting": "bridge",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_539270_186481",
+      "type": "spot",
+      "value_ft": 53.2,
+      "raw": "53\u00b72",
+      "confidence": "high",
+      "n_readings": 3,
+      "readers": [
+        "opus-cg",
+        "opus-ck",
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131075_87104",
+        "m18_131075_87107"
+      ],
+      "bng_e": 539269.93,
+      "bng_n": 186480.77,
+      "spread_m": 3.54,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cg:m18_131075_87107@667,251=53.2(h)",
+        "opus-cn:m18_131075_87104@656,1011=53.2(m)",
+        "opus-ck:m18_131075_87107@668,252=53.2(m)"
+      ],
+      "notes": "High Road tramway opposite the Smithy; tick on the rail right of the figure",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_538955_186480",
+      "type": "spot",
+      "value_ft": 57.3,
+      "raw": "57\u00b73",
+      "confidence": "medium",
+      "n_readings": 2,
+      "readers": [
+        "opus-cm",
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104",
+        "m18_131072_87107"
+      ],
+      "bng_e": 538954.89,
+      "bng_n": 186480.36,
+      "spread_m": 0.42,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@586,995=57.3(m)",
+        "opus-cm:m18_131072_87107@584,226=57.3(m)"
+      ],
+      "notes": "Cathall Road at Percy Street; dot right after the H of CATHALL ~14 px W of figure",
+      "setting": "street",
+      "setting_source": "reader",
+      "setting_conflict": false
+    },
+    {
+      "id": "sh_538941_186477",
+      "type": "bench_mark",
+      "value_ft": 58.74,
+      "raw": "B.M.58\u00b774",
+      "confidence": "high",
+      "n_readings": 2,
+      "readers": [
+        "opus-cm",
+        "opus-cn"
+      ],
+      "mosaics": [
+        "m18_131072_87104",
+        "m18_131072_87107"
+      ],
+      "bng_e": 538941.02,
+      "bng_n": 186477.38,
+      "spread_m": 0.95,
+      "layer": "os-london-five-foot-1893",
+      "layers": [
+        "os-london-five-foot-1893"
+      ],
+      "scale": "1:1056",
+      "survey_dates": "1891-95 (published 1893-96)",
+      "datum": "OD Liverpool",
+      "source": "OS 1:1056 London 1891-96 via NLS",
+      "disputed": false,
+      "views": [
+        "opus-cn:m18_131072_87104@548,999=58.74(h)",
+        "opus-cm:m18_131072_87107@547,236=58.74(h)"
+      ],
+      "notes": "B.M. on the building wall south of Cathall Road near the south edge; pheon ~15 px NE of text; decimals 74 clear at 6x/12x; figure whole (ends py ~1019)",
+      "setting": "building",
+      "setting_source": "reader",
+      "setting_conflict": false
+    }
+  ],
+  "changedExisting": [
+    {
+      "id": "sh_539382_186829",
+      "changes": {
+        "setting": [
+          "street",
+          "railway"
+        ],
+        "setting_conflict": [
+          false,
+          true
+        ]
+      }
+    },
+    {
+      "id": "sh_539159_186538",
+      "changes": {
+        "confidence": [
+          "medium",
+          "high"
+        ]
+      }
+    }
+  ],
+  "note": "Live transcription changed during inventory. This is an inventory only, not automatic approval to replace source values or add terrain controls.",
+  "coverage": {
+    "reviewWindowKm2": 49,
+    "modernTerrainYear": 2003,
+    "modernTerrainValidPercent": 93.68,
+    "historicalTrialSupportKm2": 16.2041,
+    "cached1890sMosaicsIntersectingWindow": 541,
+    "cached1890sMosaicsWithCompletedReads": 361,
+    "cached1890sMosaicsWithoutCompletedReads": 180,
+    "completeTileMosaicFootprintKm2": 39.58229,
+    "footprintCaveat": "Nominal registered footprints of mosaics with no missing tiles; not a guarantee that map content or elevation readings cover every point."
+  },
+  "nextAction": "Reconcile live source additions, changed records and removed/merged IDs against frozen trial by position and provenance before importing; review existing medium-confidence street/ground readings in consequential gaps. Preserve frozen source and reviewed overrides."
+}

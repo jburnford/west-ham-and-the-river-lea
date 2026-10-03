@@ -97,5 +97,5 @@ export function greatEastern({THREE,scene,m,railway:r,box,surface,ballast}) {
   }
   water(r.northernWater,m.water,.06);water(r.northernWater,m.tidalWater,.06);
   surface(r.northernBanks.flatMap(([a,b,c,d])=>[[a,b,c],[a,c,d]]),earth,0,true);
-  return {length:r.length,tracks:r.tracks,bridges:r.bridges.length,sleepers:index,sewerCrossing:r.sewerCrossing};
+  return {id:r.id,length:r.length,tracks:r.tracks,bridges:r.bridges.length,sleepers:index,sewerCrossing:r.sewerCrossing};
 }

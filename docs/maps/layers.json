@@ -163,6 +163,28 @@
       "minZoom": 9,
       "maxNative": 15,
       "note": "Just after the book's period; the bookend for comparison."
+    },
+    {
+      "id": "national-grid-early",
+      "year": 1950,
+      "label": "1947–63",
+      "title": "National Grid plans, earlier sheets",
+      "path": "london_1940s",
+      "local": "os-national-grid-early",
+      "minZoom": 10,
+      "maxNative": 19,
+      "note": "Post-war plans at 1:1,250 and 1:2,500. The first detailed survey after the 1930s flood works: the Prescott Channel beside Three Mills, the rebuilt back rivers and allotments on Mill Meads. The National Library of Scotland built this layer from the earlier post-war sheets. Some plots in Canning Town are still open here and rebuilt on the later sheets."
+    },
+    {
+      "id": "national-grid-later",
+      "year": 1958,
+      "label": "1947–63",
+      "title": "National Grid plans, later sheets",
+      "path": "os/london_2500",
+      "local": "os-national-grid-later",
+      "minZoom": 10,
+      "maxNative": 19,
+      "note": "The same series built from later revised sheets, with ward names. Compare it with the earlier sheets to see post-war rebuilding. Individual sheets carry their own revision dates."
     }
   ],
   "vectors": [

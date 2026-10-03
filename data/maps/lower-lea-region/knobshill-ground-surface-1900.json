@@ -1,0 +1,290 @@
+{
+  "epoch": "1900",
+  "id": "knobshill-low-ground",
+  "name": "Low ground between Old Lea and Pudding Mill River, opposite Knobshill Cottage",
+  "reviewBoundsBNG": [
+    537400,
+    183970,
+    537570,
+    184145
+  ],
+  "reviewOutlineBNG": [
+    [
+      537408.674,
+      184141.505
+    ],
+    [
+      537557.473,
+      184145.535
+    ],
+    [
+      537560.941,
+      184017.527
+    ],
+    [
+      537517.778,
+      184016.729
+    ],
+    [
+      537513.385,
+      184014.011
+    ],
+    [
+      537512.299,
+      184012.868
+    ],
+    [
+      537510.911,
+      184009.117
+    ],
+    [
+      537508.146,
+      184001.245
+    ],
+    [
+      537504.687,
+      183991.497
+    ],
+    [
+      537502.244,
+      183985.49
+    ],
+    [
+      537500.806,
+      183983.594
+    ],
+    [
+      537499.328,
+      183983.183
+    ],
+    [
+      537496.342,
+      183983.473
+    ],
+    [
+      537493.326,
+      183984.877
+    ],
+    [
+      537490.29,
+      183987.023
+    ],
+    [
+      537486.127,
+      183989.509
+    ],
+    [
+      537483.121,
+      183990.542
+    ],
+    [
+      537479.783,
+      183990.08
+    ],
+    [
+      537477.149,
+      183991.122
+    ],
+    [
+      537474.494,
+      183992.907
+    ],
+    [
+      537471.126,
+      183993.559
+    ],
+    [
+      537467.034,
+      183993.448
+    ],
+    [
+      537463.666,
+      183994.099
+    ],
+    [
+      537459.906,
+      183995.483
+    ],
+    [
+      537456.115,
+      183997.979
+    ],
+    [
+      537452.667,
+      184001.599
+    ],
+    [
+      537447.72,
+      184005.55
+    ],
+    [
+      537412.379,
+      184004.593
+    ]
+  ],
+  "boundaryReview": {
+    "mosaic": "reference/spot-heights/mosaics/m18_131057_87131.png",
+    "registration": "reference/spot-heights/mosaics/m18_131057_87131.json",
+    "detailCrop": "reference/river-height-review-2026-10-01/m18_131057_87131_zoom_305_647_s4.png",
+    "nativePixels": [
+      [
+        100,
+        270
+      ],
+      [
+        500,
+        270
+      ],
+      [
+        500,
+        615
+      ],
+      [
+        384,
+        614
+      ],
+      [
+        372,
+        621
+      ],
+      [
+        369,
+        624
+      ],
+      [
+        365,
+        634
+      ],
+      [
+        357,
+        655
+      ],
+      [
+        347,
+        681
+      ],
+      [
+        340,
+        697
+      ],
+      [
+        336,
+        702
+      ],
+      [
+        332,
+        703
+      ],
+      [
+        324,
+        702
+      ],
+      [
+        316,
+        698
+      ],
+      [
+        308,
+        692
+      ],
+      [
+        297,
+        685
+      ],
+      [
+        289,
+        682
+      ],
+      [
+        280,
+        683
+      ],
+      [
+        273,
+        680
+      ],
+      [
+        266,
+        675
+      ],
+      [
+        257,
+        673
+      ],
+      [
+        246,
+        673
+      ],
+      [
+        237,
+        671
+      ],
+      [
+        227,
+        667
+      ],
+      [
+        217,
+        660
+      ],
+      [
+        208,
+        650
+      ],
+      [
+        195,
+        639
+      ],
+      [
+        100,
+        639
+      ]
+    ],
+    "note": "Southern outline follows the north side of the mapped ditch; other outline edges extend into adjacent water compartments. The actual surface is clipped to the dry component containing the 12.1ft dot. This review extent does not add a ditch bed or hydraulic connection."
+  },
+  "outlineTransitionMetres": [
+    0,
+    10
+  ],
+  "interiorPointBNG": [
+    537493.93,
+    184017.57
+  ],
+  "bankReachIds": [
+    "Lower_River_Lea-15",
+    "Lower_River_Lea-8"
+  ],
+  "bankControlIds": [],
+  "marshControlIds": [
+    "sh_537494_184017"
+  ],
+  "meshCellMetres": 4,
+  "bankTransitionMetres": [
+    6,
+    18
+  ],
+  "shoreTransitionMetres": [
+    0,
+    1.5
+  ],
+  "southernBlendNorthings": [
+    183930,
+    183950
+  ],
+  "northernBlendNorthings": [
+    184150,
+    184180
+  ],
+  "westernBlendEastings": [
+    537380,
+    537400
+  ],
+  "method": "Use the single reviewed 12.1ft ground dot as a local level estimate within its river-bounded dry compartment north of the mapped ditch. No slope can be measured from one dot. Join the margins to illustrative water and blend over 10m at the traced review edge rather than creating a hard elevation step.",
+  "limitations": [
+    "One ground observation supports a local approximately level surface, not a surveyed marsh slope or regional calibration.",
+    "No measured bank crest is available on this side of either river; edge slopes are interpreted. Do not borrow the higher readings from the opposite bank.",
+    "The southern ditch bounds the review but its invert, water level and discharge are not modelled. The blend is an uncertainty transition, not a historical embankment.",
+    "Knobshill Cottage and its garden are across Pudding Mill River and outside this patch.",
+    "Source-datum conversion remains provisional; water and bed levels remain illustrative; this patch is not applied to the flood solver."
+  ]
+}

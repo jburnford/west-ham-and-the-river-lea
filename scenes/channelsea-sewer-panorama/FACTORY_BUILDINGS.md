@@ -1,5 +1,20 @@
 # Factory buildings — mapped coverage and refinement, 27 September 2026
 
+29 September eastern-strip continuation: replace the sketch treatment between
+Channelsea and the Woolwich railway with 137 mapped roofs across twenty added
+sites. Upper mills/market/wharfs supply fifteen ranges; the northern chemical,
+brush, hardware and Abbey Road compounds supply thirty-eight; the southern
+works and Abbey Stores Yard supply eighty-four. Of these, 134 use the supplied
+OS extract and three are directly traced from original OS roof hatching.
+No Goad coverage or measured elevations are asserted: low eaves, storeys,
+materials and gable bays are explicit estimates. Eleven legacy grid blocks,
+seven rough frontage masses and six arbitrary sketch chimneys are suppressed
+when their reviewed sites load. All 544 earlier registered ranges and 88
+registered chimneys remain. New totals:681 ranges,63 sites,627 source-linked
+ranges,16 direct traces and2 provisional transfers. Small plant, chimney
+identities and architectural elevations still need evidence-led refinement.
+
+
 29 September Ritchie/Crown/western-trades continuation: thirty-seven ranges
 in twenty-three groups follow supplied exteriors, with one directly traced
 southern Crown/Johnson roof. All thirty-eight existing ranges and their height

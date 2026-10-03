@@ -1,0 +1,127 @@
+{
+  "geometryEpoch": "1900",
+  "defaultScenario": "east-to-west",
+  "purpose": "Connectivity sensitivity only. No water levels, discharge or inundation predictions.",
+  "crossingRoutePolicy": "Straight chord between mapped western trace endpoint and eastern channel start. Approximate search corridor, not a surveyed culvert alignment.",
+  "roadContext": {
+    "name": "Manor Road",
+    "mosaic": "m18_131075_87146",
+    "pixels": [
+      [
+        131,
+        205
+      ],
+      [
+        131,
+        425
+      ],
+      [
+        131,
+        590
+      ],
+      [
+        131,
+        635
+      ],
+      [
+        131,
+        694
+      ]
+    ],
+    "status": "Bounded 1900 carriageway restored in 3D, with a profile from three 1890s road spot heights. Railway alignment locally retraced; railway formation height remains provisional."
+  },
+  "scenarios": [
+    {
+      "id": "evidence-only",
+      "name": "Mapped channel only",
+      "westernPassage": false,
+      "crossing": "closed",
+      "description": "Only the identifiable eastern channel is connected. Unknown links are excluded, which does not establish that they were historically blocked."
+    },
+    {
+      "id": "crossing-blocked",
+      "name": "Crossing blocked",
+      "westernPassage": true,
+      "crossing": "closed",
+      "description": "Assume the western feature is a drain and its sluices pass water, but the railway/road crossing is blocked."
+    },
+    {
+      "id": "east-to-west",
+      "name": "East to west \u2014 working model",
+      "westernPassage": true,
+      "crossing": "east-to-west",
+      "description": "Preferred reconstruction: culverted drainage passes water east to west when western water levels permit, with controls preventing return flow. Nearby ground levels and mapped sluices support this interpretation; pipe dimensions and gate mechanism remain provisional. Arrows indicate intended passage, not continuous flow."
+    },
+    {
+      "id": "west-to-east",
+      "name": "One-way: west to east",
+      "westernPassage": true,
+      "crossing": "west-to-east",
+      "description": "Assume the opposite gate orientation, with western sluices passing water. Direction is a scenario, not historical evidence."
+    },
+    {
+      "id": "both-ways",
+      "name": "Unrestricted connection",
+      "westernPassage": true,
+      "crossing": "both",
+      "description": "Assume an open crossing in both directions and passing western sluices. This is an upper bound on possible connections, not on flood extent or flow capacity."
+    }
+  ],
+  "evidenceReview": [
+    {
+      "source": "West Ham: a study in social and industrial problems (1907), printed p29 note1, PDF p53",
+      "file": "reference/topography-research-2026-09-28/flood-evidence/west-ham-outer-london-inquiry-1907.pdf",
+      "finding": "Describes replacement of marsh watercourses by building sites and shortcomings in sewer capacity and pumping exposed by the 1888 flood.",
+      "modelUse": "Do not assume surviving mapped drains provide a free gravity outfall. Does not supply the local culvert dimensions or invert."
+    },
+    {
+      "source": "Jim Clifford, West Ham and the River Lea, chapter6, PDF p182 and note21",
+      "file": "West Ham and the River Lea_ A Social and E - Jim Clifford.pdf",
+      "finding": "Reports pump stoppage when flooding extinguished the fires in 1875 and 1888; the 1888 pump house required a fire engine to drain it.",
+      "modelUse": "Future flood scenarios must consider pumping failure separately from channel connectivity; no pump link or capacity assigned here."
+    },
+    {
+      "source": "1848-51 skeleton survey, s18_131072_87146 and s18_131075_87146",
+      "finding": "Railway and Marsh Lane are visible, but internal field drainage is sparsely represented.",
+      "modelUse": "No nineteenth-century drain disappearance or construction date inferred from omission. Do not copy the 1900 graph into 1850."
+    },
+    {
+      "source": "Essex Archives catalogue D/Z346/11321/1036",
+      "url": "https://www.essexarchivesonline.co.uk/result_details.aspx?ThisRecordsOffSet=1&id=1201477",
+      "finding": "A Manor Road drainage agreement is with Hackney Borough Council, dated18June1906.",
+      "modelUse": "Rejected as confirmation of this West Ham crossing; same road name is insufficient."
+    }
+  ],
+  "requiredBeforeHydraulics": [
+    "Represent the probable culverted connection and test uncertainty in the western drainage route",
+    "Constrain or bracket invert, opening size and barrel route",
+    "Test plausible sluice operation, blockage and return-flow cases for each event",
+    "Constrain railway formation and drainage crossing levels; road profile now tied to three map spot heights",
+    "Trace beyond the map boundary to a confirmed outfall or pumping system",
+    "Add period-specific pumping capacity, operation and failure scenarios"
+  ],
+  "hydraulicReady": false,
+  "workingInterpretation": {
+    "status": "preferred engineering inference, not surveyed pipe detail",
+    "connection": "Ditches on opposite sides of the embankment, their alignment and mapped sluices support a probable culverted drainage connection. Treating them as disconnected is a sensitivity case, not the preferred reconstruction.",
+    "intendedDirection": "east-to-west",
+    "levelEvidence": {
+      "easternGroundFeet": [
+        6.3,
+        6.4
+      ],
+      "westernGroundFeet": [
+        4.5,
+        4.9
+      ],
+      "controlIds": [
+        "sh_539244_182605",
+        "sh_539367_182599",
+        "sh_538923_182626",
+        "sh_538982_182621"
+      ],
+      "interpretation": "Ground beside this reach is approximately 0.4\u20130.6 m higher to the east. This supports the preferred direction but does not measure invert slope or water-level difference."
+    },
+    "gateInterpretation": "The one-way scenario approximates successful controlled drainage. A sluice label alone does not establish a flap gate, automatic operation, or constant east-to-west flow. High downstream water can stop drainage; ineffective or open controls may allow return flow."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "geometryEpoch": "1900",
+  "observationEpoch": "1890s",
+  "continuityAssumption": "1890s mapped drainage provisionally continued to 1900; other scene years require separate review.",
+  "source": "NLS OS London five-foot 1893-96 mosaics; source pixels measured from top left",
+  "features": [
+    {"id":"plaistow-east-drain","kind":"open-channel","mosaic":"m18_131075_87146","pixels":[[159,620],[245,621],[350,636],[520,645],[578,656],[630,653],[690,653],[790,646],[875,651],[918,658],[982,666]],"evidence":"Blue-filled channel east of the sheet join at pixel x350; continuous double-line western reach to Manor Road. Colour change coincides with sheet edge, not a mapped barrier.","render":true},
+    {"id":"junction-west-drain-candidate","kind":"unresolved-linear-feature","mosaic":"m18_131072_87146","pixels":[[240,627],[380,634],[615,637],[806,620]],"evidence":"Double-line feature linking labelled sluices. Drain versus adjoining path and covered sections require review.","render":false}
+  ],
+  "sluices": [
+    {"id":"west-junction","mosaic":"m18_131072_87146","pixel":[240,627]},
+    {"id":"middle-junction","mosaic":"m18_131072_87146","pixel":[615,637]},
+    {"id":"railway-west","mosaic":"m18_131072_87146","pixel":[806,620]},
+    {"id":"manor-road-north","mosaic":"m18_131075_87146","pixel":[159,228]}
+  ],
+  "connections": [
+    {"id":"railway-manor-road-crossing","from":"junction-west-drain-candidate","to":"plaistow-east-drain","kind":"possible-culvert","hydraulicallyEnabled":false,"invertODNMetres":null,"gateOperation":null,"evidence":"Aligned drainage features and sluice label on either side of railway/road corridor; underground route and levels unverified."}
+  ],
+  "sectionAssumptions": {
+    "renderBounds":[315,565,520,600],
+    "topWidthMetres":5,
+    "bedWidthMetres":2,
+    "depthBelowLowestRimMetres":0.9,
+    "standingWaterDepthMetres":0.3,
+    "boundaryFeatherMetres":6,
+    "status":"Illustrative section, not surveyed: dimensions, bed and water level are assumptions. Water is independent of the Channelsea tide.",
+    "boundaryMeaning":"Only the reach within supported reconstructed ground is rendered. Faded ends are model boundaries, not historical dams, outlets or channel ends."
+  },
+  "floodReady":false
+}

@@ -1,0 +1,44 @@
+{
+  "targetEpoch": "1900",
+  "purpose": "Build the regional landscape from available evidence while further map transcription proceeds separately.",
+  "modernReliefSigmaMetres": 100,
+  "correctionDecayMetres": 350,
+  "marshCompartmentFiles": [
+    "data/maps/lower-lea-region/pudding-city-marsh-1900.json"
+  ],
+  "marshPrior": {
+    "heightFeet": 12,
+    "datum": "OD Liverpool",
+    "authority": "User working expectation for marsh without better observations, 2 October 2026",
+    "fieldPatchIds": [
+      "north-railway-marsh",
+      "knobshill-low-ground",
+      "potters-ditch-low-ground",
+      "city-mill-bank-and-ground"
+    ],
+    "includeMappedMarshDitchesFootprint": true,
+    "interiorSetbackMetres": 5,
+    "boundaryTransitionMetres": 20,
+    "policy": "Use about 12 ft as the unsurveyed marsh prior within identified historical marsh footprints. Historical ground and ordinary street observations take precedence; banks, structures and works margins do not establish marsh height. Apply no such default to the whole valley or terrace. Blend only the outer modelling transition into adjoining relief; retain explicit estimated status."
+  },
+  "localMarshEstimates": [
+    {
+      "patchId": "city-mill-bank-and-ground",
+      "interiorSetbackMetres": 5,
+      "controlIds": [
+        "sh_537687_184334",
+        "sh_537793_184215"
+      ],
+      "method": "Use the existing reviewed field compartment, excluding a 5 m edge strip reserved for banks and transitions. Interpolate 11.2/10.8 ft ground levels along northing, clamping beyond the two observed northings. These constrain a gently graded marsh estimate, not modern fill or a cottage-garden level.",
+      "reason": "The user identifies these marsh-edge observations as lower than the 13.9 ft Knobshill Cottage garden. Their 0.4 ft difference supports only about 12 cm northward rise; modern terrain does not justify larger interior relief."
+    }
+  ],
+  "streetPolicy": "Use historical street and marsh-lane levels without a blanket fill subtraction. Adjacent ground may differ; preserve reviewed local relief.",
+  "earlierMarshPolicy": "Under the user's working assumption, a reviewed 1848-51 marsh-ground observation is a lower-bound estimate for 1900 where the same land surface survives. Later fill or building development may raise it. Retain original date, datum and surface role; do not treat banks, decks, benchmarks or channel beds as marsh ground. Specific evidence of excavation or a changed channel requires local review.",
+  "earlierMarshStatus": "Selected 1848–51 regional review now supplies 45 early low-lane and ground-margin proxies. They establish representative marsh levels under the author’s continuity assumption; they are not 45 interior marsh surveys.",
+  "modernReliefPolicy": "Modern relief is a fallback outside the broad historical marsh envelope only. Within that envelope the early regional marsh surface takes precedence, with later ground and bounded raised-surface evidence.",
+  "boundaryPolicy": "Corrections propagate only along dry grid edges that do not intersect mapped water or reviewed canal/structure exclusions. Exclusions are not hydraulic barrier heights.",
+  "missingDataPolicy": "Retain missing cells where neither modern terrain nor accepted historical interpolation supplies a height. No zero-height fallback.",
+  "regionalMarshBaselineFile": "data/maps/lower-lea-region/regional-marsh-baseline-1900.json",
+  "surfaceHierarchy": "Regional 1848–51 marsh estimate; later ground corrections; later streets and factory yards confined to mapped footprints; bank/wall margins and railway/sewer formations confined to their own footprints. Benchmarks do not become ground or crest heights."
+}

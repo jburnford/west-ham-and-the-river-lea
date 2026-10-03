@@ -282,6 +282,16 @@ async def east_channelsea(url):
     for site in sites:
         assert rendered['siteRanges'].get(str(site),0)==sum(b['siteId']==site for b in actual.values()),site
     assert rendered['chimneys']==expected['counts']['chimneys']
+    infra=json.loads((runner.ROOT/'docs/data/infrastructure.json').read_text())
+    assert report['render']['infrastructure']['raisedRailways']==len(infra['railways'])
+    assert 'north-london-connection' in {r['id'] for r in report['render']['railConnections']}
+    assert report['render']['factoryYards']['connectedTrackMetres']>1000
+    assert report['render']['factoryYards']['formationTriangles']>0
+    yard_report=report['render']['factoryYards']
+    yard_data=json.loads((runner.ROOT/'docs/data/factory-yards.json').read_text())
+    assert yard_report['sites']==yard_data['counts']['sites']
+    assert {9005,9006,9007}<={s['id'] for s in yard_data['sites']}
+    assert (yard_report['workingGrids'],yard_report['openWorkingCells'],yard_report['workingGridBoundaries'])==(1,20,49)
     print(f'Eastern strip: {len(ids)} reviewed building ranges at {len(sites)} new sites reached the renderer; all prior factory ranges and registered chimneys remain.',flush=True)
 
 
@@ -484,7 +494,9 @@ if __name__ == '__main__':
     parser.add_argument('--soap-wharves-only', action='store_true', help='Review Cook soap works, Bow Bridge/Magnet wharves and Lime Works plant')
     parser.add_argument('--mill-brush-brewery-only', action='store_true', help='Review the mill, Smith brush/fibre works, Bow Brewery court and mineral-water works')
     parser.add_argument('--marshgate-trades-only', action='store_true', help='Review Jeffrey glue works, Marshgate chemical works and Alderson rope works')
-    parser.add_argument('--east-channelsea-only', action='store_true', help='Review eastern river frontage, gasworks, manure works and eastern housing')
+    parser.add_argument('--east-channelsea-only', action='store_true', help='Review the mapped works, wharves, market and yards east of the Channelsea')
+    parser.add_argument('--east-railways-only', action='store_true', help='Review the northern connection, mapped underpass and complete depot throat')
+    parser.add_argument('--east-working-context-only', action='store_true', help='Review eastern wharf ground, open working grid, station alignment and railway joins')
     parser.add_argument('--remaining-trades-only', action='store_true', help='Review Ritchie jute, Crown/Johnson and the remaining western trades')
     parser.add_argument('--three-mills-landmarks-only', action='store_true', help='Review House/Clock Mills and the bonded wharf')
     parser.add_argument('--three-mills-south-only', action='store_true', help='Review the southern Three Mills ranges and tanks')
@@ -826,7 +838,7 @@ if __name__ == '__main__':
             'imperial-crown-230-plan': {'position':[-698,150,505],'target':[-698,0,500],'fov':62},
         }
         action=remaining_trades
-    if args.east_channelsea_only:
+    if args.east_channelsea_only or args.east_railways_only or args.east_working_context_only:
         runner.REPORT_NAME='east-channelsea-alignment-checks.json'
         runner.VIEWS={
             'east-strip-overview': {'position':[540,520,560],'target':[25,0,-160],'fov':65},
@@ -835,15 +847,30 @@ if __name__ == '__main__':
             'east-strip-south-plan': {'position':[65,310,220],'target':[65,0,212],'fov':62},
             'east-strip-riverfront': {'position':[-145,60,255],'target':[35,5,155],'fov':65},
             'east-strip-wharfs': {'position':[-90,260,-730],'target':[-150,0,-743],'fov':62},
+            'east-victoria-working-grid': {'position':[-29,100,-312],'target':[-29,0,-318],'fov':62},
+            'east-stratford-station-plan': {'position':[-105,190,-790],'target':[-110,0,-797],'fov':62},
             'east-strip-stirling-close': {'position':[85,45,80],'target':[160,6,-4],'fov':65},
             'east-abbey-frontage': {'position':[70,160,150],'target':[-185,0,-13],'fov':65},
+            'east-rail-network': {'position':[-750,560,-650],'target':[-720,0,-1110],'fov':70},
+            'east-rail-underpass': {'position':[-445,24,-1260],'target':[-391,6,-1230],'fov':65},
+            'east-depot-throat': {'position':[-55,55,-315],'target':[70,4,-380],'fov':65},
         }
+        if args.east_railways_only:
+            runner.VIEWS={name:view for name,view in runner.VIEWS.items()
+                          if name in {'east-rail-network','east-rail-underpass','east-depot-throat'}}
+            runner.REPORT_NAME='east-railways-checks.json'
+        if args.east_working_context_only:
+            runner.VIEWS={name:view for name,view in runner.VIEWS.items()
+                          if name in {'east-strip-wharfs','east-victoria-working-grid',
+                                      'east-stratford-station-plan','east-rail-network',
+                                      'east-rail-underpass','east-depot-throat'}}
+            runner.REPORT_NAME='east-working-context-checks.json'
         action=east_channelsea
     if args.view:
         if args.view not in runner.VIEWS:parser.error('Unknown selected view: '+args.view)
         runner.VIEWS={args.view:runner.VIEWS[args.view]}
         runner.REPORT_NAME=args.view+'-checks.json'
-        action=east_channelsea if args.east_channelsea_only else remaining_trades if args.remaining_trades_only else marshgate_trades if args.marshgate_trades_only else mill_brush_brewery if args.mill_brush_brewery_only else soap_wharves if args.soap_wharves_only else west_mills if args.west_mills_only else ratner_albion if args.ratner_albion_only else three_mills if (args.three_mills_north_only or args.three_mills_south_only or args.three_mills_landmarks_only) else runner.review
+        action=east_channelsea if (args.east_channelsea_only or args.east_railways_only or args.east_working_context_only) else remaining_trades if args.remaining_trades_only else marshgate_trades if args.marshgate_trades_only else mill_brush_brewery if args.mill_brush_brewery_only else soap_wharves if args.soap_wharves_only else west_mills if args.west_mills_only else ratner_albion if args.ratner_albion_only else three_mills if (args.three_mills_north_only or args.three_mills_south_only or args.three_mills_landmarks_only) else runner.review
     if args.url:
         asyncio.run(action(args.url.rstrip('/')))
         raise SystemExit

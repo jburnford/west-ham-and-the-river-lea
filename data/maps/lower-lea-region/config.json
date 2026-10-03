@@ -1,0 +1,10 @@
+{
+  "targetEpoch": "1900",
+  "reviewBoundsBNG": [535000, 180000, 542000, 187000],
+  "reviewWindowStatus": "49 km² review window for locating floodplain margins; not an approved hydraulic boundary",
+  "cellSizeMetres": 10,
+  "nearConnectionMetres": 15,
+  "contactToleranceMetres": 0.05,
+  "terrainRole": "Continuous 2003 relief reference; historical correction pending",
+  "sourceRiverPolicy": "Retain source geometry and source date claims. Repair derived copies, never silently join gaps or equate mapped contact with hydraulic connection."
+}

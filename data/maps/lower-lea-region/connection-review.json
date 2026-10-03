@@ -1,0 +1,809 @@
+{
+  "schemaVersion": 1,
+  "targetEpoch": "1900",
+  "policy": "Review constraints only. Geometric contact and provisional mapping continuity do not authorise hydraulic passage. Mill controls may lie inside a single reach as well as at polygon joins. Unknown restriction is neither an open connection nor a solid dam.",
+  "navigationReachIds": [
+    "Lower_River_Lea-18",
+    "Lower_River_Lea-22"
+  ],
+  "navigationPolicy": "Audit all external contacts of these mapped navigation reaches, including touching polygons. Do not infer a gate at each contact or one shared water level across all reaches.",
+  "connectionReviews": [
+    {
+      "a": "Lower_River_Lea-0-part-0",
+      "b": "Lower_River_Lea-0-part-1",
+      "category": "provisional-mapping-seam",
+      "note": "0.11 m separation within the same Bow Creek source feature; accept as provisional cartographic continuity, without changing bank geometry or assigning hydraulic capacity."
+    },
+    {
+      "a": "Lower_River_Lea-0-part-1",
+      "b": "Lower_River_Lea-0-part-2",
+      "category": "provisional-mapping-seam",
+      "note": "0.14 m separation within the same Bow Creek source feature; accept as provisional cartographic continuity, without changing bank geometry or assigning hydraulic capacity."
+    },
+    {
+      "a": "Lower_River_Lea-3-part-0",
+      "b": "Lower_River_Lea-4-part-0",
+      "category": "provisional-mapping-seam",
+      "note": "0.32 m same-river seam; provisional cartographic continuity. Waterworks mill controls still require a separate review within the reaches."
+    },
+    {
+      "a": "Lower_River_Lea-2-part-0",
+      "b": "Lower_River_Lea-9-part-0",
+      "category": "channel-junction-review",
+      "note": "Check channel continuity on the period sheet; no restriction inferred merely from a 3 m gap."
+    },
+    {
+      "a": "Lower_River_Lea-5-part-0",
+      "b": "Lower_River_Lea-6-part-0",
+      "category": "mapped-weir-review",
+      "note": "Direct five-foot map review locates Templemills Bridge and a labelled Weir at this reach break. Preserve the control rather than joining it as an unrestricted cartographic seam; crest and openings unresolved.",
+      "evidence": [
+        "period-map-comparison"
+      ]
+    },
+    {
+      "a": "Lower_River_Lea-13-part-0",
+      "b": "Lower_River_Lea-14-part-0",
+      "category": "mill-site-review",
+      "note": "Review alongside the Abbey Mill (Corn) map supplied by the author. Association with this join is provisional until the crop is registered; do not close or freely bridge the gap on distance alone."
+    },
+    {
+      "a": "Lower_River_Lea-17-part-0",
+      "b": "Lower_River_Lea-22-part-0",
+      "category": "mapped-navigation-junction",
+      "note": "Author map shows the western Bow Back River mouth opening into the River Lea/Navigation. Treat the 2.08 m polygon gap as a mapping seam at this junction, not an inferred lock or dam. No gate is shown at the mouth; the dashed boundary is administrative. Channel dimensions and hydraulic losses still need review.",
+      "evidence": [
+        "author-navigation-map"
+      ]
+    }
+  ],
+  "sources": {
+    "author-abbey-map": {
+      "path": "data/maps/lower-lea-region/evidence/abbey-mill-user-map.png",
+      "received": "2026-10-01",
+      "date": null,
+      "note": "Author screenshot: Abbey Mill (Corn), divided/narrow water passages and F.P. label. Sheet/date/registration unresolved. Nearby height labels are not established sill or bed levels. Distinct from Abbey Mills pumping station."
+    },
+    "book-ch1": {
+      "path": "West Ham and the River Lea_ A Social and E - Jim Clifford.pdf",
+      "chapter": 1,
+      "note": "1824 dispute over tidal storage at Three Mills and Four Mills; complainants’ evidence, not proof of unchanged 1900 operation."
+    },
+    "book-ch6": {
+      "path": "West Ham and the River Lea_ A Social and E - Jim Clifford.pdf",
+      "chapter": 6,
+      "note": "Obstructed back rivers; 1908-09 proposed improvements failed; City Mill and Waterworks floodgate disrepair in 1920; 1930s reconstruction. Do not backdate 1920 condition or build rejected proposals."
+    },
+    "bow-locks-history": {
+      "path": "reference/topography-research-2026-09-28/flood-evidence/bow-locks.html",
+      "url": "http://www.leeandstort.co.uk/Bow_Locks.htm",
+      "note": "Compilation reports rejected 1898 Three Mills junction tide-gate proposal, LMA ACC 2423/006; Bow western lock works 1900, eastern lock 1931, highest-tide exclusion 2000. Original records not inspected."
+    },
+    "author-waterworks-map": {
+      "path": "data/maps/lower-lea-region/evidence/waterworks-flood-gate-user-map.png",
+      "received": "2026-10-01",
+      "date": null,
+      "note": "Author screenshot explicitly labels Flood Gate across the Waterworks River and F.B. alongside. Gate existence on this map is direct evidence; sheet date, registration, opening dimensions and operating state unresolved."
+    },
+    "author-city-mills-map": {
+      "path": "data/maps/lower-lea-region/evidence/city-mills-user-map.png",
+      "received": "2026-10-01",
+      "date": null,
+      "note": "Author screenshot labels City Mills (Chemical), shows water passages and crossings. Mill name is not proof of active water-powered milling. No explicit floodgate label identified in this crop. Nearby spot heights and B.M. 17.85 are not sill levels. Sheet/date/registration unresolved."
+    },
+    "author-bow-back-map": {
+      "path": "data/maps/lower-lea-region/evidence/bow-back-marshgate-user-map.png",
+      "received": "2026-10-01",
+      "date": null,
+      "note": "Author identifies east–west Bow Back River connection under the bridge. Crop shows Marshgate Lane road crossing and Lock label immediately to its west. Retain channel continuity under the road; model any lock separately. Exact registration and gate state unresolved."
+    },
+    "author-pudding-map": {
+      "path": "data/maps/lower-lea-region/evidence/pudding-mill-user-map.png",
+      "received": "2026-10-01",
+      "date": null,
+      "note": "Map labels St. Thomas’s Mills (Patent Food). Author identifies this as Pudding Mill River, with its only passage through the mill, and states poor flow by the 1890s. Keep that author dating distinct from the book’s 1908-09 congestion account. No sill, opening size, gate state or bypass established from this crop."
+    },
+    "author-navigation-map": {
+      "path": "data/maps/lower-lea-region/evidence/bow-back-navigation-user-map.png",
+      "received": "2026-10-01",
+      "date": null,
+      "note": "Author identifies western Bow Back River junction with the canal. Crop shows a continuous open mouth into River Lea; no lock/gate shown at that mouth. Dashed administrative boundary is not a hydraulic barrier. Distinct from the lock beside Marshgate Lane at the eastern end. Sheet/date/registration unresolved."
+    },
+    "author-old-ford-map": {
+      "path": "data/maps/lower-lea-region/evidence/old-ford-navigation-user-map.png",
+      "received": "2026-10-01",
+      "date": null,
+      "note": "Author identifies Navigation–Old Lea link feeding the upper back rivers. Crop labels Old Ford Lock on navigation and Flood Gate on a separate side connection. These are distinct controls. Dashed administrative boundaries are not barriers. Exact registration, source date, sill heights and operations unresolved."
+    },
+    "author-upper-branches-map": {
+      "path": "data/maps/lower-lea-region/evidence/upper-back-rivers-user-map.png",
+      "received": "2026-10-01",
+      "date": null,
+      "note": "Author identifies top of the back rivers. Wider crop relates Old Lea/Old Ford context to branching channels, railway crossings and smaller field drains. Review visible channel routes across railway and map-sheet lines; neither a railway line nor an administrative boundary establishes a solid hydraulic barrier. Exact branch identification and registration pending."
+    },
+    "author-upper-channelsea-map": {
+      "path": "data/maps/lower-lea-region/evidence/upper-channelsea-user-map.png",
+      "received": "2026-10-01",
+      "date": null,
+      "note": "Author identifies top of Channelsea. Crop labels Channelsea River on narrow branch beside Waterworks River and shows upper connecting passage. Trace the channel and its connection; do not silently terminate at source polygon boundary. Registration, source date and dimensions unresolved; no operating gate inferred from this crop. Subsequent author correction identifies the Old Lea as the adjoining wider river that branches into Waterworks and City Mill lower down; do not conflate the Old Lea, the separately labelled Waterworks reach, and the navigation."
+    },
+    "period-map-comparison": {
+      "path": "reference/lower-lea-connection-review/map-crops.json",
+      "note": "Direct visual comparison of cached georeferenced NLS five-foot 1893 layer and London skeleton c1848–51 layer. Individual sheet dates remain unverified; earlier sparse mapping cannot establish absence of a gate. Crops retain native pixels. Approximate mapped site locations are not surveyed hydraulic cross-sections."
+    },
+    "author-three-mills-map": {
+      "path": "data/maps/lower-lea-region/evidence/three-mills-user-map.png",
+      "received": "2026-10-01",
+      "date": null,
+      "note": "Author confirms Three Mills needs water connection through its buildings. Crop shows northern water terminating at mill/distillery footprints and water reappearing to south. Retain restricted mill passage; do not treat building footprint as a solid dam or carve an open-water bypass."
+    },
+    "six-inch-second-network-review": {
+      "path": "reference/lower-lea-connection-review/six-inch-review.json",
+      "layerId": "six-inch-2nd",
+      "seriesDates": "1888–1913, sheet dates vary",
+      "note": "Author-requested direct review of locally cached blue-water six-inch second-edition maps. Five native-resolution panels cover the upper branches, middle network, southern creek/Thames and junction details. Blue shading identifies mapped water coverage, not hydraulic capacity or gate state."
+    }
+  },
+  "controlSites": [
+    {
+      "id": "abbey-corn-mill",
+      "name": "Abbey Mill (Corn)",
+      "reachIds": [
+        "Lower_River_Lea-13",
+        "Lower_River_Lea-14"
+      ],
+      "evidence": [
+        "author-abbey-map",
+        "period-map-comparison"
+      ],
+      "note": "Candidate restriction at the mill passages. Trace each passage, any wheel opening and bypass separately. Map crop alone does not establish an operating gate, sill elevation or a continuous dam.",
+      "positionBNG": [
+        538883.6,
+        183258.1
+      ],
+      "locationStatus": "Located approximately on georeferenced five-foot map; site marker, not a surveyed control cross-section",
+      "targetEpoch": "1900",
+      "activeInSolver": false,
+      "crestODN": null,
+      "sillODN": null,
+      "openingWidthMetres": null,
+      "operatingState": null,
+      "mapPixelReview": {
+        "crop": "abbey-mill-os-london-five-foot-1893.png",
+        "pixel": [
+          203,
+          266
+        ],
+        "interpretationToleranceMetres": 5
+      }
+    },
+    {
+      "id": "three-mills",
+      "name": "Three Mills",
+      "reachIds": [
+        "Lower_River_Lea-1",
+        "Lower_River_Lea-2",
+        "Lower_River_Lea-0"
+      ],
+      "evidence": [
+        "book-ch1",
+        "book-ch6",
+        "author-three-mills-map",
+        "period-map-comparison"
+      ],
+      "note": "Author-confirmed passage through the Three Mills buildings to Bow Creek. Full-map review finds the shared upstream water area and downstream river separated in the source polygons by about 26 m across the mill footprint. Preserve a single mill-control group for the two adjoining upstream reaches; do not add independent capacities for each source polygon or invent an open bypass. This is distinct from the rejected 1898 navigation-junction tide gate.",
+      "positionBNG": [
+        538298.6,
+        182821.4
+      ],
+      "locationStatus": "Approximate mill site on georeferenced five-foot map; individual wheel openings and cross-sections unresolved",
+      "targetEpoch": "1900",
+      "activeInSolver": false,
+      "crestODN": null,
+      "sillODN": null,
+      "openingWidthMetres": null,
+      "operatingState": null,
+      "mapPixelReview": {
+        "crop": "three-mills-os-london-five-foot-1893.png",
+        "pixel": [
+          366,
+          364
+        ],
+        "interpretationToleranceMetres": 5
+      }
+    },
+    {
+      "id": "city-mill",
+      "name": "City Mill",
+      "reachIds": [
+        "Lower_River_Lea-7"
+      ],
+      "evidence": [
+        "book-ch6",
+        "author-city-mills-map"
+      ],
+      "note": "Author map labels City Mills (Chemical) and shows passages and crossings to trace; it does not establish an operating watermill or gate setting. Chapter 6 documents City Mill River floodgate disrepair in 1920; locate the structures and establish their c1900 state separately.",
+      "positionBNG": null,
+      "locationStatus": "Reach association for review; control cross-section not located",
+      "targetEpoch": "1900",
+      "activeInSolver": false,
+      "crestODN": null,
+      "sillODN": null,
+      "openingWidthMetres": null,
+      "operatingState": null
+    },
+    {
+      "id": "waterworks-mill",
+      "name": "Waterworks Mill",
+      "reachIds": [
+        "Lower_River_Lea-3",
+        "Lower_River_Lea-4"
+      ],
+      "evidence": [
+        "book-ch6"
+      ],
+      "note": "Chapter 6 identifies Waterworks River floodgates in 1920. Locate mill/sluice cross-sections; do not interpret all upstream Waterworks polygon joins as gates.",
+      "positionBNG": null,
+      "locationStatus": "Reach association for review; control cross-section not located",
+      "targetEpoch": "1900",
+      "activeInSolver": false,
+      "crestODN": null,
+      "sillODN": null,
+      "openingWidthMetres": null,
+      "operatingState": null
+    },
+    {
+      "id": "pudding-mill",
+      "name": "Pudding Mill River / St. Thomas’s Mills",
+      "reachIds": [
+        "Lower_River_Lea-8",
+        "Lower_River_Lea-9"
+      ],
+      "evidence": [
+        "book-ch6",
+        "author-pudding-map",
+        "period-map-comparison"
+      ],
+      "note": "Author identifies the only river passage here as through St. Thomas’s Mills (Patent Food), with poor flow by the 1890s. Preserve this restricted through-building route; do not create an open-water bypass. Chapter 6 independently describes congestion in 1908-09; dimensions and c1900 discharge remain unresolved.",
+      "positionBNG": [
+        538015.4,
+        183405.6
+      ],
+      "locationStatus": "Located approximately on georeferenced five-foot map; site marker, not a surveyed control cross-section",
+      "targetEpoch": "1900",
+      "activeInSolver": false,
+      "crestODN": null,
+      "sillODN": null,
+      "openingWidthMetres": null,
+      "operatingState": null,
+      "mapPixelReview": {
+        "crop": "pudding-mill-os-london-five-foot-1893.png",
+        "pixel": [
+          221,
+          247
+        ],
+        "interpretationToleranceMetres": 5
+      }
+    },
+    {
+      "id": "bow-locks",
+      "name": "Bow Locks",
+      "reachIds": [
+        "Lower_River_Lea-18",
+        "Lower_River_Lea-0"
+      ],
+      "evidence": [
+        "bow-locks-history",
+        "period-map-comparison",
+        "six-inch-second-network-review"
+      ],
+      "note": "Full-map review identifies the Navigation lock passage into Bow Creek. The source polygons are separated by 15.065 m here, just beyond the original gap search. Preserve a lock-controlled connection while Bow Creek continues alongside it. Keep the Limehouse Cut approach and its dated Bromley Lock layout separate. Resolve works during 1900; do not insert the 1931 second chamber or 2000 tidal-exclusion behaviour.",
+      "positionBNG": [
+        538296.8,
+        182368.9
+      ],
+      "locationStatus": "Approximate upper tidal-lock site on georeferenced five-foot map; gates and hydraulic cross-section unresolved",
+      "targetEpoch": "1900",
+      "activeInSolver": false,
+      "crestODN": null,
+      "sillODN": null,
+      "openingWidthMetres": null,
+      "operatingState": null,
+      "mapPixelReview": {
+        "crop": "bow-locks-junction-os-london-five-foot-1893.png",
+        "pixel": [
+          695,
+          366
+        ],
+        "interpretationToleranceMetres": 5
+      }
+    },
+    {
+      "id": "waterworks-flood-gate",
+      "name": "Waterworks River flood gate",
+      "reachIds": [
+        "Lower_River_Lea-3",
+        "Lower_River_Lea-4",
+        "Lower_River_Lea-5",
+        "Lower_River_Lea-6"
+      ],
+      "evidence": [
+        "author-waterworks-map"
+      ],
+      "note": "Explicit Flood Gate label at a constricted cross-channel passage with F.B. nearby. Whole Waterworks corridor selected until the map crop is registered; this does not place a gate at every polygon join. Do not assume this is the same structure as the mill-associated floodgates in the 1920 account.",
+      "positionBNG": null,
+      "locationStatus": "Mapped structure; exact cross-section and source date unresolved",
+      "targetEpoch": "1900",
+      "activeInSolver": false,
+      "crestODN": null,
+      "sillODN": null,
+      "openingWidthMetres": null,
+      "operatingState": null
+    },
+    {
+      "id": "marshgate-lock",
+      "name": "Lock beside Marshgate Lane bridge",
+      "reachIds": [
+        "Lower_River_Lea-17",
+        "Lower_River_Lea-21",
+        "Lower_River_Lea-9"
+      ],
+      "evidence": [
+        "author-bow-back-map"
+      ],
+      "note": "Author confirms the Bow Back River connects beneath this bridge. Map labels Lock west of Marshgate Lane. Preserve the under-bridge water route and assess the lock as a separate control; a road footprint must not close the channel. Associated reaches are provisional until crop registration.",
+      "positionBNG": null,
+      "locationStatus": "Mapped lock and author-confirmed under-bridge route; cross-section registration pending",
+      "targetEpoch": "1900",
+      "activeInSolver": false,
+      "crestODN": null,
+      "sillODN": null,
+      "openingWidthMetres": null,
+      "operatingState": null
+    },
+    {
+      "id": "old-ford-lock",
+      "name": "Old Ford Lock",
+      "reachIds": [
+        "Lower_River_Lea-15",
+        "Lower_River_Lea-22"
+      ],
+      "evidence": [
+        "author-old-ford-map",
+        "period-map-comparison"
+      ],
+      "note": "Lock explicitly labelled on the navigation. Preserve it separately from the floodgate on the lateral connection; operating state and exact cross-section unresolved.",
+      "positionBNG": [
+        537349.6,
+        183985.1
+      ],
+      "locationStatus": "Located approximately on georeferenced five-foot map; site marker, not a surveyed control cross-section",
+      "targetEpoch": "1900",
+      "activeInSolver": false,
+      "crestODN": null,
+      "sillODN": null,
+      "openingWidthMetres": null,
+      "operatingState": null,
+      "mapPixelReview": {
+        "crop": "old-ford-os-london-five-foot-1893.png",
+        "pixel": [
+          434,
+          386
+        ],
+        "interpretationToleranceMetres": 5
+      }
+    },
+    {
+      "id": "old-ford-side-floodgate",
+      "name": "Old Ford side-connection floodgate",
+      "reachIds": [
+        "Lower_River_Lea-15",
+        "Lower_River_Lea-22"
+      ],
+      "evidence": [
+        "author-old-ford-map",
+        "period-map-comparison"
+      ],
+      "note": "Flood Gate explicitly labelled on the side route between the navigation and Old Lea, identified by the author as the link to the upper back rivers. Preserve this route and its separate control; do not merge it with the navigation lock or assign a permanently closed state.",
+      "positionBNG": [
+        537376.4,
+        183946.4
+      ],
+      "locationStatus": "Located approximately on georeferenced five-foot map; site marker, not a surveyed control cross-section",
+      "targetEpoch": "1900",
+      "activeInSolver": false,
+      "crestODN": null,
+      "sillODN": null,
+      "openingWidthMetres": null,
+      "operatingState": null,
+      "mapPixelReview": {
+        "crop": "old-ford-os-london-five-foot-1893.png",
+        "pixel": [
+          503,
+          492
+        ],
+        "interpretationToleranceMetres": 5
+      }
+    },
+    {
+      "id": "temple-mills-weir",
+      "name": "Temple Mills bridge weir",
+      "reachIds": [
+        "Lower_River_Lea-5",
+        "Lower_River_Lea-6"
+      ],
+      "evidence": [
+        "period-map-comparison"
+      ],
+      "note": "Weir is explicitly labelled beside Templemills Bridge on the five-foot layer. The early skeleton map shows the bridge/channel layout, but does not resolve an identical control. Preserve the control during repair of the 1.78 m source seam.",
+      "positionBNG": [
+        537572.2,
+        185482.1
+      ],
+      "locationStatus": "Approximate position of mapped Weir label/crossing on georeferenced later sheet; crest and cross-section unresolved",
+      "targetEpoch": "1900",
+      "activeInSolver": false,
+      "crestODN": null,
+      "sillODN": null,
+      "openingWidthMetres": null,
+      "operatingState": null,
+      "mapPixelReview": {
+        "crop": "upper-channelsea-os-london-five-foot-1893.png",
+        "pixel": [
+          488,
+          556
+        ],
+        "interpretationToleranceMetres": 5
+      }
+    }
+  ],
+  "excludedStructures": [
+    {
+      "id": "three-mills-junction-proposed-tide-gate",
+      "proposedYear": 1898,
+      "status": "rejected proposal",
+      "activeInSolver": false,
+      "evidence": [
+        "bow-locks-history"
+      ]
+    }
+  ],
+  "futureHydraulics": {
+    "parameters": [
+      "crestODN",
+      "sillODN",
+      "openingWidthMetres",
+      "operatingState"
+    ],
+    "sensitivityCases": [
+      "less restricted passage",
+      "more restricted passage"
+    ],
+    "requirements": [
+      "Resolve normal river and tidal flow through mill openings, bypasses and overtopping together.",
+      "Allow different water levels on either side of a control and storage upstream.",
+      "Test backwater with upstream river input and downstream tide; do not assume east-to-west flow at all times.",
+      "Record dated existence and operating evidence separately for 1848-50, 1888, 1897, 1900, 1904 and 1928."
+    ],
+    "status": "Scenario design only; no numeric capacity or flood result assigned"
+  },
+  "routeConstraints": [
+    {
+      "id": "bow-back-marshgate-under-bridge",
+      "evidence": [
+        "author-bow-back-map"
+      ],
+      "reachIds": [
+        "Lower_River_Lea-17",
+        "Lower_River_Lea-21",
+        "Lower_River_Lea-9"
+      ],
+      "channelContinuity": "author-confirmed route under bridge; precise source-part endpoints pending registration",
+      "roadDeckIsChannelBed": false,
+      "unrestrictedHydraulicPassage": null,
+      "note": "Retain water passage below the bridge when burning roads/terrain. Lock capacity, gate state and possible overtopping are separate from channel continuity. This is the eastern Marshgate route, not the western 2.08 m gap to the Lee Navigation."
+    },
+    {
+      "id": "pudding-through-mill",
+      "evidence": [
+        "author-pudding-map",
+        "book-ch6"
+      ],
+      "reachIds": [
+        "Lower_River_Lea-8",
+        "Lower_River_Lea-9"
+      ],
+      "channelContinuity": "author-confirmed through-mill passage, without a parallel bypass at this site",
+      "buildingFootprintIsSolidDam": false,
+      "inventParallelBypass": false,
+      "unrestrictedHydraulicPassage": false,
+      "capacity": null,
+      "poorFlowEvidence": [
+        {
+          "period": "1890s",
+          "source": "author-pudding-map",
+          "status": "author statement accompanying map"
+        },
+        {
+          "period": "1908-1909",
+          "source": "book-ch6",
+          "status": "chapter account of channel congestion"
+        }
+      ]
+    },
+    {
+      "id": "bow-back-navigation-mouth",
+      "evidence": [
+        "author-navigation-map"
+      ],
+      "reachIds": [
+        "Lower_River_Lea-17",
+        "Lower_River_Lea-22"
+      ],
+      "channelContinuity": "mapped open mouth; 2.08 m source polygon seam",
+      "inventGateAtMouth": false,
+      "boundaryLineIsBarrier": false,
+      "capacity": null
+    },
+    {
+      "id": "old-ford-side-connection",
+      "evidence": [
+        "author-old-ford-map"
+      ],
+      "reachIds": [
+        "Lower_River_Lea-15",
+        "Lower_River_Lea-22"
+      ],
+      "channelContinuity": "author-identified navigation–Old Lea side connection, with Flood Gate labelled",
+      "navigationLockAndSideGateAreSeparate": true,
+      "unrestrictedHydraulicPassage": false,
+      "operatingState": null,
+      "capacity": null,
+      "note": "Map evidence establishes separate routes and structures. Exact source-part assignment requires registration; no gate inserted at a computed contact coordinate."
+    },
+    {
+      "id": "three-mills-through-buildings",
+      "evidence": [
+        "author-three-mills-map",
+        "period-map-comparison"
+      ],
+      "reachIds": [
+        "Lower_River_Lea-1",
+        "Lower_River_Lea-2",
+        "Lower_River_Lea-0"
+      ],
+      "upstreamNodes": [
+        "Lower_River_Lea-1-part-0",
+        "Lower_River_Lea-2-part-0"
+      ],
+      "downstreamNode": "Lower_River_Lea-0-part-2",
+      "controlGroupId": "three-mills",
+      "channelContinuity": "author-confirmed mill passage between shared upstream water area and Bow Creek",
+      "buildingFootprintIsSolidDam": false,
+      "inventParallelBypass": false,
+      "unrestrictedHydraulicPassage": false,
+      "capacity": null,
+      "countCapacityOncePerControlGroup": true,
+      "note": "Source reaches 1 and 2 meet above the mill. One schematic link represents their shared mill control, not a survey of individual wheel bays. Do not add two independent capacities merely because there are two GIS features."
+    },
+    {
+      "id": "bow-locks-controlled-connection",
+      "reachIds": [
+        "Lower_River_Lea-18",
+        "Lower_River_Lea-0"
+      ],
+      "evidence": [
+        "period-map-comparison",
+        "bow-locks-history"
+      ],
+      "channelContinuity": "mapped lock passage; Bow Creek remains a separate through river",
+      "unrestrictedHydraulicPassage": false,
+      "capacity": null,
+      "operatingState": null,
+      "limehouseCutIsSeparateRoute": true,
+      "note": "Do not flatten canal, lock and tidal creek into one unrestricted water body or use a modern junction layout for every epoch. The Cut approach still needs separate geometry review."
+    }
+  ],
+  "structureRoutes": [
+    {
+      "a": "Lower_River_Lea-8-part-0",
+      "b": "Lower_River_Lea-9-part-0",
+      "siteId": "pudding-mill",
+      "category": "through-mill-passage",
+      "evidence": [
+        "author-pudding-map"
+      ],
+      "note": "Author-confirmed through-mill route. The line joins nearest mapped endpoints schematically; it is not a surveyed passage centreline or an open-channel repair. No bypass or numeric capacity assigned."
+    },
+    {
+      "a": "Lower_River_Lea-1-part-0",
+      "b": "Lower_River_Lea-0-part-2",
+      "siteId": "three-mills",
+      "controlGroupId": "three-mills",
+      "category": "through-mill-passage",
+      "evidence": [
+        "author-three-mills-map",
+        "period-map-comparison"
+      ],
+      "note": "Restricted passage through mill buildings to Bow Creek, shared by adjoining upstream reaches 1 and 2. Nearest mapped endpoints give a schematic link only; wheel passages, sill and capacity remain unresolved. No open bypass or duplicate capacity."
+    },
+    {
+      "a": "Lower_River_Lea-18-part-0",
+      "b": "Lower_River_Lea-0-part-2",
+      "siteId": "bow-locks",
+      "controlGroupId": "bow-locks",
+      "category": "lock-passage",
+      "evidence": [
+        "period-map-comparison",
+        "bow-locks-history"
+      ],
+      "note": "Mapped Navigation–Bow Creek lock passage. Explicit connection lies just outside the 15 m automatic gap search. Schematic endpoints do not specify lock dimensions, operating state or capacity; preserve the separate Limehouse Cut approach and dated changes."
+    }
+  ],
+  "networkAreas": [
+    {
+      "id": "upper-back-rivers",
+      "name": "Upper back-river branches",
+      "evidence": [
+        "author-upper-branches-map",
+        "author-old-ford-map"
+      ],
+      "reachIds": [
+        "Lower_River_Lea-15",
+        "Lower_River_Lea-16",
+        "Lower_River_Lea-19",
+        "Lower_River_Lea-6",
+        "Lower_River_Lea-7",
+        "Lower_River_Lea-8"
+      ],
+      "note": "Broad study area for tracing the upper branches back to Old Lea and the Old Ford side connection. Reach association is provisional; register the map before deciding individual joins. Preserve visible under-railway passages. Distinguish field drainage ditches from main channels; administrative and sheet boundaries are not barriers."
+    },
+    {
+      "id": "upper-channelsea",
+      "name": "Upper Channelsea connection",
+      "evidence": [
+        "author-upper-channelsea-map",
+        "six-inch-second-network-review"
+      ],
+      "reachIds": [
+        "Lower_River_Lea-10",
+        "Lower_River_Lea-11",
+        "Lower_River_Lea-5",
+        "Lower_River_Lea-6",
+        "Lower_River_Lea-16",
+        "Lower_River_Lea-19"
+      ],
+      "note": "Review upper Channelsea in the wider Old Lea corridor. Author distinguishes Old Lea from its Waterworks and City Mill branches farther downstream. Full later sheets also label a separate parallel Waterworks reach: retain individual source names rather than renaming every nearby channel. Trace upper and intervening Channelsea passages; broad highlighted area is not one junction."
+    },
+    {
+      "id": "bow-locks-limehouse-cut",
+      "name": "Bow Creek / Navigation / Limehouse Cut junction",
+      "reachIds": [
+        "Lower_River_Lea-18",
+        "Lower_River_Lea-0"
+      ],
+      "evidence": [
+        "period-map-comparison",
+        "six-inch-second-network-review"
+      ],
+      "note": "Blue six-inch map shows Limehouse Cut approaching from southwest and joining the Navigation west of the tidal creek. Keep this canal junction separate from the Navigation-to-Bow-Creek lock passage. Highlight covers current primary reaches; the Cut approach still requires its own derived geometry and dated boundary treatment."
+    }
+  ],
+  "periodComparisons": [
+    {
+      "siteId": "old-ford-lock",
+      "earlierLayer": "os-london-skeleton-5280",
+      "laterLayer": "os-london-five-foot-1893",
+      "earlierObservation": "Oldford Lock and side-channel layout drawn.",
+      "laterObservation": "Old Ford Lock and separately labelled Flood Gates on side connection.",
+      "inference": "Lock and junction layout present in both; identical gate condition or capacity not established."
+    },
+    {
+      "siteId": "bow-back-navigation-mouth",
+      "earlierLayer": "os-london-skeleton-5280",
+      "laterLayer": "os-london-five-foot-1893",
+      "earlierObservation": "Open junction by Bow Bridge; eastern branch labelled Pudding Mill.",
+      "laterObservation": "Open western Bow Back mouth; no gate at junction depicted.",
+      "inference": "Channel continuity supported in both layers; retain source naming differences."
+    },
+    {
+      "siteId": "pudding-mill",
+      "earlierLayer": "os-london-skeleton-5280",
+      "laterLayer": "os-london-five-foot-1893",
+      "earlierObservation": "Channel runs into building/crossing footprint at the same site.",
+      "laterObservation": "St. Thomas’s Mills (Patent Food) across channel passage.",
+      "inference": "Through-building route supported by both map layouts plus author identification; flow condition not measurable from map."
+    },
+    {
+      "siteId": "abbey-corn-mill",
+      "earlierLayer": "os-london-skeleton-5280",
+      "laterLayer": "os-london-five-foot-1893",
+      "earlierObservation": "Divided passage/crossing layout near Westham Abbey Wharf.",
+      "laterObservation": "Abbey Mill (Corn) beside divided passage and footbridge.",
+      "inference": "Compare individual openings rather than treating whole site as a solid dam. Earlier map is not evidence for unchanged operation."
+    },
+    {
+      "siteId": "temple-mills-weir",
+      "earlierLayer": "os-london-skeleton-5280",
+      "laterLayer": "os-london-five-foot-1893",
+      "earlierObservation": "Temple Mills Bridge and channel layout drawn.",
+      "laterObservation": "Weir label at bridge and upper ordinary-tide limit annotation.",
+      "inference": "A later mapped control must be retained; no crest elevation or earlier operating regime established."
+    },
+    {
+      "siteId": "three-mills",
+      "earlierLayer": "os-london-skeleton-5280",
+      "laterLayer": "os-london-five-foot-1893",
+      "earlierObservation": "Northern channels reach the building/crossing footprint beside Three Mills Bridge; river resumes to the south.",
+      "laterObservation": "Mill/distillery buildings span the break between upstream water and the downstream channel.",
+      "inference": "Both layouts support the author-identified through-building route. They do not establish identical wheel openings, gate states or discharge capacity in both periods."
+    },
+    {
+      "siteId": "bow-locks",
+      "earlierLayer": "os-london-skeleton-5280",
+      "laterLayer": "os-london-five-foot-1893",
+      "earlierObservation": "Separate Navigation/creek channels and upper lock structure; Limehouse Cut approach via labelled Bromley Lock farther south.",
+      "laterObservation": "Upper lock passage beside the tidal creek; Tide Lock and Bromley Lock labels at distinct positions.",
+      "inference": "Keep lock passages and the through creek separate. Review the Cut approach by epoch instead of copying a modern junction; exact 1900 rebuilding state remains unresolved."
+    }
+  ],
+  "networkReview": {
+    "preferredContinuityLayer": "six-inch-2nd",
+    "mapLink": "./maps/#15/51.530/-0.010/on:six-inch-2nd/v:",
+    "findings": [
+      {
+        "id": "cut-navigation-junction",
+        "reachIds": [
+          "Lower_River_Lea-18"
+        ],
+        "observation": "Blue water shows Limehouse Cut approaching from the southwest and joining the Navigation west of the tidal creek. The Navigation-to-Bow-Creek lock passage is a separate connection.",
+        "action": "Trace and retain the Cut branch separately; do not collapse the three waterways into one node at the tidal lock.",
+        "geometryStatus": "Cut branch still absent from regional primary geometry"
+      },
+      {
+        "id": "old-lea-and-waterworks",
+        "reachIds": [
+          "Lower_River_Lea-16",
+          "Lower_River_Lea-19",
+          "Lower_River_Lea-5",
+          "Lower_River_Lea-6"
+        ],
+        "observation": "Old River Lea, Waterworks River and Hackney Cut/Navigation are visibly distinct channels. Waterworks branches off the Lea farther north and runs east of the old river through Temple Mills.",
+        "action": "Keep named reaches and their junctions distinct. The author’s wider Old Lea correction must not rename the separately mapped Waterworks channel."
+      },
+      {
+        "id": "upper-channelsea-interruption",
+        "reachIds": [
+          "Lower_River_Lea-10",
+          "Lower_River_Lea-11"
+        ],
+        "endpointSeparationMetres": 192.9497874828279,
+        "endpointBNG": [
+          [
+            537699.1060378631,
+            185228.09360015637
+          ],
+          [
+            537676.9692121961,
+            185036.41788067407
+          ]
+        ],
+        "observation": "The two primary Channelsea pieces omit a substantial intervening corridor beside the Artificial Manure Works. Blue water reveals the branching passages and links to Waterworks; the detailed map labels Channelsea and Potter’s Ditch.",
+        "action": "Trace the intervening channels and works passages, including any covered sections. Do not bridge 193 m with a straight open channel or infer capacity from the blue fill.",
+        "geometryStatus": "Missing/interrupted corridor identified; exact passage tracing pending"
+      },
+      {
+        "id": "mills-and-creek",
+        "reachIds": [
+          "Lower_River_Lea-0",
+          "Lower_River_Lea-1",
+          "Lower_River_Lea-2",
+          "Lower_River_Lea-14"
+        ],
+        "observation": "The blue layer clarifies the upstream Three Mills water, the downstream Bow Creek channel and Abbey Creek joining to the east. Bow Creek can be followed south into the Thames.",
+        "action": "Preserve the Three Mills through-building control and the separate Abbey Creek entry while extending downstream geometry."
+      }
+    ],
+    "limitations": "Review of mapped continuity, not a hydraulic run. Sheet dates vary; use the large-scale maps for gate, mill and passage detail. Northwestern Lea Bridge endpoint remains a separate coverage check."
+  }
+}

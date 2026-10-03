@@ -13,6 +13,7 @@ from shapely import contains_xy, segmentize
 from shapely.geometry import Polygon, LineString, box
 from shapely.ops import unary_union
 from marsh_ditches import geometry as ditch_geometry, apply_sections
+from core_river_connections import build as reviewed_connections, combined as connection_geometry
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'docs/data'
@@ -42,11 +43,17 @@ def build():
     infrastructure = json.loads((OUT/'infrastructure.json').read_text())
     channels = {r['id']: unary_union([Polygon(p[0], p[1:]) for p in r['polygons']])
                 for r in plan['rivers']}
-    river = unary_union(list(channels.values()))
+    connections=reviewed_connections(plan['rivers'])
+    passages=connection_geometry(connections)
+    river = unary_union(list(channels.values())+[passages])
     # Author's hydrological distinction: the Old Lea/navigation above the
-    # Limehouse Cut lock retains water; the other scene channels share the tide.
+    # Limehouse Cut lock retains water; river channels elsewhere share the tide.
     retained_ids = {18, 22, 10018, 10022}
-    tidal = unary_union([g for key,g in channels.items() if key not in retained_ids])
+    east_context=json.loads((ROOT/'data/maps/east-channelsea-context-alignment.json').read_text())
+    isolated_ids={r['id'] for r in east_context['additionalRivers']}
+    # The OS maps disconnected moat pools and a drain, not their hydraulic links.
+    # Show these at the shared illustrative low datum without animating a tide.
+    tidal = unary_union([g for key,g in channels.items() if key not in retained_ids|isolated_ids]+[connection_geometry(connections,tidal_only=True)])
     patch = box(*core['bounds'])
     # Sample only a narrow corridor at runtime; the generation grid is temporary.
     minx, minz, maxx, maxz = np.array(river.bounds).astype(int) + [-18, -18, 18, 18]
@@ -77,7 +84,6 @@ def build():
     height = np.where(water, .06-.25-.17*np.minimum(inside, 9), height)
     # Existing site envelopes and road corridors keep their ground datum. These
     # are industrial plots, not evidence for continuous walls along every plot.
-    east_context=json.loads((ROOT/'data/maps/east-channelsea-context-alignment.json').read_text())
     sites = unary_union([Polygon(p[0], p[1:]) for s in plan['sites']+east_context['additionalYards'] for p in s['polygons']])
     roads = unary_union([LineString(r['route']).buffer(r['width']/2+2)
                          for r in infrastructure['roads']])
@@ -125,6 +131,10 @@ def build():
     # surrounding ground; the detailed core itself remains untouched.
     height += .004*smooth(0, 1, core_distance)
     height,ditch_mud,marsh_active=apply_sections(X,Z,height)
+    # Mill/bridge decks stay above the channel. Do not leave a terrain plug
+    # beneath a reviewed passage after generic bank or ditch shaping.
+    passage_mask=contains_xy(passages,X,Z)
+    height[passage_mask]=np.minimum(height[passage_mask],-.7)
     sediment=np.maximum(sediment*(1-smooth(1.1,1.65,height)),ditch_mud)
     ditch_raw,marsh,ditches,ditch_parts,_=ditch_geometry()
     # At working plots the bank cannot occupy a wide grass slope. A narrow
@@ -158,10 +168,13 @@ def build():
     # Confine the animated surface to river-side shelves. A whole-scene plane
     # would flood the lower marsh through the back of its embankments.
     core_beds = unary_union([Polygon(p[0], p[1:]) for p in plan['bankStudies']])
-    retained = unary_union([g for key,g in channels.items() if key in retained_ids])
+    retained = unary_union([g for key,g in channels.items() if key in retained_ids|isolated_ids])
     tide_envelope = tidal.buffer(5).union(core_beds.intersection(patch))
     tide_envelope = tide_envelope.difference(sites.union(roads).difference(tidal))
     tide_envelope = tide_envelope.difference(marsh.union(ditches).union(retained))
+    lock_gaps=unary_union([Polygon(p[0],p[1:]) for r in connections['connections']
+        if not r['tidalDisplay'] for p in r['polygons']]).difference(unary_union(list(channels.values())))
+    tide_envelope=tide_envelope.difference(lock_gaps)
     meta = {
         'positionFile': 'river-network.f32', 'indexFile': 'river-network.u32', 'colorFile': 'river-network.rgb',
         'sedimentFile': 'river-network.silt',
@@ -176,12 +189,15 @@ def build():
                         'waterPolygons':rings(ditches.difference(patch)), 'marshPolygons':rings(marsh),
                         'levels':ditch_raw['levels'],'policy':ditch_raw['policy']},
         'retainedWaterChannelIds':sorted(retained_ids),
-        'tidalChannelIds':sorted(set(channels)-retained_ids),
+        'isolatedWaterChannelIds':sorted(isolated_ids),
+        'reviewedConnections':connections,
+        'isolatedWaterEvidence':'OS-mapped separate moat pools and eastern drain. Flat illustrative low water only; hydraulic connection and historical water levels are unresolved.',
+        'tidalChannelIds':sorted(set(channels)-retained_ids-isolated_ids),
         'tidalEvidence':'Author correction: tidal margins throughout except Old Lea north of the Limehouse Cut lock. GIS ids 18,22,10018,10022 identify that retained reach; Bow Creek id 0 remains tidal. Widths and sections inferred, not reconstructed tidal hydraulics.',
         'vertices': len(used), 'triangles': len(triangles), 'step': 1, 'baseGround': rings(ground),
         'channels': [{'id': r['id'], 'name': 'Three Mills Wall River' if r['id'] == 1 else r['name'],
                       'sourceName': r['name']} for r in plan['rivers']],
-        'source': 'data/maps/panorama-source-context.geojson; supplied Lower_River_Lea.geojson and Industry_1893-95.geojson',
+        'source': 'data/maps/panorama-source-context.geojson; supplied Lower_River_Lea.geojson and Industry_1893-95.geojson; data/maps/east-channelsea-context-alignment.json for OS-traced moat/drain pools and local east-bank reconciliation',
         'planSha256': hashlib.sha256((OUT/'ground-plan.json').read_bytes()).hexdigest(),
         'evidence': 'Author identifies Wall River west of Mill Mead and marsh below rivers at high tide. Wall River photo supplies the local raised bank/path section; data/maps/marsh-ditches.json supplies map-traced drains. Heights, widths, bed depths and retaining-edge sections remain inferred, not a surveyed wall inventory.',
         'chronology': 'The author dates later engineered embankments to the 1930s. EAW014561 (16 April 1948) is comparison evidence only; its embankments, channel alterations and factory forms are not backdated into this scene. Prescott Cut remains excluded.',

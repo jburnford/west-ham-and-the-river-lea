@@ -8,6 +8,7 @@ from shapely.affinity import rotate,translate
 from shapely.geometry import box
 from shapely.ops import unary_union,nearest_points
 from abbey_support import station_footprints
+from victoria_stone_grid import build_victoria_stone_grid
 
 ROOT=Path(__file__).resolve().parents[1]
 load=lambda path:json.loads((ROOT/path).read_text())
@@ -60,6 +61,7 @@ def build():
     sawmill=load('data/maps/sawmill-yard.json')
     jute=load('data/maps/ritchie-jute.json')
     east=load('data/maps/east-channelsea-context-alignment.json')
+    wharfs=load('data/maps/east-wharf-yards.json')['yards']
     sawmill_parcel=Polygon(sawmill['parcel'][0])
     track_space=sawmill_parcel.buffer(-1.2).difference(blocked.buffer(1.2))
     tracks=[]
@@ -67,22 +69,14 @@ def build():
         clipped=LineString(row['points']).intersection(track_space)
         for line in getattr(clipped,'geoms',[clipped]):
             if line.geom_type=='LineString' and line.length>2:tracks.append({'id':row['id'],'points':[list(p) for p in line.coords]})
-    depot=next(y for y in east['additionalYards'] if y['id']==13011)
-    depot_parcel=unary_union([Polygon(p[0],p[1:]) for p in depot['polygons']])
-    depot_space=depot_parcel.buffer(-1.4).difference(blocked.buffer(1.4))
-    for source in east['railSidings']:
-        clipped=LineString(source['points']).intersection(depot_space)
-        for index,line in enumerate(getattr(clipped,'geoms',[clipped])):
-            if line.geom_type=='LineString' and line.length>2:
-                tracks.append(dict(id=source['id']+'-'+str(index),siteId=13011,
-                    points=[list(p) for p in line.coords],gauge=1.435,sleeperWidth=2.4,
-                    sourceTrackId=source['id'],evidence=source['evidence']))
+    from east_depot_tracks import build_east_depot_tracks
+    tracks.extend(build_east_depot_tracks(east,infra,blocked))
     tracks_union=unary_union([LineString(t['points']) for t in tracks])
     # Give the restored full sawmill parcel precedence over anonymous context.
     western=factories['westContext'].get('sites',[])
-    priority_ids={797,1017,9001,*[s['id'] for s in western],*[s['id'] for s in east['additionalYards']]}
+    priority_ids={797,1017,9001,*[s['id'] for s in western],*[s['id'] for s in east['additionalYards']],*[s['id'] for s in wharfs]}
     source=[*east['additionalYards'],oil['yard'],sugar['yard'],west_sugar['yard'],*crystal_barber['yards'],{'id':797,'name':names[797],'polygons':[sawmill['parcel']]},
-      {'id':1017,'name':names[1017],'polygons':[jute['parcel']]}]+western+[s for s in plan['sites'] if s['id'] not in priority_ids]+[{'id':-i-1,'name':'Western wharf context','polygons':[p]} for i,p in enumerate(factories['westContext']['yards'])]
+      {'id':1017,'name':names[1017],'polygons':[jute['parcel']]}]+western+[s for s in plan['sites'] if s['id'] not in priority_ids]+[{'id':-i-1,'name':'Western wharf context','polygons':[p]} for i,p in enumerate(factories['westContext']['yards'])]+wharfs
     used=Polygon();sites=[]
     for site in source:
         parcel=unary_union([Polygon(p[0],p[1:]) for p in site['polygons']])
@@ -138,6 +132,7 @@ def build():
             radius=min(radius,max(0,point.distance(protected)-.2))
             if radius>.65:soft_edges.append([round(x,3),round(z,3),round(radius,3)])
     result={'sites':sites,'bounds':[extent[0]-2,extent[1]-2,extent[2]+2,extent[3]+2],
+      'workingGrids':[build_victoria_stone_grid()],
       'buildingEdges':[[list(q) for q in p.exterior.coords] for p in parts(buildings)],
       'softEdges':soft_edges,
       'tracks':tracks,'trackEvidence':sawmill['interpretation']+' Eastern depot siding centrelines follow OS; standard gauge, low yard elevation and sleepers are interpretations.',

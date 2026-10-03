@@ -1,18 +1,75 @@
 # Continue building-by-building footprint matching
 
+**Next-session priority changed, 30 September 2026:** the user wants to clear
+the conversation and focus on elevation data. Read the leading elevation
+handoff in `/home/jic823/book_website/MEMORY.md` first. The footprint and station
+tasks below are parked follow-ups. Begin with the existing spot-height collection,
+its quality/setting/datum information and the earlier topography research;
+do not resume building additions automatically or treat interpreted railway
+levels as surveyed heights. Last verified scene: `6d92fd6dcc67`.
+
 Checkpoint: 29 September 2026, recovered after WSL restart. The author wants an approximate but convincing
 circa-1900 reconstruction. Continue adjusting existing 3D models to the supplied
 building footprints, site by site. Exact architectural accuracy is not required,
 but record the distinction between map evidence and interpreted elevations.
 
-Commit checkpoint: `9d14388` contains the House/Clock Mill and bonded-wharf
-continuation, after `d6c9335` committed the preceding six passes. Ratner/Albion and Bow Flour/rubber/felt
-were followed locally by Cook/Bow/Magnet/lime and mill/brush/brewery/mineral-water
-continuations, followed by Jeffrey/Marshgate/Alderson; all remain uncommitted. The user explicitly requested
-GPT-6.1 Sol delegation for this work. Two agents authored Ratner/Albion, and
-two more authored Bow Flour/rubber/felt, with parent integration and independent
-map/geometry/browser review.
+Commit checkpoints: `9d14388` contains the House/Clock Mill and bonded-wharf
+continuation, after `d6c9335` committed the preceding six passes. Later workflows
+advanced the shared workspace HEAD; it was `b3ac87d` at this documentation
+update. Read `git log` and `git status` before describing later work as
+uncommitted. The user explicitly requested GPT-6.1 Sol delegation for this
+work, with parent integration and independent map/geometry/browser review.
 Separate height work and `docs2/` remain excluded.
+
+## Current priority: the eastern river/railway strip
+
+Latest continuation (30 September): three wharf working surfaces and Victoria
+Stone's twenty open cells are integrated. Totals are 91 yards / 34 wear routes /
+168 stock groups; all 88 earlier yards and tracks remain exact. Station controls
+12–15 now follow the native running pair clear of covered source 1539 and the
+waiting-room bodies. The supported booking-bridge overlap remains. Fourteen
+station source shapes clip only bank toes, preserving the full running crest.
+Nine targeted checks and six browser views pass at **`6d92fd6dcc67`**. The northwest
+connection has an exact four-rail-head join; all depot joins and levels pass.
+Source 1539 is a shaded covered body, not an open platform. Roof form/height,
+Short Road frontage and the short isolated chemical-works blue channel remain
+separate follow-up work; see the final section in `FOOTPRINT_ALIGNMENT.md`.
+The summaries immediately below describe the earlier complete pass.
+
+The author clarified that the **whole strip east of Channelsea and west of the
+north–south Woolwich railway** looked like a rough sketch. Continue the compound
+and context reconstruction throughout that area, including source omissions;
+existing-range completion alone is insufficient. West Ham Gas Works 873 lies
+west of the river and its remaining fifteen ranges are paused, untouched.
+
+The current three registers are `east-channelsea-upper` (15 additions),
+`east-channelsea-south` (84 additions, 83 source-linked plus 1 direct OS trace)
+and `east-channelsea-north` (38 additions, 36 source-linked plus 2 direct OS traces).
+Together they add 137 roofs: 134 source-linked and 3 direct OS traces.
+Current runtime totals are 681 ranges at 63 sites, with 627 source-linked
+and 16 direct traces (643 reviewed), 88 chimneys and 20 mapped heights.
+Paired context is `east-channelsea-context-alignment.json`: 15 bounded eastern
+bank controls, three isolated local watercourses, three stock-free working
+yards and 11 depot siding paths producing 14 rendered segments. Yards now
+total 88 surfaces/32 wear routes/168 stock groups. The missing northwestern
+running line is authored in `north-london-connection.json`, with native OS
+confirming the low-level underpass. Railway/context integration is complete.
+All eleven final browser views passed and were visually inspected, including
+the revised depot approach. The browser serves verified revision `00f727032dd6`.
+The combined geometry suite has 54 passes and one documented pre-existing
+High Street frontage failure, with no new failures.
+Earlier numerical summaries below are historical checkpoints.
+
+These additions are **OS-led**. Native five-foot mapping and supplied source
+polygons establish the roof outlines; no Goad/fire-insurance coverage has been
+established here. New storeys, eaves, materials, roofs and siding elevations are
+explicit estimates. Preserve open courts, working cells, loading platforms and
+track fans. Globe Mill is labelled **(Crushing)**; the northern wharf is
+**Halling Wharf**. Small symbols do not automatically justify a building or tall
+chimney. Upper preflight/idempotence and independent upper/south map review are
+complete. The final eleven-view review confirmed all 137 added ranges and
+continuous railway joins. See the eastern continuation section in
+`FOOTPRINT_ALIGNMENT.md` for scope, source exclusions and final verification.
 
 ## Start here
 
@@ -27,7 +84,7 @@ Separate height work and `docs2/` remain excluded.
 
 ## Completed model alignment
 
-- 493 source-linked factory ranges at forty-two sites, including 24 Slater & Palmer /
+- Before the eastern-strip additions, 493 source-linked factory ranges at forty-two sites, including 24 Slater & Palmer /
   Marshgate Mills ink-works ranges. First-pass registry:
   `data/maps/factory-footprint-alignment.json`. It retains original outlines,
   source IDs, changes in position/area and previous roof/height interpretations.
@@ -153,7 +210,7 @@ Separate height work and `docs2/` remain excluded.
   period-map access traces. These volumes use the station plan and shared factory
   renderer, separately from the industrial ranges. Heights and roofs remain
   interpreted. Tiny features 1064653 and 1162448 are explicitly deferred.
-- The broader scene has 43 factory sites, 544 ranges, 88 factory chimneys,
+- Before the eastern-strip additions, the scene had 43 factory sites, 544 ranges, 88 factory chimneys,
   196 terrace rows / 3,204 houses and 85 modeled yards (37 wear routes, 160 stock groups).
   Eleven factory ranges use direct OS traces; two retain local Goad transfers.
 - Kendrick / Usher: `data/maps/kendrick-usher-footprint-alignment.json` adds
@@ -751,3 +808,91 @@ close, Crown/Johnson plan/close, western foundry, moulding and Imperial/Crown
 plans. No browser or shader errors. Renderer checks confirm all 38 corrected
 ranges, two independently mapped chimney bases and four inferred transfers.
 Final manifest: `e6436d00d72d`. The local preview serves this rebuilt scene.
+
+
+## Eastern-strip handoff — 30 September, final verification complete
+
+Continue from the saved upper/south/north footprint registers and paired context
+register. Immutable references are `east-channelsea-before.json`, its 6,855-shape
+source cache and the context/road before snapshots. Do not replace these with
+regenerated scene data. Re-authoring preparations use the private cache/mosaic;
+saved registers suffice for routine builds. Integration now includes added
+sites/buildings, three isolated local water features, stock-free depot/stores/
+Globe-Victoria working ground, siding meshes and bounded existing river-bank
+corrections. The new sidings use an interpreted 1.435 m gauge and 2.4 m sleepers.
+
+The three registers now contain 137 roofs (134 source-linked plus 3 direct),
+including 38 northern roofs. The bank register contains 15 corrected controls,
+including the Globe riverside follow-up. The regenerated runtime is 681 ranges
+at 63 sites: 627 source-linked plus 16 direct traces, 643 reviewed in total.
+It retains 88 chimneys with 20 mapped heights. Yards now have 88 surfaces,
+32 wear routes and 168 stock groups, with no stock in the three new yards.
+The completed bank correction clears the full corn-mill, Caledonian and
+Globe riverside roofs, including source 9468. These wall/water conflicts are
+resolved without trimming roof exteriors or adding a general water exception.
+
+`build_north_london_connection` and `apply_mainline_crossing` are integrated
+in `build_infrastructure.py`. The northern register preserves the old GE
+prefix and records the GIS route, exact Woolwich rail-head join and
+OS-confirmed underpass. Connected depot junctions use a 130 m level approach
+at 5.5 m formation/5.96 m rail-top height, followed by a 240 m outward grade.
+The built depot contains 10,259 formation triangles; 408 rail-bank clearance
+checks pass, and the focused join was visually reviewed and passed.
+
+Eight streets now have bounded native-map corrections: Bridge Road, Barnby, St Thomas,
+Hotham, Randal, Canning, Leywick and Morley. The paired housing review has
+18 native roof-body corrections, two exact preserved corner bodies and
+four suppressed duplicates over unshaded rear gardens. Both
+Barnby terraces and the complete Barnby carriageway were re-read against the
+OS sheet; the south roof stops before the unshaded garden interval beside
+St Thomas Road. Housing rebuild and the bounded housing check pass:
+192 rows, 3,034 estimated houses, 2,991 rear yards, 2,899 sculleries and 2,787 privies.
+
+Housing, dependent infrastructure, yards, regional footprints, river geometry
+and the manifest have been regenerated. Reproducible focused checks include:
+
+```sh
+python3 scripts/check_east_channelsea_upper_alignment.py
+python3 scripts/check_east_channelsea_south_alignment.py
+python3 scripts/check_east_channelsea_north_alignment.py
+python3 scripts/check_east_channelsea_context.py
+python3 scripts/check_north_london_connection.py
+python3 scripts/review_factory_buildings.py --east-channelsea-only --software-gl --url http://127.0.0.1:4175
+```
+
+All eleven final views passed and were visually inspected. Their diagnostics
+confirm saved register IDs, current runtime counts and revision `00f727032dd6`.
+Earlier pass-count sections remain historical records.
+
+
+Northern railway continuation: repository GIS ways 198582978/198582965 and upper
+198582968 supply the missing NW route; native OS supplies the underpass
+interpretation at Stratford Low Level. The new route retains the old southern
+chord and joins the Woolwich renderer at an exact existing station. The
+interpreted 3 m lower formation, existing 8.5 m GE formation and upper deck provide
+4.39 m rail-head-to-soffit clearance; historical vertical levels remain
+unmeasured. A bounded 90.3 m GE append follows GIS 198781682 and preserves all
+old stations/chainages; clipped earth cuts gain explicit abutment faces.
+Saved JSON suffices for routine builds. The preparation is byte-idempotent;
+new source/join/grade/water/bridge preflight and published railway checks pass.
+The focused depot join also passes visual review. Railway/context integration
+is complete; final combined validation and the browser-confirmed manifest
+revision are recorded below.
+
+
+Final verification, 30 September 2026: **54 geometry/preservation checks pass,
+with no new failures**. The remaining High Street frontage01/roads failure is
+pre-existing: its 134.175 m² overlap was reproduced using only pre-integration
+commit `3be0a50`. It needs a separate review. All eleven final SwiftShader views
+passed without browser or shader errors and were visually inspected, including
+the northwest connection, underpass and depot throat. Reports are
+`review/east-channelsea-validation.json` and
+`review/east-channelsea-alignment-checks.json`.
+
+Final asset revision: **`00f727032dd6`**. All 25 module and 139 asset hashes match;
+the browser confirmed that revision. Regional context has 234,354 visible source
+features in 115 tiles (4.00 MB). River geometry has 22 source features,
+604,191 vertices and 1,188,366 triangles. Yards retain 88 surfaces, 32 wear routes
+and 168 stock groups. Housing has 192 rows, 3,034 estimated houses, 2,991 rear
+yards, 2,899 sculleries and 2,787 privies. Housing/context preparations are
+byte-idempotent. Local preview remains on port 4175; no deployment or commit.

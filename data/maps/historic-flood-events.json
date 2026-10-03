@@ -1,0 +1,850 @@
+{
+  "schemaVersion": 1,
+  "sources": {
+    "clifford-ch6": {
+      "path": "West Ham and the River Lea_ A Social and E - Jim Clifford.pdf",
+      "sha256": "5c83c17848828df7d7770068a7e3c44c7f667b488ef4c6028668f870f860261f",
+      "chapter": 6,
+      "title": "Fixing Rivers, Fixing Society",
+      "pageNumberConvention": "PDF file pages, one-based; not printed book pagination",
+      "figure": 19
+    },
+    "three-mills-photo": {
+      "path": "reference/Images and Figures/Figure7_1Flood level marks, Three Mills. July 1985. B&W.tiff",
+      "sha256": "5c09dd233124686ba724b5b97a43d1b76cc9ce8afc33506fb149b56ae9c36eed",
+      "photographDate": "1985-07",
+      "credit": "Newham Archives and Local Studies Library, per book figure 19",
+      "location": "wall at or near Three Mills; exact wall unresolved",
+      "bng": null,
+      "use": "research reference; not copied into public scene assets"
+    },
+    "outer-london-1907": {
+      "path": "reference/topography-research-2026-09-28/flood-evidence/west-ham-outer-london-inquiry-1907.pdf",
+      "sha256": "c58565689408bc15c554ff41127d967e5463fc71d027ad74df66eff07946df62",
+      "authors": [
+        "E. G. Howarth",
+        "Mona Wilson"
+      ],
+      "year": 1907,
+      "printedPage": 29,
+      "pdfPage": 53,
+      "status": "text and scan inspected"
+    },
+    "thames250": {
+      "url": "https://thames250exhibition.com/flood-management/",
+      "relevance": "Reports daily Teddington head and tail levels from 1892; potential freshwater source for 1897 and 1904, not a Three Mills tidal height.",
+      "archiveReferenceExample": "D/TC/G2/1/56 (March 1947 tackle sheet; seek the required earlier dates)"
+    },
+    "engineer-1931": {
+      "url": "https://graces-guide-s3-live.s3.amazonaws.com/gracesguide/8/8a/Er19311106.pdf",
+      "path": "reference/topography-research-2026-09-28/flood-evidence/engineer-1931-11-06.pdf",
+      "title": "The Tidal Thames, No. I",
+      "date": "1931-11-06",
+      "printedPages": [
+        494,
+        495
+      ],
+      "pdfPages": [
+        16,
+        17
+      ],
+      "review": "Table on printed p495 visually inspected: OCR wrongly reads some fives as sixes."
+    },
+    "thames-ledger-study": {
+      "url": "https://www.nature.com/articles/s41597-022-01223-7",
+      "datasetDOI": "https://doi.org/10.5285/b66afb2c-cd53-7de9-e053-6c86abc0d251",
+      "datumNote": "Study converts station-specific historical THW records to ODN; do not use an unspecified historical OD as modern ODN."
+    },
+    "pla-dredging-2007": {
+      "url": "https://pla.co.uk/sites/default/files/2024-03/Baseline-Document-for-Maintenance-Dredging-june2007.pdf",
+      "pdfPages": [
+        47,
+        48,
+        57
+      ],
+      "relevance": "1909-1928 Yantlet dredging confirmed. Tidal-range change attributed to multiple possible causes; precise 2m/0.7m claim not established by this source."
+    },
+    "nrfa": {
+      "url": "https://nrfaapps.ceh.ac.uk/nrfa/nrfa-api.html",
+      "acknowledgement": "Data from the UK National River Flow Archive",
+      "files": [
+        "38001-gdf.json",
+        "38001-ndf.json",
+        "39001-gdf.json",
+        "39001-ndf.json",
+        "station-info.json"
+      ],
+      "range": [
+        "1897-11-01",
+        "1928-01-31"
+      ],
+      "limitations": "Daily means, not event maxima. Early Feildes records affected by gates/mills, Kingston series then derived at Teddington. Naturalised and gauged flows are distinct."
+    },
+    "thames-ledger-code": {
+      "url": "https://github.com/ivanhaigh/Thames-Sea-Level-Data",
+      "review": "master1.m supplies London Bridge +3.459m THW-to-ODN correction; loadin2.m divides feet by3.281. Noon PM hours blindly incremented by12, producing next-day midnight timestamps in some published rows. Event peaks independently checked against spreadsheet."
+    },
+    "bow-locks-history": {
+      "url": "http://www.leeandstort.co.uk/Bow_Locks.htm",
+      "title": "Bow Locks — Lee and Stort history",
+      "accessed": "2026-09-30",
+      "path": "reference/topography-research-2026-09-28/flood-evidence/bow-locks.html",
+      "sha256": "43c64528f05d5ac294d350ef6ebdebad1a2392b101c87644a432dfb00dd8863e",
+      "sourceStatus": "Historical compilation with transcribed archival extracts; cited original files not inspected",
+      "floodReportArchiveReferenceAsCited": "The National Archives, RAIL 845/112",
+      "image": {
+        "url": "http://www.leeandstort.co.uk/images/Flood%20record.jpg",
+        "path": "reference/topography-research-2026-09-28/flood-evidence/bow-locks-flood-record.jpg",
+        "sha256": "d153478660b40820b32477626e9bb4c3c03f95228be686b2e664e8a2cbc51115",
+        "review": "Colour photograph visually checked: same arrangement of 1928, 1904 and eroded bottom panels as supplied 1985 photograph. No surveyed height, scale or exact wall location."
+      }
+    },
+    "heltrust-west-ham": {
+      "url": "https://heltrust.org.uk/our-past",
+      "title": "Heritage Engineering Learning Trust: Our Past",
+      "path": "reference/topography-research-2026-09-28/flood-evidence/heltrust-our-past.html",
+      "sha256": "70037aaf2a7c1e70443a7856694de08742c2c00a1796592c8e1074190e550bdd",
+      "accessed": "2026-09-30"
+    },
+    "tideway-appendix-q": {
+      "url": "https://www.tideway.london/media/2114/53-heritage-statement-appendix-q-abbey-mills-pumping-station.pdf",
+      "title": "Thames Tideway Tunnel Heritage Statement Appendix Q: Abbey Mills Pumping Station, January 2013",
+      "path": "reference/topography-research-2026-09-28/flood-evidence/tideway-heritage-appendix-q-abbey-mills.pdf",
+      "sha256": "a8dbb8b47a47c2809d06a12f79c0841ad0a92bf374a06652f6559fcf4664bfc3",
+      "accessed": "2026-09-30"
+    },
+    "he-west-ham-engine-house": {
+      "url": "https://historicengland.org.uk/listing/the-list/list-entry/1357997",
+      "title": "Engine House at West Ham Pumping Station",
+      "accessed": "2026-09-30",
+      "evidence": "Engine house dated 1897; Lilleshall beam engines built 1895 and installed 1900."
+    },
+    "trove-107325485": {
+      "url": "https://trove.nla.gov.au/newspaper/article/107325485",
+      "titleAsPasted": "Storms and Hoods in England.",
+      "normalisedTitle": "Storms and Floods in England",
+      "publicationDate": "1888-09-14",
+      "publicationDateProvenance": "User copied Trove issue heading; corrected earlier tentative 1897 attribution",
+      "newspaperTitle": null,
+      "reprintAttribution": "News of the World, August 5 (as attributed in user-supplied OCR)",
+      "originalAccountDateInferred": "1888-08-05",
+      "accessStatus": "Website blocked by bot-check; article text and issue date supplied by user; scan not inspected",
+      "ocrCautions": [
+        "Title Hoods probably Floods",
+        "Freemasons Lane depth Gin probably 6in; retain unresolved until scan review",
+        "Do not infer event date from Australian publication date"
+      ]
+    }
+  },
+  "events": [
+    {
+      "id": "1897-11-29",
+      "mechanism": "tidal-storm-surge",
+      "role": "modelling-target",
+      "sources": [
+        "clifford-ch6",
+        "three-mills-photo"
+      ],
+      "bookPDFPages": [
+        179,
+        180,
+        183,
+        184
+      ],
+      "bookNotes": [
+        12,
+        25,
+        26
+      ],
+      "markPosition": "bottom",
+      "markHeightODNMetres": null,
+      "markSeparationMetres": null
+    },
+    {
+      "id": "1898-10-29",
+      "mechanism": "heavy-rainfall",
+      "role": "separate-research-event",
+      "sources": [
+        "clifford-ch6"
+      ],
+      "bookPDFPages": [
+        248
+      ],
+      "bookNotes": [
+        10
+      ],
+      "markPosition": null,
+      "markHeightODNMetres": null,
+      "markSeparationMetres": null
+    },
+    {
+      "id": "1904-12-30",
+      "mechanism": "tidal-storm-surge",
+      "role": "modelling-target",
+      "sources": [
+        "clifford-ch6",
+        "three-mills-photo"
+      ],
+      "bookPDFPages": [
+        179,
+        180,
+        183,
+        184
+      ],
+      "bookNotes": [
+        12,
+        27,
+        28
+      ],
+      "markPosition": "middle",
+      "markHeightODNMetres": null,
+      "markSeparationMetres": null
+    },
+    {
+      "id": "1928-01-07",
+      "mechanism": "tidal-storm-surge",
+      "role": "modelling-target",
+      "sources": [
+        "clifford-ch6",
+        "three-mills-photo"
+      ],
+      "bookPDFPages": [
+        179,
+        180,
+        205,
+        206
+      ],
+      "bookNotes": [
+        12,
+        113
+      ],
+      "markPosition": "top",
+      "markHeightODNMetres": null,
+      "markSeparationMetres": null,
+      "additionalRoles": [
+        "flood-mark-calibration"
+      ]
+    },
+    {
+      "id": "1888-07-30-rainfall-sequence",
+      "mechanism": "heavy-rainfall-reported",
+      "role": "modelling-target",
+      "sources": [
+        "trove-107325485"
+      ],
+      "reportedInitialStormDate": "1888-07-30",
+      "eventEndDate": null,
+      "dateConfidence": "Day/month from pasted text; year inferred from user-confirmed 1888 issue and August 5 reprint attribution",
+      "temporalCaution": "Article combines July 30 thunderstorm with subsequent Tuesday/Wednesday downpours; individual local impacts not all assigned to July 30",
+      "waterLevelODNMetres": null,
+      "interpretation": "Rainfall/runoff and local drainage flooding described; article does not establish a storm surge, river peak, pump failure or failure of a flood defence."
+    }
+  ],
+  "relativeMarkConstraints": [
+    {
+      "lowerEvent": "1897-11-29",
+      "higherEvent": "1904-12-30",
+      "differenceMetres": null
+    },
+    {
+      "lowerEvent": "1904-12-30",
+      "higherEvent": "1928-01-07",
+      "differenceMetres": null
+    }
+  ],
+  "reportedFloodDepths": [
+    {
+      "event": "1897-11-29",
+      "place": "unspecified roads in Stratford",
+      "depthFeet": 4,
+      "kind": "contemporary report quoted in chapter 6; approximate local depth, not absolute elevation",
+      "sourceNote": 26
+    },
+    {
+      "event": "1904-12-30",
+      "place": "Stratford High Street, exact reach unresolved",
+      "depthFeet": 2,
+      "kind": "chapter 6 report; approximate local depth, not absolute elevation",
+      "sourceNote": 28
+    },
+    {
+      "event": "1888-07-30-rainfall-sequence",
+      "place": "Tilbury railway just above Plaistow, precise location unresolved",
+      "depthFeet": 3,
+      "depthMetres": 0.9144,
+      "kind": "Approximate reported railway inundation; reference surface unspecified",
+      "source": "trove-107325485",
+      "heightODNMetres": null,
+      "exactObservationDate": null
+    },
+    {
+      "event": "1888-07-30-rainfall-sequence",
+      "place": "Cellar of one house in Grafton Road, Plaistow",
+      "depthFeet": 6,
+      "depthMetres": 1.8288,
+      "kind": "Reported cellar depth; floor elevation and address unknown",
+      "source": "trove-107325485",
+      "heightODNMetres": null,
+      "exactObservationDate": null
+    },
+    {
+      "event": "1888-07-30-rainfall-sequence",
+      "place": "Railway Tavern cellar, West India Dock Road",
+      "depthFeet": 6,
+      "depthMetres": 1.8288,
+      "kind": "Reported cellar depth requiring pumping; not street or river elevation",
+      "source": "trove-107325485",
+      "heightODNMetres": null,
+      "exactObservationDate": null
+    },
+    {
+      "event": "1888-07-30-rainfall-sequence",
+      "place": "Railway cutting between Brockley and New Cross",
+      "depthFeet": 3,
+      "depthMetres": 0.9144,
+      "kind": "Approximate local maximum in cutting; distant comparison only",
+      "source": "trove-107325485",
+      "heightODNMetres": null,
+      "exactObservationDate": null
+    }
+  ],
+  "periodChangeConstraints": [
+    {
+      "period": "1900-1902",
+      "feature": "Northern Outfall Sewer bridge at Channelsea",
+      "change": "rebuilding/widening; compare pre-works 1897 and post-works 1904",
+      "source": "https://historicengland.org.uk/listing/the-list/list-entry/1392549"
+    },
+    {
+      "period": "1908-1909",
+      "feature": "Morley/Tween Lower Lea canalisation scheme",
+      "change": "proposal failed; do not model as completed works",
+      "source": "clifford-ch6"
+    },
+    {
+      "period": "1930s",
+      "feature": "Lower Lea reconstruction and Prescott Canal",
+      "change": "postdates all four events; exclude from event geometry",
+      "source": "clifford-ch6, PDF page 206"
+    },
+    {
+      "period": "by 1907, individual commissioning dates unresolved",
+      "feature": "local storm drainage and Northern Outfall Sewer",
+      "change": "Report p29 describes new intercepting sewers, pumping machinery and access to Northern Outfall; reports sewer enlargement in 1906. Do not backdate every improvement to 1904 or conflate overall sewer enlargement with Channelsea bridge works.",
+      "source": "outer-london-1907"
+    },
+    {
+      "period": "1898",
+      "feature": "Proposed tide gate at Three Mills Back River / Navigation junction near Three Mills Overshoot",
+      "change": "Proposal rejected; do not introduce this proposed barrier into 1900 or 1904 geometry",
+      "source": "bow-locks-history",
+      "archiveReferenceAsCited": "LMA ACC 2423/006",
+      "status": "Reported by compilation; original not inspected"
+    },
+    {
+      "period": "1900",
+      "feature": "Bow western lock",
+      "change": "Page describes rebuilding/improvement in 1900; distinguish pre-works 1897/1898 from post-works 1904. Exact completion date, gate and sill levels unresolved for c1900 scene.",
+      "source": "bow-locks-history",
+      "status": "Chronology lead; period plans needed"
+    },
+    {
+      "period": "1931",
+      "feature": "Bow eastern lock",
+      "change": "Duplication postdates 1897, 1898, 1904 and 1928; no second chamber inferred for those events",
+      "source": "bow-locks-history",
+      "status": "Chronology lead; period plans needed"
+    },
+    {
+      "period": "2000",
+      "feature": "Bow Locks tidal exclusion",
+      "change": "Page reports rebuilding to exclude highest tides; modern control behaviour must not be assumed for historical scenarios",
+      "source": "bow-locks-history",
+      "status": "Chronology lead; original design/operating records needed"
+    },
+    {
+      "period": "1897-1900",
+      "feature": "West Ham Pumping Station, Abbey Road; distinct from Abbey Mills",
+      "change": "Engine house dated 1897; beam engines installed 1900 per Historic England. HELT states full operation by 1900. Do not backdate full pumping capacity to 1897 or 1898; exact commissioning dates and earlier arrangements unresolved.",
+      "sources": [
+        "heltrust-west-ham",
+        "he-west-ham-engine-house"
+      ]
+    },
+    {
+      "period": "1891-1896",
+      "feature": "Abbey Mills Station B",
+      "change": "Building construction range reported in Appendix Q para Q.3.9; equipment commissioning and duty unresolved.",
+      "source": "tideway-appendix-q",
+      "pdfPage": 11
+    },
+    {
+      "period": "1910-1914",
+      "feature": "Abbey Mills Station C and valve house",
+      "change": "Exclude from 1900 and 1897/1898/1904 event infrastructure; review for 1928.",
+      "source": "tideway-appendix-q",
+      "pdfPage": 11
+    }
+  ],
+  "calibrationPolicy": "Keep relative photograph evidence separate from metric survey heights. A remote Thames gauge peak is not a surveyed Three Mills mark. Do not infer breaches from fears of failure or convert reported street depths directly into ODN.",
+  "landscapeEvidence": [
+    {
+      "source": "outer-london-1907",
+      "printedPage": 29,
+      "observations": [
+        "Low southern marsh ground locally below Thames high water; some land subsequently raised",
+        "Former watercourses and ditches converted to building sites, increasing dependence on sewers",
+        "Some houses built on refuse-filled ground"
+      ],
+      "modellingImplication": "Track local fill and loss of drainage/storage by date; do not flatten the borough into one historical ground level.",
+      "sourceCaution": "The report predicted serious floods would not recur; preserve this as contemporary opinion, not model validation."
+    }
+  ],
+  "gaugeEvidence": [
+    {
+      "event": "1928-01-07",
+      "station": "Southend Pier",
+      "heightAboveTrinityHighWaterFeet": 2.5,
+      "source": "engineer-1931",
+      "sourcePrintedPage": 495,
+      "heightODNMetres": null,
+      "transferToThreeMills": "not established"
+    },
+    {
+      "event": "1928-01-07",
+      "station": "Tilbury",
+      "heightAboveTrinityHighWaterFeet": 3.7916666666666665,
+      "source": "engineer-1931",
+      "sourcePrintedPage": 495,
+      "heightODNMetres": null,
+      "transferToThreeMills": "not established"
+    },
+    {
+      "event": "1928-01-07",
+      "station": "Royal Albert Dock",
+      "heightAboveTrinityHighWaterFeet": 5.083333333333333,
+      "source": "engineer-1931",
+      "sourcePrintedPage": 495,
+      "heightODNMetres": null,
+      "transferToThreeMills": "not established"
+    },
+    {
+      "event": "1928-01-07",
+      "station": "London Bridge",
+      "heightAboveTrinityHighWaterFeet": 5.75,
+      "source": "engineer-1931",
+      "sourcePrintedPage": 495,
+      "heightODNMetres": null,
+      "transferToThreeMills": "not established"
+    },
+    {
+      "event": "1928-01-07",
+      "station": "Richmond Lock",
+      "heightAboveTrinityHighWaterFeet": 6.145833333333333,
+      "source": "engineer-1931",
+      "sourcePrintedPage": 495,
+      "heightODNMetres": null,
+      "transferToThreeMills": "not established"
+    }
+  ],
+  "claimsUnderReview": [
+    {
+      "claim": "1928 peak 5.55m at about 01:30, almost a foot above previous record",
+      "origin": "User supplied Claude research; repeated online summaries",
+      "status": "Not adopted as ODN: published London Bridge peak is5.2115mODN at01:10, raw5ft9inTHW; common18ft3in historicalOD figure uses a different datum.",
+      "evidence": "The Engineer gives London Bridge +5ft9in THW and describes THW as 12.50ft above historical OD. Sum 18.25ft = 5.5626m historical OD; not automatically ODN or Three Mills."
+    },
+    {
+      "claim": "1928 Southend surge residual approximately 1.5m",
+      "origin": "User supplied Claude research",
+      "status": "not yet verified from prediction and observation for the event",
+      "modellingNote": "Residual above predicted tide is distinct from absolute peak and from excess above average spring high water."
+    },
+    {
+      "claim": "1909-1928 capital dredging deepened channel about2m and raised tidal range0.7m",
+      "origin": "User supplied Claude research",
+      "status": "dredging programme confirmed; numeric depth/range attribution unverified",
+      "modellingNote": "Do not subtract0.7m from1928 to obtain1897 or1904 levels."
+    }
+  ],
+  "digitisedGaugePeaks1928": [
+    {
+      "station": "Southend",
+      "timeAsPublished": "1928-01-06T23:49:00",
+      "heightODNMetres": 4.1346,
+      "highWater": true,
+      "file": "4_Southend.txt",
+      "line": 22513,
+      "rawSpreadsheetRow": 46,
+      "rawSheet": "01",
+      "rawHeightAboveTHWFeet": 2.5,
+      "conversionOffsetMetres": 3.3726,
+      "offsetEvidence": "Inayatillah et al. Table 3 (https://www.nature.com/articles/s41597-022-01223-7/tables/4); London Bridge also checked against master1.m",
+      "rawPeakChecked": true,
+      "threeMillsHeightODNMetres": null
+    },
+    {
+      "station": "Gravesend (Tilbury Dock)",
+      "timeAsPublished": "1928-01-07T00:09:00",
+      "heightODNMetres": 4.6306,
+      "highWater": true,
+      "file": "6_Tilbury.txt",
+      "line": 19977,
+      "rawSpreadsheetRow": 52,
+      "rawSheet": "01",
+      "rawHeightAboveTHWFeet": 3.7916666666666665,
+      "conversionOffsetMetres": 3.475,
+      "offsetEvidence": "Inayatillah et al. Table 3 (https://www.nature.com/articles/s41597-022-01223-7/tables/4); London Bridge also checked against master1.m",
+      "rawPeakChecked": true,
+      "threeMillsHeightODNMetres": null
+    },
+    {
+      "station": "Gallions Pier (Albert Dock)",
+      "timeAsPublished": "1928-01-07T00:58:00",
+      "heightODNMetres": 5.0243,
+      "highWater": true,
+      "file": "7-8_Silvertown.txt",
+      "line": 17955,
+      "rawSpreadsheetRow": 51,
+      "rawSheet": "01",
+      "rawHeightAboveTHWFeet": 5.083333333333333,
+      "conversionOffsetMetres": 3.475,
+      "offsetEvidence": "Inayatillah et al. Table 3 (https://www.nature.com/articles/s41597-022-01223-7/tables/4); London Bridge also checked against master1.m",
+      "rawPeakChecked": true,
+      "threeMillsHeightODNMetres": null
+    },
+    {
+      "station": "Old Swan Pier",
+      "timeAsPublished": "1928-01-07T01:10:00",
+      "heightODNMetres": 5.2115,
+      "highWater": true,
+      "file": "10-11_London_Bridge.txt",
+      "line": 21725,
+      "rawSpreadsheetRow": 49,
+      "rawSheet": "01",
+      "rawHeightAboveTHWFeet": 5.75,
+      "conversionOffsetMetres": 3.459,
+      "offsetEvidence": "Inayatillah et al. Table 3 (https://www.nature.com/articles/s41597-022-01223-7/tables/4); London Bridge also checked against master1.m",
+      "rawPeakChecked": true,
+      "threeMillsHeightODNMetres": null
+    }
+  ],
+  "dailyFlowEvidence": [
+    {
+      "station": 38001,
+      "series": "gdf",
+      "event": "1897-11-29",
+      "eventDayMeanM3PerSecond": 1.47,
+      "sourceFile": "38001-gdf.json"
+    },
+    {
+      "station": 38001,
+      "series": "gdf",
+      "event": "1898-10-29",
+      "eventDayMeanM3PerSecond": 0.475,
+      "sourceFile": "38001-gdf.json"
+    },
+    {
+      "station": 38001,
+      "series": "gdf",
+      "event": "1904-12-30",
+      "eventDayMeanM3PerSecond": 2.15,
+      "sourceFile": "38001-gdf.json"
+    },
+    {
+      "station": 38001,
+      "series": "gdf",
+      "event": "1928-01-07",
+      "eventDayMeanM3PerSecond": 22.7,
+      "sourceFile": "38001-gdf.json"
+    },
+    {
+      "station": 38001,
+      "series": "ndf",
+      "event": "1897-11-29",
+      "eventDayMeanM3PerSecond": 2.63,
+      "sourceFile": "38001-ndf.json"
+    },
+    {
+      "station": 38001,
+      "series": "ndf",
+      "event": "1898-10-29",
+      "eventDayMeanM3PerSecond": 1.32,
+      "sourceFile": "38001-ndf.json"
+    },
+    {
+      "station": 38001,
+      "series": "ndf",
+      "event": "1904-12-30",
+      "eventDayMeanM3PerSecond": 3.26,
+      "sourceFile": "38001-ndf.json"
+    },
+    {
+      "station": 38001,
+      "series": "ndf",
+      "event": "1928-01-07",
+      "eventDayMeanM3PerSecond": 23.8,
+      "sourceFile": "38001-ndf.json"
+    },
+    {
+      "station": 39001,
+      "series": "gdf",
+      "event": "1897-11-29",
+      "eventDayMeanM3PerSecond": 25,
+      "sourceFile": "39001-gdf.json"
+    },
+    {
+      "station": 39001,
+      "series": "gdf",
+      "event": "1898-10-29",
+      "eventDayMeanM3PerSecond": 16.4,
+      "sourceFile": "39001-gdf.json"
+    },
+    {
+      "station": 39001,
+      "series": "gdf",
+      "event": "1904-12-30",
+      "eventDayMeanM3PerSecond": 28.1,
+      "sourceFile": "39001-gdf.json"
+    },
+    {
+      "station": 39001,
+      "series": "gdf",
+      "event": "1928-01-07",
+      "eventDayMeanM3PerSecond": 522,
+      "sourceFile": "39001-gdf.json"
+    },
+    {
+      "station": 39001,
+      "series": "ndf",
+      "event": "1897-11-29",
+      "eventDayMeanM3PerSecond": 30,
+      "sourceFile": "39001-ndf.json"
+    },
+    {
+      "station": 39001,
+      "series": "ndf",
+      "event": "1898-10-29",
+      "eventDayMeanM3PerSecond": 23.1,
+      "sourceFile": "39001-ndf.json"
+    },
+    {
+      "station": 39001,
+      "series": "ndf",
+      "event": "1904-12-30",
+      "eventDayMeanM3PerSecond": 36,
+      "sourceFile": "39001-ndf.json"
+    },
+    {
+      "station": 39001,
+      "series": "ndf",
+      "event": "1928-01-07",
+      "eventDayMeanM3PerSecond": 526,
+      "sourceFile": "39001-ndf.json"
+    }
+  ],
+  "researchComparison": "reference/topography-research-2026-09-28/flood-evidence/event-comparison.json",
+  "interpretation1904": "Event-day upstream flow substantially below1928 at both gauges; does not support substituting a large fluvial flood for the storm surge identified in chapter6. Tide predictions/observations still needed for event attribution.",
+  "researchLeads": [
+    {
+      "source": "user supplied research",
+      "lead": "Sheerness daily high/low water ledgers for1897 and1904",
+      "status": "exact-date holdings not verified; monthly PSMSL means cannot resolve an individual surge"
+    },
+    {
+      "source": "user supplied research",
+      "lead": "Thames Conservancy/LCC Chief Engineer and Lee Conservancy lock-keeper records at London Metropolitan Archives",
+      "status": "catalogue references and exact-date survival remain unverified"
+    },
+    {
+      "source": "bow-locks-history",
+      "lead": "RAIL 845/112: 1928 flood report; recover normal-head datum at Limehouse, Bromley and Old Ford and confirm original readings",
+      "status": "Reference transcribed from page; archive original not yet inspected. Nearby LMA ACC 2423/P1516 concerns the keeper lobby, not the flood report."
+    },
+    {
+      "source": "tideway-appendix-q",
+      "lead": "MOLA ABM11 geoarchaeological borehole/deposit model, Table Q.3 HEA1A, PDF21/printed17",
+      "status": "Appendix summarises buried surfaces and gravel relief but supplies no dated 1900 surface elevations. Obtain underlying report and logs."
+    },
+    {
+      "source": "tideway-appendix-q",
+      "lead": "PCA Bridport Site Three Mills TMI03, Table Q.3 HEA39, PDF26/printed22",
+      "status": "Summary describes 18th/19th-century alluvium beneath 19th/20th-century made ground. Need original sections, dates and datum."
+    },
+    {
+      "source": "https://www.glias.org.uk/news/333news.html",
+      "lead": "Monthly installation reports exchanged by Lewis Angell and Lilleshall, reportedly extant at 1982 Newcomen visit; engine-house material formerly at Passmore Edwards Museum",
+      "status": "Potential commissioning evidence; present holdings and reports not inspected."
+    },
+    {
+      "source": "user supplied",
+      "lead": "https://trove.nla.gov.au/newspaper/article/107325485",
+      "status": "User supplied OCR and corrected issue date to 14 September 1888; reported storm starts July 30. Newspaper title, scan and individual impact dates still unresolved."
+    }
+  ],
+  "localNavigationLevelEvidence": [
+    {
+      "event": "1928-01-07",
+      "place": "Limehouse",
+      "reportedTime": "about 01:30, early morning tide; timezone unspecified",
+      "heightAboveNormalHeadFeet": 8,
+      "heightAboveNormalHeadInches": 6,
+      "heightAboveNormalHeadMetres": 2.5908,
+      "referenceLevel": "normal head at this location; absolute datum unresolved",
+      "heightODNMetres": null,
+      "source": "bow-locks-history",
+      "archiveReferenceAsCited": "RAIL 845/112",
+      "precision": "Report says about; metric conversion does not imply millimetre measurement accuracy",
+      "use": "Relative local water-level constraint pending definition and survey datum of normal head; not a street depth or a surge residual"
+    },
+    {
+      "event": "1928-01-07",
+      "place": "Bromley",
+      "reportedTime": "about 01:30, early morning tide; timezone unspecified",
+      "heightAboveNormalHeadFeet": 7,
+      "heightAboveNormalHeadInches": 8,
+      "heightAboveNormalHeadMetres": 2.3368,
+      "referenceLevel": "normal head at this location; absolute datum unresolved",
+      "heightODNMetres": null,
+      "source": "bow-locks-history",
+      "archiveReferenceAsCited": "RAIL 845/112",
+      "precision": "Report says about; metric conversion does not imply millimetre measurement accuracy",
+      "use": "Relative local water-level constraint pending definition and survey datum of normal head; not a street depth or a surge residual"
+    },
+    {
+      "event": "1928-01-07",
+      "place": "Old Ford",
+      "reportedTime": "about 01:30, early morning tide; timezone unspecified",
+      "heightAboveNormalHeadFeet": 7,
+      "heightAboveNormalHeadInches": 7,
+      "heightAboveNormalHeadMetres": 2.3114,
+      "referenceLevel": "normal head at this location; absolute datum unresolved",
+      "heightODNMetres": null,
+      "source": "bow-locks-history",
+      "archiveReferenceAsCited": "RAIL 845/112",
+      "precision": "Report says about; metric conversion does not imply millimetre measurement accuracy",
+      "use": "Relative local water-level constraint pending definition and survey datum of normal head; not a street depth or a surge residual"
+    }
+  ],
+  "localFloodImpactEvidence": [
+    {
+      "event": "1928-01-07",
+      "source": "bow-locks-history",
+      "archiveReferenceAsCited": "RAIL 845/112",
+      "observations": [
+        "Two empty barges stranded on the path above Three Mills",
+        "Loaded barge stranded on the wharf at Bow",
+        "Floodwater entered collector and lock keeper houses at Bromley"
+      ],
+      "use": "Qualitative inundation checks after locations and contemporary ground/wharf elevations are established; not absolute water heights"
+    },
+    {
+      "event": "1888-07-30-rainfall-sequence",
+      "source": "trove-107325485",
+      "observations": [
+        "Basements flooded around Victoria Docks, Barking Road and adjoining streets",
+        "Low-lying houses flooded across Hackney Marshes and around Temple Mills",
+        "Flooding in lower Tottenham and Clapton",
+        "Railway workers garden plots damaged",
+        "West Ham fire engines and portable pumps used to drain basements"
+      ],
+      "use": "Geographic and drainage vulnerability evidence for 1888; locate period addresses and surface types before elevation comparisons. Later pumping infrastructure must not be backdated."
+    }
+  ],
+  "drainageInfrastructureEvidence": [
+    {
+      "feature": "West Ham Pumping Station",
+      "sources": [
+        "heltrust-west-ham",
+        "he-west-ham-engine-house"
+      ],
+      "reportedConnections": [
+        {
+          "equipment": "Two beam engines",
+          "outlet": "Northern Outfall Sewer",
+          "duty": "Sewage lifting; one normally running, second used as needed"
+        },
+        {
+          "equipment": "Three centrifugal storm pumps",
+          "outlet": "Channelsea River",
+          "duty": "Combined stormwater and sewage; two reported built in 1900, third transferred second-hand from Canning Town"
+        }
+      ],
+      "reportedPumpLiftFeet": 42,
+      "reportedPumpLiftMetres": 12.8016,
+      "datumCaution": "Pump lift is a difference between hydraulic levels, not ground elevation, an ODN height, sewer crest or flood level.",
+      "appliedModelDischargeM3PerSecond": null,
+      "missingForSimulation": [
+        "Event-specific commissioning and availability",
+        "Pump performance curves against head",
+        "Sewer catchment and storage",
+        "Discharge invert levels and tidal backwater controls",
+        "Event operating logs"
+      ],
+      "interpretation": "Distinguish drainage operation from direct tidal inundation; page claims of flood prevention do not demonstrate elimination of all floods."
+    }
+  ],
+  "modernElevationComparisonEvidence": [
+    {
+      "source": "tideway-appendix-q",
+      "pdfPage": 35,
+      "drawing": "DCO-PP-26X-ABMPS-270003",
+      "drawingDate": "2013-01",
+      "surveyDate": null,
+      "datum": "Tunnel Datum, explicitly 100 metres below Ordnance Datum Newlyn",
+      "conversionToODN": "heightODNMetres = heightTunnelDatumMetres - 100",
+      "points": [
+        {
+          "locationDescription": "Abbey Creek boundary path northeast of Lee Tunnel shaft",
+          "heightTunnelDatumMetres": 105.22,
+          "heightODNMetres": 5.22,
+          "bng": null
+        },
+        {
+          "locationDescription": "East of storm sewage overflow screens",
+          "heightTunnelDatumMetres": 105.35,
+          "heightODNMetres": 5.35,
+          "bng": null
+        },
+        {
+          "locationDescription": "Southeast of Lee Tunnel shaft near Abbey Creek boundary",
+          "heightTunnelDatumMetres": 105.73,
+          "heightODNMetres": 5.73,
+          "bng": null
+        },
+        {
+          "locationDescription": "East of Prescott Channel / Three Mills Lock",
+          "heightTunnelDatumMetres": 105.67,
+          "heightODNMetres": 5.67,
+          "bng": null
+        },
+        {
+          "locationDescription": "Southern end near Prescott and Channelsea junction",
+          "heightTunnelDatumMetres": 105.22,
+          "heightODNMetres": 5.22,
+          "bng": null
+        }
+      ],
+      "review": "Drawing and datum visually inspected; all dimensions/levels marked approximate. Coordinates not yet georeferenced. Distinct from the 105.40m example in legend.",
+      "excludedShaftLevel": {
+        "heightTunnelDatumMetres": 109,
+        "reason": "Lee Tunnel works shown as existing at future start of Tideway construction; not historical open-ground control"
+      },
+      "use": "Modern comparison only, not active historic terrain controls. Cannot infer fill thickness without co-located historic evidence."
+    }
+  ],
+  "studyScope": {
+    "principalFloodYears": [
+      1888,
+      1897,
+      1904,
+      1928
+    ],
+    "secondaryFloodYears": [
+      1898
+    ],
+    "comparisonBoundary": "1930s Lower Lea civil engineering works",
+    "authority": "User-defined study scope, 30 September 2026",
+    "policy": "Separate event-year terrain and drainage systems; no assumption that all four floods have identical mechanisms. 1888 detailed chronology under review."
+  }
+}

@@ -1,0 +1,691 @@
+{
+  "title": "The marsh that became a town",
+  "note": "Draft render of SCRIPT.md draft 5, with the post-war proposal in section 7 and the gasworks line changed to match the 1890s sheet. Views are zoom/lat/lng on the maps page; stills are captured at 3840x2160, so k=2 shows the view at native detail and k=1 shows one zoom level wider. Shots below an effective zoom of 17 use the six-inch second edition for consistent blue water and no sheet-tint patchwork; closer shots use the five-foot plan.",
+  "say": {
+    "Lea": "Lee",
+    "Bow": "Boe",
+    "Plaistow": "Plarstow"
+  },
+  "voice": "bm_george",
+  "speed": 0.96,
+  "shots": [
+    {
+      "id": "s1-outfall",
+      "section": 1,
+      "view": "17.5/51.51880/0.00050",
+      "layer": "five-foot-1893",
+      "map": "1890s",
+      "motion": [
+        [
+          0.45,
+          0.5,
+          1.75
+        ],
+        [
+          0.55,
+          0.5,
+          2.0
+        ]
+      ],
+      "lead": 1.2,
+      "units": [
+        "In 1888, West Ham needed a fire engine to pump out a pumping station.",
+        "Floodwater had put out the fires that powered the pumps. The machinery meant to drain the town had itself been flooded."
+      ]
+    },
+    {
+      "id": "s1-streets",
+      "view": "17.0/51.51450/0.00800",
+      "layer": "six-inch-2nd",
+      "map": "1890s",
+      "motion": [
+        [
+          0.38,
+          0.5,
+          1.9
+        ],
+        [
+          0.62,
+          0.48,
+          1.6
+        ]
+      ],
+      "captions": [
+        {
+          "text": "WEST HAM · THE FLOOD OF 1888",
+          "style": "title",
+          "at": 0.02,
+          "until": 0.55
+        }
+      ],
+      "units": [
+        "Look at these streets beside the River Lea. Within a few decades, low marshland had become a place of factories, docks and thousands of homes. People came here for work. Keeping their homes dry became a constant struggle.",
+        "To see how this happened, we need to go back to a landscape with far fewer streets."
+      ],
+      "tail": 1.6
+    },
+    {
+      "id": "s2-wide",
+      "section": 2,
+      "view": "15.0/51.51200/0.02000",
+      "layer": "chapman-andre-1777",
+      "map": "1777",
+      "motion": [
+        [
+          0.5,
+          0.5,
+          1.1
+        ],
+        [
+          0.5,
+          0.5,
+          1.35
+        ]
+      ],
+      "captions": [
+        {
+          "text": "1777 · THE MARSHES EAST OF LONDON",
+          "style": "title",
+          "at": 0.05,
+          "until": 0.9
+        }
+      ],
+      "units": [
+        "The Thames runs along the bottom of this landscape. The Lea comes down from the north, splitting into channels before it reaches the larger river."
+      ]
+    },
+    {
+      "id": "s2-plaistow",
+      "view": "15.0/51.51500/0.02200",
+      "layer": "chapman-andre-1777",
+      "map": "1777",
+      "motion": [
+        [
+          0.42,
+          0.5,
+          1.4
+        ],
+        [
+          0.58,
+          0.5,
+          1.6
+        ]
+      ],
+      "units": [
+        "Much of the ground between them is marsh. But this is already a working landscape. Farmers have drained fields and built banks to keep the water out. Livestock graze here before being taken to market in London. Around Plaistow, growers produce potatoes for the city."
+      ]
+    },
+    {
+      "id": "s2-mills",
+      "view": "15.0/51.53000/-0.00600",
+      "layer": "chapman-andre-1777",
+      "map": "1777",
+      "motion": [
+        [
+          0.5,
+          0.6,
+          1.4
+        ],
+        [
+          0.5,
+          0.45,
+          1.7
+        ]
+      ],
+      "units": [
+        "There is industry too. The tide helps drive the mills. Cloth printers work beside the waterways. At Three Mills, the name tells you what drew people to this spot: water could do work."
+      ]
+    },
+    {
+      "id": "s2-close",
+      "view": "15.0/51.52500/0.01500",
+      "layer": "chapman-andre-1777",
+      "map": "1777",
+      "motion": [
+        [
+          0.5,
+          0.5,
+          1.4
+        ],
+        [
+          0.5,
+          0.5,
+          1.1
+        ]
+      ],
+      "units": [
+        "London is close enough to buy what this landscape produces. For now, fields still separate its small settlements. That is about to change."
+      ],
+      "tail": 1.4
+    },
+    {
+      "id": "s3-dock",
+      "section": 3,
+      "view": "16.0/51.50750/0.03000",
+      "layer": "six-inch-2nd",
+      "map": "1890s",
+      "motion": [
+        [
+          0.5,
+          0.5,
+          1.75
+        ],
+        [
+          0.5,
+          0.5,
+          2.0
+        ]
+      ],
+      "captions": [
+        {
+          "text": "VICTORIA DOCK OPENS · 1855",
+          "style": "title",
+          "at": 0.05,
+          "until": 0.95
+        }
+      ],
+      "units": [
+        "Victoria Dock opened in 1855. Its great basin was cut into the low ground beside the Thames."
+      ]
+    },
+    {
+      "id": "s3-creek",
+      "view": "16.0/51.51500/0.00300",
+      "layer": "six-inch-2nd",
+      "map": "1890s",
+      "motion": [
+        [
+          0.5,
+          0.72,
+          1.8
+        ],
+        [
+          0.45,
+          0.3,
+          1.8
+        ]
+      ],
+      "units": [
+        "One of the most important things arriving here was coal. Ships brought it to the docks. Barges carried it onwards to factories along the Lea.",
+        "Steam power did not make the river obsolete. The river supplied the fuel."
+      ]
+    },
+    {
+      "id": "s3-soapworks",
+      "view": "17.5/51.53260/-0.01560",
+      "layer": "five-foot-1893",
+      "map": "1890s",
+      "motion": [
+        [
+          0.5,
+          0.5,
+          1.6
+        ],
+        [
+          0.5,
+          0.5,
+          1.95
+        ]
+      ],
+      "units": [
+        "Follow these waterways and the factory sites begin to make sense. A wharf gave a works a place to unload. A railway siding offered another route in and out. Cheap transport helped make West Ham an attractive place to manufacture goods for London and beyond."
+      ]
+    },
+    {
+      "id": "s3-threemills",
+      "view": "17.5/51.52570/-0.00610",
+      "layer": "five-foot-1893",
+      "map": "1890s",
+      "motion": [
+        [
+          0.5,
+          0.5,
+          1.6
+        ],
+        [
+          0.5,
+          0.5,
+          1.8
+        ]
+      ],
+      "units": [
+        "The water that had turned mill wheels now helped feed a much larger industrial economy."
+      ],
+      "tail": 1.2
+    },
+    {
+      "id": "s4-goods",
+      "section": 4,
+      "kind": "seq",
+      "map": "1890s",
+      "stills": [
+        {
+          "view": "18.0/51.52880/-0.01000",
+          "layer": "five-foot-1893",
+          "caption": "SOAP"
+        },
+        {
+          "view": "17.5/51.50070/0.04820",
+          "layer": "five-foot-1893",
+          "caption": "SUGAR"
+        },
+        {
+          "view": "17.5/51.53390/-0.00200",
+          "layer": "five-foot-1893",
+          "caption": "GAS"
+        }
+      ],
+      "motion": [
+        [
+          0.5,
+          0.5,
+          1.8
+        ],
+        [
+          0.5,
+          0.5,
+          2.0
+        ]
+      ],
+      "units": [
+        "Some of these factory names belong to ordinary daily life: soap, sugar, gas for lighting and cooking. Others made chemicals, rubber and telegraph cable."
+      ]
+    },
+    {
+      "id": "s4-silvertown",
+      "view": "17.0/51.50190/0.01980",
+      "layer": "six-inch-2nd",
+      "map": "1890s",
+      "motion": [
+        [
+          0.45,
+          0.5,
+          1.6
+        ],
+        [
+          0.55,
+          0.5,
+          1.8
+        ]
+      ],
+      "units": [
+        "The things people bought and used elsewhere had to be made somewhere. Here, that meant coal deliveries, furnaces, waste and smoke, often close to the houses of the people doing the work."
+      ]
+    },
+    {
+      "id": "s4-abbeymarsh",
+      "kind": "wipe",
+      "view": "17.5/51.53180/-0.00450",
+      "layers": [
+        "five-foot-1860s",
+        "five-foot-1893"
+      ],
+      "labels": [
+        "1860s",
+        "1890s"
+      ],
+      "motion": [
+        [
+          0.5,
+          0.5,
+          1.7
+        ],
+        [
+          0.5,
+          0.5,
+          1.8
+        ]
+      ],
+      "wipe": [
+        0.2,
+        0.8
+      ],
+      "units": [
+        "Factories spread along the riverbanks. Older industrial grounds filled with new buildings."
+      ]
+    },
+    {
+      "id": "s4-westmarsh",
+      "view": "17.0/51.52250/0.00050",
+      "layer": "six-inch-2nd",
+      "map": "1890s",
+      "motion": [
+        [
+          0.4,
+          0.45,
+          1.7
+        ],
+        [
+          0.58,
+          0.55,
+          1.7
+        ]
+      ],
+      "units": [
+        "Yet look beside this gasworks: there is still open marsh, and a farm.",
+        "West Ham did not turn from green countryside into a solid block of factories overnight. Gardens, workshops, large works and open marsh existed alongside one another. A short walk could take someone from a crowded street to a field, with a gas holder rising beyond it."
+      ],
+      "tail": 1.2
+    },
+    {
+      "id": "s5-population",
+      "section": 5,
+      "view": "17.0/51.51500/0.01200",
+      "layer": "six-inch-2nd",
+      "map": "1890s",
+      "motion": [
+        [
+          0.5,
+          0.5,
+          2.0
+        ],
+        [
+          0.45,
+          0.5,
+          1.35
+        ]
+      ],
+      "captions": [
+        {
+          "text": "WEST HAM · 1851 · ABOUT 19,000 PEOPLE",
+          "style": "title",
+          "at": 0.25,
+          "until": 0.6
+        },
+        {
+          "text": "WEST HAM · 1901 · 267,000 PEOPLE",
+          "style": "title",
+          "at": 0.62,
+          "until": 1.0
+        }
+      ],
+      "units": [
+        "Work brought people here in enormous numbers. In 1851, West Ham had about nineteen thousand residents. Fifty years later, it had more than a quarter of a million."
+      ]
+    },
+    {
+      "id": "s5-ditches",
+      "view": "17.0/51.51400/0.02500",
+      "layer": "six-inch-2nd",
+      "map": "1890s",
+      "motion": [
+        [
+          0.42,
+          0.5,
+          1.7
+        ],
+        [
+          0.58,
+          0.5,
+          1.85
+        ]
+      ],
+      "units": [
+        "New housing spread onto the marsh. Some early builders followed the drainage ditches, putting homes along their banks. Channels dug to carry water away became open sewers beside the new streets.",
+        "Families needed wages from the docks and factories. They also needed clean water, better drainage and homes they could afford. The growth of industry did not guarantee steady work or healthy surroundings."
+      ]
+    },
+    {
+      "id": "s5-strikes",
+      "view": "17.0/51.50070/0.04420",
+      "layer": "six-inch-2nd",
+      "map": "1890s",
+      "motion": [
+        [
+          0.4,
+          0.5,
+          1.7
+        ],
+        [
+          0.6,
+          0.5,
+          1.7
+        ]
+      ],
+      "captions": [
+        {
+          "text": "STRIKES · 1889",
+          "style": "title",
+          "at": 0.05,
+          "until": 0.95
+        }
+      ],
+      "units": [
+        "These districts became centres of labour organisation. Many of the dockers who struck in 1889 lived and worked in southern West Ham. Gasworkers organised too, and workers at the rubber and telegraph works in Silvertown went on strike that summer."
+      ]
+    },
+    {
+      "id": "s5-rows",
+      "view": "17.5/51.51600/0.01000",
+      "layer": "five-foot-1893",
+      "map": "1890s",
+      "motion": [
+        [
+          0.5,
+          0.5,
+          1.7
+        ],
+        [
+          0.5,
+          0.5,
+          2.0
+        ]
+      ],
+      "units": [
+        "Behind these rows of little rectangles were people trying to improve the terms on which they lived and worked."
+      ],
+      "tail": 1.2
+    },
+    {
+      "id": "s6-drains",
+      "section": 6,
+      "view": "17.0/51.51750/0.03500",
+      "layer": "six-inch-2nd",
+      "map": "1890s",
+      "motion": [
+        [
+          0.45,
+          0.5,
+          1.6
+        ],
+        [
+          0.55,
+          0.5,
+          1.85
+        ]
+      ],
+      "captions": [
+        {
+          "text": "DRAINING THE TOWN",
+          "style": "title",
+          "at": 0.05,
+          "until": 0.7
+        }
+      ],
+      "units": [
+        "Building streets had not raised all this land beyond the reach of water.",
+        "Rain had to drain away. River walls had to hold. When water collected on the low ground, pumps helped remove it. Those pumps depended on coal and on fires that had to keep burning."
+      ]
+    },
+    {
+      "id": "s6-pumphouse",
+      "view": "17.5/51.51880/0.00050",
+      "layer": "five-foot-1893",
+      "map": "1890s",
+      "motion": [
+        [
+          0.5,
+          0.5,
+          1.7
+        ],
+        [
+          0.5,
+          0.5,
+          1.95
+        ]
+      ],
+      "units": [
+        "That brings us back to 1888. Floodwater stopped the pumps when they were needed most. A fire engine had to drain the pump house before it could do its job again."
+      ]
+    },
+    {
+      "id": "s6-streets",
+      "view": "17.0/51.51850/0.01700",
+      "layer": "six-inch-2nd",
+      "map": "1890s",
+      "motion": [
+        [
+          0.6,
+          0.5,
+          1.7
+        ],
+        [
+          0.4,
+          0.5,
+          1.7
+        ]
+      ],
+      "units": [
+        "Residents demanded better drainage. The borough took on greater responsibility for sewers and flood defences, but maintaining a town on this ground was expensive. It also required action by people and organisations with different interests in the rivers."
+      ]
+    },
+    {
+      "id": "s6-wharves",
+      "view": "17.0/51.51200/0.00800",
+      "layer": "six-inch-2nd",
+      "map": "1890s",
+      "motion": [
+        [
+          0.5,
+          0.4,
+          1.7
+        ],
+        [
+          0.5,
+          0.6,
+          1.8
+        ]
+      ],
+      "units": [
+        "Flooding returned in 1897 and nineteen-oh-four. In 1928, another severe flood spread through houses, factories and wharves. The waterways that brought work into West Ham could also interrupt it, damage homes and destroy possessions."
+      ],
+      "tail": 1.2
+    },
+    {
+      "id": "s7-backrivers",
+      "section": 7,
+      "view": "16.5/51.53300/-0.00900",
+      "layer": "six-inch-2nd",
+      "map": "1890s",
+      "motion": [
+        [
+          0.5,
+          0.5,
+          1.6
+        ],
+        [
+          0.5,
+          0.5,
+          1.75
+        ]
+      ],
+      "captions": [
+        {
+          "text": "THE 1930s · FLOOD RELIEF AND JOBS",
+          "style": "title",
+          "at": 0.05,
+          "until": 0.95
+        }
+      ],
+      "units": [
+        "In the 1930s, flood relief and unemployment became part of the same project. Public money paid for major changes to the waterways, and jobless men were employed to carry them out."
+      ]
+    },
+    {
+      "id": "s7-postwar",
+      "kind": "wipe",
+      "view": "16.5/51.53300/-0.00900",
+      "layers": [
+        "six-inch-2nd",
+        "national-grid-early"
+      ],
+      "labels": [
+        "1890s",
+        "MAPPED 1947–63"
+      ],
+      "motion": [
+        [
+          0.5,
+          0.5,
+          1.75
+        ],
+        [
+          0.5,
+          0.5,
+          1.85
+        ]
+      ],
+      "wipe": [
+        0.12,
+        0.45
+      ],
+      "units": [
+        "A survey made after the Second World War shows what the work left behind.",
+        "Some channels were filled in. Others were moved. Bridges were rebuilt and the High Street widened. Several old mills were demolished."
+      ]
+    },
+    {
+      "id": "s7-threemills",
+      "view": "17.0/51.52800/-0.00650",
+      "layer": "national-grid-early",
+      "map": "1947–63",
+      "motion": [
+        [
+          0.5,
+          0.5,
+          1.7
+        ],
+        [
+          0.5,
+          0.5,
+          1.95
+        ]
+      ],
+      "units": [
+        "Three Mills survived, with a new flood channel running nearby."
+      ],
+      "tail": 0.8
+    },
+    {
+      "id": "s7-split",
+      "kind": "split",
+      "view": "15.0/51.52000/0.01000",
+      "layers": [
+        "chapman-andre-1777",
+        "six-inch-2nd"
+      ],
+      "labels": [
+        "1777",
+        "1890s"
+      ],
+      "units": [
+        "Return to the earlier marsh and the scale of the change is striking. Docks have been dug into fields. Factories crowd the waterways. Streets reach across ground that once supported grazing and market gardens.",
+        "London gained fuel, manufactured goods and places to work. The people who made their homes here also had to fight for better wages, healthier streets and protection from floods.",
+        "They had built a town on the marsh. Keeping it habitable was work that never ended."
+      ],
+      "tail": 4.0
+    },
+    {
+      "id": "credits",
+      "kind": "card",
+      "dur": 7.0,
+      "lines": [
+        "The marsh that became a town",
+        "Historical research: Jim Clifford, West Ham and the River Lea (UBC Press, 2017)",
+        "Historic maps reproduced with the permission of the National Library of Scotland (CC-BY)",
+        "Chapman and André, 1777 · Ordnance Survey five-foot plans, 1860s and 1890s · Ordnance Survey National Grid plans, 1947–63",
+        "Draft · narration by a synthetic voice (Kokoro, British English)"
+      ]
+    }
+  ]
+}
