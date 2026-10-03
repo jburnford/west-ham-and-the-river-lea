@@ -21,6 +21,7 @@ import { loadHistoricElevation, applyHistoricElevation, historicGround } from '.
 import { tideControls } from './tides.js';
 import { createDistrictNavigator, districtViews, factoryViews, viewPose } from './district-navigation.js';
 import { createRandom } from './lib/prng.js';
+import { createGroundSampler } from './lib/ground-sampler.js';
 import { flatSurface, box as libBox, cylinder as libCylinder, beam as libBeam } from './lib/geometry.js';
 
 const $ = (selector) => document.querySelector(selector);
@@ -933,7 +934,8 @@ function buildScene() {
   const sewerBanks = data.infrastructure.sewerBanks.map((tri) =>
     tri.map(([x, y, z]) => [
       x,
-      (y * cover(x, z)) / sewer.height + (1 - y / sewer.height) * (data.mainLandscape?.level(x, z, 0) ?? 0),
+      // Toes follow the detailed ground sampler, not the 10 m landscape raster, which ignores bank crests.
+      (y * cover(x, z)) / sewer.height + (1 - y / sewer.height) * terrain.level(x, z),
       z,
     ])
   );
@@ -1267,6 +1269,14 @@ try {
   data.riverSystem = system;
   applyRiverSystem(data);
   applyMainLandscape(data, mainLandscape);
+  // Ground lookups outside the detailed tile read the meshes that are actually drawn, so objects,
+  // fills and bank toes meet the surface the reader sees rather than a source grid it replaced.
+  data.drawnGround = createGroundSampler([
+    data.elevation && { positions: data.elevation.grids.extension },
+    data.mainLandscape && { positions: data.mainLandscape.grids.groundMesh },
+    { positions: data.riverNetwork.positions, indices: data.riverNetwork.indices },
+    { positions: data.riverSystem.positions, indices: data.riverSystem.indices },
+  ]);
   data.neighbourhood.terraces = housing.rows.filter((r) => r.group === 'district');
   data.southwest.rows = housing.rows.filter((r) => r.group === 'southwest');
   walker = createDistrictNavigator(data.neighbourhood.sewer);

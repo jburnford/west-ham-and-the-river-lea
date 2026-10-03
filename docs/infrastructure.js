@@ -100,7 +100,8 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
         for (let j = 0; j < 3; j++) {
           const a = points[j],
             b = points[(j + 1) % 3];
-          const low = (p) => [p[0], Math.max(0.1, level(p[0], p[2])), p[2]];
+          // The fill reaches the drawn ground, which the landscape pass can place below 0.1 m.
+          const low = (p) => [p[0], level(p[0], p[2]), p[2]];
           supports.push(...a, ...low(a), ...b, ...b, ...low(a), ...low(b));
         }
       }

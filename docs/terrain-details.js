@@ -43,6 +43,8 @@ export function terrainDetails({ THREE, scene, materials: m, data, box, cylinder
     [x0, z0, x1, z1] = t.bounds;
   function level(x, z) {
     if (x < x0 || x > x1 || z < z0 || z > z1) {
+      const drawn = data.drawnGround?.sample(x, z);
+      if (drawn !== null && drawn !== undefined) return drawn;
       if (data.mainLandscape?.weight(x, z) > 0) return data.mainLandscape.level(x, z);
       if (data.elevation?.weight(x, z) > 0) return data.elevation.level(x, z);
       return data.riverNetwork.marshLevel(x, z);
@@ -164,7 +166,8 @@ export function terrainDetails({ THREE, scene, materials: m, data, box, cylinder
   let vegetationCount = 0;
   const plantRandom = createRandom(902);
   const roadSegments = data.infrastructure.roads.flatMap((r) =>
-    r.route.slice(1).map((b, i) => ({ a: r.route[i], b, width: r.width / 2 + 2 }))
+    // Raised road corridors extend about a metre past the carriageway; keep tufts off their edges.
+    r.route.slice(1).map((b, i) => ({ a: r.route[i], b, width: r.width / 2 + 3 }))
   );
   function onRoad(x, z) {
     return roadSegments.some(({ a, b, width }) => {
