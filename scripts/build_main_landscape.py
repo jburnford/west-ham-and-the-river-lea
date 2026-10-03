@@ -60,25 +60,51 @@ for feature in meta['laterSurfaceLayers']['features']:
     levels=np.array([records[id]['provisionalODNMetres']-offset for id in ids])
     road_fits.append((road,line.buffer(road['width']/2+3),positions,levels,cKDTree(positions),ids))
 road_tree=shapely.STRtree([fit[1] for fit in road_fits])
-def road_levels(points,result):
+# Abbey Lane's approaches are graded to the abbey-mill-crossing deck (whose
+# height is an interpretation in road-traces.json): level with the deck for
+# 2 m beyond each end, then at no more than 1 in 20, so the street meets the
+# deck instead of standing above it. The drawn road surface lies 0.065 m above
+# this ground (docs/infrastructure.js).
+DECK_GRADE=.05;DECK_LANDING_M=2;DECK_ROAD_OFFSET=.065;DECK_APPROACH_M=20
+graded_decks={j:[(LineString(b['route']),b['height']-DECK_ROAD_OFFSET,b['id']) for b in infra['roadBridges'] if b['id']=='abbey-mill-crossing' and b['name']==fit[0]['name']] for j,fit in enumerate(road_fits)}
+graded_decks={j:v for j,v in graded_decks.items() if v}
+def road_fit_levels(j,points):
+    """Street level of corridor j at points: inverse-distance from the corridor's
+    own readings, never through water; NaN where no reading is in reach."""
+    road,footprint,positions,levels,tree,ids=road_fits[j];out=np.full(len(points),np.nan)
+    if not len(points):return out
+    d,ii=tree.query(points,k=min(4,len(positions)))
+    if d.ndim==1:d=d[:,None];ii=ii[:,None]
+    links=shapely.linestrings(np.stack([np.broadcast_to(points[:,None,:],(*ii.shape,2)),positions[ii]],axis=2).reshape(-1,2,2))
+    clear=~shapely.intersects(links,water).reshape(ii.shape)
+    w=np.where(clear&(d<=120),1/np.maximum(d,3)**2,0);total=w.sum(axis=1);ok=total>0
+    out[ok]=(levels[ii[ok]]*w[ok]).sum(axis=1)/total[ok]
+    for line,deck,_ in graded_decks.get(j,[]):
+        reach=DECK_GRADE*np.maximum(0,shapely.distance(shapely.points(points),line)-DECK_LANDING_M)
+        out=np.clip(out,deck-reach,deck+reach)
+    return out
+def road_levels(points,result,assigned=None):
     matches=road_tree.query(shapely.points(points),predicate='within')
     if not matches.size:return result
     for j in np.unique(matches[1]):
-        indices=matches[0][matches[1]==j];road,footprint,positions,levels,tree,ids=road_fits[j]
-        d,ii=tree.query(points[indices],k=min(4,len(positions)))
-        if d.ndim==1:d=d[:,None];ii=ii[:,None]
-        links=shapely.linestrings(np.stack([np.broadcast_to(points[indices,None,:],(*ii.shape,2)),positions[ii]],axis=2).reshape(-1,2,2))
-        clear=~shapely.intersects(links,water).reshape(ii.shape)
-        w=np.where(clear&(d<=120),1/np.maximum(d,3)**2,0);total=w.sum(axis=1);ok=total>0
-        result[indices[ok]]=(levels[ii[ok]]*w[ok]).sum(axis=1)/total[ok]
+        indices=matches[0][matches[1]==j];value=road_fit_levels(j,points[indices]);ok=np.isfinite(value)
+        result[indices[ok]]=value[ok]
+        if assigned is not None:assigned[indices[ok]]=True
     return result
 
-def base(points):
-    result=sample(filled,points)
+def base(points,edges=True):
+    """Premises pads and street corridors at their own levels; with edges, the
+    bank-foot frontage fill and the earth batters outside them (see below)."""
+    marsh=sample(filled,points);result=marsh.copy();pad=np.zeros(len(points),bool);street=np.zeros(len(points),bool)
     matches=pad_tree.query(shapely.points(points),predicate='within')
     if matches.size:
         for j in np.unique(matches[1]):result[matches[0][matches[1]==j]]=pads[j]['groundSceneY']
-    return road_levels(points,result)
+        pad[matches[0]]=True
+    if edges:result=frontage_levels(points,result,pad)
+    result=road_levels(points,result,street)
+    # A higher neighbour's batter may run into a lower yard (never over its
+    # buildings), but never onto a street corridor.
+    return edge_batter(points,result,street) if edges else result
 
 # Retaining walls are masonry: the coping runs level or in gentle grades, and
 # the land behind is filled to it. The crest follows the observed along-bank
@@ -119,6 +145,107 @@ for b in factory['buildings']:
 footprints+=[shapely.Point(h['x'],h['z']).buffer(h['radius']) for h in factory['holders']]
 footprints+=[Polygon(b['footprint']).buffer(0) for k in ('mappedFactories','houses','terraces') for b in plan['neighbourhood'][k] if b.get('footprint')]
 wall_exclusion=shapely.union_all([fit[1] for fit in road_fits]+footprints);shapely.prepare(wall_exclusion)
+
+# Yard and street edges. Premises pads and street corridors stay level inside
+# their outlines. Outside, the ground meets them on an earth batter that falls
+# at 1:1.5 from the edge until it meets the surrounding ground, so its width
+# follows the level difference (at most EDGE_REACH_M). Where a raised pad stands
+# within FRONTAGE_M of a regional bank, the strip between the yard edge and the
+# bank is made up to the lower of the yard and bank-crest levels, so no trench
+# is left at the bank foot. Neither raises water, nor ground steeper than 1:1.5
+# above low water from the water's edge or above a building's ground from its
+# footprint (its premises level, or its unraised ground if it has no pad).
+EDGE_BATTER=1.5;EDGE_REACH_M=8;FRONTAGE_M=40;FRONTAGE_SHORE_JUMP_M=5
+pad_level={p['siteId']:p['groundSceneY'] for p in pads};footprint_geoms=[];footprint_caps=[]
+for b in factory['buildings']:
+    for p in b.get('renderPolygons') or []:footprint_geoms.append(Polygon(p['outer'],p.get('holes',[])).buffer(0));footprint_caps.append(pad_level.get(b.get('siteId'),-np.inf))
+for h in factory['holders']:footprint_geoms.append(shapely.Point(h['x'],h['z']).buffer(h['radius']));footprint_caps.append(pad_level.get(h.get('siteId'),-np.inf))
+for k in ('mappedFactories','houses','terraces'):
+    for b in plan['neighbourhood'][k]:
+        if b.get('footprint'):footprint_geoms.append(Polygon(b['footprint']).buffer(0));footprint_caps.append(pad_level.get(b.get('siteId'),-np.inf))
+# The other seated buildings: High Street frontages, housing rows, the station
+# and its supporting buildings, and the corn mill (a rotated box in the scene).
+station=read('docs/data/abbey-station-plan.json')
+for b in [*read('docs/data/high-street-frontages.json')['buildings'],*read('docs/data/housing-detail.json')['rows'],{'footprint':station['worldFootprint']},*station['supportingBuildings']]:
+    if b.get('footprint'):footprint_geoms.append(Polygon(b['footprint']).buffer(0));footprint_caps.append(pad_level.get(b.get('siteId'),-np.inf))
+mill=plan['neighbourhood']['mill'];turn=np.radians(mill['rotation']);corner=np.array([[sx*mill['width']/2,sz*mill['depth']/2] for sx,sz in ((-1,-1),(1,-1),(1,1),(-1,1))])
+footprint_geoms.append(Polygon(np.column_stack([mill['x']+corner[:,0]*np.cos(turn)+corner[:,1]*np.sin(turn),mill['z']-corner[:,0]*np.sin(turn)+corner[:,1]*np.cos(turn)])));footprint_caps.append(pad_level.get(mill.get('siteId'),-np.inf))
+footprint_tree=shapely.STRtree(footprint_geoms);footprint_caps=np.array(footprint_caps)
+water_edges=[]
+for ring in shapely.get_parts(shapely.boundary(water)):
+    for part in shapely.get_parts(ring):
+        c=shapely.get_coordinates(part);water_edges+=list(np.stack([c[:-1],c[1:]],axis=1))
+water_edge_tree=shapely.STRtree(shapely.linestrings(np.array(water_edges)))
+def edge_caps(points,level,current):
+    """Limit raised edge ground at points to 1:1.5 above low water from the
+    water's edge, and to 1:1.5 above a building's ground from its footprint
+    (its premises level, or the unraised ground for a building without one),
+    so the fill neither enters the water nor buries a building wall."""
+    pts=shapely.points(points);i,dw=water_edge_tree.query_nearest(pts,max_distance=EDGE_REACH_M,return_distance=True,all_matches=False)
+    cap=np.full(len(points),np.inf);cap[i[0]]=network['waterLevel']+.02+dw/EDGE_BATTER
+    cap[shapely.contains_xy(water,points[:,0],points[:,1])]=-np.inf
+    fi,fk=footprint_tree.query(pts,predicate='dwithin',distance=EDGE_REACH_M)
+    if len(fi):
+        floor=np.where(np.isfinite(footprint_caps[fk]),footprint_caps[fk],current[fi])
+        np.minimum.at(cap,fi,floor+shapely.distance(footprint_tree.geometries[fk],pts[fi])/EDGE_BATTER)
+    return np.minimum(level,np.maximum(cap,current))
+def crest_at(points):return banks.crest(np.column_stack([538900+points[:,0],183209-points[:,1]]))-offset
+# Bank-foot frontage: rays from the yard edge (every metre) to the nearest
+# regional shoreline, kept where they are 0.6-40 m long and cross neither the
+# yard, water nor a railway embankment; consecutive rays bound the strip
+# between yard and bank.
+shore_local=local(shapely.MultiLineString(banks.lines));pad_union=shapely.union_all(pad_geoms);frontages=[]
+rail_bodies=shapely.union_all([LineString(r['route']).buffer(r.get('baseHalfWidth',15)) for r in infra['railways']]);shapely.prepare(rail_bodies)
+for j,polygon in enumerate(pad_geoms):
+    if polygon.distance(shore_local)>FRONTAGE_M:continue
+    quads=[]
+    for part in shapely.get_parts(polygon):
+        q=shapely.get_coordinates(part.exterior.segmentize(1))[:-1];n=len(q)
+        s=shapely.get_coordinates(shapely.shortest_line(shapely.points(q),shore_local)).reshape(-1,2,2)[:,1]
+        v=s-q;length=np.linalg.norm(v,axis=1);u=v/np.maximum(length,1e-9)[:,None]
+        ray=shapely.linestrings(np.stack([q+.3*u,s-.3*u],axis=1))
+        ok=(length>.6)&(length<=FRONTAGE_M);ok[ok]=~shapely.intersects(ray[ok],polygon)&~shapely.intersects(ray[ok],water)&~shapely.intersects(ray[ok],rail_bodies)
+        k=np.flatnonzero(ok&np.roll(ok,-1)&(np.linalg.norm(s-np.roll(s,-1,axis=0),axis=1)<=FRONTAGE_SHORE_JUMP_M));k1=(k+1)%n
+        quads+=list(shapely.make_valid(shapely.polygons(np.stack([q[k],q[k1],s[k1],s[k]],axis=1))))
+    strip=shapely.union_all(quads).buffer(.25).buffer(-.25).difference(pad_union).difference(water) if quads else Polygon()
+    strip=shapely.union_all([g for g in shapely.get_parts(strip) if g.geom_type=='Polygon' and g.area>1])
+    if not strip.is_empty:frontages.append((strip,j))
+front_tree=shapely.STRtree([f[0] for f in frontages])
+def frontage_levels(points,result,pad):
+    if not frontages:return result
+    m=front_tree.query(shapely.points(points),predicate='within')
+    level=np.full(len(points),-np.inf)
+    for k in np.unique(m[1]):
+        idx=m[0][m[1]==k];idx=idx[~pad[idx]]
+        level[idx]=np.maximum(level[idx],np.minimum(pads[frontages[k][1]]['groundSceneY'],crest_at(points[idx])))
+    some=np.flatnonzero(level>result)
+    if len(some):result[some]=np.maximum(result[some],edge_caps(points[some],level[some],result[some]))
+    return result
+# Batter sources: each outline with the level at its nearest edge point.
+edge_sources=[(g,(lambda q,y=p['groundSceneY']:np.full(len(q),y))) for g,p in zip(pad_geoms,pads)]
+edge_sources+=[(g,(lambda q,y=pads[j]['groundSceneY']:np.minimum(y,crest_at(q)))) for g,j in frontages]
+edge_sources+=[(fit[1],(lambda q,j=j:road_fit_levels(j,q))) for j,fit in enumerate(road_fits)]
+edge_tree=shapely.STRtree([s[0] for s in edge_sources]);edge_geoms=np.array([s[0] for s in edge_sources],dtype=object)
+def edge_batter(points,result,street):
+    cand=np.flatnonzero(~street)
+    if not len(cand):return result
+    pts=shapely.points(points[cand]);pi,si=edge_tree.query(pts,predicate='dwithin',distance=EDGE_REACH_M)
+    if not len(pi):return result
+    c=shapely.get_coordinates(shapely.shortest_line(edge_geoms[si],pts[pi])).reshape(-1,2,2);q=c[:,0];d=np.linalg.norm(c[:,1]-q,axis=1)
+    top=np.full(len(si),np.nan)
+    for k in np.unique(si):sel=si==k;top[sel]=edge_sources[k][1](q[sel])
+    ok=np.isfinite(top);level=np.full(len(cand),-np.inf);np.maximum.at(level,pi[ok],(top-d/EDGE_BATTER)[ok])
+    some=np.flatnonzero(level>result[cand])
+    if len(some):
+        idx=cand[some];result[idx]=np.maximum(result[idx],edge_caps(points[idx],level[some],result[idx]))
+    return result
+# Abbey Lane's approach keeps its graded street level through the regional bank
+# band (it crosses the bank onto the deck); the bank beside it is cut back at 1:1.5.
+deck_zones=[(road_fits[j][1].intersection(line.buffer(DECK_APPROACH_M)).difference(line.buffer(road_fits[j][0]['width']/2+1.1,cap_style='flat')),j) for j,v in graded_decks.items() for line,_,_ in v]
+# Under the deck itself (the road-surface exclusion of build_infrastructure.py)
+# the bank stays 0.1 m below the 0.4 m deck slab, rising beside it at 1:1.5.
+deck_under=[(line.buffer(road_fits[j][0]['width']/2+1.1,cap_style='flat'),deck+DECK_ROAD_OFFSET-.5) for j,v in graded_decks.items() for line,deck,_ in v]
+for zone in [*[d[0] for d in deck_zones],*[d[0] for d in deck_under]]:shapely.prepare(zone)
 # Where no wall stands (beyond wall ends, ditch mouths) the fill is battered
 # down to the water's edge at the same 1:1.5, so it never stands as a cliff.
 wall_lines=shapely.union_all([LineString(r) for r in retaining['routes'] if len(r)>1])
@@ -194,6 +321,20 @@ def blend_surface(points,old,bank=True,key='groundMesh'):
             tally=lip_vertices.setdefault(key,{'liftedToCrest':0,'heldAtReviewedHeight':0})
             tally['liftedToCrest']+=int(wall.sum());tally['heldAtReviewedHeight']+=int(held.sum());lip=lip[wall|held]
             rise[lip]=1
+            # Graded deck approach: street level through the bank band, with
+            # the bank beside it cut back at 1:1.5 from the street edge.
+            pm=p[margin];zone=np.zeros(len(pm),bool)
+            for approach,_ in deck_zones:zone|=shapely.contains_xy(approach,pm[:,0],pm[:,1])
+            levels[zone]=g[margin][zone];rise[zone]=1
+            for approach,j in deck_zones:
+                near=np.flatnonzero(~zone&shapely.dwithin(approach,shapely.points(pm),EDGE_REACH_M))
+                if not len(near):continue
+                c=shapely.get_coordinates(shapely.shortest_line(approach,shapely.points(pm[near]))).reshape(-1,2,2)
+                street=road_fit_levels(j,c[:,0]);ok=np.isfinite(street);near=near[ok]
+                levels[near]=np.minimum(levels[near],street[ok]+np.linalg.norm(c[ok,1]-c[ok,0],axis=1)/EDGE_BATTER)
+            for under,soffit in deck_under:
+                d=shapely.distance(under,shapely.points(pm));near=(d<EDGE_REACH_M)&~zone
+                levels[near]=np.minimum(levels[near],soffit+d[near]/EDGE_BATTER)
             levels=(network['waterLevel']+.02)*(1-rise)+levels*rise
             g[margin]=levels
     # Bed and drain-water vertices retain their native geometry and levels.
@@ -321,7 +462,12 @@ a=coords[:,1]-coords[:,0];b=coords[:,2]-coords[:,0];cross=a[:,0]*b[:,1]-a[:,1]*b
 points=coords.reshape(-1,2);heights=surface(points,np.full(len(points),-.1));mesh=np.column_stack([points[:,0],heights,points[:,1]]).astype('<f4')
 mesh.tofile(OUT/'main-landscape-1900.background.f32');files['groundMesh']='main-landscape-1900.background.f32'
 # Scene sampling for objects outside the original detailed grids.
-east,north=np.meshgrid(np.arange(e0+step/2,e1,step),np.arange(n1-step/2,n0,-step));points=np.column_stack([east.ravel()-538900,183209-north.ravel()]);values=base(points).reshape(shape)
+east,north=np.meshgrid(np.arange(e0+step/2,e1,step),np.arange(n1-step/2,n0,-step));points=np.column_stack([east.ravel()-538900,183209-north.ravel()]);values=base(points)
+# Buildings without a premises pad are seated by sampling this field; cells
+# whose bilinear reach (one cell diagonal) touches such a footprint keep the
+# level without edge batters, so no building is lifted off its unraised ground.
+unpadded=footprint_tree.query(shapely.points(points),predicate='dwithin',distance=step*np.sqrt(2))
+held=np.unique(unpadded[0][~np.isfinite(footprint_caps[unpadded[1]])]);values[held]=base(points[held],edges=False);values=values.reshape(shape)
 values.astype('<f4').tofile(OUT/'main-landscape-1900.level.f32');files['level']='main-landscape-1900.level.f32';support.astype('<f4').tofile(OUT/'main-landscape-1900.weight.f32');files['weight']='main-landscape-1900.weight.f32'
 # Retaining-edge crests (wall_levels) are computed above with the land-side fill.
 # Refitting railway toes leaves every formation station unchanged.
@@ -355,11 +501,18 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
     'junctionEndCaps':{'method':f'river-network vertices within {END_FACE_M} m of drawn river-system water (waterPolygons) are capped at the water edge (low water + 0.02 m) rising by smoothstep to their existing height {END_FACE_M} m from that water; recorded raised shore edges excluded; no vertex lowered more than 2.4 m below a mesh neighbour',
         **end_caps,
         'evidence':'Mapped: the river-system water polygons and the network channel ends that meet them. Estimated: the earth face at each junction, taken from the system bank face rather than from any survey of the confluence banks.'},
+    'edgeBatters':{'method':f'premises pads and street corridors stay level inside their outlines; outside, the ground meets them on an earth batter falling at 1:{EDGE_BATTER} from the nearest edge until it meets the surrounding ground (at most {EDGE_REACH_M} m), including into a lower neighbouring yard but never onto a street corridor; where a raised pad stands within {FRONTAGE_M} m of a regional bank, the strip between yard edge and bank (bounded by rays from the yard edge to the nearest shoreline that cross no water or railway embankment) is made up to the lower of the yard and bank-crest levels; neither raises water, ground steeper than 1:{EDGE_BATTER} above low water from the water edge, or ground steeper than 1:{EDGE_BATTER} above a building footprint (its premises level, or its unraised ground if it has no premises pad); the 10 m level field keeps its unbattered value in cells within one cell diagonal of a building without a premises pad, so no seated building moves',
+        'frontages':[{'siteId':pads[j]['siteId'],'areaM2':round(g.area,1)} for g,j in frontages],
+        'evidence':'Mapped: the premises outlines (ground-plan sites), the street routes and widths, the shorelines, and the building footprints. Observed: the same-premises yard readings and street spot heights that set the pad and corridor levels, and the bank-top readings behind the crest. Estimated: the 1:1.5 batter, its reach, and the frontage fill between yard and bank; no surveyed section of any yard edge, street embankment or wharf frontage.'},
+    'abbeyMillCrossingApproach':{'method':f'Abbey Lane corridor ground level with the abbey-mill-crossing deck (deck height minus the {DECK_ROAD_OFFSET} m road-surface offset) for {DECK_LANDING_M} m beyond each deck end, then within 1 in {round(1/DECK_GRADE)} of the deck, clipped to the corridor readings; within {DECK_APPROACH_M} m of the deck the regional bank band does not lift the street, the bank beside it is cut back at 1:{EDGE_BATTER}, and under the deck the bank stays 0.1 m below the 0.4 m deck slab',
+        'deckHeight':[b[1]+DECK_ROAD_OFFSET for v in graded_decks.values() for b in v][0] if graded_decks else None,
+        'evidence':'Mapped: the crossing and approach alignment (OS VIII.32, road-traces.json). Observed: Abbey Lane street spot heights sh_538874_183253 (2.19 m scene, 8.1 m west of the deck) and sh_538944_183274 (2.40 m, 34 m east). Interpreted: the 1.8 m deck height (road-traces.json); the approach grade and landing are estimates made to meet it. Both readings stand above the deck, so the graded approach dips to the bridge; raising the deck in road-traces.json is the alternative.'},
     'railwaySlopes':railways,
     'continuousBanks':{'profileCount':len(banks.lines),'sourceIds':banks.accepted_ids,'heightStatus':'observed crests interpolate along bank; unsampled components inferred'},
     'probes':[{'name':name,'scenePosition':[e-538900,183209-n],'groundSceneY':float(base(np.array([[e-538900,183209-n]]))[0])} for name,e,n in [('Pudding–City marsh',537650,184100),('Western neighbouring marsh',537300,184100),('Northern Mill Meads',538550,183200),('Abbey marsh',539200,182900),('Western Plaistow',539800,181800)]],
     'limitations':['Site pads without yard readings use a conservative premises estimate, not a measured fill thickness.','Existing railway grades, sewer cover, channel beds and water levels retained.','The flood solver has not been recalibrated to these visible geometry changes.',
-        'Wall fill is limited by the 1 m river-network mesh, whose triangles straddle the 0.32 m walls: a narrow gutter (median 0.7 m deep) remains in the first metre behind many walls. Building footprints are not filled, so buildings standing within 3 m of a wall keep their premises ground. Walls in the Channelsea core stand on preserved tidal mud and have no fill.'],
+        'Wall fill is limited by the 1 m river-network mesh, whose triangles straddle the 0.32 m walls: a narrow gutter (median 0.7 m deep) remains in the first metre behind many walls. Building footprints are not filled, so buildings standing within 3 m of a wall keep their premises ground. Walls in the Channelsea core stand on preserved tidal mud and have no fill.',
+        'Yard and street batters are not drawn under building footprints or on preserved tidal mud, so a vertical face remains where a street shoulder or yard edge runs into a building; the 20 m regional ground mesh spans the batters as tilted triangles rather than resolving them.'],
     'inputHashes':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [*inputs,Path(__file__).resolve(),ROOT/'scripts/regional_continuous_structures.py']}}
 (OUT/'main-landscape-1900.json').write_text(json.dumps(result,separators=(',',':'))+'\n')
 print('MAIN LANDSCAPE:',len(mesh)//3,'new background triangles;',len(pads),'premises levels',flush=True)
