@@ -832,23 +832,30 @@ function buildScene() {
     // Orient the long roof axis along the traced range; facade subdivisions are inferred.
     detail.factory({ ...b, width: b.depth, depth: b.width, rotation: b.rotation - 90, mapped: true });
   }
-  // One deliberately simple chimney per chosen site. Locations/heights are study assumptions.
-  for (const id of [874, 875, 876, 1125, 562, 965]) {
+  // One deliberately simple chimney per site listed in the ground plan, whose record also holds the study dimensions.
+  const chimneys = data.neighbourhood.studyChimneys;
+  for (const id of chimneys.siteIds) {
     if (surveyedFactories.has(id)) continue;
     const b =
       data.factoryStudies.find((b) => b.siteId === id) ||
       data.neighbourhood.mappedFactories.find((b) => b.siteId === id);
     if (b) {
-      cylinder(scene, b.x, 0.15 + (b.landscapeLift ?? 0), b.z, 1.5, 2.1, 36, materials.brick);
-      cylinder(scene, b.x, 35 + (b.landscapeLift ?? 0), b.z, 1.9, 1.9, 1.4, materials.brick);
+      const lift = b.landscapeLift ?? 0;
+      cylinder(scene, b.x, 0.15 + lift, b.z, chimneys.topRadius, chimneys.baseRadius, chimneys.height, materials.brick);
+      cylinder(
+        scene,
+        b.x,
+        chimneys.height - 1 + lift,
+        b.z,
+        chimneys.capRadius,
+        chimneys.capRadius,
+        1.4,
+        materials.brick
+      );
     }
   }
-  const barges = [
-    [20, 49, -10, true],
-    [25, 73, 8, true],
-    [-26, 37, 5, false],
-    [-35, 95, -8, true],
-  ];
+  // Barge placements interpret the 1900 photograph and are recorded in the ground plan, not here.
+  const barges = data.neighbourhood.barges.map((b) => [b.x, b.z, b.heading, b.laden]);
   for (const spec of barges) detail.barge(...spec);
   surfaces.excludeBargeHolds(barges);
   detail.waterfront();
@@ -868,9 +875,12 @@ function buildScene() {
     },
   });
   detail.mill(data.neighbourhood.mill);
-  [...data.neighbourhood.holders.filter((h) => h.siteId !== 924), ...data.factoryBuildings.holders].forEach((h) =>
-    detail.holder(h)
-  );
+  // Sites with individually registered holders supersede their earlier map-traced circles.
+  const registeredHolderSites = new Set(data.factoryBuildings.holders.map((h) => h.siteId));
+  [
+    ...data.neighbourhood.holders.filter((h) => !registeredHolderSites.has(h.siteId)),
+    ...data.factoryBuildings.holders,
+  ].forEach((h) => detail.holder(h));
   data.neighbourhood.houses.forEach((h) => detail.houses(h));
   data.neighbourhood.terraces.forEach((h) => detail.terrace(h));
   // Author-supplied southwest context: distant terraces and works around

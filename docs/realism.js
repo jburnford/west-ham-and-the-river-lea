@@ -128,9 +128,11 @@ export function realism(THREE, renderer, scene, data, options = {}) {
 
   // Static soft contact shading, baked from existing reconstruction envelopes.
   // This is visual grounding, not surveyed ground marks or a new building layer.
+  // Written once here and handed to the shader as a uniform, so the two cannot drift apart.
   const contactBounds = [-1600, -1050, 650, 1700],
-    contactWidth = 2250,
-    contactDepth = 2750;
+    contactWidth = contactBounds[2] - contactBounds[0],
+    contactDepth = contactBounds[3] - contactBounds[1];
+  const contactUniform = new THREE.Vector4(contactBounds[0], contactBounds[1], contactWidth, contactDepth);
   const contactCanvas = document.createElement('canvas');
   contactCanvas.width = contactCanvas.height = 2048;
   const contactContext = contactCanvas.getContext('2d');
@@ -199,6 +201,7 @@ export function realism(THREE, renderer, scene, data, options = {}) {
       wall = ['brick', 'wood'].includes(material.userData.surface);
     material.onBeforeCompile = (shader) => {
       shader.uniforms.contactMap = { value: contactMap };
+      shader.uniforms.contactBounds = { value: contactUniform };
       if (shared && material.userData.yardAtlas) {
         shader.uniforms.yardAtlas = { value: material.userData.yardAtlas };
         shader.uniforms.yardBounds = { value: material.userData.yardBounds };
@@ -228,7 +231,9 @@ export function realism(THREE, renderer, scene, data, options = {}) {
         );
       }
       shader.fragmentShader =
-        'uniform sampler2D contactMap; varying vec3 surfacePosition;\n' + noise + shader.fragmentShader;
+        'uniform sampler2D contactMap; uniform vec4 contactBounds; varying vec3 surfacePosition;\n' +
+        noise +
+        shader.fragmentShader;
       if (terrain)
         shader.fragmentShader = 'uniform sampler2D landAtlas; uniform vec4 landBounds;\n' + shader.fragmentShader;
       if (silt)
@@ -271,7 +276,7 @@ export function realism(THREE, renderer, scene, data, options = {}) {
           diffuseColor.rgb=mix(diffuseColor.rgb,yard.rgb*vec3(.402,.371,.323),yard.a*atlasCoverage(yardUv));`
             : ''
         }
-        vec2 contactUv=vec2((surfacePosition.x+1600.0)/2250.0,1.0-(surfacePosition.z+1050.0)/2750.0);
+        vec2 contactUv=vec2((surfacePosition.x-contactBounds.x)/contactBounds.z,1.0-(surfacePosition.z-contactBounds.y)/contactBounds.w);
         float contact=texture2D(contactMap,clamp(contactUv,vec2(0),vec2(1))).r;
         diffuseColor.rgb *= 1.0-(1.0-contact)*atlasCoverage(contactUv)*.65*(1.0-smoothstep(.0,3.0,surfacePosition.y));
         ${

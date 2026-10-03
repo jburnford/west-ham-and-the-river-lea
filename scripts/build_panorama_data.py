@@ -228,6 +228,16 @@ def build():
         'evidence':'OS VIII.32 names Abbey Mill (Corn); Main southern mill mass re-anchored to OS VIII.32 pixel (1090,625) at 1800 px width, clear of the mapped lane crossing; author suggests the c1800 mill building form probably continued into c1900, analogous to nearby Three Mills. Interlocking gables, boarded upper floors and masonry base are inferred from Figure 1; height is estimated. Windmill omitted.'}
     replaced={f['siteId'] for f in context['mappedFactories']}
     result['factoryStudies']=[f for f in result['factoryStudies'] if f['siteId'] not in replaced]
+
+    # Scene facts the renderer used to hardcode. Each is an interpretation, recorded here so every consumer sees the same world.
+    context['studyChimneys']={'siteIds':[874,875,876,1125,562,965],'height':36,'baseRadius':2.1,'topRadius':1.5,'capRadius':1.9,
+        'evidence':'One deliberately simple chimney per chosen site, placed at the range centre; sites with individually registered ranges omit it. Heights and radii are study assumptions, not surveyed stacks.'}
+    context['barges']=[{'x':20,'z':49,'heading':-10,'laden':True},{'x':25,'z':73,'heading':8,'laden':True},
+        {'x':-26,'z':37,'heading':5,'laden':False},{'x':-35,'z':95,'heading':-8,'laden':True}]
+    context['bargesEvidence']='Lighter positions, headings and loads interpret the 1900 photograph; none is a surveyed mooring.'
+    facades={253:{'curvedRoof':True,'lightBrick':True},512:{'lightBrick':True},875:{'sparseUpperArches':True}}
+    for f in result['factoryStudies']+context['mappedFactories']:
+        if f['siteId'] in facades:f['facade']=dict(facades[f['siteId']],evidence='Facade treatment interpreted from the period photographs; not a documented elevation.')
     line=LineString(context['sewer']['route'])
     # Earth banks stop at waterways and the railway corridor; the elevated crest spans them.
     water=unary_union([Polygon(p[0],p[1:]) for f in result['rivers'] for p in f['polygons']])

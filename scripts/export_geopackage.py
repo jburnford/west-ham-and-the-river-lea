@@ -191,9 +191,9 @@ def main():
           + [building_record(b) for b in station['supportingBuildings']], written)
     write('station_access_paths', [{**pick(p, 'name', 'width', 'kind', 'surface', 'evidence', 'sheet', 'surfaceEvidence'), 'geometry': line(p['points'])} for p in station['accessPaths']], written)
     surveyed = {s['id'] for s in fb['sites']}
-    studies = [{**pick(b, 'siteId', 'name', 'height', 'evidence', 'sourceSheet'), 'kind': 'factory study', 'supersededByRegistered': b['siteId'] in surveyed,
+    studies = [{**pick(b, 'siteId', 'name', 'height', 'evidence', 'sourceSheet', 'facade'), 'kind': 'factory study', 'supersededByRegistered': b['siteId'] in surveyed,
                 'geometry': rectangle(b['x'], b['z'], b['width'], b['depth'], b.get('rotation', 0))} for b in GROUND['factoryStudies']]
-    studies += [{**pick(b, 'siteId', 'name', 'height', 'evidence', 'sourceSheet'), 'kind': 'OS-mapped factory range', 'supersededByRegistered': b['siteId'] in surveyed,
+    studies += [{**pick(b, 'siteId', 'name', 'height', 'evidence', 'sourceSheet', 'facade'), 'kind': 'OS-mapped factory range', 'supersededByRegistered': b['siteId'] in surveyed,
                  'geometry': polygon([b['footprint']]) if b.get('footprint') else rectangle(b['x'], b['z'], b['width'], b['depth'], b.get('rotation', 0))} for b in n['mappedFactories']]
     sw = load('southwest-context.json')
     studies += [{**pick(b, 'siteId', 'name', 'height', 'evidence'), 'kind': 'southwest industrial range', 'supersededByRegistered': b['siteId'] in surveyed,

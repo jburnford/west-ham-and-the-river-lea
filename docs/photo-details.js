@@ -386,7 +386,7 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
     g.rotation.y = ((b.rotation || 0) * Math.PI) / 180;
     // Keep the mapped envelope. Roof divisions/elevations are comparative studies,
     // not identifications of individual buildings in the historic photographs.
-    const curved = b.siteId === 253,
+    const curved = Boolean(b.facade?.curvedRoof),
       sections = b.mapped ? Math.max(1, Math.round(b.depth / 23)) : 1;
     const span = b.depth / sections;
     for (let section = 0; section < sections; section++) {
@@ -396,7 +396,7 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
       const w = b.width,
         d = span,
         h = b.height - (section % 3) * 0.65;
-      const wall = b.siteId === 512 || b.siteId === 253 ? brickLight : m.brick;
+      const wall = b.facade?.lightBrick ? brickLight : m.brick;
       box(part, 0, 0, 0, w, h, d, wall);
       // Low pitched industrial ranges, with a raised ventilator on selected roofs.
       roofLoft(part, [
@@ -446,7 +446,7 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
             box(side, 0, 3.9, 0.17, 2.6, 0.22, 0.45, wall);
             for (const x of [-0.85, -0.42, 0, 0.42, 0.85]) box(side, x, 0.15, 0.18, 0.025, 3.65, 0.02, m.dark);
           } else arch(side, 0, 1.4, 0.08, 1.6, 2.8, 0, wall);
-          if (h > 9.5 && !(b.siteId === 875 && bay % 3 === 1)) arch(side, 0, 5.7, 0.08, 1.5, 2.5, 0, wall);
+          if (h > 9.5 && !(b.facade?.sparseUpperArches && bay % 3 === 1)) arch(side, 0, 5.7, 0.08, 1.5, 2.5, 0, wall);
           box(side, -2.05, 0, 0.05, 0.42, h, 0.4, wall);
         }
         // Eaves shadows, rainwater pipes and a dark plinth ground each range.
