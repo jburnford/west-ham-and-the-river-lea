@@ -55,7 +55,7 @@ legacy+=read('docs/data/housing-detail.json')['rows']+data['neighbourhood']['hou
 buildings=unary_union([rectangle(b).buffer(.3) for b in legacy]+[Polygon(p['outer'],p['holes']).buffer(.15) for b in factories['buildings'] for p in b['renderPolygons']])
 buildings=buildings.union(station_footprints(station).buffer(.15))
 
-road_shapes=[];shoulders=[];paths=[];routes=[];bridges=[]
+road_shapes=[];road_names=[];shoulders=[];paths=[];routes=[];bridges=[]
 surface_shapes={s:[] for s in ['macadam','setts','cinder']}
 explicit_decks=[]
 for r in traces['roads']:
@@ -73,6 +73,7 @@ for r in traces['roads']:
     corridor=line.buffer(w/2,join_style=2,cap_style=2).difference(buildings)
     ground=corridor.difference(water.buffer(.6)).difference(deck_exclusion)
     (paths if r['kind']=='path' else road_shapes).append(ground)
+    if r['kind']!='path':road_names.append(r['name'])
     if r['kind']!='path':surface_shapes[r['surface']].append(ground)
     if r['kind']!='path':shoulders.append(line.buffer(w/2+1.1,join_style=2,cap_style=2).difference(buildings).difference(water.buffer(.6)).difference(deck_exclusion))
     # Only the named mapped crossings receive a road deck over water.
@@ -90,8 +91,8 @@ def triangles(g,max_edge=5):
         for t in constrained_delaunay_triangles(segmentize(p,max_edge)).geoms:
             if tolerant.covers(t):result.append([[round(x,3),round(z,3)] for x,z in list(t.exterior.coords)[:3]])
     return result
-# High Street passes over the enclosed sewer; other openings retain the earlier
-# interpretation until their individual structures are reviewed.
+# High Street passes over the enclosed sewer. Abbey Lane and Mill Meads works
+# road pass under it on interpreted brick arches (docs/sewer-crossing.js).
 sewer=data['neighbourhood']['sewer'];sewer_line=LineString(sewer['route'])
 crossing_spec=read('data/maps/sewer-high-street.json')['crossing']
 high_street=next(r for r in routes if r['name']==crossing_spec['road'])
@@ -107,7 +108,11 @@ for sign in [-1,1]:
  for part in getattr(edge,'geoms',[edge]):
   if part.geom_type=='LineString':sewer_edges.append(list(segmentize(part,4).coords))
 sewer_banks=[]
-road_openings=roads.buffer(1.5)
+# build_panorama_data.py already stops the banks 1.5 m short of the streets it
+# names in bankEnds (kind 'road') and walls those ends; only the remaining
+# streets (Stratford High Street) are cut here, exactly as before.
+precut={e['road'] for e in sewer.get('bankEnds',[]) if e['kind']=='road'}
+road_openings=unary_union([g for g,n in zip(road_shapes,road_names) if n not in precut]).buffer(1.5)
 for tri in data['neighbourhood']['sewer']['banks']:
     polygon=Polygon([(p[0],p[2]) for p in tri])
     if polygon.area<.0001:continue

@@ -16,6 +16,7 @@ ORIGIN = (538900, 183209)  # Historic England's approximate bridge grid referenc
 project = Transformer.from_crs(4326, 27700, always_xy=True).transform
 SEWER_WATER_SETBACK = 1.5  # metres between drawn water and the earth bank; the end wall stands in it
 SEWER_BANK_LATTICE = (2, 0)  # x, z phase (mod 12 m) of the bank sample grid
+SEWER_ROAD_SETBACK = 1.5  # metres between street edge and bank; build_infrastructure.py used roads.buffer(1.5)
 
 
 def drawn_water(result):
@@ -46,6 +47,51 @@ def drawn_water(result):
     shapes += [Polygon([(x+rx*math.cos(i*math.pi/16), z+rz*math.sin(i*math.pi/16)) for i in range(32)])
                for x, z, rx, rz in terrain.get('pools', [])]
     return unary_union(shapes)
+
+
+def sewer_road_openings(line):
+    """Street corridors the sewer banks are cut for, as docs/data/infrastructure.json
+    traces them (the road list there is assembled from several trace files).
+
+    The routes and widths do not depend on the sewer, so the previous build's
+    file is read here, as drawn_water() reads the water. Paths stay buried, as
+    before, and Stratford High Street keeps its enclosed-sewer treatment in
+    build_infrastructure.py. Returns {name: (route record, corridor)}.
+    """
+    try:
+        roads = json.loads((ROOT/'docs/data/infrastructure.json').read_text())['roads']
+        high_street = json.loads((ROOT/'data/maps/sewer-high-street.json').read_text())['crossing']['road']
+    except FileNotFoundError:
+        return {}
+    footprint = line.buffer(22+SEWER_ROAD_SETBACK, join_style=2)
+    out = {}
+    for r in roads:
+        if r['kind'] == 'path' or r['name'] == high_street:
+            continue
+        corridor = LineString(r['route']).buffer(r['width']/2, join_style=2, cap_style=2)
+        if corridor.intersects(footprint):
+            out[r['name']] = (r, corridor)
+    return out
+
+
+def annotate_road_ends(ends, line, roads, crest_width):
+    """Name the street beside each road-facing bank end. Where the street
+    passes under the sewer, roadAxis is its centreline chord across the deck
+    (crest edge to crest edge), which docs/sewer-crossing.js uses for the arch."""
+    crest = line.buffer(crest_width/2, join_style=2)
+    for end in ends:
+        if end['kind'] != 'road':
+            continue
+        middle = LineString([(p[0], p[2]) for p in end['points']]).interpolate(.5, normalized=True)
+        name = min(roads, key=lambda n: roads[n][1].buffer(SEWER_ROAD_SETBACK).boundary.distance(middle))
+        record, _ = roads[name]
+        end['road'] = name
+        end['roadWidth'] = record['width']
+        under = LineString(record['route']).intersection(crest)
+        if under.geom_type == 'LineString' and not under.is_empty:
+            coords = list(under.coords)
+            end['roadAxis'] = [[round(x, 2), round(z, 2)] for x, z in (coords[0], coords[-1])]
+    return ends
 
 
 def densify_bank_ends(piece, line, obstacles, step=2):
@@ -351,7 +397,16 @@ def build():
     context['sewer']['crest']=[[[[round(x,2),round(z,2)] for x,z in crest.exterior.coords]]]
     # Drop slivers left between water bodies; they cannot carry an embankment.
     pieces=[densify_bank_ends(p,line,obstacles) for p in getattr(bank,'geoms',[bank]) if p.area>=20]
-    bank=unary_union(pieces)
+    # The allotment layout keeps the bank outline it was laid out against;
+    # street openings through the embankment do not move the garden.
+    garden_bank=unary_union(pieces)
+    # Streets pass under the sewer (Abbey Lane, Mill Meads works road) or meet
+    # its toe; the bank stops 1.5 m from the street and gets a brick end wall.
+    roads=sewer_road_openings(line)
+    if roads:
+        obstacles['road']=unary_union([c for _,c in roads.values()]).buffer(SEWER_ROAD_SETBACK)
+        bank=line.buffer(22,join_style=2).difference(unary_union(list(obstacles.values())))
+        pieces=[densify_bank_ends(p,line,obstacles) for p in getattr(bank,'geoms',[bank]) if p.area>=20]
     bank_height=lambda x,z:round(max(0,min(7.25,(22-line.distance(Point(x,z)))*7.25/14.5)),2)
     context['sewer']['banks']=[]
     for piece in pieces:
@@ -368,11 +423,15 @@ def build():
         for tri in triangulate(MultiPoint(samples)):
             if piece.covers(tri):
                 context['sewer']['banks'].append([[round(x,2),bank_height(x,z),round(z,2)] for x,z in list(tri.exterior.coords)[:3][::-1]])
-    context['sewer']['bankEnds']=sewer_bank_ends([orient(p) for p in pieces],line,obstacles,bank_height)
+    ends=sewer_bank_ends([orient(p) for p in pieces],line,obstacles,bank_height)
+    context['sewer']['bankEnds']=annotate_road_ends(ends,line,roads,context['sewer']['crestWidth'])
     context['sewer']['bankEndsEvidence']=('Bank ends follow the drawn water edge, set back '+str(SEWER_WATER_SETBACK)+' m, and the 6 m railway corridor. '
         'The position of each end is derived from the mapped channel and railway; the brick end wall, its 0.8 m thickness and its '
-        'footing are interpreted, not a surveyed abutment.')
-    garden=Polygon(context['garden']['footprint']).difference(water.buffer(8)).difference(bank)
+        'footing are interpreted, not a surveyed abutment. '
+        'Road ends stand '+str(SEWER_ROAD_SETBACK)+' m from the traced street corridors (docs/data/infrastructure.json roads, '
+        'Stratford High Street and paths excepted), so their positions follow the mapped streets. Where a street passes under the '
+        'sewer, the brick arch carrying the deck, its segmental form, rise and springing height are interpreted, not a documented structure.')
+    garden=Polygon(context['garden']['footprint']).difference(water.buffer(8)).difference(garden_bank)
     access=unary_union([LineString(r['route']).buffer(r['width']/2+1) for r in context['garden']['accessCorridors']])
     garden=garden.difference(access)
     ditch_path=ROOT/'data/maps/marsh-ditches.json'
