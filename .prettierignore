@@ -1,0 +1,12 @@
+# Third-party and generated files keep their own formatting.
+docs/vendor/
+docs0/
+docs2/
+docs/data/
+docs/maps/layers.json
+docs/scene-manifest.json
+data/
+exports/
+reference/
+node_modules/
+*.min.js

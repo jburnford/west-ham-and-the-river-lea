@@ -1,36 +1,162 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Plaistow flood experiment · 1900</title>
-<link rel="stylesheet" href="./flood-demo.css"></head>
-<body><main>
-<header><nav><a href="./?flood=1">← Flood the landscape</a><a href="./drainage-connections.html">Drainage evidence</a></nav><p class="eyebrow">THE LOWER LEA · 1900 LANDSCAPE</p><h1>Low ground, high water</h1><p class="intro">Much of southern West Ham occupied former marshland below high-tide level. When the river overtopped its banks, water spread into low ground where it could collect and be slow to drain. Heavy rain could also overwhelm drainage.</p><p class="scope">This first experiment covers one small drainage crossing. It explores how local obstacles and outlets affect water movement; it does not yet model the wider basin, tidal rivers or riverbank overtopping. The embankments are one part of that larger story.</p></header>
-<section aria-label="Scope of this experiment"><h2>A local drainage experiment</h2><p class="scope">Raise water in a ditch, block its connection, or add rain. These are controlled tests, not reconstructions of the historical floods. In particular, raising the western outlet tests backwater through a drain, not water flowing over a riverbank.</p></section>
-<section class="controls" aria-label="Flood conditions">
-<label>Test condition<select id="preset"><option value="inflow">Water rises in the eastern drain</option><option value="surge">Water rises at the western outlet</option><option value="rain">Heavy rain on the fields</option></select></label>
-<label>Peak boundary level <span class="unit">metres ODN</span><input id="peak" type="number" min="0.9" max="2.6" step="0.05" value="1.65"></label>
-<label>Culvert operation<select id="gate"><option value="east-to-west">Drains east to west</option><option value="both">Open in both directions</option><option value="blocked">Blocked</option></select></label>
-<div class="actions"><button id="run">Run experiment</button><button id="compare" class="secondary">Compare with blocked drain</button><button id="cancel" class="secondary" hidden>Stop calculation</button></div>
-</section>
-<details class="adjustments"><summary>Rain, pumping and uncertain heights</summary><div class="controls">
-<label>Rainfall <span class="unit">mm per hour for the whole run</span><input id="rain" type="number" min="0" max="100" step="5" value="0"></label>
-<label>Test pump<select id="pump"><option value="off">Off / failed</option><option value="on">On — up to 0.08 m³ per second</option></select></label>
-<label>Railway formation <span class="unit">metres ODN</span><select id="rail"><option value="1">Lower — 1.0 m</option><option value="1.6" selected>Working — 1.6 m</option><option value="1.9">Higher — 1.9 m</option></select></label>
-<label>Land-height uncertainty<select id="shift"><option value="-0.3">Ground and structures 0.3 m lower</option><option value="0" selected>Working heights</option><option value="0.3">Ground and structures 0.3 m higher</option></select></label>
-</div><p>The pump is an assumed extraction from the eastern drain, not an identified historical pump. Height changes move the ground, road, railway, channel beds and culvert together against the same water levels.</p></details>
-<p id="status" role="status" aria-live="polite">Loading the landscape…</p>
-<section class="playback" aria-label="Simulation time"><button id="play" class="secondary" disabled>Play</button><label for="time">Time <strong id="clock">0 min</strong></label><input id="time" type="range" min="0" max="60" value="0" step="1" disabled><label class="check"><input id="evidence" type="checkbox"> Show assumed ground</label></section>
-<div class="legend"><span>Water depth</span><i style="background:#b8dde6"></i>5 cm<i style="background:#54accd"></i>20 cm<i style="background:#2174a5"></i>50 cm<i style="background:#133858"></i>1 m+<small>Flooded land counts depths over 5 cm, excluding the drains.</small></div>
-<section id="maps" class="maps" aria-label="Flood maps"></section>
-<p id="inspect">Point to a cell to inspect its ground height and water depth.</p>
-<section class="result-actions"><button id="download" class="secondary" disabled>Download results</button><a href="./data/flood-demo-1900.json">Surface and source data</a></section>
-<details id="evidence-panel"><summary>What this experiment establishes — and what it does not</summary>
-<p>The 540 × 160 m test area uses a 2 m grid. Both channel ends exchange water with prescribed reservoirs. The northern and southern edges are closed test boundaries; the western outlet is not a confirmed historical outfall. Water can cross the embankments on the surface if it reaches their crests, even with the culvert blocked.</p>
-<p>The working culvert opening is 0.9 × 0.6 m over a 45 m candidate route. A one-way control permits east-to-west flow only when the water levels allow it. The model includes opening losses and resistance along the barrel; its capacity has not been calibrated.</p>
-<p>The former constant railway height conflicts with a road bridge farther south. This experiment replaces it with a common local formation between 1.0 and 1.9 m ODN. The default permits about 3.46 m between rail top and the assumed bridge soffit there. This is a test range, not a surveyed railway profile.</p>
-<p id="support"></p><p id="balance"></p>
-<p>The solver moves and accounts for water between cells. It includes wetting, drying, rainfall, boundary inflow/outflow, culvert exchange and the optional pump. It omits sewer networks, infiltration and fast-flow momentum effects. Flood timing and depths are illustrative until geometry and event conditions are calibrated.</p>
-<p>Before claiming a reconstruction of 1888, 1897, 1904 or 1928, we still need event-specific infrastructure, local river levels and comparison with reported inundation. The Three Mills marks do not yet have established absolute heights in this model.</p>
-<p>Method references: <a href="https://doi.org/10.1016/j.jhydrol.2010.03.027">Bates, Horritt &amp; Fewtrell: local-inertial flow</a>; <a href="https://www.epa.gov/water-research/storm-water-management-model-swmm">EPA SWMM hydraulic references</a>. This is a separate demo implementation, not either of those software packages.</p>
-</details>
-<footer>Historical landscape research · Jim Clifford · All levels use the project’s provisional ODN reference.</footer>
-</main><script type="module" src="./flood-demo.js"></script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Plaistow flood experiment · 1900</title>
+    <link rel="stylesheet" href="./flood-demo.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+          <a href="./?flood=1">← Flood the landscape</a><a href="./drainage-connections.html">Drainage evidence</a>
+        </nav>
+        <p class="eyebrow">THE LOWER LEA · 1900 LANDSCAPE</p>
+        <h1>Low ground, high water</h1>
+        <p class="intro">
+          Much of southern West Ham occupied former marshland below high-tide level. When the river overtopped its
+          banks, water spread into low ground where it could collect and be slow to drain. Heavy rain could also
+          overwhelm drainage.
+        </p>
+        <p class="scope">
+          This first experiment covers one small drainage crossing. It explores how local obstacles and outlets affect
+          water movement; it does not yet model the wider basin, tidal rivers or riverbank overtopping. The embankments
+          are one part of that larger story.
+        </p>
+      </header>
+      <section aria-label="Scope of this experiment">
+        <h2>A local drainage experiment</h2>
+        <p class="scope">
+          Raise water in a ditch, block its connection, or add rain. These are controlled tests, not reconstructions of
+          the historical floods. In particular, raising the western outlet tests backwater through a drain, not water
+          flowing over a riverbank.
+        </p>
+      </section>
+      <section class="controls" aria-label="Flood conditions">
+        <label
+          >Test condition<select id="preset">
+            <option value="inflow">Water rises in the eastern drain</option>
+            <option value="surge">Water rises at the western outlet</option>
+            <option value="rain">Heavy rain on the fields</option>
+          </select></label
+        >
+        <label
+          >Peak boundary level <span class="unit">metres ODN</span
+          ><input id="peak" type="number" min="0.9" max="2.6" step="0.05" value="1.65"
+        /></label>
+        <label
+          >Culvert operation<select id="gate">
+            <option value="east-to-west">Drains east to west</option>
+            <option value="both">Open in both directions</option>
+            <option value="blocked">Blocked</option>
+          </select></label
+        >
+        <div class="actions">
+          <button id="run">Run experiment</button
+          ><button id="compare" class="secondary">Compare with blocked drain</button
+          ><button id="cancel" class="secondary" hidden>Stop calculation</button>
+        </div>
+      </section>
+      <details class="adjustments">
+        <summary>Rain, pumping and uncertain heights</summary>
+        <div class="controls">
+          <label
+            >Rainfall <span class="unit">mm per hour for the whole run</span
+            ><input id="rain" type="number" min="0" max="100" step="5" value="0"
+          /></label>
+          <label
+            >Test pump<select id="pump">
+              <option value="off">Off / failed</option>
+              <option value="on">On — up to 0.08 m³ per second</option>
+            </select></label
+          >
+          <label
+            >Railway formation <span class="unit">metres ODN</span
+            ><select id="rail">
+              <option value="1">Lower — 1.0 m</option>
+              <option value="1.6" selected>Working — 1.6 m</option>
+              <option value="1.9">Higher — 1.9 m</option>
+            </select></label
+          >
+          <label
+            >Land-height uncertainty<select id="shift">
+              <option value="-0.3">Ground and structures 0.3 m lower</option>
+              <option value="0" selected>Working heights</option>
+              <option value="0.3">Ground and structures 0.3 m higher</option>
+            </select></label
+          >
+        </div>
+        <p>
+          The pump is an assumed extraction from the eastern drain, not an identified historical pump. Height changes
+          move the ground, road, railway, channel beds and culvert together against the same water levels.
+        </p>
+      </details>
+      <p id="status" role="status" aria-live="polite">Loading the landscape…</p>
+      <section class="playback" aria-label="Simulation time">
+        <button id="play" class="secondary" disabled>Play</button
+        ><label for="time">Time <strong id="clock">0 min</strong></label
+        ><input id="time" type="range" min="0" max="60" value="0" step="1" disabled /><label class="check"
+          ><input id="evidence" type="checkbox" /> Show assumed ground</label
+        >
+      </section>
+      <div class="legend">
+        <span>Water depth</span><i style="background: #b8dde6"></i>5 cm<i style="background: #54accd"></i>20 cm<i
+          style="background: #2174a5"
+        ></i
+        >50 cm<i style="background: #133858"></i>1 m+<small
+          >Flooded land counts depths over 5 cm, excluding the drains.</small
+        >
+      </div>
+      <section id="maps" class="maps" aria-label="Flood maps"></section>
+      <p id="inspect">Point to a cell to inspect its ground height and water depth.</p>
+      <section class="result-actions">
+        <button id="download" class="secondary" disabled>Download results</button
+        ><a href="./data/flood-demo-1900.json">Surface and source data</a>
+      </section>
+      <details id="evidence-panel">
+        <summary>What this experiment establishes — and what it does not</summary>
+        <p>
+          The 540 × 160 m test area uses a 2 m grid. Both channel ends exchange water with prescribed reservoirs. The
+          northern and southern edges are closed test boundaries; the western outlet is not a confirmed historical
+          outfall. Water can cross the embankments on the surface if it reaches their crests, even with the culvert
+          blocked.
+        </p>
+        <p>
+          The working culvert opening is 0.9 × 0.6 m over a 45 m candidate route. A one-way control permits east-to-west
+          flow only when the water levels allow it. The model includes opening losses and resistance along the barrel;
+          its capacity has not been calibrated.
+        </p>
+        <p>
+          The former constant railway height conflicts with a road bridge farther south. This experiment replaces it
+          with a common local formation between 1.0 and 1.9 m ODN. The default permits about 3.46 m between rail top and
+          the assumed bridge soffit there. This is a test range, not a surveyed railway profile.
+        </p>
+        <p id="support"></p>
+        <p id="balance"></p>
+        <p>
+          The solver moves and accounts for water between cells. It includes wetting, drying, rainfall, boundary
+          inflow/outflow, culvert exchange and the optional pump. It omits sewer networks, infiltration and fast-flow
+          momentum effects. Flood timing and depths are illustrative until geometry and event conditions are calibrated.
+        </p>
+        <p>
+          Before claiming a reconstruction of 1888, 1897, 1904 or 1928, we still need event-specific infrastructure,
+          local river levels and comparison with reported inundation. The Three Mills marks do not yet have established
+          absolute heights in this model.
+        </p>
+        <p>
+          Method references:
+          <a href="https://doi.org/10.1016/j.jhydrol.2010.03.027">Bates, Horritt &amp; Fewtrell: local-inertial flow</a
+          >;
+          <a href="https://www.epa.gov/water-research/storm-water-management-model-swmm"
+            >EPA SWMM hydraulic references</a
+          >. This is a separate demo implementation, not either of those software packages.
+        </p>
+      </details>
+      <footer>
+        Historical landscape research · Jim Clifford · All levels use the project’s provisional ODN reference.
+      </footer>
+    </main>
+    <script type="module" src="./flood-demo.js"></script>
+  </body>
+</html>

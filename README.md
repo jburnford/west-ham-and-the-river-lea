@@ -48,7 +48,7 @@ node scripts/check_bridge_movement.mjs # bounds, crest clearance and fixed eye h
 python3 scripts/check_panorama.py       # needs Python Playwright + Chromium; server running
 ```
 
-`npm test` runs every `scripts/check_*.mjs` and summarises passes and failures (no npm packages are installed; the scripts only need Node).
+`npm test` runs every `scripts/check_*.mjs` and summarises passes and failures; the check scripts need only Node. `npm install` adds Prettier and ESLint as dev dependencies, after which `npm run format` applies the house style to the hand-written front end and scripts and `npm run lint` catches real mistakes. Shared helpers for new scene code live in `docs/lib/` (random numbers, grid sampling, mesh helpers) and are tested by `scripts/check_lib.mjs`. `python3 scripts/review_smoke.py <label> [--compare <label>]` loads the scene headlessly and records its diagnostic snapshot, which is how refactors are shown to change nothing.
 
 ## GIS exports
 

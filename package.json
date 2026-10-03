@@ -8,6 +8,15 @@
     "test:quiet": "node scripts/run_checks.mjs --quiet",
     "serve": "python3 -m http.server 4173 --bind 127.0.0.1 --directory docs",
     "manifest": "python3 scripts/build_scene_manifest.py",
-    "export:gis": "python3 scripts/export_terrain_geotiff.py --verify && python3 scripts/export_geopackage.py --verify"
+    "export:gis": "python3 scripts/export_terrain_geotiff.py --verify && python3 scripts/export_geopackage.py --verify",
+    "lint": "eslint docs scripts",
+    "format": "prettier --write \"docs/**/*.{js,css,html}\" \"scripts/**/*.mjs\" eslint.config.js",
+    "format:check": "prettier --check \"docs/**/*.{js,css,html}\" \"scripts/**/*.mjs\" eslint.config.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.9"
   }
 }

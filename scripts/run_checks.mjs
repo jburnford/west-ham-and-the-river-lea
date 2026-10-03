@@ -7,7 +7,9 @@ import { dirname, join } from 'node:path';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const quiet = process.argv.includes('--quiet');
-const checks = readdirSync(here).filter(f => /^check_.*\.mjs$/.test(f)).sort();
+const checks = readdirSync(here)
+  .filter((f) => /^check_.*\.mjs$/.test(f))
+  .sort();
 const results = [];
 for (const file of checks) {
   const started = Date.now();
@@ -17,11 +19,17 @@ for (const file of checks) {
   if (!ok || !quiet) {
     const output = (run.stdout + run.stderr).trim().split('\n');
     // On failure show the assertion message and the first stack frame, not the JSON dumps or Node banner.
-    const shown = ok ? output.slice(-1)
-      : output.filter(l => /Error|assert|Stale|expected|actual|at file:/.test(l) && !/node:internal/.test(l)).slice(0, 6);
+    const shown = ok
+      ? output.slice(-1)
+      : output
+          .filter((l) => /Error|assert|Stale|expected|actual|at file:/.test(l) && !/node:internal/.test(l))
+          .slice(0, 6);
     console.log(`${ok ? 'PASS' : 'FAIL'} ${file}\n  ${shown.join('\n  ')}`);
   }
 }
-const failed = results.filter(r => !r.ok);
-console.log(`\n${results.length - failed.length}/${results.length} checks passed` + (failed.length ? `; failing: ${failed.map(r => r.file).join(', ')}` : ''));
+const failed = results.filter((r) => !r.ok);
+console.log(
+  `\n${results.length - failed.length}/${results.length} checks passed` +
+    (failed.length ? `; failing: ${failed.map((r) => r.file).join(', ')}` : '')
+);
 process.exit(failed.length ? 1 : 0);

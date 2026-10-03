@@ -1,11 +1,126 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lower Lea · working landscape</title>
-<link rel="stylesheet" href="lower-lea-region.css">
-<style>
-main{display:block}#landscape-frame{height:68vh;min-height:360px;border:1px solid #aebbae;border-radius:6px;overflow:hidden;position:relative;background:#dbe6e7}#landscape-frame canvas{display:block;width:100%;height:100%;touch-action:none}#landscape-state{position:absolute;top:12px;left:16px;background:#fffcf4e8;padding:8px 12px;font-size:12px;pointer-events:none}.toolbar label{font-size:13px;display:flex;align-items:center;gap:8px}.toolbar select{width:auto}.toolbar{align-items:center}#landscape-inspect{min-height:2.5em;font-size:13px}#landscape-summary{font-size:14px;max-width:980px}.error{color:#972e21}a{color:#14747a}
-</style></head>
-<body><header><nav><a href="./lower-lea-region.html?elevation=landscape">← Elevation map and sources</a><a href="./lower-lea-marsh-evidence.html">1848 marsh analysis</a><a href="./?flood=1">Detailed landscape</a></nav><p class="eyebrow">LEA BRIDGE TO THE THAMES</p><h1>The working landscape</h1><p>Early marsh levels establish the lowland base. Later evidence gives streets, yards and embankments their local heights.</p></header>
-<main><div class="toolbar"><button id="landscape-whole">Whole valley</button><button id="landscape-north">Northern marshes</button><button id="landscape-pudding-city">Pudding–City marsh</button><button id="landscape-marsh">City Mill east marsh</button><button id="landscape-mill-meads">Mill Meads</button><button id="landscape-plaistow">Plaistow marshes</button><button id="landscape-south">Thames end</button><label>Surface <select id="landscape-surface"><option value="surface">1900 surfaces</option><option value="ground">Underlying ground</option></select></label><label>Colour <select id="landscape-colour"><option value="height">Elevation</option><option value="evidence">Evidence and estimates</option></select></label><label><input type="checkbox" id="landscape-observations"> Later surface readings</label><label>Vertical scale <select id="landscape-scale"><option value="1">1× true scale</option><option value="4" selected>4× relief</option><option value="10">10× relief</option></select></label></div>
-<div id="landscape-frame"><p id="landscape-state" role="status">Loading landscape…</p></div><p id="landscape-inspect" role="status">Click the land to inspect its height and evidence.</p><p class="help">Drag to rotate and tilt; scroll or + / − to zoom. Arrow keys rotate; Home restores the whole valley. North is toward the far edge in the starting view. The vertical scale changes the view only.</p><p id="landscape-summary"></p><p class="legend" id="landscape-legend"></p><p class="notice">Waterways and reviewed structure areas are openings in this ground surface; no channel-bed or water level is assigned here. The early marsh base is a regional estimate from sparse evidence. Some later surfaces still lack matched heights or mapped footprints. Continuous structural profiles include estimated heights between readings. Flood behaviour needs further reconciliation; valley-wide 30 cm accuracy is not established.</p></main>
-<footer>Historical OS levels use the project’s provisional datum conversion. Broad relief: Environment Agency LiDAR, 2003, Open Government Licence. <a href="./data/lower-lea-region/landscape-1900.json">Landscape data and provenance</a>.</footer><script type="module" src="lower-lea-landscape.js"></script></body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lower Lea · working landscape</title>
+    <link rel="stylesheet" href="lower-lea-region.css" />
+    <style>
+      main {
+        display: block;
+      }
+      #landscape-frame {
+        height: 68vh;
+        min-height: 360px;
+        border: 1px solid #aebbae;
+        border-radius: 6px;
+        overflow: hidden;
+        position: relative;
+        background: #dbe6e7;
+      }
+      #landscape-frame canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+      }
+      #landscape-state {
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        background: #fffcf4e8;
+        padding: 8px 12px;
+        font-size: 12px;
+        pointer-events: none;
+      }
+      .toolbar label {
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .toolbar select {
+        width: auto;
+      }
+      .toolbar {
+        align-items: center;
+      }
+      #landscape-inspect {
+        min-height: 2.5em;
+        font-size: 13px;
+      }
+      #landscape-summary {
+        font-size: 14px;
+        max-width: 980px;
+      }
+      .error {
+        color: #972e21;
+      }
+      a {
+        color: #14747a;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./lower-lea-region.html?elevation=landscape">← Elevation map and sources</a
+        ><a href="./lower-lea-marsh-evidence.html">1848 marsh analysis</a><a href="./?flood=1">Detailed landscape</a>
+      </nav>
+      <p class="eyebrow">LEA BRIDGE TO THE THAMES</p>
+      <h1>The working landscape</h1>
+      <p>
+        Early marsh levels establish the lowland base. Later evidence gives streets, yards and embankments their local
+        heights.
+      </p>
+    </header>
+    <main>
+      <div class="toolbar">
+        <button id="landscape-whole">Whole valley</button><button id="landscape-north">Northern marshes</button
+        ><button id="landscape-pudding-city">Pudding–City marsh</button
+        ><button id="landscape-marsh">City Mill east marsh</button><button id="landscape-mill-meads">Mill Meads</button
+        ><button id="landscape-plaistow">Plaistow marshes</button><button id="landscape-south">Thames end</button
+        ><label
+          >Surface
+          <select id="landscape-surface">
+            <option value="surface">1900 surfaces</option>
+            <option value="ground">Underlying ground</option>
+          </select></label
+        ><label
+          >Colour
+          <select id="landscape-colour">
+            <option value="height">Elevation</option>
+            <option value="evidence">Evidence and estimates</option>
+          </select></label
+        ><label><input type="checkbox" id="landscape-observations" /> Later surface readings</label
+        ><label
+          >Vertical scale
+          <select id="landscape-scale">
+            <option value="1">1× true scale</option>
+            <option value="4" selected>4× relief</option>
+            <option value="10">10× relief</option>
+          </select></label
+        >
+      </div>
+      <div id="landscape-frame"><p id="landscape-state" role="status">Loading landscape…</p></div>
+      <p id="landscape-inspect" role="status">Click the land to inspect its height and evidence.</p>
+      <p class="help">
+        Drag to rotate and tilt; scroll or + / − to zoom. Arrow keys rotate; Home restores the whole valley. North is
+        toward the far edge in the starting view. The vertical scale changes the view only.
+      </p>
+      <p id="landscape-summary"></p>
+      <p class="legend" id="landscape-legend"></p>
+      <p class="notice">
+        Waterways and reviewed structure areas are openings in this ground surface; no channel-bed or water level is
+        assigned here. The early marsh base is a regional estimate from sparse evidence. Some later surfaces still lack
+        matched heights or mapped footprints. Continuous structural profiles include estimated heights between readings.
+        Flood behaviour needs further reconciliation; valley-wide 30 cm accuracy is not established.
+      </p>
+    </main>
+    <footer>
+      Historical OS levels use the project’s provisional datum conversion. Broad relief: Environment Agency LiDAR, 2003,
+      Open Government Licence. <a href="./data/lower-lea-region/landscape-1900.json">Landscape data and provenance</a>.
+    </footer>
+    <script type="module" src="lower-lea-landscape.js"></script>
+  </body>
+</html>

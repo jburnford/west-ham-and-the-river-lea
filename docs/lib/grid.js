@@ -8,8 +8,10 @@
 export function sampleVertexGrid(values, meta, x, z) {
   const fx = Math.max(0, Math.min(meta.width - 1, (x - meta.bounds[0]) / meta.step));
   const fz = Math.max(0, Math.min(meta.height - 1, (z - meta.bounds[1]) / meta.step));
-  const i = Math.min(Math.floor(fx), meta.width - 2), j = Math.min(Math.floor(fz), meta.height - 2);
-  const u = fx - i, v = fz - j;
+  const i = Math.min(Math.floor(fx), meta.width - 2),
+    j = Math.min(Math.floor(fz), meta.height - 2);
+  const u = fx - i,
+    v = fz - j;
   const at = (a, b) => values[b * meta.width + a];
   return (at(i, j) * (1 - u) + at(i + 1, j) * u) * (1 - v) + (at(i, j + 1) * (1 - u) + at(i + 1, j + 1) * u) * v;
 }

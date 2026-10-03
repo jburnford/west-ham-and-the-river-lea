@@ -17,7 +17,10 @@ export function flatSurface(THREE, parent, polygons, material, y = 0) {
   const meshes = [];
   for (const rings of polygons) {
     const mesh = new THREE.Mesh(new THREE.ShapeGeometry(polygonShape(THREE, rings)), material);
-    mesh.rotation.x = -Math.PI / 2; mesh.position.y = y; parent.add(mesh); meshes.push(mesh);
+    mesh.rotation.x = -Math.PI / 2;
+    mesh.position.y = y;
+    parent.add(mesh);
+    meshes.push(mesh);
   }
   return meshes;
 }
@@ -25,29 +28,36 @@ export function flatSurface(THREE, parent, polygons, material, y = 0) {
 // Axis-aligned box whose base sits at y. Returns the mesh.
 export function box(THREE, parent, x, y, z, width, height, depth, material) {
   const mesh = new THREE.Mesh(new THREE.BoxGeometry(width, height, depth), material);
-  mesh.position.set(x, y + height / 2, z); parent.add(mesh); return mesh;
+  mesh.position.set(x, y + height / 2, z);
+  parent.add(mesh);
+  return mesh;
 }
 
 // Vertical cylinder (or cone) whose base sits at y. Returns the mesh.
 export function cylinder(THREE, parent, x, y, z, radiusTop, radiusBottom, height, material, segments = 16) {
   const mesh = new THREE.Mesh(new THREE.CylinderGeometry(radiusTop, radiusBottom, height, segments), material);
-  mesh.position.set(x, y + height / 2, z); parent.add(mesh); return mesh;
+  mesh.position.set(x, y + height / 2, z);
+  parent.add(mesh);
+  return mesh;
 }
 
 // Thin cylinder between two [x, y, z] points. Returns the mesh.
 export function beam(THREE, parent, a, b, radius, material) {
-  const av = new THREE.Vector3(...a), bv = new THREE.Vector3(...b), delta = bv.clone().sub(av);
+  const av = new THREE.Vector3(...a),
+    bv = new THREE.Vector3(...b),
+    delta = bv.clone().sub(av);
   const mesh = new THREE.Mesh(new THREE.CylinderGeometry(radius, radius, delta.length(), 6), material);
   mesh.position.copy(av.add(bv).multiplyScalar(0.5));
   mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), delta.normalize());
-  parent.add(mesh); return mesh;
+  parent.add(mesh);
+  return mesh;
 }
 
 // Collects triangles per material into flat position arrays, then builds one
 // mesh per material. Replaces the inline tri/quad batchers in several modules.
 export function createTriangleBatcher() {
   const batches = new Map();
-  const batch = material => {
+  const batch = (material) => {
     if (!batches.has(material)) batches.set(material, { positions: [], uv: [] });
     return batches.get(material);
   };
@@ -70,15 +80,21 @@ export function createTriangleBatcher() {
         if (!positions.length) continue;
         const geometry = new THREE.BufferGeometry();
         geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-        if (uv.length === positions.length / 3 * 2) geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
+        if (uv.length === (positions.length / 3) * 2)
+          geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
         geometry.computeVertexNormals();
         const mesh = new THREE.Mesh(geometry, material);
-        mesh.name = name; mesh.castShadow = castShadow; mesh.receiveShadow = receiveShadow;
-        parent.add(mesh); meshes.push(mesh);
+        mesh.name = name;
+        mesh.castShadow = castShadow;
+        mesh.receiveShadow = receiveShadow;
+        parent.add(mesh);
+        meshes.push(mesh);
       }
       return meshes;
     },
-    get size() { return batches.size; },
+    get size() {
+      return batches.size;
+    },
   };
 }
 
@@ -86,7 +102,8 @@ export function createTriangleBatcher() {
 export function signedArea(ring) {
   let sum = 0;
   for (let i = 0; i < ring.length; i++) {
-    const [x0, z0] = ring[i], [x1, z1] = ring[(i + 1) % ring.length];
+    const [x0, z0] = ring[i],
+      [x1, z1] = ring[(i + 1) % ring.length];
     sum += x0 * z1 - x1 * z0;
   }
   return sum / 2;

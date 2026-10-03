@@ -1,26 +1,257 @@
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Factory building atlas · Lower Lea c1900</title>
-<style>
-*{box-sizing:border-box}body{margin:0;background:#eae8de;color:#263330;font:16px/1.5 system-ui,sans-serif}header{padding:1rem 1.5rem;background:#233b36;color:#faf9ee}h1{font-size:1.4rem;margin:0}header p{margin:.3rem 0 0;font-size:.9rem}main{display:grid;grid-template-columns:300px 1fr;min-height:85vh}aside{padding:1rem;background:#f8f6ee;overflow:auto;max-height:90vh}label,select{display:block;width:100%;margin-bottom:.6rem}select,button{font:inherit;padding:.5rem}button{cursor:pointer}svg{width:100%;height:82vh;min-height:450px;background:#d9dfcd}path.range{fill:#967f66;stroke:#302f29;stroke-width:.25;cursor:pointer}path.range:hover,path.selected{fill:#d89548;stroke:#722800;stroke-width:1}path.river{fill:#98bab9;stroke:#527d7b;stroke-width:.25}circle{fill:#788d87;stroke:#304b46;stroke-width:.5}#details{font-size:.87rem}#details h2{font-size:1.1rem}a{color:#24665c}header a{color:#fff}small{display:block;margin-top:1rem}#status{font-size:.85rem} @media(max-width:700px){main{grid-template-columns:1fr}aside{max-height:none}svg{height:65vh}#details{min-height:0}}
-</style>
-<header><h1>Factory building atlas · Lower Lea, c1900–1902</h1><p>Great Eastern Main Line to Bromley gasworks, Old Lea to Channelsea. <a href="./">Open the panorama</a></p></header>
-<main><aside><label for="sites">Factory or works</label><select id="sites"><option value="all">All factories</option></select><button id="reset">Show whole district</button><p id="status">Loading mapped ranges…</p><div id="details"><p>Select a building on the plan to inspect its evidence.</p><p>Footprints come from period maps. Heights, windows and most roofs are reconstruction estimates. The mapped range divisions do not always identify separate buildings or roofs.</p></div><small>Goad plans: British Library / Wikimedia Commons. OS comparisons reproduced with permission of the <a href="https://maps.nls.uk/">National Library of Scotland</a>. No reference photographs are used as textures.</small></aside><svg id="plan" role="img" aria-label="Interactive plan of individually mapped factory ranges"></svg></main>
-<script type="module">
-const [data,ground]=await Promise.all(['./data/factory-buildings.json','./data/ground-plan.json'].map(async u=>{const r=await fetch(u);if(!r.ok)throw Error('Unable to load the factory atlas');return r.json()}));
-const svg=document.querySelector('#plan'),select=document.querySelector('#sites'),details=document.querySelector('#details'),ns='http://www.w3.org/2000/svg';
-const paths=new Map();
-function node(tag,attrs,parent=svg){const n=document.createElementNS(ns,tag);for(const [k,v]of Object.entries(attrs))n.setAttribute(k,v);parent.append(n);return n}
-const path=rings=>rings.map(r=>r.map((p,i)=>(i?'L':'M')+p.join(',')).join(' ')+'Z').join(' ');
-for(const r of [...ground.rivers,...data.westContext.rivers])for(const p of r.polygons)node('path',{d:path(p),class:'river','fill-rule':'evenodd'});
-for(const b of data.buildings){const n=node('path',{d:b.renderPolygons.map(p=>path([p.outer,...p.holes])).join(' '),class:'range','fill-rule':'evenodd',tabindex:0,role:'button','aria-label':b.name});node('title',{},n).textContent=b.name;paths.set(b.id,n);n.addEventListener('click',()=>inspect(b));n.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();inspect(b)}})}
-for(const h of [...data.holders,...ground.neighbourhood.holders.filter(h=>h.siteId!==924)]){const n=node('circle',{cx:h.x,cy:h.z,r:h.radius});node('title',{},n).textContent=h.id}
-function paragraph(text){const p=document.createElement('p');p.textContent=text;details.append(p)}
-function inspect(b){for(const n of paths.values())n.classList.remove('selected');paths.get(b.id).classList.add('selected');details.replaceChildren();const h=document.createElement('h2');h.textContent=b.name;details.append(h);paragraph(`${b.id} · ${b.width.toFixed(1)} × ${b.depth.toFixed(1)} m envelope · estimated eaves ${b.height.toFixed(1)} m`);paragraph(b.footprintEvidence);paragraph(b.heightEvidence);paragraph(b.roofEvidence);if(b.floorMark)paragraph('Map annotation: '+b.floorMark);if(b.placementEvidence)paragraph(b.placementEvidence);if(b.waterReview)paragraph(b.waterReview);if(b.streetTrimEvidence)paragraph(b.streetTrimEvidence);if(b.areaM2-b.renderAreaM2>1)paragraph('The rendered envelope is partitioned at adjoining ranges, holder rings, mapped streets or a reviewed river edge; the original map envelope remains in the evidence register.');for(const key of [b.source,b.elevationSource].filter(Boolean)){const s=data.sources[key],a=document.createElement('a');a.href=s.url;a.textContent=`Source: ${key} (${s.date})`;a.target='_blank';a.rel='noopener';const p=document.createElement('p');p.append(a);details.append(p)}}
-for(const s of [...data.sites].sort((a,b)=>a.name.localeCompare(b.name))){const o=document.createElement('option');o.value=s.id;o.textContent=`${s.name} (${s.buildingCount})`;select.append(o)}
-function focus(id){const rows=id==='all'?data.buildings:data.buildings.filter(b=>b.siteId===Number(id));const pts=rows.flatMap(b=>b.footprint);let xs=pts.map(p=>p[0]),zs=pts.map(p=>p[1]);const x=Math.min(...xs)-20,z=Math.min(...zs)-20,w=Math.max(...xs)-x+20,h=Math.max(...zs)-z+20;svg.setAttribute('viewBox',`${x} ${z} ${w} ${h}`);for(const b of data.buildings)paths.get(b.id).style.opacity=id==='all'||b.siteId===Number(id)?1:.22;document.querySelector('#status').textContent=id==='all'?`${data.counts.ranges} mapped ranges across ${data.counts.sites} sites, plus the retained Abbey Mill model.`:`${rows.length} mapped ranges. Click a footprint for its evidence.`}
-select.addEventListener('change',()=>focus(select.value));document.querySelector('#reset').addEventListener('click',()=>{select.value='all';focus('all')});focus('all');
-</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Factory building atlas · Lower Lea c1900</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: #eae8de;
+      color: #263330;
+      font:
+        16px/1.5 system-ui,
+        sans-serif;
+    }
+    header {
+      padding: 1rem 1.5rem;
+      background: #233b36;
+      color: #faf9ee;
+    }
+    h1 {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+    header p {
+      margin: 0.3rem 0 0;
+      font-size: 0.9rem;
+    }
+    main {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      min-height: 85vh;
+    }
+    aside {
+      padding: 1rem;
+      background: #f8f6ee;
+      overflow: auto;
+      max-height: 90vh;
+    }
+    label,
+    select {
+      display: block;
+      width: 100%;
+      margin-bottom: 0.6rem;
+    }
+    select,
+    button {
+      font: inherit;
+      padding: 0.5rem;
+    }
+    button {
+      cursor: pointer;
+    }
+    svg {
+      width: 100%;
+      height: 82vh;
+      min-height: 450px;
+      background: #d9dfcd;
+    }
+    path.range {
+      fill: #967f66;
+      stroke: #302f29;
+      stroke-width: 0.25;
+      cursor: pointer;
+    }
+    path.range:hover,
+    path.selected {
+      fill: #d89548;
+      stroke: #722800;
+      stroke-width: 1;
+    }
+    path.river {
+      fill: #98bab9;
+      stroke: #527d7b;
+      stroke-width: 0.25;
+    }
+    circle {
+      fill: #788d87;
+      stroke: #304b46;
+      stroke-width: 0.5;
+    }
+    #details {
+      font-size: 0.87rem;
+    }
+    #details h2 {
+      font-size: 1.1rem;
+    }
+    a {
+      color: #24665c;
+    }
+    header a {
+      color: #fff;
+    }
+    small {
+      display: block;
+      margin-top: 1rem;
+    }
+    #status {
+      font-size: 0.85rem;
+    }
+    @media (max-width: 700px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      aside {
+        max-height: none;
+      }
+      svg {
+        height: 65vh;
+      }
+      #details {
+        min-height: 0;
+      }
+    }
+  </style>
+  <header>
+    <h1>Factory building atlas · Lower Lea, c1900–1902</h1>
+    <p>Great Eastern Main Line to Bromley gasworks, Old Lea to Channelsea. <a href="./">Open the panorama</a></p>
+  </header>
+  <main>
+    <aside>
+      <label for="sites">Factory or works</label
+      ><select id="sites">
+        <option value="all">All factories</option></select
+      ><button id="reset">Show whole district</button>
+      <p id="status">Loading mapped ranges…</p>
+      <div id="details">
+        <p>Select a building on the plan to inspect its evidence.</p>
+        <p>
+          Footprints come from period maps. Heights, windows and most roofs are reconstruction estimates. The mapped
+          range divisions do not always identify separate buildings or roofs.
+        </p>
+      </div>
+      <small
+        >Goad plans: British Library / Wikimedia Commons. OS comparisons reproduced with permission of the
+        <a href="https://maps.nls.uk/">National Library of Scotland</a>. No reference photographs are used as
+        textures.</small
+      >
+    </aside>
+    <svg id="plan" role="img" aria-label="Interactive plan of individually mapped factory ranges"></svg>
+  </main>
+  <script type="module">
+    const [data, ground] = await Promise.all(
+      ['./data/factory-buildings.json', './data/ground-plan.json'].map(async (u) => {
+        const r = await fetch(u);
+        if (!r.ok) throw Error('Unable to load the factory atlas');
+        return r.json();
+      })
+    );
+    const svg = document.querySelector('#plan'),
+      select = document.querySelector('#sites'),
+      details = document.querySelector('#details'),
+      ns = 'http://www.w3.org/2000/svg';
+    const paths = new Map();
+    function node(tag, attrs, parent = svg) {
+      const n = document.createElementNS(ns, tag);
+      for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+      parent.append(n);
+      return n;
+    }
+    const path = (rings) => rings.map((r) => r.map((p, i) => (i ? 'L' : 'M') + p.join(',')).join(' ') + 'Z').join(' ');
+    for (const r of [...ground.rivers, ...data.westContext.rivers])
+      for (const p of r.polygons) node('path', { d: path(p), class: 'river', 'fill-rule': 'evenodd' });
+    for (const b of data.buildings) {
+      const n = node('path', {
+        d: b.renderPolygons.map((p) => path([p.outer, ...p.holes])).join(' '),
+        class: 'range',
+        'fill-rule': 'evenodd',
+        tabindex: 0,
+        role: 'button',
+        'aria-label': b.name,
+      });
+      node('title', {}, n).textContent = b.name;
+      paths.set(b.id, n);
+      n.addEventListener('click', () => inspect(b));
+      n.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          inspect(b);
+        }
+      });
+    }
+    for (const h of [...data.holders, ...ground.neighbourhood.holders.filter((h) => h.siteId !== 924)]) {
+      const n = node('circle', { cx: h.x, cy: h.z, r: h.radius });
+      node('title', {}, n).textContent = h.id;
+    }
+    function paragraph(text) {
+      const p = document.createElement('p');
+      p.textContent = text;
+      details.append(p);
+    }
+    function inspect(b) {
+      for (const n of paths.values()) n.classList.remove('selected');
+      paths.get(b.id).classList.add('selected');
+      details.replaceChildren();
+      const h = document.createElement('h2');
+      h.textContent = b.name;
+      details.append(h);
+      paragraph(
+        `${b.id} · ${b.width.toFixed(1)} × ${b.depth.toFixed(1)} m envelope · estimated eaves ${b.height.toFixed(1)} m`
+      );
+      paragraph(b.footprintEvidence);
+      paragraph(b.heightEvidence);
+      paragraph(b.roofEvidence);
+      if (b.floorMark) paragraph('Map annotation: ' + b.floorMark);
+      if (b.placementEvidence) paragraph(b.placementEvidence);
+      if (b.waterReview) paragraph(b.waterReview);
+      if (b.streetTrimEvidence) paragraph(b.streetTrimEvidence);
+      if (b.areaM2 - b.renderAreaM2 > 1)
+        paragraph(
+          'The rendered envelope is partitioned at adjoining ranges, holder rings, mapped streets or a reviewed river edge; the original map envelope remains in the evidence register.'
+        );
+      for (const key of [b.source, b.elevationSource].filter(Boolean)) {
+        const s = data.sources[key],
+          a = document.createElement('a');
+        a.href = s.url;
+        a.textContent = `Source: ${key} (${s.date})`;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        const p = document.createElement('p');
+        p.append(a);
+        details.append(p);
+      }
+    }
+    for (const s of [...data.sites].sort((a, b) => a.name.localeCompare(b.name))) {
+      const o = document.createElement('option');
+      o.value = s.id;
+      o.textContent = `${s.name} (${s.buildingCount})`;
+      select.append(o);
+    }
+    function focus(id) {
+      const rows = id === 'all' ? data.buildings : data.buildings.filter((b) => b.siteId === Number(id));
+      const pts = rows.flatMap((b) => b.footprint);
+      let xs = pts.map((p) => p[0]),
+        zs = pts.map((p) => p[1]);
+      const x = Math.min(...xs) - 20,
+        z = Math.min(...zs) - 20,
+        w = Math.max(...xs) - x + 20,
+        h = Math.max(...zs) - z + 20;
+      svg.setAttribute('viewBox', `${x} ${z} ${w} ${h}`);
+      for (const b of data.buildings)
+        paths.get(b.id).style.opacity = id === 'all' || b.siteId === Number(id) ? 1 : 0.22;
+      document.querySelector('#status').textContent =
+        id === 'all'
+          ? `${data.counts.ranges} mapped ranges across ${data.counts.sites} sites, plus the retained Abbey Mill model.`
+          : `${rows.length} mapped ranges. Click a footprint for its evidence.`;
+    }
+    select.addEventListener('change', () => focus(select.value));
+    document.querySelector('#reset').addEventListener('click', () => {
+      select.value = 'all';
+      focus('all');
+    });
+    focus('all');
+  </script>
 </html>

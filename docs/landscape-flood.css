@@ -1,4 +1,147 @@
-.landscape-flood-panel{position:absolute;right:24px;top:100px;z-index:7;width:330px;max-height:calc(100dvh - 130px);overflow:auto;padding:19px;color:#233d35;background:rgba(250,247,236,.96);border:1px solid #b9c0ad;border-radius:8px;box-shadow:0 5px 25px #10221b33;font:14px/1.45 system-ui,sans-serif}
-.landscape-flood-panel h2{font:normal 27px/1.12 Georgia,serif;margin:6px 0 12px}.landscape-flood-panel p{margin:10px 0}.landscape-flood-panel .flood-kicker{font-size:10px;letter-spacing:.13em;margin:0}.landscape-flood-panel label{display:flex;justify-content:space-between;font-weight:600;margin-top:16px}.landscape-flood-panel input[type=range]{width:100%;margin:12px 0;accent-color:#246858}.flood-actions{display:flex;flex-wrap:wrap;gap:7px}.landscape-flood-panel button{border:1px solid #9caa98;border-radius:4px;padding:8px;background:#fffdf7;color:#245448;font:600 12px system-ui;cursor:pointer}.landscape-flood-panel button:hover{background:#e0eadd}.landscape-flood-panel .flood-caveat{font-size:12px;color:#586451}.landscape-flood-panel details{border-top:1px solid #cbd1c1;padding-top:10px;font-size:12px}.landscape-flood-panel summary{cursor:pointer;font-weight:600}.landscape-flood-panel a{color:#246858;text-decoration:underline}.landscape-flood-panel .flood-exit{display:block;font-size:12px;margin-top:15px}.landscape-flood-panel canvas{display:block;width:100%;max-height:230px;object-fit:contain;image-rendering:pixelated;margin-top:10px}.landscape-flood-panel button:focus-visible,.landscape-flood-panel summary:focus-visible,.landscape-flood-panel input:focus-visible{outline:3px solid #a97932;outline-offset:2px}
-body.is-flood-view .travel,body.is-flood-view .hud-top,body.is-flood-view .hero,body.is-flood-view .steps,body.is-flood-view .essay,body.is-flood-view .evidence,body.is-flood-view .site-foot{display:none}body.is-flood-view .scrolly{min-height:100dvh}body.is-flood-view .stage{position:fixed;inset:0}body.is-flood-view .chapters{display:none}body.is-flood-view .hud-bottom{right:390px}body.is-flood-view .veil{opacity:.25}body.is-flood-view{overflow:hidden}
-@media(max-width:700px){.landscape-flood-panel{top:auto;bottom:10px;left:10px;right:10px;width:auto;max-height:43dvh;padding:12px;font-size:12px}.landscape-flood-panel h2{font-size:22px;margin:4px 0 7px}.landscape-flood-panel p{margin:7px 0}body.is-flood-view .hud-bottom,body.is-flood-view .site-links{display:none}}
+.landscape-flood-panel {
+  position: absolute;
+  right: 24px;
+  top: 100px;
+  z-index: 7;
+  width: 330px;
+  max-height: calc(100dvh - 130px);
+  overflow: auto;
+  padding: 19px;
+  color: #233d35;
+  background: rgba(250, 247, 236, 0.96);
+  border: 1px solid #b9c0ad;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px #10221b33;
+  font:
+    14px/1.45 system-ui,
+    sans-serif;
+}
+.landscape-flood-panel h2 {
+  font:
+    normal 27px/1.12 Georgia,
+    serif;
+  margin: 6px 0 12px;
+}
+.landscape-flood-panel p {
+  margin: 10px 0;
+}
+.landscape-flood-panel .flood-kicker {
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  margin: 0;
+}
+.landscape-flood-panel label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-top: 16px;
+}
+.landscape-flood-panel input[type='range'] {
+  width: 100%;
+  margin: 12px 0;
+  accent-color: #246858;
+}
+.flood-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.landscape-flood-panel button {
+  border: 1px solid #9caa98;
+  border-radius: 4px;
+  padding: 8px;
+  background: #fffdf7;
+  color: #245448;
+  font: 600 12px system-ui;
+  cursor: pointer;
+}
+.landscape-flood-panel button:hover {
+  background: #e0eadd;
+}
+.landscape-flood-panel .flood-caveat {
+  font-size: 12px;
+  color: #586451;
+}
+.landscape-flood-panel details {
+  border-top: 1px solid #cbd1c1;
+  padding-top: 10px;
+  font-size: 12px;
+}
+.landscape-flood-panel summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.landscape-flood-panel a {
+  color: #246858;
+  text-decoration: underline;
+}
+.landscape-flood-panel .flood-exit {
+  display: block;
+  font-size: 12px;
+  margin-top: 15px;
+}
+.landscape-flood-panel canvas {
+  display: block;
+  width: 100%;
+  max-height: 230px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  margin-top: 10px;
+}
+.landscape-flood-panel button:focus-visible,
+.landscape-flood-panel summary:focus-visible,
+.landscape-flood-panel input:focus-visible {
+  outline: 3px solid #a97932;
+  outline-offset: 2px;
+}
+body.is-flood-view .travel,
+body.is-flood-view .hud-top,
+body.is-flood-view .hero,
+body.is-flood-view .steps,
+body.is-flood-view .essay,
+body.is-flood-view .evidence,
+body.is-flood-view .site-foot {
+  display: none;
+}
+body.is-flood-view .scrolly {
+  min-height: 100dvh;
+}
+body.is-flood-view .stage {
+  position: fixed;
+  inset: 0;
+}
+body.is-flood-view .chapters {
+  display: none;
+}
+body.is-flood-view .hud-bottom {
+  right: 390px;
+}
+body.is-flood-view .veil {
+  opacity: 0.25;
+}
+body.is-flood-view {
+  overflow: hidden;
+}
+@media (max-width: 700px) {
+  .landscape-flood-panel {
+    top: auto;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    max-height: 43dvh;
+    padding: 12px;
+    font-size: 12px;
+  }
+  .landscape-flood-panel h2 {
+    font-size: 22px;
+    margin: 4px 0 7px;
+  }
+  .landscape-flood-panel p {
+    margin: 7px 0;
+  }
+  body.is-flood-view .hud-bottom,
+  body.is-flood-view .site-links {
+    display: none;
+  }
+}

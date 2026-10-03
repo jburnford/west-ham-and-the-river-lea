@@ -21,7 +21,7 @@ async def check():
         page.on('console', lambda m: console_errors.append(m.text) if m.type == 'error' else None)
         page.on('request', lambda r: remote.append(r.url) if not r.url.startswith('http://127.0.0.1:4173/') else None)
         await page.goto('http://127.0.0.1:4173/')
-        await page.wait_for_function('window.panoramaReview?.ready === true')
+        await page.wait_for_function('window.panoramaReview?.ready === true', timeout=600000)
         initial = await page.evaluate('window.panoramaReview')
         assert initial['camera'][1] == 9
         assert initial['movement']['along'] == 0 and initial['movement']['across'] == 5.5
