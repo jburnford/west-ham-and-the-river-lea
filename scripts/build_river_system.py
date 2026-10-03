@@ -154,6 +154,22 @@ def build():
     # Preserve the detailed core wholesale. The overlap reaches the existing
     # water, while only the extra banks/bed require a new coarse terrain mesh.
     display_water = full_water.difference(current.buffer(.01))
+    # The drawn regional water also leaves out every other surface the scene
+    # draws as network water at the same level (docs/app.js): the tidal
+    # polygons, marsh-ditch render polygons and terrain pools. The tidal
+    # polygons reach past `current` into regional channels at junctions, where
+    # two coplanar planes showed as straight seams. Only the drawn planes are
+    # trimmed; display_water still sets the bed corrections and ground cuts, so
+    # the beds under the trimmed areas stay covered by the network's water.
+    pools=[Polygon([(x+rx*np.cos(i*np.pi/16),z+rz*np.sin(i*np.pi/16)) for i in range(33)])
+           for x,z,rx,rz in terrain['pools']]
+    network_water=shapely.union_all([current,geometry(core['tide']['polygons']),
+        geometry([p for f in core['marshDitches']['features'] for p in f['renderPolygons']]),*pools])
+    drawn_water=display_water.difference(network_water.buffer(.01))
+    # Clipped to the channels: never outside the mapped reaches, whose edges
+    # are the bank lines the regional bank sections are built from.
+    assert drawn_water.difference(full_water).area<1e-6
+    assert drawn_water.intersection(network_water).area<1e-6
     # Remove artificial bank caps at the former clipped endpoints only. Keep
     # all existing buildings, bridge decks and sewer structure coordinates.
     network_path=OUT/core['positionFile'];paths.append(network_path)
@@ -209,7 +225,7 @@ def build():
     meta={'epoch':'1900','status':'mapped network geometry; hydraulic operation uncalibrated',
           'reaches':reaches,'crossings':crossings,'contacts':contacts,
           'controlSites':region['connectionReview']['controlSites'],
-          'waterPolygons':rings(display_water),'extensionPolygons':rings(extension),
+          'waterPolygons':rings(drawn_water),'extensionPolygons':rings(extension),
           'baseGround':rings(core_ground),'regionalGround':rings(regional_ground),
           'positionFile':'river-system-1900.f32','indexFile':'river-system-1900.u32',
           'sedimentFile':'river-system-1900.silt','landcoverFile':'river-system-1900.cover',

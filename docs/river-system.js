@@ -86,9 +86,11 @@ export function riverSystem({ THREE, scene, data, materials, surfaces }) {
   faces.name = 'Limehouse Cut — interpreted brick canal edges';
   faces.receiveShadow = true;
   scene.add(faces);
-  // Static illustrative water. New upstream channels are not silently added
-  // to the tide animation or used as unrestricted flood seeds.
-  const water = new THREE.MeshStandardMaterial({ color: 0x73979a, roughness: 0.5, side: THREE.DoubleSide });
+  // Static water at the network's level. New upstream channels are not
+  // silently added to the tide animation or used as unrestricted flood seeds.
+  // It shares the network's reflective water material, so the two meet
+  // without a seam; a separate pale material read as a different surface.
+  const water = materials.water;
   const group = new THREE.Group();
   group.name = 'Lower Lea river system — mapped water';
   for (const rings of data.waterPolygons) {
