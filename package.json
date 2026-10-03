@@ -1,0 +1,13 @@
+{
+  "name": "west-ham-river-lea",
+  "private": true,
+  "description": "West Ham and the River Lea: 3D landscape reconstruction, historic maps and the model data behind them.",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/run_checks.mjs",
+    "test:quiet": "node scripts/run_checks.mjs --quiet",
+    "serve": "python3 -m http.server 4173 --bind 127.0.0.1 --directory docs",
+    "manifest": "python3 scripts/build_scene_manifest.py",
+    "export:gis": "python3 scripts/export_terrain_geotiff.py --verify && python3 scripts/export_geopackage.py --verify"
+  }
+}

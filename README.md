@@ -48,6 +48,20 @@ python3 scripts/check_panorama.py       # needs Python Playwright + Chromium; se
 Browser checks cover view selection, bounded camera movement, keyboard/pointer controls, zoom, map/evidence dialogs, mobile overflow and WebGL failure. Screenshots and the latest report are in [review/](scenes/channelsea-sewer-panorama/review/). These are software-rendered Chromium checks, not a physical-phone performance assessment.
 
 The scene renders on interaction and resize, with a timed animation loop only while movement is held. Static meshes are batched by material. A 512 × 384 reflection pass follows the camera; the directional shadow map is rendered once for the static scene. The latest focused terrain review records 20 main-pass draw calls (about 4.2 million triangles), plus 19 reflection-pass calls. These are separate rendering costs. Terrain data and a generated mud texture add to the local renderer and scene data. Phone and website development are currently deferred at the author’s request.
+`npm test` runs every `scripts/check_*.mjs` and summarises passes and failures (no npm packages are installed; the scripts only need Node).
+
+## GIS exports
+
+The model data is written in a local scene frame, metres east and south of the sewer bridge origin recorded in `docs/data/ground-plan.json`. Two scripts convert it back to British National Grid (EPSG:27700) so the reconstruction can be opened in QGIS or any GIS, independent of the browser renderer:
+
+```sh
+npm run export:gis   # or run the two scripts below directly
+python3 scripts/export_terrain_geotiff.py --verify   # terrain grids → exports/gis/terrain/*.tif (needs numpy, tifffile)
+python3 scripts/export_geopackage.py --verify        # footprints, water, roads → exports/gis/west-ham-model-1900.gpkg (needs geopandas, pyogrio, shapely)
+```
+
+Scene-Y rasters hold the renderer's vertical unit; the `*-odn.tif` variants add the provisional ODN offset from `terrain-1900.json`, which is a working assumption rather than a survey calibration. `exports/` is ignored by git; regenerate after changing the model data. See [GIS export notes](scenes/channelsea-sewer-panorama/GIS_EXPORTS.md) and the [portability plan](MODEL_PORTABILITY_PLAN.md).
+
 
 London VIII.32, VIII.22 and VIII.42 have now been inspected. The author’s wider OS screenshot extends housing coverage eastwards. The scene also includes the continuous raised sewer, mapped railway routes, seven factory-range studies, interpreted gardens and Abbey Mill without a windmill. See the local reference ledger. Next research priority: improve sheet registration with multiple control points, identify individual factory buildings in figures 3 and 4, and fit photograph landmarks to the camera. The bridge was rebuilt during 1900–1902; a final scene date must account for that change.
 
