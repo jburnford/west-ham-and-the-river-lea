@@ -5,13 +5,826 @@
   "name": "Bromley-by-Bow gasworks",
   "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg (project extract west-ham-buffer-buildings-bng.geojson.gz); cached NLS OS London five-foot VIII.42, revised 1893",
   "sourceCRS": "EPSG:27700 to scene origin E538900,N183209; x east, z south, metres",
-  "method": "Bromley gasworks 3 October 2026: OS-led audit of the 1891-96 footprints without models. Long purifier-block sheds, the lodge at B.M. 18.45, the south-west leg of the riverside L-range and small yard and garden buildings added from source outlines; purifier vessel rows refitted to the 44 mapped vessels; scrubber tanks and holders 1-4 moved to circle fits of the mapped column bases. Heights, storeys and roof forms are explicit estimates: the OS gives plan only, no Goad sheet covers the site and no photograph of the works buildings has been found. Retort-house envelopes left for a later pass.",
+  "method": "Bromley gasworks 3 October 2026: OS-led audit of the 1891-96 footprints without models. Long purifier-block sheds, the lodge at B.M. 18.45, the south-west leg of the riverside L-range and small yard and garden buildings added from source outlines; purifier vessel rows refitted to the 44 mapped vessels; scrubber tanks and holders 1-4 moved to circle fits of the mapped column bases. Heights, storeys and roof forms are explicit estimates: the OS gives plan only, no Goad sheet covers the site and no photograph of the works buildings has been found. Later pass (T9, same day): the two retort-house envelopes (site924-os-13, -14) re-registered to their one-to-one source outlines (fids 49, 46; heights and roofs kept), their 24 interpretive roof flues carried across at the same fractional place in each block, and the boiler stack fitted to its mapped square base (fid 926100). Supplied outlines are used unshifted; at this site they sit 1.70 m west and 0.40 m south of the printed OS lines.",
   "evidenceNotes": [
     "Most of the remaining mapped area at this site is plant (purifier vessels, holder column bases, an overhead coal gantry), not buildings; see reference/photo-review-2026-10-03/reports/site-924-proposal.md (local).",
     "Holder bromley-9 is drawn on the 1893 OS with its 24 column bases; it does not post-date the survey."
   ],
-  "buildings": [],
-  "structures": [],
+  "buildings": [
+    {
+      "modelId": "site924-os-13",
+      "siteId": 924,
+      "name": "Bromley northern paired retort houses",
+      "sourceFid": 49,
+      "worldFootprint": [
+        [
+          -335.62,
+          1153.09
+        ],
+        [
+          -343.791,
+          1161.211
+        ],
+        [
+          -344.27,
+          1161.378
+        ],
+        [
+          -354.249,
+          1171.598
+        ],
+        [
+          -357.765,
+          1174.96
+        ],
+        [
+          -358.186,
+          1175.034
+        ],
+        [
+          -389.676,
+          1143.899
+        ],
+        [
+          -389.844,
+          1143.423
+        ],
+        [
+          -392.623,
+          1140.594
+        ],
+        [
+          -393.36,
+          1140.354
+        ],
+        [
+          -424.882,
+          1108.963
+        ],
+        [
+          -424.898,
+          1108.478
+        ],
+        [
+          -377.75,
+          1061.54
+        ],
+        [
+          -377.264,
+          1061.674
+        ],
+        [
+          -361.043,
+          1077.808
+        ],
+        [
+          -360.516,
+          1078.587
+        ],
+        [
+          -345.357,
+          1093.306
+        ],
+        [
+          -344.589,
+          1094.41
+        ],
+        [
+          -343.219,
+          1095.504
+        ],
+        [
+          -310.769,
+          1127.825
+        ],
+        [
+          -310.738,
+          1128.437
+        ],
+        [
+          -329.863,
+          1147.246
+        ],
+        [
+          -331.316,
+          1148.93
+        ],
+        [
+          -335.431,
+          1152.579
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -390.531,
+          1062.312
+        ],
+        [
+          -312.843,
+          1137.335
+        ],
+        [
+          -361.469,
+          1187.688
+        ],
+        [
+          -439.157,
+          1112.665
+        ]
+      ],
+      "priorRotationDegrees": 44.0,
+      "footprintRotationDegrees": 44.94279,
+      "preservedHeight": 11,
+      "preservedRoofRise": 4.2,
+      "preservedRoofBays": 2,
+      "preservedRoofAxis": "x",
+      "review": "T9 re-registration, 3 October 2026. MAPPED: the exterior is GeoPackage outline fid 49 (one-to-one, no holes), simplified at 0.15 m (max deviation 0.15 m), used unshifted like the other Bromley outlines; checked against the cached NLS five-foot VIII.42 mosaic, where this outline and 19 neighbouring site-924 outlines all sit 1.6-1.8 m west and 0.25-0.45 m south of the printed lines (median 1.70 m W, 0.40 m S). The OS draws one shaded block, 94.9 x 67.3 m on a 44.94 deg axis, with no internal walls, flue squares or labels. MOVED: the legacy rectPixels envelope (108 x 70 m, 7,560 m2, centre (-376.0, 1125.0)) is replaced; centre moves 10.5 m (+8.2 m x, -6.7 m z), area 7,560 -> 6,338 m2, axis 44.00 -> 44.94 deg, previous IoU 0.65. ESTIMATED (unchanged): 11 m eaves, 4.2 m roof rise and two parallel ridges along the long axis, interpreted from the 1924 aerials EPW010697/EPW010699; the retort-house function is an interpretation of layout and aerials, not an OS label.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.6528,
+        "centroidShiftMetres": 10.548,
+        "areaRatio": 0.8384,
+        "axisChangeDegrees": 0.943
+      }
+    },
+    {
+      "modelId": "site924-os-14",
+      "siteId": 924,
+      "name": "Bromley southern paired retort houses",
+      "sourceFid": 46,
+      "worldFootprint": [
+        [
+          -271.888,
+          1261.387
+        ],
+        [
+          -302.894,
+          1230.134
+        ],
+        [
+          -302.895,
+          1229.583
+        ],
+        [
+          -293.501,
+          1220.247
+        ],
+        [
+          -283.98,
+          1210.498
+        ],
+        [
+          -283.779,
+          1210.069
+        ],
+        [
+          -283.299,
+          1209.902
+        ],
+        [
+          -280.878,
+          1207.222
+        ],
+        [
+          -280.308,
+          1207.123
+        ],
+        [
+          -278.574,
+          1205.173
+        ],
+        [
+          -278.508,
+          1204.795
+        ],
+        [
+          -277.747,
+          1204.298
+        ],
+        [
+          -275.675,
+          1202.023
+        ],
+        [
+          -274.301,
+          1200.91
+        ],
+        [
+          -263.73,
+          1190.275
+        ],
+        [
+          -263.258,
+          1189.51
+        ],
+        [
+          -262.844,
+          1189.323
+        ],
+        [
+          -256.008,
+          1182.424
+        ],
+        [
+          -255.585,
+          1182.626
+        ],
+        [
+          -221.041,
+          1216.614
+        ],
+        [
+          -188.732,
+          1249.043
+        ],
+        [
+          -188.887,
+          1249.454
+        ],
+        [
+          -216.98,
+          1278.057
+        ],
+        [
+          -219.599,
+          1280.425
+        ],
+        [
+          -235.819,
+          1296.606
+        ],
+        [
+          -236.279,
+          1296.432
+        ],
+        [
+          -252.954,
+          1280.12
+        ],
+        [
+          -268.563,
+          1264.567
+        ],
+        [
+          -268.557,
+          1264.279
+        ],
+        [
+          -271.392,
+          1261.519
+        ]
+      ],
+      "priorFootprint": [
+        [
+          -274.665,
+          1167.642
+        ],
+        [
+          -194.099,
+          1245.443
+        ],
+        [
+          -241.335,
+          1294.358
+        ],
+        [
+          -321.901,
+          1216.557
+        ]
+      ],
+      "priorRotationDegrees": 44.0,
+      "footprintRotationDegrees": 44.69426,
+      "preservedHeight": 11,
+      "preservedRoofRise": 4.2,
+      "preservedRoofBays": 2,
+      "preservedRoofAxis": "x",
+      "review": "T9 re-registration, 3 October 2026. MAPPED: the exterior is GeoPackage outline fid 46 (one-to-one, no holes), simplified at 0.15 m (max deviation 0.14 m), used unshifted like the other Bromley outlines; checked against the cached NLS five-foot VIII.42 mosaic, where this outline and 19 neighbouring site-924 outlines all sit 1.6-1.8 m west and 0.25-0.45 m south of the printed lines (median 1.70 m W, 0.40 m S). The OS draws one shaded block, 95.3 x 67.6 m on a 44.69 deg axis, with no internal walls, flue squares or labels. MOVED: the legacy rectPixels envelope (112 x 68 m, 7,616 m2, centre (-258.0, 1231.0)) is replaced; centre moves 14.9 m (+12.1 m x, +8.6 m z), area 7,616 -> 6,392 m2, axis 44.00 -> 44.69 deg, previous IoU 0.71. ESTIMATED (unchanged): 11 m eaves, 4.2 m roof rise and two parallel ridges along the long axis, interpreted from the 1924 aerials EPW010697/EPW010699; the retort-house function is an interpretation of layout and aerials, not an OS label.",
+      "comparison": {
+        "previousIntersectionOverUnion": 0.7077,
+        "centroidShiftMetres": 14.867,
+        "areaRatio": 0.8393,
+        "axisChangeDegrees": 0.694
+      }
+    }
+  ],
+  "structures": [
+    {
+      "id": "stack-924-retort-1--1-1",
+      "centre": [
+        -376.831,
+        1072.755
+      ],
+      "priorCentre": [
+        -388.895,
+        1075.013
+      ],
+      "rotation": 44.94279,
+      "preservedHeight": 18.5,
+      "parentBuildingId": "site924-os-13",
+      "parentFractions": [
+        0.0926,
+        0.1143
+      ],
+      "review": "T9: moved 12.3 m with its parent site924-os-13, now registered on fid 49. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.093 along, 0.114 across the old 108 x 70 m envelope), now -38.7 m along and -25.9 m across the centre of the mapped 94.9 x 67.3 m outline; the 17.6 m bay step becomes 15.5 m. Prior position (-388.9, 1075.0)."
+    },
+    {
+      "id": "stack-924-retort-1--1-2",
+      "centre": [
+        -365.884,
+        1083.679
+      ],
+      "priorCentre": [
+        -376.235,
+        1087.239
+      ],
+      "rotation": 44.94279,
+      "preservedHeight": 19.0,
+      "parentBuildingId": "site924-os-13",
+      "parentFractions": [
+        0.2556,
+        0.1143
+      ],
+      "review": "T9: moved 10.9 m with its parent site924-os-13, now registered on fid 49. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.256 along, 0.114 across the old 108 x 70 m envelope), now -23.2 m along and -25.9 m across the centre of the mapped 94.9 x 67.3 m outline; the 17.6 m bay step becomes 15.5 m. Prior position (-376.2, 1087.2)."
+    },
+    {
+      "id": "stack-924-retort-1--1-3",
+      "centre": [
+        -354.937,
+        1094.604
+      ],
+      "priorCentre": [
+        -363.574,
+        1099.465
+      ],
+      "rotation": 44.94279,
+      "preservedHeight": 19.3,
+      "parentBuildingId": "site924-os-13",
+      "parentFractions": [
+        0.4185,
+        0.1143
+      ],
+      "review": "T9: moved 9.9 m with its parent site924-os-13, now registered on fid 49. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.419 along, 0.114 across the old 108 x 70 m envelope), now -7.7 m along and -25.9 m across the centre of the mapped 94.9 x 67.3 m outline; the 17.6 m bay step becomes 15.5 m. Prior position (-363.6, 1099.5)."
+    },
+    {
+      "id": "stack-924-retort-1--1-4",
+      "centre": [
+        -343.991,
+        1105.529
+      ],
+      "priorCentre": [
+        -350.914,
+        1111.691
+      ],
+      "rotation": 44.94279,
+      "preservedHeight": 19.3,
+      "parentBuildingId": "site924-os-13",
+      "parentFractions": [
+        0.5815,
+        0.1143
+      ],
+      "review": "T9: moved 9.3 m with its parent site924-os-13, now registered on fid 49. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.581 along, 0.114 across the old 108 x 70 m envelope), now +7.7 m along and -25.9 m across the centre of the mapped 94.9 x 67.3 m outline; the 17.6 m bay step becomes 15.5 m. Prior position (-350.9, 1111.7)."
+    },
+    {
+      "id": "stack-924-retort-1--1-5",
+      "centre": [
+        -333.044,
+        1116.454
+      ],
+      "priorCentre": [
+        -338.254,
+        1123.917
+      ],
+      "rotation": 44.94279,
+      "preservedHeight": 19.0,
+      "parentBuildingId": "site924-os-13",
+      "parentFractions": [
+        0.7444,
+        0.1143
+      ],
+      "review": "T9: moved 9.1 m with its parent site924-os-13, now registered on fid 49. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.744 along, 0.114 across the old 108 x 70 m envelope), now +23.2 m along and -25.9 m across the centre of the mapped 94.9 x 67.3 m outline; the 17.6 m bay step becomes 15.5 m. Prior position (-338.3, 1123.9)."
+    },
+    {
+      "id": "stack-924-retort-1--1-6",
+      "centre": [
+        -322.097,
+        1127.379
+      ],
+      "priorCentre": [
+        -325.593,
+        1136.143
+      ],
+      "rotation": 44.94279,
+      "preservedHeight": 18.5,
+      "parentBuildingId": "site924-os-13",
+      "parentFractions": [
+        0.9074,
+        0.1143
+      ],
+      "review": "T9: moved 9.4 m with its parent site924-os-13, now registered on fid 49. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.907 along, 0.114 across the old 108 x 70 m envelope), now +38.7 m along and -25.9 m across the centre of the mapped 94.9 x 67.3 m outline; the 17.6 m bay step becomes 15.5 m. Prior position (-325.6, 1136.1)."
+    },
+    {
+      "id": "stack-924-retort-1-1-1",
+      "centre": [
+        -413.483,
+        1109.48
+      ],
+      "priorCentre": [
+        -426.407,
+        1113.857
+      ],
+      "rotation": 44.94279,
+      "preservedHeight": 18.5,
+      "parentBuildingId": "site924-os-13",
+      "parentFractions": [
+        0.0926,
+        0.8857
+      ],
+      "review": "T9: moved 13.6 m with its parent site924-os-13, now registered on fid 49. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.093 along, 0.886 across the old 108 x 70 m envelope), now -38.7 m along and +25.9 m across the centre of the mapped 94.9 x 67.3 m outline; the 17.6 m bay step becomes 15.5 m. Prior position (-426.4, 1113.9)."
+    },
+    {
+      "id": "stack-924-retort-1-1-2",
+      "centre": [
+        -402.536,
+        1120.405
+      ],
+      "priorCentre": [
+        -413.746,
+        1126.083
+      ],
+      "rotation": 44.94279,
+      "preservedHeight": 19.0,
+      "parentBuildingId": "site924-os-13",
+      "parentFractions": [
+        0.2556,
+        0.8857
+      ],
+      "review": "T9: moved 12.6 m with its parent site924-os-13, now registered on fid 49. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.256 along, 0.886 across the old 108 x 70 m envelope), now -23.2 m along and +25.9 m across the centre of the mapped 94.9 x 67.3 m outline; the 17.6 m bay step becomes 15.5 m. Prior position (-413.7, 1126.1)."
+    },
+    {
+      "id": "stack-924-retort-1-1-3",
+      "centre": [
+        -391.589,
+        1131.329
+      ],
+      "priorCentre": [
+        -401.086,
+        1138.309
+      ],
+      "rotation": 44.94279,
+      "preservedHeight": 19.3,
+      "parentBuildingId": "site924-os-13",
+      "parentFractions": [
+        0.4185,
+        0.8857
+      ],
+      "review": "T9: moved 11.8 m with its parent site924-os-13, now registered on fid 49. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.419 along, 0.886 across the old 108 x 70 m envelope), now -7.7 m along and +25.9 m across the centre of the mapped 94.9 x 67.3 m outline; the 17.6 m bay step becomes 15.5 m. Prior position (-401.1, 1138.3)."
+    },
+    {
+      "id": "stack-924-retort-1-1-4",
+      "centre": [
+        -380.642,
+        1142.254
+      ],
+      "priorCentre": [
+        -388.426,
+        1150.535
+      ],
+      "rotation": 44.94279,
+      "preservedHeight": 19.3,
+      "parentBuildingId": "site924-os-13",
+      "parentFractions": [
+        0.5815,
+        0.8857
+      ],
+      "review": "T9: moved 11.4 m with its parent site924-os-13, now registered on fid 49. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.581 along, 0.886 across the old 108 x 70 m envelope), now +7.7 m along and +25.9 m across the centre of the mapped 94.9 x 67.3 m outline; the 17.6 m bay step becomes 15.5 m. Prior position (-388.4, 1150.5)."
+    },
+    {
+      "id": "stack-924-retort-1-1-5",
+      "centre": [
+        -369.696,
+        1153.179
+      ],
+      "priorCentre": [
+        -375.765,
+        1162.761
+      ],
+      "rotation": 44.94279,
+      "preservedHeight": 19.0,
+      "parentBuildingId": "site924-os-13",
+      "parentFractions": [
+        0.7444,
+        0.8857
+      ],
+      "review": "T9: moved 11.3 m with its parent site924-os-13, now registered on fid 49. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.744 along, 0.886 across the old 108 x 70 m envelope), now +23.2 m along and +25.9 m across the centre of the mapped 94.9 x 67.3 m outline; the 17.6 m bay step becomes 15.5 m. Prior position (-375.8, 1162.8)."
+    },
+    {
+      "id": "stack-924-retort-1-1-6",
+      "centre": [
+        -358.749,
+        1164.104
+      ],
+      "priorCentre": [
+        -363.105,
+        1174.987
+      ],
+      "rotation": 44.94279,
+      "preservedHeight": 18.5,
+      "parentBuildingId": "site924-os-13",
+      "parentFractions": [
+        0.9074,
+        0.8857
+      ],
+      "review": "T9: moved 11.7 m with its parent site924-os-13, now registered on fid 49. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.907 along, 0.886 across the old 108 x 70 m envelope), now +38.7 m along and +25.9 m across the centre of the mapped 94.9 x 67.3 m outline; the 17.6 m bay step becomes 15.5 m. Prior position (-363.1, 1175.0)."
+    },
+    {
+      "id": "stack-924-retort-2--1-1",
+      "centre": [
+        -254.351,
+        1194.844
+      ],
+      "priorCentre": [
+        -271.59,
+        1181.732
+      ],
+      "rotation": 44.69426,
+      "preservedHeight": 18.5,
+      "parentBuildingId": "site924-os-14",
+      "parentFractions": [
+        0.1071,
+        0.1176
+      ],
+      "review": "T9: moved 21.7 m with its parent site924-os-14, now registered on fid 46. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.107 along, 0.118 across the old 112 x 68 m envelope), now -37.4 m along and -25.8 m across the centre of the mapped 95.3 x 67.6 m outline; the 17.6 m bay step becomes 15.0 m. Prior position (-271.6, 1181.7)."
+    },
+    {
+      "id": "stack-924-retort-2--1-2",
+      "centre": [
+        -243.705,
+        1205.377
+      ],
+      "priorCentre": [
+        -258.929,
+        1193.958
+      ],
+      "rotation": 44.69426,
+      "preservedHeight": 19.0,
+      "parentBuildingId": "site924-os-14",
+      "parentFractions": [
+        0.2643,
+        0.1176
+      ],
+      "review": "T9: moved 19.0 m with its parent site924-os-14, now registered on fid 46. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.264 along, 0.118 across the old 112 x 68 m envelope), now -22.5 m along and -25.8 m across the centre of the mapped 95.3 x 67.6 m outline; the 17.6 m bay step becomes 15.0 m. Prior position (-258.9, 1194.0)."
+    },
+    {
+      "id": "stack-924-retort-2--1-3",
+      "centre": [
+        -233.059,
+        1215.91
+      ],
+      "priorCentre": [
+        -246.269,
+        1206.184
+      ],
+      "rotation": 44.69426,
+      "preservedHeight": 19.3,
+      "parentBuildingId": "site924-os-14",
+      "parentFractions": [
+        0.4214,
+        0.1176
+      ],
+      "review": "T9: moved 16.4 m with its parent site924-os-14, now registered on fid 46. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.421 along, 0.118 across the old 112 x 68 m envelope), now -7.5 m along and -25.8 m across the centre of the mapped 95.3 x 67.6 m outline; the 17.6 m bay step becomes 15.0 m. Prior position (-246.3, 1206.2)."
+    },
+    {
+      "id": "stack-924-retort-2--1-4",
+      "centre": [
+        -222.413,
+        1226.443
+      ],
+      "priorCentre": [
+        -233.609,
+        1218.41
+      ],
+      "rotation": 44.69426,
+      "preservedHeight": 19.3,
+      "parentBuildingId": "site924-os-14",
+      "parentFractions": [
+        0.5786,
+        0.1176
+      ],
+      "review": "T9: moved 13.8 m with its parent site924-os-14, now registered on fid 46. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.579 along, 0.118 across the old 112 x 68 m envelope), now +7.5 m along and -25.8 m across the centre of the mapped 95.3 x 67.6 m outline; the 17.6 m bay step becomes 15.0 m. Prior position (-233.6, 1218.4)."
+    },
+    {
+      "id": "stack-924-retort-2--1-5",
+      "centre": [
+        -211.767,
+        1236.976
+      ],
+      "priorCentre": [
+        -220.948,
+        1230.636
+      ],
+      "rotation": 44.69426,
+      "preservedHeight": 19.0,
+      "parentBuildingId": "site924-os-14",
+      "parentFractions": [
+        0.7357,
+        0.1176
+      ],
+      "review": "T9: moved 11.2 m with its parent site924-os-14, now registered on fid 46. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.736 along, 0.118 across the old 112 x 68 m envelope), now +22.5 m along and -25.8 m across the centre of the mapped 95.3 x 67.6 m outline; the 17.6 m bay step becomes 15.0 m. Prior position (-220.9, 1230.6)."
+    },
+    {
+      "id": "stack-924-retort-2--1-6",
+      "centre": [
+        -201.12,
+        1247.509
+      ],
+      "priorCentre": [
+        -208.288,
+        1242.862
+      ],
+      "rotation": 44.69426,
+      "preservedHeight": 18.5,
+      "parentBuildingId": "site924-os-14",
+      "parentFractions": [
+        0.8929,
+        0.1176
+      ],
+      "review": "T9: moved 8.5 m with its parent site924-os-14, now registered on fid 46. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.893 along, 0.118 across the old 112 x 68 m envelope), now +37.4 m along and -25.8 m across the centre of the mapped 95.3 x 67.6 m outline; the 17.6 m bay step becomes 15.0 m. Prior position (-208.3, 1242.9)."
+    },
+    {
+      "id": "stack-924-retort-2-1-1",
+      "centre": [
+        -290.703,
+        1231.586
+      ],
+      "priorCentre": [
+        -307.712,
+        1219.138
+      ],
+      "rotation": 44.69426,
+      "preservedHeight": 18.5,
+      "parentBuildingId": "site924-os-14",
+      "parentFractions": [
+        0.1071,
+        0.8824
+      ],
+      "review": "T9: moved 21.1 m with its parent site924-os-14, now registered on fid 46. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.107 along, 0.882 across the old 112 x 68 m envelope), now -37.4 m along and +25.8 m across the centre of the mapped 95.3 x 67.6 m outline; the 17.6 m bay step becomes 15.0 m. Prior position (-307.7, 1219.1)."
+    },
+    {
+      "id": "stack-924-retort-2-1-2",
+      "centre": [
+        -280.057,
+        1242.119
+      ],
+      "priorCentre": [
+        -295.052,
+        1231.364
+      ],
+      "rotation": 44.69426,
+      "preservedHeight": 19.0,
+      "parentBuildingId": "site924-os-14",
+      "parentFractions": [
+        0.2643,
+        0.8824
+      ],
+      "review": "T9: moved 18.5 m with its parent site924-os-14, now registered on fid 46. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.264 along, 0.882 across the old 112 x 68 m envelope), now -22.5 m along and +25.8 m across the centre of the mapped 95.3 x 67.6 m outline; the 17.6 m bay step becomes 15.0 m. Prior position (-295.1, 1231.4)."
+    },
+    {
+      "id": "stack-924-retort-2-1-3",
+      "centre": [
+        -269.411,
+        1252.652
+      ],
+      "priorCentre": [
+        -282.391,
+        1243.59
+      ],
+      "rotation": 44.69426,
+      "preservedHeight": 19.3,
+      "parentBuildingId": "site924-os-14",
+      "parentFractions": [
+        0.4214,
+        0.8824
+      ],
+      "review": "T9: moved 15.8 m with its parent site924-os-14, now registered on fid 46. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.421 along, 0.882 across the old 112 x 68 m envelope), now -7.5 m along and +25.8 m across the centre of the mapped 95.3 x 67.6 m outline; the 17.6 m bay step becomes 15.0 m. Prior position (-282.4, 1243.6)."
+    },
+    {
+      "id": "stack-924-retort-2-1-4",
+      "centre": [
+        -258.765,
+        1263.185
+      ],
+      "priorCentre": [
+        -269.731,
+        1255.816
+      ],
+      "rotation": 44.69426,
+      "preservedHeight": 19.3,
+      "parentBuildingId": "site924-os-14",
+      "parentFractions": [
+        0.5786,
+        0.8824
+      ],
+      "review": "T9: moved 13.2 m with its parent site924-os-14, now registered on fid 46. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.579 along, 0.882 across the old 112 x 68 m envelope), now +7.5 m along and +25.8 m across the centre of the mapped 95.3 x 67.6 m outline; the 17.6 m bay step becomes 15.0 m. Prior position (-269.7, 1255.8)."
+    },
+    {
+      "id": "stack-924-retort-2-1-5",
+      "centre": [
+        -248.119,
+        1273.718
+      ],
+      "priorCentre": [
+        -257.071,
+        1268.042
+      ],
+      "rotation": 44.69426,
+      "preservedHeight": 19.0,
+      "parentBuildingId": "site924-os-14",
+      "parentFractions": [
+        0.7357,
+        0.8824
+      ],
+      "review": "T9: moved 10.6 m with its parent site924-os-14, now registered on fid 46. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.736 along, 0.882 across the old 112 x 68 m envelope), now +22.5 m along and +25.8 m across the centre of the mapped 95.3 x 67.6 m outline; the 17.6 m bay step becomes 15.0 m. Prior position (-257.1, 1268.0)."
+    },
+    {
+      "id": "stack-924-retort-2-1-6",
+      "centre": [
+        -237.473,
+        1284.251
+      ],
+      "priorCentre": [
+        -244.41,
+        1280.268
+      ],
+      "rotation": 44.69426,
+      "preservedHeight": 18.5,
+      "parentBuildingId": "site924-os-14",
+      "parentFractions": [
+        0.8929,
+        0.8824
+      ],
+      "review": "T9: moved 8.0 m with its parent site924-os-14, now registered on fid 46. MAPPED: only the parent outline; the OS shows no flue squares, chimney bases or 'Chy.' label inside the block. ESTIMATED: the flue itself, its row and bay, height and profile, from the repeated roof stacks in the 1924 aerials. The position keeps its fractional place in the block (0.893 along, 0.882 across the old 112 x 68 m envelope), now +37.4 m along and +25.8 m across the centre of the mapped 95.3 x 67.6 m outline; the 17.6 m bay step becomes 15.0 m. Prior position (-244.4, 1280.3)."
+    },
+    {
+      "id": "stack-924-boiler-photo",
+      "centre": [
+        -265.687,
+        1137.18
+      ],
+      "priorCentre": [
+        -263.826,
+        1136.875
+      ],
+      "rotation": 0,
+      "preservedHeight": 32,
+      "sourceFid": 926100,
+      "sourcePolygons": [
+        [
+          [
+            [
+              -265.864,
+              1134.918
+            ],
+            [
+              -265.674,
+              1134.906
+            ],
+            [
+              -265.251,
+              1135.103
+            ],
+            [
+              -263.426,
+              1137.034
+            ],
+            [
+              -263.522,
+              1137.566
+            ],
+            [
+              -265.453,
+              1139.352
+            ],
+            [
+              -265.944,
+              1139.377
+            ],
+            [
+              -267.845,
+              1137.528
+            ],
+            [
+              -268.05,
+              1137.111
+            ],
+            [
+              -265.864,
+              1134.918
+            ]
+          ]
+        ]
+      ],
+      "review": "T9: fitted to GeoPackage outline fid 926100, the 3.55 x 3.53 m square drawn open in range outline 24074 (a hole in that outline) - the 'small square feature' the original placement cites. Moved 1.89 m (-1.86 m x, +0.31 m z): the prior centre sat on the printed square in the NLS mosaic frame, which is the same 1.7 m W / 0.4 m S frame difference measured for the retort-house outlines; the stack now uses the GeoPackage frame like the re-registered retort houses. Not a child of site924-os-13/-14: it stands in the eastern utility range (site924-os-15, unchanged). MAPPED: the square base and its position. ESTIMATED (unchanged): the chimney reading of the square (provisional, with EPW010699), the 32 m height and round tapered profile read from the 1924 aerial, and the 1.5 m radius (plinth 3.6 m across against the 3.5 m square)."
+    }
+  ],
   "removedBuildings": [
     {
       "id": "site924-os-7",
