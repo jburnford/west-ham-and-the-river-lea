@@ -1,0 +1,3121 @@
+{
+ "schemaVersion": 1,
+ "date": "2026-10-03",
+ "site": 865,
+ "name": "Leather Cloth Works",
+ "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg (project extract west-ham-buffer-buildings-bng.geojson.gz); cached NLS OS London five-foot mosaic (os-london-five-foot-1893); EPFL OS text layer for the labels 'Leather Cloth Works' and 'Reservoir'",
+ "sourceCRS": "EPSG:27700 to scene origin E538900,N183209; x east, z south, metres",
+ "method": "Leather Cloth Works 3 October 2026: first models for site 865 (previously excluded as east of Channelsea). 45 of the 50 supplied OS outlines on the site are modelled, merged where they touch; the 3,838 m² northern outline is split into a main shed and its long arm. A hatched street block on the south road (OS lettering \"STEPH…\") that the GeoPackage omits is traced from the OS mosaic, moved into the GeoPackage frame by the measured (-1.75, +0.25) m offset, and split into three roofs. A small square opening in one range is read as a chimney base. All heights, storeys, roof forms, materials and functions are explicit estimates: the OS gives plan only and no Goad sheet or photograph of this works has been found.",
+ "evidenceNotes": [
+  "OS labels on the site (EPFL text layer): \"Leather Cloth Works\" at about (372, -358) and \"Reservoir\" at about (417, -411). No \"Chy.\", boiler, tank or department labels.",
+  "The GeoPackage outlines at this site sit 1.75 m west and 0.25 m south of the printed outlines in the cached mosaic; the offset was fitted to the outline ink of 17 supplied footprints. Supplied outlines are used unshifted, as at Bromley; only the three traced roofs were moved into the GeoPackage frame.",
+  "Not modelled: fid 802028 (27 m², GeoPackage class \"compound\", drawn on the OS as a crossed outline at the junction of the great shed and the south-west yard, so it may be a covered way or open structure rather than a roofed building); fids 1088836, 1025151, 1113424, 1115301, 1230246 and 1291498 (0.8–5.3 m² posts, piers or yard fittings). fid 1061509 is the chimney base, modelled as a structure.",
+  "The reservoir is open water inside the works and is not modelled here; it is not part of the river water layer the builder checks against.",
+  "A grey stippled area on the northern OS sheet south-west of the great shed, at the sheet join, is not modelled: it has no supplied outline and its tone may be the sheet edge rather than a roof."
+ ],
+ "buildings": [],
+ "structures": [],
+ "groups": [],
+ "additionalSites": [
+  {
+   "id": 865,
+   "name": "Leather Cloth Works",
+   "sources": [
+    "os-1893"
+   ],
+   "coverage": "Individual OS-mapped ranges; three street-front roofs traced from the OS where the GeoPackage has no outline",
+   "notes": "Named on the OS five-foot plan. Roof exteriors are mapped; heights, storeys, roof forms, materials and building functions are estimates. No Goad coverage is asserted."
+  }
+ ],
+ "additionalBuildings": [
+  {
+   "id": "b865-north-hall",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — great northern shed",
+   "footprintRotationDegrees": 23.39,
+   "eavesHeight": 5.5,
+   "roofRise": 2.7,
+   "roofAxis": "x",
+   "roofBays": 4,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    150
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 150), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). The supplied outline is one 3,838 m² shaded polygon with no internal lines on the OS; it is split here along the line of the north-east wall of its south-east arm, a modelling cut so that the arm and the main block take separate roofs. This record is the main block north of that line.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 5.5 m eaves: a large shaded works shed is read as one tall storey (a type-based reading: long single-storey sheds are a common works form of the period), not evidence about this works; 5.5 m chosen for realism.",
+   "roofEvidence": "Ridge-and-furrow pitched roof with 4 parallel spans of about 10 m is an interpretation of a 40 m-deep single shed; no roof lines are drawn on the OS. North-light (saw-tooth) glazing would be equally plausible for a works shed but the renderer cannot draw the vertical glazed faces, so plain slate pitches are used.",
+   "functionEvidence": "Largest roofed area of the works, beside the OS \"Reservoir\". Function (coating or finishing shed) is a type-based interpretation; the OS names only the works.",
+   "worldFootprint": [
+    [
+     339.54,
+     -429.793
+    ],
+    [
+     334.972,
+     -418.968
+    ],
+    [
+     334.339,
+     -418.119
+    ],
+    [
+     387.423,
+     -394.19
+    ],
+    [
+     395.191,
+     -411.687
+    ],
+    [
+     395.185,
+     -412.18
+    ],
+    [
+     384.702,
+     -417.105
+    ],
+    [
+     384.681,
+     -417.595
+    ],
+    [
+     385.455,
+     -419.297
+    ],
+    [
+     385.295,
+     -419.778
+    ],
+    [
+     383.231,
+     -420.802
+    ],
+    [
+     383.23,
+     -421.293
+    ],
+    [
+     389.699,
+     -436.309
+    ],
+    [
+     389.642,
+     -436.981
+    ],
+    [
+     350.248,
+     -453.624
+    ]
+   ]
+  },
+  {
+   "id": "b865-reservoir-range",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — long range along the reservoir",
+   "footprintRotationDegrees": 23.39,
+   "eavesHeight": 6.5,
+   "roofRise": 4.0,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    150
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 150), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). The south strip of the supplied 3,838 m² outline, cut off along the line of the arm’s north-east wall (a modelling division; the OS draws none). The arm itself is mapped; the small bay at its west end and the spur at its east end are separate records.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 6.5 m eaves: a long narrow range read as a tall single storey (drying stoves or rooms in which coated cloth was hung, a type-based reading for leather-cloth works); 6.5 m chosen for realism, not evidence.",
+   "roofEvidence": "Single pitched span along the 93 m range is an interpretation; slate covering assumed. No ventilator or lantern is modelled.",
+   "functionEvidence": "Long range of even width running from Abbey Road along the south-west side of the reservoir; drying range is a type-based interpretation, not a label.",
+   "worldFootprint": [
+    [
+     327.972,
+     -401.713
+    ],
+    [
+     413.366,
+     -364.773
+    ],
+    [
+     418.55,
+     -375.776
+    ],
+    [
+     417.496,
+     -376.037
+    ],
+    [
+     418.966,
+     -379.501
+    ],
+    [
+     418.889,
+     -380.005
+    ],
+    [
+     387.681,
+     -393.84
+    ],
+    [
+     387.423,
+     -394.19
+    ],
+    [
+     334.339,
+     -418.119
+    ],
+    [
+     331.252,
+     -410.878
+    ],
+    [
+     331.043,
+     -408.655
+    ]
+   ]
+  },
+  {
+   "id": "b865-reservoir-range-west-bay",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — bay at the west end of the reservoir range",
+   "footprintRotationDegrees": 23.39,
+   "eavesHeight": 4.5,
+   "roofRise": 2.5,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    150
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 150), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Part of the supplied 3,838 m² outline lying south of the long range’s south wall line; separated so that the range keeps an even span (a modelling division; the OS draws none).",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 4.5 m eaves: a low projection read as one storey below the range eaves; 4.5 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Projection from the south wall of the long range near Abbey Road, beside the crossed outline fid 802028; use unidentified.",
+   "worldFootprint": [
+    [
+     325.835,
+     -396.159
+    ],
+    [
+     331.134,
+     -393.413
+    ],
+    [
+     332.045,
+     -392.443
+    ],
+    [
+     334.105,
+     -391.42
+    ],
+    [
+     334.32,
+     -391.015
+    ],
+    [
+     333.972,
+     -390.711
+    ],
+    [
+     333.874,
+     -389.605
+    ],
+    [
+     343.872,
+     -385.104
+    ],
+    [
+     344.094,
+     -384.687
+    ],
+    [
+     345.73,
+     -384.259
+    ],
+    [
+     345.944,
+     -384.315
+    ],
+    [
+     348.287,
+     -389.371
+    ],
+    [
+     348.763,
+     -389.41
+    ],
+    [
+     351.388,
+     -388.327
+    ],
+    [
+     351.832,
+     -388.501
+    ],
+    [
+     352.829,
+     -390.617
+    ],
+    [
+     353.193,
+     -390.803
+    ],
+    [
+     327.972,
+     -401.713
+    ],
+    [
+     325.943,
+     -397.126
+    ]
+   ]
+  },
+  {
+   "id": "b865-reservoir-range-east-spur",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — spur at the east end of the reservoir range",
+   "footprintRotationDegrees": 23.39,
+   "eavesHeight": 4.5,
+   "roofRise": 2.5,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    150
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 150), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Part of the supplied 3,838 m² outline lying south of the long range’s south wall line; separated so that the range keeps an even span (a modelling division; the OS draws none).",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 4.5 m eaves: a narrow projection read as one storey below the range eaves; 4.5 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Narrow spur running south from the east end of the long range; use unidentified.",
+   "worldFootprint": [
+    [
+     406.634,
+     -367.112
+    ],
+    [
+     403.388,
+     -359.313
+    ],
+    [
+     403.632,
+     -358.907
+    ],
+    [
+     409.295,
+     -356.541
+    ],
+    [
+     409.636,
+     -356.858
+    ],
+    [
+     413.366,
+     -364.773
+    ],
+    [
+     403.119,
+     -369.206
+    ],
+    [
+     406.552,
+     -367.706
+    ]
+   ]
+  },
+  {
+   "id": "b865-hall-west-adjuncts",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — small adjuncts on the Abbey Road wall",
+   "footprintRotationDegrees": -65.85,
+   "eavesHeight": 2.8,
+   "roofRise": 1.0,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    995306,
+    1018319,
+    1043032
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 995306, 1018319, 1043032), merged across the OS division lines between them, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Three touching narrow cells against the west wall of fid 150.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 2.8 m eaves: small attached cells read as low lean-to stores; 2.8 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Three narrow cells against the west wall of the great shed on the Abbey Road boundary; use unidentified.",
+   "worldFootprint": [
+    [
+     337.559,
+     -425.056
+    ],
+    [
+     339.47,
+     -429.299
+    ],
+    [
+     339.463,
+     -429.795
+    ],
+    [
+     338.462,
+     -430.051
+    ],
+    [
+     336.404,
+     -425.938
+    ],
+    [
+     336.336,
+     -425.368
+    ],
+    [
+     336.142,
+     -425.142
+    ],
+    [
+     334.949,
+     -422.656
+    ],
+    [
+     334.678,
+     -421.677
+    ],
+    [
+     334.492,
+     -421.418
+    ],
+    [
+     333.832,
+     -420.201
+    ],
+    [
+     333.537,
+     -419.288
+    ],
+    [
+     333.479,
+     -418.705
+    ],
+    [
+     334.335,
+     -418.351
+    ],
+    [
+     334.742,
+     -418.557
+    ],
+    [
+     335.706,
+     -420.648
+    ],
+    [
+     335.773,
+     -421.235
+    ],
+    [
+     335.997,
+     -421.375
+    ],
+    [
+     336.346,
+     -422.24
+    ],
+    [
+     336.61,
+     -422.591
+    ],
+    [
+     337.433,
+     -424.858
+    ]
+   ]
+  },
+  {
+   "id": "b865-garden-house",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — detached house in the works garden",
+   "footprintRotationDegrees": 21.57,
+   "eavesHeight": 6.9,
+   "roofRise": 3.3,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 2,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    65662,
+    1100167
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 65662, 1100167), merged across the OS division lines between them, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Shaded house outline and its small porch cell.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 2 storeys, 6.9 m eaves: a detached house-type outline with projecting bays read as a two-storey residence (builder default 6.9 m eaves for two storeys).",
+   "roofEvidence": "Plain gable along the long axis; a hipped slate roof would be likelier for a house but is not a renderer option.",
+   "functionEvidence": "Irregular outline with bays, set in an open garden with a curving path at the north corner of the site; read as a works house or manager’s residence. Unlabelled on the OS.",
+   "worldFootprint": [
+    [
+     377.387,
+     -464.309
+    ],
+    [
+     374.829,
+     -465.466
+    ],
+    [
+     374.632,
+     -465.75
+    ],
+    [
+     376.552,
+     -470.617
+    ],
+    [
+     376.33,
+     -471.027
+    ],
+    [
+     373.635,
+     -472.057
+    ],
+    [
+     373.655,
+     -472.548
+    ],
+    [
+     373.864,
+     -472.903
+    ],
+    [
+     373.959,
+     -473.45
+    ],
+    [
+     373.604,
+     -473.725
+    ],
+    [
+     368.656,
+     -475.573
+    ],
+    [
+     368.246,
+     -474.751
+    ],
+    [
+     367.691,
+     -474.655
+    ],
+    [
+     366.42,
+     -474.036
+    ],
+    [
+     365.764,
+     -472.826
+    ],
+    [
+     366.082,
+     -471.243
+    ],
+    [
+     366.438,
+     -470.963
+    ],
+    [
+     366.451,
+     -470.482
+    ],
+    [
+     365.606,
+     -468.847
+    ],
+    [
+     364.905,
+     -468.815
+    ],
+    [
+     363.876,
+     -468.067
+    ],
+    [
+     363.243,
+     -466.237
+    ],
+    [
+     363.495,
+     -465.189
+    ],
+    [
+     363.789,
+     -464.894
+    ],
+    [
+     363.902,
+     -464.376
+    ],
+    [
+     372.296,
+     -461.058
+    ],
+    [
+     372.99,
+     -462.246
+    ],
+    [
+     373.4,
+     -462.325
+    ],
+    [
+     374.248,
+     -461.939
+    ],
+    [
+     374.814,
+     -461.866
+    ],
+    [
+     375.212,
+     -462.126
+    ],
+    [
+     375.505,
+     -462.46
+    ],
+    [
+     376.553,
+     -462.268
+    ],
+    [
+     376.632,
+     -462.126
+    ],
+    [
+     376.995,
+     -461.868
+    ],
+    [
+     377.545,
+     -461.81
+    ],
+    [
+     377.85,
+     -462.156
+    ],
+    [
+     378.341,
+     -463.485
+    ],
+    [
+     378.338,
+     -463.974
+    ],
+    [
+     377.931,
+     -464.203
+    ],
+    [
+     377.378,
+     -464.248
+    ]
+   ]
+  },
+  {
+   "id": "b865-eastbourne-road-lodge",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — lodge on the Eastbourne Road wall",
+   "footprintRotationDegrees": 23.97,
+   "eavesHeight": 3.4,
+   "roofRise": 1.1,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    826726,
+    901022
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 826726, 901022), merged across the OS division lines between them, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Two touching cells on the north boundary; about 18 % of the outline lies outside the approximate site polygon, which follows the wall line only roughly.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 3.4 m eaves: small boundary building read as a single-storey lodge or store; 3.4 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Small two-cell building on the north boundary wall facing Eastbourne Road; gate lodge is an interpretation.",
+   "worldFootprint": [
+    [
+     402.928,
+     -465.424
+    ],
+    [
+     398.802,
+     -467.476
+    ],
+    [
+     397.819,
+     -467.742
+    ],
+    [
+     397.455,
+     -467.444
+    ],
+    [
+     396.164,
+     -464.409
+    ],
+    [
+     396.474,
+     -464.065
+    ],
+    [
+     401.18,
+     -462.002
+    ],
+    [
+     401.74,
+     -461.946
+    ],
+    [
+     401.734,
+     -461.737
+    ],
+    [
+     404.739,
+     -460.391
+    ],
+    [
+     405.165,
+     -460.613
+    ],
+    [
+     406.45,
+     -463.648
+    ],
+    [
+     406.182,
+     -464.014
+    ],
+    [
+     404.967,
+     -464.686
+    ],
+    [
+     403.629,
+     -465.183
+    ],
+    [
+     403.071,
+     -465.223
+    ]
+   ]
+  },
+  {
+   "id": "b865-reservoir-corner-building",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — building at the reservoir’s south-east corner",
+   "footprintRotationDegrees": 25.47,
+   "eavesHeight": 4.0,
+   "roofRise": 2.1,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    165507
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 165507), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single shaded outline.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 4.0 m eaves: small detached building read as one storey; 4.0 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Detached building at the south-east corner of the reservoir; a pump or engine house for the reservoir is possible but unlabelled.",
+   "worldFootprint": [
+    [
+     426.937,
+     -382.422
+    ],
+    [
+     426.954,
+     -382.38
+    ],
+    [
+     424.114,
+     -376.562
+    ],
+    [
+     424.264,
+     -376.064
+    ],
+    [
+     424.811,
+     -376.026
+    ],
+    [
+     425.081,
+     -375.004
+    ],
+    [
+     433.527,
+     -371.148
+    ],
+    [
+     433.87,
+     -371.401
+    ],
+    [
+     435.721,
+     -375.084
+    ],
+    [
+     436.013,
+     -376.075
+    ],
+    [
+     435.666,
+     -376.386
+    ],
+    [
+     435.009,
+     -376.41
+    ],
+    [
+     435.666,
+     -377.691
+    ],
+    [
+     435.735,
+     -378.245
+    ],
+    [
+     435.45,
+     -378.586
+    ],
+    [
+     427.489,
+     -382.378
+    ]
+   ]
+  },
+  {
+   "id": "b865-central-block",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — central block at the works label",
+   "footprintRotationDegrees": 24.48,
+   "eavesHeight": 6.9,
+   "roofRise": 4.0,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 2,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    15181
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 15181), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single shaded outline.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 2 storeys, 6.9 m eaves: compact detached blocks of 150–300 m² in the yard are read as two-storey (stores or finishing rooms), the large sheds as single-storey; builder default 6.9 m eaves for two storeys.",
+   "roofEvidence": "Plain gable on the long axis over a chamfered outline; the roof form is not established.",
+   "functionEvidence": "Shaded block with chamfered corners beside the OS label \"Leather Cloth Works\"; use unidentified.",
+   "worldFootprint": [
+    [
+     383.857,
+     -361.529
+    ],
+    [
+     382.519,
+     -362.025
+    ],
+    [
+     382.169,
+     -362.281
+    ],
+    [
+     369.387,
+     -368.036
+    ],
+    [
+     369.055,
+     -368.211
+    ],
+    [
+     368.852,
+     -368.145
+    ],
+    [
+     362.593,
+     -354.678
+    ],
+    [
+     362.324,
+     -354.313
+    ],
+    [
+     362.19,
+     -353.826
+    ],
+    [
+     362.389,
+     -353.38
+    ],
+    [
+     362.758,
+     -353.141
+    ],
+    [
+     363.233,
+     -353.003
+    ],
+    [
+     363.602,
+     -352.736
+    ],
+    [
+     364.146,
+     -352.659
+    ],
+    [
+     376.703,
+     -346.77
+    ],
+    [
+     377.213,
+     -346.895
+    ],
+    [
+     379.208,
+     -351.075
+    ],
+    [
+     382.037,
+     -352.02
+    ],
+    [
+     384.313,
+     -356.487
+    ],
+    [
+     384.433,
+     -357.506
+    ],
+    [
+     383.337,
+     -360.183
+    ],
+    [
+     383.79,
+     -360.947
+    ]
+   ]
+  },
+  {
+   "id": "b865-central-annex",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — range on the north-east side of the central block",
+   "footprintRotationDegrees": 24.59,
+   "eavesHeight": 4.2,
+   "roofRise": 1.8,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    110973,
+    1049981
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 110973, 1049981), merged across the OS division lines between them, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Narrow shaded range and the thin cell along its outer wall.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 4.2 m eaves: narrow attached range read as one storey; 4.2 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Narrow range attached along the north-east side of the central block; use unidentified.",
+   "worldFootprint": [
+    [
+     380.188,
+     -370.102
+    ],
+    [
+     380.053,
+     -370.583
+    ],
+    [
+     379.109,
+     -370.924
+    ],
+    [
+     377.565,
+     -371.815
+    ],
+    [
+     377.069,
+     -371.933
+    ],
+    [
+     376.309,
+     -372.367
+    ],
+    [
+     375.704,
+     -372.328
+    ],
+    [
+     375.518,
+     -371.898
+    ],
+    [
+     375.074,
+     -371.953
+    ],
+    [
+     371.733,
+     -373.566
+    ],
+    [
+     371.249,
+     -373.405
+    ],
+    [
+     369.101,
+     -368.763
+    ],
+    [
+     369.055,
+     -368.211
+    ],
+    [
+     369.387,
+     -368.036
+    ],
+    [
+     382.169,
+     -362.281
+    ],
+    [
+     382.519,
+     -362.025
+    ],
+    [
+     383.857,
+     -361.529
+    ],
+    [
+     383.946,
+     -361.607
+    ],
+    [
+     385.729,
+     -365.381
+    ],
+    [
+     385.982,
+     -365.737
+    ],
+    [
+     386.239,
+     -366.714
+    ],
+    [
+     385.937,
+     -367.053
+    ],
+    [
+     383.017,
+     -368.467
+    ],
+    [
+     382.107,
+     -368.77
+    ],
+    [
+     381.743,
+     -369.035
+    ],
+    [
+     380.406,
+     -369.531
+    ],
+    [
+     380.109,
+     -369.864
+    ]
+   ]
+  },
+  {
+   "id": "b865-boiler-house",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — boiler house with chimney (interpretation)",
+   "footprintRotationDegrees": -4.63,
+   "eavesHeight": 6.0,
+   "roofRise": 2.4,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    24851,
+    909790,
+    975990
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 24851, 909790, 975990), merged across the OS division lines between them, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Shaded 27 x 8.3 m range with an internal unshaded square (kept as a hole), plus two 1 m strips along its south wall merged in (a step, platform or lean-to; kept within the outline rather than left as slivers).",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 6.0 m eaves: a boiler or engine house needs a tall single storey over the boilers; 6.0 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the 27 m range; slate covering assumed. The chimney rises through the mapped opening (worldHoles).",
+   "functionEvidence": "The range contains a small square drawn open in its roof (kept as a hole) and supplied separately as fid 1061509; that square is read as a chimney base, making this the likeliest boiler house. The function is an interpretation from the symbol and layout; the OS has no \"Chy.\" or boiler label here.",
+   "worldFootprint": [
+    [
+     400.482,
+     -334.025
+    ],
+    [
+     401.594,
+     -334.203
+    ],
+    [
+     401.676,
+     -333.662
+    ],
+    [
+     402.034,
+     -333.396
+    ],
+    [
+     416.714,
+     -334.681
+    ],
+    [
+     417.083,
+     -334.951
+    ],
+    [
+     416.99,
+     -335.503
+    ],
+    [
+     417.475,
+     -335.742
+    ],
+    [
+     416.346,
+     -343.564
+    ],
+    [
+     389.919,
+     -341.459
+    ],
+    [
+     390.649,
+     -333.457
+    ],
+    [
+     391.737,
+     -333.325
+    ],
+    [
+     391.79,
+     -332.677
+    ],
+    [
+     392.259,
+     -332.586
+    ],
+    [
+     399.966,
+     -333.21
+    ],
+    [
+     400.353,
+     -333.479
+    ]
+   ],
+   "worldHoles": [
+    [
+     [
+      400.095,
+      -339.414
+     ],
+     [
+      401.999,
+      -339.43
+     ],
+     [
+      402.097,
+      -337.491
+     ],
+     [
+      400.427,
+      -337.391
+     ],
+     [
+      400.137,
+      -337.751
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "b865-yard-building-south",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — detached building south of the boiler house",
+   "footprintRotationDegrees": -5.07,
+   "eavesHeight": 4.0,
+   "roofRise": 1.8,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    178340
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 178340), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single shaded outline.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 4.0 m eaves: small detached building read as one storey; 4.0 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Detached building in the central yard; use unidentified.",
+   "worldFootprint": [
+    [
+     402.273,
+     -331.656
+    ],
+    [
+     401.982,
+     -331.576
+    ],
+    [
+     391.369,
+     -330.688
+    ],
+    [
+     391.065,
+     -330.372
+    ],
+    [
+     391.853,
+     -324.147
+    ],
+    [
+     403.415,
+     -325.065
+    ],
+    [
+     403.681,
+     -325.444
+    ],
+    [
+     403.536,
+     -325.828
+    ],
+    [
+     403.025,
+     -331.18
+    ],
+    [
+     402.835,
+     -331.594
+    ]
+   ]
+  },
+  {
+   "id": "b865-yard-building-west",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — small three-room building west of the boiler house",
+   "footprintRotationDegrees": 84.97,
+   "eavesHeight": 3.8,
+   "roofRise": 2.2,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    324678,
+    787182,
+    940179
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 324678, 787182, 940179), merged across the OS division lines between them, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Three touching shaded cells.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 3.8 m eaves: small building read as one storey; 3.8 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Small building of three rooms inside a dotted enclosure; use unidentified.",
+   "worldFootprint": [
+    [
+     385.986,
+     -333.267
+    ],
+    [
+     385.246,
+     -340.788
+    ],
+    [
+     384.806,
+     -340.977
+    ],
+    [
+     377.73,
+     -340.372
+    ],
+    [
+     377.396,
+     -340.074
+    ],
+    [
+     378.089,
+     -332.478
+    ],
+    [
+     378.017,
+     -332.248
+    ],
+    [
+     378.329,
+     -328.854
+    ],
+    [
+     382.04,
+     -329.076
+    ],
+    [
+     382.042,
+     -328.893
+    ],
+    [
+     382.231,
+     -327.159
+    ],
+    [
+     382.552,
+     -326.846
+    ],
+    [
+     386.096,
+     -327.158
+    ],
+    [
+     386.555,
+     -327.319
+    ],
+    [
+     386.355,
+     -329.667
+    ],
+    [
+     386.354,
+     -329.784
+    ],
+    [
+     385.986,
+     -333.235
+    ]
+   ]
+  },
+  {
+   "id": "b865-garden-hut",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — hut in the dotted enclosure",
+   "footprintRotationDegrees": 12.9,
+   "eavesHeight": 3.0,
+   "roofRise": 1.3,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    820133
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 820133), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single shaded square.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 3.0 m eaves: very small building read as a single-storey hut; 3.0 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Small square building inside an oval dotted enclosure in the yard; use unidentified.",
+   "worldFootprint": [
+    [
+     365.427,
+     -337.599
+    ],
+    [
+     365.309,
+     -337.254
+    ],
+    [
+     364.38,
+     -333.259
+    ],
+    [
+     364.616,
+     -332.845
+    ],
+    [
+     369.1,
+     -331.817
+    ],
+    [
+     369.369,
+     -332.186
+    ],
+    [
+     370.235,
+     -336.242
+    ],
+    [
+     369.912,
+     -336.58
+    ],
+    [
+     366.051,
+     -337.62
+    ]
+   ]
+  },
+  {
+   "id": "b865-east-compound-building",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — building in the walled east compound",
+   "footprintRotationDegrees": 77.89,
+   "eavesHeight": 3.6,
+   "roofRise": 1.7,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    407156
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 407156), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single shaded outline.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 3.6 m eaves: small detached building read as one storey; 3.6 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Building inside a separately walled compound on the east side of the works; stable or store is possible, unlabelled.",
+   "worldFootprint": [
+    [
+     429.291,
+     -358.32
+    ],
+    [
+     429.348,
+     -358.259
+    ],
+    [
+     423.901,
+     -357.293
+    ],
+    [
+     423.697,
+     -356.871
+    ],
+    [
+     425.7,
+     -348.091
+    ],
+    [
+     431.628,
+     -349.209
+    ],
+    [
+     429.719,
+     -358.113
+    ]
+   ]
+  },
+  {
+   "id": "b865-abbey-road-house",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — house or office at the Abbey Road entrance",
+   "footprintRotationDegrees": 24.03,
+   "eavesHeight": 6.9,
+   "roofRise": 3.5,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 2,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    54167
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 54167), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single shaded outline.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 2 storeys, 6.9 m eaves: house-type outline with bays read as a two-storey house or office (builder default 6.9 m eaves for two storeys).",
+   "roofEvidence": "Plain gable on the long axis; a hipped slate roof would be likelier but is not a renderer option.",
+   "functionEvidence": "Outline with projecting bays set back from Abbey Road behind a dotted drive; office, counting house or residence is an interpretation.",
+   "worldFootprint": [
+    [
+     310.53,
+     -347.097
+    ],
+    [
+     314.934,
+     -345.318
+    ],
+    [
+     314.985,
+     -345.059
+    ],
+    [
+     315.041,
+     -345.028
+    ],
+    [
+     320.185,
+     -342.777
+    ],
+    [
+     320.675,
+     -342.78
+    ],
+    [
+     323.361,
+     -348.738
+    ],
+    [
+     322.719,
+     -349.986
+    ],
+    [
+     321.081,
+     -350.822
+    ],
+    [
+     321.239,
+     -351.716
+    ],
+    [
+     321.568,
+     -352.013
+    ],
+    [
+     322.49,
+     -352.319
+    ],
+    [
+     322.549,
+     -352.888
+    ],
+    [
+     322.818,
+     -353.25
+    ],
+    [
+     322.883,
+     -353.802
+    ],
+    [
+     322.489,
+     -354.703
+    ],
+    [
+     322.762,
+     -355.675
+    ],
+    [
+     315.074,
+     -359.103
+    ],
+    [
+     314.518,
+     -359.167
+    ],
+    [
+     314.128,
+     -358.911
+    ],
+    [
+     313.198,
+     -358.865
+    ],
+    [
+     312.036,
+     -356.31
+    ],
+    [
+     312.148,
+     -355.773
+    ],
+    [
+     312.629,
+     -355.667
+    ],
+    [
+     312.602,
+     -355.267
+    ],
+    [
+     311.907,
+     -353.504
+    ],
+    [
+     311.908,
+     -353.01
+    ],
+    [
+     312.705,
+     -352.544
+    ],
+    [
+     312.528,
+     -352.075
+    ],
+    [
+     312.249,
+     -351.727
+    ],
+    [
+     311.491,
+     -351.235
+    ],
+    [
+     311.17,
+     -350.32
+    ],
+    [
+     311.354,
+     -349.355
+    ],
+    [
+     310.598,
+     -347.673
+    ]
+   ]
+  },
+  {
+   "id": "b865-abbey-road-house-annex",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — rear annex of the Abbey Road house",
+   "footprintRotationDegrees": 23.84,
+   "eavesHeight": 3.0,
+   "roofRise": 1.0,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    910781,
+    937447
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 910781, 937447), merged across the OS division lines between them, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Two touching shaded cells attached to fid 54167.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 3.0 m eaves: small attached rooms read as one low storey; 3.0 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Small attached rooms behind the Abbey Road house; use unidentified.",
+   "worldFootprint": [
+    [
+     314.934,
+     -345.318
+    ],
+    [
+     310.53,
+     -347.097
+    ],
+    [
+     310.214,
+     -346.839
+    ],
+    [
+     309.494,
+     -345.061
+    ],
+    [
+     309.711,
+     -344.641
+    ],
+    [
+     313.544,
+     -342.922
+    ],
+    [
+     314.098,
+     -342.874
+    ],
+    [
+     314.093,
+     -342.758
+    ],
+    [
+     320.478,
+     -339.857
+    ],
+    [
+     321.347,
+     -340.261
+    ],
+    [
+     321.421,
+     -340.823
+    ],
+    [
+     321.132,
+     -341.171
+    ],
+    [
+     314.743,
+     -344.04
+    ],
+    [
+     314.741,
+     -344.082
+    ],
+    [
+     314.985,
+     -345.059
+    ]
+   ]
+  },
+  {
+   "id": "b865-north-west-yard-building",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — small building at the north-west yard",
+   "footprintRotationDegrees": 89.09,
+   "eavesHeight": 3.6,
+   "roofRise": 2.7,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    184684,
+    904977,
+    1232732
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 184684, 904977, 1232732), merged across the OS division lines between them, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Three touching shaded cells; this lies on the join between two OS sheets, where the printed outlines are slightly displaced.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 3.6 m eaves: small building read as one storey; 3.6 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Small building near the junction of the two OS sheets, west of the central yard; use unidentified.",
+   "worldFootprint": [
+    [
+     337.586,
+     -362.924
+    ],
+    [
+     342.718,
+     -373.834
+    ],
+    [
+     342.33,
+     -374.098
+    ],
+    [
+     335.393,
+     -374.056
+    ],
+    [
+     332.686,
+     -373.724
+    ],
+    [
+     332.991,
+     -364.724
+    ],
+    [
+     332.921,
+     -364.674
+    ],
+    [
+     332.953,
+     -361.145
+    ],
+    [
+     332.891,
+     -360.814
+    ],
+    [
+     332.902,
+     -360.182
+    ],
+    [
+     333.146,
+     -359.808
+    ],
+    [
+     333.708,
+     -359.739
+    ],
+    [
+     334.003,
+     -360.083
+    ],
+    [
+     334.12,
+     -360.57
+    ],
+    [
+     334.584,
+     -360.458
+    ],
+    [
+     335.994,
+     -359.994
+    ],
+    [
+     337.394,
+     -362.337
+    ],
+    [
+     337.44,
+     -362.889
+    ]
+   ]
+  },
+  {
+   "id": "b865-abbey-road-range-north",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — narrow range on Abbey Road (north)",
+   "footprintRotationDegrees": -65.88,
+   "eavesHeight": 3.6,
+   "roofRise": 1.4,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    112042
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 112042), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single shaded outline on the boundary; about 13 % lies outside the approximate site polygon.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 3.6 m eaves: narrow boundary range read as one storey; 3.6 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Narrow range on the Abbey Road boundary; cart shed, stable or store is an interpretation.",
+   "worldFootprint": [
+    [
+     293.735,
+     -330.715
+    ],
+    [
+     294.223,
+     -330.598
+    ],
+    [
+     295.566,
+     -330.094
+    ],
+    [
+     296.786,
+     -329.439
+    ],
+    [
+     298.125,
+     -328.942
+    ],
+    [
+     298.526,
+     -328.754
+    ],
+    [
+     298.554,
+     -328.746
+    ],
+    [
+     305.912,
+     -345.395
+    ],
+    [
+     306.166,
+     -345.752
+    ],
+    [
+     306.324,
+     -346.255
+    ],
+    [
+     302.97,
+     -347.837
+    ],
+    [
+     302.618,
+     -348.099
+    ],
+    [
+     302.11,
+     -348.245
+    ],
+    [
+     301.729,
+     -347.996
+    ]
+   ]
+  },
+  {
+   "id": "b865-abbey-road-cells",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — row of small cells on Abbey Road",
+   "footprintRotationDegrees": -67.67,
+   "eavesHeight": 3.2,
+   "roofRise": 1.5,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    838603,
+    846702,
+    868731
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 838603, 846702, 868731), merged across the OS division lines between them, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Three touching shaded cells on the boundary; about 20 % lies outside the approximate site polygon.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 3.2 m eaves: small boundary cells read as one low storey; 3.2 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Row of three small rooms on the Abbey Road boundary; use unidentified.",
+   "worldFootprint": [
+    [
+     297.313,
+     -325.648
+    ],
+    [
+     298.43,
+     -328.867
+    ],
+    [
+     294.474,
+     -330.38
+    ],
+    [
+     294.104,
+     -330.654
+    ],
+    [
+     293.553,
+     -330.669
+    ],
+    [
+     292.589,
+     -328.598
+    ],
+    [
+     292.386,
+     -327.563
+    ],
+    [
+     292.295,
+     -327.484
+    ],
+    [
+     292.023,
+     -327.159
+    ],
+    [
+     290.859,
+     -324.011
+    ],
+    [
+     290.722,
+     -323.931
+    ],
+    [
+     289.276,
+     -320.53
+    ],
+    [
+     289.281,
+     -319.85
+    ],
+    [
+     293.013,
+     -318.665
+    ],
+    [
+     294.122,
+     -318.843
+    ],
+    [
+     294.452,
+     -318.844
+    ],
+    [
+     294.624,
+     -319.181
+    ],
+    [
+     295.542,
+     -321.363
+    ],
+    [
+     295.587,
+     -321.913
+    ],
+    [
+     295.793,
+     -322.011
+    ],
+    [
+     297.053,
+     -325.041
+    ],
+    [
+     297.11,
+     -325.6
+    ]
+   ]
+  },
+  {
+   "id": "b865-abbey-road-range-south",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — narrow range on Abbey Road (south)",
+   "footprintRotationDegrees": 69.58,
+   "eavesHeight": 3.6,
+   "roofRise": 1.7,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    70944
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 70944), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single shaded outline on the boundary.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 3.6 m eaves: narrow boundary range read as one storey; 3.6 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Narrow range on the Abbey Road boundary near the corner with the south road; use unidentified.",
+   "worldFootprint": [
+    [
+     294.452,
+     -318.844
+    ],
+    [
+     294.122,
+     -318.843
+    ],
+    [
+     293.013,
+     -318.665
+    ],
+    [
+     289.281,
+     -319.85
+    ],
+    [
+     289.113,
+     -319.768
+    ],
+    [
+     288.566,
+     -318.484
+    ],
+    [
+     288.582,
+     -317.845
+    ],
+    [
+     295.768,
+     -298.54
+    ],
+    [
+     296.126,
+     -298.291
+    ],
+    [
+     300.614,
+     -300.093
+    ],
+    [
+     300.658,
+     -300.541
+    ],
+    [
+     298.991,
+     -305.874
+    ],
+    [
+     299.072,
+     -306.432
+    ],
+    [
+     295.888,
+     -315.88
+    ],
+    [
+     295.497,
+     -316.1
+    ]
+   ]
+  },
+  {
+   "id": "b865-main-shed-west",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — large shed west of the central yard",
+   "footprintRotationDegrees": -14.39,
+   "eavesHeight": 5.5,
+   "roofRise": 3.1,
+   "roofAxis": "x",
+   "roofBays": 2,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    3440,
+    966017
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 3440, 966017), merged across the OS division lines between them, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Shaded stepped outline and a small attached cell.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 5.5 m eaves: a large shaded works shed is read as one tall storey (a type-based reading: long single-storey sheds are a common works form of the period), not evidence about this works; 5.5 m chosen for realism.",
+   "roofEvidence": "Ridge-and-furrow pitched roof with 2 parallel spans of about 12 m is an interpretation of a 23 m-deep single shed; no roof lines are drawn on the OS. North-light (saw-tooth) glazing would be equally plausible for a works shed but the renderer cannot draw the vertical glazed faces, so plain slate pitches are used.",
+   "functionEvidence": "Large shaded shed with a stepped outline; use unidentified.",
+   "worldFootprint": [
+    [
+     323.5,
+     -319.525
+    ],
+    [
+     323.455,
+     -319.065
+    ],
+    [
+     323.974,
+     -317.006
+    ],
+    [
+     324.535,
+     -316.953
+    ],
+    [
+     327.023,
+     -317.602
+    ],
+    [
+     326.987,
+     -317.778
+    ],
+    [
+     327.248,
+     -317.778
+    ],
+    [
+     341.146,
+     -321.605
+    ],
+    [
+     341.57,
+     -321.553
+    ],
+    [
+     342.152,
+     -319.633
+    ],
+    [
+     342.458,
+     -319.277
+    ],
+    [
+     349.433,
+     -321.019
+    ],
+    [
+     349.489,
+     -321.45
+    ],
+    [
+     349.079,
+     -323.59
+    ],
+    [
+     349.309,
+     -323.996
+    ],
+    [
+     362.173,
+     -327.59
+    ],
+    [
+     362.318,
+     -328.063
+    ],
+    [
+     358.066,
+     -344.63
+    ],
+    [
+     357.432,
+     -344.681
+    ],
+    [
+     344.593,
+     -341.095
+    ],
+    [
+     344.08,
+     -341.196
+    ],
+    [
+     343.477,
+     -343.131
+    ],
+    [
+     343.197,
+     -343.479
+    ],
+    [
+     337.253,
+     -341.823
+    ],
+    [
+     337.085,
+     -341.358
+    ],
+    [
+     337.58,
+     -339.288
+    ],
+    [
+     337.387,
+     -338.86
+    ],
+    [
+     323.557,
+     -334.973
+    ],
+    [
+     322.788,
+     -334.461
+    ],
+    [
+     320.547,
+     -329.918
+    ],
+    [
+     323.42,
+     -319.503
+    ]
+   ],
+   "worldHoles": [
+    [
+     [
+      326.242,
+      -320.201
+     ],
+     [
+      326.259,
+      -320.18
+     ],
+     [
+      326.153,
+      -320.179
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "b865-yard-block",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — block between the west shed and the street range",
+   "footprintRotationDegrees": -15.44,
+   "eavesHeight": 6.9,
+   "roofRise": 4.0,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 2,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    26347
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 26347), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single shaded outline.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 2 storeys, 6.9 m eaves: compact detached blocks of 150–300 m² in the yard are read as two-storey, the large sheds as single-storey; builder default 6.9 m eaves for two storeys.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Compact shaded block; use unidentified.",
+   "worldFootprint": [
+    [
+     351.613,
+     -302.657
+    ],
+    [
+     351.593,
+     -303.025
+    ],
+    [
+     348.615,
+     -313.902
+    ],
+    [
+     348.25,
+     -314.192
+    ],
+    [
+     334.898,
+     -310.426
+    ],
+    [
+     334.351,
+     -310.353
+    ],
+    [
+     334.073,
+     -309.987
+    ],
+    [
+     334.246,
+     -304.809
+    ],
+    [
+     334.161,
+     -304.258
+    ],
+    [
+     336.632,
+     -295.978
+    ],
+    [
+     336.919,
+     -295.62
+    ],
+    [
+     341.417,
+     -296.842
+    ],
+    [
+     341.276,
+     -297.125
+    ],
+    [
+     340.752,
+     -299.123
+    ],
+    [
+     340.81,
+     -299.55
+    ]
+   ]
+  },
+  {
+   "id": "b865-yard-block-lean-to",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — lean-to on the south side of the yard block",
+   "footprintRotationDegrees": -15.21,
+   "eavesHeight": 3.0,
+   "roofRise": 0.8,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "lean",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    758415
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 758415), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single narrow outline; one side partly dotted on the OS.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 3.0 m eaves: narrow attached strip read as a low lean-to; 3.0 m chosen for realism, not evidence.",
+   "roofEvidence": "Lean-to roof is an interpretation; its slope direction follows the renderer’s axis convention, not evidence. Part of the OS outline is dotted, which may mean an open side.",
+   "functionEvidence": "Narrow strip along the south side of the yard block; use unidentified.",
+   "worldFootprint": [
+    [
+     351.613,
+     -302.657
+    ],
+    [
+     340.81,
+     -299.55
+    ],
+    [
+     340.752,
+     -299.123
+    ],
+    [
+     341.276,
+     -297.125
+    ],
+    [
+     341.417,
+     -296.842
+    ],
+    [
+     341.777,
+     -296.926
+    ],
+    [
+     351.663,
+     -299.695
+    ],
+    [
+     352.21,
+     -299.762
+    ],
+    [
+     352.373,
+     -300.241
+    ],
+    [
+     351.835,
+     -302.238
+    ]
+   ]
+  },
+  {
+   "id": "b865-sw-corner-shed",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — shed at the corner of Abbey Road and the south road",
+   "footprintRotationDegrees": -15.12,
+   "eavesHeight": 5.5,
+   "roofRise": 3.8,
+   "roofAxis": "x",
+   "roofBays": 2,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    4408,
+    913012
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 4408, 913012), merged across the OS division lines between them, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Shaded block and a small cell on its south wall. On the OS the hatching continues east from this block into the street range without a drawn wall; the supplied outline stops at the sheet join.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 5.5 m eaves: a large shaded works shed is read as one tall storey (a type-based reading: long single-storey sheds are a common works form of the period), not evidence about this works; 5.5 m chosen for realism.",
+   "roofEvidence": "Ridge-and-furrow pitched roof with 2 parallel spans of about 14 m is an interpretation of a 28 m-deep single shed; no roof lines are drawn on the OS. North-light (saw-tooth) glazing would be equally plausible for a works shed but the renderer cannot draw the vertical glazed faces, so plain slate pitches are used.",
+   "functionEvidence": "Large shaded block at the south-west corner of the works; use unidentified.",
+   "worldFootprint": [
+    [
+     312.849,
+     -282.405
+    ],
+    [
+     316.008,
+     -271.019
+    ],
+    [
+     316.495,
+     -270.898
+    ],
+    [
+     334.478,
+     -275.719
+    ],
+    [
+     334.34,
+     -277.862
+    ],
+    [
+     334.474,
+     -279.332
+    ],
+    [
+     334.348,
+     -279.75
+    ],
+    [
+     334.555,
+     -280.142
+    ],
+    [
+     334.421,
+     -283.081
+    ],
+    [
+     334.255,
+     -283.562
+    ],
+    [
+     334.06,
+     -290.91
+    ],
+    [
+     333.52,
+     -291.105
+    ],
+    [
+     331.511,
+     -290.474
+    ],
+    [
+     331.214,
+     -290.844
+    ],
+    [
+     327.801,
+     -302.566
+    ],
+    [
+     327.219,
+     -302.566
+    ],
+    [
+     302.324,
+     -295.841
+    ],
+    [
+     301.985,
+     -295.544
+    ],
+    [
+     302.009,
+     -294.916
+    ],
+    [
+     302.378,
+     -294.021
+    ],
+    [
+     302.45,
+     -293.475
+    ],
+    [
+     305.426,
+     -286.369
+    ],
+    [
+     305.82,
+     -286.125
+    ],
+    [
+     308.934,
+     -286.838
+    ],
+    [
+     308.934,
+     -286.836
+    ],
+    [
+     310.133,
+     -282.352
+    ],
+    [
+     310.559,
+     -282.293
+    ],
+    [
+     312.702,
+     -282.688
+    ]
+   ]
+  },
+  {
+   "id": "b865-street-range",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — range on the south road (OS-traced)",
+   "footprintRotationDegrees": -15.55,
+   "eavesHeight": 6.9,
+   "roofRise": 2.5,
+   "roofAxis": "x",
+   "roofBays": 2,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 2,
+   "footprintSource": "os-1893-mosaic-trace",
+   "sourceFids": [],
+   "footprintEvidence": "Not in the GeoPackage: this hatched (roofed) area of the OS sheet has no supplied outline, although its neighbours do (the GeoPackage stops at the east wall of fid 4408). Outline traced from the cached NLS OS London five-foot mosaic (os-london-five-foot-1893): hand-read wall lines snapped to the printed outline ink, corners taken at line intersections, then moved by (-1.75, 0.25) m into the GeoPackage frame (the offset that puts 17 supplied outlines at this site on the same ink) and clipped against the supplied neighbouring outlines. The OS draws no wall between this roof and the wing to its north and the eastern shed; the division is a modelling cut (the yard edge extended east, and a line dropped square to the road wall from the corner of the open notch).",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 2 storeys, 6.9 m eaves: the long street front is read as two storeys (a common form for works fronts facing a public road; type-based), builder default 6.9 m eaves.",
+   "roofEvidence": "Double-pile pitched roof (two parallel spans along the street) is an interpretation of a 19 m-deep range (15 m at its west end); no roof lines are drawn on the OS.",
+   "functionEvidence": "Street range along the south road (OS lettering \"STEPH…\", in the EPFL text layer as \"STEPH\"; full name not read) between the corner shed and the eastern sheds; use unidentified.",
+   "worldFootprint": [
+    [
+     381.4,
+     -294.35
+    ],
+    [
+     378.674,
+     -304.074
+    ],
+    [
+     333.968,
+     -290.943
+    ],
+    [
+     334.555,
+     -280.142
+    ],
+    [
+     334.348,
+     -279.75
+    ],
+    [
+     334.466,
+     -275.905
+    ],
+    [
+     370.92,
+     -286.05
+    ],
+    [
+     371.72,
+     -282.72
+    ],
+    [
+     383.87,
+     -286.586
+    ]
+   ],
+   "tracedOutlineMosaicFrame": [
+    [
+     332.78,
+     -290.33
+    ],
+    [
+     368.7,
+     -300.88
+    ],
+    [
+     380.42,
+     -304.32
+    ],
+    [
+     383.15,
+     -294.6
+    ],
+    [
+     385.62,
+     -286.84
+    ],
+    [
+     373.47,
+     -282.97
+    ],
+    [
+     372.67,
+     -286.3
+    ],
+    [
+     330.95,
+     -274.69
+    ]
+   ],
+   "registrationShiftToSourceFrame": [
+    -1.75,
+    0.25
+   ]
+  },
+  {
+   "id": "b865-l-wing",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — wing north of the street range (OS-traced)",
+   "footprintRotationDegrees": 74.34,
+   "eavesHeight": 5.5,
+   "roofRise": 2.8,
+   "roofAxis": "x",
+   "roofBays": 2,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    1022465
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 1022465), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Not in the GeoPackage: this hatched (roofed) area of the OS sheet has no supplied outline, although its neighbours do (the GeoPackage stops at the east wall of fid 4408). Outline traced from the cached NLS OS London five-foot mosaic (os-london-five-foot-1893): hand-read wall lines snapped to the printed outline ink, corners taken at line intersections, then moved by (-1.75, 0.25) m into the GeoPackage frame (the offset that puts 17 supplied outlines at this site on the same ink) and clipped against the supplied neighbouring outlines. The OS draws no wall between this roof and the street range; the division is a modelling cut (the yard edge extended east to the wing’s east wall). The small supplied cell fid 1022465 in the wing’s inner corner is merged in.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 5.5 m eaves: a large shaded works shed is read as one tall storey (a type-based reading: long single-storey sheds are a common works form of the period), not evidence about this works; 5.5 m chosen for realism.",
+   "roofEvidence": "Ridge-and-furrow pitched roof with 2 parallel spans of about 10 m is an interpretation of a 21 m-deep single shed; no roof lines are drawn on the OS. North-light (saw-tooth) glazing would be equally plausible for a works shed but the renderer cannot draw the vertical glazed faces, so plain slate pitches are used.",
+   "functionEvidence": "Wing projecting north from the street range into the yard; use unidentified.",
+   "worldFootprint": [
+    [
+     353.4,
+     -319.15
+    ],
+    [
+     354.99,
+     -312.56
+    ],
+    [
+     357.804,
+     -312.794
+    ],
+    [
+     356.017,
+     -312.363
+    ],
+    [
+     356.398,
+     -310.556
+    ],
+    [
+     356.958,
+     -310.493
+    ],
+    [
+     358.964,
+     -311.027
+    ],
+    [
+     358.757,
+     -312.278
+    ],
+    [
+     359.86,
+     -308.2
+    ],
+    [
+     364.84,
+     -309.33
+    ],
+    [
+     366.95,
+     -300.63
+    ],
+    [
+     378.674,
+     -304.074
+    ],
+    [
+     372.96,
+     -324.46
+    ]
+   ],
+   "worldHoles": [
+    [
+     [
+      358.666,
+      -312.617
+     ],
+     [
+      358.497,
+      -312.851
+     ],
+     [
+      358.6,
+      -312.86
+     ]
+    ]
+   ],
+   "tracedOutlineMosaicFrame": [
+    [
+     368.7,
+     -300.88
+    ],
+    [
+     366.59,
+     -309.58
+    ],
+    [
+     361.61,
+     -308.45
+    ],
+    [
+     360.35,
+     -313.11
+    ],
+    [
+     356.74,
+     -312.81
+    ],
+    [
+     355.15,
+     -319.4
+    ],
+    [
+     374.71,
+     -324.71
+    ],
+    [
+     380.42,
+     -304.32
+    ]
+   ],
+   "registrationShiftToSourceFrame": [
+    -1.75,
+    0.25
+   ]
+  },
+  {
+   "id": "b865-east-shed",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — shed east of the open notch (OS-traced)",
+   "footprintRotationDegrees": -17.93,
+   "eavesHeight": 5.5,
+   "roofRise": 3.2,
+   "roofAxis": "x",
+   "roofBays": 2,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "os-1893-mosaic-trace",
+   "sourceFids": [],
+   "footprintEvidence": "Not in the GeoPackage: this hatched (roofed) area of the OS sheet has no supplied outline, although its neighbours do (the GeoPackage stops at the east wall of fid 4408). Outline traced from the cached NLS OS London five-foot mosaic (os-london-five-foot-1893): hand-read wall lines snapped to the printed outline ink, corners taken at line intersections, then moved by (-1.75, 0.25) m into the GeoPackage frame (the offset that puts 17 supplied outlines at this site on the same ink) and clipped against the supplied neighbouring outlines. The OS draws no wall between this roof and the street range west of it; the division is a modelling cut (a line dropped square to the road wall from the corner of the open notch). The projecting room on its north side is the supplied fid 801184, modelled separately.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 5.5 m eaves: a large shaded works shed is read as one tall storey (a type-based reading: long single-storey sheds are a common works form of the period), not evidence about this works; 5.5 m chosen for realism.",
+   "roofEvidence": "Ridge-and-furrow pitched roof with 2 parallel spans of about 12 m is an interpretation of a 24 m-deep single shed; no roof lines are drawn on the OS. North-light (saw-tooth) glazing would be equally plausible for a works shed but the renderer cannot draw the vertical glazed faces, so plain slate pitches are used.",
+   "functionEvidence": "Large shed on the south road east of a narrow open notch; use unidentified.",
+   "worldFootprint": [
+    [
+     381.4,
+     -294.35
+    ],
+    [
+     383.87,
+     -286.586
+    ],
+    [
+     426.18,
+     -300.05
+    ],
+    [
+     421.47,
+     -315.18
+    ],
+    [
+     416.283,
+     -313.265
+    ],
+    [
+     415.726,
+     -313.276
+    ],
+    [
+     413.45,
+     -320.82
+    ],
+    [
+     382.83,
+     -310.91
+    ],
+    [
+     387.23,
+     -296.18
+    ]
+   ],
+   "tracedOutlineMosaicFrame": [
+    [
+     388.98,
+     -296.43
+    ],
+    [
+     384.58,
+     -311.16
+    ],
+    [
+     415.2,
+     -321.07
+    ],
+    [
+     417.51,
+     -313.64
+    ],
+    [
+     423.22,
+     -315.43
+    ],
+    [
+     427.93,
+     -300.3
+    ],
+    [
+     385.62,
+     -286.84
+    ],
+    [
+     383.15,
+     -294.6
+    ]
+   ],
+   "registrationShiftToSourceFrame": [
+    -1.75,
+    0.25
+   ]
+  },
+  {
+   "id": "b865-east-shed-annex",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — projecting room on the north side of the east shed",
+   "footprintRotationDegrees": 72.66,
+   "eavesHeight": 4.0,
+   "roofRise": 1.3,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    801184
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 801184), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single shaded outline.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 4.0 m eaves: small projecting room read as one storey lower than the shed; 4.0 m chosen for realism, not evidence.",
+   "roofEvidence": "Plain gable along the long axis is an interpretation; the OS gives plan only. Slate covering assumed, not established.",
+   "functionEvidence": "Small room projecting from the north wall of the east shed; use unidentified.",
+   "worldFootprint": [
+    [
+     414.201,
+     -318.752
+    ],
+    [
+     414.21,
+     -318.128
+    ],
+    [
+     415.726,
+     -313.276
+    ],
+    [
+     416.283,
+     -313.265
+    ],
+    [
+     420.091,
+     -314.532
+    ],
+    [
+     420.199,
+     -314.732
+    ],
+    [
+     420.115,
+     -315.203
+    ],
+    [
+     418.561,
+     -319.961
+    ],
+    [
+     418.077,
+     -319.945
+    ],
+    [
+     415.233,
+     -318.976
+    ]
+   ]
+  },
+  {
+   "id": "b865-south-road-shed-west",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — shed on the south road, gable to the street (west)",
+   "footprintRotationDegrees": 72.2,
+   "eavesHeight": 5.5,
+   "roofRise": 3.5,
+   "roofAxis": "x",
+   "roofBays": 1,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    13648
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 13648), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single shaded outline; its east wall is shared with fid 7607 and its west side is drawn dotted on the OS.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 5.5 m eaves: a large shaded works shed is read as one tall storey (a type-based reading: long single-storey sheds are a common works form of the period), not evidence about this works; 5.5 m chosen for realism.",
+   "roofEvidence": "Single pitched span of about 13 m with the ridge running back from the street is an interpretation; slate covering assumed.",
+   "functionEvidence": "One of a pair of sheds at the east end of the the south road frontage; use unidentified.",
+   "worldFootprint": [
+    [
+     444.33,
+     -306.01
+    ],
+    [
+     444.309,
+     -306.49
+    ],
+    [
+     437.069,
+     -328.898
+    ],
+    [
+     436.567,
+     -328.957
+    ],
+    [
+     425.221,
+     -325.133
+    ],
+    [
+     424.951,
+     -324.809
+    ],
+    [
+     432.161,
+     -302.357
+    ],
+    [
+     437.137,
+     -303.718
+    ],
+    [
+     437.483,
+     -304.0
+    ],
+    [
+     438.108,
+     -304.013
+    ],
+    [
+     438.453,
+     -304.3
+    ],
+    [
+     441.356,
+     -305.193
+    ],
+    [
+     441.908,
+     -305.263
+    ],
+    [
+     442.326,
+     -305.489
+    ],
+    [
+     442.872,
+     -305.557
+    ],
+    [
+     443.291,
+     -305.784
+    ]
+   ]
+  },
+  {
+   "id": "b865-south-road-shed-east",
+   "siteId": 865,
+   "source": "os-1893",
+   "name": "Leather Cloth Works — shed on the south road, gable to the street (east)",
+   "footprintRotationDegrees": 72.46,
+   "eavesHeight": 5.5,
+   "roofRise": 2.5,
+   "roofAxis": "x",
+   "roofBays": 2,
+   "material": "brick",
+   "roof": "gable",
+   "storeysEstimate": 1,
+   "footprintSource": "author-os-footprints-1891-96",
+   "sourceFids": [
+    7607
+   ],
+   "footprintEvidence": "Source outline from the author's 1891–96 OS building GeoPackage (sourceFids 7607), simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Single shaded outline sharing its west wall with fid 13648.",
+   "heightEvidence": "Explicit estimate; no measured height, storey mark, Goad sheet or photograph of this building at c1900 is available. 1 storey, 5.5 m eaves: a large shaded works shed is read as one tall storey (a type-based reading: long single-storey sheds are a common works form of the period), not evidence about this works; 5.5 m chosen for realism.",
+   "roofEvidence": "Ridge-and-furrow pitched roof with 2 parallel spans of about 9 m is an interpretation of a 19 m-deep single shed; no roof lines are drawn on the OS. North-light (saw-tooth) glazing would be equally plausible for a works shed but the renderer cannot draw the vertical glazed faces, so plain slate pitches are used.",
+   "functionEvidence": "One of a pair of sheds at the east end of the the south road frontage; use unidentified.",
+   "worldFootprint": [
+    [
+     437.069,
+     -328.898
+    ],
+    [
+     444.309,
+     -306.49
+    ],
+    [
+     444.33,
+     -306.01
+    ],
+    [
+     444.323,
+     -305.951
+    ],
+    [
+     444.814,
+     -305.805
+    ],
+    [
+     459.689,
+     -310.557
+    ],
+    [
+     460.237,
+     -310.631
+    ],
+    [
+     460.657,
+     -310.854
+    ],
+    [
+     461.226,
+     -310.952
+    ],
+    [
+     462.002,
+     -311.409
+    ],
+    [
+     454.788,
+     -334.502
+    ],
+    [
+     454.491,
+     -334.858
+    ],
+    [
+     437.409,
+     -329.169
+    ]
+   ]
+  }
+ ],
+ "additionalStructures": [
+  {
+   "id": "stack-865-boiler-house",
+   "siteId": 865,
+   "source": "os-1893",
+   "kind": "chimney",
+   "name": "Leather Cloth Works boiler chimney (interpretation)",
+   "x": 401.086,
+   "z": -338.464,
+   "height": 22.0,
+   "heightEvidence": "No height printed on the OS and no Goad sheet or photograph found; 22 m is the project’s typological estimate for an unmeasured works boiler stack.",
+   "radius": 0.9,
+   "section": "square",
+   "material": "brick",
+   "baseHeight": 0.34,
+   "rotation": -4.63,
+   "sourceFootprintFid": 1061509,
+   "sourcePolygons": [
+    [
+     [
+      [
+       400.704,
+       -339.512
+      ],
+      [
+       400.095,
+       -339.414
+      ],
+      [
+       400.137,
+       -337.751
+      ],
+      [
+       400.427,
+       -337.391
+      ],
+      [
+       402.097,
+       -337.491
+      ],
+      [
+       401.999,
+       -339.43
+      ],
+      [
+       400.991,
+       -339.529
+      ]
+     ]
+    ]
+   ],
+   "positionEvidence": "Placed on the small square (supplied fid 1061509, 3.9 m²) drawn open inside the boiler-house range and cut from that range as a hole. Reading the square as a chimney base is an interpretation; the OS labels no chimney here.",
+   "profileEvidence": "Square section follows the mapped base; shaft radius fitted inside the 2.1 x 1.9 m base. Taper, crown and brickwork are interpreted, not measured."
+  }
+ ]
+}
