@@ -118,7 +118,7 @@ Opus can be relied on for the 3D modelling if at least four of the six tasks mer
 | T3 | | | | |
 | T4 | | | | |
 | T5 | 233k, 81 min | merged | 0 edits; premise correction accepted | Agent showed the brief was partly wrong: no regional polygon overshot its banks, and the Bromley "rectangle" is the real Limehouse Cut head drawn in an opaque pale material. Fixed by sharing the network water material and trimming 588.6 m² of overlap with network water at 9 junctions (now 0). Two new builder assertions. Renders confirm the seams gone and water reflective. Open: hash cascade (`river-system-1900.json` hash stored in elevation-audit, elevation-trial, main-landscape, lower-lea landscape), and the river system must be rebuilt after T1 and T6 change `ground-plan.json` and `factory-buildings.json`; geopackage export not regenerated. |
-| T6 | | | | |
+| T6 | 277k, 74 min | merged | 1 edit (commit trailer); 3 traced roofs accepted | 31 buildings and 1 chimney from 45 of 50 GeoPackage outlines (the brief said 43; 7 central ones only enter the audit once the site is registered). Every height, storey, roof and function note opens as an explicit estimate; footprints cite the GeoPackage fid and the five-foot mosaic. Agent traced 2,014 m² of OS-hatched roof along the south road that has no GeoPackage outline, flagged as traced. Parent OS overlay (`views-t6/`) confirms footprints sit on the hatching. Site 865 uncovered area 7,521 → 43 m². Agent correctly noted the repo "Stephen's Road" is a different street. Open: reservoir not modelled (bare yard); fid 802028 skipped; no north-light roofs (renderer limit); 8 judgement calls listed in T6_REPORT.md for the author. |
 
 ## Also pending, not part of the trial
 
