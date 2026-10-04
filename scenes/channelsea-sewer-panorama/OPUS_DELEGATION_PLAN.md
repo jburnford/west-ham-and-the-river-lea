@@ -4,7 +4,7 @@
 
 ## Where the project stands
 
-Repository: `/home/jic823/book_website`, branch `main`. Trial written at commit `bf063a6`; after the trial and the cascade, main is at `7b4fe37` (4 October 2026). Everything below is committed. Local, git-ignored reports from today's agents are in `reference/photo-review-2026-10-03/reports/`:
+Repository: `/home/jic823/book_website`, branch `main`. Trial written at commit `bf063a6`; after the trial and the cascade, main was at `7b4fe37`; after round 2 (T18, T19, the west strip and a second cascade) main is at `1789675` (4 October 2026). Everything below is committed. Local, git-ignored reports from today's agents are in `reference/photo-review-2026-10-03/reports/`:
 
 | Report | What it holds |
 |---|---|
@@ -22,7 +22,7 @@ Verification harness, all committed:
 ```sh
 python3 -m http.server 4173 --bind 127.0.0.1 --directory docs   # serve first, keep running
 npm test                                                          # runs scripts/check_*.mjs only; 18 of 18 pass after the 4 Oct cascade. Python checks run separately: check_high_street_frontages.py fails (wall-lane-south vista path, see pending)
-python3 scripts/review_smoke.py <label> --compare main-after-cascade  # headless diagnostic snapshot; 'main-after-cascade' (4 Oct 2026, commit 1ae324c, 0 page errors, 153 draw calls, 8.91 M triangles) is the current baseline; 'main-after-t13' precedes T12b, T12c, T14, T15, T17; 'drawn-ground' is the pre-trial one. The stock 60 s waits time out under load; raise both timeouts in a scratch copy.
+python3 scripts/review_smoke.py <label> --compare main-after-round2  # headless diagnostic snapshot; 'main-after-round2' (4 Oct 2026, commit 1789675, 0 page errors, 154 draw calls, 8.92 M triangles) is the current baseline; 'main-after-cascade' (commit 1ae324c) precedes round 2; 'main-after-t13' precedes T12b, T12c, T14, T15, T17; 'drawn-ground' is the pre-trial one. The stock 60 s waits time out under load; raise both timeouts in a scratch copy.
 python3 scripts/render_views.py <cameras.json> --out=<dir>        # PNGs for a camera list; about 40 s a view after a 5 min scene load
 python3 scripts/footprint_gap_audit.py                            # footprint coverage, started zones
 python3 scripts/export_geopackage.py --verify                     # regenerate after model changes
