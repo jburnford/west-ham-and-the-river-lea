@@ -5,7 +5,7 @@
   "name": "Bromley-by-Bow gasworks",
   "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg (project extract west-ham-buffer-buildings-bng.geojson.gz); cached NLS OS London five-foot VIII.42, revised 1893",
   "sourceCRS": "EPSG:27700 to scene origin E538900,N183209; x east, z south, metres",
-  "method": "Bromley gasworks 3 October 2026: OS-led audit of the 1891-96 footprints without models. Long purifier-block sheds, the lodge at B.M. 18.45, the south-west leg of the riverside L-range and small yard and garden buildings added from source outlines; purifier vessel rows refitted to the 44 mapped vessels; scrubber tanks and holders 1-4 moved to circle fits of the mapped column bases. Heights, storeys and roof forms are explicit estimates: the OS gives plan only, no Goad sheet covers the site and no photograph of the works buildings has been found. Later pass (T9, same day): the two retort-house envelopes (site924-os-13, -14) re-registered to their one-to-one source outlines (fids 49, 46; heights and roofs kept), their 24 interpretive roof flues carried across at the same fractional place in each block, and the boiler stack fitted to its mapped square base (fid 926100). Supplied outlines are used unshifted; at this site they sit 1.70 m west and 0.40 m south of the printed OS lines.",
+  "method": "Bromley gasworks 3 October 2026: OS-led audit of the 1891-96 footprints without models. Long purifier-block sheds, the lodge at B.M. 18.45, the south-west leg of the riverside L-range and small yard and garden buildings added from source outlines; purifier vessel rows refitted to the 44 mapped vessels; scrubber tanks and holders 1-4 moved to circle fits of the mapped column bases. Heights, storeys and roof forms are explicit estimates: the OS gives plan only, no Goad sheet covers the site and no photograph of the works buildings has been found. Later pass (T9, same day): the two retort-house envelopes (site924-os-13, -14) re-registered to their one-to-one source outlines (fids 49, 46; heights and roofs kept), their 24 interpretive roof flues carried across at the same fractional place in each block, and the boiler stack fitted to its mapped square base (fid 926100). Supplied outlines are used unshifted; at this site they sit 1.70 m west and 0.40 m south of the printed OS lines. T19 pass (4 October 2026): the four remaining legacy envelopes (site924-os-4, -9, -15, -16) retired and replaced by five records on their GeoPackage outlines (4790; 233453+24074+198842 with the stack-base hole 926100; 713151+35247; 20695; 494073), heights kept at the legacy values as explicit estimates; gantries and open features classified, not modelled.",
   "evidenceNotes": [
     "Most of the remaining mapped area at this site is plant (purifier vessels, holder column bases, an overhead coal gantry), not buildings; see reference/photo-review-2026-10-03/reports/site-924-proposal.md (local).",
     "Holder bromley-9 is drawn on the 1893 OS with its 24 column bases; it does not post-date the survey."
@@ -861,6 +861,131 @@
     {
       "id": "site924-os-6",
       "reason": "os-6 (24 x 17 m) lies over an unshaded enclosure (support 0.03); os-5 (47 x 10 m) over-extends a row of small rooms on the south boundary (support 0.22)."
+    },
+    {
+      "id": "site924-os-15",
+      "reason": "Legacy OS range envelope (40 x 35 m) replaced by GeoPackage outlines 4790 (b924-eastern-range) and 233453+24074+198842 (b924-boiler-range); the envelope overlapped open yard on its north-east side.",
+      "replacedBy": [
+        "b924-eastern-range",
+        "b924-boiler-range"
+      ],
+      "priorFootprint": [
+        [
+          -271.23,
+          1109.518
+        ],
+        [
+          -242.457,
+          1137.305
+        ],
+        [
+          -266.77,
+          1162.482
+        ],
+        [
+          -295.543,
+          1134.695
+        ]
+      ],
+      "priorAreaM2": 1400.0,
+      "priorCentre": [
+        -269.0,
+        1136.0
+      ],
+      "priorRotationDegrees": 44.0
+    },
+    {
+      "id": "site924-os-16",
+      "reason": "Legacy OS range envelope replaced by GeoPackage outlines 713151+35247 (b924-north-east-range).",
+      "replacedBy": [
+        "b924-north-east-range"
+      ],
+      "priorFootprint": [
+        [
+          -253.743,
+          1088.301
+        ],
+        [
+          -230.005,
+          1111.225
+        ],
+        [
+          -236.257,
+          1117.699
+        ],
+        [
+          -259.995,
+          1094.775
+        ]
+      ],
+      "priorAreaM2": 297.0,
+      "priorCentre": [
+        -245.0,
+        1103.0
+      ],
+      "priorRotationDegrees": 44.0
+    },
+    {
+      "id": "site924-os-4",
+      "reason": "Legacy OS range envelope replaced by GeoPackage outline 20695 (b924-garden-house).",
+      "replacedBy": [
+        "b924-garden-house"
+      ],
+      "priorFootprint": [
+        [
+          -365.551,
+          807.037
+        ],
+        [
+          -348.432,
+          812.599
+        ],
+        [
+          -352.449,
+          824.963
+        ],
+        [
+          -369.568,
+          819.401
+        ]
+      ],
+      "priorAreaM2": 234.0,
+      "priorCentre": [
+        -359.0,
+        816.0
+      ],
+      "priorRotationDegrees": 18.0
+    },
+    {
+      "id": "site924-os-9",
+      "reason": "Legacy OS range envelope replaced by GeoPackage outline 494073 (b924-yard-shed-bm17).",
+      "replacedBy": [
+        "b924-yard-shed-bm17"
+      ],
+      "priorFootprint": [
+        [
+          -434.485,
+          922.371
+        ],
+        [
+          -432.406,
+          912.589
+        ],
+        [
+          -427.515,
+          913.629
+        ],
+        [
+          -429.594,
+          923.411
+        ]
+      ],
+      "priorAreaM2": 50.0,
+      "priorCentre": [
+        -431.0,
+        918.0
+      ],
+      "priorRotationDegrees": -78.0
     }
   ],
   "additionalBuildings": [
@@ -3268,6 +3393,528 @@
       "heightEvidence": "Explicit estimate; no measured height, storey mark or photograph of this building at c1900 is available. ",
       "roofEvidence": "Gable; interpretation.",
       "functionEvidence": "Small detached outbuilding at the west end of the boundary."
+    },
+    {
+      "id": "b924-eastern-range",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley eastern utility range (main block)",
+      "worldFootprint": [
+        [
+          -275.089,
+          1131.66
+        ],
+        [
+          -279.672,
+          1127.397
+        ],
+        [
+          -280.071,
+          1127.52
+        ],
+        [
+          -291.925,
+          1139.326
+        ],
+        [
+          -291.981,
+          1139.916
+        ],
+        [
+          -268.367,
+          1163.614
+        ],
+        [
+          -267.946,
+          1163.691
+        ],
+        [
+          -267.466,
+          1163.527
+        ],
+        [
+          -255.869,
+          1152.084
+        ],
+        [
+          -255.73,
+          1151.586
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 45.116,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        4790
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 4790, simplified at 0.15 m (max deviation 0.129 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 34.48 x 17.79 m, 606.8 m2. Replaces the west part of legacy envelope site924-os-15 (40 x 35 m, 1400 m2, centre (-269.0, 1136.0)), which was a rectangle read from the OS and sat about 6 m north-east of the drawn block, overlapping open yard; the range's three supplied parts on its north-east side are modelled separately as b924-boiler-range.",
+      "heightEvidence": "Explicit estimate: one storey, 3.8 m eaves, the value of the legacy envelope it replaces; the OS gives plan only and no Goad sheet or c1900 photograph of this range is in the repository.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Ridge along the long axis; the legacy envelope's three-bay roof is not kept because the block is now 22 m deep, not 35 m.",
+      "functionEvidence": "Explicit estimate: unidentified works range beside the retort houses; the OS labels nothing here.",
+      "priorModelId": "site924-os-15",
+      "priorFootprint": [
+        [
+          -271.23,
+          1109.518
+        ],
+        [
+          -242.457,
+          1137.305
+        ],
+        [
+          -266.77,
+          1162.482
+        ],
+        [
+          -295.543,
+          1134.695
+        ]
+      ],
+      "priorRotationDegrees": 44.0,
+      "priorFootprintEvidence": "Individual OS range envelope, rounded to metres.",
+      "priorHeightEvidence": "Inferred storey count, not supplied by OS.",
+      "priorEavesHeight": 3.8,
+      "priorStoreys": 1
+    },
+    {
+      "id": "b924-boiler-range",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley boiler range with the boiler-stack base",
+      "worldFootprint": [
+        [
+          -279.672,
+          1127.397
+        ],
+        [
+          -255.73,
+          1151.586
+        ],
+        [
+          -255.327,
+          1151.468
+        ],
+        [
+          -248.038,
+          1144.426
+        ],
+        [
+          -247.867,
+          1143.963
+        ],
+        [
+          -248.098,
+          1143.548
+        ],
+        [
+          -252.575,
+          1139.368
+        ],
+        [
+          -252.821,
+          1138.892
+        ],
+        [
+          -267.535,
+          1124.385
+        ],
+        [
+          -267.774,
+          1123.91
+        ],
+        [
+          -271.805,
+          1119.85
+        ],
+        [
+          -272.357,
+          1119.77
+        ],
+        [
+          -279.532,
+          1126.91
+        ]
+      ],
+      "worldHoles": [
+        [
+          [
+            -265.251,
+            1135.103
+          ],
+          [
+            -263.426,
+            1137.034
+          ],
+          [
+            -263.522,
+            1137.566
+          ],
+          [
+            -265.453,
+            1139.352
+          ],
+          [
+            -265.944,
+            1139.377
+          ],
+          [
+            -268.05,
+            1137.111
+          ],
+          [
+            -265.864,
+            1134.918
+          ]
+        ]
+      ],
+      "footprintRotationDegrees": 45.294,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        233453,
+        24074,
+        198842
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 233453, 24074, 198842, merged across the two OS division lines, simplified at 0.15 m (max deviation 0.163 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 34.63 x 11.08 m, 364.6 m2. Keeps the supplied hole at fid 926100, the 3.5 m square drawn open in fid 24074 on which stack-924-boiler-photo already stands (T9). Replaces the north-east part of legacy envelope site924-os-15.",
+      "heightEvidence": "Explicit estimate: one storey, 3.8 m eaves, as the legacy envelope; no source gives its height.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. The open square stays open as a chimney well, the convention T6 used at site 865.",
+      "functionEvidence": "Explicit estimate: boiler house, read from the stack base drawn inside it (fid 926100) and its position between the retort houses; not labelled on the OS.",
+      "priorModelId": "site924-os-15"
+    },
+    {
+      "id": "b924-north-east-range",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley narrow range north-east of the boiler range",
+      "worldFootprint": [
+        [
+          -225.625,
+          1113.242
+        ],
+        [
+          -250.158,
+          1088.321
+        ],
+        [
+          -250.647,
+          1088.357
+        ],
+        [
+          -254.307,
+          1092.142
+        ],
+        [
+          -254.278,
+          1092.645
+        ],
+        [
+          -250.126,
+          1096.551
+        ],
+        [
+          -249.97,
+          1097.026
+        ],
+        [
+          -245.504,
+          1101.918
+        ],
+        [
+          -229.728,
+          1117.275
+        ],
+        [
+          -229.24,
+          1117.1
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 45.45,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        713151,
+        35247
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 713151, 35247, merged across the OS division line, simplified at 0.15 m (max deviation 0.148 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 35.5 x 6.22 m, 211.3 m2. Replaces legacy envelope site924-os-16 (33 x 9 m, 297 m2, centre (-245.0, 1103.0)), which sat about 4 m south-west of the drawn range.",
+      "heightEvidence": "Explicit estimate: one storey, 3.8 m eaves, as the legacy envelope; no source gives its height.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Explicit estimate: narrow works range (stores or workshops by type); unlabelled on the OS.",
+      "priorModelId": "site924-os-16",
+      "priorFootprint": [
+        [
+          -253.743,
+          1088.301
+        ],
+        [
+          -230.005,
+          1111.225
+        ],
+        [
+          -236.257,
+          1117.699
+        ],
+        [
+          -259.995,
+          1094.775
+        ]
+      ],
+      "priorRotationDegrees": 44.0,
+      "priorFootprintEvidence": "Individual OS range envelope, rounded to metres.",
+      "priorHeightEvidence": "Inferred storey count, not supplied by OS.",
+      "priorEavesHeight": 3.8,
+      "priorStoreys": 1
+    },
+    {
+      "id": "b924-garden-house",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley house in the works garden",
+      "worldFootprint": [
+        [
+          -366.121,
+          810.364
+        ],
+        [
+          -367.57,
+          811.632
+        ],
+        [
+          -368.055,
+          813.615
+        ],
+        [
+          -367.667,
+          814.417
+        ],
+        [
+          -368.083,
+          815.206
+        ],
+        [
+          -368.118,
+          816.244
+        ],
+        [
+          -368.772,
+          817.465
+        ],
+        [
+          -368.842,
+          818.36
+        ],
+        [
+          -369.74,
+          818.693
+        ],
+        [
+          -370.521,
+          820.387
+        ],
+        [
+          -370.509,
+          821.016
+        ],
+        [
+          -369.93,
+          821.705
+        ],
+        [
+          -370.199,
+          822.683
+        ],
+        [
+          -370.034,
+          823.164
+        ],
+        [
+          -364.029,
+          825.14
+        ],
+        [
+          -363.713,
+          826.114
+        ],
+        [
+          -361.388,
+          826.857
+        ],
+        [
+          -360.702,
+          826.268
+        ],
+        [
+          -359.351,
+          826.792
+        ],
+        [
+          -359.095,
+          827.155
+        ],
+        [
+          -359.082,
+          827.778
+        ],
+        [
+          -356.966,
+          828.671
+        ],
+        [
+          -356.27,
+          828.673
+        ],
+        [
+          -355.517,
+          828.167
+        ],
+        [
+          -354.471,
+          828.206
+        ],
+        [
+          -351.081,
+          818.073
+        ],
+        [
+          -350.467,
+          815.625
+        ],
+        [
+          -365.077,
+          810.53
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 19.225,
+      "eavesHeight": 6.9,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        20695
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 20695, simplified at 0.15 m (max deviation 0.142 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws a shaded house-like building with bays and porches inside curving garden walks. 17.83 x 14.46 m, 236.3 m2. Replaces legacy envelope site924-os-4 (18 x 13 m, 234 m2, centre (-359.0, 816.0)), a rectangle about 3 m north-east of the drawn house.",
+      "heightEvidence": "Explicit estimate: two storeys, 6.9 m eaves, the legacy envelope's two-storey value; no source gives its height.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. A hipped slate roof would be likelier for a house but is not a renderer option.",
+      "functionEvidence": "Explicit estimate: a detached house in landscaped grounds inside the works, read by type as a manager's or engineer's house; the OS does not name it.",
+      "priorModelId": "site924-os-4",
+      "priorFootprint": [
+        [
+          -365.551,
+          807.037
+        ],
+        [
+          -348.432,
+          812.599
+        ],
+        [
+          -352.449,
+          824.963
+        ],
+        [
+          -369.568,
+          819.401
+        ]
+      ],
+      "priorRotationDegrees": 18.0,
+      "priorFootprintEvidence": "Individual OS range envelope, rounded to metres.",
+      "priorHeightEvidence": "Inferred storey count, not supplied by OS.",
+      "priorEavesHeight": 6.9,
+      "priorStoreys": 2
+    },
+    {
+      "id": "b924-yard-shed-bm17",
+      "siteId": 924,
+      "source": "os-1893",
+      "name": "Bromley small shed north of B.M. 17.0",
+      "worldFootprint": [
+        [
+          -433.872,
+          912.054
+        ],
+        [
+          -436.157,
+          923.23
+        ],
+        [
+          -435.875,
+          923.573
+        ],
+        [
+          -432.225,
+          924.241
+        ],
+        [
+          -431.886,
+          923.948
+        ],
+        [
+          -429.626,
+          913.352
+        ],
+        [
+          -429.746,
+          912.809
+        ],
+        [
+          -430.594,
+          912.433
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -78.445,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        494073
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 494073, simplified at 0.15 m (max deviation 0.063 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 11.97 x 4.42 m, 51.5 m2. Replaces legacy envelope site924-os-9 (10 x 5 m, 50 m2, centre (-431.0, 918.0)); the GeoPackage outline sits 1.7 m west of the printed one, the site-wide frame offset measured by T9.",
+      "heightEvidence": "Explicit estimate: one storey, 3.8 m eaves, as the legacy envelope.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Explicit estimate: small detached shed by the internal road; unlabelled.",
+      "priorModelId": "site924-os-9",
+      "priorFootprint": [
+        [
+          -434.485,
+          922.371
+        ],
+        [
+          -432.406,
+          912.589
+        ],
+        [
+          -427.515,
+          913.629
+        ],
+        [
+          -429.594,
+          923.411
+        ]
+      ],
+      "priorRotationDegrees": -78.0,
+      "priorFootprintEvidence": "Individual OS range envelope, rounded to metres.",
+      "priorHeightEvidence": "Inferred storey count, not supplied by OS.",
+      "priorEavesHeight": 3.8,
+      "priorStoreys": 1
     }
   ],
   "removedStructures": [
@@ -3546,5 +4193,65 @@
       "positionEvidence": "Circle fits to the GeoPackage column bases (24\u201330 per ring) put the centres at bromley-1 (-345.8, 731.8), bromley-2 (-399.9, 682.7), bromley-3 (-384.8, 607.9), bromley-4 (-272.2, 707.4): shifts of 4.3, 7.1, 6.9 and 3.1 m from the current hand-read centres. GeoPackage holder-tank polygon centroids agree within 1.6 m. bromley-5 to -9 are within 1.6 m already."
     }
   ],
-  "groups": []
+  "groups": [],
+  "classifiedOutlines": [
+    {
+      "id": "gantry-north",
+      "sourceFids": [
+        34850,
+        459328
+      ],
+      "classification": "overhead coal gantry",
+      "modelled": false,
+      "evidence": "Bottle-shaped outline drawn dotted and lightly stippled (not hatched) on the OS five-foot mosaic, running from the south-west wall of the northern retort house (fid 49) out over the tramway lines; twin of the southern gantry. Read as an elevated coal gantry or conveyor, not a ground building. The renderer has no gantry or elevated-structure kind, so it is recorded, not drawn; modelling it needs a new structure kind in docs/factory-buildings.js."
+    },
+    {
+      "id": "gantry-south",
+      "sourceFids": [
+        37343,
+        441135
+      ],
+      "classification": "overhead coal gantry",
+      "modelled": false,
+      "evidence": "Same dotted, stippled bottle shape from the south-west wall of the southern retort house (fid 46) over the dock wall and tramway; as the northern gantry, recorded and not drawn for want of a renderer kind."
+    },
+    {
+      "id": "retort-house-end-features",
+      "sourceFids": [
+        777740,
+        851236,
+        860071
+      ],
+      "classification": "open (unshaded) features on the retort-house ends",
+      "modelled": false,
+      "evidence": "An unshaded rectangle and two unshaded circles drawn against the short ends of the retort houses beside small stepped symbols; unshaded on the OS, so not roofed buildings. Possibly open tanks, wells or stair foot features; unidentified."
+    },
+    {
+      "id": "open-compartments",
+      "sourceFids": [
+        850708,
+        963950,
+        899855,
+        1001269,
+        1015116
+      ],
+      "classification": "unshaded small compartments and yard adjuncts",
+      "modelled": false,
+      "evidence": "Drawn as open (unshaded) outlines on the OS: a small framed box between holders (850708), a gap compartment between the yard sheds (963950) and the lodge-side yard compartments already listed as unmodelled by the lodge record."
+    },
+    {
+      "id": "holder-column-bases",
+      "sourceFids": "about 170 outlines of 2-4 m2 on the holder rings",
+      "classification": "gasholder guide-frame column bases",
+      "modelled": false,
+      "evidence": "Small squares on the holder circumferences; drawn by the holder model (columns), not buildings."
+    },
+    {
+      "id": "purifier-vessels",
+      "sourceFids": "the 44 vessel outlines of the seven fitted rows",
+      "classification": "purifier vessels (plant)",
+      "modelled": "as purifierBank structures (earlier pass)",
+      "evidence": "Already drawn by the seven b924-purifiers-* rows. scripts/footprint_gap_audit.py counts purifier rows as cover but mirrors their rotation (it lays the rows out along (cos r, -sin r) where docs/factory-buildings.js lays them along (cos r, sin r)), so it reports the 44 vessels as uncovered; with the renderer's sense they are covered."
+    }
+  ]
 }

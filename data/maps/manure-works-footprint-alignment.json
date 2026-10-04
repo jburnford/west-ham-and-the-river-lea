@@ -1,0 +1,919 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-04",
+  "site": 1018,
+  "name": "Manure works beside the Channelsea (F.S. Hempleman & Co., Blood Manure Works & Wharf)",
+  "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg (project extract west-ham-buffer-buildings-bng.geojson.gz); cached NLS OS London five-foot 1893; Goad insurance plan London NE vol. F sheet 18, July 1893 (reference/factory-building-survey/goad-f18.tiff)",
+  "sourceCRS": "EPSG:27700 to scene origin E538900,N183209; x east, z south, metres",
+  "method": "Manure works 1018 (T19, 4 October 2026): the three legacy OS range envelopes retired; nine records on GeoPackage outlines 1524, 863177 and 944, cut only at Goad F18 compartment walls (similarity-fitted to the outlines), 944 held 6.1 m off the LT&SR centreline; names, uses, storeys, wood/brick and tile roofs read from Goad F18; two Goad chimneys added (one with a printed 40 ft height). Heights in metres are explicit estimates.",
+  "evidenceNotes": [
+    "Goad registration: Goad F18 (reference/factory-building-survey/goad-f18.tiff, July 1893) registered to the GeoPackage outlines by a similarity fit that maximises the overlap of the Goad building colours with fids 1524, 944 and 863177: 0.1594 m per pixel, rotation 20.401 deg, overlap IoU 0.866; GeoPackage vertices lie a median 0.42 m (90th percentile 1.67 m) from the fitted Goad building edge; five hand-read corner controls RMS 2.26 m (max 3.53 m). The fit and its controls are recorded in goadRegistration.",
+    "The OS draws both ranges as single shaded blocks with a dashed line and the lettering 'P. Shed' along their railway sides; the GeoPackage outlines include that strip.",
+    "Goad prints '(Admission refused)' beside the works: the surveyors did not enter, so compartment uses and figures were read from outside."
+  ],
+  "goadRegistration": {
+    "sheet": "reference/factory-building-survey/goad-f18.tiff",
+    "pixelToWorld": [
+      0.14940227874932507,
+      0.05556630481635443,
+      -153.16144995503663,
+      -71.94974925472766
+    ],
+    "metresPerPixel": 0.1594,
+    "rotationDegrees": 20.401,
+    "overlapIoU": 0.866,
+    "edgeResidual": {
+      "vertices": 92,
+      "medianMetres": 0.42,
+      "p90Metres": 1.67
+    },
+    "controls": [
+      {
+        "control": "east range west end, north corner",
+        "goadPixel": [
+          570,
+          3238
+        ],
+        "sourceVertex": [
+          -248.32,
+          444.01
+        ],
+        "residualMetres": 0.65
+      },
+      {
+        "control": "east range step, outer corner",
+        "goadPixel": [
+          632,
+          3121
+        ],
+        "sourceVertex": [
+          -230.41,
+          430.93
+        ],
+        "residualMetres": 2.29
+      },
+      {
+        "control": "east range step, inner corner",
+        "goadPixel": [
+          660,
+          3157
+        ],
+        "sourceVertex": [
+          -228.9,
+          436.33
+        ],
+        "residualMetres": 1.08
+      },
+      {
+        "control": "west range north notch, west corner",
+        "goadPixel": [
+          256,
+          3478
+        ],
+        "sourceVertex": [
+          -305.68,
+          459.4
+        ],
+        "residualMetres": 3.53
+      },
+      {
+        "control": "west range north notch, inner corner",
+        "goadPixel": [
+          294,
+          3506
+        ],
+        "sourceVertex": [
+          -302.47,
+          466.26
+        ],
+        "residualMetres": 2.5
+      }
+    ],
+    "controlRmsMetres": 2.26,
+    "compartmentWallsPixels": {
+      "LK": [
+        [
+          330,
+          3477
+        ],
+        [
+          359,
+          3507
+        ]
+      ],
+      "KJ": [
+        [
+          370,
+          3428
+        ],
+        [
+          401,
+          3470
+        ]
+      ],
+      "FE": [
+        [
+          632,
+          3121
+        ],
+        [
+          660,
+          3157
+        ]
+      ],
+      "EC": [
+        [
+          898,
+          2914
+        ],
+        [
+          928,
+          2958
+        ]
+      ],
+      "CB": [
+        [
+          917,
+          2902
+        ],
+        [
+          947,
+          2940
+        ]
+      ],
+      "BA": [
+        [
+          970,
+          2851
+        ],
+        [
+          1004,
+          2891
+        ]
+      ]
+    }
+  },
+  "buildings": [],
+  "structures": [],
+  "removedBuildings": [
+    {
+      "id": "site1018-os-1",
+      "reason": "Legacy OS range envelope (92 x 14 m) drawn about 6 m north of the works and over open riverside ground; superseded by the four records on GeoPackage outlines 1524 and 863177 cut at the Goad F18 compartment walls.",
+      "replacedBy": [
+        "b1018-manure-shed-west",
+        "b1018-engine-smithy",
+        "b1018-stable-loft",
+        "b1018-stable-annex"
+      ],
+      "priorFootprint": [
+        [
+          -371.078,
+          484.53
+        ],
+        [
+          -286.392,
+          448.583
+        ],
+        [
+          -280.922,
+          461.47
+        ],
+        [
+          -365.608,
+          497.417
+        ]
+      ],
+      "priorAreaM2": 1288.0,
+      "priorCentre": [
+        -326.0,
+        473.0
+      ],
+      "priorRotationDegrees": -23.0
+    },
+    {
+      "id": "site1018-os-2",
+      "reason": "Legacy OS range envelope (65 x 13 m) lying mostly over the open ground between the two ranges (the OS oval marked C, B.M. 15.94); superseded by the records on GeoPackage outline 944.",
+      "replacedBy": [
+        "b1018-raw-material-store",
+        "b1018-manure-shed-east",
+        "b1018-brick-range-c",
+        "b1018-store-office",
+        "b1018-cart-shed"
+      ],
+      "priorFootprint": [
+        [
+          -278.456,
+          445.715
+        ],
+        [
+          -218.623,
+          420.318
+        ],
+        [
+          -213.544,
+          432.285
+        ],
+        [
+          -273.377,
+          457.682
+        ]
+      ],
+      "priorAreaM2": 845.0,
+      "priorCentre": [
+        -246.0,
+        439.0
+      ],
+      "priorRotationDegrees": -23.0
+    },
+    {
+      "id": "site1018-os-3",
+      "reason": "Legacy OS range envelope (25 x 12 m) partly over open ground north of fid 944; superseded by the records on GeoPackage outline 944.",
+      "replacedBy": [
+        "b1018-raw-material-store",
+        "b1018-manure-shed-east",
+        "b1018-brick-range-c",
+        "b1018-store-office",
+        "b1018-cart-shed"
+      ],
+      "priorFootprint": [
+        [
+          -227.851,
+          424.361
+        ],
+        [
+          -204.838,
+          414.593
+        ],
+        [
+          -200.149,
+          425.639
+        ],
+        [
+          -223.162,
+          435.407
+        ]
+      ],
+      "priorAreaM2": 300.0,
+      "priorCentre": [
+        -214.0,
+        425.0
+      ],
+      "priorRotationDegrees": -23.0
+    }
+  ],
+  "additionalBuildings": [
+    {
+      "id": "b1018-manure-shed-west",
+      "siteId": 1018,
+      "source": "os-1893",
+      "name": "Hempleman west manure shed and ovens (Goad L)",
+      "worldFootprint": [
+        [
+          -302.128,
+          466.552
+        ],
+        [
+          -302.466,
+          466.257
+        ],
+        [
+          -305.213,
+          459.571
+        ],
+        [
+          -305.676,
+          459.405
+        ],
+        [
+          -353.66,
+          480.107
+        ],
+        [
+          -353.933,
+          480.459
+        ],
+        [
+          -351.938,
+          486.05
+        ],
+        [
+          -358.008,
+          488.644
+        ],
+        [
+          -358.15,
+          489.003
+        ],
+        [
+          -355.47,
+          495.755
+        ],
+        [
+          -355.018,
+          495.954
+        ],
+        [
+          -316.096,
+          480.646
+        ],
+        [
+          -310.495,
+          478.629
+        ],
+        [
+          -297.427,
+          473.445
+        ],
+        [
+          -294.364,
+          472.029
+        ],
+        [
+          -297.559,
+          464.725
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -21.638,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        1524
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 1524, simplified at 0.15 m (max deviation 0.133 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 65.55 x 16.09 m, 903.2 m2. Cut from the outline at the compartment wall between L (manure shed) and K (engine, smithy) on Goad F18; the OS draws no internal wall there. Goad F18 (reference/factory-building-survey/goad-f18.tiff, July 1893) registered to the GeoPackage outlines by a similarity fit that maximises the overlap of the Goad building colours with fids 1524, 944 and 863177: 0.1594 m per pixel, rotation 20.401 deg, overlap IoU 0.866; GeoPackage vertices lie a median 0.42 m (90th percentile 1.67 m) from the fitted Goad building edge; five hand-read corner controls RMS 2.26 m (max 3.53 m).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F18 prints (figure 1) in compartment L; Goad F18 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F18 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "F.S. Hempleman & Co., Blood Manure Works & Wharf (Goad F18, lot F.222): compartment L is lettered 'Manure Shed' and 'Ovens', with an engine, boiler (hatched square) and factory chimney symbol at its west end.",
+      "goadCompartment": "L",
+      "supersedes": [
+        "site1018-os-1"
+      ]
+    },
+    {
+      "id": "b1018-engine-smithy",
+      "siteId": 1018,
+      "source": "os-1893",
+      "name": "Hempleman engine house and smithy (Goad K)",
+      "worldFootprint": [
+        [
+          -297.559,
+          464.725
+        ],
+        [
+          -294.364,
+          472.029
+        ],
+        [
+          -286.061,
+          468.776
+        ],
+        [
+          -288.29,
+          461.017
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -21.804,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        1524
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 1524, simplified at 0.15 m (max deviation 0.053 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 9.98 x 8.03 m, 75.6 m2. Cut from the outline at the compartment walls between L (manure shed) and K, and between K and J (stable and loft) on Goad F18; the OS draws no internal wall there. Goad F18 (reference/factory-building-survey/goad-f18.tiff, July 1893) registered to the GeoPackage outlines by a similarity fit that maximises the overlap of the Goad building colours with fids 1524, 944 and 863177: 0.1594 m per pixel, rotation 20.401 deg, overlap IoU 0.866; GeoPackage vertices lie a median 0.42 m (90th percentile 1.67 m) from the fitted Goad building edge; five hand-read corner controls RMS 2.26 m (max 3.53 m).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F18 prints in compartment K; Goad F18 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F18 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "F.S. Hempleman & Co., Blood Manure Works & Wharf (Goad F18, lot F.222): compartment K is lettered 'Eng.' (with an engine symbol) and 'Smithy'.",
+      "goadCompartment": "K",
+      "supersedes": [
+        "site1018-os-1"
+      ]
+    },
+    {
+      "id": "b1018-stable-loft",
+      "siteId": 1018,
+      "source": "os-1893",
+      "name": "Hempleman stable and loft (Goad J)",
+      "worldFootprint": [
+        [
+          -272.609,
+          452.701
+        ],
+        [
+          -273.137,
+          452.57
+        ],
+        [
+          -288.622,
+          458.578
+        ],
+        [
+          -288.653,
+          459.135
+        ],
+        [
+          -288.127,
+          460.519
+        ],
+        [
+          -288.29,
+          461.017
+        ],
+        [
+          -286.061,
+          468.776
+        ],
+        [
+          -285.188,
+          468.656
+        ],
+        [
+          -275.94,
+          464.697
+        ],
+        [
+          -269.415,
+          462.34
+        ],
+        [
+          -269.211,
+          461.934
+        ],
+        [
+          -270.286,
+          459.267
+        ],
+        [
+          -270.318,
+          458.589
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -21.206,
+      "eavesHeight": 6.9,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        1524
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 1524, simplified at 0.15 m (max deviation 0.11 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 18.36 x 10.64 m, 185.3 m2. Cut from the outline at the compartment wall between K (engine, smithy) and J (stable and loft) on Goad F18; the OS draws no internal wall there. Goad F18 (reference/factory-building-survey/goad-f18.tiff, July 1893) registered to the GeoPackage outlines by a similarity fit that maximises the overlap of the Goad building colours with fids 1524, 944 and 863177: 0.1594 m per pixel, rotation 20.401 deg, overlap IoU 0.866; GeoPackage vertices lie a median 0.42 m (90th percentile 1.67 m) from the fitted Goad building edge; five hand-read corner controls RMS 2.26 m (max 3.53 m).",
+      "heightEvidence": "Explicit estimate: 6.9 m eaves (builder two-storey value) for the 2 storeys Goad F18 prints in compartment J; Goad F18 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F18 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "F.S. Hempleman & Co., Blood Manure Works & Wharf (Goad F18, lot F.222): compartment J is lettered 'Stable & Loft'; '(Admission refused)' is printed beside the works.",
+      "goadCompartment": "J",
+      "supersedes": [
+        "site1018-os-1"
+      ]
+    },
+    {
+      "id": "b1018-stable-annex",
+      "siteId": 1018,
+      "source": "os-1893",
+      "name": "Hempleman small annex east of the stable (Goad, unlettered)",
+      "worldFootprint": [
+        [
+          -270.318,
+          458.589
+        ],
+        [
+          -270.286,
+          459.267
+        ],
+        [
+          -269.246,
+          461.949
+        ],
+        [
+          -264.445,
+          460.187
+        ],
+        [
+          -264.245,
+          459.752
+        ],
+        [
+          -265.426,
+          457.123
+        ],
+        [
+          -265.753,
+          456.818
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -21.195,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        863177
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 863177, simplified at 0.15 m (max deviation 0.135 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 5.46 x 3.61 m, 19.0 m2. Matches the narrow set-back compartment at the east end of J on Goad F18 (Goad F18 (reference/factory-building-survey/goad-f18.tiff, July 1893) registered to the GeoPackage outlines by a similarity fit that maximises the overlap of the Goad building colours with fids 1524, 944 and 863177: 0.1594 m per pixel, rotation 20.401 deg, overlap IoU 0.866; GeoPackage vertices lie a median 0.42 m (90th percentile 1.67 m) from the fitted Goad building edge; five hand-read corner controls RMS 2.26 m (max 3.53 m)).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F18 prints in this compartment; Goad F18 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F18 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "F.S. Hempleman & Co., Blood Manure Works & Wharf (Goad F18, lot F.222): small unlettered compartment; use unknown.",
+      "goadCompartment": "unlettered",
+      "supersedes": [
+        "site1018-os-1"
+      ]
+    },
+    {
+      "id": "b1018-raw-material-store",
+      "siteId": 1018,
+      "source": "os-1893",
+      "name": "Hempleman store for raw material and ovens (Goad F)",
+      "worldFootprint": [
+        [
+          -248.322,
+          444.007
+        ],
+        [
+          -248.659,
+          444.327
+        ],
+        [
+          -245.731,
+          452.11
+        ],
+        [
+          -245.424,
+          452.455
+        ],
+        [
+          -227.195,
+          445.232
+        ],
+        [
+          -229.875,
+          436.716
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -21.566,
+      "eavesHeight": 5.35,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        944
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 944, simplified at 0.15 m (max deviation 0.08 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 20.4 x 8.92 m, 178.4 m2. Cut from the outline at the compartment wall between F (store for raw material, ovens) and E (manure shed), which meets the step in the north wall that both the OS and Goad draw on Goad F18; the OS draws no internal wall there. Goad F18 (reference/factory-building-survey/goad-f18.tiff, July 1893) registered to the GeoPackage outlines by a similarity fit that maximises the overlap of the Goad building colours with fids 1524, 944 and 863177: 0.1594 m per pixel, rotation 20.401 deg, overlap IoU 0.866; GeoPackage vertices lie a median 0.42 m (90th percentile 1.67 m) from the fitted Goad building edge; five hand-read corner controls RMS 2.26 m (max 3.53 m). Fid 944 was first clipped 6.1 m off the LT&SR centreline (docs/data/infrastructure.json route): 20.9 m2 at its east end (cart shed) lay within that band (crest half-width 4 m + 0.5 m formation band + the 1.5 m retaining-wall gap T15 holds fill off footprints), so the building stays clear of the railway formation and of the wall line.",
+      "heightEvidence": "Explicit estimate: 5.35 m eaves (builder value for 1 1/2 storeys); Goad F18 prints a storey figure read as '1-2' or '1 1/2' in compartment F (legibility poor), taken as one and a half storeys; Goad F18 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F18 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "F.S. Hempleman & Co., Blood Manure Works & Wharf (Goad F18, lot F.222): compartment F is lettered 'Store for raw material' and 'Ovens'.",
+      "goadCompartment": "F",
+      "railwayHoldOff": {
+        "distanceFromCentrelineMetres": 6.1,
+        "outlineAreaRemovedM2": 20.86,
+        "appliesTo": "the whole of fid 944 before the Goad cuts"
+      },
+      "supersedes": [
+        "site1018-os-2",
+        "site1018-os-3"
+      ]
+    },
+    {
+      "id": "b1018-manure-shed-east",
+      "siteId": 1018,
+      "source": "os-1893",
+      "name": "Hempleman east manure shed, ovens and cartway (Goad E, D, G)",
+      "worldFootprint": [
+        [
+          -195.688,
+          408.626
+        ],
+        [
+          -222.069,
+          427.308
+        ],
+        [
+          -230.227,
+          430.487
+        ],
+        [
+          -230.414,
+          430.934
+        ],
+        [
+          -228.546,
+          436.035
+        ],
+        [
+          -229.875,
+          436.716
+        ],
+        [
+          -227.195,
+          445.232
+        ],
+        [
+          -218.739,
+          441.929
+        ],
+        [
+          -218.041,
+          441.359
+        ],
+        [
+          -197.802,
+          433.36
+        ],
+        [
+          -178.009,
+          425.078
+        ],
+        [
+          -183.32,
+          403.59
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -22.706,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        944
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 944, simplified at 0.15 m (max deviation 0.135 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 56.55 x 22.0 m, 988.9 m2. Cut from the outline at the compartment walls between F and E (manure shed), and between E and the brick compartment C on Goad F18; the OS draws no internal wall there. Goad F18 (reference/factory-building-survey/goad-f18.tiff, July 1893) registered to the GeoPackage outlines by a similarity fit that maximises the overlap of the Goad building colours with fids 1524, 944 and 863177: 0.1594 m per pixel, rotation 20.401 deg, overlap IoU 0.866; GeoPackage vertices lie a median 0.42 m (90th percentile 1.67 m) from the fitted Goad building edge; five hand-read corner controls RMS 2.26 m (max 3.53 m). Fid 944 was first clipped 6.1 m off the LT&SR centreline (docs/data/infrastructure.json route): 20.9 m2 at its east end (cart shed) lay within that band (crest half-width 4 m + 0.5 m formation band + the 1.5 m retaining-wall gap T15 holds fill off footprints), so the building stays clear of the railway formation and of the wall line.",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F18 prints in E and D; Goad F18 colours it yellow (wood in the 1926 key). E, D and the cartway G are one record because the OS draws them as one roof and Goad draws only part-height internal lines between them.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F18 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "F.S. Hempleman & Co., Blood Manure Works & Wharf (Goad F18, lot F.222): E is lettered 'Manure Shed' and 'Engine', D 'Ovens' with boilers (hatched squares) and a factory chimney symbol marked 40', G 'Cartway' along the railway side.",
+      "goadCompartment": "E, D, G",
+      "railwayHoldOff": {
+        "distanceFromCentrelineMetres": 6.1,
+        "outlineAreaRemovedM2": 20.86,
+        "appliesTo": "the whole of fid 944 before the Goad cuts"
+      },
+      "supersedes": [
+        "site1018-os-2",
+        "site1018-os-3"
+      ]
+    },
+    {
+      "id": "b1018-brick-range-c",
+      "siteId": 1018,
+      "source": "os-1893",
+      "name": "Hempleman brick compartment C",
+      "worldFootprint": [
+        [
+          -181.753,
+          402.976
+        ],
+        [
+          -183.32,
+          403.59
+        ],
+        [
+          -178.009,
+          425.078
+        ],
+        [
+          -173.927,
+          423.37
+        ],
+        [
+          -179.981,
+          404.615
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 76.117,
+      "eavesHeight": 6.9,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        944
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 944, simplified at 0.15 m (max deviation 0.147 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 22.35 x 4.37 m, 78.4 m2. Cut from the outline at the compartment walls between E (manure shed) and C, and between C and B (store and office) on Goad F18; the OS draws no internal wall there. Goad F18 (reference/factory-building-survey/goad-f18.tiff, July 1893) registered to the GeoPackage outlines by a similarity fit that maximises the overlap of the Goad building colours with fids 1524, 944 and 863177: 0.1594 m per pixel, rotation 20.401 deg, overlap IoU 0.866; GeoPackage vertices lie a median 0.42 m (90th percentile 1.67 m) from the fitted Goad building edge; five hand-read corner controls RMS 2.26 m (max 3.53 m). Fid 944 was first clipped 6.1 m off the LT&SR centreline (docs/data/infrastructure.json route): 20.9 m2 at its east end (cart shed) lay within that band (crest half-width 4 m + 0.5 m formation band + the 1.5 m retaining-wall gap T15 holds fill off footprints), so the building stays clear of the railway formation and of the wall line.",
+      "heightEvidence": "Explicit estimate: 6.9 m eaves for the 2 storeys Goad F18 prints in compartment C; Goad F18 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F18 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "F.S. Hempleman & Co., Blood Manure Works & Wharf (Goad F18, lot F.222): compartment C, unlettered use, brick.",
+      "goadCompartment": "unlettered",
+      "railwayHoldOff": {
+        "distanceFromCentrelineMetres": 6.1,
+        "outlineAreaRemovedM2": 20.86,
+        "appliesTo": "the whole of fid 944 before the Goad cuts"
+      },
+      "supersedes": [
+        "site1018-os-2",
+        "site1018-os-3"
+      ]
+    },
+    {
+      "id": "b1018-store-office",
+      "siteId": 1018,
+      "source": "os-1893",
+      "name": "Hempleman store and office (Goad B)",
+      "worldFootprint": [
+        [
+          -173.927,
+          423.37
+        ],
+        [
+          -162.74,
+          418.689
+        ],
+        [
+          -166.949,
+          407.102
+        ],
+        [
+          -167.436,
+          407.475
+        ],
+        [
+          -167.315,
+          408.392
+        ],
+        [
+          -174.087,
+          411.094
+        ],
+        [
+          -179.981,
+          404.615
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 72.11,
+      "eavesHeight": 10.0,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 3,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        944
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 944, simplified at 0.15 m (max deviation 0.097 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 19.71 x 12.08 m, 150.8 m2. Cut from the outline at the compartment walls between C and B (store and office), and between B and A (cart shed) on Goad F18; the OS draws no internal wall there. Goad F18 (reference/factory-building-survey/goad-f18.tiff, July 1893) registered to the GeoPackage outlines by a similarity fit that maximises the overlap of the Goad building colours with fids 1524, 944 and 863177: 0.1594 m per pixel, rotation 20.401 deg, overlap IoU 0.866; GeoPackage vertices lie a median 0.42 m (90th percentile 1.67 m) from the fitted Goad building edge; five hand-read corner controls RMS 2.26 m (max 3.53 m). Fid 944 was first clipped 6.1 m off the LT&SR centreline (docs/data/infrastructure.json route): 20.9 m2 at its east end (cart shed) lay within that band (crest half-width 4 m + 0.5 m formation band + the 1.5 m retaining-wall gap T15 holds fill off footprints), so the building stays clear of the railway formation and of the wall line.",
+      "heightEvidence": "Explicit estimate: 10.0 m eaves (builder three-storey value) for the figure 3 Goad F18 prints in compartment B, read as storeys; Goad F18 colours it pink (brick in the 1926 key). The reading of '3' as a storey figure is the usual Goad convention but is not certain at this size.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F18 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "F.S. Hempleman & Co., Blood Manure Works & Wharf (Goad F18, lot F.222): compartment B is lettered 'Store & Off.' (store and office).",
+      "goadCompartment": "B",
+      "railwayHoldOff": {
+        "distanceFromCentrelineMetres": 6.1,
+        "outlineAreaRemovedM2": 20.86,
+        "appliesTo": "the whole of fid 944 before the Goad cuts"
+      },
+      "supersedes": [
+        "site1018-os-2",
+        "site1018-os-3"
+      ]
+    },
+    {
+      "id": "b1018-cart-shed",
+      "siteId": 1018,
+      "source": "os-1893",
+      "name": "Hempleman cart shed (Goad A)",
+      "worldFootprint": [
+        [
+          -152.63,
+          414.458
+        ],
+        [
+          -157.573,
+          403.666
+        ],
+        [
+          -162.67,
+          405.358
+        ],
+        [
+          -166.949,
+          407.102
+        ],
+        [
+          -162.74,
+          418.689
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 67.291,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        944
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 944, simplified at 0.15 m (max deviation 0.144 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 12.31 x 10.96 m, 127.4 m2. Cut from the outline at the compartment wall between B (store and office) and A (cart shed) on Goad F18; the OS draws no internal wall there. Goad F18 (reference/factory-building-survey/goad-f18.tiff, July 1893) registered to the GeoPackage outlines by a similarity fit that maximises the overlap of the Goad building colours with fids 1524, 944 and 863177: 0.1594 m per pixel, rotation 20.401 deg, overlap IoU 0.866; GeoPackage vertices lie a median 0.42 m (90th percentile 1.67 m) from the fitted Goad building edge; five hand-read corner controls RMS 2.26 m (max 3.53 m). Fid 944 was first clipped 6.1 m off the LT&SR centreline (docs/data/infrastructure.json route): 20.9 m2 at its east end (cart shed) lay within that band (crest half-width 4 m + 0.5 m formation band + the 1.5 m retaining-wall gap T15 holds fill off footprints), so the building stays clear of the railway formation and of the wall line.",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F18 prints in compartment A; Goad F18 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F18 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "F.S. Hempleman & Co., Blood Manure Works & Wharf (Goad F18, lot F.222): compartment A is lettered 'Cart Shed', with a tank symbol.",
+      "goadCompartment": "A",
+      "railwayHoldOff": {
+        "distanceFromCentrelineMetres": 6.1,
+        "outlineAreaRemovedM2": 20.86,
+        "appliesTo": "the whole of fid 944 before the Goad cuts"
+      },
+      "supersedes": [
+        "site1018-os-2",
+        "site1018-os-3"
+      ]
+    }
+  ],
+  "removedStructures": [],
+  "additionalStructures": [
+    {
+      "id": "stack-1018-ovens-d",
+      "siteId": 1018,
+      "kind": "chimney",
+      "name": "Hempleman ovens chimney (Goad D)",
+      "section": "square",
+      "height": 12.192,
+      "radius": 0.9,
+      "material": "brick",
+      "baseHeight": 0.34,
+      "parentBuildingId": "b1018-manure-shed-east",
+      "localPosition": [
+        -8.181,
+        4.028
+      ],
+      "mapSource": "reference/factory-building-survey/goad-f18.tiff",
+      "goadPixel": [
+        775,
+        3084
+      ],
+      "positionEvidence": "Factory chimney symbol (square with a cross, 1926 Goad key) on Goad F18 at pixel [775, 3084], placed at (-208.74, 431.87) through the similarity fit (Goad F18 (reference/factory-building-survey/goad-f18.tiff, July 1893) registered to the GeoPackage outlines by a similarity fit that maximises the overlap of the Goad building colours with fids 1524, 944 and 863177: 0.1594 m per pixel, rotation 20.401 deg, overlap IoU 0.866; GeoPackage vertices lie a median 0.42 m (90th percentile 1.67 m) from the fitted Goad building edge; five hand-read corner controls RMS 2.26 m (max 3.53 m)); stored relative to its parent range. No chimney base is drawn on the OS or supplied in the GeoPackage.",
+      "heightEvidence": "40' printed beside the chimney symbol in compartment D on Goad F18, read as height in feet; converted at 0.3048 m/ft.",
+      "profileEvidence": "Square section from the Goad symbol; 0.9 m half-width, taper, brickwork and crown are interpreted, not measured.",
+      "symbolKey": "goad-symbol-key-1926",
+      "mappedHeightFeet": 40
+    },
+    {
+      "id": "stack-1018-engine-l",
+      "siteId": 1018,
+      "kind": "chimney",
+      "name": "Hempleman engine chimney (Goad L)",
+      "section": "square",
+      "height": 12.192,
+      "radius": 0.9,
+      "material": "brick",
+      "baseHeight": 0.34,
+      "parentBuildingId": "b1018-manure-shed-west",
+      "localPosition": [
+        -16.79,
+        -1.674
+      ],
+      "mapSource": "reference/factory-building-survey/goad-f18.tiff",
+      "goadPixel": [
+        95,
+        3671
+      ],
+      "positionEvidence": "Factory chimney symbol (square with a cross, 1926 Goad key) on Goad F18 at pixel [95, 3671], placed at (-342.95, 481.78) through the similarity fit (Goad F18 (reference/factory-building-survey/goad-f18.tiff, July 1893) registered to the GeoPackage outlines by a similarity fit that maximises the overlap of the Goad building colours with fids 1524, 944 and 863177: 0.1594 m per pixel, rotation 20.401 deg, overlap IoU 0.866; GeoPackage vertices lie a median 0.42 m (90th percentile 1.67 m) from the fitted Goad building edge; five hand-read corner controls RMS 2.26 m (max 3.53 m)); stored relative to its parent range. No chimney base is drawn on the OS or supplied in the GeoPackage.",
+      "heightEvidence": "Explicit estimate: 12.19 m, the 40 ft printed for the works' other chimney (Goad D), used by type because Goad prints no height for this one.",
+      "profileEvidence": "Square section from the Goad symbol; 0.9 m half-width, taper, brickwork and crown are interpreted, not measured.",
+      "symbolKey": "goad-symbol-key-1926"
+    }
+  ],
+  "tanks": [],
+  "holderAdjustments": [],
+  "groups": [],
+  "classifiedOutlines": [
+    {
+      "id": "oval-c",
+      "sourceFids": [],
+      "classification": "open feature",
+      "modelled": false,
+      "evidence": "OS oval outline lettered 'C' with B.M. 15.94 between the two ranges, unshaded and with no GeoPackage outline; Goad F18 shows open ground there. Not a building."
+    },
+    {
+      "id": "goad-boilers",
+      "sourceFids": [],
+      "classification": "boilers inside the ranges",
+      "modelled": false,
+      "evidence": "Hatched boiler squares in compartments L and D on Goad F18 are inside the modelled roofs; the renderer has no boiler kind."
+    },
+    {
+      "id": "goad-tank-a",
+      "sourceFids": [],
+      "classification": "tank inside the cart shed",
+      "modelled": false,
+      "evidence": "Tank symbol in compartment A on Goad F18; inside the roof, not drawn."
+    }
+  ]
+}
