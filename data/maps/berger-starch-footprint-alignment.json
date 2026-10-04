@@ -1,0 +1,1357 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-04",
+  "site": 250,
+  "name": "Samuel Berger & Co. rice starch works",
+  "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg (project extract west-ham-buffer-buildings-bng.geojson.gz); cached NLS OS London five-foot mosaic (os-london-five-foot-1893); Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside)",
+  "sourceCRS": "EPSG:27700 to scene origin E538900,N183209; x east, z south, metres",
+  "method": "Berger rice starch works 4 October 2026: first models for site 250 (previously excluded as outside the western riverside corridor, and drawn as two interpreted placeholder ranges). Footprints are GeoPackage outlines; the 5009 m² main outline (fid 85) is divided into the 18 compartments Goad draws inside it, cut along lines read in a site frame (see scripts/prepare_berger_starch_alignment.py). The works runs west beyond the GIS site parcel: Goad shows the stoves, boxing room and stove holes on the Powis Road side as part of Berger's works, so the whole outline is modelled.",
+  "goadRegistration": {
+    "sheet": "goad-f16",
+    "file": "reference/factory-building-survey/goad-f16.tiff",
+    "url": "https://commons.wikimedia.org/wiki/File:Insurance_Plan_of_London_North_East_District_Vol._F;_sheet_16_(BL_152670).tiff",
+    "sha256": "c13041033b6c123170b9cd790dbaf5b54dc01d3ee6d9ad97444e4c07d140d370",
+    "pixelToWorld": [
+      0.12117577,
+      -0.10050115,
+      -1304.00240994,
+      396.00371604
+    ],
+    "method": "Similarity fit: two rough controls (Ratner Safe Works, Berger works), then ECC alignment of the sheet's pink and yellow building colours to the rasterised GeoPackage outlines inside the sheet, affine solution projected back to a similarity. Local translation check in 120 m windows: median 1.0 m, 90th percentile 1.8 m, maximum 2.5 m."
+  },
+  "siteFrame": {
+    "origin": [
+      -1027.2,
+      555.3
+    ],
+    "rotationDegrees": -21.6
+  },
+  "evidenceNotes": [
+    "Goad symbol reading follows the Goad key (reference/factory-building-survey/goad-symbol-key-1926.jpg, a 1926 printing): figures are storeys, \"T\" a tiled roof, hatched rectangles steam boilers, \"Eng.\" a steam engine.",
+    "Goad marks the works \"Admission refused\": its interior divisions are a sketch survey from outside and may be simplified.",
+    "Small outlines on the east edge (fids 765959, 1073764, 894372) are outside the works wall on Cottage Place and are not modelled here."
+  ],
+  "buildings": [],
+  "structures": [],
+  "groups": [],
+  "additionalSites": [
+    {
+      "id": 250,
+      "name": "Samuel Berger & Co. rice starch works",
+      "sources": [
+        "os-1893"
+      ],
+      "coverage": "Individual OS-mapped ranges; compartments and storeys from Goad sheet F16",
+      "notes": "Named \"Starch Works\" on the OS five-foot plan and \"Samuel Berger & Co. Rice Starch Works\" on Goad F16 (July 1893). Roof exteriors are mapped; compartment divisions and storeys follow Goad; heights, roof forms and materials not shown on Goad are estimates."
+    }
+  ],
+  "additionalBuildings": [
+    {
+      "id": "b250-stoves-west",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — drying stove range (No. 4)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "z",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "No. 4, stoves, stove holes",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u -6 to 14 m, v 0 to 50 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad draws a long range of stove cells with \"Stove holes\" along the west wall and \"No. 4\" at the north end; no storey figure is legible. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -1027.148,
+          555.279
+        ],
+        [
+          -1026.682,
+          556.769
+        ],
+        [
+          -1017.662,
+          577.319
+        ],
+        [
+          -1007.014,
+          601.084
+        ],
+        [
+          -995.777,
+          596.635
+        ],
+        [
+          -1014.183,
+          550.146
+        ],
+        [
+          -1015.113,
+          550.514
+        ],
+        [
+          -1015.346,
+          549.925
+        ],
+        [
+          -1027.034,
+          554.786
+        ]
+      ]
+    },
+    {
+      "id": "b250-boxing-room",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — boxing room (V)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "z",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "V",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 14 to 22 m, v 0 to 50 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"V Boxing room &c\", storey figure 2. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -988.339,
+          593.69
+        ],
+        [
+          -1006.745,
+          547.201
+        ],
+        [
+          -1014.183,
+          550.146
+        ],
+        [
+          -995.777,
+          596.635
+        ]
+      ]
+    },
+    {
+      "id": "b250-stoves-t",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — drying stoves (T)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "z",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "T",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 22 to 33 m, v 10 to 50 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"T Stoves\" with \"Stove holes\" along its east wall; storey figure not legible. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -978.13,
+          589.593
+        ],
+        [
+          -992.836,
+          552.45
+        ],
+        [
+          -1003.064,
+          556.499
+        ],
+        [
+          -988.339,
+          593.69
+        ]
+      ]
+    },
+    {
+      "id": "b250-no3-j1",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — warehouse ends (No. 3, J1)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "No. 3, J1",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 13 to 26 m, v -12 to 10 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"No. 3\" and \"J1\", each marked 2. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -1009.583,
+          538.98
+        ],
+        [
+          -1015.46,
+          541.312
+        ],
+        [
+          -1015.539,
+          541.863
+        ],
+        [
+          -1012.637,
+          548.414
+        ],
+        [
+          -1012.79,
+          548.862
+        ],
+        [
+          -1015.346,
+          549.925
+        ],
+        [
+          -1015.113,
+          550.514
+        ],
+        [
+          -1006.745,
+          547.201
+        ],
+        [
+          -1003.064,
+          556.499
+        ],
+        [
+          -999.345,
+          555.027
+        ],
+        [
+          -1006.214,
+          537.677
+        ],
+        [
+          -1009.093,
+          538.973
+        ]
+      ]
+    },
+    {
+      "id": "b250-warehouse-j",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — warehouse with floating room over (J)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "J",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 26 to 43.5 m, v -12 to 10 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"J Whse: 1st floating rm. over\", marked 2. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -999.345,
+          555.027
+        ],
+        [
+          -983.073,
+          548.584
+        ],
+        [
+          -990.238,
+          530.489
+        ],
+        [
+          -1006.214,
+          537.677
+        ]
+      ]
+    },
+    {
+      "id": "b250-range-h",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — range H",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "z",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "H",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 43.5 to 56.5 m, v -12 to 10 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"H\", marked 2 1/2; use not lettered. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -978.27,
+          525.402
+        ],
+        [
+          -990.238,
+          530.489
+        ],
+        [
+          -983.073,
+          548.584
+        ],
+        [
+          -970.986,
+          543.799
+        ]
+      ]
+    },
+    {
+      "id": "b250-mill-g",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — mill and stones (G)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "z",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "G",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 56.5 to 64 m, v -12 to 0 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"G Mill & stones\", marked 2 1/2. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -968.309,
+          530.782
+        ],
+        [
+          -968.733,
+          530.587
+        ],
+        [
+          -971.359,
+          523.143
+        ],
+        [
+          -971.69,
+          522.836
+        ],
+        [
+          -978.27,
+          525.402
+        ],
+        [
+          -974.668,
+          534.501
+        ],
+        [
+          -967.712,
+          531.747
+        ]
+      ]
+    },
+    {
+      "id": "b250-engine-boilers",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — engine and boiler house (E, F)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "z",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "E, F",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 56.5 to 66 m, v 0 to 15 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"E\" with \"Eng.\" (steam engine) and \"F\" with two hatched steam-boiler symbols; no storey figure, read as one tall storey. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -967.325,
+          532.337
+        ],
+        [
+          -967.712,
+          531.747
+        ],
+        [
+          -974.668,
+          534.501
+        ],
+        [
+          -969.146,
+          548.448
+        ],
+        [
+          -959.389,
+          544.585
+        ],
+        [
+          -959.275,
+          544.867
+        ],
+        [
+          -963.946,
+          533.022
+        ],
+        [
+          -965.871,
+          531.854
+        ]
+      ]
+    },
+    {
+      "id": "b250-soda-ash-s",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — soda ash range with scraping room over (S)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "z",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "S",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 33 to 44 m, v 10 to 50 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"S Soda ash &c 1st, scraping rm. over\" (two floors). Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -982.609,
+          548.4
+        ],
+        [
+          -992.836,
+          552.45
+        ],
+        [
+          -978.13,
+          589.593
+        ],
+        [
+          -967.913,
+          585.518
+        ]
+      ]
+    },
+    {
+      "id": "b250-vats-r",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — vats and pumps range (R)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "z",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "R",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 44 to 56.5 m, v 10 to 44 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"R Vats, pumps &c\", marked 2. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -958.47,
+          575.411
+        ],
+        [
+          -970.986,
+          543.799
+        ],
+        [
+          -982.609,
+          548.4
+        ],
+        [
+          -970.092,
+          580.013
+        ]
+      ]
+    },
+    {
+      "id": "b250-stable-k",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — stable with engineer's shop over (K)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "K",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 56.5 to 81 m, v 15 to 19.5 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"K Stable, engineer &c over\" (two floors). Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -946.242,
+          539.743
+        ],
+        [
+          -958.873,
+          545.132
+        ],
+        [
+          -959.389,
+          544.585
+        ],
+        [
+          -969.146,
+          548.448
+        ],
+        [
+          -967.489,
+          552.632
+        ],
+        [
+          -944.71,
+          543.613
+        ]
+      ]
+    },
+    {
+      "id": "b250-settling-p",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — settling slides (P)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "P",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 56.5 to 81 m, v 19.5 to 34 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"P Settling slides &c\", marked 1 1/2. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -939.372,
+          557.094
+        ],
+        [
+          -944.71,
+          543.613
+        ],
+        [
+          -967.489,
+          552.632
+        ],
+        [
+          -962.151,
+          566.113
+        ]
+      ]
+    },
+    {
+      "id": "b250-settling-o",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — settling vats and boxing room (O)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "O",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 56.5 to 81 m, v 34 to 44 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"O Settling vats & boxing room\", marked 1 1/2. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -935.691,
+          566.392
+        ],
+        [
+          -939.372,
+          557.094
+        ],
+        [
+          -962.151,
+          566.113
+        ],
+        [
+          -958.47,
+          575.411
+        ]
+      ]
+    },
+    {
+      "id": "b250-store-n",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — store with vats over (N)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "N",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 44 to 81 m, v 44 to 56 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"Store\" and \"N Vats over\" (two floors) along the Love Lane wall; its north edge is read from a dashed Goad line at about v 44. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -936.992,
+          572.601
+        ],
+        [
+          -933.825,
+          571.103
+        ],
+        [
+          -935.691,
+          566.392
+        ],
+        [
+          -970.092,
+          580.013
+        ],
+        [
+          -967.913,
+          585.518
+        ],
+        [
+          -954.525,
+          579.963
+        ],
+        [
+          -954.432,
+          579.748
+        ],
+        [
+          -945.422,
+          576.205
+        ],
+        [
+          -943.463,
+          575.137
+        ]
+      ]
+    },
+    {
+      "id": "b250-settling-l",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — settling vats with packing room over (L)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "L",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 81 to 100 m, v 12 to 30 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"L Settling vats & packing over\", marked 2. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -928.537,
+          537.537
+        ],
+        [
+          -942.67,
+          543.133
+        ],
+        [
+          -944.266,
+          539.045
+        ],
+        [
+          -946.242,
+          539.743
+        ],
+        [
+          -940.844,
+          553.375
+        ],
+        [
+          -925.467,
+          547.287
+        ]
+      ]
+    },
+    {
+      "id": "b250-settling-m",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — settling vats (M)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "M",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 81 to 100 m, v 30 to 52 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"M Settling vats\", marked 1=2 (one and two storeys). Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -933.112,
+          570.943
+        ],
+        [
+          -933.718,
+          568.737
+        ],
+        [
+          -919.984,
+          563.363
+        ],
+        [
+          -925.467,
+          547.287
+        ],
+        [
+          -940.844,
+          553.375
+        ],
+        [
+          -933.825,
+          571.103
+        ]
+      ]
+    },
+    {
+      "id": "b250-stoves-south",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — south drying stoves",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "Stoves",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u -6 to 14 m, v 50 to 70 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"Stoves\" on Love Lane; storey figure read as 2 but faint. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -991.345,
+          607.83
+        ],
+        [
+          -995.777,
+          596.635
+        ],
+        [
+          -1007.014,
+          601.084
+        ],
+        [
+          -1002.327,
+          611.694
+        ]
+      ]
+    },
+    {
+      "id": "b250-frame-room-z",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — frame room (Z)",
+      "footprintRotationDegrees": -21.6,
+      "roofAxis": "z",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        85
+      ],
+      "goadLetters": "Z",
+      "footprintEvidence": "Part of the single shaded outline fid 85 (5009 m²) in the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893). Divided along the compartment lines of Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside), registered to the GeoPackage by a building-mask fit (median local misfit 1.0 m, maximum 2.5 m). Cut in a site frame at -21.6 degrees: u 14 to 33 m, v 50 to 70 m from scene (-1027.2, 555.3). The cut lines are a reading of the Goad, accurate to about 1–2 m.",
+      "heightEvidence": "Storeys from Goad: Goad \"Z Frame room\", marked 1=2. Eaves height is the project’s default for the storey count (explicit estimate); Goad gives floors, not heights.",
+      "roofEvidence": "Goad marks \"T\" (tiled roof) along several walls of the works; the renderer draws one roof covering, so the tile reading is recorded but not shown. Pitched roof and its ridge direction are interpretations; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside).",
+      "worldFootprint": [
+        [
+          -976.252,
+          602.357
+        ],
+        [
+          -978.205,
+          597.903
+        ],
+        [
+          -978.217,
+          597.28
+        ],
+        [
+          -979.05,
+          596.024
+        ],
+        [
+          -979.376,
+          594.476
+        ],
+        [
+          -979.714,
+          594.175
+        ],
+        [
+          -981.052,
+          591.067
+        ],
+        [
+          -980.841,
+          590.721
+        ],
+        [
+          -995.777,
+          596.635
+        ],
+        [
+          -991.345,
+          607.83
+        ]
+      ]
+    },
+    {
+      "id": "b250-warehouse-a",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — warehouse (A)",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        5106
+      ],
+      "goadLetters": "A",
+      "footprintEvidence": "Source outline fid 5106 (584 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893).",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside): Goad \"A Whse.\" marked 2; a struck \"40\" inside the range is not read as a height. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; no ridges are drawn on Goad or the OS.",
+      "functionEvidence": "As lettered on Goad sheet F16 block F.196.",
+      "worldFootprint": [
+        [
+          -942.051,
+          503.476
+        ],
+        [
+          -942.248,
+          503.485
+        ],
+        [
+          -943.643,
+          499.672
+        ],
+        [
+          -944.486,
+          498.002
+        ],
+        [
+          -944.703,
+          498.005
+        ],
+        [
+          -970.416,
+          509.437
+        ],
+        [
+          -971.042,
+          510.069
+        ],
+        [
+          -963.511,
+          527.94
+        ],
+        [
+          -963.177,
+          528.236
+        ],
+        [
+          -941.149,
+          518.182
+        ],
+        [
+          -937.111,
+          516.548
+        ],
+        [
+          -937.096,
+          515.899
+        ],
+        [
+          -937.919,
+          513.557
+        ],
+        [
+          -938.412,
+          513.042
+        ]
+      ]
+    },
+    {
+      "id": "b250-office-b",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — office and dwelling (B, D) on the north street",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        122409
+      ],
+      "goadLetters": "B, D",
+      "footprintEvidence": "Source outline fid 122409 (93 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893).",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside): Goad \"D Dwg.\" (dwelling, figure read as 3) and \"B Off.\" (office, figure read as 2-3); taken together as 2 1/2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; no ridges are drawn on Goad or the OS.",
+      "functionEvidence": "As lettered on Goad sheet F16 block F.196.",
+      "worldFootprint": [
+        [
+          -976.187,
+          517.499
+        ],
+        [
+          -977.864,
+          513.09
+        ],
+        [
+          -978.314,
+          513.094
+        ],
+        [
+          -995.184,
+          520.783
+        ],
+        [
+          -993.513,
+          524.991
+        ],
+        [
+          -993.267,
+          524.995
+        ],
+        [
+          -976.467,
+          517.852
+        ]
+      ]
+    },
+    {
+      "id": "b250-range-c",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — range C on the north street",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        702216
+      ],
+      "goadLetters": "C",
+      "footprintEvidence": "Source outline fid 702216 (38 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893).",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside): Goad \"C\"; figure read as 2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; no ridges are drawn on Goad or the OS.",
+      "functionEvidence": "As lettered on Goad sheet F16 block F.196.",
+      "worldFootprint": [
+        [
+          -977.863,
+          513.09
+        ],
+        [
+          -976.187,
+          517.499
+        ],
+        [
+          -975.796,
+          517.497
+        ],
+        [
+          -969.296,
+          514.545
+        ],
+        [
+          -969.315,
+          514.054
+        ],
+        [
+          -970.98,
+          510.048
+        ],
+        [
+          -977.594,
+          512.725
+        ]
+      ]
+    },
+    {
+      "id": "b250-dwelling-d1",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — dwelling D1",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        777789
+      ],
+      "goadLetters": "D1",
+      "footprintEvidence": "Source outline fid 777789 (30 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893).",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside): Goad \"D1\"; no storey figure legible. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; no ridges are drawn on Goad or the OS.",
+      "functionEvidence": "As lettered on Goad sheet F16 block F.196.",
+      "worldFootprint": [
+        [
+          -1000.388,
+          526.055
+        ],
+        [
+          -1001.556,
+          522.914
+        ],
+        [
+          -1008.664,
+          525.058
+        ],
+        [
+          -1009.514,
+          525.512
+        ],
+        [
+          -1008.113,
+          528.546
+        ],
+        [
+          -1007.788,
+          528.765
+        ]
+      ]
+    },
+    {
+      "id": "b250-dwelling-d-west",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — dwelling beside D1",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        825899
+      ],
+      "goadLetters": "D",
+      "footprintEvidence": "Source outline fid 825899 (24 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893).",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside): Goad dwelling range west of \"D Dwg.\"; no figure legible. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; no ridges are drawn on Goad or the OS.",
+      "functionEvidence": "As lettered on Goad sheet F16 block F.196.",
+      "worldFootprint": [
+        [
+          -1000.388,
+          526.055
+        ],
+        [
+          -993.95,
+          523.855
+        ],
+        [
+          -995.184,
+          520.783
+        ],
+        [
+          -1001.207,
+          522.629
+        ],
+        [
+          -1001.556,
+          522.914
+        ]
+      ]
+    },
+    {
+      "id": "b250-cart-shed",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — cart shed",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        418306
+      ],
+      "goadLetters": "Carts &c",
+      "footprintEvidence": "Source outline fid 418306 (56 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893).",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside): Goad \"Carts &c\" at the north end of L. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; no ridges are drawn on Goad or the OS.",
+      "functionEvidence": "As lettered on Goad sheet F16 block F.196.",
+      "worldFootprint": [
+        [
+          -944.266,
+          539.045
+        ],
+        [
+          -942.67,
+          543.133
+        ],
+        [
+          -931.4,
+          538.608
+        ],
+        [
+          -933.016,
+          534.359
+        ],
+        [
+          -933.198,
+          534.345
+        ],
+        [
+          -943.987,
+          538.696
+        ]
+      ]
+    },
+    {
+      "id": "b250-carpenters-shop-w",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — carpenter's shop (W)",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        325406
+      ],
+      "goadLetters": "W",
+      "footprintEvidence": "Source outline fid 325406 (62 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893).",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside): Goad \"W Carp. &c\", coloured yellow (wood) and marked \"Br. & timber\"; one storey. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; no ridges are drawn on Goad or the OS.",
+      "functionEvidence": "As lettered on Goad sheet F16 block F.196.",
+      "worldFootprint": [
+        [
+          -966.839,
+          585.09
+        ],
+        [
+          -980.802,
+          590.658
+        ],
+        [
+          -981.052,
+          591.067
+        ],
+        [
+          -979.714,
+          594.175
+        ],
+        [
+          -979.413,
+          594.481
+        ],
+        [
+          -978.984,
+          594.405
+        ],
+        [
+          -965.545,
+          588.881
+        ]
+      ]
+    },
+    {
+      "id": "b250-lean-to-ef",
+      "siteId": 250,
+      "source": "os-1893",
+      "name": "Berger rice starch works — lean-to beside the engine house",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        868225
+      ],
+      "goadLetters": "",
+      "footprintEvidence": "Source outline fid 868225 (18 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893).",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff), block F.196 \"Samuel Berger & Co. Rice Starch Works\", marked \"Admission refused\" (a sketch survey from outside): Narrow shaded outline against the engine and boiler house; not lettered on Goad. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; no ridges are drawn on Goad or the OS.",
+      "functionEvidence": "Not lettered on Goad; function unknown.",
+      "worldFootprint": [
+        [
+          -962.912,
+          535.298
+        ],
+        [
+          -962.88,
+          535.976
+        ],
+        [
+          -959.267,
+          544.885
+        ],
+        [
+          -958.873,
+          545.132
+        ],
+        [
+          -957.073,
+          544.379
+        ],
+        [
+          -956.784,
+          544.11
+        ],
+        [
+          -957.549,
+          542.088
+        ],
+        [
+          -958.869,
+          541.998
+        ],
+        [
+          -961.562,
+          535.236
+        ],
+        [
+          -961.945,
+          534.985
+        ]
+      ]
+    }
+  ],
+  "additionalStructures": [
+    {
+      "id": "stack-250-boiler",
+      "siteId": 250,
+      "source": "os-1893",
+      "kind": "chimney",
+      "name": "Berger rice starch works boiler chimney",
+      "x": -952.158,
+      "z": 532.975,
+      "height": 24.384,
+      "mappedHeightFeet": 80,
+      "heightEvidence": "\"80\" printed beside the Goad chimney symbol (sheet F16, block F.196), read as height in feet as on the same sheet's \"60'\" stack at Cleugh's jute mill; converted at 0.3048 m/ft. The prime is not legible here.",
+      "symbolKey": "goad-symbol-key-1926",
+      "radius": 1.03,
+      "section": "square",
+      "material": "brick",
+      "baseHeight": 0.34,
+      "rotation": -21.6,
+      "sourceFootprintFid": 966028,
+      "sourcePolygons": [
+        [
+          [
+            [
+              -951.72,
+              531.214
+            ],
+            [
+              -953.94,
+              532.286
+            ],
+            [
+              -953.981,
+              532.853
+            ],
+            [
+              -953.232,
+              534.641
+            ],
+            [
+              -952.811,
+              534.681
+            ],
+            [
+              -950.536,
+              533.819
+            ],
+            [
+              -950.218,
+              533.488
+            ],
+            [
+              -951.159,
+              531.277
+            ]
+          ]
+        ]
+      ],
+      "evidenceType": "map-interpretation",
+      "supportingSources": [
+        "author-os-footprints-1891-96",
+        "os-1893",
+        "goad-f16"
+      ],
+      "positionEvidence": "Placed on the small square outline fid 966028 (8.6 m²) standing alone in the yard east of the boiler house; Goad sheet F16 draws a square chimney symbol there, beside the hatched boilers of F.",
+      "profileEvidence": "Square section follows the mapped base; taper, crown and brickwork are interpreted, not measured."
+    }
+  ]
+}

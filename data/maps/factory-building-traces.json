@@ -69,6 +69,20 @@
       "registration": "Similarity fit to six corresponding building centres on georeferenced OS and listed mill locations; hand-picked controls, not survey precision.",
       "sha256": "7a9ebe2968b4560216b85837f96ccf74fdfa5a7f756da859ffcba375fc59c99e"
     },
+    "goad-f16": {
+      "file": "reference/factory-building-survey/goad-f16.tiff",
+      "date": "July 1893 printed heading",
+      "url": "https://commons.wikimedia.org/wiki/File:Insurance_Plan_of_London_North_East_District_Vol._F;_sheet_16_(BL_152670).tiff",
+      "pixelToWorld": [
+        0.12117577,
+        -0.10050115,
+        -1304.00240994,
+        396.00371604
+      ],
+      "controlResidualMetres": 1.0,
+      "registration": "Similarity fit: two rough controls (Ratner Safe Works, Berger works), then ECC alignment of the sheet's pink and yellow building colours to the rasterised GeoPackage outlines inside the sheet, affine solution projected back to a similarity. Local translation check in 120 m windows: median 1.0 m, 90th percentile 1.8 m, maximum 2.5 m. Registered 4 October 2026 for the Berger rice starch works (berger-starch-footprint-alignment.json).",
+      "sha256": "c13041033b6c123170b9cd790dbaf5b54dc01d3ee6d9ad97444e4c07d140d370"
+    },
     "os-1893": {
       "date": "1893 revision / 1894 publication; London five-foot series",
       "file": "reference/nls-tiles/os-london-five-foot-1893/18/",
