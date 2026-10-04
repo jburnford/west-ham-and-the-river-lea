@@ -3114,6 +3114,11 @@
      ]
     ]
    ],
+   "evidenceType": "map-interpretation",
+   "supportingSources": [
+    "author-os-footprints-1891-96",
+    "os-1893"
+   ],
    "positionEvidence": "Placed on the small square (supplied fid 1061509, 3.9 m²) drawn open inside the boiler-house range and cut from that range as a hole. Reading the square as a chimney base is an interpretation; the OS labels no chimney here.",
    "profileEvidence": "Square section follows the mapped base; shaft radius fitted inside the 2.1 x 1.9 m base. Taper, crown and brickwork are interpreted, not measured."
   }
