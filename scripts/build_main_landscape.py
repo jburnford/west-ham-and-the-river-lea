@@ -88,6 +88,22 @@ road_tree=shapely.STRtree([fit[1] for fit in road_fits])
 DECK_GRADE=.05;DECK_LANDING_M=2;DECK_ROAD_OFFSET=.065;DECK_APPROACH_M=20
 graded_decks={j:[(LineString(b['route']),b['height']-DECK_ROAD_OFFSET,b['id']) for b in infra['roadBridges'] if b['id']=='abbey-mill-crossing' and b['name']==fit[0]['name']] for j,fit in enumerate(road_fits)}
 graded_decks={j:v for j,v in graded_decks.items() if v}
+# A street passing under the Northern Outfall Sewer deck (a sewer bank end of
+# kind 'road' with a roadAxis) keeps its own unraised ground there: the marsh
+# level at the middle of the opening. Its corridor level is held to that for
+# DECK_LANDING_M beyond the opening axis and may rise from it at no more than
+# 1 in 20, so a reading whose 120 m reach ends under the deck (Mill Meads works
+# road, 2.83 m scene at Abbey Road) neither stands under the arch nor drops off
+# at the end of its reach. docs/sewer-crossing.js springs the street arch from
+# the street centreline under the deck.
+underpasses={}
+for end in plan['neighbourhood']['sewer']['bankEnds']:
+    if end.get('kind')!='road' or not end.get('roadAxis'):continue
+    for j,fit in enumerate(road_fits):
+        if fit[0]['name']!=end['road']:continue
+        axis=LineString(end['roadAxis']);centre=np.array(axis.interpolate(.5,normalized=True).coords)
+        underpasses.setdefault(j,{})[tuple(np.round(axis.coords,2).ravel())]=(axis,float(sample(filled,centre)[0]),end['road'])
+underpasses={j:list(v.values()) for j,v in underpasses.items()}
 def road_fit_levels(j,points):
     """Street level of corridor j at points: inverse-distance from the corridor's
     own readings, never through water; NaN where no reading is in reach."""
@@ -102,6 +118,8 @@ def road_fit_levels(j,points):
     for line,deck,_ in graded_decks.get(j,[]):
         reach=DECK_GRADE*np.maximum(0,shapely.distance(shapely.points(points),line)-DECK_LANDING_M)
         out=np.clip(out,deck-reach,deck+reach)
+    for axis,street,_ in underpasses.get(j,[]):
+        out=np.minimum(out,street+DECK_GRADE*np.maximum(0,shapely.distance(shapely.points(points),axis)-DECK_LANDING_M))
     return out
 def road_levels(points,result,assigned=None):
     matches=road_tree.query(shapely.points(points),predicate='within')
@@ -482,6 +500,11 @@ def export_heights(key,points,old,preserve=None,triangles=None):
         grid=(core['height'],core['width']);dist,nearest=distance_transform_edt(~preserve.reshape(grid),return_indices=True)
         cap=old[np.ravel_multi_index(tuple(nearest),grid)].ravel()+dist.ravel()*core['step']/WALL_BATTER
         new=np.maximum(blended,np.minimum(new,cap));new[preserve]=old[preserve]
+    # Written after the road-bridge and road-corridor pass below.
+    surfaces[key]={'points':points,'old':old,'new':new,'triangles':triangles,'preserve':preserve}
+surfaces={}
+def write_heights(key):
+    s=surfaces[key];new=s['new'];old=s['old']
     name=f'main-landscape-1900.{key}.f32';new.astype('<f4').tofile(OUT/name);files[key]=name
     changed=abs(new-old)>1e-6;stats[key]={'vertices':len(old),'changedVertices':int(changed.sum()),'changeRangeMetres':[float((new-old).min()),float((new-old).max())]}
     print(key,stats[key],flush=True)
@@ -508,20 +531,6 @@ p=read('docs/data/'+historic['files']['extension'],True).reshape(-1,3);export_he
 p=read('docs/data/'+system['faceFile'],True).reshape(-1,3);old=p[:,1].copy();w=weight(p[:,[0,2]]);bng=np.column_stack([538900+p[:,0],183209-p[:,2]])
 new=old.copy();top=old>network['waterLevel']+.5;new[top]+=w[top]*(banks.crest(bng[top])-offset-old[top])
 new.astype('<f4').tofile(OUT/'main-landscape-1900.faces.f32');files['faces']='main-landscape-1900.faces.f32'
-# Existing flat placeholder polygons need interior vertices, not just raised edges.
-outline=local(Polygon(meta['regionalMarshBaseline']['config']['outlineBNG']))
-original_base=geometry(system['baseGround']);original_regional=geometry(system['regionalGround'])
-area=original_base.union(original_regional).intersection(outline).difference(water)
-x0,z0,x1,z1=area.bounds;mesh_step=20
-x,z=np.meshgrid(np.arange(np.floor(x0/mesh_step)*mesh_step,x1,mesh_step),np.arange(np.floor(z0/mesh_step)*mesh_step,z1,mesh_step))
-cells=shapely.box(x.ravel(),z.ravel(),x.ravel()+mesh_step,z.ravel()+mesh_step)
-parts=shapely.get_parts(shapely.intersection(cells,area));parts=parts[shapely.area(parts)>1e-5]
-triangles=shapely.get_parts(shapely.constrained_delaunay_triangles(parts));triangles=triangles[shapely.area(triangles)>1e-5]
-coords=shapely.get_coordinates(triangles).reshape(-1,4,2)[:,:3,:]
-# Upward scene winding.
-a=coords[:,1]-coords[:,0];b=coords[:,2]-coords[:,0];cross=a[:,0]*b[:,1]-a[:,1]*b[:,0];coords[cross>0]=coords[cross>0][:,[0,2,1]]
-points=coords.reshape(-1,2);heights=surface(points,np.full(len(points),-.1));mesh=np.column_stack([points[:,0],heights,points[:,1]]).astype('<f4')
-mesh.tofile(OUT/'main-landscape-1900.background.f32');files['groundMesh']='main-landscape-1900.background.f32'
 # Scene sampling for objects outside the original detailed grids.
 east,north=np.meshgrid(np.arange(e0+step/2,e1,step),np.arange(n1-step/2,n0,-step));points=np.column_stack([east.ravel()-538900,183209-north.ravel()]);values=base(points)
 # Buildings without a premises pad are seated by sampling this field; cells
@@ -530,6 +539,337 @@ east,north=np.meshgrid(np.arange(e0+step/2,e1,step),np.arange(n1-step/2,n0,-step
 unpadded=footprint_tree.query(shapely.points(points),predicate='dwithin',distance=step*np.sqrt(2))
 held=np.unique(unpadded[0][~np.isfinite(footprint_caps[unpadded[1]])]);values[held]=base(points[held],edges=False);values=values.reshape(shape)
 values.astype('<f4').tofile(OUT/'main-landscape-1900.level.f32');files['level']='main-landscape-1900.level.f32';support.astype('<f4').tofile(OUT/'main-landscape-1900.weight.f32');files['weight']='main-landscape-1900.weight.f32'
+# Existing flat placeholder polygons need interior vertices, not just raised edges.
+outline=local(Polygon(meta['regionalMarshBaseline']['config']['outlineBNG']))
+original_base=geometry(system['baseGround']);original_regional=geometry(system['regionalGround'])
+area=original_base.union(original_regional).intersection(outline).difference(water)
+x0,z0,x1,z1=area.bounds;mesh_step=20
+x,z=np.meshgrid(np.arange(np.floor(x0/mesh_step)*mesh_step,x1,mesh_step),np.arange(np.floor(z0/mesh_step)*mesh_step,z1,mesh_step))
+cells=shapely.box(x.ravel(),z.ravel(),x.ravel()+mesh_step,z.ravel()+mesh_step)
+parts=shapely.get_parts(shapely.intersection(cells,area));parts=parts[shapely.area(parts)>1e-5]
+# Road surface triangles as docs/infrastructure.js draws them: carriageway,
+# footway and path, each drawn its offset above the ground under its vertices,
+# and the bridge decks (boxes at the deck height). The 20 m regional mesh is
+# cut along them, so no tilted regional triangle spans a street: inside a street
+# triangle the regional ground is planar with it (see the road pass below).
+ROAD_SETS=[('carriageway',[t for k in infra['roadSurfaces'].values() for t in k],DECK_ROAD_OFFSET),('footway',infra['shoulderTriangles'],.095),('path',infra['pathTriangles'],.05)]
+road_tri=np.array([t for _,ts,_ in ROAD_SETS for t in ts],dtype=float);road_offset=np.concatenate([np.full(len(ts),o) for _,ts,o in ROAD_SETS])
+deck_tri=[];deck_ground=[]
+for bridge in infra['roadBridges']:
+    r=np.array(bridge['route'],dtype=float)
+    for a_,c_ in zip(r[:-1],r[1:]):
+        u_=(c_-a_)/np.linalg.norm(c_-a_);n_=np.array([-u_[1],u_[0]])*bridge['width']/2
+        q_=[a_-n_,c_-n_,c_+n_,a_+n_];deck_tri+=[[q_[0],q_[1],q_[2]],[q_[0],q_[2],q_[3]]];deck_ground+=[bridge['height']-DECK_ROAD_OFFSET]*2
+deck_tri=np.array(deck_tri);deck_ground=np.array(deck_ground)
+all_road_tri=np.concatenate([road_tri,deck_tri]);road_polys=shapely.polygons(all_road_tri);surface_tree=shapely.STRtree(road_polys)
+road_zone=shapely.union_all(road_polys);shapely.prepare(road_zone)
+hit=np.flatnonzero(shapely.intersects(parts,road_zone));pieces=[parts[np.setdiff1d(np.arange(len(parts)),hit)]]
+def polygon_parts(g):return [x for x in shapely.get_parts(g) if x.geom_type=='Polygon' and x.area>1e-6]
+for k in hit:
+    # Overlay the cell piece with every road triangle over it, so each face
+    # lies wholly inside or outside each triangle (footway and street
+    # triangles overlap, and their edges need not meet).
+    faces=[parts[k]]
+    for triangle in road_polys[surface_tree.query(parts[k],predicate='intersects')]:
+        split=[]
+        for f in faces:
+            if not f.intersects(triangle):split.append(f);continue
+            split+=polygon_parts(f.intersection(triangle))+polygon_parts(f.difference(triangle))
+        faces=split
+    pieces.append(np.array(faces,dtype=object))
+parts=np.concatenate(pieces);parts=parts[shapely.area(parts)>1e-5]
+triangles=shapely.get_parts(shapely.constrained_delaunay_triangles(parts));triangles=triangles[shapely.area(triangles)>1e-5]
+coords=shapely.get_coordinates(triangles).reshape(-1,4,2)[:,:3,:]
+# Upward scene winding.
+a=coords[:,1]-coords[:,0];b=coords[:,2]-coords[:,0];cross=a[:,0]*b[:,1]-a[:,1]*b[:,0];coords[cross>0]=coords[cross>0][:,[0,2,1]]
+points=coords.reshape(-1,2);heights=surface(points,np.full(len(points),-.1))
+# The page reads these positions as float32; so does the road pass, so a road
+# vertex on a sliver corner falls through (or not) exactly as it does there.
+points=points.astype('<f4').astype(float)
+surfaces['groundMesh']={'points':points,'old':np.full(len(points),-.1),'new':heights,'triangles':np.arange(len(points)).reshape(-1,3),'preserve':None}
+# Road bridges and road corridors. docs/infrastructure.js draws each street,
+# footway and path triangle at ground() under its vertices plus its offset:
+# ground() is the drawn ground, raised within reach of a road bridge to the
+# bridge cone (deck - 0.065 - 0.12 m per metre from the deck route) and on the
+# High Street sewer approach; each deck is a box at the deck height. Here the
+# landscape is fitted to those surfaces, in this order:
+#  1. Approach embankments: under every road triangle within reach of a bridge
+#     cone the ground is made up to the cone, so the approach stands on earth
+#     rather than on a vertical fill curtain; beyond the road edge it falls at
+#     1:1.5 to the surrounding ground. It never rises over water, nor steeper
+#     than 1:1.5 above low water from the water's edge, above a building's
+#     ground from its footprint (edge_caps) or above the outer edge of its own
+#     mesh, so beside the river, against buildings and where no adjustable
+#     mesh carries on, the road keeps a short walled or curtained approach.
+#  2. Approach cuttings, on the bridge's own road: where the ground stands
+#     above a deck, the road ground is cut to the deck road level for
+#     DECK_LANDING_M from the deck route, then rises at no more than 1 in 20,
+#     the sides of the cut at 1:1.5.
+#  3. Span clearance: between the first and last drawn low water under each
+#     deck (where the abutment faces stand), out to CLEAR_MARGIN_M beyond each
+#     deck edge, no ground stands above the water edge (low water + 0.02 m).
+#  4. No ground above a road: every landscape vertex inside a road or deck
+#     triangle, or within one mesh edge of one, is held at or below the drawn
+#     road surface there (the triangle's ground() values interpolated, plus
+#     its offset, less up to ROAD_CAP_BELOW_M but keeping at least
+#     ROAD_CAP_KEEP_M of the offset; under a deck, the deck top likewise).
+#     The vertices the road's own vertices take their ground from are held so
+#     in ROAD_SUPPORT_PASSES passes only, re-reading the road after each, and
+#     the rest then in one pass that leaves the road where it stands; further
+#     out, ground above the road is cut back at 1:1.5 (a cutting).
+# Channel beds (network and system vertices in drawn water) and preserved tidal
+# mud keep their heights throughout; nothing here touches level.f32, by which
+# buildings without a premises pad are seated.
+WATER_EDGE=network['waterLevel']+.02;BRIDGE_CONE=.12;CLEAR_MARGIN_M=2;CUT_REACH_M=40;ROAD_CAP_BELOW_M=.04;ROAD_CAP_KEEP_M=.025;ROAD_SUPPORT_PASSES=4
+low_water=geometry(system['waterPolygons']).union(water);shapely.prepare(low_water)
+building_union=shapely.union_all(footprint_geoms);shapely.prepare(building_union)
+def protected(key):
+    s=surfaces[key];q=s['points']
+    if key=='core':return s['preserve'].copy()
+    if key in ('network','system'):return shapely.contains_xy(low_water,q[:,0],q[:,1])
+    return np.zeros(len(q),bool)
+def route_frame(route):
+    """docs/road-bridges.js routeFrame: station s along the route, offset v to its left."""
+    r=np.array(route,dtype=float);seg=np.diff(r,axis=0);ln=np.linalg.norm(seg,axis=1);s0=np.r_[0,np.cumsum(ln)[:-1]];u=seg/ln[:,None]
+    def at(s,v):
+        s=np.asarray(s,dtype=float);k=np.clip(np.searchsorted(s0+ln,s-1e-9),0,len(seg)-1)
+        return r[k]+u[k]*(s-s0[k])[:,None]+np.column_stack([-u[k][:,1],u[k][:,0]])*np.asarray(v,dtype=float)[:,None]
+    return at,float(ln.sum())
+span_footprints={}
+for bridge in infra['roadBridges']:
+    # Lines across the deck width set the span; beyond each deck edge, out to
+    # the margin, the edge line's span carries on (a side channel there is not
+    # under the bridge).
+    at,length=route_frame(bridge['route']);half=bridge['width']/2;s=np.arange(0,length+1e-9,.1);strips=[];spans={}
+    for v in np.arange(-half,half+1e-9,.25):
+        q=at(s,np.full(len(s),v));wet=np.flatnonzero(shapely.contains_xy(low_water,q[:,0],q[:,1]))
+        if len(wet) and s[wet[-1]]-s[wet[0]]>=.2:spans[v]=(s[wet[0]],s[wet[-1]])
+    for v,(s0_,s1_) in spans.items():
+        lo,hi=v-.125,v+.125
+        if v==min(spans):lo=-half-CLEAR_MARGIN_M
+        if v==max(spans):hi=half+CLEAR_MARGIN_M
+        strips.append(Polygon(at(np.array([s0_,s1_,s1_,s0_]),np.array([lo,lo,hi,hi]))).buffer(0))
+    if strips:span_footprints[bridge['id']]=shapely.union_all(strips).buffer(.01,join_style='mitre').buffer(-.01,join_style='mitre')
+span_zone=shapely.union_all(list(span_footprints.values()));shapely.prepare(span_zone)
+bridge_lines=[(LineString(b['route']),b['height']) for b in infra['roadBridges']]
+def bridge_cone(q):
+    out=np.full(len(q),-np.inf);pts=shapely.points(q)
+    for line,h in bridge_lines:out=np.maximum(out,h-DECK_ROAD_OFFSET-BRIDGE_CONE*shapely.distance(pts,line))
+    return out
+def nearest_on_roads(q,reach):
+    """Nearest point on a road surface or deck triangle within reach, and its distance (0 inside)."""
+    pts=shapely.points(q);i,d=surface_tree.query_nearest(pts,max_distance=reach,return_distance=True,all_matches=False)
+    near=np.full((len(q),2),np.nan);dist=np.full(len(q),np.inf)
+    if len(i[0]):near[i[0]]=shapely.get_coordinates(shapely.shortest_line(road_polys[i[1]],pts[i[0]])).reshape(-1,2,2)[:,0];dist[i[0]]=d
+    return near,dist
+hsx=infra['sewerHighStreet'];hs_line=LineString(hsx['roadRoute'])
+def high_street(q):
+    t=np.clip((np.linalg.norm(q-np.array(hsx['centre']),axis=1)-12)/hsx['roadApproachLength'],0,1)
+    lat=np.clip((shapely.distance(shapely.points(q),hs_line)-hsx['roadWidth']/2-2)/28,0,1)
+    return .185+(hsx['surfaceHeight']-.185)*(1-t*t*(3-2*t))*(1-lat*lat*(3-2*lat))
+road_profiles=[r['elevationProfile'] for r in infra['roads'] if r.get('elevationProfile') and r['elevationProfile'].get('geometryEpoch')==historic['epoch']]
+def profile_height(q):
+    out=np.full(len(q),np.nan);pts=shapely.points(q)
+    for pf in road_profiles:
+        line=LineString(pf['route']);ok=np.isnan(out)&(shapely.distance(pts,line)<=pf['widthMetres']/2+pf['shoulderMetres']+.01)
+        out[ok]=np.interp(shapely.line_locate_point(line,pts[ok]),[c['distance'] for c in pf['controls']],[c['heightScene'] for c in pf['controls']])
+    return out
+cb=core['bounds']
+def in_core(q):return (q[:,0]>=cb[0])&(q[:,0]<=cb[2])&(q[:,1]>=cb[1])&(q[:,1]<=cb[3])
+def road_ground(q,lv):
+    """docs/infrastructure.js ground() at q, given the drawn ground lv there."""
+    h=np.where(field_weight(q)>0,lv,np.where(in_core(q),np.maximum(.12,lv),.12))
+    hs=high_street(q);sel=hs>.1850001;h[sel]=np.maximum(h[sel],hs[sel]-DECK_ROAD_OFFSET)
+    h=np.maximum(h,bridge_cone(q));pr=profile_height(q);ok=np.isfinite(pr);h[ok]=pr[ok]-DECK_ROAD_OFFSET
+    return h
+class Locator:
+    """Barycentric weights of fixed points in a fixed triangle set (vertex indices)."""
+    def __init__(self,xz,tri,q,zone=None):
+        polys=shapely.polygons(xz[tri])
+        if zone is not None:keep=np.flatnonzero(shapely.intersects(polys,zone));tri=tri[keep];polys=polys[keep]
+        pi,ti=shapely.STRtree(polys).query(shapely.points(q),predicate='intersects')
+        w,ok=barycentric(xz[tri[ti]],q[pi])
+        self.pi=pi[ok];self.idx=tri[ti[ok]];self.w=w[ok];self.n=len(q)
+    def top(self,y):
+        out=np.full(self.n,-np.inf);np.maximum.at(out,self.pi,(self.w*y[self.idx]).sum(axis=1));return out
+def barycentric(t,q):
+    a,b,c=t[:,0],t[:,1],t[:,2];v0=b-a;v1=c-a;v2=q-a
+    den=v0[:,0]*v1[:,1]-v1[:,0]*v0[:,1];ok=abs(den)>1e-12;den=np.where(ok,den,1)
+    u=(v2[:,0]*v1[:,1]-v1[:,0]*v2[:,1])/den;v=(v0[:,0]*v2[:,1]-v2[:,0]*v0[:,1])/den
+    w=np.column_stack([1-u-v,u,v]);ok&=(w>=-1e-6).all(axis=1)
+    return np.clip(w,0,1)/np.clip(w,0,1).sum(axis=1,keepdims=True),ok
+mesh_keys=['network','system','extension','groundMesh']
+mesh_tri={k:(surfaces[k]['triangles'] if k in ('network','system') else np.arange(len(surfaces[k]['points'])).reshape(-1,3)) for k in mesh_keys}
+def core_level(q):
+    fx=np.clip((q[:,0]-cb[0])/core['step'],0,core['width']-1.001);fz=np.clip((q[:,1]-cb[1])/core['step'],0,core['height']-1.001)
+    i=np.floor(fx).astype(int);j=np.floor(fz).astype(int);u=fx-i;v=fz-j;y=surfaces['core']['new'].reshape(core['height'],core['width'])
+    return (y[j,i]*(1-u)+y[j,i+1]*u)*(1-v)+(y[j+1,i]*(1-u)+y[j+1,i+1]*u)*v
+field_meta={'bounds':[e0-538900+step/2,183209-n1+step/2,e1-538900-step/2,183209-n0-step/2],'step':step,'width':shape[1],'height':shape[0]}
+def vertex_grid(values,m,q):
+    """docs/lib/grid.js sampleVertexGrid (clamped bilinear)."""
+    fx=np.clip((q[:,0]-m['bounds'][0])/m['step'],0,m['width']-1);fz=np.clip((q[:,1]-m['bounds'][1])/m['step'],0,m['height']-1)
+    i=np.minimum(np.floor(fx).astype(int),m['width']-2);j=np.minimum(np.floor(fz).astype(int),m['height']-2);u=fx-i;v=fz-j;g=values.reshape(m['height'],m['width'])
+    return (g[j,i]*(1-u)+g[j,i+1]*u)*(1-v)+(g[j+1,i]*(1-u)+g[j+1,i+1]*u)*v
+def field_weight(q):
+    """main-landscape.js weight()."""
+    fb=[e0-538900,183209-n1,e1-538900,183209-n0];w=vertex_grid(support,field_meta,q)
+    w[(q[:,0]<fb[0])|(q[:,0]>fb[2])|(q[:,1]<fb[1])|(q[:,1]>fb[3])]=0
+    return w
+def field_level(q):
+    """main-landscape.js level(): the 10 m level field blended by the marsh weight to -0.1 m."""
+    return -.1+field_weight(q)*(vertex_grid(values,field_meta,q)+.1)
+def drawn_level(q,locators):
+    """terrainDetails().level: the core tile inside its bounds, else the highest drawn mesh."""
+    out=np.full(len(q),-np.inf)
+    for k,loc in locators.items():out=np.maximum(out,loc.top(surfaces[k]['new']))
+    # No drawn mesh (a hole or the edge of the regional mesh): the page falls
+    # back to the main landscape's 10 m level field (main-landscape.js level()).
+    none=np.flatnonzero(~np.isfinite(out))
+    if len(none):out[none]=field_level(q[none])
+    inside=in_core(q);out[inside]=core_level(q[inside]);return out
+road_pass={'embankment':{},'cutting':{},'spanClearance':{},'roadClamp':{}}
+def mesh_points(key):return surfaces[key]['points']
+def near_bridges(q,reach):
+    pts=shapely.points(q);return np.min([shapely.distance(pts,line) for line,_ in bridge_lines],axis=0)<=reach
+# 1. Approach embankments.
+def mesh_boundary(key):
+    """Outer-edge vertices of a mesh near the bridges, as (tree of points, vertex indices); None for the core grid.
+    The regional mesh's outer edge is the edge of its area (its pieces meet along cut edges inside it)."""
+    if key=='core':return None
+    q=mesh_points(key);t=mesh_tri[key]
+    if key=='groundMesh':
+        b=np.flatnonzero(near_bridges(q,EMB_REACH_M+EDGE_REACH_M));b=b[shapely.distance(area.boundary,shapely.points(q[b]))<1e-3]
+        return (shapely.STRtree(shapely.points(q[b])),b) if len(b) else None
+    if key=='extension':
+        _,inv=np.unique(np.round(q,3),axis=0,return_inverse=True);t=inv.reshape(-1,3);rep=np.zeros(inv.max()+1,int);rep[inv]=np.arange(len(q))
+    else:rep=None
+    e=np.sort(np.concatenate([t[:,[0,1]],t[:,[1,2]],t[:,[2,0]]]),axis=1);u,c=np.unique(e,axis=0,return_counts=True);b=np.unique(u[c==1])
+    if rep is not None:b=rep[b]
+    b=b[near_bridges(q[b],EMB_REACH_M+EDGE_REACH_M)]
+    return (shapely.STRtree(shapely.points(q[b])),b) if len(b) else None
+EMB_REACH_M=max((h-DECK_ROAD_OFFSET+.5)/BRIDGE_CONE for _,h in bridge_lines)+EDGE_REACH_M
+for key in ['core',*mesh_keys]:
+    q=mesh_points(key);new=surfaces[key]['new'];free=~protected(key)
+    idx=np.flatnonzero(free&near_bridges(q,EMB_REACH_M))
+    near,dist=nearest_on_roads(q[idx],EDGE_REACH_M);ok=np.isfinite(dist);idx=idx[ok];near=near[ok];dist=dist[ok]
+    level=bridge_cone(near)-dist/EDGE_BATTER
+    # Also no steeper than 1:1.5 above low water from any drawn low water
+    # (river-system water polygons included), never over it.
+    level=np.minimum(level,WATER_EDGE+shapely.distance(low_water,shapely.points(q[idx]))/EDGE_BATTER)
+    # And no steeper than 1:1.5 above the outer edge of the mesh itself (beyond
+    # it lies other ground this pass does not raise), so no fill stands as a
+    # cliff at a mesh boundary.
+    edge=mesh_boundary(key)
+    if edge is not None and len(idx):
+        k,dk=edge[0].query_nearest(shapely.points(q[idx]),return_distance=True,all_matches=False)
+        level[k[0]]=np.minimum(level[k[0]],new[edge[1][k[1]]]+dk/EDGE_BATTER)
+    up=level>new[idx]+1e-6;idx=idx[up]
+    if not len(idx):continue
+    raised=np.maximum(new[idx],edge_caps(q[idx],level[up],new[idx]));gain=raised-new[idx];new[idx]=raised
+    road_pass['embankment'][key]={'raisedVertices':int((gain>1e-6).sum()),'maxRaiseMetres':round(float(gain.max()),3)}
+# 2. Approach cuttings, on the bridge's own road only (its corridor and
+# footways, within CUT_REACH_M of the deck route); a crossing street keeps its
+# own level and the cut meets it at its edge.
+ROAD_SHOULDER_M=1.2;road_buffers={}
+for r in infra['roads']:
+    if len(r['route'])>1:road_buffers.setdefault(r['name'],[]).append(LineString(r['route']).buffer(r['width']/2+ROAD_SHOULDER_M))
+cut_zones=[]
+for bridge in infra['roadBridges']:
+    line=LineString(bridge['route']);reach=line.buffer(CUT_REACH_M+EDGE_REACH_M)
+    others=shapely.union_all([g for n,gs in road_buffers.items() if n!=bridge['name'] for g in gs if g.intersects(reach)])
+    zone=shapely.union_all(road_buffers.get(bridge['name'],[])).intersection(line.buffer(CUT_REACH_M)).difference(others)
+    if not zone.is_empty:shapely.prepare(others);cut_zones.append((zone,line,bridge['height'],others))
+for key in ['core',*mesh_keys]:
+    q=mesh_points(key);new=surfaces[key]['new'];free=~protected(key);lowered=np.zeros(len(q));pts_all=shapely.points(q)
+    for zone,line,h,others in cut_zones:
+        idx=np.flatnonzero(free&shapely.dwithin(zone,pts_all,EDGE_REACH_M))
+        if not len(idx):continue
+        near=shapely.get_coordinates(shapely.shortest_line(zone,pts_all[idx])).reshape(-1,2,2)[:,0];dist=np.linalg.norm(q[idx]-near,axis=1)
+        level=h-DECK_ROAD_OFFSET+DECK_GRADE*np.maximum(0,shapely.distance(shapely.points(near),line)-DECK_LANDING_M)+dist/EDGE_BATTER
+        down=level<new[idx]-1e-6
+        down&=(dist<=1e-6)|~(shapely.contains_xy(building_union,q[idx,0],q[idx,1])|shapely.contains_xy(others,q[idx,0],q[idx,1]))
+        idx=idx[down];lowered[idx]=np.maximum(lowered[idx],new[idx]-level[down]);new[idx]=level[down]
+    if lowered.any():road_pass['cutting'][key]={'loweredVertices':int((lowered>0).sum()),'maxLoweringMetres':round(float(lowered.max()),3)}
+# 3. Span clearance.
+for key in ['core',*mesh_keys]:
+    q=mesh_points(key);new=surfaces[key]['new']
+    idx=np.flatnonzero(~protected(key)&shapely.contains_xy(span_zone,q[:,0],q[:,1]));idx=idx[new[idx]>WATER_EDGE]
+    if not len(idx):continue
+    road_pass['spanClearance'][key]={'loweredVertices':int(len(idx)),'maxLoweringMetres':round(float((new[idx]-WATER_EDGE).max()),3)}
+    new[idx]=WATER_EDGE
+# 4. No ground above a road. Margins: one mesh edge (core cell diagonal, the
+# 1 m network grid diagonal, the 2 m extension grid diagonal, the longest
+# incident system edge up to 3 m; the regional mesh is cut along the roads).
+rv,ridx=np.unique(np.round(road_tri.reshape(-1,2),4),axis=0,return_inverse=True);ridx=ridx.reshape(-1,3)
+deck_idx=len(rv)+np.arange(len(deck_tri)*3).reshape(-1,3);tri_vertices=np.concatenate([ridx,deck_idx]);tri_offset=np.r_[road_offset,np.full(len(deck_tri),DECK_ROAD_OFFSET)]
+road_locators={k:Locator(mesh_points(k),mesh_tri[k],rv,road_zone.buffer(1)) for k in mesh_keys}
+def edge_margin(key):
+    if key=='core':return np.full(len(mesh_points(key)),core['step']*np.sqrt(2)+.01)
+    if key=='groundMesh':return np.full(len(mesh_points(key)),.02)
+    t=mesh_tri[key];q=mesh_points(key);m=np.zeros(len(q))
+    for a_,b_ in ((0,1),(1,2),(2,0)):
+        e=np.linalg.norm(q[t[:,a_]]-q[t[:,b_]],axis=1);np.maximum.at(m,t[:,a_],e);np.maximum.at(m,t[:,b_],e)
+    return np.minimum(m,3.0)+.01
+clamp={}
+for key in ['core',*mesh_keys]:
+    q=mesh_points(key);margin=edge_margin(key)
+    idx=np.flatnonzero(~protected(key)&shapely.dwithin(road_zone,shapely.points(q),margin))
+    # Every road or deck triangle within the margin caps the vertex, at the
+    # nearest point of the triangle (overlapping street and footway triangles
+    # each follow their own vertices). This includes ground under the edge of
+    # a building that stands over a footway (a registration conflict between
+    # frontage and street); the building keeps its own seat.
+    pts=shapely.points(q[idx]);pi,ti=surface_tree.query(pts,predicate='dwithin',distance=margin[idx])
+    c=shapely.get_coordinates(shapely.shortest_line(road_polys[ti],pts[pi])).reshape(-1,2,2)[:,0]
+    contained=np.linalg.norm(c-q[idx][pi],axis=1)<=1e-9
+    w,ok=barycentric(all_road_tri[ti],c);pi=pi[ok];ti=ti[ok];w=w[ok];contained=contained[ok]
+    clamp[key]=(idx,pi,tri_vertices[ti],w,tri_offset[ti],contained)
+# The drawn road takes its height from the ground at its own vertices, so
+# lowering the mesh vertices that ground is interpolated from (the triangles
+# or core cell containing each road vertex) lowers the road, and the next pass
+# the ground beside it, and so on along the street (a steep road triangle
+# over a bank would sink a whole lane). Those support vertices are therefore
+# held under the road for a few passes only; every other vertex then in one
+# pass, which leaves the road where it stands.
+road_support={k:np.zeros(len(mesh_points(k)),bool) for k in ['core',*mesh_keys]}
+for k,loc in road_locators.items():road_support[k][np.unique(loc.idx)]=True
+fx=np.clip((rv[:,0]-cb[0])/core['step'],0,core['width']-1.001);fz=np.clip((rv[:,1]-cb[1])/core['step'],0,core['height']-1.001)
+ci=np.floor(fx).astype(int)[in_core(rv)];cj=np.floor(fz).astype(int)[in_core(rv)]
+for a_,b_ in ((0,0),(1,0),(0,1),(1,1)):road_support['core'][(cj+b_)*core['width']+ci+a_]=True
+before={k:surfaces[k]['new'].copy() for k in ['core',*mesh_keys]}
+G0=np.r_[road_ground(rv,drawn_level(rv,road_locators)),np.repeat(deck_ground,3)];G=G0
+for _ in range(ROAD_SUPPORT_PASSES):
+    for key,(idx,pi,tv,w,off,contained) in clamp.items():
+        cap=np.full(len(idx),np.inf);np.minimum.at(cap,pi,(w*G[tv]).sum(axis=1)+off-np.clip(off-ROAD_CAP_KEEP_M,0,ROAD_CAP_BELOW_M))
+        new=surfaces[key]['new'];low=np.flatnonzero(new[idx]>cap+1e-6);new[idx[low]]=cap[low]
+    G=np.r_[road_ground(rv,drawn_level(rv,road_locators)),np.repeat(deck_ground,3)]
+road_pass['roadSupport']={'passes':ROAD_SUPPORT_PASSES,'roadVertexChangeMetres':{'max':round(float(np.abs(G-G0).max()),3),'p99':round(float(np.percentile(np.abs(G-G0),99)),3)}}
+for key,(idx,pi,tv,w,off,contained) in clamp.items():
+    cap=np.full(len(idx),np.inf);np.minimum.at(cap,pi,(w*G[tv]).sum(axis=1)+off-np.clip(off-ROAD_CAP_KEEP_M,0,ROAD_CAP_BELOW_M))
+    new=surfaces[key]['new'];low=np.flatnonzero((new[idx]>cap+1e-6)&~road_support[key][idx]);new[idx[low]]=cap[low]
+G_after=np.r_[road_ground(rv,drawn_level(rv,road_locators)),np.repeat(deck_ground,3)]
+road_pass['roadClamp']['roadVertexGroundChangeMetres']=round(float(np.abs(G_after-G).max()),6)
+# Beyond one mesh edge from a road, ground standing above it is cut back at
+# 1:1.5 from the road (a cutting), so the clamp leaves no cliff at its margin.
+# These vertices touch no road triangle, so the road does not move.
+road_pass['cuttingSides']={}
+for key in ['core',*mesh_keys]:
+    q=mesh_points(key);new=surfaces[key]['new'];margin=edge_margin(key)
+    idx=np.flatnonzero(~protected(key)&shapely.dwithin(road_zone,shapely.points(q),EDGE_REACH_M))
+    idx=idx[~shapely.contains_xy(building_union,q[idx,0],q[idx,1])&~road_support[key][idx]]
+    pts=shapely.points(q[idx]);j,d=surface_tree.query_nearest(pts,return_distance=True,all_matches=False)
+    c=shapely.get_coordinates(shapely.shortest_line(road_polys[j[1]],pts[j[0]])).reshape(-1,2,2)[:,0]
+    w,ok=barycentric(all_road_tri[j[1]],c);off=tri_offset[j[1]]
+    cap=(w*G[tri_vertices[j[1]]]).sum(axis=1)+off-np.clip(off-ROAD_CAP_KEEP_M,0,ROAD_CAP_BELOW_M)+np.maximum(0,d-margin[idx[j[0]]])/EDGE_BATTER
+    k=idx[j[0]];low=ok&(new[k]>cap+1e-6)
+    if low.any():road_pass['cuttingSides'][key]={'loweredVertices':int(low.sum()),'maxLoweringMetres':round(float((new[k][low]-cap[low]).max()),3)};new[k[low]]=cap[low]
+for key in clamp:
+    loss=before[key]-surfaces[key]['new']
+    road_pass['roadClamp'][key]={'candidateVertices':int(len(clamp[key][0])),'loweredVertices':int((loss>1e-6).sum()),'maxLoweringMetres':round(float(loss.max()),3)}
+print('ROAD PASS:',json.dumps(road_pass),flush=True)
+for key in ['core','network','system','extension']:write_heights(key)
+heights=surfaces['groundMesh']['new'];mesh=np.column_stack([points[:,0],heights,points[:,1]]).astype('<f4')
+mesh.tofile(OUT/'main-landscape-1900.background.f32');files['groundMesh']='main-landscape-1900.background.f32'
 # Retaining-edge crests (wall_levels) are computed above with the land-side fill.
 # Refitting railway toes leaves every formation station unchanged.
 railways=[]
@@ -804,6 +1144,10 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
     'abbeyMillCrossingApproach':{'method':f'Abbey Lane corridor ground level with the abbey-mill-crossing deck (deck height minus the {DECK_ROAD_OFFSET} m road-surface offset) for {DECK_LANDING_M} m beyond each deck end, then within 1 in {round(1/DECK_GRADE)} of the deck, clipped to the corridor readings; within {DECK_APPROACH_M} m of the deck the regional bank band does not lift the street, the bank beside it is cut back at 1:{EDGE_BATTER}, and under the deck the bank stays 0.1 m below the 0.4 m deck slab',
         'deckHeight':[b[1]+DECK_ROAD_OFFSET for v in graded_decks.values() for b in v][0] if graded_decks else None,
         'evidence':'Mapped: the crossing and approach alignment (OS VIII.32, road-traces.json). Observed: Abbey Lane street spot heights sh_538874_183253 (2.19 m scene, 8.1 m west of the deck) and sh_538944_183274 (2.40 m, 34 m east). Interpreted: the 1.8 m deck height (road-traces.json); the approach grade and landing are estimates made to meet it. Both readings stand above the deck, so the graded approach dips to the bridge; raising the deck in road-traces.json is the alternative.'},
+    'roadBridgeClearance':{'method':f'fitted to the road surfaces docs/infrastructure.js draws (street, footway and path triangles at ground() under their vertices plus 0.065, 0.095 and 0.05 m; ground() raised within reach of a road bridge to the cone deck - {DECK_ROAD_OFFSET} - {BRIDGE_CONE} m per metre from the deck route; decks as boxes at the deck height), in order: (1) approach embankments: under road triangles the ground is made up to the bridge cone and falls beyond the road edge at 1:{EDGE_BATTER} to the surrounding ground, never over water nor steeper than 1:{EDGE_BATTER} above low water from the water edge, above a building from its footprint, or above the outer edge of the mesh it is in; (2) approach cuttings on the bridge\'s own road (corridor plus {ROAD_SHOULDER_M} m footway, within {CUT_REACH_M} m of the deck route, crossing streets excluded): ground no higher than the deck road level for {DECK_LANDING_M} m from the deck route, then rising at no more than 1 in {round(1/DECK_GRADE)}, sides cut at 1:{EDGE_BATTER}; (3) span clearance: inside each footprint (between the first and last drawn low water on lines parallel to the deck route across the deck width, the outermost lines\' spans carried on {CLEAR_MARGIN_M} m beyond each deck edge) no ground above the water edge ({WATER_EDGE:.2f} m); (4) every other landscape vertex inside a road or deck triangle, or within one mesh edge of one, held at or below that road\'s drawn surface (its ground() values interpolated over the triangle plus the triangle\'s offset, less up to {ROAD_CAP_BELOW_M} m while keeping {ROAD_CAP_KEEP_M} m of the offset; the deck top likewise under a deck), with the vertices each road vertex takes its ground from (the mesh triangles or core cell containing it) held so in {ROAD_SUPPORT_PASSES} passes only, the road re-read after each (it follows them down: roadSupport.roadVertexChangeMetres), and every other vertex then in one pass that leaves the road where it stands; beyond one mesh edge, ground above a road is cut back at 1:{EDGE_BATTER} from it (outside building footprints); the 20 m regional mesh is cut along the road triangles so its triangles inside a street are planar with it; streets passing under the Northern Outfall Sewer keep the marsh level at the middle of the opening for {DECK_LANDING_M} m beyond the opening axis and rise from it at no more than 1 in {round(1/DECK_GRADE)}. Channel beds in drawn water and preserved tidal mud are never changed; level.f32 is not changed by this pass',
+        'waterEdge':WATER_EDGE,'footprints':{k:rings(g) for k,g in span_footprints.items()},'pass':road_pass,
+        'underpasses':[{'road':name,'axis':np.round(np.array(axis.coords),2).tolist(),'streetSceneY':round(street,3)} for v in underpasses.values() for axis,street,name in v],
+        'evidence':'Mapped: the street, footway, path and deck geometry (infrastructure.json), the drawn low water, the building footprints and the sewer openings (ground-plan.json). Observed: none at the bridges; the deck heights are interpretations (road-traces.json) and so are the embankments, cuttings and clearances fitted to them. The Bow Bridge east approach parapet bench mark (OS 25-inch, "hatched south parapet / retaining wall") suggests a walled rather than battered approach on that side; the batter is held off the frontage buildings there in any case. The Mill Meads works road readings (2.83 m at Abbey Road, 2.10 m to the north) lie 115 m and more from the sewer: its dip under the sewer to marsh level is an interpretation, as T1b drew it.'},
     'railwaySlopes':railways,
     'railwayWorks':{'method':f'formation stations, routes and the refitted embankment heights are unchanged; per railway, works.removedTriangles lists embankment triangles not drawn and works.addedTriangles the earth drawn instead (remainders re-triangulated in their own planes, hipped ends, the LT&SR west approach); works.walls are brick faces (top edge on the earthwork, foot {RAIL_FOOTING} m below the ground or at {RAIL_BED} m beside water). No embankment stands over drawn water: at recorded bridges the fill stops {RAIL_WATER_CLEAR} m short of the water behind an abutment face with in-line wings; where a raised embankment would come within {RAIL_GAP} m of a mapped building footprint it stops {RAIL_GAP} m off behind a retaining wall, except where the footprint lies in the formation (recorded as a conflict); raised line ends with nothing beyond close with an earth end at the side slope',
         'railways':rail_works,
@@ -812,6 +1156,7 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
     'probes':[{'name':name,'scenePosition':[e-538900,183209-n],'groundSceneY':float(base(np.array([[e-538900,183209-n]]))[0])} for name,e,n in [('Pudding–City marsh',537650,184100),('Western neighbouring marsh',537300,184100),('Northern Mill Meads',538550,183200),('Abbey marsh',539200,182900),('Western Plaistow',539800,181800)]],
     'limitations':['Site pads without yard readings use a conservative premises estimate, not a measured fill thickness.','Existing railway grades, sewer cover, channel beds and water levels retained.','The flood solver has not been recalibrated to these visible geometry changes.',
         'Wall fill is limited by the 1 m river-network mesh, whose triangles straddle the 0.32 m walls: a narrow gutter (median 0.7 m deep) remains in the first metre behind many walls. Building footprints are not filled, so buildings standing within 3 m of a wall keep their premises ground. Walls in the Channelsea core stand on preserved tidal mud and have no fill.',
+        'Road surfaces are drawn on the ground under their own vertices only; the landscape is fitted under them (roadBridgeClearance), not the reverse, so where a road triangle spans a bank the bank is cut back rather than the road raised over it. Preserved tidal mud under the Abbey Lane footways is not cut, and the approaches of a bridge stop where no adjustable mesh carries on (Three Mills Lea bridge west end).',
         'Yard and street batters are not drawn under building footprints or on preserved tidal mud, so a vertical face remains where a street shoulder or yard edge runs into a building; the 20 m regional ground mesh spans the batters as tilted triangles rather than resolving them.'],
     'inputHashes':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [*inputs,Path(__file__).resolve(),ROOT/'scripts/regional_continuous_structures.py']}}
 (OUT/'main-landscape-1900.json').write_text(json.dumps(result,separators=(',',':'))+'\n')
