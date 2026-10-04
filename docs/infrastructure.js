@@ -3,6 +3,7 @@ import { highStreetSurfaceHeight } from './sewer-levels.js';
 import { greatEastern } from './great-eastern.js';
 import { roadProfileHeight } from './road-levels.js';
 import { createRandom } from './lib/prng.js';
+import { bridgeClearance, roadBridges } from './road-bridges.js';
 export function infrastructure({ THREE, scene, materials: m, data, box, level }) {
   const infra = data.infrastructure,
     [x0, z0, x1, z1] = data.terrain.bounds;
@@ -85,6 +86,7 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
       }
     return h;
   };
+  const clearance = bridgeClearance(infra.roadBridges);
   function surface(triangles, material, offset = 0, hasHeight = false) {
     const vertices = [],
       supports = [];
@@ -97,13 +99,13 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
       if (!hasHeight && points.some((p) => p[1] > 0.4)) {
         // Fill raised bridge approaches down to the ground instead of leaving
         // the road as a floating sheet. Internal faces disappear inside the fill.
-        for (let j = 0; j < 3; j++) {
-          const a = points[j],
-            b = points[(j + 1) % 3];
-          // The fill reaches the drawn ground, which the landscape pass can place below 0.1 m.
-          const low = (p) => [p[0], level(p[0], p[2]), p[2]];
-          supports.push(...a, ...low(a), ...b, ...b, ...low(a), ...low(b));
-        }
+        // The fill stops at the bridge abutment faces: none between them, under a span.
+        for (let j = 0; j < 3; j++)
+          for (const [a, b] of clearance.outside(points[j], points[(j + 1) % 3])) {
+            // The fill reaches the drawn ground, which the landscape pass can place below 0.1 m.
+            const low = (p) => [p[0], level(p[0], p[2]), p[2]];
+            supports.push(...a, ...low(a), ...b, ...b, ...low(a), ...low(b));
+          }
       }
     }
     const geometry = new THREE.BufferGeometry();
@@ -134,48 +136,24 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
     scene.add(g);
     return { g, length };
   }
+  // The road over each bridge: deck setts and footways, as before. Other modules (the tram rails)
+  // read this surface. Arches, abutments, parapets and railings come from road-bridges.js.
   for (const bridge of infra.roadBridges)
     for (let i = 1; i < bridge.route.length; i++) {
       const { g, length } = segment(bridge.route[i - 1], bridge.route[i]);
-      if (bridge.style?.endsWith('-arch')) {
-        const material = bridge.style === 'brick-arch' ? m.brick : m.stone;
-        const count = bridge.archCount || 1,
-          bay = length / count,
-          pier = count > 1 ? 1.1 : 0.7;
-        // Simple segmental openings. Materials and arch counts are documented;
-        // clearances, voussoir dimensions and deck heights remain interpretations.
-        for (let arch = 0; arch < count; arch++) {
-          const left = -length / 2 + arch * bay + pier / 2,
-            right = left + bay - pier;
-          const shape = new THREE.Shape();
-          shape.moveTo(left, bridge.height - 0.4);
-          shape.lineTo(right, bridge.height - 0.4);
-          for (let j = 0; j <= 32; j++) {
-            const t = 1 - j / 32;
-            shape.lineTo(
-              left + (right - left) * t,
-              0.3 + (bridge.height - 1.0) * Math.pow(Math.sin(Math.PI * t), 0.65)
-            );
-          }
-          shape.closePath();
-          const geometry = new THREE.ExtrudeGeometry(shape, { depth: bridge.width, bevelEnabled: false, steps: 1 });
-          const mesh = new THREE.Mesh(geometry, material);
-          mesh.position.z = -bridge.width / 2;
-          g.add(mesh);
-        }
-        for (let j = 0; j <= count; j++)
-          box(g, -length / 2 + j * bay, -0.15, 0, pier, bridge.height - 0.25, bridge.width);
-      }
-      box(g, 0, bridge.height - 0.4, 0, length, 0.4, bridge.width, m.stone);
       if (bridge.surface) box(g, 0, bridge.height, 0, length, 0.02, bridge.width, roads[bridge.surface]);
-      const parapet = bridge.style === 'stone-arch' ? m.stone : m.brick;
-      for (const sign of [-1, 1]) {
-        box(g, 0, bridge.height, sign * (bridge.width / 2 - 0.15), length, 0.9, 0.3, parapet);
-        box(g, 0, bridge.height + 0.9, sign * (bridge.width / 2 - 0.15), length, 0.12, 0.42, m.stone);
-        if (bridge.style)
+      if (bridge.style)
+        for (const sign of [-1, 1])
           box(g, 0, bridge.height + 0.025, sign * (bridge.width / 2 - 0.9), length, 0.12, 1.15, pavement);
-      }
     }
+  const bridgeStructures = roadBridges({
+    THREE,
+    scene,
+    materials: m,
+    bridges: infra.roadBridges,
+    level,
+    waterLevel: data.riverNetwork.waterLevel,
+  });
   for (const railway of infra.railways) {
     if (railway.detailedMainline || railway.detailedRailway) {
       const detail = greatEastern({ THREE, scene, m, railway, box, surface, ballast });
@@ -216,6 +194,11 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
     roadRoutes: infra.roads.length,
     roadBridges: infra.roadBridges.length,
     namedBridges: infra.roadBridges.map((b) => b.id || b.name),
+    bridgeStructures: {
+      meshes: bridgeStructures.meshes,
+      triangles: bridgeStructures.triangles,
+      forms: bridgeStructures.bridges.map((b) => `${b.id}: ${b.form}`),
+    },
     raisedRailways: infra.railways.length,
     railFormationHeights: Object.fromEntries(infra.railways.map((r) => [r.name, r.formationHeight])),
   };
