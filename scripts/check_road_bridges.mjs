@@ -208,6 +208,11 @@ for (const b of bridges) {
 
 // 3. Arch crowns clear the water.
 const layouts = bridges.map((b) => bridgeLayout(b, bridgeForms.bridges[b.id]));
+for (const l of layouts) {
+  const [r0, r1] = l.form.abutments;
+  // Registered abutments must already lie under the deck; the module would otherwise move them.
+  assert(Math.abs(l.a0 - r0) < 1e-9 && Math.abs(l.a1 - r1) < 1e-9, `${l.bridge.id}: abutments moved under the deck`);
+}
 for (const l of layouts.filter((l) => l.arches.length)) {
   assert(l.crown - waterLevel >= 0.3, `${l.bridge.id}: crown soffit ${l.crown} m within 0.3 m of the water`);
   assert(l.springing > waterLevel, `${l.bridge.id}: springing below the water`);

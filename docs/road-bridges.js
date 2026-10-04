@@ -159,12 +159,12 @@ export const bridgeForms = {
     'three-mills-lane-beside-distillery-connection-0': {
       form: 'timber-deck',
       provisional: true,
-      abutments: [7.5, 12.93],
+      abutments: [7.5, 11.93],
       beamDepth: 0.3,
       abutmentLength: 1,
       waterEdges: { centre: [15.75, null], left: [16, null], right: [8, null] },
       evidence:
-        'Provisional footpath deck or culvert (record). The drawn water reaches the route only on its right edge from 8 m and runs on beyond the route end, so the second abutment is put at the route end. Timber deck, beams and railings on brick abutments; all dimensions estimated.',
+        'Provisional footpath deck or culvert (record). The drawn water reaches the route only on its right edge from 8 m and runs on beyond the route end, so the second abutment is put at the route end (its face 1 m inside it). Timber deck, beams and railings on brick abutments; all dimensions estimated.',
     },
   },
 };
