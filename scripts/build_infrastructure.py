@@ -102,6 +102,12 @@ assert crossing.geom_type=='Point'
 crossing_spec={**crossing_spec,'centre':[crossing.x,crossing.y],'roadRoute':high_street['route'],'roadWidth':high_street['width']}
 street_opening=street_line.buffer(high_street['width']/2+1.1,cap_style=2)
 sewer_crest=sewer_line.buffer(sewer['crestWidth']/2,join_style=2).difference(street_opening)
+portal=sewer.get('portal')
+if portal:
+    # The open embankment ends at the Wick Lane portal: the crest stops flush with
+    # the portal face instead of running on in a round cap (as build_panorama_data.py).
+    (px,pz),(dx,dz)=portal['point'],portal['direction'];nx,nz,r=-dz,dx,80
+    sewer_crest=sewer_crest.difference(Polygon([(px+nx*r,pz+nz*r),(px-nx*r,pz-nz*r),(px-nx*r-dx*r,pz-nz*r-dz*r),(px+nx*r-dx*r,pz+nz*r-dz*r)]))
 sewer_edges=[]
 for sign in [-1,1]:
  edge=sewer_line.offset_curve(sign*7.3,join_style=2).difference(street_opening.buffer(.15))

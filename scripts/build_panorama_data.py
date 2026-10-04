@@ -23,6 +23,32 @@ SEWER_TOE_SEED = 1864  # seeds the toe wander and slope variation; any fixed val
 SEWER_TOE_AMPLITUDE = 2.0  # metres; bound on the toe's wander either side of the 22 m half base
 SEWER_BANK_SPACING = 5  # metres between slope sample rows along the bank near the scene
 SEWER_BANK_ROWS = (0, .25, .5, .78)  # slope fractions (crest edge 0 to toe 1) of the sample rows
+# Route beyond the OS VIII.32 trace and the High Street correction (task T1c).
+# Crest centreline points read from the OS London five-foot plan, 1893-96 revision
+# (NLS tiles, layer os-london-five-foot-1893, via factory_map_sources.mosaic), in
+# scene metres. Reading accuracy about 2-4 m: points sit on the crest between the
+# mapped slope hachures and the "NORTHERN OUTFALL SEWER" lettering.
+# West: from the open embankment's end at the east kerb of Wick Lane, across the
+# Lea at Old Ford, to the first point of the High Street correction's westernRoute.
+SEWER_WEST_TRACE = [(-1790.5, -702.5), (-1752.9, -688.3), (-1681.7, -664.0), (-1632.2, -645.8), (-1588.7, -630.2),
+                    (-1542.0, -621.0), (-1475.4, -607.4), (-1440.0, -600.9), (-1394.6, -587.3)]
+# Wick Lane centreline where it passes the sewer (five-foot plan; the lane is not
+# traced as a street in this model). The covered sewer continues west of it.
+SEWER_WICK_LANE_CROSSING = (-1798.9, -702.8)
+# East: replaces the 1400 m straight extrapolation beyond the last OS VIII.32 point
+# (349.54, 51.25). The first point lies on that extrapolation, which agrees with the
+# five-foot crest within 2 m as far as here; then the mapped bend south-east across
+# the London, Tilbury and Southend Railway and through Plaistow, to the edge of the
+# five-foot sheet coverage at about x 2290 (no tiles exist further east).
+SEWER_EAST_TRACE = [(697.8, 39.78), (722.8, 43.3), (739.6, 53.1), (760.6, 67.0), (804.9, 96.7), (870.2, 141.1),
+                    (1154.3, 318.7), (1430.6, 480.5), (1581.4, 546.9), (1667.9, 574.9), (1750.1, 585.3),
+                    (1922.1, 610.2), (2176.8, 665.6), (2289.2, 687.0)]
+# Beyond the five-foot coverage the route continues on the last mapped bearing to
+# x 2700 (Blind Lane, the West Ham borough boundary on the OS six-inch second edition,
+# which shows the embankment on this line within a few metres), inside the
+# landscape's base ground (to x 2750) and at the fog distance from the scene centre.
+SEWER_EAST_END_X = 2700.0
+SEWER_PORTAL_SETBACK = 0.3  # metres; the bank ends this far east of the portal face, inside the headwall
 
 
 class EarthBank:
@@ -43,9 +69,13 @@ class EarthBank:
     7.25, which left a strip of the deck slab showing along the crest edge.
     """
 
-    def __init__(self, line, top, crest_half=7.5, toe=22, seed=SEWER_TOE_SEED, amplitude=SEWER_TOE_AMPLITUDE):
+    def __init__(self, line, top, crest_half=7.5, toe=22, seed=SEWER_TOE_SEED, amplitude=SEWER_TOE_AMPLITUDE, origin=0):
         rng = random.Random(seed)
         self.line, self.length = line, line.length
+        # Chainage the waves are measured from. The T1c western extension moved the
+        # route start; keeping the waves on the earlier chainage keeps the bank form
+        # (and its triangles) unchanged along the stretch that was already modelled.
+        self.origin = origin
         self.crest_half, self.toe, self.top, self.under_crest = crest_half, toe, top, top-.1
         shares, bands = (.5, .3, .2), ((120, 180), (55, 85), (28, 40))
         self.toe_waves = {side: [(amplitude*s, rng.uniform(*b), rng.uniform(0, 2*math.pi)) for s, b in zip(shares, bands)]
@@ -54,11 +84,11 @@ class EarthBank:
         self.swell_waves = {side: (rng.uniform(18, 26), rng.uniform(0, 2*math.pi)) for side in (1, -1)}
 
     def taper(self, d):
-        # The far extensions end in plain round caps, so both toes agree there.
+        # The route ends taper to plain round caps (the west one is cut by the portal), so both toes agree there.
         return max(0, min(1, d/60, (self.length-d)/60))
 
     def toe_offset(self, d, side):
-        wave = sum(a*math.sin(2*math.pi*d/w+p) for a, w, p in self.toe_waves[side])
+        wave = sum(a*math.sin(2*math.pi*(d-self.origin)/w+p) for a, w, p in self.toe_waves[side])
         return self.toe+self.taper(d)*wave
 
     def locate(self, x, z):
@@ -79,10 +109,10 @@ class EarthBank:
         if u >= 1:
             return 0
         w, p = self.blend_waves[side]
-        k = .5+.15*math.sin(2*math.pi*d/w+p)
+        k = .5+.15*math.sin(2*math.pi*(d-self.origin)/w+p)
         fall = (1-k)*u+k*u*u*(3-2*u)
         w, p = self.swell_waves[side]
-        swell = .1*self.taper(d)*math.sin(math.pi*u)*math.sin(2*math.pi*d/w+p)
+        swell = .1*self.taper(d)*math.sin(math.pi*u)*math.sin(2*math.pi*(d-self.origin)/w+p)
         return round(max(0, min(self.top, self.top*(1-fall)+swell)), 2)
 
     def radial(self, x, z, u):
@@ -257,6 +287,71 @@ def sewer_bank_ends(pieces, line, obstacles, height):
     return sorted(ends, key=lambda e: e['chainage'])
 
 
+SEWER_WEST_JOIN = (-1317.819, -567.373)  # first point of data/maps/sewer-high-street.json westernRoute
+SEWER_EAST_JOIN = (349.54, 51.25)  # last OS VIII.32 centreline point
+
+
+def sewer_route_extensions(sewer):
+    """Carry the sewer route from the Wick Lane portal to the edge of the landscape (T1c).
+
+    Replaces the two straight end-bearing extrapolations. Mapped lengths follow the
+    OS five-foot crest; the inferred length is the eastern continuation beyond the
+    five-foot coverage. Adds the portal record for docs/sewer-crossing.js.
+    """
+    route = [list(p) for p in sewer['route']]
+    assert math.dist(route[0], SEWER_WEST_JOIN) < .01 and math.dist(route[-2], SEWER_EAST_JOIN) < .01
+    (ax, az), (bx, bz) = SEWER_EAST_TRACE[-2:]
+    end = (SEWER_EAST_END_X, round(bz+(bz-az)*(SEWER_EAST_END_X-bx)/(bx-ax), 2))
+    sewer['route'] = [list(p) for p in SEWER_WEST_TRACE]+route[:-1]+[list(p) for p in SEWER_EAST_TRACE]+[list(end)]
+    length = lambda points: sum(math.dist(a, b) for a, b in zip(points[:-1], points[1:]))
+    west = length(SEWER_WEST_TRACE+[SEWER_WEST_JOIN])
+    east_mapped = length([SEWER_EAST_JOIN]+SEWER_EAST_TRACE)
+    east_inferred = math.dist(SEWER_EAST_TRACE[-1], end)
+    source = 'OS London five-foot plan, 1893-96 revision (NLS tiles, layer os-london-five-foot-1893)'
+    sewer['extensionMetres'] = round(east_inferred, 1)
+    sewer['routeExtensions'] = {
+        'west': {'mappedMetres': round(west, 1), 'inferredMetres': 0, 'source': source,
+                 'evidence': 'Crest centreline read from the five-foot plan between the slope hachures, from the east kerb of Wick Lane '
+                             'across the Lea at Old Ford to the High Street correction; reading accuracy about 2-4 m. Ends at the Wick Lane '
+                             'portal: west of it the sewer is covered (author direction). The plan still shows embankment slopes between Wick '
+                             'Lane and the North London Railway and a penstock chamber west of the railway; that stretch is not modelled.'},
+        'east': {'mappedMetres': round(east_mapped, 1), 'inferredMetres': round(east_inferred, 1), 'source': source,
+                 'evidence': 'Crest centreline read from the five-foot plan east of the last OS VIII.32 point: the straight run to the bend at '
+                             'x 700 (the earlier extrapolation agrees with the plan within 2 m there), the bend south-east across the London, '
+                             'Tilbury and Southend Railway, and the run through Plaistow to the edge of the five-foot coverage at x 2289. '
+                             'The last '+str(round(east_inferred))+' m continue that last mapped bearing to x '+str(round(SEWER_EAST_END_X))+
+                             ' (Blind Lane, the West Ham boundary) and are inferred; the OS six-inch second edition shows the embankment on '
+                             'this line within a few metres. The route stops there, inside the landscape base ground (to x 2750) and at '
+                             'the fog distance from the scene. Streets and the railway crossed by the extensions are not modelled, so the '
+                             'bank is continuous over them.'},
+        'replaces': 'The earlier 1400 m straight extrapolation of the OS VIII.32 end bearing east of (349.54, 51.25), which ran north '
+                    'of east past the mapped bend, and the western end at (-1317.8, -567.4) in open marsh.'}
+    sewer['evidence'] = ('Centreline read from OS VIII.32 and the supplied mosaic; translated to meet the existing listed bridge anchor. '
+                         'Height follows author guidance of roughly roof level. West of the High Street correction and east of OS VIII.32 '
+                         'the centreline is read from the OS London five-foot plan (1893-96): '+str(round(west))+' m west to the Wick Lane '
+                         'portal and '+str(round(east_mapped))+' m east to the end of five-foot coverage. The last '+str(round(east_inferred))+
+                         ' m in the east continue the last mapped bearing and are inferred, not surveyed. See routeExtensions.')
+    (x0, z0), (x1, z1) = SEWER_WEST_TRACE[:2]
+    n = math.hypot(x1-x0, z1-z0)
+    sewer['portal'] = {
+        'street': 'Wick Lane', 'chainage': 0, 'point': [x0, z0], 'direction': [round((x1-x0)/n, 5), round((z1-z0)/n, 5)],
+        'streetCrossing': list(SEWER_WICK_LANE_CROSSING), 'bankSetback': SEWER_PORTAL_SETBACK,
+        'evidence': 'Position mapped: the east kerb of Wick Lane where it meets the sewer on the OS five-foot plan (1893-96), which '
+                    'marks B.M. 35.3 at the crossing. That the open embankment begins here and the sewer is covered to the west is '
+                    'author direction (Victoria Park). Interpreted, not a documented structure: the brick portal headwall across the '
+                    'embankment end, its thickness, its parapet and stone coping above the walk, and the blind stone arch ring on its west face marking where '
+                    'the sewer passes into cover.'}
+
+
+def portal_cut(portal, setback=0, reach=80):
+    """Half-plane west of the portal face (moved east by setback), as a polygon."""
+    (x, z), (dx, dz) = portal['point'], portal['direction']
+    x, z = x+dx*setback, z+dz*setback
+    nx, nz = -dz, dx
+    return Polygon([(x+nx*reach, z+nz*reach), (x-nx*reach, z-nz*reach),
+                    (x-nx*reach-dx*reach, z-nz*reach-dz*reach), (x+nx*reach-dx*reach, z+nz*reach-dz*reach)])
+
+
 def neighbourhood():
     context = json.loads((ROOT/'data/maps/neighbourhood-context.json').read_text())
     traces = json.loads((ROOT/'data/maps/os-neighbourhood-traces.json').read_text())
@@ -351,6 +446,7 @@ def neighbourhood():
         context['sewer']['priorUncorrectedRoute']=route
         context['sewer']['route']=correction['westernRoute']+route[1:]
         context['sewer']['alignmentEvidence']=correction['evidence']
+        sewer_route_extensions(context['sewer'])
     context['railways']=[]
     for railway in traces['railways']:
         route=[]
@@ -490,10 +586,17 @@ def build():
     # The embankment fills small marsh pools rather than bridging them.
     drawn=unary_union([g for g in getattr(drawn,'geoms',[drawn]) if g.area>=50])
     obstacles={'water':drawn.buffer(SEWER_WATER_SETBACK),'railway':rail}
-    earth=EarthBank(line,context['sewer']['height'])
+    # The open embankment ends at the Wick Lane portal: the bank stops just east of
+    # the portal face (inside its headwall) and the crest stops flush with the face.
+    portal=context['sewer'].get('portal')
+    if portal:
+        obstacles['portal']=portal_cut(portal,SEWER_PORTAL_SETBACK)
+    earth=EarthBank(line,context['sewer']['height'],origin=line.project(Point(SEWER_WEST_JOIN)) if portal else 0)
     footprint=earth.footprint()
     bank=footprint.difference(unary_union(list(obstacles.values())))
     crest=line.buffer(7.5,join_style=2)
+    if portal:
+        crest=crest.difference(portal_cut(portal))
     context['sewer']['crest']=[[[[round(x,2),round(z,2)] for x,z in crest.exterior.coords]]]
     # Drop slivers left between water bodies; they cannot carry an embankment.
     pieces=[densify_bank_ends(p,line,obstacles) for p in getattr(bank,'geoms',[bank]) if p.area>=20]
@@ -546,12 +649,14 @@ def build():
         'footing are interpreted, not a surveyed abutment. '
         'Road ends stand '+str(SEWER_ROAD_SETBACK)+' m from the traced street corridors (docs/data/infrastructure.json roads, '
         'Stratford High Street and paths excepted), so their positions follow the mapped streets. Where a street passes under the '
-        'sewer, the brick arch carrying the deck, its segmental form, rise and springing height are interpreted, not a documented structure.')
+        'sewer, the brick arch carrying the deck, its segmental form, rise and springing height are interpreted, not a documented structure. '
+        'The portal end (kind portal) stands '+str(SEWER_PORTAL_SETBACK)+' m east of the Wick Lane portal face; see portal.')
     context['sewer']['bankFormEvidence']=('Kept from the sewer record: the mapped centreline, the 15 m crest, the 44 m base (mean) and the height of '
         'about 7.4 m (author guidance); the exact nineteenth-century section is unresolved. Interpreted, not surveyed: the earthwork form between crest edge and toe. '
         'The toe outline has rounded joins and caps instead of mitred corners. Each toe wanders independently about the 22 m half base, '
         'by a seeded sum of three long waves (seed '+str(SEWER_TOE_SEED)+', wavelengths 28-180 m, amplitude bound '
-        '±'+str(SEWER_TOE_AMPLITUDE)+' m, zero mean), tapering to the plain 22 m over the last 60 m of the inferred far extensions. '
+        '±'+str(SEWER_TOE_AMPLITUDE)+' m, zero mean, measured along the route from its pre-T1c western start so the earlier stretch keeps its form), '
+        'tapering to the plain 22 m over the last 60 m at each end of the route (the western end is cut by the Wick Lane portal). '
         'The slope is a convex shoulder and concave foot (a straight batter blended with a smoothstep, the blend varying 0.35-0.65 along '
         'each side) with a swell of at most 0.1 m that vanishes at crest edge and toe, so no slope is a single plane; the slope '
         'meets the crest at the full height. '
