@@ -4,7 +4,7 @@
 
 ## Where the project stands
 
-Repository: `/home/jic823/book_website`, branch `main`, clean at commit `bf063a6`. Everything below is committed. Local, git-ignored reports from today's agents are in `reference/photo-review-2026-10-03/reports/`:
+Repository: `/home/jic823/book_website`, branch `main`. Trial written at commit `bf063a6`; after the trial and the cascade, main is at `7b4fe37` (4 October 2026). Everything below is committed. Local, git-ignored reports from today's agents are in `reference/photo-review-2026-10-03/reports/`:
 
 | Report | What it holds |
 |---|---|
@@ -21,7 +21,7 @@ Verification harness, all committed:
 
 ```sh
 python3 -m http.server 4173 --bind 127.0.0.1 --directory docs   # serve first, keep running
-npm test                                                          # 13 of 15 pass; the two flood checks fail on a known stale hash
+npm test                                                          # runs scripts/check_*.mjs only; 18 of 18 pass after the 4 Oct cascade. Python checks run separately: check_high_street_frontages.py fails (wall-lane-south vista path, see pending)
 python3 scripts/review_smoke.py <label> --compare main-after-cascade  # headless diagnostic snapshot; 'main-after-cascade' (4 Oct 2026, commit 1ae324c, 0 page errors, 153 draw calls, 8.91 M triangles) is the current baseline; 'main-after-t13' precedes T12b, T12c, T14, T15, T17; 'drawn-ground' is the pre-trial one. The stock 60 s waits time out under load; raise both timeouts in a scratch copy.
 python3 scripts/render_views.py <cameras.json> --out=<dir>        # PNGs for a camera list; about 40 s a view after a 5 min scene load
 python3 scripts/footprint_gap_audit.py                            # footprint coverage, started zones
@@ -137,20 +137,38 @@ Opus can be relied on for the 3D modelling if at least four of the six tasks mer
 
 ## Also pending, not part of the trial
 
-- **Cascade run 4 October 2026 (commit 682c7d2):** historic elevation first (it regenerates `terrain-1900.json`, hashed by the river system and landscape), then river system, landscape, flood files, factory yards, drainage connections, scene manifest; bridge-check sample refreshed; landscape check given 1 cm tolerance at the drawn waterline inside spans. Result: `npm test` 18 of 18, `check_flood_demo` and `check_drainage_connections` passing for the first time. Remaining stale: GeoTIFF/GeoPackage exports (`npm run export:gis`) and the glTF export, not run.
+Tidied 4 October 2026 at `7b4fe37`: entries closed by T1c, T12a–c, T13, T16 and the cascade were removed; the outcomes table above keeps their detail.
 
-- **PRIORITY ORDER (author, 3 October 2026, after seeing main on 4173): fundamentals before features.** The tram rails were added on a road that is itself out of place; the bridge is off kilter; buildings stand in the road; the marsh surface lies over the road. Order from here: (1) **T13 road corridor correction**: retrace Stratford High Street onto the OS carriageway (T10 measured 1.3–8 m off; Bow Bridge span was previously moved 5.7 m E / 7 m S by hand), with its five bridges and West Ham Lane, Ward Road and Angel Lane (T7); then a full `build_infrastructure.py` rebuild that resolves the 160k-leaf road-mesh drift; audit every building footprint against the corrected corridors and move or flag the ones in the road. (2) **T12b landscape at the roads and bridges**: ground must never stand above a road surface or inside an arch; rebuild the landscape after T13. (3) Then T1c, T12a results merge on top. No new feature tasks until (1) and (2) are in.
+- **PRIORITY ORDER (author, 3 October 2026): fundamentals before features.** Correct roads, bridges, ground and building placement before adding new elements. The first round under this rule (T13 road corridors, T12b landscape at the bridges, then T1c and T12a on top) is merged.
 
-- **T12d, deck ends in `infrastructure.js` (from T10, T12c, T13):** the cambered approach meets each level deck with a 0.26–0.58 m step and a 0.8–0.9 m footway step; let the bridge height win over the road profile near each deck end and blend the camber out, or fix the road elevation profiles at source; refresh both stored check samples in the same change; fix the 3.3 m² footway hole at the Pegshole east end. Also cut the tide and river-system water polygons back from the retraced approach roads at the deck corners.
-- **T1d, sewer openings on the extended route (from T1c):** the bank now runs straight over the London, Tilbury and Southend Railway at about x 750 and over the Plaistow streets east of it, and Wick Lane itself is not modelled at the portal; the railway crossing needs a bridge opening like the road arches, and the streets need openings or the author's decision to stop modelling detail beyond the fog. T12b must also lower the ground under the Mill Meads works road deck so the T1b arch regains its 3.5 m rise and 6.5 m clearance.
-- **T12, road bridges (author screenshot of Bow Bridge, 3 October 2026):** the High Street crossing of the Lower Lea is a flat slab flush with the road, no arch, parapets or abutments, partly swallowed by risen ground (audit issue I4 at every road bridge). T12a (running) draws each `roadBridges` record as its recorded structure in `docs/infrastructure.js` and stops the approach fill at the abutments; T12b (after T11) cuts the landscape back from the arches and approaches so water passes under and nothing buries the structure.
-- **T1c, sewer completeness (author screenshots, 3 October 2026, queued behind T8):** (a) the deck at the City Mill River, the Lea branch (x −1167..−1139) and the x −883 crossing has no trough, abutments or piers; only the Channelsea got them in T1. Treat every pair of water-side `bankEnds` as a span and give it the Channelsea treatment. (b) The modelled route stops at x −1320 in open marsh. Author: the sewer is covered west of Wick Lane by Victoria Park, so extend the west end along the OS route across the Lea at Old Ford (Old Ford Lock is at about scene (−1521, −731)) to Wick Lane, and end it there as the portal where the embankment emerges from cover; the east end continues towards Beckton until it leaves the regional landscape or the fog. Trace the extension from the OS mosaic tiles, record it as mapped where read and inferred where not. (c) T8 covers the square plan form and the Mill Mead path through the bank.
+- **Cascade recipe (as run 4 October 2026, commit 682c7d2):** historic elevation first (it regenerates `terrain-1900.json`, hashed by the river system and landscape), then river system, landscape, flood files, factory yards, drainage connections, scene manifest (`npm run manifest`); refresh the bridge-check road sample if the landscape moved. Rerun from the first stage a change touches. Hashed landscape inputs now include `factory-buildings.json` and `road-bridge-forms.json`.
 
-- From T1 and T1b: decide whether the Mill Mead riverbank path (x≈−37) gets an opening through the extended sewer bank; shorten the 44 m wing walls at the road arches if they read as too long. `review_smoke.py` times out at its 60 s wait even on base files; lengthen the wait. After the landscape tasks land, run one rebuild cascade: river system (reads `ground-plan.json` and `factory-buildings.json`, both changed), main landscape, flood field, geopackage export, and the stale `inputHashes` in the derived files.
+### Open: fundamentals
 
-- Railway sweep views re-rendered from main after T1–T7 (26 views, `reference/photo-review-2026-10-03/views-rail-rerender/`, 3 October 2026); not yet re-audited.
-- Road geometry (from T7): retrace West Ham Lane and Ward Road onto the printed carriageways; delete or retrace the two Angel Lane routes; decide whether the seven `district-*-east-return` rows front Arthingworth Street; `build_infrastructure.py` on unchanged inputs changes 160k road-mesh leaves, so a clean rebuild needs its own task. The High Street centreline itself is 1.3–8 m off the OS carriageway (T10 measurement); retrace it with the others. Tram rails done in T10.
-- Bromley: `os-15`, `os-16`, `os-4`, `os-9` envelopes not yet re-registered; coal gantries (fids 34850, 37343) and open end features unmodelled; `build_factory_yards.py` rebuild needed (yards drawn around the old envelopes at 924 and missing at 865); `check_factory_buildings.py` fails on T6's `stack-865-boiler-house`.
-- Flood plausibility runs against the 1897 and 1904 accounts once the landscape fixes land.
-- Astra's two flood checks fail on a stale terrain hash until the flood field is rebuilt.
+- **T12d, deck ends in `infrastructure.js` (from T10, T12c, T13):** the cambered approach meets each level deck with a 0.26–0.58 m step and a 0.8–0.9 m footway step; let the bridge height win over the road profile near each deck end and blend the camber out, or fix the road elevation profiles at source; refresh both stored check samples in the same change; fix the 3.3 m² footway hole at the Pegshole east end. Also cut the tide and river-system water polygons back from the retraced approach roads at the deck corners. Note Pegshole east bank: 19° on the OS vs 7° in the drawn water (T12c).
+- **Road surface over banks (from T12b):** the road sinks up to 0.8 m over 90 m where road triangles span a bank; no approach embankment on the Three Mills Lea west approach (no adjustable mesh there).
+- **Road traces still off the OS (from T13, T17):** Marshgate Lane runs about 3 m west of the printed lane, so the builder trims `high-street-09`; Hotham, Randal and Barnby Streets not retraced; site 865's Abbey Road buildings stand against a wrong road.
+- **`check_high_street_frontages.py` fails** on the `wall-lane-south` vista path crossing `site419-range-1` by 1.99 m² (pre-existing, exposed by T17): move the vista route 1.5 m west or rule the factory corner wrong.
+- **T2b, core walls (from T2, T14):** relocation of core walls 15/21 is computed and recorded but needs core-terrain edges (flag `APPLY_CORE_WALL_RELOCATION`); 16/17 cannot move (mud edge runs through mapped buildings). Fill coverage is 64.7 % against the original 95 % target.
+- **River system raster (from T11):** the 206 system-mesh steps that pre-date the lip rule.
+
+### Open: sewer
+
+- **T1d, sewer openings on the extended route (from T1c):** the bank runs straight over the LT&SR at about x 750 and over the Plaistow streets east of it, and Wick Lane itself is not modelled at the portal; the railway crossing needs a bridge opening like the road arches, and the streets need openings or the author's decision to stop modelling detail beyond the fog. The portal at Wick Lane is the author's reading; the five-foot plan suggests the embankment continued west to the railway.
+- Author decisions: shorten the 44 m wing walls at the road arches; arch form could equally be iron girders on brick abutments; the Mill Mead path now ends at the toe on both sides (T8), so an opening through the bank is a choice, not a defect.
+- Small dark chip at the sewer crest edge in two T8 views, untraced.
+
+### Open: railways and sites
+
+- Railways (from T15): LT&SR west approach ends in an earth mound; four lines stop short of the model edge (need route data); three terraces inside formations recorded as conflicts; 200 m ditch-side cut beside the Woolwich branch; Hunts Lane siding (`east-run`) floats up to 0.25 m. Railway sweep views re-rendered after T1–T7 (`views-rail-rerender/`, 26 views) not yet re-audited, and most sweep cameras sit inside buildings or under ground.
+- Bromley: `os-15`, `os-16`, `os-4`, `os-9` envelopes not yet re-registered; coal gantries (fids 34850, 37343) and open end features unmodelled.
+- Site 865 (from T6, T16): reservoir not modelled; fid 802028 skipped; 8 judgement calls for the author in `T6_REPORT.md`; yard stock generic crates.
+- Factory yard builder: normalise ring start to stop byte churn on rebuilds.
+
+### Open: exports, evidence, housekeeping
+
+- Exports stale: GeoTIFF/GeoPackage (`npm run export:gis`, then `export_geopackage.py --verify`) and the glTF export.
+- Flood plausibility against the 1897 and 1904 accounts (`flood-evidence.md`), now that the landscape fixes have landed.
+- Bridge deck heights may be 0.6–2.0 m low against OS spot heights (Three Mills, St Michael's, Pegshole; T12a); Abbey Lane deck 1.8 m vs about 2.25 m in both street readings (T3).
+- `review_smoke.py` times out at its stock 60 s waits; lengthen them in the script rather than in scratch copies.
 - `docs2/` still needs deleting by the author.
