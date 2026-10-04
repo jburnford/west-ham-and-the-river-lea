@@ -174,11 +174,15 @@
     "marshgate-lane-connection-0": {
       "form": "timber-deck",
       "provisional": true,
-      "abutments": [7.0, 16.0],
+      "abutments": [7.0, 18.5],
       "beamDepth": 0.35,
       "abutmentLength": 1.2,
-      "waterEdges": { "centre": [7.75, 15.25], "left": [8.0, 17.25], "right": [7.25, 13.5] },
-      "evidence": "Provisional connection (record): deck versus culvert unresolved and not a documented named bridge. Drawn as the plainest reading, a timber deck on timber beams and brick abutments at the drawn water edges, with timber railings. All dimensions estimated."
+      "waterEdges": { "centre": [7.7, 15.55], "left": [7.15, 18.25], "right": [8.15, 15.15] },
+      "evidence": "Provisional connection (record): deck versus culvert unresolved and not a documented named bridge. Drawn as the plainest reading, a timber deck on timber beams and brick abutments at the drawn water edges, with timber railings. All dimensions estimated. T18 (October 2026): the span moved with the Marshgate Lane retrace onto the printed lane (same stations along the lane). Measured in the model on the new span every 0.05 m: the GIS channel (docs/data/ground-plan.json rivers) crosses at 7.7-15.55 m on the centreline, 8.15-15.15 m on the right edge and 7.15-18.25 m on the left (east) edge, where the river along the east side of the lane reaches under the deck; the far abutment is moved from 16.0 to 18.5 m so that the walled approach does not stand in it. The tide shelf polygon in docs/data/river-network.json also reaches under the left edge from 2.0 m; it was cut for the prior lane and is left to a river-network rebuild (T18_REPORT.md).",
+      "priorAbutments": [7.0, 16.0],
+      "priorWaterEdges": { "centre": [7.75, 15.25], "left": [8.0, 17.25], "right": [7.25, 13.5] },
+      "priorEvidence": "Provisional connection (record): deck versus culvert unresolved and not a documented named bridge. Drawn as the plainest reading, a timber deck on timber beams and brick abutments at the drawn water edges, with timber railings. All dimensions estimated.",
+      "priorNote": "Abutments and water edges measured on the prior span, which T18 (4 October 2026) moved with the Marshgate Lane retrace; kept for the record only."
     },
     "hunts-lane-connection-0": {
       "form": "iron-deck",
