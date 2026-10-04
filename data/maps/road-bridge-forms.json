@@ -1,6 +1,6 @@
 {
   "description": "Structural form chosen for each road bridge in docs/data/infrastructure.json roadBridges, about 1900: arches, abutments, piers, parapets or railings, and wing walls. The bridge records (route, width, deck height, style, arch count) are not changed here; this register adds the structure under and beside the deck. docs/road-bridges.js carries an identical copy as bridgeForms, and scripts/check_road_bridges.mjs fails if the two differ.",
-  "frame": "Stations are metres along each bridge route from its first point. Offsets are metres across it, positive on the left (the normal (-uz, ux)). An abutment face lies at station abutment + skew * offset, so skew is the shift of the face per metre across the deck. Heights are scene y metres; the static water surface is y 0.06 and the animated tide reaches y 1.1.",
+  "frame": "Stations are metres along each bridge route from its first point. Offsets are metres across it, positive on the left (the normal (-uz, ux)). An abutment face lies at station abutment + skew * offset, so skew is the shift of the face per metre across the deck: one number when both faces are parallel, or a pair [first, second abutment] when each face follows its own bank. Heights are scene y metres; the static water surface is y 0.06 and the animated tide reaches y 1.1.",
   "sources": [
     {
       "id": "vch",
@@ -30,7 +30,7 @@
     {
       "id": "drawn-water",
       "citation": "Water polygons as drawn by docs/app.js (tide, reviewed connections, retained rivers, marsh ditches, river system)",
-      "use": "Abutment stations sit at the drawn water edges measured along each route on the centreline and both deck edges (waterEdges below). They are model measurements, not surveyed abutments."
+      "use": "Abutment stations sit at the drawn water edges measured along each route on the centreline and both deck edges (waterEdges below). For the five High Street crossings T12c re-measured the edges after the T13 retrace every 0.05 m along the route and every 0.5 m across the deck (bankEdges lists them every metre) and fitted one straight face line to each bank. They are model measurements, not surveyed abutments."
     }
   ],
   "defaults": {
@@ -40,64 +40,115 @@
     "parapetThickness": 0.45,
     "railingHeight": 1.05,
     "clearZoneMargin": 2.0,
-    "evidence": "Estimates for every bridge: springing 0.44 m above the static water so the arch feet stand clear of it; masonry parapet 1.0 m plus 0.12 m coping (about 1.1 m above the carriageway, 1.0 m above the footway); railings 1.05 m. Approach fill is not drawn within 2 m of either deck edge between the abutment faces."
+    "abutmentEndClearance": 0.3,
+    "evidence": "Estimates for every bridge: springing 0.44 m above the static water so the arch feet stand clear of it; masonry parapet 1.0 m plus 0.12 m coping (about 1.1 m above the carriageway, 1.0 m above the footway); railings 1.05 m. Approach fill is not drawn within 2 m of either deck edge between the abutment faces. Arch abutment faces stay at least 0.3 m inside the route ends at both deck edges (abutmentEndClearance), so the arch ring never reaches past the deck; the masonry behind a face may run on under the approach."
   },
   "bridges": {
     "bow-bridge": {
       "form": "stone-arch",
       "arches": 1,
-      "abutments": [3.0, 29.5],
-      "skew": 0.4,
+      "abutments": [4.35, 30.5],
+      "skew": [0.67, 0.21],
       "crownDepth": 0.9,
       "ringDepth": 0.6,
       "abutmentLength": 2.5,
-      "waterEdges": { "centre": [2.0, 29.0], "left": [6.5, 30.5], "right": [0.0, 27.25] },
-      "evidence": "Documented: one granite-faced span completed 1839 (road-trace notes), stone family (VCH as cited); bench mark on the hatched south parapet of the east approach (OS 25-inch). Mapped: the crossing on the OS five-foot plan. Measured in the model: the River Lea crosses the route obliquely, so the abutment faces follow the bank with a skew of 0.4 m per metre. Estimated: one segmental arch of 26.5 m along the road, crown soffit 0.9 m below the deck, springing 0.5 m, ring and parapet dimensions. The 1901-06 rebuilding is not shown."
+      "waterEdges": { "centre": [4.2, 30.0], "left": [8.35, 31.25], "right": [0.8, 28.65] },
+      "bankEdges": {
+        "offsets": [-6.0, -5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+        "start": [0.8, 0.75, 1.45, 2.15, 2.8, 3.5, 4.2, 4.9, 5.6, 6.25, 6.95, 7.65, 8.35],
+        "end": [28.65, 29.0, 29.2, 29.4, 29.6, 29.8, 30.0, 30.2, 30.4, 30.6, 30.8, 31.0, 31.25]
+      },
+      "evidence": "Documented: one granite-faced span completed 1839 (road-trace notes), stone family (VCH as cited); bench mark on the hatched south parapet of the east approach (OS 25-inch). Mapped: the crossing on the OS five-foot plan; the T13 retrace laid the span on the road axis and read the west and east banks 34 and 10 degrees from square to the road. Measured in the model (T12c, on the T13 span of 32.2 m): the drawn water edges on the deck run at +0.67 m (west bank) and +0.21 m (east bank) per metre across it, 34 and 12 degrees from square to the road (bankEdges). Interpretation: each abutment face follows its own bank (west 0.10 m into the water, east 0.50 m back on the bank at the centreline; the setback is 0.5 m except where the face must stay 0.3 m inside the deck end at a deck edge); the segmental arch splays between the two faces with one crown and springing, 28.9 m along the road at the right deck edge, 26.1 m on the centreline and 23.4 m at the left. The square-ended deck stays on the road axis. Estimated: crown soffit 0.9 m below the deck, springing 0.5 m, ring and parapet dimensions. The 1901-06 rebuilding is not shown.",
+      "priorAbutments": [3.0, 29.5],
+      "priorSkew": 0.4,
+      "priorWaterEdges": { "centre": [2.0, 29.0], "left": [6.5, 30.5], "right": [0.0, 27.25] },
+      "priorEvidence": "Documented: one granite-faced span completed 1839 (road-trace notes), stone family (VCH as cited); bench mark on the hatched south parapet of the east approach (OS 25-inch). Mapped: the crossing on the OS five-foot plan. Measured in the model: the River Lea crosses the route obliquely, so the abutment faces follow the bank with a skew of 0.4 m per metre. Estimated: one segmental arch of 26.5 m along the road, crown soffit 0.9 m below the deck, springing 0.5 m, ring and parapet dimensions. The 1901-06 rebuilding is not shown.",
+      "priorNote": "Values measured by T12a on the previous span, which T13 (3 October 2026) moved onto the retraced road axis and shortened; they no longer describe this span and are kept for the record only."
     },
     "pegshole-bridge": {
       "form": "stone-arch",
       "arches": 2,
-      "abutments": [8.0, 27.0],
-      "skew": 0,
+      "abutments": [0.5, 15.65],
+      "skew": [0.03, -0.12],
       "pier": 1.8,
       "crownDepth": 0.6,
       "ringDepth": 0.45,
       "abutmentLength": 2.5,
-      "waterEdges": { "centre": [10.75, 24.75], "left": [5.75, 29.0], "right": [9.75, 25.5] },
-      "evidence": "Documented: stone family and two arches (VCH as cited, in the record). Mapped: Peg's Hole Bridge over the Three Mills Back River on the OS five-foot plan; bench mark on its parapet and a spot height at the bridge crown (OS 25-inch). Measured in the model: the water widens on the left (south-east) edge, so the abutments are set between the centreline and edge water lines. Estimated: two segmental arches of 8.6 m on a 1.8 m river pier with cutwaters, rise, ring and parapet dimensions."
+      "waterEdges": { "centre": [0.95, 15.1], "left": [1.0, 14.5], "right": [-0.85, 16.3] },
+      "bankEdges": {
+        "offsets": [-6.0, -5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+        "start": [-0.85, -0.55, 0.05, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 1.0, 1.0, 1.0],
+        "end": [16.3, 15.6, 15.5, 15.4, 15.3, 15.2, 15.1, 15.0, 14.9, 14.8, 14.7, 14.6, 14.5]
+      },
+      "evidence": "Documented: stone family and two arches (VCH as cited, in the record). Mapped: Peg's Hole Bridge over the Three Mills Back River on the OS five-foot plan; bench mark on its parapet and a spot height at the bridge crown (OS 25-inch). The T13 retrace read the banks 1 and 19 degrees from square on the OS; the drawn water's east bank is only 7 degrees, and the faces follow the drawn water. Measured in the model (T12c, on the T13 span of 18.1 m): the drawn water edges on the deck run at +0.03 m (west bank) and -0.12 m (east bank) per metre across it, 2 and 7 degrees from square to the road (bankEdges). At the right deck edge (offsets -4.5 to -6 m) a river-system water polygon runs on 0.4-0.85 m beyond the route start under the approach; the face cannot follow it inside the deck. Interpretation: each abutment face follows its own bank (west 0.40 m back on the bank, east 0.50 m back on the bank at the centreline; the setback is 0.5 m except where the face must stay 0.3 m inside the deck end at a deck edge); the arches splay between the two faces with one crown and springing, each 7.1 m along the road at the right deck edge, 6.7 m on the centreline and 6.2 m at the left. The square-ended deck stays on the road axis. Estimated: a 1.8 m river pier with cutwaters on the line midway between the faces, rise, ring and parapet dimensions.",
+      "priorAbutments": [8.0, 27.0],
+      "priorSkew": 0,
+      "priorWaterEdges": { "centre": [10.75, 24.75], "left": [5.75, 29.0], "right": [9.75, 25.5] },
+      "priorEvidence": "Documented: stone family and two arches (VCH as cited, in the record). Mapped: Peg's Hole Bridge over the Three Mills Back River on the OS five-foot plan; bench mark on its parapet and a spot height at the bridge crown (OS 25-inch). Measured in the model: the water widens on the left (south-east) edge, so the abutments are set between the centreline and edge water lines. Estimated: two segmental arches of 8.6 m on a 1.8 m river pier with cutwaters, rise, ring and parapet dimensions.",
+      "priorNote": "Values measured by T12a on the previous span, which T13 (3 October 2026) moved onto the retraced road axis and shortened; they no longer describe this span and are kept for the record only."
     },
     "st-thomas-bridge": {
       "form": "brick-arch",
       "arches": 1,
-      "abutments": [7.0, 15.75],
-      "skew": 0,
+      "abutments": [0.9, 8.25],
+      "skew": [-0.01, -0.06],
       "crownDepth": 0.6,
       "ringDepth": 0.35,
       "abutmentLength": 2.0,
-      "waterEdges": { "centre": [8.5, 15.0], "left": [3.0, 19.25], "right": [8.75, 15.75] },
-      "evidence": "Documented: brick family (VCH as cited); the arch count is not established by the written source (road-trace notes). Mapped: Sir Thomas D'Akers Bridge over the western Waterworks arm (OS five-foot plan). Measured in the model: centreline water 8.5-15 m; the drawn water flares on the left edge and is left partly under the abutment there. Estimated: one segmental brick arch of 8.75 m with three brick rings, rise and parapet dimensions; a brick parapet with stone coping."
+      "waterEdges": { "centre": [1.4, 7.8], "left": [-3.65, 12.5], "right": [1.4, 8.15] },
+      "bankEdges": {
+        "offsets": [-6.0, -5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+        "start": [1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.35, 1.35, 1.35, 1.35, 1.35, -3.65],
+        "end": [8.15, 8.1, 8.05, 8.0, 7.95, 7.85, 7.8, 7.75, 7.7, 7.65, 7.6, 7.55, 12.5]
+      },
+      "evidence": "Documented: brick family (VCH as cited); the arch count is not established by the written source (road-trace notes). Mapped: Sir Thomas D'Akers Bridge over the western Waterworks arm (OS five-foot plan); the T13 retrace read the banks 1 and 3 degrees from square. Measured in the model (T12c, on the T13 span of 8.9 m): the drawn water edges on the deck run at -0.01 m (west bank) and -0.06 m (east bank) per metre across it, 1 and 3 degrees from square to the road (bankEdges). Along the left deck edge (offsets 5.5-6 m) the tide water polygon runs on beyond both route ends under the approaches (its dry gap for the road ends 5.0-5.5 m left of the centreline, short of the 6 m deck edge); the faces cannot follow it inside the deck. Interpretation: each abutment face follows its own bank (west 0.50 m back on the bank, east 0.45 m back on the bank at the centreline; the setback is 0.5 m except where the face must stay 0.3 m inside the deck end at a deck edge); the segmental arch splays between the two faces with one crown and springing, 7.6 m along the road at the right deck edge, 7.3 m on the centreline and 7.0 m at the left. The square-ended deck stays on the road axis. Estimated: one segmental brick arch with three brick rings, rise and parapet dimensions; a brick parapet with stone coping.",
+      "priorAbutments": [7.0, 15.75],
+      "priorSkew": 0,
+      "priorWaterEdges": { "centre": [8.5, 15.0], "left": [3.0, 19.25], "right": [8.75, 15.75] },
+      "priorEvidence": "Documented: brick family (VCH as cited); the arch count is not established by the written source (road-trace notes). Mapped: Sir Thomas D'Akers Bridge over the western Waterworks arm (OS five-foot plan). Measured in the model: centreline water 8.5-15 m; the drawn water flares on the left edge and is left partly under the abutment there. Estimated: one segmental brick arch of 8.75 m with three brick rings, rise and parapet dimensions; a brick parapet with stone coping.",
+      "priorNote": "Values measured by T12a on the previous span, which T13 (3 October 2026) moved onto the retraced road axis and shortened; they no longer describe this span and are kept for the record only."
     },
     "st-michaels-bridge": {
       "form": "stone-arch",
       "arches": 1,
-      "abutments": [8.0, 20.75],
-      "skew": -0.18,
+      "abutments": [1.4, 14.15],
+      "skew": [-0.17, -0.14],
       "crownDepth": 0.7,
       "ringDepth": 0.5,
       "abutmentLength": 2.5,
-      "waterEdges": { "centre": [8.5, 20.25], "left": [7.25, 19.25], "right": [9.5, 21.25] },
-      "evidence": "Documented: stone family (VCH as cited). Mapped: St Michael's Bridge over the eastern Waterworks arm (OS five-foot plan) with a bench mark at the bridge (OS 25-inch). Measured in the model: both drawn banks cross the route at the same oblique angle, skew -0.18 m per metre. Estimated: one segmental arch of 12.75 m, rise, ring and parapet dimensions."
+      "waterEdges": { "centre": [1.9, 13.65], "left": [-4.15, 17.85], "right": [2.9, 14.5] },
+      "bankEdges": {
+        "offsets": [-6.0, -5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+        "start": [2.9, 2.75, 2.55, 2.4, 2.25, 2.05, 1.9, 1.75, 1.55, 1.4, 1.25, 1.05, -4.15],
+        "end": [14.5, 14.4, 14.25, 14.1, 13.95, 13.8, 13.65, 13.55, 13.4, 13.25, 13.1, 12.95, 17.85]
+      },
+      "evidence": "Documented: stone family (VCH as cited). Mapped: St Michael's Bridge over the eastern Waterworks arm (OS five-foot plan) with a bench mark at the bridge (OS 25-inch); the T13 retrace read the banks 9 and 8 degrees from square. Measured in the model (T12c, on the T13 span of 15.3 m): the drawn water edges on the deck run at -0.17 m (west bank) and -0.14 m (east bank) per metre across it, 10 and 8 degrees from square to the road (bankEdges). Along the left deck edge (offsets 5.5-6 m on the west bank, 6 m on the east) the tide water polygon runs on beyond the route ends under the approaches (its dry gap for the road ends 5.25 m left of the centreline at the west end, short of the 6 m deck edge); the faces cannot follow it inside the deck. Interpretation: each abutment face follows its own bank, 0.5 m back on the bank; the segmental arch splays between the two faces with one crown and springing, 12.6 m along the road at the right deck edge, 12.8 m on the centreline and 12.9 m at the left. The square-ended deck stays on the road axis. Estimated: rise, ring and parapet dimensions.",
+      "priorAbutments": [8.0, 20.75],
+      "priorSkew": -0.18,
+      "priorWaterEdges": { "centre": [8.5, 20.25], "left": [7.25, 19.25], "right": [9.5, 21.25] },
+      "priorEvidence": "Documented: stone family (VCH as cited). Mapped: St Michael's Bridge over the eastern Waterworks arm (OS five-foot plan) with a bench mark at the bridge (OS 25-inch). Measured in the model: both drawn banks cross the route at the same oblique angle, skew -0.18 m per metre. Estimated: one segmental arch of 12.75 m, rise, ring and parapet dimensions.",
+      "priorNote": "Values measured by T12a on the previous span, which T13 (3 October 2026) moved onto the retraced road axis and shortened; they no longer describe this span and are kept for the record only."
     },
     "channelsea-high-street-bridge": {
       "form": "stone-arch",
       "arches": 1,
-      "abutments": [20.75, 31.0],
-      "skew": -0.3,
+      "abutments": [2.55, 13.9],
+      "skew": [-0.32, -0.03],
       "crownDepth": 0.65,
       "ringDepth": 0.45,
       "abutmentLength": 2.5,
-      "waterEdges": { "centre": [21.25, 30.25], "left": [18.75, 29.75], "right": [23.25, 32.5] },
-      "evidence": "Documented: stone family (VCH as cited). Mapped: Channel Sea Bridge on the OS five-foot plan, with tramway spot heights on it (OS 25-inch). Measured in the model: the Channelsea crosses the route obliquely, skew -0.3 m per metre. Estimated: one segmental arch of 10.25 m, rise, ring and parapet dimensions. The long route either side of the water is drawn as walled approach, as before."
+      "waterEdges": { "centre": [3.05, 13.4], "left": [-4.3, 18.75], "right": [5.0, 13.6] },
+      "bankEdges": {
+        "offsets": [-6.0, -5.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0],
+        "start": [5.0, 4.65, 4.35, 4.0, 3.7, 3.35, 3.05, 2.75, 2.4, 2.1, -3.5, -3.8, -4.3],
+        "end": [13.6, 13.55, 13.55, 13.5, 13.45, 13.45, 13.4, 13.4, 13.35, 18.3, 18.3, 18.25, 18.75]
+      },
+      "evidence": "Documented: stone family (VCH as cited). Mapped: Channel Sea Bridge on the OS five-foot plan, with tramway spot heights on it (OS 25-inch); the T13 retrace read the banks 18 and 2 degrees from square. Measured in the model (T12c, on the T13 span of 14.4 m): the drawn water edges on the deck run at -0.32 m (west bank) and -0.03 m (east bank) per metre across it, 18 and 2 degrees from square to the road (bankEdges). On the left 3 m of the deck (offsets 3-6 m) the tide water polygon runs on beyond both route ends under the approaches: its dry gap for the road reaches only 2.25-3.5 m left of the centreline (the pre-T13 road lay 3.6-6.3 m to the right, which suggests the gap was cut for it). The faces cannot follow that water inside the deck. Interpretation: each abutment face follows its own bank, 0.5 m back on the bank; the segmental arch splays between the two faces with one crown and springing, 9.6 m along the road at the right deck edge, 11.4 m on the centreline and 13.1 m at the left. The square-ended deck stays on the road axis. Estimated: rise, ring and parapet dimensions.",
+      "priorAbutments": [20.75, 31.0],
+      "priorSkew": -0.3,
+      "priorWaterEdges": { "centre": [21.25, 30.25], "left": [18.75, 29.75], "right": [23.25, 32.5] },
+      "priorEvidence": "Documented: stone family (VCH as cited). Mapped: Channel Sea Bridge on the OS five-foot plan, with tramway spot heights on it (OS 25-inch). Measured in the model: the Channelsea crosses the route obliquely, skew -0.3 m per metre. Estimated: one segmental arch of 10.25 m, rise, ring and parapet dimensions. The long route either side of the water is drawn as walled approach, as before.",
+      "priorNote": "Values measured by T12a on the previous span, which T13 (3 October 2026) moved onto the retraced road axis and shortened; they no longer describe this span and are kept for the record only."
     },
     "three-mills-lea-bridge": {
       "form": "iron-deck",
