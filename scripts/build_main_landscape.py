@@ -546,6 +546,235 @@ for rail in infra['railways']:
     w[abs(old-crest)<.15]=0
     levels=old+w*(target-old)
     railways.append({'name':rail['name'],'heights':levels.reshape(-1,3).tolist()})
+
+# Railway earthworks where the traced embankment meets water, buildings and
+# its own ends. Routes, formation heights and every existing embankment height
+# stay as above; this only removes embankment triangles (or parts of them,
+# re-triangulated in their own planes) and adds earth and brick faces. The
+# bridge decks, girders and piers are drawn by docs/railway-bridges.js from
+# data/maps/railway-bridge-forms.json, which records the evidence.
+# - Openings: no embankment stands over drawn water. Where the traced
+#   embankment ran on over it (the North London branch over the Hackney Cut,
+#   RAIL_OPENINGS) the fill stops RAIL_WATER_CLEAR m short of the drawn water
+#   edge and a brick abutment face with in-line wings follows that edge down
+#   below the bed. Where the traced embankment already stops at a mapped
+#   crossing (the 2 m water and street clearance in build_infrastructure.py,
+#   including the LT&SR's east bank of Bow Creek), the cut faces of the plain
+#   railways take the same brick face; the new LT&SR west approach is clipped
+#   to the drawn west bank the same way.
+# - Buildings: where a raised embankment would reach within RAIL_GAP m of a
+#   mapped building footprint, the fill stops RAIL_GAP m from the footprint and
+#   a brick retaining wall holds it, so no wall of the building is buried. Not
+#   done where that would cut the formation (recorded as a conflict).
+# - Line ends: a raised end with nothing beyond is closed by an earth end
+#   falling at the railway's own side slope to the ground (a hipped end), not
+#   left as a cut. At Bow Creek the LT&SR route ends in the river, so a short
+#   level approach behind the west abutment ends the same way.
+RAIL_GAP=1.5;RAIL_WATER_CLEAR=.4;RAIL_WALL_MIN=.05;RAIL_FOOTING=.4;RAIL_BED=-1.2;RAIL_END_STEP=1.;RAIL_TOE_SINK=.5
+RAIL_OPENINGS={'nl-hackney-cut':('North London / Victoria Park branch connection',50,95)}
+# The LT&SR west approach: stations along the route's first segment from its
+# first point (in Bow Creek); full section from RAIL_APPROACH[1] back to [2],
+# then the hipped end. Bow Creek's drawn west edge is at station -7.7 on the
+# centreline and -12.8/-2.0 at the crest edges (skew about 1.2 m per metre).
+RAIL_APPROACH=('London, Tilbury and Southend Railway',14.,-16.8)
+# Labels for footprint_geoms, in the order they were collected above.
+footprint_labels=[f"factory {b.get('id')}" for b in factory['buildings'] for p in b.get('renderPolygons') or []]+[f"holder {h.get('id',h.get('siteId'))}" for h in factory['holders']]
+footprint_labels+=[f"{k} {b.get('id')}" for k in ('mappedFactories','houses','terraces') for b in plan['neighbourhood'][k] if b.get('footprint')]
+footprint_labels+=[f"frontage {b.get('id')}" for b in json.loads((ROOT/'docs/data/high-street-frontages.json').read_text())['buildings'] if b.get('footprint')]
+footprint_labels+=[f"housing {b.get('id')}" for b in json.loads((ROOT/'docs/data/housing-detail.json').read_text())['rows'] if b.get('footprint')]
+footprint_labels+=['station']+[f"station {b.get('id')}" for b in station['supportingBuildings'] if b.get('footprint')]+['corn mill']
+assert len(footprint_labels)==len(footprint_geoms)
+road_corridors=shapely.union_all([LineString(r['route']).buffer(r['width']/2) for r in infra['roads'] if len(r['route'])>1]);shapely.prepare(road_corridors)
+rail_works={}
+def plane_heights(tri,pts):
+    """Heights at plan points pts on the plane of the 3D triangle tri."""
+    (x0,y0,z0),(x1,y1,z1),(x2,y2,z2)=tri;det=(x1-x0)*(z2-z0)-(x2-x0)*(z1-z0)
+    if abs(det)<1e-12:return np.full(len(pts),max(y0,y1,y2))
+    a=((pts[:,0]-x0)*(z2-z0)-(x2-x0)*(pts[:,1]-z0))/det;b=((x1-x0)*(pts[:,1]-z0)-(pts[:,0]-x0)*(z1-z0))/det
+    return y0+a*(y1-y0)+b*(y2-y0)
+def clip_away(tris,cut):
+    """Remove the parts of 3D triangles (N,3,3) inside the plan polygon cut.
+    Returns removed indices, the re-triangulated remainders (heights on each
+    original triangle's plane) and the remainder edges lying on the cut edge."""
+    removed=[];added=[];faces=[]
+    if cut.is_empty:return removed,added,faces
+    # Drop sub-decimetre wiggles of buffered water edges, which leave sliver remainders.
+    cut=shapely.set_precision(cut.simplify(.05),1e-3)
+    polys=shapely.polygons(np.concatenate([tris[:,:,[0,2]],tris[:,:1,[0,2]]],axis=1));boundary=cut.boundary;shapely.prepare(cut);shapely.prepare(boundary)
+    for i in shapely.STRtree(polys).query(cut,predicate='intersects'):
+        poly=polys[i]
+        if poly.area<1e-6:
+            if cut.contains(poly.centroid):removed.append(int(i))
+            continue
+        piece=poly.difference(cut)
+        if piece.area>poly.area-1e-6:continue
+        removed.append(int(i))
+        # Snap to the 1 mm grid the works are stored on, so neighbouring remainders share vertices.
+        piece=shapely.set_precision(piece,1e-3)
+        if piece.area<1e-4:continue
+        for t in shapely.get_parts(shapely.constrained_delaunay_triangles(piece)):
+            if t.area<1e-4:continue
+            xz=shapely.get_coordinates(t)[:3];y=plane_heights(tris[i],xz)
+            added.append(np.column_stack([xz[:,0],y,xz[:,1]]))
+    # Faces: edges of the kept and re-triangulated earth near the cut that no longer have a
+    # neighbour and lie on or inside the cut (vertices matched to 0.1 mm).
+    near=set(shapely.STRtree(polys).query(cut.buffer(4.),predicate='intersects').tolist())-set(removed)
+    local=[tris[i] for i in sorted(near) if polys[i].area>=1e-6]+added
+    count={};first={};fresh=set()
+    for n,t in enumerate(local):
+        for j in range(3):
+            a,b=t[j],t[(j+1)%3];k=tuple(sorted((tuple(np.round(a[[0,2]],3)),tuple(np.round(b[[0,2]],3)))))
+            count[k]=count.get(k,0)+1;first[k]=(a,b)
+            if n>=len(local)-len(added):fresh.add(k)
+    # On or inside the cut, or within 3.5 m of it where the remainder meets a gap
+    # the traced embankment already had (beside the North London branch's northern water).
+    for k,c in count.items():
+        a,b=first[k]
+        if c!=1 or np.hypot(*(a[[0,2]]-b[[0,2]]))<=1e-4:continue
+        d=shapely.distance(cut,shapely.points((a[[0,2]]+b[[0,2]])/2))
+        if d<3.5:faces.append(np.array([a,b]))
+    # An edge with earth on both sides (a T-junction or a snapping mismatch) is not a face.
+    if faces:
+        cover=shapely.union_all([Polygon(t[:,[0,2]]) for t in local if Polygon(t[:,[0,2]]).area>1e-6]).buffer(1e-4);shapely.prepare(cover)
+        f=np.array(faces);mid=f[:,:,[0,2]].mean(1);d=f[:,1,[0,2]]-f[:,0,[0,2]];nrm=np.column_stack([-d[:,1],d[:,0]])/np.maximum(1e-9,np.hypot(d[:,0],d[:,1]))[:,None]
+        both=shapely.contains_xy(cover,*(mid+.05*nrm).T)&shapely.contains_xy(cover,*(mid-.05*nrm).T)
+        faces=[x for x,b in zip(faces,both) if not b]
+    return removed,added,faces
+def rail_ground(points):
+    """The ground the plain embankment toes meet (base(); 0.05 m outside the marsh weight, as in the traced embankment)."""
+    w=weight(points);return w*base(points)+(1-w)*.05
+def wall_quads(faces,kind):
+    """Brick faces from embankment edges down past the ground: to RAIL_BED beside water, else RAIL_FOOTING below ground."""
+    quads=[]
+    if not faces:return quads
+    f=np.array(faces);ends=f[:,:,[0,2]].reshape(-1,2);g=rail_ground(ends).reshape(-1,2);wet=(shapely.distance(water,shapely.points(ends))<1.5).reshape(-1,2)
+    bottom=np.where(wet,np.minimum(g,RAIL_BED),g-RAIL_FOOTING)
+    for (a,b),(ga,gb),(ba,bb) in zip(f,g,bottom):
+        if max(a[1]-ga,b[1]-gb)<RAIL_WALL_MIN:continue
+        quads.append([a.tolist(),b.tolist(),[b[0],min(bb,b[1]),b[2]],[a[0],min(ba,a[1]),a[2]]])
+    return quads
+def hipped_end(profile,u,slope,ground_fn):
+    """Earth end beyond a raised end profile (points (x,y,z) across the line, outward
+    direction u): every profile point falls at the side slope as it moves out, to
+    a toe ring sunk RAIL_TOE_SINK m into the ground (the drawn ground can lie below base())."""
+    profile=np.asarray(profile,float);xz=profile[:,[0,2]];h0=np.maximum(0,profile[:,1]-ground_fn(xz));rows=[profile];sunk=[h0<=0]
+    for k in range(1,int(np.ceil(h0.max()/slope/RAIL_END_STEP))+2):
+        f=k*RAIL_END_STEP;q=xz+u*f;g=ground_fn(q);h=np.maximum(0,h0-slope*f)
+        rows.append(np.column_stack([q[:,0],np.where(h>0,g+h,g-RAIL_TOE_SINK),q[:,1]]));sunk.append(h<=0)
+    tris=[]
+    for r0,r1,s0,s1 in zip(rows[:-1],rows[1:],sunk[:-1],sunk[1:]):
+        for j in range(len(profile)-1):
+            for t,ss in (((r0[j],r0[j+1],r1[j+1]),(s0[j],s0[j+1],s1[j+1])),((r0[j],r1[j+1],r1[j]),(s0[j],s1[j+1],s1[j]))):
+                if not all(ss):tris.append(np.array(t))
+    return tris
+def boundary_edges(tris):
+    """Edges used by one triangle (vertices matched in plan to 1 mm), less any with earth on both sides."""
+    count={};first={}
+    for t in tris:
+        t=np.asarray(t)
+        for j in range(3):
+            a,b=t[j],t[(j+1)%3];k=tuple(sorted((tuple(np.round(a[[0,2]],3)),tuple(np.round(b[[0,2]],3)))))
+            count[k]=count.get(k,0)+1;first[k]=(a,b)
+    edges=[np.array(first[k]) for k,c in count.items() if c==1 and k[0]!=k[1]]
+    if not edges:return edges
+    cover=shapely.union_all([p for p in shapely.polygons([np.asarray(t)[:,[0,2]] for t in tris]) if p.area>1e-6]).buffer(1e-4);shapely.prepare(cover)
+    f=np.array(edges);mid=f[:,:,[0,2]].mean(1);d=f[:,1,[0,2]]-f[:,0,[0,2]];nrm=np.column_stack([-d[:,1],d[:,0]])/np.maximum(1e-9,np.hypot(d[:,0],d[:,1]))[:,None]
+    both=shapely.contains_xy(cover,*(mid+.05*nrm).T)&shapely.contains_xy(cover,*(mid-.05*nrm).T)
+    return [e for e,b in zip(edges,both) if not b]
+lines_by_name={r['name']:LineString(r['route']) for r in infra['railways']}
+for rail,record in zip(infra['railways'],railways):
+    name=rail['name'];line=lines_by_name[name];half=rail.get('baseHalfWidth',15);crest_half=rail.get('crestHalfWidth',max(3,rail.get('tracks',1)*2))
+    tris=np.array(rail['embankment'],float);tris[:,:,1]=np.array(record['heights']);detailed=bool(rail.get('detailedMainline') or rail.get('detailedRailway'))
+    others=shapely.union_all([LineString(r['route']).buffer(r.get('baseHalfWidth',15)) for r in infra['railways'] if r['name']!=name])
+    items=[];removed=set();added=[];walls=[]
+    def apply(cut,kind,ident,evidence,extra=None,source=None):
+        global_tris=tris if source is None else source
+        rem,add,faces=clip_away(global_tris,cut);q=wall_quads(faces,kind)
+        items.append({'kind':kind,'id':ident,'removedTriangles':len(rem),'addedTriangles':len(add),'wallFaces':len(q),'wallLengthMetres':round(float(sum(np.hypot(w[1][0]-w[0][0],w[1][2]-w[0][2]) for w in q)),1),**(extra or {}),'evidence':evidence})
+        return rem,add,q
+    # Recorded bridge openings.
+    for ident,(railway,c0,c1) in RAIL_OPENINGS.items():
+        if railway!=name:continue
+        band=shapely.ops.substring(line,c0,c1).buffer(half+3,cap_style='flat')
+        rem,add,q=apply(water.buffer(RAIL_WATER_CLEAR).intersection(band),'opening',ident,'Mapped: the drawn water (river-system, ground-plan and ditch polygons) the line crosses. Interpreted: the fill stopping 0.4 m short of it behind a brick abutment face with in-line wings; no surveyed abutment.')
+        removed|=set(rem);added+=add;walls+=q
+    # Buildings beside the embankment.
+    vertices=tris.reshape(-1,3);raised=vertices[:,1]-rail_ground(vertices[:,[0,2]])>RAIL_WALL_MIN
+    vtree=shapely.STRtree(shapely.points(vertices[:,[0,2]]))
+    crest_band=line.buffer(crest_half+.5)
+    cuts=[];held=[];conflicts=[]
+    # The detailed railways already stop their fill at building edges behind
+    # their own retaining walls (great-eastern.js); only a footprint that the
+    # fill actually enters is held off there.
+    for k in footprint_tree.query(line.buffer(half+RAIL_GAP+1)):
+        near=vtree.query(footprint_geoms[k] if detailed else footprint_geoms[k].buffer(RAIL_GAP),predicate='intersects')
+        if not len(near) or not raised[near].any():continue
+        cut=footprint_geoms[k].buffer(RAIL_GAP,join_style='mitre')
+        label={'footprint':footprint_labels[k],'centre':np.round(list(footprint_geoms[k].centroid.coords)[0],1).tolist(),'distanceFromRouteMetres':round(footprint_geoms[k].distance(line),2)}
+        if cut.intersects(crest_band):conflicts.append({**label,'reason':'footprint within '+str(RAIL_GAP)+' m of the formation; no wall can hold the fill off it'});continue
+        cuts.append(cut);held.append(label)
+    if cuts:
+        rem,add,q=apply(shapely.union_all(cuts),'hold-off','buildings','Mapped: the building footprints (OS-traced, as seated in the scene). Interpreted: a brick retaining wall '+str(RAIL_GAP)+' m off each footprint where the traced embankment slope would otherwise bury its wall; no surveyed wall.',{'buildings':held})
+        removed|=set(rem);added+=add;walls+=q
+    if conflicts:items.append({'kind':'conflict','id':'buildings-in-formation','conflicts':conflicts,'evidence':'Recorded, not changed: a mapped footprint lies inside the traced formation (a registration conflict between the building and railway traces).'})
+    # Raised line ends with nothing beyond them.
+    route=np.array(rail['route'],float)
+    for which,p0,p1 in (('start',route[0],route[1]),('end',route[-1],route[-2])):
+        if others.contains(shapely.Point(p0)) or (name==RAIL_APPROACH[0] and which=='start'):continue
+        u=(p0-p1)/np.linalg.norm(p0-p1);n=np.array([-u[1],u[0]])
+        f=(vertices[:,[0,2]]-p0)@u;o=(vertices[:,[0,2]]-p0)@n;at=np.abs(f)<.05
+        # A rounded or sloped end already reaches beyond the end line.
+        if not at.any() or ((f>1)&(np.abs(o)<half)).any():continue
+        prof=np.unique(np.round(vertices[at],4),axis=0);prof=prof[np.argsort((prof[:,[0,2]]-p0)@n)]
+        keep=np.r_[True,np.diff((prof[:,[0,2]]-p0)@n)>.05];prof=prof[keep]
+        rise=prof[:,1]-rail_ground(prof[:,[0,2]])
+        if rise.max()<.5:continue
+        slope=rise.max()/max(1,half-crest_half);end=hipped_end(prof,u,slope,rail_ground)
+        # Zero-area slivers standing in the old end plane would show as a seam line on the new end.
+        cf=(tris[:,:,[0,2]].mean(1)-p0)@u;pa=shapely.area(shapely.polygons(np.concatenate([tris[:,:,[0,2]],tris[:,:1,[0,2]]],axis=1)))
+        removed|=set(np.flatnonzero((np.abs(cf)<.1)&(pa<1e-6)).tolist())
+        end=np.array(end);rem,add,q=clip_away(end,water.buffer(RAIL_WATER_CLEAR).union(shapely.union_all([footprint_geoms[k].buffer(RAIL_GAP,join_style='mitre') for k in footprint_tree.query(shapely.Point(p0).buffer(half*2))]) if len(footprint_tree.query(shapely.Point(p0).buffer(half*2))) else Polygon()))
+        kept=[t for i,t in enumerate(end) if i not in set(rem)]+add;q=wall_quads(q,'end')
+        items.append({'kind':'end-fill','id':f'{which}','point':np.round(p0,2).tolist(),'heightMetres':round(float(rise.max()),2),'slope':f'1:{round(1/slope,2)}','addedTriangles':len(kept),'wallFaces':len(q),'evidence':'Interpreted: the traced line ends here inside the model; the embankment is closed by an earth end at its own side slope. The OS five-foot plan shows the line continuing beyond (see data/maps/railway-bridge-forms.json lineEnds).'})
+        added+=kept;walls+=q
+    # The LT&SR approach behind the Bow Creek west abutment.
+    if name==RAIL_APPROACH[0]:
+        a0=route[0];ua=(route[1]-a0)/np.linalg.norm(route[1]-a0);na=np.array([-ua[1],ua[0]]);crest=rail['formationHeight']+.05
+        offsets=np.array(sorted({*np.arange(-half,half+.01,2.),-crest_half,crest_half,*np.arange(-half-2,-half+.01,2.),*np.arange(half,half+2.01,2.)}))
+        def section(st):
+            xz=a0+ua*st+np.outer(offsets,na);g=rail_ground(xz);t=np.clip((half-np.abs(offsets))/max(1,half-crest_half),0,1)
+            return np.column_stack([xz[:,0],np.where(t>0,g+t*(crest-g),g-RAIL_TOE_SINK),xz[:,1]])
+        rows=[section(st) for st in np.arange(RAIL_APPROACH[1],RAIL_APPROACH[2]-1e-6,-RAIL_END_STEP)]
+        if rows and abs(((rows[-1][0,[0,2]]-a0)@ua)-RAIL_APPROACH[2])>1e-3:rows.append(section(RAIL_APPROACH[2]))
+        body=[]
+        for r0,r1 in zip(rows[:-1],rows[1:]):
+            for j in range(len(offsets)-1):body+=[np.array([r0[j],r0[j+1],r1[j+1]]),np.array([r0[j],r1[j+1],r1[j]])]
+        body+=hipped_end(rows[-1],-ua,(crest-float(np.median(rail_ground(rows[-1][:,[0,2]]))))/max(1,half-crest_half),rail_ground)
+        body=np.array(body)
+        cut=water.buffer(RAIL_WATER_CLEAR).union(shapely.union_all([footprint_geoms[k].buffer(RAIL_GAP,join_style='mitre') for k in footprint_tree.query(LineString([a0+ua*RAIL_APPROACH[1],a0+ua*(RAIL_APPROACH[2]-15)]).buffer(half+3))] or [Polygon()]))
+        rem,add,faces=clip_away(body,cut);kept=[t for i,t in enumerate(body) if i not in set(rem)]+add;q=wall_quads(faces,'abutment')
+        # The traced embankment's rounded end on the west bank lies under the approach: not drawn.
+        removed|=set(np.flatnonzero(((tris[:,:,[0,2]].mean(1)-a0)@ua)<RAIL_APPROACH[1]).tolist())
+        items.append({'kind':'approach','id':'ltsr-bow-creek-west','stations':[RAIL_APPROACH[1],RAIL_APPROACH[2]],'addedTriangles':len(kept),'wallFaces':len(q),'wallLengthMetres':round(float(sum(np.hypot(w[1][0]-w[0][0],w[1][2]-w[0][2]) for w in q)),1),'evidence':'Mapped: the LT&SR crossing Bow Creek and continuing west on the OS five-foot plan, and the drawn west water edge. Interpreted: the traced route ends in the river, so the fill is carried at formation level to station '+str(RAIL_APPROACH[2])+' behind a brick west abutment on the drawn bank and closed there by an earth end at the side slope; the line beyond is not modelled.'})
+        added+=kept;walls+=q
+    # Cut faces of the plain railways at mapped openings (water, streets).
+    if not detailed:
+        final=[t for i,t in enumerate(tris) if i not in removed]+[np.asarray(t) for t in added]
+        faces=[];crossing_ends=shapely.multipoints([c[k] for c in rail['crossings'] for k in (0,-1)]) if rail['crossings'] else None
+        for e in boundary_edges(final):
+            m=shapely.points(e[:,[0,2]].mean(0))
+            # Only the cut ends at a crossing; a side cut along a ditch or street is left as traced.
+            if crossing_ends is None or shapely.distance(crossing_ends,m)>half+3:continue
+            if shapely.distance(water,m)<3.2 or shapely.distance(road_corridors,m)<3.2:
+                if not others.contains(m):faces.append(e)
+        wall_ids={tuple(np.round(np.array(w[:2])[:,[0,2]].ravel(),3)) for w in walls}
+        q=[w for w in wall_quads(faces,'opening-cut') if tuple(np.round(np.array(w[:2])[:,[0,2]].ravel(),3)) not in wall_ids and tuple(np.round(np.array(w[1::-1])[:,[0,2]].ravel(),3)) not in wall_ids]
+        if q:items.append({'kind':'opening-cut','id':'mapped-openings','wallFaces':len(q),'wallLengthMetres':round(float(sum(np.hypot(w[1][0]-w[0][0],w[1][2]-w[0][2]) for w in q)),1),'evidence':'Mapped: the water and street openings the traced embankment already stops at (2 m clearance). Interpreted: brick abutment and wing faces on its cut ends; no surveyed abutment.'})
+        walls+=q
+    if items:
+        record['works']={'removedTriangles':sorted(removed),'addedTriangles':np.round(np.array([np.asarray(t) for t in added]),3).tolist() if added else [],'walls':np.round(np.array(walls),3).tolist() if walls else [],'items':items}
+        rail_works[name]=[{k:v for k,v in it.items() if k!='evidence'} for it in items]
+        print('RAILWAY WORKS:',name,rail_works[name],flush=True)
 result={'epoch':'1900','status':'regional early-marsh ground applied to main industrial reconstruction',
     'scope':'1848-supported marsh envelope and its interpreted edge blend; existing outer terrain retained',
     'files':files,'field':{'bounds':[e0-538900,183209-n1,e1-538900,183209-n0],'step':step,'width':shape[1],'height':shape[0],'cellCentres':True},
@@ -576,6 +805,9 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
         'deckHeight':[b[1]+DECK_ROAD_OFFSET for v in graded_decks.values() for b in v][0] if graded_decks else None,
         'evidence':'Mapped: the crossing and approach alignment (OS VIII.32, road-traces.json). Observed: Abbey Lane street spot heights sh_538874_183253 (2.19 m scene, 8.1 m west of the deck) and sh_538944_183274 (2.40 m, 34 m east). Interpreted: the 1.8 m deck height (road-traces.json); the approach grade and landing are estimates made to meet it. Both readings stand above the deck, so the graded approach dips to the bridge; raising the deck in road-traces.json is the alternative.'},
     'railwaySlopes':railways,
+    'railwayWorks':{'method':f'formation stations, routes and the refitted embankment heights are unchanged; per railway, works.removedTriangles lists embankment triangles not drawn and works.addedTriangles the earth drawn instead (remainders re-triangulated in their own planes, hipped ends, the LT&SR west approach); works.walls are brick faces (top edge on the earthwork, foot {RAIL_FOOTING} m below the ground or at {RAIL_BED} m beside water). No embankment stands over drawn water: at recorded bridges the fill stops {RAIL_WATER_CLEAR} m short of the water behind an abutment face with in-line wings; where a raised embankment would come within {RAIL_GAP} m of a mapped building footprint it stops {RAIL_GAP} m off behind a retaining wall, except where the footprint lies in the formation (recorded as a conflict); raised line ends with nothing beyond close with an earth end at the side slope',
+        'railways':rail_works,
+        'evidence':'Mapped: the railway routes and the formation they carry (infrastructure.json), the drawn water, the street corridors and the building footprints; the OS five-foot plan for the Bow Creek and Hackney Cut crossings and the line ends (data/maps/railway-bridge-forms.json). Interpreted: every abutment, wing and retaining wall, the hipped ends and the LT&SR west approach; none is a surveyed structure.'},
     'continuousBanks':{'profileCount':len(banks.lines),'sourceIds':banks.accepted_ids,'heightStatus':'observed crests interpolate along bank; unsampled components inferred'},
     'probes':[{'name':name,'scenePosition':[e-538900,183209-n],'groundSceneY':float(base(np.array([[e-538900,183209-n]]))[0])} for name,e,n in [('Pudding–City marsh',537650,184100),('Western neighbouring marsh',537300,184100),('Northern Mill Meads',538550,183200),('Abbey marsh',539200,182900),('Western Plaistow',539800,181800)]],
     'limitations':['Site pads without yard readings use a conservative premises estimate, not a measured fill thickness.','Existing railway grades, sewer cover, channel beds and water levels retained.','The flood solver has not been recalibrated to these visible geometry changes.',

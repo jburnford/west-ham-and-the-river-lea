@@ -4,6 +4,13 @@ import { greatEastern } from './great-eastern.js';
 import { roadProfileHeight } from './road-levels.js';
 import { createRandom } from './lib/prng.js';
 import { bridgeClearance, roadBridges } from './road-bridges.js';
+import {
+  railwayWorks,
+  addedBridgeIntervals,
+  replacedCrossings,
+  railwayBridges,
+  railwayWalls,
+} from './railway-bridges.js';
 export function infrastructure({ THREE, scene, materials: m, data, box, level }) {
   const infra = data.infrastructure,
     [x0, z0, x1, z1] = data.terrain.bounds;
@@ -87,7 +94,7 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
     return h;
   };
   const clearance = bridgeClearance(infra.roadBridges);
-  function surface(triangles, material, offset = 0, hasHeight = false) {
+  function surface(triangles, material, offset = 0, hasHeight = false, name = '') {
     const vertices = [],
       supports = [];
     for (const tri of triangles) {
@@ -114,7 +121,9 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
     for (let i = 0; i < vertices.length; i += 3) uv.push(vertices[i], vertices[i + 2]);
     geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
     geometry.computeVertexNormals();
-    scene.add(new THREE.Mesh(geometry, material));
+    const mesh = new THREE.Mesh(geometry, material);
+    mesh.name = name;
+    scene.add(mesh);
     if (supports.length) {
       const fill = new THREE.BufferGeometry();
       fill.setAttribute('position', new THREE.Float32BufferAttribute(supports, 3));
@@ -154,15 +163,36 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
     level,
     waterLevel: data.riverNetwork.waterLevel,
   });
+  // The main landscape's railway works keep embankment off drawn water and building footprints,
+  // close raised line ends and add brick abutment, wing and retaining faces (railway-bridges.js).
+  const railworks = {};
   for (const railway of infra.railways) {
+    const works = railwayWorks(railway, data.mainLandscape),
+      embankmentName = `railway-embankment:${railway.name}`;
+    railworks[railway.name] = { removed: works.removed, added: works.added, wallFaces: works.walls.length };
+    railwayWalls({ THREE, scene, materials: m, walls: works.walls, name: `railway-wall:${railway.name}` });
     if (railway.detailedMainline || railway.detailedRailway) {
-      const detail = greatEastern({ THREE, scene, m, railway, box, surface, ballast });
+      const detail = greatEastern({
+        THREE,
+        scene,
+        m,
+        railway: {
+          ...railway,
+          embankment: works.embankment,
+          bridges: [...railway.bridges, ...addedBridgeIntervals(railway)],
+        },
+        box,
+        surface: (triangles, ...rest) =>
+          surface(triangles, ...rest, ...(triangles === works.embankment ? [embankmentName] : [])),
+        ballast,
+      });
       if (railway.detailedMainline) scene.userData.greatEastern = detail;
       else (scene.userData.railConnections ||= []).push(detail);
       continue;
     }
-    surface(railway.embankment, earth, 0, true);
-    const h = railway.formationHeight;
+    surface(works.embankment, earth, 0, true, embankmentName);
+    const h = railway.formationHeight,
+      replaced = replacedCrossings(railway);
     for (let i = 1; i < railway.route.length; i++) {
       const { g, length } = segment(railway.route[i - 1], railway.route[i]);
       box(g, 0, h, 0, length, 0.24, 8.6, ballast);
@@ -171,7 +201,9 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
         for (let x = -length / 2; x < length / 2; x += 2.5) box(g, x, h + 0.24, track, 0.22, 0.18, 2.4, m.wood);
       }
     }
-    for (const crossing of railway.crossings) {
+    for (const [index, crossing] of railway.crossings.entries()) {
+      // A crossing with a register bridge is drawn by railway-bridges.js.
+      if (replaced.has(index)) continue;
       for (let i = 1; i < crossing.length; i++) {
         const { g, length } = segment(crossing[i - 1], crossing[i]);
         box(g, 0, h - 0.5, 0, length, 0.5, 8.6, m.iron);
@@ -190,6 +222,7 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
       }
     }
   }
+  const railBridges = railwayBridges({ THREE, scene, materials: m, railways: infra.railways, level, box, ballast });
   return {
     roadRoutes: infra.roads.length,
     roadBridges: infra.roadBridges.length,
@@ -201,5 +234,7 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
     },
     raisedRailways: infra.railways.length,
     railFormationHeights: Object.fromEntries(infra.railways.map((r) => [r.name, r.formationHeight])),
+    railwayWorks: railworks,
+    railwayBridges: railBridges.bridges.map((b) => `${b.id}: ${b.form}, ${b.girders} girders, ${b.piers} pier`),
   };
 }
