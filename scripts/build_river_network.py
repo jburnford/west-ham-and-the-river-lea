@@ -33,13 +33,21 @@ WALL_WIDTH = .32
 # Offsets (m) of the shore-following lines that carry the bank vertices. 0 is
 # the mapped shoreline, 0.16 the land face of a retaining wall standing on it;
 # 0.5 m spacing covers the shelf and the bank crest, 1 m the back slope. Beyond
-# 8 m every section is gentle enough for the 1 m grid.
-RING_OFFSETS = [0, WALL_WIDTH/2, .5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 7, 8]
+# 8 m every section is gentle enough for the 1 m grid. No line lies on the
+# tidal outline (TIDE_SHELF_M): vertices there would fall either side of it at
+# random, and the landscape keeps native heights inside it but raises outside.
+TIDE_SHELF_M = 5
+RING_OFFSETS = [0, WALL_WIDTH/2, .5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, TIDE_SHELF_M-.1, TIDE_SHELF_M+.1, 5.5, 6, 7, 8]
 ALONG_SHORE = 1.0
 SLIVER_M = .25
 EDGE_TOL = 2e-4  # m: float32 positions resolve about 1e-4 m at these coordinates
 MERGE_TOL = 5e-3  # m: vertices closer than this (clipping noise) are one vertex
 CORE_WALL_SEARCH_M = 15
+# The core terrain (0.4 m grid, river-terrain build) has no mesh edges on a moved
+# wall line, so the landscape wall fill would drag ground teeth up its water
+# face there. Core walls are therefore only proposed, not moved, until the core
+# mesh or the landscape builder can carry them.
+APPLY_CORE_WALL_RELOCATION = False
 SHORE_OFFSET_M = .35  # mean (raster - exact) shoreline distance over land nodes within 5 m
 BUILT_OFFSET_M = .45  # the same for distance to sites and roads, within 3 m
 
@@ -406,7 +414,12 @@ def build():
     frontages = json.loads((OUT/'high-street-frontages.json').read_text())
     buildings = unary_union([Polygon(q['outer'], q['holes']) for b in factories['buildings']+frontages['buildings'] for q in b['renderPolygons']] +
                             [Polygon(b['footprint']) for b in plan['neighbourhood']['houses']+plan['neighbourhood']['terraces']])
-    wall_routes, relocated, not_relocated = relocate_core_walls(wall_routes, core, river, buildings)
+    moved_routes, relocated, not_relocated = relocate_core_walls(wall_routes, core, river, buildings)
+    if APPLY_CORE_WALL_RELOCATION:
+        wall_routes = moved_routes
+    else:
+        for record in relocated:
+            record['proposedRoute'] = moved_routes[record['routeIndex']]
 
     # Land section from exact distances to the mapped geometry, not its 1 m raster.
     river_distance, tidal_distance = Distance(mesh_water), Distance(tidal)
@@ -547,7 +560,7 @@ def build():
     # would flood the lower marsh through the back of its embankments.
     core_beds = unary_union([Polygon(p[0], p[1:]) for p in plan['bankStudies']])
     retained = unary_union([g for key,g in channels.items() if key in retained_ids|isolated_ids])
-    tide_envelope = tidal.buffer(5).union(core_beds.intersection(patch))
+    tide_envelope = tidal.buffer(TIDE_SHELF_M).union(core_beds.intersection(patch))
     tide_envelope = tide_envelope.difference(sites.union(roads).difference(tidal))
     tide_envelope = tide_envelope.difference(marsh.union(ditches).union(retained))
     lock_gaps=unary_union([Polygon(p[0],p[1:]) for r in connections['connections']
@@ -563,9 +576,11 @@ def build():
                 'evidence':'Illustrative synchronised rise and fall within interpreted river-side shelves. Not a tide prediction or hydraulic simulation; excludes retained Old Lea and marsh drains.'},
         'retainingEdges':{'routes':wall_routes,'crestHeight':1.65,'baseHeight':-.55,'width':WALL_WIDTH,
                           'evidence':'Interpretive flood-retaining edges where tidal river banks meet GIS industrial plots. Presence, material and individual sections require photograph/engineering-plan verification. Not the 1930s concrete embankments.',
-                          'relocatedRoutes':{'routes':relocated,'notRelocated':not_relocated,
+                          'coreWallRelocation':{'applied':APPLY_CORE_WALL_RELOCATION,
+                              'notAppliedReason':'the core terrain (river-terrain, 0.4 m grid) has no mesh edges on the moved wall lines, so the main-landscape wall fill raises ground cells on the water side of the wall (teeth up its face, seen in a scratch rebuild) and its land-side test (wet samples 1-5 m out) becomes a tie; move them once the core mesh carries the wall lines or the landscape builder clears core wall faces',
+                              'routes':relocated,'notRelocated':not_relocated,
                               'notRelocatedReason':'mapped factory buildings stand inside the core channel section along these walls, many within 1-2 m of the GIS outline, and the core terrain mud runs under them; the mud edge would put the wall through buildings, so the walls stay on the GIS outline (the building frontage is the real bank line there; the core channel section needs trimming to it in the river-terrain build)',
-                              'method':'routes inside the detailed core moved from the GIS outline to the landward edge of the core terrain exposed tidal mud (river-terrain.rgba, the same test as the main landscape uses), found along the land-side normal every 1 m, median-filtered over 7 m and averaged over 5 m; tapered to zero within 10 m of the core boundary; vertices every 2 m; priorRoute is the former route',
+                              'method':'routes inside the detailed core moved from the GIS outline to the landward edge of the core terrain exposed tidal mud (river-terrain.rgba, the same test as the main landscape uses), found along the land-side normal every 1 m, median-filtered over 7 m and averaged over 5 m; tapered to zero within 10 m of the core boundary; vertices every 2 m; proposedRoute is the bank-line route, priorRoute the route in use (applied only if APPLY_CORE_WALL_RELOCATION)',
                               'evidence':'Mapped: the GIS outline and the industrial plot the wall fronts. Estimated: the core channel section (river-terrain build, an interpretation of Figure 2.4 and the author), so the new line is the interpreted bank line of that section, not a surveyed wall. The former routes stood on the low-water line about 7.5 m inside that section, on preserved tidal mud.'}},
         'marshDitches':{'features':[{**f,'renderPolygons':rings(g),'retainedAreaM2':round(g.area,2)} for f,g in zip(ditch_raw['features'],ditch_parts)],
                         'waterPolygons':rings(ditches.difference(patch)), 'marshPolygons':rings(marsh),
