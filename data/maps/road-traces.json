@@ -279,8 +279,8 @@
       "sheet": "32",
       "points": [
         [
-          1059,
-          654
+          1039.0,
+          728.7
         ],
         [
           1036,
@@ -315,7 +315,28 @@
       "kind": "path",
       "pixelWidth": 1800,
       "surface": "cinder",
-      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked."
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked.",
+      "routeEvidence": "Mapped: centreline traced from OS VIII.32, from the embankment toe south along the Channelsea to (869, 1170). Estimated: the first point, cut where the trace meets the embankment toe. The OS VIII.32 trace runs on from pixel (1059, 654) to (869, 1170) and passes under the footprint of the later Northern Outfall Sewer embankment from about 3 m to about 48 m along its length. No tunnel, creep or steps through the embankment is mapped or documented here, so the path is drawn in two parts that each end at the modelled embankment toe (0.25 m clear of it), the point where the mapped path meets the later embankment. The toe line is interpreted (neighbourhood.sewer.bankFormEvidence), so the exact end points are estimates; the route between them is the mapped trace."
+    },
+    {
+      "name": "Mill Mead riverbank path, north of the sewer",
+      "sheet": "32",
+      "points": [
+        [
+          1059,
+          654
+        ],
+        [
+          1057.7,
+          659.0
+        ]
+      ],
+      "width": 2,
+      "kind": "path",
+      "pixelWidth": 1800,
+      "surface": "cinder",
+      "surfaceEvidence": "Provisional visual assignment from author description of c1900 practice; no street-specific paving/adoption record checked.",
+      "routeEvidence": "Mapped: the northern start of the same OS VIII.32 trace at (1059, 654). Estimated: the end point, cut where the trace meets the embankment toe about 3 m on. The OS VIII.32 trace runs on from pixel (1059, 654) to (869, 1170) and passes under the footprint of the later Northern Outfall Sewer embankment from about 3 m to about 48 m along its length. No tunnel, creep or steps through the embankment is mapped or documented here, so the path is drawn in two parts that each end at the modelled embankment toe (0.25 m clear of it), the point where the mapped path meets the later embankment. The toe line is interpreted (neighbourhood.sewer.bankFormEvidence), so the exact end points are estimates; the route between them is the mapped trace."
     },
     {
       "name": "Roberts Road",
