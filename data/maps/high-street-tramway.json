@@ -1,0 +1,78 @@
+{
+  "id": "stratford-high-street-tramway-1900",
+  "name": "Stratford High Street horse tramway, about 1900",
+  "status": "interpreted",
+  "operation": {
+    "traction": "horse",
+    "overheadEquipment": "none",
+    "evidence": "Documented: the two c1904 Broadway photographs in the photo catalogue show horse cars boarded 'ALDGATE, WHITECHAPEL, MILE END, BOW & STRATFORD' on granite setts with flush grooved rails and no overhead wires (catalogue review, not used as a texture). The catalogue also records that West Ham's electric trams and their poles date from 1905 (091910), after the scene date. The photographs are at the Broadway, about 460 m beyond the modelled High Street, so they document the service and rail type, not this stretch of track. No trams or horses are modelled."
+  },
+  "track": {
+    "form": "double",
+    "gaugeMetres": 1.435,
+    "trackCentreSpacingMetres": 2.7,
+    "curveRadiusMetres": 25,
+    "lateralPlacement": "centred on the modelled carriageway centreline",
+    "passingLoops": [],
+    "evidence": "Mapped: the OS London five-foot plan (1:1056, surveyed 1891-95, published 1893-96; NLS tiles cached in reference/spot-heights/mosaics) draws four parallel rail lines along the whole High Street from Bow Road over Bow Bridge, Pegs Hole, St Thomas and St Michael's bridges and the Channelsea bridge to Stratford Bridge, lettered TRAMWAY by the Bow granary and again north of Stratford Bridge. A cross-profile scan every 5 m along the modelled centreline found the four-line pattern at 239 of 284 stations. The misses are text, bridge lettering and the section between William Street and Park Lane where the modelled centreline runs up to about 8 m north-west of the drawn carriageway. No single-track section or passing loop was seen, so none is modelled. Measured: line spacing within each pair median 1.40 m (interquartile 1.30-1.40 m) at 0.38 m per map pixel, consistent with standard gauge; track centres median 2.70 m (interquartile 2.60-2.80 m). Estimated: the gauge is taken as standard 1,435 mm (the map cannot resolve 1,435 against nearby gauges), the track-centre spacing is the rounded map measurement, the modelled road's corners are eased into 25 m radius curves (a typical street-tramway radius, not measured; the sharpest corner, 23 degrees at the Channelsea approach junction, moves the track about 0.5 m towards the inside of the bend), and the tracks are centred on the modelled road rather than on the drawn rails (the drawn rails lie a median 1.3-1.6 m south-east of the modelled centreline along most of the route and about 4 m south-east at the Channelsea bridge; the road alignment is not changed here)."
+  },
+  "rail": {
+    "type": "grooved girder rail, laid flush in the setts",
+    "headWidthMetres": 0.06,
+    "grooveWidthMetres": 0.03,
+    "lipWidthMetres": 0.016,
+    "headAboveSettsMetres": 0.007,
+    "colours": {
+      "head": "#6a6b6a",
+      "groove": "#1b1a19",
+      "lip": "#454441"
+    },
+    "evidence": "Documented: flush grooved rails in setts (c1904 Broadway photographs). Estimated: head, groove and lip widths are typical grooved-rail proportions, not measured on any High Street rail; the 7 mm rise above the sett surface is a rendering allowance so the rail reads without depth fighting, not a claim that the rails stood proud of the paving. Colours are type-based estimates of wheel-polished head, dark groove and weathered lip."
+  },
+  "route": {
+    "roads": ["Stratford High Street", "Stratford High Street — Channelsea approach"],
+    "followsBridgeDecks": [
+      "bow-bridge",
+      "pegshole-bridge",
+      "st-thomas-bridge",
+      "st-michaels-bridge",
+      "channelsea-high-street-bridge"
+    ],
+    "evidence": "Mapped: the rails are drawn continuously over every High Street bridge on the OS five-foot plan, including the Channelsea bridge (spot-height readers note 'tramway at Channel Sea Bridge; dot on rail above figure' and 'tramway at Channelsea Bridge; dot on the rail right of figures'). Interpreted: the rails follow the modelled High Street centreline from docs/data/infrastructure.json at run time, so they move with any later road retrace, and sit on the modelled sett surface or bridge deck. The tramway continued west along Bow Road and north-east beyond Stratford Bridge to the Broadway; those parts lie beyond the modelled High Street and are not drawn."
+  },
+  "sources": [
+    {
+      "path": "reference/spot-heights/mosaics/m18_131060_87140.png",
+      "note": "OS London five-foot mosaic, Bow Bridge to Bow Bridge Wharf: four rail lines and TRAMWAY lettering."
+    },
+    {
+      "path": "reference/spot-heights/mosaics/m18_131063_87137.png",
+      "note": "OS London five-foot mosaic, Pegs Hole to St Michael's bridges: four rail lines continuous over the bridges."
+    },
+    {
+      "path": "reference/spot-heights/mosaics/m18_131066_87134.png",
+      "note": "OS London five-foot mosaic, William Street to Park Lane: four rail lines along the drawn carriageway."
+    },
+    {
+      "path": "reference/spot-heights/mosaics/m18_131069_87131.png",
+      "note": "OS London five-foot mosaic, Channelsea bridge to Stratford Bridge: four rail lines across the bridge."
+    },
+    {
+      "path": "reference/epfl-london-os-text/londonos_texts_postcorrected.gpkg",
+      "note": "EPFL text layer: label 104206 'TRAMWAY' at about scene (-953, 48) on the High Street; label 86528 'TRAMWAY' at about scene (-160, -892) north of Stratford Bridge."
+    },
+    {
+      "path": "data/maps/lower-lea-region/height-observations.opus-2026-10-02.geojson",
+      "note": "Spot-height reader notes on the High Street: 'Stratford High Street tramway ... dot a solid blob on the north rail', 'High Street tramway at West Street; dot between the rails', 'tramway at Channel Sea Bridge; dot on rail above figure' (ids sh_538019_183216, sh_538470_183755, sh_538651_183978 and others)."
+    },
+    {
+      "path": "reference/photo-review-2026-10-03/reports/photo-catalogue.md",
+      "note": "Broadway c1904 photographs 091809 and 091819: horse trams, flush grooved rails in setts, no overhead wires; 091910 dates electric trams to 1905."
+    },
+    {
+      "path": "scenes/channelsea-sewer-panorama/OPUS_DELEGATION_PLAN.md",
+      "note": "Author's note: the High Street lacks tram rails (horse trams, no wires, correct for 1900)."
+    }
+  ],
+  "limitations": "The OS plan predates the scene by five to nine years; no record of relaying, new crossovers or a change of track form between the survey and 1900 was found in the repository. Crossovers, points, drainage boxes and rail joints are not drawn on the OS at a readable size and are not modelled. Rail widths, rise and colours are estimates. The tracks are centred on the modelled carriageway, which differs from the drawn carriageway by up to about 8 m between William Street and Park Lane and about 4 m at the Channelsea bridge."
+}
