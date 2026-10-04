@@ -3,7 +3,7 @@ import { highStreetSurfaceHeight } from './sewer-levels.js';
 import { greatEastern } from './great-eastern.js';
 import { roadProfileHeight } from './road-levels.js';
 import { createRandom } from './lib/prng.js';
-import { bridgeClearance, roadBridges } from './road-bridges.js';
+import { bridgeClearance, bridgeForms, deckEndLevel, roadBridges } from './road-bridges.js';
 import {
   railwayWorks,
   addedBridgeIntervals,
@@ -63,6 +63,8 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
   const earth = m.ground.clone();
   earth.color.set('#777463');
   const profiles = infra.roads.map((r) => r.elevationProfile).filter(Boolean);
+  const deckEnds = deckEndLevel(infra.roadBridges),
+    deckFootway = bridgeForms.defaults.deckFootway;
   const profileHeight = (x, z) => {
     for (const p of profiles) {
       const y = roadProfileHeight(x, z, p, data.elevation?.meta.epoch);
@@ -81,19 +83,77 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
           : 0.12;
     const highStreet = highStreetSurfaceHeight(x, z, infra.sewerHighStreet);
     if (!data.mainLandscape || highStreet > 0.1850001) h = Math.max(h, highStreet - 0.065);
-    for (const bridge of infra.roadBridges)
-      for (let i = 1; i < bridge.route.length; i++) {
-        const a = bridge.route[i - 1],
-          b = bridge.route[i],
-          dx = b[0] - a[0],
-          dz = b[1] - a[1];
-        const t = Math.max(0, Math.min(1, ((x - a[0]) * dx + (z - a[1]) * dz) / (dx * dx + dz * dz)));
-        const distance = Math.hypot(x - a[0] - t * dx, z - a[1] - t * dz);
-        h = Math.max(h, bridge.height - 0.065 - distance * 0.12);
-      }
-    return h;
+    // Near a bridge the deck level wins: level across the road at each deck end, falling along it
+    // (deckEndLevel in road-bridges.js; the rule and its estimates are in the bridge register).
+    return deckEnds(x, z, h);
   };
   const clearance = bridgeClearance(infra.roadBridges);
+  // The street footway carried onto each deck footway (deckEndFootways from build_infrastructure.py):
+  // each vertex carries its rise weight, 0 where it meets the street footway (0.095 m above
+  // ground()) and 1 at the deck end (the deck footway top). Its edges get kerb faces down to just
+  // below the road, then earth fill to the drawn ground where the approach is raised.
+  function deckEndFootways() {
+    const rise = deckFootway.base + deckFootway.thickness - (0.095 - 0.065),
+      top = [],
+      kerbs = [],
+      fill = [];
+    for (const record of infra.deckEndFootways ?? []) {
+      const edges = new Map();
+      for (const tri of record.triangles) {
+        const points = tri.map(([x, z, w]) => [x, ground(x, z) + 0.095 + w * rise, z]);
+        const [a, b, c] = points;
+        if ((b[0] - a[0]) * (c[2] - a[2]) - (b[2] - a[2]) * (c[0] - a[0]) > 0) points.reverse();
+        top.push(...points.flat());
+        for (let j = 0; j < 3; j++) {
+          const p = points[j],
+            q = points[(j + 1) % 3],
+            key = [p, q]
+              .map((v) => `${v[0].toFixed(3)},${v[2].toFixed(3)}`)
+              .sort()
+              .join('|');
+          if (edges.has(key)) edges.set(key, null);
+          else edges.set(key, { p, q, inner: points[(j + 2) % 3] });
+        }
+      }
+      for (const edge of edges.values()) {
+        if (!edge) continue;
+        const { p, q, inner } = edge,
+          low = (v) => [v[0], ground(v[0], v[2]) + 0.045, v[2]];
+        // Outward: away from the triangle's third vertex.
+        const ex = q[0] - p[0],
+          ez = q[2] - p[2],
+          side = Math.sign(ez * (inner[0] - p[0]) - ex * (inner[2] - p[2])) || 1;
+        const quad = (a, b, c, d, list) => {
+          // Winding chosen so the face looks away from the footway.
+          if (side < 0) list.push(...a, ...b, ...c, ...a, ...c, ...d);
+          else list.push(...a, ...c, ...b, ...a, ...d, ...c);
+        };
+        quad(p, q, low(q), low(p), kerbs);
+        if (Math.max(p[1], q[1]) > 0.4)
+          for (const [a, b] of clearance.outside(low(p), low(q))) {
+            const ground0 = [a[0], Math.min(a[1], level(a[0], a[2])), a[2]],
+              ground1 = [b[0], Math.min(b[1], level(b[0], b[2])), b[2]];
+            quad(a, b, ground1, ground0, fill);
+          }
+      }
+    }
+    for (const [positions, material, name] of [
+      [top, pavement, 'road-deck-end-footway'],
+      [kerbs, pavement, 'road-deck-end-kerb'],
+      [fill, earth, 'road-deck-end-fill'],
+    ]) {
+      if (!positions.length) continue;
+      const geometry = new THREE.BufferGeometry();
+      geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+      const uv = [];
+      for (let i = 0; i < positions.length; i += 3) uv.push(positions[i], positions[i + 2] + positions[i + 1]);
+      geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
+      geometry.computeVertexNormals();
+      const mesh = new THREE.Mesh(geometry, material);
+      mesh.name = name;
+      scene.add(mesh);
+    }
+  }
   function surface(triangles, material, offset = 0, hasHeight = false, name = '') {
     const vertices = [],
       supports = [];
@@ -151,10 +211,20 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
     for (let i = 1; i < bridge.route.length; i++) {
       const { g, length } = segment(bridge.route[i - 1], bridge.route[i]);
       if (bridge.surface) box(g, 0, bridge.height, 0, length, 0.02, bridge.width, roads[bridge.surface]);
-      if (bridge.style)
+      if (bridge.style && bridge.width - 2 * deckFootway.inset - deckFootway.width >= deckFootway.minCarriageway)
         for (const sign of [-1, 1])
-          box(g, 0, bridge.height + 0.025, sign * (bridge.width / 2 - 0.9), length, 0.12, 1.15, pavement);
+          box(
+            g,
+            0,
+            bridge.height + deckFootway.base,
+            sign * (bridge.width / 2 - deckFootway.inset),
+            length,
+            deckFootway.thickness,
+            deckFootway.width,
+            pavement
+          );
     }
+  deckEndFootways();
   const bridgeStructures = roadBridges({
     THREE,
     scene,
