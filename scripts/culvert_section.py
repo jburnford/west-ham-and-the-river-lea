@@ -6,6 +6,7 @@ import numpy as np
 from shapely.geometry import LineString, Point
 from manor_road import profile
 from spot_height_mosaics import pixel_to_coords
+from railway_levels import formation_at_point
 
 ROOT=Path(__file__).resolve().parents[1]
 CONFIG='data/maps/culvert-section-1900.json'
@@ -53,12 +54,19 @@ def build_section(graph,infra,drainage):
     assert hit.geom_type=='Point'
     fraction=bridge.project(hit)/bridge.length
     deck=spots[0]['heightODN']*(1-fraction)+spots[1]['heightODN']*fraction
-    formation=rail['formationHeight']+offset
+    # The prior constant formation (kept for the record) and the OS level profile that replaced it.
+    formation=rail.get('priorFormationHeight',rail['formationHeight'])+offset
     review={**review,'spots':spots,'crossingPosition':list(hit.coords[0]),'deckEstimateODN':deck,
             'inheritedFormationODN':formation,'formationAboveDeckMetres':formation-deck,
             'distanceFromDrainCrossingMetres':hit.distance(line),
             'constantFormationConflictsWithRoadBridge':formation>=deck,
             'calibratedFloodBarrier':False}
+    if rail.get('levelProfile'):
+        profiled=formation_at_point(rail,hit.x,hit.y)+offset
+        review.update({'profileFormationODN':profiled,'profileFormationBelowDeckMetres':deck-profiled,
+                       'profileConflictsWithRoadBridge':profiled>=deck,
+                       'profileSource':rail['levelProfile']['register'],
+                       'profileStatus':'The constant 5.5 m formation was replaced by the OS level profile (at grade here: formation 0.1 m above the OS ground readings); the road bridge now passes over the line.'})
     inputs=[CONFIG,sidecar,sidecar.replace('.json','.png'),*review['readers']]
     return {**spec,'cases':cases,'railwayHeightReview':review,'lengthMetres':length,
             'route':crossing['route'],'assumedApproachBedODN':bed,

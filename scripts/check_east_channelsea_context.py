@@ -209,7 +209,10 @@ def check(preflight=False):
                 assert 60<extension['extensionLength']<100
                 assert built_rail['tracks']==old_rails[built_rail['name']]['tracks']
             else:
-                assert {k:built_rail[k] for k in ['name','route','tracks'] if k in built_rail}==old_rails[built_rail['name']]
+                kept={k:built_rail[k] for k in ['name','route','tracks'] if k in built_rail}
+                # A route retraced by the OS level register (data/maps/railway-levels.json) keeps its prior route.
+                if 'priorRoute' in built_rail:kept['route']=built_rail['priorRoute']
+                assert kept==old_rails[built_rail["name"]],built_rail["name"]
         old_roads={r['name']:r for r in before['builtRoads']}
         corrected_roads={c['name']:c for c in register['roadCorrections']}
         for built_road in infra['roads']:

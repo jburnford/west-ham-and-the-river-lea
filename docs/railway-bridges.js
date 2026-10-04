@@ -177,6 +177,19 @@ export function faceStation(face, o, g) {
   return face.centre + ((side - face.centre) * Math.abs(o)) / g;
 }
 
+// Formation level at chainage s along a railway: its OS level profile (data/maps/railway-levels.json,
+// built into infrastructure.json levelProfile), flat beyond the ends; else its single formation height.
+export function formationAt(railway, s) {
+  const p = railway.levelProfile;
+  if (!p) return railway.formationHeight;
+  const c = p.chainage,
+    f = p.formation;
+  if (s <= c[0]) return f[0];
+  for (let i = 1; i < c.length; i++)
+    if (s <= c[i]) return f[i - 1] + ((f[i] - f[i - 1]) * (s - c[i - 1])) / (c[i] - c[i - 1]);
+  return f[f.length - 1];
+}
+
 export function bridgeFrame(railway) {
   const [a, b] = railway.route,
     length = Math.hypot(b[0] - a[0], b[1] - a[1]),
@@ -217,8 +230,10 @@ export function railwayBridges({ THREE, scene, materials: m, railways, level, bo
     if (form.frame !== 'route-start') continue;
     const railway = railways.find((r) => r.name === form.railway);
     if (!railway) continue;
+    // One level deck at the measured formation level midway between the abutment faces (the route-start
+    // frame's stations are route chainages on the first segment).
     const f = bridgeFrame(railway),
-      h = railway.formationHeight,
+      h = formationAt(railway, (form.abutments.west.centre + form.abutments.east.centre) / 2),
       g = form.girderOffset,
       top = h + form.girderAboveFormation,
       soffit = top - form.girderDepth,

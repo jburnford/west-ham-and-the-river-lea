@@ -18,7 +18,11 @@ for p,h in spec['inputHashes'].items():assert hashlib.sha256((ROOT/p).read_bytes
 rail=next(r for r in infra['railways'] if r['name']==spec['railway']['name'])
 line=LineString(road['route']);track=LineString(rail['route'])
 assert line.distance(track)>road['width']/2+1.1+4.3, 'Road shoulders overlap rail ballast'
-assert rail['formationHeight']==5.5, 'No surveyed formation height has been supplied'
+# The branch follows the OS level register (data/maps/railway-levels.json), not a constant height.
+levels=load('data/maps/railway-levels.json')['railways'][rail['name']]
+assert rail['levelProfile']['chainage']==[p[0] for p in levels['profile']], 'Branch level profile differs from the register'
+assert rail['levelProfile']['formation']==[p[1] for p in levels['profile']], 'Branch level profile differs from the register'
+assert rail['priorFormationHeight']==5.5
 assert 180<line.length<185
 mesh=unary_union([Polygon(t) for t in infra['roadSurfaces']['macadam'] if Polygon(t).distance(line)<.01])
 assert line.buffer(road['width']/2-.01,cap_style=2).difference(mesh).area<.1

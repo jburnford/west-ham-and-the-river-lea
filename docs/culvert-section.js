@@ -117,7 +117,11 @@ export function mountCulvertSection(data, epoch) {
         : '');
     const r = data.railwayHeightReview;
     document.querySelector('#railway-height-review').textContent =
-      `A mapped road-over-rail bridge about ${Math.round(r.distanceFromDrainCrossingMetres)} m farther south gives an estimated road deck of ${r.deckEstimateODN.toFixed(2)} m ODN. The inherited constant railway formation is ${r.inheritedFormationODN.toFixed(2)} m ODN, already ${r.formationAboveDeckMetres.toFixed(2)} m above that deck estimate. The railway profile needs correction before it can serve as a flood barrier; this bridge does not give a measured track height at the drain crossing.`;
+      `A mapped road-over-rail bridge about ${Math.round(r.distanceFromDrainCrossingMetres)} m farther south gives an estimated road deck of ${r.deckEstimateODN.toFixed(2)} m ODN. The earlier constant railway formation was ${r.inheritedFormationODN.toFixed(2)} m ODN, ${r.formationAboveDeckMetres.toFixed(2)} m above that deck estimate. ` +
+      (r.profileFormationODN === undefined
+        ? 'The railway profile needs correction before it can serve as a flood barrier; '
+        : `The OS level profile now puts the line at grade there, formation ${r.profileFormationODN.toFixed(2)} m ODN, ${r.profileFormationBelowDeckMetres.toFixed(2)} m below the deck estimate; it is not calibrated as a flood barrier, and `) +
+      'this bridge does not give a measured track height at the drain crossing.';
     window.culvertSectionReview = c;
   }
   select.addEventListener('change', draw);

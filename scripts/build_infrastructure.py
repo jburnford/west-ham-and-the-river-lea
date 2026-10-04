@@ -203,15 +203,29 @@ redo=unary_union([Polygon(t) for t in redo])
 crest_triangles+=triangles(redo.difference(crest_deck),4)+triangles(redo.intersection(crest_deck),4)
 railways=[]
 branch_connection=read('data/maps/woolwich-northern-connection.json')
+from railway_levels import load as load_levels, apply as apply_levels, level_stations, bank_level
+from shapely.ops import substring
+levels_register=load_levels()
 for r in data['neighbourhood']['railways']:
     r=align_railway(r,manor)
     if r['name']=='Great Eastern Railway, Woolwich branch':
         r={**r,'route':[branch_connection['existingBranchStart'],*r['route'][1:]],
            'evidence':r['evidence']+' '+branch_connection['alignmentNote']}
-    line=LineString(r['route']);height=5.5
+    # Formation levels (and the LT&SR / Abbey Mills curve routes) from the OS level register.
+    r=apply_levels(r,levels_register);spec=levels_register['railways'].get(r['name'],{})
+    line=LineString(r['route'])
+    chain,formation=np.array(r['levelProfile']['chainage']),np.array(r['levelProfile']['formation'])
+    def level(s):return float(np.interp(s,chain,formation))
     # The rail deck spans the gaps; earth slopes stop at water and streets below.
     openings=water.buffer(2).union(roads.buffer(2))
-    footprint=line.buffer(17,join_style=2).difference(openings).difference(buildings)
+    # Register bridges (the LT&SR over the G.E.R. and Manor Road): no earth between the abutment faces.
+    register_spans=[]
+    for bridge in spec.get('bridges',[]):
+        s0,s1=bridge['chainage'];p=bridge.get('pier');t=bridge.get('pierThickness',0)/2
+        spans=[(s0,p-t),(p+t,s1)] if p is not None else [(s0,s1)]
+        register_spans+=[(bridge,a,b) for a,b in spans]
+    register_cut=unary_union([substring(line,b['chainage'][0],b['chainage'][1]).buffer(18,cap_style=2) for b in spec.get('bridges',[])]) if spec.get('bridges') else Polygon()
+    footprint=line.buffer(17,join_style=2).difference(openings).difference(register_cut).difference(buildings)
     samples=[]
     for p in getattr(footprint,'geoms',[footprint]):
         if p.geom_type!='Polygon':continue
@@ -220,19 +234,52 @@ for r in data['neighbourhood']['railways']:
     for d in np.arange(0,line.length,4):
         c=line.interpolate(d);a=line.interpolate(max(0,d-1));b=line.interpolate(min(line.length,d+1))
         dx,dz=b.x-a.x,b.y-a.y;length=math.hypot(dx,dz)
-        for offset in [-13,-9,-4.5,0,4.5,9,13]:
+        for offset in [-13,-11,-9,-7.5,-6,-4.5,0,4.5,6,7.5,9,11,13]:  # rows across the 1:1.75 side slopes
             q=Point(c.x-dz/length*offset,c.y+dx/length*offset)
             if footprint.contains(q):samples.append((q.x,q.y))
     tolerant=footprint.buffer(.00001)
     rail_triangles=[list(t.exterior.coords)[:3] for t in triangulate(MultiPoint(samples)) if tolerant.covers(t)]
     mesh=[]
+    crest_half,side=r['levelProfile']['crestHalfWidth'],r['levelProfile']['sideSlope']
+    def bank(x,z):
+        # Crest 0.05 m above the formation at its chainage, side slopes at the register's 1 in 1.75
+        # (measured on the OS hatching) down to 0.05 m, or 0.2 m below a lower formation; the main
+        # landscape refits them to the drawn ground.
+        f=level(line.project(Point(x,z)))
+        return round(float(bank_level(f+.05,line.distance(Point(x,z)),crest_half,side,min(.05,f-.2))),3)
     for tri in rail_triangles:
-        mesh.append([[x,round(.05+height*max(0,min(1,(17-line.distance(Point(x,z)))/12.5)),3),z] for x,z in tri])
-    crossings=[]
+        mesh.append([[x,bank(x,z),z] for x,z in tri])
+    crossings=[];details=[]
     cuts=line.intersection(openings)
     for part in getattr(cuts,'geoms',[cuts]):
-        if part.geom_type=='LineString' and part.length>1:crossings.append(list(part.coords))
-    railways.append({**r,'formationHeight':height,'embankment':mesh,'crossings':crossings,'evidence':r['evidence']+' Raised formation at 5.5 m above local marsh datum, side slopes and bridge details interpreted from author direction; not surveyed levels.'})
+        if part.geom_type!='LineString' or part.length<=1:continue
+        a,b=sorted(line.project(Point(q)) for q in (part.coords[0],part.coords[-1]))
+        if any(a<bb['chainage'][1] and b>bb['chainage'][0] for bb in spec.get('bridges',[])):continue
+        crossings.append(list(part.coords));details.append({'chainage':[round(a,2),round(b,2)],'formation':round(level((a+b)/2),3),'kind':'mapped opening (water or street)'})
+    for bridge,a,b in register_spans:
+        crossings.append([list(q) for q in substring(line,a,b).coords])
+        details.append({'chainage':[round(a,2),round(b,2)],'formation':bridge['deckFormation'],'kind':'register bridge','id':bridge['id']})
+    level_note=(' Formation levels from the OS level register (data/maps/railway-levels.json): '+'; '.join(f"{g['kind']} {g['from']}-{g['to']} m" for g in spec['segments'])+'.') if spec else ''
+    railways.append({**r,'embankment':mesh,'crossings':crossings,'crossingDetails':details,'levelStations':level_stations(r),
+                     'evidence':r['evidence']+(level_note or ' Raised formation at 5.5 m above local marsh datum, side slopes and bridge details interpreted from author direction; not surveyed levels.')})
+# Clearances under the register bridges: deck soffit (the drawn iron deck is 0.5 m deep) over the
+# rail top of a railway passing beneath and over the OS ground readings of a road beneath.
+for rail in railways:
+    spec=levels_register['railways'].get(rail['name'],{});line=LineString(rail['route']);records=[]
+    for bridge in spec.get('bridges',[]):
+        soffit=bridge['deckFormation']-.5;under=[]
+        for item in bridge['crosses']:
+            if 'groundSpotHeights' in item:
+                ids={c['spotHeight']:c for c in spec['controls']}
+                ground=max(ids[i]['sceneY'] for i in item['groundSpotHeights'])
+                under.append({'what':item['what'],'level':ground,'basis':'highest OS road reading under the span','clearanceMetres':round(soffit-ground,2)})
+                continue
+            other=next(o for o in railways if o['name'].startswith(item['what'].replace('G.E.R.','Great Eastern Railway,')))
+            hit=LineString(other['route']).intersection(line)
+            s=LineString(other['route']).project(hit);top=float(np.interp(s,other['levelProfile']['chainage'],other['levelProfile']['formation']))+other['levelProfile']['railTopAboveFormation']
+            under.append({'what':item['what'],'level':round(top,3),'basis':f"rail top of the traced {other['name']} at its chainage {s:.1f} (the trace runs about 12 m east of the OS rails here, under the Manor Road span)",'clearanceMetres':round(soffit-top,2)})
+        records.append({'id':bridge['id'],'deckFormation':bridge['deckFormation'],'soffit':round(soffit,3),'under':under})
+    if records:rail['levelProfile']['bridges']=records
 railways.append(build_great_eastern(water,roads,buildings,sewer))
 from woolwich_connection import build_woolwich_connection
 from stratford_station_rail_alignment import station_formation_obstacles
@@ -274,9 +321,16 @@ result['districtSources']=district['sources']
 result['districtNotes']=district['notes']
 result['housingSources']=housing['sources']
 result['housingNotes']='Street-facing envelopes and junction breaks audited together. Rear plots are not treated as lanes. Widths and facades remain approximate; see housing-road-traces.json for corrections and omissions.'
-assert all(r['formationHeight']>4 or
+# Railways in the core box follow the OS level register; the others keep their traced heights.
+assert all(r.get('levelProfile') or r['formationHeight']>4 or
            (r.get('id')=='north-london-connection' and r['formationHeight']==3)
            for r in railways)
+# The Abbey Mills curve meets the LT&SR and the Woolwich branch at one level.
+by_name={r['name']:r for r in railways}
+curve_rail=by_name['Abbey Mills junction curve']
+for end,other in [(0,'London, Tilbury and Southend Railway'),(-1,'Great Eastern Railway, Woolwich branch')]:
+    o=by_name[other];s=LineString(o['route']).project(Point(curve_rail['route'][end]))
+    assert abs(curve_rail['levelProfile']['formation'][end]-np.interp(s,o['levelProfile']['chainage'],o['levelProfile']['formation']))<.01,('junction level',other)
 assert all(math.isfinite(v) for r in railways for t in r['embankment'] for p in t for v in p)
 (ROOT/'docs/data/infrastructure.json').write_text(json.dumps(result,separators=(',',':'))+'\n')
 print(f"Infrastructure: {len(routes)} street/lane traces, {len(bridges)} road crossing segments, {len(railways)} raised railway routes; road/building/water checks passed.")

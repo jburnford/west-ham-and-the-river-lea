@@ -31,6 +31,8 @@ for (const epoch of ['1850', '1888', '1897', '1904', '1928'])
 assert.throws(() => selectCulvertCase(data, 'missing'), /Unknown/);
 const r = data.railwayHeightReview;
 assert(r.constantFormationConflictsWithRoadBridge && r.formationAboveDeckMetres > 1.3);
+// The OS level profile (data/maps/railway-levels.json) that replaced the constant formation passes under the bridge.
+assert(!r.profileConflictsWithRoadBridge && r.profileFormationBelowDeckMetres > 3);
 assert(r.distanceFromDrainCrossingMetres > 270 && r.distanceFromDrainCrossingMetres < 285);
 assert.equal(r.calibratedFloodBarrier, false);
 // Scenarios must not replace unobserved inverts or enable the hydraulic graph.

@@ -262,33 +262,47 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
     }
     surface(works.embankment, earth, 0, true, embankmentName);
     const h = railway.formationHeight,
-      replaced = replacedCrossings(railway);
-    for (let i = 1; i < railway.route.length; i++) {
-      const { g, length } = segment(railway.route[i - 1], railway.route[i]);
-      box(g, 0, h, 0, length, 0.24, 8.6, ballast);
+      replaced = replacedCrossings(railway),
+      // Formation level stations [x, z, y, chainage] from the OS level register (build_infrastructure.py);
+      // a railway without them keeps one level along its route.
+      stations = railway.levelStations || railway.route.map(([x, z]) => [x, z, h]);
+    for (let i = 1; i < stations.length; i++) {
+      const [ax, az, ay] = stations[i - 1],
+        [bx, bz, by] = stations[i],
+        { g, length } = segment([ax, az], [bx, bz]);
+      if (length < 0.01) continue;
+      // Each piece sits on its own grade: the group at the mean formation level, pitched along it.
+      const run = Math.hypot(length, by - ay);
+      g.position.y = (ay + by) / 2;
+      g.rotation.z = Math.atan2(by - ay, length);
+      box(g, 0, 0, 0, run, 0.24, 8.6, ballast);
       for (const track of [-1.8, 1.8]) {
-        for (const rail of [-0.718, 0.718]) box(g, 0, h + 0.33, track + rail, length, 0.13, 0.09, m.iron);
-        for (let x = -length / 2; x < length / 2; x += 2.5) box(g, x, h + 0.24, track, 0.22, 0.18, 2.4, m.wood);
+        for (const rail of [-0.718, 0.718]) box(g, 0, 0.33, track + rail, run, 0.13, 0.09, m.iron);
+        for (let x = -run / 2; x < run / 2; x += 2.5) box(g, x, 0.24, track, 0.22, 0.18, 2.4, m.wood);
       }
     }
     for (const [index, crossing] of railway.crossings.entries()) {
       // A crossing with a register bridge is drawn by railway-bridges.js.
       if (replaced.has(index)) continue;
+      // Deck at the formation level of the crossing (crossingDetails, from the level register).
+      const hc = railway.crossingDetails?.[index]?.formation ?? h;
       for (let i = 1; i < crossing.length; i++) {
         const { g, length } = segment(crossing[i - 1], crossing[i]);
-        box(g, 0, h - 0.5, 0, length, 0.5, 8.6, m.iron);
-        for (const sign of [-1, 1]) box(g, 0, h - 0.5, sign * 4.15, length, 1.15, 0.22, m.iron);
+        box(g, 0, hc - 0.5, 0, length, 0.5, 8.6, m.iron);
+        for (const sign of [-1, 1]) box(g, 0, hc - 0.5, sign * 4.15, length, 1.15, 0.22, m.iron);
       }
-      // Abutments at the gap edges keep water/road space clear beneath the span.
+      // Abutments at the gap edges keep water/road space clear beneath the span; they stand on the
+      // drawn ground (or 0.05 m, whichever is lower) up to the deck.
       for (const end of [0, crossing.length - 1]) {
         const a = crossing[end],
           b = crossing[end === 0 ? 1 : end - 1],
-          { g } = segment(a, b);
+          { g } = segment(a, b),
+          foot = Math.min(0.05, level(a[0], a[1]) - 0.3);
         const q = new THREE.Group();
         q.position.set(a[0], 0, a[1]);
         q.rotation.y = g.rotation.y;
         scene.add(q);
-        box(q, 0, 0.05, 0, 1.3, h - 0.55, 9, m.brick);
+        if (hc - 0.55 > foot) box(q, 0, foot, 0, 1.3, hc - 0.55 - foot, 9, m.brick);
       }
     }
   }

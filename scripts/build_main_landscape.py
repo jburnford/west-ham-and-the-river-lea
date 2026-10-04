@@ -896,9 +896,19 @@ for adjustment in system.get('railwayGroundAdjustments',[]):
 for rail in infra['railways']:
     vertices=np.array(rail['embankment']);p=vertices[:,:,[0,2]].reshape(-1,2);line=LineString(rail['route']);pts=shapely.points(p)
     d=shapely.distance(pts,line);s=shapely.line_locate_point(line,pts);stations=np.array(rail.get('stations',[]))
-    crest=np.interp(s,stations[:,5],stations[:,2]) if len(stations) else np.full(len(p),rail['formationHeight']+.05)
+    # Plain railways in the core box carry an OS level profile (data/maps/railway-levels.json);
+    # their embankment crest is 0.05 m above it.
+    profile=rail.get('levelProfile')
+    crest=np.interp(s,stations[:,5],stations[:,2]) if len(stations) else np.interp(s,profile['chainage'],profile['formation'])+.05 if profile else np.full(len(p),rail['formationHeight']+.05)
     half=rail.get('baseHalfWidth',15);crest_half=rail.get('crestHalfWidth',max(3,rail.get('tracks',1)*2));t=np.clip((half-d)/max(1,half-crest_half),0,1)
     g=base(p);old=vertices[:,:,1].ravel();target=g+t*(crest-g);w=weight(p)
+    if profile and not len(stations):
+        # Register railways: side slopes at the OS-measured 1 in sideSlope from the crest edge down to
+        # the ground, so the toe follows the bank height; beyond the toe the earth lies 0.05 m under
+        # the ground. Where the ground stands above the crest (a cutting) the old blend is kept.
+        ch,side=profile['crestHalfWidth'],profile['sideSlope']
+        slope=crest-np.maximum(0,d-ch)/side
+        target=np.where(g<=crest,np.where(slope>=g,slope,g-.05),crest+(g-crest)*np.clip((d-ch)/max(1,half-ch),0,1))
     # Exact crest vertices and bridge geometry retain their original elevations.
     w[abs(old-crest)<.15]=0
     levels=old+w*(target-old)
@@ -1096,7 +1106,7 @@ for rail,record in zip(infra['railways'],railways):
         added+=kept;walls+=q
     # The LT&SR approach behind the Bow Creek west abutment.
     if name==RAIL_APPROACH[0]:
-        a0=route[0];ua=(route[1]-a0)/np.linalg.norm(route[1]-a0);na=np.array([-ua[1],ua[0]]);crest=rail['formationHeight']+.05
+        a0=route[0];ua=(route[1]-a0)/np.linalg.norm(route[1]-a0);na=np.array([-ua[1],ua[0]]);crest=(rail['levelProfile']['formation'][0] if rail.get('levelProfile') else rail['formationHeight'])+.05
         offsets=np.array(sorted({*np.arange(-half,half+.01,2.),-crest_half,crest_half,*np.arange(-half-2,-half+.01,2.),*np.arange(half,half+2.01,2.)}))
         def section(st):
             xz=a0+ua*st+np.outer(offsets,na);g=rail_ground(xz);t=np.clip((half-np.abs(offsets))/max(1,half-crest_half),0,1)

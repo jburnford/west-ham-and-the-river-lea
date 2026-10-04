@@ -7,6 +7,7 @@ from shapely.ops import substring
 from historic_drainage import evidence
 from spot_height_mosaics import pixel_to_coords
 from culvert_section import build_section
+from railway_levels import formation_at_point
 
 ROOT=Path(__file__).resolve().parents[1]
 load=lambda path:json.loads((ROOT/path).read_text())
@@ -42,8 +43,14 @@ def build():
     for rail in infra['railways']:
         line=LineString(rail['route']);hit=line.intersection(corridor)
         if not hit.is_empty:
-            crossings.append({'name':rail['name'],'position':list(hit.coords)[0],
-                              'sceneFormationHeight':rail.get('formationHeight'),'heightStatus':'inherited interpretation, not a surveyed crossing level'})
+            position=list(hit.coords)[0]
+            if rail.get('levelProfile'):
+                crossings.append({'name':rail['name'],'position':position,
+                                  'sceneFormationHeight':round(formation_at_point(rail,*position),3),
+                                  'heightStatus':'OS level register (data/maps/railway-levels.json): formation interpolated along the line between its OS controls (at grade here); not a surveyed crossing level'})
+            else:
+                crossings.append({'name':rail['name'],'position':position,
+                                  'sceneFormationHeight':rail.get('formationHeight'),'heightStatus':'inherited interpretation, not a surveyed crossing level'})
         clipped=line.intersection(window)
         for part in getattr(clipped,'geoms',[clipped]):
             if part.geom_type=='LineString':railways.append({'name':rail['name'],'route':list(map(list,part.coords))})

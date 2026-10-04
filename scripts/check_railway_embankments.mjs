@@ -14,7 +14,7 @@ import { loadMainLandscape, applyMainLandscape } from '../docs/main-landscape.js
 import { createGroundSampler } from '../docs/lib/ground-sampler.js';
 import { box as libBox } from '../docs/lib/geometry.js';
 import { infrastructure } from '../docs/infrastructure.js';
-import { railwayBridgeForms, bridgeFrame, faceStation } from '../docs/railway-bridges.js';
+import { railwayBridgeForms, bridgeFrame, faceStation, formationAt } from '../docs/railway-bridges.js';
 
 const load = async (url, type = 'json') => {
   const b = readFileSync(new URL('../docs/' + url.replace(/^\.\//, ''), import.meta.url));
@@ -169,7 +169,8 @@ assert(
 const bow = railwayBridgeForms.bridges['ltsr-bow-creek'],
   ltsr = data.infrastructure.railways.find((r) => r.name === bow.railway),
   frame = bridgeFrame(ltsr),
-  h = ltsr.formationHeight;
+  // The deck is level at the OS formation level midway between the abutment faces (railway-bridges.js).
+  h = formationAt(ltsr, (bow.abutments.west.centre + bow.abutments.east.centre) / 2);
 const structure = [];
 scene.traverse((o) => o.isMesh && o.name === 'railway-bridge-structure' && structure.push(o));
 assert(structure.length, 'railway bridge structure drawn');

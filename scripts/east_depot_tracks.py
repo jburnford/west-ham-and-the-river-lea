@@ -29,7 +29,10 @@ def branch_join(infra, register=None):
     assert 0 < spec['chainageMetres'] < length
     t, offset = spec['chainageMetres']/length, spec['trackOffsetMetres']
     point = [a[0]+dx*t-dz/length*offset, a[1]+dz*t+dx/length*offset]
-    return point, branch['formationHeight']
+    # The branch's formation at the join chainage (its OS level profile, data/maps/railway-levels.json;
+    # the chainage lies on the first route segment, so it is also the route chainage).
+    from railway_levels import formation_at
+    return point, round(float(formation_at(branch, spec['chainageMetres'])), 6)
 
 
 def _unit(a, b):
