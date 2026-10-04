@@ -53,7 +53,8 @@ for row in context['terraces']+context['houses']:
 sewer=context['sewer']
 route=LineString(sewer['route'])
 correction=json.loads((ROOT/'data/maps/sewer-high-street.json').read_text())
-assert sewer['route'][:len(correction['westernRoute'])] == correction['westernRoute']
+# T1c extended the route west to Wick Lane, so the High Street correction is now an interior run.
+k=sewer['route'].index(correction['westernRoute'][0]); assert sewer['route'][k:k+len(correction['westernRoute'])] == correction['westernRoute']
 assert route.length > 3000 and route.distance(Point(0,0)) < .1
 assert sewer['height'] == 7.4
 for triangle in sewer['banks']:
