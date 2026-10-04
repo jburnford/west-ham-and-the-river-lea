@@ -22,7 +22,7 @@ Verification harness, all committed:
 ```sh
 python3 -m http.server 4173 --bind 127.0.0.1 --directory docs   # serve first, keep running
 npm test                                                          # 13 of 15 pass; the two flood checks fail on a known stale hash
-python3 scripts/review_smoke.py <label> --compare main-after-t13  # headless diagnostic snapshot; 'main-after-t13' (3 Oct 2026, 0 page errors, 151 draw calls, 8.25 M triangles) is the current baseline; 'drawn-ground' is the pre-trial one. The stock 60 s waits time out under load; raise both timeouts in a scratch copy.
+python3 scripts/review_smoke.py <label> --compare main-after-cascade  # headless diagnostic snapshot; 'main-after-cascade' (4 Oct 2026, commit 1ae324c, 0 page errors, 153 draw calls, 8.91 M triangles) is the current baseline; 'main-after-t13' precedes T12b, T12c, T14, T15, T17; 'drawn-ground' is the pre-trial one. The stock 60 s waits time out under load; raise both timeouts in a scratch copy.
 python3 scripts/render_views.py <cameras.json> --out=<dir>        # PNGs for a camera list; about 40 s a view after a 5 min scene load
 python3 scripts/footprint_gap_audit.py                            # footprint coverage, started zones
 python3 scripts/export_geopackage.py --verify                     # regenerate after model changes
