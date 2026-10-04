@@ -207,17 +207,36 @@ for (const b of bridges) {
   );
 }
 
-// 3. Arch crowns clear the water.
+// 3. Abutments where the register puts them, at the drawn banks, and arch crowns clear the water.
 const layouts = bridges.map((b) => bridgeLayout(b, bridgeForms.bridges[b.id]));
 for (const l of layouts) {
   const [r0, r1] = l.form.abutments;
-  // Registered abutments must already lie under the deck; the module would otherwise move them.
+  // Registered abutments must already lie where the module may put them, or it would move them:
+  // deck abutment bodies under the deck; arch abutment faces (each along its own bank where the
+  // register gives one skew per abutment) inside the route ends at both deck edges.
   assert(Math.abs(l.a0 - r0) < 1e-9 && Math.abs(l.a1 - r1) < 1e-9, `${l.bridge.id}: abutments moved under the deck`);
+  // Where the register lists the drawn bank edges across the deck, each face lies within 1 m of
+  // them at every offset whose edge falls inside the route (water beyond a route end, under the
+  // approach, cannot be met by a face on the deck).
+  const edges = l.form.bankEdges;
+  if (!edges) continue;
+  edges.offsets.forEach((v, j) =>
+    [edges.start[j], edges.end[j]].forEach((edge, i) => {
+      if (edge === null || edge < 0 || edge > l.frame.length) return;
+      const off = l.face(i, v) - edge;
+      assert(
+        Math.abs(off) <= 1,
+        `${l.bridge.id}: abutment face ${i} at offset ${v} m lies ${off.toFixed(2)} m from the drawn water edge`
+      );
+    })
+  );
 }
 for (const l of layouts.filter((l) => l.arches.length)) {
   assert(l.crown - waterLevel >= 0.3, `${l.bridge.id}: crown soffit ${l.crown} m within 0.3 m of the water`);
   assert(l.springing > waterLevel, `${l.bridge.id}: springing below the water`);
-  assert(l.rise > 0 && l.rise / l.span <= 0.5, `${l.bridge.id}: impossible segmental rise ${l.rise} on ${l.span}`);
+  // Splayed arches change span across the deck: the rise must suit the span at both deck edges too.
+  for (const span of [l.span, ...l.edgeSpans])
+    assert(l.rise > 0 && l.rise / span <= 0.5, `${l.bridge.id}: impossible segmental rise ${l.rise} on ${span}`);
 }
 
 // 4. Nothing in the channel below the water except abutment footings, river piers and the
@@ -329,26 +348,28 @@ assert(fillVertices > 0, 'No approach fill drawn at all');
 // Landscape report for the landscape task (T12b): where the drawn ground stands inside an arch,
 // above a deck underside, or above the water under the span. Not asserted.
 const landscape = layouts.map((l) => {
-  const { frame: f, width, height, skew } = l,
+  const { frame: f, width, height } = l,
     half = width / 2;
   let insideArch = 0,
     aboveDeck = 0,
     dryUnderSpan = 0,
     samples = 0,
     worst = null;
-  for (let xa = l.a0; xa <= l.a1; xa += 0.25)
-    for (let v = -half; v <= half + 1e-6; v += half / 4) {
-      const [x, z] = f.at(xa + skew * v, v),
+  for (let v = -half; v <= half + 1e-6; v += half / 4) {
+    const arches = l.section ? l.section(v).arches : [];
+    for (let s = l.face(0, v); s <= l.face(1, v); s += 0.25) {
+      const [x, z] = f.at(s, v),
         y = level(x, z),
-        archHere = l.arches.find((a) => xa >= a.from && xa <= a.to),
-        roof = archHere ? l.soffit(archHere, xa) : (l.deckUnderside ?? l.springing);
+        archHere = arches.find((a) => s >= a.from && s <= a.to),
+        roof = archHere ? l.soffit(archHere, s) : (l.deckUnderside ?? l.springing);
       samples++;
       if (y > waterLevel) dryUnderSpan++;
       if (y > roof - 0.05 && (!worst || y - roof > worst.by))
-        worst = { by: +(y - roof).toFixed(2), station: +(xa + skew * v).toFixed(2), offset: +v.toFixed(2) };
+        worst = { by: +(y - roof).toFixed(2), station: +s.toFixed(2), offset: +v.toFixed(2) };
       if (archHere && y > roof - 0.05) insideArch++;
       if (y > height) aboveDeck++;
     }
+  }
   let overDeck = null;
   for (let s = 0; s <= f.length; s += 0.5)
     for (const v of [-half, 0, half]) {
