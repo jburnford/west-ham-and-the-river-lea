@@ -29,7 +29,16 @@ for g in r['groups']:
     assert not used.intersection(g['sourceFids']),g['id']
     used.update(g['sourceFids'])
     source = unary_union([Polygon(p[0],p[1:]) for p in g['sourcePolygons']])
-    target = unary_union([Polygon(cs[id]['worldFootprint'],cs[id]['worldHoles']) for id in g['modelIds']])
+    # A recorded OS re-registration (osRegistration, T18) moves the EPFL outline as a whole along a
+    # stated vector; every check below then holds against the moved outline as strictly as it holds
+    # against the source elsewhere.
+    moves = {(*cs[id]['osRegistration']['shiftDirection'], cs[id]['osRegistration']['shiftMetres']) for id in g['modelIds'] if 'osRegistration' in cs[id]}
+    if moves:
+        assert len(moves)==1 and all('osRegistration' in cs[id] for id in g['modelIds']),g['id']
+        (ux,uz,d), = moves
+        assert abs(math.hypot(ux,uz)-1)<.001 and 0<d<3,g['id']
+        source = affinity.translate(source,ux*d,uz*d)
+    target =unary_union([Polygon(cs[id]['worldFootprint'],cs[id]['worldHoles']) for id in g['modelIds']])
     actual = unary_union([Polygon(p['outer'],p['holes']) for id in g['modelIds'] for p in models[id]['renderPolygons']])
     assert target.symmetric_difference(source).area<.05,g['id']
     assert actual.symmetric_difference(target).area<.02,g['id']

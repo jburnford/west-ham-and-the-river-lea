@@ -179,7 +179,8 @@
           387.74
         ]
       ],
-      "evidence": "OS east-bank lane continues to the distillery approach; connection geometry and level inferred."
+      "evidence": "OS east-bank lane continues to the distillery approach; connection geometry and level inferred. T18 (October 2026) OS reading at the Three Mills dwellings (Goad 802; z 344-352): the OS London five-foot plan revised 1893-96 (reference/nls-tiles/os-london-five-foot-1893) prints an open strip lettered F.P. about 6 m wide between the river-bank line (x -568.4 at z 350) and the west face of the dwelling block (x -562.8 at z 346.7, -561.8 at z 350.7); this route runs in it, 0.2 m from its centre at z 350, so the route is not moved. The modelled dwelling (site419-range-1) stood 1.9 m west of its printed face and is re-registered in data/maps/three-mills-north-footprint-alignment.json.",
+      "priorEvidence": "OS east-bank lane continues to the distillery approach; connection geometry and level inferred."
     }
   ]
 }
