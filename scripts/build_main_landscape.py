@@ -29,6 +29,15 @@ valid=np.isfinite(ground);nearest=distance_transform_edt(~valid,return_distances
 plan=read('docs/data/ground-plan.json');infra=read('docs/data/infrastructure.json');network=read('docs/data/river-network.json');system=read('docs/data/river-system-1900.json');core=read('docs/data/river-terrain.json');historic=read('docs/data/terrain-1900.json');audit=read('docs/data/lower-lea-region/elevation-audit.json');config=read('data/maps/lower-lea-region/continuous-embankments-1900.json')
 banks=Banks(system,audit,config);water=local(banks.water).union(geometry([p for r in plan['rivers'] for p in r['polygons']])).union(geometry([p for f in network['marshDitches']['features'] for p in f['renderPolygons']]))
 shapely.prepare(water)
+# The river network's own tidal water (the tide polygons the scene draws as
+# water, rising and falling over the network's river-side shelves) is water to
+# the bank blend and the edge batters as well: neither raises ground inside it,
+# so the network keeps its own bank faces there. Street levels, retaining-wall
+# sides and the fill behind those walls (which stand inside this outline) keep
+# the regional mask above. Within TIDAL_BUILDING_M of a mapped
+# building the outline is not applied: the building frontage (its wharf or
+# quay ground) keeps the bank blend, falling at 1:1.5 to the tidal shelf.
+tidal=geometry(network['tide']['polygons'])  # blend_water (below) once building footprints are known
 def sample(grid,points):
     rc=np.array([(n1-(183209-points[:,1]))/step-.5,((538900+points[:,0])-e0)/step-.5])
     return map_coordinates(grid,rc,order=1,mode='constant',cval=0)
@@ -51,14 +60,25 @@ for site in plan['sites']:
 pad_tree=shapely.STRtree(pad_geoms)
 # Street observations stay on their mapped corridors, including their ground
 # shoulders; never propagate across the wider marsh or through a watercourse.
-road_fits=[]
+# Footpaths (kind 'path') are not streets: a riverside path across the marsh
+# lies on the ground it crosses (marsh, bank slope, yard, wall fill), its few
+# centimetres of cinder drawn above that ground by docs/infrastructure.js, so it
+# takes no level of its own from street readings. Only inside the Northern
+# Outfall Sewer embankment footprint does a path corridor keep its former
+# street level, so the embankment toes it reaches stay as they were.
+sewer_zone=shapely.union_all([Polygon([(v[0],v[2]) for v in t]).buffer(0) for t in infra['sewerBanks']]+[Polygon(t).buffer(0) for t in infra['sewerCrestTriangles']]).buffer(1)
+road_fits=[];path_corridors=[]
 for feature in meta['laterSurfaceLayers']['features']:
     if feature['kind']!=10:continue
     road=next(r for r in infra['roads'] if r['name']==feature['name'])
-    line=LineString(road['route']);ids=feature['sourceIds']
+    line=LineString(road['route']);ids=feature['sourceIds'];corridor=line.buffer(road['width']/2+3)
+    if road.get('kind')=='path':
+        corridor=corridor.intersection(sewer_zone)
+        path_corridors.append({'name':road['name'],'widthMetres':road['width'],'lengthMetres':round(line.length,1),'streetReadingsNotApplied':ids,'sewerEmbankmentStubM2':round(corridor.area,1)})
+        if corridor.is_empty:continue
     positions=np.array([[records[id]['positionBNG'][0]-538900,183209-records[id]['positionBNG'][1]] for id in ids])
     levels=np.array([records[id]['provisionalODNMetres']-offset for id in ids])
-    road_fits.append((road,line.buffer(road['width']/2+3),positions,levels,cKDTree(positions),ids))
+    road_fits.append((road,corridor,positions,levels,cKDTree(positions),ids))
 road_tree=shapely.STRtree([fit[1] for fit in road_fits])
 # Abbey Lane's approaches are graded to the abbey-mill-crossing deck (whose
 # height is an interpretation in road-traces.json): level with the deck for
@@ -171,8 +191,10 @@ for b in [*read('docs/data/high-street-frontages.json')['buildings'],*read('docs
 mill=plan['neighbourhood']['mill'];turn=np.radians(mill['rotation']);corner=np.array([[sx*mill['width']/2,sz*mill['depth']/2] for sx,sz in ((-1,-1),(1,-1),(1,1),(-1,1))])
 footprint_geoms.append(Polygon(np.column_stack([mill['x']+corner[:,0]*np.cos(turn)+corner[:,1]*np.sin(turn),mill['z']-corner[:,0]*np.sin(turn)+corner[:,1]*np.cos(turn)])));footprint_caps.append(pad_level.get(mill.get('siteId'),-np.inf))
 footprint_tree=shapely.STRtree(footprint_geoms);footprint_caps=np.array(footprint_caps)
+TIDAL_BUILDING_M=5;tidal_frontage=shapely.union_all(footprint_geoms).buffer(TIDAL_BUILDING_M)
+blend_water=water.union(tidal.difference(tidal_frontage));shapely.prepare(blend_water)
 water_edges=[]
-for ring in shapely.get_parts(shapely.boundary(water)):
+for ring in shapely.get_parts(shapely.boundary(blend_water)):
     for part in shapely.get_parts(ring):
         c=shapely.get_coordinates(part);water_edges+=list(np.stack([c[:-1],c[1:]],axis=1))
 water_edge_tree=shapely.STRtree(shapely.linestrings(np.array(water_edges)))
@@ -183,7 +205,7 @@ def edge_caps(points,level,current):
     so the fill neither enters the water nor buries a building wall."""
     pts=shapely.points(points);i,dw=water_edge_tree.query_nearest(pts,max_distance=EDGE_REACH_M,return_distance=True,all_matches=False)
     cap=np.full(len(points),np.inf);cap[i[0]]=network['waterLevel']+.02+dw/EDGE_BATTER
-    cap[shapely.contains_xy(water,points[:,0],points[:,1])]=-np.inf
+    cap[shapely.contains_xy(blend_water,points[:,0],points[:,1])]=-np.inf
     fi,fk=footprint_tree.query(pts,predicate='dwithin',distance=EDGE_REACH_M)
     if len(fi):
         floor=np.where(np.isfinite(footprint_caps[fk]),footprint_caps[fk],current[fi])
@@ -289,7 +311,7 @@ def surface(points,old,bank=True):
 # (Limehouse Cut), the river network's interpretive retaining edges, and the
 # reviewed river-system terrain patches whose recorded shore transition is no
 # wider than the lip itself. Every other shore is an earth or canal-earth bank.
-MASONRY_REACH_M=1.5;LIP_M=.6;lip_vertices={}
+MASONRY_REACH_M=1.5;LIP_M=.6;lip_vertices={};tidal_kept={}
 masonry=shapely.union_all([LineString(r['route']) for r in system['bankSections']['canalFacingRoutes']]+[LineString(r) for r in network['retainingEdges']['routes'] if len(r)>1])
 steep_patches=[t for t in system['bankSections']['terrainPatches'] if t['config']['shoreTransitionMetres'][1]<=LIP_M]
 masonry_zone=masonry.buffer(MASONRY_REACH_M);patch_zone=geometry([p for t in steep_patches for p in t['polygons']])
@@ -298,7 +320,7 @@ for zone in (masonry_zone,patch_zone,raised_shore):shapely.prepare(zone)
 def blend_surface(points,old,bank=True,key='groundMesh'):
     w=weight(points);out=np.asarray(old,dtype=float).copy();selected=w>0
     if not selected.any():return out
-    p=points[selected];g=base(p);wet=shapely.contains_xy(water,p[:,0],p[:,1]);old_y=out[selected]
+    p=points[selected];g=base(p);wet=shapely.contains_xy(blend_water,p[:,0],p[:,1]);old_y=out[selected]
     if bank:
         bng=np.column_stack([538900+p[:,0],183209-p[:,1]]);pts=shapely.points(bng)
         near=banks.segment_tree.nearest(pts);distance=shapely.distance(pts,banks.segments[near])
@@ -337,7 +359,9 @@ def blend_surface(points,old,bank=True,key='groundMesh'):
                 levels[near]=np.minimum(levels[near],soffit+d[near]/EDGE_BATTER)
             levels=(network['waterLevel']+.02)*(1-rise)+levels*rise
             g[margin]=levels
-    # Bed and drain-water vertices retain their native geometry and levels.
+    # Bed, drain-water and network tidal-water vertices retain their native
+    # geometry and levels.
+    tidal_kept[key]=tidal_kept.get(key,0)+int((wet&~shapely.contains_xy(water,p[:,0],p[:,1])).sum())
     use=~wet;out_indices=np.flatnonzero(selected)[use]
     out[out_indices]=old_y[use]+w[selected][use]*(g[use]-old_y[use])
     return out
@@ -411,9 +435,46 @@ def cap_junction_ends(points,new,triangles):
     end_caps.update({'loweredVertices':int(changed.sum()),'maxLoweringMetres':float((new-out).max())})
     return out
 
+# Tidal bank faces: network tidal-water ground keeps its native height, so
+# blended ground beside it may stand no steeper than 1:1.5 above it (measured
+# along mesh edges, or across the core grid), never below its own pre-blend
+# height, nor in street corridors or building footprints. The bank crest is
+# then reached a few metres back from the outline instead of standing as a
+# cliff at its edge.
+TIDAL_FACE=1.5;tidal_faced={}
+def tidal_faces(key,points,blended,old,triangles=None):
+    seed=shapely.contains_xy(blend_water,points[:,0],points[:,1]);free=~seed&(blended>old+1e-6)
+    river=shapely.contains_xy(water,points[:,0],points[:,1]);seed&=~river
+    # Street corridors and building footprints keep their blended ground.
+    free&=~shapely.contains_xy(wall_exclusion,points[:,0],points[:,1])
+    if not seed.any() or not free.any():return blended
+    # The limit spreads over land and tidal ground, never across regional water.
+    cap=np.where(seed,blended,np.inf)
+    if triangles is not None:
+        edges=np.unique(np.sort(np.concatenate([triangles[:,[0,1]],triangles[:,[1,2]],triangles[:,[2,0]]]),axis=1),axis=0)
+        edges=edges[(~river)[edges].all(axis=1)];rise=np.linalg.norm(points[edges[:,0]]-points[edges[:,1]],axis=1)/TIDAL_FACE
+        for _ in range(60):
+            before=cap.copy()
+            np.minimum.at(cap,edges[:,1],cap[edges[:,0]]+rise);np.minimum.at(cap,edges[:,0],cap[edges[:,1]]+rise)
+            if np.array_equal(before,cap):break
+    else:
+        grid=(core['height'],core['width']);c=cap.reshape(grid);ok=(~river).reshape(grid)
+        for _ in range(60):
+            before=c.copy()
+            for di,dj in ((0,1),(1,0),(1,1),(1,-1)):
+                r=core['step']*np.hypot(di,dj)/TIDAL_FACE
+                a=(slice(0,grid[0]-di),slice(max(0,-dj),grid[1]-max(0,dj)));b=(slice(di,grid[0]),slice(max(0,dj),grid[1]-max(0,-dj)))
+                c[b]=np.where(ok[b],np.minimum(c[b],c[a]+r),np.inf);c[a]=np.where(ok[a],np.minimum(c[a],c[b]+r),np.inf)
+            if np.array_equal(before,c):break
+        cap=c.ravel()
+    out=blended.copy();limit=free&(cap<blended);out[limit]=np.maximum(old[limit],cap[limit])
+    tidal_faced[key]={'loweredVertices':int((out<blended-1e-6).sum()),'maxLoweringMetres':round(float((blended-out).max()),3)}
+    return out
 files={};stats={}
 def export_heights(key,points,old,preserve=None,triangles=None):
-    blended=blend_surface(points,old,key=key);new=fill_behind_walls(points,blended.copy())
+    blended=blend_surface(points,old,key=key)
+    if key in ('core','network'):blended=tidal_faces(key,points,blended,old,triangles)
+    new=fill_behind_walls(points,blended.copy())
     if triangles is not None:new=clear_wall_faces(points,new,blended,triangles)
     if key=='network':new=cap_junction_ends(points,new,triangles)
     if preserve is not None:
@@ -501,6 +562,13 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
     'junctionEndCaps':{'method':f'river-network vertices within {END_FACE_M} m of drawn river-system water (waterPolygons) are capped at the water edge (low water + 0.02 m) rising by smoothstep to their existing height {END_FACE_M} m from that water; recorded raised shore edges excluded; no vertex lowered more than 2.4 m below a mesh neighbour',
         **end_caps,
         'evidence':'Mapped: the river-system water polygons and the network channel ends that meet them. Estimated: the earth face at each junction, taken from the system bank face rather than from any survey of the confluence banks.'},
+    'pathCorridors':{'method':'footpath corridors (infrastructure roads of kind "path") take no street level of their own: the ground under them is whatever the marsh, bank band, yard pads, batters and wall fill make it, and docs/infrastructure.js draws the cinder surface 0.05 m above that ground; they raise no batter of their own and do not stop the neighbouring batters or wall fill; only inside the Northern Outfall Sewer embankment footprint (bank and crest triangles, 1 m margin) does a path corridor keep its former inverse-distance street level, so the embankment toes are unchanged; streets, lanes and roads keep their street readings',
+        'corridors':path_corridors,
+        'evidence':'Mapped: the path centrelines and widths (OS five-foot and VIII.32 traces in infrastructure.json) and the sewer embankment footprint. Observed: none for the paths themselves; the one street reading formerly applied to the Mill Mead riverbank path (sh_538874_183253, 2.19 m scene) is an Abbey Road/Abbey Lane spot height by the Abbey Mill bridge, not a level on the path, and spread 2.2 m above the marsh along the first 120 m of the path, with a 2.4 m drop at the end of its reach. Interpreted: a riverside footpath across the marsh lies at marsh or bank level with a few centimetres of made-up cinder; its cinder thickness and any local raising are not surveyed.'},
+    'networkTidalWater':{'method':'the river network tide polygons (drawn as water at low water and as tidal water rising to high water) are added to the water mask of the bank blend and the edge batters: vertices inside them keep their native river-network (or core) heights, and no batter rises from inside them, except within '+str(TIDAL_BUILDING_M)+' m of a mapped building footprint, where the building frontage keeps the bank blend; street levels, retaining-wall sides, the wall fill and the river-network wall-face clearing keep the regional water mask',
+        'nativeVerticesKept':tidal_kept,'faceMethod':f'blended ground beside the outline stands no steeper than 1:{TIDAL_FACE} above the native tidal ground (along river-network mesh edges, or across the core grid), never below its own pre-blend height and not in street corridors or building footprints; the wall fill is applied afterwards as before',
+        'faceLowering':tidal_faced,
+        'evidence':'Mapped: the river network tidal outline (river-network.json tide.polygons) and its interpreted river-side shelves and bank faces. Estimated: those shelf and bank-face heights (river-network build) and the 1:1.5 face that rises from them to the regional bank crest outside the outline. The fill behind the interpretive retaining walls, which stand inside the outline, is unchanged.'},
     'edgeBatters':{'method':f'premises pads and street corridors stay level inside their outlines; outside, the ground meets them on an earth batter falling at 1:{EDGE_BATTER} from the nearest edge until it meets the surrounding ground (at most {EDGE_REACH_M} m), including into a lower neighbouring yard but never onto a street corridor; where a raised pad stands within {FRONTAGE_M} m of a regional bank, the strip between yard edge and bank (bounded by rays from the yard edge to the nearest shoreline that cross no water or railway embankment) is made up to the lower of the yard and bank-crest levels; neither raises water, ground steeper than 1:{EDGE_BATTER} above low water from the water edge, or ground steeper than 1:{EDGE_BATTER} above a building footprint (its premises level, or its unraised ground if it has no premises pad); the 10 m level field keeps its unbattered value in cells within one cell diagonal of a building without a premises pad, so no seated building moves',
         'frontages':[{'siteId':pads[j]['siteId'],'areaM2':round(g.area,1)} for g,j in frontages],
         'evidence':'Mapped: the premises outlines (ground-plan sites), the street routes and widths, the shorelines, and the building footprints. Observed: the same-premises yard readings and street spot heights that set the pad and corridor levels, and the bank-top readings behind the crest. Estimated: the 1:1.5 batter, its reach, and the frontage fill between yard and bank; no surveyed section of any yard edge, street embankment or wharf frontage.'},
