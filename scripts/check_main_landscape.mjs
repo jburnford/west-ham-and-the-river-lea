@@ -112,7 +112,11 @@ for (let j = 0; j < data.terrain.height; j++)
     const k = j * data.terrain.width + i;
     coreMud[k] = properties[k * 4 + 3] > 200 && properties[k * 4 + 2] < 80 ? 1 : 0;
     coreXYZ.set(
-      [data.terrain.bounds[0] + i * data.terrain.step, data.terrain.levels[k], data.terrain.bounds[1] + j * data.terrain.step],
+      [
+        data.terrain.bounds[0] + i * data.terrain.step,
+        data.terrain.levels[k],
+        data.terrain.bounds[1] + j * data.terrain.step,
+      ],
       k * 3
     );
   }
@@ -148,7 +152,10 @@ for (const [id, polygons] of Object.entries(clearance.footprints)) {
     }
   spanReport[id] = { vertices, highest: +highest.toFixed(3), mudVertices, highestMud: +highestMud.toFixed(3) };
   assert(vertices + mudVertices > 0, `${id}: no landscape vertex in its span footprint`);
-  assert(highest <= clearance.waterEdge + 1e-3, `${id}: ground ${highest.toFixed(2)} m in the span, above the water edge`);
+  assert(
+    highest <= clearance.waterEdge + 1e-3,
+    `${id}: ground ${highest.toFixed(2)} m in the span, above the water edge`
+  );
 }
 // The drawn road surface, built by the real module (railways are not needed here).
 data.drawnGround = createGroundSampler([
@@ -183,7 +190,13 @@ const plainMaterial = () => new THREE.MeshStandardMaterial();
 infrastructure({
   THREE,
   scene: roadScene,
-  materials: { stone: plainMaterial(), ground: plainMaterial(), iron: plainMaterial(), wood: plainMaterial(), brick: plainMaterial() },
+  materials: {
+    stone: plainMaterial(),
+    ground: plainMaterial(),
+    iron: plainMaterial(),
+    wood: plainMaterial(),
+    brick: plainMaterial(),
+  },
   data: { ...data, infrastructure: { ...data.infrastructure, railways: [] } },
   box: (parent, ...args) => libBox(THREE, parent, ...args),
   level: drawnLevel,
@@ -258,7 +271,11 @@ for (const [kind, triangles] of Object.entries(roadTriangles)) {
   }
   corridorReport[kind] = { samples, offending: offending.length, worst, onPreservedMud: mudSamples };
   assert(samples > 1000, `${kind}: road surface not sampled`);
-  assert.equal(offending.length, 0, `${kind}: ground stands more than 0.05 m above the road, worst ${JSON.stringify(worst)}`);
+  assert.equal(
+    offending.length,
+    0,
+    `${kind}: ground stands more than 0.05 m above the road, worst ${JSON.stringify(worst)}`
+  );
 }
 console.log(
   JSON.stringify(
