@@ -6,7 +6,7 @@ import json
 import math
 from pathlib import Path
 
-from shapely.geometry import LineString, Polygon
+from shapely.geometry import LineString, Point, Polygon
 from factory_alignment_checks import load
 from factory_map_sources import mosaic
 from factory_street_clearance import street_clearances
@@ -29,7 +29,24 @@ expected_west=next(c for c in load('data/maps/remaining-trades-context-alignment
 if remaining.exists():
     assert expected_west['priorPoints']==prior['road']['points']
     assert expected_west['priorBridgeSpans']==prior['road']['priorBridgeSpans']
-assert west['points']==expected_west['points'] and west['bridgeSpans']==expected_west.get('bridgeSpans',prior['road']['priorBridgeSpans'])
+expected_spans=expected_west.get('bridgeSpans',prior['road']['priorBridgeSpans'])
+if 't18Retrace' in west:
+    # T18 (October 2026) retraced Marshgate Lane onto the printed carriageway, as the remaining-trades
+    # register did before it: the superseded trace must be exactly that register's, kept as priors,
+    # and the new centreline must lie within 0.5 m (median) of the recorded OS readings.
+    assert west['priorPoints']==expected_west['points']
+    assert west['priorBridgeSpanPoints']=={s['id']:s['points'] for s in expected_spans}
+    assert [s['id'] for s in west['bridgeSpans']]==[s['id'] for s in expected_spans]
+    assert west['t18Retrace']['deviationMetres']['new']['median']<=.5
+    readings=[c for c in west['t18Retrace']['readings'] if c['priorStation']<=134]
+    prior_line=LineString(west['priorPoints'])
+    def reading_point(c):
+        p=prior_line.interpolate(c['priorStation']);a=prior_line.interpolate(max(0,c['priorStation']-.5));b=prior_line.interpolate(c['priorStation']+.5)
+        ux,uz=b.x-a.x,b.y-a.y;n=math.hypot(ux,uz);return (p.x-uz/n*c['centreOffset'],p.y+ux/n*c['centreOffset'])
+    deviations=sorted(LineString(west['points']).distance(Point(reading_point(c))) for c in readings)
+    assert deviations[len(deviations)//2]<=.5 and len(readings)>40
+else:
+    assert west['points']==expected_west['points'] and west['bridgeSpans']==expected_spans
 assert west['width'] == north['width'] == r['road']['width'] == 7
 assert not north.get('buildingClearanceReviews')
 assert sum(q['name'] == north['name'] for q in roads) == 1
