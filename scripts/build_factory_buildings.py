@@ -95,7 +95,8 @@ def build():
                        'data/maps/imperial-street-works-footprint-alignment.json',
                        'data/maps/bromley-g10-footprint-alignment.json',
                        'data/maps/bromley-g9-footprint-alignment.json',
-                       'data/maps/bromley-g8-footprint-alignment.json']
+                       'data/maps/bromley-g8-footprint-alignment.json',
+                       'data/maps/safety-oil-wharf-footprint-alignment.json']
     compounds = [json.loads((ROOT/path).read_text()) for path in group_registers]
     structure_alignment = {}
     map_traces = {}

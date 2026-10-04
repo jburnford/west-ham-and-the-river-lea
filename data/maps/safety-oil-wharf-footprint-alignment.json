@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-04",
+  "sites": [
+    9010
+  ],
+  "name": "Safety Oil Wharf, Bromley",
+  "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg (project extract west-ham-buffer-buildings-bng.geojson.gz); cached NLS OS London five-foot mosaic (os-london-five-foot-1893); Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff)",
+  "sourceCRS": "EPSG:27700 to scene origin E538900,N183209; x east, z south, metres",
+  "method": "4 October 2026: the 1,775 m² outline south of Three Mills was drawn only as a flat plan; Goad F16 identifies it as a petroleum store. New site 9010 (no GIS parcel), two buildings on their GeoPackage outlines (see scripts/prepare_safety_oil_wharf_alignment.py).",
+  "evidenceNotes": [
+    "Goad colours read with the key (reference/factory-building-survey/goad-symbol-key-1926.jpg): pink brick, yellow wood, grey metal buildings, grey-blue skylights; figures are storeys; feet are printed beside chimney symbols.",
+    "Barrel stacks on the open ground (\"Empty barrels\") are not modelled."
+  ],
+  "buildings": [],
+  "structures": [],
+  "groups": [],
+  "additionalSites": [
+    {
+      "id": 9010,
+      "name": "Safety Oil Wharf, Bromley (petroleum store)",
+      "sources": [
+        "os-1893"
+      ],
+      "coverage": "Individual OS-mapped ranges; uses, storeys and construction from Goad sheet goad-f16",
+      "notes": "Lettered \"Safety Oil Wharf, Bromley\" with \"Petroleum in barrels\" and \"Empty barrels\" on Goad F16 (block 644); the OS draws the building without a name and the GIS industry layer has no site here. Roof exteriors are mapped; heights and roof forms are estimates."
+    }
+  ],
+  "additionalBuildings": [
+    {
+      "id": "b9010-petroleum-store",
+      "siteId": 9010,
+      "source": "os-1893",
+      "name": "Safety Oil Wharf, Bromley (petroleum store) — petroleum store",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        739
+      ],
+      "footprintEvidence": "Source outline fid 739 (1775 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-f16.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff): Goad 644 \"Safety ... Bromley ... Petroleum in barrels\", pink (brick), marked 1, with an internal division wall. Eaves height is an explicit estimate.",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-f16: Goad 644 \"Safety ... Bromley ... Petroleum in barrels\", pink (brick), marked 1, with an internal division wall.",
+      "worldFootprint": [
+        [
+          -644.438,
+          509.088
+        ],
+        [
+          -644.435,
+          509.294
+        ],
+        [
+          -662.131,
+          518.008
+        ],
+        [
+          -662.128,
+          518.461
+        ],
+        [
+          -646.617,
+          548.172
+        ],
+        [
+          -646.196,
+          548.374
+        ],
+        [
+          -638.586,
+          544.635
+        ],
+        [
+          -638.038,
+          544.551
+        ],
+        [
+          -634.219,
+          551.413
+        ],
+        [
+          -633.663,
+          551.319
+        ],
+        [
+          -610.098,
+          539.667
+        ],
+        [
+          -609.912,
+          538.619
+        ],
+        [
+          -610.678,
+          518.358
+        ],
+        [
+          -621.794,
+          498.11
+        ],
+        [
+          -622.247,
+          497.948
+        ]
+      ],
+      "eavesHeight": 4.5
+    },
+    {
+      "id": "b9010-van-shed",
+      "siteId": 9010,
+      "source": "os-1893",
+      "name": "Safety Oil Wharf, Bromley (petroleum store) — van shed",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        44482
+      ],
+      "footprintEvidence": "Source outline fid 44482 (156 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-f16.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, North East District vol. F sheet 16, July 1893 (reference/factory-building-survey/goad-f16.tiff): Goad 642 \"Van shed\", marked 1. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-f16: Goad 642 \"Van shed\", marked 1.",
+      "worldFootprint": [
+        [
+          -662.131,
+          518.008
+        ],
+        [
+          -644.435,
+          509.294
+        ],
+        [
+          -644.432,
+          508.891
+        ],
+        [
+          -647.967,
+          502.337
+        ],
+        [
+          -665.656,
+          511.075
+        ],
+        [
+          -665.685,
+          511.532
+        ],
+        [
+          -662.55,
+          517.798
+        ]
+      ]
+    }
+  ],
+  "additionalStructures": []
+}
