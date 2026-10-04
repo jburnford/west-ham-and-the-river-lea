@@ -99,6 +99,59 @@ def triangles(g,max_edge=5):
         for t in mesh.geoms:
             if tolerant.covers(t):result.append([[round(x,3),round(z,3)] for x,z in list(t.exterior.coords)[:3]])
     return result
+# Deck ends (data/maps/road-bridge-forms.json, deckEndEvidence): at each end of a bridge with deck
+# footways the street footway is carried onto the deck footway over a taper, its kerb line drawing
+# in from the street carriageway edge to the deck footway kerb. docs/infrastructure.js draws these
+# strips (deckEndFootways), rising to the deck footway top; they are kept out of the carriageway,
+# street footway and path meshes drawn here, but not out of `roads`, which the railway and sewer
+# openings below still read as before.
+bridge_defaults=read('data/maps/road-bridge-forms.json')['defaults']
+deck_fw=bridge_defaults['deckFootway'];taper=bridge_defaults['deckEndFootwayTaper'];street_fw=bridge_defaults['streetFootway']
+street_corridors=[(r['name'],LineString([point(r['sheet'],p,r['pixelWidth']) for p in r['points']]).buffer(r['width']/2,join_style=2,cap_style=2))
+                  for r in traces['roads'] if r['kind']!='path']
+deck_end_footways=[];deck_end_zones=[]
+def deck_end_zone(bridge,side_name,q0,q1):
+    """The deck-end footway strips beyond route point q1 (q0 is the route point before it), laid
+    along the approach road's own centreline, which can turn at the deck end."""
+    road=min((r for r in routes if r['name']==bridge['name']),key=lambda r:LineString(r['route']).distance(Point(q1)))
+    line=LineString(road['route']);half=road['width']/2;kerb=bridge['width']/2-deck_fw['inset']-deck_fw['width']/2
+    t0=line.project(Point(q1));sign=1 if line.project(Point(q0))<t0 else -1
+    def frame(s):
+        t=min(line.length,max(0,t0+sign*s));a=line.interpolate(max(0,t-.05));b=line.interpolate(min(line.length,t+.05))
+        p=line.interpolate(t);ux,uz=(b.x-a.x)*sign,(b.y-a.y)*sign;n=math.hypot(ux,uz)
+        return p,ux/n,uz/n
+    stations=list(np.arange(-.5,taper+1e-9,.5))
+    inner=lambda s:kerb+(half-kerb)*min(1,max(0,s/taper))
+    # Beyond the deck-end line (square to the last deck segment), so the strip meets the deck edge.
+    length=math.hypot(q1[0]-q0[0],q1[1]-q0[1]);ex,ez=(q1[0]-q0[0])/length,(q1[1]-q0[1])/length
+    beyond=Polygon([(q1[0]-ez*40,q1[1]+ex*40),(q1[0]-ez*40+ex*40,q1[1]+ex*40+ez*40),(q1[0]+ez*40+ex*40,q1[1]-ex*40+ez*40),(q1[0]+ez*40,q1[1]-ex*40)])
+    def at(s,v):
+        # On the deck axis carried on at the deck end, turning onto the road's own line by the
+        # end of the taper (the connection decks meet their lanes at a bend).
+        p,ux,uz=frame(s);a=min(1,max(0,s/taper))
+        road_pt=(p.x-uz*v,p.y+ux*v);deck_pt=(q1[0]+ex*s-ez*v,q1[1]+ez*s+ex*v)
+        return (deck_pt[0]+(road_pt[0]-deck_pt[0])*a,deck_pt[1]+(road_pt[1]-deck_pt[1])*a)
+    sides=[]
+    for side in (-1,1):
+        edge_in=[at(s,side*inner(s)) for s in stations];edge_out=[at(s,side*(half+street_fw)) for s in stations]
+        sides.append(Polygon(edge_in+edge_out[::-1]).buffer(0))
+    zone=unary_union(sides).intersection(beyond)
+    others=unary_union([g for name,g in street_corridors if name!=bridge['name']])
+    zone=zone.difference(buildings).difference(water.buffer(.6)).difference(others).difference(deck_exclusion)
+    zone=unary_union([g for g in getattr(zone,'geoms',[zone]) if g.geom_type=='Polygon' and g.area>.05])
+    if zone.is_empty:return
+    deck_end_zones.append(zone)
+    def rise(x,z):
+        # Station beyond the deck end, measured as the strip is laid: on the deck axis at the deck
+        # end, along the road by the end of the taper.
+        s_deck=(x-q1[0])*ex+(z-q1[1])*ez;s_road=sign*(line.project(Point(x,z))-t0);a=min(1,max(0,s_deck/taper))
+        return round(min(1,max(0,1-(s_deck*(1-a)+s_road*a)/taper)),4)
+    deck_end_footways.append({'bridge':bridge['id'],'end':side_name,'triangles':[[[x,z,rise(x,z)] for x,z in tri] for tri in triangles(zone,1)]})
+for bridge in bridges:
+    if bridge.get('style') and bridge['width']-2*deck_fw['inset']-deck_fw['width']>=deck_fw['minCarriageway']:
+        deck_end_zone(bridge,'start',bridge['route'][1],bridge['route'][0])
+        deck_end_zone(bridge,'end',bridge['route'][-2],bridge['route'][-1])
+deck_ends=unary_union(deck_end_zones);drawn_roads=roads.difference(deck_ends)
 # High Street passes over the enclosed sewer. Abbey Lane and Mill Meads works
 # road pass under it on interpreted brick arches (docs/sewer-crossing.js).
 sewer=data['neighbourhood']['sewer'];sewer_line=LineString(sewer['route'])
@@ -192,11 +245,11 @@ railways[-2]=apply_mainline_crossing(railways[-2],northern,water,branch_road_cle
 railways.append(northern)
 result={'sources':'data/maps/road-traces.json; data/maps/district-road-traces.json; data/maps/great-eastern-mainline.json; OS housing registration; southwest holder registration',
         'limitations':'Centrelines approximate; widths, paving, railway levels and bridge structures interpreted. Registration can differ by tens of metres. Buildings and waterways clipped out of road surface; named mapped crossings bridged separately.',
-        'roads':routes,'roadTriangles':triangles(roads),'shoulderTriangles':triangles(shoulder),'pathTriangles':triangles(path),'roadBridges':bridges,'railways':railways,'sewerBanks':sewer_banks}
+        'roads':routes,'roadTriangles':triangles(drawn_roads),'shoulderTriangles':triangles(shoulder.difference(deck_ends)),'pathTriangles':triangles(path.difference(deck_ends) if path.intersection(deck_ends).area>1e-9 else path),'roadBridges':bridges,'railways':railways,'sewerBanks':sewer_banks}
 result['sewerHighStreet']=crossing_spec
 result['sewerCrestTriangles']=crest_triangles
 result['sewerRailEdges']=sewer_edges
-remaining=roads
+remaining=drawn_roads
 result['roadSurfaces']={}
 for kind in ['setts','macadam','cinder']:
     patch=unary_union(surface_shapes[kind]).intersection(remaining)
@@ -215,7 +268,8 @@ assert all(not water.buffer(.6).covers(Point(p)) for p in mill_span['route'])
 assert not span_line.buffer(mill_span['width']/2,cap_style=2).intersects(rectangle(data['neighbourhood']['mill']))
 assert roads.intersection(deck_exclusion).area<.01
 road_mesh_area=sum(Polygon(t).area for t in result['roadTriangles'])
-assert abs(road_mesh_area-roads.area)/roads.area<.002,(road_mesh_area,roads.area)
+assert abs(road_mesh_area-drawn_roads.area)/drawn_roads.area<.002,(road_mesh_area,drawn_roads.area)
+result['deckEndFootways']=deck_end_footways
 result['districtSources']=district['sources']
 result['districtNotes']=district['notes']
 result['housingSources']=housing['sources']

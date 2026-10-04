@@ -170,6 +170,28 @@ def build():
     # are the bank lines the regional bank sections are built from.
     assert drawn_water.difference(full_water).area<1e-6
     assert drawn_water.intersection(network_water).area<1e-6
+    # Approach roads at the road-bridge deck ends (T18): where the drawn regional water runs on
+    # past a deck end under the approach (the deck corners, cut for the pre-T13 road), the drawn
+    # street, footway and deck-end footway surfaces of docs/data/infrastructure.json win within
+    # 12 m beyond each route end. Only the drawn plane is trimmed, as above.
+    approach_infrastructure=read('docs/data/infrastructure.json')
+    approach_surfaces=shapely.union_all([Polygon(t) for t in sum(approach_infrastructure['roadSurfaces'].values(),[])
+        +approach_infrastructure['shoulderTriangles']]+[Polygon([q[:2] for q in t]) for r in approach_infrastructure.get('deckEndFootways',[]) for t in r['triangles']])
+    approach_zones=[]
+    for bridge in approach_infrastructure['roadBridges']:
+        r=bridge['route'];reach=bridge['width']/2+1.1
+        for a,c in ((r[1],r[0]),(r[-2],r[-1])):
+            length=float(np.hypot(c[0]-a[0],c[1]-a[1]));ux,uz=(c[0]-a[0])/length,(c[1]-a[1])/length
+            at=lambda s,v:(c[0]+ux*s-uz*v,c[1]+uz*s+ux*v)
+            approach_zones.append(Polygon([at(0,-reach),at(12,-reach),at(12,reach),at(0,reach)]))
+    approach_cut=approach_surfaces.intersection(shapely.union_all(approach_zones)).buffer(.01,join_style='mitre')
+    # Only the pieces that reach under an approach are cut, so the others keep their rings as before.
+    kept=[]
+    for piece in getattr(drawn_water,'geoms',[drawn_water]):
+        if piece.intersection(approach_cut).area<1e-9:kept.append(piece);continue
+        cut=piece.difference(approach_cut)
+        kept.extend(g for g in getattr(cut,'geoms',[cut]) if g.geom_type=='Polygon' and g.area>1e-9)
+    drawn_water=shapely.MultiPolygon(kept)
     # Remove artificial bank caps at the former clipped endpoints only. Keep
     # all existing buildings, bridge decks and sewer structure coordinates.
     network_path=OUT/core['positionFile'];paths.append(network_path)

@@ -5,6 +5,7 @@
 // sett surface the reader sees (road triangles or bridge deck), a few millimetres proud.
 import { highStreetSurfaceHeight } from './sewer-levels.js';
 import { roadProfileHeight } from './road-levels.js';
+import { deckEndLevel } from './road-bridges.js';
 
 const MAX_STEP = 4, // metres between cross-sections on plain road
   MIN_STEP = 0.05,
@@ -19,7 +20,8 @@ export function roadGround(data, level) {
   const infra = data.infrastructure,
     [x0, z0, x1, z1] = data.terrain.bounds,
     profiles = infra.roads.map((r) => r.elevationProfile).filter(Boolean),
-    epoch = data.elevation?.meta.epoch;
+    epoch = data.elevation?.meta.epoch,
+    deckEnds = deckEndLevel(infra.roadBridges);
   return (x, z) => {
     for (const p of profiles) {
       const y = roadProfileHeight(x, z, p, epoch);
@@ -33,16 +35,7 @@ export function roadGround(data, level) {
           : 0.12;
     const highStreet = highStreetSurfaceHeight(x, z, infra.sewerHighStreet);
     if (!data.mainLandscape || highStreet > 0.1850001) h = Math.max(h, highStreet - ROAD_OFFSET);
-    for (const bridge of infra.roadBridges)
-      for (let i = 1; i < bridge.route.length; i++) {
-        const a = bridge.route[i - 1],
-          b = bridge.route[i],
-          dx = b[0] - a[0],
-          dz = b[1] - a[1];
-        const t = Math.max(0, Math.min(1, ((x - a[0]) * dx + (z - a[1]) * dz) / (dx * dx + dz * dz)));
-        h = Math.max(h, bridge.height - ROAD_OFFSET - Math.hypot(x - a[0] - t * dx, z - a[1] - t * dz) * 0.12);
-      }
-    return h;
+    return deckEnds(x, z, h);
   };
 }
 

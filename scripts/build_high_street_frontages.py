@@ -21,6 +21,26 @@ for z in range(vista['bank']['zStart'],vista['bank']['zEnd']+1,2):
  assert not cut.is_empty
  vista['bank']['samples'].append([round(cut.bounds[2],3),z])
 result['vista']=vista
+bridge_defaults=load('data/maps/road-bridge-forms.json')['defaults']
+def deck_end_level(x,z,street):
+ """docs/road-bridges.js deckEndLevel: the deck road level at each route end, level across the
+ approach band and falling at approachGrade along the road, blended to the deck within deckEndBlend."""
+ h=street
+ for bridge in infra['roadBridges']:
+  route=bridge['route'];band=bridge['width']/2+bridge_defaults['streetFootway'];deck=bridge['height']-.065;best=None;s0=0
+  for i in range(1,len(route)):
+   (ax,az),(bx,bz)=route[i-1],route[i];length=math.hypot(bx-ax,bz-az);ux,uz=(bx-ax)/length,(bz-az)/length
+   t=(x-ax)*ux+(z-az)*uz
+   if i>1:t=max(0,t)
+   if i<len(route)-1:t=min(length,t)
+   dist=math.hypot(x-ax-ux*t,z-az-uz*t)
+   if best is None or dist<best[2]:best=(s0+t,-(x-ax)*uz+(z-az)*ux,dist)
+   s0+=length
+  s,v,_=best;d=math.hypot(max(0,-s,s-s0),max(0,abs(v)-band))
+  h=max(h,deck-bridge_defaults['approachGrade']*d)
+  if d<bridge_defaults['deckEndBlend']:
+   q=d/bridge_defaults['deckEndBlend'];h=deck+(h-deck)*q*q*(3-2*q)
+ return h
 for connection in vista['connections']:
  if 'bankStart' in connection:
   bank_route=[]
@@ -32,7 +52,7 @@ for connection in vista['connections']:
  if connection['id']=='high-street-access':
   x,z=vista['bank']['samples'][0];connection['route'][-1]=[x+vista['bank']['pathLandOffset'],vista['bank']['crestHeight'],z]
   x,_,z=connection['route'][0]
-  ground=max([.12]+[bridge['height']-.065-LineString(bridge['route']).distance(Point(x,z))*.12 for bridge in infra['roadBridges']])
+  ground=deck_end_level(x,z,.12)
   connection['route'][0][1]=ground+.04
  # Mitered ribbon, retaining the exact width/level at the photograph segment.
  route=connection['route'];sections=[]

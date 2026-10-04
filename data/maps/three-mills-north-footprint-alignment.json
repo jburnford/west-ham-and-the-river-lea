@@ -57,36 +57,36 @@
         [
           [
             [
-              -563.19,
-              350.529
+              -561.385,
+              350.037
             ],
             [
-              -555.586,
-              348.632
+              -553.781,
+              348.14
             ],
             [
-              -555.408,
-              348.633
+              -553.603,
+              348.141
             ],
             [
-              -555.406,
-              348.548
+              -553.601,
+              348.056
             ],
             [
-              -556.227,
-              344.963
+              -554.422,
+              344.471
             ],
             [
-              -556.481,
-              344.739
+              -554.676,
+              344.247
             ],
             [
-              -564.709,
-              346.746
+              -562.904,
+              346.254
             ],
             [
-              -563.608,
-              350.746
+              -561.803,
+              350.254
             ]
           ]
         ]
@@ -2184,36 +2184,36 @@
       "sourceFid": 738916,
       "worldFootprint": [
         [
-          -563.19,
-          350.529
+          -561.385,
+          350.037
         ],
         [
-          -555.586,
-          348.632
+          -553.781,
+          348.14
         ],
         [
-          -555.408,
-          348.633
+          -553.603,
+          348.141
         ],
         [
-          -555.406,
-          348.548
+          -553.601,
+          348.056
         ],
         [
-          -556.227,
-          344.963
+          -554.422,
+          344.471
         ],
         [
-          -556.481,
-          344.739
+          -554.676,
+          344.247
         ],
         [
-          -564.709,
-          346.746
+          -562.904,
+          346.254
         ],
         [
-          -563.608,
-          350.746
+          -561.803,
+          350.254
         ]
       ],
       "worldHoles": [],
@@ -2246,6 +2246,50 @@
         "centroidShiftMetres": 3.230600974782256,
         "areaRatio": 0.6043492482292218,
         "axisChangeDegrees": -1.632393884740047
+      },
+      "priorEpflWorldFootprint": [
+        [
+          -563.19,
+          350.529
+        ],
+        [
+          -555.586,
+          348.632
+        ],
+        [
+          -555.408,
+          348.633
+        ],
+        [
+          -555.406,
+          348.548
+        ],
+        [
+          -556.227,
+          344.963
+        ],
+        [
+          -556.481,
+          344.739
+        ],
+        [
+          -564.709,
+          346.746
+        ],
+        [
+          -563.608,
+          350.746
+        ]
+      ],
+      "osRegistration": {
+        "osReading": "OS London five-foot plan revised 1893-96 (reference/nls-tiles/os-london-five-foot-1893, read with scripts/factory_map_sources.py mosaic() in cross-profiles): the hatched dwelling block that this record traces prints with its west face at x -562.8 (z 346.7) to -561.8 (z 350.7) and its east wall at x -554.1 (z 346) to -553.7 (z 348); west of the face is the open strip lettered F.P. (footpath), about 6 m wide between the face and the river-bank line at x -568.4 (z 350).",
+        "interpretation": "The EPFL 1891-96 outline (fid 738916, the sourcePolygons of group three-mills-north-dwelling-802) is the same block, registered 1.87 m west of the NLS-georeferenced plan along its own long axis (west end 1.94 / 1.81 m, east end about 1.9 / 1.8 m); worldFootprint is that outline moved 1.87 m east-north-east along its long axis and 0.05 m across it (so that it does not overlap range 2, whose shared wall bends at the west end); shape, area and rotation are unchanged. Before, its west end stood 1.9 m into the printed footpath, and the Wall River vista path (wall-lane-south), which runs in the printed footpath, crossed it by 1.99 m2. The neighbouring ranges 2 and 3 read 1.8-2.0 m west of their printed faces too and range 4 0.4 m; they are not moved here (T18_REPORT.md).",
+        "shiftMetres": 1.8707,
+        "shiftDirection": [
+          0.964835,
+          -0.262858
+        ],
+        "priorNote": "priorEpflWorldFootprint keeps the EPFL-registered footprint used before T18 (4 October 2026); sourcePolygons are the unchanged EPFL source."
       }
     },
     {

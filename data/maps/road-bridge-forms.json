@@ -41,7 +41,13 @@
     "railingHeight": 1.05,
     "clearZoneMargin": 2.0,
     "abutmentEndClearance": 0.3,
-    "evidence": "Estimates for every bridge: springing 0.44 m above the static water so the arch feet stand clear of it; masonry parapet 1.0 m plus 0.12 m coping (about 1.1 m above the carriageway, 1.0 m above the footway); railings 1.05 m. Approach fill is not drawn within 2 m of either deck edge between the abutment faces. Arch abutment faces stay at least 0.3 m inside the route ends at both deck edges (abutmentEndClearance), so the arch ring never reaches past the deck; the masonry behind a face may run on under the approach."
+    "evidence": "Estimates for every bridge: springing 0.44 m above the static water so the arch feet stand clear of it; masonry parapet 1.0 m plus 0.12 m coping (about 1.1 m above the carriageway, 1.0 m above the footway); railings 1.05 m. Approach fill is not drawn within 2 m of either deck edge between the abutment faces. Arch abutment faces stay at least 0.3 m inside the route ends at both deck edges (abutmentEndClearance), so the arch ring never reaches past the deck; the masonry behind a face may run on under the approach.",
+    "deckFootway": { "inset": 0.9, "width": 1.15, "base": 0.025, "thickness": 0.12, "minCarriageway": 1 },
+    "streetFootway": 1.1,
+    "approachGrade": 0.12,
+    "deckEndBlend": 2,
+    "deckEndFootwayTaper": 6,
+    "deckEndEvidence": "Deck ends (T18, October 2026). Interpretation and estimates; no source in the repository shows the kerb layout or the road levels at the bridge heads. Recorded from the model as drawn before T18: the deck footway box in docs/infrastructure.js (deckFootway: centre inset 0.9 m from the deck edge, 1.15 m wide, 0.025 m above the deck setts, 0.12 m thick, so its top is 0.145 m above the recorded deck height; from T18 the boxes are drawn only where they leave at least minCarriageway, 1 m, of setts between them, so the 2.2 m Three Mills Lane footpath deck, whose two boxes overlapped, is now a plain deck that its path meets flush) and the 1.1 m street footway that scripts/build_infrastructure.py draws beside every street (streetFootway). Rule: within the approach band (half the deck width plus streetFootway either side of the route) the drawn road and footway take the deck road level (deck height less 0.065 m, so the setts meet flush) at each route end and fall at approachGrade (0.12 m per metre, the grade docs/infrastructure.js already used; scripts/build_main_landscape.py still fits the ground to the earlier rule, as BRIDGE_CONE, which only ever lies below this one) along the road, level across it; outside the band the fall is measured from the band edge. Before T18 the fall was measured from the route line in every direction, so the approach sloped 0.12 m per metre across the road and met the level deck 0.26-0.58 m low (T12C_REPORT.md). Within deckEndBlend (2 m) of the deck end the approach is blended (smoothstep) to the deck road level, so the road meets the deck flush where the street is higher as well as lower. The street footway is carried onto the deck footway over deckEndFootwayTaper (6 m): its kerb line draws in from the street carriageway edge to the deck footway kerb, and its surface rises from the street footway level (0.03 m above the road) to the deck footway top. The 6 m taper and the kerb rise are estimates chosen so the footway is continuous."
   },
   "bridges": {
     "bow-bridge": {
@@ -168,11 +174,15 @@
     "marshgate-lane-connection-0": {
       "form": "timber-deck",
       "provisional": true,
-      "abutments": [7.0, 16.0],
+      "abutments": [7.0, 18.5],
       "beamDepth": 0.35,
       "abutmentLength": 1.2,
-      "waterEdges": { "centre": [7.75, 15.25], "left": [8.0, 17.25], "right": [7.25, 13.5] },
-      "evidence": "Provisional connection (record): deck versus culvert unresolved and not a documented named bridge. Drawn as the plainest reading, a timber deck on timber beams and brick abutments at the drawn water edges, with timber railings. All dimensions estimated."
+      "waterEdges": { "centre": [7.7, 15.55], "left": [7.15, 18.25], "right": [8.15, 15.15] },
+      "evidence": "Provisional connection (record): deck versus culvert unresolved and not a documented named bridge. Drawn as the plainest reading, a timber deck on timber beams and brick abutments at the drawn water edges, with timber railings. All dimensions estimated. T18 (October 2026): the span moved with the Marshgate Lane retrace onto the printed lane (same stations along the lane). Measured in the model on the new span every 0.05 m: the GIS channel (docs/data/ground-plan.json rivers) crosses at 7.7-15.55 m on the centreline, 8.15-15.15 m on the right edge and 7.15-18.25 m on the left (east) edge, where the river along the east side of the lane reaches under the deck; the far abutment is moved from 16.0 to 18.5 m so that the walled approach does not stand in it. The tide shelf polygon in docs/data/river-network.json also reaches under the left edge from 2.0 m; it was cut for the prior lane and is left to a river-network rebuild (T18_REPORT.md).",
+      "priorAbutments": [7.0, 16.0],
+      "priorWaterEdges": { "centre": [7.75, 15.25], "left": [8.0, 17.25], "right": [7.25, 13.5] },
+      "priorEvidence": "Provisional connection (record): deck versus culvert unresolved and not a documented named bridge. Drawn as the plainest reading, a timber deck on timber beams and brick abutments at the drawn water edges, with timber railings. All dimensions estimated.",
+      "priorNote": "Abutments and water edges measured on the prior span, which T18 (4 October 2026) moved with the Marshgate Lane retrace; kept for the record only."
     },
     "hunts-lane-connection-0": {
       "form": "iron-deck",

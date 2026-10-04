@@ -2117,6 +2117,145 @@
       "sheet": "scene",
       "points": [
         [
+          -818.082,
+          -69.818
+        ],
+        [
+          -832.972,
+          -89.928
+        ],
+        [
+          -840.251,
+          -99.997
+        ],
+        [
+          -842.327,
+          -104.678
+        ],
+        [
+          -844.553,
+          -112.406
+        ],
+        [
+          -846.199,
+          -126.237
+        ],
+        [
+          -849.167,
+          -134.051
+        ],
+        [
+          -851.893,
+          -139.43
+        ],
+        [
+          -861.827,
+          -152.666
+        ],
+        [
+          -876.289,
+          -170.358
+        ],
+        [
+          -881.32,
+          -174.741
+        ]
+      ],
+      "pixelWidth": 4864,
+      "sourcePixels": [
+        [
+          1845.46,
+          1618.386
+        ],
+        [
+          1806.938,
+          1563.145
+        ],
+        [
+          1788.123,
+          1535.499
+        ],
+        [
+          1782.889,
+          1522.742
+        ],
+        [
+          1777.475,
+          1501.769
+        ],
+        [
+          1774.064,
+          1464.405
+        ],
+        [
+          1766.663,
+          1443.146
+        ],
+        [
+          1759.735,
+          1428.462
+        ],
+        [
+          1734.021,
+          1392.093
+        ],
+        [
+          1696.47,
+          1343.394
+        ],
+        [
+          1683.278,
+          1331.223
+        ]
+      ],
+      "sourceBounds": [
+        -1450,
+        -650,
+        250,
+        600
+      ],
+      "width": 7,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "T18 retrace (October 2026) on the OS London five-foot plan revised 1893-96 (NLS tiles reference/nls-tiles/os-london-five-foot-1893, read with scripts/factory_map_sources.py mosaic() in straightened strips and cross-profiles along the prior centreline). Mapped: the printed carriageway edges, which are the dotted kerb lines where the plan draws them and otherwise the printed building or wall face that bounds the carriageway (the east face of the lane from the High Street to the bridge, and the west face of St Thomas Mills at the north end); the centreline is their midpoint at 53 stations every 2 m. Fit: median 0.067 m, largest 0.281 m from those midpoints (prior trace: median 3.75 m, largest 6.6 m; it ran up to 1.5 m inside the printed P.H. at the High Street corner and along the house fronts west of the lane further north). The High Street end now meets the High Street centreline. Estimated: the 7 m modelled width (the printed carriageway is 3.4-6.5 m between kerbs), and the line across the High Street corner, where no kerb is printed. The lane now ends in the forecourt in front of St Thomas Mills (printed spot height 16.5): the prior trace ran on for 39 m through the printed house row west of the lane to the mill; the printed passage beside the mill is only about 4.4 m between building faces, and a 7 m carriageway with footways there would stand in the modelled mill (site257-mill, whose footprint lies about 1.5 m west of the printed mill face), so that passage is not modelled. The provisional connection deck keeps its prior stations along the lane and moves with it. Readings and overlays: T18_REPORT.md.",
+      "surfaceEvidence": "Interpreted paving; no street-specific adoption record.",
+      "bridgeSpans": [
+        {
+          "id": "marshgate-lane-connection-0",
+          "points": [
+            [
+              -832.972,
+              -89.928
+            ],
+            [
+              -840.251,
+              -99.997
+            ],
+            [
+              -842.327,
+              -104.678
+            ],
+            [
+              -844.553,
+              -112.406
+            ]
+          ],
+          "style": "deck",
+          "height": 1.5,
+          "provisional": true,
+          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge. Existing provisional crossing moved onto the mapped eastern lane; both endpoints relocated, with one intervening road control to follow its bend. Identity, deck style, 1.5 m height and uncertainty retained. Exact bank alignment and deck versus culvert remain unresolved."
+        }
+      ],
+      "millBrushAlignment": {
+        "register": "data/maps/mill-brush-context-alignment.json",
+        "review": "OS and Goad show separate approaches around St Thomas/Barry mill. Remove the old diagonal shortcut through the mill; keep western controls0\u20136 and trace the northern frontage passage/bend. The mill courts and covered water interface do not establish a public carriageway or new bridge between these arms. Width remains interpreted."
+      },
+      "remainingTradesContextAlignment": {
+        "register": "data/maps/remaining-trades-context-alignment.json",
+        "review": "Re-read the complete unmodified OS mosaic. The southern Marshgate arm previously ran through Crown/Johnson instead of the public street east of its walls. Follow that street and keep the last two mill approach controls and the separate northern arm. At the ornamental moulding shed, Three Mills Lane follows the middle of the mapped street a little south of the former western bridge approach. Retain both 7 m carriageways and ordinary 1.1 m shoulders. No building clearance exception, new road link, or river change is introduced."
+      },
+      "priorPoints": [
+        [
           -816.083,
           -58.503
         ],
@@ -2161,8 +2300,7 @@
           -193.21
         ]
       ],
-      "pixelWidth": 4864,
-      "sourcePixels": [
+      "priorSourcePixels": [
         [
           1850.002,
           1649.001
@@ -2208,47 +2346,447 @@
           1280.002
         ]
       ],
-      "sourceBounds": [
-        -1450,
-        -650,
-        250,
-        600
-      ],
-      "width": 7,
-      "kind": "street",
-      "surface": "macadam",
-      "alignmentEvidence": "Manually read centreline on archived NLS georeferenced OS London five-foot mapping, revised 1893. Scene origin 538900,183209; widths estimated from the map.",
-      "surfaceEvidence": "Interpreted paving; no street-specific adoption record.",
-      "bridgeSpans": [
-        {
-          "id": "marshgate-lane-connection-0",
-          "points": [
-            [
-              -837.354,
-              -87.634
-            ],
-            [
-              -842.141,
-              -99.388
-            ],
-            [
-              -845.099,
-              -112.305
-            ]
+      "priorBridgeSpanPoints": {
+        "marshgate-lane-connection-0": [
+          [
+            -837.354,
+            -87.634
           ],
-          "style": "deck",
-          "height": 1.5,
-          "provisional": true,
-          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge. Existing provisional crossing moved onto the mapped eastern lane; both endpoints relocated, with one intervening road control to follow its bend. Identity, deck style, 1.5 m height and uncertainty retained. Exact bank alignment and deck versus culvert remain unresolved."
-        }
-      ],
-      "millBrushAlignment": {
-        "register": "data/maps/mill-brush-context-alignment.json",
-        "review": "OS and Goad show separate approaches around St Thomas/Barry mill. Remove the old diagonal shortcut through the mill; keep western controls0\u20136 and trace the northern frontage passage/bend. The mill courts and covered water interface do not establish a public carriageway or new bridge between these arms. Width remains interpreted."
+          [
+            -842.141,
+            -99.388
+          ],
+          [
+            -845.099,
+            -112.305
+          ]
+        ]
       },
-      "remainingTradesContextAlignment": {
-        "register": "data/maps/remaining-trades-context-alignment.json",
-        "review": "Re-read the complete unmodified OS mosaic. The southern Marshgate arm previously ran through Crown/Johnson instead of the public street east of its walls. Follow that street and keep the last two mill approach controls and the separate northern arm. At the ornamental moulding shed, Three Mills Lane follows the middle of the mapped street a little south of the former western bridge approach. Retain both 7 m carriageways and ordinary 1.1 m shoulders. No building clearance exception, new road link, or river change is introduced."
+      "priorAlignmentEvidence": "Manually read centreline on archived NLS georeferenced OS London five-foot mapping, revised 1893. Scene origin 538900,183209; widths estimated from the map.",
+      "t18Retrace": {
+        "readings": [
+          {
+            "priorStation": 20,
+            "westEdge": 3.4,
+            "eastEdge": 8.2,
+            "bounds": "W kerb (dotted) / E building face",
+            "centreOffset": 5.8
+          },
+          {
+            "priorStation": 22,
+            "westEdge": 3.3,
+            "eastEdge": 8.1,
+            "bounds": "W kerb / E face",
+            "centreOffset": 5.7
+          },
+          {
+            "priorStation": 24,
+            "westEdge": 3.2,
+            "eastEdge": 8.0,
+            "bounds": "W kerb / E face",
+            "centreOffset": 5.6
+          },
+          {
+            "priorStation": 26,
+            "westEdge": 3.1,
+            "eastEdge": 8.0,
+            "bounds": "W kerb / E face",
+            "centreOffset": 5.55
+          },
+          {
+            "priorStation": 28,
+            "westEdge": 2.9,
+            "eastEdge": 7.8,
+            "bounds": "W kerb / E face",
+            "centreOffset": 5.35
+          },
+          {
+            "priorStation": 30,
+            "westEdge": 2.8,
+            "eastEdge": 7.8,
+            "bounds": "W kerb / E face",
+            "centreOffset": 5.3
+          },
+          {
+            "priorStation": 32,
+            "westEdge": 2.6,
+            "eastEdge": 7.7,
+            "bounds": "W kerb / E face",
+            "centreOffset": 5.15
+          },
+          {
+            "priorStation": 34,
+            "westEdge": 2.5,
+            "eastEdge": 7.6,
+            "bounds": "W kerb / E face",
+            "centreOffset": 5.05
+          },
+          {
+            "priorStation": 36,
+            "westEdge": 2.4,
+            "eastEdge": 7.5,
+            "bounds": "W kerb / E face",
+            "centreOffset": 4.95
+          },
+          {
+            "priorStation": 38,
+            "westEdge": 2.0,
+            "eastEdge": 7.3,
+            "bounds": "W kerb / E face",
+            "centreOffset": 4.65
+          },
+          {
+            "priorStation": 40,
+            "westEdge": 1.6,
+            "eastEdge": 6.8,
+            "bounds": "W kerb / E face",
+            "centreOffset": 4.2
+          },
+          {
+            "priorStation": 42,
+            "westEdge": 1.2,
+            "eastEdge": 6.3,
+            "bounds": "W kerb / E face",
+            "centreOffset": 3.75
+          },
+          {
+            "priorStation": 44,
+            "westEdge": 0.8,
+            "eastEdge": 5.8,
+            "bounds": "W kerb / E face",
+            "centreOffset": 3.3
+          },
+          {
+            "priorStation": 46,
+            "westEdge": 0.5,
+            "eastEdge": 4.3,
+            "bounds": "both kerbs",
+            "centreOffset": 2.4
+          },
+          {
+            "priorStation": 48,
+            "westEdge": 0.2,
+            "eastEdge": 3.8,
+            "bounds": "both kerbs",
+            "centreOffset": 2.0
+          },
+          {
+            "priorStation": 52,
+            "westEdge": -0.3,
+            "eastEdge": 3.1,
+            "bounds": "both kerbs",
+            "centreOffset": 1.4
+          },
+          {
+            "priorStation": 54,
+            "westEdge": -0.8,
+            "eastEdge": 2.8,
+            "bounds": "both kerbs",
+            "centreOffset": 1.0
+          },
+          {
+            "priorStation": 56,
+            "westEdge": -1.1,
+            "eastEdge": 2.7,
+            "bounds": "both kerbs",
+            "centreOffset": 0.8
+          },
+          {
+            "priorStation": 58,
+            "westEdge": -1.4,
+            "eastEdge": 2.8,
+            "bounds": "both kerbs",
+            "centreOffset": 0.7
+          },
+          {
+            "priorStation": 60,
+            "westEdge": -1.8,
+            "eastEdge": 3.0,
+            "bounds": "both kerbs",
+            "centreOffset": 0.6
+          },
+          {
+            "priorStation": 62,
+            "westEdge": -2.3,
+            "eastEdge": 3.4,
+            "bounds": "both kerbs",
+            "centreOffset": 0.55
+          },
+          {
+            "priorStation": 66,
+            "westEdge": -2.5,
+            "eastEdge": 3.8,
+            "bounds": "both kerbs",
+            "centreOffset": 0.65
+          },
+          {
+            "priorStation": 68,
+            "westEdge": -2.2,
+            "eastEdge": 4.1,
+            "bounds": "both kerbs",
+            "centreOffset": 0.95
+          },
+          {
+            "priorStation": 70,
+            "westEdge": -2.1,
+            "eastEdge": 4.0,
+            "bounds": "both kerbs",
+            "centreOffset": 0.95
+          },
+          {
+            "priorStation": 72,
+            "westEdge": -2.3,
+            "eastEdge": 4.2,
+            "bounds": "both kerbs",
+            "centreOffset": 0.95
+          },
+          {
+            "priorStation": 74,
+            "westEdge": -2.4,
+            "eastEdge": 4.4,
+            "bounds": "both kerbs",
+            "centreOffset": 1.0
+          },
+          {
+            "priorStation": 76,
+            "westEdge": -2.5,
+            "eastEdge": 4.3,
+            "bounds": "both kerbs",
+            "centreOffset": 0.9
+          },
+          {
+            "priorStation": 84,
+            "westEdge": -1.0,
+            "eastEdge": 4.3,
+            "bounds": "both kerbs",
+            "centreOffset": 1.65
+          },
+          {
+            "priorStation": 86,
+            "westEdge": -0.5,
+            "eastEdge": 4.2,
+            "bounds": "both kerbs",
+            "centreOffset": 1.85
+          },
+          {
+            "priorStation": 88,
+            "westEdge": -0.1,
+            "eastEdge": 4.4,
+            "bounds": "both kerbs",
+            "centreOffset": 2.15
+          },
+          {
+            "priorStation": 90,
+            "westEdge": 0.2,
+            "eastEdge": 4.3,
+            "bounds": "both kerbs",
+            "centreOffset": 2.25
+          },
+          {
+            "priorStation": 92,
+            "westEdge": 0.0,
+            "eastEdge": 4.3,
+            "bounds": "both kerbs",
+            "centreOffset": 2.15
+          },
+          {
+            "priorStation": 94,
+            "westEdge": 0.0,
+            "eastEdge": 4.5,
+            "bounds": "both kerbs",
+            "centreOffset": 2.25
+          },
+          {
+            "priorStation": 96,
+            "westEdge": 0.2,
+            "eastEdge": 4.9,
+            "bounds": "both kerbs",
+            "centreOffset": 2.55
+          },
+          {
+            "priorStation": 98,
+            "westEdge": 0.4,
+            "eastEdge": 5.1,
+            "bounds": "both kerbs",
+            "centreOffset": 2.75
+          },
+          {
+            "priorStation": 100,
+            "westEdge": 0.7,
+            "eastEdge": 5.4,
+            "bounds": "both kerbs",
+            "centreOffset": 3.05
+          },
+          {
+            "priorStation": 102,
+            "westEdge": 1.0,
+            "eastEdge": 5.6,
+            "bounds": "both kerbs",
+            "centreOffset": 3.3
+          },
+          {
+            "priorStation": 104,
+            "westEdge": 1.1,
+            "eastEdge": 5.9,
+            "bounds": "both kerbs",
+            "centreOffset": 3.5
+          },
+          {
+            "priorStation": 106,
+            "westEdge": 1.4,
+            "eastEdge": 6.1,
+            "bounds": "both kerbs",
+            "centreOffset": 3.75
+          },
+          {
+            "priorStation": 108,
+            "westEdge": 1.6,
+            "eastEdge": 6.3,
+            "bounds": "both kerbs",
+            "centreOffset": 3.95
+          },
+          {
+            "priorStation": 110,
+            "westEdge": 1.8,
+            "eastEdge": 6.4,
+            "bounds": "both kerbs",
+            "centreOffset": 4.1
+          },
+          {
+            "priorStation": 112,
+            "westEdge": 2.0,
+            "eastEdge": 6.6,
+            "bounds": "both kerbs",
+            "centreOffset": 4.3
+          },
+          {
+            "priorStation": 114,
+            "westEdge": 2.2,
+            "eastEdge": 6.8,
+            "bounds": "both kerbs",
+            "centreOffset": 4.5
+          },
+          {
+            "priorStation": 116,
+            "westEdge": 2.4,
+            "eastEdge": 6.9,
+            "bounds": "both kerbs",
+            "centreOffset": 4.65
+          },
+          {
+            "priorStation": 118,
+            "westEdge": 2.6,
+            "eastEdge": 7.1,
+            "bounds": "both kerbs",
+            "centreOffset": 4.85
+          },
+          {
+            "priorStation": 120,
+            "westEdge": 2.9,
+            "eastEdge": 7.3,
+            "bounds": "both kerbs",
+            "centreOffset": 5.1
+          },
+          {
+            "priorStation": 122,
+            "westEdge": 3.0,
+            "eastEdge": 7.5,
+            "bounds": "both kerbs",
+            "centreOffset": 5.25
+          },
+          {
+            "priorStation": 124,
+            "westEdge": 3.2,
+            "eastEdge": 7.6,
+            "bounds": "both kerbs",
+            "centreOffset": 5.4
+          },
+          {
+            "priorStation": 126,
+            "westEdge": 3.4,
+            "eastEdge": 7.7,
+            "bounds": "both kerbs",
+            "centreOffset": 5.55
+          },
+          {
+            "priorStation": 128,
+            "westEdge": 3.9,
+            "eastEdge": 8.1,
+            "bounds": "both kerbs",
+            "centreOffset": 6.0
+          },
+          {
+            "priorStation": 130,
+            "westEdge": 3.9,
+            "eastEdge": 8.5,
+            "bounds": "both kerbs",
+            "centreOffset": 6.2
+          },
+          {
+            "priorStation": 132,
+            "westEdge": 3.9,
+            "eastEdge": 9.0,
+            "bounds": "both kerbs",
+            "centreOffset": 6.45
+          },
+          {
+            "priorStation": 134,
+            "westEdge": 3.8,
+            "eastEdge": 9.4,
+            "bounds": "both kerbs",
+            "centreOffset": 6.6
+          },
+          {
+            "priorStation": 146,
+            "westEdge": 4.9,
+            "eastEdge": 7.4,
+            "bounds": "W kerb / E St Thomas Mills face",
+            "centreOffset": 6.15
+          },
+          {
+            "priorStation": 148,
+            "westEdge": 4.5,
+            "eastEdge": 7.3,
+            "bounds": "W kerb / E mill face",
+            "centreOffset": 5.9
+          },
+          {
+            "priorStation": 150,
+            "westEdge": 4.2,
+            "eastEdge": 7.4,
+            "bounds": "W kerb / E mill face",
+            "centreOffset": 5.8
+          },
+          {
+            "priorStation": 154,
+            "westEdge": 4.4,
+            "eastEdge": 7.3,
+            "bounds": "W kerb / E mill face",
+            "centreOffset": 5.85
+          },
+          {
+            "priorStation": 156,
+            "westEdge": 4.8,
+            "eastEdge": 7.2,
+            "bounds": "W kerb / E mill face",
+            "centreOffset": 6.0
+          }
+        ],
+        "offsetConvention": "metres across the prior centreline, positive to the east (left of travel from the High Street)",
+        "deviationMetres": {
+          "new": {
+            "median": 0.067,
+            "max": 0.281,
+            "over05": 0,
+            "n": 53
+          },
+          "prior": {
+            "median": 3.75,
+            "max": 6.6,
+            "over05": 53
+          }
+        },
+        "priorNote": "priorPoints, priorSourcePixels, priorBridgeSpanPoints and priorAlignmentEvidence keep the trace before T18 (4 October 2026); it ran 3.75 m (median) west of the printed carriageway."
       }
     },
     {

@@ -1057,32 +1057,28 @@
         {
           "outer": [
             [
-              -843.043,
-              -77.397
-            ],
-            [
               -834.779,
               -66.976
             ],
             [
-              -830.8123669125562,
-              -70.12149101493563
+              -827.335,
+              -72.879
             ],
             [
-              -832.2924341742341,
-              -71.9832108409456
+              -835.6,
+              -83.3
             ],
             [
-              -838.2784354302082,
-              -81.17574844222504
+              -843.043,
+              -77.397
             ]
           ],
           "holes": []
         }
       ],
       "sourceAreaM2": 126.35,
-      "renderAreaM2": 72.88,
-      "retainedFraction": 0.577,
+      "renderAreaM2": 126.35,
+      "retainedFraction": 1.0,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
     {
@@ -1167,7 +1163,7 @@
             ],
             [
               -828.3482082844928,
-              -99.76465148813652
+              -99.76465148813654
             ]
           ],
           "holes": []
@@ -1821,7 +1817,7 @@
             ],
             [
               -808.8475524254741,
-              -50.704522352496916
+              -50.70452235249692
             ],
             [
               -793.2680074498492,
@@ -1990,7 +1986,7 @@
             ],
             [
               -806.7314953959344,
-              -48.8119760351232
+              -48.81197603512321
             ],
             [
               -801.7089870451078,
@@ -4423,7 +4419,7 @@
         "route": [
           [
             -617.43,
-            1.3719670509927404,
+            1.5269234760240764,
             -278.93
           ],
           [
@@ -4452,12 +4448,12 @@
           [
             [
               -618.7280930141665,
-              1.3969670509927403,
+              1.5519234760240763,
               -278.8596116020061
             ],
             [
               -616.1319069858334,
-              1.3969670509927403,
+              1.5519234760240763,
               -279.0003883979939
             ]
           ],
@@ -5850,7 +5846,8 @@
             387.74
           ]
         ],
-        "evidence": "OS east-bank lane continues to the distillery approach; connection geometry and level inferred.",
+        "evidence": "OS east-bank lane continues to the distillery approach; connection geometry and level inferred. T18 (October 2026) OS reading at the Three Mills dwellings (Goad 802; z 344-352): the OS London five-foot plan revised 1893-96 (reference/nls-tiles/os-london-five-foot-1893) prints an open strip lettered F.P. about 6 m wide between the river-bank line (x -568.4 at z 350) and the west face of the dwelling block (x -562.8 at z 346.7, -561.8 at z 350.7); this route runs in it, 0.2 m from its centre at z 350, so the route is not moved. The modelled dwelling (site419-range-1) stood 1.9 m west of its printed face and is re-registered in data/maps/three-mills-north-footprint-alignment.json.",
+        "priorEvidence": "OS east-bank lane continues to the distillery approach; connection geometry and level inferred.",
         "sections": [
           [
             [
