@@ -149,6 +149,8 @@ def build(epoch_id, refresh_snapshot=False):
     baseline = np.full(X.shape, -.1)
     positions = np.fromfile(PUBLIC/network['positionFile'], dtype='<f4').reshape(-1, 3)
     inside = (positions[:, 0]>=x0)&(positions[:, 0]<=x1)&(positions[:, 2]>=z0)&(positions[:, 2]<=z1)
+    # T14 meshed the banks along the shoreline, adding off-grid vertices; only the 1 m grid vertices are interpolation nodes here.
+    inside &= (positions[:, 0]==np.round(positions[:, 0])) & (positions[:, 2]==np.round(positions[:, 2]))
     local = positions[inside]
     baseline[(local[:, 2]-z0).astype(int), (local[:, 0]-x0).astype(int)] = local[:, 1]
     cx0, cz0, cx1, cz1 = core['bounds']
