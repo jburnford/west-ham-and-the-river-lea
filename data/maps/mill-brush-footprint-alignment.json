@@ -1,7 +1,7 @@
 {
   "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg; cached OS London five-foot mosaic",
   "sourceCRS": "EPSG:3857 reprojected through BNG; scene origin E538900,N183209",
-  "method": "Reviewed complete mill and southern Augustus Smith OS exteriors with Goad F3 room identities; one corrected misplaced mill-room identity, an interpreted coppers/stoves cut, two independently mapped chimney bases, and all prior elevations/roof parameters retained.",
+  "method": "Reviewed complete mill and southern Augustus Smith OS exteriors with Goad F3 room identities; one corrected misplaced mill-room identity, an interpreted coppers/stoves cut, two independently mapped chimney bases, and all prior elevations/roof parameters retained. T19 (4 October 2026): the northern Smith's fibre works added as 10 additionalBuildings on GeoPackage outlines 1166, 11876, 44759, 105760, 386554, 492753 (1166 cut at Goad F3 walls), with Goad F3 storeys, wood/brick colours and tile marks; heights in metres are explicit estimates. 5 further records (b258-north-room-820, b258-office-846, b258-north-813, b258-north-dwelling, b258-north-815) are held in heldForRoadRegistration because the registered Marshgate Lane corridor covers most of them.",
   "groups": [
     {
       "id": "st-thomas-main",
@@ -4360,15 +4360,6 @@
   "deferred": [
     {
       "sourceFids": [
-        1166,
-        492753,
-        834044,
-        802229
-      ],
-      "reason": "Separate northern fibre works and touching rooms have no existing range counterpart. The northern chimney is independently located; broad northern buildings remain source context pending their own range/elevation review."
-    },
-    {
-      "sourceFids": [
         848220,
         839475,
         864605,
@@ -4400,6 +4391,965 @@
         992504
       ],
       "reason": "Western office/store rooms belong to the adjacent Howards side on Goad; not reassigned to the corn mill by proximity."
+    },
+    {
+      "sourceFids": [
+        1166,
+        492753,
+        834044,
+        802229
+      ],
+      "reason": "T19 (4 October 2026): 1166 modelled as records cut at Goad F3 walls and 492753 as one record (additionalBuildings); 834044 and the 820 room of 1166 held for the Marshgate Lane re-registration (heldForRoadRegistration); 802229 classified (classifiedOutlines).",
+      "resolved": true
+    }
+  ],
+  "additionalBuildings": [
+    {
+      "id": "b258-north-room-817",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Smith's fibre works north room (Goad 817)",
+      "worldFootprint": [
+        [
+          -904.055,
+          -275.919
+        ],
+        [
+          -910.131,
+          -285.269
+        ],
+        [
+          -910.544,
+          -285.499
+        ],
+        [
+          -921.198,
+          -277.96
+        ],
+        [
+          -915.765,
+          -268.938
+        ],
+        [
+          -916.856,
+          -267.89
+        ],
+        [
+          -903.597,
+          -276.084
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -31.716,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        1166
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 1166, simplified at 0.15 m (max deviation 0.147 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 15.59 x 11.66 m, 151.6 m2. Cut from fid 1166 at the line of the rooms' south wall (lot 817) and the boiler house drawn on Goad F3; the OS draws no internal wall. Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge). A detached sliver of 0.98 m2 left by the cut is not modelled.",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints in lot 817; Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Part of the northern Smith's fibre works (Goad F3 lettering 'SMITH'S ... FIBRE ... MILLS' across lots 817-846; OS 'Brush & Fibre Works'); Goad gives no use for this room."
+    },
+    {
+      "id": "b258-west-wood-range",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Smith's fibre works west wooden range (Goad 824, 828)",
+      "worldFootprint": [
+        [
+          -916.911,
+          -267.569
+        ],
+        [
+          -906.204,
+          -249.195
+        ],
+        [
+          -905.094,
+          -249.66
+        ],
+        [
+          -904.634,
+          -249.632
+        ],
+        [
+          -901.067,
+          -243.844
+        ],
+        [
+          -895.119,
+          -247.148
+        ],
+        [
+          -910.403,
+          -271.878
+        ],
+        [
+          -916.856,
+          -267.89
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 58.282,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        1166
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 1166, simplified at 0.15 m (max deviation 0.132 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 29.07 x 8.35 m, 224.2 m2. Cut from fid 1166 at the east wall of the wooden lots 824 and 828 drawn on Goad F3; the OS draws no internal wall. Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge). 3.09 m2 along its west wall that falls within 0.15 m of the drawn Pudding Mill river polygon (ground-plan rivers) is clipped off: a registration difference between the river trace and the supplied outline, not a mapped overhang.",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints in lots 824 and 828; Goad F3 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Part of the northern Smith's fibre works (Goad F3 lettering 'SMITH'S ... FIBRE ... MILLS' across lots 817-846; OS 'Brush & Fibre Works'); no use given."
+    },
+    {
+      "id": "b258-two-storey-block",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Smith's fibre works two-storey block with the boiler chimney well",
+      "worldFootprint": [
+        [
+          -890.653,
+          -284.083
+        ],
+        [
+          -910.403,
+          -271.878
+        ],
+        [
+          -902.135,
+          -258.5
+        ],
+        [
+          -880.019,
+          -272.167
+        ]
+      ],
+      "worldHoles": [
+        [
+          [
+            -896.561,
+            -278.771
+          ],
+          [
+            -895.847,
+            -277.595
+          ],
+          [
+            -895.826,
+            -277.117
+          ],
+          [
+            -897.143,
+            -276.524
+          ],
+          [
+            -897.958,
+            -277.602
+          ],
+          [
+            -898.06,
+            -278.151
+          ],
+          [
+            -896.906,
+            -278.9
+          ]
+        ]
+      ],
+      "footprintRotationDegrees": -31.715,
+      "eavesHeight": 6.9,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        1166
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 1166, simplified at 0.15 m (max deviation 0.147 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 26.0 x 15.73 m, 383.7 m2. Cut from fid 1166 at the walls bounding the two-storey brick block (north, west, and the Fibre Machinery range to the south) drawn on Goad F3; the OS draws no internal wall. Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge). Keeps the supplied hole around chimney base 1073893, on which stack-258-1149-1128 (50 ft, printed) already stands; the small 822 room (P, felt roof, one storey) at its east end is folded into this record.",
+      "heightEvidence": "Explicit estimate: 6.9 m eaves for the 2 storeys Goad F3 prints here (with '1st' floor marks); Goad F3 colours it pink (brick in the 1926 key). The one-storey room 822 at its east end is drawn at the same height (simplification).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour. The chimney well stays open.",
+      "functionEvidence": "Part of the northern Smith's fibre works (Goad F3 lettering 'SMITH'S ... FIBRE ... MILLS' across lots 817-846; OS 'Brush & Fibre Works'); boilers (hatched) and the 50 ft chimney stand on its north side."
+    },
+    {
+      "id": "b258-fibre-machinery",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Smith's fibre machinery shed (Goad, lettered)",
+      "worldFootprint": [
+        [
+          -895.039,
+          -247.231
+        ],
+        [
+          -894.491,
+          -247.305
+        ],
+        [
+          -893.869,
+          -247.931
+        ],
+        [
+          -893.224,
+          -248.015
+        ],
+        [
+          -892.771,
+          -248.533
+        ],
+        [
+          -878.711,
+          -256.454
+        ],
+        [
+          -869.838,
+          -241.501
+        ],
+        [
+          -869.345,
+          -241.514
+        ],
+        [
+          -868.877,
+          -241.853
+        ],
+        [
+          -885.513,
+          -268.772
+        ],
+        [
+          -902.135,
+          -258.5
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 58.284,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        1166
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 1166, simplified at 0.15 m (max deviation 0.142 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 31.69 x 19.54 m, 281.9 m2. Cut from fid 1166 at the walls of the wooden range lettered 'Fibre Machinery' drawn on Goad F3; the OS draws no internal wall. Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints; Goad F3 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Part of the northern Smith's fibre works (Goad F3 lettering 'SMITH'S ... FIBRE ... MILLS' across lots 817-846; OS 'Brush & Fibre Works'): Goad letters it 'Fibre Machinery'."
+    },
+    {
+      "id": "b258-east-range",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Smith's fibre works east range on Marshgate Lane (Goad 826, 832)",
+      "worldFootprint": [
+        [
+          -867.758,
+          -243.047
+        ],
+        [
+          -860.514,
+          -249.514
+        ],
+        [
+          -860.244,
+          -249.789
+        ],
+        [
+          -860.311,
+          -250.081
+        ],
+        [
+          -880.019,
+          -272.167
+        ],
+        [
+          -885.513,
+          -268.772
+        ],
+        [
+          -868.877,
+          -241.853
+        ],
+        [
+          -867.898,
+          -242.56
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 58.284,
+      "eavesHeight": 6.9,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        1166
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 1166, simplified at 0.15 m (max deviation 0.001 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 31.64 x 11.61 m, 279.0 m2. Cut from fid 1166 at the west wall of the strip along Marshgate Lane (lots 826, 832) drawn on Goad F3; the OS draws no internal wall. Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge).",
+      "heightEvidence": "Explicit estimate: 6.9 m eaves for the 2 storeys Goad F3 prints (with '1st' floor marks); Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Part of the northern Smith's fibre works (Goad F3 lettering 'SMITH'S ... FIBRE ... MILLS' across lots 817-846; OS 'Brush & Fibre Works'); Goad letters a 'Disused Eng.' (disused engine) bay in it."
+    },
+    {
+      "id": "b258-boiler-house",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Smith's fibre works boiler house",
+      "worldFootprint": [
+        [
+          -907.742,
+          -281.643
+        ],
+        [
+          -904.055,
+          -275.919
+        ],
+        [
+          -898.09,
+          -279.985
+        ],
+        [
+          -898.092,
+          -280.469
+        ],
+        [
+          -899.657,
+          -283.011
+        ],
+        [
+          -901.649,
+          -285.563
+        ],
+        [
+          -902.213,
+          -285.513
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -34.28,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "metal",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        492753
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 492753, simplified at 0.15 m (max deviation 0.149 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 7.63 x 6.89 m, 50.9 m2. Goad F3 draws hatched boiler squares in a grey (metal-building colour in the 1926 key) compartment here (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves, one storey; Goad F3 gives no storey figure for the boiler compartment.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Metal walls from the Goad grey colour; roof material unknown.",
+      "functionEvidence": "Part of the northern Smith's fibre works (Goad F3 lettering 'SMITH'S ... FIBRE ... MILLS' across lots 817-846; OS 'Brush & Fibre Works'): steam boilers (Goad hatched squares), beside the 50 ft chimney."
+    },
+    {
+      "id": "b258-south-range",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Smith's fibre works south range on Marshgate Lane (Goad 834-840)",
+      "worldFootprint": [
+        [
+          -860.244,
+          -249.789
+        ],
+        [
+          -867.758,
+          -243.047
+        ],
+        [
+          -867.898,
+          -242.56
+        ],
+        [
+          -855.316,
+          -220.098
+        ],
+        [
+          -854.892,
+          -219.885
+        ],
+        [
+          -849.094,
+          -225.312
+        ],
+        [
+          -844.897,
+          -232.237
+        ],
+        [
+          -844.897,
+          -232.725
+        ],
+        [
+          -859.814,
+          -249.591
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 48.509,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        11876
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 11876, simplified at 0.15 m (max deviation 0.117 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 25.95 x 16.17 m, 335.6 m2. Goad F3 lots 834, 838, 840 (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints in each room; Goad F3 colours it pink (brick in the 1926 key), with a yellow (wood) strip along the yard side (lot 836) drawn here in brick (one material per record).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Part of the northern Smith's fibre works (Goad F3 lettering 'SMITH'S ... FIBRE ... MILLS' across lots 817-846; OS 'Brush & Fibre Works'); no use given. '(14')' printed beside it is a ground level above datum in the Goad key, not a building height."
+    },
+    {
+      "id": "b258-house-842",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "House in Smith's fibre works yard (Goad 842)",
+      "worldFootprint": [
+        [
+          -886.777,
+          -227.466
+        ],
+        [
+          -883.318,
+          -229.66
+        ],
+        [
+          -882.832,
+          -229.657
+        ],
+        [
+          -882.54,
+          -229.316
+        ],
+        [
+          -880.024,
+          -230.485
+        ],
+        [
+          -879.972,
+          -230.745
+        ],
+        [
+          -876.603,
+          -232.992
+        ],
+        [
+          -876.033,
+          -233.091
+        ],
+        [
+          -875.895,
+          -233.582
+        ],
+        [
+          -877.459,
+          -236.433
+        ],
+        [
+          -879.613,
+          -235.674
+        ],
+        [
+          -880.371,
+          -236.785
+        ],
+        [
+          -881.735,
+          -236.319
+        ],
+        [
+          -882.091,
+          -236.457
+        ],
+        [
+          -883.702,
+          -239.206
+        ],
+        [
+          -884.185,
+          -239.366
+        ],
+        [
+          -891.464,
+          -235.319
+        ],
+        [
+          -891.374,
+          -234.768
+        ],
+        [
+          -887.413,
+          -228.09
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -29.073,
+      "eavesHeight": 6.9,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        105760
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 105760, simplified at 0.15 m (max deviation 0.138 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 12.97 x 9.78 m, 99.7 m2. Goad F3 lot 842 (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: 6.9 m eaves for the 2 storeys Goad F3 prints; Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. A hipped roof would be likelier for a house but is not a renderer option.",
+      "functionEvidence": "Goad F3 marks it D (dwelling)."
+    },
+    {
+      "id": "b258-house-844",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Cottage in Smith's fibre works yard (Goad 844)",
+      "worldFootprint": [
+        [
+          -880.024,
+          -230.485
+        ],
+        [
+          -882.54,
+          -229.316
+        ],
+        [
+          -882.832,
+          -229.657
+        ],
+        [
+          -883.318,
+          -229.66
+        ],
+        [
+          -886.777,
+          -227.466
+        ],
+        [
+          -886.694,
+          -226.93
+        ],
+        [
+          -881.966,
+          -219.766
+        ],
+        [
+          -878.841,
+          -221.535
+        ],
+        [
+          -878.555,
+          -221.895
+        ],
+        [
+          -878.677,
+          -222.455
+        ],
+        [
+          -879.383,
+          -223.61
+        ],
+        [
+          -877.161,
+          -225.175
+        ],
+        [
+          -877.216,
+          -225.852
+        ],
+        [
+          -877.532,
+          -226.073
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 57.614,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        386554
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 386554, simplified at 0.15 m (max deviation 0.122 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 9.26 x 7.54 m, 58.5 m2. Goad F3 lot 844 (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints; Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Goad F3 marks it D (dwelling)."
+    },
+    {
+      "id": "b258-rooms-846",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Smith's fibre works rooms by the south gate (Goad 846)",
+      "worldFootprint": [
+        [
+          -861.869,
+          -212.481
+        ],
+        [
+          -865.249,
+          -217.147
+        ],
+        [
+          -865.201,
+          -217.696
+        ],
+        [
+          -861.835,
+          -221.191
+        ],
+        [
+          -863.89,
+          -224.377
+        ],
+        [
+          -864.364,
+          -224.205
+        ],
+        [
+          -876.44,
+          -212.027
+        ],
+        [
+          -876.455,
+          -211.555
+        ],
+        [
+          -870.706,
+          -202.932
+        ],
+        [
+          -870.216,
+          -202.792
+        ],
+        [
+          -862.008,
+          -211.984
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -45.241,
+      "eavesHeight": 5.35,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        44759
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 44759, simplified at 0.15 m (max deviation 0.125 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 20.03 x 10.92 m, 155.7 m2. Goad F3 lot 846 (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: 5.35 m eaves (builder value for the '1=2' mark, one and a half storeys); Goad F3 prints '1' and '1-2' in its rooms; Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Part of the northern Smith's fibre works (Goad F3 lettering 'SMITH'S ... FIBRE ... MILLS' across lots 817-846; OS 'Brush & Fibre Works'); no use given."
+    }
+  ],
+  "heldForRoadRegistration": [
+    {
+      "id": "b258-north-room-820",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Smith's fibre works room east of the boilers (Goad 820)",
+      "worldFootprint": [
+        [
+          -893.545,
+          -287.324
+        ],
+        [
+          -893.994,
+          -287.355
+        ],
+        [
+          -899.657,
+          -283.011
+        ],
+        [
+          -898.092,
+          -280.469
+        ],
+        [
+          -898.09,
+          -279.985
+        ],
+        [
+          -898.967,
+          -279.362
+        ],
+        [
+          -898.781,
+          -279.06
+        ],
+        [
+          -890.653,
+          -284.083
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -31.716,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        1166
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 1166, simplified at 0.15 m (max deviation 0.075 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 9.55 x 4.54 m, 33.5 m2. Cut from fid 1166 at the south wall of lot 820 and the boiler house's east wall drawn on Goad F3; the OS draws no internal wall. Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints in lot 820; Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Part of the northern Smith's fibre works (Goad F3 lettering 'SMITH'S ... FIBRE ... MILLS' across lots 817-846; OS 'Brush & Fibre Works'); no use given.",
+      "heldReason": "Not built: 82% of the outline lies inside the registered Marshgate Lane street corridor (data/maps/district-road-traces.json, 7 m + 1.1 m shoulders), whose centreline here runs about 4-6 m west of the street drawn on the OS, along the building frontage. The builder would clip the roof away almost entirely. Move this record to additionalBuildings once the lane is re-registered."
+    },
+    {
+      "id": "b258-office-846",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Smith's fibre works office (Goad 846)",
+      "worldFootprint": [
+        [
+          -861.835,
+          -221.191
+        ],
+        [
+          -865.201,
+          -217.696
+        ],
+        [
+          -865.249,
+          -217.147
+        ],
+        [
+          -861.816,
+          -212.479
+        ],
+        [
+          -861.41,
+          -212.689
+        ],
+        [
+          -858.511,
+          -216.018
+        ],
+        [
+          -858.375,
+          -216.508
+        ],
+        [
+          -861.413,
+          -220.981
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 53.668,
+      "eavesHeight": 5.35,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        753274
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 753274, simplified at 0.15 m (max deviation 0.13 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 7.1 x 5.36 m, 32.3 m2. Goad F3 lot 846 (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: 5.35 m eaves for the 1 1/2 storeys Goad F3 prints; Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Goad F3 letters it 'Off.' (office).",
+      "heldReason": "Not built: 79% of the outline lies inside the registered Marshgate Lane street corridor (data/maps/district-road-traces.json, 7 m + 1.1 m shoulders), whose centreline here runs about 4-6 m west of the street drawn on the OS, along the building frontage. The builder would clip the roof away almost entirely. Move this record to additionalBuildings once the lane is re-registered."
+    },
+    {
+      "id": "b258-north-813",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Building on Marshgate Lane north of the fibre works (Goad 813)",
+      "worldFootprint": [
+        [
+          -908.377,
+          -292.562
+        ],
+        [
+          -908.236,
+          -293.049
+        ],
+        [
+          -903.903,
+          -297.274
+        ],
+        [
+          -904.052,
+          -297.678
+        ],
+        [
+          -908.403,
+          -301.409
+        ],
+        [
+          -908.891,
+          -301.526
+        ],
+        [
+          -913.265,
+          -298.1
+        ],
+        [
+          -909.394,
+          -292.497
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -38.07,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        587186
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 587186, simplified at 0.15 m (max deviation 0.146 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 7.4 x 7.37 m, 45.3 m2. Goad F3 lot 813 (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge)); inside the site-258 parcel, but Goad gives it its own lot number and no owner, so its link to Smith's works is by parcel only.",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints; Goad F3 colours it pink (brick in the 1926 key) with a yellow (wood) strip on its west side.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Unidentified; no use on Goad.",
+      "heldReason": "Not built: 100% of the outline lies inside the registered Marshgate Lane street corridor (data/maps/district-road-traces.json, 7 m + 1.1 m shoulders), whose centreline here runs about 4-6 m west of the street drawn on the OS, along the building frontage. The builder would clip the roof away almost entirely. Move this record to additionalBuildings once the lane is re-registered."
+    },
+    {
+      "id": "b258-north-dwelling",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Dwelling on Marshgate Lane north of the fibre works",
+      "worldFootprint": [
+        [
+          -904.218,
+          -291.46
+        ],
+        [
+          -900.991,
+          -294.72
+        ],
+        [
+          -903.403,
+          -297.136
+        ],
+        [
+          -903.903,
+          -297.274
+        ],
+        [
+          -908.236,
+          -293.049
+        ],
+        [
+          -908.377,
+          -292.562
+        ],
+        [
+          -906.079,
+          -290.184
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -44.277,
+      "eavesHeight": 6.9,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        808876
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 808876, simplified at 0.15 m (max deviation 0.148 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 6.81 x 3.94 m, 26.0 m2. Goad F3 (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge)); attribution to the works by parcel only.",
+      "heightEvidence": "Explicit estimate: 6.9 m eaves; Goad F3 prints D (dwelling) and a storey figure read as 2 (small, uncertain); Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Goad F3 marks it D (dwelling).",
+      "heldReason": "Not built: 100% of the outline lies inside the registered Marshgate Lane street corridor (data/maps/district-road-traces.json, 7 m + 1.1 m shoulders), whose centreline here runs about 4-6 m west of the street drawn on the OS, along the building frontage. The builder would clip the roof away almost entirely. Move this record to additionalBuildings once the lane is re-registered."
+    },
+    {
+      "id": "b258-north-815",
+      "siteId": 258,
+      "source": "os-1893",
+      "name": "Building on Marshgate Lane north of the fibre works (Goad 815)",
+      "worldFootprint": [
+        [
+          -900.991,
+          -294.72
+        ],
+        [
+          -904.218,
+          -291.46
+        ],
+        [
+          -900.782,
+          -288.383
+        ],
+        [
+          -900.357,
+          -288.305
+        ],
+        [
+          -897.814,
+          -291.355
+        ],
+        [
+          -897.646,
+          -291.833
+        ],
+        [
+          -897.887,
+          -292.247
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 41.845,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        834044
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 834044, simplified at 0.15 m (max deviation 0.147 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 4.98 x 4.81 m, 22.4 m2. Goad F3 lot 815 (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 5.1, -3.2 m; 0.15886 m per pixel; colour-overlap IoU 0.8938; GeoPackage vertices a median 0.4 m, 90th percentile 1.2 m from the fitted Goad building edge)); attribution by parcel only.",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints; Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Unidentified; no use on Goad.",
+      "heldReason": "Not built: 100% of the outline lies inside the registered Marshgate Lane street corridor (data/maps/district-road-traces.json, 7 m + 1.1 m shoulders), whose centreline here runs about 4-6 m west of the street drawn on the OS, along the building frontage. The builder would clip the roof away almost entirely. Move this record to additionalBuildings once the lane is re-registered."
+    }
+  ],
+  "classifiedOutlines": [
+    {
+      "id": "fibre-diagonal",
+      "sourceFids": [
+        802229
+      ],
+      "classification": "narrow diagonal fibre feature",
+      "modelled": false,
+      "evidence": "A 1.3 m-wide, 20 m-long diagonal outline across the yard, double-lined on the OS and lettered for fibre on Goad F3 (lettering partly illegible) beside 'Fibre piled'; too narrow for a roofed building; read as a fibre rail, bench or drying line."
+    },
+    {
+      "id": "mill-symbol",
+      "sourceFids": [
+        1075308
+      ],
+      "classification": "corn-mill small symbol",
+      "modelled": false,
+      "evidence": "Already deferred by the earlier mill-brush pass as St Thomas corn-mill context (site 257); not part of this site."
     }
   ]
 }

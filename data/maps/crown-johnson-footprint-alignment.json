@@ -1,6 +1,6 @@
 {
   "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg; cached OS five-foot mosaic; original July1893 Goad F3",
-  "method": "Nine retained ranges matched explicitly to OS exteriors; missing southern roof traced with supplied terminal walls. Goad alterations and approximate compartment identities recorded separately.",
+  "method": "Nine retained ranges matched explicitly to OS exteriors; missing southern roof traced with supplied terminal walls. Goad alterations and approximate compartment identities recorded separately. T19 (4 October 2026): fifteen additionalBuildings on the unmodelled northern Johnson outlines (79794 cut at a Goad F3 wall, 737100, 115749, 598184, 641316, 545686, 885016, 93040, 250214, 786213, 60939, 125888, 861166, 236176) with Goad F3 storeys and colours where legible; the Du Barry bakehouse outlines inside the parcel are classified, not modelled.",
   "groups": [
     {
       "id": "crown-johnson-north",
@@ -2836,11 +2836,1063 @@
         948832,
         236176
       ],
-      "reason": "Separate northern buildings, plant and lane-edge body are not absorbed into the inherited main process block. Goad shows the works under alterations; additional room/plant modelling needs separate review."
+      "reason": "Separate northern buildings, plant and lane-edge body are not absorbed into the inherited main process block. Goad shows the works under alterations; additional room/plant modelling needs separate review.",
+      "resolved": "T19 (4 October 2026): 125888, 861166 and 236176 modelled as additionalBuildings; 948832 classified as plant."
     },
     {
       "feature": "Goad northern compound and floor marks",
       "reason": "OS has separated bodies where Goad presents a broader connected works under alterations. Exact temporal sequence, internal room attribution and several inherited floor estimates remain unresolved; this pass fixes exterior placement without claiming a full architectural reconstruction."
+    }
+  ],
+  "additionalBuildings": [
+    {
+      "id": "b398-wood-two-storey",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works two-storey wooden block (Goad 562)",
+      "worldFootprint": [
+        [
+          -923.468,
+          -163.264
+        ],
+        [
+          -919.291,
+          -159.301
+        ],
+        [
+          -916.517,
+          -161.004
+        ],
+        [
+          -921.256,
+          -168.726
+        ],
+        [
+          -923.573,
+          -166.202
+        ],
+        [
+          -924.874,
+          -164.373
+        ],
+        [
+          -923.953,
+          -163.404
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 58.454,
+      "eavesHeight": 6.9,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        79794
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 79794, simplified at 0.15 m (max deviation 0.08 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 9.06 x 5.36 m, 36.3 m2. Cut from fid 79794 at the walls of the two-storey wooden compartment drawn on Goad F3; the OS draws no internal wall. Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge).",
+      "heightEvidence": "Explicit estimate: 6.9 m eaves for the 2 storeys Goad F3 prints; Goad F3 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); no use given."
+    },
+    {
+      "id": "b398-wood-north-range",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works north wooden range (Goad 562)",
+      "worldFootprint": [
+        [
+          -919.291,
+          -159.301
+        ],
+        [
+          -915.471,
+          -155.902
+        ],
+        [
+          -915.347,
+          -155.537
+        ],
+        [
+          -912.937,
+          -157.966
+        ],
+        [
+          -912.841,
+          -158.499
+        ],
+        [
+          -913.076,
+          -158.912
+        ],
+        [
+          -916.929,
+          -162.509
+        ],
+        [
+          -916.987,
+          -162.985
+        ],
+        [
+          -916.309,
+          -164.182
+        ],
+        [
+          -917.465,
+          -165.564
+        ],
+        [
+          -911.105,
+          -173.481
+        ],
+        [
+          -910.96,
+          -173.974
+        ],
+        [
+          -913.899,
+          -176.663
+        ],
+        [
+          -914.272,
+          -176.755
+        ],
+        [
+          -921.256,
+          -168.726
+        ],
+        [
+          -916.517,
+          -161.004
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -83.07,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        79794
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 79794, simplified at 0.15 m (max deviation 0.139 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 21.19 x 9.59 m, 78.5 m2. The rest of fid 79794 after the two-storey compartment is cut off at its Goad F3 walls. Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints; Goad F3 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); no use given."
+    },
+    {
+      "id": "b398-wood-west-range",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works west wooden range",
+      "worldFootprint": [
+        [
+          -929.24,
+          -151.244
+        ],
+        [
+          -929.432,
+          -151.771
+        ],
+        [
+          -933.064,
+          -154.988
+        ],
+        [
+          -937.448,
+          -150.136
+        ],
+        [
+          -937.327,
+          -149.614
+        ],
+        [
+          -934.287,
+          -147.063
+        ],
+        [
+          -933.712,
+          -147.007
+        ],
+        [
+          -931.999,
+          -149.018
+        ],
+        [
+          -930.996,
+          -149.29
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -47.901,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        737100
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 737100, simplified at 0.15 m (max deviation 0.079 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 6.89 x 5.35 m, 34.4 m2. (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints; Goad F3 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); no use given."
+    },
+    {
+      "id": "b398-wood-range-564",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works wooden range (Goad 564)",
+      "worldFootprint": [
+        [
+          -926.93,
+          -149.874
+        ],
+        [
+          -925.345,
+          -152.011
+        ],
+        [
+          -924.926,
+          -152.245
+        ],
+        [
+          -919.164,
+          -159.011
+        ],
+        [
+          -923.468,
+          -163.264
+        ],
+        [
+          -923.953,
+          -163.404
+        ],
+        [
+          -925.449,
+          -161.497
+        ],
+        [
+          -925.92,
+          -161.324
+        ],
+        [
+          -926.151,
+          -161.738
+        ],
+        [
+          -927.03,
+          -162.002
+        ],
+        [
+          -927.408,
+          -161.768
+        ],
+        [
+          -933.064,
+          -154.988
+        ],
+        [
+          -927.412,
+          -149.736
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -49.637,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        115749
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 115749, simplified at 0.15 m (max deviation 0.14 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 12.86 x 8.07 m, 95.3 m2. Goad F3 lot 564 (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints; Goad F3 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); Goad draws a factory chimney symbol in the open notch on its north side (not modelled: no height printed and no OS base)."
+    },
+    {
+      "id": "b398-yard-building",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works yard building south of lot 564",
+      "worldFootprint": [
+        [
+          -915.487,
+          -155.051
+        ],
+        [
+          -915.471,
+          -155.902
+        ],
+        [
+          -919.164,
+          -159.011
+        ],
+        [
+          -924.87,
+          -152.308
+        ],
+        [
+          -922.903,
+          -150.541
+        ],
+        [
+          -922.852,
+          -150.27
+        ],
+        [
+          -920.014,
+          -150.343
+        ],
+        [
+          -919.629,
+          -150.478
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -49.594,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        598184
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 598184, simplified at 0.15 m (max deviation 0.131 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 9.07 x 5.37 m, 44.4 m2. Goad F3 leaves this ground blank (lot 564 yard) (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)). Goad F3 marks the works as under alterations in July 1893, so its rooms may differ from the OS survey; the OS outline is the geometry.",
+      "heightEvidence": "Explicit estimate: one storey, 3.8 m eaves; no storey figure (Goad shows no building here).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); unidentified."
+    },
+    {
+      "id": "b398-shed-641316",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works shed by the cooperage (Goad 590)",
+      "worldFootprint": [
+        [
+          -908.946,
+          -144.168
+        ],
+        [
+          -906.967,
+          -146.044
+        ],
+        [
+          -903.702,
+          -150.843
+        ],
+        [
+          -907.472,
+          -154.339
+        ],
+        [
+          -907.96,
+          -154.312
+        ],
+        [
+          -908.232,
+          -153.983
+        ],
+        [
+          -911.718,
+          -145.74
+        ],
+        [
+          -911.431,
+          -145.377
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -55.771,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        641316
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 641316, simplified at 0.15 m (max deviation 0.146 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 9.64 x 5.51 m, 41.6 m2. Goad F3 draws only a dashed outline here (lot 590) (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)). Goad F3 marks the works as under alterations in July 1893, so its rooms may differ from the OS survey; the OS outline is the geometry.",
+      "heightEvidence": "Explicit estimate: one storey, 3.8 m eaves; no storey figure.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); unidentified."
+    },
+    {
+      "id": "b398-shed-545686",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works shed (Goad 588)",
+      "worldFootprint": [
+        [
+          -910.251,
+          -137.381
+        ],
+        [
+          -909.749,
+          -137.316
+        ],
+        [
+          -908.392,
+          -136.217
+        ],
+        [
+          -907.912,
+          -136.381
+        ],
+        [
+          -903.158,
+          -142.157
+        ],
+        [
+          -903.017,
+          -142.641
+        ],
+        [
+          -906.967,
+          -146.044
+        ],
+        [
+          -908.946,
+          -144.168
+        ],
+        [
+          -909.061,
+          -143.779
+        ],
+        [
+          -912.544,
+          -139.8
+        ],
+        [
+          -912.683,
+          -139.308
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -50.521,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        545686
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 545686, simplified at 0.15 m (max deviation 0.123 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 8.83 x 5.75 m, 48.5 m2. Goad F3 draws only an outline here (lot 588) (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)). Goad F3 marks the works as under alterations in July 1893, so its rooms may differ from the OS survey; the OS outline is the geometry.",
+      "heightEvidence": "Explicit estimate: one storey, 3.8 m eaves; no storey figure.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); unidentified."
+    },
+    {
+      "id": "b398-wood-shed-592",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works small wooden shed (Goad 592)",
+      "worldFootprint": [
+        [
+          -899.406,
+          -156.713
+        ],
+        [
+          -896.532,
+          -160.655
+        ],
+        [
+          -899.036,
+          -162.547
+        ],
+        [
+          -899.453,
+          -162.317
+        ],
+        [
+          -901.867,
+          -159.16
+        ],
+        [
+          -901.828,
+          -158.638
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -52.926,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        885016
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 885016, simplified at 0.15 m (max deviation 0.038 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 4.88 x 3.44 m, 16.3 m2. Goad F3 lot 592 (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints; Goad F3 colours it yellow (wood in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); no use given."
+    },
+    {
+      "id": "b398-coopers-block",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works block under the COOPERS lettering",
+      "worldFootprint": [
+        [
+          -903.717,
+          -150.993
+        ],
+        [
+          -906.967,
+          -146.044
+        ],
+        [
+          -903.017,
+          -142.641
+        ],
+        [
+          -902.605,
+          -142.801
+        ],
+        [
+          -892.729,
+          -155.256
+        ],
+        [
+          -892.334,
+          -155.488
+        ],
+        [
+          -892.248,
+          -156.58
+        ],
+        [
+          -896.067,
+          -160.854
+        ],
+        [
+          -896.536,
+          -160.706
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -51.007,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        93040
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 93040, simplified at 0.15 m (max deviation 0.145 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 18.53 x 6.55 m, 107.8 m2. (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints; Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Explicit estimate: a cooperage (casks for the chemical trade), read from Goad's large lettering 'COOPERS' across this block; part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)')."
+    },
+    {
+      "id": "b398-range-250214",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works range north of the long range",
+      "worldFootprint": [
+        [
+          -888.399,
+          -160.118
+        ],
+        [
+          -889.283,
+          -160.683
+        ],
+        [
+          -889.442,
+          -161.169
+        ],
+        [
+          -892.891,
+          -164.537
+        ],
+        [
+          -893.307,
+          -164.313
+        ],
+        [
+          -896.067,
+          -160.854
+        ],
+        [
+          -892.248,
+          -156.58
+        ],
+        [
+          -892.334,
+          -155.488
+        ],
+        [
+          -888.634,
+          -151.335
+        ],
+        [
+          -886.734,
+          -153.125
+        ],
+        [
+          -886.181,
+          -153.225
+        ],
+        [
+          -884.438,
+          -155.085
+        ],
+        [
+          -884.278,
+          -155.555
+        ],
+        [
+          -884.43,
+          -156.04
+        ],
+        [
+          -885.052,
+          -156.253
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 45.776,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        250214
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 250214, simplified at 0.15 m (max deviation 0.145 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 12.92 x 6.29 m, 68.6 m2. (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: 3.8 m eaves for the one storey Goad F3 prints; Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); no use given."
+    },
+    {
+      "id": "b398-range-786213",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works narrow range",
+      "worldFootprint": [
+        [
+          -886.588,
+          -148.285
+        ],
+        [
+          -886.432,
+          -148.862
+        ],
+        [
+          -884.227,
+          -151.05
+        ],
+        [
+          -886.181,
+          -153.225
+        ],
+        [
+          -886.734,
+          -153.125
+        ],
+        [
+          -892.848,
+          -147.035
+        ],
+        [
+          -890.088,
+          -145.085
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -44.887,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        786213
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 786213, simplified at 0.15 m (max deviation 0.15 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 9.09 x 3.53 m, 29.2 m2. (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)); Goad's '(July 1893)' lettering overprints it. Goad F3 marks the works as under alterations in July 1893, so its rooms may differ from the OS survey; the OS outline is the geometry.",
+      "heightEvidence": "Explicit estimate: one storey, 3.8 m eaves; no legible storey figure.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); unidentified."
+    },
+    {
+      "id": "b398-long-range",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works long range behind the Marshgate Lane houses",
+      "worldFootprint": [
+        [
+          -869.599,
+          -138.284
+        ],
+        [
+          -870.281,
+          -139.027
+        ],
+        [
+          -870.379,
+          -139.613
+        ],
+        [
+          -872.343,
+          -142.124
+        ],
+        [
+          -872.735,
+          -142.309
+        ],
+        [
+          -872.902,
+          -142.784
+        ],
+        [
+          -873.717,
+          -143.483
+        ],
+        [
+          -873.816,
+          -144.042
+        ],
+        [
+          -876.48,
+          -147.413
+        ],
+        [
+          -877.426,
+          -147.973
+        ],
+        [
+          -877.591,
+          -148.463
+        ],
+        [
+          -877.883,
+          -148.503
+        ],
+        [
+          -878.472,
+          -149.171
+        ],
+        [
+          -878.706,
+          -149.745
+        ],
+        [
+          -881.754,
+          -152.909
+        ],
+        [
+          -882.22,
+          -152.8
+        ],
+        [
+          -886.432,
+          -148.862
+        ],
+        [
+          -886.588,
+          -148.285
+        ],
+        [
+          -884.477,
+          -145.305
+        ],
+        [
+          -884.028,
+          -145.198
+        ],
+        [
+          -882.937,
+          -143.422
+        ],
+        [
+          -882.544,
+          -143.176
+        ],
+        [
+          -882.055,
+          -143.217
+        ],
+        [
+          -875.292,
+          -134.338
+        ],
+        [
+          -874.821,
+          -134.257
+        ],
+        [
+          -870.454,
+          -137.383
+        ],
+        [
+          -870.358,
+          -137.719
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 49.916,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        60939
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 60939, simplified at 0.15 m (max deviation 0.141 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 19.37 x 7.51 m, 132.9 m2. (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: one storey, 3.8 m eaves; Goad F3 marks T but no legible storey figure; Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); no use given."
+    },
+    {
+      "id": "b398-centre-block",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works central block",
+      "worldFootprint": [
+        [
+          -890.088,
+          -145.085
+        ],
+        [
+          -895.01,
+          -148.539
+        ],
+        [
+          -895.497,
+          -148.668
+        ],
+        [
+          -901.692,
+          -140.557
+        ],
+        [
+          -901.476,
+          -140.146
+        ],
+        [
+          -894.874,
+          -135.561
+        ],
+        [
+          -894.466,
+          -135.78
+        ],
+        [
+          -889.284,
+          -142.523
+        ],
+        [
+          -888.874,
+          -142.755
+        ],
+        [
+          -888.78,
+          -143.919
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -52.628,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        125888
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 125888, simplified at 0.15 m (max deviation 0.142 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 10.84 x 8.85 m, 91.0 m2. (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)). Goad F3 marks the works as under alterations in July 1893, so its rooms may differ from the OS survey; the OS outline is the geometry.",
+      "heightEvidence": "Explicit estimate: one storey, 3.8 m eaves; Goad's large 'JOHNSON' lettering overprints the room and no storey figure is legible; Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); unidentified. Deferred by the earlier crown-johnson pass as a separate northern building."
+    },
+    {
+      "id": "b398-small-room",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works small room",
+      "worldFootprint": [
+        [
+          -887.948,
+          -131.102
+        ],
+        [
+          -885.325,
+          -132.247
+        ],
+        [
+          -884.935,
+          -132.706
+        ],
+        [
+          -887.366,
+          -137.188
+        ],
+        [
+          -887.789,
+          -137.393
+        ],
+        [
+          -890.321,
+          -136.136
+        ],
+        [
+          -890.374,
+          -135.582
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": 61.564,
+      "eavesHeight": 3.8,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        861166
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 861166, simplified at 0.15 m (max deviation 0.136 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 5.8 x 3.41 m, 19.1 m2. (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: one storey, 3.8 m eaves; no legible storey figure.",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); unidentified (deferred by the crown-johnson pass)."
+    },
+    {
+      "id": "b398-lane-building",
+      "siteId": 398,
+      "source": "os-1893",
+      "name": "Johnson works building at the Marshgate Lane bend (Goad 582)",
+      "worldFootprint": [
+        [
+          -855.396,
+          -133.674
+        ],
+        [
+          -862.194,
+          -132.879
+        ],
+        [
+          -862.556,
+          -125.275
+        ],
+        [
+          -862.268,
+          -124.976
+        ],
+        [
+          -860.426,
+          -125.102
+        ],
+        [
+          -859.882,
+          -125.018
+        ],
+        [
+          -859.636,
+          -124.639
+        ],
+        [
+          -857.893,
+          -124.691
+        ],
+        [
+          -857.287,
+          -125.326
+        ],
+        [
+          -852.62,
+          -125.668
+        ],
+        [
+          -855.032,
+          -133.403
+        ]
+      ],
+      "worldHoles": [],
+      "footprintRotationDegrees": -6.67,
+      "eavesHeight": 5.35,
+      "roofAxis": "x",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        236176
+      ],
+      "footprintEvidence": "Exterior from the author's 1891-96 OS building GeoPackage (reference/historic-building-footprints-2026-09-28/west-ham-buffer-buildings-bng.geojson.gz), sourceFids 236176, simplified at 0.15 m (max deviation 0.003 m), used unshifted in the GeoPackage frame; checked against the cached NLS OS London five-foot 1893 mosaic (scripts/factory_map_sources.py mosaic(), layer os-london-five-foot-1893), which draws it as a shaded (roofed) building. 9.91 x 8.63 m, 69.9 m2. Goad F3 lot 582 (Goad F3 (reference/city-mills-howards/goad-1893-vol-f-sheet-3.tiff, July 1893) locally re-registered to the GeoPackage outlines by a similarity fit starting from the project's regional goad-f3-marsh registration (shifted 8.04, -2.86 m; 0.15763 m per pixel; colour-overlap IoU 0.65; GeoPackage vertices a median 0.47 m, 90th percentile 2.39 m from the fitted Goad building edge)).",
+      "heightEvidence": "Explicit estimate: 5.35 m eaves (builder value for 1 1/2 storeys); Goad F3 prints both 1 and 2 in its rooms; Goad F3 colours it pink (brick in the 1926 key).",
+      "roofEvidence": "Explicit estimate: plain gable along the long axis, rise from the builder's 0.27 x bay-span rule. Goad F3 marks the roof T (tile in the 1926 Goad key, reference/factory-building-survey/goad-symbol-key-1926.jpg); the renderer draws its standard roof colour.",
+      "functionEvidence": "Part of the Johnson chemical works (Goad F3 'JOHNSON CHEMICAL WORKS (UNDER ALTERATIONS, JULY 1893)'; OS 'Crown Works (Chemical)'); no use given (the 'lane-edge body' deferred by the crown-johnson pass)."
+    }
+  ],
+  "classifiedOutlines": [
+    {
+      "id": "du-barry-bakehouse",
+      "sourceFids": [
+        105484,
+        506142,
+        832905,
+        992504
+      ],
+      "classification": "buildings of the adjoining Du Barry patent-food factory",
+      "modelled": false,
+      "evidence": "Inside the site-398 parcel, but Goad F3 letters them 'Bakehouse, Oven, Off. & Stores' and draws a gangway (992504, 'Gang.') from them into the Du Barry & Co. patent food factory (St Thomas mill, site 257); the earlier mill-brush pass deferred them for the same reason. Not modelled here because they belong to site 257, outside this task; see the T19 report."
+    },
+    {
+      "id": "round-feature",
+      "sourceFids": [
+        948832
+      ],
+      "classification": "circular plant (vat or tank)",
+      "modelled": false,
+      "evidence": "A 3.6 m circle drawn in outline beside the central block on the OS; Goad shows no building. Plant, height unknown; deferred as plant by the crown-johnson pass."
+    },
+    {
+      "id": "small-fittings",
+      "sourceFids": [
+        998288,
+        940337,
+        1032515,
+        1117449,
+        1117961,
+        1123490,
+        1133283,
+        1189184,
+        1202435,
+        1274670
+      ],
+      "classification": "fittings and adjuncts under 11 m2",
+      "modelled": false,
+      "evidence": "Small symbols and adjuncts (steps, closets, posts) on the OS; not modelled."
+    },
+    {
+      "id": "goad-chimney-564",
+      "sourceFids": [],
+      "classification": "Goad chimney symbol without OS base or height",
+      "modelled": false,
+      "evidence": "Goad F3 draws a factory chimney symbol in the open notch north of lot 564 (b398-wood-range-564) with no printed height; the OS shows no base. Not modelled."
     }
   ]
 }
