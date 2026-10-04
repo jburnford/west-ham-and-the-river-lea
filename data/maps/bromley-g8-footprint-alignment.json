@@ -1,0 +1,872 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-04",
+  "sites": [
+    475
+  ],
+  "name": "R. Bell & Co. match and taper factory",
+  "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg (project extract west-ham-buffer-buildings-bng.geojson.gz); cached NLS OS London five-foot mosaic (os-london-five-foot-1893); Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff)",
+  "sourceCRS": "EPSG:27700 to scene origin E538900,N183209; x east, z south, metres",
+  "method": "4 October 2026: first models for site 475 (previously excluded as outside the western riverside corridor). One building per GeoPackage outline, the long dipping range divided where Goad changes its storey figure; Goad G8 (February 1894) supplies names, uses, storeys and construction (see scripts/prepare_bromley_g8_alignment.py).",
+  "evidenceNotes": [
+    "Goad colours read with the key (reference/factory-building-survey/goad-symbol-key-1926.jpg): pink brick, yellow wood, grey metal buildings, grey-blue skylights; figures are storeys; feet are printed beside chimney symbols.",
+    "Goad G8 part 1 is registered from G9 across their shared edge (Four Mills Bridge) and refined by the building-colour fit (about 0.4 m on its one matching window; treat as about 1 m).",
+    "Goad draws a range \"Conc. walls & iron roof, under cons. Feb. 1894\" north of the factory; it has no 1891-96 GeoPackage outline and is not modelled.",
+    "The boiler has an iron chimney \"20' over\" the roof rather than a brick stack; it is not drawn."
+  ],
+  "buildings": [],
+  "structures": [],
+  "groups": [],
+  "additionalSites": [
+    {
+      "id": 475,
+      "name": "R. Bell & Co. match and taper factory",
+      "sources": [
+        "os-1893"
+      ],
+      "coverage": "Individual OS-mapped ranges; uses, storeys and construction from Goad sheet goad-g8-1",
+      "notes": "Named \"Match Manufactory\" on the OS five-foot plan and \"R. Bell & Co. Limd., Match & Taper Fac.\" on Goad G8 (February 1894), between the North London Railway's Bow Works ground and the Limehouse Cut. Roof exteriors are mapped; heights and roof forms are estimates."
+    }
+  ],
+  "additionalBuildings": [
+    {
+      "id": "b475-dipping-drying-range",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — dipping and drying range",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 3,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        861
+      ],
+      "footprintEvidence": "Part (1419 m², x -960 to -910, z 1058 to 1151) of source outline fid 861, divided on a wall Goad draws; outline from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad long west range: \"Cotton wax & glue\", \"3 store, bast., offs. 1st\" and five \"Dipping & drying\" rooms with \"Corr. iron & wood 3rd\" floors and wax rooms; three storeys and basement. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad long west range: \"Cotton wax & glue\", \"3 store, bast., offs. 1st\" and five \"Dipping & drying\" rooms with \"Corr. iron & wood 3rd\" floors and wax rooms; three storeys and basement.",
+      "worldFootprint": [
+        [
+          -915.433,
+          1151.0
+        ],
+        [
+          -933.314,
+          1059.652
+        ],
+        [
+          -933.605,
+          1059.321
+        ],
+        [
+          -948.362,
+          1062.262
+        ],
+        [
+          -948.501,
+          1062.88
+        ],
+        [
+          -931.048,
+          1151.0
+        ]
+      ]
+    },
+    {
+      "id": "b475-dipping-range-south",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — south end of the dipping range",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        861
+      ],
+      "footprintEvidence": "Part (229 m², x -960 to -910, z 1151 to 1175) of source outline fid 861, divided on a wall Goad draws; outline from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad \"2 & B. All walls & all floors conc.\" at the south end of the range, with tanks on the roof. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad \"2 & B. All walls & all floors conc.\" at the south end of the range, with tanks on the roof.",
+      "worldFootprint": [
+        [
+          -930.154,
+          1155.516
+        ],
+        [
+          -920.054,
+          1170.394
+        ],
+        [
+          -919.482,
+          1170.335
+        ],
+        [
+          -912.571,
+          1165.351
+        ],
+        [
+          -915.433,
+          1151.0
+        ],
+        [
+          -931.048,
+          1151.0
+        ]
+      ]
+    },
+    {
+      "id": "b475-mess-room-store",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — mess room and store",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        8873
+      ],
+      "footprintEvidence": "Source outline fid 8873 (411 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad \"Mess room\", \"Store\", \"Conc. walls, iron roof, wooden floor\"; an upper wooden floor read as two storeys. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges. Iron roof follows Goad's grey (metal) colour or an \"iron roof\" note.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad \"Mess room\", \"Store\", \"Conc. walls, iron roof, wooden floor\"; an upper wooden floor read as two storeys.",
+      "worldFootprint": [
+        [
+          -938.428,
+          1033.119
+        ],
+        [
+          -953.406,
+          1036.992
+        ],
+        [
+          -953.498,
+          1037.645
+        ],
+        [
+          -948.462,
+          1062.42
+        ],
+        [
+          -933.317,
+          1059.309
+        ]
+      ],
+      "roofMaterial": "iron"
+    },
+    {
+      "id": "b475-range-528",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — range 528",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        55488
+      ],
+      "footprintEvidence": "Source outline fid 55488 (139 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad 528 with tin-clad doors; figure read as 2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad 528 with tin-clad doors; figure read as 2.",
+      "worldFootprint": [
+        [
+          -915.809,
+          1083.489
+        ],
+        [
+          -901.072,
+          1080.388
+        ],
+        [
+          -902.512,
+          1071.984
+        ],
+        [
+          -902.756,
+          1071.588
+        ],
+        [
+          -917.25,
+          1074.289
+        ],
+        [
+          -917.613,
+          1074.517
+        ]
+      ]
+    },
+    {
+      "id": "b475-despatch",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — despatch department",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        56213
+      ],
+      "footprintEvidence": "Source outline fid 56213 (138 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad \"Despatch dept., concrete walls\" (530), marked 2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad \"Despatch dept., concrete walls\" (530), marked 2.",
+      "worldFootprint": [
+        [
+          -914.08,
+          1092.352
+        ],
+        [
+          -899.337,
+          1089.454
+        ],
+        [
+          -901.072,
+          1080.388
+        ],
+        [
+          -915.809,
+          1083.489
+        ]
+      ]
+    },
+    {
+      "id": "b475-engineering",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — engineering shop",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        50709
+      ],
+      "footprintEvidence": "Source outline fid 50709 (146 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad \"Engineering\" (532), marked 1-2, with a grey-blue skylight. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges. Glazed alternate roof planes stand for the skylights Goad colours grey-blue.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad \"Engineering\" (532), marked 1-2, with a grey-blue skylight.",
+      "worldFootprint": [
+        [
+          -899.337,
+          1089.454
+        ],
+        [
+          -914.08,
+          1092.352
+        ],
+        [
+          -912.324,
+          1101.772
+        ],
+        [
+          -911.839,
+          1101.884
+        ],
+        [
+          -897.646,
+          1098.917
+        ]
+      ],
+      "roofGlazing": true
+    },
+    {
+      "id": "b475-match-store",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — match store",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        57214
+      ],
+      "footprintEvidence": "Source outline fid 57214 (137 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad \"Match store, concrete walls\" (534). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad \"Match store, concrete walls\" (534).",
+      "worldFootprint": [
+        [
+          -910.169,
+          1111.755
+        ],
+        [
+          -895.559,
+          1108.928
+        ],
+        [
+          -897.211,
+          1100.113
+        ],
+        [
+          -897.583,
+          1099.976
+        ],
+        [
+          -911.931,
+          1102.78
+        ],
+        [
+          -911.965,
+          1103.408
+        ]
+      ]
+    },
+    {
+      "id": "b475-varnishing-room",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — varnishing room",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        60051
+      ],
+      "footprintEvidence": "Source outline fid 60051 (134 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad \"Varnishing room\" with two stoves (536). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad \"Varnishing room\" with two stoves (536).",
+      "worldFootprint": [
+        [
+          -893.833,
+          1117.656
+        ],
+        [
+          -895.34,
+          1109.345
+        ],
+        [
+          -895.559,
+          1108.928
+        ],
+        [
+          -895.843,
+          1108.926
+        ],
+        [
+          -910.169,
+          1111.755
+        ],
+        [
+          -908.373,
+          1120.549
+        ]
+      ]
+    },
+    {
+      "id": "b475-crystallising-smithy",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — crystallising room and smithy",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        402645
+      ],
+      "footprintEvidence": "Source outline fid 402645 (57 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad \"Crystallising, wood & metal\" (yellow) and \"Smithy\" (537-538). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad \"Crystallising, wood & metal\" (yellow) and \"Smithy\" (537-538).",
+      "worldFootprint": [
+        [
+          -893.833,
+          1117.656
+        ],
+        [
+          -908.373,
+          1120.549
+        ],
+        [
+          -907.801,
+          1124.144
+        ],
+        [
+          -907.28,
+          1124.235
+        ],
+        [
+          -893.027,
+          1121.311
+        ]
+      ]
+    },
+    {
+      "id": "b475-carpenters-shop",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — carpenter's shop over skillets and labels",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        39344
+      ],
+      "footprintEvidence": "Source outline fid 39344 (167 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad \"Carp. 2nd\" over \"Skillets & labels 1st\" with a grey-blue skylight (524-526). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges. Glazed alternate roof planes stand for the skylights Goad colours grey-blue.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad \"Carp. 2nd\" over \"Skillets & labels 1st\" with a grey-blue skylight (524-526).",
+      "worldFootprint": [
+        [
+          -899.677,
+          1061.989
+        ],
+        [
+          -885.994,
+          1059.795
+        ],
+        [
+          -885.649,
+          1059.497
+        ],
+        [
+          -888.072,
+          1047.976
+        ],
+        [
+          -888.5,
+          1047.917
+        ],
+        [
+          -902.13,
+          1051.39
+        ]
+      ],
+      "roofGlazing": true
+    },
+    {
+      "id": "b475-range-524",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — range 524",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        125967
+      ],
+      "footprintEvidence": "Source outline fid 125967 (92 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad 524, marked 2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad 524, marked 2.",
+      "worldFootprint": [
+        [
+          -902.13,
+          1051.39
+        ],
+        [
+          -910.463,
+          1053.574
+        ],
+        [
+          -908.557,
+          1061.653
+        ],
+        [
+          -909.1,
+          1062.233
+        ],
+        [
+          -909.007,
+          1063.353
+        ],
+        [
+          -908.395,
+          1063.476
+        ],
+        [
+          -899.677,
+          1061.989
+        ]
+      ]
+    },
+    {
+      "id": "b475-range-522",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — range 522",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        150356
+      ],
+      "footprintEvidence": "Source outline fid 150356 (84 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad 522, marked 2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad 522, marked 2.",
+      "worldFootprint": [
+        [
+          -909.606,
+          1057.736
+        ],
+        [
+          -910.463,
+          1053.574
+        ],
+        [
+          -920.803,
+          1056.003
+        ],
+        [
+          -921.079,
+          1056.349
+        ],
+        [
+          -920.189,
+          1061.675
+        ],
+        [
+          -920.52,
+          1062.59
+        ],
+        [
+          -920.341,
+          1063.696
+        ],
+        [
+          -919.832,
+          1063.834
+        ],
+        [
+          -919.406,
+          1065.215
+        ],
+        [
+          -912.233,
+          1064.091
+        ],
+        [
+          -911.929,
+          1063.755
+        ],
+        [
+          -912.5,
+          1060.567
+        ],
+        [
+          -914.666,
+          1060.776
+        ],
+        [
+          -915.068,
+          1059.26
+        ],
+        [
+          -914.825,
+          1058.901
+        ]
+      ]
+    },
+    {
+      "id": "b475-saw-mill",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — saw mill and wood drying rooms",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        7763
+      ],
+      "footprintEvidence": "Source outline fid 7763 (449 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad \"Saw mill, conc. walls\" with \"Wood drying rooms\" along its west side, one storey, and a skylight strip. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges. Glazed alternate roof planes stand for the skylights Goad colours grey-blue.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad \"Saw mill, conc. walls\" with \"Wood drying rooms\" along its west side, one storey, and a skylight strip.",
+      "worldFootprint": [
+        [
+          -913.064,
+          1146.901
+        ],
+        [
+          -916.024,
+          1147.891
+        ],
+        [
+          -912.571,
+          1165.351
+        ],
+        [
+          -886.534,
+          1147.16
+        ],
+        [
+          -895.324,
+          1134.511
+        ],
+        [
+          -895.821,
+          1134.525
+        ],
+        [
+          -904.384,
+          1140.355
+        ],
+        [
+          -904.962,
+          1141.01
+        ],
+        [
+          -913.014,
+          1146.53
+        ]
+      ],
+      "roofGlazing": true
+    },
+    {
+      "id": "b475-mechanics-shop",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — mechanics' shop and engine",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        150974
+      ],
+      "footprintEvidence": "Source outline fid 150974 (84 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad \"Mechanics shop\" with a 28 h.p. engine. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad \"Mechanics shop\" with a 28 h.p. engine.",
+      "worldFootprint": [
+        [
+          -915.247,
+          1136.599
+        ],
+        [
+          -913.014,
+          1146.53
+        ],
+        [
+          -904.962,
+          1141.01
+        ],
+        [
+          -904.384,
+          1140.355
+        ],
+        [
+          -909.462,
+          1132.797
+        ],
+        [
+          -910.023,
+          1132.939
+        ],
+        [
+          -914.658,
+          1135.841
+        ]
+      ]
+    },
+    {
+      "id": "b475-match-box-shed",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — match-box shed",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        590975
+      ],
+      "footprintEvidence": "Source outline fid 590975 (46 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad \"Match boxes\", coloured yellow (wood). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad \"Match boxes\", coloured yellow (wood).",
+      "worldFootprint": [
+        [
+          -885.682,
+          1088.191
+        ],
+        [
+          -892.35,
+          1089.576
+        ],
+        [
+          -891.313,
+          1095.533
+        ],
+        [
+          -891.075,
+          1095.926
+        ],
+        [
+          -884.714,
+          1094.66
+        ],
+        [
+          -884.365,
+          1094.365
+        ],
+        [
+          -884.945,
+          1091.739
+        ],
+        [
+          -884.868,
+          1091.19
+        ]
+      ]
+    },
+    {
+      "id": "b475-cut-shed",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — shed on the Limehouse Cut",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        919865
+      ],
+      "footprintEvidence": "Source outline fid 919865 (13 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad 516 by the Limehouse Cut wall. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad 516 by the Limehouse Cut wall.",
+      "worldFootprint": [
+        [
+          -889.068,
+          1138.588
+        ],
+        [
+          -891.018,
+          1135.333
+        ],
+        [
+          -891.441,
+          1135.125
+        ],
+        [
+          -893.724,
+          1136.622
+        ],
+        [
+          -891.466,
+          1140.017
+        ]
+      ]
+    },
+    {
+      "id": "b475-cut-shed-south",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — shed on the Limehouse Cut",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        811628
+      ],
+      "footprintEvidence": "Source outline fid 811628 (26 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad 516 by the Limehouse Cut wall. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad 516 by the Limehouse Cut wall.",
+      "worldFootprint": [
+        [
+          -889.068,
+          1138.588
+        ],
+        [
+          -891.333,
+          1140.068
+        ],
+        [
+          -886.534,
+          1147.16
+        ],
+        [
+          -884.148,
+          1145.56
+        ],
+        [
+          -888.649,
+          1138.798
+        ]
+      ]
+    },
+    {
+      "id": "b475-boiler-house",
+      "siteId": 475,
+      "source": "os-1893",
+      "name": "R. Bell & Co. match and taper factory — boiler house",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        665473
+      ],
+      "footprintEvidence": "Source outline fid 665473 (41 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g8-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 8 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g8-1.tiff): Goad hatched boiler with \"Iron chy. 20' over\" (510). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g8-1: Goad hatched boiler with \"Iron chy. 20' over\" (510).",
+      "worldFootprint": [
+        [
+          -914.658,
+          1135.841
+        ],
+        [
+          -908.999,
+          1132.449
+        ],
+        [
+          -909.255,
+          1131.587
+        ],
+        [
+          -908.818,
+          1130.831
+        ],
+        [
+          -908.992,
+          1130.349
+        ],
+        [
+          -911.44,
+          1127.181
+        ],
+        [
+          -911.863,
+          1127.266
+        ],
+        [
+          -917.041,
+          1130.862
+        ],
+        [
+          -915.553,
+          1133.126
+        ],
+        [
+          -915.391,
+          1133.611
+        ],
+        [
+          -915.72,
+          1133.905
+        ],
+        [
+          -915.699,
+          1134.392
+        ]
+      ]
+    }
+  ],
+  "additionalStructures": []
+}

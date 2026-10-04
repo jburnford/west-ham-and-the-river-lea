@@ -83,6 +83,48 @@
       "registration": "Similarity fit: two rough controls (Ratner Safe Works, Berger works), then ECC alignment of the sheet's pink and yellow building colours to the rasterised GeoPackage outlines inside the sheet, affine solution projected back to a similarity. Local translation check in 120 m windows: median 1.0 m, 90th percentile 1.8 m, maximum 2.5 m. Registered 4 October 2026 for the Berger rice starch works (berger-starch-footprint-alignment.json).",
       "sha256": "c13041033b6c123170b9cd790dbaf5b54dc01d3ee6d9ad97444e4c07d140d370"
     },
+    "goad-g8-1": {
+      "file": "reference/factory-building-survey/goad-g8-1.tiff",
+      "date": "February 1894 printed heading",
+      "url": "https://commons.wikimedia.org/wiki/File:Insurance_Plan_of_London_East_Vol._G;_sheet_8-1_(BL_152687).tiff",
+      "pixelToWorld": [
+        0.07886238,
+        -0.00992432,
+        -994.29433173,
+        972.46713082
+      ],
+      "controlResidualMetres": 1.0,
+      "registration": "Similarity fit: two rough controls on GeoPackage outlines, then ECC alignment of the sheet's building colours (thresholds relative to the paper colour) to the rasterised GeoPackage outlines, affine solution projected back to a similarity; residual is the median local translation in 120 m windows. Registered 4 October 2026 for R. Bell & Co.'s match factory (bromley-g8-footprint-alignment.json), seeded from goad-g9-1 at Four Mills Bridge.",
+      "sha256": "995f2b5e5bf02bb16f29aa830d5db5c99d78262f1363351f08bd74b28b281eee"
+    },
+    "goad-g9-1": {
+      "file": "reference/factory-building-survey/goad-g9-1.tiff",
+      "date": "February 1894 printed heading",
+      "url": "https://commons.wikimedia.org/wiki/File:Insurance_Plan_of_London_East_Vol._G;_sheet_9-1_(BL_152690).tiff",
+      "pixelToWorld": [
+        0.07862048,
+        -0.00316959,
+        -774.0406143,
+        949.61015715
+      ],
+      "controlResidualMetres": 0.5,
+      "registration": "Similarity fit: two rough controls on GeoPackage outlines, then ECC alignment of the sheet's building colours (thresholds relative to the paper colour) to the rasterised GeoPackage outlines, affine solution projected back to a similarity; residual is the median local translation in 120 m windows. Registered 4 October 2026 for Four Mills Distillery and Sun Flour Mills (bromley-g9-footprint-alignment.json).",
+      "sha256": "da846a8534592fd455dcc2b1e401332be9c137b51852786160bb1a2cfb17e068"
+    },
+    "goad-g10": {
+      "file": "reference/factory-building-survey/goad-g10.tiff",
+      "date": "February 1894 printed heading (vol. G key: surveyed Feb. 1894)",
+      "url": "https://commons.wikimedia.org/wiki/File:Insurance_Plan_of_London_East_Vol._G;_sheet_10_(BL_152692).tiff",
+      "pixelToWorld": [
+        0.07664728,
+        -0.02409975,
+        -872.41019761,
+        701.81369057
+      ],
+      "controlResidualMetres": 0.5,
+      "registration": "Similarity fit: two rough controls on GeoPackage outlines, then ECC alignment of the sheet's building colours (thresholds relative to the paper colour) to the rasterised GeoPackage outlines, affine solution projected back to a similarity; residual is the median local translation in 120 m windows. Registered 4 October 2026 for St Leonard's Works and Bromley Maltings (bromley-g10-footprint-alignment.json).",
+      "sha256": "f1dad63f8a0ec475c9f38db2dc421a5d9223e4672c09b10a4020b058c4e542d3"
+    },
     "os-1893": {
       "date": "1893 revision / 1894 publication; London five-foot series",
       "file": "reference/nls-tiles/os-london-five-foot-1893/18/",

@@ -1,0 +1,1935 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-04",
+  "sites": [
+    794,
+    229
+  ],
+  "name": "St Leonard's Works and Bromley Maltings",
+  "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg (project extract west-ham-buffer-buildings-bng.geojson.gz); cached NLS OS London five-foot mosaic (os-london-five-foot-1893); Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff)",
+  "sourceCRS": "EPSG:27700 to scene origin E538900,N183209; x east, z south, metres",
+  "method": "4 October 2026: first models for sites 794 and 229 (previously excluded as outside the western riverside corridor). One building per GeoPackage outline; Goad G10 (February 1894, a year later than the OS revision) supplies names, uses, storeys, construction colours, skylights, boilers, the 80 ft chimney and the malting kilns (see scripts/prepare_bromley_g10_alignment.py).",
+  "evidenceNotes": [
+    "Goad colours read with the key (reference/factory-building-survey/goad-symbol-key-1926.jpg): pink brick, yellow wood, grey metal buildings, grey-blue skylights; figures are storeys; feet are printed beside chimney symbols.",
+    "Goad G10 is registered to the GeoPackage by the building-colour fit described in berger-starch-footprint-alignment.json (median local misfit 0.5 m on three windows).",
+    "Square slate-clad pyramid kilns at the maltings are inside the malting ranges and are not drawn separately."
+  ],
+  "buildings": [],
+  "structures": [],
+  "groups": [],
+  "additionalSites": [
+    {
+      "id": 794,
+      "name": "Jukes, Coulson, Stokes & Co. St Leonard's Works",
+      "sources": [
+        "os-1893"
+      ],
+      "coverage": "Individual OS-mapped ranges; uses, storeys and construction from Goad sheet goad-g10",
+      "notes": "Named \"St. Leonard's Works (Iron)\" on the OS five-foot plan and \"Jukes, Coulson, Stokes & Co., Engineers, St Leonards Works\" on Goad G10 (February 1894). Roof exteriors are mapped; heights and roof forms are estimates."
+    },
+    {
+      "id": 229,
+      "name": "H. B. Walmsley & Sons Bromley Maltings",
+      "sources": [
+        "os-1893"
+      ],
+      "coverage": "Individual OS-mapped ranges; uses, storeys and construction from Goad sheet goad-g10",
+      "notes": "Named \"Bromley Maltings\" on the OS five-foot plan and \"H. B. Walmsley & Sons, Bromley Maltings\" on Goad G10 (February 1894), with five numbered malting-floor blocks and brick-cone kilns. Roof exteriors are mapped; heights and roof forms are estimates."
+    }
+  ],
+  "additionalBuildings": [
+    {
+      "id": "b794-north-range",
+      "siteId": 794,
+      "source": "os-1893",
+      "name": "Jukes, Coulson, Stokes & Co. St Leonard's Works — north range and fitting shop",
+      "material": "metal",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        4165
+      ],
+      "footprintEvidence": "Source outline fid 4165 (661 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"Fitting shop\" and the storage range along the railway, coloured grey (metal), marked 1 and 1=2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges. Iron roof follows Goad's grey (metal) colour or an \"iron roof\" note.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"Fitting shop\" and the storage range along the railway, coloured grey (metal), marked 1 and 1=2.",
+      "worldFootprint": [
+        [
+          -746.771,
+          708.252
+        ],
+        [
+          -746.448,
+          707.342
+        ],
+        [
+          -747.626,
+          704.097
+        ],
+        [
+          -748.462,
+          703.679
+        ],
+        [
+          -748.607,
+          703.198
+        ],
+        [
+          -748.346,
+          702.224
+        ],
+        [
+          -749.56,
+          699.011
+        ],
+        [
+          -750.049,
+          698.893
+        ],
+        [
+          -750.293,
+          698.493
+        ],
+        [
+          -750.159,
+          697.516
+        ],
+        [
+          -751.434,
+          693.72
+        ],
+        [
+          -752.261,
+          693.311
+        ],
+        [
+          -752.227,
+          691.787
+        ],
+        [
+          -753.438,
+          688.603
+        ],
+        [
+          -754.157,
+          688.064
+        ],
+        [
+          -753.964,
+          687.018
+        ],
+        [
+          -754.885,
+          684.119
+        ],
+        [
+          -754.55,
+          683.829
+        ],
+        [
+          -740.066,
+          678.569
+        ],
+        [
+          -742.048,
+          672.884
+        ],
+        [
+          -785.973,
+          689.791
+        ],
+        [
+          -786.319,
+          690.088
+        ],
+        [
+          -783.128,
+          697.9
+        ],
+        [
+          -782.575,
+          697.97
+        ],
+        [
+          -782.165,
+          698.481
+        ],
+        [
+          -765.775,
+          692.195
+        ],
+        [
+          -765.3,
+          692.268
+        ],
+        [
+          -758.044,
+          712.148
+        ]
+      ],
+      "roofMaterial": "iron"
+    },
+    {
+      "id": "b794-smithy",
+      "siteId": 794,
+      "source": "os-1893",
+      "name": "Jukes, Coulson, Stokes & Co. St Leonard's Works — smithy",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        4373
+      ],
+      "footprintEvidence": "Source outline fid 4373 (641 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"Smithy\", pink with a long grey-blue skylight, marked 1. Eaves height is an explicit estimate.",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges. Glazed alternate roof planes stand for the skylights Goad colours grey-blue.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"Smithy\", pink with a long grey-blue skylight, marked 1.",
+      "worldFootprint": [
+        [
+          -723.651,
+          710.339
+        ],
+        [
+          -728.982,
+          696.172
+        ],
+        [
+          -732.497,
+          697.044
+        ],
+        [
+          -732.677,
+          696.628
+        ],
+        [
+          -733.448,
+          696.142
+        ],
+        [
+          -734.326,
+          693.864
+        ],
+        [
+          -734.332,
+          693.382
+        ],
+        [
+          -734.057,
+          693.019
+        ],
+        [
+          -734.445,
+          692.135
+        ],
+        [
+          -734.918,
+          691.987
+        ],
+        [
+          -736.289,
+          688.339
+        ],
+        [
+          -736.33,
+          686.878
+        ],
+        [
+          -737.041,
+          686.326
+        ],
+        [
+          -738.221,
+          683.084
+        ],
+        [
+          -737.93,
+          682.72
+        ],
+        [
+          -738.027,
+          682.165
+        ],
+        [
+          -738.744,
+          681.645
+        ],
+        [
+          -740.081,
+          678.586
+        ],
+        [
+          -754.759,
+          683.914
+        ],
+        [
+          -754.892,
+          684.405
+        ],
+        [
+          -753.954,
+          687.226
+        ],
+        [
+          -754.197,
+          687.595
+        ],
+        [
+          -754.109,
+          688.139
+        ],
+        [
+          -753.334,
+          688.63
+        ],
+        [
+          -752.184,
+          691.855
+        ],
+        [
+          -752.238,
+          693.344
+        ],
+        [
+          -751.745,
+          693.411
+        ],
+        [
+          -751.437,
+          693.747
+        ],
+        [
+          -750.11,
+          697.473
+        ],
+        [
+          -750.238,
+          698.441
+        ],
+        [
+          -749.575,
+          699.028
+        ],
+        [
+          -748.361,
+          702.24
+        ],
+        [
+          -748.426,
+          703.642
+        ],
+        [
+          -747.637,
+          704.115
+        ],
+        [
+          -746.454,
+          707.354
+        ],
+        [
+          -746.786,
+          708.268
+        ],
+        [
+          -746.386,
+          708.996
+        ],
+        [
+          -745.809,
+          709.048
+        ],
+        [
+          -745.529,
+          709.411
+        ],
+        [
+          -744.418,
+          712.712
+        ],
+        [
+          -744.7,
+          713.077
+        ],
+        [
+          -744.686,
+          713.56
+        ],
+        [
+          -744.498,
+          714.021
+        ],
+        [
+          -743.706,
+          714.459
+        ],
+        [
+          -742.621,
+          717.153
+        ],
+        [
+          -723.995,
+          710.636
+        ]
+      ],
+      "roofGlazing": true,
+      "eavesHeight": 5.0
+    },
+    {
+      "id": "b794-furnace-range",
+      "siteId": 794,
+      "source": "os-1893",
+      "name": "Jukes, Coulson, Stokes & Co. St Leonard's Works — furnace range",
+      "material": "metal",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        8829
+      ],
+      "footprintEvidence": "Source outline fid 8829 (412 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad grey (metal) range with \"Furnaces\" either side of the chimney, marked 1. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges. Iron roof follows Goad's grey (metal) colour or an \"iron roof\" note.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad grey (metal) range with \"Furnaces\" either side of the chimney, marked 1.",
+      "worldFootprint": [
+        [
+          -729.208,
+          674.628
+        ],
+        [
+          -731.392,
+          669.016
+        ],
+        [
+          -742.048,
+          672.884
+        ],
+        [
+          -738.772,
+          681.667
+        ],
+        [
+          -738.013,
+          682.141
+        ],
+        [
+          -737.914,
+          682.701
+        ],
+        [
+          -738.199,
+          683.069
+        ],
+        [
+          -737.085,
+          686.372
+        ],
+        [
+          -736.168,
+          687.34
+        ],
+        [
+          -736.29,
+          688.311
+        ],
+        [
+          -734.902,
+          691.969
+        ],
+        [
+          -734.431,
+          692.118
+        ],
+        [
+          -734.04,
+          693.002
+        ],
+        [
+          -734.318,
+          693.364
+        ],
+        [
+          -734.159,
+          694.33
+        ],
+        [
+          -733.421,
+          696.131
+        ],
+        [
+          -732.452,
+          697.022
+        ],
+        [
+          -729.11,
+          696.147
+        ],
+        [
+          -728.599,
+          697.024
+        ],
+        [
+          -728.28,
+          696.952
+        ],
+        [
+          -727.932,
+          696.668
+        ],
+        [
+          -728.539,
+          694.868
+        ],
+        [
+          -728.32,
+          694.444
+        ],
+        [
+          -726.389,
+          693.838
+        ],
+        [
+          -725.219,
+          696.865
+        ],
+        [
+          -724.724,
+          696.997
+        ],
+        [
+          -720.021,
+          708.955
+        ],
+        [
+          -714.454,
+          706.932
+        ],
+        [
+          -714.26,
+          706.507
+        ],
+        [
+          -719.526,
+          692.226
+        ],
+        [
+          -719.777,
+          691.862
+        ],
+        [
+          -720.336,
+          691.805
+        ],
+        [
+          -722.826,
+          685.468
+        ],
+        [
+          -724.753,
+          685.797
+        ],
+        [
+          -725.183,
+          685.601
+        ],
+        [
+          -729.202,
+          675.11
+        ]
+      ],
+      "roofMaterial": "iron"
+    },
+    {
+      "id": "b794-boiler-house",
+      "siteId": 794,
+      "source": "os-1893",
+      "name": "Jukes, Coulson, Stokes & Co. St Leonard's Works — boiler house with tank over",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        493848
+      ],
+      "footprintEvidence": "Source outline fid 493848 (52 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad hatched boiler \"(25 h.p.)\" with \"Tank over\". Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad hatched boiler \"(25 h.p.)\" with \"Tank over\".",
+      "worldFootprint": [
+        [
+          -728.253,
+          697.908
+        ],
+        [
+          -728.24,
+          698.531
+        ],
+        [
+          -723.939,
+          709.974
+        ],
+        [
+          -723.671,
+          710.342
+        ],
+        [
+          -723.297,
+          710.339
+        ],
+        [
+          -720.489,
+          709.342
+        ],
+        [
+          -720.175,
+          709.053
+        ],
+        [
+          -724.542,
+          697.186
+        ],
+        [
+          -724.865,
+          696.866
+        ]
+      ]
+    },
+    {
+      "id": "b794-hardware-store-north",
+      "siteId": 794,
+      "source": "os-1893",
+      "name": "Jukes, Coulson, Stokes & Co. St Leonard's Works — hardware storage (skylit)",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        36498
+      ],
+      "footprintEvidence": "Source outline fid 36498 (173 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"Hardware storage\" with a grey-blue skylight, marked 1=2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges. Glazed alternate roof planes stand for the skylights Goad colours grey-blue.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"Hardware storage\" with a grey-blue skylight, marked 1=2.",
+      "worldFootprint": [
+        [
+          -783.142,
+          697.849
+        ],
+        [
+          -786.179,
+          690.193
+        ],
+        [
+          -786.488,
+          690.097
+        ],
+        [
+          -804.938,
+          698.131
+        ],
+        [
+          -801.876,
+          705.783
+        ],
+        [
+          -783.593,
+          698.207
+        ]
+      ],
+      "roofGlazing": true
+    },
+    {
+      "id": "b794-hardware-store-south",
+      "siteId": 794,
+      "source": "os-1893",
+      "name": "Jukes, Coulson, Stokes & Co. St Leonard's Works — hardware storage",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        47726
+      ],
+      "footprintEvidence": "Source outline fid 47726 (151 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"Hardware storage\", marked 1=2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"Hardware storage\", marked 1=2.",
+      "worldFootprint": [
+        [
+          -787.068,
+          715.236
+        ],
+        [
+          -792.438,
+          701.949
+        ],
+        [
+          -801.876,
+          705.783
+        ],
+        [
+          -796.839,
+          718.969
+        ],
+        [
+          -796.403,
+          719.152
+        ],
+        [
+          -787.341,
+          715.576
+        ]
+      ]
+    },
+    {
+      "id": "b794-offices",
+      "siteId": 794,
+      "source": "os-1893",
+      "name": "Jukes, Coulson, Stokes & Co. St Leonard's Works — offices and stores",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 3,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        40493
+      ],
+      "footprintEvidence": "Source outline fid 40493 (164 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"Off., Stores &c\", marked 3 & B (three storeys and basement). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"Off., Stores &c\", marked 3 & B (three storeys and basement).",
+      "worldFootprint": [
+        [
+          -782.109,
+          698.496
+        ],
+        [
+          -782.577,
+          697.918
+        ],
+        [
+          -783.142,
+          697.849
+        ],
+        [
+          -792.438,
+          701.949
+        ],
+        [
+          -787.068,
+          715.236
+        ],
+        [
+          -778.526,
+          712.15
+        ],
+        [
+          -778.162,
+          712.434
+        ],
+        [
+          -777.269,
+          712.054
+        ],
+        [
+          -777.142,
+          711.565
+        ],
+        [
+          -777.966,
+          709.218
+        ],
+        [
+          -777.262,
+          707.459
+        ],
+        [
+          -777.355,
+          706.288
+        ],
+        [
+          -777.788,
+          705.458
+        ],
+        [
+          -778.752,
+          704.542
+        ],
+        [
+          -780.068,
+          704.012
+        ]
+      ]
+    },
+    {
+      "id": "b794-north-east-shed",
+      "siteId": 794,
+      "source": "os-1893",
+      "name": "Jukes, Coulson, Stokes & Co. St Leonard's Works — north-east shed",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        748957
+      ],
+      "footprintEvidence": "Source outline fid 748957 (33 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad yellow (wood) and grey shed at 514, marked 1. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad yellow (wood) and grey shed at 514, marked 1.",
+      "worldFootprint": [
+        [
+          -731.392,
+          669.016
+        ],
+        [
+          -729.208,
+          674.628
+        ],
+        [
+          -724.519,
+          672.94
+        ],
+        [
+          -724.239,
+          672.597
+        ],
+        [
+          -726.345,
+          667.103
+        ]
+      ]
+    },
+    {
+      "id": "b794-carpenters-store",
+      "siteId": 794,
+      "source": "os-1893",
+      "name": "Jukes, Coulson, Stokes & Co. St Leonard's Works — carpenter's shop and storage",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        55640
+      ],
+      "footprintEvidence": "Source outline fid 55640 (139 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"Carp. 2nd\" over storage (518-520). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"Carp. 2nd\" over storage (518-520).",
+      "worldFootprint": [
+        [
+          -789.226,
+          742.904
+        ],
+        [
+          -784.145,
+          740.606
+        ],
+        [
+          -785.677,
+          734.799
+        ],
+        [
+          -774.666,
+          730.638
+        ],
+        [
+          -774.717,
+          729.477
+        ],
+        [
+          -776.382,
+          725.527
+        ],
+        [
+          -793.069,
+          731.595
+        ],
+        [
+          -790.08,
+          742.53
+        ],
+        [
+          -789.85,
+          742.93
+        ]
+      ]
+    },
+    {
+      "id": "b794-riverside-range",
+      "siteId": 794,
+      "source": "os-1893",
+      "name": "Jukes, Coulson, Stokes & Co. St Leonard's Works — riverside range",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        436425
+      ],
+      "footprintEvidence": "Source outline fid 436425 (55 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad 516 by the river wall, marked 1. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad 516 by the river wall, marked 1.",
+      "worldFootprint": [
+        [
+          -675.703,
+          670.877
+        ],
+        [
+          -670.378,
+          670.057
+        ],
+        [
+          -671.86,
+          660.441
+        ],
+        [
+          -677.399,
+          661.148
+        ]
+      ]
+    },
+    {
+      "id": "b229-malting-1-2",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — malting floors 1 and 2 with west kilns and firing rooms",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 4,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        1125
+      ],
+      "footprintEvidence": "Source outline fid 1125 (1388 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"(1&2) Malting floors\" with \"4th\" floor marks and a \"4\" figure; firing rooms and kilns (\"Bk. cone\", \"slate clad pyramid\") at the north-west end. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"(1&2) Malting floors\" with \"4th\" floor marks and a \"4\" figure; firing rooms and kilns (\"Bk. cone\", \"slate clad pyramid\") at the north-west end.",
+      "worldFootprint": [
+        [
+          -706.513,
+          845.221
+        ],
+        [
+          -723.274,
+          843.918
+        ],
+        [
+          -723.533,
+          844.283
+        ],
+        [
+          -725.825,
+          877.244
+        ],
+        [
+          -725.74,
+          877.81
+        ],
+        [
+          -724.134,
+          878.03
+        ],
+        [
+          -723.96,
+          878.354
+        ],
+        [
+          -726.078,
+          909.125
+        ],
+        [
+          -705.815,
+          910.683
+        ],
+        [
+          -702.902,
+          910.63
+        ],
+        [
+          -700.512,
+          879.216
+        ],
+        [
+          -704.646,
+          878.861
+        ],
+        [
+          -705.003,
+          878.599
+        ],
+        [
+          -704.387,
+          868.869
+        ],
+        [
+          -704.189,
+          868.447
+        ],
+        [
+          -703.77,
+          859.225
+        ],
+        [
+          -707.488,
+          858.69
+        ]
+      ]
+    },
+    {
+      "id": "b229-malting-3",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — malting floors 3",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 3,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        6311
+      ],
+      "footprintEvidence": "Source outline fid 6311 (512 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"(3) Malting floors\", marked 3 & B and 2 & B. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"(3) Malting floors\", marked 3 & B and 2 & B.",
+      "worldFootprint": [
+        [
+          -691.257,
+          880.044
+        ],
+        [
+          -690.896,
+          879.882
+        ],
+        [
+          -686.294,
+          880.191
+        ],
+        [
+          -685.945,
+          880.46
+        ],
+        [
+          -685.463,
+          880.278
+        ],
+        [
+          -680.871,
+          880.589
+        ],
+        [
+          -680.54,
+          880.26
+        ],
+        [
+          -680.459,
+          879.737
+        ],
+        [
+          -678.734,
+          879.865
+        ],
+        [
+          -678.164,
+          881.173
+        ],
+        [
+          -667.107,
+          882.02
+        ],
+        [
+          -666.687,
+          879.366
+        ],
+        [
+          -667.217,
+          878.613
+        ],
+        [
+          -666.563,
+          869.509
+        ],
+        [
+          -666.859,
+          869.186
+        ],
+        [
+          -672.565,
+          868.806
+        ],
+        [
+          -672.842,
+          868.433
+        ],
+        [
+          -672.819,
+          867.463
+        ],
+        [
+          -703.402,
+          865.096
+        ],
+        [
+          -703.736,
+          868.443
+        ],
+        [
+          -704.229,
+          868.448
+        ],
+        [
+          -704.424,
+          868.871
+        ],
+        [
+          -704.599,
+          870.542
+        ],
+        [
+          -704.193,
+          871.609
+        ],
+        [
+          -704.606,
+          872.456
+        ],
+        [
+          -704.567,
+          873.453
+        ],
+        [
+          -704.344,
+          873.708
+        ],
+        [
+          -704.863,
+          874.459
+        ],
+        [
+          -705.052,
+          878.397
+        ],
+        [
+          -704.834,
+          878.79
+        ],
+        [
+          -691.888,
+          879.785
+        ]
+      ]
+    },
+    {
+      "id": "b229-malting-4",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — malting floors 4",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 4,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        6647
+      ],
+      "footprintEvidence": "Source outline fid 6647 (496 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"(4) Malting floors\" with \"4th\" floor marks. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"(4) Malting floors\" with \"4th\" floor marks.",
+      "worldFootprint": [
+        [
+          -691.528,
+          880.051
+        ],
+        [
+          -691.845,
+          880.343
+        ],
+        [
+          -692.37,
+          887.773
+        ],
+        [
+          -692.572,
+          888.188
+        ],
+        [
+          -701.07,
+          887.534
+        ],
+        [
+          -701.267,
+          887.958
+        ],
+        [
+          -702.052,
+          898.7
+        ],
+        [
+          -678.478,
+          900.316
+        ],
+        [
+          -678.117,
+          900.019
+        ],
+        [
+          -676.019,
+          894.133
+        ],
+        [
+          -675.115,
+          894.045
+        ],
+        [
+          -672.587,
+          894.59
+        ],
+        [
+          -672.4,
+          894.119
+        ],
+        [
+          -670.676,
+          892.715
+        ],
+        [
+          -667.109,
+          882.02
+        ],
+        [
+          -690.898,
+          880.311
+        ]
+      ]
+    },
+    {
+      "id": "b229-malting-5",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — malting floors 5",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 3.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        5678
+      ],
+      "footprintEvidence": "Source outline fid 5678 (547 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"(5) Malting floors\", marked 3 1/2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"(5) Malting floors\", marked 3 1/2.",
+      "worldFootprint": [
+        [
+          -665.112,
+          845.984
+        ],
+        [
+          -694.067,
+          843.937
+        ],
+        [
+          -695.458,
+          862.472
+        ],
+        [
+          -666.162,
+          864.577
+        ]
+      ]
+    },
+    {
+      "id": "b229-malt-store-kilns",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — malt store, firing room and kilns",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        24364
+      ],
+      "footprintEvidence": "Source outline fid 24364 (216 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"Malt store\", \"Firing 1st\" and three \"Kilns, brick cones\", marked 2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"Malt store\", \"Firing 1st\" and three \"Kilns, brick cones\", marked 2.",
+      "worldFootprint": [
+        [
+          -703.826,
+          861.889
+        ],
+        [
+          -695.607,
+          862.422
+        ],
+        [
+          -695.356,
+          862.055
+        ],
+        [
+          -694.027,
+          843.936
+        ],
+        [
+          -694.213,
+          843.802
+        ],
+        [
+          -703.816,
+          843.039
+        ],
+        [
+          -704.345,
+          843.176
+        ],
+        [
+          -704.702,
+          845.248
+        ],
+        [
+          -706.513,
+          845.221
+        ],
+        [
+          -707.488,
+          858.69
+        ],
+        [
+          -703.77,
+          859.225
+        ]
+      ]
+    },
+    {
+      "id": "b229-iron-roof-yard",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — iron roof over yard",
+      "material": "metal",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        254293
+      ],
+      "footprintEvidence": "Source outline fid 254293 (68 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"Iron roof over yard\". Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges. Iron roof follows Goad's grey (metal) colour or an \"iron roof\" note.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"Iron roof over yard\".",
+      "worldFootprint": [
+        [
+          -702.015,
+          898.631
+        ],
+        [
+          -702.732,
+          909.587
+        ],
+        [
+          -701.009,
+          909.702
+        ],
+        [
+          -700.666,
+          908.164
+        ],
+        [
+          -700.252,
+          907.954
+        ],
+        [
+          -695.727,
+          908.316
+        ],
+        [
+          -695.2,
+          900.336
+        ],
+        [
+          -695.008,
+          899.926
+        ],
+        [
+          -695.199,
+          899.115
+        ]
+      ],
+      "roofMaterial": "iron"
+    },
+    {
+      "id": "b229-south-kilns-west",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — south kiln house",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        493395
+      ],
+      "footprintEvidence": "Source outline fid 493395 (52 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"Kilns, brick cones\" (614). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"Kilns, brick cones\" (614).",
+      "worldFootprint": [
+        [
+          -690.192,
+          900.335
+        ],
+        [
+          -695.008,
+          899.926
+        ],
+        [
+          -695.2,
+          900.336
+        ],
+        [
+          -695.727,
+          908.316
+        ],
+        [
+          -695.757,
+          910.092
+        ],
+        [
+          -695.452,
+          910.396
+        ],
+        [
+          -690.924,
+          910.751
+        ]
+      ]
+    },
+    {
+      "id": "b229-south-kilns-east",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — south kiln house",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        186409
+      ],
+      "footprintEvidence": "Source outline fid 186409 (77 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"Kilns, brick cones\" (612). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"Kilns, brick cones\" (612).",
+      "worldFootprint": [
+        [
+          -680.115,
+          908.34
+        ],
+        [
+          -679.538,
+          900.315
+        ],
+        [
+          -686.714,
+          899.684
+        ],
+        [
+          -687.199,
+          899.848
+        ],
+        [
+          -687.455,
+          900.395
+        ],
+        [
+          -687.911,
+          911.006
+        ],
+        [
+          -687.511,
+          911.079
+        ]
+      ]
+    },
+    {
+      "id": "b229-south-kilns-middle",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — south kiln house",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        763811
+      ],
+      "footprintEvidence": "Source outline fid 763811 (32 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad kiln house between the two south brick cones. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad kiln house between the two south brick cones.",
+      "worldFootprint": [
+        [
+          -691.031,
+          910.753
+        ],
+        [
+          -687.911,
+          911.006
+        ],
+        [
+          -687.455,
+          900.395
+        ],
+        [
+          -690.364,
+          900.485
+        ]
+      ]
+    },
+    {
+      "id": "b229-grain-store",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — grain store and grain cleaning",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        9630
+      ],
+      "footprintEvidence": "Source outline fid 9630 (388 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad \"Grain store\" and \"(6) Grain cleaning\"; no storey figure legible, 2 is an explicit estimate. Outside the GIS site parcel but part of Walmsley's premises on Goad. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad \"Grain store\" and \"(6) Grain cleaning\"; no storey figure legible, 2 is an explicit estimate. Outside the GIS site parcel but part of Walmsley's premises on Goad.",
+      "worldFootprint": [
+        [
+          -706.197,
+          937.899
+        ],
+        [
+          -705.054,
+          938.333
+        ],
+        [
+          -704.821,
+          938.739
+        ],
+        [
+          -688.72,
+          948.247
+        ],
+        [
+          -688.403,
+          947.936
+        ],
+        [
+          -686.396,
+          940.721
+        ],
+        [
+          -685.914,
+          940.607
+        ],
+        [
+          -685.631,
+          940.254
+        ],
+        [
+          -680.572,
+          922.013
+        ],
+        [
+          -682.276,
+          921.586
+        ],
+        [
+          -695.4,
+          921.808
+        ],
+        [
+          -698.011,
+          930.318
+        ],
+        [
+          -698.493,
+          930.459
+        ],
+        [
+          -699.949,
+          932.703
+        ],
+        [
+          -702.725,
+          931.189
+        ],
+        [
+          -703.038,
+          931.457
+        ],
+        [
+          -706.623,
+          937.168
+        ]
+      ]
+    },
+    {
+      "id": "b229-south-range",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — range north of the grain store",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        248431
+      ],
+      "footprintEvidence": "Source outline fid 248431 (69 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad 610, marked 1. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad 610, marked 1.",
+      "worldFootprint": [
+        [
+          -695.4,
+          921.808
+        ],
+        [
+          -682.276,
+          921.586
+        ],
+        [
+          -681.119,
+          916.829
+        ],
+        [
+          -695.004,
+          916.465
+        ]
+      ]
+    },
+    {
+      "id": "b229-cut-shed-a",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — shed on the Limehouse Cut",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        777657
+      ],
+      "footprintEvidence": "Source outline fid 777657 (30 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad yellow (wood) range on the Limehouse Cut wharf (642). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad yellow (wood) range on the Limehouse Cut wharf (642).",
+      "worldFootprint": [
+        [
+          -666.024,
+          862.211
+        ],
+        [
+          -661.077,
+          862.414
+        ],
+        [
+          -660.767,
+          856.397
+        ],
+        [
+          -665.648,
+          856.125
+        ]
+      ]
+    },
+    {
+      "id": "b229-cut-shed-b",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — shed on the Limehouse Cut",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        819591
+      ],
+      "footprintEvidence": "Source outline fid 819591 (25 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad yellow (wood) range on the Limehouse Cut wharf (642). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad yellow (wood) range on the Limehouse Cut wharf (642).",
+      "worldFootprint": [
+        [
+          -660.668,
+          851.531
+        ],
+        [
+          -665.374,
+          851.257
+        ],
+        [
+          -665.648,
+          856.125
+        ],
+        [
+          -660.628,
+          856.285
+        ],
+        [
+          -660.336,
+          851.836
+        ]
+      ]
+    },
+    {
+      "id": "b229-cut-shed-c",
+      "siteId": 229,
+      "source": "os-1893",
+      "name": "H. B. Walmsley & Sons Bromley Maltings — shed on the Limehouse Cut",
+      "material": "wood",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        897699
+      ],
+      "footprintEvidence": "Source outline fid 897699 (15 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g10.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff): Goad yellow (wood) range on the Limehouse Cut wharf. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g10: Goad yellow (wood) range on the Limehouse Cut wharf.",
+      "worldFootprint": [
+        [
+          -665.093,
+          846.659
+        ],
+        [
+          -665.374,
+          851.257
+        ],
+        [
+          -661.717,
+          851.36
+        ],
+        [
+          -661.609,
+          847.847
+        ]
+      ]
+    }
+  ],
+  "additionalStructures": [
+    {
+      "id": "stack-794-furnaces",
+      "siteId": 794,
+      "source": "os-1893",
+      "kind": "chimney",
+      "name": "Jukes, Coulson, Stokes & Co. St Leonard's Works chimney",
+      "x": -727.045,
+      "z": 695.274,
+      "radius": 0.85,
+      "section": "square",
+      "material": "brick",
+      "baseHeight": 0.34,
+      "rotation": 0.0,
+      "sourceFootprintFid": 1013609,
+      "sourcePolygons": [
+        [
+          [
+            [
+              -726.738,
+              693.884
+            ],
+            [
+              -728.267,
+              694.381
+            ],
+            [
+              -728.561,
+              694.747
+            ],
+            [
+              -727.898,
+              696.63
+            ],
+            [
+              -725.818,
+              696.159
+            ],
+            [
+              -725.533,
+              695.815
+            ],
+            [
+              -726.176,
+              693.941
+            ]
+          ]
+        ]
+      ],
+      "evidenceType": "map-interpretation",
+      "supportingSources": [
+        "author-os-footprints-1891-96",
+        "os-1893",
+        "goad-g10"
+      ],
+      "symbolKey": "goad-symbol-key-1926",
+      "positionEvidence": "Placed on the small outline fid 1013609 (5.9 m²) where Goad prints a chimney symbol marked \"80\" between the two furnace houses.",
+      "profileEvidence": "Square section follows the mapped base; taper, crown and brickwork are interpreted, not measured.",
+      "height": 24.384,
+      "mappedHeightFeet": 80,
+      "heightEvidence": "\"80\" printed beside the Goad chimney symbol, read as height in feet; converted at 0.3048 m/ft."
+    },
+    {
+      "id": "kiln-229-628",
+      "siteId": 229,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -723.6,
+      "z": 875.2,
+      "radius": 2.4,
+      "height": 16.0,
+      "evidence": "Kiln 628, a circle lettered \"Kiln, Bk. cone\" on Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g10, inside range b229-malting-1-2; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 4.8 m.",
+      "heightEvidence": "Explicit estimate: 16 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g10"
+      ],
+      "evidenceType": "map-interpretation"
+    },
+    {
+      "id": "kiln-229-639",
+      "siteId": 229,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -698.4,
+      "z": 845.6,
+      "radius": 2.4,
+      "height": 14.0,
+      "evidence": "Kiln 639, one of three circles lettered \"Kilns, brick cones\" on Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g10, inside range b229-malt-store-kilns; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 4.8 m.",
+      "heightEvidence": "Explicit estimate: 14 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g10"
+      ],
+      "evidenceType": "map-interpretation"
+    },
+    {
+      "id": "kiln-229-638",
+      "siteId": 229,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -697.2,
+      "z": 852.4,
+      "radius": 2.4,
+      "height": 14.0,
+      "evidence": "Kiln 638, one of three circles lettered \"Kilns, brick cones\" on Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g10, inside range b229-malt-store-kilns; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 4.8 m.",
+      "heightEvidence": "Explicit estimate: 14 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g10"
+      ],
+      "evidenceType": "map-interpretation"
+    },
+    {
+      "id": "kiln-229-637",
+      "siteId": 229,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -698.8,
+      "z": 858.8,
+      "radius": 2.4,
+      "height": 14.0,
+      "evidence": "Kiln 637, one of three circles lettered \"Kilns, brick cones\" on Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g10, inside range b229-malt-store-kilns; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 4.8 m.",
+      "heightEvidence": "Explicit estimate: 14 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g10"
+      ],
+      "evidenceType": "map-interpretation"
+    },
+    {
+      "id": "kiln-229-622",
+      "siteId": 229,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -677.6,
+      "z": 877.2,
+      "radius": 2.6,
+      "height": 15.0,
+      "evidence": "Kiln 622, a circle lettered \"Kilns, brick cones\" on Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g10, inside range b229-malting-3; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 5.2 m.",
+      "heightEvidence": "Explicit estimate: 15 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g10"
+      ],
+      "evidenceType": "map-interpretation"
+    },
+    {
+      "id": "kiln-229-620",
+      "siteId": 229,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -670.0,
+      "z": 874.8,
+      "radius": 2.6,
+      "height": 15.0,
+      "evidence": "Kiln 620, a circle lettered \"Kilns, brick cones\" on Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g10, inside range b229-malting-3; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 5.2 m.",
+      "heightEvidence": "Explicit estimate: 15 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g10"
+      ],
+      "evidenceType": "map-interpretation"
+    },
+    {
+      "id": "kiln-229-614",
+      "siteId": 229,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -692.0,
+      "z": 904.8,
+      "radius": 2.8,
+      "height": 12.0,
+      "evidence": "South kiln 614, a circle lettered \"Kilns, brick cones\" on Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g10, inside range b229-south-kilns-west; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 5.6 m.",
+      "heightEvidence": "Explicit estimate: 12 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g10"
+      ],
+      "evidenceType": "map-interpretation"
+    },
+    {
+      "id": "kiln-229-612",
+      "siteId": 229,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -684.4,
+      "z": 904.4,
+      "radius": 2.8,
+      "height": 12.0,
+      "evidence": "South kiln 612, a circle lettered \"Kilns, brick cones\" on Goad Insurance Plan of London, East vol. G sheet 10, dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g10.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g10, inside range b229-south-kilns-east; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 5.6 m.",
+      "heightEvidence": "Explicit estimate: 12 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g10"
+      ],
+      "evidenceType": "map-interpretation"
+    }
+  ]
+}

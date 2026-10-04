@@ -1,0 +1,1894 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-04",
+  "sites": [
+    417,
+    418
+  ],
+  "name": "Four Mills Distillery and Sun Flour Mills",
+  "source": "Author-supplied london_buildings_1891-96_corr_v1.gpkg (project extract west-ham-buffer-buildings-bng.geojson.gz); cached NLS OS London five-foot mosaic (os-london-five-foot-1893); Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff)",
+  "sourceCRS": "EPSG:27700 to scene origin E538900,N183209; x east, z south, metres",
+  "method": "4 October 2026: first models for sites 417 and 418 (previously excluded as outside the western riverside corridor). One building per GeoPackage outline, two outlines divided on walls Goad draws; Goad G9 (February 1894) supplies names, uses, storeys, construction, the 140 ft chimney and the malting kilns (see scripts/prepare_bromley_g9_alignment.py).",
+  "evidenceNotes": [
+    "Goad colours read with the key (reference/factory-building-survey/goad-symbol-key-1926.jpg): pink brick, yellow wood, grey metal buildings, grey-blue skylights; figures are storeys; feet are printed beside chimney symbols.",
+    "Goad G9 part 1 is registered to the GeoPackage by the building-colour fit described in berger-starch-footprint-alignment.json (median local misfit 0.5 m on two windows).",
+    "The distillery is marked \"silent\" (not working) in February 1894; the model shows the buildings, not their use."
+  ],
+  "buildings": [],
+  "structures": [],
+  "groups": [],
+  "additionalSites": [
+    {
+      "id": 417,
+      "name": "Four Mills Distillery",
+      "sources": [
+        "os-1893"
+      ],
+      "coverage": "Individual OS-mapped ranges; uses, storeys and construction from Goad sheet goad-g9-1",
+      "notes": "Named \"Four Mills Distillery\" on the OS five-foot plan and \"Four Mills Distillery (silent)\" on Goad G9 (February 1894): the distillery was not working when surveyed. Granaries, mill, malting floors with kilns, brew house, still house, spirit stores and backhouses are lettered. Roof exteriors are mapped; heights and roof forms are estimates."
+    },
+    {
+      "id": 418,
+      "name": "Sun Flour Mills",
+      "sources": [
+        "os-1893"
+      ],
+      "coverage": "Individual OS-mapped ranges; uses, storeys and construction from Goad sheet goad-g9-1",
+      "notes": "Named \"Sun Mills (Corn)\" on the OS five-foot plan, \"Bromley Mills (Flour)\" in the GIS site layer and \"Sun Flour Mills\" on Goad G9, on the island between the Limehouse Cut and the Lea. Roof exteriors are mapped; heights and roof forms are estimates."
+    }
+  ],
+  "additionalBuildings": [
+    {
+      "id": "b417-granaries-2-3",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — granaries 2 and 3 (formerly spirit store)",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 4,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        1799
+      ],
+      "footprintEvidence": "Source outline fid 1799 (1045 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Granaries 3 . 2\" marked \"2, 3 & 4th\" and \"Formerly spirit store 1st\"; four floors. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Granaries 3 . 2\" marked \"2, 3 & 4th\" and \"Formerly spirit store 1st\"; four floors.",
+      "worldFootprint": [
+        [
+          -715.895,
+          1062.648
+        ],
+        [
+          -720.254,
+          1034.278
+        ],
+        [
+          -755.732,
+          1039.015
+        ],
+        [
+          -755.938,
+          1039.443
+        ],
+        [
+          -752.052,
+          1067.346
+        ],
+        [
+          -751.684,
+          1067.617
+        ]
+      ]
+    },
+    {
+      "id": "b417-granary-1",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — granary 1",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 4,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        6305
+      ],
+      "footprintEvidence": "Source outline fid 6305 (512 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Granaries 1\" marked \"2, 3 & 4th\"; four floors. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Granaries 1\" marked \"2, 3 & 4th\"; four floors.",
+      "worldFootprint": [
+        [
+          -698.363,
+          1060.213
+        ],
+        [
+          -699.699,
+          1050.933
+        ],
+        [
+          -701.344,
+          1051.039
+        ],
+        [
+          -701.604,
+          1050.684
+        ],
+        [
+          -701.778,
+          1048.484
+        ],
+        [
+          -700.18,
+          1048.178
+        ],
+        [
+          -700.179,
+          1047.998
+        ],
+        [
+          -702.311,
+          1032.034
+        ],
+        [
+          -711.692,
+          1033.032
+        ],
+        [
+          -720.254,
+          1034.278
+        ],
+        [
+          -715.895,
+          1062.648
+        ],
+        [
+          -701.453,
+          1060.787
+        ],
+        [
+          -701.129,
+          1062.935
+        ],
+        [
+          -698.974,
+          1062.66
+        ],
+        [
+          -699.37,
+          1060.511
+        ]
+      ]
+    },
+    {
+      "id": "b417-malting-floors",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — malting floors, malt store and kilns",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 3,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        3386
+      ],
+      "footprintEvidence": "Source outline fid 3386 (736 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Malting floors\" marked 3 and \"Malt store 2nd\" over a row of five kilns (four brick cones, one slate-clad cone). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Malting floors\" marked 3 and \"Malt store 2nd\" over a row of five kilns (four brick cones, one slate-clad cone).",
+      "worldFootprint": [
+        [
+          -702.788,
+          1029.414
+        ],
+        [
+          -707.405,
+          1001.766
+        ],
+        [
+          -707.133,
+          996.589
+        ],
+        [
+          -716.155,
+          997.759
+        ],
+        [
+          -718.156,
+          999.526
+        ],
+        [
+          -716.052,
+          1013.821
+        ],
+        [
+          -716.455,
+          1014.062
+        ],
+        [
+          -732.174,
+          1016.177
+        ],
+        [
+          -738.439,
+          1022.351
+        ],
+        [
+          -737.1,
+          1033.643
+        ],
+        [
+          -736.808,
+          1033.93
+        ]
+      ]
+    },
+    {
+      "id": "b417-mill",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — mill",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 4,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        6640
+      ],
+      "footprintEvidence": "Source outline fid 6640 (496 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Mill\" marked 4. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Mill\" marked 4.",
+      "worldFootprint": [
+        [
+          -682.016,
+          1055.262
+        ],
+        [
+          -683.665,
+          1052.014
+        ],
+        [
+          -683.678,
+          1051.392
+        ],
+        [
+          -684.451,
+          1050.394
+        ],
+        [
+          -699.554,
+          1052.431
+        ],
+        [
+          -697.772,
+          1065.681
+        ],
+        [
+          -697.498,
+          1065.808
+        ],
+        [
+          -693.68,
+          1065.192
+        ],
+        [
+          -691.285,
+          1082.973
+        ],
+        [
+          -690.938,
+          1083.272
+        ],
+        [
+          -678.672,
+          1081.539
+        ],
+        [
+          -678.425,
+          1081.092
+        ],
+        [
+          -679.45,
+          1072.176
+        ],
+        [
+          -676.729,
+          1071.714
+        ],
+        [
+          -676.484,
+          1071.335
+        ],
+        [
+          -677.544,
+          1065.401
+        ],
+        [
+          -677.825,
+          1065.25
+        ]
+      ]
+    },
+    {
+      "id": "b417-brew-house",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — brew house and underback room",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 3,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        2627
+      ],
+      "footprintEvidence": "Source outline fid 2627 (846 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Brew house\" and \"Underback room\", marked 1-3 and 2-3, with \"iron, wood & slate roof\". Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Brew house\" and \"Underback room\", marked 1-3 and 2-3, with \"iron, wood & slate roof\".",
+      "worldFootprint": [
+        [
+          -697.01,
+          1070.79
+        ],
+        [
+          -719.602,
+          1073.768
+        ],
+        [
+          -714.544,
+          1110.42
+        ],
+        [
+          -714.129,
+          1110.205
+        ],
+        [
+          -691.824,
+          1107.169
+        ],
+        [
+          -696.791,
+          1071.204
+        ]
+      ]
+    },
+    {
+      "id": "b417-engine-room-2-stores",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — engine room no. 2 and stores",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        74560
+      ],
+      "footprintEvidence": "Source outline fid 74560 (119 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Eng. room No. 2\" and \"Stores\", marked 2-3. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Eng. room No. 2\" and \"Stores\", marked 2-3.",
+      "worldFootprint": [
+        [
+          -719.602,
+          1073.768
+        ],
+        [
+          -697.01,
+          1070.79
+        ],
+        [
+          -696.888,
+          1070.315
+        ],
+        [
+          -697.101,
+          1070.148
+        ],
+        [
+          -697.554,
+          1065.742
+        ],
+        [
+          -720.011,
+          1068.521
+        ],
+        [
+          -720.368,
+          1068.795
+        ]
+      ]
+    },
+    {
+      "id": "b417-engine-room-1",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — engine room no. 1",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        115247
+      ],
+      "footprintEvidence": "Source outline fid 115247 (96 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Eng. room No. 1, conc. roof\" beside the boilers. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Eng. room No. 1, conc. roof\" beside the boilers.",
+      "worldFootprint": [
+        [
+          -699.54,
+          1052.431
+        ],
+        [
+          -689.562,
+          1051.012
+        ],
+        [
+          -690.88,
+          1044.732
+        ],
+        [
+          -694.007,
+          1041.0
+        ],
+        [
+          -700.881,
+          1041.799
+        ],
+        [
+          -700.276,
+          1047.987
+        ],
+        [
+          -700.197,
+          1048.196
+        ],
+        [
+          -699.031,
+          1048.125
+        ],
+        [
+          -698.571,
+          1050.195
+        ],
+        [
+          -698.677,
+          1050.725
+        ],
+        [
+          -699.783,
+          1050.952
+        ]
+      ]
+    },
+    {
+      "id": "b417-grain-tanks",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — iron grain tanks",
+      "material": "metal",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        41772
+      ],
+      "footprintEvidence": "Source outline fid 41772 (162 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Iron grain tanks 50' over\", coloured grey (metal); the tanks stand on a frame. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges. Iron roof follows Goad's grey (metal) colour or an \"iron roof\" note.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Iron grain tanks 50' over\", coloured grey (metal); the tanks stand on a frame.",
+      "worldFootprint": [
+        [
+          -744.889,
+          1077.156
+        ],
+        [
+          -744.852,
+          1078.352
+        ],
+        [
+          -745.186,
+          1078.757
+        ],
+        [
+          -744.347,
+          1084.901
+        ],
+        [
+          -744.057,
+          1085.241
+        ],
+        [
+          -724.863,
+          1082.814
+        ],
+        [
+          -724.513,
+          1082.44
+        ],
+        [
+          -725.64,
+          1074.735
+        ]
+      ],
+      "roofMaterial": "iron"
+    },
+    {
+      "id": "b417-spirit-store-meter",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — methylated spirit store and meter house",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        353957
+      ],
+      "footprintEvidence": "Source outline fid 353957 (60 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Meth. spirit store\" and \"Meter house\". Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Meth. spirit store\" and \"Meter house\".",
+      "worldFootprint": [
+        [
+          -747.908,
+          1103.024
+        ],
+        [
+          -742.142,
+          1102.4
+        ],
+        [
+          -741.882,
+          1102.015
+        ],
+        [
+          -743.078,
+          1092.332
+        ],
+        [
+          -748.595,
+          1093.044
+        ],
+        [
+          -748.991,
+          1093.285
+        ]
+      ]
+    },
+    {
+      "id": "b417-bonded-warehouse",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — formerly bonded warehouse and spirit store",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        3031
+      ],
+      "footprintEvidence": "Part (453 m², x -750 to -718, z 1100 to 1128) of source outline fid 3031, divided on a wall Goad draws; outline from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Formerly bonded whse.\" and \"Spirit store\", each marked \"1-2 & B\" (one and two storeys with basement). Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Formerly bonded whse.\" and \"Spirit store\", each marked \"1-2 & B\" (one and two storeys with basement).",
+      "worldFootprint": [
+        [
+          -727.084,
+          1128.0
+        ],
+        [
+          -729.954,
+          1102.613
+        ],
+        [
+          -742.357,
+          1104.091
+        ],
+        [
+          -742.644,
+          1102.476
+        ],
+        [
+          -742.858,
+          1102.332
+        ],
+        [
+          -747.908,
+          1103.024
+        ],
+        [
+          -745.407,
+          1128.0
+        ]
+      ]
+    },
+    {
+      "id": "b417-still-house",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — still house",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 3,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        3031
+      ],
+      "footprintEvidence": "Part (332 m², x -750 to -718, z 1128 to 1149) of source outline fid 3031, divided on a wall Goad draws; outline from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Still house\", marked 1-3. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Still house\", marked 1-3.",
+      "worldFootprint": [
+        [
+          -728.494,
+          1147.455
+        ],
+        [
+          -719.731,
+          1146.136
+        ],
+        [
+          -720.134,
+          1143.58
+        ],
+        [
+          -720.501,
+          1143.305
+        ],
+        [
+          -722.719,
+          1143.673
+        ],
+        [
+          -723.13,
+          1143.436
+        ],
+        [
+          -725.937,
+          1139.375
+        ],
+        [
+          -727.084,
+          1128.0
+        ],
+        [
+          -745.407,
+          1128.0
+        ],
+        [
+          -743.604,
+          1145.666
+        ],
+        [
+          -736.141,
+          1144.819
+        ],
+        [
+          -736.162,
+          1144.194
+        ],
+        [
+          -735.793,
+          1143.937
+        ],
+        [
+          -729.107,
+          1142.958
+        ]
+      ]
+    },
+    {
+      "id": "b417-boiler-house",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — boiler house",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        19168
+      ],
+      "footprintEvidence": "Source outline fid 19168 (249 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad hatched steam boilers under grey-blue skylights. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges. Glazed alternate roof planes stand for the skylights Goad colours grey-blue.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad hatched steam boilers under grey-blue skylights.",
+      "worldFootprint": [
+        [
+          -691.824,
+          1107.169
+        ],
+        [
+          -705.915,
+          1109.173
+        ],
+        [
+          -703.484,
+          1126.388
+        ],
+        [
+          -689.387,
+          1124.425
+        ]
+      ],
+      "roofGlazing": true
+    },
+    {
+      "id": "b417-engine-room-3-offices",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — engine room no. 3 and offices",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        45871
+      ],
+      "footprintEvidence": "Source outline fid 45871 (154 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Eng. room No. 3, conc. roof\" and \"Offs.\", marked 2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Eng. room No. 3, conc. roof\" and \"Offs.\", marked 2.",
+      "worldFootprint": [
+        [
+          -703.484,
+          1126.388
+        ],
+        [
+          -705.915,
+          1109.173
+        ],
+        [
+          -714.129,
+          1110.205
+        ],
+        [
+          -714.544,
+          1110.42
+        ],
+        [
+          -712.218,
+          1127.457
+        ],
+        [
+          -711.792,
+          1127.63
+        ]
+      ]
+    },
+    {
+      "id": "b417-backhouse-north",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — backhouse",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        3754
+      ],
+      "footprintEvidence": "Source outline fid 3754 (696 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Backhouse\", marked 2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Backhouse\", marked 2.",
+      "worldFootprint": [
+        [
+          -712.533,
+          1161.939
+        ],
+        [
+          -695.332,
+          1160.605
+        ],
+        [
+          -695.506,
+          1160.666
+        ],
+        [
+          -692.328,
+          1160.047
+        ],
+        [
+          -691.218,
+          1159.266
+        ],
+        [
+          -690.191,
+          1157.207
+        ],
+        [
+          -693.421,
+          1132.899
+        ],
+        [
+          -694.18,
+          1131.132
+        ],
+        [
+          -695.49,
+          1129.943
+        ],
+        [
+          -696.821,
+          1129.444
+        ],
+        [
+          -715.936,
+          1131.986
+        ],
+        [
+          -716.658,
+          1132.532
+        ]
+      ]
+    },
+    {
+      "id": "b417-backhouse-south-west",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — south backhouse",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        43106
+      ],
+      "footprintEvidence": "Source outline fid 43106 (159 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Backhouse\", marked 2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Backhouse\", marked 2.",
+      "worldFootprint": [
+        [
+          -702.199,
+          1178.602
+        ],
+        [
+          -704.292,
+          1161.378
+        ],
+        [
+          -713.068,
+          1161.953
+        ],
+        [
+          -713.475,
+          1162.176
+        ],
+        [
+          -711.578,
+          1177.433
+        ],
+        [
+          -709.674,
+          1179.285
+        ]
+      ]
+    },
+    {
+      "id": "b417-backhouse-south-east",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — south backhouse",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        47930
+      ],
+      "footprintEvidence": "Source outline fid 47930 (150 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Backhouse\", marked 2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Backhouse\", marked 2.",
+      "worldFootprint": [
+        [
+          -695.513,
+          1160.666
+        ],
+        [
+          -695.332,
+          1160.605
+        ],
+        [
+          -704.292,
+          1161.378
+        ],
+        [
+          -702.199,
+          1178.602
+        ],
+        [
+          -694.142,
+          1177.819
+        ],
+        [
+          -693.656,
+          1177.189
+        ]
+      ]
+    },
+    {
+      "id": "b417-charger-house",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — charger house",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        31539
+      ],
+      "footprintEvidence": "Source outline fid 31539 (188 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Charger house\", marked 2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Charger house\", marked 2.",
+      "worldFootprint": [
+        [
+          -716.89,
+          1153.552
+        ],
+        [
+          -725.124,
+          1154.384
+        ],
+        [
+          -724.835,
+          1157.549
+        ],
+        [
+          -722.021,
+          1176.655
+        ],
+        [
+          -721.779,
+          1177.039
+        ],
+        [
+          -713.974,
+          1176.06
+        ]
+      ]
+    },
+    {
+      "id": "b417-stables",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — stables",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        21630
+      ],
+      "footprintEvidence": "Source outline fid 21630 (231 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Stables\" with a yellow (wood) range along one side; one storey read. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Stables\" with a yellow (wood) range along one side; one storey read.",
+      "worldFootprint": [
+        [
+          -732.577,
+          1186.449
+        ],
+        [
+          -726.871,
+          1184.741
+        ],
+        [
+          -736.736,
+          1149.246
+        ],
+        [
+          -742.974,
+          1150.084
+        ],
+        [
+          -742.965,
+          1150.709
+        ]
+      ]
+    },
+    {
+      "id": "b417-pump-room",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — pump room",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        206348
+      ],
+      "footprintEvidence": "Source outline fid 206348 (74 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Pump room\" by the wash pit. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Pump room\" by the wash pit.",
+      "worldFootprint": [
+        [
+          -717.923,
+          1146.015
+        ],
+        [
+          -727.817,
+          1147.436
+        ],
+        [
+          -726.745,
+          1154.187
+        ],
+        [
+          -726.397,
+          1154.424
+        ],
+        [
+          -725.124,
+          1154.384
+        ],
+        [
+          -716.89,
+          1153.552
+        ]
+      ]
+    },
+    {
+      "id": "b417-charger-room",
+      "siteId": 417,
+      "source": "os-1893",
+      "name": "Four Mills Distillery — charger room",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        647715
+      ],
+      "footprintEvidence": "Source outline fid 647715 (42 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Charger room\". Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Charger room\".",
+      "worldFootprint": [
+        [
+          -727.817,
+          1147.436
+        ],
+        [
+          -731.104,
+          1147.849
+        ],
+        [
+          -731.867,
+          1148.365
+        ],
+        [
+          -729.235,
+          1157.751
+        ],
+        [
+          -728.866,
+          1158.005
+        ],
+        [
+          -724.835,
+          1157.549
+        ],
+        [
+          -725.124,
+          1154.384
+        ],
+        [
+          -726.397,
+          1154.424
+        ],
+        [
+          -726.745,
+          1154.187
+        ]
+      ]
+    },
+    {
+      "id": "b418-grain-silos",
+      "siteId": 418,
+      "source": "os-1893",
+      "name": "Sun Flour Mills — grain silos",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        13577
+      ],
+      "footprintEvidence": "Part (193 m², x -708 to -694.5, z 984 to 1004) of source outline fid 13577, divided on a wall Goad draws; outline from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Grain silos, solid wood construction, iron bottoms forming ceiling of ground floor\", marked 2 1/2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Grain silos, solid wood construction, iron bottoms forming ceiling of ground floor\", marked 2 1/2.",
+      "worldFootprint": [
+        [
+          -706.054,
+          986.221
+        ],
+        [
+          -706.258,
+          986.65
+        ],
+        [
+          -707.133,
+          996.589
+        ],
+        [
+          -707.334,
+          1001.657
+        ],
+        [
+          -694.5,
+          1001.891
+        ],
+        [
+          -694.5,
+          986.066
+        ]
+      ]
+    },
+    {
+      "id": "b418-flour-warehouse-3",
+      "siteId": 418,
+      "source": "os-1893",
+      "name": "Sun Flour Mills — flour warehouse 3",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 4,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        13577
+      ],
+      "footprintEvidence": "Part (116 m², x -694.5 to -686, z 984 to 1004) of source outline fid 13577, divided on a wall Goad draws; outline from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"(3) Flour whse.\" with \"4th\" floor marks. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"(3) Flour whse.\" with \"4th\" floor marks.",
+      "worldFootprint": [
+        [
+          -687.289,
+          1002.057
+        ],
+        [
+          -687.387,
+          985.993
+        ],
+        [
+          -694.5,
+          986.066
+        ],
+        [
+          -694.5,
+          1001.891
+        ],
+        [
+          -690.875,
+          1002.087
+        ]
+      ]
+    },
+    {
+      "id": "b418-flour-warehouse-2",
+      "siteId": 418,
+      "source": "os-1893",
+      "name": "Sun Flour Mills — flour warehouse 2 and wheat cleaning",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 4.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        12693
+      ],
+      "footprintEvidence": "Source outline fid 12693 (322 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"(2) Flour whse.\", marked 4 1/2, with \"Wheat cleaning\" at its south end. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"(2) Flour whse.\", marked 4 1/2, with \"Wheat cleaning\" at its south end.",
+      "worldFootprint": [
+        [
+          -670.132,
+          982.35
+        ],
+        [
+          -684.395,
+          983.008
+        ],
+        [
+          -687.429,
+          983.429
+        ],
+        [
+          -687.307,
+          1008.133
+        ],
+        [
+          -687.041,
+          1008.47
+        ],
+        [
+          -680.017,
+          1008.531
+        ],
+        [
+          -679.832,
+          1003.947
+        ],
+        [
+          -680.112,
+          996.324
+        ],
+        [
+          -679.934,
+          995.982
+        ],
+        [
+          -669.633,
+          995.703
+        ]
+      ]
+    },
+    {
+      "id": "b418-mill-1",
+      "siteId": 418,
+      "source": "os-1893",
+      "name": "Sun Flour Mills — mill (15 sets of rollers)",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 4.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        59940
+      ],
+      "footprintEvidence": "Source outline fid 59940 (134 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"(1) Mill (15 sets rollers)\", marked 4 1/2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"(1) Mill (15 sets rollers)\", marked 4 1/2.",
+      "worldFootprint": [
+        [
+          -669.633,
+          995.703
+        ],
+        [
+          -659.902,
+          995.576
+        ],
+        [
+          -659.757,
+          995.157
+        ],
+        [
+          -660.414,
+          981.839
+        ],
+        [
+          -661.015,
+          981.687
+        ],
+        [
+          -670.132,
+          982.35
+        ]
+      ]
+    },
+    {
+      "id": "b418-boilers-offices",
+      "siteId": 418,
+      "source": "os-1893",
+      "name": "Sun Flour Mills — boiler house, coal store and offices",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1.5,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        16094
+      ],
+      "footprintEvidence": "Source outline fid 16094 (277 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad hatched boilers and \"Coals\" (one storey) with offices and a cyclone room marked 2 at the north-east corner. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad hatched boilers and \"Coals\" (one storey) with offices and a cyclone room marked 2 at the north-east corner.",
+      "worldFootprint": [
+        [
+          -653.605,
+          982.778
+        ],
+        [
+          -660.383,
+          982.465
+        ],
+        [
+          -659.757,
+          995.157
+        ],
+        [
+          -659.902,
+          995.576
+        ],
+        [
+          -673.216,
+          995.868
+        ],
+        [
+          -673.098,
+          996.986
+        ],
+        [
+          -672.238,
+          997.314
+        ],
+        [
+          -672.066,
+          997.799
+        ],
+        [
+          -672.354,
+          998.739
+        ],
+        [
+          -673.128,
+          999.216
+        ],
+        [
+          -673.043,
+          1002.209
+        ],
+        [
+          -671.59,
+          1003.237
+        ],
+        [
+          -671.573,
+          1003.992
+        ],
+        [
+          -649.002,
+          1004.271
+        ],
+        [
+          -648.46,
+          995.077
+        ],
+        [
+          -654.55,
+          995.09
+        ],
+        [
+          -654.837,
+          994.778
+        ],
+        [
+          -655.187,
+          987.22
+        ],
+        [
+          -655.121,
+          986.661
+        ],
+        [
+          -654.772,
+          986.366
+        ],
+        [
+          -654.214,
+          986.464
+        ],
+        [
+          -653.778,
+          986.246
+        ]
+      ]
+    },
+    {
+      "id": "b418-cyclone-room",
+      "siteId": 418,
+      "source": "os-1893",
+      "name": "Sun Flour Mills — cyclone room",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        395799
+      ],
+      "footprintEvidence": "Source outline fid 395799 (58 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Cyclone room\" beside the boilers. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Cyclone room\" beside the boilers.",
+      "worldFootprint": [
+        [
+          -673.131,
+          1003.967
+        ],
+        [
+          -673.128,
+          999.216
+        ],
+        [
+          -672.354,
+          998.739
+        ],
+        [
+          -672.066,
+          997.799
+        ],
+        [
+          -672.238,
+          997.314
+        ],
+        [
+          -673.098,
+          996.986
+        ],
+        [
+          -673.216,
+          995.868
+        ],
+        [
+          -679.934,
+          995.982
+        ],
+        [
+          -680.112,
+          996.324
+        ],
+        [
+          -679.832,
+          1003.947
+        ]
+      ]
+    },
+    {
+      "id": "b418-bag-room",
+      "siteId": 418,
+      "source": "os-1893",
+      "name": "Sun Flour Mills — bag room",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        522192
+      ],
+      "footprintEvidence": "Source outline fid 522192 (50 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Bag room\", marked 1. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Bag room\", marked 1.",
+      "worldFootprint": [
+        [
+          -690.875,
+          1002.087
+        ],
+        [
+          -691.23,
+          1001.951
+        ],
+        [
+          -707.405,
+          1001.766
+        ],
+        [
+          -706.77,
+          1004.95
+        ],
+        [
+          -700.803,
+          1004.719
+        ],
+        [
+          -691.053,
+          1005.038
+        ],
+        [
+          -690.782,
+          1004.517
+        ]
+      ]
+    },
+    {
+      "id": "b418-dwelling",
+      "siteId": 418,
+      "source": "os-1893",
+      "name": "Sun Flour Mills — dwelling",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        456957
+      ],
+      "footprintEvidence": "Source outline fid 456957 (54 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"D.\" (dwelling) at 504, marked 2. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"D.\" (dwelling) at 504, marked 2.",
+      "worldFootprint": [
+        [
+          -663.627,
+          975.899
+        ],
+        [
+          -657.035,
+          976.121
+        ],
+        [
+          -657.041,
+          969.613
+        ],
+        [
+          -658.42,
+          968.526
+        ],
+        [
+          -663.633,
+          968.244
+        ],
+        [
+          -663.877,
+          968.641
+        ],
+        [
+          -664.031,
+          972.733
+        ],
+        [
+          -664.699,
+          973.325
+        ],
+        [
+          -664.671,
+          974.425
+        ],
+        [
+          -664.243,
+          974.635
+        ],
+        [
+          -664.023,
+          975.678
+        ]
+      ]
+    },
+    {
+      "id": "b418-office",
+      "siteId": 418,
+      "source": "os-1893",
+      "name": "Sun Flour Mills — office",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 2,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        609259
+      ],
+      "footprintEvidence": "Source outline fid 609259 (44 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad \"Off. 1st\" at 506. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad \"Off. 1st\" at 506.",
+      "worldFootprint": [
+        [
+          -653.421,
+          976.308
+        ],
+        [
+          -660.216,
+          976.14
+        ],
+        [
+          -660.674,
+          981.688
+        ],
+        [
+          -660.414,
+          981.839
+        ],
+        [
+          -660.316,
+          982.421
+        ],
+        [
+          -653.605,
+          982.778
+        ]
+      ]
+    },
+    {
+      "id": "b418-north-shed-a",
+      "siteId": 418,
+      "source": "os-1893",
+      "name": "Sun Flour Mills — north shed",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        195530
+      ],
+      "footprintEvidence": "Source outline fid 195530 (75 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad range at 500-502 north of the mill. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad range at 500-502 north of the mill.",
+      "worldFootprint": [
+        [
+          -657.338,
+          964.99
+        ],
+        [
+          -657.509,
+          964.509
+        ],
+        [
+          -657.25,
+          953.309
+        ],
+        [
+          -663.745,
+          953.436
+        ],
+        [
+          -663.521,
+          953.994
+        ],
+        [
+          -663.913,
+          964.684
+        ],
+        [
+          -663.609,
+          965.202
+        ],
+        [
+          -657.672,
+          965.279
+        ]
+      ]
+    },
+    {
+      "id": "b418-north-shed-b",
+      "siteId": 418,
+      "source": "os-1893",
+      "name": "Sun Flour Mills — north shed",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        215121
+      ],
+      "footprintEvidence": "Source outline fid 215121 (73 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad range at 500-502 north of the mill. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad range at 500-502 north of the mill.",
+      "worldFootprint": [
+        [
+          -657.25,
+          953.309
+        ],
+        [
+          -657.509,
+          964.509
+        ],
+        [
+          -657.338,
+          964.99
+        ],
+        [
+          -651.511,
+          965.237
+        ],
+        [
+          -650.958,
+          953.205
+        ]
+      ]
+    },
+    {
+      "id": "b418-north-shed-c",
+      "siteId": 418,
+      "source": "os-1893",
+      "name": "Sun Flour Mills — north shed",
+      "material": "brick",
+      "roof": "gable",
+      "storeysEstimate": 1,
+      "footprintSource": "author-os-footprints-1891-96",
+      "sourceFids": [
+        253707
+      ],
+      "footprintEvidence": "Source outline fid 253707 (68 m²) from the author's 1891–96 OS building GeoPackage, simplified at 0.15 m; checked against the cached NLS OS London five-foot mosaic (os-london-five-foot-1893) and the registered Goad sheet goad-g9-1.",
+      "heightEvidence": "Storeys from Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff): Goad range at 500-502 north of the mill. Eaves height is the project default for that storey count (explicit estimate).",
+      "roofEvidence": "Pitched roof is an interpretation; Goad and the OS draw no ridges.",
+      "functionEvidence": "Use as lettered on Goad sheet goad-g9-1: Goad range at 500-502 north of the mill.",
+      "worldFootprint": [
+        [
+          -650.958,
+          953.205
+        ],
+        [
+          -651.511,
+          965.237
+        ],
+        [
+          -646.071,
+          965.616
+        ],
+        [
+          -645.56,
+          957.581
+        ],
+        [
+          -645.546,
+          953.125
+        ]
+      ]
+    }
+  ],
+  "additionalStructures": [
+    {
+      "id": "stack-417-140ft",
+      "siteId": 417,
+      "source": "os-1893",
+      "kind": "chimney",
+      "name": "Four Mills Distillery chimney",
+      "x": -723.412,
+      "z": 1131.287,
+      "radius": 1.1,
+      "section": "round",
+      "material": "brick",
+      "baseHeight": 0.34,
+      "rotation": 0.0,
+      "sourceFootprintFid": 880792,
+      "sourcePolygons": [
+        [
+          [
+            [
+              -725.757,
+              1130.328
+            ],
+            [
+              -725.455,
+              1132.616
+            ],
+            [
+              -723.974,
+              1133.636
+            ],
+            [
+              -722.313,
+              1133.381
+            ],
+            [
+              -721.07,
+              1132.163
+            ],
+            [
+              -721.102,
+              1130.404
+            ],
+            [
+              -722.385,
+              1129.19
+            ],
+            [
+              -724.056,
+              1129.041
+            ],
+            [
+              -724.924,
+              1129.401
+            ]
+          ]
+        ]
+      ],
+      "evidenceType": "map-interpretation",
+      "supportingSources": [
+        "author-os-footprints-1891-96",
+        "os-1893",
+        "goad-g9-1"
+      ],
+      "symbolKey": "goad-symbol-key-1926",
+      "positionEvidence": "Placed on the small outline fid 880792 (16.9 m²) where Goad prints an octagonal chimney symbol marked \"140'\" between the still house and the backhouse (drawn round: the renderer has no octagon).",
+      "profileEvidence": "Square section follows the mapped base; taper, crown and brickwork are interpreted, not measured.",
+      "height": 42.672,
+      "mappedHeightFeet": 140,
+      "heightEvidence": "\"140\" printed beside the Goad chimney symbol, read as height in feet; converted at 0.3048 m/ft."
+    },
+    {
+      "id": "kiln-417-1",
+      "siteId": 417,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -735.0,
+      "z": 1027.2,
+      "radius": 2.9,
+      "height": 16.0,
+      "evidence": "First of four circles lettered \"Kilns, brick cones\" under the malt store on Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g9-1, inside range b417-malting-floors; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 5.8 m.",
+      "heightEvidence": "Explicit estimate: 16 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g9-1"
+      ],
+      "evidenceType": "map-interpretation"
+    },
+    {
+      "id": "kiln-417-2",
+      "siteId": 417,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -728.6,
+      "z": 1026.8,
+      "radius": 2.9,
+      "height": 16.0,
+      "evidence": "Second of four circles lettered \"Kilns, brick cones\" on Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g9-1, inside range b417-malting-floors; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 5.8 m.",
+      "heightEvidence": "Explicit estimate: 16 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g9-1"
+      ],
+      "evidenceType": "map-interpretation"
+    },
+    {
+      "id": "kiln-417-3",
+      "siteId": 417,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -722.2,
+      "z": 1026.4,
+      "radius": 2.9,
+      "height": 16.0,
+      "evidence": "Third of four circles lettered \"Kilns, brick cones\" on Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g9-1, inside range b417-malting-floors; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 5.8 m.",
+      "heightEvidence": "Explicit estimate: 16 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g9-1"
+      ],
+      "evidenceType": "map-interpretation"
+    },
+    {
+      "id": "kiln-417-4",
+      "siteId": 417,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -715.4,
+      "z": 1025.8,
+      "radius": 2.9,
+      "height": 16.0,
+      "evidence": "Fourth of four circles lettered \"Kilns, brick cones\" on Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g9-1, inside range b417-malting-floors; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 5.8 m.",
+      "heightEvidence": "Explicit estimate: 16 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g9-1"
+      ],
+      "evidenceType": "map-interpretation"
+    },
+    {
+      "id": "kiln-417-5",
+      "siteId": 417,
+      "source": "os-1893",
+      "kind": "kiln",
+      "x": -707.4,
+      "z": 1025.0,
+      "radius": 2.9,
+      "height": 16.0,
+      "evidence": "Circle lettered \"Kiln, slate clad cone\" on Goad Insurance Plan of London, East vol. G sheet 9 (part 1), dated February 1894, 40 ft to the inch (reference/factory-building-survey/goad-g9-1.tiff).",
+      "positionEvidence": "Circle centre read on the registered Goad sheet goad-g9-1, inside range b417-malting-floors; the OS draws the range, not the kiln.",
+      "radiusEvidence": "Goad circle diameter about 5.8 m.",
+      "heightEvidence": "Explicit estimate: 16 m, enough for the kiln to rise above its range; no height is printed.",
+      "geometryEvidence": "Drawn with the renderer’s simple cylindrical kiln; cone, cowl or pyramid roof not modelled.",
+      "supportingSources": [
+        "goad-g9-1"
+      ],
+      "evidenceType": "map-interpretation"
+    }
+  ]
+}
