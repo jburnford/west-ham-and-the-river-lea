@@ -9,6 +9,7 @@ from shapely.geometry import shape, box, Polygon, Point, MultiPoint, LineString
 from shapely.geometry.polygon import orient
 from shapely.ops import transform, triangulate, unary_union
 from shapely.affinity import rotate
+from shapely import segmentize, constrained_delaunay_triangles, contains_xy, distance as shapely_distance, points as shapely_points
 from housing_frontages import split_at_streets
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,6 +18,101 @@ project = Transformer.from_crs(4326, 27700, always_xy=True).transform
 SEWER_WATER_SETBACK = 1.5  # metres between drawn water and the earth bank; the end wall stands in it
 SEWER_BANK_LATTICE = (2, 0)  # x, z phase (mod 12 m) of the bank sample grid
 SEWER_ROAD_SETBACK = 1.5  # metres between street edge and bank; build_infrastructure.py used roads.buffer(1.5)
+# Interpreted earthwork form of the embankment (task T8); see EarthBank.
+SEWER_TOE_SEED = 1864  # seeds the toe wander and slope variation; any fixed value reproduces the same bank
+SEWER_TOE_AMPLITUDE = 2.0  # metres; bound on the toe's wander either side of the 22 m half base
+SEWER_BANK_SPACING = 5  # metres between slope sample rows along the bank near the scene
+SEWER_BANK_ROWS = (0, .25, .5, .78)  # slope fractions (crest edge 0 to toe 1) of the sample rows
+
+
+class EarthBank:
+    """Interpreted earth form of the Northern Outfall Sewer embankment.
+
+    Documented: a 15 m crest, 44 m base and about 7.4 m height (the sewer
+    record). Interpreted: everything about the section between crest edge and
+    toe. The toe outline uses rounded joins and caps, not mitres. Each toe wanders
+    independently up to SEWER_TOE_AMPLITUDE either side of the 22 m half base,
+    as a seeded sum of three long waves (zero mean, so the base stays 44 m on
+    average). The slope is a convex shoulder and concave foot: a blend of a
+    straight batter and a smoothstep, with the blend varying slowly along each
+    side, plus a low swell (at most 0.1 m) that vanishes at crest edge and toe.
+    Heights are returned in the bank convention (docs/app.js scales y by
+    cover / sewer height): the full sewer height at the crest edge, so slope
+    and grassed crest meet without a step, 0.1 lower under the crest sheet
+    (no coincident faces) and 0 at the toe. The straight profile stopped at
+    7.25, which left a strip of the deck slab showing along the crest edge.
+    """
+
+    def __init__(self, line, top, crest_half=7.5, toe=22, seed=SEWER_TOE_SEED, amplitude=SEWER_TOE_AMPLITUDE):
+        rng = random.Random(seed)
+        self.line, self.length = line, line.length
+        self.crest_half, self.toe, self.top, self.under_crest = crest_half, toe, top, top-.1
+        shares, bands = (.5, .3, .2), ((120, 180), (55, 85), (28, 40))
+        self.toe_waves = {side: [(amplitude*s, rng.uniform(*b), rng.uniform(0, 2*math.pi)) for s, b in zip(shares, bands)]
+                          for side in (1, -1)}
+        self.blend_waves = {side: (rng.uniform(70, 110), rng.uniform(0, 2*math.pi)) for side in (1, -1)}
+        self.swell_waves = {side: (rng.uniform(18, 26), rng.uniform(0, 2*math.pi)) for side in (1, -1)}
+
+    def taper(self, d):
+        # The far extensions end in plain round caps, so both toes agree there.
+        return max(0, min(1, d/60, (self.length-d)/60))
+
+    def toe_offset(self, d, side):
+        wave = sum(a*math.sin(2*math.pi*d/w+p) for a, w, p in self.toe_waves[side])
+        return self.toe+self.taper(d)*wave
+
+    def locate(self, x, z):
+        p = Point(x, z)
+        d = self.line.project(p)
+        c = self.line.interpolate(d)
+        a, b = self.line.interpolate(max(0, d-.5)), self.line.interpolate(min(self.length, d+.5))
+        side = 1 if (b.x-a.x)*(z-c.y)-(b.y-a.y)*(x-c.x) >= 0 else -1
+        return d, side, math.hypot(x-c.x, z-c.y), c
+
+    def height(self, x, z):
+        d, side, dist, _ = self.locate(x, z)
+        if dist < self.crest_half-.01:
+            return self.under_crest
+        if dist <= self.crest_half:
+            return self.top
+        u = (dist-self.crest_half)/(self.toe_offset(d, side)-self.crest_half)
+        if u >= 1:
+            return 0
+        w, p = self.blend_waves[side]
+        k = .5+.15*math.sin(2*math.pi*d/w+p)
+        fall = (1-k)*u+k*u*u*(3-2*u)
+        w, p = self.swell_waves[side]
+        swell = .1*self.taper(d)*math.sin(math.pi*u)*math.sin(2*math.pi*d/w+p)
+        return round(max(0, min(self.top, self.top*(1-fall)+swell)), 2)
+
+    def radial(self, x, z, u):
+        """Move (x, z) along its offset from the centreline to slope fraction u."""
+        d, side, dist, c = self.locate(x, z)
+        if dist < 1e-6:
+            return None
+        r = self.crest_half+u*(self.toe_offset(d, side)-self.crest_half)
+        return (c.x+(x-c.x)*r/dist, c.y+(z-c.y)*r/dist)
+
+    def footprint(self, step=4):
+        outline = segmentize(self.line.buffer(self.toe, quad_segs=16), step)
+        ring = [q for q in (self.radial(x, z, 1) for x, z in outline.exterior.coords[:-1]) if q]
+        shape = Polygon(ring).buffer(0)
+        return max(getattr(shape, 'geoms', [shape]), key=lambda g: g.area)
+
+    def rows(self, spacing=SEWER_BANK_SPACING, near=1300):
+        """Sample rows along the slope at SEWER_BANK_ROWS, closer near the scene."""
+        out = []
+        for side in (1, -1):
+            for u in SEWER_BANK_ROWS:
+                curve = self.line.offset_curve(side*(self.crest_half+u*(self.toe-self.crest_half)), quad_segs=8)
+                for part in getattr(curve, 'geoms', [curve]):
+                    for i, (x, z) in enumerate(segmentize(part, spacing).coords):
+                        if math.hypot(x, z) > near and i % 3:
+                            continue
+                        q = self.radial(x, z, u)
+                        if q:
+                            out.append(q)
+        return out
 
 
 def drawn_water(result):
@@ -99,7 +195,9 @@ def densify_bank_ends(piece, line, obstacles, step=2):
     crest edge, so the triangulated bank keeps its full profile up to the end
     wall instead of sagging to the toe height between distant corners."""
     edges = [o.boundary.buffer(.02) for o in obstacles.values()]
-    crest = line.buffer(7.5, join_style=2).boundary
+    # The crest edge of the EarthBank profile (radially 7.5 m from the centreline,
+    # so rounded at bends); the mitred crest sheet differs by at most 0.07 m there.
+    crest = line.buffer(7.5, quad_segs=8).boundary
 
     def ring(coords):
         out = []
@@ -392,37 +490,55 @@ def build():
     # The embankment fills small marsh pools rather than bridging them.
     drawn=unary_union([g for g in getattr(drawn,'geoms',[drawn]) if g.area>=50])
     obstacles={'water':drawn.buffer(SEWER_WATER_SETBACK),'railway':rail}
-    bank=line.buffer(22,join_style=2).difference(unary_union(list(obstacles.values())))
+    earth=EarthBank(line,context['sewer']['height'])
+    footprint=earth.footprint()
+    bank=footprint.difference(unary_union(list(obstacles.values())))
     crest=line.buffer(7.5,join_style=2)
     context['sewer']['crest']=[[[[round(x,2),round(z,2)] for x,z in crest.exterior.coords]]]
     # Drop slivers left between water bodies; they cannot carry an embankment.
     pieces=[densify_bank_ends(p,line,obstacles) for p in getattr(bank,'geoms',[bank]) if p.area>=20]
-    # The allotment layout keeps the bank outline it was laid out against;
-    # street openings through the embankment do not move the garden.
-    garden_bank=unary_union(pieces)
+    # The allotment layout keeps the bank outline it was laid out against (the
+    # earlier straight 22 m mitred outline); neither the earthwork form nor the
+    # street openings through the embankment move the garden.
+    laid_out=line.buffer(22,join_style=2).difference(unary_union(list(obstacles.values())))
+    garden_bank=unary_union([p for p in getattr(laid_out,'geoms',[laid_out]) if p.area>=20])
     # Streets pass under the sewer (Abbey Lane, Mill Meads works road) or meet
     # its toe; the bank stops 1.5 m from the street and gets a brick end wall.
     roads=sewer_road_openings(line)
     if roads:
         obstacles['road']=unary_union([c for _,c in roads.values()]).buffer(SEWER_ROAD_SETBACK)
-        bank=line.buffer(22,join_style=2).difference(unary_union(list(obstacles.values())))
+        bank=footprint.difference(unary_union(list(obstacles.values())))
         pieces=[densify_bank_ends(p,line,obstacles) for p in getattr(bank,'geoms',[bank]) if p.area>=20]
-    bank_height=lambda x,z:round(max(0,min(7.25,(22-line.distance(Point(x,z)))*7.25/14.5)),2)
+    bank_height=earth.height
+    rows=earth.rows()
+    rows_x=[x for x,_ in rows];rows_z=[z for _,z in rows]
     context['sewer']['banks']=[]
     for piece in pieces:
         samples=list(piece.exterior.coords)
         for hole in piece.interiors:samples.extend(hole.coords)
         minx,minz,maxx,maxz=piece.bounds
-        # One fixed 12 m lattice for every piece, so moving a bank end only
-        # re-triangulates near that end. Its phase keeps the High Street
-        # stretch on the lattice it was first triangulated on.
+        # The flat crest keeps a sparse fixed 12 m lattice; the slopes get rows
+        # along the earth profile. Rows closer than 0.6 m to the outline are
+        # left out so no sliver triangles form against the densified ends.
         x0,z0=int(minx)-(int(minx)-SEWER_BANK_LATTICE[0])%12,int(minz)-(int(minz)-SEWER_BANK_LATTICE[1])%12
         for x in range(x0,int(maxx)+1,12):
             for z in range(z0,int(maxz)+1,12):
-                if piece.contains(Point(x,z)):samples.append((x,z))
-        for tri in triangulate(MultiPoint(samples)):
-            if piece.covers(tri):
-                context['sewer']['banks'].append([[round(x,2),bank_height(x,z),round(z,2)] for x,z in list(tri.exterior.coords)[:3][::-1]])
+                if line.distance(Point(x,z))<earth.crest_half-.5 and piece.contains(Point(x,z)):samples.append((x,z))
+        inside=[i for i in range(len(rows)) if minx<=rows_x[i]<=maxx and minz<=rows_z[i]<=maxz]
+        if inside:
+            xs=[rows_x[i] for i in inside];zs=[rows_z[i] for i in inside]
+            keep=contains_xy(piece,xs,zs)
+            clear=shapely_distance(piece.boundary,shapely_points(list(zip(xs,zs))))>.6
+            samples+=[(x,z) for x,z,k,c in zip(xs,zs,keep,clear) if k and c]
+        kept=[tri for tri in triangulate(MultiPoint(samples)) if piece.covers(tri)]
+        # Unconstrained Delaunay can miss concave corners of the outline; fill
+        # any remainder with constrained triangles on the same vertices.
+        rest=piece.difference(unary_union(kept)) if kept else piece
+        for part in getattr(rest,'geoms',[rest]):
+            if part.geom_type=='Polygon' and part.area>.01:
+                kept+=[t for t in constrained_delaunay_triangles(part).geoms if t.area>1e-4]
+        for tri in kept:
+            context['sewer']['banks'].append([[round(x,2),bank_height(x,z),round(z,2)] for x,z in list(orient(tri,-1).exterior.coords)[:3]])
     ends=sewer_bank_ends([orient(p) for p in pieces],line,obstacles,bank_height)
     context['sewer']['bankEnds']=annotate_road_ends(ends,line,roads,context['sewer']['crestWidth'])
     context['sewer']['bankEndsEvidence']=('Bank ends follow the drawn water edge, set back '+str(SEWER_WATER_SETBACK)+' m, and the 6 m railway corridor. '
@@ -431,6 +547,16 @@ def build():
         'Road ends stand '+str(SEWER_ROAD_SETBACK)+' m from the traced street corridors (docs/data/infrastructure.json roads, '
         'Stratford High Street and paths excepted), so their positions follow the mapped streets. Where a street passes under the '
         'sewer, the brick arch carrying the deck, its segmental form, rise and springing height are interpreted, not a documented structure.')
+    context['sewer']['bankFormEvidence']=('Kept from the sewer record: the mapped centreline, the 15 m crest, the 44 m base (mean) and the height of '
+        'about 7.4 m (author guidance); the exact nineteenth-century section is unresolved. Interpreted, not surveyed: the earthwork form between crest edge and toe. '
+        'The toe outline has rounded joins and caps instead of mitred corners. Each toe wanders independently about the 22 m half base, '
+        'by a seeded sum of three long waves (seed '+str(SEWER_TOE_SEED)+', wavelengths 28-180 m, amplitude bound '
+        '±'+str(SEWER_TOE_AMPLITUDE)+' m, zero mean), tapering to the plain 22 m over the last 60 m of the inferred far extensions. '
+        'The slope is a convex shoulder and concave foot (a straight batter blended with a smoothstep, the blend varying 0.35-0.65 along '
+        'each side) with a swell of at most 0.1 m that vanishes at crest edge and toe, so no slope is a single plane; the slope '
+        'meets the crest at the full height. '
+        'The crest stays the exact 15 m band (its outline is unchanged; the bends are gentle, so its mitres add at most 0.07 m), grassed where it covers '
+        'the earth bank and the sewer inside it; the stone deck shows only where it spans water, railway or street.')
     garden=Polygon(context['garden']['footprint']).difference(water.buffer(8)).difference(garden_bank)
     access=unary_union([LineString(r['route']).buffer(r['width']/2+1) for r in context['garden']['accessCorridors']])
     garden=garden.difference(access)

@@ -120,6 +120,20 @@ for tri in data['neighbourhood']['sewer']['banks']:
     coefficients=np.linalg.solve(np.array([[p[0],p[2],1] for p in tri]),np.array([p[1] for p in tri]))
     for cut in triangles(polygon.difference(road_openings),8):
         sewer_banks.append([[x,round(float(np.dot([x,z,1],coefficients)),3),z] for x,z in cut])
+# No opening through the embankment is mapped for any path: path traces end at
+# the bank toe (the Mill Mead riverbank path is drawn in two parts).
+sewer_footprint=unary_union([Polygon([(p[0],p[2]) for p in t]).buffer(1e-5) for t in sewer_banks if Polygon([(p[0],p[2]) for p in t]).area>1e-6])
+assert path.intersection(sewer_footprint).area<.01,'A path runs through the sewer embankment'
+# Split the crest along the bank outline, so docs/app.js can grass the crest over
+# the earth bank and keep the stone deck over the openings without a sawtooth
+# seam. Only crest triangles touching an opening are re-triangulated; the rest,
+# including the whole High Street stretch, keep their earlier triangulation.
+crest_deck=sewer_crest.difference(sewer_footprint.buffer(.005,join_style=2)).difference(street_opening.buffer(3)).simplify(.02)
+crest_triangles=[];redo=[]
+for t in triangles(sewer_crest,4):
+    (redo if Polygon(t).intersects(crest_deck.buffer(.01)) else crest_triangles).append(t)
+redo=unary_union([Polygon(t) for t in redo])
+crest_triangles+=triangles(redo.difference(crest_deck),4)+triangles(redo.intersection(crest_deck),4)
 railways=[]
 branch_connection=read('data/maps/woolwich-northern-connection.json')
 for r in data['neighbourhood']['railways']:
@@ -166,7 +180,7 @@ result={'sources':'data/maps/road-traces.json; data/maps/district-road-traces.js
         'limitations':'Centrelines approximate; widths, paving, railway levels and bridge structures interpreted. Registration can differ by tens of metres. Buildings and waterways clipped out of road surface; named mapped crossings bridged separately.',
         'roads':routes,'roadTriangles':triangles(roads),'shoulderTriangles':triangles(shoulder),'pathTriangles':triangles(path),'roadBridges':bridges,'railways':railways,'sewerBanks':sewer_banks}
 result['sewerHighStreet']=crossing_spec
-result['sewerCrestTriangles']=triangles(sewer_crest,4)
+result['sewerCrestTriangles']=crest_triangles
 result['sewerRailEdges']=sewer_edges
 remaining=roads
 result['roadSurfaces']={}
