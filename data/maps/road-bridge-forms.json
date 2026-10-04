@@ -1,0 +1,145 @@
+{
+  "description": "Structural form chosen for each road bridge in docs/data/infrastructure.json roadBridges, about 1900: arches, abutments, piers, parapets or railings, and wing walls. The bridge records (route, width, deck height, style, arch count) are not changed here; this register adds the structure under and beside the deck. docs/road-bridges.js carries an identical copy as bridgeForms, and scripts/check_road_bridges.mjs fails if the two differ.",
+  "frame": "Stations are metres along each bridge route from its first point. Offsets are metres across it, positive on the left (the normal (-uz, ux)). An abutment face lies at station abutment + skew * offset, so skew is the shift of the face per metre across the deck. Heights are scene y metres; the static water surface is y 0.06 and the animated tide reaches y 1.1.",
+  "sources": [
+    {
+      "id": "vch",
+      "citation": "Victoria County History, Essex VI, pp. 57-61, as cited in each roadBridges evidence string for the structural family (stone or brick arch, deck).",
+      "use": "Structural family only. The text is not held in this repository and was not read for this task; spans, rises, ring depths and parapet forms are estimates."
+    },
+    {
+      "id": "road-trace-notes",
+      "citation": "data/maps/district-road-traces.json notes",
+      "use": "Bow Bridge is one granite-faced span completed 1839; St Thomas brick arch count is not established by the written source; High Street bridge names follow the nineteenth-century transposition; the three lane connections are provisional, with deck or culvert unresolved."
+    },
+    {
+      "id": "os-five-foot",
+      "citation": "OS London five-foot plan, 1893-96 revision, NLS tiles read with scripts/factory_map_sources.py mosaic() at zoom 18 (about 0.4 m per pixel)",
+      "use": "Named crossings and the parapet or road edge lines across each river. At this resolution the abutment faces under the deck cannot be read; the plan does show each crossing as one continuous carriageway between buildings."
+    },
+    {
+      "id": "os-heights",
+      "citation": "data/maps/lower-lea-region/height-observations.opus-2026-10-02.geojson (OS 25-inch, 1893-96 revision, feet above OD Liverpool)",
+      "use": "Bench marks cut on the Pegs Hole Bridge parapet, at St Michael's Bridge and on the hatched south parapet of the Bow Bridge east approach show masonry parapets there. Spot heights on the crossings are compared with the recorded deck heights in the T12a report; they are not used to change any height."
+    },
+    {
+      "id": "photo-catalogue",
+      "citation": "reference/photo-review-2026-10-03/reports/photo-catalogue.md",
+      "use": "No archive image shows these bridges, so no elevation detail is copied from a photograph."
+    },
+    {
+      "id": "drawn-water",
+      "citation": "Water polygons as drawn by docs/app.js (tide, reviewed connections, retained rivers, marsh ditches, river system)",
+      "use": "Abutment stations sit at the drawn water edges measured along each route on the centreline and both deck edges (waterEdges below). They are model measurements, not surveyed abutments."
+    }
+  ],
+  "defaults": {
+    "springing": 0.5,
+    "parapetHeight": 1.0,
+    "copingHeight": 0.12,
+    "parapetThickness": 0.45,
+    "railingHeight": 1.05,
+    "clearZoneMargin": 2.0,
+    "evidence": "Estimates for every bridge: springing 0.44 m above the static water so the arch feet stand clear of it; masonry parapet 1.0 m plus 0.12 m coping (about 1.1 m above the carriageway, 1.0 m above the footway); railings 1.05 m. Approach fill is not drawn within 2 m of either deck edge between the abutment faces."
+  },
+  "bridges": {
+    "bow-bridge": {
+      "form": "stone-arch",
+      "arches": 1,
+      "abutments": [3.0, 29.5],
+      "skew": 0.4,
+      "crownDepth": 0.9,
+      "ringDepth": 0.6,
+      "abutmentLength": 2.5,
+      "waterEdges": { "centre": [2.0, 29.0], "left": [6.5, 30.5], "right": [0.0, 27.25] },
+      "evidence": "Documented: one granite-faced span completed 1839 (road-trace notes), stone family (VCH as cited); bench mark on the hatched south parapet of the east approach (OS 25-inch). Mapped: the crossing on the OS five-foot plan. Measured in the model: the River Lea crosses the route obliquely, so the abutment faces follow the bank with a skew of 0.4 m per metre. Estimated: one segmental arch of 26.5 m along the road, crown soffit 0.9 m below the deck, springing 0.5 m, ring and parapet dimensions. The 1901-06 rebuilding is not shown."
+    },
+    "pegshole-bridge": {
+      "form": "stone-arch",
+      "arches": 2,
+      "abutments": [8.0, 27.0],
+      "skew": 0,
+      "pier": 1.8,
+      "crownDepth": 0.6,
+      "ringDepth": 0.45,
+      "abutmentLength": 2.5,
+      "waterEdges": { "centre": [10.75, 24.75], "left": [5.75, 29.0], "right": [9.75, 25.5] },
+      "evidence": "Documented: stone family and two arches (VCH as cited, in the record). Mapped: Peg's Hole Bridge over the Three Mills Back River on the OS five-foot plan; bench mark on its parapet and a spot height at the bridge crown (OS 25-inch). Measured in the model: the water widens on the left (south-east) edge, so the abutments are set between the centreline and edge water lines. Estimated: two segmental arches of 8.6 m on a 1.8 m river pier with cutwaters, rise, ring and parapet dimensions."
+    },
+    "st-thomas-bridge": {
+      "form": "brick-arch",
+      "arches": 1,
+      "abutments": [7.0, 15.75],
+      "skew": 0,
+      "crownDepth": 0.6,
+      "ringDepth": 0.35,
+      "abutmentLength": 2.0,
+      "waterEdges": { "centre": [8.5, 15.0], "left": [3.0, 19.25], "right": [8.75, 15.75] },
+      "evidence": "Documented: brick family (VCH as cited); the arch count is not established by the written source (road-trace notes). Mapped: Sir Thomas D'Akers Bridge over the western Waterworks arm (OS five-foot plan). Measured in the model: centreline water 8.5-15 m; the drawn water flares on the left edge and is left partly under the abutment there. Estimated: one segmental brick arch of 8.75 m with three brick rings, rise and parapet dimensions; a brick parapet with stone coping."
+    },
+    "st-michaels-bridge": {
+      "form": "stone-arch",
+      "arches": 1,
+      "abutments": [8.0, 20.75],
+      "skew": -0.18,
+      "crownDepth": 0.7,
+      "ringDepth": 0.5,
+      "abutmentLength": 2.5,
+      "waterEdges": { "centre": [8.5, 20.25], "left": [7.25, 19.25], "right": [9.5, 21.25] },
+      "evidence": "Documented: stone family (VCH as cited). Mapped: St Michael's Bridge over the eastern Waterworks arm (OS five-foot plan) with a bench mark at the bridge (OS 25-inch). Measured in the model: both drawn banks cross the route at the same oblique angle, skew -0.18 m per metre. Estimated: one segmental arch of 12.75 m, rise, ring and parapet dimensions."
+    },
+    "channelsea-high-street-bridge": {
+      "form": "stone-arch",
+      "arches": 1,
+      "abutments": [20.75, 31.0],
+      "skew": -0.3,
+      "crownDepth": 0.65,
+      "ringDepth": 0.45,
+      "abutmentLength": 2.5,
+      "waterEdges": { "centre": [21.25, 30.25], "left": [18.75, 29.75], "right": [23.25, 32.5] },
+      "evidence": "Documented: stone family (VCH as cited). Mapped: Channel Sea Bridge on the OS five-foot plan, with tramway spot heights on it (OS 25-inch). Measured in the model: the Channelsea crosses the route obliquely, skew -0.3 m per metre. Estimated: one segmental arch of 10.25 m, rise, ring and parapet dimensions. The long route either side of the water is drawn as walled approach, as before."
+    },
+    "three-mills-lea-bridge": {
+      "form": "iron-deck",
+      "abutments": [23.75, 38.5],
+      "girderDepth": 0.8,
+      "abutmentLength": 1.5,
+      "waterEdges": { "centre": [24.25, 38.0], "left": [24.25, 37.0], "right": [24.25, 38.25] },
+      "evidence": "Recorded style deck (the record's archCount 1 is retained in infrastructure.json but a deck has no arch). Mapped: Three Mills Bridge over the River Lea on the OS five-foot plan, with a bench mark at its west abutment (OS 25-inch). Measured in the model: water 24.25-38 m on the route. Estimated: wrought-iron girders 0.8 m deep on brick abutments, timber deck, iron railings; walled approaches on the land either side."
+    },
+    "abbey-mill-crossing": {
+      "form": "slab-deck",
+      "abutments": [19.5, 28.0],
+      "abutmentLength": 1.2,
+      "waterEdges": { "centre": [24.5, 27.5], "left": [22.25, 27.5], "right": [20.0, 25.75] },
+      "evidence": "The record has no structural style; its 0.4 m slab and brick parapets are kept as drawn before, because the T3 landscape holds the bank 0.1 m below that slab. Measured in the model: the two channel cuts reach 20-27.5 m on the route. Added estimate: brick abutments at the water edges. Construction remains interpreted, as the record says."
+    },
+    "marshgate-lane-connection-0": {
+      "form": "timber-deck",
+      "provisional": true,
+      "abutments": [7.0, 16.0],
+      "beamDepth": 0.35,
+      "abutmentLength": 1.2,
+      "waterEdges": { "centre": [7.75, 15.25], "left": [8.0, 17.25], "right": [7.25, 13.5] },
+      "evidence": "Provisional connection (record): deck versus culvert unresolved and not a documented named bridge. Drawn as the plainest reading, a timber deck on timber beams and brick abutments at the drawn water edges, with timber railings. All dimensions estimated."
+    },
+    "hunts-lane-connection-0": {
+      "form": "iron-deck",
+      "provisional": true,
+      "abutments": [2.75, 19.25],
+      "girderDepth": 0.6,
+      "abutmentLength": 1.2,
+      "waterEdges": { "centre": [3.25, 18.75], "left": [3.75, 20.5], "right": [2.25, 17.25] },
+      "evidence": "Provisional Cook's Road connection (record): deck versus culvert unresolved. The drawn water is 15.5 m wide on the route, too long for plain timber beams without river trestles, so iron girders on brick abutments are drawn, with iron railings. All dimensions estimated."
+    },
+    "three-mills-lane-beside-distillery-connection-0": {
+      "form": "timber-deck",
+      "provisional": true,
+      "abutments": [7.5, 11.93],
+      "beamDepth": 0.3,
+      "abutmentLength": 1.0,
+      "waterEdges": { "centre": [15.75, null], "left": [16.0, null], "right": [8.0, null] },
+      "evidence": "Provisional footpath deck or culvert (record). The drawn water reaches the route only on its right edge from 8 m and runs on beyond the route end, so the second abutment is put at the route end (its face 1 m inside it). Timber deck, beams and railings on brick abutments; all dimensions estimated."
+    }
+  }
+}
