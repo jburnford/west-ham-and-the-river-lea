@@ -10,7 +10,7 @@ export const bridgeForms = {
   description:
     'Structural form chosen for each road bridge in docs/data/infrastructure.json roadBridges, about 1900: arches, abutments, piers, parapets or railings, and wing walls. The bridge records (route, width, deck height, style, arch count) are not changed here; this register adds the structure under and beside the deck. docs/road-bridges.js carries an identical copy as bridgeForms, and scripts/check_road_bridges.mjs fails if the two differ.',
   frame:
-    'Stations are metres along each bridge route from its first point. Offsets are metres across it, positive on the left (the normal (-uz, ux)). An abutment face lies at station abutment + skew * offset, so skew is the shift of the face per metre across the deck. Heights are scene y metres; the static water surface is y 0.06 and the animated tide reaches y 1.1.',
+    'Stations are metres along each bridge route from its first point. Offsets are metres across it, positive on the left (the normal (-uz, ux)). An abutment face lies at station abutment + skew * offset, so skew is the shift of the face per metre across the deck: one number when both faces are parallel, or a pair [first, second abutment] when each face follows its own bank. Heights are scene y metres; the static water surface is y 0.06 and the animated tide reaches y 1.1.',
   sources: [
     {
       id: 'vch',
@@ -44,7 +44,7 @@ export const bridgeForms = {
       id: 'drawn-water',
       citation:
         'Water polygons as drawn by docs/app.js (tide, reviewed connections, retained rivers, marsh ditches, river system)',
-      use: 'Abutment stations sit at the drawn water edges measured along each route on the centreline and both deck edges (waterEdges below). They are model measurements, not surveyed abutments.',
+      use: 'Abutment stations sit at the drawn water edges measured along each route on the centreline and both deck edges (waterEdges below). For the five High Street crossings T12c re-measured the edges after the T13 retrace every 0.05 m along the route and every 0.5 m across the deck (bankEdges lists them every metre) and fitted one straight face line to each bank. They are model measurements, not surveyed abutments.',
     },
   ],
   defaults: {
@@ -54,70 +54,131 @@ export const bridgeForms = {
     parapetThickness: 0.45,
     railingHeight: 1.05,
     clearZoneMargin: 2,
+    abutmentEndClearance: 0.3,
     evidence:
-      'Estimates for every bridge: springing 0.44 m above the static water so the arch feet stand clear of it; masonry parapet 1.0 m plus 0.12 m coping (about 1.1 m above the carriageway, 1.0 m above the footway); railings 1.05 m. Approach fill is not drawn within 2 m of either deck edge between the abutment faces.',
+      'Estimates for every bridge: springing 0.44 m above the static water so the arch feet stand clear of it; masonry parapet 1.0 m plus 0.12 m coping (about 1.1 m above the carriageway, 1.0 m above the footway); railings 1.05 m. Approach fill is not drawn within 2 m of either deck edge between the abutment faces. Arch abutment faces stay at least 0.3 m inside the route ends at both deck edges (abutmentEndClearance), so the arch ring never reaches past the deck; the masonry behind a face may run on under the approach.',
   },
   bridges: {
     'bow-bridge': {
       form: 'stone-arch',
       arches: 1,
-      abutments: [3, 29.5],
-      skew: 0.4,
+      abutments: [4.35, 30.5],
+      skew: [0.67, 0.21],
       crownDepth: 0.9,
       ringDepth: 0.6,
       abutmentLength: 2.5,
-      waterEdges: { centre: [2, 29], left: [6.5, 30.5], right: [0, 27.25] },
+      waterEdges: { centre: [4.2, 30], left: [8.35, 31.25], right: [0.8, 28.65] },
+      bankEdges: {
+        offsets: [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6],
+        start: [0.8, 0.75, 1.45, 2.15, 2.8, 3.5, 4.2, 4.9, 5.6, 6.25, 6.95, 7.65, 8.35],
+        end: [28.65, 29, 29.2, 29.4, 29.6, 29.8, 30, 30.2, 30.4, 30.6, 30.8, 31, 31.25],
+      },
       evidence:
+        'Documented: one granite-faced span completed 1839 (road-trace notes), stone family (VCH as cited); bench mark on the hatched south parapet of the east approach (OS 25-inch). Mapped: the crossing on the OS five-foot plan; the T13 retrace laid the span on the road axis and read the west and east banks 34 and 10 degrees from square to the road. Measured in the model (T12c, on the T13 span of 32.2 m): the drawn water edges on the deck run at +0.67 m (west bank) and +0.21 m (east bank) per metre across it, 34 and 12 degrees from square to the road (bankEdges). Interpretation: each abutment face follows its own bank (west 0.10 m into the water, east 0.50 m back on the bank at the centreline; the setback is 0.5 m except where the face must stay 0.3 m inside the deck end at a deck edge); the segmental arch splays between the two faces with one crown and springing, 28.9 m along the road at the right deck edge, 26.1 m on the centreline and 23.4 m at the left. The square-ended deck stays on the road axis. Estimated: crown soffit 0.9 m below the deck, springing 0.5 m, ring and parapet dimensions. The 1901-06 rebuilding is not shown.',
+      priorAbutments: [3, 29.5],
+      priorSkew: 0.4,
+      priorWaterEdges: { centre: [2, 29], left: [6.5, 30.5], right: [0, 27.25] },
+      priorEvidence:
         'Documented: one granite-faced span completed 1839 (road-trace notes), stone family (VCH as cited); bench mark on the hatched south parapet of the east approach (OS 25-inch). Mapped: the crossing on the OS five-foot plan. Measured in the model: the River Lea crosses the route obliquely, so the abutment faces follow the bank with a skew of 0.4 m per metre. Estimated: one segmental arch of 26.5 m along the road, crown soffit 0.9 m below the deck, springing 0.5 m, ring and parapet dimensions. The 1901-06 rebuilding is not shown.',
+      priorNote:
+        'Values measured by T12a on the previous span, which T13 (3 October 2026) moved onto the retraced road axis and shortened; they no longer describe this span and are kept for the record only.',
     },
     'pegshole-bridge': {
       form: 'stone-arch',
       arches: 2,
-      abutments: [8, 27],
-      skew: 0,
+      abutments: [0.5, 15.65],
+      skew: [0.03, -0.12],
       pier: 1.8,
       crownDepth: 0.6,
       ringDepth: 0.45,
       abutmentLength: 2.5,
-      waterEdges: { centre: [10.75, 24.75], left: [5.75, 29], right: [9.75, 25.5] },
+      waterEdges: { centre: [0.95, 15.1], left: [1, 14.5], right: [-0.85, 16.3] },
+      bankEdges: {
+        offsets: [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6],
+        start: [-0.85, -0.55, 0.05, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 1, 1, 1],
+        end: [16.3, 15.6, 15.5, 15.4, 15.3, 15.2, 15.1, 15, 14.9, 14.8, 14.7, 14.6, 14.5],
+      },
       evidence:
+        "Documented: stone family and two arches (VCH as cited, in the record). Mapped: Peg's Hole Bridge over the Three Mills Back River on the OS five-foot plan; bench mark on its parapet and a spot height at the bridge crown (OS 25-inch). The T13 retrace read the banks 1 and 19 degrees from square on the OS; the drawn water's east bank is only 7 degrees, and the faces follow the drawn water. Measured in the model (T12c, on the T13 span of 18.1 m): the drawn water edges on the deck run at +0.03 m (west bank) and -0.12 m (east bank) per metre across it, 2 and 7 degrees from square to the road (bankEdges). At the right deck edge (offsets -4.5 to -6 m) a river-system water polygon runs on 0.4-0.85 m beyond the route start under the approach; the face cannot follow it inside the deck. Interpretation: each abutment face follows its own bank (west 0.40 m back on the bank, east 0.50 m back on the bank at the centreline; the setback is 0.5 m except where the face must stay 0.3 m inside the deck end at a deck edge); the arches splay between the two faces with one crown and springing, each 7.1 m along the road at the right deck edge, 6.7 m on the centreline and 6.2 m at the left. The square-ended deck stays on the road axis. Estimated: a 1.8 m river pier with cutwaters on the line midway between the faces, rise, ring and parapet dimensions.",
+      priorAbutments: [8, 27],
+      priorSkew: 0,
+      priorWaterEdges: { centre: [10.75, 24.75], left: [5.75, 29], right: [9.75, 25.5] },
+      priorEvidence:
         "Documented: stone family and two arches (VCH as cited, in the record). Mapped: Peg's Hole Bridge over the Three Mills Back River on the OS five-foot plan; bench mark on its parapet and a spot height at the bridge crown (OS 25-inch). Measured in the model: the water widens on the left (south-east) edge, so the abutments are set between the centreline and edge water lines. Estimated: two segmental arches of 8.6 m on a 1.8 m river pier with cutwaters, rise, ring and parapet dimensions.",
+      priorNote:
+        'Values measured by T12a on the previous span, which T13 (3 October 2026) moved onto the retraced road axis and shortened; they no longer describe this span and are kept for the record only.',
     },
     'st-thomas-bridge': {
       form: 'brick-arch',
       arches: 1,
-      abutments: [7, 15.75],
-      skew: 0,
+      abutments: [0.9, 8.25],
+      skew: [-0.01, -0.06],
       crownDepth: 0.6,
       ringDepth: 0.35,
       abutmentLength: 2,
-      waterEdges: { centre: [8.5, 15], left: [3, 19.25], right: [8.75, 15.75] },
+      waterEdges: { centre: [1.4, 7.8], left: [-3.65, 12.5], right: [1.4, 8.15] },
+      bankEdges: {
+        offsets: [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6],
+        start: [1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.35, 1.35, 1.35, 1.35, 1.35, -3.65],
+        end: [8.15, 8.1, 8.05, 8, 7.95, 7.85, 7.8, 7.75, 7.7, 7.65, 7.6, 7.55, 12.5],
+      },
       evidence:
+        "Documented: brick family (VCH as cited); the arch count is not established by the written source (road-trace notes). Mapped: Sir Thomas D'Akers Bridge over the western Waterworks arm (OS five-foot plan); the T13 retrace read the banks 1 and 3 degrees from square. Measured in the model (T12c, on the T13 span of 8.9 m): the drawn water edges on the deck run at -0.01 m (west bank) and -0.06 m (east bank) per metre across it, 1 and 3 degrees from square to the road (bankEdges). Along the left deck edge (offsets 5.5-6 m) the tide water polygon runs on beyond both route ends under the approaches (its dry gap for the road ends 5.0-5.5 m left of the centreline, short of the 6 m deck edge); the faces cannot follow it inside the deck. Interpretation: each abutment face follows its own bank (west 0.50 m back on the bank, east 0.45 m back on the bank at the centreline; the setback is 0.5 m except where the face must stay 0.3 m inside the deck end at a deck edge); the segmental arch splays between the two faces with one crown and springing, 7.6 m along the road at the right deck edge, 7.3 m on the centreline and 7.0 m at the left. The square-ended deck stays on the road axis. Estimated: one segmental brick arch with three brick rings, rise and parapet dimensions; a brick parapet with stone coping.",
+      priorAbutments: [7, 15.75],
+      priorSkew: 0,
+      priorWaterEdges: { centre: [8.5, 15], left: [3, 19.25], right: [8.75, 15.75] },
+      priorEvidence:
         "Documented: brick family (VCH as cited); the arch count is not established by the written source (road-trace notes). Mapped: Sir Thomas D'Akers Bridge over the western Waterworks arm (OS five-foot plan). Measured in the model: centreline water 8.5-15 m; the drawn water flares on the left edge and is left partly under the abutment there. Estimated: one segmental brick arch of 8.75 m with three brick rings, rise and parapet dimensions; a brick parapet with stone coping.",
+      priorNote:
+        'Values measured by T12a on the previous span, which T13 (3 October 2026) moved onto the retraced road axis and shortened; they no longer describe this span and are kept for the record only.',
     },
     'st-michaels-bridge': {
       form: 'stone-arch',
       arches: 1,
-      abutments: [8, 20.75],
-      skew: -0.18,
+      abutments: [1.4, 14.15],
+      skew: [-0.17, -0.14],
       crownDepth: 0.7,
       ringDepth: 0.5,
       abutmentLength: 2.5,
-      waterEdges: { centre: [8.5, 20.25], left: [7.25, 19.25], right: [9.5, 21.25] },
+      waterEdges: { centre: [1.9, 13.65], left: [-4.15, 17.85], right: [2.9, 14.5] },
+      bankEdges: {
+        offsets: [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6],
+        start: [2.9, 2.75, 2.55, 2.4, 2.25, 2.05, 1.9, 1.75, 1.55, 1.4, 1.25, 1.05, -4.15],
+        end: [14.5, 14.4, 14.25, 14.1, 13.95, 13.8, 13.65, 13.55, 13.4, 13.25, 13.1, 12.95, 17.85],
+      },
       evidence:
+        "Documented: stone family (VCH as cited). Mapped: St Michael's Bridge over the eastern Waterworks arm (OS five-foot plan) with a bench mark at the bridge (OS 25-inch); the T13 retrace read the banks 9 and 8 degrees from square. Measured in the model (T12c, on the T13 span of 15.3 m): the drawn water edges on the deck run at -0.17 m (west bank) and -0.14 m (east bank) per metre across it, 10 and 8 degrees from square to the road (bankEdges). Along the left deck edge (offsets 5.5-6 m on the west bank, 6 m on the east) the tide water polygon runs on beyond the route ends under the approaches (its dry gap for the road ends 5.25 m left of the centreline at the west end, short of the 6 m deck edge); the faces cannot follow it inside the deck. Interpretation: each abutment face follows its own bank, 0.5 m back on the bank; the segmental arch splays between the two faces with one crown and springing, 12.6 m along the road at the right deck edge, 12.8 m on the centreline and 12.9 m at the left. The square-ended deck stays on the road axis. Estimated: rise, ring and parapet dimensions.",
+      priorAbutments: [8, 20.75],
+      priorSkew: -0.18,
+      priorWaterEdges: { centre: [8.5, 20.25], left: [7.25, 19.25], right: [9.5, 21.25] },
+      priorEvidence:
         "Documented: stone family (VCH as cited). Mapped: St Michael's Bridge over the eastern Waterworks arm (OS five-foot plan) with a bench mark at the bridge (OS 25-inch). Measured in the model: both drawn banks cross the route at the same oblique angle, skew -0.18 m per metre. Estimated: one segmental arch of 12.75 m, rise, ring and parapet dimensions.",
+      priorNote:
+        'Values measured by T12a on the previous span, which T13 (3 October 2026) moved onto the retraced road axis and shortened; they no longer describe this span and are kept for the record only.',
     },
     'channelsea-high-street-bridge': {
       form: 'stone-arch',
       arches: 1,
-      abutments: [20.75, 31],
-      skew: -0.3,
+      abutments: [2.55, 13.9],
+      skew: [-0.32, -0.03],
       crownDepth: 0.65,
       ringDepth: 0.45,
       abutmentLength: 2.5,
-      waterEdges: { centre: [21.25, 30.25], left: [18.75, 29.75], right: [23.25, 32.5] },
+      waterEdges: { centre: [3.05, 13.4], left: [-4.3, 18.75], right: [5, 13.6] },
+      bankEdges: {
+        offsets: [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6],
+        start: [5, 4.65, 4.35, 4, 3.7, 3.35, 3.05, 2.75, 2.4, 2.1, -3.5, -3.8, -4.3],
+        end: [13.6, 13.55, 13.55, 13.5, 13.45, 13.45, 13.4, 13.4, 13.35, 18.3, 18.3, 18.25, 18.75],
+      },
       evidence:
+        'Documented: stone family (VCH as cited). Mapped: Channel Sea Bridge on the OS five-foot plan, with tramway spot heights on it (OS 25-inch); the T13 retrace read the banks 18 and 2 degrees from square. Measured in the model (T12c, on the T13 span of 14.4 m): the drawn water edges on the deck run at -0.32 m (west bank) and -0.03 m (east bank) per metre across it, 18 and 2 degrees from square to the road (bankEdges). On the left 3 m of the deck (offsets 3-6 m) the tide water polygon runs on beyond both route ends under the approaches: its dry gap for the road reaches only 2.25-3.5 m left of the centreline (the pre-T13 road lay 3.6-6.3 m to the right, which suggests the gap was cut for it). The faces cannot follow that water inside the deck. Interpretation: each abutment face follows its own bank, 0.5 m back on the bank; the segmental arch splays between the two faces with one crown and springing, 9.6 m along the road at the right deck edge, 11.4 m on the centreline and 13.1 m at the left. The square-ended deck stays on the road axis. Estimated: rise, ring and parapet dimensions.',
+      priorAbutments: [20.75, 31],
+      priorSkew: -0.3,
+      priorWaterEdges: { centre: [21.25, 30.25], left: [18.75, 29.75], right: [23.25, 32.5] },
+      priorEvidence:
         'Documented: stone family (VCH as cited). Mapped: Channel Sea Bridge on the OS five-foot plan, with tramway spot heights on it (OS 25-inch). Measured in the model: the Channelsea crosses the route obliquely, skew -0.3 m per metre. Estimated: one segmental arch of 10.25 m, rise, ring and parapet dimensions. The long route either side of the water is drawn as walled approach, as before.',
+      priorNote:
+        'Values measured by T12a on the previous span, which T13 (3 October 2026) moved onto the retraced road axis and shortened; they no longer describe this span and are kept for the record only.',
     },
     'three-mills-lea-bridge': {
       form: 'iron-deck',
@@ -211,35 +272,82 @@ export function routeFrame(route) {
   return { segments, length, at, tangent, project };
 }
 
-// Plan layout of one bridge: abutment faces, arches and piers in arch-frame stations
-// (station - skew * offset), and the levels that follow from the record and the form.
+// Plan layout of one bridge: abutment faces, arches and piers, and the levels that follow from
+// the record and the form. Each abutment face is a straight line across the deck at station
+// abutment + skew * offset; skew is one number (both faces parallel) or one per abutment, so each
+// face can follow its own bank. Between two faces that are not parallel the arch barrel splays:
+// at every offset it is a segmental arch from face to face with the same springing and crown, so
+// its span varies across the deck. section(v) gives the arches and piers at offset v.
 export function bridgeLayout(bridge, form, defaults = bridgeForms.defaults) {
   const frame = routeFrame(bridge.route),
     width = bridge.width,
     height = bridge.height,
-    skew = form.skew || 0,
-    abutmentLength = form.abutmentLength ?? 1.2;
+    half = width / 2,
+    skews = Array.isArray(form.skew) ? [...form.skew] : [form.skew || 0, form.skew || 0],
+    abutmentLength = form.abutmentLength ?? 1.2,
+    arch = ARCH_FORMS.has(form.form);
   let [a0, a1] = form.abutments;
-  // Abutment bodies stay under the recorded deck.
-  a0 = Math.max(a0, abutmentLength);
-  a1 = Math.min(a1, frame.length - abutmentLength);
-  const layout = { bridge, form, frame, width, height, skew, abutmentLength, a0, a1, arches: [], piers: [] };
-  if (ARCH_FORMS.has(form.form)) {
+  // Deck abutment bodies stay under the recorded deck. Arch abutment faces stay inside the route at
+  // both deck edges, by abutmentEndClearance; the masonry behind a face may run on under the
+  // approach, where the end closure and the approach fill close it.
+  const keep = (k) => (arch ? (defaults.abutmentEndClearance ?? 0) : abutmentLength) + Math.abs(k) * half;
+  a0 = Math.max(a0, keep(skews[0]));
+  a1 = Math.min(a1, frame.length - keep(skews[1]));
+  const face = (i, v) => (i ? a1 + skews[1] * v : a0 + skews[0] * v);
+  const layout = {
+    bridge,
+    form,
+    frame,
+    width,
+    half,
+    height,
+    skews,
+    abutmentLength,
+    a0,
+    a1,
+    face,
+    arches: [],
+    piers: [],
+  };
+  // Inside the opening between the two faces, at station s and offset v.
+  layout.between = (s, v) => s > face(0, v) && s < face(1, v);
+  if (arch) {
     const n = form.arches,
       pier = n > 1 ? form.pier : 0,
-      span = (a1 - a0 - (n - 1) * pier) / n,
       springing = form.springing ?? defaults.springing,
       crown = height - form.crownDepth,
-      rise = crown - springing,
-      radius = (span * span) / 4 / rise / 2 + rise / 2;
-    for (let i = 0; i < n; i++) {
-      const from = a0 + i * (span + pier);
-      layout.arches.push({ from, to: from + span, mid: from + span / 2 });
-      if (i) layout.piers.push({ from: from - pier, to: from });
-    }
-    Object.assign(layout, { span, springing, crown, rise, radius, ringDepth: form.ringDepth });
-    layout.soffit = (arch, xa) =>
-      springing + Math.sqrt(Math.max(0, radius * radius - (xa - arch.mid) ** 2)) - (radius - rise);
+      rise = crown - springing;
+    const section = (v) => {
+      const f0 = face(0, v),
+        f1 = face(1, v),
+        span = (f1 - f0 - (n - 1) * pier) / n,
+        radius = (span * span) / 4 / rise / 2 + rise / 2,
+        arches = [],
+        piers = [];
+      for (let i = 0; i < n; i++) {
+        const from = f0 + i * (span + pier);
+        arches.push({ from, to: from + span, mid: from + span / 2, span, radius });
+        if (i) piers.push({ from: from - pier, to: from });
+      }
+      return { v, f0, f1, span, radius, arches, piers };
+    };
+    const centre = section(0);
+    Object.assign(layout, {
+      section,
+      arches: centre.arches,
+      piers: centre.piers,
+      span: centre.span,
+      radius: centre.radius,
+      // Arch spans at the right and left deck edges.
+      edgeSpans: [section(-half).span, section(half).span],
+      springing,
+      crown,
+      rise,
+      ringDepth: form.ringDepth,
+    });
+    // Soffit height at station s under an arch taken from section(v).
+    layout.soffit = (a, s) =>
+      springing + Math.sqrt(Math.max(0, a.radius * a.radius - (s - a.mid) ** 2)) - (a.radius - rise);
   } else {
     const depth = form.form === 'iron-deck' ? form.girderDepth : form.form === 'timber-deck' ? form.beamDepth : 0;
     layout.deckUnderside = form.form === 'slab-deck' ? height - 0.4 : height - 0.12 - depth;
@@ -259,7 +367,7 @@ export function bridgeClearance(bridges, forms = bridgeForms) {
         reach = b.width / 2 + margin,
         xs = b.route.map((p) => p[0]),
         zs = b.route.map((p) => p[1]),
-        pad = reach + Math.abs(layout.skew) * reach;
+        pad = reach + Math.max(...layout.skews.map(Math.abs)) * reach;
       return {
         layout,
         reach,
@@ -274,10 +382,11 @@ export function bridgeClearance(bridges, forms = bridgeForms) {
         Math.max(z0, z1) >= q.box[1] &&
         Math.min(z0, z1) <= q.box[3]
     );
+  // A skewed face line, carried on past a deck edge, can cross the route end; the zone stops there,
+  // since beyond the route end is the approach, whose fill must stay.
   const insideZone = (q, x, z) => {
-    const p = q.layout.frame.project(x, z),
-      xa = p.s - q.layout.skew * p.v;
-    return xa > q.layout.a0 && xa < q.layout.a1 && Math.abs(p.v) <= q.reach;
+    const p = q.layout.frame.project(x, z);
+    return p.s > 0 && p.s < q.layout.frame.length && q.layout.between(p.s, p.v) && Math.abs(p.v) <= q.reach;
   };
   return {
     zones,
@@ -408,129 +517,163 @@ export function roadBridges({ THREE, scene, materials: m, bridges, level, waterL
     const form = bridgeForms.bridges[bridge.id];
     if (!form) continue;
     const L = bridgeLayout(bridge, form, defaults),
-      { frame, width: W, height: h, skew: k, a0, a1, abutmentLength: lab } = L,
+      { frame, width: W, height: h, skews, a0, a1, abutmentLength: lab, face: faceAt } = L,
       half = W / 2,
       arch = ARCH_FORMS.has(form.form),
       body = form.form === 'brick-arch' ? m.brick : arch ? m.stone : m.brick,
-      at = (xa, v) => frame.at(xa + k * v, v),
-      p3 = (xa, v, y) => {
-        const [x, z] = at(xa, v);
+      // Plan points in route stations and offsets.
+      p3 = (s, v, y) => {
+        const [x, z] = frame.at(s, v);
         return [x, y, z];
       },
       tangent = frame.tangent(frame.length / 2),
       u3 = [tangent[0], 0, tangent[1]];
     const set = (part) => (tag = { bridge: bridge.id, part });
-    // Footing: below the lower of the drawn bed and the water, under each abutment face.
-    const footing = (xa) =>
+    // Footing: below the lower of the drawn bed and the water, under a face line (station at offset v).
+    const footing = (line) =>
       Math.min(
         waterLevel,
-        lowest([-half, -half / 2, 0, half / 2, half].flatMap((v) => [at(xa, v), at(xa + 0.5, v), at(xa - 0.5, v)]))
+        lowest(
+          [-half, -half / 2, 0, half / 2, half].flatMap((v) => {
+            const s = line(v);
+            return [frame.at(s, v), frame.at(s + 0.5, v), frame.at(s - 0.5, v)];
+          })
+        )
       ) - 0.3;
-    const foot0 = footing(a0),
-      foot1 = footing(a1);
-    const pierFoot = L.piers.map((p) => footing((p.from + p.to) / 2));
+    const foot0 = footing((v) => faceAt(0, v)),
+      foot1 = footing((v) => faceAt(1, v));
+    const pierFoot = arch
+      ? L.piers.map((p, i) =>
+          footing((v) => {
+            const q = L.section(v).piers[i];
+            return (q.from + q.to) / 2;
+          })
+        )
+      : [];
     const info = {
       id: bridge.id,
       form: form.form,
       provisional: Boolean(form.provisional),
       abutments: [+a0.toFixed(2), +a1.toFixed(2)],
+      skews: skews.map((k) => +k.toFixed(3)),
       clearSpan: +(a1 - a0 - L.piers.reduce((s, p) => s + p.to - p.from, 0)).toFixed(2),
     };
 
     if (arch) {
-      // Soffit: each arch barrel, straight across the deck in the skewed arch frame.
+      const springing = L.springing,
+        rows = Math.max(2, Math.ceil(Math.abs(skews[1] - skews[0]) * W)),
+        sections = Array.from({ length: rows + 1 }, (_, r) => L.section(-half + (W * r) / rows));
+      // Soffit: each arch barrel from face to face, in rows across the deck. Where the two faces are
+      // not parallel the span changes from row to row and the barrel splays.
       set('arch');
-      for (const a of L.arches) {
-        const n = Math.max(12, Math.ceil((a.to - a.from) / 0.5));
-        let arc = 0;
-        for (let j = 0; j < n; j++) {
-          const xa = a.from + ((a.to - a.from) * j) / n,
-            xb = a.from + ((a.to - a.from) * (j + 1)) / n,
-            ya = L.soffit(a, xa),
-            yb = L.soffit(a, xb),
-            step = Math.hypot(xb - xa, yb - ya);
-          face(
-            body,
-            [p3(xa, -half, ya), p3(xb, -half, yb), p3(xb, half, yb), p3(xa, half, ya)],
-            [0, -1, 0],
-            [
-              [arc, -half],
-              [arc + step, -half],
-              [arc + step, half],
-              [arc, half],
-            ]
-          );
-          arc += step;
-        }
-      }
-      // Abutment faces below the springing, and river piers with cutwaters.
+      L.arches.forEach((_, i) => {
+        const n = Math.max(12, Math.ceil(Math.max(...sections.map((q) => q.arches[i].span)) / 0.5));
+        const grid = sections.map((q) => {
+          const a = q.arches[i];
+          let arc = 0,
+            last = null;
+          return Array.from({ length: n + 1 }, (_, j) => {
+            const s = a.from + ((a.to - a.from) * j) / n,
+              y = L.soffit(a, s);
+            if (last) arc += Math.hypot(s - last[0], y - last[1]);
+            last = [s, y];
+            return { p: p3(s, q.v, y), uv: [arc, q.v] };
+          });
+        });
+        for (let r = 0; r < rows; r++)
+          for (let j = 0; j < n; j++) {
+            const c = [grid[r][j], grid[r][j + 1], grid[r + 1][j + 1], grid[r + 1][j]];
+            face(
+              body,
+              c.map((q) => q.p),
+              [0, -1, 0],
+              c.map((q) => q.uv)
+            );
+          }
+      });
+      // Abutment faces below the springing, each along its own bank, and river piers with cutwaters.
       set('abutment');
-      const springing = L.springing;
-      for (const [xa, foot, dir] of [
-        [a0, foot0, 1],
-        [a1, foot1, -1],
-      ])
+      for (const [i, foot, dir] of [
+        [0, foot0, 1],
+        [1, foot1, -1],
+      ]) {
+        const s0 = faceAt(i, -half),
+          s1 = faceAt(i, half);
         face(
           body,
-          [p3(xa, -half, foot), p3(xa, half, foot), p3(xa, half, springing), p3(xa, -half, springing)],
+          [p3(s0, -half, foot), p3(s1, half, foot), p3(s1, half, springing), p3(s0, -half, springing)],
           [u3[0] * dir, 0, u3[2] * dir]
         );
-      L.piers.forEach((p, i) => {
-        const foot = pierFoot[i];
+      }
+      const right = L.section(-half),
+        left = L.section(half);
+      L.piers.forEach((_, i) => {
+        const foot = pierFoot[i],
+          pr = right.piers[i],
+          pl = left.piers[i];
         set('pier');
-        for (const [xa, dir] of [
-          [p.from, -1],
-          [p.to, 1],
+        for (const [key, dir] of [
+          ['from', -1],
+          ['to', 1],
         ])
           face(
             body,
-            [p3(xa, -half, foot), p3(xa, half, foot), p3(xa, half, springing), p3(xa, -half, springing)],
+            [
+              p3(pr[key], -half, foot),
+              p3(pl[key], half, foot),
+              p3(pl[key], half, springing),
+              p3(pr[key], -half, springing),
+            ],
             [u3[0] * dir, 0, u3[2] * dir]
           );
         set('cutwater');
-        const mid = (p.from + p.to) / 2,
-          top = springing + 0.4;
+        const top = springing + 0.4,
+          // Shift of the pier centre line per metre across the deck.
+          pierSkew = ((pl.from + pl.to) / 2 - (pr.from + pr.to) / 2) / W;
         for (const side of [-1, 1]) {
-          const v0 = side * half,
+          const p = side > 0 ? pl : pr,
+            v0 = side * half,
+            mid = (p.from + p.to) / 2,
+            noseS = mid + pierSkew * side,
             nose = side * (half + 1.0),
             outward = [-u3[2] * side, 0, u3[0] * side];
-          for (const xa of [p.from, p.to]) {
-            const dir = xa === p.from ? -1 : 1,
+          for (const s of [p.from, p.to]) {
+            const dir = s === p.from ? -1 : 1,
               normal = [outward[0] + u3[0] * dir, 0, outward[2] + u3[2] * dir];
-            face(body, [p3(xa, v0, foot), p3(mid, nose, foot), p3(mid, nose, top), p3(xa, v0, top)], normal);
-            face(body, [p3(xa, v0, top), p3(mid, nose, top), p3(mid, v0, top + 0.6)], [normal[0], 1, normal[2]]);
+            face(body, [p3(s, v0, foot), p3(noseS, nose, foot), p3(noseS, nose, top), p3(s, v0, top)], normal);
+            face(body, [p3(s, v0, top), p3(noseS, nose, top), p3(mid, v0, top + 0.6)], [normal[0], 1, normal[2]]);
           }
         }
       });
       // Spandrel walls on both faces, from the soffit (or footing, or ground on the approaches) up
-      // to the deck. Columns are placed in route stations so the walls end exactly at the route ends.
+      // to the deck, in route stations so the walls end exactly at the route ends.
       for (const side of [-1, 1]) {
-        const v = side * half;
-        const kinds = [];
-        const xa0 = -k * v,
-          xa1 = frame.length - k * v;
-        const cuts = [xa0, a0 - lab, a0, ...L.arches.flatMap((a) => [a.from, a.to]), a1, a1 + lab, xa1];
-        const edges = [...new Set(cuts.map((x) => Math.min(xa1, Math.max(xa0, x))))].sort((p, q) => p - q);
+        const v = side * half,
+          q = side > 0 ? left : right,
+          kinds = [],
+          end = frame.length;
+        const cuts = [0, q.f0 - lab, q.f0, ...q.arches.flatMap((a) => [a.from, a.to]), q.f1, q.f1 + lab, end];
+        const edges = [...new Set(cuts.map((x) => Math.min(end, Math.max(0, x))))].sort((p, r) => p - r);
         for (let i = 1; i < edges.length; i++) kinds.push([edges[i - 1], edges[i]]);
         for (const [from, to] of kinds) {
           if (to - from < 1e-4) continue;
           const mid = (from + to) / 2,
-            archHere = L.arches.find((a) => mid > a.from && mid < a.to),
-            pierHere = L.piers.findIndex((p) => mid > p.from && mid < p.to),
-            abutHere = mid >= a0 - lab && mid <= a1 + lab;
+            archHere = q.arches.find((a) => mid > a.from && mid < a.to),
+            pierHere = q.piers.findIndex((p) => mid > p.from && mid < p.to),
+            abutHere = mid >= q.f0 - lab && mid <= q.f1 + lab;
           // The wall over a pier or abutment is that pier's or abutment's side face.
           set(archHere ? 'spandrel' : pierHere >= 0 ? 'pier' : abutHere ? 'abutment' : 'approach-wall');
           const n = archHere ? Math.max(12, Math.ceil((to - from) / 0.5)) : Math.max(1, Math.ceil((to - from) / 1));
           const columns = [];
           for (let j = 0; j <= n; j++) {
-            const xa = from + ((to - from) * j) / n,
-              [x, z] = at(xa, v);
+            const s = from + ((to - from) * j) / n,
+              [x, z] = frame.at(s, v);
             const bottom = archHere
-              ? L.soffit(archHere, xa)
+              ? L.soffit(archHere, s)
               : pierHere >= 0
                 ? pierFoot[pierHere]
                 : abutHere
-                  ? mid < a0
+                  ? mid < q.f0
                     ? foot0
                     : foot1
                   : Math.min(h, level(x, z) - 0.4);
@@ -538,28 +681,31 @@ export function roadBridges({ THREE, scene, materials: m, bridges, level, waterL
           }
           wallFace(body, columns, side);
         }
-        // Projecting arch ring (archivolt) on the face.
+        // Projecting arch ring (archivolt) on the face; its extrados is kept within the route.
         set('ring');
         const proud = side * (half + 0.05);
-        for (const a of L.arches) {
+        for (const a of q.arches) {
           const n = Math.max(12, Math.ceil((a.to - a.from) / 0.5)),
-            centreY = L.springing - (L.radius - L.rise),
-            outer = (xa) => {
-              const dx = xa - a.mid,
-                y = L.soffit(a, xa) - centreY,
+            centreY = springing - (a.radius - L.rise),
+            outer = (s) => {
+              const dx = s - a.mid,
+                y = L.soffit(a, s) - centreY,
                 r = Math.hypot(dx, y);
-              return [a.mid + (dx * (r + L.ringDepth)) / r, centreY + (y * (r + L.ringDepth)) / r];
+              return [
+                Math.min(end, Math.max(0, a.mid + (dx * (r + L.ringDepth)) / r)),
+                centreY + (y * (r + L.ringDepth)) / r,
+              ];
             };
           for (let j = 0; j < n; j++) {
-            const xa = a.from + ((a.to - a.from) * j) / n,
-              xb = a.from + ((a.to - a.from) * (j + 1)) / n,
-              [oa, ya] = outer(xa),
-              [ob, yb] = outer(xb),
-              sa = L.soffit(a, xa),
-              sb = L.soffit(a, xb),
+            const sa0 = a.from + ((a.to - a.from) * j) / n,
+              sb0 = a.from + ((a.to - a.from) * (j + 1)) / n,
+              [oa, ya] = outer(sa0),
+              [ob, yb] = outer(sb0),
+              sa = L.soffit(a, sa0),
+              sb = L.soffit(a, sb0),
               out = [-u3[2] * side, 0, u3[0] * side];
-            face(body, [p3(xa, proud, sa), p3(xb, proud, sb), p3(ob, proud, yb), p3(oa, proud, ya)], out);
-            face(body, [p3(xa, v, sa), p3(xb, v, sb), p3(xb, proud, sb), p3(xa, proud, sa)], [0, -1, 0]);
+            face(body, [p3(sa0, proud, sa), p3(sb0, proud, sb), p3(ob, proud, yb), p3(oa, proud, ya)], out);
+            face(body, [p3(sa0, v, sa), p3(sb0, v, sb), p3(sb0, proud, sb), p3(sa0, proud, sa)], [0, -1, 0]);
             face(body, [p3(oa, v, ya), p3(ob, v, yb), p3(ob, proud, yb), p3(oa, proud, ya)], [0, 1, 0]);
           }
         }
@@ -570,6 +716,7 @@ export function roadBridges({ THREE, scene, materials: m, bridges, level, waterL
       }
       info.arches = L.arches.length;
       info.span = +L.span.toFixed(2);
+      info.edgeSpans = L.edgeSpans.map((s) => +s.toFixed(2));
       info.springing = L.springing;
       info.crownSoffit = +L.crown.toFixed(3);
       info.rise = +L.rise.toFixed(3);
@@ -695,19 +842,20 @@ export function roadBridges({ THREE, scene, materials: m, bridges, level, waterL
     set('wing');
     const wingLength = arch ? Math.min(5, Math.max(2, (h - L.springing) * 0.9)) : 1.5,
       wingTop = arch ? h - 0.12 : L.deckUnderside;
-    for (const [xa, foot, land] of [
-      [a0, foot0, -1],
-      [a1, foot1, 1],
+    for (const [i, foot, land] of [
+      [0, foot0, -1],
+      [1, foot1, 1],
     ])
       for (const side of [-1, 1]) {
         // Along the face line (skewed), outward, then turned 30 degrees towards the land.
-        const fl = Math.hypot(k, 1),
+        const k = skews[i],
+          fl = Math.hypot(k, 1),
           fs = (k * side) / fl,
           fv = side / fl,
           ds = Math.cos(Math.PI / 6) * fs + Math.sin(Math.PI / 6) * land,
           dv = Math.cos(Math.PI / 6) * fv,
           dl = Math.hypot(ds, dv);
-        const start = [xa + k * side * half, side * half],
+        const start = [faceAt(i, side * half), side * half],
           dir = [ds / dl, dv / dl],
           columns = [],
           back = [];
@@ -764,7 +912,7 @@ export function roadBridges({ THREE, scene, materials: m, bridges, level, waterL
       [frame.length - 0.05, 1],
     ]) {
       // Where an abutment reaches the route end the closure is the abutment's back.
-      const reach = Math.abs(k) * half;
+      const reach = Math.abs(skews[dir < 0 ? 0 : 1]) * half;
       set((dir < 0 ? s + reach >= a0 - lab : s - reach <= a1 + lab) ? 'abutment' : 'closure');
       const t = frame.tangent(s),
         top = arch ? h : L.deckUnderside,

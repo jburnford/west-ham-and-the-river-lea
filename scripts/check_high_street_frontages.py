@@ -10,7 +10,10 @@ def shapes(b):return unary_union([Polygon(p['outer'],p['holes']) for p in b['ren
 def rectangle(b):return affinity.translate(affinity.rotate(box(-b['width']/2,-b['depth']/2,b['width']/2,b['depth']/2),-b['rotation']),b['x'],b['z'])
 authored=load('data/maps/high-street-frontages.json');data=load('docs/data/high-street-frontages.json');ground=load('docs/data/ground-plan.json');factories=load('docs/data/factory-buildings.json');infra=load('docs/data/infrastructure.json')
 assert {b['id'] for b in data['buildings']}|{b['id'] for b in data['omitted']}=={b['id'] for b in authored['ranges']}
-assert len(data['buildings'])==33
+# 34 since T17 (3 Oct 2026): the published file was last built at ed15f11, when factory range site789-os-3 covered
+# high-street-06 and the builder omitted it. That factory range has since been re-registered off it, so the rebuild
+# retains all 34 source ranges; the T17 re-registration of high-street-01..05, -09 and -30 does not change the count.
+assert len(data['buildings'])==34
 water=unary_union([Polygon(p[0],p[1:]) for r in ground['rivers']+factories['westContext']['rivers'] for p in r['polygons']])
 existing=unary_union([shapes(b) for b in factories['buildings']]+[rectangle(b) for b in ground['neighbourhood']['terraces']+ground['neighbourhood']['houses']])
 roads=unary_union([Polygon(t) for t in infra['roadTriangles']+infra['pathTriangles']])

@@ -17,16 +17,38 @@
       "name": "Bow Bridge south-east frontage A",
       "sourceAxis": [
         [
-          319,
-          1541
+          343,
+          1554
         ],
         [
-          370,
-          1503
+          385,
+          1522
         ]
       ],
       "sourceDepth": 27,
       "footprint": [
+        [
+          -994.799,
+          97.187
+        ],
+        [
+          -979.57,
+          85.087
+        ],
+        [
+          -973.329,
+          92.942
+        ],
+        [
+          -988.558,
+          105.042
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorFootprint": [
         [
           -1003.758,
           92.612
@@ -44,26 +66,74 @@
           100.484
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+      "priorSourceAxis": [
+        [
+          319,
+          1541
+        ],
+        [
+          370,
+          1503
+        ]
+      ],
+      "priorRotationDegrees": -38.17,
+      "sourceFootprintFids": [
+        138492,
+        589380,
+        583605,
+        702458
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "On the OS five-foot plan (1893 sheets, NLS mosaic) and the EPFL 1891-96 footprints traced from it, the printed south-east building line here stands 8.41 m (median of 72 perpendicular readings every 0.25 m along the range) from the retraced High Street centreline; fitted line residual at most 0.14 m. EPFL footprint cover of the new plan 0.92, of the prior plan 0.09.",
+        "interpretation": "The prior plan put the street face -0.85/-0.59 m from the centreline, in the carriageway. Moved 9.33 m (dx 7.29, dz 5.83) so the street face lies on the printed building line (8.33/8.44 m); south-west end shortened 4.2 m (width 23.65 -> 19.45 m) because the OS steps the building line back 2.4 m there (readings 10.8-11.0 m) behind a small projecting porch or bay (6.9 m); the prior range ran across that forecourt; rotation -38.17 -> -38.47 degrees to follow that line. Depth 10.03 m, storeys, height and roof unchanged; width 19.45 m.",
+        "frontageFromCentrelineM": [
+          8.33,
+          8.44
+        ],
+        "priorFrontageFromCentrelineM": [
+          -0.85,
+          -0.59
+        ]
+      }
     },
     {
       "id": "high-street-02",
       "name": "Bow Bridge south-east frontage B",
       "sourceAxis": [
         [
-          378,
-          1498
+          391,
+          1517
         ],
         [
-          427,
-          1463
+          440,
+          1482
         ]
       ],
       "sourceDepth": 27,
       "footprint": [
+        [
+          -977.099,
+          82.884
+        ],
+        [
+          -959.182,
+          69.451
+        ],
+        [
+          -953.164,
+          77.478
+        ],
+        [
+          -971.081,
+          90.911
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorFootprint": [
         [
           -982.159,
           75.997
@@ -81,26 +151,75 @@
           83.992
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+      "priorSourceAxis": [
+        [
+          378,
+          1498
+        ],
+        [
+          427,
+          1463
+        ]
+      ],
+      "priorRotationDegrees": -37.02,
+      "sourceFootprintFids": [
+        82613,
+        605424,
+        66336,
+        651374,
+        708274
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "On the OS five-foot plan (1893 sheets, NLS mosaic) and the EPFL 1891-96 footprints traced from it, the printed south-east building line here stands 8.47 m (median of 91 perpendicular readings every 0.25 m along the range) from the retraced High Street centreline; fitted line residual at most 0.22 m. EPFL footprint cover of the new plan 0.93, of the prior plan 0.15.",
+        "interpretation": "The prior plan put the street face -0.31/0.12 m from the centreline, in the carriageway. Moved 8.58 m (dx 5.06, dz 6.93) so the street face lies on the printed building line (8.23/8.73 m); rotation -37.02 -> -36.86 degrees to follow that line. Depth 10.03 m, storeys, height and roof unchanged; width 22.39 m.",
+        "frontageFromCentrelineM": [
+          8.23,
+          8.73
+        ],
+        "priorFrontageFromCentrelineM": [
+          -0.31,
+          0.12
+        ]
+      }
     },
     {
       "id": "high-street-03",
       "name": "Bow Bridge south-east corner",
       "sourceAxis": [
         [
-          447,
-          1452
+          459,
+          1463
         ],
         [
-          464,
-          1438
+          477,
+          1450
         ]
       ],
       "sourceDepth": 26,
       "footprint": [
+        [
+          -952.231,
+          62.321
+        ],
+        [
+          -945.64,
+          57.462
+        ],
+        [
+          -939.906,
+          65.239
+        ],
+        [
+          -946.497,
+          70.099
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorFootprint": [
         [
           -957.096,
           58.585
@@ -118,26 +237,72 @@
           65.866
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+      "priorSourceAxis": [
+        [
+          447,
+          1452
+        ],
+        [
+          464,
+          1438
+        ]
+      ],
+      "priorRotationDegrees": -40.95,
+      "sourceFootprintFids": [
+        721522,
+        679506
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "On the OS five-foot plan (1893 sheets, NLS mosaic) and the EPFL 1891-96 footprints traced from it, the printed south-east building line here stands 7.52 m (median of 34 perpendicular readings every 0.25 m along the range) from the retraced High Street centreline; fitted line residual at most 0.62 m. EPFL footprint cover of the new plan 0.88, of the prior plan 0.3.",
+        "interpretation": "The prior plan put the street face 1.47/1.07 m from the centreline, in the carriageway. Moved 6.37 m (dx 4.76, dz 4.24) so the street face lies on the printed building line (7.41/7.66 m) and 1.5 m north-east along the street, off the open passage at its south-west end; rotation -40.95 -> -36.4 degrees to follow that line. Depth 9.66 m, storeys, height and roof unchanged; width 8.19 m.",
+        "frontageFromCentrelineM": [
+          7.41,
+          7.66
+        ],
+        "priorFrontageFromCentrelineM": [
+          1.47,
+          1.07
+        ]
+      }
     },
     {
       "id": "high-street-04",
       "name": "Lion Wharf entrance west",
       "sourceAxis": [
         [
-          485,
-          1426
+          492,
+          1439
         ],
         [
-          505,
-          1410
+          514,
+          1424
         ]
       ],
       "sourceDepth": 23,
       "footprint": [
+        [
+          -939.649,
+          53.402
+        ],
+        [
+          -931.901,
+          47.865
+        ],
+        [
+          -926.931,
+          54.818
+        ],
+        [
+          -934.679,
+          60.356
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorFootprint": [
         [
           -942.806,
           48.933
@@ -155,26 +320,73 @@
           55.453
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+      "priorSourceAxis": [
+        [
+          485,
+          1426
+        ],
+        [
+          505,
+          1410
+        ]
+      ],
+      "priorRotationDegrees": -40.14,
+      "sourceFootprintFids": [
+        671707,
+        752928,
+        692504
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "On the OS five-foot plan (1893 sheets, NLS mosaic) and the EPFL 1891-96 footprints traced from it, the printed south-east building line here stands 8.51 m (median of 40 perpendicular readings every 0.25 m along the range) from the retraced High Street centreline; fitted line residual at most 0.17 m. EPFL footprint cover of the new plan 0.97, of the prior plan 0.31.",
+        "interpretation": "The prior plan put the street face 2.75/2.5 m from the centreline, in the carriageway. Moved 5.88 m (dx 3.11, dz 4.99) so the street face lies on the printed building line (8.22/8.73 m); rotation -40.14 -> -35.55 degrees to follow that line. Depth 8.55 m, storeys, height and roof unchanged; width 9.52 m.",
+        "frontageFromCentrelineM": [
+          8.22,
+          8.73
+        ],
+        "priorFrontageFromCentrelineM": [
+          2.75,
+          2.5
+        ]
+      }
     },
     {
       "id": "high-street-05",
       "name": "Lion Wharf frontage",
       "sourceAxis": [
         [
-          515,
-          1405
+          526,
+          1418
         ],
         [
-          586,
-          1353
+          594,
+          1362
         ]
       ],
       "sourceDepth": 23,
       "footprint": [
+        [
+          -927.628,
+          45.569
+        ],
+        [
+          -902.831,
+          24.211
+        ],
+        [
+          -897.254,
+          30.687
+        ],
+        [
+          -922.05,
+          52.045
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorFootprint": [
         [
           -931.714,
           40.722
@@ -192,10 +404,40 @@
           47.471
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+      "priorSourceAxis": [
+        [
+          515,
+          1405
+        ],
+        [
+          586,
+          1353
+        ]
+      ],
+      "priorRotationDegrees": -37.7,
+      "sourceFootprintFids": [
+        682438,
+        771056,
+        797158,
+        800115,
+        810053,
+        762001,
+        811601,
+        885934
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "On the OS five-foot plan (1893 sheets, NLS mosaic) and the EPFL 1891-96 footprints traced from it, the printed south-east building line here stands 9.31 m (median of 117 perpendicular readings every 0.25 m along the range) from the retraced High Street centreline; fitted line residual at most 0.6 m. EPFL footprint cover of the new plan 0.8, of the prior plan 0.33.",
+        "interpretation": "The prior plan put the street face 3.26/4.54 m from the centreline, in the carriageway. Moved 5.48 m (dx 3.71, dz 4.04) so the street face lies on the printed building line (9.6/9.15 m); rotation -37.7 -> -40.74 degrees to follow that line. Depth 8.55 m, storeys, height and roof unchanged; width 32.73 m.",
+        "frontageFromCentrelineM": [
+          9.6,
+          9.15
+        ],
+        "priorFrontageFromCentrelineM": [
+          3.26,
+          4.54
+        ]
+      }
     },
     {
       "id": "high-street-06",
@@ -333,16 +575,38 @@
       "name": "Marshgate corner public house",
       "sourceAxis": [
         [
-          768,
-          1072
+          766,
+          1098
         ],
         [
-          787,
-          1055
+          786,
+          1083
         ]
       ],
-      "sourceDepth": 30,
+      "sourceDepth": 36,
       "footprint": [
+        [
+          -843.043,
+          -77.397
+        ],
+        [
+          -835.6,
+          -83.3
+        ],
+        [
+          -827.335,
+          -72.879
+        ],
+        [
+          -834.779,
+          -66.976
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorFootprint": [
         [
           -842.152,
           -86.084
@@ -360,10 +624,27 @@
           -77.99
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved."
+      "priorSourceAxis": [
+        [
+          768,
+          1072
+        ],
+        [
+          787,
+          1055
+        ]
+      ],
+      "priorSourceDepth": 30,
+      "priorRotationDegrees": -43.31,
+      "sourceFootprintFids": [
+        91288
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "The OS five-foot plan prints the P.H. as one shaded block on the south-west side of Marshgate Lane at its High Street corner (EPFL footprint sourceFid 91288, 108 m2): lane face from (-835.6, -83.3) to (-828.7, -74.6) with a chamfer to the High Street, about 13.3-13.9 m along the lane and 10.2 m across, with a notch on its south-west side. The printed lane between this face and the block opposite (EPFL sourceFid 24982, 213 m2) is about 6.2 m wide. The prior plan stood 7 m north-west of the P.H. and 6-7 m into the lane, over open roadway (EPFL cover 0.32).",
+        "interpretation": "Re-registered onto the printed P.H. block: moved 10.16 m (dx -0.32, dz 10.15); width across the lane 9.5 m kept; length along the lane 11.1 -> 13.3 m because the OS prints one block of that length. EPFL cover of the new plan 0.81. The modelled Marshgate Lane is itself about 3 m west of the printed lane here (its centreline runs 0.2 m from the P.H. face), so the builder trims the lane side of this range; the lane, not the range, is wrong for that remaining clash.",
+        "laneMisregistration": "Marshgate Lane centreline between (-828.8, -74.5) and (-842.1, -99.4) lies about 3 m west of the printed lane centre; left for a road retrace."
+      }
     },
     {
       "id": "high-street-10",
@@ -1212,16 +1493,48 @@
       "name": "High Street school street range",
       "sourceAxis": [
         [
-          1422,
-          513
+          1435,
+          526
         ],
         [
-          1443,
-          485
+          1456,
+          497
         ]
       ],
       "sourceDepth": 45,
       "footprint": [
+        [
+          -602.475,
+          -296.367
+        ],
+        [
+          -595.006,
+          -307.013
+        ],
+        [
+          -581.308,
+          -297.402
+        ],
+        [
+          -588.777,
+          -286.756
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          1400,
+          498
+        ],
+        [
+          1421,
+          470
+        ]
+      ],
+      "priorFootprint": [
         [
           -607.473,
           -300.923
@@ -1239,20 +1552,34 @@
           -291.268
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
-      "previousSourceAxis": [
+      "priorSourceAxis": [
         [
-          1400,
-          498
+          1422,
+          513
         ],
         [
-          1421,
-          470
+          1443,
+          485
         ]
-      ]
+      ],
+      "priorRotationDegrees": -54.62,
+      "sourceFootprintFids": [
+        16951,
+        920307
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "On the OS five-foot plan (1893 sheets, NLS mosaic) and the EPFL 1891-96 footprints traced from it, the printed south-east building line here stands 7.7 m (median of 63 perpendicular readings every 0.25 m along the range) from the retraced High Street centreline; fitted line residual at most 0.22 m. EPFL footprint cover of the new plan 0.8, of the prior plan 0.55.",
+        "interpretation": "The prior plan put the street face 1.03/0.76 m from the centreline, in the carriageway. Moved 6.72 m (dx 4.98, dz 4.51) so the street face lies on the printed building line (7.67/7.42 m); rotation -54.62 -> -54.95 degrees to follow that line. Depth 16.73 m, storeys, height and roof unchanged; width 13.0 m.",
+        "frontageFromCentrelineM": [
+          7.67,
+          7.42
+        ],
+        "priorFrontageFromCentrelineM": [
+          1.03,
+          0.76
+        ]
+      }
     },
     {
       "id": "high-street-31",
