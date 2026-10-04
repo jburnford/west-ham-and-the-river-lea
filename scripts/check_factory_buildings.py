@@ -62,7 +62,17 @@ assert len(stacks) == factory['counts']['chimneys']
 assert len({s['id'] for s in stacks}) == len(stacks)
 for i, s in enumerate(stacks):
     assert s['siteId'] in {site['id'] for site in factory['sites']}
-    assert (s.get('pixelPosition') or s.get('parentBuildingId')) and s['positionEvidence'] and s['heightEvidence'] and s['profileEvidence']
+    # Every stack must say where its position comes from: a symbol traced on a
+    # sheet (pixelPosition), a parent range (parentBuildingId), or a supplied OS
+    # outline read as the base itself (sourceFootprintFid + sourcePolygons). The
+    # last is how site 865's boiler stack is registered: world coordinates on
+    # fid 1061509, which its range keeps as a hole, so it has no sheet pixel and
+    # no parent that contains it. Such a stack must stand on that outline.
+    on_mapped_base = bool(s.get('sourceFootprintFid') and s.get('sourcePolygons'))
+    assert (s.get('pixelPosition') or s.get('parentBuildingId') or on_mapped_base) and s['positionEvidence'] and s['heightEvidence'] and s['profileEvidence'], s['id']
+    if on_mapped_base and not (s.get('pixelPosition') or s.get('parentBuildingId')):
+        mapped_base = unary_union([Polygon(q[0], q[1:]) for q in s['sourcePolygons']])
+        assert mapped_base.buffer(.05).contains(Point(s['x'], s['z'])), ('Chimney off its mapped base', s['id'])
     if s.get('evidenceType') in {'map-and-photograph', 'photograph-interpretation', 'map-interpretation'}:
         assert s['supportingSources'] and all(k in factory['sources'] for k in s['supportingSources'])
     else:
