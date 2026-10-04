@@ -919,17 +919,47 @@ function buildScene() {
   // Continuous elevated sewer: mapped bends, interpreted bank profile and distant extensions.
   const sewer = data.neighbourhood.sewer;
   const cover = (x, z) => sewerSurfaceHeight(x, z, sewer, data.infrastructure.sewerHighStreet);
-  const crestGeometry = new THREE.BufferGeometry();
-  const crestVertices = [];
+  // The crest is grassed where it covers the earth bank (and the sewer inside it); the stone
+  // deck shows only over the openings the bank stops at: water, railway and streets.
+  const bankCells = new Map();
+  const bankCell = (x, z) => `${Math.floor(x / 10)},${Math.floor(z / 10)}`;
+  for (const tri of data.infrastructure.sewerBanks) {
+    const xs = tri.map((p) => p[0]),
+      zs = tri.map((p) => p[2]);
+    for (let i = Math.floor(Math.min(...xs) / 10); i <= Math.floor(Math.max(...xs) / 10); i++)
+      for (let j = Math.floor(Math.min(...zs) / 10); j <= Math.floor(Math.max(...zs) / 10); j++) {
+        const key = `${i},${j}`;
+        if (!bankCells.has(key)) bankCells.set(key, []);
+        bankCells.get(key).push(tri);
+      }
+  }
+  const overBank = (x, z) =>
+    (bankCells.get(bankCell(x, z)) || []).some(([a, b, c]) => {
+      const side = (p, q) => (q[0] - p[0]) * (z - p[2]) - (q[2] - p[2]) * (x - p[0]);
+      const s = [side(a, b), side(b, c), side(c, a)];
+      return s.every((v) => v >= 0) || s.every((v) => v <= 0);
+    });
+  const crestVertices = { earth: [], deck: [] };
   for (const source of data.infrastructure.sewerCrestTriangles) {
     const tri = source.map(([x, z]) => [x, cover(x, z), z]);
     const [a, b, c] = tri;
     if ((b[0] - a[0]) * (c[2] - a[2]) - (b[2] - a[2]) * (c[0] - a[0]) > 0) tri.reverse();
-    crestVertices.push(...tri.flat());
+    const kind = overBank((a[0] + b[0] + c[0]) / 3, (a[2] + b[2] + c[2]) / 3) ? 'earth' : 'deck';
+    crestVertices[kind].push(...tri.flat());
   }
-  crestGeometry.setAttribute('position', new THREE.Float32BufferAttribute(crestVertices, 3));
-  crestGeometry.computeVertexNormals();
-  scene.add(new THREE.Mesh(crestGeometry, materials.stone));
+  for (const [kind, vertices] of Object.entries(crestVertices)) {
+    if (!vertices.length) continue;
+    const crestGeometry = new THREE.BufferGeometry();
+    crestGeometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+    if (kind === 'earth') {
+      // Same texture mapping as the bank slopes, so crest and slope read as one grassed earthwork.
+      const uv = [];
+      for (let i = 0; i < vertices.length; i += 3) uv.push(vertices[i] / 5500, -vertices[i + 2] / 5500);
+      crestGeometry.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
+    }
+    crestGeometry.computeVertexNormals();
+    scene.add(new THREE.Mesh(crestGeometry, kind === 'earth' ? materials.ground : materials.stone));
+  }
   const bankGeometry = new THREE.BufferGeometry();
   const sewerBanks = data.infrastructure.sewerBanks.map((tri) =>
     tri.map(([x, y, z]) => [
