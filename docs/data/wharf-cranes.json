@@ -1,0 +1,229 @@
+{
+ "origin": {
+  "easting": 538900,
+  "northing": 183209
+ },
+ "crs": "EPSG:27700 local metres, x east, z south, y up",
+ "source": "OS London five-foot plan 1891-96 (cached NLS tiles, layer os-london-five-foot-1893); crane symbols located with the EPFL OS text layer (reference/epfl-london-os-text/londonos_texts_postcorrected.gpkg, labels 'C' / 'c')",
+ "method": "Every 'C' label inside the core Lower Lea box was checked on a 1 m grid crop of the five-foot mosaic. The OS crane symbol is a dot with a small 'C' beside it; positions are the dot centres, read to about 0.5 m. One label (-1155.8, -73.6) is a letter of larger lettering, not a crane. Cranes in yards whose buildings are not yet modelled are listed under deferred.",
+ "form": {
+  "baseSize": 1.6,
+  "baseHeight": 0.45,
+  "postHeight": 4.2,
+  "postRadius": 0.16,
+  "jibFoot": 0.9,
+  "jibReach": 5.2,
+  "jibTipHeight": 6.4,
+  "jibRadius": 0.11,
+  "tieRadius": 0.035,
+  "winchSize": [
+   0.7,
+   0.6,
+   0.5
+  ],
+  "hookDrop": 2.2,
+  "evidence": "Hand-worked iron wharf crane on a timber-capped stone base: post, inclined jib and tie rods, winch at the foot. The OS records position only; the form, size and jib direction are a type-based interpretation for cranes of the period, not evidence about any one crane."
+ },
+ "cranes": [
+  {
+   "id": "crane-abbey-mills-channelsea",
+   "x": -20.7,
+   "z": -135.0,
+   "mapped": [
+    -20.7,
+    -135.0
+   ],
+   "movedMetres": 0.0,
+   "headingDegrees": 147.2,
+   "setting": "wharf",
+   "place": "Channelsea bank at Abbey Mills chemical works",
+   "distanceToTargetMetres": 3.54,
+   "positionEvidence": "OS five-foot crane symbol: dot right of 'C.' at the river wall.",
+   "headingEvidence": "Jib turned toward the nearest drawn water edge (interpretation: the OS gives no direction)."
+  },
+  {
+   "id": "crane-manure-works-oval",
+   "x": -259.6,
+   "z": 441.5,
+   "mapped": [
+    -259.6,
+    441.5
+   ],
+   "movedMetres": 0.0,
+   "headingDegrees": -109.5,
+   "setting": "wharf",
+   "place": "Hempleman's manure works wharf on Abbey Creek",
+   "distanceToTargetMetres": 5.35,
+   "positionEvidence": "OS five-foot crane symbol: dot inside a drawn oval lettered 'C' with B.M. 15.94; the oval is read as the crane's raised base or turning circle.",
+   "headingEvidence": "Jib turned toward the nearest drawn water edge (interpretation: the OS gives no direction)."
+  },
+  {
+   "id": "crane-st-leonards-wharf",
+   "x": -632.8,
+   "z": 695.2,
+   "mapped": [
+    -632.8,
+    695.2
+   ],
+   "movedMetres": 0.0,
+   "headingDegrees": 78.0,
+   "setting": "wharf",
+   "place": "Lea bank below St Leonard's Works",
+   "distanceToTargetMetres": 3.02,
+   "positionEvidence": "OS five-foot crane symbol: dot right of 'C.' at the river edge.",
+   "headingEvidence": "Jib turned toward the nearest drawn water edge (interpretation: the OS gives no direction)."
+  },
+  {
+   "id": "crane-imperial-works-wharf",
+   "x": -626.2,
+   "z": 483.4,
+   "mapped": [
+    -626.2,
+    483.4
+   ],
+   "movedMetres": 0.0,
+   "headingDegrees": -35.1,
+   "setting": "wharf",
+   "place": "Lea bank beside Imperial Works",
+   "distanceToTargetMetres": 1.81,
+   "positionEvidence": "OS five-foot crane symbol: dot upper right of 'c'.",
+   "headingEvidence": "Jib turned toward the nearest drawn water edge (interpretation: the OS gives no direction)."
+  },
+  {
+   "id": "crane-albion-wharf",
+   "x": -1098.2,
+   "z": 99.7,
+   "mapped": [
+    -1098.2,
+    99.7
+   ],
+   "movedMetres": 0.0,
+   "headingDegrees": 105.9,
+   "setting": "yard",
+   "place": "Albion Wharf yard",
+   "distanceToTargetMetres": 1.42,
+   "positionEvidence": "OS five-foot crane symbol: dot left of 'C' in the wharf yard.",
+   "headingEvidence": "Jib turned away from the nearest modelled building, over the open yard (interpretation: the OS gives no direction)."
+  },
+  {
+   "id": "crane-bow-bridge-wharf",
+   "x": -1023.658,
+   "z": 136.26,
+   "mapped": [
+    -1023.3,
+    135.3
+   ],
+   "movedMetres": 1.02,
+   "headingDegrees": -69.5,
+   "setting": "wharf",
+   "place": "wharf edge south of Bow Bridge",
+   "distanceToTargetMetres": 0.9,
+   "positionEvidence": "OS five-foot crane symbol: dot right of 'C.' at the river edge; the drawn water edge runs over the dot, so the crane is set back onto the bank. Moved 1.02 m onto open ground clear of the drawn water or a modelled wall.",
+   "headingEvidence": "Jib turned toward the nearest drawn water edge (interpretation: the OS gives no direction)."
+  },
+  {
+   "id": "crane-oil-wharf-south",
+   "x": -1215.0,
+   "z": -14.2,
+   "mapped": [
+    -1215.0,
+    -14.2
+   ],
+   "movedMetres": 0.0,
+   "headingDegrees": 115.0,
+   "setting": "wharf",
+   "place": "Oil Wharf river edge",
+   "distanceToTargetMetres": 7.0,
+   "positionEvidence": "OS five-foot crane symbol: dot left of 'C'.",
+   "headingEvidence": "Jib turned toward the nearest drawn water edge (interpretation: the OS gives no direction)."
+  },
+  {
+   "id": "crane-oil-wharf-north",
+   "x": -1169.3,
+   "z": 12.5,
+   "mapped": [
+    -1169.3,
+    12.5
+   ],
+   "movedMetres": 0.0,
+   "headingDegrees": 120.4,
+   "setting": "wharf",
+   "place": "Oil Wharf river edge",
+   "distanceToTargetMetres": 5.1,
+   "positionEvidence": "OS five-foot crane symbol: dot left of 'C'.",
+   "headingEvidence": "Jib turned toward the nearest drawn water edge (interpretation: the OS gives no direction)."
+  },
+  {
+   "id": "crane-oil-wharf-yard",
+   "x": -1122.8,
+   "z": -43.3,
+   "mapped": [
+    -1122.8,
+    -43.3
+   ],
+   "movedMetres": 0.0,
+   "headingDegrees": -151.6,
+   "setting": "yard",
+   "place": "small walled structure in the oil wharf yard",
+   "distanceToTargetMetres": 4.0,
+   "positionEvidence": "OS five-foot crane symbol: dot upper right of 'c' inside a small drawn enclosure.",
+   "headingEvidence": "Jib turned away from the nearest modelled building, over the open yard (interpretation: the OS gives no direction)."
+  },
+  {
+   "id": "crane-bow-flour-wharf",
+   "x": -1125.7,
+   "z": 30.7,
+   "mapped": [
+    -1125.7,
+    30.7
+   ],
+   "movedMetres": 0.0,
+   "headingDegrees": 106.1,
+   "setting": "wharf",
+   "place": "Lea bank south of Bow Flour Mills",
+   "distanceToTargetMetres": 7.11,
+   "positionEvidence": "OS five-foot crane symbol: dot left of 'C'.",
+   "headingEvidence": "Jib turned toward the nearest drawn water edge (interpretation: the OS gives no direction)."
+  },
+  {
+   "id": "crane-howards-three-mill-wall",
+   "x": -638.9,
+   "z": -210.9,
+   "mapped": [
+    -638.9,
+    -210.9
+   ],
+   "movedMetres": 0.0,
+   "headingDegrees": 22.1,
+   "setting": "wharf",
+   "place": "Three Mill Wall River bank by Howards' works",
+   "distanceToTargetMetres": 2.48,
+   "positionEvidence": "OS five-foot crane symbol: dot right of 'c.'.",
+   "headingEvidence": "Jib turned toward the nearest drawn water edge (interpretation: the OS gives no direction)."
+  }
+ ],
+ "deferred": [
+  {
+   "x": -1144.1,
+   "z": 269.3,
+   "reason": "yard crane in a works not yet modelled (west of the core strip)"
+  },
+  {
+   "x": -1164.3,
+   "z": 379.2,
+   "reason": "East London Foundry yard; works not yet modelled"
+  },
+  {
+   "x": -1129.5,
+   "z": 367.9,
+   "reason": "Bow Tank Works yard; works not yet modelled"
+  }
+ ],
+ "register": "data/maps/os-cranes.json",
+ "registerSha256": "cd6638d10bc5dcc6dc7c9778c503a35f65baf1a6ae8cb697822492102e084bf8",
+ "inputHashes": {
+  "docs/data/ground-plan.json": "6434c94c9a9d3997f95a7035a31d3afc3124da7f8453bcac839b157d8b34f3cc",
+  "docs/data/river-system-1900.json": "8ca4cee4e25807b0a918a26e68132c223194289e48a1d73aa96c74826884d4cc",
+  "docs/data/factory-buildings.json": "55e43668e7e2a7cd3bbae6d205d607af29f97189e16fb8918da9c07a53ced4d8"
+ }
+}

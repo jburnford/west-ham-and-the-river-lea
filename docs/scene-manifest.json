@@ -1,7 +1,7 @@
 {
-  "revision": "6a7b2634b63e",
+  "revision": "29a2ac9492e5",
   "modules": {
-    "./app.js": "./app.js?v=bc37816d4b85c2f8",
+    "./app.js": "./app.js?v=b4883a4e1224f934",
     "./bootstrap.js": "./bootstrap.js?v=d3ae7289d54bbe58",
     "./bridge-movement.js": "./bridge-movement.js?v=0703b847169d70f4",
     "./culvert-section.js": "./culvert-section.js?v=bf9bd4c522577bae",
@@ -47,7 +47,8 @@
     "./vendor/three/GLTFExporter.js": "./vendor/three/GLTFExporter.js?v=0931aaceb6a2489b",
     "./vendor/three/three.core.js": "./vendor/three/three.core.js?v=eb077d2417f61d3e",
     "./vendor/three/three.module.js": "./vendor/three/three.module.js?v=c8211c69345d2e99",
-    "./wall-river-vista.js": "./wall-river-vista.js?v=9494d940d27b1fac"
+    "./wall-river-vista.js": "./wall-river-vista.js?v=9494d940d27b1fac",
+    "./wharf-cranes.js": "./wharf-cranes.js?v=5e03ed2c9a8cb328"
   },
   "assets": {
     "./data/abbey-station-plan.json": "./data/abbey-station-plan.json?v=9b27d7cfc4eb9d39",
@@ -55,7 +56,7 @@
     "./data/drainage-connections-1900.json": "./data/drainage-connections-1900.json?v=ffdec3cf6fcf5432",
     "./data/factory-buildings.json": "./data/factory-buildings.json?v=55e43668e7e2a7cd",
     "./data/factory-yards.json": "./data/factory-yards.json?v=7d81e2c86025dc36",
-    "./data/flood-demo-1900.json": "./data/flood-demo-1900.json?v=8cb336dc7bb9519e",
+    "./data/flood-demo-1900.json": "./data/flood-demo-1900.json?v=49a54d464fda950c",
     "./data/ground-plan.json": "./data/ground-plan.json?v=6434c94c9a9d3997",
     "./data/high-street-frontages.json": "./data/high-street-frontages.json?v=24dd541dad42af2f",
     "./data/housing-detail.json": "./data/housing-detail.json?v=5cedb010dcbbc9cd",
@@ -266,6 +267,7 @@
     "./data/terrain-1900.zones.u8": "./data/terrain-1900.zones.u8?v=e7975a778bbf301d",
     "./data/terrain-epochs.json": "./data/terrain-epochs.json?v=61d1bc4d673bc2d0",
     "./data/tram-rails.json": "./data/tram-rails.json?v=bce3a2e1f3c754ac",
+    "./data/wharf-cranes.json": "./data/wharf-cranes.json?v=48a1c831c8d78d20",
     "./assets/textures/tidal-mud-v1.json": "./assets/textures/tidal-mud-v1.json?v=e1ca9ac91c3f9168",
     "./assets/textures/tidal-mud-v1.png": "./assets/textures/tidal-mud-v1.png?v=e5a5ecba92bfc8cc"
   }

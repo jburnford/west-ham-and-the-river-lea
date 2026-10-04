@@ -13,6 +13,7 @@ import { realism } from './realism.js';
 import { lighting } from './lighting.js';
 import { infrastructure } from './infrastructure.js';
 import { tramRails } from './tram-rails.js';
+import { wharfCranes } from './wharf-cranes.js';
 import { mappedTrees } from './mapped-trees.js';
 import { loadTerrain, terrainDetails } from './terrain-details.js';
 import { loadRiverNetwork, riverNetwork } from './river-network.js';
@@ -473,6 +474,7 @@ function update() {
     sewerCrossing: scene?.userData.sewerCrossing,
     infrastructure: scene?.userData.infrastructure,
     tramRails: scene?.userData.tramRails,
+    wharfCranes: scene?.userData.wharfCranes,
     mappedTrees: scene?.userData.mappedTrees,
     riverNetwork: scene?.userData.riverNetwork,
     riverSystem: scene?.userData.riverSystem,
@@ -806,6 +808,7 @@ function buildScene() {
   mark('infrastructure');
   scene.userData.infrastructure = infrastructure({ THREE, scene, materials, data, box, level: terrain.level });
   scene.userData.tramRails = tramRails({ THREE, scene, data, level: terrain.level });
+  scene.userData.wharfCranes = wharfCranes({ THREE, scene, data, level: terrain.level, materials });
   mark('trees');
   scene.userData.mappedTrees = mappedTrees({ THREE, scene, data, level: terrain.level, beam });
   surfaces.weather(terrain.terrainMaterial);
@@ -1269,6 +1272,7 @@ try {
     system,
     mainLandscape,
     tramRailsData,
+    cranesData,
   ] = await Promise.all([
     load('./data/ground-plan.json'),
     loadTerrain(load),
@@ -1286,6 +1290,7 @@ try {
     loadRiverSystem(load),
     loadMainLandscape(load),
     load('./data/tram-rails.json'),
+    load('./data/wharf-cranes.json'),
   ]);
   data = groundPlan;
   data.terrain = terrain;
@@ -1300,6 +1305,7 @@ try {
   data.regionalFootprints = regional;
   data.stationPlan = stationPlan;
   data.tramRails = tramRailsData;
+  data.wharfCranes = cranesData;
   data.elevation = elevation;
   applyHistoricElevation(data);
   data.riverSystem = system;
