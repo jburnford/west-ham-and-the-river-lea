@@ -425,8 +425,8 @@
           261.84668810295153,
           575.759159709324
         ],
-        "sceneFormationHeight": 5.5,
-        "heightStatus": "inherited interpretation, not a surveyed crossing level"
+        "sceneFormationHeight": -0.425,
+        "heightStatus": "OS level register (data/maps/railway-levels.json): formation interpolated along the line between its OS controls (at grade here); not a surveyed crossing level"
       },
       {
         "name": "Abbey Mills junction curve",
@@ -434,8 +434,8 @@
           251.44940726603502,
           576.0440230451394
         ],
-        "sceneFormationHeight": 5.5,
-        "heightStatus": "inherited interpretation, not a surveyed crossing level"
+        "sceneFormationHeight": -0.372,
+        "heightStatus": "OS level register (data/maps/railway-levels.json): formation interpolated along the line between its OS controls (at grade here); not a surveyed crossing level"
       }
     ],
     "nearestModelRoadMetres": 0.0,
@@ -494,9 +494,9 @@
     "reference/spot-heights/mosaics/m18_131072_87146.json": "ea238c07c62ae4c552b45297c043b48027d6ab6ebfa89633747e182af5f3bd89",
     "reference/spot-heights/mosaics/m18_131072_87146.png": "db6827dee9be1e2d53840307d32d75283faeab06dc49861e3850786ee336ac5f",
     "data/maps/drainage-connections-1900.json": "3a6a13d827abae4bfc3872c75593171aa26074793c367b09609c12544c51e15f",
-    "docs/data/infrastructure.json": "c004b53547bd1f712a7c19970bcf0c2fda6685781016b20e271794f9770b77df",
+    "docs/data/infrastructure.json": "4716588ffc9cecbc27054b4bca1dfc3b3286c5face478169a20152de0cf9419d",
     "docs/data/drainage-1900.json": "7db76c0afd4e3ab12b78f8f0e6f802bedb22e70149c89cba4631fc96b60e7ed6",
-    "docs/data/terrain-1900.json": "2f2709d9dd988d31e3dfe40f2cdcadda50b91700cdb4659abf5dc1b6818c9230",
+    "docs/data/terrain-1900.json": "b24844b79a69c200f19f6d62f438524925eeeab28fa666927d154addb8a48c77",
     "reference/spot-heights/mosaics-1848/s18_131072_87146.png": "1dd17c0c168a491cf982f6587b34fcf9822632c07255028ee13fca8369813eb7",
     "reference/spot-heights/mosaics-1848/s18_131075_87146.png": "4cef3a0cf86cdf760cf32960c6b4bf239b094d22abd656f81f6f39401a478e8b",
     "reference/topography-research-2026-09-28/flood-evidence/west-ham-outer-london-inquiry-1907.pdf": "c58565689408bc15c554ff41127d967e5463fc71d027ad74df66eff07946df62",
@@ -646,7 +646,12 @@
       "formationAboveDeckMetres": 1.3178526321647404,
       "distanceFromDrainCrossingMetres": 277.3827136642117,
       "constantFormationConflictsWithRoadBridge": true,
-      "calibratedFloodBarrier": false
+      "calibratedFloodBarrier": false,
+      "profileFormationODN": 0.9234399999999999,
+      "profileFormationBelowDeckMetres": 5.09414736783526,
+      "profileConflictsWithRoadBridge": false,
+      "profileSource": "data/maps/railway-levels.json",
+      "profileStatus": "The constant 5.5 m formation was replaced by the OS level profile (at grade here: formation 0.1 m above the OS ground readings); the road bridge now passes over the line."
     },
     "hydraulicReady": false,
     "limitations": [
@@ -880,12 +885,12 @@
       {
         "name": "Great Eastern Railway, Woolwich branch",
         "station": 19.48109566529644,
-        "formationODN": 7.33544
+        "formationODN": 1.41044
       },
       {
         "name": "Abbey Mills junction curve",
         "station": 9.079913236274098,
-        "formationODN": 7.33544
+        "formationODN": 1.4634399999999999
       }
     ],
     "verticalReference": {
