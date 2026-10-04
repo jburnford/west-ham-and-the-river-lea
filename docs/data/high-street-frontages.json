@@ -20,16 +20,38 @@
       "name": "Bow Bridge south-east frontage A",
       "sourceAxis": [
         [
-          319,
-          1541
+          343,
+          1554
         ],
         [
-          370,
-          1503
+          385,
+          1522
         ]
       ],
       "sourceDepth": 27,
       "footprint": [
+        [
+          -994.799,
+          97.187
+        ],
+        [
+          -979.57,
+          85.087
+        ],
+        [
+          -973.329,
+          92.942
+        ],
+        [
+          -988.558,
+          105.042
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorFootprint": [
         [
           -1003.758,
           92.612
@@ -47,28 +69,54 @@
           100.484
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorSourceAxis": [
+        [
+          319,
+          1541
+        ],
+        [
+          370,
+          1503
+        ]
+      ],
+      "priorRotationDegrees": -38.17,
+      "sourceFootprintFids": [
+        138492,
+        589380,
+        583605,
+        702458
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "On the OS five-foot plan (1893 sheets, NLS mosaic) and the EPFL 1891-96 footprints traced from it, the printed south-east building line here stands 8.41 m (median of 72 perpendicular readings every 0.25 m along the range) from the retraced High Street centreline; fitted line residual at most 0.14 m. EPFL footprint cover of the new plan 0.92, of the prior plan 0.09.",
+        "interpretation": "The prior plan put the street face -0.85/-0.59 m from the centreline, in the carriageway. Moved 9.33 m (dx 7.29, dz 5.83) so the street face lies on the printed building line (8.33/8.44 m); south-west end shortened 4.2 m (width 23.65 -> 19.45 m) because the OS steps the building line back 2.4 m there (readings 10.8-11.0 m) behind a small projecting porch or bay (6.9 m); the prior range ran across that forecourt; rotation -38.17 -> -38.47 degrees to follow that line. Depth 10.03 m, storeys, height and roof unchanged; width 19.45 m.",
+        "frontageFromCentrelineM": [
+          8.33,
+          8.44
+        ],
+        "priorFrontageFromCentrelineM": [
+          -0.85,
+          -0.59
+        ]
+      },
       "siteId": "high-street-frontages",
       "streetFrontage": true,
-      "x": -991.3516078251004,
-      "z": 89.23936264813315,
-      "rotation": -38.172874145201575,
-      "width": 23.67600226868376,
-      "depth": 10.032755127468022,
+      "x": -984.0640000000001,
+      "z": 95.0645,
+      "rotation": -38.46843199941733,
+      "width": 19.450837077219603,
+      "depth": 10.032502479215168,
       "storeys": 2,
       "roofAxis": "x",
       "roofBays": 1,
       "localBounds": [
         [
-          -11.83769223798356,
-          -5.016202944798152
+          -9.725418538609802,
+          -5.01625123960757
         ],
         [
-          11.8383100307002,
-          5.016552182669869
+          9.725418538609802,
+          5.016251239607598
         ]
       ],
       "material": "brick",
@@ -76,27 +124,27 @@
         {
           "outer": [
             [
-              -997.538,
-              100.484
+              -988.558,
+              105.042
             ],
             [
-              -978.945,
-              85.866
+              -973.329,
+              92.942
             ],
             [
-              -985.165,
-              77.995
+              -979.57,
+              85.087
             ],
             [
-              -1003.758,
-              92.612
+              -994.799,
+              97.187
             ]
           ],
           "holes": []
         }
       ],
-      "sourceAreaM2": 237.28,
-      "renderAreaM2": 237.28,
+      "sourceAreaM2": 195.14,
+      "renderAreaM2": 195.14,
       "retainedFraction": 1.0,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
@@ -105,16 +153,38 @@
       "name": "Bow Bridge south-east frontage B",
       "sourceAxis": [
         [
-          378,
-          1498
+          391,
+          1517
         ],
         [
-          427,
-          1463
+          440,
+          1482
         ]
       ],
       "sourceDepth": 27,
       "footprint": [
+        [
+          -977.099,
+          82.884
+        ],
+        [
+          -959.182,
+          69.451
+        ],
+        [
+          -953.164,
+          77.478
+        ],
+        [
+          -971.081,
+          90.911
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorFootprint": [
         [
           -982.159,
           75.997
@@ -132,28 +202,55 @@
           83.992
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorSourceAxis": [
+        [
+          378,
+          1498
+        ],
+        [
+          427,
+          1463
+        ]
+      ],
+      "priorRotationDegrees": -37.02,
+      "sourceFootprintFids": [
+        82613,
+        605424,
+        66336,
+        651374,
+        708274
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "On the OS five-foot plan (1893 sheets, NLS mosaic) and the EPFL 1891-96 footprints traced from it, the printed south-east building line here stands 8.47 m (median of 91 perpendicular readings every 0.25 m along the range) from the retraced High Street centreline; fitted line residual at most 0.22 m. EPFL footprint cover of the new plan 0.93, of the prior plan 0.15.",
+        "interpretation": "The prior plan put the street face -0.31/0.12 m from the centreline, in the carriageway. Moved 8.58 m (dx 5.06, dz 6.93) so the street face lies on the printed building line (8.23/8.73 m); rotation -37.02 -> -36.86 degrees to follow that line. Depth 10.03 m, storeys, height and roof unchanged; width 22.39 m.",
+        "frontageFromCentrelineM": [
+          8.23,
+          8.73
+        ],
+        "priorFrontageFromCentrelineM": [
+          -0.31,
+          0.12
+        ]
+      },
       "siteId": "high-street-frontages",
       "streetFrontage": true,
-      "x": -970.1895000000001,
-      "z": 73.2525,
-      "rotation": -37.022900265813746,
-      "width": 22.417890247380228,
-      "depth": 10.032100420969414,
+      "x": -965.1314999999998,
+      "z": 80.181,
+      "rotation": -36.86017496147896,
+      "width": 22.393497895807286,
+      "depth": 10.032400161002386,
       "storeys": 2,
       "roofAxis": "x",
       "roofBays": 1,
       "localBounds": [
         [
-          -11.208945123690114,
-          -5.016050210484593
+          -11.196748947903757,
+          -5.016200080501292
         ],
         [
-          11.208945123690114,
-          5.016050210484821
+          11.19674894790353,
+          5.016200080501093
         ]
       ],
       "material": "brick",
@@ -161,20 +258,20 @@
         {
           "outer": [
             [
-              -976.099,
-              83.992
+              -971.081,
+              90.911
             ],
             [
-              -958.22,
-              70.508
+              -953.164,
+              77.478
             ],
             [
-              -964.28,
-              62.513
+              -959.182,
+              69.451
             ],
             [
-              -982.159,
-              75.997
+              -977.099,
+              82.884
             ]
           ],
           "holes": []
@@ -190,16 +287,38 @@
       "name": "Bow Bridge south-east corner",
       "sourceAxis": [
         [
-          447,
-          1452
+          459,
+          1463
         ],
         [
-          464,
-          1438
+          477,
+          1450
         ]
       ],
       "sourceDepth": 26,
       "footprint": [
+        [
+          -952.231,
+          62.321
+        ],
+        [
+          -945.64,
+          57.462
+        ],
+        [
+          -939.906,
+          65.239
+        ],
+        [
+          -946.497,
+          70.099
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorFootprint": [
         [
           -957.096,
           58.585
@@ -217,28 +336,52 @@
           65.866
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorSourceAxis": [
+        [
+          447,
+          1452
+        ],
+        [
+          464,
+          1438
+        ]
+      ],
+      "priorRotationDegrees": -40.95,
+      "sourceFootprintFids": [
+        721522,
+        679506
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "On the OS five-foot plan (1893 sheets, NLS mosaic) and the EPFL 1891-96 footprints traced from it, the printed south-east building line here stands 7.52 m (median of 34 perpendicular readings every 0.25 m along the range) from the retraced High Street centreline; fitted line residual at most 0.62 m. EPFL footprint cover of the new plan 0.88, of the prior plan 0.3.",
+        "interpretation": "The prior plan put the street face 1.47/1.07 m from the centreline, in the carriageway. Moved 6.37 m (dx 4.76, dz 4.24) so the street face lies on the printed building line (7.41/7.66 m) and 1.5 m north-east along the street, off the open passage at its south-west end; rotation -40.95 -> -36.4 degrees to follow that line. Depth 9.66 m, storeys, height and roof unchanged; width 8.19 m.",
+        "frontageFromCentrelineM": [
+          7.41,
+          7.66
+        ],
+        "priorFrontageFromCentrelineM": [
+          1.47,
+          1.07
+        ]
+      },
       "siteId": "high-street-frontages",
       "streetFrontage": true,
-      "x": -950.8276663280049,
-      "z": 59.54202549638657,
-      "rotation": -40.95421821791357,
-      "width": 8.213820770884695,
-      "depth": 9.662966073819348,
+      "x": -946.0685111241792,
+      "z": 63.78033069963314,
+      "rotation": -36.398286262986076,
+      "width": 8.1890707868547,
+      "depth": 9.663127857798031,
       "storeys": 2,
       "roofAxis": "x",
       "roofBays": 1,
       "localBounds": [
         [
-          -4.106768057197542,
-          -4.831393271985206
+          -4.094361223198348,
+          -4.831421056048697
         ],
         [
-          4.107052713687153,
-          4.831572801834142
+          4.094709563656352,
+          4.831706801749334
         ]
       ],
       "material": "brick",
@@ -246,27 +389,27 @@
         {
           "outer": [
             [
-              -950.744,
-              65.866
+              -946.497,
+              70.099
             ],
             [
-              -944.559,
-              60.499
+              -939.906,
+              65.239
             ],
             [
-              -950.912,
-              53.218
+              -945.64,
+              57.462
             ],
             [
-              -957.096,
-              58.585
+              -952.231,
+              62.321
             ]
           ],
           "holes": []
         }
       ],
-      "sourceAreaM2": 79.12,
-      "renderAreaM2": 79.12,
+      "sourceAreaM2": 79.13,
+      "renderAreaM2": 79.13,
       "retainedFraction": 1.0,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
@@ -275,16 +418,38 @@
       "name": "Lion Wharf entrance west",
       "sourceAxis": [
         [
-          485,
-          1426
+          492,
+          1439
         ],
         [
-          505,
-          1410
+          514,
+          1424
         ]
       ],
       "sourceDepth": 23,
       "footprint": [
+        [
+          -939.649,
+          53.402
+        ],
+        [
+          -931.901,
+          47.865
+        ],
+        [
+          -926.931,
+          54.818
+        ],
+        [
+          -934.679,
+          60.356
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorFootprint": [
         [
           -942.806,
           48.933
@@ -302,28 +467,53 @@
           55.453
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorSourceAxis": [
+        [
+          485,
+          1426
+        ],
+        [
+          505,
+          1410
+        ]
+      ],
+      "priorRotationDegrees": -40.14,
+      "sourceFootprintFids": [
+        671707,
+        752928,
+        692504
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "On the OS five-foot plan (1893 sheets, NLS mosaic) and the EPFL 1891-96 footprints traced from it, the printed south-east building line here stands 8.51 m (median of 40 perpendicular readings every 0.25 m along the range) from the retraced High Street centreline; fitted line residual at most 0.17 m. EPFL footprint cover of the new plan 0.97, of the prior plan 0.31.",
+        "interpretation": "The prior plan put the street face 2.75/2.5 m from the centreline, in the carriageway. Moved 5.88 m (dx 3.11, dz 4.99) so the street face lies on the printed building line (8.22/8.73 m); rotation -40.14 -> -35.55 degrees to follow that line. Depth 8.55 m, storeys, height and roof unchanged; width 9.52 m.",
+        "frontageFromCentrelineM": [
+          8.22,
+          8.73
+        ],
+        "priorFrontageFromCentrelineM": [
+          2.75,
+          2.5
+        ]
+      },
       "siteId": "high-street-frontages",
       "streetFrontage": true,
-      "x": -936.4025229853158,
-      "z": 49.12333265132974,
-      "rotation": -40.13990502269464,
-      "width": 9.545631224704039,
-      "depth": 8.547376287931343,
+      "x": -933.2900361710339,
+      "z": 54.11032930611334,
+      "rotation": -35.550966445570104,
+      "width": 9.52404703126274,
+      "depth": 8.54745669089175,
       "storeys": 2,
       "roofAxis": "x",
       "roofBays": 1,
       "localBounds": [
         [
-          -4.772583594958519,
-          -4.273545392865678
+          -4.761802619492073,
+          -4.273568438319003
         ],
         [
-          4.77304762974552,
-          4.2738308950656645
+          4.762244411770666,
+          4.273888252572746
         ]
       ],
       "material": "brick",
@@ -331,27 +521,27 @@
         {
           "outer": [
             [
-              -937.279,
-              55.453
+              -934.679,
+              60.356
             ],
             [
-              -929.999,
-              49.313
+              -926.931,
+              54.818
             ],
             [
-              -935.526,
-              42.794
+              -931.901,
+              47.865
             ],
             [
-              -942.806,
-              48.933
+              -939.649,
+              53.402
             ]
           ],
           "holes": []
         }
       ],
-      "sourceAreaM2": 81.39,
-      "renderAreaM2": 81.39,
+      "sourceAreaM2": 81.4,
+      "renderAreaM2": 81.4,
       "retainedFraction": 1.0,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
@@ -360,16 +550,38 @@
       "name": "Lion Wharf frontage",
       "sourceAxis": [
         [
-          515,
-          1405
+          526,
+          1418
         ],
         [
-          586,
-          1353
+          594,
+          1362
         ]
       ],
       "sourceDepth": 23,
       "footprint": [
+        [
+          -927.628,
+          45.569
+        ],
+        [
+          -902.831,
+          24.211
+        ],
+        [
+          -897.254,
+          30.687
+        ],
+        [
+          -922.05,
+          52.045
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorFootprint": [
         [
           -931.714,
           40.722
@@ -387,28 +599,58 @@
           47.471
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorSourceAxis": [
+        [
+          515,
+          1405
+        ],
+        [
+          586,
+          1353
+        ]
+      ],
+      "priorRotationDegrees": -37.7,
+      "sourceFootprintFids": [
+        682438,
+        771056,
+        797158,
+        800115,
+        810053,
+        762001,
+        811601,
+        885934
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "On the OS five-foot plan (1893 sheets, NLS mosaic) and the EPFL 1891-96 footprints traced from it, the printed south-east building line here stands 9.31 m (median of 117 perpendicular readings every 0.25 m along the range) from the retraced High Street centreline; fitted line residual at most 0.6 m. EPFL footprint cover of the new plan 0.8, of the prior plan 0.33.",
+        "interpretation": "The prior plan put the street face 3.26/4.54 m from the centreline, in the carriageway. Moved 5.48 m (dx 3.71, dz 4.04) so the street face lies on the printed building line (9.6/9.15 m); rotation -37.7 -> -40.74 degrees to follow that line. Depth 8.55 m, storeys, height and roof unchanged; width 32.73 m.",
+        "frontageFromCentrelineM": [
+          9.6,
+          9.15
+        ],
+        "priorFrontageFromCentrelineM": [
+          3.26,
+          4.54
+        ]
+      },
       "siteId": "high-street-frontages",
       "streetFrontage": true,
-      "x": -916.1460850517101,
-      "z": 34.088894215569994,
-      "rotation": -37.70469361407866,
-      "width": 32.747353600576844,
-      "depth": 8.546817194651908,
+      "x": -912.4409185468464,
+      "z": 38.12812341083934,
+      "rotation": -40.73877675550128,
+      "width": 32.72698233873689,
+      "depth": 8.547084882583704,
       "storeys": 2,
       "roofAxis": "x",
       "roofBays": 1,
       "localBounds": [
         [
-          -16.37367420653061,
-          -4.273272886562026
+          -16.363143275549874,
+          -4.273362800379623
         ],
         [
-          16.373679394046235,
-          4.273544308089882
+          16.363839063187015,
+          4.273722082204081
         ]
       ],
       "material": "brick",
@@ -416,27 +658,122 @@
         {
           "outer": [
             [
-              -926.471,
-              47.471
+              -922.05,
+              52.045
             ],
             [
-              -900.578,
-              27.456
+              -897.254,
+              30.687
             ],
             [
-              -905.822,
-              20.707
+              -902.831,
+              24.211
             ],
             [
-              -931.714,
-              40.722
+              -927.628,
+              45.569
             ]
           ],
           "holes": []
         }
       ],
-      "sourceAreaM2": 279.7,
-      "renderAreaM2": 279.7,
+      "sourceAreaM2": 279.71,
+      "renderAreaM2": 279.71,
+      "retainedFraction": 1.0,
+      "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
+    },
+    {
+      "id": "high-street-06",
+      "name": "Bow Bridge Wharf street edge",
+      "sourceAxis": [
+        [
+          549,
+          1286
+        ],
+        [
+          565,
+          1274
+        ]
+      ],
+      "sourceDepth": 20,
+      "footprint": [
+        [
+          -919.955,
+          -3.316
+        ],
+        [
+          -914.123,
+          -7.931
+        ],
+        [
+          -909.497,
+          -2.115
+        ],
+        [
+          -915.329,
+          2.5
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          561,
+          1298
+        ],
+        [
+          577,
+          1286
+        ]
+      ],
+      "siteId": "high-street-frontages",
+      "streetFrontage": true,
+      "x": -914.7259999999999,
+      "z": -2.7155,
+      "rotation": -38.35540472975985,
+      "width": 7.455654047174789,
+      "depth": 7.4313785887173935,
+      "storeys": 2,
+      "roofAxis": "x",
+      "roofBays": 1,
+      "localBounds": [
+        [
+          -3.7278270235874515,
+          -3.7156892943587736
+        ],
+        [
+          3.727827023587338,
+          3.71568929435862
+        ]
+      ],
+      "material": "brick",
+      "renderPolygons": [
+        {
+          "outer": [
+            [
+              -915.329,
+              2.5
+            ],
+            [
+              -909.497,
+              -2.115
+            ],
+            [
+              -914.123,
+              -7.931
+            ],
+            [
+              -919.955,
+              -3.316
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "sourceAreaM2": 55.27,
+      "renderAreaM2": 55.27,
       "retainedFraction": 1.0,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
@@ -511,6 +848,10 @@
         {
           "outer": [
             [
+              -888.169,
+              -17.247
+            ],
+            [
               -874.715,
               -29.125
             ],
@@ -519,20 +860,16 @@
               -35.518
             ],
             [
-              -891.6624047748506,
-              -25.564420730270157
-            ],
-            [
-              -886.0547273305317,
-              -19.113607014118056
+              -893.842,
+              -23.64
             ]
           ],
           "holes": []
         }
       ],
       "sourceAreaM2": 153.4,
-      "renderAreaM2": 128.92,
-      "retainedFraction": 0.84,
+      "renderAreaM2": 153.4,
+      "retainedFraction": 1.0,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
     {
@@ -596,28 +933,28 @@
         {
           "outer": [
             [
-              -867.858,
-              -63.778
-            ],
-            [
               -861.186,
               -55.793
             ],
             [
-              -846.4277373020053,
-              -68.06245247328269
+              -842.252,
+              -71.534
             ],
             [
-              -852.5757045335432,
-              -76.48230604426057
+              -848.924,
+              -79.518
+            ],
+            [
+              -867.858,
+              -63.778
             ]
           ],
           "holes": []
         }
       ],
       "sourceAreaM2": 256.2,
-      "renderAreaM2": 203.24,
-      "retainedFraction": 0.793,
+      "renderAreaM2": 256.2,
+      "retainedFraction": 1.0,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
     {
@@ -625,16 +962,38 @@
       "name": "Marshgate corner public house",
       "sourceAxis": [
         [
-          768,
-          1072
+          766,
+          1098
         ],
         [
-          787,
-          1055
+          786,
+          1083
         ]
       ],
-      "sourceDepth": 30,
+      "sourceDepth": 36,
       "footprint": [
+        [
+          -843.043,
+          -77.397
+        ],
+        [
+          -835.6,
+          -83.3
+        ],
+        [
+          -827.335,
+          -72.879
+        ],
+        [
+          -834.779,
+          -66.976
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorFootprint": [
         [
           -842.152,
           -86.084
@@ -652,28 +1011,45 @@
           -77.99
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope read from OS; exact rear additions, storeys, facade and occupancy unresolved.",
+      "priorSourceAxis": [
+        [
+          768,
+          1072
+        ],
+        [
+          787,
+          1055
+        ]
+      ],
+      "priorSourceDepth": 30,
+      "priorRotationDegrees": -43.31,
+      "sourceFootprintFids": [
+        91288
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "The OS five-foot plan prints the P.H. as one shaded block on the south-west side of Marshgate Lane at its High Street corner (EPFL footprint sourceFid 91288, 108 m2): lane face from (-835.6, -83.3) to (-828.7, -74.6) with a chamfer to the High Street, about 13.3-13.9 m along the lane and 10.2 m across, with a notch on its south-west side. The printed lane between this face and the block opposite (EPFL sourceFid 24982, 213 m2) is about 6.2 m wide. The prior plan stood 7 m north-west of the P.H. and 6-7 m into the lane, over open roadway (EPFL cover 0.32).",
+        "interpretation": "Re-registered onto the printed P.H. block: moved 10.16 m (dx -0.32, dz 10.15); width across the lane 9.5 m kept; length along the lane 11.1 -> 13.3 m because the OS prints one block of that length. EPFL cover of the new plan 0.81. The modelled Marshgate Lane is itself about 3 m west of the printed lane here (its centreline runs 0.2 m from the P.H. face), so the builder trims the lane side of this range; the lane, not the range, is wrong for that remaining clash.",
+        "laneMisregistration": "Marshgate Lane centreline between (-828.8, -74.5) and (-842.1, -99.4) lies about 3 m west of the printed lane centre; left for a road retrace."
+      },
       "siteId": "high-street-frontages",
       "streetFrontage": true,
-      "x": -834.8695,
-      "z": -85.28749999999998,
-      "rotation": -43.30702156237086,
-      "width": 9.506135292075669,
-      "depth": 11.149451368060795,
+      "x": -835.1891642203148,
+      "z": -75.13795135901336,
+      "rotation": -38.41772944509326,
+      "width": 9.500449705875667,
+      "depth": 13.300656599701483,
       "storeys": 2,
       "roofAxis": "x",
       "roofBays": 1,
       "localBounds": [
         [
-          -4.7530676460378345,
-          -5.574725684030383
+          -4.750392867310097,
+          -6.650264365219584
         ],
         [
-          4.7530676460378345,
-          5.574725684030412
+          4.75005683856557,
+          6.650392234481899
         ]
       ],
       "material": "brick",
@@ -681,28 +1057,32 @@
         {
           "outer": [
             [
-              -834.484,
-              -77.99
+              -843.043,
+              -77.397
             ],
             [
-              -827.587,
-              -84.491
+              -834.779,
+              -66.976
             ],
             [
-              -835.255,
-              -92.585
+              -830.8123669125562,
+              -70.12149101493563
             ],
             [
-              -842.152,
-              -86.084
+              -832.2924341742341,
+              -71.9832108409456
+            ],
+            [
+              -838.2784354302082,
+              -81.17574844222504
             ]
           ],
           "holes": []
         }
       ],
-      "sourceAreaM2": 105.67,
-      "renderAreaM2": 105.67,
-      "retainedFraction": 1.0,
+      "sourceAreaM2": 126.35,
+      "renderAreaM2": 72.88,
+      "retainedFraction": 0.577,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
     {
@@ -1047,104 +1427,100 @@
         {
           "outer": [
             [
+              -826.9235767658085,
+              -51.633847229071165
+            ],
+            [
+              -832.7962304760031,
+              -45.887424884368855
+            ],
+            [
+              -831.6557051085272,
+              -44.58249596247403
+            ],
+            [
+              -831.3387715741485,
+              -44.84135048879913
+            ],
+            [
+              -831.3146088803419,
+              -44.85914735407739
+            ],
+            [
+              -831.2887890595744,
+              -44.874441177708576
+            ],
+            [
+              -831.2615704719112,
+              -44.88707892558352
+            ],
+            [
+              -831.233225473855,
+              -44.89693414100085
+            ],
+            [
+              -831.2040376930735,
+              -44.903908210026685
+            ],
+            [
+              -831.1742991903449,
+              -44.907931348252234
+            ],
+            [
+              -831.1443075371188,
+              -44.90896329907525
+            ],
+            [
+              -831.1143628379375,
+              -44.9069937365185
+            ],
+            [
+              -831.0847647275078,
+              -44.9020423685542
+            ],
+            [
+              -831.0558093724767,
+              -44.89415873990078
+            ],
+            [
+              -831.0277865079076,
+              -44.88342173626513
+            ],
+            [
+              -831.0009765381142,
+              -44.86993879499098
+            ],
+            [
+              -830.4509765381142,
+              -44.557938794990974
+            ],
+            [
+              -830.4203052649365,
+              -44.53797342521651
+            ],
+            [
+              -830.39229325332,
+              -44.51442198802543
+            ],
+            [
+              -826.153740377014,
+              -40.48475836637615
+            ],
+            [
               -816.2238860090631,
-              -49.11793072064272
+              -49.11793072064273
             ],
             [
-              -821.4346161216422,
-              -53.77827207615672
-            ],
-            [
-              -826.295528402483,
-              -48.959950946243296
-            ],
-            [
-              -831.6561293438424,
-              -44.58298135012803
-            ],
-            [
-              -831.6557174702353,
-              -44.58251010608801
-            ],
-            [
-              -826.5727540060885,
-              -48.73336483635303
-            ],
-            [
-              -826.5489461166711,
-              -48.75092376109886
-            ],
-            [
-              -826.5235246198814,
-              -48.76605250650995
-            ],
-            [
-              -826.4967367062861,
-              -48.778603965467326
-            ],
-            [
-              -826.4688428530555,
-              -48.78845609156753
-            ],
-            [
-              -826.4401142911659,
-              -48.79551308586314
-            ],
-            [
-              -826.410830368035,
-              -48.7997063283813
-            ],
-            [
-              -826.3812758312381,
-              -48.80099504536255
-            ],
-            [
-              -826.3517380597109,
-              -48.799366705731984
-            ],
-            [
-              -826.3225042693696,
-              -48.79483714294738
-            ],
-            [
-              -826.2938587203133,
-              -48.787450401039706
-            ],
-            [
-              -826.26607995277,
-              -48.77727830634295
-            ],
-            [
-              -826.2394380786592,
-              -48.76441976907763
-            ],
-            [
-              -826.2141921551092,
-              -48.748999821579204
-            ],
-            [
-              -826.1905876654686,
-              -48.73116840252332
-            ],
-            [
-              -826.1688541323031,
-              -48.711098898969745
-            ],
-            [
-              -826.1492028855916,
-              -48.68898646040157
-            ],
-            [
-              -822.2685272098748,
-              -43.862624109627696
+              -822.9247472911203,
+              -55.11100659976888
             ]
           ],
           "holes": []
         }
       ],
       "sourceAreaM2": 171.96,
-      "renderAreaM2": 50.07,
-      "retainedFraction": 0.291,
+      "renderAreaM2": 115.85,
+      "retainedFraction": 0.674,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
     {
@@ -1218,12 +1594,8 @@
         {
           "outer": [
             [
-              -806.4703890317411,
-              -68.61138310847953
-            ],
-            [
-              -811.4979206164267,
-              -63.62790258749235
+              -811.702,
+              -63.851
             ],
             [
               -805.682,
@@ -1231,11 +1603,11 @@
             ],
             [
               -795.6589696526307,
-              -66.39022408601872
+              -66.3902240860187
             ],
             [
               -802.4755285846751,
-              -72.24641375359552
+              -72.2464137535955
             ]
           ],
           "holes": []
@@ -1252,19 +1624,19 @@
             ],
             [
               -797.9295590228779,
-              -76.38291336049261
+              -76.38291336049258
             ],
             [
               -791.1130000908336,
-              -70.52672369291581
+              -70.5267236929158
             ]
           ],
           "holes": []
         }
       ],
       "sourceAreaM2": 192.78,
-      "renderAreaM2": 136.9,
-      "retainedFraction": 0.71,
+      "renderAreaM2": 137.96,
+      "retainedFraction": 0.716,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
     {
@@ -1347,7 +1719,7 @@
             ],
             [
               -781.5130247203332,
-              -79.29968186906613
+              -79.29968186906612
             ],
             [
               -788.2722701207687,
@@ -1368,11 +1740,11 @@
             ],
             [
               -784.8922533889652,
-              -88.34784777764389
+              -88.34784777764392
             ],
             [
               -778.1330079885298,
-              -82.45566169037446
+              -82.45566169037447
             ]
           ],
           "holes": []
@@ -1449,7 +1821,7 @@
             ],
             [
               -808.8475524254741,
-              -50.70452235249692
+              -50.704522352496916
             ],
             [
               -793.2680074498492,
@@ -1461,11 +1833,11 @@
             ],
             [
               -795.4731607559072,
-              -66.2229666380579
+              -66.22296663805788
             ],
             [
               -795.490716845181,
-              -66.20531602025275
+              -66.20531602025274
             ],
             [
               -805.5137471925503,
@@ -1618,11 +1990,11 @@
             ],
             [
               -806.7314953959344,
-              -48.81197603512321
+              -48.8119760351232
             ],
             [
               -801.7089870451078,
-              -44.31997532311809
+              -44.31997532311808
             ]
           ],
           "holes": []
@@ -1767,11 +2139,11 @@
             ],
             [
               -790.9219326334703,
-              -70.36257528889328
+              -70.36257528889327
             ],
             [
               -789.05777693572,
-              -68.76105618742986
+              -68.76105618742984
             ],
             [
               -781.231,
@@ -1779,7 +2151,7 @@
             ],
             [
               -782.8873797388114,
-              -77.67438602500756
+              -77.67438602500755
             ],
             [
               -784.3943829515708,
@@ -1931,12 +2303,16 @@
               -62.0
             ],
             [
-              -766.1,
-              -69.644
+              -770.1260882376918,
+              -65.78936341571693
             ],
             [
-              -767.5305305836418,
-              -71.13002530455894
+              -767.8949580604772,
+              -70.22113404907489
+            ],
+            [
+              -767.7513163838821,
+              -70.87674996962345
             ],
             [
               -769.5213396380328,
@@ -1951,8 +2327,8 @@
         }
       ],
       "sourceAreaM2": 73.94,
-      "renderAreaM2": 58.51,
-      "retainedFraction": 0.791,
+      "renderAreaM2": 52.92,
+      "retainedFraction": 0.716,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
     {
@@ -2026,104 +2402,312 @@
         {
           "outer": [
             [
-              -728.024,
-              -126.577
-            ],
-            [
               -734.557,
               -134.675
             ],
             [
-              -751.318,
-              -121.221
+              -750.6249106912593,
+              -121.7773405262095
             ],
             [
-              -745.824083163579,
-              -114.41183964112955
+              -749.7064480236777,
+              -119.93271550401263
             ],
             [
-              -744.3088187203635,
-              -114.56582603405171
+              -749.6969668984193,
+              -119.9116836031791
             ],
             [
-              -744.7504571346551,
-              -118.90361351001785
+              -749.6891299762436,
+              -119.88998532583621
             ],
             [
-              -744.7519983913527,
-              -118.9330175612866
+              -749.5491164033333,
+              -119.45007171288552
             ],
             [
-              -744.7506497512022,
-              -118.96243107642792
+              -749.3843292024847,
+              -119.2262465778746
             ],
             [
-              -744.7464242057099,
-              -118.99157071384016
+              -744.7786336680259,
+              -117.87032363168464
             ],
             [
-              -744.7393624597294,
-              -119.02015577019712
+              -744.3288193016033,
+              -117.946116528591
             ],
             [
-              -744.7295325393502,
-              -119.04791088447472
+              -741.6512513619513,
+              -118.94017208726285
             ],
             [
-              -744.7170291365999,
-              -119.07456869051508
+              -741.636006663243,
+              -118.95614272400475
             ],
             [
-              -744.7019726972715,
-              -119.09987239257575
+              -741.6144511916967,
+              -118.97659356683417
             ],
             [
-              -744.6845082606648,
-              -119.1235782390536
+              -741.590978397544,
+              -118.99481177916896
             ],
             [
-              -744.6648040624159,
-              -119.14545787055408
+              -741.5658185424601,
+              -119.0106186453407
             ],
             [
-              -744.6430499138777,
-              -119.16530051968667
+              -741.5392184377257,
+              -119.02385910432582
             ],
             [
-              -744.619455373658,
-              -119.18291504139582
+              -741.5114390230757,
+              -119.03440327085161
             ],
             [
-              -744.5942477289334,
-              -119.1981317542691
+              -741.4827528069521,
+              -119.04214770953519
             ],
             [
-              -744.5676698059831,
-              -119.2108040750853
+              -741.4534411932705,
+              -119.04701644955624
             ],
             [
-              -744.5399776310322,
-              -119.22080993085657
+              -741.423791720925,
+              -119.04896172990996
             ],
             [
-              -744.5114379639416,
-              -119.22805293476254
+              -740.8512666470381,
+              -119.05810749786343
             ],
             [
-              -744.4823257284987,
-              -119.23246331464858
+              -738.2421993419327,
+              -120.06650248914319
             ],
             [
-              -736.1153249492943,
-              -120.08260261661853
+              -738.1108991165033,
+              -120.24353650095811
+            ],
+            [
+              -738.312907793994,
+              -121.06879675706348
+            ],
+            [
+              -738.5097896178912,
+              -121.24143566980915
+            ],
+            [
+              -738.5314197673894,
+              -121.2624151381974
+            ],
+            [
+              -738.550836211672,
+              -121.28545864384621
+            ],
+            [
+              -738.5678430600749,
+              -121.31033370301336
+            ],
+            [
+              -738.582268732118,
+              -121.33678935358694
+            ],
+            [
+              -738.5939676885648,
+              -121.36455868701832
+            ],
+            [
+              -738.6028218997536,
+              -121.39336154113717
+            ],
+            [
+              -738.6087420363879,
+              -121.42290732668097
+            ],
+            [
+              -738.6116683707705,
+              -121.45289795902255
+            ],
+            [
+              -738.6410439566037,
+              -122.0771291579746
+            ],
+            [
+              -739.1435685249279,
+              -123.21764939865233
+            ],
+            [
+              -739.3216779672517,
+              -123.38850551527068
+            ],
+            [
+              -739.3416361604948,
+              -123.40959841752121
+            ],
+            [
+              -739.3594615546641,
+              -123.43252210233805
+            ],
+            [
+              -739.3749871376995,
+              -123.45706179007625
+            ],
+            [
+              -739.3880674452377,
+              -123.48298756022069
+            ],
+            [
+              -739.3985799235169,
+              -123.51005650558814
+            ],
+            [
+              -739.4064260776236,
+              -123.53801500820559
+            ],
+            [
+              -739.642533683221,
+              -124.56875367297806
+            ],
+            [
+              -739.7081778970692,
+              -124.7956123531885
+            ],
+            [
+              -739.7145633235831,
+              -124.82214537486107
+            ],
+            [
+              -739.718511157063,
+              -124.84914888429329
+            ],
+            [
+              -739.724511157063,
+              -124.90914888429327
+            ],
+            [
+              -739.7259905031976,
+              -124.9413870465486
+            ],
+            [
+              -739.7239983339949,
+              -124.97359758570045
+            ],
+            [
+              -739.7185577030042,
+              -125.00540775868032
+            ],
+            [
+              -739.709731569665,
+              -125.03644945549068
+            ],
+            [
+              -739.697622070735,
+              -125.06636345900489
+            ],
+            [
+              -739.5016220707349,
+              -125.4843634590049
+            ],
+            [
+              -739.4877532204302,
+              -125.51050334640593
+            ],
+            [
+              -739.4713766067862,
+              -125.53514975076155
+            ],
+            [
+              -739.452651563103,
+              -125.55806287933828
+            ],
+            [
+              -739.4317602713065,
+              -125.57901980299582
+            ],
+            [
+              -739.4089059894419,
+              -125.5978166251358
+            ],
+            [
+              -739.384311074111,
+              -125.61427046547695
+            ],
+            [
+              -739.358214817094,
+              -125.62822123935557
+            ],
+            [
+              -739.3308711172036,
+              -125.63953321524042
+            ],
+            [
+              -739.3025460100226,
+              -125.6480963353081
+            ],
+            [
+              -739.2735150795581,
+              -125.65382728623065
+            ],
+            [
+              -739.2440607769975,
+              -125.65667030975762
+            ],
+            [
+              -738.6095058841828,
+              -125.68644414637062
+            ],
+            [
+              -735.1145092732075,
+              -127.00567683882869
+            ],
+            [
+              -735.0215347114416,
+              -127.10263602467025
+            ],
+            [
+              -735.0019789093792,
+              -127.12127264363978
+            ],
+            [
+              -734.9808259301795,
+              -127.13807456114631
+            ],
+            [
+              -734.9582472899448,
+              -127.15290554108927
+            ],
+            [
+              -734.934426064559,
+              -127.1656453284517
+            ],
+            [
+              -734.9095554052419,
+              -127.17619062437197
+            ],
+            [
+              -734.8838369724074,
+              -127.18445592372868
+            ],
+            [
+              -729.8978369724074,
+              -128.54245592372868
+            ],
+            [
+              -729.8662205429522,
+              -128.54926039276842
+            ],
+            [
+              -729.6437168588525,
+              -128.58472495377123
             ]
           ],
           "holes": []
         }
       ],
       "sourceAreaM2": 223.61,
-      "renderAreaM2": 197.69,
-      "retainedFraction": 0.884,
+      "renderAreaM2": 135.06,
+      "retainedFraction": 0.604,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
     {
@@ -2482,20 +3066,20 @@
               -223.672
             ],
             [
-              -655.5047623015586,
-              -230.49313522169808
+              -654.3319655021427,
+              -229.72086095538083
             ],
             [
-              -661.1499165036256,
-              -223.08933427377585
+              -660.2683405676377,
+              -222.50882586046242
             ]
           ],
           "holes": []
         }
       ],
       "sourceAreaM2": 126.48,
-      "renderAreaM2": 118.08,
-      "retainedFraction": 0.934,
+      "renderAreaM2": 106.66,
+      "retainedFraction": 0.843,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
     {
@@ -2578,7 +3162,7 @@
             ],
             [
               -659.5369930921587,
-              -209.2862146279987
+              -209.28621462799867
             ],
             [
               -656.7700088438994,
@@ -2978,16 +3562,48 @@
       "name": "High Street school street range",
       "sourceAxis": [
         [
-          1422,
-          513
+          1435,
+          526
         ],
         [
-          1443,
-          485
+          1456,
+          497
         ]
       ],
       "sourceDepth": 45,
       "footprint": [
+        [
+          -602.475,
+          -296.367
+        ],
+        [
+          -595.006,
+          -307.013
+        ],
+        [
+          -581.308,
+          -297.402
+        ],
+        [
+          -588.777,
+          -286.756
+        ]
+      ],
+      "storeysEstimate": 2,
+      "height": 6.4,
+      "roofRise": 2.1,
+      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
+      "previousSourceAxis": [
+        [
+          1400,
+          498
+        ],
+        [
+          1421,
+          470
+        ]
+      ],
+      "priorFootprint": [
         [
           -607.473,
           -300.923
@@ -3005,38 +3621,52 @@
           -291.268
         ]
       ],
-      "storeysEstimate": 2,
-      "height": 6.4,
-      "roofRise": 2.1,
-      "evidence": "Main envelope set behind the mapped street frontage rather than on its entrance line. Geometry is reconciled with the independently registered road and bank masks; original axis retained for review.",
-      "previousSourceAxis": [
+      "priorSourceAxis": [
         [
-          1400,
-          498
+          1422,
+          513
         ],
         [
-          1421,
-          470
+          1443,
+          485
         ]
       ],
+      "priorRotationDegrees": -54.62,
+      "sourceFootprintFids": [
+        16951,
+        920307
+      ],
+      "osRegistration": {
+        "task": "T17, 3 October 2026",
+        "osReading": "On the OS five-foot plan (1893 sheets, NLS mosaic) and the EPFL 1891-96 footprints traced from it, the printed south-east building line here stands 7.7 m (median of 63 perpendicular readings every 0.25 m along the range) from the retraced High Street centreline; fitted line residual at most 0.22 m. EPFL footprint cover of the new plan 0.8, of the prior plan 0.55.",
+        "interpretation": "The prior plan put the street face 1.03/0.76 m from the centreline, in the carriageway. Moved 6.72 m (dx 4.98, dz 4.51) so the street face lies on the printed building line (7.67/7.42 m); rotation -54.62 -> -54.95 degrees to follow that line. Depth 16.73 m, storeys, height and roof unchanged; width 13.0 m.",
+        "frontageFromCentrelineM": [
+          7.67,
+          7.42
+        ],
+        "priorFrontageFromCentrelineM": [
+          1.03,
+          0.76
+        ]
+      },
       "siteId": "high-street-frontages",
       "streetFrontage": true,
-      "x": -596.875,
-      "z": -301.397,
-      "rotation": -54.618530425113995,
-      "width": 13.045773984589687,
-      "depth": 16.732510306077756,
+      "x": -591.8915000000001,
+      "z": -296.8845,
+      "rotation": -54.947342876571824,
+      "width": 13.005382170919347,
+      "depth": 16.73339548891181,
       "storeys": 2,
       "roofAxis": "x",
       "roofBays": 1,
       "localBounds": [
         [
-          -6.522886992294843,
-          -8.366255153038935
+          -6.502691085459674,
+          -8.366697744455792
         ],
         [
-          6.522886992294843,
-          8.366255153038821
+          6.502691085459674,
+          8.366697744456019
         ]
       ],
       "material": "brick",
@@ -3044,28 +3674,28 @@
         {
           "outer": [
             [
-              -593.807,
-              -291.268
+              -588.777,
+              -286.756
             ],
             [
-              -586.277,
-              -301.871
+              -581.308,
+              -297.402
             ],
             [
-              -596.7699271074957,
-              -309.2842307348801
+              -595.006,
+              -307.013
             ],
             [
-              -604.4220886651893,
-              -298.76753761615714
+              -602.475,
+              -296.367
             ]
           ],
           "holes": []
         }
       ],
-      "sourceAreaM2": 217.6,
-      "renderAreaM2": 168.05,
-      "retainedFraction": 0.772,
+      "sourceAreaM2": 217.61,
+      "renderAreaM2": 217.61,
+      "retainedFraction": 1.0,
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     },
     {
@@ -3141,8 +3771,8 @@
               -280.74
             ],
             [
-              -608.8124415759435,
-              -280.3209829891361
+              -608.8124415759436,
+              -280.32098298913616
             ],
             [
               -594.9454480257243,
@@ -3497,12 +4127,7 @@
       "trimEvidence": "Existing registered factories/housing and mapped streets/water take precedence; no solid building across an entrance or channel."
     }
   ],
-  "omitted": [
-    {
-      "id": "high-street-06",
-      "reason": "Covered by an existing range or mapped street/water corridor."
-    }
-  ],
+  "omitted": [],
   "vista": {
     "photo": "reference/Images and Figures/PossibleCover_Three Mills Wall London Fireworks Co 1900.jpg",
     "photoDate": "circa 1900, supplied filename; original archive date not independently verified",
@@ -3798,7 +4423,7 @@
         "route": [
           [
             -617.43,
-            1.8002689847963138,
+            1.3719670509927404,
             -278.93
           ],
           [
@@ -3827,12 +4452,12 @@
           [
             [
               -618.7280930141665,
-              1.8252689847963137,
+              1.3969670509927403,
               -278.8596116020061
             ],
             [
               -616.1319069858334,
-              1.8252689847963137,
+              1.3969670509927403,
               -279.0003883979939
             ]
           ],
