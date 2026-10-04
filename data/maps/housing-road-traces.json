@@ -298,8 +298,8 @@
           558
         ],
         [
-          1624,
-          405
+          1646.076,
+          396.722
         ]
       ],
       "pixelWidth": 1888,
@@ -307,7 +307,21 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit.",
+      "t13Retrace": {
+        "date": "October 2026",
+        "priorPoints": [
+          [
+            1216,
+            558
+          ],
+          [
+            1624,
+            405
+          ]
+        ],
+        "change": "East end extended 14.1 m along the street to the retraced West Ham Lane centreline; the former end met the misplaced lane trace."
+      }
     },
     {
       "name": "Paul Street",
@@ -318,8 +332,8 @@
           629
         ],
         [
-          1660,
-          482
+          1686.749,
+          471.867
         ]
       ],
       "pixelWidth": 1888,
@@ -327,7 +341,21 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer.",
+      "t13Retrace": {
+        "date": "October 2026",
+        "priorPoints": [
+          [
+            1272,
+            629
+          ],
+          [
+            1660,
+            482
+          ]
+        ],
+        "change": "East end extended 17.2 m along the street to the retraced West Ham Lane centreline; the former end met the misplaced lane trace."
+      }
     },
     {
       "name": "Barnby Street",
@@ -687,35 +715,75 @@
     },
     {
       "name": "West Ham Lane",
-      "sheet": "22",
+      "sheet": "scene",
       "points": [
         [
-          1590,
-          339
+          243.92,
+          -879.74
         ],
         [
-          1650,
-          445
+          258.45,
+          -860.63
         ],
         [
-          1700,
-          592
+          270.77,
+          -844.91
         ],
         [
-          1730,
-          717
+          276.92,
+          -834.63
         ],
         [
-          1740,
-          835
+          282.63,
+          -826.44
         ],
         [
-          1740,
-          958
+          291.36,
+          -810.7
         ],
         [
-          1720,
-          1080
+          301.3,
+          -791.08
+        ],
+        [
+          318.77,
+          -750.79
+        ],
+        [
+          342.06,
+          -713.53
+        ],
+        [
+          349.68,
+          -699.45
+        ],
+        [
+          361.95,
+          -678.82
+        ],
+        [
+          382.22,
+          -626.59
+        ],
+        [
+          386.44,
+          -617.57
+        ],
+        [
+          388.38,
+          -609.84
+        ],
+        [
+          391.31,
+          -594.12
+        ],
+        [
+          393.75,
+          -578.3
+        ],
+        [
+          394.4,
+          -568.26
         ]
       ],
       "pixelWidth": 1888,
@@ -723,67 +791,142 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer. Name corrected October 2026 (was \"Warton Road\"): OS London five-foot 1893\u201396 mosaic (NLS os-london-five-foot-1893, zoom 18), crops centred on scene (260,-830) and (320,-680), prints \"WEST HAM LANE\" along this street at about (248,-868) and (365,-640); the EPFL OS text layer has \"HAM\" (235,-889), \"LANE\" (258,-859), \"WEST\" (352,-692) and \"LANE\" (386,-614). No WARTON label is printed on this street; WARTON ROAD is printed at (-744,-758)/(-688,-677), on Warton Road northern section. Estimated: the traced centreline lies about 5\u201350 m west of the printed carriageway (traced at the VIII.22 sheet edge; the lane straddles the VIII.23 join) and south of Paul Street runs over the Arthingworth Street east frontage; geometry not corrected."
+      "alignmentEvidence": "T13 retrace (October 2026): centreline re-read on the OS London five-foot (1:1056) 1893-96 mosaic, NLS layer os-london-five-foot-1893, zoom 18 (about 0.37 m per pixel) from the Police Station at (244,-880) to the junction with Church Street and Abbey Road at (394,-568), midway between the dotted kerb lines of the printed WEST HAM LANE (labels read along the street: 'HAM LANE' by the Police Station, 'WEST HAM LANE' by the Baptist Chapel, 'LANE' at (385,-615)), checked against the EPFL 1891-96 building footprints on both frontages. Read every 10-20 m in straightened map strips; kerb-to-kerb about 8-9.5 m, frontages 12-17 m apart. Estimated: 7 m modelled carriageway, paving. The former trace was read at the VIII.22/VIII.23 sheet join and lay 5-55 m west of the lane, south of Paul Street on the east frontage of Arthingworth Street (see t13Retrace.prior).",
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "sheet": "22",
+          "points": [
+            [
+              1590,
+              339
+            ],
+            [
+              1650,
+              445
+            ],
+            [
+              1700,
+              592
+            ],
+            [
+              1730,
+              717
+            ],
+            [
+              1740,
+              835
+            ],
+            [
+              1740,
+              958
+            ],
+            [
+              1720,
+              1080
+            ]
+          ],
+          "pixelWidth": 1888,
+          "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer. Name corrected October 2026 (was \"Warton Road\"): OS London five-foot 1893\u201396 mosaic (NLS os-london-five-foot-1893, zoom 18), crops centred on scene (260,-830) and (320,-680), prints \"WEST HAM LANE\" along this street at about (248,-868) and (365,-640); the EPFL OS text layer has \"HAM\" (235,-889), \"LANE\" (258,-859), \"WEST\" (352,-692) and \"LANE\" (386,-614). No WARTON label is printed on this street; WARTON ROAD is printed at (-744,-758)/(-688,-677), on Warton Road northern section. Estimated: the traced centreline lies about 5\u201350 m west of the printed carriageway (traced at the VIII.22 sheet edge; the lane straddles the VIII.23 join) and south of Paul Street runs over the Arthingworth Street east frontage; geometry not corrected."
+        },
+        "measurement": {
+          "lengthM": 349.8,
+          "frontageStations": 31,
+          "frontageMidpointOffsetM": {
+            "median": 1.52,
+            "p90": 2.54,
+            "max": 3.06
+          },
+          "shiftFromOldTraceM": {
+            "median": 23.3,
+            "max": 58.9
+          }
+        }
+      }
     },
     {
-      "name": "Angel Lane",
-      "sheet": "22",
-      "points": [
-        [
-          1080,
-          450
-        ],
-        [
-          1110,
-          540
-        ],
-        [
-          1140,
-          645
-        ]
-      ],
+      "name": "Abbey Road northern section",
+      "sheet": "scene",
       "pixelWidth": 1888,
-      "width": 7,
+      "width": 8,
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer. Name unverified, flagged October 2026: on the OS London five-foot 1893\u201396 mosaic (crop centred on scene (-30,-760)) and on the saved VIII.22 scan this trace crosses house plots in the block bounded by Bridge Road, Devon Terrace and Albion Street and follows no printed street; nearest printed names are RAILWAY PLACE, MOUNT PLACE, DEVON TERRACE and ALBION STREET. ANGEL LANE is printed about 600 m north, near scene (-72,-1357) (crop centred (-80,-1300)), with Angel Lane Bridge at (-77,-1482). Name left unchanged pending a geometry decision."
-    },
-    {
-      "name": "Angel Lane block passage",
-      "sheet": "22",
       "points": [
         [
-          1145,
-          514
+          393.75,
+          -578.3
         ],
         [
-          1184,
-          627
+          394.4,
+          -568.26
+        ],
+        [
+          391.95,
+          -558.52
+        ],
+        [
+          389.05,
+          -548.92
+        ],
+        [
+          378.55,
+          -531.85
+        ],
+        [
+          366.24,
+          -508.94
+        ],
+        [
+          359.44,
+          -494.43
+        ],
+        [
+          353.55,
+          -479.55
+        ],
+        [
+          346.49,
+          -465.21
+        ],
+        [
+          333.9,
+          -436.53
         ]
       ],
+      "alignmentEvidence": "T13 retrace (October 2026): the southern 140 m of the former 'West Ham Lane' trace, re-read on the OS London five-foot (1:1056) 1893-96 mosaic, NLS layer os-london-five-foot-1893, zoom 18 (about 0.37 m per pixel) where the street is printed 'ABBEY ROAD' (letters 'R O A D' at (381,-536)-(359,-493), 'A B B E Y' southward to (334,-436)), midway between the dotted kerb lines. Starts one vertex inside West Ham Lane so the two corridors overlap through the junction. Estimated: 8 m carriageway, paving. The modelled Abbey Road further south (from (322,-372)) is a separate record and is not joined here."
+    },
+    {
+      "name": "Arthingworth Street",
+      "sheet": "scene",
       "pixelWidth": 1888,
-      "width": 6,
+      "width": 8,
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit. Name unverified, flagged October 2026: on the OS London five-foot 1893\u201396 mosaic (crop centred on scene (-30,-760)) and on the saved VIII.22 scan this trace crosses house plots in the block bounded by Bridge Road, Devon Terrace and Albion Street and follows no printed street; nearest printed names are RAILWAY PLACE, MOUNT PLACE, DEVON TERRACE and ALBION STREET. ANGEL LANE is printed about 600 m north, near scene (-72,-1357) (crop centred (-80,-1300)), with Angel Lane Bridge at (-77,-1482). Name left unchanged pending a geometry decision."
+      "points": [
+        [
+          264.34,
+          -726.31
+        ],
+        [
+          336.45,
+          -561.91
+        ]
+      ],
+      "alignmentEvidence": "T13 retrace (October 2026): added. ARTHINGWORTH STREET is printed on the OS London five-foot (1:1056) 1893-96 mosaic, NLS layer os-london-five-foot-1893, zoom 18 (about 0.37 m per pixel) at about (286,-690)-(320,-600), parallel to and about 40 m west of West Ham Lane, from Barnby Street to Skiers Street. Line first fitted midway between the EPFL 1891-96 footprint frontages, then moved 1.7 m east onto the midpoint of the dotted kerb lines read in straightened map strips at 40-100 m and 110-170 m along the street (kerb to kerb 8.0-8.1 m; the EPFL footprints sit about 1.5 m off the printed house fronts here). Measured: 8 m carriageway. Estimated: paving. Three east-return housing rows that had been fitted to the misplaced West Ham Lane trace front this street."
     },
     {
       "name": "Albion Street",
-      "sheet": "22",
+      "sheet": "scene",
       "points": [
         [
-          1140,
-          645
+          -40.59,
+          -689.48
         ],
         [
-          1255,
-          608
-        ],
-        [
-          1290,
-          590
+          21.04,
+          -727.57
         ]
       ],
       "pixelWidth": 1888,
@@ -791,7 +934,49 @@
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+      "alignmentEvidence": "T13 retrace (October 2026): re-read on the OS London five-foot (1:1056) 1893-96 mosaic, NLS layer os-london-five-foot-1893, zoom 18 (about 0.37 m per pixel) along the printed ALBION STREET ('ALBION' and 'STREET' at (-25,-698)-(25,-729)) from the Bridge Road centreline to the St Thomas Road centreline, midway between the EPFL footprint frontages (9.5-11.9 m apart). The former trace lay 8-12 m south-east, across the south frontage. Estimated: 6 m carriageway, paving.",
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "sheet": "22",
+          "points": [
+            [
+              1140,
+              645
+            ],
+            [
+              1255,
+              608
+            ],
+            [
+              1290,
+              590
+            ]
+          ],
+          "pixelWidth": 1888,
+          "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer."
+        }
+      }
+    },
+    {
+      "name": "Railway Place",
+      "sheet": "scene",
+      "pixelWidth": 1888,
+      "width": 3.0,
+      "kind": "lane",
+      "surface": "setts",
+      "surfaceEvidence": "Interpreted paving for a narrow court; no adoption record.",
+      "points": [
+        [
+          -70.69,
+          -738.3
+        ],
+        [
+          -1.93,
+          -780.0
+        ]
+      ],
+      "alignmentEvidence": "T13 retrace (October 2026): added. RAILWAY PLACE is printed on the OS London five-foot (1:1056) 1893-96 mosaic, NLS layer os-london-five-foot-1893, zoom 18 (about 0.37 m per pixel) at (-51,-747)-(-23,-766) between Bridge Road and St Thomas Road. The south side is a continuous terrace built to the pavement line (EPFL footprints); the north side is yard walls and house ends about 4-5 m away. Centreline 2.6 m north of the south frontage. Estimated: 3 m width, paving."
     },
     {
       "name": "South Street",
@@ -952,30 +1137,6 @@
         [
           750,
           916
-        ]
-      ],
-      "pixelWidth": 1888,
-      "width": 6,
-      "kind": "street",
-      "surface": "macadam",
-      "surfaceEvidence": "Inferred surface; paving adoption unverified.",
-      "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
-    },
-    {
-      "name": "High Street housing frontage",
-      "sheet": "22",
-      "points": [
-        [
-          450,
-          880
-        ],
-        [
-          555,
-          775
-        ],
-        [
-          775,
-          525
         ]
       ],
       "pixelWidth": 1888,
@@ -2519,5 +2680,87 @@
     ],
     "sourcePixelScale": 2,
     "note": "Stored source coordinates refer to half-size review mosaic; full tile mosaic is 3072 pixels wide."
-  }
+  },
+  "removedRoads": [
+    {
+      "record": {
+        "name": "Angel Lane",
+        "sheet": "22",
+        "points": [
+          [
+            1080,
+            450
+          ],
+          [
+            1110,
+            540
+          ],
+          [
+            1140,
+            645
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 7,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Street or lane centreline checked against the same source map as the housing envelopes. Corrects the previous independently approximated road layer. Name unverified, flagged October 2026: on the OS London five-foot 1893\u201396 mosaic (crop centred on scene (-30,-760)) and on the saved VIII.22 scan this trace crosses house plots in the block bounded by Bridge Road, Devon Terrace and Albion Street and follows no printed street; nearest printed names are RAILWAY PLACE, MOUNT PLACE, DEVON TERRACE and ALBION STREET. ANGEL LANE is printed about 600 m north, near scene (-72,-1357) (crop centred (-80,-1300)), with Angel Lane Bridge at (-77,-1482). Name left unchanged pending a geometry decision."
+      },
+      "removed": "October 2026",
+      "reason": "No printed street under the trace: it crossed house plots in the block bounded by Bridge Road, Railway Place, St Thomas Road and Albion Street (OS crops centred (-30,-750) and (-15,-745)). ANGEL LANE is printed about 600 m north, near (-72,-1357). The two housing rows that were keyed to the block passage now front the printed Railway Place and Albion Street."
+    },
+    {
+      "record": {
+        "name": "Angel Lane block passage",
+        "sheet": "22",
+        "points": [
+          [
+            1145,
+            514
+          ],
+          [
+            1184,
+            627
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit. Name unverified, flagged October 2026: on the OS London five-foot 1893\u201396 mosaic (crop centred on scene (-30,-760)) and on the saved VIII.22 scan this trace crosses house plots in the block bounded by Bridge Road, Devon Terrace and Albion Street and follows no printed street; nearest printed names are RAILWAY PLACE, MOUNT PLACE, DEVON TERRACE and ALBION STREET. ANGEL LANE is printed about 600 m north, near scene (-72,-1357) (crop centred (-80,-1300)), with Angel Lane Bridge at (-77,-1482). Name left unchanged pending a geometry decision."
+      },
+      "removed": "October 2026",
+      "reason": "No printed street: it ran through the same block roughly on the line of the back-garden walls between Railway Place and Albion Street (OS crop centred (-15,-745)). Rows os-row-54-part-1 and os-row-55 re-keyed to Railway Place and Albion Street."
+    },
+    {
+      "record": {
+        "name": "High Street housing frontage",
+        "sheet": "22",
+        "points": [
+          [
+            450,
+            880
+          ],
+          [
+            555,
+            775
+          ],
+          [
+            775,
+            525
+          ]
+        ],
+        "pixelWidth": 1888,
+        "width": 6,
+        "kind": "street",
+        "surface": "macadam",
+        "surfaceEvidence": "Inferred surface; paving adoption unverified.",
+        "alignmentEvidence": "Centreline read from the mapped carriageway, distinguishing street-facing buildings from rear plots. September 2026 frontage audit."
+      },
+      "removed": "October 2026",
+      "reason": "A second, 6 m street drawn 1-10 m south-east of Stratford High Street between (-438,-535) and (-249,-753). With the High Street retraced onto the OS carriageway this line runs through the south-east frontage houses; the OS shows one carriageway only. Row os-row-65 re-keyed to Stratford High Street."
+    }
+  ]
 }

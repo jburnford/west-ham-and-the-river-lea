@@ -40,6 +40,10 @@ names={r['name'] for r in review}|set(housing_review.get('removeRoadNames',[]))
 expected_routes=[r for r in expected_routes if r['name'] not in names]+review
 station=load('docs/data/abbey-station-plan.json')
 expected_routes=[r for r in expected_routes if r['name'] not in station['replaceRoadNames']]+station['accessPaths']
+# build_infrastructure.py appends the Manor Road drainage crossing last; this line was
+# unreachable while the stale road mesh failed the factory-clearance assertion above.
+from manor_road import evidence as manor_evidence, road_trace
+expected_routes.append(road_trace(manor_evidence()))
 assert [r['name'] for r in data['roads']]==[r['name'] for r in expected_routes]
 report['limitations']=['Short Channelsea north-approach bank discrepancy remains within the measured 5 m bound.','Three short lane connections are provisional GIS-bank reconciliations, not independently documented bridge designs.']
 out=ROOT/'reference/district-streets/geometry-checks.json';out.write_text(json.dumps(report,indent=2)+'\n')
