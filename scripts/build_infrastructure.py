@@ -5,7 +5,8 @@ import numpy as np
 from pyproj import Transformer
 from shapely.geometry import Polygon, LineString, Point, MultiPoint, box
 from shapely.ops import unary_union, triangulate
-from shapely import affinity, segmentize, constrained_delaunay_triangles
+from shapely import affinity, segmentize, constrained_delaunay_triangles, set_precision
+from shapely.errors import GEOSException
 from great_eastern import build_great_eastern
 from abbey_support import station_footprints
 from manor_road import evidence as manor_evidence, road_trace, align_railway
@@ -88,7 +89,14 @@ def triangles(g,max_edge=5):
     for p in getattr(g,'geoms',[g]):
         if p.geom_type!='Polygon' or p.area<.05:continue
         tolerant=p.buffer(.00001)
-        for t in constrained_delaunay_triangles(segmentize(p,max_edge)).geoms:
+        try:mesh=constrained_delaunay_triangles(segmentize(p,max_edge))
+        except GEOSException:
+            # GEOS can fail to find a convex corner on long slivers with near-collinear
+            # vertices (the Bridge Road shoulder after the October 2026 retrace). Snap
+            # that polygon alone to 1 µm, well below the 1 mm output rounding, and retry.
+            p=set_precision(p,1e-6);tolerant=p.buffer(.00001)
+            mesh=constrained_delaunay_triangles(segmentize(p,max_edge))
+        for t in mesh.geoms:
             if tolerant.covers(t):result.append([[round(x,3),round(z,3)] for x,z in list(t.exterior.coords)[:3]])
     return result
 # High Street passes over the enclosed sewer. Abbey Lane and Mill Meads works

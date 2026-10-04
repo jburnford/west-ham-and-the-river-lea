@@ -36,103 +36,375 @@
       "sheet": "scene",
       "points": [
         [
-          -1120.385,
-          187.542
+          -1121.299,
+          186.181
         ],
         [
-          -1036.62,
-          118.42
+          -1091.757,
+          166.496
         ],
         [
-          -940.775,
-          42.182
+          -1080.764,
+          158.663
         ],
         [
-          -875,
-          -17.971572
+          -1075.244,
+          154.359
         ],
         [
-          -830.854,
-          -54.016
+          -1070.246,
+          150.203
         ],
         [
-          -771.719,
-          -117.611
+          -1051.465,
+          133.703
         ],
         [
-          -699.226,
-          -190.143
+          -1050.236,
+          132.462
         ],
         [
-          -630.22,
-          -274.865
+          -1022.694,
+          108.974
         ],
         [
-          -535.116,
-          -405.572
+          -986.492,
+          79.787
         ],
         [
-          -452.582,
-          -519.224
+          -949.518,
+          50.773
         ],
         [
-          -395.436,
-          -608.046
+          -931.942,
+          36.725
         ],
         [
-          -370.61,
-          -653.283
+          -920.336,
+          27.223
+        ],
+        [
+          -908.97,
+          17.435
+        ],
+        [
+          -896.697,
+          6.407
+        ],
+        [
+          -879.903,
+          -9.307
+        ],
+        [
+          -778.481,
+          -108.549
+        ],
+        [
+          -762.664,
+          -123.912
+        ],
+        [
+          -748.132,
+          -138.371
+        ],
+        [
+          -732.771,
+          -154.119
+        ],
+        [
+          -698.257,
+          -190.296
+        ],
+        [
+          -688.707,
+          -200.533
+        ],
+        [
+          -677.572,
+          -212.791
+        ],
+        [
+          -669.052,
+          -222.543
+        ],
+        [
+          -656.019,
+          -238.367
+        ],
+        [
+          -638.643,
+          -260.259
+        ],
+        [
+          -626.797,
+          -275.557
+        ],
+        [
+          -620.442,
+          -282.627
+        ],
+        [
+          -616.658,
+          -287.282
+        ],
+        [
+          -613.336,
+          -292.274
+        ],
+        [
+          -609.12,
+          -300.224
+        ],
+        [
+          -607.805,
+          -302.349
+        ],
+        [
+          -575.336,
+          -345.497
+        ],
+        [
+          -568.185,
+          -354.502
+        ],
+        [
+          -560.318,
+          -365.472
+        ],
+        [
+          -547.686,
+          -383.484
+        ],
+        [
+          -536.476,
+          -400.047
+        ],
+        [
+          -501.178,
+          -451.018
+        ],
+        [
+          -470.964,
+          -495.169
+        ],
+        [
+          -460.215,
+          -510.225
+        ],
+        [
+          -454.718,
+          -517.35
+        ],
+        [
+          -449.057,
+          -524.347
+        ],
+        [
+          -416.034,
+          -563.211
+        ],
+        [
+          -399.68,
+          -582.776
+        ],
+        [
+          -386.09,
+          -599.436
+        ],
+        [
+          -356.976,
+          -635.63
+        ],
+        [
+          -353.2,
+          -640.293
         ]
       ],
       "pixelWidth": 4864,
       "sourcePixels": [
         [
-          1014.8,
-          2289.265
+          1012.444,
+          2285.534
         ],
         [
-          1244.799,
-          2109.266
+          1093.217,
+          2234.688
         ],
         [
-          1507.767,
-          1910.991
+          1123.311,
+          2214.4
         ],
         [
-          1688.808,
-          1753.828
+          1138.449,
+          2203.214
         ],
         [
-          1810.004,
-          1660.002
+          1152.175,
+          2192.389
         ],
         [
-          1973.47,
-          1493.087
+          1203.817,
+          2149.333
         ],
         [
-          2173.47,
-          1303.085
+          1207.208,
+          2146.081
         ],
         [
-          2365.002,
-          1080.002
+          1282.888,
+          2084.849
         ],
         [
-          2630.002,
-          735.001
+          1382.243,
+          2008.905
         ],
         [
-          2860.004,
-          435.002
+          1483.659,
+          1933.484
         ],
         [
-          3020.003,
-          200.003
+          1531.888,
+          1896.943
         ],
         [
-          3090.001,
-          80.003
+          1563.751,
+          1872.206
+        ],
+        [
+          1594.991,
+          1846.682
+        ],
+        [
+          1628.757,
+          1817.884
+        ],
+        [
+          1675.008,
+          1776.8
+        ],
+        [
+          1954.647,
+          1516.993
+        ],
+        [
+          1998.25,
+          1476.783
+        ],
+        [
+          2038.336,
+          1438.912
+        ],
+        [
+          2080.743,
+          1397.632
+        ],
+        [
+          2176.084,
+          1302.744
+        ],
+        [
+          2202.482,
+          1275.878
+        ],
+        [
+          2233.284,
+          1243.685
+        ],
+        [
+          2256.88,
+          1218.05
+        ],
+        [
+          2293.041,
+          1176.394
+        ],
+        [
+          2341.311,
+          1118.716
+        ],
+        [
+          2374.246,
+          1078.39
+        ],
+        [
+          2391.832,
+          1059.817
+        ],
+        [
+          2402.336,
+          1047.56
+        ],
+        [
+          2411.623,
+          1034.361
+        ],
+        [
+          2423.528,
+          1013.262
+        ],
+        [
+          2427.216,
+          1007.636
+        ],
+        [
+          2517.579,
+          893.826
+        ],
+        [
+          2537.445,
+          870.101
+        ],
+        [
+          2559.377,
+          841.137
+        ],
+        [
+          2594.624,
+          793.559
+        ],
+        [
+          2625.945,
+          749.78
+        ],
+        [
+          2724.483,
+          615.109
+        ],
+        [
+          2808.869,
+          498.431
+        ],
+        [
+          2838.843,
+          458.675
+        ],
+        [
+          2854.129,
+          439.892
+        ],
+        [
+          2869.847,
+          421.465
+        ],
+        [
+          2961.392,
+          319.23
+        ],
+        [
+          3006.752,
+          267.743
+        ],
+        [
+          3044.476,
+          223.876
+        ],
+        [
+          3125.329,
+          128.544
+        ],
+        [
+          3135.812,
+          116.264
         ]
       ],
       "sourceBounds": [
@@ -144,12 +416,27 @@
       "width": 12,
       "kind": "street",
       "surface": "setts",
-      "alignmentEvidence": "Manually read centreline on archived NLS georeferenced OS London five-foot mapping, revised 1893. Scene origin 538900,183209; widths estimated from the map.",
+      "alignmentEvidence": "T13 retrace (October 2026): centreline re-read on the OS London five-foot (1:1056) 1893-96 mosaic, NLS layer os-london-five-foot-1893, zoom 18 (about 0.37 m per pixel) as the midpoint between the two inner rails of the double horse-tram track drawn in the carriageway (four parallel rail lines, track centres about 2.70 m apart). The rail centres were detected automatically in cross-profiles every 1 m and checked by eye at every bridge; a robust spline was fitted through them, with a separate fit either side of the sheet join east of St Michael's Bridge, and the route keeps a vertex wherever the spline departs from the chord by more than 0.10 m. Where lettering or the railway viaduct hides the rails (about 790-850 m and 1080-1120 m along the route) the spline bridges gaps of up to 30 m on straight carriageway. Measured: route within 0.02 m median, 1.85 m maximum of the detected rail centre at the 106 ten-metre stations where the rails are legible. Estimated: the 12 m carriageway width (the drawn kerb lines are not continuous enough to measure; the frontage-to-frontage space is 15-18 m including footways), paving and levels. Scene origin 538900,183209.",
       "surfaceEvidence": "Interpreted paving; no street-specific adoption record.",
       "bridgeSpans": [
         {
           "id": "bow-bridge",
           "points": [
+            [
+              -1048.715,
+              131.165
+            ],
+            [
+              -1024.216,
+              110.272
+            ]
+          ],
+          "style": "stone-arch",
+          "archCount": 1,
+          "height": 4.8,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates.",
+          "alignmentEvidence": "T13 retrace (October 2026): span laid on the retraced High Street centreline, on a straight piece of the route so the deck axis is the road axis. OS reading: bank lines read by eye at both parapets on 6-9x crops: the west bank crosses the centreline at 97.7 m along the route (34 deg from square to the road) and the east bank at 122.5 m (10 deg); the channel axis is 22 deg from square, so the road crosses the River Lea obliquely, as drawn, and the bridge carries it straight across. The span runs from 91.2 m to 123.4 m along the route so the 14.2 m deck (carriageway plus 1.1 m footways) covers the model water and its 0.6 m clearance across the full width; at the centreline the span ends lie -6.5 m and +0.9 m from the bank lines; the excess is the 0.6 m water clearance plus the skew of the banks across the deck width (the model water outline also starts 2.3 m west of the read west bank). Previous span (priorPoints) was 39.2 m long, 2.6 deg off the retraced road axis, its ends -2.1 m and -0.5 m to the side of the retraced centreline. Estimated: arch form, deck height and the abutment faces, which docs/infrastructure.js draws square to the road.",
+          "priorPoints": [
             [
               -1049.366,
               128.939
@@ -159,15 +446,25 @@
               104.858
             ]
           ],
-          "style": "stone-arch",
-          "archCount": 1,
-          "height": 4.8,
-          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates.",
-          "alignmentEvidence": "First two road controls and Bow Bridge span moved 5.7 m east and 7 m south to the visible Bow Road carriageway. The former line ran along the north frontage and through the mill. Retain the interpreted 12 m carriageway and all eastern controls/bridges."
+          "priorAlignmentEvidence": "First two road controls and Bow Bridge span moved 5.7 m east and 7 m south to the visible Bow Road carriageway. The former line ran along the north frontage and through the mill. Retain the interpreted 12 m carriageway and all eastern controls/bridges."
         },
         {
           "id": "pegshole-bridge",
           "points": [
+            [
+              -777.047,
+              -109.942
+            ],
+            [
+              -764.099,
+              -122.518
+            ]
+          ],
+          "style": "stone-arch",
+          "archCount": 2,
+          "height": 3.0,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates.",
+          "priorPoints": [
             [
               -782.633,
               -101.814
@@ -177,14 +474,25 @@
               -125.991
             ]
           ],
-          "style": "stone-arch",
-          "archCount": 2,
-          "height": 3.0,
-          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+          "alignmentEvidence": "T13 retrace (October 2026): span laid on the retraced High Street centreline, on a straight piece of the route so the deck axis is the road axis. OS reading: bank lines read by eye at both parapets on 6-9x crops: the west bank crosses the centreline at 454.6 m along the route (1 deg from square to the road) and the east bank at 470.2 m (19 deg); the channel axis is 10 deg from square, so the road crosses the Pegs Hole channel obliquely, as drawn, and the bridge carries it straight across. The span runs from 454.8 m to 472.9 m along the route so the 14.2 m deck (carriageway plus 1.1 m footways) covers the model water and its 0.6 m clearance across the full width; at the centreline the span ends lie +0.3 m and +2.7 m from the bank lines; the excess is the 0.6 m water clearance plus the skew of the banks across the deck width. Previous span (priorPoints) was 34.3 m long, 0.7 deg off the retraced road axis, its ends 1.9 m and 1.6 m to the side of the retraced centreline. Estimated: arch form, deck height and the abutment faces, which docs/infrastructure.js draws square to the road."
         },
         {
           "id": "st-thomas-bridge",
           "points": [
+            [
+              -676.256,
+              -214.297
+            ],
+            [
+              -670.368,
+              -221.037
+            ]
+          ],
+          "style": "brick-arch",
+          "archCount": 1,
+          "height": 2.6,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates.",
+          "priorPoints": [
             [
               -680.549,
               -208.859
@@ -194,14 +502,25 @@
               -223.003
             ]
           ],
-          "style": "brick-arch",
-          "archCount": 1,
-          "height": 2.6,
-          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+          "alignmentEvidence": "T13 retrace (October 2026): span laid on the retraced High Street centreline, on a straight piece of the route so the deck axis is the road axis. OS reading: bank lines taken where the model river outline meets the parapet lines, which matches the drawn OS banks at the bridge corners to about 1 m by eye: the west bank crosses the centreline at 601.1 m along the route (1 deg from square to the road) and the east bank at 607.8 m (3 deg); the channel axis is 1 deg from square, so the road crosses St Thomas Creek obliquely, as drawn, and the bridge carries it straight across. The span runs from 600.0 m to 608.9 m along the route so the 14.2 m deck (carriageway plus 1.1 m footways) covers the model water and its 0.6 m clearance across the full width; at the centreline the span ends lie -1.1 m and +1.1 m from the bank lines; the excess is the 0.6 m water clearance plus the skew of the banks across the deck width. Previous span (priorPoints) was 17.8 m long, 3.8 deg off the retraced road axis, its ends 0.4 m and -0.8 m to the side of the retraced centreline. Estimated: arch form, deck height and the abutment faces, which docs/infrastructure.js draws square to the road."
         },
         {
           "id": "st-michaels-bridge",
           "points": [
+            [
+              -637.419,
+              -261.841
+            ],
+            [
+              -628.021,
+              -273.977
+            ]
+          ],
+          "style": "stone-arch",
+          "archCount": 1,
+          "height": 2.8,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates.",
+          "priorPoints": [
             [
               -642.802,
               -258.364
@@ -211,10 +530,7 @@
               -282.264
             ]
           ],
-          "style": "stone-arch",
-          "archCount": 1,
-          "height": 2.8,
-          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+          "alignmentEvidence": "T13 retrace (October 2026): span laid on the retraced High Street centreline, on a straight piece of the route so the deck axis is the road axis. OS reading: bank lines taken where the model river outline meets the parapet lines, which matches the drawn OS banks at the bridge corners to about 1 m by eye: the west bank crosses the centreline at 663.2 m along the route (9 deg from square to the road) and the east bank at 675.0 m (8 deg); the channel axis is 9 deg from square, so the road crosses the channel at St Michael's (Harrow) Bridge obliquely, as drawn, and the bridge carries it straight across. The span runs from 661.4 m to 676.7 m along the route so the 14.2 m deck (carriageway plus 1.1 m footways) covers the model water and its 0.6 m clearance across the full width; at the centreline the span ends lie -1.9 m and +1.7 m from the bank lines; the excess is the 0.6 m water clearance plus the skew of the banks across the deck width. Previous span (priorPoints) was 29.9 m long, 0.8 deg off the retraced road axis, its ends -2.1 m and -3.0 m to the side of the retraced centreline. Estimated: arch form, deck height and the abutment faces, which docs/infrastructure.js draws square to the road."
         }
       ],
       "westSugarAlignment": {
@@ -378,57 +694,226 @@
           "modelIds": [
             "west-259-2"
           ],
-          "shoulderWidth": 0.78,
-          "evidence": "OS brewery west frontage source5599 is 6.787 m from the retained High Street centreline. Keep the 12 m carriageway and complete shaded exterior; the interpreted pavement narrows locally to 0.78 m instead of trimming 0.600 m\u00b2 from the building."
+          "shoulderWidth": 0.13,
+          "evidence": "T13 retrace (October 2026): OS brewery west frontage source5599 is 6.154 m from the retraced High Street centreline (previously 6.787 m from the old line). Keep the 12 m carriageway and the complete shaded exterior; the interpreted pavement narrows locally to 0.13 m. The OS kerb here is drawn about 5.3-6 m from the rail centre, so the modelled 12 m carriageway is about 0.5 m wider than the drawn one on this side.",
+          "priorShoulderWidth": 0.78,
+          "priorEvidence": "OS brewery west frontage source5599 is 6.787 m from the retained High Street centreline. Keep the 12 m carriageway and complete shaded exterior; the interpreted pavement narrows locally to 0.78 m instead of trimming 0.600 m\u00b2 from the building."
         }
-      ]
+      ],
+      "t13Retrace": {
+        "date": "October 2026",
+        "source": "OS London five-foot (1:1056) 1893-96 mosaic, NLS layer os-london-five-foot-1893, zoom 18 (about 0.37 m per pixel)",
+        "priorPoints": [
+          [
+            -1120.385,
+            187.542
+          ],
+          [
+            -1036.62,
+            118.42
+          ],
+          [
+            -940.775,
+            42.182
+          ],
+          [
+            -875,
+            -17.971572
+          ],
+          [
+            -830.854,
+            -54.016
+          ],
+          [
+            -771.719,
+            -117.611
+          ],
+          [
+            -699.226,
+            -190.143
+          ],
+          [
+            -630.22,
+            -274.865
+          ],
+          [
+            -535.116,
+            -405.572
+          ],
+          [
+            -452.582,
+            -519.224
+          ],
+          [
+            -395.436,
+            -608.046
+          ],
+          [
+            -370.61,
+            -653.283
+          ]
+        ],
+        "priorSourcePixels": [
+          [
+            1014.8,
+            2289.265
+          ],
+          [
+            1244.799,
+            2109.266
+          ],
+          [
+            1507.767,
+            1910.991
+          ],
+          [
+            1688.808,
+            1753.828
+          ],
+          [
+            1810.004,
+            1660.002
+          ],
+          [
+            1973.47,
+            1493.087
+          ],
+          [
+            2173.47,
+            1303.085
+          ],
+          [
+            2365.002,
+            1080.002
+          ],
+          [
+            2630.002,
+            735.001
+          ],
+          [
+            2860.004,
+            435.002
+          ],
+          [
+            3020.003,
+            200.003
+          ],
+          [
+            3090.001,
+            80.003
+          ]
+        ],
+        "priorAlignmentEvidence": "Manually read centreline on archived NLS georeferenced OS London five-foot mapping, revised 1893. Scene origin 538900,183209; widths estimated from the map.",
+        "measurement": {
+          "stations10m": 114,
+          "stationsWithLegibleRails": 91,
+          "newMedianM": 0.02,
+          "newMaxM": 1.85,
+          "newOver0_5": 2,
+          "newOver0_5At": [
+            600,
+            700
+          ],
+          "oldMedianM": 1.66,
+          "oldMaxM": 9.97
+        },
+        "method": "Rail-centre detection and spline fit; scratch tools railscan.py/track.py/refine.py/merge_fit2.py/build_hs.py (not committed)."
+      }
     },
     {
       "name": "Stratford High Street \u2014 Channelsea approach",
       "sheet": "scene",
       "points": [
         [
-          -370.61,
-          -653.283
+          -353.2,
+          -640.293
         ],
         [
-          -293.352,
-          -714.433
+          -349.425,
+          -644.956
         ],
         [
-          -255.729,
-          -768.188
+          -323.051,
+          -677.642
         ],
         [
-          -227.032,
-          -807.96
+          -287.143,
+          -722.552
         ],
         [
-          -189.472,
-          -863.941
+          -249.249,
+          -769.47
+        ],
+        [
+          -237.715,
+          -783.806
+        ],
+        [
+          -230.421,
+          -793.333
+        ],
+        [
+          -222.533,
+          -804.898
+        ],
+        [
+          -216.691,
+          -814.218
+        ],
+        [
+          -192.752,
+          -853.497
+        ],
+        [
+          -187.215,
+          -862.552
         ]
       ],
       "pixelWidth": 4864,
       "sourcePixels": [
         [
-          1370,
-          1100
+          1343.812,
+          1140.264
         ],
         [
-          1510,
-          945
+          1354.294,
+          1127.984
         ],
         [
-          1615,
-          803
+          1427.532,
+          1041.898
         ],
         [
-          1695,
-          698
+          1527.275,
+          923.593
         ],
         [
-          1800,
-          550
+          1632.503,
+          800.025
+        ],
+        [
+          1664.536,
+          762.266
+        ],
+        [
+          1684.827,
+          737.145
+        ],
+        [
+          1706.863,
+          706.58
+        ],
+        [
+          1723.239,
+          681.91
+        ],
+        [
+          1790.425,
+          577.888
+        ],
+        [
+          1805.962,
+          553.909
         ]
       ],
       "sourceBounds": [
@@ -440,12 +925,26 @@
       "width": 12,
       "kind": "street",
       "surface": "setts",
-      "alignmentEvidence": "Manually read centreline on archived NLS georeferenced OS London five-foot mapping, revised 1893. Scene origin 538900,183209; widths estimated from the map.",
+      "alignmentEvidence": "T13 retrace (October 2026): centreline re-read on the OS London five-foot (1:1056) 1893-96 mosaic, NLS layer os-london-five-foot-1893, zoom 18 (about 0.37 m per pixel) as the midpoint between the two inner rails of the double horse-tram track drawn in the carriageway (four parallel rail lines, track centres about 2.70 m apart). The rail centres were detected automatically in cross-profiles every 1 m and checked by eye at every bridge; a robust spline was fitted through them, with a separate fit either side of the sheet join east of St Michael's Bridge, and the route keeps a vertex wherever the spline departs from the chord by more than 0.10 m. Where lettering or the railway viaduct hides the rails (about 790-850 m and 1080-1120 m along the route) the spline bridges gaps of up to 30 m on straight carriageway. Measured: route within 0.02 m median, 1.85 m maximum of the detected rail centre at the 106 ten-metre stations where the rails are legible. Estimated: the 12 m carriageway width (the drawn kerb lines are not continuous enough to measure; the frontage-to-frontage space is 15-18 m including footways), paving and levels. Scene origin 538900,183209.",
       "surfaceEvidence": "Interpreted paving; no street-specific adoption record.",
       "bridgeSpans": [
         {
           "id": "channelsea-high-street-bridge",
           "points": [
+            [
+              -247.995,
+              -771.028
+            ],
+            [
+              -238.968,
+              -782.248
+            ]
+          ],
+          "style": "stone-arch",
+          "archCount": 1,
+          "height": 3.3,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates.",
+          "priorPoints": [
             [
               -261.104,
               -760.509
@@ -455,12 +954,69 @@
               -800.503
             ]
           ],
-          "style": "stone-arch",
-          "archCount": 1,
-          "height": 3.3,
-          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates."
+          "alignmentEvidence": "T13 retrace (October 2026): span laid on the retraced High Street centreline, on a straight piece of the route so the deck axis is the road axis. OS reading: bank lines taken where the model river outline meets the parapet lines, which matches the drawn OS banks at the bridge corners to about 1 m by eye: the west bank crosses the centreline at 1306.0 m along the route (18 deg from square to the road) and the east bank at 1316.4 m (2 deg); the channel axis is 10 deg from square, so the road crosses the Channelsea obliquely, as drawn, and the bridge carries it straight across. The span runs from 1303.0 m to 1317.3 m along the route so the 14.2 m deck (carriageway plus 1.1 m footways) covers the model water and its 0.6 m clearance across the full width; at the centreline the span ends lie -3.0 m and +1.0 m from the bank lines; the excess is the 0.6 m water clearance plus the skew of the banks across the deck width. Previous span (priorPoints) was 49.2 m long, 3.2 deg off the retraced road axis, its ends -3.6 m and -5.7 m to the side of the retraced centreline. Estimated: arch form, deck height and the abutment faces, which docs/infrastructure.js draws square to the road."
         }
-      ]
+      ],
+      "t13Retrace": {
+        "date": "October 2026",
+        "source": "OS London five-foot (1:1056) 1893-96 mosaic, NLS layer os-london-five-foot-1893, zoom 18 (about 0.37 m per pixel)",
+        "priorPoints": [
+          [
+            -370.61,
+            -653.283
+          ],
+          [
+            -293.352,
+            -714.433
+          ],
+          [
+            -255.729,
+            -768.188
+          ],
+          [
+            -227.032,
+            -807.96
+          ],
+          [
+            -189.472,
+            -863.941
+          ]
+        ],
+        "priorSourcePixels": [
+          [
+            1370,
+            1100
+          ],
+          [
+            1510,
+            945
+          ],
+          [
+            1615,
+            803
+          ],
+          [
+            1695,
+            698
+          ],
+          [
+            1800,
+            550
+          ]
+        ],
+        "priorAlignmentEvidence": "Manually read centreline on archived NLS georeferenced OS London five-foot mapping, revised 1893. Scene origin 538900,183209; widths estimated from the map.",
+        "measurement": {
+          "stations10m": 28,
+          "stationsWithLegibleRails": 15,
+          "newMedianM": 0.03,
+          "newMaxM": 0.41,
+          "newOver0_5": 0,
+          "newOver0_5At": [],
+          "oldMedianM": 4.47,
+          "oldMaxM": 6.61
+        },
+        "method": "Rail-centre detection and spline fit; scratch tools railscan.py/track.py/refine.py/merge_fit2.py/build_hs.py (not committed)."
+      }
     },
     {
       "name": "Sugar House Lane",

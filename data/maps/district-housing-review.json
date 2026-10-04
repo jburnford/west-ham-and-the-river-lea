@@ -345,48 +345,90 @@
     },
     {
       "id": "os-row-34",
-      "x": 213.5846558699766,
-      "z": -633.0073708709692,
-      "width": 189.29,
+      "x": 204.911,
+      "z": -629.448,
+      "width": 170.54,
       "rotation": 22.31,
       "depth": 6.6,
-      "houseCount": 47,
+      "houseCount": 42,
       "frontStreet": "Hotham Street",
       "street": "Hotham Street",
       "frontSign": 1,
       "group": "district",
       "reviewArea": "northeast",
-      "maxYardDepth": 32
+      "maxYardDepth": 32,
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "x": 213.5846558699766,
+          "z": -633.0073708709692,
+          "width": 189.29,
+          "rotation": 22.31,
+          "street": "Hotham Street",
+          "frontStreet": "Hotham Street",
+          "houseCount": 47,
+          "frontSign": 1
+        },
+        "evidence": "East end trimmed by 18.8 m: the envelope ran across the printed ARTHINGWORTH STREET, now modelled; on the OS five-foot plan the terrace stops at the street's west frontage, about 8 m from its centreline. Rotation, depth and the west end are unchanged; house count scaled. Note: the row and its street record lie a few metres off the drawn terraces along their length (EPFL footprint cover of the row is low); not corrected here."
+      }
     },
     {
       "id": "os-row-35",
-      "x": 220.6341071062553,
-      "z": -618.0087575226463,
-      "width": 185.86,
+      "x": 212.542,
+      "z": -614.72,
+      "width": 168.39,
       "rotation": 22.12,
       "depth": 6.6,
-      "houseCount": 46,
+      "houseCount": 42,
       "frontStreet": "Hotham Street",
       "street": "Hotham Street",
       "frontSign": -1,
       "group": "district",
       "reviewArea": "northeast",
-      "maxYardDepth": 32
+      "maxYardDepth": 32,
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "x": 220.6341071062553,
+          "z": -618.0087575226463,
+          "width": 185.86,
+          "rotation": 22.12,
+          "street": "Hotham Street",
+          "frontStreet": "Hotham Street",
+          "houseCount": 46,
+          "frontSign": -1
+        },
+        "evidence": "East end trimmed by 17.5 m: the envelope ran across the printed ARTHINGWORTH STREET, now modelled; on the OS five-foot plan the terrace stops at the street's west frontage, about 8 m from its centreline. Rotation, depth and the west end are unchanged; house count scaled. Note: the row and its street record lie a few metres off the drawn terraces along their length (EPFL footprint cover of the row is low); not corrected here."
+      }
     },
     {
       "id": "os-row-36",
-      "x": 235.75307245216135,
-      "z": -576.248534967314,
-      "width": 177.24,
+      "x": 230.983,
+      "z": -574.388,
+      "width": 167.0,
       "rotation": 21.31,
       "depth": 6.6,
-      "houseCount": 44,
+      "houseCount": 41,
       "frontStreet": "Randal Street",
       "street": "Randal Street",
       "frontSign": 1,
       "group": "district",
       "reviewArea": "northeast",
-      "maxYardDepth": 32
+      "maxYardDepth": 32,
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "x": 235.75307245216135,
+          "z": -576.248534967314,
+          "width": 177.24,
+          "rotation": 21.31,
+          "street": "Randal Street",
+          "frontStreet": "Randal Street",
+          "houseCount": 44,
+          "frontSign": 1
+        },
+        "evidence": "East end trimmed by 10.2 m: the envelope ran across the printed ARTHINGWORTH STREET, now modelled; on the OS five-foot plan the terrace stops at the street's west frontage, about 8 m from its centreline. Rotation, depth and the west end are unchanged; house count scaled. Note: the row and its street record lie a few metres off the drawn terraces along their length (EPFL footprint cover of the row is low); not corrected here."
+      }
     },
     {
       "id": "os-row-37",
@@ -660,33 +702,59 @@
     },
     {
       "id": "os-row-54-part-1",
-      "x": -26.052796240880465,
-      "z": -738.5648627632391,
-      "width": 44.46,
-      "rotation": -65.09,
+      "x": -32.16,
+      "z": -754.798,
+      "width": 51.0,
+      "rotation": 31.235,
       "depth": 6.6,
-      "houseCount": 12,
-      "frontStreet": "Angel Lane block passage",
-      "street": "Angel Lane block passage",
-      "frontSign": -1,
+      "houseCount": 11,
+      "frontStreet": "Railway Place",
+      "street": "Railway Place",
       "group": "district",
       "reviewArea": "northeast",
-      "maxYardDepth": 32
+      "maxYardDepth": 32,
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "x": -26.052796240880465,
+          "z": -738.5648627632391,
+          "width": 44.46,
+          "rotation": -65.09,
+          "street": "Angel Lane block passage",
+          "frontStreet": "Angel Lane block passage",
+          "houseCount": 12,
+          "frontSign": -1
+        },
+        "evidence": "Re-axed onto the continuous south terrace of the printed RAILWAY PLACE (OS five-foot 1893-96; EPFL footprints cover 4.6-5.0 m of every metre of frontage from 16 to 67 m along the street). The former envelope ran north-south across the back gardens on the line of the deleted \"Angel Lane block passage\". Front wall 2.6 m from the Railway Place centreline. Estimated: 11 houses, 6.6 m main-body depth."
+      }
     },
     {
       "id": "os-row-55",
-      "x": -8.348203759119537,
-      "z": -741.873137236761,
-      "width": 51.5,
-      "rotation": -65.09,
+      "x": -2.272,
+      "z": -722.586,
+      "width": 32.0,
+      "rotation": 31.718,
       "depth": 6.6,
-      "houseCount": 12,
-      "frontStreet": "Angel Lane block passage",
-      "street": "Angel Lane block passage",
-      "frontSign": 1,
+      "houseCount": 7,
+      "frontStreet": "Albion Street",
+      "street": "Albion Street",
       "group": "district",
       "reviewArea": "northeast",
-      "maxYardDepth": 32
+      "maxYardDepth": 32,
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "x": -8.348203759119537,
+          "z": -741.873137236761,
+          "width": 51.5,
+          "rotation": -65.09,
+          "street": "Angel Lane block passage",
+          "frontStreet": "Angel Lane block passage",
+          "houseCount": 12,
+          "frontSign": 1
+        },
+        "evidence": "Re-axed onto the north terrace of the printed ALBION STREET between the yard east of the corner public house and St Thomas Road (EPFL footprints continuous from 34 to 66 m along the street). The former envelope ran north-south across the back gardens. Front wall 4.7 m from the Albion Street centreline. Estimated: 7 houses, 6.6 m depth."
+      }
     },
     {
       "id": "os-row-56-part-1",
@@ -876,17 +944,31 @@
       "rotation": 49.4,
       "depth": 6.6,
       "houseCount": 26,
-      "frontStreet": "High Street housing frontage",
-      "street": "High Street housing frontage",
+      "frontStreet": "Stratford High Street \u2014 Channelsea approach",
+      "street": "Stratford High Street \u2014 Channelsea approach",
       "frontSign": -1,
       "group": "district",
       "reviewArea": "northwest",
-      "maxYardDepth": 32
+      "maxYardDepth": 32,
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "x": -316.34954782006474,
+          "z": -660.282442924453,
+          "width": 100.12,
+          "rotation": 49.4,
+          "street": "High Street housing frontage",
+          "frontStreet": "High Street housing frontage",
+          "houseCount": 26,
+          "frontSign": -1
+        },
+        "evidence": "Re-keyed only: its former street \"High Street housing frontage\" duplicated the High Street and has been removed; the row runs parallel to the retraced High Street (Channelsea approach record). Geometry unchanged."
+      }
     },
     {
       "id": "os-row-66",
       "depth": 6.6,
-      "houseCount": 25,
+      "houseCount": 19,
       "frontStreet": "Stratford High Street",
       "street": "Stratford High Street",
       "group": "district",
@@ -894,16 +976,36 @@
       "maxYardDepth": 27,
       "axis": [
         [
-          399,
-          900
+          -472.288,
+          -525.994
         ],
         [
-          497,
-          799
+          -429.09,
+          -572.892
         ]
       ],
-      "sheet": "22",
-      "fitToStreet": true
+      "sheet": "scene",
+      "fitToStreet": false,
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "axis": [
+            [
+              399,
+              900
+            ],
+            [
+              497,
+              799
+            ]
+          ],
+          "sheet": "22",
+          "street": "Stratford High Street",
+          "frontStreet": "Stratford High Street",
+          "houseCount": 25
+        },
+        "evidence": "Axis fixed at the previously published position, which lies on the house bodies drawn on the OS five-foot plan (EPFL footprint cover 0.91), and the street fit switched off: the terrace has front gardens about 4-6 m deep, so the builder's fit to the retraced High Street (front face 2 m from the carriageway) would move it into the gardens (cover 0.64)."
+      }
     },
     {
       "id": "os-row-67",
@@ -2112,12 +2214,12 @@
       "id": "district-pitchford-langthorne-east-return",
       "axis": [
         [
-          233.703,
-          -866.769
+          236.546,
+          -872.692
         ],
         [
-          243.301,
-          -850.888
+          247.651,
+          -858.087
         ]
       ],
       "sheet": "scene",
@@ -2136,7 +2238,27 @@
           218.41520961799887,
           -835.8579672447387
         ]
-      ]
+      ],
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "axis": [
+            [
+              233.703,
+              -866.769
+            ],
+            [
+              243.301,
+              -850.888
+            ]
+          ],
+          "sheet": "scene",
+          "street": "West Ham Lane",
+          "frontStreet": "West Ham Lane",
+          "houseCount": 5
+        },
+        "evidence": "Fronts WEST HAM LANE: Arthingworth Street begins at Barnby Street, so this block end faces the lane itself. The row had been fitted to the misplaced lane trace 15-25 m west of the printed lane. Axis re-set on the west terrace drawn on the OS five-foot plan (EPFL footprints continuous along the stretch), front wall 7.0 m from the West Ham Lane centreline; the housing builder then fits it to the street as for other added returns. Estimated: depth, house count."
+      }
     },
     {
       "id": "district-langthorne-paul-west-return",
@@ -2172,12 +2294,12 @@
       "id": "district-langthorne-paul-east-return",
       "axis": [
         [
-          257.057,
-          -828.127
+          266.775,
+          -833.767
         ],
         [
-          270.819,
-          -805.356
+          281.19,
+          -809.928
         ]
       ],
       "sheet": "scene",
@@ -2196,7 +2318,27 @@
           255.33784132361023,
           -796.0218873987751
         ]
-      ]
+      ],
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "axis": [
+            [
+              257.057,
+              -828.127
+            ],
+            [
+              270.819,
+              -805.356
+            ]
+          ],
+          "sheet": "scene",
+          "street": "West Ham Lane",
+          "frontStreet": "West Ham Lane",
+          "houseCount": 6
+        },
+        "evidence": "Fronts WEST HAM LANE: Arthingworth Street begins at Barnby Street, so this block end faces the lane itself. The row had been fitted to the misplaced lane trace 15-25 m west of the printed lane. Axis re-set on the west terrace drawn on the OS five-foot plan (EPFL footprints continuous along the stretch), front wall 6.1 m from the West Ham Lane centreline; the housing builder then fits it to the street as for other added returns. Estimated: depth, house count."
+      }
     },
     {
       "id": "district-paul-barnby-west-return",
@@ -2232,12 +2374,12 @@
       "id": "district-paul-barnby-east-return",
       "axis": [
         [
-          279.098,
-          -779.083
+          293.145,
+          -785.82
         ],
         [
-          295.885,
-          -733.938
+          310.461,
+          -747.072
         ]
       ],
       "sheet": "scene",
@@ -2256,7 +2398,27 @@
           274.1576788756858,
           -726.0707010332978
         ]
-      ]
+      ],
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "axis": [
+            [
+              279.098,
+              -779.083
+            ],
+            [
+              295.885,
+              -733.938
+            ]
+          ],
+          "sheet": "scene",
+          "street": "West Ham Lane",
+          "frontStreet": "West Ham Lane",
+          "houseCount": 12
+        },
+        "evidence": "Fronts WEST HAM LANE: Arthingworth Street begins at Barnby Street, so this block end faces the lane itself. The row had been fitted to the misplaced lane trace 15-25 m west of the printed lane. Axis re-set on the west terrace drawn on the OS five-foot plan (EPFL footprints continuous along the stretch), front wall 6.4 m from the West Ham Lane centreline; the housing builder then fits it to the street as for other added returns. Estimated: depth, house count."
+      }
     },
     {
       "id": "district-barnby-hotham-west-return",
@@ -2292,19 +2454,19 @@
       "id": "district-barnby-hotham-east-return",
       "axis": [
         [
-          303.937,
-          -707.21
+          285.375,
+          -702.346
         ],
         [
-          312.422,
-          -675.77
+          298.454,
+          -672.528
         ]
       ],
       "sheet": "scene",
       "depth": 6.2,
       "houseCount": 8,
-      "street": "West Ham Lane",
-      "frontStreet": "West Ham Lane",
+      "street": "Arthingworth Street",
+      "frontStreet": "Arthingworth Street",
       "reviewArea": "northeast",
       "maxYardDepth": 32,
       "sourceAxisBeforeStreetFit": [
@@ -2316,7 +2478,27 @@
           296.73707396900556,
           -671.7755458252315
         ]
-      ]
+      ],
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "axis": [
+            [
+              303.937,
+              -707.21
+            ],
+            [
+              312.422,
+              -675.77
+            ]
+          ],
+          "sheet": "scene",
+          "street": "West Ham Lane",
+          "frontStreet": "West Ham Lane",
+          "houseCount": 8
+        },
+        "evidence": "Fronts ARTHINGWORTH STREET, not West Ham Lane: the reviewer's source axis (sourceAxisBeforeStreetFit) lies on the east frontage of Arthingworth Street, 8-10 m from its centreline and 40-70 m from the printed West Ham Lane; the row had been fitted 10-25 m east onto the misplaced lane trace, into back gardens. Axis re-set on the east terrace drawn on the OS five-foot plan (EPFL footprints continuous along the stretch), front wall 6.5 m from the Arthingworth Street centreline; the housing builder then fits it to the street as for other added returns. Estimated: depth, house count."
+      }
     },
     {
       "id": "district-hotham-randal-west-return",
@@ -2352,19 +2534,19 @@
       "id": "district-hotham-randal-east-return",
       "axis": [
         [
-          319.054,
-          -649.529
+          308.747,
+          -649.284
         ],
         [
-          323.246,
-          -612.294
+          323.535,
+          -615.571
         ]
       ],
       "sheet": "scene",
       "depth": 6.2,
       "houseCount": 9,
-      "street": "West Ham Lane",
-      "frontStreet": "West Ham Lane",
+      "street": "Arthingworth Street",
+      "frontStreet": "Arthingworth Street",
       "reviewArea": "northeast",
       "maxYardDepth": 32,
       "sourceAxisBeforeStreetFit": [
@@ -2376,7 +2558,27 @@
           313.95636640136377,
           -611.370027183543
         ]
-      ]
+      ],
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "axis": [
+            [
+              319.054,
+              -649.529
+            ],
+            [
+              323.246,
+              -612.294
+            ]
+          ],
+          "sheet": "scene",
+          "street": "West Ham Lane",
+          "frontStreet": "West Ham Lane",
+          "houseCount": 9
+        },
+        "evidence": "Fronts ARTHINGWORTH STREET, not West Ham Lane: the reviewer's source axis (sourceAxisBeforeStreetFit) lies on the east frontage of Arthingworth Street, 8-10 m from its centreline and 40-70 m from the printed West Ham Lane; the row had been fitted 10-25 m east onto the misplaced lane trace, into back gardens. Axis re-set on the east terrace drawn on the OS five-foot plan (EPFL footprints continuous along the stretch), front wall 6.6 m from the Arthingworth Street centreline; the housing builder then fits it to the street as for other added returns. Estimated: depth, house count."
+      }
     },
     {
       "id": "district-randal-skelton-west-return",
@@ -2412,19 +2614,19 @@
       "id": "district-randal-skelton-east-return",
       "axis": [
         [
-          326.553,
-          -582.917
+          313.462,
+          -581.451
         ],
         [
-          327.555,
-          -546.395
+          323.958,
+          -557.523
         ]
       ],
       "sheet": "scene",
       "depth": 6.2,
       "houseCount": 9,
-      "street": "West Ham Lane",
-      "frontStreet": "West Ham Lane",
+      "street": "Arthingworth Street",
+      "frontStreet": "Arthingworth Street",
       "reviewArea": "northeast",
       "maxYardDepth": 32,
       "sourceAxisBeforeStreetFit": [
@@ -2436,7 +2638,27 @@
           320.4810480645436,
           -546.2871723632927
         ]
-      ]
+      ],
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "axis": [
+            [
+              326.553,
+              -582.917
+            ],
+            [
+              327.555,
+              -546.395
+            ]
+          ],
+          "sheet": "scene",
+          "street": "West Ham Lane",
+          "frontStreet": "West Ham Lane",
+          "houseCount": 9
+        },
+        "evidence": "Fronts ARTHINGWORTH STREET, not West Ham Lane: the reviewer's source axis (sourceAxisBeforeStreetFit) lies on the west frontage of Arthingworth Street, 8-10 m from its centreline and 40-70 m from the printed West Ham Lane; the row had been fitted 10-25 m east onto the misplaced lane trace, into back gardens. Axis re-set on the west terrace drawn on the OS five-foot plan (EPFL footprints continuous along the stretch), front wall 10.1 m from the Arthingworth Street centreline; the housing builder then fits it to the street as for other added returns. Estimated: depth, house count."
+      }
     },
     {
       "id": "district-leywick-morley-west-west-return",
@@ -2543,8 +2765,8 @@
       "sheet": "scene",
       "depth": 6.2,
       "houseCount": 8,
-      "street": "West Ham Lane",
-      "frontStreet": "West Ham Lane",
+      "street": "Abbey Road northern section",
+      "frontStreet": "Abbey Road northern section",
       "reviewArea": "northeast",
       "maxYardDepth": 32,
       "sourceAxisBeforeStreetFit": [
@@ -2556,7 +2778,27 @@
           250.22319941251843,
           -439.99370957762176
         ]
-      ]
+      ],
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "axis": [
+            [
+              322.12,
+              -463.241
+            ],
+            [
+              317.649,
+              -430.456
+            ]
+          ],
+          "sheet": "scene",
+          "street": "West Ham Lane",
+          "frontStreet": "West Ham Lane",
+          "houseCount": 8
+        },
+        "evidence": "Re-keyed only: the row (geometry fixed by east-bridge-road-housing.json) fronts the street printed ABBEY ROAD, now the separate record \"Abbey Road northern section\"."
+      }
     },
     {
       "id": "district-montague-south-a",
@@ -4144,25 +4386,84 @@
       "name": "Ward Road",
       "points": [
         [
-          574,
-          394
+          -411.4,
+          -837.6
         ],
         [
-          658,
-          490
+          -387.3,
+          -812.71
         ],
         [
-          743,
-          580
+          -377.26,
+          -803.0
+        ],
+        [
+          -373.34,
+          -798.41
+        ],
+        [
+          -369.71,
+          -793.56
+        ],
+        [
+          -358.96,
+          -781.71
+        ],
+        [
+          -332.59,
+          -754.35
+        ],
+        [
+          -319.58,
+          -741.91
+        ],
+        [
+          -293.52,
+          -714.58
         ]
       ],
-      "sheet": "22",
+      "sheet": "scene",
       "pixelWidth": 1888,
       "width": 6,
       "kind": "street",
       "surface": "macadam",
       "surfaceEvidence": "Interpreted macadam on mapped residential streets.",
-      "alignmentEvidence": "Centreline re-read with the district housing block review. Name corrected October 2026 (was \"Warton Road upper housing\"): OS London five-foot 1893\u201396 mosaic (NLS os-london-five-foot-1893, zoom 18), crop centred on scene (-320,-775), prints \"WARD ROAD\" on the only street between the same two streets (the road to the north and Stratford High Street), parallel to this trace; EPFL OS text layer \"WARD\" (-369,-790), \"ROAD\" (-330,-750). Estimated: the traced centreline lies about 15\u201330 m north-east of the printed carriageway, across a yard and buildings, on both the mosaic and the saved VIII.22 scan; geometry not corrected."
+      "alignmentEvidence": "T13 retrace (October 2026): re-read on the OS London five-foot (1:1056) 1893-96 mosaic, NLS layer os-london-five-foot-1893, zoom 18 (about 0.37 m per pixel) along the printed WARD ROAD (letters W-A-R-D at (-377,-803)-(-358,-779), R-O-A-D at (-340,-761)-(-302,-723); EPFL labels WARD (-369,-790), ROAD (-330,-750)), midway between the dotted kerb lines in straightened map strips, from the Lett Road centreline to the Stratford High Street centreline. The former trace lay 15-30 m north-east, across the Calcarium & Paint Works yard and buildings. Estimated: 6 m carriageway, paving.",
+      "t13Retrace": {
+        "date": "October 2026",
+        "prior": {
+          "sheet": "22",
+          "points": [
+            [
+              574,
+              394
+            ],
+            [
+              658,
+              490
+            ],
+            [
+              743,
+              580
+            ]
+          ],
+          "pixelWidth": 1888,
+          "alignmentEvidence": "Centreline re-read with the district housing block review. Name corrected October 2026 (was \"Warton Road upper housing\"): OS London five-foot 1893\u201396 mosaic (NLS os-london-five-foot-1893, zoom 18), crop centred on scene (-320,-775), prints \"WARD ROAD\" on the only street between the same two streets (the road to the north and Stratford High Street), parallel to this trace; EPFL OS text layer \"WARD\" (-369,-790), \"ROAD\" (-330,-750). Estimated: the traced centreline lies about 15\u201330 m north-east of the printed carriageway, across a yard and buildings, on both the mosaic and the saved VIII.22 scan; geometry not corrected."
+        },
+        "measurement": {
+          "lengthM": 170.5,
+          "frontageStations": 6,
+          "frontageMidpointOffsetM": {
+            "median": 1.53,
+            "p90": 2.5,
+            "max": 3.06
+          },
+          "shiftFromOldTraceM": {
+            "median": 21.8,
+            "max": 40.6
+          }
+        }
+      }
     },
     {
       "name": "Carpenters Road upper housing",
