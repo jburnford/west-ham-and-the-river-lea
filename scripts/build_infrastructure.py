@@ -216,8 +216,12 @@ for r in data['neighbourhood']['railways']:
     line=LineString(r['route'])
     chain,formation=np.array(r['levelProfile']['chainage']),np.array(r['levelProfile']['formation'])
     def level(s):return float(np.interp(s,chain,formation))
-    # The rail deck spans the gaps; earth slopes stop at water and streets below.
-    openings=water.buffer(2).union(roads.buffer(2))
+    # The rail deck spans the gaps; earth slopes stop at water and streets below. A street the OS
+    # shows crossing on the level (the register's crossings with osForm 'level crossing') is not an
+    # opening: the line runs on through at its formation and the street is drawn at rail level over it.
+    level_crossings=[substring(line,*spec['crossings'][k]['chainage']).buffer(15,cap_style=2) for k in spec.get('crossings',{}) if spec['crossings'][k].get('osForm')=='level crossing']
+    street_openings=roads.buffer(2).difference(unary_union(level_crossings)) if level_crossings else roads.buffer(2)
+    openings=water.buffer(2).union(street_openings)
     # Register bridges (the LT&SR over the G.E.R. and Manor Road): no earth between the abutment faces.
     register_spans=[]
     for bridge in spec.get('bridges',[]):

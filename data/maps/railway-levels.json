@@ -1351,7 +1351,8 @@
             179.7
           ],
           "osForm": "level crossing",
-          "evidence": "OS: Abbey Road crosses the line on the level by the signal box (13.5 ft). The model's road and ground here stand about 1.9 m below that reading, so the at-grade line at the measured level still spans the drawn road on the model's short deck; it becomes a level crossing when the ground is raised to the OS."
+          "evidence": "OS: Abbey Road crosses the line on the level by the signal box (13.5 ft). Drawn as a level crossing: scripts/build_infrastructure.py leaves no opening or deck here, and the main landscape takes Abbey Road to its OS street level (data/maps/os-ground-levels.json), so the road surface meets the rail top (13.5 ft, 1.88 m scene).",
+          "priorEvidence": "T20: the model's road and ground here stood about 1.9 m below that reading, so the at-grade line at the measured level spanned the drawn road on the model's short deck (chainage 167.5-179.7, deck formation 1.515 m)."
         }
       }
     }

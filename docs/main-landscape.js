@@ -28,6 +28,22 @@ export async function loadMainLandscape(load) {
   return { meta, grids, weight, level };
 }
 
+// Premises ground at (x, z): the pad level, or, where the pad carries several OS yard readings
+// (controls [x, z, y]), their inverse-distance surface (power 2, distances under 3 m counted as 3 m),
+// exactly as scripts/os_ground_levels.py premises_level() draws the pad.
+export function premisesLevel(pad, x, z) {
+  if (!pad.controls || pad.controls.length < 2) return pad.groundSceneY;
+  let total = 0,
+    sum = 0;
+  for (const [cx, cz, cy] of pad.controls) {
+    const d = Math.max(3, Math.hypot(x - cx, z - cz)),
+      w = 1 / (d * d);
+    total += w;
+    sum += w * cy;
+  }
+  return sum / total;
+}
+
 export function applyMainLandscape(data, landscape) {
   if (!landscape) return;
   if (data.elevation?.meta.epoch !== landscape.meta.epoch) throw Error('Main landscape epoch mismatch');
@@ -59,7 +75,7 @@ export function applyMainLandscape(data, landscape) {
     if (!Number.isFinite(x) || !Number.isFinite(z)) return;
     const pad = premises.get(b.siteId),
       w = landscape.weight(x, z);
-    b.landscapeLift = pad ? w * (pad.groundSceneY + 0.1) : landscape.level(x, z) + 0.1;
+    b.landscapeLift = pad ? w * (premisesLevel(pad, x, z) + 0.1) : landscape.level(x, z) + 0.1;
     if (Math.abs(b.landscapeLift) > 0.001) seated++;
   };
   const n = data.neighbourhood;

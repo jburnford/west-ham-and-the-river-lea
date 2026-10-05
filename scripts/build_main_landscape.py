@@ -13,6 +13,7 @@ from scipy.ndimage import distance_transform_edt, map_coordinates
 from shapely.geometry import Polygon, LineString, box
 from shapely.ops import transform
 from regional_continuous_structures import Banks, polygon_bng
+import os_ground_levels as osg
 
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'docs/data';inputs=[]
 def read(path,binary=False):
@@ -42,21 +43,62 @@ def sample(grid,points):
     rc=np.array([(n1-(183209-points[:,1]))/step-.5,((538900+points[:,0])-e0)/step-.5])
     return map_coordinates(grid,rc,order=1,mode='constant',cval=0)
 def weight(points):return sample(support,points)
+# OS five-foot ground levels (data/maps/os-ground-levels.json, scripts/os_ground_levels.py):
+# premises pads, street corridors and the marsh between works take the OS readings
+# assigned to them. Where an applied reading lies outside the regional early-marsh
+# support, the landscape applies within 30 m of it (feathered over 20 m).
+os_register=read(osg.REGISTER)
+_field=np.column_stack([(np.arange(e0+step/2,e1,step)-538900)[None,:].repeat(shape[0],0).ravel(),(183209-np.arange(n1-step/2,n0,-step))[:,None].repeat(shape[1],1).ravel()])
+_in_box=(_field[:,0]>=os_register['coreBox'][0]-60)&(_field[:,0]<=os_register['coreBox'][2]+60)&(_field[:,1]>=os_register['coreBox'][1]-60)&(_field[:,1]<=os_register['coreBox'][3]+60)
+_extension=np.zeros(len(_field));_extension[_in_box]=osg.support_extension(os_register,_field[_in_box])
+support_prior=support.copy();support=np.maximum(support,_extension.reshape(shape).astype(support.dtype))
+os_support={'radiusMetres':osg.SUPPORT_RADIUS_M,'featherMetres':osg.SUPPORT_FEATHER_M,'cellsRaised':int((support>support_prior+1e-6).sum()),'cellsRaisedToFull':int(((support>=.999)&(support_prior<.999)).sum())}
+# The marsh correction: the regional early-marsh ground corrected to the OS marsh readings
+# within each dry compartment (rivers, not field ditches, divide them).
+_compartment_water=local(banks.water).union(geometry([p for r in plan['rivers'] for p in r['polygons']]));shapely.prepare(_compartment_water)
+os_marsh=osg.marsh_controls(os_register,infra)
+OS_WEST_LIMIT=-628
+os_corr,os_corr_meta,os_marsh_residuals=osg.correction_grid(os_marsh,lambda q:sample(filled,q),_compartment_water,os_register['coreBox'],OS_WEST_LIMIT)
+def marsh_at(points):
+    """The marsh between works: the regional early-marsh ground plus the OS marsh correction."""
+    return sample(filled,points)+osg.sample(os_corr,os_corr_meta,points)
+os_premises=osg.premises(os_register);os_streets=osg.streets(os_register)
 records={r['id']:r for r in audit['records']};yard_features=[f for f in meta['laterSurfaceLayers']['features'] if f['kind']==11]
-pads=[];pad_geoms=[]
+pads=[];pad_geoms=[];RAIL_SIDE_PAD_M=6
 for site in plan['sites']:
     polygon=geometry(site['polygons']);p=polygon.representative_point();centre=np.array([[p.x,p.y]])
-    if weight(centre)[0]<=0:continue
+    # The padded sites are those inside the regional early-marsh support (unchanged by the OS support).
+    if sample(support_prior,centre)[0]<=0:continue
     matched=next((f for f in yard_features if f['name']==site['name']),None)
     if matched:
         height=float(np.median([records[id]['provisionalODNMetres']-offset for id in matched['sourceIds']]))
         method='median of same-premises historical yard readings';ids=matched['sourceIds']
     else:
         points=np.array([list(polygon.representative_point().coords)[0],*list(shapely.get_coordinates(polygon))[::max(1,len(shapely.get_coordinates(polygon))//16)]])
-        height=max(-.1,float(np.median(sample(filled,points))))
-        method='marsh-supported premises estimate; retain at least the existing interpreted -0.1 m site floor';ids=[]
-    pads.append({'siteId':site['id'],'name':site['name'],'groundSceneY':height,'method':method,'sourceIds':ids})
+        height=max(-.1,float(np.median(marsh_at(points))))
+        method='marsh-supported premises estimate (the OS-corrected marsh around the outline); retain at least the existing interpreted -0.1 m site floor';ids=[]
+    pad={'siteId':site['id'],'name':site['name'],'groundSceneY':height,'method':method,'sourceIds':ids}
+    # Premises beside a railway the OS draws at grade (no cutting or bank hatching) meet it at the
+    # ground level the railway level register takes there (os_ground_levels.rail_side_controls,
+    # 9 m from the line), where that lies inside the outline or within RAIL_SIDE_PAD_M of it.
+    beside=[c for c in os_marsh if c['kind']=='rail-side' and polygon.distance(shapely.Point(c['position']))<=RAIL_SIDE_PAD_M]
+    if site['id'] in os_premises or beside:
+        # OS yard readings of these premises (data/maps/os-ground-levels.json): level where one reading,
+        # their inverse-distance surface where several (docs/main-landscape.js seats each building on it).
+        controls,ids=os_premises.get(site['id'],([],[]))
+        controls=controls+[[*c['position'],c['sceneY']] for c in beside]
+        pad={**pad,'groundSceneY':float(np.median([c[2] for c in controls])),'sourceIds':ids,
+             'railSideControls':[c['id'] for c in beside],
+             'method':('OS five-foot yard readings of the premises' if ids else 'no yard reading')+(' and the ground beside the at-grade railway (railway-levels.json formation less 0.1 m)' if beside else '')+(' (inverse-distance surface, power 2, '+str(osg.PAD_SOFTEN_M)+' m softening)' if len(controls)>1 else ''),
+             'priorGroundSceneY':height,'priorMethod':method}
+        if len(controls)>1:pad['controls']=[[round(c[0],2),round(c[1],2),round(c[2],3)] for c in controls]
+    pads.append(pad)
     pad_geoms.append(polygon)
+def pad_at(j,q):
+    """Ground of pad j at plan points q (level, or the surface through its OS readings)."""
+    c=pads[j].get('controls')
+    return osg.premises_level(c,q) if c else np.full(len(q),pads[j]['groundSceneY'])
+pad_index={p['siteId']:j for j,p in enumerate(pads)}
 pad_tree=shapely.STRtree(pad_geoms)
 # Street observations stay on their mapped corridors, including their ground
 # shoulders; never propagate across the wider marsh or through a watercourse.
@@ -67,17 +109,24 @@ pad_tree=shapely.STRtree(pad_geoms)
 # Outfall Sewer embankment footprint does a path corridor keep its former
 # street level, so the embankment toes it reaches stay as they were.
 sewer_zone=shapely.union_all([Polygon([(v[0],v[2]) for v in t]).buffer(0) for t in infra['sewerBanks']]+[Polygon(t).buffer(0) for t in infra['sewerCrestTriangles']]).buffer(1)
+# Street readings are road-surface levels: the corridor ground lies ROAD_SURFACE_OFFSET below them
+# (the drawn road surface offset in docs/infrastructure.js). Each corridor takes the regional street
+# readings (later surface layers, kind 10) and the OS register's street readings for that street.
+ROAD_SURFACE_OFFSET=.065
 road_fits=[];path_corridors=[]
-for feature in meta['laterSurfaceLayers']['features']:
-    if feature['kind']!=10:continue
-    road=next(r for r in infra['roads'] if r['name']==feature['name'])
-    line=LineString(road['route']);ids=feature['sourceIds'];corridor=line.buffer(road['width']/2+3)
+street_ids={f['name']:list(f['sourceIds']) for f in meta['laterSurfaceLayers']['features'] if f['kind']==10}
+for name,controls in os_streets.items():
+    street_ids[name]=list(dict.fromkeys([*street_ids.get(name,[]),*[c[0] for c in controls]]))
+os_street_points={c[0]:(c[1],c[2],c[3]) for controls in os_streets.values() for c in controls}
+for name,ids in street_ids.items():
+    road=next(r for r in infra['roads'] if r['name']==name)
+    line=LineString(road['route']);corridor=line.buffer(road['width']/2+3)
     if road.get('kind')=='path':
         corridor=corridor.intersection(sewer_zone)
         path_corridors.append({'name':road['name'],'widthMetres':road['width'],'lengthMetres':round(line.length,1),'streetReadingsNotApplied':ids,'sewerEmbankmentStubM2':round(corridor.area,1)})
         if corridor.is_empty:continue
-    positions=np.array([[records[id]['positionBNG'][0]-538900,183209-records[id]['positionBNG'][1]] for id in ids])
-    levels=np.array([records[id]['provisionalODNMetres']-offset for id in ids])
+    positions=np.array([os_street_points[id][:2] if id in os_street_points else [records[id]['positionBNG'][0]-538900,183209-records[id]['positionBNG'][1]] for id in ids])
+    levels=np.array([os_street_points[id][2] if id in os_street_points else records[id]['provisionalODNMetres']-offset for id in ids])-ROAD_SURFACE_OFFSET
     road_fits.append((road,corridor,positions,levels,cKDTree(positions),ids))
 road_tree=shapely.STRtree([fit[1] for fit in road_fits])
 # Abbey Lane's approaches are graded to the abbey-mill-crossing deck (whose
@@ -102,7 +151,7 @@ for end in plan['neighbourhood']['sewer']['bankEnds']:
     for j,fit in enumerate(road_fits):
         if fit[0]['name']!=end['road']:continue
         axis=LineString(end['roadAxis']);centre=np.array(axis.interpolate(.5,normalized=True).coords)
-        underpasses.setdefault(j,{})[tuple(np.round(axis.coords,2).ravel())]=(axis,float(sample(filled,centre)[0]),end['road'])
+        underpasses.setdefault(j,{})[tuple(np.round(axis.coords,2).ravel())]=(axis,float(marsh_at(centre)[0]),end['road'])
 underpasses={j:list(v.values()) for j,v in underpasses.items()}
 def road_fit_levels(j,points):
     """Street level of corridor j at points: inverse-distance from the corridor's
@@ -133,10 +182,11 @@ def road_levels(points,result,assigned=None):
 def base(points,edges=True):
     """Premises pads and street corridors at their own levels; with edges, the
     bank-foot frontage fill and the earth batters outside them (see below)."""
-    marsh=sample(filled,points);result=marsh.copy();pad=np.zeros(len(points),bool);street=np.zeros(len(points),bool)
+    marsh=marsh_at(points);result=marsh.copy();pad=np.zeros(len(points),bool);street=np.zeros(len(points),bool)
     matches=pad_tree.query(shapely.points(points),predicate='within')
     if matches.size:
-        for j in np.unique(matches[1]):result[matches[0][matches[1]==j]]=pads[j]['groundSceneY']
+        for j in np.unique(matches[1]):
+            idx=matches[0][matches[1]==j];result[idx]=pad_at(j,points[idx])
         pad[matches[0]]=True
     if edges:result=frontage_levels(points,result,pad)
     result=road_levels(points,result,street)
@@ -194,20 +244,26 @@ wall_exclusion=shapely.union_all([fit[1] for fit in road_fits]+footprints);shape
 # above low water from the water's edge or above a building's ground from its
 # footprint (its premises level, or its unraised ground if it has no pad).
 EDGE_BATTER=1.5;EDGE_REACH_M=8;FRONTAGE_M=40;FRONTAGE_SHORE_JUMP_M=5
-pad_level={p['siteId']:p['groundSceneY'] for p in pads};footprint_geoms=[];footprint_caps=[]
+footprint_geoms=[];footprint_caps=[]
+def pad_level_get(site_id,geom):
+    """Premises ground of a footprint (its pad at the footprint's representative point), or -inf without a pad."""
+    j=pad_index.get(site_id)
+    if j is None:return -np.inf
+    return float(pad_at(j,np.array(geom.representative_point().coords))[0])
+
 for b in factory['buildings']:
-    for p in b.get('renderPolygons') or []:footprint_geoms.append(Polygon(p['outer'],p.get('holes',[])).buffer(0));footprint_caps.append(pad_level.get(b.get('siteId'),-np.inf))
-for h in factory['holders']:footprint_geoms.append(shapely.Point(h['x'],h['z']).buffer(h['radius']));footprint_caps.append(pad_level.get(h.get('siteId'),-np.inf))
+    for p in b.get('renderPolygons') or []:footprint_geoms.append(Polygon(p['outer'],p.get('holes',[])).buffer(0));footprint_caps.append(pad_level_get(b.get('siteId'),footprint_geoms[-1]))
+for h in factory['holders']:footprint_geoms.append(shapely.Point(h['x'],h['z']).buffer(h['radius']));footprint_caps.append(pad_level_get(h.get('siteId'),footprint_geoms[-1]))
 for k in ('mappedFactories','houses','terraces'):
     for b in plan['neighbourhood'][k]:
-        if b.get('footprint'):footprint_geoms.append(Polygon(b['footprint']).buffer(0));footprint_caps.append(pad_level.get(b.get('siteId'),-np.inf))
+        if b.get('footprint'):footprint_geoms.append(Polygon(b['footprint']).buffer(0));footprint_caps.append(pad_level_get(b.get('siteId'),footprint_geoms[-1]))
 # The other seated buildings: High Street frontages, housing rows, the station
 # and its supporting buildings, and the corn mill (a rotated box in the scene).
 station=read('docs/data/abbey-station-plan.json')
 for b in [*read('docs/data/high-street-frontages.json')['buildings'],*read('docs/data/housing-detail.json')['rows'],{'footprint':station['worldFootprint']},*station['supportingBuildings']]:
-    if b.get('footprint'):footprint_geoms.append(Polygon(b['footprint']).buffer(0));footprint_caps.append(pad_level.get(b.get('siteId'),-np.inf))
+    if b.get('footprint'):footprint_geoms.append(Polygon(b['footprint']).buffer(0));footprint_caps.append(pad_level_get(b.get('siteId'),footprint_geoms[-1]))
 mill=plan['neighbourhood']['mill'];turn=np.radians(mill['rotation']);corner=np.array([[sx*mill['width']/2,sz*mill['depth']/2] for sx,sz in ((-1,-1),(1,-1),(1,1),(-1,1))])
-footprint_geoms.append(Polygon(np.column_stack([mill['x']+corner[:,0]*np.cos(turn)+corner[:,1]*np.sin(turn),mill['z']-corner[:,0]*np.sin(turn)+corner[:,1]*np.cos(turn)])));footprint_caps.append(pad_level.get(mill.get('siteId'),-np.inf))
+footprint_geoms.append(Polygon(np.column_stack([mill['x']+corner[:,0]*np.cos(turn)+corner[:,1]*np.sin(turn),mill['z']-corner[:,0]*np.sin(turn)+corner[:,1]*np.cos(turn)])));footprint_caps.append(pad_level_get(mill.get('siteId'),footprint_geoms[-1]))
 footprint_tree=shapely.STRtree(footprint_geoms);footprint_caps=np.array(footprint_caps)
 TIDAL_BUILDING_M=5;tidal_frontage=shapely.union_all(footprint_geoms).buffer(TIDAL_BUILDING_M)
 blend_water=water.union(tidal.difference(tidal_frontage));shapely.prepare(blend_water)
@@ -257,13 +313,13 @@ def frontage_levels(points,result,pad):
     level=np.full(len(points),-np.inf)
     for k in np.unique(m[1]):
         idx=m[0][m[1]==k];idx=idx[~pad[idx]]
-        level[idx]=np.maximum(level[idx],np.minimum(pads[frontages[k][1]]['groundSceneY'],crest_at(points[idx])))
+        level[idx]=np.maximum(level[idx],np.minimum(pad_at(frontages[k][1],points[idx]),crest_at(points[idx])))
     some=np.flatnonzero(level>result)
     if len(some):result[some]=np.maximum(result[some],edge_caps(points[some],level[some],result[some]))
     return result
 # Batter sources: each outline with the level at its nearest edge point.
-edge_sources=[(g,(lambda q,y=p['groundSceneY']:np.full(len(q),y))) for g,p in zip(pad_geoms,pads)]
-edge_sources+=[(g,(lambda q,y=pads[j]['groundSceneY']:np.minimum(y,crest_at(q)))) for g,j in frontages]
+edge_sources=[(g,(lambda q,j=j:pad_at(j,q))) for j,g in enumerate(pad_geoms)]
+edge_sources+=[(g,(lambda q,j=j:np.minimum(pad_at(j,q),crest_at(q)))) for g,j in frontages]
 edge_sources+=[(fit[1],(lambda q,j=j:road_fit_levels(j,q))) for j,fit in enumerate(road_fits)]
 edge_tree=shapely.STRtree([s[0] for s in edge_sources]);edge_geoms=np.array([s[0] for s in edge_sources],dtype=object)
 def edge_batter(points,result,street):
@@ -335,20 +391,39 @@ steep_patches=[t for t in system['bankSections']['terrainPatches'] if t['config'
 masonry_zone=masonry.buffer(MASONRY_REACH_M);patch_zone=geometry([p for t in steep_patches for p in t['polygons']])
 raised_shore=masonry_zone.union(patch_zone)
 for zone in (masonry_zone,patch_zone,raised_shore):shapely.prepare(zone)
+# A street corridor with a street level of its own (OS street readings) keeps it beside the
+# river too: inside the network tidal outline it takes the regional water mask (as the wall
+# fill does), and the bank band does not draw the river bank crest across it (only the bank
+# face within 3 m of the shoreline, below). Abbey Lane's graded deck approach keeps its own
+# rule (deck_zones, deck_under), as do footpath stubs.
+graded_reach=shapely.union_all([line.buffer(DECK_APPROACH_M+EDGE_REACH_M) for v in graded_decks.values() for line,_,_ in v]) if graded_decks else Polygon()
+shapely.prepare(graded_reach)
+street_fits=[j for j,fit in enumerate(road_fits) if fit[0].get('kind')!='path']
+def own_street(p):
+    """Points of p inside a street corridor (not a path) that has a street level there, outside Abbey Lane's graded deck approach."""
+    out=np.zeros(len(p),bool)
+    for j in street_fits:
+        inside=np.flatnonzero(shapely.contains_xy(road_fits[j][1],p[:,0],p[:,1]))
+        if len(inside):out[inside[np.isfinite(road_fit_levels(j,p[inside]))]]=True
+    return out&~shapely.contains_xy(graded_reach,p[:,0],p[:,1])
 def blend_surface(points,old,bank=True,key='groundMesh'):
     w=weight(points);out=np.asarray(old,dtype=float).copy();selected=w>0
     if not selected.any():return out
     p=points[selected];g=base(p);wet=shapely.contains_xy(blend_water,p[:,0],p[:,1]);old_y=out[selected]
+    street=own_street(p);wet[street]=shapely.contains_xy(water,p[street,0],p[street,1])
     if bank:
         bng=np.column_stack([538900+p[:,0],183209-p[:,1]]);pts=shapely.points(bng)
         near=banks.segment_tree.nearest(pts);distance=shapely.distance(pts,banks.segments[near])
-        margin=(distance<14)&~wet
+        # A street keeps its own level beside the bank: within 3 m of the shoreline it takes the
+        # bank face up to that level (no crest), beyond it the bank band leaves it alone.
+        margin=(distance<14)&~wet&~(street&(distance>=3))
         if margin.any():
             d=distance[margin];crest=np.maximum(g[margin],banks.crest(bng[margin])-offset)
             inland=np.clip((14-d)/8,0,1)
             # Preserve a wet-side bank face, then crest, then dry-side toe.
             rise=np.clip(d/3,0,1);rise=rise*rise*(3-2*rise)
             levels=g[margin]+inland*(crest-g[margin])
+            levels[street[margin]]=g[margin][street[margin]]
             # An existing raised lip is kept only on a recorded raised shore
             # edge: lifted to the crest against masonry (canal faces, retaining
             # walls, whose copings follow the crest), held at its reviewed
@@ -1149,6 +1224,14 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
     'replacementBaseGround':rings(original_base.difference(outline)),'replacementRegionalGround':rings(original_regional.difference(outline)),
     'roadControlIds':sorted({id for fit in road_fits for id in fit[-1]}),
     'siteGround':pads,'retainingEdgeCrests':wall_levels,
+    'osGroundLevels':{'register':osg.REGISTER,
+        'method':f'premises pads take their OS yard readings (level with one, the inverse-distance surface through several, power 2, {osg.PAD_SOFTEN_M} m softening; docs/main-landscape.js seats each building on it at its centre); street corridors take their OS street readings as road-surface levels ({ROAD_SURFACE_OFFSET} m above the corridor ground) with the regional street readings; the marsh between works is the regional early-marsh ground plus a correction to the OS marsh, open-ground, bank-foot and track readings and to the ground beside the railways the OS draws at grade (the railway level register formation less its 0.1 m lift, {osg.RAIL_SIDE_OFFSET_M} m either side every {osg.RAIL_SIDE_SPACING_M} m), interpolated as a Gaussian-process mean (squared-exponential kernel, length {osg.MARSH_LENGTH_M} m, noise {osg.MARSH_NOISE_M} m) within each dry compartment between the rivers, clipped to the compartment\'s residual range and fading to no correction away from the readings and over {osg.GRID_MARGIN_M} m outside the core box; where an applied reading lies outside the regional early-marsh support the landscape applies within {osg.SUPPORT_RADIUS_M} m of it, feathered over {osg.SUPPORT_FEATHER_M} m',
+        'premisesSites':sorted(os_premises),'streetCorridors':{name:ids for name,ids in street_ids.items() if name in os_streets},
+        'marshControls':{'readings':sum(1 for c in os_marsh if c['kind']=='reading'),'railSide':sum(1 for c in os_marsh if c['kind']=='rail-side'),
+                         'residualBeforeCorrection':{'median':round(float(np.median(os_marsh_residuals)),3),'min':round(float(os_marsh_residuals.min()),3),'max':round(float(os_marsh_residuals.max()),3)}},
+        'correctionGrid':{**os_corr_meta,'range':[round(float(os_corr.min()),3),round(float(os_corr.max()),3)],'westLimit':OS_WEST_LIMIT},
+        'support':os_support,
+        'evidence':'Observed: the OS London five-foot plan 1891-96 spot heights in reference/spot-heights/heights.geojson as classified in data/maps/os-ground-levels.json (setting, notes and confidence from the readers). Interpreted: which ground each reading measures (the register rules and decisions), the pad surfaces between readings, the marsh interpolation between readings and its fading away from them, and the ground beside at-grade railways (from data/maps/railway-levels.json). Not applied: the terrace west of the Lea and Bow Creek and the High Street west of it (outside the main landscape support; T21_REPORT.md decision 1).'},
     'retainingEdgeFill':{'crestMethod':f'1.65 m interpretive crest blended to the observed along-bank crest by the marsh weight {WALL_INLAND_M} m behind the wall; {WALL_MEAN_M} m running mean along the wall; grade-limited upper envelope at {WALL_GRADE} m per metre',
         'fillMethod':f'land side filled level with the coping to {WALL_TOP_M} m from the wall line, then falling at 1:{WALL_BATTER} to the surrounding ground (at most {WALL_REACH_M} m); never lowers ground; water, street corridors and building footprints excluded; battered at the same slope down to unwalled shoreline and to preserved intertidal mud; in the river-network mesh, land vertices of triangles straddling a wall are held down so no ground stands more than {WALL_TOE_M} m above low water at the water face, and no filled vertex stands more than 2.4 m above a mesh neighbour',
         'evidence':'Mapped: the shoreline and GIS industrial plot edges that the interpretive wall routes follow (river-network retainingEdges; the walls themselves are not a surveyed inventory), and the high-confidence wall_top/embankment_top spot heights behind the along-bank crest profile. Estimated: the coping grade between readings, the berm width and batter, and the fill itself; no surveyed section of any wall or its backfill.'},
@@ -1185,6 +1268,6 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
         'Wall fill is limited by the 1 m river-network mesh, whose triangles straddle the 0.32 m walls: a narrow gutter (median 0.7 m deep) remains in the first metre behind many walls. Building footprints are not filled, so buildings standing within 3 m of a wall keep their premises ground. Walls in the Channelsea core stand on preserved tidal mud and have no fill.',
         'Road surfaces are drawn on the ground under their own vertices only; the landscape is fitted under them (roadBridgeClearance), not the reverse, so where a road triangle spans a bank the bank is cut back rather than the road raised over it. Preserved tidal mud under the Abbey Lane footways is not cut, and the approaches of a bridge stop where no adjustable mesh carries on (Three Mills Lea bridge west end).',
         'Yard and street batters are not drawn under building footprints or on preserved tidal mud, so a vertical face remains where a street shoulder or yard edge runs into a building; the 20 m regional ground mesh spans the batters as tilted triangles rather than resolving them.'],
-    'inputHashes':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [*inputs,Path(__file__).resolve(),ROOT/'scripts/regional_continuous_structures.py']}}
+    'inputHashes':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [*inputs,Path(__file__).resolve(),ROOT/'scripts/regional_continuous_structures.py',ROOT/'scripts/os_ground_levels.py']}}
 (OUT/'main-landscape-1900.json').write_text(json.dumps(result,separators=(',',':'))+'\n')
 print('MAIN LANDSCAPE:',len(mesh)//3,'new background triangles;',len(pads),'premises levels',flush=True)
