@@ -26,6 +26,7 @@ from shapely.ops import unary_union, linemerge
 from marsh_ditches import geometry as ditch_geometry, apply_sections
 from core_river_connections import build as reviewed_connections, combined as connection_geometry
 from river_bank_sections import Distance
+import tide_levels as tl
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'docs/data'
@@ -269,10 +270,12 @@ def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, eas
     wall_east = np.nan_to_num((X-east >= 0) & (X-east < 16)).astype(float)
     wall_east *= smooth(-210, -175, Z)*(1-smooth(300, 355, Z))
     variation = .93 + .07*np.sin(Z*.041)*np.sin(X*.029)
-    crest = (1.65 + .10*wall_east)*variation
+    # Tidal banks take the OS towing-path crest (data/maps/os-tide-levels.json);
+    # retained water keeps the earlier 1.65 m interpretive crest.
+    crest = (np.where(tidal_bank, tl.CREST, 1.65) + .10*wall_east)*variation
     width = 7 + 7*wall_east
     height = -.1 + (crest+.1)*smooth(0, 3, shore)*(1-smooth(4, width, shore))
-    height = np.where(water, .06-.25-.17*np.minimum(inside, 9), height)
+    height = np.where(water, np.where(tidal_bank, tl.tidal_bed(inside), .06-.25-.17*np.minimum(inside, 9)), height)
     # Existing site envelopes and road corridors keep their ground datum. These
     # are industrial plots, not evidence for continuous walls along every plot.
     clearance = smooth(0, 3, built_distance)
@@ -280,8 +283,12 @@ def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, eas
     # Match Channelsea's exposed shelves at its existing water datum. The GIS
     # remains the low-water route anchor, not a claimed high-water survey.
     sediment = tidal_bank * (1-smooth(4.5,7.5,outside)) * clearance
-    shelf = .06 + 1.59*smooth(0,5,shore)
+    shelf = tl.tidal_shelf(shore, crest)
     height = np.where(~water, height*(1-sediment)+shelf*sediment, height)
+    # OS mud flats between the low-water outline and the high-water mark.
+    flat = contains_xy(tl.flats, X, Z) & ~water
+    height = np.where(flat, tl.mud_flat(shore), height)
+    sediment = np.where(flat, 1., sediment)
     # Local photograph study: a worn path on a raised grassy east bank, with
     # timber details rendered separately. Metric section remains an estimate.
     support=np.zeros_like(height)
@@ -290,7 +297,7 @@ def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, eas
         bank=vista['bank']
         offset=X-east
         profile=np.interp(np.nan_to_num(offset,nan=-100),
-                          [0,1,4.8,8.5,15,20],[.08,.65,bank['crestHeight'],bank['crestHeight'],bank['crestHeight'],-.1])
+                          [0,1,4.8,8.5,15,20],[tl.BED_EDGE,.65,bank['crestHeight'],bank['crestHeight'],bank['crestHeight'],-.1])
         blend=smooth(bank['zStart']-10,bank['zStart'],Z)*(1-smooth(bank['zEnd'],bank['zEnd']+10,Z))
         active_bank=(offset>=0)&(offset<=20)&(~water)
         height=np.where(active_bank,height*(1-blend)+profile*blend,height)
@@ -307,12 +314,16 @@ def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, eas
                 height=height*(1-weight)+target*weight
                 support=np.maximum(support,weight)
         # Grass above the muddy bank face, including the raised photo section.
-        sediment*=1-smooth(1.25,1.95,height)
+        sediment*=1-smooth(tl.HIGH-.1,tl.HIGH+.4,height)
     # The old patch tapers to -.1 at its boundary. Match that seam precisely.
     x0, z0, x1, z1 = context['coreBounds']
     dx, dz = np.maximum(np.maximum(x0-X, X-x1), 0), np.maximum(np.maximum(z0-Z, Z-z1), 0)
     core_distance = np.hypot(dx, dz)
-    height = -.1+(height+.1)*smooth(0, 3, core_distance)
+    # Tidal channels meet the core below low water (tide_levels.seam), so the
+    # seam does not dam them; land and still water meet it at -0.1 as before.
+    inside_tidal = context['insideTidal'] if context.get('insideTidal') is not None else inside*tidal_bank
+    edge = tl.seam(inside_tidal)
+    height = edge+(height-edge)*smooth(0, 3, core_distance)
     # A tiny offset prevents coplanar flicker where the outer apron meets the
     # surrounding ground; the detailed core itself remains untouched.
     height += .004*smooth(0, 1, core_distance)
@@ -321,7 +332,9 @@ def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, eas
     # beneath a reviewed passage after generic bank or ditch shaping.
     passage_mask=contains_xy(context['passages'],X,Z)
     height[passage_mask]=np.minimum(height[passage_mask],-.7)
-    sediment=np.maximum(sediment*(1-smooth(1.1,1.65,height)),ditch_mud)
+    tidal_passage=contains_xy(context['tidalPassages'],X,Z)
+    height[tidal_passage]=np.minimum(height[tidal_passage],tl.SEAM_BED)
+    sediment=np.maximum(sediment*(1-smooth(tl.HIGH,tl.CREST,height)),ditch_mud)
     return height, sediment, support, marsh_active, core_distance
 
 
@@ -345,7 +358,10 @@ def build():
     isolated_ids={r['id'] for r in east_context['additionalRivers']}
     # The OS maps disconnected moat pools and a drain, not their hydraulic links.
     # Show these at the shared illustrative low datum without animating a tide.
-    tidal = unary_union([g for key,g in channels.items() if key not in retained_ids|isolated_ids]+[connection_geometry(connections,tidal_only=True)])
+    # Above the OS tidal limit at Abbey Mill (data/maps/os-tide-levels.json) the
+    # Channelsea is still water at the retained level, like the Old Lea.
+    head_ids = tl.ABOVE_TIDAL_LIMIT
+    tidal = unary_union([g for key,g in channels.items() if key not in retained_ids|isolated_ids|head_ids]+[connection_geometry(connections,tidal_only=True)])
     patch = box(*core['bounds'])
     # Mesh shoreline: the mapped outline with gaps under 0.5 m between channel
     # pieces closed (source-window joins, e.g. at x = -1050) and water slivers
@@ -389,11 +405,22 @@ def build():
     context = {'vista': json.loads(vista_path.read_text()) if vista_path.exists() else None,
                'vistaConnections': json.loads((OUT/'high-street-frontages.json').read_text())['vista']['connections']
                if vista_path.exists() else [],
-               'coreBounds': core['bounds'], 'passages': passages}
+               'coreBounds': core['bounds'], 'passages': passages,
+               'tidalPassages': connection_geometry(connections, tidal_only=True)}
+    # Exact distance into tidal water for grid nodes at the core boundary, where
+    # this mesh and the core (0.4 m grid) must meet at the same seam level.
+    cx0, cz0, cx1, cz1 = core['bounds']
+    core_gap = np.hypot(np.maximum(np.maximum(cx0-X, X-cx1), 0), np.maximum(np.maximum(cz0-Z, Z-cz1), 0))
+    inside_tidal = inside*tidal_bank
+    near = (core_gap < 3.5) & water
+    pts = shapely.points(X[near], Z[near])
+    inside_tidal[near] = np.where(shapely.covers(tidal, pts), shapely.distance(pts, tidal.boundary), 0)
+    context['insideTidal'] = inside_tidal
     # Raster section: channel beds and the extent of the mesh. Land heights are
     # recomputed below from exact distances to the mapped shoreline.
     height, sediment, support, marsh_active, core_distance = section(
         X, Z, water, outside, inside, shore, tidal_bank, distance_transform_edt(~built), east, context)
+    context['insideTidal'] = None
     # Grid points in a closed join gap are channel bed: give them the mean bed
     # of their mapped-water neighbours. Every other bed point is unchanged.
     gap = contains_xy(mesh_water, X, Z) & ~water
@@ -408,7 +435,10 @@ def build():
     ditch_raw,marsh,ditches,ditch_parts,_=ditch_geometry()
     # At working plots the bank cannot occupy a wide grass slope. A narrow
     # retaining edge holds the same interpreted crest; material/design unresolved.
-    retaining=river.boundary.intersection(tidal.buffer(.01)).intersection(sites.buffer(3)).difference(roads)
+    # The Channelsea head above Abbey Mill is still water but a working, navigable
+    # frontage: its works keep the retaining edges they had while it was drawn tidal.
+    head = unary_union([g for key,g in channels.items() if key in head_ids])
+    retaining=river.boundary.intersection(tidal.union(head).buffer(.01)).intersection(sites.buffer(3)).difference(roads)
     wall_routes=[list(segmentize(g,4).coords) for g in getattr(retaining,'geoms',[retaining]) if g.geom_type=='LineString' and g.length>1]
     # River walls the OS draws (data/maps/os-river-walls.json): the shoreline along each traced
     # line becomes a retaining route too, where the plot rule above has not already made one.
@@ -451,7 +481,7 @@ def build():
         return h, s, d+SHORE_OFFSET_M
 
     # Keep complete 1 m cells, excluding the core at its integer boundaries.
-    active = ((outside < 21) | (support>0) | marsh_active) & (core_distance > 0)
+    active = ((outside < 21) | (support>0) | marsh_active | contains_xy(tl.flats.buffer(21), X, Z)) & (core_distance > 0)
     cells = active[:-1, :-1] | active[1:, :-1] | active[:-1, 1:] | active[1:, 1:]
     cx, cz = X[:-1, :-1]+.5, Z[:-1, :-1]+.5
     x0, z0, x1, z1 = core['bounds']
@@ -559,6 +589,8 @@ def build():
     grass = np.array([1., 1., 1.])
     silt_colour = np.array([.70, .65, .54])
     green = smooth(.2, 2.8, distance)[:, None]
+    # The OS mud flats are silt out to the high-water mark, however far from the channel.
+    green[contains_xy(tl.flats, positions[:, 0], positions[:, 2])] = 0
     colors = np.clip((silt_colour*(1-green)+grass*green)*255, 0, 255).astype('uint8')
     positions.tofile(OUT/'river-network.f32')
     indices.tofile(OUT/'river-network.u32')
@@ -568,13 +600,15 @@ def build():
         contains_xy(Polygon(plan['neighbourhood']['garden']['footprint']),positions[:,0],positions[:,2])])
     (landcover.astype('uint8')*255).tofile(OUT/'river-network.cover')
     # Remove the flat floor below channels as well as the existing terrain patch.
-    ground = box(-2750, -2750, 2750, 2750).difference(river.buffer(14).union(patch).union(marsh))
+    ground = box(-2750, -2750, 2750, 2750).difference(river.buffer(14).union(tl.flats.buffer(14)).union(patch).union(marsh))
     # Confine the animated surface to river-side shelves. A whole-scene plane
     # would flood the lower marsh through the back of its embankments.
     core_beds = unary_union([Polygon(p[0], p[1:]) for p in plan['bankStudies']])
-    retained = unary_union([g for key,g in channels.items() if key in retained_ids|isolated_ids])
+    retained = unary_union([g for key,g in channels.items() if key in retained_ids|isolated_ids|head_ids])
     tide_envelope = tidal.buffer(TIDE_SHELF_M).union(core_beds.intersection(patch))
     tide_envelope = tide_envelope.difference(sites.union(roads).difference(tidal))
+    # OS mud flats out to the high-water mark (data/maps/os-tide-levels.json).
+    tide_envelope = tide_envelope.union(tl.flats.difference(roads))
     tide_envelope = tide_envelope.difference(marsh.union(ditches).union(retained))
     lock_gaps=unary_union([Polygon(p[0],p[1:]) for r in connections['connections']
         if not r['tidalDisplay'] for p in r['polygons']]).difference(unary_union(list(channels.values())))
@@ -584,11 +618,12 @@ def build():
         'sedimentFile': 'river-network.silt',
         'landcoverFile': 'river-network.cover',
         'waterLevel':core['waterLevel'],
-        'tide':{'low':core['waterLevel'], 'high':ditch_raw['levels']['illustrativeHighWater'],
+        'tide':{'low':tl.LOW, 'high':tl.HIGH,
                 'cycleSeconds':90, 'polygons':rings(tide_envelope),
-                'evidence':'Illustrative synchronised rise and fall within interpreted river-side shelves. Not a tide prediction or hydraulic simulation; excludes retained Old Lea and marsh drains.'},
-        'retainingEdges':{'routes':wall_routes,'crestHeight':1.65,'baseHeight':-.55,'width':WALL_WIDTH,
-                          'evidence':'Interpretive flood-retaining edges where tidal river banks meet GIS industrial plots. Presence, material and individual sections require photograph/engineering-plan verification. Not the 1930s concrete embankments.',
+                'register':'data/maps/os-tide-levels.json',
+                'evidence':'High and low water of ordinary tides from the OS five-foot plan and Trinity High Water (data/maps/os-tide-levels.json): high 3.41 m ODN, low about OD, rising and falling in step over the river-side shelves and the OS mud flats. Not a tide prediction or hydraulic simulation; excludes the retained Old Lea, the Channelsea above the tidal limit at Abbey Mill and the marsh drains.'},
+        'retainingEdges':{'routes':wall_routes,'crestHeight':tl.CREST,'baseHeight':tl.WALL_BASE,'width':WALL_WIDTH,
+                          'evidence':'Interpretive flood-retaining edges where tidal river banks (and the Channelsea head above Abbey Mill) meet GIS industrial plots. Presence, material and individual sections require photograph/engineering-plan verification. Not the 1930s concrete embankments.',
                           'osRiverWalls':{'register':'data/maps/os-river-walls.json','walls':os_wall_records,
                                           'method':f"the mapped shoreline within {os_walls['toleranceMetres']} m of each OS-traced wall line (inside the tidal channels, outside road bridges and existing routes; a street may run along the wall top)"},
                           'coreWallRelocation':{'applied':APPLY_CORE_WALL_RELOCATION,
@@ -601,10 +636,11 @@ def build():
                         'waterPolygons':rings(ditches.difference(patch)), 'marshPolygons':rings(marsh),
                         'levels':ditch_raw['levels'],'policy':ditch_raw['policy']},
         'retainedWaterChannelIds':sorted(retained_ids),
+        'aboveTidalLimitChannelIds':sorted(head_ids),
         'isolatedWaterChannelIds':sorted(isolated_ids),
         'reviewedConnections':connections,
         'isolatedWaterEvidence':'OS-mapped separate moat pools and eastern drain. Flat illustrative low water only; hydraulic connection and historical water levels are unresolved.',
-        'tidalChannelIds':sorted(set(channels)-retained_ids-isolated_ids),
+        'tidalChannelIds':sorted(set(channels)-retained_ids-isolated_ids-head_ids),
         'tidalEvidence':'Author correction: tidal margins throughout except Old Lea north of the Limehouse Cut lock. GIS ids 18,22,10018,10022 identify that retained reach; Bow Creek id 0 remains tidal. Widths and sections inferred, not reconstructed tidal hydraulics.',
         'vertices': len(positions), 'triangles': len(triangles), 'step': 1, 'baseGround': rings(ground),
         'bankMesh': {'method': 'land within 8 m of the mapped channels is triangulated (constrained Delaunay) in bands between offset lines of the mapped shoreline; channel beds and ground beyond 8 m keep the 1 m grid, whose cells cut by the shoreline or the 8 m line are clipped and share their vertices with the bands',

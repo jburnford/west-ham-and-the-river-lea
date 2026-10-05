@@ -41,7 +41,9 @@ for stage in [1.9,2.5,3.5,4.5,5.5]:
     area=float((actual*(arrays['bed']<stage-.05)*(1-arrays['riverFraction'])).sum()*meta['step']**2)
     areas.append(area)
 assert all(b>=a for a,b in zip(areas,areas[1:]))
-assert areas[0]==0 and areas[2]>100000
+# Below the old low water (1.9 m ODN) only partial channel-edge cells of intertidal mud may
+# count as land since the tide was re-levelled (task C: under 1 m2, below Abbey Mill).
+assert areas[0]<2 and areas[2]>100000
 OUT.mkdir(parents=True,exist_ok=True)
 (OUT/'landscape-flood-numerical-checks.json').write_text(json.dumps({'status':'PASS','areaM2':meta['areaM2'],'stagesODN':[1.9,2.5,3.5,4.5,5.5],'floodedLandM2':areas,'checks':['enclosed low bowl stays dry','bank overtopping threshold','opening permits lower-stage access','no diagonal leakage','independent component validation','monotonic inundation','source hashes','provenance retained'],'interpretation':'Geometry checks, not hydraulic or historical calibration.'},indent=2)+'\n')
 print('Landscape connected-inundation checks passed.',areas)

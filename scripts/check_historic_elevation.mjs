@@ -48,9 +48,11 @@ for (let j = 0; j < terrain.height; j++)
 const tiny = { bounds: [0, 0, 1, 1], step: 1, width: 2, height: 2 };
 assert.equal(gridSample(new Float32Array([0, 2, 4, 6]), tiny, 0.5, 0.5), 3);
 assert.equal(gridSample(new Float32Array([0, 2, 4, 6]), tiny, 1, 1), 6);
-// Datum conversion is shared; numerical map labels must not set water levels.
-assert.equal(riverNetwork.tide.low, 0.06);
-assert.equal(riverNetwork.tide.high, 1.1);
+// Datum conversion is shared; numerical map labels must not set water levels:
+// the tide comes from its own register (data/maps/os-tide-levels.json).
+const tideRegister = JSON.parse(readFileSync(new URL('../data/maps/os-tide-levels.json', import.meta.url)));
+assert.equal(riverNetwork.tide.low, tideRegister.lowWater.sceneY);
+assert.equal(riverNetwork.tide.high, tideRegister.highWater.sceneY);
 console.log(
   JSON.stringify(
     {

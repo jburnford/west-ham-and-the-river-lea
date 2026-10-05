@@ -30,6 +30,9 @@ export function applyRiverSystem(data) {
   data.riverNetwork.baseGround = system.baseGround;
   for (const i of system.coreBedCorrections)
     data.riverNetwork.positions[i * 3 + 1] = Math.min(-0.7, data.riverNetwork.positions[i * 3 + 1]);
+  // Under tidal regional water the network bed goes below low water, not to -0.7.
+  for (const i of system.tidalCoreBedCorrections ?? [])
+    data.riverNetwork.positions[i * 3 + 1] = Math.min(system.tidalCoreBedLevel, data.riverNetwork.positions[i * 3 + 1]);
   for (const adjustment of system.railwayGroundAdjustments || []) {
     const railway = data.infrastructure.railways.find((r) => r.id === adjustment.railwayId);
     const vertex = railway?.embankment[adjustment.triangle]?.[adjustment.vertex];
@@ -102,6 +105,19 @@ export function riverSystem({ THREE, scene, data, materials, surfaces }) {
     group.add(surface);
   }
   scene.add(group);
+  // Bow Creek to the Thames takes the tide: drawn at low water in the network's tidal
+  // material, so the tide control lifts it with the network's tidal water.
+  const tidal = new THREE.Group();
+  tidal.name = 'Lower Lea river system — tidal water';
+  tidal.position.y = data.tideLow;
+  for (const rings of data.tidalWaterPolygons ?? []) {
+    const shape = new THREE.Shape(rings[0].map(([x, z]) => new THREE.Vector2(x, -z)));
+    for (const hole of rings.slice(1)) shape.holes.push(new THREE.Path(hole.map(([x, z]) => new THREE.Vector2(x, -z))));
+    const surface = new THREE.Mesh(new THREE.ShapeGeometry(shape), materials.tidalWater ?? water);
+    surface.rotation.x = -Math.PI / 2;
+    tidal.add(surface);
+  }
+  scene.add(tidal);
   return {
     epoch: data.epoch,
     pieces: data.reaches.length,

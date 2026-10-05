@@ -472,9 +472,9 @@ export function photoDetails({ THREE, scene, materials: m, box, cylinder, beam, 
   const floatingMaterials = new Map();
   const holdFloor = m.wood.clone();
   holdFloor.color.set('#75654d');
-  function barge(x, z, angle, loaded) {
+  function barge(x, z, angle, loaded, base = 0.14) {
     const g = new THREE.Group();
-    g.position.set(x, 0.14, z);
+    g.position.set(x, base, z);
     g.rotation.y = (angle * Math.PI) / 180;
     scene.add(g);
     const shape = new THREE.Shape();

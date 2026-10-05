@@ -839,7 +839,6 @@
     "water": 0.06,
     "ditchBed": -0.4,
     "riverBankCrest": 1.65,
-    "illustrativeHighWater": 1.1,
-    "evidence": "Author: marsh lower than rivers at high tide; continuous raised banks or walls required. Values are section-study estimates in the existing local scene datum, not measured historic tide levels."
+    "evidence": "Author: marsh lower than rivers at high tide; continuous raised banks or walls required. Values are section-study estimates in the existing local scene datum. High and low water are in data/maps/os-tide-levels.json (task C, October 2026; the former illustrativeHighWater 1.1 m is retired)."
   }
 }

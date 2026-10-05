@@ -8,6 +8,8 @@ destinations in district-navigation.js. Serve docs on 4173 first.
     python3 scripts/render_views.py cameras.json --out reference/photo-review-2026-10-03/views
     python3 scripts/render_views.py --destinations three-mills-west,bromley --out ...
     python3 scripts/render_views.py --all-destinations --out ...
+
+A camera may carry "tide": 0 (low water) to 1 (high water), set through the tide slider.
 """
 import asyncio
 import base64
@@ -55,6 +57,13 @@ async def main():
         index = []
         for camera in cameras:
             started = time.time()
+            if 'tide' in camera:
+                # Optional tide stage, 0 (low water) to 1 (high water), through the page's own slider.
+                await page.evaluate('''(t) => {
+                    const s = document.querySelector('#tide-level');
+                    s.value = String(Math.round(t * 100));
+                    s.dispatchEvent(new Event('input'));
+                }''', camera['tide'])
             data_url = await page.evaluate('(c) => window.riverNetworkReview(c)', {'position': camera['position'], 'target': camera['target'], 'fov': camera.get('fov', 55)})
             path = out / f"{camera['label']}.png"
             path.write_bytes(base64.b64decode(data_url.split(',', 1)[1]))

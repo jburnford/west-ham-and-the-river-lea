@@ -444,7 +444,8 @@ export function realism(THREE, renderer, scene, data, options = {}) {
       return;
     }
     fixed.reflect(camera);
-    const animated = tideHeight > data.riverNetwork.waterLevel + 0.00001;
+    // Tidal water is drawn at every stage (from low water up), so it always reflects.
+    const animated = data.riverNetwork.tide.polygons.length > 0;
     if (animated) moving.reflect(camera);
     Object.assign(reflectionStats, fixed.reflectionStats, { planes: animated ? 2 : 1, tidalLevel: tideHeight });
   }

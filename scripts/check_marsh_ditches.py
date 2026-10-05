@@ -28,9 +28,9 @@ assert np.percentile(y[interior],95)<core['waterLevel'],'Ditches painted on uncu
 dry=marsh.buffer(-5).difference(ditches.buffer(5))
 mask=contains_xy(dry,x,z)
 assert mask.sum()>10000
-assert core['waterLevel']<np.median(y[mask])<raw['levels']['illustrativeHighWater']
-assert np.percentile(y[mask],99)<raw['levels']['illustrativeHighWater']
-assert meta['retainingEdges']['crestHeight']>raw['levels']['illustrativeHighWater']
+assert core['waterLevel']<np.median(y[mask])<meta['tide']['high']
+assert np.percentile(y[mask],99)<meta['tide']['high']
+assert meta['retainingEdges']['crestHeight']>meta['tide']['high']
 # A mapped gap across a footpath must survive rather than become an invented outlet.
 a=parts[4];b=parts[5]
 assert a.distance(b)>2,'Central footpath interruption filled in'

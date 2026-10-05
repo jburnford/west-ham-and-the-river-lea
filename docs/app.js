@@ -748,7 +748,7 @@ function buildScene() {
   scene.userData.riverSystem = riverSystem({ THREE, scene, data: data.riverSystem, materials, surfaces });
   // Water belongs to waterways, not the rectangular boundary of a terrain tile.
   // A blanket plane exposed a straight water seam where that tile tapered down.
-  surface(data.riverNetwork.tide.polygons, materials.water, data.riverNetwork.waterLevel);
+  // Tidal water is the one moving surface drawn below, from low water up.
   surface(
     data.riverNetwork.reviewedConnections.connections.filter((r) => !r.tidalDisplay).flatMap((r) => r.polygons),
     materials.water,
@@ -757,6 +757,7 @@ function buildScene() {
   const retainedIds = new Set([
     ...data.riverNetwork.retainedWaterChannelIds,
     ...(data.riverNetwork.isolatedWaterChannelIds ?? []),
+    ...(data.riverNetwork.aboveTidalLimitChannelIds ?? []),
   ]);
   surface(
     [...data.rivers, ...data.factoryBuildings.westContext.rivers]
@@ -770,12 +771,12 @@ function buildScene() {
     materials.water,
     data.riverNetwork.waterLevel
   );
-  for (const [x, z, rx, rz] of data.terrain.pools) {
+  for (const [x, z, rx, rz, level = data.riverNetwork.waterLevel] of data.terrain.pools) {
     const ring = Array.from({ length: 33 }, (_, i) => [
       x + rx * Math.cos((i * Math.PI) / 16),
       z + rz * Math.sin((i * Math.PI) / 16),
     ]);
-    surface([[ring]], materials.water, data.riverNetwork.waterLevel);
+    surface([[ring]], materials.water, level);
   }
   surface(data.riverNetwork.tide.polygons, materials.tidalWater, data.riverNetwork.tide.low);
   // Module-facing helpers keep their (parent, ...) signature; the shared versions take THREE first.
@@ -885,7 +886,8 @@ function buildScene() {
   // Barge placements interpret the 1900 photograph and are recorded in the ground plan, not here.
   mark('waterfront');
   const barges = data.neighbourhood.barges.map((b) => [b.x, b.z, b.heading, b.laden]);
-  for (const spec of barges) detail.barge(...spec);
+  // Lighters ride on the tidal water: placed at low water, lifted with the tide.
+  for (const spec of barges) detail.barge(...spec, data.riverNetwork.tide.low + 0.08);
   surfaces.excludeBargeHolds(barges);
   detail.waterfront();
   detail.station(data.stationPlan);
@@ -1117,7 +1119,6 @@ function buildScene() {
   const applyTideState = (state) => {
     for (const mesh of tidalMeshes) {
       mesh.position.y = state.level - state.low;
-      mesh.visible = state.level > state.low + 0.00001;
     }
     for (const mesh of floatingMeshes) mesh.position.y = state.level - state.low;
     if (!scene.userData.floodSimplifiedWater && scene.userData.tideObjects?.waterOffsets[0] !== state.level - state.low)

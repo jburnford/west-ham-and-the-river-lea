@@ -15,6 +15,7 @@ from factory_map_sources import mosaic
 from build_lower_lea_region import polygons, rings
 from river_bank_sections import build_banks
 from regional_marsh_surface import MarshSurface, TerrainSurfaces
+import tide_levels as tl
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'docs/data'
@@ -145,6 +146,11 @@ def build():
     g = Polygon(worlds[t['panel']](np.asarray(t['pixels'])+t['cropOrigin']))
     add('thames-mouth-context','Thames at the Bow Creek mouth',g,'estuary',{'panel':t['panel'],'note':t['note']})
 
+    # Bow Creek is tidal to the Thames (author, 5 October 2026): its regional reach, the
+    # Thames mouth and the seams between its parts take the tide (data/maps/os-tide-levels.json).
+    tidal_ids=[r['id'] for r in reaches if r['id'] in ('Lower_River_Lea-0','thames-mouth-context')
+               or r['id'].startswith('regional-Lower_River_Lea-0-') or r['id']=='core-seam-Lower_River_Lea-0-part-1-Lower_River_Lea-0-part-2']
+    tidal_water=shapely.union_all([geoms[k] for k in tidal_ids])
     # The locally corrected banks take precedence over the raw regional GIS.
     current = shapely.union_all([geometry(r['polygons']) for r in plan['rivers']+west['rivers']]+
                                 [geometry(r['polygons']) for r in core['reviewedConnections']['connections']])
@@ -162,7 +168,7 @@ def build():
     # trimmed; display_water still sets the bed corrections and ground cuts, so
     # the beds under the trimmed areas stay covered by the network's water.
     pools=[Polygon([(x+rx*np.cos(i*np.pi/16),z+rz*np.sin(i*np.pi/16)) for i in range(33)])
-           for x,z,rx,rz in terrain['pools']]
+           for x,z,rx,rz,*_ in terrain['pools']]
     network_water=shapely.union_all([current,geometry(core['tide']['polygons']),
         geometry([p for f in core['marshDitches']['features'] for p in f['renderPolygons']]),*pools])
     drawn_water=display_water.difference(network_water.buffer(.01))
@@ -197,7 +203,9 @@ def build():
     network_path=OUT/core['positionFile'];paths.append(network_path)
     network_positions=np.fromfile(network_path,dtype='<f4').reshape(-1,3)
     caps=shapely.contains_xy(display_water,network_positions[:,0],network_positions[:,2])
-    core_bed_corrections=np.flatnonzero(caps & (network_positions[:,1]>-.7)).tolist()
+    under_tide=shapely.contains_xy(tidal_water,network_positions[:,0],network_positions[:,2])
+    core_bed_corrections=np.flatnonzero(caps & ~under_tide & (network_positions[:,1]>-.7)).tolist()
+    tidal_core_bed_corrections=np.flatnonzero(caps & under_tide & (network_positions[:,1]>tl.SEAM_BED)).tolist()
     # Source-window boundaries are openings, not physical banks. They are
     # registered in the same native map coordinates as the Thames trace.
     thames_points=worlds[t['panel']](np.asarray(t['pixels'])+t['cropOrigin'])
@@ -230,7 +238,10 @@ def build():
     marsh=TerrainSurfaces([MarshSurface(c,height_review,datum,full_water,geoms,protected,flat_ground,infrastructure['railways'])
         for c in [marsh_config,bank_config,knobshill_config,waterworks_config,upper_waterworks_config,temple_config,potters_config,city_mill_config]])
     p,ix,silt,cover,faces,face_uv,bank_envelope,bank_sections=build_banks(
-        full_water,protected,reaches,geoms,sections,open_cuts,flat_ground,marsh=marsh)
+        full_water,protected,reaches,geoms,sections,open_cuts,flat_ground,marsh=marsh,tidal=tidal_water)
+    # Drawn tidal water moves with the network's tide; the rest stays still.
+    tidal_drawn=drawn_water.intersection(tidal_water)
+    still_drawn=drawn_water.difference(tidal_water)
     p.tofile(OUT/'river-system-1900.f32');ix.tofile(OUT/'river-system-1900.u32')
     silt.tofile(OUT/'river-system-1900.silt');cover.tofile(OUT/'river-system-1900.cover')
     faces.tofile(OUT/'river-system-1900.faces.f32');face_uv.tofile(OUT/'river-system-1900.face-uv.f32')
@@ -247,14 +258,15 @@ def build():
     meta={'epoch':'1900','status':'mapped network geometry; hydraulic operation uncalibrated',
           'reaches':reaches,'crossings':crossings,'contacts':contacts,
           'controlSites':region['connectionReview']['controlSites'],
-          'waterPolygons':rings(drawn_water),'extensionPolygons':rings(extension),
+          'waterPolygons':rings(still_drawn),'tidalWaterPolygons':rings(tidal_drawn),'tidalReachIds':tidal_ids,
+          'tideLow':tl.LOW,'tideRegister':'data/maps/os-tide-levels.json','extensionPolygons':rings(extension),
           'baseGround':rings(core_ground),'regionalGround':rings(regional_ground),
           'positionFile':'river-system-1900.f32','indexFile':'river-system-1900.u32',
           'sedimentFile':'river-system-1900.silt','landcoverFile':'river-system-1900.cover',
           'faceFile':'river-system-1900.faces.f32','faceUVFile':'river-system-1900.face-uv.f32',
           'faceVertices':len(faces),'bankSections':bank_sections,
           'vertices':len(p),'triangles':len(ix)//3,'waterLevel':core['waterLevel'],
-          'coreBedCorrections':core_bed_corrections,
+          'coreBedCorrections':core_bed_corrections,'tidalCoreBedCorrections':tidal_core_bed_corrections,'tidalCoreBedLevel':tl.SEAM_BED,
           'railwayGroundAdjustments':[row for surface in marsh.surfaces for row in surface.railway_adjustments()],
           'bounds':list(full_water.bounds),'corePreserved':True,'floodDomainChanged':False,
           'sectionAssumption':config['sectionAssumption'],'dateNote':config['dateNote'],

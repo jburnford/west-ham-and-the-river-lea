@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 from shapely.geometry import Polygon, LineString, Point
 from shapely.ops import unary_union, nearest_points
+import tide_levels as tl
 
 ROOT=Path(__file__).resolve().parents[1]
 REVIEW=ROOT/'docs/data/lower-lea-region/index.json'
@@ -58,7 +59,9 @@ def build(rivers):
             'widthStatus':'inferred display width; not a hydraulic capacity',
             'bedSceneY':-.7,'bedStatus':'provisional submerged bed matching scene datum; not surveyed bathymetry',
             'capacity':None,'gateState':None,
-            'tidalDisplay':category!='lock-passage','sourceEndpointsBNG':r['routeBNG'],
+            # A passage into a channel above the tidal limit (the Abbey Mill race,
+            # data/maps/os-tide-levels.json) is the step between still head and tide.
+            'tidalDisplay':category!='lock-passage' and not set(ids)&tl.ABOVE_TIDAL_LIMIT,'sourceEndpointsBNG':r['routeBNG'],
             'evidence':r.get('evidence',[]),'note':r.get('note',r.get('reviewNote',''))})
     return {'epoch':'1900','connections':rows,'deferred':deferred,
         'reviewSha256':digest,

@@ -32,7 +32,9 @@ for r in data['connections']:
  if r['id']=='three-mills':
   assert channels[1].distance(channels[2])<.02  # one shared mill group, not two parallel capacities
   assert sum(q['id']=='three-mills' for q in data['connections'])==1
- if r['category']=='lock-passage':
+ assert r['tidalDisplay']==(r['category']!='lock-passage' and r['id']!='abbey-mill')
+ if not r['tidalDisplay']:
+  # Locks, and the Abbey Mill race at the tidal limit (os-tide-levels.json): no tide through them.
   assert tide.intersection(patch.difference(water)).area<1e-6
  else:
   # A retained bank at the open Navigation mouth can legitimately clip one end.

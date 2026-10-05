@@ -319,12 +319,13 @@ function abutmentStations(sewer, origin, spec) {
 
 // Water spans other than the Channelsea, not surveyed structures: how far the
 // trough runs into the bank, its lowest soffit and the pier size are interpretation.
-// minimumSoffit keeps the trough 0.3 m above the illustrative high water
-// (river-network.json tide.high, 1.1 m) where the sewer descends towards Stratford
-// High Street and the deck is low; the sewer section there is unresolved.
+// minimumSoffit keeps the trough 0.3 m above high water (river-network.json
+// tide.high, 1.58 m, data/maps/os-tide-levels.json; 1.4 m when high water was 1.1 m)
+// where the sewer descends towards Stratford High Street and the deck is low; the
+// sewer section there is unresolved.
 export const spanAssumptions = Object.freeze({
   troughEmbedment: 2,
-  minimumSoffit: 1.4,
+  minimumSoffit: 1.9,
   maximumSegment: 6,
   pierLength: 2,
 });

@@ -7,6 +7,7 @@ import numpy as np
 import shapely
 from shapely.geometry import Polygon, LineString, GeometryCollection
 from build_lower_lea_region import polygons, rings
+import tide_levels as tl
 
 
 def smooth(a, b, v):
@@ -38,7 +39,9 @@ class Distance:
         return d
 
 
-def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground, marsh=None):
+def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground, marsh=None, tidal=None):
+    """tidal: regional water that takes the tide (data/maps/os-tide-levels.json); its beds
+    sit below low water and its banks rise from the low-water edge to the tidal crest."""
     level=config['referenceLevelSceneY']
     canal=shapely.union_all([geoms[r['id']] for r in reaches if r['role']=='navigation'
         and r['id'] not in config['naturalOverrideReachIds']])
@@ -56,6 +59,12 @@ def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground
     water_distance=Distance(water);canal_distance=Distance(canal);hard_distance=Distance(hard)
     protected_distance=Distance(protected);flat_distance=Distance(flat_ground)
     open_distance=Distance(openings);shore_distance=Distance(shore)
+    tidal_distance=Distance(tidal) if tidal is not None and not tidal.is_empty else None
+
+    def tidal_weight(pts,d):
+        # 1 where the nearest water is tidal, fading over 5 m where tidal and still water meet.
+        if tidal_distance is None:return np.zeros(len(pts))
+        return 1-smooth(0,5,np.maximum(0,tidal_distance(pts)-d))
 
     def fields(xz, force_bed=False):
         pts=shapely.points(xz)
@@ -73,6 +82,11 @@ def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground
         y=height[0]*(1-canal_weight)+height[1]*canal_weight
         mud=silt[0]*(1-canal_weight)+silt[1]*canal_weight
         y=y*(1-hard_weight)+height[2]*hard_weight;mud*=1-hard_weight
+        # Tidal reaches: the bank face rises from the low-water edge to the tidal crest over
+        # 5 m (as the river network's), holds to 8 m, then falls to the earth profile's foot.
+        tw=tidal_weight(pts,d)
+        y_tidal=np.where(d<=5,tl.tidal_shelf(d),np.interp(d,[5,8,14],[tl.CREST,tl.CREST,level-.16]))
+        y=y*(1-tw)+y_tidal*tw;mud=mud*(1-tw)+(1-smooth(tl.HIGH-.1,tl.HIGH+.4,y_tidal))*tw
         # Subtle longitudinal variation keeps earthen banks from looking like
         # a uniform concrete bund; masonry coping stays level.
         variation=.045*np.sin(xz[:,0]*.071+np.sin(xz[:,1]*.037))
@@ -88,6 +102,7 @@ def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground
         inside=shore_distance(pts)
         depth=config['bed']['riverDepthMetres']*(1-canal_weight)+config['bed']['canalDepthMetres']*canal_weight
         bed=level-shore_depth-(depth-shore_depth)*smooth(0,5,inside)
+        bed=bed*(1-tw)+tl.tidal_bed(inside)*tw
         y[wet]=bed[wet];mud[wet]=1
         cover=hard_weight*(1-smooth(3.5,6,d))
         return y,mud,cover
@@ -121,6 +136,8 @@ def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground
                 seam=smooth(0,5,protected_distance(pts))*smooth(14,22,open_distance(pts))
                 clearance=smooth(0,2,flat_distance(pts))
                 y[onshore]=-.1+((level+.02)*(1-h)+(level+1.25)*h+.1)*seam*clearance
+                tw=tidal_weight(pts,np.zeros(len(pts)))
+                y[onshore]=y[onshore]*(1-tw)+tl.BED_EDGE*tw
                 mud[onshore]=1-h
         positions.append(np.column_stack([xz[:,0],y,xz[:,1]]));sediment.append(mud);covers.append(cover)
         indices.append(inverse+offset)

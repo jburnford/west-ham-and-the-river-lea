@@ -14,6 +14,8 @@ from shapely.geometry import Polygon, LineString, box
 from shapely.ops import unary_union
 from marsh_ditches import apply_sections
 from core_river_connections import build as reviewed_connections, combined as connection_geometry
+import shapely
+import tide_levels as tl
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'docs/data'
@@ -28,9 +30,14 @@ nz, nx = X.shape
 patch = box(*bounds)
 river = unary_union([Polygon(p[0], p[1:]) for r in data['rivers'] for p in r['polygons']])
 southern_bed = unary_union([Polygon(p[0], p[1:]) for p in data['bankStudies']])
-# Northern mud shelves follow both banks of the mapped upstream channel.
+# Tidal water: every channel but the retained Old Lea, the isolated moats and
+# drain, and the Channelsea above the tidal limit at Abbey Mill (os-tide-levels.json).
+connections = reviewed_connections(data['rivers'])
+tidal = unary_union([Polygon(p[0], p[1:]) for r in data['rivers'] if r['id'] not in {18, 22, 1301, 1302, 1303} | tl.ABOVE_TIDAL_LIMIT
+                     for p in r['polygons']]+[connection_geometry(connections, tidal_only=True)])
+# Northern mud shelves follow both banks of the tidal channel below Abbey Mill.
 # Their width is inferred; the southern island is retained from the prior study.
-northern_bed = river.buffer(7.5).intersection(box(x[0],z[0],x[-1],0))
+northern_bed = tidal.buffer(7.5).intersection(box(x[0],z[0],x[-1],0))
 bed = unary_union([southern_bed,northern_bed])
 water = contains_xy(river, X, Z)
 on_bed = contains_xy(bed, X, Z)
@@ -55,10 +62,13 @@ coarse, middle, fine = noise(13, 17), noise(2.8, 82), noise(.55, 116)
 # The irregular tidal margin varies around the mapped route, not its centreline.
 shore = signed + (middle-.5)*.8 + (fine-.5)*.12
 height = .34 + .12*coarse
-height = np.where(on_bed, .06 + 1.25*smooth(0, 6, shore), height)
+# Mud between low water and the OS high-water mark (bankStudies follow it).
+height = np.where(on_bed, tl.mud_flat(shore), height)
 clods = np.maximum(0, fine-.39)**1.4 * .68
 height += on_bed * smooth(.3, 2, shore) * ((middle-.5)*.33 + clods)
-height = np.where(shore < 0, .06 - .35*smooth(0, 2, -shore) - 1.45*smooth(0, 10, -shore), height)
+tidal_cell = contains_xy(tidal.buffer(3), X, Z)
+height = np.where(shore < 0, np.where(tidal_cell, tl.tidal_bed(-shore),
+                  .06 - .35*smooth(0, 2, -shore) - 1.45*smooth(0, 10, -shore)), height)
 
 # River-right, facing south: a raised, irregular bank with lower Mill Mead behind.
 # Derive its plan from the outer western channel edge at each north/south section.
@@ -106,6 +116,10 @@ rill_distance = distance_transform_edt(np.asarray(rill_canvas) == 0)*step
 cut = np.exp(-(rill_distance/.48)**2) * smooth(.3, 1.4, shore) * on_bed
 height = height*(1-cut*.98) - cut*.04
 
+# The OS puts the mud between the high-water marks below high water: clods stay under it.
+mud = on_bed & (bank_shape*bank_start < .05) & (shore > 0)
+height = np.where(mud, np.minimum(height, tl.HIGH-.06), height)
+
 # Isolated shallow pools in the churned bed; connected creeks retain their depth.
 pools = []
 for _ in range(200):
@@ -114,22 +128,33 @@ for _ in range(200):
         continue
     px,pz = x[ix],z[iz]; rx,rz = rng.uniform(.8,2),rng.uniform(1.3,3.5)
     oval = ((X-px)/rx)**2 + ((Z-pz)/rz)**2
-    depression = np.clip(1-oval,0,1)
-    height = np.where(oval < 1, np.minimum(height, .015 + oval*.8), height)
-    pools.append([round(px,2),round(pz,2),round(rx,2),round(rz,2)])
+    # A pool keeps water a little below the mud it lies in, not at a fixed level.
+    floor = float(height[iz,ix])-.1
+    height = np.where(oval < 1, np.minimum(height, floor-.04 + oval*.8), height)
+    pools.append([round(px,2),round(pz,2),round(rx,2),round(rz,2),round(floor,3)])
 
 # Taper the patch into the surrounding flat study without vertical seams.
 edge_distance = np.minimum.reduce([X-x[0],x[-1]-X,Z-z[0],z[-1]-Z])
 blend = smooth(0, 3, edge_distance)
-height = height*blend + (-.1)*(1-blend)
+# The network meets this patch at the same seam (tide_levels.seam): below low
+# water in tidal channels, from exact distances into them, -0.1 elsewhere.
+inside_tidal = np.zeros_like(height)
+near = (edge_distance < 3.5) & water
+pts = shapely.points(X[near], Z[near])
+inside_tidal[near] = np.where(shapely.covers(tidal, pts), shapely.distance(pts, tidal.boundary), 0)
+edge = tl.seam(inside_tidal)
+height = height*blend + edge*(1-blend)
 height,ditch_mud,marsh_active=apply_sections(X,Z,height)
 passages=connection_geometry(reviewed_connections(data['rivers']))
 passage_mask=contains_xy(passages,X,Z)
 height[passage_mask]=np.minimum(height[passage_mask],-.7)
+tidal_passage=contains_xy(connection_geometry(connections, tidal_only=True),X,Z)
+height[tidal_passage]=np.minimum(height[tidal_passage],tl.SEAM_BED)
 
 # Depth, moisture and bank mask for physically distinct material responses.
-depth = np.clip((.06-height)/2.4, 0, 1)
-wetness = np.maximum(1-smooth(.04, .95, height), np.exp(-rill_distance*1.8)*.55*on_bed)
+depth = np.clip((np.where(tidal_cell, tl.BED_EDGE, .06)-height)/2.4, 0, 1)
+wetness = np.maximum(1-smooth(np.where(tidal_cell, tl.HIGH-.3, .04), np.where(tidal_cell, tl.HIGH+.4, .95), height),
+                     np.exp(-rill_distance*1.8)*.55*on_bed)
 sediment_coverage=on_bed.astype(float)*(1-smooth(1.2,2.4,height)*np.clip(bank_shape*bank_start,0,1))
 sediment_coverage=np.maximum(sediment_coverage,ditch_mud)
 properties = np.stack([depth, wetness, np.clip(bank_shape*bank_start,0,1), sediment_coverage],axis=-1)
@@ -159,7 +184,8 @@ meta = {'bounds': bounds, 'step':step, 'width':nx, 'height':nz, 'waterLevel':.06
         'heightFile':'river-terrain.f32', 'propertyFile':'river-terrain.rgba','landcoverFile':'river-terrain.landcover',
         'outsideRivers':outside_rivers, 'outsideSites':outside_sites,
         'bankRoute':[[round(float(edges[i]-7),2),round(float(z[i]),2)] for i in range(round((20-z[0])/step),round((325-z[0])/step),round(4/step))],
-        'rills':len(rills), 'pools':pools,
+        'rills':len(rills), 'pools':pools, 'poolFormat':'[x, z, radius x, radius z, water level]',
+        'tideRegister':'data/maps/os-tide-levels.json',
         'evidence':'Figure 2.4 and author identification of the raised river-right bank and low Mill Mead. Heights, depths, rills, pools and bank section are interpretations, not surveyed levels.',
         'heightRange':[round(float(height.min()),3),round(float(height.max()),3)]}
 (OUT / 'river-terrain.json').write_text(json.dumps(meta,separators=(',',':'))+'\n')

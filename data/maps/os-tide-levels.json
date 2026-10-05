@@ -1,0 +1,68 @@
+{
+  "description": "High and low water of ordinary tides for the tidal channels in the core box, their extent where the OS five-foot plan draws mud beyond the mapped channel outline, the tidal limit on the Channelsea, and the interpretive tidal bank crest. scripts/build_river_network.py and scripts/build_river_terrain.py read this register (scripts/tide_levels.py); docs/data/river-network.json tide carries the levels to the scene. Task C, October 2026.",
+  "frame": "scene x = easting - 538900, z = 183209 - northing; levels are scene y metres (docs/data/ground-plan.json origin)",
+  "datum": {
+    "liverpoolToNewlynFeet": -1.3,
+    "footMetres": 0.3048,
+    "odnMinusSceneYMetres": 1.83544,
+    "formula": "scene y = (feet + liverpoolToNewlynFeet) x 0.3048 - odnMinusSceneYMetres",
+    "source": "data/maps/railway-levels.json datum (docs/data/terrain-1900.json verticalReference)"
+  },
+  "source": "OS London five-foot plan, 1893-96 (reference/nls-tiles/os-london-five-foot-1893, read through scripts/factory_map_sources.py mosaic at zoom 18); OS readings from data/maps/os-ground-levels.json",
+  "highWater": {
+    "sceneY": 1.578,
+    "feetAboveOD": 12.5,
+    "odnMetres": 3.414,
+    "previousSceneY": 1.1,
+    "evidence": "Documented: Trinity High Water, 12 ft 6 in above Ordnance Datum (The Engineer, as recorded in data/maps/historic-flood-events.json). The OS draws the H.W.M.O.T. along the wall faces at Three Mills, Sun Mills and Four Mills and at the toe of the hatched east banks, and prints no level for it. Its readings bracket the level: ordinary tides stood below the towing paths and river wall tops on the tidal reaches (lowest the side of the Tidal Lock, 14.53 ft, 2.20 m; Sun Mills wall 14.7 ft, 2.25 m; Bow Creek towing path 14.9-15.8 ft, 2.31-2.58 m) and below the towing paths on the Lea between Bow Bridge and Bow Locks (14.1-15.0 ft, 2.07-2.34 m), and above the marsh behind the banks (4.2-9.7 ft, -0.95 to 0.73 m), which the author describes as lower than the rivers at high tide. Trinity High Water lies inside that bracket, about 0.6 m below the lowest tidal-reach wall top. Interpreted: the model's single high-water stage is Trinity High Water; ordinary tides averaged somewhat lower (the OS mark is the mean of springs and neaps). Modern levels are higher and are not used.",
+    "bracketReadings": {
+      "below": ["sh_538275_182327", "sh_538260_182261", "sh_538330_182696", "sh_538311_182572", "sh_538310_182510", "sh_538087_182975", "sh_538236_182814"],
+      "above": ["sh_538520_182791", "sh_538506_182847", "sh_538458_183000", "sh_538474_182922"]
+    }
+  },
+  "lowWater": {
+    "sceneY": -2.0,
+    "odnMetres": -0.165,
+    "previousSceneY": 0.06,
+    "evidence": "Mapped: the L.W.M.O.T. lines run along the mapped channel outline (the GIS Lower_River_Lea layer, the model's shoreline) at Four Mills, along Bow Creek and on Abbey Creek and the Channelsea below Abbey Mill, so at low water the water stands within that outline. The OS prints no level for it. Inferred: the marsh drains discharged to the tidal channels through sluices at low water (the OS sluices at the Channelsea outfalls), so low water stood below the lowest drained marsh readings (4.2-5.7 ft, -0.95 to -0.49 m, by the sluice west of Lower Abbey Mills Junction and on Abbey Marsh) and below their drain beds, about a metre lower. Estimated: -2.0 m (about OD). The modelled Lea flow at Feildes Weir (G2G, 1891-1910: median 4.6, Q95 2.0 cubic metres a second; file supplied by the author 5 October 2026) is a shallow stream at low water, consistent with the narrow low-water channel the OS draws. The resulting range, 3.6 m, puts high water about 1 m below the Three Mills quay and exposes 4-4.5 m of wall at low water, the form of the author's photographs (reference/modern-tide-photos-2026-10-05)."
+  },
+  "retainedLevel": {
+    "sceneY": 0.06,
+    "evidence": "Unchanged: the Old Lea above the Limehouse Cut lock, the isolated moats and drain, the marsh ditches and (new) the Channelsea above the tidal limit keep the scene's earlier illustrative water level. Their historical levels are unresolved."
+  },
+  "tidalLimit": {
+    "aboveTidalLimitChannelIds": [12, 13],
+    "at": [-17, -50],
+    "evidence": "Mapped: the OS letters 'Highest Point to which the O.T. flow' at Abbey Mill (Corn), beside B.M. 16.46 (EPFL text layer, labels at -15..16, -45..-49), and the GIS channel record splits there (channel 13 ends at z -50, channel 14 begins at z -46). The OS towing path west of the Channelsea above the mill reads 11.5 ft (1.27 m, sh_538852_183307), below high water, so that reach was not tidal. The author (5 October 2026): there must have been a step at Abbey Mill, as the tides went much higher on the other back rivers. Channels 12 and 13 (Stratford Mill to Abbey Mill) are drawn as still water at the retained level, without tidal mud."
+  },
+  "tidalBankCrest": {
+    "sceneY": 2.22,
+    "previousSceneY": 1.65,
+    "evidence": "Median of the OS towing-path readings beside the Lea between Bow Bridge and Bow Locks (sh_537975_183046, sh_538047_183035, sh_538072_183022, sh_538087_182975, sh_538128_182907, sh_538201_182860, sh_538236_182814) and beside Bow Creek (sh_538310_182510, sh_538311_182572, sh_538330_182696): 14.1-15.8 ft, 2.07-2.58 m. The model holds the Lea reach still (the retained Old Lea rule), but its banks are the district's mapped river-bank tops; the Bow Creek readings alone give 2.43 m. It replaces the 1.65 m interpretive crest of the generic tidal bank sections and retaining edges, which high water would otherwise overtop; OS-read banks, walls and premises keep their own levels (main landscape)."
+  },
+  "sections": {
+    "bedEdgeAboveLowWaterMetres": 0.6,
+    "bedDepthBelowLowWaterMetres": 1.7,
+    "bedRampMetres": 6,
+    "shelfMetres": 5,
+    "seamBelowLowWaterMetres": 0.6,
+    "seamRampMetres": 8,
+    "mudTopBelowHighWaterMetres": 0.2,
+    "mudRampMetres": 12,
+    "wallBaseBelowLowWaterMetres": 0.5,
+    "evidence": "Estimated display sections, not surveys. Inside the mapped (low-water) outline the bed falls from 0.6 m above low water at the shoreline to 1.7 m below it over 6 m, so a margin of mud shows inside the outline at low water, as at the foot of the Three Mills walls. Outside it, a generic tidal bank rises from that edge to the tidal crest over 5 m. Mud flats (below) rise from the same edge to 0.2 m below high water over 12 m and stay just under it to the high-water mark. Where a tidal channel crosses the edge of the detailed core, both meshes meet at 0.6 m below low water (feathered over 8 m from the shore), not at the old -0.1 m seam, which would dam the channel at low water. Retaining walls stand from 0.5 m below low water."
+  },
+  "mudFlats": [
+    {
+      "id": "four-mills-east-flats",
+      "polygon": [[-612.7, 900.0], [-616.1, 924.8], [-621.4, 948.5], [-625.5, 969.9], [-630.9, 991.2], [-637.3, 1017.4], [-643.8, 1038.8], [-651.5, 1060.2], [-658.0, 1081.6], [-664.5, 1103.1], [-669.6, 1131.5], [-672.5, 1155.2], [-672.1, 1170.5], [-656.8, 1170.1], [-656.8, 1159.5], [-656.1, 1150.0], [-654.1, 1138.2], [-651.5, 1128.7], [-647.5, 1117.9], [-643.1, 1107.2], [-638.1, 1097.6], [-633.0, 1088.0], [-628.5, 1079.7], [-625.1, 1072.5], [-630.4, 1069.1], [-632.9, 1063.3], [-632.0, 1055.0], [-628.2, 1046.6], [-623.7, 1038.2], [-619.6, 1031.0], [-614.7, 1020.3], [-609.1, 1009.5], [-603.4, 999.9], [-597.7, 991.5], [-590.9, 981.9], [-584.1, 971.1], [-577.3, 959.1], [-570.6, 945.9], [-567.3, 937.6], [-564.0, 926.9], [-561.3, 913.8], [-558.4, 899.6], [-555.7, 885.4]],
+      "evidence": "Mapped: the H.W.M.O.T. line on the east side of the Lea from the Tidal Lock past Sun Mills to Four Mills (lettered H.W.M.O.T. below B.M. 17.19 at -625, 1072), with 'Mud' lettered between it and the low-water channel and on the mud island north of Sun Mills. The polygon runs from the channel's centre line (the dash-dot boundary 'C.C. at L.W.') to that line, so it holds the east mud flat and the island; the mapped water inside it stays channel bed. Traced on the five-foot mosaic at zoom 18 (task C)."
+    },
+    {
+      "id": "sun-mills-mud-basin",
+      "polygon": [[-689.5, 1009.8], [-647.0, 1008.7], [-647.8, 1020.0], [-657.9, 1041.5], [-664.8, 1050.0], [-677.8, 1049.9], [-688.7, 1040.0]],
+      "evidence": "Mapped: the basin south of Sun Mills (Corn), lettered 'Mud', between the mill frontage, the Four Mills Distillery boundary and the low-water line, open to the Lea at its south-east corner. Traced on the five-foot mosaic at zoom 18 (task C)."
+    }
+  ],
+  "notTraced": "Elsewhere in the core box the H.W.M.O.T. lies on the river walls or within about 5 m of the mapped outline (Bow Creek, the lower Channelsea west of the core, Three Mills), which the generic 5 m tidal shelf covers. In the detailed core (Abbey Creek and the Channelsea below Abbey Mill) the existing mud-shelf study polygons (ground-plan.json bankStudies) already follow the OS high-water lines on both sides and are re-levelled, not re-traced."
+}

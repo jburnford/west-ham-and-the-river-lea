@@ -171,7 +171,7 @@ def drawn_water(result):
     shapes += rings([p for f in network['marshDitches']['features'] for p in f['renderPolygons']])
     shapes += rings(system['waterPolygons'])
     shapes += [Polygon([(x+rx*math.cos(i*math.pi/16), z+rz*math.sin(i*math.pi/16)) for i in range(32)])
-               for x, z, rx, rz in terrain.get('pools', [])]
+               for x, z, rx, rz, *_ in terrain.get('pools', [])]
     return unary_union(shapes)
 
 
