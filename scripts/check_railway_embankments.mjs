@@ -341,7 +341,12 @@ for (const site of sites) {
   // A topological boundary edge is only open if the ground beside it, on the side away from its own
   // triangle, carries no other embankment triangle (T-junctions and slivers left by the traced
   // triangulation and by clipping are not openings).
-  const local = embankments[site.railway].filter((tri) => tri.some(near));
+  // An added route that continues a line (the LT&SR west of Bow Creek, data/maps/railway-levels.json) covers
+  // the cross-section where the two embankments meet.
+  const related = Object.keys(embankments).filter(
+    (n) => n === site.railway || n.startsWith(site.railway + ',') || site.railway.startsWith(n + ',')
+  );
+  const local = related.flatMap((n) => embankments[n]).filter((tri) => tri.some(near));
   function covered(x, z, own) {
     for (const tri of local) {
       if (tri === own) continue;

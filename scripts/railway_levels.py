@@ -53,7 +53,12 @@ def apply(rail, register=None):
     if spec is None:
         return rail
     out = dict(rail)
-    if 'route' in spec:
+    if spec.get('addedRoute'):
+        # A railway the register adds (no traced route before it): see added_railways().
+        out['route'] = spec['route']
+        out['priorRoute'] = spec['priorRoute']
+        out['routeEvidence'] = spec['routeEvidence']
+    elif 'route' in spec:
         assert spec['priorRoute'] == rail['route'], f"{rail['name']}: register priorRoute differs from the traced route"
         out['route'] = spec['route']
         out['priorRoute'] = spec['priorRoute']
@@ -72,6 +77,13 @@ def apply(rail, register=None):
                            'register': REGISTER,
                            'segments': spec['segments']}
     return out
+
+
+def added_railways(register=None):
+    """Plain railway records for the register's added routes (railways the traced plan does not have)."""
+    reg = register or load()
+    return [{'name': name, 'route': spec['route'], 'tracks': spec['tracks'], 'evidence': spec['evidence']}
+            for name, spec in reg['railways'].items() if spec.get('addedRoute')]
 
 
 def bank_level(crest, distance, crest_half, side, toe):

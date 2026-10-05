@@ -71,7 +71,7 @@
           37.51
         ]
       },
-      "evidence": "Mapped (OS five-foot and 25-inch): the LT&SR crossing Bow Creek on a continuous structure, the rails unbroken from bank to bank with a footbridge (F.B.) alongside on the north, the line continuing west past Bow Pottery on embankment, and the creek's high- and low-water marks. Measured in the model: the traced route begins in the creek, 7.7 m east of the drawn west water edge on the centreline; the drawn water spans stations -7.7 to 33.6 on the centreline, the banks crossing the line at about 50 degrees. Interpreted: brick abutments with in-line wings on both drawn banks, two half-through wrought-iron plate-girder spans of about 21 and 23 m on one brick river pier set parallel to the banks, girders 1.9 m deep standing 0.65 m above the formation. No pier is visible on the OS plan, where a pier under the deck would not show; the pier, spans and girder depth are estimates. West of the abutment the traced line is not modelled: the fill is carried at formation level to station -16.8 and closed there by an earth end."
+      "evidence": "Mapped (OS five-foot and 25-inch): the LT&SR crossing Bow Creek on a continuous structure, the rails unbroken from bank to bank with a footbridge (F.B.) alongside on the north, the line continuing west past Bow Pottery on embankment, and the creek's high- and low-water marks. Measured in the model: the traced route begins in the creek, 7.7 m east of the drawn west water edge on the centreline; the drawn water spans stations -7.7 to 33.6 on the centreline, the banks crossing the line at about 50 degrees. Interpreted: brick abutments with in-line wings on both drawn banks, two half-through wrought-iron plate-girder spans of about 21 and 23 m on one brick river pier set parallel to the banks, girders 1.9 m deep standing 0.65 m above the formation. No pier is visible on the OS plan, where a pier under the deck would not show; the pier, spans and girder depth are estimates. West of the abutment the fill is carried at formation level to station -16.8, where the added route west of Bow Creek (data/maps/railway-levels.json, task A) continues the line through Bromley."
     },
     "nl-hackney-cut": {
       "railway": "North London / Victoria Park branch connection",
@@ -113,9 +113,19 @@
         -605.37,
         605.86
       ],
-      "treatment": "west abutment on the drawn bank, level approach to station -16.8, earth end at the side slope",
+      "treatment": "west abutment on the drawn bank and a level approach to station -16.8, where the register's added route carries the line on west (no earth end since task A, October 2026)",
       "osShowsLineContinuing": true,
-      "evidence": "OS five-foot: the line continues west across Bow Creek past Bow Pottery towards Bromley. Carrying it on would need a route beyond the traced one, which this register does not add."
+      "evidence": "OS five-foot: the line continues west across Bow Creek past Bow Pottery towards Bromley. Since task A (5 October 2026) data/maps/railway-levels.json adds that route (London, Tilbury and Southend Railway, west of Bow Creek), starting at the end of this approach; the two embankments meet on the approach's last cross-section."
+    },
+    "london-tilbury-and-southend-bromley": {
+      "railway": "London, Tilbury and Southend Railway, west of Bow Creek",
+      "point": [
+        -834.0,
+        690.9
+      ],
+      "treatment": "line stops at grade 3 m east of the St Leonard's Street bridge; no earth end (the formation is within 0.5 m of the drawn ground)",
+      "osShowsLineContinuing": true,
+      "evidence": "OS five-foot: the line passes under the St Leonard's Street bridge (deck 47.3 ft, sh_538059_182513, on hatched ramps) into Bromley Station. The street, its bridge and the station are not drawn here, so the added route stops short of the street's east kerb line."
     },
     "north-london-connection-west": {
       "railway": "North London / Victoria Park branch connection",

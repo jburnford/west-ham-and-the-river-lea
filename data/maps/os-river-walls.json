@@ -1,0 +1,26 @@
+{
+  "description": "River walls the OS five-foot plan (1893-96) draws along the Lea west bank in the core box, traced as lines in the scene frame. scripts/build_river_network.py makes the mapped shoreline (the drawn water outline) within toleranceMetres of each line a retaining-wall route, so the walls stand on the shoreline the model draws and on the river-network mesh edges, like the other retaining edges. Their coping height is set by the main landscape (terraceWalls: the higher of the bank crest and the ground 6 m behind).",
+  "frame": "scene x = easting - 538900, z = 183209 - northing (docs/data/ground-plan.json origin)",
+  "source": "OS London five-foot plan, 1893-96 (reference/nls-tiles/os-london-five-foot-1893, read through scripts/factory_map_sources.py mosaic at zoom 18)",
+  "toleranceMetres": 4.5,
+  "walls": [
+    {
+      "id": "sun-mills-river-wall",
+      "line": [[-640.0, 938.0], [-641.0, 960.0], [-643.0, 990.0], [-645.0, 1010.0], [-648.0, 1030.0], [-652.0, 1045.0], [-658.0, 1060.0]],
+      "wallTopReadings": ["sh_538260_182261"],
+      "evidence": "Mapped: a continuous double line on the Lea west bank from the Tidal Lock past Sun Mills (corn) to the mud basin south of the mill, with the 14.7 ft spot height on it at (-640, 948) (T22: the Sun Mills river-wall line, 2.25 m). The drawn water edge runs 0-4 m east of the line. Interpreted: a masonry river wall along the line; its section and material are not shown on the plan."
+    },
+    {
+      "id": "four-mills-river-wall",
+      "line": [[-669.0, 1076.0], [-674.0, 1100.0], [-678.0, 1120.0], [-681.0, 1140.0], [-682.0, 1152.0]],
+      "wallTopReadings": ["sh_538225_182137"],
+      "evidence": "Mapped: a coursed masonry band about 4 m wide drawn along the Four Mills Distillery frontage to the Lea from z 1076 to 1152, with the 16.8 ft spot height at its north end (-674.6, 1072); the line is its water face. The drawn water edge runs 1-3 m east of it. Interpreted: a stone-faced river wall; the band's width suggests a battered face or an apron, which the model does not draw."
+    }
+  ],
+  "notModelled": [
+    {
+      "id": "bow-wharves",
+      "evidence": "Bow Bridge and Magnet Wharf edges (around x -1060..-1000, z 40..160): the drawn water there does not follow the OS banks (the GIS channel south-east of Bow Bridge crosses mapped buildings), so a wall on the drawn shoreline would stand off the OS edge. Needs the water outline retraced first (task A, 5 October 2026)."
+    }
+  ]
+}

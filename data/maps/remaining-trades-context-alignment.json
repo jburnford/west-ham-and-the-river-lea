@@ -120,9 +120,11 @@
             ]
           ],
           "style": "deck",
-          "height": 1.5,
+          "height": 2.93,
           "provisional": true,
-          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge. Existing provisional crossing moved onto the mapped eastern lane; both endpoints relocated, with one intervening road control to follow its bend. Identity, deck style, 1.5 m height and uncertainty retained. Exact bank alignment and deck versus culvert remain unresolved."
+          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge. Existing provisional crossing moved onto the mapped eastern lane; both endpoints relocated, with one intervening road control to follow its bend. Identity, deck style, 1.5 m height and uncertainty retained. Exact bank alignment and deck versus culvert remain unresolved.",
+          "priorHeight": 1.5,
+          "heightEvidence": "Task A (5 October 2026): no OS height on the crossing itself. The deck is laid level at the lane level the OS gives at its middle: Marshgate Lane reads 2.65 m at the High Street corner (sh_538078_183283, 5.7 m along the lane) and 3.19 m south of the deck (sh_538054_183338, 67.0 m along), and the deck spans 25.0-50.6 m along the lane, so linear interpolation gives 2.82-3.05 m, 2.93 m at its middle. The prior 1.5 m was an estimate that left the lane cut 1.7 m below its OS level (T22 decision 4). Deck versus culvert remains unresolved."
         }
       ],
       "reviewedSourceBounds": [

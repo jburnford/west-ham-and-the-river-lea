@@ -20,7 +20,7 @@
     {
       "id": "os-heights",
       "citation": "data/maps/lower-lea-region/height-observations.opus-2026-10-02.geojson (OS 25-inch, 1893-96 revision, feet above OD Liverpool)",
-      "use": "Bench marks cut on the Pegs Hole Bridge parapet, at St Michael's Bridge and on the hatched south parapet of the Bow Bridge east approach show masonry parapets there. Spot heights on the crossings are compared with the recorded deck heights in the T12a report; they are not used to change any height. The one exception is Three Mills Bridge, re-levelled by T22 (October 2026) to its OS five-foot spot height (21.2 ft, 4.23 m scene) in data/maps/district-road-traces.json, the prior 2.2 m estimate kept there as priorHeight."
+      "use": "Bench marks cut on the Pegs Hole Bridge parapet, at St Michael's Bridge and on the hatched south parapet of the Bow Bridge east approach show masonry parapets there. Spot heights on the crossings are compared with the recorded deck heights in the T12a report; they are not used to change any height. The exceptions are Three Mills Bridge, re-levelled by T22 (October 2026) to its OS five-foot spot height (21.2 ft, 4.23 m scene), and Pegs Hole Bridge, re-levelled by task A (5 October 2026) to its OS crown (19.1 ft, 3.59 m scene), in data/maps/district-road-traces.json, the prior estimates (2.2 m, 3.0 m) kept there as priorHeight. Task A also laid the provisional Marshgate Lane and Cook's Road decks at the OS and drawn lane levels beside them (2.93 m and 2.8 m, prior 1.5 m; heightEvidence there)."
     },
     {
       "id": "photo-catalogue",

@@ -1134,6 +1134,9 @@ RAIL_OPENINGS={'nl-hackney-cut':('North London / Victoria Park branch connection
 # then the hipped end. Bow Creek's drawn west edge is at station -7.7 on the
 # centreline and -12.8/-2.0 at the crest edges (skew about 1.2 m per metre).
 RAIL_APPROACH=('London, Tilbury and Southend Railway',14.,-16.8)
+# Task A (October 2026): the register's added route (data/maps/railway-levels.json) carries the line
+# on west from the approach's end, so neither the approach nor the added route is closed there.
+RAIL_APPROACH_WEST='London, Tilbury and Southend Railway, west of Bow Creek'
 # Labels for footprint_geoms, in the order they were collected above.
 footprint_labels=[f"factory {b.get('id')}" for b in factory['buildings'] for p in b.get('renderPolygons') or []]+[f"holder {h.get('id',h.get('siteId'))}" for h in factory['holders']]
 footprint_labels+=[f"{k} {b.get('id')}" for k in ('mappedFactories','houses','terraces') for b in plan['neighbourhood'][k] if b.get('footprint')]
@@ -1277,7 +1280,7 @@ for rail,record in zip(infra['railways'],railways):
     # Raised line ends with nothing beyond them.
     route=np.array(rail['route'],float)
     for which,p0,p1 in (('start',route[0],route[1]),('end',route[-1],route[-2])):
-        if others.contains(shapely.Point(p0)) or (name==RAIL_APPROACH[0] and which=='start'):continue
+        if others.contains(shapely.Point(p0)) or (name in (RAIL_APPROACH[0],RAIL_APPROACH_WEST) and which=='start'):continue
         u=(p0-p1)/np.linalg.norm(p0-p1);n=np.array([-u[1],u[0]])
         f=(vertices[:,[0,2]]-p0)@u;o=(vertices[:,[0,2]]-p0)@n;at=np.abs(f)<.05
         # A rounded or sloped end already reaches beyond the end line.
@@ -1306,7 +1309,8 @@ for rail,record in zip(infra['railways'],railways):
         body=[]
         for r0,r1 in zip(rows[:-1],rows[1:]):
             for j in range(len(offsets)-1):body+=[np.array([r0[j],r0[j+1],r1[j+1]]),np.array([r0[j],r1[j+1],r1[j]])]
-        body+=hipped_end(rows[-1],-ua,(crest-float(np.median(rail_ground(rows[-1][:,[0,2]]))))/max(1,half-crest_half),rail_ground)
+        if not any(r['name']==RAIL_APPROACH_WEST for r in infra['railways']):
+            body+=hipped_end(rows[-1],-ua,(crest-float(np.median(rail_ground(rows[-1][:,[0,2]]))))/max(1,half-crest_half),rail_ground)
         body=np.array(body)
         cut=water.buffer(RAIL_WATER_CLEAR).union(shapely.union_all([footprint_geoms[k].buffer(RAIL_GAP,join_style='mitre') for k in footprint_tree.query(LineString([a0+ua*RAIL_APPROACH[1],a0+ua*(RAIL_APPROACH[2]-15)]).buffer(half+3))] or [Polygon()]))
         rem,add,faces=clip_away(body,cut);kept=[t for i,t in enumerate(body) if i not in set(rem)]+add;q=wall_quads(faces,'abutment')

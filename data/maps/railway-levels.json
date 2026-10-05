@@ -1355,6 +1355,145 @@
           "priorEvidence": "T20: the model's road and ground here stood about 1.9 m below that reading, so the at-grade line at the measured level spanned the drawn road on the model's short deck (chainage 167.5-179.7, deck formation 1.515 m)."
         }
       }
+    },
+    "London, Tilbury and Southend Railway, west of Bow Creek": {
+      "addedRoute": true,
+      "tracks": 2,
+      "priorFormationHeight": null,
+      "route": [
+        [
+          -620.88,
+          612.3
+        ],
+        [
+          -634.74,
+          618.06
+        ],
+        [
+          -670.0,
+          630.5
+        ],
+        [
+          -700.0,
+          641.8
+        ],
+        [
+          -750.0,
+          661.8
+        ],
+        [
+          -800.0,
+          681.0
+        ],
+        [
+          -834.0,
+          690.9
+        ]
+      ],
+      "priorRoute": "none: new route (task A, 5 October 2026); before it the LT&SR ended at a 17 m approach behind the Bow Creek west abutment, closed by an earth end (docs/railway-bridges.js lineEnds london-tilbury-and-southend-west)",
+      "routeEvidence": "Traced on the OS five-foot plan (scripts/factory_map_sources.py mosaic, zoom 18): the four drawn rails of the two running lines west of Bow Creek, read on cross-sections at x -605 (centre z 602.5), -700 (641.8), -770 (669.8), -800 (681.0) and -855 (697.0), run between the Steam Boiler Works (Fraser & Fraser, site 795) and St Leonard's Works (site 794) to the St Leonard's Street bridge, where the street crosses over the line, with Bromley Station beyond. The route starts at the end of the LT&SR approach (LT&SR station -16.8, on the line of its first segment, which the Bow Creek bridge follows and which lies about 3 m south of the OS centreline at the creek) and keeps that heading for 15 m, then joins the OS centreline by x -700 and follows it to x -834, 3 m east of the street's east kerb line on the OS. The line beyond, under the bridge and through Bromley Station, is not modelled: the street, the bridge and the station are not drawn here.",
+      "evidence": "London, Tilbury and Southend Railway from the Bow Creek bridge west through Bromley to the St Leonard's Street bridge, on the OS five-foot plan (1893-96). Two running lines. A separate record from the main LT&SR route so that the main route's chainages (bridges, controls, the Abbey Mills junction) are unchanged; it begins where the main route's west approach ends.",
+      "profile": [
+        [
+          0.0,
+          5.081,
+          "level with the LT&SR approach behind the Bow Creek west abutment (LT&SR station -16.8, formation 5.081 from sh_538285_182602)"
+        ],
+        [
+          78.6,
+          6.026,
+          "sh_538203_182575"
+        ],
+        [
+          166.3,
+          7.092,
+          "sh_538122_182541"
+        ],
+        [
+          227.28,
+          7.092,
+          "held level from the last rail reading to the St Leonard's Street bridge (no reading; interpretation)"
+        ]
+      ],
+      "controls": [
+        {
+          "spotHeight": "sh_538203_182575",
+          "chainage": 78.6,
+          "offset": 5.7,
+          "position": [
+            -696.51,
+            634.43
+          ],
+          "readingFeet": 28.6,
+          "type": "spot",
+          "sceneY": 6.486,
+          "setting": "railway",
+          "confidence": "high",
+          "layer": "os-london-five-foot-1893",
+          "notes": "railway (London Tilbury & Southend line); dot right of figures",
+          "kind": "rail",
+          "use": "control",
+          "evidence": "OS spot height on the LT&SR west of Bow Creek (dot right of the figures, on the line). Rail top = reading."
+        },
+        {
+          "spotHeight": "sh_538122_182541",
+          "chainage": 166.3,
+          "offset": 4.5,
+          "position": [
+            -777.72,
+            667.65
+          ],
+          "readingFeet": 32.1,
+          "type": "spot",
+          "sceneY": 7.552,
+          "setting": "railway",
+          "confidence": "high",
+          "layer": "os-london-five-foot-1893",
+          "notes": "railway embankment; dot left of figures",
+          "kind": "rail",
+          "use": "control",
+          "evidence": "OS spot height on the LT&SR embankment west of the Steam Boiler Works (dot left of the figures, on the line). Rail top = reading."
+        },
+        {
+          "spotHeight": "sh_538221_182584",
+          "chainage": 58.8,
+          "offset": 8.3,
+          "position": [
+            -678.89,
+            625.03
+          ],
+          "readingFeet": 25.75,
+          "type": "bench_mark",
+          "sceneY": 5.617,
+          "setting": null,
+          "confidence": "high",
+          "layer": "os-london-five-foot-1893",
+          "notes": "pheon above-right of the text on the railway boundary by the Steam Boiler Works",
+          "kind": "bench-mark",
+          "use": "check",
+          "evidence": "OS bench mark on the railway boundary by the Steam Boiler Works, on the boundary wall north of the line; a mark on a wall, so a check, not a control."
+        }
+      ],
+      "segments": [
+        {
+          "from": 0.0,
+          "to": 78.6,
+          "kind": "embankment",
+          "evidence": "Mapped: embankment hatching on the north side of the line from the Bow Creek bridge to about x -690 (the Steam Boiler Works boundary), the ground falling to the creek. Measured: rail 25.5 ft at the bridge west end (LT&SR control) and 28.6 ft here. Interpolated: linear between them, about 1 in 85."
+        },
+        {
+          "from": 78.6,
+          "to": 166.3,
+          "kind": "at-grade",
+          "evidence": "Mapped: no embankment hatching between the works on either side. Measured: rail 28.6 ft and 32.1 ft (about 1 in 82). The drawn terrace ground beside the line (T22, corrected to the OS terrace readings) stands 0.1-0.3 m below the formation here, so the line sits on its ballast at grade."
+        },
+        {
+          "from": 166.3,
+          "to": 227.28,
+          "kind": "at-grade",
+          "evidence": "No reading between sh_538122_182541 and the St Leonard's Street bridge (the street deck reads 47.3 ft, sh_538059_182513, about 4.6 m above this rail level). Interpreted: formation held level at the last rail reading; the drawn terrace ground beside it is 6.8-7.1 m."
+        }
+      ]
     }
   },
   "unchanged": {

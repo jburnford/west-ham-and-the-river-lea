@@ -203,10 +203,11 @@ redo=unary_union([Polygon(t) for t in redo])
 crest_triangles+=triangles(redo.difference(crest_deck),4)+triangles(redo.intersection(crest_deck),4)
 railways=[]
 branch_connection=read('data/maps/woolwich-northern-connection.json')
-from railway_levels import load as load_levels, apply as apply_levels, level_stations, bank_level
+from railway_levels import load as load_levels, apply as apply_levels, level_stations, bank_level, added_railways
 from shapely.ops import substring
 levels_register=load_levels()
-for r in data['neighbourhood']['railways']:
+# The register's added routes (the LT&SR west of Bow Creek) are built as plain railways too.
+for r in data['neighbourhood']['railways']+added_railways(levels_register):
     r=align_railway(r,manor)
     if r['name']=='Great Eastern Railway, Woolwich branch':
         r={**r,'route':[branch_connection['existingBranchStart'],*r['route'][1:]],
@@ -229,7 +230,8 @@ for r in data['neighbourhood']['railways']:
         spans=[(s0,p-t),(p+t,s1)] if p is not None else [(s0,s1)]
         register_spans+=[(bridge,a,b) for a,b in spans]
     register_cut=unary_union([substring(line,b['chainage'][0],b['chainage'][1]).buffer(18,cap_style=2) for b in spec.get('bridges',[])]) if spec.get('bridges') else Polygon()
-    footprint=line.buffer(17,join_style=2).difference(openings).difference(register_cut).difference(buildings)
+    # An added route ends square where it joins the line it continues (the LT&SR west approach).
+    footprint=line.buffer(17,join_style=2,cap_style=2 if spec.get('addedRoute') else 1).difference(openings).difference(register_cut).difference(buildings)
     samples=[]
     for p in getattr(footprint,'geoms',[footprint]):
         if p.geom_type!='Polygon':continue

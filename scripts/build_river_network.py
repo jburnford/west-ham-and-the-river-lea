@@ -22,7 +22,7 @@ from scipy.sparse.csgraph import connected_components
 from scipy.spatial import cKDTree
 from shapely import contains_xy, segmentize
 from shapely.geometry import Polygon, LineString, box
-from shapely.ops import unary_union
+from shapely.ops import unary_union, linemerge
 from marsh_ditches import geometry as ditch_geometry, apply_sections
 from core_river_connections import build as reviewed_connections, combined as connection_geometry
 from river_bank_sections import Distance
@@ -410,6 +410,17 @@ def build():
     # retaining edge holds the same interpreted crest; material/design unresolved.
     retaining=river.boundary.intersection(tidal.buffer(.01)).intersection(sites.buffer(3)).difference(roads)
     wall_routes=[list(segmentize(g,4).coords) for g in getattr(retaining,'geoms',[retaining]) if g.geom_type=='LineString' and g.length>1]
+    # River walls the OS draws (data/maps/os-river-walls.json): the shoreline along each traced
+    # line becomes a retaining route too, where the plot rule above has not already made one.
+    os_walls=json.loads((ROOT/'data/maps/os-river-walls.json').read_text());os_wall_records=[]
+    for w in os_walls['walls']:
+        near=LineString(w['line']).buffer(os_walls['toleranceMetres'],cap_style=2)
+        shore=river.boundary.intersection(tidal.buffer(.01)).intersection(near).difference(roads).difference(retaining.buffer(.05))
+        shore=linemerge(shore) if shore.geom_type=='MultiLineString' else shore
+        added=[list(segmentize(g,4).coords) for g in getattr(shore,'geoms',[shore]) if g.geom_type=='LineString' and g.length>1]
+        os_wall_records.append({'id':w['id'],'routeIndices':list(range(len(wall_routes),len(wall_routes)+len(added))),
+                                'lengthMetres':round(sum(LineString(r).length for r in added),2),'tracedLengthMetres':round(LineString(w['line']).length,2)})
+        wall_routes+=added
     factories = json.loads((OUT/'factory-buildings.json').read_text())
     frontages = json.loads((OUT/'high-street-frontages.json').read_text())
     buildings = unary_union([Polygon(q['outer'], q['holes']) for b in factories['buildings']+frontages['buildings'] for q in b['renderPolygons']] +
@@ -576,6 +587,8 @@ def build():
                 'evidence':'Illustrative synchronised rise and fall within interpreted river-side shelves. Not a tide prediction or hydraulic simulation; excludes retained Old Lea and marsh drains.'},
         'retainingEdges':{'routes':wall_routes,'crestHeight':1.65,'baseHeight':-.55,'width':WALL_WIDTH,
                           'evidence':'Interpretive flood-retaining edges where tidal river banks meet GIS industrial plots. Presence, material and individual sections require photograph/engineering-plan verification. Not the 1930s concrete embankments.',
+                          'osRiverWalls':{'register':'data/maps/os-river-walls.json','walls':os_wall_records,
+                                          'method':f"the mapped shoreline within {os_walls['toleranceMetres']} m of each OS-traced wall line (inside the tidal channels, outside road corridors and existing routes)"},
                           'coreWallRelocation':{'applied':APPLY_CORE_WALL_RELOCATION,
                               'notAppliedReason':'the core terrain (river-terrain, 0.4 m grid) has no mesh edges on the moved wall lines, so the main-landscape wall fill raises ground cells on the water side of the wall (teeth up its face, seen in a scratch rebuild) and its land-side test (wet samples 1-5 m out) becomes a tie; move them once the core mesh carries the wall lines or the landscape builder clears core wall faces',
                               'routes':relocated,'notRelocated':not_relocated,

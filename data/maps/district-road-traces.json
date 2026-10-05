@@ -462,7 +462,7 @@
           ],
           "style": "stone-arch",
           "archCount": 2,
-          "height": 3.0,
+          "height": 3.59,
           "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates.",
           "priorPoints": [
             [
@@ -474,7 +474,9 @@
               -125.991
             ]
           ],
-          "alignmentEvidence": "T13 retrace (October 2026): span laid on the retraced High Street centreline, on a straight piece of the route so the deck axis is the road axis. OS reading: bank lines read by eye at both parapets on 6-9x crops: the west bank crosses the centreline at 454.6 m along the route (1 deg from square to the road) and the east bank at 470.2 m (19 deg); the channel axis is 10 deg from square, so the road crosses the Pegs Hole channel obliquely, as drawn, and the bridge carries it straight across. The span runs from 454.8 m to 472.9 m along the route so the 14.2 m deck (carriageway plus 1.1 m footways) covers the model water and its 0.6 m clearance across the full width; at the centreline the span ends lie +0.3 m and +2.7 m from the bank lines; the excess is the 0.6 m water clearance plus the skew of the banks across the deck width. Previous span (priorPoints) was 34.3 m long, 0.7 deg off the retraced road axis, its ends 1.9 m and 1.6 m to the side of the retraced centreline. Estimated: arch form, deck height and the abutment faces, which docs/infrastructure.js draws square to the road."
+          "alignmentEvidence": "T13 retrace (October 2026): span laid on the retraced High Street centreline, on a straight piece of the route so the deck axis is the road axis. OS reading: bank lines read by eye at both parapets on 6-9x crops: the west bank crosses the centreline at 454.6 m along the route (1 deg from square to the road) and the east bank at 470.2 m (19 deg); the channel axis is 10 deg from square, so the road crosses the Pegs Hole channel obliquely, as drawn, and the bridge carries it straight across. The span runs from 454.8 m to 472.9 m along the route so the 14.2 m deck (carriageway plus 1.1 m footways) covers the model water and its 0.6 m clearance across the full width; at the centreline the span ends lie +0.3 m and +2.7 m from the bank lines; the excess is the 0.6 m water clearance plus the skew of the banks across the deck width. Previous span (priorPoints) was 34.3 m long, 0.7 deg off the retraced road axis, its ends 1.9 m and 1.6 m to the side of the retraced centreline. Estimated: arch form, deck height and the abutment faces, which docs/infrastructure.js draws square to the road.",
+          "priorHeight": 3.0,
+          "heightEvidence": "Task A (5 October 2026): deck height 3.59 m is the OS five-foot spot height at the High Street crown of Pegs Hole Bridge, 19.1 ft (sh_538117_183327, setting bridge, data/maps/os-ground-levels.json), converted with the project datum; the bench mark on its parapet reads 20.61 ft = 4.05 m (sh_538138_183324). The prior 3.0 m was an estimate (T12a compared it with the OS and left it; T22 decision 5). The High Street rises to it from its OS levels 2.65 m at the Marshgate Lane corner (sh_538078_183283, 45 m west) and 3.07 m east of the bridge (sh_538161_183355, 44 m east), about 1 in 47 and 1 in 88."
         },
         {
           "id": "st-thomas-bridge",
@@ -2241,9 +2243,11 @@
             ]
           ],
           "style": "deck",
-          "height": 1.5,
+          "height": 2.93,
           "provisional": true,
-          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge. Existing provisional crossing moved onto the mapped eastern lane; both endpoints relocated, with one intervening road control to follow its bend. Identity, deck style, 1.5 m height and uncertainty retained. Exact bank alignment and deck versus culvert remain unresolved."
+          "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge. Existing provisional crossing moved onto the mapped eastern lane; both endpoints relocated, with one intervening road control to follow its bend. Identity, deck style, 1.5 m height and uncertainty retained. Exact bank alignment and deck versus culvert remain unresolved.",
+          "priorHeight": 1.5,
+          "heightEvidence": "Task A (5 October 2026): no OS height on the crossing itself. The deck is laid level at the lane level the OS gives at its middle: Marshgate Lane reads 2.65 m at the High Street corner (sh_538078_183283, 5.7 m along the lane) and 3.19 m south of the deck (sh_538054_183338, 67.0 m along), and the deck spans 25.0-50.6 m along the lane, so linear interpolation gives 2.82-3.05 m, 2.93 m at its middle. The prior 1.5 m was an estimate that left the lane cut 1.7 m below its OS level (T22 decision 4). Deck versus culvert remains unresolved."
         }
       ],
       "millBrushAlignment": {
@@ -2924,10 +2928,12 @@
             ]
           ],
           "style": "deck",
-          "height": 1.5,
+          "height": 2.8,
           "provisional": true,
           "evidence": "Provisional connection where the 1893 road trace meets the independently registered GIS bank. Deck versus culvert and exact bank alignment unresolved; not evidence of a documented named bridge.",
-          "alignmentEvidence": "Provisional Cook\u2019s Road connection follows the reviewed route and reaches dry land beyond corrected Bow Back River bank; deck versus culvert remains unresolved."
+          "alignmentEvidence": "Provisional Cook\u2019s Road connection follows the reviewed route and reaches dry land beyond corrected Bow Back River bank; deck versus culvert remains unresolved.",
+          "priorHeight": 1.5,
+          "heightEvidence": "Task A (5 October 2026): no OS height on Cook's Road. The deck is laid level at the drawn terrace beside it (T22: the ground at the OS terrace readings): the lane's east end 2.82 m, the ground 15 m either side of the deck ends 2.40-2.94 m and the lane 50-120 m west 2.9-3.5 m. The prior 1.5 m was an estimate that left the deck in a dip in the raised ground (T22 decision 4). Deck versus culvert remains unresolved."
         }
       ],
       "nameEvidence": "Cook\u2019s Road on 1893 OS, corroborated by Wessex Archaeology / Crossrail XPM09 historic building recording, section 3.1.6\u20137.",
