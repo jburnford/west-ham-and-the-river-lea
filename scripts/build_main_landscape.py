@@ -75,13 +75,21 @@ os_marsh=osg.marsh_controls(os_register,infra)
 # Terrace zone (T22): the regional bank crest along the shorelines, where no OS reading is near.
 os_bank=osg.bank_controls(os_register,banks,lambda q:banks.crest(np.column_stack([538900+q[:,0],183209-q[:,1]]))-offset,_compartment_water,lambda line:local(line),infra)
 os_marsh=os_marsh+os_bank
-# T21 corrected east of x -628 only (OS_WEST_LIMIT); since T22 the correction spans the whole core box, the
-# terrace readings (use 'terrace') correcting the regional terrace ground in their own dry compartments.
-OS_WEST_LIMIT_PRIOR=-628;OS_WEST_LIMIT=os_register['coreBox'][0]
+# T21 corrected east of x -628 only, from the marsh readings and the rail-side ground (os_corr_prior, unchanged).
+# T22 adds a correction over the whole core box that also takes the terrace controls (terrace, zone street and yard
+# readings and the bank crests; os_corr). East of the terrace zone (x > -628) the ground keeps T21's correction
+# exactly; inside it the T22 correction applies, blended from T21's over TERRACE_BLEND_M inside the zone edge, so the
+# terrace controls do not reach across the Lea into T21's ground.
+OS_WEST_LIMIT_PRIOR=-628;OS_WEST_LIMIT=os_register['coreBox'][0];TERRACE_BLEND_M=20.
+_marsh_ids={r['id'] for r in os_register['readings'] if r['use']=='marsh'}
+os_marsh_prior=[c for c in os_marsh if c['kind']=='rail-side' or (c['kind']=='reading' and c['id'] in _marsh_ids)]
+os_corr_prior,os_corr_prior_meta,_=osg.correction_grid(os_marsh_prior,lambda q:sample(filled,q),_compartment_water,os_register['coreBox'],OS_WEST_LIMIT_PRIOR)
 os_corr,os_corr_meta,os_marsh_residuals=osg.correction_grid(os_marsh,lambda q:sample(filled,q),_compartment_water,os_register['coreBox'],OS_WEST_LIMIT)
 def marsh_at(points):
-    """The marsh between works: the regional early-marsh ground plus the OS marsh correction."""
-    return sample(filled,points)+osg.sample(os_corr,os_corr_meta,points)
+    """The marsh between works: the regional early-marsh ground plus the OS marsh correction (T21's east of the
+    terrace zone, T22's inside it, blended over TERRACE_BLEND_M inside the zone edge)."""
+    prior=osg.sample(os_corr_prior,os_corr_prior_meta,points);s_=np.clip((TERRACE_ZONE[2]-points[:,0])/TERRACE_BLEND_M,0,1)
+    return sample(filled,points)+prior+s_*(osg.sample(os_corr,os_corr_meta,points)-prior)
 os_premises=osg.premises(os_register);os_streets=osg.streets(os_register)
 records={r['id']:r for r in audit['records']};yard_features=[f for f in meta['laterSurfaceLayers']['features'] if f['kind']==11]
 pads=[];pad_geoms=[];RAIL_SIDE_PAD_M=6;terrace_unpadded=set()
@@ -1335,7 +1343,8 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
         'premisesSites':sorted(os_premises),'streetCorridors':{name:ids for name,ids in street_ids.items() if name in os_streets},
         'marshControls':{'readings':sum(1 for c in os_marsh if c['kind']=='reading'),'railSide':sum(1 for c in os_marsh if c['kind']=='rail-side'),'bankCrest':sum(1 for c in os_marsh if c['kind']=='bank-crest'),'bankCrestMethod':f'terrace zone: the regional bank crest every {osg.BANK_CONTROL_SPACING_M:g} m along the shorelines, {osg.BANK_CONTROL_INLAND_M:g} m inland, where no OS ground reading lies within {osg.BANK_CONTROL_CLEAR_M:g} m',
                          'residualBeforeCorrection':{'median':round(float(np.median(os_marsh_residuals)),3),'min':round(float(os_marsh_residuals.min()),3),'max':round(float(os_marsh_residuals.max()),3)}},
-        'correctionGrid':{**os_corr_meta,'range':[round(float(os_corr.min()),3),round(float(os_corr.max()),3)],'westLimit':OS_WEST_LIMIT},
+        'correctionGrid':{**os_corr_meta,'range':[round(float(os_corr.min()),3),round(float(os_corr.max()),3)],'westLimit':OS_WEST_LIMIT,'appliesWestOf':TERRACE_ZONE[2],'blendMetres':TERRACE_BLEND_M},
+        'correctionGridPrior':{**os_corr_prior_meta,'range':[round(float(os_corr_prior.min()),3),round(float(os_corr_prior.max()),3)],'westLimit':OS_WEST_LIMIT_PRIOR,'controls':len(os_marsh_prior),'evidence':'T21 marsh correction (marsh readings and rail-side ground only), kept east of the terrace zone'},
         'support':os_support,'terraceSupport':terrace_support,'terraceMeshStepMetres':TERRACE_MESH_STEP,'terraceSeam':seam,
         'terraceWalls':{'method':f'retaining walls whose ground {WALL_INLAND_M} m behind lies in the terrace zone carry their coping at the higher of the bank crest and that ground (premises pad, street or OS-corrected terrace), blended by the terrace weight','evidence':'Mapped: the interpretive wall routes (river-network retainingEdges) and the premises outlines. Observed: the OS yard, street and wall-top readings behind them. Interpreted: that a wall at a terrace frontage is a wharf or quay wall holding the made ground behind it at yard level; no surveyed section.'},
         'evidence':'Observed: the OS London five-foot plan 1891-96 spot heights in reference/spot-heights/heights.geojson as classified in data/maps/os-ground-levels.json (setting, notes and confidence from the readers). Interpreted: which ground each reading measures (the register rules and decisions), the pad surfaces between readings, the marsh interpolation between readings and its fading away from them, and the ground beside at-grade railways (from data/maps/railway-levels.json). T21 left the terrace west of the Lea and Bow Creek and the High Street west of it unapplied (T21_REPORT.md decision 1); T22 applies them over the terrace zone (T22_REPORT.md).'},
