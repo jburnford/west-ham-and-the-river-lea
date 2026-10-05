@@ -32,6 +32,7 @@
   "defaultLevelODN": 3.5,
   "minLevelODN": 1.9,
   "maxLevelODN": 5.5,
+  "groundSource": "the drawn ground (scripts/sample_drawn_ground.mjs, as the page draws it; task B, October 2026), with road paving, railway and sewer embankments and retaining walls at their drawn copings composed on top",
   "seedPolicy": "Cells at least half inside mapped tidal polygons; all tidal reaches share the test stage.",
   "reviewedRiverConnections": {
     "epoch": "1900",
@@ -2252,11 +2253,18 @@
     "The provisional ODN reference is not a survey calibration; no selected level is assigned to 1888, 1897, 1904 or 1928."
   ],
   "inputHashes": {
-    "docs/data/terrain-1900.json": "43b9af4358bfe3e01bcd5f3c951c9eff7c7138bfc552aedd2d853889d0d0dd30",
-    "docs/data/river-network.json": "82a1cf64c5fe0263507c216247075e1da07793b04b53ae82d8e1035b14505369",
+    "docs/data/terrain-1900.json": "dbec37a18ec48e6000ffee03159dcb37b4e5c80cca17efa47ce56de8ac321e86",
+    "docs/data/river-network.json": "292138e6b62d0b676a312b54431fd907fb6037848c639f95f710fd9c2f9b8e03",
     "docs/data/infrastructure.json": "0ea7697c3022756426d5cddea7127fada9c800127a24b659b7c4275e50f0ffaf",
     "docs/data/ground-plan.json": "6434c94c9a9d3997f95a7035a31d3afc3124da7f8453bcac839b157d8b34f3cc",
-    "docs/data/terrain-1900.scene.f32": "b02695c00e375371836ef487740edd8b9e483dc19aaf3b49f8b7ac4b29220044",
+    "docs/data/main-landscape-1900.json": "e25f83dcfd2ad04ce9d0a2cc6bdd6d0e89c087297dfe188ec552c74098a18d36",
+    "docs/data/main-landscape-1900.core.f32": "347400b1b285a921048125c3e656f0cfc3ee5dd584ef9d30c9b5756fe7ebb7ca",
+    "docs/data/main-landscape-1900.network.f32": "1ee141474b79fc9eb0c8cda9f326a37e2f297b9b823e06f4089c9297cfc86f11",
+    "docs/data/main-landscape-1900.system.f32": "6f29074ffa31e7713d11575ec73e36fa976fa518edd3206fff0fe375ee7b0a8f",
+    "docs/data/main-landscape-1900.extension.f32": "dc4d7014b1af9426dfe53bdb7093b872385d75e5c4ec85fedf4aabeb58df2b42",
+    "docs/data/main-landscape-1900.background.f32": "c5a168122acf0fca04b0fcd6077eeb7023f7bf1b5e66e0175fb321b2a16017d4",
+    "docs/data/main-landscape-1900.level.f32": "838c27f62755a8c60062be72d45d9fd4ae2941ac2caee7930d872f6a94920d52",
+    "docs/data/main-landscape-1900.weight.f32": "185efba204ec6ccb855ea921faf11be2ff6a911b64837757f22dab5eb87b4524",
     "docs/data/terrain-1900.weight.f32": "446a51fc993eb6acc753fe9d1f49b8f643ad4c302273c1be39d8dd5c099cea30",
     "docs/data/terrain-1900.road-mask.u8": "c9292ceafeba7c0df19b8fdf3407201a3e2ece9e8fed068efbd56593cd68007e"
   }
