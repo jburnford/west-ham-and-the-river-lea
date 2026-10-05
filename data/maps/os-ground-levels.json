@@ -20,12 +20,20 @@
    "mark": "bench mark (type bench_mark): the level of the mark, which stands above the ground",
    "structure": "spot height with setting bridge, building, wall_top, embankment_top or railway"
   },
-  "support": "ground readings in the west strip (x < -628) and High Street readings where the regional early-marsh support weight is below 0.9 are not applied (decision 1); elsewhere the main landscape applies around each applied reading",
+  "support": "T21 left the west strip (x < -628) and the High Street readings where the regional early-marsh support weight is below 0.9 unapplied (T21 decision 1); since T22 the main landscape applies over the whole terrace zone [-1280, -240, -628, 1160] (the core box west of x -628), and elsewhere around each applied reading",
   "street": "a street-setting reading within half the street width + 6 m of a drawn street (not a path) sets that street corridor (with the regional street readings)",
-  "premises": "any other non-marsh ground reading within 1.5 m of a ground-plan site the main landscape pads sets that pad",
-  "marsh": "remaining ground readings (marsh, open ground, bank feet, footpaths, undrawn tracks) correct the marsh between works"
+  "premises": "any other non-marsh ground reading within 1.5 m of a ground-plan site the main landscape pads (centre in the marsh support, outside the terrace zone) sets that pad; inside the terrace zone a yard-setting reading within 1.5 m of a site sets (and creates) its pad",
+  "marsh": "remaining ground readings (marsh, open ground, bank feet, footpaths, undrawn tracks) correct the marsh between works",
+  "terrace": "remaining ground readings in the west strip, and High Street readings below the T21 support threshold, inside the terrace zone (open ground, streets the model does not draw, towing paths, yards of sites without a pad) correct the regional terrace ground in the same way"
  },
  "exceptionMetres": 0.6,
+ "terraceZone": [
+  -1280,
+  -240,
+  -628,
+  1160
+ ],
+ "terraceFeatherMetres": 60,
  "zones": {
   "west-strip": "x < -628 (the Bromley/Bow terrace west of the Lea and Bow Creek), outside the High Street band",
   "high-street": "within 45 m of the Stratford High Street centreline",
@@ -37,6 +45,31 @@
   "abbey-marsh-south": "x -150..120, z > 340 (the marsh south of the LT&SR)"
  },
  "premises": {
+  "255": {
+   "name": "Lime Works",
+   "controlIds": [
+    "sh_538020_183095"
+   ]
+  },
+  "421": {
+   "name": "Albion Works (Oil and Grease)",
+   "controlIds": [
+    "sh_538027_182979",
+    "sh_538069_183002"
+   ]
+  },
+  "260": {
+   "name": "Howard & Sons",
+   "controlIds": [
+    "sh_538165_183446"
+   ]
+  },
+  "417": {
+   "name": "Four Mills Distillery",
+   "controlIds": [
+    "sh_538179_182078"
+   ]
+  },
   "924": {
    "name": "Gas Works",
    "controlIds": [
@@ -73,12 +106,45 @@
   }
  },
  "streets": {
-  "Marshgate Lane": [
-   "sh_538078_183283"
-  ],
   "Stratford High Street": [
+   "sh_537784_183026",
+   "sh_537805_183041",
+   "sh_537835_183063",
+   "sh_537884_183113",
+   "sh_537944_183152",
+   "sh_537977_183182",
+   "sh_538011_183218",
+   "sh_538019_183216",
    "sh_538161_183355",
    "sh_538210_183406"
+  ],
+  "St Leonard Street": [
+   "sh_537907_182852",
+   "sh_537928_182805",
+   "sh_537957_182763",
+   "sh_537983_182720"
+  ],
+  "Priory Street": [
+   "sh_537961_182879",
+   "sh_538017_182906"
+  ],
+  "Franklin Street": [
+   "sh_537983_182833",
+   "sh_537990_182835"
+  ],
+  "Washington Street": [
+   "sh_538016_182794"
+  ],
+  "Jefferson Street": [
+   "sh_538039_182751"
+  ],
+  "Hancock Road": [
+   "sh_538044_182864",
+   "sh_538068_182823"
+  ],
+  "Marshgate Lane": [
+   "sh_538054_183338",
+   "sh_538078_183283"
   ],
   "Three Mills Lane": [
    "sh_538304_182814",
@@ -127,8 +193,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "High Street, Bow; dot 20 px left of figure beside a small circle (lamp?) and near H·I·G·H interpuncts",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537628_183260",
@@ -145,8 +210,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Towing Path on the west bank of the River Lea where it leaves Old Ford Road; dot centred between the path edge lines 10 px NE of the figure; no bank hatching at this point",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace",
+   "exception": "Old Ford towing path inside the bank band (within 14 m of the regional shoreline), where the model draws the regional bank crest (2.98 m, interpolated along the bank from bank-top readings elsewhere); the OS towing path below the Old Ford Road slope is 0.7 m lower"
   },
   {
    "id": "sh_537629_182281",
@@ -181,8 +246,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Burdett Street; only mark is the tick between E and E of STREET (no other interpuncts in STREET); digits clear 8x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537641_182839",
@@ -217,8 +281,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "St Mary's churchyard, Bow, beside Bow Road; no dot beside figure (only dot is on the Bow Road kerb 22 px NW at 617,392); position = centre of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537646_183212",
@@ -235,8 +298,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Old Ford Road footway (between dotted lines) at the top of the hatched slope down to the Towing Path; dot 3 px NW of the figure; second digit closed at the top in raw pixels (8, not 6), 5 flat-topped",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537647_182935",
@@ -253,8 +315,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Bow Road south kerb at the Brewery Yard corner; dot above-right of figure",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537655_182741",
@@ -271,8 +332,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "street by the Board school, south; dot left of figure; 6 open at 7-8x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537663_182312",
@@ -307,8 +367,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Devon's Road east of the bridge; only dot is the E·V interpunct of DEVON'S; 8x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537671_183228",
@@ -325,8 +384,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Towing Path along the River Lea below the Old Ford Road slope; small dot at the end of the 'Path' lettering on the path edge line, figure written 15 px NE over the river; the dot could be a lettering stop",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace",
+   "exception": "Old Ford towing path inside the bank band, where the model draws the regional bank crest (2.98 m); the OS towing path is 0.9 m lower"
   },
   {
    "id": "sh_537671_183381",
@@ -340,11 +399,12 @@
     -171.9
    ],
    "zone": "west-strip",
-   "category": "structure",
+   "category": "ground",
    "supportWeight": 0.023,
    "notes": "East London Soap Works: figure written in a small open yard between works buildings, dot on the west rail of the works siding 15 px east; taken as rails at grade in the works yard",
-   "use": "none",
-   "reason": "spot height on a structure (railway); not the ground"
+   "decision": true,
+   "use": "terrace",
+   "reason": "rails at grade in the East London Soap Works yard (the reader set railway: \"taken as rails at grade in the works yard\"); a works siding laid in the yard surface, so the reading is the yard level; applied as terrace ground (T22)"
   },
   {
    "id": "sh_537683_182915",
@@ -361,8 +421,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Baker's Alley; figure written on the building, dot in the alley 15 px left",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537684_182693",
@@ -379,8 +438,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Devons Road at Bruce Road; dot above-right; second digit 6 at 6x/8x, ambiguous at 12x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537687_182395",
@@ -433,8 +491,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Bow Road south carriageway (B O W lettering); dot above-left of figure",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537695_182691",
@@ -469,8 +526,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "open ground behind houses east of Baker's Alley; no dot found (only a dot on a fence line at 779,617); final 6 open at 12x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537707_183001",
@@ -487,8 +543,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Bow Road (north carriageway) east of St Mary's; dot left of figure",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537708_182400",
@@ -505,8 +560,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Tibbatts Road; dot left of figure between S and 29 (TIBBATTS has no interpuncts); 8x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537709_183158",
@@ -523,8 +577,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "overlap strip with m18_131060_87140: Old Ford Road by Taylor's Buildings; the only dot is after the A of R O A D (A·), possibly an interpunct",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537714_182653",
@@ -541,8 +594,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Devons Road; dot is the N· of DEVON'S lettering",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537714_182847",
@@ -559,8 +611,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "High Street, Bow (H·I·G·H lettering); only nearby dot is the H·I interpunct; position = centre of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537717_183147",
@@ -610,11 +661,12 @@
     -218.59
    ],
    "zone": "west-strip",
-   "category": "structure",
+   "category": "ground",
    "supportWeight": 0.707,
    "notes": "works siding (two rail lines about 4 px apart) at the foot of the G.E.R. bank beside the East London Soap Works, dot on the rail at a building corner, figure to the right; italic 3 open at the left at 8x",
-   "use": "none",
-   "reason": "spot height on a structure (railway); not the ground"
+   "decision": true,
+   "use": "terrace",
+   "reason": "rails at grade in the East London Soap Works yard (the reader set railway: \"taken as rails at grade in the works yard\"); a works siding laid in the yard surface, so the reading is the yard level; applied as terrace ground (T22); at the foot of the G.E.R. bank by a works building"
   },
   {
    "id": "sh_537728_182364",
@@ -631,8 +683,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Devon's Road beside the siding fan; only dot is the O·A interpunct of ROAD; 8 (closed) differs from final 6 (open) at 6x/8x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537729_182985",
@@ -649,8 +700,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Bow Road by the Urinal; dot right of figure on the kerb line",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537732_182607",
@@ -667,8 +717,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Devons Road at Raverley Street; dot above-right; 6 open",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537733_182359",
@@ -685,8 +734,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "R·O·A·D lettering west of Brickfield Road; only nearby dot is O· interpunct; centre of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537738_182717",
@@ -703,8 +751,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Bruce Road; dot above-right of figure before E of BRUCE; 9 clear at 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537740_182863",
@@ -721,8 +768,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "High Street, Bow; isolated dot right of figures (F.P. dot separate); 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537742_183044",
@@ -739,8 +785,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "overlap strip with m18_131060_87140: street past the Baptist Chapel (Bow); dot above the figure; final G-shaped 6 differs from the 8 beside it at 7x/12x and in raw pixels",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537751_182730",
@@ -793,8 +838,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Devons Road by the P.O. and P.H.; dot left of figure (separate from the F.P. dot); 3s open-left at 12x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537767_182396",
@@ -811,8 +855,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Tibbatts Road / Devons Road corner under F.P.; dot could be the F.P. dot; digits 8x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537768_183098",
@@ -829,8 +872,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "overlap strip with m18_131060_87140: road junction by the Sunday School; solid dot below the figure",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537774_182936",
@@ -883,8 +925,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Bow High Street tramway; dot a solid blob on the rail 10 px above the figure; final 9 one upper counter; figure ends 14 px from the south edge",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Stratford High Street",
+   "use": "street"
   },
   {
    "id": "sh_537785_182504",
@@ -901,8 +943,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Devons Road south, descending toward the LT&SR; dot above figure",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537790_182877",
@@ -919,8 +960,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "High Street, Bow at Edgar Road corner; dots nearby belong to F.P. and the dotted kerb; position = centre of figures; round-topped 6 at 7x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537798_182447",
@@ -937,8 +977,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "road junction south of railway; dot above, 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537800_182474",
@@ -991,8 +1030,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Bow High Street tramway at the Payne Road corner; dot a solid blob on the rail 8 px below-right of the figure",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Stratford High Street",
+   "use": "street"
   },
   {
    "id": "sh_537806_182562",
@@ -1009,8 +1048,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Love Lane west, by P.H.; dot above figure; 7x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537808_182366",
@@ -1027,8 +1065,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Brickfield Road north end; dot below may be interpunct before B of BRICKFIELD",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537811_182752",
@@ -1045,8 +1082,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "road (…WELL ROAD, R·O·A·D lettering) at Edgar Road; dot above-left of figures; 6 at 7x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537819_182325",
@@ -1063,8 +1099,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Brickfield Road by F·I·E·L·D; no own dot; centre of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537823_182280",
@@ -1081,8 +1116,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Brickfield Road south by R·O·A·D; no dot; centre of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537835_183063",
@@ -1099,8 +1133,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Bow Road / High Street (Bow) tramway at the west end of Bow Bridge; dot a solid blob on the north rail 15 px NW of the figure; final 8 two counters",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Stratford High Street",
+   "use": "street"
   },
   {
    "id": "sh_537841_182691",
@@ -1117,8 +1151,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Grace Street / Powis Road corner; dot left of figure; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537845_182254",
@@ -1135,8 +1168,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Brickfield Road by St Andrew's Church; dot left; just south of the py~762 join",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537848_182576",
@@ -1171,8 +1203,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "west end of Donald Street by Argyle Works; dot above, 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537861_182499",
@@ -1189,8 +1220,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Stepney Union Workhouse grounds above 'Bromley Junction'; no dot found; centre of figures; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537865_182226",
@@ -1261,8 +1291,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "High Street by the D.F. (drinking fountain) at Manor House Place; dot above-left of figures, separate from D.F. circle",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537880_182547",
@@ -1279,8 +1308,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "open ground between workhouse buildings; dot above-left of figure; 7x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537882_182588",
@@ -1297,8 +1325,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Love Lane; dot after E of LOVE, F.P. with own dot just above; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537884_182338",
@@ -1315,8 +1342,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Devas Street at Cross Street; dot left; oval 0",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537884_183113",
@@ -1333,8 +1359,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "east end of Bow Bridge over the River Lea, north footway by a hydrant (H·); faint dot 3 px left of the figure next to the dotted footway line; the highest point of the road profile 20·4-20·8 (west) / 16·8-15·3 (east), so taken as the bridge",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Stratford High Street",
+   "use": "street"
   },
   {
    "id": "sh_537889_183102",
@@ -1369,8 +1395,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Gurley Street at Cross Street; dot left; final 9 with tail distinct from the 2",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537893_182685",
@@ -1405,8 +1430,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "side street south of the High Street by Ammiel Terrace; dot 5 px above-left of the figure between the dotted kerbs; figure ends 6 px from the south edge",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537900_182944",
@@ -1423,8 +1447,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "High Street north of St Mary's Church; dot sits between S and T of STREET lettering (possible interpunct); 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537907_182852",
@@ -1441,8 +1464,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "street at the west end of Priory Street by an H mark; no survey dot found; position = centre of figures; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "St Leonard Street",
+   "use": "street"
   },
   {
    "id": "sh_537908_183005",
@@ -1459,8 +1482,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "road south of Ammiel Terrace; dot above figures; 6 open at 7x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537911_182974",
@@ -1495,8 +1517,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "open works ground south of Love Lane; dot above-right; final 8 vs 3 unsettled at 10x/18x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537923_182380",
@@ -1549,8 +1570,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Empson Street; separate dot above-right of figure, distinct from the ·F.P dot",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537928_182805",
@@ -1567,8 +1587,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "road junction by the Congl. Chapel; dot left of figures; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "St Leonard Street",
+   "use": "street"
   },
   {
    "id": "sh_537928_183050",
@@ -1621,8 +1641,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "workhouse grounds just north of Down Platform; dot left of figure; 7x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537944_183152",
@@ -1639,8 +1658,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "High Street tramway by Bow Granary; dot a solid blob on the north rail under the A of TRAMWAY (no other dots in that lettering), 15 px SE of the figure; final 8 two counters in raw pixels",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Stratford High Street",
+   "use": "street"
   },
   {
    "id": "sh_537949_182711",
@@ -1657,8 +1676,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "lane east of Grace Street works; dot left of figure; 7x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537953_183040",
@@ -1693,8 +1711,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "street east of the Congl. Chapel; dot just before the S of the street lettering (possible interpunct); 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "St Leonard Street",
+   "use": "street"
   },
   {
    "id": "sh_537961_182617",
@@ -1711,8 +1729,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Love Lane by St Leonard's School; dot above-left of figure; 7x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537961_182879",
@@ -1729,8 +1746,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Priory Street; dot right of figures lies between Y and S of PRIORY STREET lettering (P·R·I·O·R·Y has interpuncts); 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Priory Street",
+   "use": "street"
   },
   {
    "id": "sh_537962_183125",
@@ -1747,8 +1764,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "open yard of Lion Wharf (Iron Works) behind the High Street terraces; dot 6 px left of the figure; final 3 open middle-left",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537963_182233",
@@ -1765,8 +1781,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Empson Street below M·P; only dot is interpunct; centre of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537967_182199",
@@ -1783,8 +1798,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Colin Street below C·O·L; only dot is interpunct; centre of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537968_182594",
@@ -1801,8 +1815,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Love Lane south side; dot above-left of figure; 7x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537975_183046",
@@ -1816,11 +1829,12 @@
     162.8
    ],
    "zone": "west-strip",
-   "category": "structure",
+   "category": "ground",
    "supportWeight": 0.0,
    "notes": "Towing Path along the river (C.C. at L.W. boundary to the north) above the hatched slope down to the Ratner Safe Works; bold dot 4 px left of the figure on the path (a second small dot at 773,966 by the hatching start is not taken)",
-   "use": "none",
-   "reason": "spot height on a structure (embankment_top); not the ground"
+   "decision": true,
+   "use": "terrace",
+   "reason": "towing path along the river bank: the reader set embankment_top (the path runs on the bank top above the water), but the path is the ground surface beside the river, and the bank crest the main landscape draws from the high-confidence bank-top readings stands at it; applied as terrace ground (T22)"
   },
   {
    "id": "sh_537977_183182",
@@ -1837,8 +1851,8 @@
    "category": "ground",
    "supportWeight": 0.042,
    "notes": "Stratford High Street tramway by the Bow Bridge Wharf (Soap & Chemical Works) frontage; dot a solid blob on the north rail 6 px right of the figure, before the '(circa A.D. 1110)' lettering; final 3 no counter",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Stratford High Street",
+   "use": "street"
   },
   {
    "id": "sh_537983_182720",
@@ -1855,8 +1869,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "St Leonard's Street; two dots by F.P. above figure (one is F.P.'s own); used the dot left of F; final 3 matches lead 3; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "St Leonard Street",
+   "use": "street"
   },
   {
    "id": "sh_537983_182833",
@@ -1873,8 +1887,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Franklin Street; dot above the N of FRANKLIN, figures right; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Franklin Street",
+   "use": "street"
   },
   {
    "id": "sh_537990_182407",
@@ -1891,8 +1905,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "STREET lettering south of Sick Asylum; dot above-left may be an interpunct E·E",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_537990_182835",
@@ -1909,8 +1922,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Franklin Street; no dot of its own; position = centre of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Franklin Street",
+   "use": "street"
   },
   {
    "id": "sh_538003_183416",
@@ -1963,8 +1976,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Soap Works (disused) yard; dot above-left of figures; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538011_183218",
@@ -1981,8 +1993,8 @@
    "category": "ground",
    "supportWeight": 0.532,
    "notes": "High Street",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Stratford High Street",
+   "use": "street"
   },
   {
    "id": "sh_538012_183391",
@@ -1999,8 +2011,7 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "Marshgate Lane at the south corner of St Thomas's Mills; dot 10 px NW of the figure, inside the dotted footway edge; 5 flat-topped",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538016_182794",
@@ -2017,8 +2028,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Washington Street; only dot is the O·N interpunct; position = centre of figures; all three 3s alike",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Washington Street",
+   "use": "street"
   },
   {
    "id": "sh_538017_182239",
@@ -2035,8 +2046,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Empson Street by F.P. near Berger Hall; F.P./H dots only; centre of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538017_182906",
@@ -2053,8 +2063,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "north end of Hancock Road just south of the sheet join; dot above figures; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Priory Street",
+   "use": "street"
   },
   {
    "id": "sh_538019_183216",
@@ -2071,8 +2081,8 @@
    "category": "ground",
    "supportWeight": 0.568,
    "notes": "Stratford High Street tramway; dot is a solid blob on the north rail 5 px right of the figure; final 9 one upper counter",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Stratford High Street",
+   "use": "street"
   },
   {
    "id": "sh_538020_183095",
@@ -2089,8 +2099,9 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Lime Works yard by the kilns; dot 8 px left of the figure; 5s flat-topped",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "siteId": 255,
+   "siteName": "Lime Works",
+   "use": "premises"
   },
   {
    "id": "sh_538024_182520",
@@ -2107,8 +2118,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Bromley Station forecourt; dot left of figure; 7x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538024_182541",
@@ -2143,8 +2153,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "St Leonard's Street between two F.P.s; no dot of its own; centre of figures; final 3 matches lead 3; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538026_182204",
@@ -2179,8 +2188,9 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Albion Works (Oil & Grease) yard; dot above figures; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "siteId": 421,
+   "siteName": "Albion Works (Oil and Grease)",
+   "use": "premises"
   },
   {
    "id": "sh_538032_183241",
@@ -2215,8 +2225,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Jefferson Street; dot after the final N of JEFFERSON (no interpuncts in that name), figures right; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Jefferson Street",
+   "use": "street"
   },
   {
    "id": "sh_538044_182580",
@@ -2251,8 +2261,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Hancock Road at its north end; last digit 6 (not 8); dot taken as the interpunct in 'H·A' of the road name, ~20 px from the figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Hancock Road",
+   "use": "street"
   },
   {
    "id": "sh_538045_182571",
@@ -2284,11 +2294,13 @@
     173.75
    ],
    "zone": "west-strip",
-   "category": "structure",
+   "category": "ground",
    "supportWeight": 0.0,
    "notes": "Lea Towing Path (between the letters of 'Path' lettering and the figure); dot left of figures; 10x",
-   "use": "none",
-   "reason": "spot height on a structure (embankment_top); not the ground"
+   "decision": true,
+   "use": "terrace",
+   "reason": "towing path along the river bank: the reader set embankment_top (the path runs on the bank top above the water), but the path is the ground surface beside the river, and the bank crest the main landscape draws from the high-confidence bank-top readings stands at it; applied as terrace ground (T22)",
+   "exception": "towing path dot 1.5 m from the drawn Lea water edge, on the 3 m earth bank face; the crest stands at the OS level behind it"
   },
   {
    "id": "sh_538053_182517",
@@ -2323,8 +2335,9 @@
    "category": "ground",
    "supportWeight": 0.732,
    "notes": "Marshgate Lane",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Marshgate Lane",
+   "use": "street",
+   "exception": "Marshgate Lane 17 m south of the provisional Marshgate Lane connection deck (1.5 m, an estimate; deck versus culvert unresolved): the lane is cut down to the deck (approach cutting, 1 in 20 from 2 m beyond the deck), 1.7 m below the OS lane level; the deck level is T22 decision 4"
   },
   {
    "id": "sh_538055_182867",
@@ -2356,11 +2369,12 @@
     1147.1
    ],
    "zone": "west-strip",
-   "category": "structure",
+   "category": "ground",
    "supportWeight": 0.0,
    "notes": "Limehouse Cut towing path at its tip by the School; dot below-left on the bank line, a second dot above",
-   "use": "none",
-   "reason": "spot height on a structure (embankment_top); not the ground"
+   "decision": true,
+   "use": "terrace",
+   "reason": "towing path along the river bank: the reader set embankment_top (the path runs on the bank top above the water), but the path is the ground surface beside the river, and the bank crest the main landscape draws from the high-confidence bank-top readings stands at it; applied as terrace ground (T22) (Limehouse Cut)"
   },
   {
    "id": "sh_538059_182513",
@@ -2413,8 +2427,8 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Hancock Road; only nearby dot is the C·K interpunct of H·A·N·C·O·C·K; position = centre of figures; 3 open at 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "road": "Hancock Road",
+   "use": "street"
   },
   {
    "id": "sh_538069_182379",
@@ -2431,8 +2445,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "street junction NE of Favonia Street; dot left; flat-top 5",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538069_183002",
@@ -2449,8 +2462,9 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "yard east of Albion Works; dot left",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "siteId": 421,
+   "siteName": "Albion Works (Oil and Grease)",
+   "use": "premises"
   },
   {
    "id": "sh_538070_182676",
@@ -2485,8 +2499,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Three Mills Lane at the corner of Imperial Street; dot is the interpunct in 'H·R' of THREE, upper-left of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538072_183022",
@@ -2500,11 +2513,13 @@
     187.48
    ],
    "zone": "west-strip",
-   "category": "structure",
+   "category": "ground",
    "supportWeight": 0.0,
    "notes": "towing path at the bend; dot above-right on the wall line",
-   "use": "none",
-   "reason": "spot height on a structure (embankment_top); not the ground"
+   "decision": true,
+   "use": "terrace",
+   "reason": "towing path along the river bank: the reader set embankment_top (the path runs on the bank top above the water), but the path is the ground surface beside the river, and the bank crest the main landscape draws from the high-confidence bank-top readings stands at it; applied as terrace ground (T22)",
+   "exception": "towing path dot 1.5 m from the drawn Lea water edge, on the 3 m earth bank face; the crest stands at the OS level behind it"
   },
   {
    "id": "sh_538075_182453",
@@ -2572,11 +2587,13 @@
     1108.99
    ],
    "zone": "west-strip",
-   "category": "structure",
+   "category": "ground",
    "supportWeight": 0.0,
    "notes": "Limehouse Cut south bank / towing path at the east edge; two dots above figure, one may belong to the bank line",
-   "use": "none",
-   "reason": "spot height on a structure (embankment_top); not the ground"
+   "decision": true,
+   "use": "terrace",
+   "reason": "towing path along the river bank: the reader set embankment_top (the path runs on the bank top above the water), but the path is the ground surface beside the river, and the bank crest the main landscape draws from the high-confidence bank-top readings stands at it; applied as terrace ground (T22) (Limehouse Cut)",
+   "exception": "Limehouse Cut towing path 1.0 m from the drawn Cut edge: the coarse river-system bank triangles span from the canal-face coping to the bank behind, so the drawn surface at the dot lies between them"
   },
   {
    "id": "sh_538087_182975",
@@ -2590,11 +2607,12 @@
     233.87
    ],
    "zone": "west-strip",
-   "category": "structure",
+   "category": "ground",
    "supportWeight": 0.0,
    "notes": "towing path by the Soap Works (disused); dot 11 px right of figures",
-   "use": "none",
-   "reason": "spot height on a structure (embankment_top); not the ground"
+   "decision": true,
+   "use": "terrace",
+   "reason": "towing path along the river bank: the reader set embankment_top (the path runs on the bank top above the water), but the path is the ground surface beside the river, and the bank crest the main landscape draws from the high-confidence bank-top readings stands at it; applied as terrace ground (T22)"
   },
   {
    "id": "sh_538090_183053",
@@ -2611,8 +2629,7 @@
    "category": "ground",
    "supportWeight": 0.026,
    "notes": "west of Bow Bridge Works; dot RIGHT of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538095_182783",
@@ -2629,8 +2646,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Hancock Road; dot is the interpunct in 'O·A' of ROAD, above-right of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538096_182947",
@@ -2665,8 +2681,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "street north of Berger Hall; dot right of figure (F.P. has its own dot); 10x and 20x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538117_183327",
@@ -2701,8 +2716,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "High Street / St Leonard's Street by the F.P.; dot below figure, separate from the F.P. dot; second digit 6/8 unsettled at 7x and 20x (alt 28·6)",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538119_182144",
@@ -2773,8 +2787,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "St Leonard's Street at James Street; small arrow-like mark above-left taken as the dot; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538128_182907",
@@ -2788,11 +2801,13 @@
     301.84
    ],
    "zone": "west-strip",
-   "category": "structure",
+   "category": "ground",
    "supportWeight": 0.0,
    "notes": "towing path south of the sheet join; dot right of figures",
-   "use": "none",
-   "reason": "spot height on a structure (embankment_top); not the ground"
+   "decision": true,
+   "use": "terrace",
+   "reason": "towing path along the river bank: the reader set embankment_top (the path runs on the bank top above the water), but the path is the ground surface beside the river, and the bank crest the main landscape draws from the high-confidence bank-top readings stands at it; applied as terrace ground (T22)",
+   "exception": "towing path dot 1.9 m from the drawn Lea water edge, on the 3 m earth bank face; the crest stands at the OS level behind it"
   },
   {
    "id": "sh_538132_182726",
@@ -2809,8 +2824,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Three Mills Lane; dot is the interpunct in 'I·L' of MILLS, below-right of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538138_183324",
@@ -2845,8 +2859,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "St Leonard's Street at Peter Street; dot above-left; 5 flat-topped at 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538147_182265",
@@ -2863,8 +2876,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "St Leonard's Street by the Urinal; no survey dot (dot below is the i of Urinal); sheet join py ~764 passes just above; position = centre of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538149_182179",
@@ -2878,11 +2890,12 @@
     1030.38
    ],
    "zone": "west-strip",
-   "category": "ground",
+   "category": "structure",
    "supportWeight": 0.008,
    "notes": "St Leonard's Street by Bromley Lock; nearest dot is the O·N interpunct of ST LEONARD'S; position = centre of figures; 10x",
+   "decision": true,
    "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "reason": "St Leonard's Street on Four Mills Bridge over the Limehouse Cut (OS: the street crosses the Cut here; Bromley Lock beside it): a bridge-deck level; the model draws neither the street nor the bridge here, only the Cut water (T22)"
   },
   {
    "id": "sh_538150_182103",
@@ -2899,8 +2912,7 @@
    "category": "ground",
    "supportWeight": 0.231,
    "notes": "St Leonard's Street; dot directly after the final T of STREET, above the figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538155_182051",
@@ -2917,8 +2929,7 @@
    "category": "ground",
    "supportWeight": 0.543,
    "notes": "St Leonard's Street by the P.H.; dot above figures, F.P. dot separate above-left; 7x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538160_183413",
@@ -2971,8 +2982,9 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "yard south of City Mills; dot left of figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "siteId": 260,
+   "siteName": "Howard & Sons",
+   "use": "premises"
   },
   {
    "id": "sh_538179_182078",
@@ -2989,8 +3001,9 @@
    "category": "ground",
    "supportWeight": 0.672,
    "notes": "inside Four Mills Distillery; figure beside a circled survey-station triangle, position = station centre; 10x",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "siteId": 417,
+   "siteName": "Four Mills Distillery",
+   "use": "premises"
   },
   {
    "id": "sh_538183_182766",
@@ -3007,8 +3020,7 @@
    "category": "ground",
    "supportWeight": 0.0,
    "notes": "Three Mills Lane; dot is the interpunct in 'L·A' of LANE, ~18 px above the figures",
-   "use": "none",
-   "reason": "outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)"
+   "use": "terrace"
   },
   {
    "id": "sh_538194_182417",
@@ -3040,11 +3052,13 @@
     349.25
    ],
    "zone": "west-strip",
-   "category": "structure",
+   "category": "ground",
    "supportWeight": 0.0,
    "notes": "towing path; no adjacent dot (dots nearby belong to the C.C. boundary dash-dot line), position = figures",
-   "use": "none",
-   "reason": "spot height on a structure (embankment_top); not the ground"
+   "decision": true,
+   "use": "terrace",
+   "reason": "towing path along the river bank: the reader set embankment_top (the path runs on the bank top above the water), but the path is the ground surface beside the river, and the bank crest the main landscape draws from the high-confidence bank-top readings stands at it; applied as terrace ground (T22)",
+   "exception": "towing path on the Lea west bank, but inside the drawn river (GIS channel outline), 4 m from its edge: the drawn water is wider than the OS channel here, so the reading falls on the channel bed"
   },
   {
    "id": "sh_538203_182575",
@@ -3148,11 +3162,13 @@
     395.45
    ],
    "zone": "west-strip",
-   "category": "structure",
+   "category": "ground",
    "supportWeight": 0.023,
    "notes": "towing path by Ornamental Moulding Works; dot left of figures (other dots nearby belong to the C.C. dash-dot line)",
-   "use": "none",
-   "reason": "spot height on a structure (embankment_top); not the ground"
+   "decision": true,
+   "use": "terrace",
+   "reason": "towing path along the river bank: the reader set embankment_top (the path runs on the bank top above the water), but the path is the ground surface beside the river, and the bank crest the main landscape draws from the high-confidence bank-top readings stands at it; applied as terrace ground (T22)",
+   "exception": "towing path dot 1.2 m from the drawn Lea water edge: the model draws a 3 m earth bank face from the water edge to the bank crest (T11/T14 bank band); the crest itself stands at the OS level 2-3 m back"
   },
   {
    "id": "sh_538243_182800",
@@ -3478,7 +3494,7 @@
    "notes": "Three Mills Lane east of the bridge; dot left",
    "road": "Three Mills Lane",
    "use": "street",
-   "exception": "Three Mills Lane at the east bank of the Lea: the Three Mills Lea bridge deck (road-traces, 2.2 m; OS 21.2 ft on the bridge, 4.23 m) ends 25 m short of the drawn east water edge, so the lane crosses drawn water and the bank face rises from it; the street level cannot be met until the bridge is re-levelled and lengthened (structure, decision 3)"
+   "exception": "Three Mills Lane at the east bank of the Lea: the Three Mills Lea bridge deck (T22: re-levelled to the OS 21.2 ft, 4.23 m; prior 2.2 m) ends 25 m short of the drawn east water edge, so the lane crosses drawn water and the bank face rises from it; the street level cannot be met until the bridge is lengthened (structure, T21 decision 3)"
   },
   {
    "id": "sh_538304_183237",

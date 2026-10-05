@@ -41,7 +41,7 @@ for (const r of register.readings) {
   assert.equal(r.valueFeet, s.value_ft, r.id);
   assert(Math.hypot(r.position[0] - s.x, r.position[1] - s.z) < 0.01, `${r.id} position`);
   assert(Math.abs(r.sceneY - sceneY(s.value_ft)) < 0.001, `${r.id} scene level`);
-  assert(['premises', 'street', 'marsh', 'none'].includes(r.use), `${r.id} use`);
+  assert(['premises', 'street', 'marsh', 'terrace', 'none'].includes(r.use), `${r.id} use`);
   if (r.use === 'none') assert(r.reason, `${r.id}: a reading not applied must say why`);
   if (r.use !== 'none') assert.equal(r.category, 'ground', `${r.id}: only ground readings are applied`);
   if (r.exception) assert.notEqual(r.use, 'none', `${r.id}: exceptions are applied readings`);
@@ -147,16 +147,46 @@ for (const [siteId, item] of Object.entries(register.premises)) {
   }
 }
 
+// 5. The terrace zone (T22): every applied reading there, exceptions included, has a median |drawn - OS| within
+// 0.3 m and a 90th percentile within the register's 0.6 m; objects there stand on their recorded seats.
+const [tx0, tz0, tx1, tz1] = register.terraceZone;
+const inTerrace = ([x, z]) => x >= tx0 && x <= tx1 && z >= tz0 && z <= tz1;
+const terrace = register.readings.filter((r) => r.use !== 'none' && inTerrace(r.position)).map((r) => r.id);
+const terraceAbs = rows
+  .filter((r) => terrace.includes(r.id))
+  .map((r) => Math.abs(r.residual))
+  .sort((a, b) => a - b);
+const tpct = (q) => terraceAbs[Math.min(terraceAbs.length - 1, Math.floor(q * terraceAbs.length))];
+assert(terraceAbs.length >= 90, 'Too few applied readings on the terrace');
+assert(tpct(0.5) <= 0.3, `Terrace median |drawn - OS| ${tpct(0.5).toFixed(2)} m`);
+assert(tpct(0.9) <= limit, `Terrace 90th percentile |drawn - OS| ${tpct(0.9).toFixed(2)} m`);
+const seats = landscape.meta.seats ?? {};
+let seatedObjects = 0;
+for (const b of [...data.factoryBuildings.buildings, ...data.factoryBuildings.structures, ...data.housingDetail.rows])
+  if (b.id !== undefined && seats[b.id] !== undefined) {
+    assert(Math.abs(b.landscapeLift - 0.1 - seats[b.id]) < 1e-6, `${b.id} is not seated on its recorded seat`);
+    seatedObjects++;
+  }
+assert(seatedObjects > 400, 'Too few objects on recorded seats');
+
 console.log(
   JSON.stringify({
     status: 'PASS',
     readings: register.readings.length,
     applied: rows.length,
-    byUse: Object.fromEntries(['premises', 'street', 'marsh'].map((u) => [u, rows.filter((r) => r.use === u).length])),
+    byUse: Object.fromEntries(
+      ['premises', 'street', 'marsh', 'terrace'].map((u) => [u, rows.filter((r) => r.use === u).length])
+    ),
     medianAbsMetres: +pct(0.5).toFixed(3),
     p90AbsMetres: +pct(0.9).toFixed(3),
     worstKept: kept.reduce((w, r) => (Math.abs(r.residual) > Math.abs(w.residual) ? r : w)),
     exceptions: rows.filter((r) => r.exception).map((r) => [r.id, +r.residual.toFixed(2)]),
+    terrace: {
+      applied: terraceAbs.length,
+      medianAbsMetres: +tpct(0.5).toFixed(3),
+      p90AbsMetres: +tpct(0.9).toFixed(3),
+      seatedObjects,
+    },
   })
 );
 console.log('OS ground levels: register matches the spot heights; the drawn ground meets every applied reading.');

@@ -11,7 +11,9 @@ is converted to scene y with the project datum and given
 - a zone (for the report and the check);
 - a use: 'premises' (the yard level of a ground-plan site whose premises pad the
   main landscape draws), 'street' (the level of a drawn street corridor), 'marsh'
-  (open ground between works: the marsh correction), or 'none' with a reason.
+  (open ground between works: the marsh correction), 'terrace' (open ground,
+  undrawn streets and towing paths on the Bromley/Bow terrace west of the Lea and
+  Bow Creek: the same correction of the regional ground), or 'none' with a reason.
 
 The rules are below; DECISIONS lists every reading whose use differs from the
 rule, with the reason. scripts/build_main_landscape.py reads the register;
@@ -34,7 +36,12 @@ DATUM = {'liverpoolToNewlynFeet': -1.3, 'footMetres': 0.3048, 'odnMinusSceneYMet
          'source': 'docs/data/terrain-1900.json verticalReference (channelsea-crest-v1)'}
 GROUND_SETTINGS = {'street', 'yard', 'marsh', 'open_ground', 'embankment_foot'}
 STRUCTURE_SETTINGS = {'bridge', 'building', 'wall_top', 'embankment_top', 'railway'}
-SUPPORT_MIN = .9          # High Street readings below this regional early-marsh weight are not applied (decision 1)
+SUPPORT_MIN = .9          # T21: High Street readings below this regional early-marsh weight were not applied (T21 decision 1)
+# T22: the terrace zone, where the main landscape now draws the regional ground corrected to the OS readings
+# (scripts/build_main_landscape.py TERRACE_ZONE): the core box west of x = -628 (T21's west strip; east of it T21's marsh rules apply
+# unchanged).
+TERRACE_ZONE = [-1280, -240, -628, 1160]
+TERRACE_FEATHER_M = 60    # outside the core box the main landscape fades from the terrace over this band (west, north, south)
 STREET_REACH_M = 6        # a street reading belongs to a drawn street within half its width + this
 PREMISES_REACH_M = 1.5      # a yard reading belongs to a site pad within this distance of its outline
 
@@ -45,7 +52,24 @@ GAS_RAMP = ('on the gas works road at the foot of the hatched approach embankmen
 SHORT_WALL = ('on the Short Wall, the lane along the top of the Lea river wall (16.9-17.9 ft, about 2.6 m above Mill Meads): '
               'the drawn Three Mills Wall lane lies inside the river network tidal outline, where the native bank heights are kept, '
               'so raising it to the OS means building the wall and bank under it (a structure; decision 4), not a street level')
+TOWING_PATH = ('towing path along the river bank: the reader set embankment_top (the path runs on the bank top above the '
+               'water), but the path is the ground surface beside the river, and the bank crest the main landscape draws '
+               'from the high-confidence bank-top readings stands at it; applied as terrace ground (T22)')
+RAILS_IN_YARD = ('rails at grade in the East London Soap Works yard (the reader set railway: "taken as rails at grade in the works '
+                 'yard"); a works siding laid in the yard surface, so the reading is the yard level; applied as terrace ground (T22)')
 DECISIONS = {
+    'sh_537671_183381': {'category': 'ground', 'use': 'terrace', 'reason': RAILS_IN_YARD},
+    'sh_537723_183428': {'category': 'ground', 'use': 'terrace', 'reason': RAILS_IN_YARD+'; at the foot of the G.E.R. bank by a works building'},
+    'sh_538149_182179': {'category': 'structure', 'use': 'none', 'reason': 'St Leonard\'s Street on Four Mills Bridge over the Limehouse Cut (OS: the street crosses the Cut here; Bromley Lock beside it): a bridge-deck level; the model draws neither the street nor the bridge here, only the Cut water (T22)'},
+    'sh_537975_183046': {'category': 'ground', 'use': 'terrace', 'reason': TOWING_PATH},
+    'sh_538047_183035': {'category': 'ground', 'use': 'terrace', 'reason': TOWING_PATH},
+    'sh_538057_182062': {'category': 'ground', 'use': 'terrace', 'reason': TOWING_PATH+' (Limehouse Cut)'},
+    'sh_538072_183022': {'category': 'ground', 'use': 'terrace', 'reason': TOWING_PATH},
+    'sh_538085_182100': {'category': 'ground', 'use': 'terrace', 'reason': TOWING_PATH+' (Limehouse Cut)'},
+    'sh_538087_182975': {'category': 'ground', 'use': 'terrace', 'reason': TOWING_PATH},
+    'sh_538128_182907': {'category': 'ground', 'use': 'terrace', 'reason': TOWING_PATH},
+    'sh_538201_182860': {'category': 'ground', 'use': 'terrace', 'reason': TOWING_PATH},
+    'sh_538236_182814': {'category': 'ground', 'use': 'terrace', 'reason': TOWING_PATH},
     'sh_538907_182862': {'category': 'ground', 'use': 'marsh', 'reason': "reader setting 'railway', but the note reads 'road north of railway': a road level beside the line, taken as ground by the railway level register (LT&SR control at chainage 664.6)"},
     'sh_538886_182938': {'use': 'none', 'reason': 'figures ambiguous (17.3 or 17.8 ft) and the dot not confirmed; 1.3 m above the B.M. 13.17 ft cut on the Abbey Mills Chemical Works building 18 m south-east (a bench mark stands above its ground), so not the works yard; probably on the river-wall bank (17.9 ft 30 m north)'},
     'sh_538462_182436': {'use': 'none', 'reason': GAS_RAMP},
@@ -73,10 +97,20 @@ EXCEPTIONS = {
     'sh_538735_182518': MESH20+' (4 m outside the site 924 outline)',
     'sh_538412_182627': MESH20+' (beside Bow Creek below the LT&SR embankment)',
     'sh_538279_182756': 'on the bank top 1.6 m from the drawn Lea water south of Three Mills Bridge: the model draws an earth bank face rising from the water edge over 3 m (T11/T14 bank band), where the OS level implies a quay or wall edge',
-    'sh_538304_182814': 'Three Mills Lane at the east bank of the Lea: the Three Mills Lea bridge deck (road-traces, 2.2 m; OS 21.2 ft on the bridge, 4.23 m) ends 25 m short of the drawn east water edge, so the lane crosses drawn water and the bank face rises from it; the street level cannot be met until the bridge is re-levelled and lengthened (structure, decision 3)',
+    'sh_538304_182814': 'Three Mills Lane at the east bank of the Lea: the Three Mills Lea bridge deck (T22: re-levelled to the OS 21.2 ft, 4.23 m; prior 2.2 m) ends 25 m short of the drawn east water edge, so the lane crosses drawn water and the bank face rises from it; the street level cannot be met until the bridge is lengthened (structure, T21 decision 3)',
     'sh_538458_183000': 'between two parallel drains, inside the drawn marsh-ditch polygons (the strip between the drains is narrower than the drawn drains), where the native drain section is kept',
     'sh_538459_183075': 'between two parallel drains at their junction, inside the drawn marsh-ditch polygons, where the native drain section is kept',
     'sh_538508_182732': 'at the corner of the distillery grounds on the Channelsea edge: the river network tidal face rises at 1:1.5 from the drawn tidal shelf (T11), where the OS level implies a quay edge',
+    # T22: the terrace west of the Lea and Bow Creek (measured on the T22 build).
+    'sh_538201_182860': 'towing path on the Lea west bank, but inside the drawn river (GIS channel outline), 4 m from its edge: the drawn water is wider than the OS channel here, so the reading falls on the channel bed',
+    'sh_538054_183338': 'Marshgate Lane 17 m south of the provisional Marshgate Lane connection deck (1.5 m, an estimate; deck versus culvert unresolved): the lane is cut down to the deck (approach cutting, 1 in 20 from 2 m beyond the deck), 1.7 m below the OS lane level; the deck level is T22 decision 4',
+    'sh_538085_182100': 'Limehouse Cut towing path 1.0 m from the drawn Cut edge: the coarse river-system bank triangles span from the canal-face coping to the bank behind, so the drawn surface at the dot lies between them',
+    'sh_538236_182814': 'towing path dot 1.2 m from the drawn Lea water edge: the model draws a 3 m earth bank face from the water edge to the bank crest (T11/T14 bank band); the crest itself stands at the OS level 2-3 m back',
+    'sh_538047_183035': 'towing path dot 1.5 m from the drawn Lea water edge, on the 3 m earth bank face; the crest stands at the OS level behind it',
+    'sh_538072_183022': 'towing path dot 1.5 m from the drawn Lea water edge, on the 3 m earth bank face; the crest stands at the OS level behind it',
+    'sh_538128_182907': 'towing path dot 1.9 m from the drawn Lea water edge, on the 3 m earth bank face; the crest stands at the OS level behind it',
+    'sh_537628_183260': 'Old Ford towing path inside the bank band (within 14 m of the regional shoreline), where the model draws the regional bank crest (2.98 m, interpolated along the bank from bank-top readings elsewhere); the OS towing path below the Old Ford Road slope is 0.7 m lower',
+    'sh_537671_183228': 'Old Ford towing path inside the bank band, where the model draws the regional bank crest (2.98 m); the OS towing path is 0.9 m lower',
 }
 
 
@@ -133,9 +167,22 @@ def main():
         return 'abbey-marsh-south'
 
     sites = {s['id']: (s['name'], shapely.union_all([Polygon(p[0], p[1:]) for p in s['polygons']])) for s in plan['sites']}
-    # Only sites the main landscape draws a premises pad for (centre inside the marsh support).
-    padded = {i: v for i, v in sites.items()
-              if weight(*list(v[1].representative_point().coords)[0]) > 0}
+    def in_terrace(x, z):
+        return TERRACE_ZONE[0] <= x <= TERRACE_ZONE[2] and TERRACE_ZONE[1] <= z <= TERRACE_ZONE[3]
+
+    def centre(g):
+        return list(g.representative_point().coords)[0]
+
+    # Sites the main landscape draws a premises pad for: centre inside the marsh support and outside the terrace
+    # zone and its feather band (T21's rule). Inside them (T22) a site is padded only where the OS gives its yard level:
+    # a yard-setting reading within PREMISES_REACH_M of its outline; its other ground is the OS-corrected terrace.
+    def in_terrace_band(x, z):
+        # the zone and its feather band outside the core box (build_main_landscape.py terrace_weight > 0)
+        zx0, zz0, zx1, zz1 = TERRACE_ZONE
+        return x <= zx1 and zx0-TERRACE_FEATHER_M < x and zz0-TERRACE_FEATHER_M < z < zz1+TERRACE_FEATHER_M
+
+    padded = {i: v for i, v in sites.items() if weight(*centre(v[1])) > 0 and not in_terrace_band(*centre(v[1]))}
+    terrace_sites = {i: v for i, v in sites.items() if in_terrace_band(*centre(v[1]))}
     streets = [(r['name'], LineString(r['route']), r['width']) for r in infra['roads'] if r.get('kind') != 'path' and len(r['route']) > 1]
 
     readings = []
@@ -153,8 +200,6 @@ def main():
             why = 'bench mark: cut on a wall, post, building or bridge above the ground it stands on; a check, not a ground level'
         elif cat == 'structure':
             why = f"spot height on a structure ({p.get('setting')}); not the ground"
-        elif zone(x, z) == 'west-strip' or (zone(x, z) == 'high-street' and w < SUPPORT_MIN):
-            why = 'outside the main landscape support: the terrace west of the Lea and Bow Creek and the High Street towards Bow Bridge are drawn as the earlier flat floor, 2-9 m below the OS; not applied (T21_REPORT.md decision 1)'
         else:
             road = None
             if p.get('setting') == 'street':
@@ -166,10 +211,16 @@ def main():
                 near = sorted((g.distance(q), sid) for sid, (_, g) in padded.items())
                 if near and near[0][0] <= PREMISES_REACH_M:
                     site = near[0][1]
+                elif p.get('setting') == 'yard':
+                    near = sorted((g.distance(q), sid) for sid, (_, g) in terrace_sites.items())
+                    if near and near[0][0] <= PREMISES_REACH_M:
+                        site = near[0][1]
             if road:
                 use = 'street'; item['road'] = road
             elif site is not None:
                 use = 'premises'; item['siteId'] = site; item['siteName'] = sites[site][0]
+            elif in_terrace(x, z) and (zone(x, z) == 'west-strip' or (zone(x, z) == 'high-street' and w < SUPPORT_MIN)):
+                use = 'terrace'
             else:
                 use = 'marsh'
         if p['id'] in DECISIONS:
@@ -208,12 +259,14 @@ def main():
             'category': {'ground': 'spot height with setting street, yard, marsh, open_ground, embankment_foot, other or unset (towing path, works ground)',
                          'mark': 'bench mark (type bench_mark): the level of the mark, which stands above the ground',
                          'structure': 'spot height with setting bridge, building, wall_top, embankment_top or railway'},
-            'support': f'ground readings in the west strip (x < -628) and High Street readings where the regional early-marsh support weight is below {SUPPORT_MIN} are not applied (decision 1); elsewhere the main landscape applies around each applied reading',
+            'support': f'T21 left the west strip (x < -628) and the High Street readings where the regional early-marsh support weight is below {SUPPORT_MIN} unapplied (T21 decision 1); since T22 the main landscape applies over the whole terrace zone {TERRACE_ZONE} (the core box west of x -628), and elsewhere around each applied reading',
             'street': f'a street-setting reading within half the street width + {STREET_REACH_M} m of a drawn street (not a path) sets that street corridor (with the regional street readings)',
-            'premises': f'any other non-marsh ground reading within {PREMISES_REACH_M} m of a ground-plan site the main landscape pads sets that pad',
+            'premises': f'any other non-marsh ground reading within {PREMISES_REACH_M} m of a ground-plan site the main landscape pads (centre in the marsh support, outside the terrace zone) sets that pad; inside the terrace zone a yard-setting reading within {PREMISES_REACH_M} m of a site sets (and creates) its pad',
             'marsh': 'remaining ground readings (marsh, open ground, bank feet, footpaths, undrawn tracks) correct the marsh between works',
+            'terrace': 'remaining ground readings in the west strip, and High Street readings below the T21 support threshold, inside the terrace zone (open ground, streets the model does not draw, towing paths, yards of sites without a pad) correct the regional terrace ground in the same way',
         },
         'exceptionMetres': EXCEPTION_M,
+        'terraceZone': TERRACE_ZONE, 'terraceFeatherMetres': TERRACE_FEATHER_M,
         'zones': {'west-strip': 'x < -628 (the Bromley/Bow terrace west of the Lea and Bow Creek), outside the High Street band',
                   'high-street': 'within 45 m of the Stratford High Street centreline',
                   'three-mills': 'x -628..-300 north of z 620 (Three Mills, Mill Meads, Abbey Lane west)',

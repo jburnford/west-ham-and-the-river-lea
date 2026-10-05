@@ -68,14 +68,19 @@ export function applyMainLandscape(data, landscape) {
     rail.embankment.forEach((tri, i) => tri.forEach((v, j) => (v[1] = profile.heights[i][j])));
   }
   const premises = new Map(meta.siteGround.map((p) => [p.siteId, p]));
+  // Objects traced outside their site's pad outline are seated on the ground drawn under them (outsideIds).
+  const outside = new Set(meta.siteGround.flatMap((p) => (p.outsideIds ?? []).map((id) => `${p.siteId}:${id}`)));
   let seated = 0;
   const seat = (b) => {
     if (!b) return;
     const [x, z] = b.centre ?? [b.x, b.z];
     if (!Number.isFinite(x) || !Number.isFinite(z)) return;
-    const pad = premises.get(b.siteId),
-      w = landscape.weight(x, z);
-    b.landscapeLift = pad ? w * (premisesLevel(pad, x, z) + 0.1) : landscape.level(x, z) + 0.1;
+    const pad = outside.has(`${b.siteId}:${b.id}`) ? undefined : premises.get(b.siteId),
+      w = landscape.weight(x, z),
+      seatY = b.id === undefined ? undefined : meta.seats?.[b.id];
+    // Objects with a recorded seat stand on the median drawn ground under their footprint (build_main_landscape.py).
+    if (seatY !== undefined) b.landscapeLift = seatY + 0.1;
+    else b.landscapeLift = pad ? w * (premisesLevel(pad, x, z) + 0.1) : landscape.level(x, z) + 0.1;
     if (Math.abs(b.landscapeLift) > 0.001) seated++;
   };
   const n = data.neighbourhood;

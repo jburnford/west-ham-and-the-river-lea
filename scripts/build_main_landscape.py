@@ -52,23 +52,47 @@ _field=np.column_stack([(np.arange(e0+step/2,e1,step)-538900)[None,:].repeat(sha
 _in_box=(_field[:,0]>=os_register['coreBox'][0]-60)&(_field[:,0]<=os_register['coreBox'][2]+60)&(_field[:,1]>=os_register['coreBox'][1]-60)&(_field[:,1]<=os_register['coreBox'][3]+60)
 _extension=np.zeros(len(_field));_extension[_in_box]=osg.support_extension(os_register,_field[_in_box])
 support_prior=support.copy();support=np.maximum(support,_extension.reshape(shape).astype(support.dtype))
-os_support={'radiusMetres':osg.SUPPORT_RADIUS_M,'featherMetres':osg.SUPPORT_FEATHER_M,'cellsRaised':int((support>support_prior+1e-6).sum()),'cellsRaisedToFull':int(((support>=.999)&(support_prior<.999)).sum())}
+# The Bromley/Bow terrace west of the Lea and Bow Creek (T22). The regional early-marsh support is 0 there, so
+# the scene drew the river network's flat floor at about 0 m while the OS gives 15-36 ft (2.4-9.0 m scene). Inside
+# the terrace zone (the core box west of x -628, os-ground-levels.json terraceZone) the main landscape now applies in
+# full: the regional ground grid, which already holds the terrace, corrected to the OS terrace, street and yard
+# readings (below). Outside the core box the weight falls to nothing over TERRACE_FEATHER_M (west, north and south
+# sides of the zone), so the drawn ground there is unchanged beyond that band.
+TERRACE_ZONE=os_register['terraceZone'];TERRACE_FEATHER_M=float(os_register['terraceFeatherMetres']);TERRACE_MESH_STEP=5.
+def terrace_weight(q):
+    """1 inside the terrace zone, smoothstep to 0 over TERRACE_FEATHER_M outside the core box beside it."""
+    zx0,zz0,zx1,zz1=TERRACE_ZONE
+    d=np.hypot(np.maximum(zx0-q[:,0],0),np.maximum(np.maximum(zz0-q[:,1],q[:,1]-zz1),0))
+    t=np.clip(d/TERRACE_FEATHER_M,0,1);w=1-t*t*(3-2*t);w[q[:,0]>zx1]=0
+    return w
+support_os=support.copy();support=np.maximum(support,terrace_weight(_field).reshape(shape).astype(support.dtype))
+terrace_support={'zone':TERRACE_ZONE,'featherMetres':TERRACE_FEATHER_M,'cellsRaised':int((support>support_os+1e-6).sum()),'cellsRaisedToFull':int(((support>=.999)&(support_os<.999)).sum())}
+os_support={'radiusMetres':osg.SUPPORT_RADIUS_M,'featherMetres':osg.SUPPORT_FEATHER_M,'cellsRaised':int((support_os>support_prior+1e-6).sum()),'cellsRaisedToFull':int(((support_os>=.999)&(support_prior<.999)).sum())}
 # The marsh correction: the regional early-marsh ground corrected to the OS marsh readings
 # within each dry compartment (rivers, not field ditches, divide them).
 _compartment_water=local(banks.water).union(geometry([p for r in plan['rivers'] for p in r['polygons']]));shapely.prepare(_compartment_water)
 os_marsh=osg.marsh_controls(os_register,infra)
-OS_WEST_LIMIT=-628
+# Terrace zone (T22): the regional bank crest along the shorelines, where no OS reading is near.
+os_bank=osg.bank_controls(os_register,banks,lambda q:banks.crest(np.column_stack([538900+q[:,0],183209-q[:,1]]))-offset,_compartment_water,lambda line:local(line),infra)
+os_marsh=os_marsh+os_bank
+# T21 corrected east of x -628 only (OS_WEST_LIMIT); since T22 the correction spans the whole core box, the
+# terrace readings (use 'terrace') correcting the regional terrace ground in their own dry compartments.
+OS_WEST_LIMIT_PRIOR=-628;OS_WEST_LIMIT=os_register['coreBox'][0]
 os_corr,os_corr_meta,os_marsh_residuals=osg.correction_grid(os_marsh,lambda q:sample(filled,q),_compartment_water,os_register['coreBox'],OS_WEST_LIMIT)
 def marsh_at(points):
     """The marsh between works: the regional early-marsh ground plus the OS marsh correction."""
     return sample(filled,points)+osg.sample(os_corr,os_corr_meta,points)
 os_premises=osg.premises(os_register);os_streets=osg.streets(os_register)
 records={r['id']:r for r in audit['records']};yard_features=[f for f in meta['laterSurfaceLayers']['features'] if f['kind']==11]
-pads=[];pad_geoms=[];RAIL_SIDE_PAD_M=6
+pads=[];pad_geoms=[];RAIL_SIDE_PAD_M=6;terrace_unpadded=set()
 for site in plan['sites']:
     polygon=geometry(site['polygons']);p=polygon.representative_point();centre=np.array([[p.x,p.y]])
-    # The padded sites are those inside the regional early-marsh support (unchanged by the OS support).
-    if sample(support_prior,centre)[0]<=0:continue
+    # The padded sites are those inside the regional early-marsh support (unchanged by the OS support). Inside the
+    # terrace zone and its feather band (T22) only sites with OS yard readings are padded; the ground of the others is the OS-corrected
+    # terrace, which passes through the readings around them.
+    in_terrace=terrace_weight(centre)[0]>0
+    if in_terrace and site['id'] not in os_premises:terrace_unpadded.add(site['id']);continue
+    if not in_terrace and sample(support_prior,centre)[0]<=0:continue
     matched=next((f for f in yard_features if f['name']==site['name']),None)
     if matched:
         height=float(np.median([records[id]['provisionalODNMetres']-offset for id in matched['sourceIds']]))
@@ -215,6 +239,12 @@ for route_index,route in enumerate(retaining['routes']):
     side=1 if wet[0]<=wet[1] else -1;nq=side*nq
     bank_crest=banks.crest(np.column_stack([538900+q[:,0],183209-q[:,1]]))-offset
     raw=retaining['crestHeight']+weight(q+WALL_INLAND_M*nq)*(bank_crest-retaining['crestHeight'])
+    # On the terrace (T22) a wharf or quay wall holds the made ground behind it: where the ground WALL_INLAND_M
+    # behind the wall (its premises pad, street or the OS-corrected terrace) stands above the bank crest, the
+    # coping is carried at that ground level, so the yard meets the wall top instead of a bank face.
+    tw=terrace_weight(q+WALL_INLAND_M*nq)
+    if tw.any():
+        behind=base(q+WALL_INLAND_M*nq,edges=False);raw=np.maximum(raw,raw+tw*(behind-raw))
     half=WALL_MEAN_M/2;mean=np.array([raw[abs(s-x)<=half].mean() for x in s])
     at=np.interp(chain,s,mean)
     # Grade-limited upper envelope: adjacent copings differ by at most 2 cm per metre.
@@ -246,10 +276,27 @@ wall_exclusion=shapely.union_all([fit[1] for fit in road_fits]+footprints);shape
 EDGE_BATTER=1.5;EDGE_REACH_M=8;FRONTAGE_M=40;FRONTAGE_SHORE_JUMP_M=5
 footprint_geoms=[];footprint_caps=[]
 def pad_level_get(site_id,geom):
-    """Premises ground of a footprint (its pad at the footprint's representative point), or -inf without a pad."""
+    """Premises ground of a footprint (its pad at the footprint's representative point), or -inf without a pad
+    or where the footprint lies outside its site's pad outline (as docs/main-landscape.js seats it, below)."""
     j=pad_index.get(site_id)
     if j is None:return -np.inf
-    return float(pad_at(j,np.array(geom.representative_point().coords))[0])
+    q=geom.representative_point()
+    if not pad_outline_near[j].contains(q):return -np.inf
+    return float(pad_at(j,np.array(q.coords))[0])
+# Objects whose centre lies outside their site's pad outline (the building traces and the ground-plan site outlines
+# are separate registrations; T22 found whole works traced away from their site outline, e.g. the East London Soap
+# Works) are seated on the ground drawn under them, not on the distant pad: each pad lists them (outsideIds) and
+# docs/main-landscape.js seats them on the level field.
+PAD_OUTLINE_MARGIN_M=1.;pad_outline_near=[g.buffer(PAD_OUTLINE_MARGIN_M) for g in pad_geoms]
+for j in range(len(pads)):pads[j].pop('outsideIds',None)
+_frontage_buildings=read('docs/data/high-street-frontages.json')['buildings']
+for b in [*factory['buildings'],*factory['structures'],*factory['holders'],*_frontage_buildings]:
+    j=pad_index.get(b.get('siteId'))
+    if j is None or 'id' not in b:continue
+    c=b.get('centre') or [b['x'],b['z']]
+    if not pad_outline_near[j].contains(shapely.Point(c)):pads[j].setdefault('outsideIds',[]).append(b['id'])
+for p in pads:
+    if 'outsideIds' in p:p['outsideIds']=sorted(set(p['outsideIds']))
 
 for b in factory['buildings']:
     for p in b.get('renderPolygons') or []:footprint_geoms.append(Polygon(p['outer'],p.get('holes',[])).buffer(0));footprint_caps.append(pad_level_get(b.get('siteId'),footprint_geoms[-1]))
@@ -617,11 +664,18 @@ values.astype('<f4').tofile(OUT/'main-landscape-1900.level.f32');files['level']=
 # Existing flat placeholder polygons need interior vertices, not just raised edges.
 outline=local(Polygon(meta['regionalMarshBaseline']['config']['outlineBNG']))
 original_base=geometry(system['baseGround']);original_regional=geometry(system['regionalGround'])
-area=original_base.union(original_regional).intersection(outline).difference(water)
-x0,z0,x1,z1=area.bounds;mesh_step=20
-x,z=np.meshgrid(np.arange(np.floor(x0/mesh_step)*mesh_step,x1,mesh_step),np.arange(np.floor(z0/mesh_step)*mesh_step,z1,mesh_step))
-cells=shapely.box(x.ravel(),z.ravel(),x.ravel()+mesh_step,z.ravel()+mesh_step)
-parts=shapely.get_parts(shapely.intersection(cells,area));parts=parts[shapely.area(parts)>1e-5]
+# Since T22 the mesh also covers the terrace zone and its feather band (terrace_mesh), at TERRACE_MESH_STEP so
+# that the terrace streets, yards, banks and their batters are resolved; elsewhere it keeps its 20 m step. The two
+# grids are aligned (5 m divides 20 m) and meet along the edge of terrace_mesh, where the fine vertices take the
+# coarse surface (below), so no crack opens along the join.
+zx0,zz0,zx1,zz1=TERRACE_ZONE;terrace_mesh=box(zx0-TERRACE_FEATHER_M,zz0-TERRACE_FEATHER_M,zx1,zz1+TERRACE_FEATHER_M)
+area=original_base.union(original_regional).intersection(outline.union(terrace_mesh)).difference(water)
+def mesh_cells(region,mesh_step):
+    x0,z0,x1,z1=region.bounds
+    x,z=np.meshgrid(np.arange(np.floor(x0/mesh_step)*mesh_step,x1,mesh_step),np.arange(np.floor(z0/mesh_step)*mesh_step,z1,mesh_step))
+    cells=shapely.box(x.ravel(),z.ravel(),x.ravel()+mesh_step,z.ravel()+mesh_step)
+    p=shapely.get_parts(shapely.intersection(cells,region));return p[shapely.area(p)>1e-5]
+parts=np.concatenate([mesh_cells(area.difference(terrace_mesh),20),mesh_cells(area.intersection(terrace_mesh),TERRACE_MESH_STEP)])
 # Road surface triangles as docs/infrastructure.js draws them: carriageway,
 # footway and path, each drawn its offset above the ground under its vertices,
 # and the bridge decks (boxes at the deck height). The 20 m regional mesh is
@@ -960,7 +1014,58 @@ for key in clamp:
     road_pass['roadClamp'][key]={'candidateVertices':int(len(clamp[key][0])),'loweredVertices':int((loss>1e-6).sum()),'maxLoweringMetres':round(float(loss.max()),3)}
 print('ROAD PASS:',json.dumps(road_pass),flush=True)
 for key in ['core','network','system','extension']:write_heights(key)
-heights=surfaces['groundMesh']['new'];mesh=np.column_stack([points[:,0],heights,points[:,1]]).astype('<f4')
+heights=surfaces['groundMesh']['new']
+# The join between the 20 m and the terrace mesh: fine vertices on it (and not on a coarse vertex) take the coarse
+# triangle's surface there, so the two meshes share one edge line.
+_tri=np.arange(len(points)).reshape(-1,3);_cen=points[_tri].mean(axis=1);_fine=shapely.contains_xy(terrace_mesh,_cen[:,0],_cen[:,1])
+_on=np.flatnonzero(shapely.distance(terrace_mesh.boundary,shapely.points(points))<1e-4)
+_on=_on[np.isin(_on,_tri[_fine].ravel())]
+seam={'joinVertices':int(len(_on)),'changedVertices':0,'maxChangeMetres':0.}
+if len(_on):
+    _loc=Locator(points,_tri[~_fine],points[_on])
+    _top=_loc.top(heights);_ok=np.isfinite(_top)&(np.abs(_top-heights[_on])>1e-6)
+    seam={'joinVertices':int(len(_on)),'changedVertices':int(_ok.sum()),'maxChangeMetres':round(float(np.abs(_top[_ok]-heights[_on][_ok]).max()) if _ok.any() else 0.,3)}
+    heights=heights.copy();heights[_on[_ok]]=_top[_ok]
+print('TERRACE SEAM:',seam,flush=True)
+surfaces['groundMesh']['new']=heights
+# Object seats (T22). On the terrace the ground under a building is the drawn surface itself (terrace, streets,
+# bank faces, wall fill), which the 10 m level field only approximates beside banks and walls; and a building traced
+# outside its site's pad outline stands on the ground drawn there. Such objects (factory ranges, chimneys, kilns,
+# tanks and holders, High Street frontages, housing rows) are seated on the median drawn ground under their footprint
+# (2 m samples; circles for round plant): every object inside the terrace zone, or of a terrace site, that has no
+# premises pad, and every
+# object anywhere that lies outside its pad outline (outsideIds). docs/main-landscape.js reads seats by object id.
+SEAT_SAMPLE_M=2.
+def footprint_samples(polys):
+    q=[]
+    for g in polys:
+        if g.is_empty:continue
+        x0_,z0_,x1_,z1_=g.bounds
+        gx,gz=np.meshgrid(np.arange(x0_+SEAT_SAMPLE_M/2,x1_,SEAT_SAMPLE_M),np.arange(z0_+SEAT_SAMPLE_M/2,z1_,SEAT_SAMPLE_M))
+        c=np.column_stack([gx.ravel(),gz.ravel()]);c=c[shapely.contains_xy(g,c[:,0],c[:,1])]
+        q+=list(c) if len(c) else [list(g.representative_point().coords)[0]]
+    return np.array(q,float)
+def circle_samples(x,z,r):
+    a=np.arange(8)*np.pi/4;return np.array([[x,z],*np.column_stack([x+r*np.cos(a),z+r*np.sin(a)])],float)
+_seat_items=[]
+for b in factory['buildings']:_seat_items.append((b,footprint_samples([Polygon(p['outer'],p.get('holes',[])).buffer(0) for p in b.get('renderPolygons') or []])))
+for p in factory['structures']:_seat_items.append((p,circle_samples(p['x'],p['z'],p.get('radius') or 3.)))
+for h in factory['holders']:_seat_items.append((h,circle_samples(h['x'],h['z'],h['radius'])))
+for b in _frontage_buildings:_seat_items.append((b,footprint_samples([Polygon(p['outer'],p.get('holes',[])).buffer(0) for p in b['renderPolygons']] if b.get('renderPolygons') else [Polygon(b['footprint']).buffer(0)])))
+for r in read('docs/data/housing-detail.json')['rows']:_seat_items.append((r,footprint_samples([Polygon(r['footprint']).buffer(0)])))
+_outside={(p['siteId'],i) for p in pads for i in p.get('outsideIds',[])}
+_chosen=[]
+for b,q in _seat_items:
+    c=np.array([b.get('centre') or [b['x'],b['z']]],float);j=pad_index.get(b.get('siteId'))
+    if (b.get('siteId'),b['id']) in _outside or (j is None and (terrace_weight(c)[0]>=.999 or b.get('siteId') in terrace_unpadded)):_chosen.append((b['id'],q))
+_all=np.concatenate([q for _,q in _chosen]);_zone=shapely.union_all([shapely.box(*q.min(axis=0)-3,*q.max(axis=0)+3) for _,q in _chosen])
+_locs={k:Locator(mesh_points(k),mesh_tri[k],_all,_zone) for k in mesh_keys}
+_ground=drawn_level(_all,_locs);seats={};_k=0
+for i,q in _chosen:
+    seats[i]=round(float(np.median(_ground[_k:_k+len(q)])),3);_k+=len(q)
+seats=dict(sorted(seats.items()))
+print('SEATS:',len(seats),flush=True)
+mesh=np.column_stack([points[:,0],heights,points[:,1]]).astype('<f4')
 mesh.tofile(OUT/'main-landscape-1900.background.f32');files['groundMesh']='main-landscape-1900.background.f32'
 # Retaining-edge crests (wall_levels) are computed above with the land-side fill.
 # Refitting railway toes leaves every formation station unchanged.
@@ -1224,14 +1329,16 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
     'replacementBaseGround':rings(original_base.difference(outline)),'replacementRegionalGround':rings(original_regional.difference(outline)),
     'roadControlIds':sorted({id for fit in road_fits for id in fit[-1]}),
     'siteGround':pads,'retainingEdgeCrests':wall_levels,
+    'seats':seats,'seatMethod':f'objects inside the terrace zone, or belonging to a terrace site, without a premises pad, and objects anywhere outside their site\'s pad outline (siteGround outsideIds), are seated on the median drawn ground under their footprint ({SEAT_SAMPLE_M:g} m samples; eight points round round plant), keyed by object id (T22)',
     'osGroundLevels':{'register':osg.REGISTER,
-        'method':f'premises pads take their OS yard readings (level with one, the inverse-distance surface through several, power 2, {osg.PAD_SOFTEN_M} m softening; docs/main-landscape.js seats each building on it at its centre); street corridors take their OS street readings as road-surface levels ({ROAD_SURFACE_OFFSET} m above the corridor ground) with the regional street readings; the marsh between works is the regional early-marsh ground plus a correction to the OS marsh, open-ground, bank-foot and track readings and to the ground beside the railways the OS draws at grade (the railway level register formation less its 0.1 m lift, {osg.RAIL_SIDE_OFFSET_M} m either side every {osg.RAIL_SIDE_SPACING_M} m), interpolated as a Gaussian-process mean (squared-exponential kernel, length {osg.MARSH_LENGTH_M} m, noise {osg.MARSH_NOISE_M} m) within each dry compartment between the rivers, clipped to the compartment\'s residual range and fading to no correction away from the readings and over {osg.GRID_MARGIN_M} m outside the core box; where an applied reading lies outside the regional early-marsh support the landscape applies within {osg.SUPPORT_RADIUS_M} m of it, feathered over {osg.SUPPORT_FEATHER_M} m',
+        'method':f'premises pads take their OS yard readings (level with one, the inverse-distance surface through several, power 2, {osg.PAD_SOFTEN_M} m softening; docs/main-landscape.js seats each building on it at its centre); street corridors take their OS street readings as road-surface levels ({ROAD_SURFACE_OFFSET} m above the corridor ground) with the regional street readings; the marsh between works is the regional early-marsh ground plus a correction to the OS marsh, open-ground, bank-foot and track readings and to the ground beside the railways the OS draws at grade (the railway level register formation less its 0.1 m lift, {osg.RAIL_SIDE_OFFSET_M} m either side every {osg.RAIL_SIDE_SPACING_M} m), interpolated as a Gaussian-process mean (squared-exponential kernel, length {osg.MARSH_LENGTH_M} m, noise {osg.MARSH_NOISE_M} m) within each dry compartment between the rivers, clipped to the compartment\'s residual range and fading to no correction away from the readings and over {osg.GRID_MARGIN_M} m outside the core box; where an applied reading lies outside the regional early-marsh support the landscape applies within {osg.SUPPORT_RADIUS_M} m of it, feathered over {osg.SUPPORT_FEATHER_M} m; on the Bromley/Bow terrace (the terrace zone {TERRACE_ZONE}, since T22) it applies in full, the regional ground there corrected in the same way to the OS terrace readings (open ground, streets the model does not draw, towing paths, yards of sites without a pad) as well as the yard and street readings, drawn as a {TERRACE_MESH_STEP:g} m mesh, with every site in the zone on a premises pad, and feathered to nothing over {TERRACE_FEATHER_M:g} m outside the core box',
         'premisesSites':sorted(os_premises),'streetCorridors':{name:ids for name,ids in street_ids.items() if name in os_streets},
-        'marshControls':{'readings':sum(1 for c in os_marsh if c['kind']=='reading'),'railSide':sum(1 for c in os_marsh if c['kind']=='rail-side'),
+        'marshControls':{'readings':sum(1 for c in os_marsh if c['kind']=='reading'),'railSide':sum(1 for c in os_marsh if c['kind']=='rail-side'),'bankCrest':sum(1 for c in os_marsh if c['kind']=='bank-crest'),'bankCrestMethod':f'terrace zone: the regional bank crest every {osg.BANK_CONTROL_SPACING_M:g} m along the shorelines, {osg.BANK_CONTROL_INLAND_M:g} m inland, where no OS ground reading lies within {osg.BANK_CONTROL_CLEAR_M:g} m',
                          'residualBeforeCorrection':{'median':round(float(np.median(os_marsh_residuals)),3),'min':round(float(os_marsh_residuals.min()),3),'max':round(float(os_marsh_residuals.max()),3)}},
         'correctionGrid':{**os_corr_meta,'range':[round(float(os_corr.min()),3),round(float(os_corr.max()),3)],'westLimit':OS_WEST_LIMIT},
-        'support':os_support,
-        'evidence':'Observed: the OS London five-foot plan 1891-96 spot heights in reference/spot-heights/heights.geojson as classified in data/maps/os-ground-levels.json (setting, notes and confidence from the readers). Interpreted: which ground each reading measures (the register rules and decisions), the pad surfaces between readings, the marsh interpolation between readings and its fading away from them, and the ground beside at-grade railways (from data/maps/railway-levels.json). Not applied: the terrace west of the Lea and Bow Creek and the High Street west of it (outside the main landscape support; T21_REPORT.md decision 1).'},
+        'support':os_support,'terraceSupport':terrace_support,'terraceMeshStepMetres':TERRACE_MESH_STEP,'terraceSeam':seam,
+        'terraceWalls':{'method':f'retaining walls whose ground {WALL_INLAND_M} m behind lies in the terrace zone carry their coping at the higher of the bank crest and that ground (premises pad, street or OS-corrected terrace), blended by the terrace weight','evidence':'Mapped: the interpretive wall routes (river-network retainingEdges) and the premises outlines. Observed: the OS yard, street and wall-top readings behind them. Interpreted: that a wall at a terrace frontage is a wharf or quay wall holding the made ground behind it at yard level; no surveyed section.'},
+        'evidence':'Observed: the OS London five-foot plan 1891-96 spot heights in reference/spot-heights/heights.geojson as classified in data/maps/os-ground-levels.json (setting, notes and confidence from the readers). Interpreted: which ground each reading measures (the register rules and decisions), the pad surfaces between readings, the marsh interpolation between readings and its fading away from them, and the ground beside at-grade railways (from data/maps/railway-levels.json). T21 left the terrace west of the Lea and Bow Creek and the High Street west of it unapplied (T21_REPORT.md decision 1); T22 applies them over the terrace zone (T22_REPORT.md).'},
     'retainingEdgeFill':{'crestMethod':f'1.65 m interpretive crest blended to the observed along-bank crest by the marsh weight {WALL_INLAND_M} m behind the wall; {WALL_MEAN_M} m running mean along the wall; grade-limited upper envelope at {WALL_GRADE} m per metre',
         'fillMethod':f'land side filled level with the coping to {WALL_TOP_M} m from the wall line, then falling at 1:{WALL_BATTER} to the surrounding ground (at most {WALL_REACH_M} m); never lowers ground; water, street corridors and building footprints excluded; battered at the same slope down to unwalled shoreline and to preserved intertidal mud; in the river-network mesh, land vertices of triangles straddling a wall are held down so no ground stands more than {WALL_TOE_M} m above low water at the water face, and no filled vertex stands more than 2.4 m above a mesh neighbour',
         'evidence':'Mapped: the shoreline and GIS industrial plot edges that the interpretive wall routes follow (river-network retainingEdges; the walls themselves are not a surveyed inventory), and the high-confidence wall_top/embankment_top spot heights behind the along-bank crest profile. Estimated: the coping grade between readings, the berm width and batter, and the fill itself; no surveyed section of any wall or its backfill.'},

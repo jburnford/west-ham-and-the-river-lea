@@ -45,7 +45,10 @@ def check(preflight=False):
         assert pixel(road['points']).round(3).tolist() == road['sourcePixels']
         bridge = road['bridgeSpans'][0]
         previous_bridge = correction['priorBridgeSpans'][0]
-        assert {k:v for k,v in bridge.items() if k not in ['points','evidence']} == {k:v for k,v in previous_bridge.items() if k not in ['points','evidence']}
+        # T22 re-levelled Three Mills Bridge to its OS spot height; the prior estimated height is kept as priorHeight.
+        relevel = ['points','evidence','height','priorHeight','heightEvidence']
+        assert {k:v for k,v in bridge.items() if k not in relevel} == {k:v for k,v in previous_bridge.items() if k not in relevel}
+        assert bridge.get('priorHeight', bridge['height']) == previous_bridge['height']
         if road['name'] == 'Marshgate Lane':
             assert road['points'][:-2] == traced
             assert road['points'][-2:] == correction['priorPoints'][-2:]

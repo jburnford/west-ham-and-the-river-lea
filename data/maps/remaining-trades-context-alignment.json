@@ -325,8 +325,10 @@
           ],
           "style": "deck",
           "archCount": 1,
-          "height": 2.2,
-          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates. Only the western endpoint of the existing Lea bridge moves onto the re-read approach; eastern endpoint, identity, deck style, single arch and 2.2 m estimated height retained."
+          "height": 4.23,
+          "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates. Only the western endpoint of the existing Lea bridge moves onto the re-read approach; eastern endpoint, identity, deck style, single arch and 2.2 m estimated height retained.",
+          "priorHeight": 2.2,
+          "heightEvidence": "T22 (October 2026): deck height 4.23 m is the OS five-foot spot height on Three Mills Bridge, 21.2 ft (sh_538259_182802, setting bridge, data/maps/os-ground-levels.json), converted with the project datum. The prior 2.2 m was an estimate; with the terrace drawn at its OS levels the west approach (Three Mills Lane, OS 23.8 ft = 5.02 m 40 m west of the deck) would otherwise fall 2.8 m into a cutting to reach it. The bench mark at the west abutment (19.5 ft = 3.70 m) is cut on the abutment below the deck. Deck length, route and form unchanged."
         }
       ],
       "reviewedSourceBounds": [

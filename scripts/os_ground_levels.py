@@ -20,6 +20,11 @@ scripts/build_main_landscape.py draws:
 - support: where an applied reading lies outside the regional early-marsh
   support, the main landscape applies within SUPPORT_RADIUS_M of it, feathered
   over SUPPORT_FEATHER_M.
+- the terrace (T22): inside the register's terraceZone the correction also takes
+  the terrace readings (open ground, undrawn streets, towing paths), the street
+  readings (at the ground under the road surface) and the yard readings, and the
+  regional bank crest along the shorelines where no reading is near
+  (bank_controls), so the regional terrace ground meets the OS everywhere there.
 """
 import hashlib
 import json
@@ -41,7 +46,12 @@ SUPPORT_RADIUS_M = 30.0
 SUPPORT_FEATHER_M = 20.0
 RAIL_SIDE_OFFSET_M = 9.0
 RAIL_SIDE_SPACING_M = 20.0
-APPLIED = ('premises', 'street', 'marsh')
+APPLIED = ('premises', 'street', 'marsh', 'terrace')
+ROAD_SURFACE_OFFSET = 0.065   # street readings are road-surface levels; the ground under the road is this much lower
+BANK_CONTROL_SPACING_M = 15.0  # terrace zone: regional bank-crest controls along the shorelines (build_main_landscape.py)
+BANK_CONTROL_INLAND_M = 4.0
+BANK_CONTROL_CLEAR_M = 15.0
+BANK_CONTROL_BRIDGE_M = 30.0
 
 
 def load():
@@ -104,10 +114,56 @@ def rail_side_controls(infra, core_box):
     return out
 
 
+def in_terrace_zone(register, p):
+    z = register.get('terraceZone')
+    return bool(z) and z[0] <= p[0] <= z[2] and z[1] <= p[1] <= z[3]
+
+
 def marsh_controls(register, infra):
-    rs = [{'id': r['id'], 'position': r['position'], 'sceneY': r['sceneY'], 'kind': 'reading'}
-          for r in register['readings'] if r['use'] == 'marsh']
+    """Controls of the correction: marsh and terrace readings, and (T22) inside the terrace zone also the street readings
+    (at the ground under the road surface) and the yard readings, so the terrace surface passes through every OS ground
+    level there and the streets and pads meet it without steps."""
+    rs = []
+    for r in register['readings']:
+        if r['use'] in ('marsh', 'terrace') or (r['use'] in ('street', 'premises') and in_terrace_zone(register, r['position'])):
+            rs.append({'id': r['id'], 'position': r['position'], 'kind': 'reading',
+                       'sceneY': r['sceneY']-(ROAD_SURFACE_OFFSET if r['use'] == 'street' else 0)})
     return rs+rail_side_controls(infra, register['coreBox'])
+
+
+def bank_controls(register, banks, crest, water, offset_local, infra):
+    """Terrace zone (T22): the regional bank crest (from the OS bank-top readings along each bank) as controls every
+    BANK_CONTROL_SPACING_M along the shorelines, BANK_CONTROL_INLAND_M inland, where no OS ground reading lies within
+    BANK_CONTROL_CLEAR_M, and not on a street corridor (+5 m) or within BANK_CONTROL_BRIDGE_M of a road
+    bridge. Without them the regional ground runs at terrace height to the water's edge where no reading
+    says otherwise (it stood 2-3 m above the towing paths), and the bank band then draws that height at the shore."""
+    # Not on streets or bridge approaches (raised above the bank on the OS: the High Street at Bow Bridge).
+    keep_off = shapely.union_all([LineString(r['route']).buffer(r['width']/2+5) for r in infra['roads'] if r.get('kind') != 'path' and len(r['route']) > 1]
+                                 + [LineString(b['route']).buffer(BANK_CONTROL_BRIDGE_M) for b in infra['roadBridges']])
+    shapely.prepare(keep_off)
+    readings = np.array([r['position'] for r in register['readings'] if r['use'] in APPLIED and in_terrace_zone(register, r['position'])], float)
+    from scipy.spatial import cKDTree
+    tree = cKDTree(readings) if len(readings) else None
+    out = []
+    for j, line in enumerate(banks.lines):
+        local = offset_local(line)
+        n = int(np.ceil(local.length/BANK_CONTROL_SPACING_M))
+        for k in range(n+1):
+            s = min(local.length, k*BANK_CONTROL_SPACING_M)
+            a = local.interpolate(max(0, s-1)); b = local.interpolate(min(local.length, s+1)); c = local.interpolate(s)
+            ux, uz = b.x-a.x, b.y-a.y; L = np.hypot(ux, uz)
+            if L < 1e-6:
+                continue
+            ux, uz = ux/L, uz/L
+            for side in (-1, 1):
+                p = (c.x-uz*side*BANK_CONTROL_INLAND_M, c.y+ux*side*BANK_CONTROL_INLAND_M)
+                if not in_terrace_zone(register, p) or water.contains(shapely.Point(p)) or keep_off.contains(shapely.Point(p)):
+                    continue
+                if tree is not None and tree.query(p)[0] < BANK_CONTROL_CLEAR_M:
+                    continue
+                out.append({'id': f'bank-{j:03d}@{s:.0f}{"L" if side > 0 else "R"}', 'position': [round(p[0], 2), round(p[1], 2)],
+                            'sceneY': float(crest(np.array([[c.x, c.y]]))[0]), 'kind': 'bank-crest'})
+    return out
 
 
 def correction_grid(controls, prior, water, core_box, west_limit):
