@@ -69,6 +69,11 @@ height += on_bed * smooth(.3, 2, shore) * ((middle-.5)*.33 + clods)
 tidal_cell = contains_xy(tidal.buffer(3), X, Z)
 height = np.where(shore < 0, np.where(tidal_cell, tl.tidal_bed(-shore),
                   .06 - .35*smooth(0, 2, -shore) - 1.45*smooth(0, 10, -shore)), height)
+# Plain ground beside tidal water outside the shelf study (the tongue where Abbey Creek
+# and the Channelsea meet) slopes down to the low-water edge as a mud face, as the
+# network's tidal banks do, instead of standing sheer above the bed at low water.
+tidal_face = tidal_cell & ~on_bed & (shore >= 0) & (shore < tl.S['shelfMetres'])
+height = np.where(tidal_face, tl.BED_EDGE + (height-tl.BED_EDGE)*smooth(0, tl.S['shelfMetres'], shore), height)
 
 # River-right, facing south: a raised, irregular bank with lower Mill Mead behind.
 # Derive its plan from the outer western channel edge at each north/south section.
@@ -155,7 +160,7 @@ height[tidal_passage]=np.minimum(height[tidal_passage],tl.SEAM_BED)
 depth = np.clip((np.where(tidal_cell, tl.BED_EDGE, .06)-height)/2.4, 0, 1)
 wetness = np.maximum(1-smooth(np.where(tidal_cell, tl.HIGH-.3, .04), np.where(tidal_cell, tl.HIGH+.4, .95), height),
                      np.exp(-rill_distance*1.8)*.55*on_bed)
-sediment_coverage=on_bed.astype(float)*(1-smooth(1.2,2.4,height)*np.clip(bank_shape*bank_start,0,1))
+sediment_coverage=(on_bed|tidal_face).astype(float)*(1-smooth(1.2,2.4,height)*np.clip(bank_shape*bank_start,0,1))
 sediment_coverage=np.maximum(sediment_coverage,ditch_mud)
 properties = np.stack([depth, wetness, np.clip(bank_shape*bank_start,0,1), sediment_coverage],axis=-1)
 height.astype('<f4').tofile(OUT / 'river-terrain.f32')

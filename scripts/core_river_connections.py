@@ -33,6 +33,13 @@ def build(rivers):
         key=r['id']-10000 if 10000<=r['id']<10100 else r['id']
         channels[key]=channels.get(key,Polygon()).union(geometry(r['polygons']))
     rows=[];deferred=[]
+    # A passage under a street with no bridge deck is culverted there (the House Mill
+    # race under Three Mills Lane, task C): the street runs on over it, so the passage
+    # is not drawn as open water or cut into the ground under the street.
+    infrastructure=json.loads((ROOT/'docs/data/infrastructure.json').read_text())
+    decks=unary_union([LineString(b['route']).buffer(b['width']/2+2,cap_style=2) for b in infrastructure['roadBridges']])
+    streets={r['name']:LineString(r['route']).buffer(r['width']/2,cap_style=2,join_style=2) for r in infrastructure['roads'] if len(r['route'])>1}
+    undecked=unary_union(list(streets.values())).difference(decks)
     specifications=[]
     for r in review['connectionReview']['structureRoutes']:
         specifications.append((r,r['siteId'],4.0 if r['category']=='lock-passage' else 3.0,r['category']))
@@ -54,6 +61,16 @@ def build(rivers):
         patch=line.buffer(width/2,cap_style=1)
         # Preserve overlaps at both ends so rounding cannot leave a dry seam.
         assert patch.intersection(channels[ids[0]]).area>0 and patch.intersection(channels[ids[1]]).area>0
+        culvert=patch.intersection(undecked)
+        culverted=[name for name,g in streets.items() if g.intersection(culvert).area>.5] if culvert.area>.5 else []
+        if culverted:
+            # Cut square to the passage over the stretch under the street, so the new
+            # shoreline is two straight lines (a cut along the street's outline left
+            # slivers that float32 rounding reversed in the network mesh).
+            under=line.intersection(undecked)
+            stations=[line.project(Point(c)) for g in getattr(under,'geoms',[under]) for c in g.coords]
+            cut=LineString([line.interpolate(min(stations)),line.interpolate(max(stations))]).buffer(width,cap_style=2)
+            culvert=patch.intersection(cut);patch=patch.difference(cut)
         rows.append({'id':identifier,'channelIds':ids,'category':category,
             'route':list(line.coords),'polygons':rings(patch),'visualWidthMetres':width,
             'widthStatus':'inferred display width; not a hydraulic capacity',
@@ -62,7 +79,8 @@ def build(rivers):
             # A passage into a channel above the tidal limit (the Abbey Mill race,
             # data/maps/os-tide-levels.json) is the step between still head and tide.
             'tidalDisplay':category!='lock-passage' and not set(ids)&tl.ABOVE_TIDAL_LIMIT,'sourceEndpointsBNG':r['routeBNG'],
-            'evidence':r.get('evidence',[]),'note':r.get('note',r.get('reviewNote',''))})
+            'evidence':r.get('evidence',[]),'note':r.get('note',r.get('reviewNote','')),
+            **({'culvertedUnder':culverted,'culvertAreaM2':round(culvert.area,2)} if culverted else {})})
     return {'epoch':'1900','connections':rows,'deferred':deferred,
         'reviewSha256':digest,
         'policy':'Reviewed geometric passages in the core scene. Mill and lock capacities are uncalibrated; a common display tide is not unrestricted hydraulic flow.',

@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 import numpy as np
 from shapely import contains_xy
-from shapely.geometry import Polygon
+from shapely.geometry import Polygon, LineString
 from shapely.ops import unary_union
 
 import tide_levels as tl
@@ -53,6 +53,12 @@ flat=contains_xy(tl.flats.difference(tidal.buffer(1)),x,z)
 assert flat.sum()>2000
 assert np.percentile(y[flat],5)>meta['tide']['low'] and np.percentile(y[flat],95)<meta['tide']['high'],'Mud flat not between low and high water'
 assert np.median(silt[flat])>200,'Mud flat not drawn as mud'
+# No tidal water across a street that has no bridge deck (the House Mill race is culverted
+# under Three Mills Lane): streets run on over culverted passages.
+infrastructure=load('docs/data/infrastructure.json')
+decks=unary_union([LineString(b['route']).buffer(b['width']/2+2,cap_style=2) for b in infrastructure['roadBridges']])
+streets=unary_union([LineString(r['route']).buffer(r['width']/2,cap_style=2,join_style=2) for r in infrastructure['roads'] if len(r['route'])>1]).difference(decks)
+assert tide.intersection(streets).difference(tidal).area<1,'Tidal water drawn across a street'
 # Tidal channels hold water at low water away from their edges.
 deep=contains_xy(tidal.buffer(-4),x,z)&(contains_xy(Polygon([(-1300,-1000),(300,-1000),(300,1400),(-1300,1400)]),x,z))
 assert deep.sum()>10000 and np.percentile(y[deep],90)<meta['tide']['low'],'Tidal bed above low water'
