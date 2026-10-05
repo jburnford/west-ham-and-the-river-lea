@@ -64,12 +64,18 @@ The five-foot plan (1893-96) draws the H.W.M.O.T. and L.W.M.O.T. lines and lette
   - **Core seam.** Where a tidal channel crosses the edge of the detailed core, both meshes meet 0.6 m below low water, using exact distances on both sides. The old seam was -0.1, which dammed the channel at low water. This is the pale straight bar the author saw on the Channelsea at the Abbey Creek mouth.
   - **Tidal limit.** Channels 12 and 13 leave the tide. Their works frontages keep their retaining edges: 36 routes and 2,352 m, unchanged.
   - **Tide record.** `tide.low` and `tide.high` come from the register, and `retainingEdges` carries crest 2.22 and base -2.5.
-- `core_river_connections.py`: a passage into a channel above the tidal limit is not tidal. This is the Abbey Mill race.
+- `core_river_connections.py`:
+  - A passage into a channel above the tidal limit is not tidal. This is the Abbey Mill race.
+  - A passage under a street with no bridge deck is culverted there. This is the House Mill race under Three Mills Lane, 21 m² (`culvertedUnder`).
+    - On the OS the race runs under the mill and the lane, and the lane (16.2 ft, 2.71 m) runs on unbroken between the mill and the river wall.
+    - Before, the street sagged into a slot over the race (bed -0.7 m), and at the new high water the tide showed across the street (author's screenshot).
+    - A bridge deck was tried first and dropped. The OS shows no parapets, and the deck re-triangulated the whole connected setts surface, which broke the road-ground check at Bridge Court.
 - `build_river_terrain.py`, the Channelsea core:
   - tidal beds and mud as in the network;
   - northern shelves only below Abbey Mill;
   - mud capped 6 cm under high water, so the shelf study's clods no longer stand out of the water;
   - pools carry their own water level (the fifth field);
+  - plain ground beside tidal water outside the shelf study slopes to the low-water edge as a 5 m mud face, as the network's banks do. Before, the tongue where Abbey Creek and the Channelsea meet (about -150, 344) stood as a sheer 2.4 m block above the bed at low water (author's screenshot);
   - the same seam rule as the network.
 - `river_bank_sections.py` and `build_river_system.py`: regional Bow Creek, the Thames mouth and their seams are tidal.
   - They get tidal beds and banks.
@@ -100,10 +106,10 @@ The five-foot plan (1893-96) draws the H.W.M.O.T. and L.W.M.O.T. lines and lette
 | | Before (main f8c238b) | After |
 |---|---|---|
 | Low / high water (scene y) | 0.06 / 1.1 | -2.0 / 1.578 |
-| Tide polygons (network) | 174,592 m² | 159,479 m² (+3,836 OS flats beyond the old shelf; -18,949 above Abbey Mill) |
+| Tide polygons (network) | 174,592 m² | 159,458 m² (the OS flats beyond the old shelf added; the Channelsea above Abbey Mill and the culverted race removed) |
 | Traced OS mud flats | none | 10,036 m² (2 polygons) |
 | Regional tidal water | 0 | 654,492 m² (Bow Creek to the Thames); still regional water 309,041 m² |
-| Network mesh | 924,788 vertices | 931,618 vertices (the flats) |
+| Network mesh | 924,788 vertices | 931,889 vertices (the flats) |
 | Network / core height range | -1.72..2.05 / -1.74..3.46 | -3.70..2.26 / -3.70..3.46 |
 | Core pools | 17 | 10 (none above Abbey Mill) |
 | Generic tidal crest / wall base | 1.65 / -0.55 | 2.22 / -2.5 |
@@ -138,6 +144,7 @@ The five-foot plan (1893-96) draws the H.W.M.O.T. and L.W.M.O.T. lines and lette
     - Walls must reach below low water.
     - The OS flats must lie inside the tide, between low and high water, and be drawn as mud.
     - Tidal beds must lie below low water away from the edges.
+    - No tidal water may be drawn across a street that has no bridge deck.
     - No tide may pass Abbey Mill, and there must be no tidal mud along channels 12 and 13.
     - The old "high <= 1.1" guard (against a rejected 1.4 m setting) is replaced by the register check.
     - Channel 13 leaves the exposed-shelf list.
@@ -147,7 +154,7 @@ The five-foot plan (1893-96) draws the H.W.M.O.T. and L.W.M.O.T. lines and lette
   - `check_landscape_flood.py`: at 1.9 m ODN, partial channel-edge cells under 2 m² may count as land.
     - Before, it had to be exactly 0. It is now 1 m²: one cell below Abbey Mill, 94% inside the tidal water, whose remaining 6% is intertidal mud at -0.5 m.
     - The enclosed-bowl test at the higher stages is unchanged.
-  - `check_road_bridges.mjs`: stored sample refreshed. Only the Hunts Lane connection's west approach moved, by at most 0.022 m.
+  - `check_road_bridges.mjs`: stored sample refreshed. Only the Hunts Lane connection's west approach moved, by at most 0.031 m in all; St Thomas and St Michael's moved 0.001 m.
 - Lint and prettier are clean on the changed JS.
 
 ## Renders
@@ -161,11 +168,13 @@ Before (main on 4173) and after (task C on 4210), each at low and high water, ar
 | Channelsea at Abbey Mills (`final-abbey-mills-channelsea`) | Better. At low water it is a narrow stream between steep mud banks, with a lighter at the stream edge, like the author's 1920s-30s aerial. At high water it fills bank to bank. |
 | Abbey Creek mouth (`final-abbey-creek-mouth`, `-plan`) | Fixed. Before, a pale straight bar crossed the water at the core edge at low water. After, the bed is continuous across the seam (-2.6 m on both sides). A colour change in the bed remains where the two meshes meet. |
 | Bow Creek south edge (`final-bow-creek-south-edge`) | Improved. The water no longer steps at z 1364. The regional and network banks still meet with an abrupt change of form. |
+| Three Mills Lane at House Mill (`final-three-mills-lane-culvert`) | Fixed (author's screenshot). On main f90d7da, high water showed across the lane and the lane had a slot over the race at low water. Now the lane is continuous at both stages, and the race shows only where it leaves through the river wall. |
+| Abbey Creek tongue (`final-abbey-creek-tongue`) | Fixed (author's screenshot). The tongue between the arms is a sloping mud spit at low water, not a sheer block. The top two panels of that sheet are a misplaced camera inside a building; use the lower two. |
 | Regional Bow Creek (`final-bow-creek-regional`) | New. It now rises and falls, with its banks above high water. A bridge across it shows more of its structure at low water. |
 
 ## Smoke
 
-`review_smoke.py` (scratch copy with 900 s waits): `taskc-before` (main on 4173) against `taskc-after` (4210). Both have **0 page errors**. There are 22 differences, all expected:
+`review_smoke.py` (scratch copy with 900 s waits): `taskc-before` (main on 4173) against `taskc-after` (4210). It ran before the last two fixes (the Abbey Creek tongue and the House Mill race culvert) and was not rerun after them; `npm test` (21 of 21) and the renders were. Both have **0 page errors**. There are 22 differences, all expected:
 
 - **Mesh and triangle counts.** River network and landscape replacement counts move with the new mesh. The draw-call count rises by one (the tidal regional water).
 - **Triangles fall by 263k.** Terrain clods drop from 22,656 to 8,703: the shelf study's clods are now under water or capped.
