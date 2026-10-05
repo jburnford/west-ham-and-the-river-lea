@@ -211,7 +211,8 @@ def sample(grid, meta, q):
 
 def support_extension(register, field_points):
     """Support weight at the regional field points (N,2) from the applied readings."""
-    pos = np.array([r['position'] for r in register['readings'] if r['use'] in APPLIED], float)
+    # The terrace zone has its own full support (T22); its readings do not extend the support beyond it.
+    pos = np.array([r['position'] for r in register['readings'] if r['use'] in APPLIED and not in_terrace_zone(register, r['position'])], float)
     from scipy.spatial import cKDTree
     d, _ = cKDTree(pos).query(field_points, k=1)
     t = np.clip((d-SUPPORT_RADIUS_M)/SUPPORT_FEATHER_M, 0, 1)

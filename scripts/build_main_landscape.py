@@ -301,7 +301,9 @@ _frontage_buildings=read('docs/data/high-street-frontages.json')['buildings']
 for b in [*factory['buildings'],*factory['structures'],*factory['holders'],*_frontage_buildings]:
     j=pad_index.get(b.get('siteId'))
     if j is None or 'id' not in b:continue
-    c=b.get('centre') or [b['x'],b['z']]
+    c=b.get('centre') or [b['x'],b['z']];cb_=os_register['coreBox']
+    # Only inside the core box (outside it the scene is left as it was).
+    if not (cb_[0]<=c[0]<=cb_[2] and cb_[1]<=c[1]<=cb_[3]):continue
     if not pad_outline_near[j].contains(shapely.Point(c)):pads[j].setdefault('outsideIds',[]).append(b['id'])
 for p in pads:
     if 'outsideIds' in p:p['outsideIds']=sorted(set(p['outsideIds']))
