@@ -413,9 +413,11 @@ def build():
     # River walls the OS draws (data/maps/os-river-walls.json): the shoreline along each traced
     # line becomes a retaining route too, where the plot rule above has not already made one.
     os_walls=json.loads((ROOT/'data/maps/os-river-walls.json').read_text());os_wall_records=[]
+    # A traced wall may carry a street along its top (Marshgate Lane); only the road bridges interrupt it.
+    bridge_spans=unary_union([LineString(b['route']).buffer(b['width']/2+2) for b in infrastructure['roadBridges']])
     for w in os_walls['walls']:
         near=LineString(w['line']).buffer(os_walls['toleranceMetres'],cap_style=2)
-        shore=river.boundary.intersection(tidal.buffer(.01)).intersection(near).difference(roads).difference(retaining.buffer(.05))
+        shore=river.boundary.intersection(tidal.buffer(.01)).intersection(near).difference(bridge_spans).difference(retaining.buffer(.05))
         shore=linemerge(shore) if shore.geom_type=='MultiLineString' else shore
         added=[list(segmentize(g,4).coords) for g in getattr(shore,'geoms',[shore]) if g.geom_type=='LineString' and g.length>1]
         os_wall_records.append({'id':w['id'],'routeIndices':list(range(len(wall_routes),len(wall_routes)+len(added))),
@@ -588,7 +590,7 @@ def build():
         'retainingEdges':{'routes':wall_routes,'crestHeight':1.65,'baseHeight':-.55,'width':WALL_WIDTH,
                           'evidence':'Interpretive flood-retaining edges where tidal river banks meet GIS industrial plots. Presence, material and individual sections require photograph/engineering-plan verification. Not the 1930s concrete embankments.',
                           'osRiverWalls':{'register':'data/maps/os-river-walls.json','walls':os_wall_records,
-                                          'method':f"the mapped shoreline within {os_walls['toleranceMetres']} m of each OS-traced wall line (inside the tidal channels, outside road corridors and existing routes)"},
+                                          'method':f"the mapped shoreline within {os_walls['toleranceMetres']} m of each OS-traced wall line (inside the tidal channels, outside road bridges and existing routes; a street may run along the wall top)"},
                           'coreWallRelocation':{'applied':APPLY_CORE_WALL_RELOCATION,
                               'notAppliedReason':'the core terrain (river-terrain, 0.4 m grid) has no mesh edges on the moved wall lines, so the main-landscape wall fill raises ground cells on the water side of the wall (teeth up its face, seen in a scratch rebuild) and its land-side test (wet samples 1-5 m out) becomes a tie; move them once the core mesh carries the wall lines or the landscape builder clears core wall faces',
                               'routes':relocated,'notRelocated':not_relocated,

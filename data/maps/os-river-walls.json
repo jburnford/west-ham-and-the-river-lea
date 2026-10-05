@@ -15,6 +15,12 @@
       "line": [[-669.0, 1076.0], [-674.0, 1100.0], [-678.0, 1120.0], [-681.0, 1140.0], [-682.0, 1152.0]],
       "wallTopReadings": ["sh_538225_182137"],
       "evidence": "Mapped: a coursed masonry band about 4 m wide drawn along the Four Mills Distillery frontage to the Lea from z 1076 to 1152, with the 16.8 ft spot height at its north end (-674.6, 1072); the line is its water face. The drawn water edge runs 1-3 m east of it. Interpreted: a stone-faced river wall; the band's width suggests a battered face or an apron, which the model does not draw."
+    },
+    {
+      "id": "marshgate-lane-river-wall",
+      "line": [[-841.3, -115.0], [-844.2, -131.9], [-850.5, -142.0], [-868.4, -164.8], [-875.3, -178.3]],
+      "wallTopReadings": ["sh_538054_183338"],
+      "evidence": "Mapped: Marshgate Lane runs on the west bank of the Pudding Mill River from the lock crossing to St Thomas's Mills, its east kerb drawn as a continuous double line on the water's edge, with the lane's spot height 17.8 ft (3.19 m) at (-846, -129) beside it and no bank slope between lane and water. Interpreted: a river wall carrying the lane edge (task B, October 2026); material and section are not shown. Without it the model drew an earth bank face under the lane's east half, and the road surface, which takes its height from the ground under its own vertices, sank to 1.2-1.4 m along the whole lane (TASK_A_REPORT.md open item)."
     }
   ],
   "notModelled": [

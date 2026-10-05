@@ -2336,8 +2336,7 @@
    "supportWeight": 0.732,
    "notes": "Marshgate Lane",
    "road": "Marshgate Lane",
-   "use": "street",
-   "exception": "Marshgate Lane 17 m south of the Marshgate Lane connection deck: since task A (October 2026) the deck is at 2.93 m (OS lane levels either side) and the lane meets it level, but between this reading and the next OS lane level (2.80 m at the St Thomas's Mills corner, 58 m on) the drawn lane falls to the terrace ground under it, 1.2-1.4 m, and is 1.5 m low here; the terrace correction does not carry the street readings along the lane (open item, task A report)"
+   "use": "street"
   },
   {
    "id": "sh_538055_182867",

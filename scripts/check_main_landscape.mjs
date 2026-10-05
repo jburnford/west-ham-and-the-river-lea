@@ -9,6 +9,7 @@ import { loadHistoricElevation, applyHistoricElevation } from '../docs/historic-
 import { loadRiverNetwork } from '../docs/river-network.js';
 import { loadRiverSystem, applyRiverSystem } from '../docs/river-system.js';
 import { loadMainLandscape, applyMainLandscape } from '../docs/main-landscape.js';
+import { buildingPlinths } from '../docs/building-plinths.js';
 const load = async (url, type = 'json') => {
   const b = readFileSync(new URL('../docs/' + url.replace(/^\.\//, ''), import.meta.url));
   return type === 'json' ? JSON.parse(b) : b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength);
@@ -279,6 +280,18 @@ for (const [kind, triangles] of Object.entries(roadTriangles)) {
     `${kind}: ground stands more than 0.05 m above the road, worst ${JSON.stringify(worst)}`
   );
 }
+// Plinths (task B): every recorded plinth stands under an object the scene draws, from below the lowest drawn ground
+// under it up to its seat, and the module draws them all.
+const plinthRecords = data.mainLandscape.meta.plinths.objects;
+for (const [id, [bottom, top]] of Object.entries(plinthRecords)) assert(bottom < top - 0.3, `plinth ${id}`);
+const plinthScene = new THREE.Scene();
+const drawnPlinths = buildingPlinths({
+  THREE,
+  scene: plinthScene,
+  data,
+  materials: { brick: new THREE.MeshStandardMaterial() },
+});
+assert.equal(drawnPlinths.plinths, Object.keys(plinthRecords).length, 'every plinth drawn');
 console.log(
   JSON.stringify(
     {
@@ -300,6 +313,7 @@ console.log(
         'outer ground unchanged',
         'no ground in a road-bridge span above the water edge',
         'no ground above a drawn road surface',
+        `${drawnPlinths.plinths} building plinths on sloping ground`,
       ],
     },
     null,

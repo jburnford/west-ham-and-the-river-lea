@@ -442,10 +442,10 @@ def surface(points,old,bank=True):
 # (Limehouse Cut), the river network's interpretive retaining edges, and the
 # reviewed river-system terrain patches whose recorded shore transition is no
 # wider than the lip itself. Every other shore is an earth or canal-earth bank.
-MASONRY_REACH_M=1.5;LIP_M=.6;lip_vertices={};tidal_kept={}
+MASONRY_REACH_M=1.5;LIP_M=.6;WALLED_STREET_M=5.;lip_vertices={};tidal_kept={}
 masonry=shapely.union_all([LineString(r['route']) for r in system['bankSections']['canalFacingRoutes']]+[LineString(r) for r in network['retainingEdges']['routes'] if len(r)>1])
 steep_patches=[t for t in system['bankSections']['terrainPatches'] if t['config']['shoreTransitionMetres'][1]<=LIP_M]
-masonry_zone=masonry.buffer(MASONRY_REACH_M);patch_zone=geometry([p for t in steep_patches for p in t['polygons']])
+masonry_zone=masonry.buffer(MASONRY_REACH_M);walled_street_zone=masonry.buffer(WALLED_STREET_M);shapely.prepare(walled_street_zone);walled_streets={};patch_zone=geometry([p for t in steep_patches for p in t['polygons']])
 raised_shore=masonry_zone.union(patch_zone)
 for zone in (masonry_zone,patch_zone,raised_shore):shapely.prepare(zone)
 # A street corridor with a street level of its own (OS street readings) keeps it beside the
@@ -456,6 +456,7 @@ for zone in (masonry_zone,patch_zone,raised_shore):shapely.prepare(zone)
 graded_reach=shapely.union_all([line.buffer(DECK_APPROACH_M+EDGE_REACH_M) for v in graded_decks.values() for line,_,_ in v]) if graded_decks else Polygon()
 shapely.prepare(graded_reach)
 street_fits=[j for j,fit in enumerate(road_fits) if fit[0].get('kind')!='path']
+street_corridors=shapely.union_all([road_fits[j][1] for j in street_fits]);shapely.prepare(street_corridors)
 def own_street(p):
     """Points of p inside a street corridor (not a path) that has a street level there, outside Abbey Lane's graded deck approach."""
     out=np.zeros(len(p),bool)
@@ -467,7 +468,7 @@ def blend_surface(points,old,bank=True,key='groundMesh'):
     w=weight(points);out=np.asarray(old,dtype=float).copy();selected=w>0
     if not selected.any():return out
     p=points[selected];g=base(p);wet=shapely.contains_xy(blend_water,p[:,0],p[:,1]);old_y=out[selected]
-    street=own_street(p);wet[street]=shapely.contains_xy(water,p[street,0],p[street,1])
+    street=own_street(p);wet[street]=shapely.contains_xy(water,p[street,0],p[street,1]);street_mask=street
     if bank:
         bng=np.column_stack([538900+p[:,0],183209-p[:,1]]);pts=shapely.points(bng)
         near=banks.segment_tree.nearest(pts);distance=shapely.distance(pts,banks.segments[near])
@@ -507,6 +508,11 @@ def blend_surface(points,old,bank=True,key='groundMesh'):
             for under,soffit in deck_under:
                 d=shapely.distance(under,shapely.points(pm));near=(d<EDGE_REACH_M)&~zone
                 levels[near]=np.minimum(levels[near],soffit+d[near]/EDGE_BATTER)
+            # Task B (October 2026): a street beside a recorded masonry edge (a retaining wall or canal face, within
+            # WALLED_STREET_M) runs at its own level up to the wall instead of falling down a bank face to the water:
+            # Marshgate Lane on its Pudding Mill River wall.
+            walled=(street_mask[margin]|shapely.contains_xy(street_corridors,pm[:,0],pm[:,1]))&shapely.contains_xy(walled_street_zone,pm[:,0],pm[:,1])&(levels>network['waterLevel']+.5)
+            rise[walled]=1;walled_streets[key]=walled_streets.get(key,0)+int(walled.sum())
             levels=(network['waterLevel']+.02)*(1-rise)+levels*rise
             g[margin]=levels
     # Bed, drain-water and network tidal-water vertices retain their native
@@ -1057,23 +1063,59 @@ def footprint_samples(polys):
     return np.array(q,float)
 def circle_samples(x,z,r):
     a=np.arange(8)*np.pi/4;return np.array([[x,z],*np.column_stack([x+r*np.cos(a),z+r*np.sin(a)])],float)
-_seat_items=[]
-for b in factory['buildings']:_seat_items.append((b,footprint_samples([Polygon(p['outer'],p.get('holes',[])).buffer(0) for p in b.get('renderPolygons') or []])))
+_seat_items=[];_seat_polys={}
+def _poly_item(b,polys):
+    _seat_polys[b['id']]=polys;_seat_items.append((b,footprint_samples(polys)))
+for b in factory['buildings']:_poly_item(b,[Polygon(p['outer'],p.get('holes',[])).buffer(0) for p in b.get('renderPolygons') or []])
 for p in factory['structures']:_seat_items.append((p,circle_samples(p['x'],p['z'],p.get('radius') or 3.)))
 for h in factory['holders']:_seat_items.append((h,circle_samples(h['x'],h['z'],h['radius'])))
-for b in _frontage_buildings:_seat_items.append((b,footprint_samples([Polygon(p['outer'],p.get('holes',[])).buffer(0) for p in b['renderPolygons']] if b.get('renderPolygons') else [Polygon(b['footprint']).buffer(0)])))
-for r in read('docs/data/housing-detail.json')['rows']:_seat_items.append((r,footprint_samples([Polygon(r['footprint']).buffer(0)])))
+for b in _frontage_buildings:_poly_item(b,[Polygon(p['outer'],p.get('holes',[])).buffer(0) for p in b['renderPolygons']] if b.get('renderPolygons') else [Polygon(b['footprint']).buffer(0)])
+for r in read('docs/data/housing-detail.json')['rows']:_poly_item(r,[Polygon(r['footprint']).buffer(0)])
 _outside={(p['siteId'],i) for p in pads for i in p.get('outsideIds',[])}
 _chosen=[]
 for b,q in _seat_items:
     c=np.array([b.get('centre') or [b['x'],b['z']]],float);j=pad_index.get(b.get('siteId'))
     if (b.get('siteId'),b['id']) in _outside or (j is None and (terrace_weight(c)[0]>=.999 or b.get('siteId') in terrace_unpadded)):_chosen.append((b['id'],q))
-_all=np.concatenate([q for _,q in _chosen]);_zone=shapely.union_all([shapely.box(*q.min(axis=0)-3,*q.max(axis=0)+3) for _,q in _chosen])
+# Task B (October 2026): every other object in the core box whose seat (its pad, or the level field) stands more
+# than SEAT_OUTLIER_M off the median drawn ground under it is seated by the same rule (T22 decision 7); and where the
+# drawn ground under a footprint falls more than PLINTH_MIN_M below the seat (a building on a slope or over a bank
+# edge), docs/building-plinths.js draws a brick plinth under the footprint from below that ground up to the seat
+# (T22 decision 6). Footprint samples are the 2 m seat samples plus the outline vertices.
+SEAT_OUTLIER_M=.3;PLINTH_MIN_M=.3;PLINTH_SINK_M=.1
+_cb=os_register['coreBox'];_chosen_ids={i for i,_ in _chosen}
+def _centre(b):return np.array([b.get('centre') or [b['x'],b['z']]],float)
+_core_items=[(b,q) for b,q in _seat_items if b.get('id') is not None and _cb[0]<=_centre(b)[0,0]<=_cb[2] and _cb[1]<=_centre(b)[0,1]<=_cb[3]]
+def _outline(b):
+    v=[np.asarray(g.exterior.coords) for g in _seat_polys.get(b['id'],[]) if not g.is_empty and g.geom_type=='Polygon']
+    return np.concatenate(v) if v else np.zeros((0,2))
+_items=[(b,q,_outline(b)) for b,q in _core_items]
+_all=np.concatenate([np.concatenate([q,v]) for _,q,v in _items]);_zone=shapely.union_all([shapely.box(*np.concatenate([q,v]).min(axis=0)-3,*np.concatenate([q,v]).max(axis=0)+3) for _,q,v in _items])
 _locs={k:Locator(mesh_points(k),mesh_tri[k],_all,_zone) for k in mesh_keys}
-_ground=drawn_level(_all,_locs);seats={};_k=0
-for i,q in _chosen:
-    seats[i]=round(float(np.median(_ground[_k:_k+len(q)])),3);_k+=len(q)
+_ground=drawn_level(_all,_locs);seats={};_k=0;_under={}
+for b,q,v in _items:
+    g=_ground[_k:_k+len(q)+len(v)];_under[b['id']]=(float(np.median(g[:len(q)])),float(g.min()));_k+=len(q)+len(v)
+for i,_ in _chosen:seats[i]=round(_under[i][0],3) if i in _under else None
+_missing=[i for i,v in seats.items() if v is None]
+if _missing:
+    _m=[(i,q) for i,q in _chosen if i in _missing];_a=np.concatenate([q for _,q in _m]);_l={k:Locator(mesh_points(k),mesh_tri[k],_a,shapely.union_all([shapely.box(*q.min(axis=0)-3,*q.max(axis=0)+3) for _,q in _m])) for k in mesh_keys};_g=drawn_level(_a,_l);_k=0
+    for i,q in _m:seats[i]=round(float(np.median(_g[_k:_k+len(q)])),3);_k+=len(q)
+def _current(b):
+    c=_centre(b);j=pad_index.get(b.get('siteId'))
+    if j is not None and (b.get('siteId'),b['id']) not in _outside:return float(field_weight(c)[0]*pad_at(j,c)[0])
+    return float(field_level(c)[0])
+seat_outliers=[]
+for b,q,v in _items:
+    if b['id'] in seats:continue
+    prior=_current(b);median=_under[b['id']][0]
+    if abs(prior-median)>SEAT_OUTLIER_M:seats[b['id']]=round(median,3);seat_outliers.append({'id':b['id'],'siteId':b.get('siteId'),'priorSeat':round(prior,3),'seat':round(median,3)})
 seats=dict(sorted(seats.items()))
+plinths={}
+for b,q,v in _items:
+    if b['id'] not in _seat_polys:continue
+    top=seats.get(b['id'],_current(b));low=_under[b['id']][1]
+    if top-low>PLINTH_MIN_M:plinths[b['id']]=[round(low-PLINTH_SINK_M,3),round(top+.1,3)]
+plinths=dict(sorted(plinths.items()))
+print('SEAT OUTLIERS:',len(seat_outliers),'PLINTHS:',len(plinths),flush=True)
 print('SEATS:',len(seats),flush=True)
 mesh=np.column_stack([points[:,0],heights,points[:,1]]).astype('<f4')
 mesh.tofile(OUT/'main-landscape-1900.background.f32');files['groundMesh']='main-landscape-1900.background.f32'
@@ -1343,7 +1385,8 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
     'replacementBaseGround':rings(original_base.difference(outline)),'replacementRegionalGround':rings(original_regional.difference(outline)),
     'roadControlIds':sorted({id for fit in road_fits for id in fit[-1]}),
     'siteGround':pads,'retainingEdgeCrests':wall_levels,
-    'seats':seats,'seatMethod':f'objects inside the terrace zone, or belonging to a terrace site, without a premises pad, and objects anywhere outside their site\'s pad outline (siteGround outsideIds), are seated on the median drawn ground under their footprint ({SEAT_SAMPLE_M:g} m samples; eight points round round plant), keyed by object id (T22)',
+    'seats':seats,'seatOutliers':{'method':f'objects in the core box, outside the T22 seat rule, whose seat (pad or level field at the centre) stands more than {SEAT_OUTLIER_M} m off the median drawn ground under their footprint are seated on that median (task B)','objects':seat_outliers},
+    'plinths':{'method':f'brick plinth under the footprint from {PLINTH_SINK_M} m below the lowest drawn ground under it (2 m samples and outline vertices) to the seat + 0.1, where that ground lies more than {PLINTH_MIN_M} m below the seat (task B); docs/building-plinths.js','objects':plinths},'seatMethod':f'objects inside the terrace zone, or belonging to a terrace site, without a premises pad, and objects anywhere outside their site\'s pad outline (siteGround outsideIds), are seated on the median drawn ground under their footprint ({SEAT_SAMPLE_M:g} m samples; eight points round round plant), keyed by object id (T22)',
     'osGroundLevels':{'register':osg.REGISTER,
         'method':f'premises pads take their OS yard readings (level with one, the inverse-distance surface through several, power 2, {osg.PAD_SOFTEN_M} m softening; docs/main-landscape.js seats each building on it at its centre); street corridors take their OS street readings as road-surface levels ({ROAD_SURFACE_OFFSET} m above the corridor ground) with the regional street readings; the marsh between works is the regional early-marsh ground plus a correction to the OS marsh, open-ground, bank-foot and track readings and to the ground beside the railways the OS draws at grade (the railway level register formation less its 0.1 m lift, {osg.RAIL_SIDE_OFFSET_M} m either side every {osg.RAIL_SIDE_SPACING_M} m), interpolated as a Gaussian-process mean (squared-exponential kernel, length {osg.MARSH_LENGTH_M} m, noise {osg.MARSH_NOISE_M} m) within each dry compartment between the rivers, clipped to the compartment\'s residual range and fading to no correction away from the readings and over {osg.GRID_MARGIN_M} m outside the core box; where an applied reading lies outside the regional early-marsh support the landscape applies within {osg.SUPPORT_RADIUS_M} m of it, feathered over {osg.SUPPORT_FEATHER_M} m; on the Bromley/Bow terrace (the terrace zone {TERRACE_ZONE}, since T22) it applies in full, the regional ground there corrected in the same way to the OS terrace readings (open ground, streets the model does not draw, towing paths, yards of sites without a pad) as well as the yard and street readings, drawn as a {TERRACE_MESH_STEP:g} m mesh, with every site in the zone on a premises pad, and feathered to nothing over {TERRACE_FEATHER_M:g} m outside the core box',
         'premisesSites':sorted(os_premises),'streetCorridors':{name:ids for name,ids in street_ids.items() if name in os_streets},
@@ -1357,6 +1400,7 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
     'retainingEdgeFill':{'crestMethod':f'1.65 m interpretive crest blended to the observed along-bank crest by the marsh weight {WALL_INLAND_M} m behind the wall; {WALL_MEAN_M} m running mean along the wall; grade-limited upper envelope at {WALL_GRADE} m per metre',
         'fillMethod':f'land side filled level with the coping to {WALL_TOP_M} m from the wall line, then falling at 1:{WALL_BATTER} to the surrounding ground (at most {WALL_REACH_M} m); never lowers ground; water, street corridors and building footprints excluded; battered at the same slope down to unwalled shoreline and to preserved intertidal mud; in the river-network mesh, land vertices of triangles straddling a wall are held down so no ground stands more than {WALL_TOE_M} m above low water at the water face, and no filled vertex stands more than 2.4 m above a mesh neighbour',
         'evidence':'Mapped: the shoreline and GIS industrial plot edges that the interpretive wall routes follow (river-network retainingEdges; the walls themselves are not a surveyed inventory), and the high-confidence wall_top/embankment_top spot heights behind the along-bank crest profile. Estimated: the coping grade between readings, the berm width and batter, and the fill itself; no surveyed section of any wall or its backfill.'},
+    'walledStreets':{'method':f'street-corridor vertices within {WALLED_STREET_M} m of a recorded masonry edge (retaining-wall routes, canal faces) keep their street level up to the edge (task B)','vertices':walled_streets},
     'shoreLip':{'method':f'bank vertices within {LIP_M} m of the regional shoreline whose previous height stood more than 0.5 m above low water are lifted to the full crest only within {MASONRY_REACH_M} m of a recorded masonry edge (river-system canalFacingRoutes, river-network retainingEdges), and keep their previous reviewed height (capped at the crest) inside a reviewed terrain patch whose recorded shore transition is no wider than {LIP_M} m; all other shores take the 0-3 m smoothstep earth face',
         'lipVertices':lip_vertices,'steepShorePatches':[t['id'] for t in steep_patches],
         'evidence':'Mapped: the shorelines, the interpreted canal-face and retaining-edge routes, and the reviewed patch outlines. Recorded in the bank policy: earth and canal-earth profiles elsewhere ("no continuous masonry assumed on Hackney Cut"). Estimated: the 1.5 m reach of a masonry edge and the smoothstep face itself; no surveyed bank section.'},

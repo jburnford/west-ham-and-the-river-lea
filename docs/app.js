@@ -14,6 +14,7 @@ import { lighting } from './lighting.js';
 import { infrastructure } from './infrastructure.js';
 import { tramRails } from './tram-rails.js';
 import { wharfCranes } from './wharf-cranes.js';
+import { buildingPlinths } from './building-plinths.js';
 import { mappedTrees } from './mapped-trees.js';
 import { loadTerrain, terrainDetails } from './terrain-details.js';
 import { loadRiverNetwork, riverNetwork } from './river-network.js';
@@ -809,6 +810,7 @@ function buildScene() {
   scene.userData.infrastructure = infrastructure({ THREE, scene, materials, data, box, level: terrain.level });
   scene.userData.tramRails = tramRails({ THREE, scene, data, level: terrain.level });
   scene.userData.wharfCranes = wharfCranes({ THREE, scene, data, level: terrain.level, materials });
+  scene.userData.buildingPlinths = buildingPlinths({ THREE, scene, data, materials });
   mark('trees');
   scene.userData.mappedTrees = mappedTrees({ THREE, scene, data, level: terrain.level, beam });
   surfaces.weather(terrain.terrainMaterial);

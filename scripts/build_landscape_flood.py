@@ -6,6 +6,8 @@ uncertainty. A uniform tidal stage is a geometric experiment, not a hydrograph.
 import hashlib
 import heapq
 import json
+import subprocess
+import tempfile
 from pathlib import Path
 
 import numpy as np
@@ -58,7 +60,17 @@ def build():
     plan = read('ground-plan.json')
     assert meta['epoch'] == meta['geometryEpoch'] == '1900'
     shape = (meta['height'], meta['width'])
-    ground = np.frombuffer(read(meta['files']['scene'], True), '<f4').reshape(shape).copy()
+    # The ground the page draws (scripts/sample_drawn_ground.mjs: the main landscape, river network and river
+    # system meshes and the core tile, as terrainDetails().level), sampled on this grid; since task B (October
+    # 2026) the flood surface follows it rather than the historic scaffold (terrain-1900 scene) under it.
+    landscape = read('main-landscape-1900.json')
+    for key in ('core', 'network', 'system', 'extension', 'groundMesh', 'level', 'weight'):
+        read(landscape['files'][key], True)
+    with tempfile.TemporaryDirectory() as tmp:
+        subprocess.run(['node', str(ROOT/'scripts/sample_drawn_ground.mjs'), str(meta['bounds'][0]), str(meta['bounds'][1]),
+                        str(shape[1]), str(shape[0]), '1', tmp+'/drawn.f32'], check=True, capture_output=True)
+        ground = np.fromfile(tmp+'/drawn.f32', '<f4').reshape(shape).astype(np.float32)
+    assert np.isfinite(ground).all()
     weight = np.frombuffer(read(meta['files']['weight'], True), '<f4').reshape(shape)
     road = np.frombuffer(read(meta['files']['roadMask'], True), 'u1').reshape(shape) > 0
     offset = meta['verticalReference']['odnMinusSceneYMetres']
@@ -109,12 +121,23 @@ def build():
     raster([[[x, cover(x, z), z] for x, z in tri] for tri in infra['sewerCrestTriangles']], 2)
     # Rendered thin retaining walls are sampled with a one-metre halo to avoid
     # losing them between raster points; no claim that this is their real width.
+    # Each wall at its drawn coping (main-landscape retainingEdgeCrests, nearest route vertex).
     walls = network['retainingEdges']
-    wall_geom = shapely.union_all([LineString(r) for r in walls['routes']]).buffer(1)
-    wall = shapely.contains_xy(wall_geom, X, Z) & ~tidal
-    raised = wall & (ground < walls['crestHeight'])
-    ground[raised] = walls['crestHeight']
-    kind[raised] = 2
+    for route, crest in zip(walls['routes'], landscape['retainingEdgeCrests']):
+        if len(route) < 2: continue
+        route = np.asarray(route, float); crest = np.asarray(crest, float)
+        lo = np.floor(route.min(axis=0)-2).astype(int); hi = np.ceil(route.max(axis=0)+2).astype(int)
+        ix0, iz0 = max(0, lo[0]-x0), max(0, lo[1]-z0); ix1, iz1 = min(shape[1]-1, hi[0]-x0), min(shape[0]-1, hi[1]-z0)
+        if ix1 < ix0 or iz1 < iz0: continue
+        sl = np.s_[iz0:iz1+1, ix0:ix1+1]
+        wall = shapely.contains_xy(LineString(route).buffer(1), X[sl], Z[sl]) & ~tidal[sl]
+        if not wall.any(): continue
+        q = np.column_stack([X[sl][wall], Z[sl][wall]])
+        top = crest[np.argmin(((q[:, None, :]-route[None, :, :])**2).sum(-1), axis=1)]
+        cells = ground[sl].copy(); k = kind[sl].copy(); flat, kf = cells.reshape(-1), k.reshape(-1)
+        idx = np.flatnonzero(wall.ravel()); up = flat[idx] < top
+        flat[idx[up]] = top[up]; kf[idx[up]] = 2
+        ground[sl] = cells; kind[sl] = k
     kind[tidal] = 3
     ground += offset
 
@@ -143,6 +166,7 @@ def build():
            'bounds': [x0, z0, x0+width*step, z0+height*step], 'files': files,
            'verticalReference': meta['verticalReference'], 'defaultLevelODN': 3.5,
            'minLevelODN': 1.9, 'maxLevelODN': 5.5,
+           'groundSource': 'the drawn ground (scripts/sample_drawn_ground.mjs, as the page draws it; task B, October 2026), with road paving, railway and sewer embankments and retaining walls at their drawn copings composed on top',
            'seedPolicy': 'Cells at least half inside mapped tidal polygons; all tidal reaches share the test stage.',
            'reviewedRiverConnections':network['reviewedConnections'],
            'areaM2': width*height*step*step, 'supportedFieldAreaM2': float(support.sum()*step*step),
