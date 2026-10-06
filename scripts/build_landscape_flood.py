@@ -25,6 +25,8 @@ import shapely
 from shapely.geometry import LineString, Polygon
 from skimage.morphology import reconstruction
 
+import flood_basins
+
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / 'docs/data'
 inputs = []
@@ -261,6 +263,20 @@ def build():
         np.savez(os.environ['FLOOD_DUMP'], bed=bed, conn=tidal_conn, inside=inside, tidal=tidal_fraction, water=water_fraction, kind=kind, origin=np.array([x0, z0]))
     assert np.all(tidal_conn[inside] >= bed[inside] - 1e-6)
 
+    # Phase V: the hollows, their merge tree and stage-volume tables, on the same 2 m ground (flood_basins.py). The
+    # hierarchy bed closes hollows too small to matter; both views use it.
+    scenarios_path = ROOT / 'data/maps/flood-scenarios.json'
+    inputs.append(scenarios_path)
+    scenarios = json.loads(scenarios_path.read_text())
+    sluices = [s for s in json.loads(register_path.read_text())['structures'] if s['type'] == 'sluice']
+    hier, land_cells, basin_labels, _, _, volume, basin_volumes = flood_basins.basin_model(
+        bed, inside, water_fraction, tidal_fraction, kind, (x0, z0), sluices)
+    bed = np.where(inside, hier, bed).astype(np.float32)
+    tidal_conn = np.maximum(tidal_conn, bed)
+    if os.environ.get('FLOOD_DUMP'):   # the hierarchy bed and basin labels too
+        np.savez(os.environ['FLOOD_DUMP'], bed=bed, conn=tidal_conn, inside=inside, tidal=tidal_fraction, water=water_fraction,
+                 kind=kind, origin=np.array([x0, z0]), basin=basin_labels)
+
     # Fine grid over FINE_BOX; coarse grid (lowest of each 5 x 5 block) over the rest.
     fi0, fj0 = int((FINE_BOX[0] - x0) // CELL), int((FINE_BOX[1] - z0) // CELL)
     fi1, fj1 = (FINE_BOX[2] - x0) // CELL, (FINE_BOX[3] - z0) // CELL
@@ -273,13 +289,21 @@ def build():
     coarse_conn = cblocks(np.where(inside, tidal_conn, np.inf)).min(axis=2)
     coarse_inside = cblocks(inside).any(axis=2)
     coarse_bed = cblocks(np.where(inside, bed, np.inf)).min(axis=2)
+    # Each 10 m cell belongs to the basin of its lowest 2 m cell.
+    lowest_cell = cblocks(np.where(basin_labels > 0, bed, np.inf)).argmin(axis=2)
+    coarse_basin = np.take_along_axis(cblocks(basin_labels), lowest_cell[..., None], axis=2)[..., 0]
+    coarse_basin[~np.isfinite(cblocks(np.where(basin_labels > 0, bed, np.inf)).min(axis=2))] = 0
     ci0, cj0, ci1, cj1 = fi0 // f, fj0 // f, fi1 // f, fj1 // f
     coarse_conn[cj0:cj1, ci0:ci1] = np.inf
     coarse_conn[~coarse_inside] = np.inf
+    coarse_basin[cj0:cj1, ci0:ci1] = 0
+    coarse_basin[~coarse_inside] = 0
 
     files = {'fineBed': 'landscape-flood-1900.fine-bed.u16', 'fineConnection': 'landscape-flood-1900.fine-connection.u16',
              'fineWater': 'landscape-flood-1900.fine-water.u8', 'fineSupport': 'landscape-flood-1900.fine-support.u8',
-             'coarseConnection': 'landscape-flood-1900.coarse-connection.u16', 'coarseBed': 'landscape-flood-1900.coarse-bed.u16'}
+             'coarseConnection': 'landscape-flood-1900.coarse-connection.u16', 'coarseBed': 'landscape-flood-1900.coarse-bed.u16',
+             'fineBasin': 'landscape-flood-1900.fine-basin.u16', 'coarseBasin': 'landscape-flood-1900.coarse-basin.u16',
+             'basinVolumes': 'landscape-flood-1900.basin-volumes.f32'}
     for old in PUBLIC.glob('landscape-flood-1900.*'):
         if old.name != 'landscape-flood-1900.json' and old.name not in files.values():
             old.unlink()
@@ -288,7 +312,11 @@ def build():
     np.round(water_fraction[fine] * 255).astype('u1').tofile(PUBLIC / files['fineWater'])
     np.round(support[fine] * 255).astype('u1').tofile(PUBLIC / files['fineSupport'])
     encode(coarse_conn).tofile(PUBLIC / files['coarseConnection'])
-    encode(np.where(np.isfinite(coarse_conn), coarse_bed, np.inf)).tofile(PUBLIC / files['coarseBed'])
+    encode(np.where(np.isfinite(coarse_conn) | (coarse_basin > 0), coarse_bed, np.inf)).tofile(PUBLIC / files['coarseBed'])
+    assert basin_labels.max() < NONE
+    basin_labels[fine].astype('<u2').tofile(PUBLIC / files['fineBasin'])
+    coarse_basin.astype('<u2').tofile(PUBLIC / files['coarseBasin'])
+    basin_volumes.tofile(PUBLIC / files['basinVolumes'])
 
     # Land connected at each stage, on the 2 m grid: the whole model, the fine box, the rest, and the old box.
     land = inside & (water_fraction < .5)
@@ -308,7 +336,18 @@ def build():
                       'outsideFineVolumeM3': round(float(((s - bed) * (lw & ~in_fine)).sum() * area)),
                       'legacyBoxHa': round(float((lw & in_old).sum() * area / 1e4), 2),
                       'modelEdgeCells': int((wet & edge).sum())})
-    out = {'epoch': '1900', 'method': 'connected-stage-per-source', 'schemaVersion': 2,
+    volume['parameters'].update({
+        'sluiceDischargeM3PerSecond': flood_basins.SLUICE_DISCHARGE,
+        'method': 'Fill and spill over a depression hierarchy (flood_basins.py, docs/lib/flood-volume.js). Rain: the storm total on each hollow\'s whole catchment, no losses. Tide and river: weir flow Q = C x 2 m x (h - saddle)^1.5 summed over every 2 m cell edge of the crest a basin shares with the water (or with ground already holding the source), free overfall, integrated over the tide curve or the held duration; water stands above the crest up to the source level and the rest returns. Sluices: their discharge while the water outside is below the sill, for each tide of the duration.',
+        'estimates': {
+            'weirCoefficient': 'Broad-crested weir over grass banks; 1.7 is the ideal value, 1.6 allows for an uneven crest. Free overfall overstates inflow once the basin fills.',
+            'sluiceDischargeM3PerSecond': 'About a 0.6 m culvert under 0.5 m of head (0.68 m³/s ideal), reduced for flap, silt and weed. Not surveyed.',
+            'sillODN': 'The lowest drawn ground within 16 m of the mapped sluice (the ditch bed). Not surveyed.'}})
+    volume['scenarios'] = scenarios
+    volume['tideODN'] = {'low': round(network['tide']['low'] + offset, 4), 'high': round(network['tide']['high'] + offset, 4),
+                         'periodHours': 12.42, 'source': 'river-network.json tide (data/maps/os-tide-levels.json)'}
+    volume['retainedLevelODN'] = round(network['waterLevel'] + offset, 4) if isinstance(network.get('waterLevel'), (int, float)) else None
+    out = {'epoch': '1900', 'method': 'connected-stage-per-source', 'schemaVersion': 3,
            'cellMetres': CELL, 'sources': ['tidal'],
            'encoding': {'type': 'uint16', 'odnMetres': 'value / 100 - 10', 'none': NONE, 'capODN': CAP_ODN,
                         'waterAndSupport': 'uint8 fraction x 255 (fineWater: share of the cell inside any mapped water polygon)'},
@@ -317,7 +356,7 @@ def build():
                       'note': 'Lowest connection level of each 10 m block; blank inside the fine box and outside the modelled ground.'},
            'bounds': list(FINE_BOX), 'legacyBounds': list(LEGACY_BOX), 'files': files,
            'verticalReference': meta['verticalReference'], 'defaultLevelODN': 3.5, 'minLevelODN': 1.9, 'maxLevelODN': 5.5,
-           'stageTable': table,
+           'stageTable': table, 'volume': volume,
            'groundSource': 'the drawn ground (scripts/sample_drawn_ground.mjs, as the page draws it), sampled every metre, with railway and sewer embankments and retaining walls at their drawn copings composed on top (road paving inside the old box only); 2 m cells keep their highest sample',
            'modelledGround': 'main-landscape weight > 0, every mapped water polygon and the core tile; cells outside never carry water',
            'seedPolicy': 'Cells at least half inside the tidal polygons (river network tide and river system tidal water), less the Thames context reach; all tidal reaches share the test stage.',

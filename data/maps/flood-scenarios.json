@@ -1,0 +1,66 @@
+{
+  "description": "Scenario presets for the volume flood view (FLOOD_MODEL_PLAN.md section 4.6, Phase V). Every total is an estimate chosen to illustrate a mechanism, not a measured event. Levels are ODN metres; the surge is the rise of high water above ordinary high water (Trinity High Water, os-tide-levels.json).",
+  "status": "estimates for review (task E, 6 October 2026)",
+  "controls": {
+    "rainMm": { "min": 0, "max": 150, "step": 5 },
+    "durationTides": [
+      { "tides": 1, "label": "one tide (about 12 hours)" },
+      { "tides": 2, "label": "one day" },
+      { "tides": 6, "label": "three days" }
+    ],
+    "surgeM": { "min": 0, "max": 2, "step": 0.05 },
+    "riverLevelODN": { "min": 1.9, "max": 5, "step": 0.05, "note": "Held level on the non-tidal water (the Lea above the locks, the upper Channelsea and the other reaches outside the tide polygons). The default is the model's retained datum, 0.06 m scene (tide_levels.RETAINED). Phase 2 replaces this with pound levels from the Lea flow." }
+  },
+  "presets": [
+    {
+      "id": "ordinary-day",
+      "label": "Ordinary day",
+      "rainMm": 0,
+      "tides": 1,
+      "surgeM": 0,
+      "riverLevelODN": 1.895,
+      "caption": "No rain, an ordinary tide and the river at its usual level.",
+      "evidence": "Default view (author, 6 October 2026)."
+    },
+    {
+      "id": "summer-storm-1888",
+      "label": "Summer storms, 1888 (estimate)",
+      "rainMm": 50,
+      "tides": 6,
+      "surgeM": 0,
+      "riverLevelODN": 1.895,
+      "caption": "A thunderstorm and two more downpours over three days, with ordinary tides. The total, 50 mm, is an estimate: the report gives no rainfall figure.",
+      "evidence": "historic-flood-events.json 1888-07-30-rainfall-sequence (trove-107325485): rainfall and local drainage flooding on Hackney Marshes, around Temple Mills and in Plaistow; no river peak or surge established. No measured total found (search, 6 October 2026)."
+    },
+    {
+      "id": "winter-storm-high-tides",
+      "label": "Winter storm, high tides (estimate)",
+      "rainMm": 40,
+      "tides": 2,
+      "surgeM": 0.4,
+      "riverLevelODN": 1.895,
+      "caption": "40 mm of rain in a day while high water stands 0.4 m above ordinary: the sluices drain for less of each tide.",
+      "evidence": "Illustrative. The surge is a modest spring-tide-plus-wind rise, well below the 1928 peak."
+    },
+    {
+      "id": "surge-1928-height",
+      "label": "Surge to the 1928 height (one tide)",
+      "rainMm": 0,
+      "tides": 1,
+      "surgeM": 1.7,
+      "riverLevelODN": 1.895,
+      "caption": "High water about 5.1 m ODN, the 1928 peak near Bow, on the 1890s ground for one tide. The 1928 walls and ground were not those of the 1890s.",
+      "evidence": "lea-control-structures.json navigationNormalHead method: 1928-01-07 peak at Bow about 5.1 m ODN (digitisedGaugePeaks1928); ordinary high water 3.41 m ODN."
+    },
+    {
+      "id": "river-held-high",
+      "label": "River held high for a day (estimate)",
+      "rainMm": 20,
+      "tides": 2,
+      "surgeM": 0,
+      "riverLevelODN": 3.4,
+      "caption": "The non-tidal reaches held at 3.4 m ODN for a day with 20 mm of rain. The level is an estimate until Phase 2 computes the pounds from the Lea flow.",
+      "evidence": "Illustrative; the 1894 G2G peak at Feildes Weir (40.9 m³/s daily mean) has no level yet."
+    }
+  ]
+}
