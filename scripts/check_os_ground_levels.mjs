@@ -36,7 +36,11 @@ for (const f of json('reference/spot-heights/heights.geojson').features) {
     z = 183209 - p.bng_n;
   if ((x >= bx0 && x <= bx1 && z >= bz0 && z <= bz1) || inStratford([x, z])) source.set(p.id, { ...p, x, z });
 }
-assert.equal(register.readings.length, source.size, 'Register and spot-height collection differ in the core box and Stratford zone');
+assert.equal(
+  register.readings.length,
+  source.size,
+  'Register and spot-height collection differ in the core box and Stratford zone'
+);
 for (const r of register.readings) {
   const s = source.get(r.id);
   assert(s, `${r.id} is not in the spot-height collection`);
@@ -173,8 +177,13 @@ assert(seatedObjects > 400, 'Too few objects on recorded seats');
 
 // 6. The Stratford zone (task E, F1): the applied readings there, exceptions included, have a median drawn - OS within
 // 0.1 m and a median |drawn - OS| within 0.3 m.
-const stratford = new Set(register.readings.filter((r) => r.use !== 'none' && inStratford(r.position)).map((r) => r.id));
-const sRes = rows.filter((r) => stratford.has(r.id)).map((r) => r.residual).sort((a, b) => a - b),
+const stratford = new Set(
+  register.readings.filter((r) => r.use !== 'none' && inStratford(r.position)).map((r) => r.id)
+);
+const sRes = rows
+    .filter((r) => stratford.has(r.id))
+    .map((r) => r.residual)
+    .sort((a, b) => a - b),
   sAbs = sRes.map(Math.abs).sort((a, b) => a - b),
   mid = (a) => a[Math.floor(a.length / 2)];
 assert(sRes.length >= 120, 'Too few applied readings in the Stratford zone');

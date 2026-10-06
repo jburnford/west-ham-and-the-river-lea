@@ -1783,6 +1783,219 @@
    "sources": [
     "os-london-five-foot-1893"
    ]
+  },
+  {
+   "id": "channelsea-head-temple-mills",
+   "name": "Head of the Channelsea at Temple Mills",
+   "type": "closed head (bank, culvert or sluice)",
+   "status1895": "present (inferred)",
+   "position": {
+    "scene": [
+     -1313.0,
+     -2168.0
+    ],
+    "bng": [
+     537587.0,
+     185377.0
+    ]
+   },
+   "crossLine": {
+    "scene": [
+     [
+      -1314.2,
+      -2161.1
+     ],
+     [
+      -1314.3,
+      -2163.3
+     ],
+     [
+      -1308.8,
+      -2170.3
+     ],
+     [
+      -1309.2,
+      -2173.6
+     ]
+    ],
+    "status": "derived (task E, F1): 2 m outside the river-system Waterworks River polygon, along its edge across the mouth of the Channelsea channel and 3 m into its banks; the three closures together cut every river-system Channelsea reach off from the Waterworks River"
+   },
+   "reachBelow": [
+    5
+   ],
+   "mechanism": "The model's channel network joins the head of the Channelsea (Channel Sea River) to the Waterworks River here. The five-foot plan draws no open passage: a track and B.M. 16.08 stand across the head beside the hatched Waterworks River bank. The OS letters \"Highest Point to which the O.T. flow\" on the Channelsea at Abbey Mill, so ordinary tides, which ran up the Waterworks River to Temple Mills weir, did not enter the Channelsea here: its head was closed to them.",
+   "tideBarrier": {
+    "sceneY": 2.92,
+    "odnMetres": 4.755,
+    "status": "estimate",
+    "rangeSceneY": [
+     2.67,
+     3.2
+    ],
+    "boundingReadings": [
+     {
+      "id": "sh_537596_185408",
+      "feet": 16.9,
+      "sceneY": 2.92,
+      "what": "yard of the cottages south of Templemills Bridge, 32 m"
+     }
+    ],
+    "method": "The OS bank level beside the head: the flood grid (scripts/build_landscape_flood.py) closes the tidal source across the head up to this level, as the bank it passes."
+   },
+   "default1895": {
+    "state": "closed to the tide",
+    "evidence": [
+     "os-london-five-foot-1893",
+     "Abbey Mill tidal-limit lettering (task C)"
+    ],
+    "note": "Task E, F1 (author, 6 October 2026: the Channelsea head)."
+   }
+  },
+  {
+   "id": "potters-ditch-head",
+   "name": "Potter's Ditch at the Waterworks River",
+   "type": "closed head (bank, culvert or sluice)",
+   "status1895": "present (inferred)",
+   "position": {
+    "scene": [
+     -1265.4,
+     -2022.0
+    ],
+    "bng": [
+     537634.6,
+     185231.0
+    ]
+   },
+   "crossLine": {
+    "scene": [
+     [
+      -1262.5,
+      -2013.7
+     ],
+     [
+      -1264.6,
+      -2030.5
+     ]
+    ],
+    "status": "derived (task E, F1): 2 m outside the river-system Waterworks River polygon, along its edge across the mouth of the Channelsea channel and 3 m into its banks; the three closures together cut every river-system Channelsea reach off from the Waterworks River"
+   },
+   "reachBelow": [
+    5
+   ],
+   "mechanism": "Potter's Ditch, a narrow drain between the Waterworks River and the Channel Sea River, meets the hatched Waterworks River bank, which the plan draws unbroken across it (17.8 ft on the bank corner): a drain passing the bank by a culvert or sluice, not an open channel. The OS letters \"Highest Point to which the O.T. flow\" on the Channelsea at Abbey Mill, so ordinary tides, which ran up the Waterworks River to Temple Mills weir, did not enter the Channelsea here: its head was closed to them.",
+   "tideBarrier": {
+    "sceneY": 3.19,
+    "odnMetres": 5.025,
+    "status": "estimate",
+    "rangeSceneY": [
+     2.9,
+     3.5
+    ],
+    "boundingReadings": [
+     {
+      "id": "sh_537638_185226",
+      "feet": 17.8,
+      "sceneY": 3.19,
+      "what": "embankment corner at the head of the Waterworks River, 6 m"
+     }
+    ],
+    "method": "The OS bank level beside the head: the flood grid (scripts/build_landscape_flood.py) closes the tidal source across the head up to this level, as the bank it passes."
+   },
+   "default1895": {
+    "state": "closed to the tide",
+    "evidence": [
+     "os-london-five-foot-1893",
+     "Abbey Mill tidal-limit lettering (task C)"
+    ],
+    "note": "Task E, F1 (author, 6 October 2026: the Channelsea head)."
+   }
+  },
+  {
+   "id": "channelsea-embanked-channel-head",
+   "name": "Head of the embanked channel above the Manure Works",
+   "type": "closed head (bank, culvert or sluice)",
+   "status1895": "present (inferred)",
+   "position": {
+    "scene": [
+     -1221.4,
+     -1818.5
+    ],
+    "bng": [
+     537678.6,
+     185027.5
+    ]
+   },
+   "crossLine": {
+    "scene": [
+     [
+      -1217.5,
+      -1793.8
+     ],
+     [
+      -1217.2,
+      -1795.4
+     ],
+     [
+      -1218.5,
+      -1800.8
+     ],
+     [
+      -1218.9,
+      -1807.1
+     ],
+     [
+      -1217.9,
+      -1810.3
+     ],
+     [
+      -1221.6,
+      -1830.1
+     ]
+    ],
+    "status": "derived (task E, F1): 2 m outside the river-system Waterworks River polygon, along its edge across the mouth of the Channelsea channel and 3 m into its banks; the three closures together cut every river-system Channelsea reach off from the Waterworks River"
+   },
+   "reachBelow": [
+    5
+   ],
+   "mechanism": "The embanked channel east of the Waterworks River (reach 11 of the Channelsea) meets it here; the plan carries the Waterworks River bank hatching unbroken across its head. The OS letters \"Highest Point to which the O.T. flow\" on the Channelsea at Abbey Mill, so ordinary tides, which ran up the Waterworks River to Temple Mills weir, did not enter the Channelsea here: its head was closed to them.",
+   "tideBarrier": {
+    "sceneY": 3.19,
+    "odnMetres": 5.025,
+    "status": "estimate",
+    "rangeSceneY": [
+     2.22,
+     3.79
+    ],
+    "boundingReadings": [
+     {
+      "id": "sh_537674_185070",
+      "feet": 17.8,
+      "sceneY": 3.19,
+      "what": "Waterworks River east embankment, 43 m north"
+     },
+     {
+      "id": "sh_537676_185046",
+      "feet": 19.76,
+      "sceneY": 3.79,
+      "what": "B.M. on the embankment, 20 m (a mark stands above its ground)"
+     },
+     {
+      "id": "sh_537680_184985",
+      "feet": 14.6,
+      "sceneY": 2.22,
+      "what": "east bank of the Waterworks River, 42 m south"
+     }
+    ],
+    "method": "The OS bank level beside the head: the flood grid (scripts/build_landscape_flood.py) closes the tidal source across the head up to this level, as the bank it passes."
+   },
+   "default1895": {
+    "state": "closed to the tide",
+    "evidence": [
+     "os-london-five-foot-1893",
+     "Abbey Mill tidal-limit lettering (task C)"
+    ],
+    "note": "Task E, F1 (author, 6 October 2026: the Channelsea head)."
+   }
   }
  ],
  "notFound": [

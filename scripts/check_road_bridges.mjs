@@ -131,6 +131,9 @@ if (process.argv.includes('--write-sample')) {
 // Hunts Lane connection's west approach moved (up to 0.022 m, the bank under it), then, after the core-tongue mud
 // face and the House Mill race culvert, St Thomas and St Michael's by 0.001 m and Hunts Lane by up to 0.009 m more;
 // TASK_C_REPORT.md.
+// Refreshed by task E, F1 (6 October 2026): the Stratford zone drawn at its OS levels; St Michael's Bridge approaches
+// rise 0.03-0.38 m onto the deck on the OS High Street causeway instead of sagging to the bridge cone; no deck
+// station changed (FLOOD_MODEL_PLAN.md section 0).
 // Refresh with --write-sample whenever a road, bridge span or the landscape under an approach is deliberately changed.
 // prettier-ignore
 const BEFORE = {
@@ -155,9 +158,9 @@ const BEFORE = {
     [2.769,  2.64,  2.36,  2.53,  2.6,  2.62,  2.62,  2.62,  2.62,  2.62,  2.62,  2.62,  2.62,  2.599,  2.516,  2.354,  2.536],
   ],
   'st-michaels-bridge': [
-    [2.335,  2.44,  2.56,  2.71,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.773,  2.611,  2.482,  2.362],
-    [2.442,  2.527,  2.612,  2.697,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.722,  2.602,  2.482,  2.362],
-    [2.549,  2.48,  2.56,  2.728,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.773,  2.606,  2.482,  2.362],
+    [2.714,  2.713,  2.716,  2.71,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.773,  2.611,  2.482,  2.606],
+    [2.72,  2.74,  2.76,  2.779,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.748,  2.669,  2.589,  2.509],
+    [2.727,  2.579,  2.56,  2.728,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.773,  2.606,  2.482,  2.391],
   ],
   'channelsea-high-street-bridge': [
     [2.82,  2.94,  3.06,  3.216,  3.32,  3.32,  3.32,  3.32,  3.32,  3.32,  3.32,  3.32,  3.32,  3.32,  3.32,  3.32,  3.32,  3.32,  3.32,  3.278,  3.117,  2.988,  2.868],

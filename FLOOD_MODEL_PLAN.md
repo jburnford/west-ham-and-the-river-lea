@@ -23,37 +23,9 @@ Read first:
 - **Phase 0:** `data/maps/lea-control-structures.json`, revised after the author's review (see section 6).
 - **Phase 1:** the whole-model flood grid (`scripts/build_landscape_flood.py`, `docs/landscape-flood.js`).
 - **OS flood banks** (the author: "fix the rivers"): `data/maps/os-flood-banks.json`, raised in `scripts/build_main_landscape.py` (`raise_to_flood_banks`).
+- **F1** (the ground north of the core, to the OS): done 6 October 2026. It is reported in `TASK_E_REPORT.md` under "F1", with the author's open questions (the Channelsea head closures; trimming the 2 m join ring).
 
-**F1 in progress (6 October 2026, uncommitted in the worktree; stopped at the author's request).**
-
-- **Done so far:**
-  - **Register.** `os-ground-levels.json` gains a `stratfordZone` [-1800, -2450, -150, -240] and a new use, `stratford` (`prepare_os_ground_levels.py`). Core entries are unchanged. One new decision (sh_538088_183603) and 15 new exceptions, each with its reason.
-  - **Builder** (`build_main_landscape.py`, `os_ground_levels.py`):
-    - a Stratford correction grid with a 60 m kernel, because the readings are sparser than in the core, ramped in over 20 m north of the core edge;
-    - the support extended round applied readings, but not within 15 m of mapped water;
-    - a blend-only weight in which water cells take their neighbours' weight, so the regional bank crest is drawn in full;
-    - a 2 m background mesh in a 6 m ring round the river-network rectangle. It closes a gap between the network and system meshes that notched every bank crossing the network's north edge.
-  - **Check.** `check_os_ground_levels.mjs` covers the zone: the median must be within 0.1 m.
-  - **Diagnostics.** `flood_diagnostics.py spills` takes a box.
-- **Result before the last change:**
-  - Stratford applied readings: median drawn − OS −1.08 → −0.007 m; within 0.6 m 33 → 119 of 134.
-  - Mill Meads fills at 3.78 m ODN (was 2.23).
-  - The Stratford Marsh and Carpenters Road basins fill at 3.51-4.02 m ODN.
-  - Land wet at high water north of the core: 79.5 → 12.7 ha.
-  - The terrace check figures are identical to the baseline.
-- **Open, in this order:**
-  1. The 15 m water clearance (the last change) dropped the support at sh_537108_184276 (Hertford Union towing path). `check_os_ground_levels.mjs` now fails on it (−2.59 m). Give it an exception or a narrower clearance, then rerun the check.
-  2. **The Channelsea head is still open** (the F1 item below). With the network-edge sills back at 0.00 m, the upper Channelsea takes the tide at 0.00 through Temple Mills. Its banks by the High Street spill at 2.7-3.4 m ODN (`spills 3.414 -1800 -2450 -150 -240`). Gate the link with `tideBarrier` records on the Temple Mills and Hackney sluices in `lea-control-structures.json`, checked on the OS.
-  3. **Recorded, not to fix in F1:**
-     - Old Ford and Hackney Wick, west of the Navigation, flood just under high water, because the Navigation is tidal in the Phase 1 grid (Phase 2 holds it at its pound level).
-     - The Hackney Cut towing paths are drawn 4 m under the OS.
-     - The railway and Northern Outfall Sewer embankments north of the core are not in the drawn-ground sampler. Check that the flood builder composes them there.
-     - The West Ham Gas Works pad (site 873) is a 0.15 m marsh estimate.
-     - The river-network edge leaves a 4 m strip with no bed mesh across the Waterworks River and the Channelsea.
-  4. Then the cascade from the main landscape on (section 7), `npm test`, renders, and an F1 section in `TASK_E_REPORT.md`.
-- **Scratch:** `/tmp/claude-1000/-home-jic823-book-website/9d88d6ca-a424-4c7e-8b0a-7d4513f1e9b0/scratchpad/f1/`. It holds the baseline data (`base/`), flood dumps and measuring scripts (`m2.py`, `trace.py`, `hwmap.py`, `probe.mjs`).
-
-**Next:** finish F1 (above), then F2-F3 (section 5, agreed by the author 6 October 2026), then Phase 2.
+**Next:** F2 (back-river beds), then F3 (the works wall face) (section 5, agreed by the author 6 October 2026), then Phase 2.
 
 **Tools.** `scripts/flood_diagnostics.py`, on a dump made with `FLOOD_DUMP=… python3 scripts/build_landscape_flood.py`:
 

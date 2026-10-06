@@ -89,6 +89,11 @@ _mapped_water=local(banks.water).union(geometry([p for r in plan['rivers'] for p
 support_pre_stratford=support.copy();_sz=in_stratford(_field)
 _ext=np.zeros(len(_field));_ext[_sz]=osg.stratford_support(os_register,_field[_sz])
 _ext[_sz]*=~shapely.dwithin(_mapped_water,shapely.points(_field[_sz]),STRATFORD_WATER_CLEAR_M)
+# Nor beyond the regional marsh outline, the ground the landscape mesh draws: outside it (Stratford town) the page draws
+# no ground and seats streets and buildings on the level field, which a raised weight there lifted above streets
+# crossing from the drawn marsh (0.3 m at Carpenters Road by the Channelsea).
+_marsh_outline=local(Polygon(meta['regionalMarshBaseline']['config']['outlineBNG']))
+_ext[_sz]*=shapely.contains_xy(_marsh_outline,_field[_sz,0],_field[_sz,1])
 support=np.maximum(support,_ext.reshape(shape).astype(support.dtype))
 _wet_cells=(shapely.contains_xy(_mapped_water,_field[:,0],_field[:,1])&_sz).reshape(shape)
 support_blend=np.where(_wet_cells,np.maximum(support,grey_dilation(support,size=(3,3))),support).astype(support.dtype)
@@ -781,13 +786,16 @@ _np=read('docs/data/'+network['positionFile'],True).reshape(-1,3);nx0,nz0,nx1,nz
 join_sides=[box(nx0-NET_JOIN_M,nz0-NET_JOIN_M,nx1+NET_JOIN_M,nz0+NET_JOIN_M),box(nx0-NET_JOIN_M,nz1-NET_JOIN_M,nx1+NET_JOIN_M,nz1+NET_JOIN_M),
             box(nx0-NET_JOIN_M,nz0+NET_JOIN_M,nx0+NET_JOIN_M,nz1-NET_JOIN_M),box(nx1-NET_JOIN_M,nz0+NET_JOIN_M,nx1+NET_JOIN_M,nz1-NET_JOIN_M)]
 join_mesh=shapely.union_all(join_sides).difference(terrace_mesh);fine_mesh=terrace_mesh.union(join_mesh)
+# In the ring the mesh covers all the river system's base and regional ground, inside the regional marsh outline or not
+# (the gap is there too: by the Channelsea a street crossed it on the level field, 0.3 m above its own surface).
+join_area=original_base.union(original_regional).difference(water).intersection(shapely.union_all(join_sides))
 def mesh_cells(region,mesh_step):
     x0,z0,x1,z1=region.bounds
     x,z=np.meshgrid(np.arange(np.floor(x0/mesh_step)*mesh_step,x1,mesh_step),np.arange(np.floor(z0/mesh_step)*mesh_step,z1,mesh_step))
     cells=shapely.box(x.ravel(),z.ravel(),x.ravel()+mesh_step,z.ravel()+mesh_step)
     p=shapely.get_parts(shapely.intersection(cells,region));return p[shapely.area(p)>1e-5]
 parts=np.concatenate([mesh_cells(area.difference(fine_mesh),20),mesh_cells(area.intersection(terrace_mesh),TERRACE_MESH_STEP),
-                      *[mesh_cells(area.intersection(side.difference(terrace_mesh)),NET_JOIN_STEP) for side in join_sides]])
+                      *[mesh_cells(join_area.intersection(side.difference(terrace_mesh)),NET_JOIN_STEP) for side in join_sides]])
 # Road surface triangles as docs/infrastructure.js draws them: carriageway,
 # footway and path, each drawn its offset above the ground under its vertices,
 # and the bridge decks (boxes at the deck height). The 20 m regional mesh is
@@ -1132,12 +1140,18 @@ heights=surfaces['groundMesh']['new']
 _tri=np.arange(len(points)).reshape(-1,3);_cen=points[_tri].mean(axis=1);_fine=shapely.contains_xy(fine_mesh,_cen[:,0],_cen[:,1])
 _on=np.flatnonzero(shapely.distance(fine_mesh.boundary,shapely.points(points))<1e-4)
 _on=_on[np.isin(_on,_tri[_fine].ravel())]
+# Vertices the road pass has set (clamped under a road, or carrying one) keep that height (task E, F1: the network-join
+# ring crosses streets, and the coarse surface there stood up to 0.3 m above the carriageway).
+_road_set=np.zeros(len(points),bool);_road_set[road_support['groundMesh']]=True
+if 'groundMesh' in clamp:_road_set[clamp['groundMesh'][0]]=True
+_held=int(_road_set[_on].sum());_on=_on[~_road_set[_on]]
 seam={'joinVertices':int(len(_on)),'changedVertices':0,'maxChangeMetres':0.}
 if len(_on):
     _loc=Locator(points,_tri[~_fine],points[_on])
     _top=_loc.top(heights);_ok=np.isfinite(_top)&(np.abs(_top-heights[_on])>1e-6)
     seam={'joinVertices':int(len(_on)),'changedVertices':int(_ok.sum()),'maxChangeMetres':round(float(np.abs(_top[_ok]-heights[_on][_ok]).max()) if _ok.any() else 0.,3)}
     heights=heights.copy();heights[_on[_ok]]=_top[_ok]
+seam['roadVerticesHeld']=_held
 print('TERRACE SEAM:',seam,flush=True)
 surfaces['groundMesh']['new']=heights
 # Object seats (T22). On the terrace the ground under a building is the drawn surface itself (terrace, streets,
@@ -1347,7 +1361,11 @@ def wall_quads(faces,kind):
     if not faces:return quads
     f=np.array(faces);ends=f[:,:,[0,2]].reshape(-1,2);g=rail_ground(ends).reshape(-1,2);wet=(shapely.distance(water,shapely.points(ends))<1.5).reshape(-1,2)
     bottom=np.where(wet,np.minimum(g,RAIL_BED),g-RAIL_FOOTING)
-    for (a,b),(ga,gb),(ba,bb) in zip(f,g,bottom):
+    # Beside water the drawn bank falls to the water edge, which base() (rail_ground) does not hold: a cut end there
+    # stands above the bank face even where it meets the ground behind it (task E, F1: the North London branch at the
+    # Hackney Cut, whose toes rose with the OS-corrected ground to 2.3 m beside the bank face at the water).
+    rise_g=np.where(wet,np.minimum(g,network['waterLevel']+.02),g)
+    for (a,b),(ga,gb),(ba,bb) in zip(f,rise_g,bottom):
         if max(a[1]-ga,b[1]-gb)<RAIL_WALL_MIN:continue
         quads.append([a.tolist(),b.tolist(),[b[0],min(bb,b[1]),b[2]],[a[0],min(ba,a[1]),a[2]]])
     return quads

@@ -107,3 +107,86 @@ The old-box column differs from main for three reasons: the land figures now exc
 3. A masonry face for the works river wall?
 
 Then Phase 2: pounds and ponds, with the tide-mill rule, the Navigation's overfalls and the working mills agreed in Phase 0.
+
+# F1: the ground north of the core, to the OS (6 October 2026)
+
+Done directly in the parent session, on `task-e-flood-model` after `2621cb2` (work in progress, committed when the author had to leave). The author agreed F1-F3 on 6 October and decision 1 above is answered by it. Scratch work (measuring scripts, flood dumps, the pre-F1 data) is in the session scratchpad `…/9d88d6ca-…/scratchpad/f1/`.
+
+## Summary
+
+- **The Stratford zone** (scene x -1800..-150, z -2450..-240: the High Street to Temple Mills, north of the core box) is drawn at its OS levels.
+  - **Readings.** The 132 applied OS ground readings there: median drawn − OS **-1.08 → -0.009 m**; median |drawn − OS| 0.031 m; 113 within ±0.6 m (33 before). The other 19 are listed exceptions, each with its reason.
+  - **The core box is unchanged** in its results. The terrace check figures are identical (116 readings, median 0.006, p90 0.246 m). Inside the box, ground moved only along its north edge, where street corridors and pads straddle it: core tile ≤ 0.014 m, network ≤ 0.07 m, extension ≤ 0.5 m.
+- **The flood at high water (3.414 m ODN):**
+
+| | Before F1 | After F1 |
+|---|---|---|
+| Mill Meads fills at | 2.23 m ODN (from the north, at (-546, -379)) | 3.78 m ODN (over the Abbey Mills ground at (-36, 11)) |
+| Stratford Marsh basins fill at | 2.31-3.41 m ODN | 3.72-4.07 m ODN |
+| The Carpenters Road works fill at | 2.95 m ODN | 4.02 m ODN |
+| The upper Channelsea takes the tide at | 1.84 m ODN (through Temple Mills) | 3.64 m ODN (over the Abbey Mill gate only) |
+| Land wet at high water, Stratford zone | 73.7 ha | 11.9 ha |
+| Land wet at high water, core box | 31.2 ha | 1.3 ha |
+| Land wet at high water, whole model | 205.3 ha | 108.7 ha |
+
+  The connected-land stage table: 2.5 m ODN 42.87 → 1.32 ha; 3.5 m ODN 306.77 → 157.00 ha.
+- **Checks.**
+  - `npm test` 21/21. `check_os_ground_levels.mjs` now covers the zone. Two other checks needed work: `check_road_bridges.mjs` sample refreshed (St Michael's Bridge approaches only), and `check_railway_embankments.mjs` passes after a builder fix (below).
+  - Python checks: the same 41 pass and 34 fail as before F1.
+  - The builders are deterministic (reruns byte-identical).
+
+## What changed
+
+**The register** (`data/maps/os-ground-levels.json`, `scripts/prepare_os_ground_levels.py`).
+- A `stratfordZone` and a new use, `stratford`: every ground reading on the drawn marsh in the zone that is not a street or premises reading.
+- Readings where the regional early-marsh support is 0, or beyond the regional marsh outline, are not applied, each with its reason. That is Stratford town and Hackney Wick on the terrace, which the model does not draw.
+- Street readings on drawn streets set their corridors. The High Street causeway now carries its OS levels north of the core.
+- Core entries are unchanged.
+- Three decisions (a reading inside the drawn City Mill River; a low-confidence West Ham Gas Works figure; a Hertford Union towing path off the drawn marsh) and 19 exceptions (bank faces, tidal-outline shelves, the marsh edge beside water, pad batters).
+
+**The ground** (`scripts/build_main_landscape.py`, `scripts/os_ground_levels.py`).
+- **A Stratford correction grid.** It interpolates the zone's residuals against the core-corrected ground, as T21/T22 did:
+  - every applied reading is a control, streets at the ground under the road;
+  - the kernel is 60 m, because the readings are sparser (median spacing 68 m against 51 m in the core);
+  - it is 0 on the core's north edge and full 20 m north of it, and fades out over 60 m beyond the zone.
+  - Residuals before it: median +0.70 m, range -1.61..+3.93 m. This is the 1890s made ground of the Carpenters Road district, the High Street and the railway lands standing on the 1848 marsh.
+- **Support.** It is extended round the applied readings as in the core, but not within 15 m of mapped water nor beyond the regional marsh outline. Raising it there put a 1.7 m sill across the Channelsea where no mesh draws its bed, and lifted Stratford town's level field above a street.
+- **The bank blend.** It uses a weight in which water cells take their neighbours' weight. The 10 m weight field is 0 in water, so the banks got 0.3-0.9 of the regional bank crest, although that crest already runs through the OS bank-top readings. The exported weight is unchanged.
+- **The river-network join.**
+  - The river-system mesh stops 4-8 m short of the network's rectangle, and the 20 m background mesh bridged the gap. On the Waterworks River bank at the network's north edge, a 20 m triangle fell from the 2.4 m crest to its water-edge vertex, and the tide entered the Carpenters Road works through the notch at 0.5 m.
+  - A 6 m ring either side of the network edge is now meshed at 2 m and joined to the 20 m mesh as the terrace mesh is. Vertices the road pass sets are left alone at the join.
+  - Background mesh: 574,494 → 727,893 vertices; `background.f32` 6.9 → 8.7 MB.
+- **Railway abutments.** A cut embankment end within 1.5 m of water is measured against the water edge, not the base ground behind the bank face. The North London branch at the Hackney Cut gains 7 abutment faces (5.3 m), because its toes rose with the OS ground to 2.3 m beside the bank face. One more 0.7 m face appears at the LT&SR Bow Creek approach.
+
+**The Channelsea head** (`data/maps/lea-control-structures.json`).
+- Three new closures where the river-system Channelsea meets the Waterworks River: the head at Temple Mills, Potter's Ditch, and the head of the embanked channel above the Manure Works.
+  - Each is a `tideBarrier` at the OS bank level beside it (2.92, 3.19 and 3.19 m scene; estimates, with their bounding readings).
+  - The closure line runs 2 m outside the Waterworks River edge across the Channelsea mouth. The three together cut every Channelsea reach off from it.
+- **Evidence.** The plan draws no open passage at any of them: the hatched Waterworks River bank runs unbroken across the heads. The OS also letters Abbey Mill "Highest Point to which the O.T. flow" on the Channelsea, while ordinary tides reached Temple Mills weir on the Waterworks River. No sluice is lettered at these heads; the OS "Sluice" labels near Temple Mills are on marsh drains.
+
+**Tools.** `scripts/flood_diagnostics.py spills` takes a box.
+
+## Renders
+
+`reference/photo-review-2026-10-03/views-taske-f1/` (main checkout) has before-F1 (`0aec8c0`) and after pairs (`cameras.json`) and the high-water maps (`hw0-*`, `hw5-*`).
+- **The High Street by the Waterworks River.** The terraces' yard walls no longer stand on wedges above ground falling away from the houses: the yards lie near street level.
+- **The Hackney Cut.** The North London bridge has its abutment face.
+- **Stratford Marsh in plan, the Channelsea by the High Street and Temple Mills.** No jumps.
+
+## Not done, and why
+
+- **Old Ford and Hackney Wick, west of the Navigation, and the Bow strip at (-1350, -250)** are wet just under high water. In the Phase 1 grid the Navigation is joined to the tide through the channel network; Phase 2 holds it at its pound level. The Hackney Cut towing paths are drawn up to 4 m under the OS where they lie beyond the drawn marsh.
+- **Embankments north of the core in the flood grid.**
+  - The Northern Outfall Sewer bank is composed there at 7.40 m against its OS 7.7-8.0 m crest readings: it holds.
+  - The G.E.R. High Meads loop embankment is not drawn: 1.29 m against the OS 2.62 m. It is not a flood barrier that matters at high water, but it wants drawing.
+- **The North London branch formation** (an interpreted 3.0 m, "lower formation at the OS-confirmed underpass") now stands barely above the OS ground at the Hackney Cut (2.8-4.4 m). Its level wants the railway level register treatment.
+- **The West Ham Gas Works pad** (site 873) is a 0.15 m marsh estimate with no reliable yard reading.
+- **The join ring** runs round the whole network rectangle. The gaps were found on its north edge; trimming the ring to where the meshes actually part would save most of the 1.8 MB.
+- **The 4 m strip with no bed mesh** where the Waterworks River and the Channelsea cross the network edge remains. The flood grid reads 0.0 m there (a sill below the channel beds, as before F1).
+- **The Poplar side of Bow Creek** (about 97 ha, wet at 3.39 m ODN) is unchanged; it was lower priority in the plan.
+
+## Decisions for the author
+
+1. The Channelsea head closures are inferred from the OS lettering and the unbroken bank, not from a lettered sluice. Is that right, or did the head pass water at some states of the tide?
+2. Trim the 2 m join ring to the network's north edge (smaller download), or keep it whole?
+3. Next: F2 (back-river beds), then F3 (the works wall face), then Phase 2.

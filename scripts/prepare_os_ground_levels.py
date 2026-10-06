@@ -96,6 +96,7 @@ DECISIONS = {
     'sh_539156_183134': {'use': 'none', 'reason': 'Manor Road dips to 3.4 ft where it passes under the Northern Outfall Sewer aqueduct, beside the bank; a local road cutting under the aqueduct (Manor Road is 8.4 ft 73 m south), and Manor Road is not drawn here'},
     'sh_538851_183160': {'use': 'none', 'reason': 'on the strip between the Channelsea and the toe of the sewer bank, at the level of the river-bank crest beside it (18.9 ft, as the embankment-top reading sh_538858_183162 two metres away): a bank-top level, not marsh; as a marsh control it raised a 3.5 m mound over the mud flats'},
     'sh_538088_183603': {'use': 'none', 'reason': 'no survey dot found (position = the figures, medium confidence) and the figures fall inside the drawn City Mill River, 2.4 m from its edge; "by Laboratory Yard", whose ground the reading cannot place (task E, F1)'},
+    'sh_537108_184276': {'use': 'none', 'reason': 'Hertford Union Canal towing path at the head of Bottom Lock (medium confidence), west of the Lea Navigation, 7 m from the canal: the regional early-marsh support is 0.09 here, at the edge of the drawn marsh, and the support is not extended within 15 m of mapped water (task E, F1), so the model does not draw this ground'},
     'sh_538584_183464': {'use': 'none', 'reason': 'low confidence: the second digit is ambiguous (8 or 6) and the dot was not located; it would set the West Ham Gas Works pad (site 873) at 0.45 m on a single uncertain figure (task E, F1)'},
     'sh_538776_182863': {'use': 'none', 'reason': 'low confidence, dot not located; 1.6-1.8 m above the Abbey Creek Wharf readings (10.9-11.6 ft) 40-70 m south; probably on the end of the Long Wall bank at the wharf head'},
 }
@@ -137,6 +138,10 @@ EXCEPTIONS = {
     'sh_537632_183892': 'track by the Bone Works on the bank edge, 7 m from the drawn water, inside the bank band where the model draws the regional bank crest',
     'sh_538516_183577': 'Stanley Road (medium confidence), 9.5 m from the Stanley Road gasworks junction corridor: on the 1:1.5 batter from that corridor\'s own street level',
     'sh_538666_183895': 'Channel Sea Road at its north end, 7 m from the North Street corridor and below the High Street causeway: on the 1:1.5 batters from those streets\' own levels',
+    'sh_537524_183535': 'towing path north of the railway bridge by the Bow Goods Station, '+'at the edge of the drawn marsh beside water: the regional early-marsh support is 0.43 here and the Stratford support extension stops 15 m from mapped water (a raised weight beside a channel the meshes do not draw put a sill across it), so the drawn ground is only partly the corrected landscape',
+    'sh_538531_184294': 'beside the G.E.R. Woolwich Branch bridge (the note puts the dot by the parapet), '+'at the edge of the drawn marsh beside water: the regional early-marsh support is 0.57 here and the Stratford support extension stops 15 m from mapped water (a raised weight beside a channel the meshes do not draw put a sill across it), so the drawn ground is only partly the corrected landscape',
+    'sh_538536_184373': 'open ground by the Foot Bridge south of Stratford Low Level, '+'at the edge of the drawn marsh beside water: the regional early-marsh support is 0.25 here and the Stratford support extension stops 15 m from mapped water (a raised weight beside a channel the meshes do not draw put a sill across it), so the drawn ground is only partly the corrected landscape',
+    'sh_537296_183634': 'Old Ford Road by the Smithy on the terrace west of the Lea, at the edge of the regional marsh outline: the next reading up the road (6.94 m, 87 m north) lies beyond it and is not applied, so the correction has no control on that side and the drawn ground falls towards the regional ground',
     'sh_537161_185652': 'open Hackney Marsh inside the Lea meander, 6.6 m from the drawn Lea, inside the bank band where the model draws the regional bank crest of the Temple Mills Road approach',
 }
 
@@ -167,6 +172,8 @@ def main():
     meta = load('docs/data/lower-lea-region/landscape-1900.json')
     shape = (meta['height'], meta['width']); e0, n0, e1, n1 = meta['boundsBNG']; step = meta['cellSizeMetres']
     support = np.fromfile(ROOT/'docs/data/lower-lea-region'/meta['earlyMarshWeightFile'], '<f4').reshape(shape)
+    # The regional marsh outline: the ground the main landscape mesh draws (task E, F1).
+    outline = Polygon([(e-538900, 183209-n) for e, n in meta['regionalMarshBaseline']['config']['outlineBNG']])
 
     def weight(x, z):
         rc = np.array([[(n1-(183209-z))/step-.5], [((538900+x)-e0)/step-.5]])
@@ -236,9 +243,9 @@ def main():
             why = 'bench mark: cut on a wall, post, building or bridge above the ground it stands on; a check, not a ground level'
         elif cat == 'structure':
             why = f"spot height on a structure ({p.get('setting')}); not the ground"
-        elif in_stratford(x, z) and w <= 0:
-            why = ('outside the drawn marsh: the regional early-marsh support is 0 here (Stratford town or Hackney Wick on the '
-                   'terrace, or the Lea Navigation banks beyond the modelled ground), which the model does not draw (task E, F1)')
+        elif in_stratford(x, z) and (w <= 0 or not outline.contains(q)):
+            why = ('outside the drawn marsh: ' + ('the regional early-marsh support is 0 here' if w <= 0 else 'beyond the regional marsh outline, the ground the landscape mesh draws')
+                   + ' (Stratford town or Hackney Wick on the terrace, or the Lea Navigation banks beyond the modelled ground), which the model does not draw (task E, F1)')
         else:
             road = None
             if p.get('setting') == 'street':

@@ -321,7 +321,9 @@
    "category": "ground",
    "supportWeight": 0.09,
    "notes": "Hertford Union towing path at the head of Bottom Lock: two dots right of the figure (842,650 and 839,668), both 5-8 px from the canal edge line, so position = centre of figures; level path with no bank drawn; lone final 3 read open at 10x",
-   "use": "stratford"
+   "decision": true,
+   "use": "none",
+   "reason": "Hertford Union Canal towing path at the head of Bottom Lock (medium confidence), west of the Lea Navigation, 7 m from the canal: the regional early-marsh support is 0.09 here, at the edge of the drawn marsh, and the support is not extended within 15 m of mapped water (task E, F1), so the model does not draw this ground"
   },
   {
    "id": "sh_537114_185525",
@@ -390,7 +392,8 @@
    "category": "ground",
    "supportWeight": 0.001,
    "notes": "Wick Lane, isolated dot in the carriageway; overlap with m18_131054_87134; decimal 6 (one lower counter)",
-   "use": "stratford"
+   "use": "none",
+   "reason": "outside the drawn marsh: beyond the regional marsh outline, the ground the landscape mesh draws (Stratford town or Hackney Wick on the terrace, or the Lea Navigation banks beyond the modelled ground), which the model does not draw (task E, F1)"
   },
   {
    "id": "sh_537142_185481",
@@ -953,7 +956,8 @@
    "category": "ground",
    "supportWeight": 0.031,
    "notes": "same road by the Smithy, overlap strip with 131054_87137; dot directly below the figure above the Smithy lettering; 6 open-topped at 9x",
-   "use": "stratford"
+   "use": "stratford",
+   "exception": "Old Ford Road by the Smithy on the terrace west of the Lea, at the edge of the regional marsh outline: the next reading up the road (6.94 m, 87 m north) lies beyond it and is not applied, so the correction has no control on that side and the drawn ground falls towards the regional ground"
   },
   {
    "id": "sh_537301_183697",
@@ -1641,7 +1645,8 @@
    "category": "ground",
    "supportWeight": 0.435,
    "notes": "the same towing path north of the railway bridge, beside the Bow Goods Station lettering; dot centred between the path's edge lines 20 px SW of the figure; figure lies 4-8 px below the py ~366 sheet join but is whole",
-   "use": "stratford"
+   "use": "stratford",
+   "exception": "towing path north of the railway bridge by the Bow Goods Station, at the edge of the drawn marsh beside water: the regional early-marsh support is 0.43 here and the Stratford support extension stops 15 m from mapped water (a raised weight beside a channel the meshes do not draw put a sill across it), so the drawn ground is only partly the corrected landscape"
   },
   {
    "id": "sh_537536_184042",
@@ -9766,7 +9771,8 @@
    "category": "ground",
    "supportWeight": 0.57,
    "notes": "G.E.R. Woolwich Branch bridge parapet; dot left of figures at 6x",
-   "use": "stratford"
+   "use": "stratford",
+   "exception": "beside the G.E.R. Woolwich Branch bridge (the note puts the dot by the parapet), at the edge of the drawn marsh beside water: the regional early-marsh support is 0.57 here and the Stratford support extension stops 15 m from mapped water (a raised weight beside a channel the meshes do not draw put a sill across it), so the drawn ground is only partly the corrected landscape"
   },
   {
    "id": "sh_538532_185368",
@@ -9819,7 +9825,8 @@
    "category": "ground",
    "supportWeight": 0.249,
    "notes": "open ground by the Foot Bridge south of Stratford Low Level; dot directly above figures, 6x",
-   "use": "stratford"
+   "use": "stratford",
+   "exception": "open ground by the Foot Bridge south of Stratford Low Level, at the edge of the drawn marsh beside water: the regional early-marsh support is 0.25 here and the Stratford support extension stops 15 m from mapped water (a raised weight beside a channel the meshes do not draw put a sill across it), so the drawn ground is only partly the corrected landscape"
   },
   {
    "id": "sh_538539_184467",
