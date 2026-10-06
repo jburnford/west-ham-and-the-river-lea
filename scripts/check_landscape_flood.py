@@ -1,10 +1,10 @@
-"""Check connected flooding, overtopping thresholds and source integrity."""
+"""Check connected flooding, overtopping thresholds and source integrity (whole-model grid, schema 2)."""
 import hashlib
 import json
 from pathlib import Path
 import numpy as np
 from scipy.ndimage import label
-from build_landscape_flood import connection_levels
+from build_landscape_flood import connection_levels, fast_connection_levels
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'scenes/channelsea-sewer-panorama/review'
@@ -20,30 +20,53 @@ assert opened[3,7]==1
 # Four-neighbour connectivity must not leak diagonally through touching banks.
 bed=np.array([[0,5],[5,0]],dtype=float)
 assert connection_levels(bed,np.array([[1,0],[0,0]],dtype=bool))[1,1]==5
+# The fast reconstruction used on the whole grid agrees with the reference, barriers included.
+rng=np.random.default_rng(7)
+for _ in range(20):
+    b=rng.random((30,40))*5;s=rng.random(b.shape)<.03;bar=(rng.random(b.shape)<.1)&~s
+    ref=connection_levels(np.where(bar,np.inf,b),s);ref[bar]=np.inf
+    fast=fast_connection_levels(b,s,bar)
+    assert np.array_equal(np.isinf(ref),np.isinf(fast)) and np.allclose(ref[np.isfinite(ref)],fast[np.isfinite(fast)])
+
 meta=json.loads((ROOT/'docs/data/landscape-flood-1900.json').read_text())
-shape=(meta['height'],meta['width'])
-arrays={k:np.fromfile(ROOT/'docs/data'/meta['files'][k],dtype='<f4').reshape(shape) for k in ['bed','connection','riverFraction','support']}
-assert all(np.isfinite(a).all() for a in arrays.values())
-assert np.all(arrays['connection']>=arrays['bed'])
+assert meta['schemaVersion']==2
 for path,digest in meta['inputHashes'].items():
     assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest,path
-assert (arrays['support']==0).any() and (arrays['support']==1).any()
-seeds=arrays['riverFraction']>=.5
+none=meta['encoding']['none']
+def levels(key,grid):
+    raw=np.fromfile(ROOT/'docs/data'/meta['files'][key],dtype='<u2').reshape(meta[grid]['height'],meta[grid]['width'])
+    out=raw/100-10;out[raw==none]=np.inf;return out
+fb,fc=levels('fineBed','fine'),levels('fineConnection','fine')
+cb,cc=levels('coarseBed','coarse'),levels('coarseConnection','coarse')
+river=np.fromfile(ROOT/'docs/data'/meta['files']['fineWater'],dtype='u1').reshape(fb.shape)/255
+# No water on ground above its level: a connection level is never below the ground it covers.
+assert np.all(fc[np.isfinite(fc)]>=fb[np.isfinite(fc)]-0.011)
+assert np.all(cc[np.isfinite(cc)]>=cb[np.isfinite(cc)]-0.011)
+# The fine box is blank on the coarse grid, so no cell is drawn twice.
+s=meta['coarse']['step'];x0,z0=meta['coarse']['bounds'][:2];bx0,bz0,bx1,bz1=meta['fine']['bounds']
+assert np.isinf(cc[(bz0-z0)//s:(bz1-z0)//s,(bx0-x0)//s:(bx1-x0)//s]).all()
+# Independent component labels on the fine grid reproduce the stored levels for the tidal cells' components.
+seeds=(river>=.5)&np.isfinite(fc)&(fc<=fb+.011)
 areas=[]
 for stage in [1.9,2.5,3.5,4.5,5.5]:
-    # Independent connectivity labels validate the heap's threshold formulation.
-    eligible=arrays['bed']<stage
-    components,_=label(eligible)
-    reached_ids=np.unique(components[seeds&eligible]);reached_ids=reached_ids[reached_ids!=0]
-    expected=np.isin(components,reached_ids)
-    actual=arrays['connection']<stage
-    assert np.array_equal(expected,actual)
-    area=float((actual*(arrays['bed']<stage-.05)*(1-arrays['riverFraction'])).sum()*meta['step']**2)
-    areas.append(area)
+    actual=fc<stage
+    components,_=label(fb<stage)
+    reached=np.unique(components[seeds&(fb<stage)]);reached=reached[reached!=0]
+    # Every fine cell wet at this stage lies in a component that either holds a tidal seed or reaches the fine
+    # box edge (water from the regional grid enters there).
+    edge=np.zeros_like(actual);edge[0,:]=edge[-1,:]=edge[:,0]=edge[:,-1]=True
+    via_edge=np.unique(components[edge&actual]);via_edge=via_edge[via_edge!=0]
+    assert np.isin(components[actual],np.concatenate([reached,via_edge])).all()
+    areas.append(float((actual*(fb<stage-.05)*(1-river)).sum()*meta['fine']['step']**2))
 assert all(b>=a for a,b in zip(areas,areas[1:]))
-# Below the old low water (1.9 m ODN) only partial channel-edge cells of intertidal mud may
-# count as land since the tide was re-levelled (task C: under 1 m2, below Abbey Mill).
-assert areas[0]<2 and areas[2]>100000
+table={r['stageODN']:r for r in meta['stageTable']}
+assert all(table[b]['landHa']>=table[a]['landHa'] for a,b in zip(sorted(table),sorted(table)[1:]))
+# Below the old low-water level only channel-edge cells may count as land.
+assert table[1.9]['landHa']<2 and table[3.5]['landHa']>table[2.5]['landHa']
 OUT.mkdir(parents=True,exist_ok=True)
-(OUT/'landscape-flood-numerical-checks.json').write_text(json.dumps({'status':'PASS','areaM2':meta['areaM2'],'stagesODN':[1.9,2.5,3.5,4.5,5.5],'floodedLandM2':areas,'checks':['enclosed low bowl stays dry','bank overtopping threshold','opening permits lower-stage access','no diagonal leakage','independent component validation','monotonic inundation','source hashes','provenance retained'],'interpretation':'Geometry checks, not hydraulic or historical calibration.'},indent=2)+'\n')
-print('Landscape connected-inundation checks passed.',areas)
+(OUT/'landscape-flood-numerical-checks.json').write_text(json.dumps({'status':'PASS','areaM2':meta['areaM2'],'stagesODN':[1.9,2.5,3.5,4.5,5.5],
+    'fineLandM2':areas,'wholeModelHa':[table[s]['landHa'] for s in [1.9,2.5,3.5,4.5,5.5]],'legacyBoxHa':[table[s]['legacyBoxHa'] for s in [1.9,2.5,3.5,4.5,5.5]],
+    'checks':['enclosed low bowl stays dry','bank overtopping threshold','opening permits lower-stage access','no diagonal leakage','fast reconstruction equals reference',
+              'no water on ground above its level','fine box blank on the coarse grid','independent component validation','monotonic inundation','source hashes'],
+    'interpretation':'Geometry checks, not hydraulic or historical calibration.'},indent=2)+'\n')
+print('Landscape connected-inundation checks passed.',[round(a/1e4,2) for a in areas])

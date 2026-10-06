@@ -201,15 +201,21 @@
    "crossLine": {
     "scene": [
      [
-      -32,
-      -58
+      -40,
+      -59
      ],
      [
-      14,
-      -52
+      22,
+      -51
      ]
     ],
-    "status": "approximate, read on the crop: across both passages beside the mill (the mill stood on an island in the Channelsea, VCH)"
+    "status": "approximate, read on the crop: across both passages beside the mill (the mill stood on an island in the Channelsea, VCH), carried into the banks either side"
+   },
+   "tideBarrier": {
+    "sceneY": 1.8,
+    "odnMetres": 3.635,
+    "status": "estimate",
+    "method": "The gate top (levels.gateTopSceneY): the flood grid (scripts/build_landscape_flood.py) closes the tidal source here up to this level, as the shut gates kept ordinary tides out."
    },
    "reachAbove": [
     12,

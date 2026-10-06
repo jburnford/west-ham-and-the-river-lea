@@ -31,7 +31,7 @@ async def review_landscape_flood(url):
         assert sewer['bounds']['enclosure']['max'][1]-sewer['bounds']['enclosure']['min'][1]>2
         await page.screenshot(path=str(OUT/'landscape-flood-overview.png'))
         await page.locator('#landscape-stage').fill('1.9')
-        low=await page.evaluate('landscapeFloodReview.state');assert low['floodedLandM2']==0
+        low=await page.evaluate('landscapeFloodReview.state');assert low['floodedLandM2']<20000  # channel-edge cells only (whole model, task E)
         await page.locator('#landscape-stage').fill('4.5')
         high=await page.evaluate('landscapeFloodReview.state');assert high['floodedLandM2']>initial['floodedLandM2']
         await page.click('#landscape-toggle');assert not (await page.evaluate('landscapeFloodReview.state'))['enabled']

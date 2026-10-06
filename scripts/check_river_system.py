@@ -59,7 +59,7 @@ q=pixel_to_coords(registration,811,741);dot=Point(q['bng_e']-538900,183209-q['bn
 assert original.covers(dot) and corrected.distance(dot)>.5,'15.2ft land dot not reconciled'
 caps=np.fromfile(OUT/'river-network.f32',dtype='<f4').reshape(-1,3)[meta['coreBedCorrections']]
 flood=json.loads((OUT/'landscape-flood-1900.json').read_text())
-x0,z0,x1,z1=flood['bounds']
+x0,z0,x1,z1=flood.get('legacyBounds',flood['bounds'])
 assert not ((caps[:,0]>=x0)&(caps[:,0]<=x1)&(caps[:,2]>=z0)&(caps[:,2]<=z1)).any(), 'River extension changed the local flood bed'
 report={'status':'PASS','mappedPieces':len(g),'crossings':len(meta['crossings']),
         'mainConnectedAreaM2':main.area,'minorReconciliationFragmentsM2':sorted([p.area for p in parts if p!=main],reverse=True),
