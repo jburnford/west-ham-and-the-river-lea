@@ -1,0 +1,281 @@
+{
+ "description": "Flood banks and river walls the OS five-foot plan (1893-96) draws in the core box whose crests the model drew well below the OS wall-top and bank-top readings on them (task E, 5 October 2026; author: 'fix the rivers'). Each bank is traced along the middle of its hatched band (or the wall line) in the scene frame; its crest runs through the OS readings on it, interpolated by chainage and held beyond the end readings. scripts/build_main_landscape.py raises the land to this profile (never lowers it, never inside drawn water): the crest over crestHalfWidthMetres either side of the line, then side slopes of sideSlope horizontal to 1 vertical down to the ground.",
+ "frame": "scene x = easting - 538900, z = 183209 - northing; levels are scene y metres (docs/data/ground-plan.json origin)",
+ "source": "OS London five-foot plan, 1893-96 (reference/nls-tiles/os-london-five-foot-1893, read through scripts/factory_map_sources.py mosaic at zoom 18); readings from data/maps/os-ground-levels.json",
+ "banks": [
+  {
+   "id": "long-wall",
+   "name": "Long Wall (Mill Meads flood bank, west side of the Channelsea and Abbey Creek)",
+   "line": [
+    [
+     -399.5,
+     465.3
+    ],
+    [
+     -386.4,
+     458.7
+    ],
+    [
+     -367.8,
+     449.4
+    ],
+    [
+     -349.0,
+     440.0
+    ],
+    [
+     -330.4,
+     431.7
+    ],
+    [
+     -311.8,
+     428.9
+    ],
+    [
+     -289.4,
+     421.4
+    ],
+    [
+     -271.0,
+     418.0
+    ],
+    [
+     -241.0,
+     411.0
+    ],
+    [
+     -197.0,
+     339.0
+    ],
+    [
+     -162.0,
+     279.0
+    ],
+    [
+     -118.0,
+     211.0
+    ],
+    [
+     -102.0,
+     160.0
+    ],
+    [
+     -88.0,
+     149.0
+    ],
+    [
+     -75.0,
+     141.0
+    ],
+    [
+     -72.0,
+     126.0
+    ],
+    [
+     -70.0,
+     117.0
+    ],
+    [
+     -62.0,
+     104.0
+    ],
+    [
+     -55.0,
+     89.0
+    ],
+    [
+     -48.0,
+     77.5
+    ]
+   ],
+   "crestReadings": [
+    "sh_538573_182781",
+    "sh_538652_182804",
+    "sh_538702_182864",
+    "sh_538746_182930",
+    "sh_538780_183000",
+    "sh_538820_183061",
+    "sh_538851_183132"
+   ],
+   "crestHalfWidthMetres": 1.5,
+   "sideSlope": 1.5,
+   "evidence": "Mapped: the hatched embankment lettered LONG WALL, with F.P. along its top, from the Channelsea river wall at the mouth (-400, 465) to the bend beside Abbey Creek and north to the embankment west of the Channelsea (-48, 78); the saltings between it and the creek lie below the H.W.M.O.T. Observed: 17.1-18.1 ft on its top (2.98-3.29 m). Before this record the model drew no bank on this line: its only bank was a 2 m strip at the tidal outline 20-30 m east, and the hatched bank itself was low marsh. Estimated: the crest width (the footpath) and the side slope (the hatching is about 9 m wide)."
+  },
+  {
+   "id": "channelsea-east-wall",
+   "name": "Channelsea east bank from the Northern Outfall Sewer to the West Ham Chemical Works river wall and the Oil and Stearine Works",
+   "line": [
+    [
+     47.5,
+     27.0
+    ],
+    [
+     49.7,
+     38.6
+    ],
+    [
+     57.0,
+     51.7
+    ],
+    [
+     59.0,
+     68.5
+    ],
+    [
+     55.3,
+     83.5
+    ],
+    [
+     49.7,
+     94.7
+    ],
+    [
+     42.2,
+     109.6
+    ],
+    [
+     32.9,
+     120.8
+    ],
+    [
+     23.5,
+     132.0
+    ],
+    [
+     12.3,
+     143.3
+    ],
+    [
+     1.1,
+     152.6
+    ],
+    [
+     -7.3,
+     165.0
+    ],
+    [
+     -10.5,
+     189.0
+    ],
+    [
+     -19.4,
+     214.0
+    ],
+    [
+     -19.4,
+     240.0
+    ],
+    [
+     -18.5,
+     266.0
+    ],
+    [
+     -20.4,
+     273.0
+    ],
+    [
+     -31.6,
+     284.0
+    ],
+    [
+     -42.8,
+     290.0
+    ],
+    [
+     -57.7,
+     296.0
+    ],
+    [
+     -72.6,
+     307.0
+    ]
+   ],
+   "crestReadings": [
+    "sh_538890_183022",
+    "sh_538885_182963",
+    "sh_538892_182936",
+    "sh_538833_182894"
+   ],
+   "crestHalfWidthMetres": 1.5,
+   "sideSlope": 1.5,
+   "evidence": "Mapped: the hatched bank with F.P. on its top curving from the Northern Outfall Sewer embankment (50, 39) round to the works (1, 153), 20-30 m east of the water, the model's tidal outline covering the foreshore in front of it; the river wall (double line) along the works frontage from z 190 to 273 and the hatched bank north of it and south-west of the drain outfall towards the Oil and Stearine Works. Observed: 17.1-17.9 ft (2.98-3.22 m). The model drew the crest at 2.0-2.5 m with a notch of 0.72 m at z 153, through which the whole marsh east of the Channelsea filled at 2.56 m ODN (task E flood grid). Estimated: the made ground behind the wall (crest width and slope). No reading on the curved bank north of the works: its crest holds the first reading (17.4 ft), an estimate. The line starts on the outfall sewer's south slope (47.5, 27) so that it closes against the embankment; the sewer's crossing of the Channelsea is drawn as a deck and its toe left a trough."
+  },
+  {
+   "id": "short-wall",
+   "name": "Short Wall (east bank of the Three Mills Wall River) and the river-wall path north of it",
+   "line": [
+    [
+     -616.0,
+     -110.0
+    ],
+    [
+     -616.4,
+     -79.0
+    ],
+    [
+     -609.0,
+     -60.0
+    ],
+    [
+     -600.5,
+     -43.0
+    ],
+    [
+     -595.0,
+     -26.5
+    ],
+    [
+     -583.0,
+     -5.0
+    ],
+    [
+     -569.8,
+     17.3
+    ],
+    [
+     -562.7,
+     36.0
+    ],
+    [
+     -558.0,
+     54.6
+    ],
+    [
+     -558.0,
+     69.6
+    ],
+    [
+     -555.3,
+     92.0
+    ],
+    [
+     -554.3,
+     120.0
+    ],
+    [
+     -553.4,
+     157.0
+    ],
+    [
+     -555.0,
+     200.0
+    ],
+    [
+     -555.0,
+     242.0
+    ]
+   ],
+   "crestReadings": [
+    "sh_538283_183289",
+    "sh_538316_183215",
+    "sh_538337_183143",
+    "sh_538345_183055",
+    "sh_538345_182967"
+   ],
+   "crestHalfWidthMetres": 1.5,
+   "sideSlope": 1.5,
+   "evidence": "Mapped: the hatched bank lettered SHORT WALL along the east side of the Three Mills Wall River, and north of it the hatched strip carrying the river-wall path between the Wall River and the channel to the east, up to the High Street. Observed: 16.7-17.9 ft (2.86-3.22 m). The model drew 1.65-2.78 m. Estimated: crest width and side slope."
+  }
+ ],
+ "notTraced": "The bank west of Mill Meads along x -405 (hatched, no reading on it), the Wall River west bank by the Asphalte Works (hatched, no reading) and the Harrow Bridge Wharf bank (drawn 0.27 m under its readings) are left as drawn."
+}

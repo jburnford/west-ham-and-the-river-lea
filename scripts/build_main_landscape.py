@@ -638,6 +638,38 @@ def tidal_faces(key,points,blended,old,triangles=None):
     out=blended.copy();limit=free&(cap<blended);out[limit]=np.maximum(old[limit],cap[limit])
     tidal_faced[key]={'loweredVertices':int((out<blended-1e-6).sum()),'maxLoweringMetres':round(float((blended-out).max()),3)}
     return out
+# OS flood banks and river walls (data/maps/os-flood-banks.json, task E): the Long Wall, the Channelsea east
+# wall at the West Ham works and the Short Wall, which the model drew 1-3 m under the OS readings on their crests.
+# Each crest runs through its readings by chainage (held beyond the end readings); the land within
+# crestHalfWidthMetres of the traced line is raised to it and falls at sideSlope:1 to the ground. Raise only, and
+# never inside the drawn river and tidal water, so channels, shelves and mud stay as they are (marsh ditches are
+# built over: they pass the banks by sluices).
+flood_bank_register=read('data/maps/os-flood-banks.json');_readings={r['id']:r for r in os_register['readings']}
+# Marsh ditches crossing a bank pass through it by sluices, shut at high water: the bank is built over them.
+flood_bank_water=local(banks.water).union(geometry([p for r in plan['rivers'] for p in r['polygons']])).union(tidal);shapely.prepare(flood_bank_water)
+FLOOD_BANK_EDGE_M=6;flood_banks=[];flood_bank_mud={}
+for b in flood_bank_register['banks']:
+    line=LineString(b['line']);rs=[_readings[i] for i in b['crestReadings']]
+    s=np.array([line.project(shapely.Point(r['position'])) for r in rs]);y=np.array([r['sceneY'] for r in rs]);o=np.argsort(s)
+    # Where the drawn water is wider than the OS bank, the traced crest falls inside it or just beside it: the
+    # water's land edge along that stretch carries the crest too, so the bank stands at the edge of the drawn water.
+    crest_lines=shapely.union_all([line,flood_bank_water.boundary.intersection(line.buffer(FLOOD_BANK_EDGE_M))])
+    flood_banks.append((b,line,crest_lines,s[o],y[o]))
+flood_bank_stats={}
+def raise_to_flood_banks(key,points,levels,preserve=None):
+    out=levels.copy()
+    for b,line,crest_lines,s,y in flood_banks:
+        reach=b['crestHalfWidthMetres']+(y.max()+2)*b['sideSlope']
+        near=np.flatnonzero(shapely.dwithin(crest_lines,shapely.points(points),reach))
+        if not len(near):continue
+        q=points[near];pts=shapely.points(q)
+        crest=np.interp(shapely.line_locate_point(line,pts),s,y)
+        target=crest-np.maximum(0,shapely.distance(crest_lines,pts)-b['crestHalfWidthMetres'])/b['sideSlope']
+        up=(target>out[near])&~shapely.contains_xy(flood_bank_water,q[:,0],q[:,1])
+        out[near[up]]=target[up]
+        tally=flood_bank_stats.setdefault(b['id'],{});tally[key]=int(up.sum())
+        if preserve is not None:flood_bank_mud[b['id']]=flood_bank_mud.get(b['id'],0)+int(preserve[near[up]].sum())
+    return out
 files={};stats={}
 def export_heights(key,points,old,preserve=None,triangles=None):
     blended=blend_surface(points,old,key=key)
@@ -650,6 +682,9 @@ def export_heights(key,points,old,preserve=None,triangles=None):
         grid=(core['height'],core['width']);dist,nearest=distance_transform_edt(~preserve.reshape(grid),return_indices=True)
         cap=old[np.ravel_multi_index(tuple(nearest),grid)].ravel()+dist.ravel()*core['step']/WALL_BATTER
         new=np.maximum(blended,np.minimum(new,cap));new[preserve]=old[preserve]
+    # After the preserved tidal mud: where the core's mud runs outside the drawn tidal outline up to a river wall,
+    # the wall's crest stands on it (raise_to_flood_banks never touches the drawn water itself).
+    new=raise_to_flood_banks(key,points,new,preserve)
     # Written after the road-bridge and road-corridor pass below.
     surfaces[key]={'points':points,'old':old,'new':new,'triangles':triangles,'preserve':preserve}
 surfaces={}
@@ -1413,6 +1448,7 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
         'fillMethod':f'land side filled level with the coping to {WALL_TOP_M} m from the wall line, then falling at 1:{WALL_BATTER} to the surrounding ground (at most {WALL_REACH_M} m); never lowers ground; water, street corridors and building footprints excluded; battered at the same slope down to unwalled shoreline and to preserved intertidal mud; in the river-network mesh, land vertices of triangles straddling a wall are held down so no ground stands more than {WALL_TOE_M} m above low water at the water face, and no filled vertex stands more than 2.4 m above a mesh neighbour',
         'evidence':'Mapped: the shoreline and GIS industrial plot edges that the interpretive wall routes follow (river-network retainingEdges; the walls themselves are not a surveyed inventory), and the high-confidence wall_top/embankment_top spot heights behind the along-bank crest profile. Estimated: the coping grade between readings, the berm width and batter, and the fill itself; no surveyed section of any wall or its backfill.'},
     'walledStreets':{'method':f'street-corridor vertices within {WALLED_STREET_M} m of a recorded masonry edge (retaining-wall routes, canal faces) keep their street level up to the edge (task B)','vertices':walled_streets},
+    'osFloodBanks':{'register':'data/maps/os-flood-banks.json','method':'land within crestHalfWidthMetres of each traced bank line raised to the crest through its OS readings (by chainage, held beyond the ends), falling at sideSlope:1 to the ground; raise only, not inside the drawn water','raisedVertices':flood_bank_stats,'raisedTidalMudVertices':flood_bank_mud,'tidalMudNote':'core vertices of exposed tidal mud (otherwise kept at their channel section) raised where an OS river wall stands on mud outside the drawn tidal outline'},
     'shoreLip':{'method':f'bank vertices within {LIP_M} m of the regional shoreline whose previous height stood more than 0.5 m above low water are lifted to the full crest only within {MASONRY_REACH_M} m of a recorded masonry edge (river-system canalFacingRoutes, river-network retainingEdges), and keep their previous reviewed height (capped at the crest) inside a reviewed terrain patch whose recorded shore transition is no wider than {LIP_M} m; all other shores take the 0-3 m smoothstep earth face',
         'lipVertices':lip_vertices,'steepShorePatches':[t['id'] for t in steep_patches],
         'evidence':'Mapped: the shorelines, the interpreted canal-face and retaining-edge routes, and the reviewed patch outlines. Recorded in the bank policy: earth and canal-earth profiles elsewhere ("no continuous masonry assumed on Hackney Cut"). Estimated: the 1.5 m reach of a masonry edge and the smoothstep face itself; no surveyed bank section.'},

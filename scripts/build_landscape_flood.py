@@ -250,7 +250,7 @@ def build():
     assert seeds.sum() > 1000
     tidal_conn = fast_connection_levels(bed, seeds, barrier=~inside)
     if os.environ.get('FLOOD_DUMP'):   # full 2 m arrays, for diagnosis
-        np.savez(os.environ['FLOOD_DUMP'], bed=bed, conn=tidal_conn, inside=inside, tidal=tidal_fraction, kind=kind, origin=np.array([x0, z0]))
+        np.savez(os.environ['FLOOD_DUMP'], bed=bed, conn=tidal_conn, inside=inside, tidal=tidal_fraction, water=water_fraction, kind=kind, origin=np.array([x0, z0]))
     assert np.all(tidal_conn[inside] >= bed[inside] - 1e-6)
 
     # Fine grid over FINE_BOX; coarse grid (lowest of each 5 x 5 block) over the rest.
