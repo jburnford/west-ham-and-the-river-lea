@@ -28,11 +28,13 @@ Read first:
   - The follow-up removed 18 ha of never-wet holes from the flood grid; they had stood as walls along the banks.
   - Open questions for the author: the Channelsea head closures (inferred, not lettered); trimming the 2 m network-join ring (+1.8 MB).
 
+- **Phase V** (volume, not a switch): done 6 October 2026. `scripts/flood_basins.py`, `docs/lib/flood-volume.js`, `data/maps/flood-scenarios.json`, the `?flood` page's volume view; `TASK_E_REPORT.md` "Phase V".
+  - Open questions for the author: the pumping-station ground (it floods at 50 mm in one tide on the drawn ground; no OS reading within 109 m); the preset rain totals.
+
 **Next, in this order (author, 6 October 2026):**
 
-1. **Phase V: volume, not a switch** (section 4.6, section 5). The tide-stage grid draws a basin all dry below its rim and all wet above it. The author: the landscape was a bowl. Mill Meads probably flooded all the time; the Abbey Mills pumping station ground only when things got really bad. This brings the fill-and-spill core of Phase 3 forward and applies it to every source.
-2. **F2** (back-river beds), then **F3** (the works wall face) (section 5).
-3. **Phase 2** (pounds); then Phases 3-5.
+1. **F2** (back-river beds), then **F3** (the works wall face) (section 5).
+2. **Phase 2** (pounds). It replaces Phase V's single held river level, which acts only on water outside the tide polygons. Then Phases 3-5.
 
 **Tools.** `scripts/flood_diagnostics.py`, on a dump made with `FLOOD_DUMP=… python3 scripts/build_landscape_flood.py`:
 
@@ -229,7 +231,7 @@ Figures from the F1 build (`flood_diagnostics.py pour -300 200` and the dump): f
 
 **F1 done 6 October 2026** (`TASK_E_REPORT.md` "F1" and "F1 follow-up"): the Stratford zone at the OS (median drawn − OS -1.08 → -0.009 m over 132 readings), the Channelsea head closed, the network-join seam meshed, and the flood grid's holes removed. Mill Meads now fills at 3.78 m ODN.
 
-**Phase V: volume, not a switch (next; author, 6 October 2026).** See section 4.6 for the design and acceptance criteria. It comes before F2 and F3. It takes over Phase 3's fill and spill, and extends it to the tide and the river.
+**Phase V: volume, not a switch (author, 6 October 2026). Done 6 October 2026.** See section 4.6 for the design and acceptance criteria. It comes before F2 and F3. It takes over Phase 3's fill and spill, and extends it to the tide and the river.
 
 **Phase 2: pounds.**
 

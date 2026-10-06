@@ -5,6 +5,7 @@ from pathlib import Path
 import numpy as np
 from scipy.ndimage import label
 from build_landscape_flood import connection_levels, fast_connection_levels
+import flood_basins
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'scenes/channelsea-sewer-panorama/review'
@@ -28,8 +29,32 @@ for _ in range(20):
     fast=fast_connection_levels(b,s,bar)
     assert np.array_equal(np.isinf(ref),np.isinf(fast)) and np.allclose(ref[np.isfinite(ref)],fast[np.isfinite(fast)])
 
+# Basin hierarchy (Phase V): two hollows behind a bank, a channel beyond it. The channel's edge cell is half water but
+# carries the bank crest, so the hollow behind it must spill at the crest, not at its own rim on the land side.
+bed=np.full((12,20),3.0);bed[:, 15:]=0.0             # channel at 0 m from column 15
+bed[2:10,2:6]=1.0;bed[2:10,8:12]=1.5                  # hollow A (1.0 m floor) and hollow B (1.5 m floor)
+bed[:,6:8]=2.0                                        # saddle between them at 2.0
+bed[:,14]=4.0                                         # bank crest, inside the water polygon's edge cell
+inside=np.ones(bed.shape,bool);water=np.zeros(bed.shape);water[:,14]=.5;water[:,15:]=1;tidal=water.copy();kind=np.zeros(bed.shape,np.uint8)
+saved=flood_basins.MIN_AREA_CELLS;flood_basins.MIN_AREA_CELLS=4
+hier,land,out,tflag,enclosed=flood_basins.prepare(bed,inside,water,tidal,kind)
+hier,labels,n_land,n_out,tree,pairs=flood_basins.prune(hier,land,out,log=lambda *a:None)
+flood_basins.MIN_AREA_CELLS=saved
+parent,child0,child1,spill,formation,spill_to,spill_from,spill_cell,attached=tree
+assert n_out==1 and tflag.all()
+a,b=labels[5,3]-1,labels[5,9]-1
+assert a!=b and a<n_land and b<n_land
+assert spill[a]==2.0 and spill[b]==2.0 and parent[a]==parent[b]
+p=parent[a]
+assert attached[p] and spill_to[p]==n_land and spill[p]==4.0, (spill[p],)
+# Shallow hollows are filled to their rim; the stage tables are monotone and match the cells.
+vol,catch=flood_basins.leaf_tables(hier,labels,n_land,0.0,int(round(5/flood_basins.STEP))+1)
+assert np.all(np.diff(vol,axis=1)>=-1e-9)
+k=int(round(2.0/flood_basins.STEP))
+assert abs(vol[a,k]-4*(2.0-1.0)*32)<1e-6 and abs(vol[b,k]-4*(2.0-1.5)*32)<1e-6
+
 meta=json.loads((ROOT/'docs/data/landscape-flood-1900.json').read_text())
-assert meta['schemaVersion']==2
+assert meta['schemaVersion']==3
 for path,digest in meta['inputHashes'].items():
     assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==digest,path
 none=meta['encoding']['none']
@@ -67,6 +92,6 @@ OUT.mkdir(parents=True,exist_ok=True)
 (OUT/'landscape-flood-numerical-checks.json').write_text(json.dumps({'status':'PASS','areaM2':meta['areaM2'],'stagesODN':[1.9,2.5,3.5,4.5,5.5],
     'fineLandM2':areas,'wholeModelHa':[table[s]['landHa'] for s in [1.9,2.5,3.5,4.5,5.5]],'legacyBoxHa':[table[s]['legacyBoxHa'] for s in [1.9,2.5,3.5,4.5,5.5]],
     'checks':['enclosed low bowl stays dry','bank overtopping threshold','opening permits lower-stage access','no diagonal leakage','fast reconstruction equals reference',
-              'no water on ground above its level','fine box blank on the coarse grid','independent component validation','monotonic inundation','source hashes'],
+              'no water on ground above its level','fine box blank on the coarse grid','independent component validation','monotonic inundation','source hashes','basin hierarchy: saddles, bank-crest outlet cells, stage tables'],
     'interpretation':'Geometry checks, not hydraulic or historical calibration.'},indent=2)+'\n')
 print('Landscape connected-inundation checks passed.',[round(a/1e4,2) for a in areas])

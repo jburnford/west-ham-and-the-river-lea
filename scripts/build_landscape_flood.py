@@ -293,16 +293,21 @@ def build():
     lowest_cell = cblocks(np.where(basin_labels > 0, bed, np.inf)).argmin(axis=2)
     coarse_basin = np.take_along_axis(cblocks(basin_labels), lowest_cell[..., None], axis=2)[..., 0]
     coarse_basin[~np.isfinite(cblocks(np.where(basin_labels > 0, bed, np.inf)).min(axis=2))] = 0
+    # Its ground for the volume view is the mean of its 2 m cells in that basin: the lowest cell alone would draw the
+    # whole 10 m square wet under a few centimetres of water standing in its lowest corner.
+    same = cblocks(basin_labels) == coarse_basin[..., None]
+    coarse_basin_bed = np.where(same, cblocks(bed), 0).sum(axis=2) / np.maximum(1, same.sum(axis=2))
     ci0, cj0, ci1, cj1 = fi0 // f, fj0 // f, fi1 // f, fj1 // f
     coarse_conn[cj0:cj1, ci0:ci1] = np.inf
     coarse_conn[~coarse_inside] = np.inf
-    coarse_basin[cj0:cj1, ci0:ci1] = 0
+    # The regional basin grid continues under the fine box: the page cuts it where the 2 m surface begins.
     coarse_basin[~coarse_inside] = 0
 
     files = {'fineBed': 'landscape-flood-1900.fine-bed.u16', 'fineConnection': 'landscape-flood-1900.fine-connection.u16',
              'fineWater': 'landscape-flood-1900.fine-water.u8', 'fineSupport': 'landscape-flood-1900.fine-support.u8',
              'coarseConnection': 'landscape-flood-1900.coarse-connection.u16', 'coarseBed': 'landscape-flood-1900.coarse-bed.u16',
              'fineBasin': 'landscape-flood-1900.fine-basin.u16', 'coarseBasin': 'landscape-flood-1900.coarse-basin.u16',
+             'coarseBasinBed': 'landscape-flood-1900.coarse-basin-bed.u16',
              'basinVolumes': 'landscape-flood-1900.basin-volumes.f32'}
     for old in PUBLIC.glob('landscape-flood-1900.*'):
         if old.name != 'landscape-flood-1900.json' and old.name not in files.values():
@@ -316,6 +321,7 @@ def build():
     assert basin_labels.max() < NONE
     basin_labels[fine].astype('<u2').tofile(PUBLIC / files['fineBasin'])
     coarse_basin.astype('<u2').tofile(PUBLIC / files['coarseBasin'])
+    encode(np.where(coarse_basin > 0, coarse_basin_bed, np.inf)).tofile(PUBLIC / files['coarseBasinBed'])
     basin_volumes.tofile(PUBLIC / files['basinVolumes'])
 
     # Land connected at each stage, on the 2 m grid: the whole model, the fine box, the rest, and the old box.

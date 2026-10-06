@@ -145,3 +145,22 @@ body.is-flood-view {
     display: none;
   }
 }
+.landscape-flood-panel select {
+  width: 100%;
+  margin: 8px 0 4px;
+  padding: 6px;
+  border: 1px solid #9caa98;
+  border-radius: 4px;
+  background: #fffdf7;
+  color: #245448;
+  font: 13px system-ui;
+}
+.landscape-flood-panel button[aria-pressed='true'] {
+  background: #246858;
+  border-color: #246858;
+  color: #fffdf7;
+}
+.landscape-flood-panel select:focus-visible {
+  outline: 3px solid #a97932;
+  outline-offset: 2px;
+}

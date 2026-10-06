@@ -9,7 +9,7 @@
       { "tides": 6, "label": "three days" }
     ],
     "surgeM": { "min": 0, "max": 2, "step": 0.05 },
-    "riverLevelODN": { "min": 1.9, "max": 5, "step": 0.05, "note": "Held level on the non-tidal water (the Lea above the locks, the upper Channelsea and the other reaches outside the tide polygons). The default is the model's retained datum, 0.06 m scene (tide_levels.RETAINED). Phase 2 replaces this with pound levels from the Lea flow." }
+    "riverLevelODN": { "min": 1.85, "max": 5, "step": 0.05, "note": "Held level on the non-tidal water (the Lea above the locks, the upper Channelsea and the other reaches outside the tide polygons). The default is the model's retained datum, 0.06 m scene (tide_levels.RETAINED). Phase 2 replaces this with pound levels from the Lea flow." }
   },
   "presets": [
     {

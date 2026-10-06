@@ -57,6 +57,7 @@
   "coarseBed": "landscape-flood-1900.coarse-bed.u16",
   "fineBasin": "landscape-flood-1900.fine-basin.u16",
   "coarseBasin": "landscape-flood-1900.coarse-basin.u16",
+  "coarseBasinBed": "landscape-flood-1900.coarse-basin-bed.u16",
   "basinVolumes": "landscape-flood-1900.basin-volumes.f32"
  },
  "verticalReference": {
@@ -20869,7 +20870,7 @@
      "step": 0.05
     },
     "riverLevelODN": {
-     "min": 1.9,
+     "min": 1.85,
      "max": 5,
      "step": 0.05,
      "note": "Held level on the non-tidal water (the Lea above the locks, the upper Channelsea and the other reaches outside the tide polygons). The default is the model's retained datum, 0.06 m scene (tide_levels.RETAINED). Phase 2 replaces this with pound levels from the Lea flow."
@@ -20927,7 +20928,14 @@
      "evidence": "Illustrative; the 1894 G2G peak at Feildes Weir (40.9 m\u00b3/s daily mean) has no level yet."
     }
    ]
-  }
+  },
+  "tideODN": {
+   "low": -0.1646,
+   "high": 3.4134,
+   "periodHours": 12.42,
+   "source": "river-network.json tide (data/maps/os-tide-levels.json)"
+  },
+  "retainedLevelODN": 1.8954
  },
  "groundSource": "the drawn ground (scripts/sample_drawn_ground.mjs, as the page draws it), sampled every metre, with railway and sewer embankments and retaining walls at their drawn copings composed on top (road paving inside the old box only); 2 m cells keep their highest sample",
  "modelledGround": "main-landscape weight > 0, every mapped water polygon and the core tile; cells outside never carry water",
@@ -23166,6 +23174,6 @@
   "docs/data/terrain-1900.road-mask.u8": "c9292ceafeba7c0df19b8fdf3407201a3e2ece9e8fed068efbd56593cd68007e",
   "docs/data/terrain-1900.weight.f32": "446a51fc993eb6acc753fe9d1f49b8f643ad4c302273c1be39d8dd5c099cea30",
   "data/maps/lea-control-structures.json": "9b6ee7fc74977cca75ff18ab828ec6faa933681333f00f7250541d8127c80181",
-  "data/maps/flood-scenarios.json": "ad690d8cbc434aeb0ae26edd01e9cab3335e0bc4879201bb0282d745ea5df535"
+  "data/maps/flood-scenarios.json": "ee83ad3a392472970bb985cdaa7736ce665ee584d87537f98b89a27985091b62"
  }
 }

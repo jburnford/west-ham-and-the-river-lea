@@ -54,15 +54,15 @@ export function floodMetrics(data, level) {
   };
 }
 
-// Land under water in the volume view: hollow cells (not outlets, not mapped water) below their basin's level. The
-// regional grid counts a 10 m cell when its lowest 2 m cell is wet, which overstates the area there.
+// Land under water in the volume view: hollow cells (not outlets, not mapped water) below their basin's level. A
+// regional 10 m cell counts when the mean ground of its 2 m cells in that basin is under water.
 export function volumeMetrics(data, model, levels) {
-  const count = (grid, area, water) => {
+  const count = (grid, area, water, skip) => {
     let wet = 0,
       deepest = 0;
     for (let i = 0; i < grid.basin.length; i++) {
       const id = grid.basin[i] - 1;
-      if (id < 0 || id >= model.nLand || (water && water[i] >= 128)) continue;
+      if (id < 0 || id >= model.nLand || (water && water[i] >= 128) || skip?.(i)) continue;
       const depth = levels[id] - grid.bed[i];
       if (depth > MIN_DEPTH) {
         wet += area;
@@ -72,8 +72,22 @@ export function volumeMetrics(data, model, levels) {
     return [wet, deepest];
   };
   const [fineM2, fineDepth] = count(data.fine, data.meta.fine.step ** 2, data.fine.water),
-    [outsideM2] = count(data.coarse, data.meta.coarse.step ** 2, null);
-  return { floodedLandM2: fineM2 + outsideM2, fineLandM2: fineM2, outsideFineLandM2: outsideM2, maxLandDepth: fineDepth };
+    { coarse, fine } = data.meta,
+    [cx0, cz0] = coarse.bounds,
+    [bx0, bz0, bx1, bz1] = fine.bounds,
+    // Regional cells under the fine box are counted there, on the 2 m grid.
+    underFine = (i) => {
+      const x = cx0 + ((i % coarse.width) + 0.5) * coarse.step,
+        z = cz0 + (Math.floor(i / coarse.width) + 0.5) * coarse.step;
+      return x > bx0 && x < bx1 && z > bz0 && z < bz1;
+    },
+    [outsideM2] = count({ basin: data.coarse.basin, bed: data.coarse.basinBed }, coarse.step ** 2, null, underFine);
+  return {
+    floodedLandM2: fineM2 + outsideM2,
+    fineLandM2: fineM2,
+    outsideFineLandM2: outsideM2,
+    maxLandDepth: fineDepth,
+  };
 }
 
 export async function installLandscapeFlood({ THREE, scene, load, render, travel, setWater }) {
@@ -81,7 +95,7 @@ export async function installLandscapeFlood({ THREE, scene, load, render, travel
   if (meta.epoch !== '1900' || meta.schemaVersion !== 3) throw Error('Flood surface requires the 1900 landscape');
   const f = meta.files;
   const names = ['fineBed', 'fineConnection', 'fineWater', 'fineSupport', 'coarseBed', 'coarseConnection'];
-  names.push('fineBasin', 'coarseBasin', 'basinVolumes');
+  names.push('fineBasin', 'coarseBasin', 'coarseBasinBed', 'basinVolumes');
   const buffers = Object.fromEntries(
     await Promise.all(names.map(async (key) => [key, await load(`./data/${f[key]}`, 'buffer')]))
   );
@@ -98,6 +112,7 @@ export async function installLandscapeFlood({ THREE, scene, load, render, travel
       bed: decodeLevels(meta, buffers.coarseBed),
       connection: decodeLevels(meta, buffers.coarseConnection),
       basin: new Uint16Array(buffers.coarseBasin),
+      basinBed: decodeLevels(meta, buffers.coarseBasinBed),
     },
   };
   for (const [key, grid] of [
@@ -114,7 +129,6 @@ export async function installLandscapeFlood({ THREE, scene, load, render, travel
   // Connected extent: one plane per grid, the shoreline a contour of the interpolated connection field.
   const levelUniform = { value: meta.defaultLevelODN };
   const [bx0, bz0, bx1, bz1] = meta.fine.bounds;
-  const inFine = (x, z) => x > bx0 && x < bx1 && z > bz0 && z < bz1;
   const colour = `vec3 shallow=vec3(0.24,0.68,0.79),deep=vec3(0.035,0.25,0.42);
           gl_FragColor=vec4(mix(shallow,deep,clamp(depth/2.0,0.0,1.0)),0.76);
           #include <tonemapping_fragment>
@@ -163,20 +177,32 @@ export async function installLandscapeFlood({ THREE, scene, load, render, travel
   connectedMeshes[0].name = 'Connected inundation, regional 10 m grid — provisional 1900';
   connectedMeshes[1].name = 'Connected inundation, 2 m grid — provisional 1900';
 
-  // Volume view: water drawn at each basin's level, rebuilt only when an input changes.
-  const volumeMaterial = new THREE.ShaderMaterial({
-    transparent: true,
-    depthWrite: false,
-    side: THREE.DoubleSide,
-    vertexShader: `attribute float depth;varying float vDepth;
-      void main(){vDepth=depth;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}`,
-    fragmentShader: `varying float vDepth;
-      void main(){float depth=vDepth;if(depth<=${MIN_DEPTH})discard;
-        ${colour}
-      }`,
-  });
+  // Volume view: water drawn at each basin's level, rebuilt only when an input changes. The regional surface runs on
+  // under the fine box's edge and is cut where the 2 m surface begins (its first cell centres), so no seam shows.
+  const half = meta.fine.step / 2;
+  const volumeMaterial = (outsideFine) =>
+    new THREE.ShaderMaterial({
+      uniforms: { fineBox: { value: new THREE.Vector4(bx0 + half, bz0 + half, bx1 - half, bz1 - half) } },
+      defines: outsideFine ? { OUTSIDE_FINE: 1 } : {},
+      transparent: true,
+      depthWrite: false,
+      side: THREE.DoubleSide,
+      // Sheets a few centimetres deep would otherwise fight the ground beneath them.
+      polygonOffset: true,
+      polygonOffsetFactor: -2,
+      polygonOffsetUnits: -4,
+      vertexShader: `attribute float depth;varying float vDepth;varying vec2 worldXZ;
+        void main(){vDepth=depth;vec4 w=modelMatrix*vec4(position,1.0);worldXZ=w.xz;gl_Position=projectionMatrix*viewMatrix*w;}`,
+      fragmentShader: `uniform vec4 fineBox;varying float vDepth;varying vec2 worldXZ;
+        void main(){float depth=vDepth;if(depth<=${MIN_DEPTH})discard;
+          #ifdef OUTSIDE_FINE
+          if(worldXZ.x>fineBox.x&&worldXZ.x<fineBox.z&&worldXZ.y>fineBox.y&&worldXZ.y<fineBox.w)discard;
+          #endif
+          ${colour}
+        }`,
+    });
   const volumeMeshes = ['coarse', 'fine'].map((key) => {
-    const mesh = new THREE.Mesh(new THREE.BufferGeometry(), volumeMaterial);
+    const mesh = new THREE.Mesh(new THREE.BufferGeometry(), volumeMaterial(key === 'coarse'));
     mesh.name = `Volume flooding, ${key === 'fine' ? '2 m' : 'regional 10 m'} grid — provisional 1900`;
     mesh.position.y = 0.018 - offset;
     mesh.renderOrder = 6;
@@ -184,11 +210,15 @@ export async function installLandscapeFlood({ THREE, scene, load, render, travel
     scene.add(mesh);
     return mesh;
   });
+  // Regional quads wholly inside the fine box are not built at all.
+  const cs = meta.coarse.step,
+    insideFine = (x, z) =>
+      x - cs / 2 > bx0 + half && x + cs / 2 < bx1 - half && z - cs / 2 > bz0 + half && z + cs / 2 < bz1 - half;
   const gridOf = (key) => {
     const g = meta[key];
     return {
       ids: data[key].basin,
-      bed: data[key].bed.map((v) => (v >= NONE_ODN ? NaN : v)),
+      bed: (data[key].basinBed ?? data[key].bed).map((v) => (v >= NONE_ODN ? NaN : v)),
       width: g.width,
       height: g.height,
       x0: g.bounds[0],
@@ -199,7 +229,7 @@ export async function installLandscapeFlood({ THREE, scene, load, render, travel
   const grids = { coarse: gridOf('coarse'), fine: gridOf('fine') };
   function drawVolume(levels) {
     ['coarse', 'fine'].forEach((key, n) => {
-      const q = wetQuads(grids[key], levels, MIN_DEPTH, key === 'coarse' ? inFine : null),
+      const q = wetQuads(grids[key], levels, MIN_DEPTH, key === 'coarse' ? insideFine : null),
         geometry = new THREE.BufferGeometry();
       geometry.setAttribute('position', new THREE.BufferAttribute(q.positions, 3));
       geometry.setAttribute('depth', new THREE.BufferAttribute(q.depths, 1));
@@ -268,6 +298,7 @@ export async function installLandscapeFlood({ THREE, scene, load, render, travel
     mapBed = Float32Array.from(data.coarse.bed),
     mapConnection = Float32Array.from(data.coarse.connection),
     mapBasin = Uint16Array.from(data.coarse.basin),
+    mapBasinBed = Float32Array.from(data.coarse.basinBed),
     mapWater = new Float32Array(map.width * map.height);
   for (let j = 0; j < meta.fine.height; j++)
     for (let i = 0; i < meta.fine.width; i++) {
@@ -278,7 +309,7 @@ export async function installLandscapeFlood({ THREE, scene, load, render, travel
         mapBasin[t] = 0;
       }
       if (data.fine.bed[s] < mapBed[t]) {
-        mapBed[t] = data.fine.bed[s];
+        mapBed[t] = mapBasinBed[t] = data.fine.bed[s];
         mapBasin[t] = data.fine.basin[s];
       }
       mapConnection[t] = Math.min(mapConnection[t], data.fine.connection[s]);
@@ -290,7 +321,7 @@ export async function installLandscapeFlood({ THREE, scene, load, render, travel
   function paintMap() {
     for (let i = 0; i < mapBed.length; i++) {
       let depth;
-      if (mode === 'volume') depth = mapBasin[i] && result ? result.levels[mapBasin[i] - 1] - mapBed[i] : -1;
+      if (mode === 'volume') depth = mapBasin[i] && result ? result.levels[mapBasin[i] - 1] - mapBasinBed[i] : -1;
       else depth = stage > mapConnection[i] ? stage - mapBed[i] : -1;
       const wet = enabled && depth > MIN_DEPTH,
         t = Math.max(0, Math.min(1, depth / 2));

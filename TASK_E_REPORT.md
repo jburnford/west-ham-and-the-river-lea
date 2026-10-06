@@ -211,3 +211,100 @@ The author saw, in the `?flood` view at about 4.2 m ODN: a line of 10 m squares 
 - **Round dry islands about 60 m across.** These are humps the correction raises round single high readings, for example two "open ground south of the Victoria Park Branch" readings at 5.2 and 5.9 m ODN (probably railway made ground). They follow the OS, but the shape is the kernel's, not the ground's.
 - **Seams.** Some straight edges in the water are railway embankments (the High Meads loop, the Victoria Park branch). I have not traced every one.
 - **Checks.** `npm test` 21/21; `check_landscape_flood.py` passes; the downstream rebuild was rerun.
+
+# Phase V: volume, not a switch (6 October 2026)
+
+The author: the landscape was a bowl. Mill Meads probably flooded all the time, while the Abbey Mills pumping station ground flooded only when things got really bad. The connected-level grid could not show that: a basin went from dry to full as soon as a source passed its rim. Rain, the tide and the river now arrive as volumes and fill the lowest ground first.
+
+## Summary
+
+- **The ground as hollows.** `scripts/flood_basins.py` splits the same 2 m ground into 119 hollows. Where two meet at a saddle they form a parent basin (49); a basin that reaches water is attached to it (69). Each basin has a stage–volume table at 5 cm steps.
+- **Routing in the browser** (`docs/lib/flood-volume.js`, pure functions, about 1 ms a scenario):
+  - Rain: a storm total on each hollow's whole catchment. A full hollow spills into the hollow across its saddle, or out to the water.
+  - Tide, surge and river: weir flow over each crest while the source stands above it, integrated over the tide curve or the held duration. Water stands above the crest up to the source level; the rest goes back.
+  - Marsh sluices: they drain at an estimated rate while the water outside is below their sill, in every tide of the duration.
+- **The page** (`?flood`) opens on the volume view, with five presets and controls for rain, duration (one tide, one day, three days), surge and the held river level. The Phase 1 view stays as "Connected extent". The water is drawn at each basin's level, with the shoreline cut where the interpolated depth reaches zero.
+- **The author's cases:**
+  - Mill Meads holds 456,000 m³ to its tidal crest at 3.78 m ODN (as F1). 20 mm of rain in one tide puts 23 cm in its lowest hollow (1.76 m ODN), more than 2 m below the rim.
+  - A surge 5 cm over the crest for one tide leaves a 4 cm sheet in the bottom of the bowl (1.57 m ODN).
+  - **The pumping station does not behave as the author expects** (see "Not done").
+
+## What changed
+
+**Builder** (`build_landscape_flood.py`, schema 3, about 75 s):
+- **Hollows too small to matter are filled.**
+  - Hollows smaller than 0.1 ha at their rim: area closing, 31,100 m³ in all.
+  - Hollows shallower than 5 cm: filled to their rim, 5,300 m³.
+  - The filled ground (the "hierarchy bed") now serves both views.
+- **Water cells are outlets:** tidal (the tide polygons, 2 patches) and river (other mapped water, 9 patches; patches under 0.01 ha count as ground).
+  - Each hollow's catchment is grown by a minimax priority flood: a cell joins whichever minimum or outlet reaches it at the lowest level over the ground.
+  - A plain watershed was tried first and was wrong at the banks. A half-water 2 m cell at a polygon edge carries the bank crest (4.45 m by Mill Meads), and the watershed let the river claim the land behind it below that crest, so Mill Meads spilled at 3.56 m. The check now includes this case.
+- **Merging** is in saddle order (Kruskal). A basin that meets a water patch, or ground already draining to one, is attached there.
+  - Crest profiles: for each attached basin, the saddle level of every 2 m cell edge it shares with the water or the ground across.
+- **Sluices.** Each of the ten marsh sluices in `lea-control-structures.json` drains the lowest hollow within 16 m of its mapped point, to the nearest water.
+- **New files:**
+  - `fine-basin.u16` (2.1 MB), the basin of each 2 m cell;
+  - `coarse-basin.u16` and `coarse-basin-bed.u16` (0.8 MB each), the regional cells. A 10 m cell takes the basin of its lowest 2 m cell, and the mean ground of its cells in that basin; the lowest cell alone drew whole squares wet under a few centimetres.
+  - `basin-volumes.f32` (25 KB), the stage tables.
+  - The JSON gains `volume` (242 KB in all).
+- **Scenario presets** live in `data/maps/flood-scenarios.json` with their evidence; every total is labelled an estimate.
+
+**Estimates** (in the JSON `volume.parameters.estimates`):
+- Weir coefficient 1.6. Free overfall overstates inflow once a basin fills; the water stands no higher than the source in any case.
+- Sluice discharge 0.3 m³/s each: about a 0.6 m culvert under 0.5 m of head, reduced for flap, silt and weed.
+- Sluice sills: the lowest drawn ground within 16 m (the ditch bed).
+- No rain total for 1888 was found: the report gives none. The preset uses 50 mm over three days.
+
+## Presets (land under water, the whole model; 2 m area around the core in brackets)
+
+| Preset | Land wet | Rain in | Drained | Run off | Standing |
+|---|---|---|---|---|---|
+| Ordinary day | 1.1 ha (0.6) | 0 | 0 | 0 | 10,100 m³ |
+| Summer storms, 1888 (50 mm, three days) | 427 ha (54) | 697,000 m³ | 129,000 | 35,000 | 539,000 |
+| Winter storm, high tides (40 mm, a day, +0.4 m) | 406 ha (51) | 558,000 | 73,000 | 27,000 | 467,000 |
+| Surge to the 1928 height (+1.7 m, one tide) | 747 ha (138) | 0 | 23,000 | 0 | 8.4 million |
+| River held at 3.4 m ODN for a day, 20 mm | 375 ha (45) | 279,000 | 33,000 | 11,000 | 1.1 million |
+
+- Most of the rain-wet area is the flat regional marsh outside the core: Plaistow Levels and the Stratford marshes. That ground is still the early-marsh surface outside the F1 zone.
+- The ordinary-day water is one hollow at Bow, west of the Lea (−1053, 76): its crest is 1.41 m ODN, below the retained river datum (1.895 m) that the model holds in the non-tidal water beside it. This is F1's "Bow strip" again; Phase 2's pound levels and the ground there decide it.
+
+## Checks
+
+- `scripts/check_flood_volume.mjs` (new; in `npm test`, 22/22 pass):
+  - a hand-built two-hollow model: own rain, spill, merge, the crest overflow, a thin surge sheet, the surge cap and a tide-locked sluice;
+  - on the built model, volume balances to 1e-15 over 432 combinations of rain, surge, duration and river level;
+  - levels never fall with more rain or a higher surge, nor with a longer duration for the tide and river;
+  - no drawn water stands above its basin level;
+  - the author's cases.
+  - It writes `scenes/channelsea-sewer-panorama/review/flood-volume-checks.json`.
+- `check_landscape_flood.py` adds a synthetic hierarchy (two hollows behind a bank whose edge cell is half water) and passes at schema 3. `check_core_river_connections.py` and `check_river_system.py` pass.
+- The builder is deterministic.
+
+## Renders
+
+Renders at each preset, with five cameras:
+- **Overview.**
+- **Mill Meads in plan and oblique** (the allotments). On an ordinary day Mill Meads is dry. In the 1888 preset its southern half is under a shallow sheet up to the allotment furrows, and the water reaches the ground beside the Abbey Mills station.
+- **North of the railway from the High Street.** Rain stands in the hollow beside the Waterworks River.
+- **Stratford in plan.**
+- **Fixed after the first renders:**
+  - 10 m squares drawn wet by their lowest corner (speckle, striping);
+  - z-fighting under sheets a few centimetres deep (a depth bias on the water);
+  - a seam at the fine-box edge: the regional surface now runs under it and is cut in the shader where the 2 m surface begins.
+
+## Not done, and why
+
+- **The pumping-station ground floods too easily.**
+  - In the drawn model the station (BNG 538719, 183223) stands at 1.88 m ODN on the same continuous low plain as Mill Meads, 35 cm above its floor. It is in the same hollow, so 50 mm of rain in one tide wets it.
+  - No OS reading lies within 109 m of the station; its ground is interpolated from the streets and marsh around it. I have not raised it without evidence.
+  - The 1888 report of "a fire engine to pump out a pumping station" may be West Ham's own station rather than Abbey Mills.
+- **The river source** acts only on water outside the tide polygons, at one held level. The back rivers up to Temple Mills are tidal in the model, so high Lea flow does not raise them yet. Phase 2's pounds replace the held level.
+- **No losses.** All rain on a catchment runs off: no soakage and no town sewers. Totals on the town's streets are overstated.
+- **Timing.** Water is shown at the peak of the chosen conditions, not as it builds. The solver step (Phase 3) is unchanged.
+- **The water material.** It is still the depth-tinted translucent layer, not the scene's water material (plan section 4.5).
+
+## Decisions for the author
+
+1. The pumping station: does the book or another source put its yard on made ground above the marsh? If so, I need a level, and the OS sheet may show one I have not found.
+2. The preset totals (1888: 50 mm over three days; winter storm: 40 mm in a day with high water 0.4 m above ordinary) are placeholders. Are there figures you prefer?
+3. Next, per the plan: F2 (back-river beds), then F3, then Phase 2.
