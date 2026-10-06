@@ -1,0 +1,1687 @@
+{
+ "description": "Control structures on the Lower Lea for the c.1895 flood model (FLOOD_MODEL_PLAN.md, Phase 0 draft for the author's review, 5 October 2026). One record per mill, lock, weir, flood gate and sluice the OS five-foot plan shows or the sources document. Every number is marked documented, mapped, estimate or unknown, with its method and the readings that bound it. Nothing reads this file yet.",
+ "frame": "scene x = easting - 538900, z = 183209 - northing; levels are scene y metres; odnMetres = sceneY + 1.83544 (data/maps/os-tide-levels.json datum)",
+ "datum": {
+  "odnMinusSceneYMetres": 1.83544,
+  "osFeetToSceneY": "scene y = (feet - 1.3) x 0.3048 - 1.83544"
+ },
+ "status": "draft; awaiting author review (Phase 0 checkpoint)",
+ "sources": {
+  "book": "West Ham and the River Lea (Clifford), PDF pages one-based; ch. 1 pp. 40-68, ch. 6 pp. 176-206",
+  "vch-ancient-mills": "W.R. Powell (ed.), \"West Ham: Ancient mills\", VCH Essex vi (1973) pp. 89-93, https://www.british-history.ac.uk/vch/essex/vol6/pp89-93 (read 5 October 2026)",
+  "bow-locks-history": "reference/topography-research-2026-09-28/flood-evidence/bow-locks.html (Lee and Stort compilation; originals not inspected)",
+  "os-london-five-foot-1893": "NLS OS London five-foot 1893-96, read through scripts/factory_map_sources.py mosaic; labels from the EPFL text layer",
+  "connection-review": "data/maps/lower-lea-region/connection-review.json controlSites (linked by connectionReviewId)",
+  "crops": "reference/flood-model-phase0/crops/ (main checkout, git-ignored)"
+ },
+ "sharedLevels": {
+  "tideHighSceneY": 1.578,
+  "tideLowSceneY": -2.0,
+  "navigationNormalHead": {
+   "sceneY": 0.95,
+   "odnMetres": 2.785,
+   "status": "estimate",
+   "method": "1928-01-07 peak at Bow about 5.1 m ODN (between Gallions Pier 5.02 and Old Swan Pier 5.21, digitisedGaugePeaks1928) less the reported rise above normal head, 7 ft 8 in at Bromley and 7 ft 7 in at Old Ford (localNavigationLevelEvidence): 2.75-2.8 m ODN, about 0.95 m scene. Assumes the 1890s head equalled the 1928 head.",
+   "rangeSceneY": [
+    0.75,
+    1.25
+   ],
+   "boundingReadings": [
+    {
+     "what": "Trinity High Water (ordinary tides), os-tide-levels.json",
+     "sceneY": 1.578,
+     "relation": "above the head: the 1946 photograph on the Bow Locks page shows high tide level with the Lee and the gates open at both ends, and the page says the highest tides plagued the Lower Lea until 2000"
+    },
+    {
+     "id": "sh_538275_182327",
+     "feet": 14.53,
+     "sceneY": 2.197,
+     "what": "side of the Tidal Lock (coping): head well below"
+    },
+    {
+     "what": "towing paths, os-ground-levels.json",
+     "sceneY": [
+      2.07,
+      2.58
+     ],
+     "relation": "above the head by at least 1.1 m"
+    }
+   ]
+  }
+ },
+ "structures": [
+  {
+   "id": "three-mills",
+   "name": "Three Mills (House Mill 1776, Clock Mill 1817)",
+   "type": "tidal mill",
+   "connectionReviewId": "three-mills",
+   "status1895": "working",
+   "position": {
+    "scene": [
+     -601.4,
+     387.6
+    ],
+    "bng": [
+     538298.6,
+     182821.4
+    ]
+   },
+   "crossLine": {
+    "scene": [
+     [
+      -648,
+      384
+     ],
+     [
+      -566,
+      392
+     ]
+    ],
+    "status": "approximate, read on the crop: the mill range between the pond (Three Mills Wall and Back Rivers) and the race to Bow Creek"
+   },
+   "reachAbove": [
+    1,
+    2
+   ],
+   "reachBelow": [
+    0
+   ],
+   "pond": {
+    "channelIds": [
+     1,
+     2
+    ],
+    "note": "The pond is the water above the mill. It also reaches up the back rivers (3, 4, 7, 8, 9, 17, 21) to the Stratford mills, and joins the Navigation where the Three Mills Back River meets it near Bow Bridge (x about -800, z 150-250; no gate drawn). See decision 3."
+   },
+   "mechanism": "The flood tide entered the pond through one-way gates and the gates closed as the tide turned; the ebb was then run through the wheels (book ch. 1, PDF p. 46, describing the medieval tide mills). The 1930s Prescott sluice was built so that the tide-driven wheels could run longer (Bow Locks page), so the wheels were still tide-driven after 1900.",
+   "levels": {
+    "pondFullSceneY": {
+     "sceneY": 1.578,
+     "odnMetres": 3.413,
+     "status": "documented",
+     "method": "The pond fills to the high water of the tide that fills it: ordinary tides 1.578 (Trinity High Water). Neaps fill it less, springs and surges more."
+    },
+    "pondDrawdownFloorSceneY": {
+     "sceneY": 0.0,
+     "odnMetres": 1.835,
+     "status": "estimate",
+     "method": "The lowest pond level at the end of milling, set by the race sills and the wheels. No sill is surveyed. Bounded below by the 1908 canal standard bed (six feet below the Bow overshot level, about -0.9; book p. 200), which the engineers proposed as a deepening, so the silted beds stood above it; the back rivers were navigable only at spring tides (book p. 200), which also puts the beds high.",
+     "rangeSceneY": [
+      -0.9,
+      0.6
+     ]
+    },
+    "raceSillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Not surveyed; the House Mill Trust may hold a record of the race floors."
+    }
+   },
+   "openings": {
+    "openingWidthMetres": {
+     "sceneY": 8,
+     "odnMetres": 9.835,
+     "status": "estimate",
+     "method": "Wheel bays and race at the House Mill and Clock Mill, read as about 8 m of effective width (4 to 12). The model's House Mill race passage is 3 m wide for display only (task D).",
+     "rangeSceneY": [
+      4,
+      12
+     ]
+    },
+    "dischargeCoefficient": {
+     "sceneY": 0.6,
+     "odnMetres": 2.435,
+     "status": "estimate",
+     "method": "Sluice/orifice coefficient for flow under gates; generic engineering value."
+    }
+   },
+   "operatingStates": [
+    "working (fill on the flood, hold, run on the ebb)",
+    "gates drawn (open passage both ways)",
+    "shut (held; no milling, no tide entry)"
+   ],
+   "default1895": {
+    "state": "working",
+    "evidence": [
+     "VCH Essex vi pp. 89-93: J. & W. Nicholson, gin distillers, owned the mills from 1872; distilling ceased 1941; water-powered machinery survives in the House Mill and Clock Mill",
+     "book ch. 6 p. 202: in 1908 the owners would not give up the mills for flood defence",
+     "book ch. 1 p. 67: the millers' long-standing rights to the tidal flow limited the LCB and the borough"
+    ]
+   },
+   "existence": {
+    "1809": "present; the eighteenth-century embankment that trapped more tide for Three Mills and Four Mills was the subject of the 1824-30 dispute (book ch. 1 p. 49)",
+    "1848-50": "present",
+    "1888": "present",
+    "1897": "present",
+    "1900": "present",
+    "1904": "present",
+    "1928": "present (fires 1908 and 1920 destroyed other buildings, VCH)"
+   },
+   "sources": [
+    "book-ch1 PDF pp. 46, 49, 67",
+    "book-ch6 PDF p. 202",
+    "vch-ancient-mills",
+    "bow-locks-history",
+    "os-london-five-foot-1893"
+   ],
+   "crops": [
+    "three-mills.png",
+    "three-mills-pond.png",
+    "three-mills-junction.png"
+   ]
+  },
+  {
+   "id": "abbey-mill",
+   "name": "Abbey Mill (Corn)",
+   "type": "mill head (tidal limit)",
+   "connectionReviewId": "abbey-corn-mill",
+   "status1895": "working",
+   "position": {
+    "scene": [
+     -16.4,
+     -49.1
+    ],
+    "bng": [
+     538883.6,
+     183258.1
+    ]
+   },
+   "crossLine": {
+    "scene": [
+     [
+      -32,
+      -58
+     ],
+     [
+      14,
+      -52
+     ]
+    ],
+    "status": "approximate, read on the crop: across both passages beside the mill (the mill stood on an island in the Channelsea, VCH)"
+   },
+   "reachAbove": [
+    12,
+    13
+   ],
+   "reachBelow": [
+    14
+   ],
+   "mechanism": "The OS letters \"Highest Point to which the O.T. flow\" here (task C). The upper Channelsea's banks and streets stand below ordinary high water, so the mill's gates must have kept the tide out and let the river out at low water: a head held against the tide, not a tide mill pond.",
+   "levels": {
+    "retainedSceneY": {
+     "sceneY": 0.6,
+     "odnMetres": 2.435,
+     "status": "estimate",
+     "method": "The upper Channelsea's ordinary level. It must lie below the lowest readings along it with room to spare, and the model now holds it at 0.06 (illustrative).",
+     "rangeSceneY": [
+      0.06,
+      1.0
+     ],
+     "boundingReadings": [
+      {
+       "id": "sh_538852_183307",
+       "feet": 11.5,
+       "sceneY": 1.274,
+       "what": "towing path west of the Channelsea above the mill"
+      },
+      {
+       "what": "Channel Sea Road beside the river, 10.93-11.3 ft",
+       "sceneY": [
+        1.1,
+        1.21
+       ]
+      },
+      {
+       "what": "ordinary high water below the mill",
+       "sceneY": 1.578
+      }
+     ]
+    },
+    "gateTopSceneY": {
+     "sceneY": 1.8,
+     "odnMetres": 3.635,
+     "status": "estimate",
+     "method": "At least ordinary high water, since ordinary tides stopped here; below the B.M. on the mill (2.785) and Abbey Road at the tidal-limit note (2.188).",
+     "rangeSceneY": [
+      1.6,
+      2.2
+     ]
+    }
+   },
+   "openings": {
+    "openingWidthMetres": {
+     "sceneY": 10,
+     "odnMetres": 11.835,
+     "status": "estimate",
+     "method": "Two passages either side of the mill island, about 4 and 6 m on the five-foot plan (read on the crop, +/- 2 m each).",
+     "rangeSceneY": [
+      6,
+      14
+     ]
+    },
+    "dischargeCoefficient": {
+     "sceneY": 0.6,
+     "odnMetres": 2.435,
+     "status": "estimate",
+     "method": "Sluice coefficient, generic."
+    }
+   },
+   "operatingStates": [
+    "working (tide gates shut against the flood; head held; river released at low water)",
+    "gates drawn (open; the tide runs up the Channelsea)",
+    "shut"
+   ],
+   "default1895": {
+    "state": "working",
+    "evidence": [
+     "VCH: let to William and James Hunt in 1881, family tenants until about 1936; ceased to operate by 1929; rebuilt 1863-4",
+     "OS 1893-96: tidal-limit note at the mill (task C)"
+    ]
+   },
+   "existence": {
+    "1809": "present (rebuilt 1768; water-mill and windmill in 1819)",
+    "1848-50": "present",
+    "1861-2": "burnt; rebuilt 1863-4",
+    "1888": "present",
+    "1897": "present",
+    "1900": "present",
+    "1904": "present",
+    "1928": "present, probably idle (ceased by 1929)"
+   },
+   "sources": [
+    "vch-ancient-mills",
+    "os-tide-levels.json tidalLimit",
+    "author-abbey-map"
+   ],
+   "crops": [
+    "abbey-mill.png"
+   ]
+  },
+  {
+   "id": "bow-locks",
+   "name": "Bow Locks (Bow Tidal Lock)",
+   "type": "lock",
+   "connectionReviewId": "bow-locks",
+   "status1895": "working",
+   "position": {
+    "scene": [
+     -623,
+     871
+    ],
+    "bng": [
+     538277,
+     182338
+    ]
+   },
+   "positionNote": "OS \"Tidal Lock\" label; the connection review marker is at (-603.2, 840.1)",
+   "crossLine": {
+    "scene": [
+     [
+      -640,
+      872
+     ],
+     [
+      -608,
+      868
+     ]
+    ],
+    "status": "approximate, across the lock chamber"
+   },
+   "reachAbove": [
+    18
+   ],
+   "reachBelow": [
+    0
+   ],
+   "mechanism": "Holds the Navigation (the Bow pound, Old Ford Lock down to Bow) at its normal head. Ordinary spring tides rose above the head, so at high water the lock stood level and could stand open at both ends.",
+   "levels": {
+    "normalHeadSceneY": {
+     "sceneY": 0.95,
+     "odnMetres": 2.785,
+     "status": "estimate",
+     "method": "1928-01-07 peak at Bow about 5.1 m ODN (between Gallions Pier 5.02 and Old Swan Pier 5.21, digitisedGaugePeaks1928) less the reported rise above normal head, 7 ft 8 in at Bromley and 7 ft 7 in at Old Ford (localNavigationLevelEvidence): 2.75-2.8 m ODN, about 0.95 m scene. Assumes the 1890s head equalled the 1928 head.",
+     "rangeSceneY": [
+      0.75,
+      1.25
+     ],
+     "boundingReadings": [
+      {
+       "what": "Trinity High Water (ordinary tides), os-tide-levels.json",
+       "sceneY": 1.578,
+       "relation": "above the head: the 1946 photograph on the Bow Locks page shows high tide level with the Lee and the gates open at both ends, and the page says the highest tides plagued the Lower Lea until 2000"
+      },
+      {
+       "id": "sh_538275_182327",
+       "feet": 14.53,
+       "sceneY": 2.197,
+       "what": "side of the Tidal Lock (coping): head well below"
+      },
+      {
+       "what": "towing paths, os-ground-levels.json",
+       "sceneY": [
+        2.07,
+        2.58
+       ],
+       "relation": "above the head by at least 1.1 m"
+      }
+     ]
+    },
+    "sillSceneY": {
+     "sceneY": -1.2,
+     "odnMetres": 0.635,
+     "status": "estimate",
+     "method": "Below the 1908 canal standard bed (-0.9) by a barge allowance; no survey.",
+     "rangeSceneY": [
+      -1.8,
+      -0.9
+     ]
+    }
+   },
+   "openings": {
+    "chamberWidthMetres": {
+     "sceneY": 6.1,
+     "odnMetres": 7.935,
+     "status": "documented",
+     "method": "20 ft (Lee and Stort table: 1851 pound lock 108 ft by 20 ft; west chamber rebuilt 1900, 93 ft 6 in by 20 ft). Compilation; originals not inspected."
+    }
+   },
+   "operatingStates": [
+    "working (closed except at level water)",
+    "open at level water (tide at or above the head)",
+    "shut"
+   ],
+   "default1895": {
+    "state": "working",
+    "evidence": [
+     "bow-locks-history: tide gate replaced by a pound lock in 1852; improved 1900; second chamber 1931"
+    ]
+   },
+   "existence": {
+    "1809": "single tide lock (gates worked by the current; sill raised c.1660s by the Four Mills miller, lowered 1721)",
+    "1848-50": "tide lock; pound lock and western flood gate built 1852",
+    "1888": "pound lock",
+    "1897": "pound lock",
+    "1900": "west chamber rebuilt",
+    "1904": "pound lock",
+    "1928": "pound lock (second chamber 1931)"
+   },
+   "sources": [
+    "bow-locks-history"
+   ],
+   "crops": [
+    "bow-locks.png",
+    "bow-bromley-reach.png"
+   ]
+  },
+  {
+   "id": "bow-overshoot",
+   "name": "Bow overshoot (stepped overfall beside the Tidal Lock)",
+   "type": "weir",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     -594,
+     830
+    ],
+    "bng": [
+     538306,
+     182379
+    ]
+   },
+   "crossLine": {
+    "scene": [
+     [
+      -603,
+      790
+     ],
+     [
+      -590,
+      868
+     ]
+    ],
+    "status": "mapped extent of the stepped masonry hatching on the five-foot plan; read on the crop"
+   },
+   "reachAbove": [
+    18
+   ],
+   "reachBelow": [
+    0
+   ],
+   "interpretation": "The OS draws a long stepped masonry structure between the Navigation and Bow Creek beside the lock. Read here as the overfall that sets the Navigation's normal head; the book's 1892/1908 canal standard is measured from \"the overshot level at Bow Lock\" (p. 200). The 1852 \"western flood gate\" (Bow Locks page) has not been located and may be part of it.",
+   "levels": {
+    "crestSceneY": {
+     "sceneY": 0.95,
+     "odnMetres": 2.785,
+     "status": "estimate",
+     "method": "Equal to the Navigation normal head by definition. 1928-01-07 peak at Bow about 5.1 m ODN (between Gallions Pier 5.02 and Old Swan Pier 5.21, digitisedGaugePeaks1928) less the reported rise above normal head, 7 ft 8 in at Bromley and 7 ft 7 in at Old Ford (localNavigationLevelEvidence): 2.75-2.8 m ODN, about 0.95 m scene. Assumes the 1890s head equalled the 1928 head.",
+     "rangeSceneY": [
+      0.75,
+      1.25
+     ],
+     "boundingReadings": [
+      {
+       "what": "Trinity High Water (ordinary tides), os-tide-levels.json",
+       "sceneY": 1.578,
+       "relation": "above the head: the 1946 photograph on the Bow Locks page shows high tide level with the Lee and the gates open at both ends, and the page says the highest tides plagued the Lower Lea until 2000"
+      },
+      {
+       "id": "sh_538275_182327",
+       "feet": 14.53,
+       "sceneY": 2.197,
+       "what": "side of the Tidal Lock (coping): head well below"
+      },
+      {
+       "what": "towing paths, os-ground-levels.json",
+       "sceneY": [
+        2.07,
+        2.58
+       ],
+       "relation": "above the head by at least 1.1 m"
+      }
+     ]
+    }
+   },
+   "openings": {
+    "crestLengthMetres": {
+     "sceneY": 70,
+     "odnMetres": 71.835,
+     "status": "estimate",
+     "method": "Length of the stepped hatching on the plan, about 70-80 m; not a surveyed crest.",
+     "rangeSceneY": [
+      40,
+      80
+     ]
+    },
+    "dischargeCoefficient": {
+     "sceneY": 1.6,
+     "odnMetres": 3.435,
+     "status": "estimate",
+     "method": "Broad-crested weir, SI units (Q = C L h^1.5); generic."
+    }
+   },
+   "operatingStates": [
+    "fixed overfall"
+   ],
+   "default1895": {
+    "state": "fixed overfall",
+    "evidence": [
+     "os-london-five-foot-1893 (stepped hatching)",
+     "book-ch6 PDF p. 200"
+    ]
+   },
+   "existence": {
+    "1809": "unknown",
+    "1848-50": "unknown",
+    "1888": "present on the 1893-96 sheet (date of building unknown)",
+    "1928": "unknown"
+   },
+   "sources": [
+    "os-london-five-foot-1893",
+    "book-ch6 PDF p. 200",
+    "bow-locks-history"
+   ],
+   "crops": [
+    "bow-locks.png"
+   ]
+  },
+  {
+   "id": "bromley-lock",
+   "name": "Bromley Lock (Limehouse Cut)",
+   "type": "lock",
+   "status1895": "working",
+   "position": {
+    "scene": [
+     -747,
+     1015
+    ],
+    "bng": [
+     538153,
+     182194
+    ]
+   },
+   "crossLine": null,
+   "reachAbove": [
+    "Limehouse Cut (not in the model geometry)"
+   ],
+   "reachBelow": [
+    0
+   ],
+   "mechanism": "Holds the Limehouse Cut at its normal head where the Cut enters the tidal Lea through the Sun Mills/Four Mills mud basin (\"Mud\" on the OS, below Bow Locks). In 1916 its gates were shut to keep a flood out of the Cut when the Bromley tide gate failed.",
+   "levels": {
+    "normalHeadSceneY": {
+     "sceneY": 0.95,
+     "odnMetres": 2.785,
+     "status": "estimate",
+     "method": "Taken equal to the Navigation head. 1928: 7 ft 8 in above normal head at Bromley. 1928-01-07 peak at Bow about 5.1 m ODN (between Gallions Pier 5.02 and Old Swan Pier 5.21, digitisedGaugePeaks1928) less the reported rise above normal head, 7 ft 8 in at Bromley and 7 ft 7 in at Old Ford (localNavigationLevelEvidence): 2.75-2.8 m ODN, about 0.95 m scene. Assumes the 1890s head equalled the 1928 head.",
+     "rangeSceneY": [
+      0.75,
+      1.25
+     ],
+     "boundingReadings": [
+      {
+       "what": "Trinity High Water (ordinary tides), os-tide-levels.json",
+       "sceneY": 1.578,
+       "relation": "above the head: the 1946 photograph on the Bow Locks page shows high tide level with the Lee and the gates open at both ends, and the page says the highest tides plagued the Lower Lea until 2000"
+      },
+      {
+       "id": "sh_538275_182327",
+       "feet": 14.53,
+       "sceneY": 2.197,
+       "what": "side of the Tidal Lock (coping): head well below"
+      },
+      {
+       "what": "towing paths, os-ground-levels.json",
+       "sceneY": [
+        2.07,
+        2.58
+       ],
+       "relation": "above the head by at least 1.1 m"
+      }
+     ]
+    }
+   },
+   "openings": {
+    "chamberWidthMetres": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Not measured; the Cut is outside the model."
+    }
+   },
+   "operatingStates": [
+    "working",
+    "shut"
+   ],
+   "default1895": {
+    "state": "working",
+    "evidence": [
+     "bow-locks-history (1916 and 1928 reports)",
+     "os-london-five-foot-1893 \"Bromley Lock\""
+    ]
+   },
+   "existence": {
+    "1809": "Limehouse Cut 1760s (book p. 44); lock layout by epoch unresolved (connection review)",
+    "1928": "present"
+   },
+   "sources": [
+    "bow-locks-history",
+    "book-ch1 PDF p. 44",
+    "os-london-five-foot-1893"
+   ],
+   "crops": [
+    "bromley-lock-four-mills.png",
+    "bow-bromley-reach.png"
+   ]
+  },
+  {
+   "id": "city-mills",
+   "name": "City Mills (Spilemans) and flood gates",
+   "type": "mill head",
+   "connectionReviewId": "city-mill",
+   "status1895": "present; milling not established",
+   "position": {
+    "scene": [
+     -760,
+     -262
+    ],
+    "bng": [
+     538140,
+     183471
+    ]
+   },
+   "crossLine": {
+    "scene": [
+     [
+      -772,
+      -262
+     ],
+     [
+      -748,
+      -262
+     ]
+    ],
+    "status": "approximate: the City Mill River passes under the City Mills (Chemical) buildings; passages not resolved"
+   },
+   "reachAbove": [
+    "7 (north of the mill)"
+   ],
+   "reachBelow": [
+    "7 (south of the mill)"
+   ],
+   "mechanism": "An ancient tide mill north of the High Street. Ordinary tides reached Temple Mills (OS note), so the flood passed the Stratford mills. The City of London owned the mills and their flood gates on the City Mill and Waterworks Rivers, in disrepair by 1920.",
+   "levels": {
+    "heldHeadSceneY": {
+     "sceneY": 1.578,
+     "odnMetres": 3.413,
+     "status": "estimate",
+     "method": "If working as a tide mill: the high water of the tide, as at Three Mills."
+    },
+    "gateSillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Not surveyed."
+    }
+   },
+   "openings": {
+    "openingWidthMetres": {
+     "sceneY": 6,
+     "odnMetres": 7.835,
+     "status": "estimate",
+     "method": "Passage under the buildings, read on the crop; uncertain.",
+     "rangeSceneY": [
+      3,
+      10
+     ]
+    }
+   },
+   "operatingStates": [
+    "gates open (tide and river pass)",
+    "working (head held on the ebb)",
+    "shut"
+   ],
+   "default1895": {
+    "state": "gates open",
+    "evidence": [
+     "VCH: Howard & Allen (Howards & Sons, manufacturing chemists) leased part from 1805 and gradually took the whole site, until 1914; corn-grinding last recorded 1818",
+     "book ch. 6 p. 205: City Mill and Waterworks floodgates in disrepair in 1920"
+    ],
+    "note": "No evidence of water-powered milling c.1895. The state is a decision for the author (decision 1)."
+   },
+   "existence": {
+    "1809": "working mill (corn; Howard & Allen chemists in part from 1805)",
+    "1848-50": "present",
+    "1888": "present",
+    "1928": "present (gates in disrepair 1920); demolished 1932-3"
+   },
+   "sources": [
+    "vch-ancient-mills",
+    "book-ch6 PDF p. 205",
+    "author-city-mills-map"
+   ],
+   "crops": [
+    "city-mills.png"
+   ]
+  },
+  {
+   "id": "waterworks-flood-gate",
+   "name": "Waterworks River flood gate",
+   "type": "flood gate",
+   "connectionReviewId": "waterworks-flood-gate",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     -555,
+     -515
+    ],
+    "bng": [
+     538345,
+     183724
+    ]
+   },
+   "crossLine": {
+    "scene": [
+     [
+      -563,
+      -517
+     ],
+     [
+      -547,
+      -513
+     ]
+    ],
+    "status": "approximate: the OS \"Flood Gate\" at a narrow passage with a footbridge (F.B.)"
+   },
+   "reachAbove": [
+    4
+   ],
+   "reachBelow": [
+    3
+   ],
+   "mechanism": "The Waterworks River above the gate runs between hatched banks. Read as one of the City's flood gates (book p. 205): it could be shut against high tides or drawn to pass floods. Its use is not recorded.",
+   "levels": {
+    "gateTopSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Not surveyed; nearby streets 14.3-14.5 ft (2.13-2.19 m)."
+    },
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Not surveyed."
+    }
+   },
+   "openings": {
+    "openingWidthMetres": {
+     "sceneY": 5,
+     "odnMetres": 6.835,
+     "status": "estimate",
+     "method": "Passage width read on the crop.",
+     "rangeSceneY": [
+      3,
+      8
+     ]
+    }
+   },
+   "operatingStates": [
+    "open",
+    "shut against the tide",
+    "drawn (flood)"
+   ],
+   "default1895": {
+    "state": "open",
+    "evidence": [
+     "os-london-five-foot-1893 \"Flood Gate\""
+    ],
+    "note": "Decision 1."
+   },
+   "existence": {
+    "1888": "present on the 1893-96 sheet",
+    "1928": "disrepair reported 1920"
+   },
+   "sources": [
+    "author-waterworks-map",
+    "book-ch6 PDF p. 205"
+   ],
+   "crops": [
+    "waterworks-flood-gate.png"
+   ]
+  },
+  {
+   "id": "waterworks-mill-site",
+   "name": "Waterworks Mill (Saynes Mill)",
+   "type": "mill head",
+   "connectionReviewId": "waterworks-mill",
+   "status1895": "absent",
+   "position": null,
+   "reachAbove": [
+    4
+   ],
+   "reachBelow": [
+    3
+   ],
+   "mechanism": "VCH: occupied by factories 1873-81 and gone by 1893-4. No control for the 1890s model; the site matters for the 1809 model.",
+   "default1895": {
+    "state": "absent",
+    "evidence": [
+     "vch-ancient-mills"
+    ]
+   },
+   "existence": {
+    "1809": "working (West Ham Waterworks Co. rebuilt the corn-mill and added a pumping engine by 1775)",
+    "1848-50": "present",
+    "1888": "gone or going",
+    "1893-4": "absent"
+   },
+   "sources": [
+    "vch-ancient-mills"
+   ]
+  },
+  {
+   "id": "st-thomas-mills",
+   "name": "St Thomas's Mills (Pudding Mill; Du Barry's Patent Food)",
+   "type": "mill head",
+   "connectionReviewId": "pudding-mill",
+   "status1895": "present; water use unknown",
+   "position": {
+    "scene": [
+     -884.6,
+     -196.6
+    ],
+    "bng": [
+     538015.4,
+     183405.6
+    ]
+   },
+   "crossLine": {
+    "scene": [
+     [
+      -892,
+      -200
+     ],
+     [
+      -876,
+      -194
+     ]
+    ],
+    "status": "approximate: the only passage, through the mill (author)"
+   },
+   "reachAbove": [
+    8
+   ],
+   "reachBelow": [
+    9
+   ],
+   "mechanism": "Restricted through-mill passage. Little water came down the Pudding Mill River even in floods by 1908 (book p. 204).",
+   "levels": {
+    "heldHeadSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "No evidence of a held head c.1895."
+    }
+   },
+   "openings": {
+    "openingWidthMetres": {
+     "sceneY": 3,
+     "odnMetres": 4.835,
+     "status": "estimate",
+     "method": "Narrow through-mill passage; read on the crop.",
+     "rangeSceneY": [
+      1.5,
+      5
+     ]
+    }
+   },
+   "operatingStates": [
+    "restricted passage",
+    "shut"
+   ],
+   "default1895": {
+    "state": "restricted passage",
+    "evidence": [
+     "VCH: Du Barry & Co. (flour miller, later patent food) lessee 1864, owner 1875, until about 1925",
+     "book-ch6 PDF p. 204",
+     "author-pudding-map"
+    ]
+   },
+   "existence": {
+    "1809": "present (Morley/Jones owners)",
+    "1928": "present; demolished about 1934"
+   },
+   "sources": [
+    "vch-ancient-mills",
+    "book-ch6 PDF p. 204",
+    "author-pudding-map"
+   ],
+   "crops": [
+    "pudding-mill.png"
+   ]
+  },
+  {
+   "id": "marshgate-lock",
+   "name": "Lock on the Bow Back River west of Marshgate Lane",
+   "type": "lock",
+   "connectionReviewId": "marshgate-lock",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     -860,
+     -89
+    ],
+    "bng": [
+     538040,
+     183298
+    ]
+   },
+   "crossLine": {
+    "scene": [
+     [
+      -862,
+      -97
+     ],
+     [
+      -858,
+      -82
+     ]
+    ],
+    "status": "approximate, across the lock (OS \"Lock\")"
+   },
+   "reachAbove": [
+    17
+   ],
+   "reachBelow": [
+    9
+   ],
+   "lockChannelId": 21,
+   "mechanism": "Between the Bow Back River's open western mouth on the Navigation (Bow pound) and the back rivers east of Marshgate Lane. If the Navigation held its head while the back rivers ebbed, this lock kept them apart (decision 3).",
+   "levels": {
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Not surveyed."
+    }
+   },
+   "openings": {
+    "chamberWidthMetres": {
+     "sceneY": 5,
+     "odnMetres": 6.835,
+     "status": "estimate",
+     "method": "Read on the crop.",
+     "rangeSceneY": [
+      4,
+      6
+     ]
+    }
+   },
+   "operatingStates": [
+    "working (closed except for passage)",
+    "open",
+    "shut"
+   ],
+   "default1895": {
+    "state": "working",
+    "evidence": [
+     "os-london-five-foot-1893 \"Lock\"",
+     "author-bow-back-map"
+    ]
+   },
+   "existence": {
+    "1888": "present on the 1893-96 sheet"
+   },
+   "sources": [
+    "author-bow-back-map",
+    "os-london-five-foot-1893"
+   ],
+   "crops": [
+    "marshgate-lock.png"
+   ]
+  },
+  {
+   "id": "old-ford-lock",
+   "name": "Old Ford Lock",
+   "type": "lock",
+   "connectionReviewId": "old-ford-lock",
+   "status1895": "working",
+   "position": {
+    "scene": [
+     -1550.4,
+     -776.1
+    ],
+    "bng": [
+     537349.6,
+     183985.1
+    ]
+   },
+   "crossLine": null,
+   "reachAbove": [
+    15
+   ],
+   "reachBelow": [
+    22
+   ],
+   "mechanism": "The upstream end of the Bow pound. Lea flow from the Hackney Cut enters the model here and over the Old Lea.",
+   "levels": {
+    "lowerPoundSceneY": {
+     "sceneY": 0.95,
+     "odnMetres": 2.785,
+     "status": "estimate",
+     "method": "The Bow pound. 1928: 7 ft 7 in above normal head at Old Ford. 1928-01-07 peak at Bow about 5.1 m ODN (between Gallions Pier 5.02 and Old Swan Pier 5.21, digitisedGaugePeaks1928) less the reported rise above normal head, 7 ft 8 in at Bromley and 7 ft 7 in at Old Ford (localNavigationLevelEvidence): 2.75-2.8 m ODN, about 0.95 m scene. Assumes the 1890s head equalled the 1928 head.",
+     "rangeSceneY": [
+      0.75,
+      1.25
+     ],
+     "boundingReadings": [
+      {
+       "what": "Trinity High Water (ordinary tides), os-tide-levels.json",
+       "sceneY": 1.578,
+       "relation": "above the head: the 1946 photograph on the Bow Locks page shows high tide level with the Lee and the gates open at both ends, and the page says the highest tides plagued the Lower Lea until 2000"
+      },
+      {
+       "id": "sh_538275_182327",
+       "feet": 14.53,
+       "sceneY": 2.197,
+       "what": "side of the Tidal Lock (coping): head well below"
+      },
+      {
+       "what": "towing paths, os-ground-levels.json",
+       "sceneY": [
+        2.07,
+        2.58
+       ],
+       "relation": "above the head by at least 1.1 m"
+      }
+     ]
+    },
+    "upperPoundSceneY": {
+     "sceneY": 2.5,
+     "odnMetres": 4.335,
+     "status": "estimate",
+     "method": "Hackney Cut level: no record found. Below the lock-side readings by at least 0.6 m, and above the Bow pound by a lock fall.",
+     "rangeSceneY": [
+      1.9,
+      3.5
+     ],
+     "boundingReadings": [
+      {
+       "what": "lock-side readings, 20.7-21.2 ft",
+       "sceneY": [
+        4.08,
+        4.23
+       ]
+      }
+     ]
+    }
+   },
+   "operatingStates": [
+    "working"
+   ],
+   "default1895": {
+    "state": "working",
+    "evidence": [
+     "os-london-five-foot-1893 \"Old Ford Lock\""
+    ]
+   },
+   "existence": {
+    "1848-50": "present (skeleton survey)",
+    "1928": "present"
+   },
+   "sources": [
+    "author-old-ford-map",
+    "period-map-comparison"
+   ],
+   "crops": [
+    "old-ford.png"
+   ]
+  },
+  {
+   "id": "old-ford-flood-gates",
+   "name": "Old Ford flood gates (Navigation to Old Lea)",
+   "type": "flood gate",
+   "connectionReviewId": "old-ford-side-floodgate",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     -1523.6,
+     -737.4
+    ],
+    "bng": [
+     537376.4,
+     183946.4
+    ]
+   },
+   "crossLine": null,
+   "reachAbove": [
+    15
+   ],
+   "reachBelow": [
+    22
+   ],
+   "mechanism": "Side connection with \"Flood Gates\" between the Navigation and the Old Lea, which feeds the upper back rivers (author). Read as shut in ordinary flow and drawn to pass floods.",
+   "levels": {
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Not surveyed."
+    }
+   },
+   "operatingStates": [
+    "shut",
+    "drawn (flood)"
+   ],
+   "default1895": {
+    "state": "shut; drawn above a flow threshold",
+    "evidence": [
+     "os-london-five-foot-1893 \"Flood Gates\""
+    ],
+    "note": "Operating rule is an estimate."
+   },
+   "existence": {
+    "1848-50": "side channel drawn",
+    "1888": "present"
+   },
+   "sources": [
+    "author-old-ford-map",
+    "period-map-comparison"
+   ],
+   "crops": [
+    "old-ford.png"
+   ]
+  },
+  {
+   "id": "temple-mills-weir",
+   "name": "Temple Mills weir (head of the Waterworks River)",
+   "type": "weir",
+   "connectionReviewId": "temple-mills-weir",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     -1327.8,
+     -2273.1
+    ],
+    "bng": [
+     537572.2,
+     185482.1
+    ]
+   },
+   "crossLine": null,
+   "reachAbove": [
+    6
+   ],
+   "reachBelow": [
+    5
+   ],
+   "mechanism": "The OS letters \"Highest point to which Ordinary Tides flow\" beside the weir at Templemills Bridge: ordinary tides ran up the Waterworks River to here, past the Stratford mills.",
+   "levels": {
+    "crestSceneY": {
+     "sceneY": 1.7,
+     "odnMetres": 3.535,
+     "status": "estimate",
+     "method": "At or above ordinary high water (1.578), since ordinary tides stopped here; below the bank by the bridge.",
+     "rangeSceneY": [
+      1.578,
+      2.2
+     ],
+     "boundingReadings": [
+      {
+       "id": "sh_537519_185495",
+       "feet": 15.8,
+       "sceneY": 2.584,
+       "what": "street west of Templemills Bridge"
+      },
+      {
+       "id": "sh_537578_185487",
+       "feet": 19.2,
+       "sceneY": 3.62,
+       "what": "Templemills Bridge"
+      },
+      {
+       "what": "river banks upstream, 16.29-16.8 ft",
+       "sceneY": [
+        2.73,
+        2.89
+       ]
+      }
+     ]
+    }
+   },
+   "openings": {
+    "crestLengthMetres": {
+     "sceneY": 12,
+     "odnMetres": 13.835,
+     "status": "estimate",
+     "method": "Channel width at the bridge, read on the crop.",
+     "rangeSceneY": [
+      8,
+      16
+     ]
+    },
+    "dischargeCoefficient": {
+     "sceneY": 1.6,
+     "odnMetres": 3.435,
+     "status": "estimate",
+     "method": "Broad-crested weir, SI; generic."
+    }
+   },
+   "operatingStates": [
+    "fixed weir"
+   ],
+   "default1895": {
+    "state": "fixed weir",
+    "evidence": [
+     "os-london-five-foot-1893 weir label and tide note (EPFL text layer)"
+    ]
+   },
+   "existence": {
+    "1848-50": "bridge and channel drawn; control unresolved",
+    "1888": "present"
+   },
+   "sources": [
+    "period-map-comparison",
+    "os-london-five-foot-1893"
+   ],
+   "crops": [
+    "temple-mills.png"
+   ]
+  },
+  {
+   "id": "four-mills",
+   "name": "Four Mills (Bromley)",
+   "type": "tidal mill",
+   "status1895": "no control drawn",
+   "position": {
+    "scene": [
+     -719,
+     1105
+    ],
+    "bng": [
+     538181,
+     182104
+    ]
+   },
+   "reachAbove": null,
+   "reachBelow": [
+    0
+   ],
+   "mechanism": "Historically the Four Mills held the Lea behind Bow Lock (sill raised in the 1660s; 1711 penning complaints; the 1824 dispute over the embankment). By 1893-96 the site is the Four Mills Distillery and Sun Mills (Corn), with the tidal \"Mud\" basin; no dam is drawn. Kept for the 1809 model.",
+   "default1895": {
+    "state": "absent as a control",
+    "evidence": [
+     "os-london-five-foot-1893",
+     "bow-locks-history (Fairclough notes)",
+     "book-ch1 PDF p. 49",
+     "vch-ancient-mills"
+    ]
+   },
+   "existence": {
+    "1809": "working tide mill controlling Bow Lock",
+    "1848-50": "Bow tide lock until 1852",
+    "1893-96": "distillery and corn mill; no separate control"
+   },
+   "sources": [
+    "bow-locks-history",
+    "book-ch1 PDF p. 49",
+    "vch-ancient-mills"
+   ],
+   "crops": [
+    "bromley-lock-four-mills.png",
+    "bow-bromley-reach.png"
+   ]
+  },
+  {
+   "id": "marsh-sluice-abbey-west",
+   "name": "Sluice (OS label)",
+   "type": "sluice",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     27,
+     590
+    ],
+    "bng": [
+     538927,
+     182619
+    ]
+   },
+   "note": "sh_538923_182626 \"by the Sluice\", 4.5 ft (-0.86)",
+   "mechanism": "Marsh drain sluice. Drains only while the water outside is below the inside water and the sill (tide-locking).",
+   "levels": {
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Below the adjacent marsh readings; not surveyed."
+    }
+   },
+   "outfall": "not traced (Phase 3)",
+   "default1895": {
+    "state": "tide-locked outfall rule",
+    "evidence": [
+     "os-london-five-foot-1893 (EPFL text layer)"
+    ]
+   },
+   "sources": [
+    "os-london-five-foot-1893"
+   ]
+  },
+  {
+   "id": "marsh-sluice-abbey-mid",
+   "name": "Sluice (OS label)",
+   "type": "sluice",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     165,
+     588
+    ],
+    "bng": [
+     539065,
+     182621
+    ]
+   },
+   "note": "sh_539070_182630, 4.6 ft (-0.83)",
+   "mechanism": "Marsh drain sluice. Drains only while the water outside is below the inside water and the sill (tide-locking).",
+   "levels": {
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Below the adjacent marsh readings; not surveyed."
+    }
+   },
+   "outfall": "not traced (Phase 3)",
+   "default1895": {
+    "state": "tide-locked outfall rule",
+    "evidence": [
+     "os-london-five-foot-1893 (EPFL text layer)"
+    ]
+   },
+   "sources": [
+    "os-london-five-foot-1893"
+   ]
+  },
+  {
+   "id": "marsh-sluice-abbey-east",
+   "name": "Sluice (OS label)",
+   "type": "sluice",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     236,
+     573
+    ],
+    "bng": [
+     539136,
+     182636
+    ]
+   },
+   "note": "ditch by the Woolwich branch",
+   "mechanism": "Marsh drain sluice. Drains only while the water outside is below the inside water and the sill (tide-locking).",
+   "levels": {
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Below the adjacent marsh readings; not surveyed."
+    }
+   },
+   "outfall": "not traced (Phase 3)",
+   "default1895": {
+    "state": "tide-locked outfall rule",
+    "evidence": [
+     "os-london-five-foot-1893 (EPFL text layer)"
+    ]
+   },
+   "sources": [
+    "os-london-five-foot-1893"
+   ]
+  },
+  {
+   "id": "marsh-sluice-manor-road",
+   "name": "Sluice (OS label)",
+   "type": "sluice",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     288,
+     433
+    ],
+    "bng": [
+     539188,
+     182776
+    ]
+   },
+   "note": "sh_539172_182787 Manor Road by the Sluice, 6.6 ft (-0.22)",
+   "mechanism": "Marsh drain sluice. Drains only while the water outside is below the inside water and the sill (tide-locking).",
+   "levels": {
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Below the adjacent marsh readings; not surveyed."
+    }
+   },
+   "outfall": "not traced (Phase 3)",
+   "default1895": {
+    "state": "tide-locked outfall rule",
+    "evidence": [
+     "os-london-five-foot-1893 (EPFL text layer)"
+    ]
+   },
+   "sources": [
+    "os-london-five-foot-1893"
+   ]
+  },
+  {
+   "id": "marsh-sluice-east-1",
+   "name": "Sluice (OS label)",
+   "type": "sluice",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     628,
+     732
+    ],
+    "bng": [
+     539528,
+     182477
+    ]
+   },
+   "note": "east marsh, outside the core",
+   "mechanism": "Marsh drain sluice. Drains only while the water outside is below the inside water and the sill (tide-locking).",
+   "levels": {
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Below the adjacent marsh readings; not surveyed."
+    }
+   },
+   "outfall": "not traced (Phase 3)",
+   "default1895": {
+    "state": "tide-locked outfall rule",
+    "evidence": [
+     "os-london-five-foot-1893 (EPFL text layer)"
+    ]
+   },
+   "sources": [
+    "os-london-five-foot-1893"
+   ]
+  },
+  {
+   "id": "marsh-sluices-east-2",
+   "name": "Sluice (OS label)",
+   "type": "sluice",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     650,
+     663
+    ],
+    "bng": [
+     539550,
+     182546
+    ]
+   },
+   "note": "east marsh, outside the core",
+   "mechanism": "Marsh drain sluice. Drains only while the water outside is below the inside water and the sill (tide-locking).",
+   "levels": {
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Below the adjacent marsh readings; not surveyed."
+    }
+   },
+   "outfall": "not traced (Phase 3)",
+   "default1895": {
+    "state": "tide-locked outfall rule",
+    "evidence": [
+     "os-london-five-foot-1893 (EPFL text layer)"
+    ]
+   },
+   "sources": [
+    "os-london-five-foot-1893"
+   ]
+  },
+  {
+   "id": "stratford-sluice-railway",
+   "name": "Sluice (OS label)",
+   "type": "sluice",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     -663,
+     -758
+    ],
+    "bng": [
+     538237,
+     183967
+    ]
+   },
+   "note": "small sluice beside the railway, Stratford Marsh",
+   "mechanism": "Marsh drain sluice. Drains only while the water outside is below the inside water and the sill (tide-locking).",
+   "levels": {
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Below the adjacent marsh readings; not surveyed."
+    }
+   },
+   "outfall": "not traced (Phase 3)",
+   "default1895": {
+    "state": "tide-locked outfall rule",
+    "evidence": [
+     "os-london-five-foot-1893 (EPFL text layer)"
+    ]
+   },
+   "sources": [
+    "os-london-five-foot-1893"
+   ]
+  },
+  {
+   "id": "channelsea-sluice-hackney",
+   "name": "Sluice (OS label)",
+   "type": "sluice",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     -1183,
+     -1582
+    ],
+    "bng": [
+     537717,
+     184791
+    ]
+   },
+   "note": "west bank of the embanked upper Channelsea",
+   "mechanism": "Marsh drain sluice. Drains only while the water outside is below the inside water and the sill (tide-locking).",
+   "levels": {
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Below the adjacent marsh readings; not surveyed."
+    }
+   },
+   "outfall": "not traced (Phase 3)",
+   "default1895": {
+    "state": "tide-locked outfall rule",
+    "evidence": [
+     "os-london-five-foot-1893 (EPFL text layer)"
+    ]
+   },
+   "sources": [
+    "os-london-five-foot-1893"
+   ]
+  },
+  {
+   "id": "temple-mills-sluice-1",
+   "name": "Sluice (OS label)",
+   "type": "sluice",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     -905,
+     -2282
+    ],
+    "bng": [
+     537995,
+     185491
+    ]
+   },
+   "note": "marsh drain, Temple Mills",
+   "mechanism": "Marsh drain sluice. Drains only while the water outside is below the inside water and the sill (tide-locking).",
+   "levels": {
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Below the adjacent marsh readings; not surveyed."
+    }
+   },
+   "outfall": "not traced (Phase 3)",
+   "default1895": {
+    "state": "tide-locked outfall rule",
+    "evidence": [
+     "os-london-five-foot-1893 (EPFL text layer)"
+    ]
+   },
+   "sources": [
+    "os-london-five-foot-1893"
+   ]
+  },
+  {
+   "id": "temple-mills-sluice-2",
+   "name": "Sluice (OS label)",
+   "type": "sluice",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     -946,
+     -2369
+    ],
+    "bng": [
+     537954,
+     185578
+    ]
+   },
+   "note": "marsh drain, Temple Mills",
+   "mechanism": "Marsh drain sluice. Drains only while the water outside is below the inside water and the sill (tide-locking).",
+   "levels": {
+    "sillSceneY": {
+     "sceneY": null,
+     "odnMetres": null,
+     "status": "unknown",
+     "method": "Below the adjacent marsh readings; not surveyed."
+    }
+   },
+   "outfall": "not traced (Phase 3)",
+   "default1895": {
+    "state": "tide-locked outfall rule",
+    "evidence": [
+     "os-london-five-foot-1893 (EPFL text layer)"
+    ]
+   },
+   "sources": [
+    "os-london-five-foot-1893"
+   ]
+  }
+ ],
+ "notFound": [
+  {
+   "item": "Three Mills Overshoot",
+   "evidence": "bow-locks-history (1898 proposal \"near the Three Mills Overshoot\")",
+   "result": "Not identified on the 1893-96 sheet near the Three Mills Back River junction; the stepped overfall at Bow Locks may be the overshoot the book calls \"the overshot level at Bow Lock\"."
+  },
+  {
+   "item": "Abbey Lock tide gates (end of Abbey Creek, under the Northern Outfall Sewer)",
+   "evidence": "bow-locks-history (LMA ACC 2423/P1874, undated)",
+   "result": "No lock or gate drawn at the head of Abbey Creek on the 1893-96 sheet; probably later."
+  },
+  {
+   "item": "Bow \"western flood gate\" (1852) and the Bromley \"west side tide gate\" (1916)",
+   "evidence": "bow-locks-history",
+   "result": "Not separately labelled; possibly the overfall structure or the gates beside the Tidal Lock."
+  },
+  {
+   "item": "Mill Meads marsh outfall",
+   "evidence": "OS ditches run to the Long Wall at about (-415, 460)",
+   "result": "Outfall sluice not lettered; trace in Phase 3."
+  }
+ ],
+ "flowEvidence": {
+  "source": "G2G_Oudin_flow_1891_2015.csv (author, untracked), column 38001 (Lee at Feildes Weir), modelled daily means",
+  "parsingNote": "Dates are ISO to 1899 and dd/mm/yyyy from 1900. The plan's figures (median 4.6, Q95 2.0, peak 40.9 on 15 Nov 1894) cover 1891-1899 only.",
+  "1891-1910": {
+   "medianM3s": 4.35,
+   "q95M3s": 2.06,
+   "q10M3s": 10.0,
+   "peakM3s": 56.08,
+   "peakDate": "1903-06-15",
+   "summerJulSepMedian": 3.04,
+   "summerQ95": 1.62,
+   "winterDecFebMedian": 6.33,
+   "winterQ10": 12.88
+  },
+  "1891-1899": {
+   "medianM3s": 4.59,
+   "q95M3s": 1.99,
+   "peakM3s": 40.88,
+   "peakDate": "1894-11-15"
+  },
+  "eventDays": {
+   "1894-11-15": 40.88,
+   "1897-11-29": 5.06,
+   "1898-10-29": 3.4,
+   "1904-12-30": 3.94
+  },
+  "caution": "Modelled natural flow. In dry summers the waterworks took most of the Lea (book p. 66; the 1860s commissioners, p. 79), so far less reached the back rivers than G2G gives. Daily means, not event peaks."
+ }
+}
