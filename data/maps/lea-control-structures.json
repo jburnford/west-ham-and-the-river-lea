@@ -5,12 +5,23 @@
   "odnMinusSceneYMetres": 1.83544,
   "osFeetToSceneY": "scene y = (feet - 1.3) x 0.3048 - 1.83544"
  },
- "status": "draft; awaiting author review (Phase 0 checkpoint)",
+ "status": "draft, revised after the author's Phase 0 review (5 October 2026); back-river beds (decision 4) still open",
+ "authorReview": {
+  "date": "2026-10-05",
+  "decisions": [
+   "Pudding Mill held water; City Mills still operational to some extent; no mill on the Waterworks River in the 1890s",
+   "Model working mills as tide-mill ponds held at the last high water (plan 4.2 changed)",
+   "The Navigation and the Three Mills pond are kept apart by a wall/bank; the Navigation held its level and let the river through to Bow Creek (confirmed on the maps: the Three Mills overfall)",
+   "Several flood types eventually; the flood from rain up river first"
+  ]
+ },
  "sources": {
   "book": "West Ham and the River Lea (Clifford), PDF pages one-based; ch. 1 pp. 40-68, ch. 6 pp. 176-206",
   "vch-ancient-mills": "W.R. Powell (ed.), \"West Ham: Ancient mills\", VCH Essex vi (1973) pp. 89-93, https://www.british-history.ac.uk/vch/essex/vol6/pp89-93 (read 5 October 2026)",
   "bow-locks-history": "reference/topography-research-2026-09-28/flood-evidence/bow-locks.html (Lee and Stort compilation; originals not inspected)",
   "os-london-five-foot-1893": "NLS OS London five-foot 1893-96, read through scripts/factory_map_sources.py mosaic; labels from the EPFL text layer",
+  "os-london-town-plan-1860s": "NLS OS London five-foot first edition, c.1862-75 (layer os-london-town-plan-1860s); no tiles east of about x -600 north of the High Street",
+  "os-london-skeleton-5280": "NLS OS London skeleton survey, c.1848-51; registration approximate",
   "connection-review": "data/maps/lower-lea-region/connection-review.json controlSites (linked by connectionReviewId)",
   "crops": "reference/flood-model-phase0/crops/ (main checkout, git-ignored)"
  },
@@ -91,7 +102,7 @@
      1,
      2
     ],
-    "note": "The pond is the water above the mill. It also reaches up the back rivers (3, 4, 7, 8, 9, 17, 21) to the Stratford mills, and joins the Navigation where the Three Mills Back River meets it near Bow Bridge (x about -800, z 150-250; no gate drawn). See decision 3."
+    "note": "The pond is the water above the mill: the Three Mills Wall and Back Rivers, up the back rivers (3, 7, 9) to the Stratford mills. It is walled off from the Navigation: from Bow Bridge to Three Mills the Bow Bridge Works strip and the island above the mill lie between them (1860s and 1893 plans). The Navigation spills into it over the Three Mills overfall, and the Bow Back River joins the two through the Marshgate Lane lock."
    },
    "mechanism": "The flood tide entered the pond through one-way gates and the gates closed as the tide turned; the ebb was then run through the wheels (book ch. 1, PDF p. 46, describing the medieval tide mills). The 1930s Prescott sluice was built so that the tide-driven wheels could run longer (Bow Locks page), so the wheels were still tide-driven after 1900.",
    "levels": {
@@ -448,7 +459,7 @@
    "reachBelow": [
     0
    ],
-   "interpretation": "The OS draws a long stepped masonry structure between the Navigation and Bow Creek beside the lock. Read here as the overfall that sets the Navigation's normal head; the book's 1892/1908 canal standard is measured from \"the overshot level at Bow Lock\" (p. 200). The 1852 \"western flood gate\" (Bow Locks page) has not been located and may be part of it.",
+   "interpretation": "The OS draws a long stepped masonry structure between the Navigation and Bow Creek beside the lock. Read here as an overfall that, with the Three Mills overfall, sets the Navigation's normal head; the book's 1892/1908 canal standard is measured from \"the overshot level at Bow Lock\" (p. 200). The 1852 \"western flood gate\" (Bow Locks page) has not been located and may be part of it.",
    "levels": {
     "crestSceneY": {
      "sceneY": 0.95,
@@ -523,6 +534,118 @@
    ],
    "crops": [
     "bow-locks.png"
+   ]
+  },
+  {
+   "id": "three-mills-overfall",
+   "name": "Three Mills overfall (the \"Three Mills Overshoot\")",
+   "type": "weir",
+   "status1895": "present",
+   "position": {
+    "scene": [
+     -711,
+     311
+    ],
+    "bng": [
+     538189,
+     182898
+    ]
+   },
+   "crossLine": {
+    "scene": [
+     [
+      -716,
+      303
+     ],
+     [
+      -704,
+      318
+     ]
+    ],
+    "status": "mapped: lettered \"Overfall\" on the 1860s 1:1,056 plan at the head of the island above Three Mills; a short link with a footbridge (F.B.) on the 1893 plan"
+   },
+   "reachAbove": [
+    18
+   ],
+   "reachBelow": [
+    2
+   ],
+   "mechanism": "Spills the Navigation into the Three Mills pond. With the Bow overshoot it holds the Navigation at its normal head; the surplus river runs through the pond and Three Mills to Bow Creek (the author's reading, 5 October 2026). The 1898 proposal for a lock or tide gate \"at the junction of the 3 Mills Back River and the Navigation, near the Three Mills Overshoot\" was turned down (Bow Locks page). At high tide the pond rises above the head and the overfall runs backwards.",
+   "levels": {
+    "crestSceneY": {
+     "sceneY": 0.95,
+     "odnMetres": 2.785,
+     "status": "estimate",
+     "method": "Equal to the Navigation normal head. 1928-01-07 peak at Bow about 5.1 m ODN (between Gallions Pier 5.02 and Old Swan Pier 5.21, digitisedGaugePeaks1928) less the reported rise above normal head, 7 ft 8 in at Bromley and 7 ft 7 in at Old Ford (localNavigationLevelEvidence): 2.75-2.8 m ODN, about 0.95 m scene. Assumes the 1890s head equalled the 1928 head.",
+     "rangeSceneY": [
+      0.75,
+      1.25
+     ],
+     "boundingReadings": [
+      {
+       "what": "Trinity High Water (ordinary tides), os-tide-levels.json",
+       "sceneY": 1.578,
+       "relation": "above the head: the 1946 photograph on the Bow Locks page shows high tide level with the Lee and the gates open at both ends, and the page says the highest tides plagued the Lower Lea until 2000"
+      },
+      {
+       "id": "sh_538275_182327",
+       "feet": 14.53,
+       "sceneY": 2.197,
+       "what": "side of the Tidal Lock (coping): head well below"
+      },
+      {
+       "what": "towing paths, os-ground-levels.json",
+       "sceneY": [
+        2.07,
+        2.58
+       ],
+       "relation": "above the head by at least 1.1 m"
+      }
+     ]
+    }
+   },
+   "openings": {
+    "crestLengthMetres": {
+     "sceneY": 15,
+     "odnMetres": 16.835,
+     "status": "estimate",
+     "method": "Width of the link at the footbridge, read on the 1860s and 1893 plans.",
+     "rangeSceneY": [
+      8,
+      20
+     ]
+    },
+    "dischargeCoefficient": {
+     "sceneY": 1.6,
+     "odnMetres": 3.435,
+     "status": "estimate",
+     "method": "Broad-crested weir, SI; generic."
+    }
+   },
+   "operatingStates": [
+    "fixed overfall"
+   ],
+   "default1895": {
+    "state": "fixed overfall",
+    "evidence": [
+     "os-london-town-plan-1860s \"Overfall\"",
+     "os-london-five-foot-1893 (F.B. over the link)",
+     "bow-locks-history (1898 proposal)"
+    ]
+   },
+   "existence": {
+    "1860s": "present (lettered)",
+    "1893-96": "present",
+    "1928": "unknown"
+   },
+   "sources": [
+    "os-london-town-plan-1860s",
+    "os-london-five-foot-1893",
+    "bow-locks-history"
+   ],
+   "crops": [
+    "cmp-three-mills-bank.png",
+    "cmp-junction-north.png"
    ]
   },
   {
@@ -619,7 +742,7 @@
    "name": "City Mills (Spilemans) and flood gates",
    "type": "mill head",
    "connectionReviewId": "city-mill",
-   "status1895": "present; milling not established",
+   "status1895": "working in part",
    "position": {
     "scene": [
      -760,
@@ -682,12 +805,13 @@
     "shut"
    ],
    "default1895": {
-    "state": "gates open",
+    "state": "working (head held), reduced opening",
     "evidence": [
+     "author, 5 October 2026: still operational to some extent",
+     "os-london-town-plan-1860s and os-london-five-foot-1893: the mill spans the City Mill River at the footbridge",
      "VCH: Howard & Allen (Howards & Sons, manufacturing chemists) leased part from 1805 and gradually took the whole site, until 1914; corn-grinding last recorded 1818",
      "book ch. 6 p. 205: City Mill and Waterworks floodgates in disrepair in 1920"
-    ],
-    "note": "No evidence of water-powered milling c.1895. The state is a decision for the author (decision 1)."
+    ]
    },
    "existence": {
     "1809": "working mill (corn; Howard & Allen chemists in part from 1805)",
@@ -701,7 +825,8 @@
     "author-city-mills-map"
    ],
    "crops": [
-    "city-mills.png"
+    "city-mills.png",
+    "cmp-city-mills.png"
    ]
   },
   {
@@ -739,7 +864,7 @@
    "reachBelow": [
     3
    ],
-   "mechanism": "The Waterworks River above the gate runs between hatched banks. Read as one of the City's flood gates (book p. 205): it could be shut against high tides or drawn to pass floods. Its use is not recorded.",
+   "mechanism": "On the site of the old Waterworks (Saynes) Mill: the 1848-51 skeleton survey draws buildings across the river here, and the 1893 plan a Flood Gate with a footbridge (the 1848 layer is registered only approximately). No mill by 1893-4 (VCH; the author agrees). The river above runs between hatched banks. Read as one of the City's flood gates (book p. 205), shut against high tides or drawn to pass floods; its use is not recorded.",
    "levels": {
     "gateTopSceneY": {
      "sceneY": null,
@@ -787,7 +912,8 @@
     "book-ch6 PDF p. 205"
    ],
    "crops": [
-    "waterworks-flood-gate.png"
+    "waterworks-flood-gate.png",
+    "cmp-waterworks.png"
    ]
   },
   {
@@ -803,7 +929,7 @@
    "reachBelow": [
     3
    ],
-   "mechanism": "VCH: occupied by factories 1873-81 and gone by 1893-4. No control for the 1890s model; the site matters for the 1809 model.",
+   "mechanism": "VCH: occupied by factories 1873-81 and gone by 1893-4. Its site is the 1893 Flood Gate (waterworks-flood-gate). No mill in the 1890s model; it matters for the 1809 model.",
    "default1895": {
     "state": "absent",
     "evidence": [
@@ -825,7 +951,7 @@
    "name": "St Thomas's Mills (Pudding Mill; Du Barry's Patent Food)",
    "type": "mill head",
    "connectionReviewId": "pudding-mill",
-   "status1895": "present; water use unknown",
+   "status1895": "working (holding water)",
    "position": {
     "scene": [
      -884.6,
@@ -855,13 +981,23 @@
    "reachBelow": [
     9
    ],
-   "mechanism": "Restricted through-mill passage. Little water came down the Pudding Mill River even in floods by 1908 (book p. 204).",
+   "mechanism": "The river runs only through the mill: St Thomas's Mill (Corn) in the 1860s, (Patent Food) in 1893. The head channel above the mill has a hatched embankment on its east side on the 1893 plan, a raised mill head. The author (5 October 2026): Pudding Mill must have held water. Little water came down the Pudding Mill River even in floods by 1908 (book p. 204).",
    "levels": {
     "heldHeadSceneY": {
-     "sceneY": null,
-     "odnMetres": null,
-     "status": "unknown",
-     "method": "No evidence of a held head c.1895."
+     "sceneY": 1.578,
+     "odnMetres": 3.413,
+     "status": "estimate",
+     "method": "A former tide mill: the pond fills to the high water of the tide, as at Three Mills; the embanked head could hold it. Below the bank and street readings by the mill (16.2 ft, 2.71; 16.5 ft, 2.80)."
+    },
+    "drawdownFloorSceneY": {
+     "sceneY": 0.3,
+     "odnMetres": 2.135,
+     "status": "estimate",
+     "method": "Higher than at Three Mills: a small, silted, embanked head.",
+     "rangeSceneY": [
+      -0.5,
+      1.0
+     ]
     }
    },
    "openings": {
@@ -877,12 +1013,16 @@
     }
    },
    "operatingStates": [
-    "restricted passage",
+    "working (head held)",
+    "gates drawn (restricted passage)",
     "shut"
    ],
    "default1895": {
-    "state": "restricted passage",
+    "state": "working (head held)",
     "evidence": [
+     "author, 5 October 2026",
+     "os-london-five-foot-1893 (embanked head channel)",
+     "os-london-town-plan-1860s: St Thomas's Mill (Corn) across the river",
      "VCH: Du Barry & Co. (flour miller, later patent food) lessee 1864, owner 1875, until about 1925",
      "book-ch6 PDF p. 204",
      "author-pudding-map"
@@ -898,7 +1038,8 @@
     "author-pudding-map"
    ],
    "crops": [
-    "pudding-mill.png"
+    "pudding-mill.png",
+    "cmp-pudding-mill.png"
    ]
   },
   {
@@ -937,7 +1078,7 @@
     9
    ],
    "lockChannelId": 21,
-   "mechanism": "Between the Bow Back River's open western mouth on the Navigation (Bow pound) and the back rivers east of Marshgate Lane. If the Navigation held its head while the back rivers ebbed, this lock kept them apart (decision 3).",
+   "mechanism": "The Bow Back River runs from an open mouth on the Navigation near Bow Bridge to this lock; east of the lock are the back rivers (the Three Mills pond). The lock kept the Navigation's head apart from the tidal back rivers. The Bow Back River is not on the 1860s plan: it was cut between the 1860s and 1893.",
    "levels": {
     "sillSceneY": {
      "sceneY": null,
@@ -971,14 +1112,18 @@
     ]
    },
    "existence": {
+    "1809": "absent (no Bow Back River)",
+    "1860s": "absent (no Bow Back River on the 1:1,056 plan)",
     "1888": "present on the 1893-96 sheet"
    },
    "sources": [
     "author-bow-back-map",
-    "os-london-five-foot-1893"
+    "os-london-five-foot-1893",
+    "os-london-town-plan-1860s"
    ],
    "crops": [
-    "marshgate-lock.png"
+    "marshgate-lock.png",
+    "cmp-bowback-highst.png"
    ]
   },
   {
@@ -1635,11 +1780,6 @@
   }
  ],
  "notFound": [
-  {
-   "item": "Three Mills Overshoot",
-   "evidence": "bow-locks-history (1898 proposal \"near the Three Mills Overshoot\")",
-   "result": "Not identified on the 1893-96 sheet near the Three Mills Back River junction; the stepped overfall at Bow Locks may be the overshoot the book calls \"the overshot level at Bow Lock\"."
-  },
   {
    "item": "Abbey Lock tide gates (end of Abbey Creek, under the Northern Outfall Sewer)",
    "evidence": "bow-locks-history (LMA ACC 2423/P1874, undated)",

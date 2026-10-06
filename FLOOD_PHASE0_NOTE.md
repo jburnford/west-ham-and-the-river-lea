@@ -46,12 +46,13 @@ Branch `task-e-flood-model` (worktree `../book_website-taske`), from main `e59ad
 | Three Mills | tidal mill | working: fill on the flood, hold, run on the ebb | VCH; book pp. 46, 67, 202 |
 | Abbey Mill (Corn) | mill head at the tidal limit | working: tide shut out, river released at low water | VCH; OS tide note |
 | Bow Locks | tidal pound lock | working; level at high tide | Lee and Stort |
+| Three Mills overfall | weir, Navigation into the pond | fixed; crest = normal head | "Overfall" on the 1860s plan; 1898 proposal |
 | Bow overshoot | weir | fixed; crest = normal head | OS hatching; book p. 200 |
 | Bromley Lock | lock (Limehouse Cut) | working | OS; 1916 and 1928 reports |
-| City Mills | mill head + flood gates | gates open (no milling evidence) | VCH; book p. 205 |
-| Waterworks River flood gate | flood gate | open | OS; book p. 205 |
+| City Mills | mill head + flood gates | working in part (author) | 1860s and 1893 plans; VCH; book p. 205 |
+| Waterworks River flood gate | flood gate on the old Waterworks Mill site | open | OS 1848 and 1893; book p. 205 |
 | Waterworks Mill | — | **absent** | VCH |
-| St Thomas's Mills | mill passage | restricted passage | VCH; book p. 204; author |
+| St Thomas's (Pudding) Mill | mill head | working, head held (author) | embanked head on the 1893 plan; VCH; book p. 204 |
 | Marshgate Lane lock | lock (Bow Back River) | working | OS; author |
 | Old Ford Lock | lock | working (upstream boundary) | OS |
 | Old Ford flood gates | flood gate | shut; drawn in floods | OS |
@@ -76,6 +77,8 @@ Values are in scene y (ODN = y + 1.835). "Documented" means a source gives it; e
 | Abbey Mill opening | 10 m (6-14) | two passages read on the plan |
 | City Mills held head (if working) | 1.578 | as Three Mills |
 | City Mills, Waterworks gate, St Thomas's, Marshgate lock openings | 6, 5, 3, 5 m | read on the crops |
+| Pudding Mill held head / floor | 1.578 / 0.3 (-0.5 to 1.0) | as a tide mill; small embanked head |
+| Three Mills overfall crest, length | = normal head; 15 m (8-20) | link width at the footbridge |
 | Old Ford upper pound (Hackney Cut) | 2.5 (1.9-3.5) | below the lock-side readings (4.08-4.23) |
 | Temple Mills weir crest | 1.7 (1.578-2.2) | ordinary tides stopped there; street 15.8 ft (2.58) by the bridge |
 | Weir coefficient | 1.6 (SI) | generic broad-crested weir |
@@ -122,3 +125,34 @@ Values are in scene y (ODN = y + 1.835). "Documented" means a source gives it; e
    - the default flood view.
 
 Next, after the author's answers: Phase 1 (the whole-model flood grid), which does not depend on these decisions, then Phase 2 with the levels agreed here.
+
+## Author review and map re-check (5 October 2026)
+
+The author's answers:
+
+- Pudding Mill must have held water.
+- City Mills was probably still working to some extent.
+- The Waterworks stream had no mill.
+- Decision 2: yes.
+- There is some kind of wall between the Navigation and the Three Mills pond; perhaps it held the Navigation's level and let the river through to Bow Creek.
+- Floods: several kinds eventually, but the flood from rain up river comes first.
+
+I compared the 1893 plan with the 1860s 1:1,056 plan and the 1848-51 skeleton survey. The crops are named `cmp-*.png`.
+
+- **The Navigation and the Three Mills pond are walled apart**, as the author thought.
+  - From Bow Bridge to Three Mills a strip of land carrying the Bow Bridge chemical works runs between the Navigation (with the towing path) and the Three Mills Back River. Below that strip, the garden island above the mill separates them.
+  - At the head of the island the 1860s plan letters **"Overfall"** (about x -711, z 311). The 1893 plan draws a short link there with a footbridge.
+  - This is the "Three Mills Overshoot" of the 1898 proposal. The Navigation was held at its normal head by this overfall and the stepped overfall at Bow Locks, and its surplus ran into the pond and through Three Mills to Bow Creek. At high tide the pond rose above the head.
+  - My decision-3 reading (an open junction near Bow Bridge) was wrong. The register now has a `three-mills-overfall` record.
+- **The Bow Back River is new.** It is not on the 1860s plan. By 1893 it runs from an open mouth on the Navigation to the Marshgate Lane lock, the only navigable link between the Navigation and the back rivers.
+- **Pudding Mill.** The river runs only under St Thomas's Mill: "(Corn)" in the 1860s, "(Patent Food)" in 1893. In 1893 the head channel above the mill has a hatched embankment, a raised mill head. Default: working, head held.
+- **City Mills** spans the City Mill River at the footbridge on both plans. Default: working, reduced opening.
+- **Waterworks River.** The 1848-51 survey draws buildings across the river where the 1893 plan letters "Flood Gate". That is the old Waterworks (Saynes) Mill, gone by 1893-4; the gate stands on its site.
+
+**Next.**
+
+- The first flood scenario is high Lea flow from rain up river. It meets the working mills (Three Mills, Pudding Mill, City Mills, Abbey Mill) and the Navigation's overfalls.
+  - The G2G presets are above.
+  - The 1894 peak (40.9 m³/s, daily mean) is the 1890s case; 1903 (56.1) is the largest in 1891-1910.
+- Phase 1 (the whole-model flood grid) goes ahead.
+- Decision 4 (raise the back-river beds) is still open; Phase 2 needs it.
