@@ -23,9 +23,16 @@ Read first:
 - **Phase 0:** `data/maps/lea-control-structures.json`, revised after the author's review (see section 6).
 - **Phase 1:** the whole-model flood grid (`scripts/build_landscape_flood.py`, `docs/landscape-flood.js`).
 - **OS flood banks** (the author: "fix the rivers"): `data/maps/os-flood-banks.json`, raised in `scripts/build_main_landscape.py` (`raise_to_flood_banks`).
-- **F1** (the ground north of the core, to the OS): done 6 October 2026. It is reported in `TASK_E_REPORT.md` under "F1", with the author's open questions (the Channelsea head closures; trimming the 2 m join ring).
+- **F1** (the ground north of the core, to the OS): done 6 October 2026, commits `2621cb2`, `42d842e` and `b2426a4`.
+  - Reported in `TASK_E_REPORT.md` under "F1" and "F1 follow-up".
+  - The follow-up removed 18 ha of never-wet holes from the flood grid; they had stood as walls along the banks.
+  - Open questions for the author: the Channelsea head closures (inferred, not lettered); trimming the 2 m network-join ring (+1.8 MB).
 
-**Next:** F2 (back-river beds), then F3 (the works wall face) (section 5, agreed by the author 6 October 2026), then Phase 2.
+**Next, in this order (author, 6 October 2026):**
+
+1. **Phase V: volume, not a switch** (section 4.6, section 5). The tide-stage grid draws a basin all dry below its rim and all wet above it. The author: the landscape was a bowl. Mill Meads probably flooded all the time; the Abbey Mills pumping station ground only when things got really bad. This brings the fill-and-spill core of Phase 3 forward and applies it to every source.
+2. **F2** (back-river beds), then **F3** (the works wall face) (section 5).
+3. **Phase 2** (pounds); then Phases 3-5.
 
 **Tools.** `scripts/flood_diagnostics.py`, on a dump made with `FLOOD_DUMP=… python3 scripts/build_landscape_flood.py`:
 
@@ -141,6 +148,48 @@ One record per control, starting from the 11 control sites plus any the OS five-
 - Keep it fast on a phone (the lite tier): no per-frame grid rebuilds; textures at most 2048².
 - Later, consider deriving the tide outline itself from the tidal connection field ("ground below high water that connects to the channel"; see the junction notes in `TASK_D_REPORT.md`). At ordinary tides it adds almost nothing on land.
 
+### 4.6 Volume, not a switch (Phase V; author, 6 October 2026)
+
+**The problem.** The Phase 1 grid stores, per cell, the lowest level at which a source reaches it (a minimax path). The page draws every cell below the chosen level as wet, at that level. So a basin goes from dry to full as soon as the level passes its rim: Mill Meads (27 ha, rim 3.78 m ODN, floor median 2.07 m ODN) jumps to 1.7 m deep. Real water arrives as a volume and fills the lowest ground first.
+
+Figures from the F1 build (`flood_diagnostics.py pour -300 200` and the dump): filling Mill Meads to its rim takes about 450,000 m³. Its lowest 6 ha are wet with about 9,000 m³, roughly 35 mm of rain on the bowl itself with the sluices tide-locked.
+
+**Builder** (extend `scripts/build_landscape_flood.py`, or a new `build_flood_basins.py`; same 2 m grid, bed, `inside` and water masks):
+
+- **A depression hierarchy** over the land cells (priority-flood merge tree). For each basin, record:
+  - its spill level and where it spills: a sibling basin, its parent, or water (a channel or source);
+  - its stage–area–volume table (5 cm steps);
+  - its rain catchment (the land cells that drain to it);
+  - its outfalls: the marsh drains and sluices (`river-network.json` `marshDitches`, the sluice records in `lea-control-structures.json`), with their sills.
+- **Merge noise.** Merge basins shallower than about 5 cm or smaller than about 0.1 ha into their parent (thresholds recorded).
+- **A basin-id texture** at 2 m (fine box) and 10 m (outside), plus a per-basin table, in `docs/data`.
+- **Keep the connection levels.** They say which basins each source can reach and over which crest; the "connected extent" view can stay as a mode.
+
+**Sources, as volumes:**
+
+- **Rain.** Storm total (mm) × catchment, less the outfall drainage. Drains run only in the low-water part of each tide, below their sill (section 4.4), for the chosen duration in tides.
+- **Tide or surge over a bank.** Weir flow over the basin's spill crest, Q = C·L·(h − crest)^1.5. L is the crest length at the spill level; C is an estimate, recorded. Integrate over the time the tide curve (`docs/tides.js` cycle, peak raised by the surge) stands above the crest. A surge 5 cm over a rim for one tide then puts a thin sheet in the bottom of the bowl.
+- **River.** In Phase V, the same weir rule from a level held by the river for the chosen duration. Phase 2 replaces that level with the pound levels from flow.
+
+**Browser** (pure functions in `docs/lib/`, unit-tested; `docs/landscape-flood.js` draws):
+
+- Route the volumes down the hierarchy: fill each basin, then spill the excess to its target. Water spilled to a channel is lost in Phase V.
+- Each basin's level comes from its stage–volume table. A cell is wet where its bed is below its basin's level.
+- Per-basin levels go in a small texture updated on input; no per-frame grid rebuild (lite tier).
+
+**Acceptance:**
+
+- **Volume is conserved:** in = stored + spilled + drained, to 0.1 %.
+- **Monotone:** more rain, a higher surge or a longer duration never lowers any basin's level.
+- No water above its basin level, and none on ground above it.
+- **The author's cases:**
+  - modest rain with tide-locked sluices wets the lowest Mill Meads hollows;
+  - the Abbey Mills pumping station ground stays dry until the inputs are large;
+  - a just-overtopping surge for one tide fills only part of a large basin.
+- Renders at presets (dry day, the 1888-07-30 rainfall estimate, a winter storm with high tides), and the author's two views (Mill Meads allotments; north of the railway from the High Street).
+
+**Read first:** `data/maps/historic-flood-events.json` (the 1888 rainfall sequence, relative marks) and the book's flood accounts, for plausible totals; label every total as an estimate.
+
 ## 5. Phases and acceptance criteria
 
 **Phase 0: evidence and register (author checkpoint before any modelling). Done 5 October 2026.**
@@ -178,15 +227,19 @@ One record per control, starting from the 11 control sites plus any the OS five-
   - Add it to `data/maps/os-river-walls.json` (the task A mechanism: a retaining-wall route on the drawn shoreline, coping from the wall-top readings), so it draws as masonry.
   - Keep the `os-flood-banks.json` crest behind it, and keep the 46 raised tidal-mud vertices accounted for in `check_main_landscape.mjs`.
 
+**F1 done 6 October 2026** (`TASK_E_REPORT.md` "F1" and "F1 follow-up"): the Stratford zone at the OS (median drawn − OS -1.08 → -0.009 m over 132 readings), the Channelsea head closed, the network-join seam meshed, and the flood grid's holes removed. Mill Meads now fills at 3.78 m ODN.
+
+**Phase V: volume, not a switch (next; author, 6 October 2026).** See section 4.6 for the design and acceptance criteria. It comes before F2 and F3. It takes over Phase 3's fill and spill, and extends it to the tide and the river.
+
 **Phase 2: pounds.**
 
 - `docs/lib/pounds.js` with unit checks.
 - The non-tidal reaches move off the single 0.06 datum to their pound levels at median flow and working heads. This changes the drawn retained water, the river network's retained ids and the marsh ditch levels, so plan the cascade.
 - Renders: City Mills, Pudding Mill, Three Mills, Abbey Mill and Bow Locks, each showing a visible step at its structure.
 
-**Phase 3: rain.**
+**Phase 3: rain over time.** (The fill and spill moved into Phase V.)
 
-- Fill and spill with outfalls and tide-locking.
+- The storm as it builds over hours (`flood-solver.js` where it helps), outfalls and tide-locking refined.
 - Test cases: a dry day; the 1888-07-30 rainfall sequence (estimated total, labelled); a winter storm with high tides.
 - Checks: water volume is conserved; hollows fill in order; no water on ground above its level.
 
@@ -212,6 +265,7 @@ One record per control, starting from the 11 control sites plus any the OS five-
 - **The Navigation** is walled off from the Three Mills pond. It held its level at the Three Mills overfall and the Bow overshoot, and let the river through to Bow Creek.
 - **Flood types.** Several kinds eventually; the flood from rain up river comes first.
 - **Corrections.** F1-F3 above, before Phase 2.
+- **Volume first (6 October 2026).** The connected-level view is a switch; flooding should come as volumes filling the lowest ground first (Mill Meads often, the Abbey Mills ground only in bad floods). Phase V comes next, before F2 and F3.
 
 **Answered 6 October 2026 (decisions 2-5 below):**
 
@@ -257,3 +311,10 @@ Decision 1 (the structure list) was answered on 5 October (above).
 - Follow the maps: OS and Goad evidence beat earlier defaults.
 - Fundamentals before features.
 - Stage explicit paths; never commit the book PDF or the G2G CSV.
+
+**Lessons from F1 (6 October 2026)**
+
+- The flood grid's modelled ground must read the landscape weight as the page does (bilinear). Read by nearest cell, it left 18 ha of never-wet holes that stood as walls along every bank.
+- Where no mesh draws (gaps between the river-network and river-system meshes; Stratford town), the page and the flood grid fall back to the 10 m level field wherever the weight is above 0. Raising the weight there draws sills across channels and lifts streets. Keep the exported weight at 0 in water and outside the marsh outline; widen only the blend weight.
+- Swapping files inside the worktree for a baseline check is blocked by the harness. Check the baseline out with `git worktree add --detach <scratch> <commit>` instead, and remove it after.
+- `scratchpad/f1/flood_render.py` renders the `?flood` page at set levels (`?river-review=1&flood=1`, the stage slider set through its input event).
