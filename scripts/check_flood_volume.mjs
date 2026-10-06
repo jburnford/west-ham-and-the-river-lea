@@ -187,10 +187,15 @@ assert(
 );
 const groundAtStation = bed[stationCell];
 assert(ordinary.levels[station] < groundAtStation, 'pumping-station ground dry on an ordinary day');
-let stationRain = null;
-for (let rain = 0; rain <= 150 && stationRain === null; rain += 5)
-  if (run({ rainMm: rain, tides: 1 }).levels[station] > groundAtStation + 0.015) stationRain = rain;
-
+// The station yard stands on made ground (data/maps/made-ground.json): rain alone never reaches it, because Mill
+// Meads spills to the tide first; only a surge does.
+assert(station !== meadsLeaf, 'the pumping-station yard is not in the Mill Meads hollow');
+for (const tides of durations)
+  for (let rain = 0; rain <= 150; rain += 10)
+    assert(run({ rainMm: rain, tides }).levels[station] <= groundAtStation + 0.015, `station wet at ${rain} mm`);
+let stationSurge = null;
+for (let surge = 0; surge <= 2 && stationSurge === null; surge = Math.round((surge + 0.05) * 100) / 100)
+  if (run({ surgeM: surge, tides: 1 }).levels[station] > groundAtStation + 0.015) stationSurge = surge;
 const presets = Object.fromEntries(
   meta.volume.scenarios.presets.map((p) => {
     const r = run(p);
@@ -215,7 +220,7 @@ const report = {
   pumpingStation: {
     groundODN: groundAtStation,
     sameHollowAsMillMeads: station === meadsLeaf,
-    firstWetRainMmOneTide: stationRain,
+    firstWetSurgeMOneTide: stationSurge,
   },
   presets,
   checks: [
@@ -224,12 +229,12 @@ const report = {
     'volume conserved to 0.1% over 432 input combinations',
     'monotone in rain and surge; in duration for the tide and river',
     'no drawn water above its basin level',
-    "author's cases: Mill Meads wets at modest rain and part-fills on a just-overtopping surge; pumping station dry on an ordinary day",
+    "author's cases: Mill Meads wets at modest rain and part-fills on a just-overtopping surge; pumping-station yard dry under any rain, wet only by a surge",
   ],
 };
 const out = new URL('../scenes/channelsea-sewer-panorama/review/', import.meta.url);
 mkdirSync(out, { recursive: true });
 writeFileSync(new URL('flood-volume-checks.json', out), JSON.stringify(report, null, 2) + '\n');
 console.log(
-  `Volume flooding checks passed (balance ${worst.toExponential(1)}; Mill Meads ${modest.levels[meadsLeaf].toFixed(2)} m ODN at 20 mm; pumping-station ground first wet at ${stationRain} mm in one tide).`
+  `Volume flooding checks passed (balance ${worst.toExponential(1)}; Mill Meads ${modest.levels[meadsLeaf].toFixed(2)} m ODN at 20 mm; pumping-station yard dry under any rain, first wet by a ${stationSurge} m surge).`
 );

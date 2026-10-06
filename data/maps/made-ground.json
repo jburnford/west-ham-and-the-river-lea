@@ -1,0 +1,50 @@
+{
+  "description": "Made ground the OS five-foot plan (1891-96) does not level: platforms raised above the marsh, with the evidence for their height. scripts/build_main_landscape.py raises the drawn ground to each (raise only; never inside the drawn river, tidal or ditch water). Levels are ODN metres; scene y = ODN - 1.83544.",
+  "status": "estimates for review (task E, 6 October 2026)",
+  "platforms": [
+    {
+      "id": "abbey-mills-pumping-station",
+      "name": "Abbey Mills Pumping Station yard (Metropolitan Board of Works, 1865-68)",
+      "outline": {
+        "sourceFile": "data/maps/abbey-station-plan.json",
+        "sourceKey": "worldFootprint",
+        "sourceNote": "the main building, traced from the OS five-foot plan",
+        "bufferMetres": 15,
+        "method": "The yard round the building: the 2003 ground stays within 0.2 m of level to 15-20 m from its walls on every side, then falls."
+      },
+      "levelODN": 3.95,
+      "status": "estimate",
+      "sideGradient": 12,
+      "sideGradientNote": "Horizontal metres per metre of fall from the yard edge to the marsh. The 2003 ground falls about 0.6 m between 15 and 35 m from the walls; the 1893 plan draws no bank hatching round the station, so the fall is a gentle made-ground slope, not an embankment.",
+      "method": "Environment Agency LiDAR DTM (1 m, flown 22 February 2003, tile DTM_V0027976, reference/topography-research-2026-09-28/tiles-2003/TQ3580.zip) round the building footprint: median 3.98 m ODN within 4 m of the walls, 3.91 m at 4-10 m, 3.80 m at 10-20 m and 3.34 m at 20-35 m; 3.78-4.03 m on each side within 10 m. Assumes the 1868 yard is unchanged (author, 6 October 2026: the station stands on the same foundations).",
+      "evidence": [
+        "2003 LiDAR against the 1890s OS readings within 550 m of the station: the street readings on Abbey Lane and by the gasworks agree within 0.25 m (7 readings; Abbey Road at Abbey Mill, raised later, is 1.1 m higher); the sewer bank top 9.27 against 9.24 m. The marsh readings at the Mill Meads edge are 1.8-4.4 m higher in 2003: later fill (the author: Prescott Channel spoil), so Mill Meads in 2003 is not evidence for the 1890s.",
+        "A later OS plan (post-war, LCC Sewage Pumping Station) draws a hachured bank between the station grounds and the Mill Meads allotments (author, 6 October 2026).",
+        "Author, 6 October 2026: the Metropolitan Board's engineers knew the marsh flooded and built the station above it; no account of the Abbey Mills station flooding has been found. The 1888 'pumping station' flooding was probably West Ham's own station beside Bow Creek."
+      ],
+      "boundingReadings": [
+        {
+          "what": "Abbey Lane north of the station, OS 1893 street readings",
+          "odn": [
+            2.04,
+            2.26
+          ],
+          "relation": "below the yard"
+        },
+        {
+          "what": "Mill Meads marsh, OS 1893 marsh readings at its edge",
+          "odn": [
+            2.16,
+            2.56
+          ],
+          "relation": "below the yard"
+        },
+        {
+          "what": "Northern Outfall Sewer bank top at the Channelsea, OS 1893",
+          "odn": 9.24,
+          "relation": "far above the yard"
+        }
+      ]
+    }
+  ]
+}

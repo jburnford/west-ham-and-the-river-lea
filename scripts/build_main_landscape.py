@@ -717,6 +717,25 @@ def raise_to_flood_banks(key,points,levels,preserve=None):
         tally=flood_bank_stats.setdefault(b['id'],{});tally[key]=int(up.sum())
         if preserve is not None:flood_bank_mud[b['id']]=flood_bank_mud.get(b['id'],0)+int(preserve[near[up]].sum())
     return out
+# Made ground the OS does not level (data/maps/made-ground.json, task E Phase V): a platform raised to its estimated
+# level within bufferMetres of its outline, falling at sideGradient:1 to the ground. Raise only; never inside the drawn
+# river, tidal or ditch water.
+made_ground_register=read('data/maps/made-ground.json');made_ground=[]
+made_ground_water=water.union(tidal);shapely.prepare(made_ground_water)
+for m in made_ground_register['platforms']:
+    o=m['outline'];yard=Polygon(read(o['sourceFile'])[o['sourceKey']]).buffer(o['bufferMetres'])
+    made_ground.append((m,yard,m['levelODN']-offset))
+made_ground_stats={}
+def raise_to_made_ground(key,points,levels):
+    out=levels.copy()
+    for m,yard,level in made_ground:
+        near=np.flatnonzero(shapely.dwithin(yard,shapely.points(points),(level+3)*m['sideGradient']))
+        if not len(near):continue
+        q=points[near];target=level-shapely.distance(yard,shapely.points(q))/m['sideGradient']
+        up=(target>out[near])&~shapely.contains_xy(made_ground_water,q[:,0],q[:,1])
+        out[near[up]]=target[up]
+        made_ground_stats.setdefault(m['id'],{})[key]=int(up.sum())
+    return out
 files={};stats={}
 def export_heights(key,points,old,preserve=None,triangles=None):
     blended=blend_surface(points,old,key=key)
@@ -732,6 +751,7 @@ def export_heights(key,points,old,preserve=None,triangles=None):
     # After the preserved tidal mud: where the core's mud runs outside the drawn tidal outline up to a river wall,
     # the wall's crest stands on it (raise_to_flood_banks never touches the drawn water itself).
     new=raise_to_flood_banks(key,points,new,preserve)
+    new=raise_to_made_ground(key,points,new)
     # Written after the road-bridge and road-corridor pass below.
     surfaces[key]={'points':points,'old':old,'new':new,'triangles':triangles,'preserve':preserve}
 surfaces={}
@@ -769,7 +789,8 @@ east,north=np.meshgrid(np.arange(e0+step/2,e1,step),np.arange(n1-step/2,n0,-step
 # whose bilinear reach (one cell diagonal) touches such a footprint keep the
 # level without edge batters, so no building is lifted off its unraised ground.
 unpadded=footprint_tree.query(shapely.points(points),predicate='dwithin',distance=step*np.sqrt(2))
-held=np.unique(unpadded[0][~np.isfinite(footprint_caps[unpadded[1]])]);values[held]=base(points[held],edges=False);values=values.reshape(shape)
+held=np.unique(unpadded[0][~np.isfinite(footprint_caps[unpadded[1]])]);values[held]=base(points[held],edges=False)
+values=raise_to_made_ground('level',points,values).reshape(shape)
 values.astype('<f4').tofile(OUT/'main-landscape-1900.level.f32');files['level']='main-landscape-1900.level.f32';support.astype('<f4').tofile(OUT/'main-landscape-1900.weight.f32');files['weight']='main-landscape-1900.weight.f32'
 # Existing flat placeholder polygons need interior vertices, not just raised edges.
 outline=local(Polygon(meta['regionalMarshBaseline']['config']['outlineBNG']))
@@ -836,7 +857,7 @@ triangles=shapely.get_parts(shapely.constrained_delaunay_triangles(parts));trian
 coords=shapely.get_coordinates(triangles).reshape(-1,4,2)[:,:3,:]
 # Upward scene winding.
 a=coords[:,1]-coords[:,0];b=coords[:,2]-coords[:,0];cross=a[:,0]*b[:,1]-a[:,1]*b[:,0];coords[cross>0]=coords[cross>0][:,[0,2,1]]
-points=coords.reshape(-1,2);heights=surface(points,np.full(len(points),-.1))
+points=coords.reshape(-1,2);heights=raise_to_made_ground('groundMesh',points,surface(points,np.full(len(points),-.1)))
 # The page reads these positions as float32; so does the road pass, so a road
 # vertex on a sliver corner falls through (or not) exactly as it does there.
 points=points.astype('<f4').astype(float)
@@ -1525,6 +1546,7 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
         'fillMethod':f'land side filled level with the coping to {WALL_TOP_M} m from the wall line, then falling at 1:{WALL_BATTER} to the surrounding ground (at most {WALL_REACH_M} m); never lowers ground; water, street corridors and building footprints excluded; battered at the same slope down to unwalled shoreline and to preserved intertidal mud; in the river-network mesh, land vertices of triangles straddling a wall are held down so no ground stands more than {WALL_TOE_M} m above low water at the water face, and no filled vertex stands more than 2.4 m above a mesh neighbour',
         'evidence':'Mapped: the shoreline and GIS industrial plot edges that the interpretive wall routes follow (river-network retainingEdges; the walls themselves are not a surveyed inventory), and the high-confidence wall_top/embankment_top spot heights behind the along-bank crest profile. Estimated: the coping grade between readings, the berm width and batter, and the fill itself; no surveyed section of any wall or its backfill.'},
     'walledStreets':{'method':f'street-corridor vertices within {WALLED_STREET_M} m of a recorded masonry edge (retaining-wall routes, canal faces) keep their street level up to the edge (task B)','vertices':walled_streets},
+    'madeGround':{'register':'data/maps/made-ground.json','method':'land within bufferMetres of each platform outline raised to its level, falling at sideGradient:1 to the ground; raise only, not inside the drawn river, tidal or ditch water','raisedVertices':made_ground_stats},
     'osFloodBanks':{'register':'data/maps/os-flood-banks.json','method':'land within crestHalfWidthMetres of each traced bank line raised to the crest through its OS readings (by chainage, held beyond the ends), falling at sideSlope:1 to the ground; raise only, not inside the drawn water','raisedVertices':flood_bank_stats,'raisedTidalMudVertices':flood_bank_mud,'tidalMudNote':'core vertices of exposed tidal mud (otherwise kept at their channel section) raised where an OS river wall stands on mud outside the drawn tidal outline'},
     'shoreLip':{'method':f'bank vertices within {LIP_M} m of the regional shoreline whose previous height stood more than 0.5 m above low water are lifted to the full crest only within {MASONRY_REACH_M} m of a recorded masonry edge (river-system canalFacingRoutes, river-network retainingEdges), and keep their previous reviewed height (capped at the crest) inside a reviewed terrain patch whose recorded shore transition is no wider than {LIP_M} m; all other shores take the 0-3 m smoothstep earth face',
         'lipVertices':lip_vertices,'steepShorePatches':[t['id'] for t in steep_patches],
