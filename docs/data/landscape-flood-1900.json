@@ -371,6 +371,10 @@
           [
             [
               [
+                -599.6999790051023,
+                400.9808522469036
+              ],
+              [
                 -599.6766810072705,
                 401.12619987595946
               ],
@@ -498,26 +502,6 @@
                 -596.718062049656,
                 400.65195823536976
               ],
-              [
-                -596.9020686166778,
-                398.9836630312206
-              ],
-              [
-                -599.883985572124,
-                399.31255704275446
-              ],
-              [
-                -599.6999790051023,
-                400.9808522469036
-              ],
-              [
-                -599.6766810072705,
-                401.12619987595946
-              ]
-            ]
-          ],
-          [
-            [
               [
                 -599.5390415222769,
                 375.0755529942331
@@ -651,16 +635,8 @@
                 375.40444700576694
               ],
               [
-                -600.6519900583189,
-                392.34944577002886
-              ],
-              [
-                -597.6700731028727,
-                392.020551758495
-              ],
-              [
-                -599.5390415222769,
-                375.0755529942331
+                -599.6999790051023,
+                400.9808522469036
               ]
             ]
           ]
@@ -686,11 +662,7 @@
           "author-three-mills-map",
           "period-map-comparison"
         ],
-        "note": "Restricted passage through mill buildings to Bow Creek, shared by adjoining upstream reaches 1 and 2. Nearest mapped endpoints give a schematic link only; wheel passages, sill and capacity remain unresolved. No open bypass or duplicate capacity.",
-        "culvertedUnder": [
-          "Three Mills Lane"
-        ],
-        "culvertAreaM2": 21.02
+        "note": "Restricted passage through mill buildings to Bow Creek, shared by adjoining upstream reaches 1 and 2. Nearest mapped endpoints give a schematic link only; wheel passages, sill and capacity remain unresolved. No open bypass or duplicate capacity."
       },
       {
         "id": "bow-locks",
@@ -2281,17 +2253,17 @@
     "The provisional ODN reference is not a survey calibration; no selected level is assigned to 1888, 1897, 1904 or 1928."
   ],
   "inputHashes": {
-    "docs/data/terrain-1900.json": "84481d0677893944478bacc9bacc96c2bf9cfb2e667d7ec047c2183f6419b212",
-    "docs/data/river-network.json": "cceb8d7ab6a05f432e24dcb4deac4d1ef4d90afabc1680e10a6c6b8c44b2f9ea",
-    "docs/data/infrastructure.json": "0ea7697c3022756426d5cddea7127fada9c800127a24b659b7c4275e50f0ffaf",
+    "docs/data/terrain-1900.json": "bc08b286ad5c4d936e7ecf5d19ce438bd09a5a68817cfcf326755e5b349bf3b4",
+    "docs/data/river-network.json": "fcb22bfda6264cd2a6b6aefcc6857c58c71b6de20d56d86f1d93201466ee3740",
+    "docs/data/infrastructure.json": "895e050bd4a930f5bcd99cc3f25b91906f2e3d83622580c3c7dcc2a2eab3db0b",
     "docs/data/ground-plan.json": "6434c94c9a9d3997f95a7035a31d3afc3124da7f8453bcac839b157d8b34f3cc",
-    "docs/data/main-landscape-1900.json": "461a0738013aaf10ff0405f6cda25dffd2d9dd7da95b808239bd9f74c20df9d0",
-    "docs/data/main-landscape-1900.core.f32": "4eea5973b0db833a9299e975882900c7a28ac3c39885bbcc43a6f0140f8cb5da",
-    "docs/data/main-landscape-1900.network.f32": "55a775f6de4fd72ccc04448a62605da0f9a93f77f4b1f3abbec68ffa2f84df8d",
-    "docs/data/main-landscape-1900.system.f32": "20a6826940a2122cbe7e4aba0c6cd1890860cb4d47b770c3af5c092d83ef2465",
-    "docs/data/main-landscape-1900.extension.f32": "0691ee52661ae62e09c4b94344d0dad0a1da0bcf5734a1879164b8b76f77a355",
-    "docs/data/main-landscape-1900.background.f32": "db26ec3e72a1aec67253d158e5ee18ec02eb8ec92aac8760a064b3c2cbaef128",
-    "docs/data/main-landscape-1900.level.f32": "7cac00e40aebb3669ccbca1efcffb4fe81dc7c414baa682c9d253ed0ff3e787a",
+    "docs/data/main-landscape-1900.json": "2f9b7deb9a8abafb5fdf3bda60a7772d87090e6c4dc9e5893cef81d6987d7b51",
+    "docs/data/main-landscape-1900.core.f32": "2377c3745921bc20eba84a167744dd628f031f55af0afa07d0eacea518047cc3",
+    "docs/data/main-landscape-1900.network.f32": "de4711191dd43840ff476735ea7493cbd6acdad39052acd57fdee4adbd03eb5d",
+    "docs/data/main-landscape-1900.system.f32": "91d903dac3ecf7d722de077d0bfa26b0ae355696b925b19ed105bb5c6a8d5888",
+    "docs/data/main-landscape-1900.extension.f32": "c5f6b75635ab156a75d4ed0cf5f609f4ca7c9d17a047d802454ce1c363ee1b62",
+    "docs/data/main-landscape-1900.background.f32": "4d414c0ab07cb21a75a1e1ba18ecc455df1e9e479df90606609b4c09ae3be53c",
+    "docs/data/main-landscape-1900.level.f32": "26683962df43589299b1fba6f2f6d32329351f0419179bca4ffb8a42026e03bf",
     "docs/data/main-landscape-1900.weight.f32": "185efba204ec6ccb855ea921faf11be2ff6a911b64837757f22dab5eb87b4524",
     "docs/data/terrain-1900.weight.f32": "446a51fc993eb6acc753fe9d1f49b8f643ad4c302273c1be39d8dd5c099cea30",
     "docs/data/terrain-1900.road-mask.u8": "c9292ceafeba7c0df19b8fdf3407201a3e2ece9e8fed068efbd56593cd68007e"
