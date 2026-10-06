@@ -9,6 +9,34 @@ Read first:
 - `scenes/channelsea-sewer-panorama/OPUS_DELEGATION_PLAN.md`, the open fundamentals
 - `TASK_C_REPORT.md` and `TASK_D_REPORT.md`
 - the memory notes `flood-model-direction`, `tide-evidence`, `follow-the-maps` and `agent-delegation-lessons`
+- `FLOOD_PHASE0_NOTE.md` and `TASK_E_REPORT.md` (task E so far)
+
+## 0. Status, 6 October 2026: start here
+
+**Branch and worktree.**
+
+- Work is on branch `task-e-flood-model`, in worktree `/home/jic823/book_website-taske` (server on 4211). Continue on this branch, from its head.
+- Main is at `e59ad25` (task D, fast-forwarded locally on 5 October, not pushed). Task E is not merged; merging and pushing wait for the author.
+
+**Done.**
+
+- **Phase 0:** `data/maps/lea-control-structures.json`, revised after the author's review (see section 6).
+- **Phase 1:** the whole-model flood grid (`scripts/build_landscape_flood.py`, `docs/landscape-flood.js`).
+- **OS flood banks** (the author: "fix the rivers"): `data/maps/os-flood-banks.json`, raised in `scripts/build_main_landscape.py` (`raise_to_flood_banks`).
+
+**Next:** fundamentals F1-F3 (section 5, after Phase 1, agreed by the author 6 October 2026), then Phase 2.
+
+**Tools.** `scripts/flood_diagnostics.py`, on a dump made with `FLOOD_DUMP=… python3 scripts/build_landscape_flood.py`:
+
+- `pour x z`: the basin at a point and where it fills from;
+- `spills [level]`: land spill crests below a level in the core box;
+- `banks`: the registered banks against their OS readings;
+- `readings`: OS bank-top and wall-top readings drawn more than 0.5 m low.
+
+**Worktree setup.**
+
+- Git-ignored inputs are linked per entry, including nested folders such as `reference/spot-heights/mosaics`.
+- The book PDF is linked into the worktree root; `check_drainage_connections` needs it.
 
 ## 1. Purpose (author's direction)
 
@@ -113,18 +141,40 @@ One record per control, starting from the 11 control sites plus any the OS five-
 
 ## 5. Phases and acceptance criteria
 
-**Phase 0: evidence and register (author checkpoint before any modelling).**
+**Phase 0: evidence and register (author checkpoint before any modelling). Done 5 October 2026.**
 
 - Read the book chapters on the mills, the Lea and flooding in full (start with chapters 1 and 6). Note what the text establishes about heads, gate operation, millers' and navigation disputes, and the 1809, 1888 and later floods, with page numbers.
 - Survey the OS five-foot mosaic (`scripts/factory_map_sources.py` `mosaic`) at every control, with crops.
 - Draft `lea-control-structures.json`: every number marked "estimate" or "mapped", with its method.
 - **Deliverable:** the register, crops, and a short note listing every estimate. **Stop for the author's review.**
 
-**Phase 1: whole-model flood grid.**
+**Phase 1: whole-model flood grid. Done 5 October 2026** (the figures are in `TASK_E_REPORT.md`; the old-box comparison differs because land now excludes all mapped water and water arrives from outside the old box).
 
 - New builder replacing `build_landscape_flood.py`: whole extent, finer core cells, per-source connection levels.
 - Old behaviour reproduced for the tidal source. Compare connected land at 1.9, 2.5, 3.5, 4.5 and 5.5 m ODN with the current figures, which are 0 / 0.03 / 51.09 / 105.63 / 114.47 ha in the old box after task D.
 - No straight edges at the old box; no water on ground above its level; checks updated (`check_landscape_flood.py`).
+
+**Fundamentals before Phase 2 (author, 6 October 2026: "add those three corrections").** Each one is checked with `scripts/flood_diagnostics.py` and renders before and after, then runs the cascade (main landscape → landscape flood → factory yards → drainage → flood demo → wharf cranes → manifest; F2 starts earlier, at the river terrain).
+
+- **F1. Regional ground north of the core, to the OS.** Outside the core box the regional "early-marsh" ground lies below the OS readings. Median by area: Stratford Marsh north of the High Street -1.08 m, Temple Mills -0.79 m, east -0.48 m, south -0.58 m; a tenth of readings are 2.5-3.4 m low.
+  - The rain-up-river flood plays out north of the core, so start with the zone from the High Street to the Waterworks River flood gate and Temple Mills. Fit the ground to the OS ground readings, as T21/T22 did inside the core (`os_ground_levels.py`, `data/maps/os-ground-levels.json`, which covers only the core box). The readings are in `reference/spot-heights/heights.geojson`.
+  - **Stratford High Street causeway.** It is missing outside the core box: the drawn ground runs at about 0.2-0.4 m scene where the road should stand. Mill Meads (22 ha) fills at 2.23 m ODN, entering at a low Waterworks River bank north of the High Street (-546, -379) and passing round the core's north edge.
+  - **Waterworks River banks** north of the High Street: hatched on the plan; give them their OS crests (an `os-flood-banks.json` record or the T21 method).
+  - **The Channelsea head.** The regional channel network joins the Channelsea to the tidal Waterworks River near Temple Mills (Potter's Ditch, the Artificial Manure Works passage), so the tide reaches the upper Channelsea round the Abbey Mill gates. Check the OS for sluices there (the five-foot plan has labels at (-905, -2282), (-946, -2369) and on the Channelsea west bank at (-1183, -1582)) and close or gate that link.
+  - **The Poplar side of Bow Creek south of the core** (about 97 ha) floods at about 3.39 m ODN, just under ordinary high water: the same regional problem to the south. Lower priority than the north.
+  - **Done when:**
+    - drawn-minus-OS medians in the fitted zone are within 0.1 m;
+    - `flood_diagnostics.py spills 3.414` finds no land spill below ordinary high water into Mill Meads or Stratford Marsh;
+    - `pour -300 200` reports Mill Meads filling above high water.
+  - This leaves the core box, which `follow-the-maps` kept for later; the author approved it for this zone on 6 October 2026.
+- **F2. Back-river beds.** The model's back-river beds lie at -2.1 to -3.7 m scene (medians by channel: Wall River -3.22, Back River -2.55, Waterworks -2.89/-2.55, City Mill -2.12, Pudding Mill -2.12, Bow Back -2.55).
+  - The evidence puts them much higher. The back rivers were "navigable only during bimonthly spring tides" (book p. 200). The 1892/1908 canal standard was "six feet below the overshot level at Bow Lock", about -0.9 m scene, proposed as a dredging, so the silted beds stood above it.
+  - Raise the beds of channels 1, 2, 3, 4, 7, 8, 9, 17 and 21. The level is an estimate, recorded in a register with its method; the lea-control-structures register's drawdown estimates give the range. Bow Creek and the tidal reaches below Three Mills stay as they are.
+  - This changes the drawn mud at low water on every back river. Start the cascade at the river terrain and river network (task C order) and review renders at low water.
+  - Phase 2's ponds depend on these beds.
+- **F3. A masonry face for the West Ham Chemical Works river wall.** The OS draws a river wall (double line) along the works frontage from z 190 to 273 at x about -19. Task E gave it the right crest (3.04-3.22 m) as an earth bank face in front of the buildings (`ew-oblique-high` render).
+  - Add it to `data/maps/os-river-walls.json` (the task A mechanism: a retaining-wall route on the drawn shoreline, coping from the wall-top readings), so it draws as masonry.
+  - Keep the `os-flood-banks.json` crest behind it, and keep the 46 raised tidal-mud vertices accounted for in `check_main_landscape.mjs`.
 
 **Phase 2: pounds.**
 
@@ -152,6 +202,16 @@ One record per control, starting from the 11 control sites plus any the OS five-
 - Update the plan's open fundamentals.
 
 ## 6. Decisions for the author (ask at the Phase 0 checkpoint)
+
+**Answered 5-6 October 2026:**
+
+- **The mills.** Pudding Mill held water. City Mills was operational to some extent. The Waterworks River had no mill: its flood gate stands on the old mill site. Three Mills and Abbey Mill were working.
+- **The ponds.** A working mill's pond is held at the last high water while the tide falls, not a steady pound (this changes 4.2).
+- **The Navigation** is walled off from the Three Mills pond. It held its level at the Three Mills overfall and the Bow overshoot, and let the river through to Bow Creek.
+- **Flood types.** Several kinds eventually; the flood from rain up river comes first.
+- **Corrections.** F1-F3 above, before Phase 2.
+
+Still open: the flow and rain control forms (2, 3), switches per structure (4) and the default view (5).
 
 1. **The structure list** for c.1895: which mills were working and holding heads, and which were works by then (for example City Mills (Chemical) and St Thomas's Mills (Patent Food)). Is the default "working heads held" or "as the 1890s operated"?
 2. **The flow control:** in m³/s with G2G presets, or as named scenarios only?
