@@ -53,8 +53,8 @@ flat=contains_xy(tl.flats.difference(tidal.buffer(1)),x,z)
 assert flat.sum()>2000
 assert np.percentile(y[flat],5)>meta['tide']['low'] and np.percentile(y[flat],95)<meta['tide']['high'],'Mud flat not between low and high water'
 assert np.median(silt[flat])>200,'Mud flat not drawn as mud'
-# No tidal water across a street that has no bridge deck (the House Mill race is culverted
-# under Three Mills Lane): streets run on over culverted passages.
+# No tidal water across a street that has no bridge deck: streets run on over culverted
+# passages (the House Mill race passes under Three Mills Lane on a deck since task D).
 infrastructure=load('docs/data/infrastructure.json')
 decks=unary_union([LineString(b['route']).buffer(b['width']/2+2,cap_style=2) for b in infrastructure['roadBridges']])
 streets=unary_union([LineString(r['route']).buffer(r['width']/2,cap_style=2,join_style=2) for r in infrastructure['roads'] if len(r['route'])>1]).difference(decks)

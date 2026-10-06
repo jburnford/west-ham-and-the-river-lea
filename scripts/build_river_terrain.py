@@ -38,7 +38,9 @@ tidal = unary_union([Polygon(p[0], p[1:]) for r in data['rivers'] if r['id'] not
 # Northern mud shelves follow both banks of the tidal channel below Abbey Mill.
 # Their width is inferred; the southern island is retained from the prior study.
 northern_bed = tidal.buffer(7.5).intersection(box(x[0],z[0],x[-1],0))
-bed = unary_union([southern_bed,northern_bed])
+# OS mud flats reaching into the core (the Abbey Creek mouth, os-tide-levels.json) carry the shelf
+# study on to the core edge, where the study itself was cut off square at z 340.
+bed = unary_union([southern_bed,northern_bed,tl.flats.intersection(patch)])
 water = contains_xy(river, X, Z)
 on_bed = contains_xy(bed, X, Z)
 outside_distance = distance_transform_edt(~water) * step
@@ -87,8 +89,12 @@ bank_offset = edges[:, None] - X
 bank_start = smooth(8, 24, Z) * (1-smooth(318, 350, Z))
 crest = 2.85 + .19*np.sin(Z*.031) + .15*(middle-.5)
 bank_shape = smooth(-.4, 5.5, bank_offset) * (1-smooth(9, 22, bank_offset))
+# Not on the OS mud flats, where the bank stands back at the high-water line (the bank fades out
+# towards the core edge there, at the Abbey Creek mouth).
+on_flat = shapely.intersects_xy(tl.flats, X, Z)
+bank_shape = np.where(on_flat, 0, bank_shape)
 bank_height = .3 + bank_shape * crest * bank_start
-height = np.maximum(height, np.where((bank_offset > 0) & ~water, bank_height, -100))
+height = np.maximum(height, np.where((bank_offset > 0) & ~water & ~on_flat, bank_height, -100))
 height += bank_shape * bank_start * (fine-.5)*.12
 
 # Short meandering drainage cuts lead out into the two main channels.
@@ -124,6 +130,9 @@ height = height*(1-cut*.98) - cut*.04
 # The OS puts the mud between the high-water marks below high water: clods stay under it.
 mud = on_bed & (bank_shape*bank_start < .05) & (shore > 0)
 height = np.where(mud, np.minimum(height, tl.HIGH-.06), height)
+# OS mud flats rise to just above high water at a traced high-water line (tide_levels.flat_rim).
+rim = on_flat & ~water
+height[rim] = tl.flat_rim(height[rim], shapely.points(X[rim], Z[rim]))
 
 # Isolated shallow pools in the churned bed; connected creeks retain their depth.
 pools = []
@@ -148,6 +157,11 @@ near = (edge_distance < 3.5) & water
 pts = shapely.points(X[near], Z[near])
 inside_tidal[near] = np.where(shapely.covers(tidal, pts), shapely.distance(pts, tidal.boundary), 0)
 edge = tl.seam(inside_tidal)
+# On an OS mud flat the network meets this patch on the flat (tide_levels.flat_seam), from the
+# exact distance to the mapped shoreline as the network measures it.
+flat_seam = (edge_distance < 3.5) & ~water & on_flat
+seam_points = shapely.points(X[flat_seam], Z[flat_seam])
+edge[flat_seam] = tl.flat_rim(tl.flat_seam(shapely.distance(seam_points, river)), seam_points)
 height = height*blend + edge*(1-blend)
 height,ditch_mud,marsh_active=apply_sections(X,Z,height)
 passages=connection_geometry(reviewed_connections(data['rivers']))

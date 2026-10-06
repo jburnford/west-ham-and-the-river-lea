@@ -240,6 +240,15 @@ export const bridgeForms = {
       evidence:
         'Provisional footpath deck or culvert (record). The drawn water reaches the route only on its right edge from 8 m and runs on beyond the route end, so the second abutment is put at the route end (its face 1 m inside it). Timber deck, beams and railings on brick abutments; all dimensions estimated.',
     },
+    'house-mill-race-crossing': {
+      form: 'slab-deck',
+      abutments: [2, 5],
+      abutmentLength: 1,
+      parapets: false,
+      waterEdges: { centre: [2, 5], left: [2, 4.85], right: [2.05, 5.1] },
+      evidence:
+        "Task D (October 2026). Mapped: the OS five-foot plan carries Three Mills Lane unbroken over the House Mill race between the mill and the river wall and draws no parapet or railing, so none is drawn (parapets false); the lane's footways run on over the slab. Measured in the model: the reviewed race passage (3 m display width) lies 2.0-5.0 m along the 7 m route on the centreline, 2.0-4.85 m on the left edge and 2.05-5.1 m on the right. Estimated: a 0.4 m stone slab on brick abutments at the water edges, 1 m long, as at the Abbey Mill crossing.",
+    },
   },
 };
 
@@ -834,9 +843,10 @@ export function roadBridges({ THREE, scene, materials: m, bridges, level, waterL
       info.deckClearance = +(under - waterLevel).toFixed(3);
     }
 
-    // Parapets (masonry) or railings, both sides, the full route length.
+    // Parapets (masonry) or railings, both sides, the full route length; none where the register
+    // records that the map draws none (parapets false: a street carried flush over a mill race).
     const masonry = arch || form.form === 'slab-deck';
-    for (const side of [-1, 1]) {
+    for (const side of form.parapets === false ? [] : [-1, 1]) {
       const name = side > 0 ? 'left' : 'right';
       if (masonry) {
         set(`parapet-${name}`);

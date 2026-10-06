@@ -165,10 +165,16 @@ road_tree=shapely.STRtree([fit[1] for fit in road_fits])
 # height is an interpretation in road-traces.json): level with the deck for
 # 2 m beyond each end, then at no more than 1 in 20, so the street meets the
 # deck instead of standing above it. The drawn road surface lies 0.065 m above
-# this ground (docs/infrastructure.js).
+# this ground (docs/infrastructure.js). A deck whose record asks for it
+# (gradedApproach: Three Mills Lane over the House Mill race, task D) is
+# graded the same way.
 DECK_GRADE=.05;DECK_LANDING_M=2;DECK_ROAD_OFFSET=.065;DECK_APPROACH_M=20
-graded_decks={j:[(LineString(b['route']),b['height']-DECK_ROAD_OFFSET,b['id']) for b in infra['roadBridges'] if b['id']=='abbey-mill-crossing' and b['name']==fit[0]['name']] for j,fit in enumerate(road_fits)}
+graded_decks={j:[(LineString(b['route']),b['height']-DECK_ROAD_OFFSET,b['id']) for b in infra['roadBridges'] if (b['id']=='abbey-mill-crossing' or b.get('gradedApproach')) and b['name']==fit[0]['name']] for j,fit in enumerate(road_fits)}
 graded_decks={j:v for j,v in graded_decks.items() if v}
+# A graded deck carries its street over the water, so a street reading across it is on the same
+# surface: the corridor's readings reach over the deck (not over other water). Without this the
+# lane west of the House Mill race deck had no reading in reach and fell to the marsh field.
+fit_water={j:water.difference(shapely.union_all([line.buffer(road_fits[j][0]['width']/2+1.1,cap_style='flat') for line,_,_ in v])) for j,v in graded_decks.items()}
 # A street passing under the Northern Outfall Sewer deck (a sewer bank end of
 # kind 'road' with a roadAxis) keeps its own unraised ground there: the marsh
 # level at the middle of the opening. Its corridor level is held to that for
@@ -193,7 +199,7 @@ def road_fit_levels(j,points):
     d,ii=tree.query(points,k=min(4,len(positions)))
     if d.ndim==1:d=d[:,None];ii=ii[:,None]
     links=shapely.linestrings(np.stack([np.broadcast_to(points[:,None,:],(*ii.shape,2)),positions[ii]],axis=2).reshape(-1,2,2))
-    clear=~shapely.intersects(links,water).reshape(ii.shape)
+    clear=~shapely.intersects(links,fit_water.get(j,water)).reshape(ii.shape)
     w=np.where(clear&(d<=120),1/np.maximum(d,3)**2,0);total=w.sum(axis=1);ok=total>0
     out[ok]=(levels[ii[ok]]*w[ok]).sum(axis=1)/total[ok]
     for line,deck,_ in graded_decks.get(j,[]):
@@ -443,6 +449,11 @@ def surface(points,old,bank=True):
 # reviewed river-system terrain patches whose recorded shore transition is no
 # wider than the lip itself. Every other shore is an earth or canal-earth bank.
 MASONRY_REACH_M=1.5;LIP_M=.6;WALLED_STREET_M=5.;lip_vertices={};tidal_kept={}
+# Beside an OS mud flat (data/maps/os-tide-levels.json, inside the tidal water) the bank stands at
+# the high-water mark, the flat's outer edge, where the OS hatching begins, not at the low-water
+# shoreline inside the flat: the bank band is measured from that edge plus FLAT_BANK_M (task D).
+# Without it the crest behind the 8 m Abbey Creek mouth flat fell below high water.
+FLAT_BANK_M=3;os_flats=shapely.union_all([Polygon(f['polygon']) for f in read('data/maps/os-tide-levels.json')['mudFlats']]);shapely.prepare(os_flats)
 masonry=shapely.union_all([LineString(r['route']) for r in system['bankSections']['canalFacingRoutes']]+[LineString(r) for r in network['retainingEdges']['routes'] if len(r)>1])
 steep_patches=[t for t in system['bankSections']['terrainPatches'] if t['config']['shoreTransitionMetres'][1]<=LIP_M]
 masonry_zone=masonry.buffer(MASONRY_REACH_M);walled_street_zone=masonry.buffer(WALLED_STREET_M);shapely.prepare(walled_street_zone);walled_streets={};patch_zone=geometry([p for t in steep_patches for p in t['polygons']])
@@ -472,6 +483,7 @@ def blend_surface(points,old,bank=True,key='groundMesh'):
     if bank:
         bng=np.column_stack([538900+p[:,0],183209-p[:,1]]);pts=shapely.points(bng)
         near=banks.segment_tree.nearest(pts);distance=shapely.distance(pts,banks.segments[near])
+        distance=np.minimum(distance,shapely.distance(os_flats,shapely.points(p))+FLAT_BANK_M)
         # A street keeps its own level beside the bank: within 3 m of the shoreline it takes the
         # bank face up to that level (no crest), beyond it the bank band leaves it alone.
         margin=(distance<14)&~wet&~(street&(distance>=3))

@@ -58,16 +58,24 @@ buildings=buildings.union(station_footprints(station).buffer(.15))
 
 road_shapes=[];road_names=[];shoulders=[];paths=[];routes=[];bridges=[]
 surface_shapes={s:[] for s in ['macadam','setts','cinder']}
-explicit_decks=[]
+explicit_decks=[];local_decks=[]
+# Decks cut out of the street meshes after they are triangulated, only where they lie: cutting a
+# new deck into the connected street surface before triangulating re-triangulates the whole of
+# it, kilometres away (task C's House Mill race deck moved some 300 triangles and with them the
+# landscape fitted under the streets). See local_cut below.
+LOCAL_CUT_DECKS={'house-mill-race-crossing'}
 for r in traces['roads']:
     for span in r.get('bridgeSpans',[]):
         route=[point(r['sheet'],p,r['pixelWidth']) for p in span['points']]
         line=LineString(route)
-        bridges.append({**{k:v for k,v in span.items() if k not in ['points']},'id':span['id'],'name':r['name'],'route':route,'width':r['width'],
+        # A flush deck (the House Mill race under Three Mills Lane) records its own width, carrying the
+        # carriageway (carriagewayWidth) and both street footways on the deck.
+        width=span.get('width',r['width'])
+        bridges.append({**{k:v for k,v in span.items() if k not in ['points']},'id':span['id'],'name':r['name'],'route':route,'width':width,
                         'height':span['height'],'surface':r['surface'],'evidence':span['evidence']})
         # Keep surface triangles off the deck, including the dry gap in the river GIS.
-        explicit_decks.append(line.buffer(r['width']/2+1.1,cap_style=2))
-deck_exclusion=unary_union(explicit_decks)
+        (local_decks if span['id'] in LOCAL_CUT_DECKS else explicit_decks).append(line.buffer(max(width/2,r['width']/2+1.1),cap_style=2))
+deck_exclusion=unary_union(explicit_decks);local_deck_cut=unary_union(local_decks)
 for r in traces['roads']:
     points=[point(r['sheet'],p,r['pixelWidth']) for p in r['points']];line=LineString(points)
     w=r['width'];route={**r,'route':[[round(x,2),round(z,2)] for x,z in points]};routes.append(route)
@@ -99,6 +107,14 @@ def triangles(g,max_edge=5):
         for t in mesh.geoms:
             if tolerant.covers(t):result.append([[round(x,3),round(z,3)] for x,z in list(t.exterior.coords)[:3]])
     return result
+def local_cut(tris,cut=local_deck_cut):
+    """Remove cut from a triangle list: triangles overlapping it are dropped and the rest of their
+    area alone is triangulated again (without new vertices on its outline, so no T-junction is made
+    with the kept triangles); every other triangle is kept as it was."""
+    if cut.is_empty:return tris
+    polys=[Polygon(t) for t in tris];hit=[p.intersection(cut).area>1e-9 for p in polys]
+    rest=unary_union([p for p,h in zip(polys,hit) if h]).difference(cut)
+    return [t for t,h in zip(tris,hit) if not h]+triangles(rest,max_edge=1e9)
 # Deck ends (data/maps/road-bridge-forms.json, deckEndEvidence): at each end of a bridge with deck
 # footways the street footway is carried onto the deck footway over a taper, its kerb line drawing
 # in from the street carriageway edge to the deck footway kerb. docs/infrastructure.js draws these
@@ -298,7 +314,7 @@ railways[-2]=apply_mainline_crossing(railways[-2],northern,water,branch_road_cle
 railways.append(northern)
 result={'sources':'data/maps/road-traces.json; data/maps/district-road-traces.json; data/maps/great-eastern-mainline.json; OS housing registration; southwest holder registration',
         'limitations':'Centrelines approximate; widths, paving, railway levels and bridge structures interpreted. Registration can differ by tens of metres. Buildings and waterways clipped out of road surface; named mapped crossings bridged separately.',
-        'roads':routes,'roadTriangles':triangles(drawn_roads),'shoulderTriangles':triangles(shoulder.difference(deck_ends)),'pathTriangles':triangles(path.difference(deck_ends) if path.intersection(deck_ends).area>1e-9 else path),'roadBridges':bridges,'railways':railways,'sewerBanks':sewer_banks}
+        'roads':routes,'roadTriangles':local_cut(triangles(drawn_roads)),'shoulderTriangles':local_cut(triangles(shoulder.difference(deck_ends))),'pathTriangles':local_cut(triangles(path.difference(deck_ends) if path.intersection(deck_ends).area>1e-9 else path)),'roadBridges':bridges,'railways':railways,'sewerBanks':sewer_banks}
 result['sewerHighStreet']=crossing_spec
 result['sewerCrestTriangles']=crest_triangles
 result['sewerRailEdges']=sewer_edges
@@ -306,7 +322,7 @@ remaining=drawn_roads
 result['roadSurfaces']={}
 for kind in ['setts','macadam','cinder']:
     patch=unary_union(surface_shapes[kind]).intersection(remaining)
-    result['roadSurfaces'][kind]=triangles(patch)
+    result['roadSurfaces'][kind]=local_cut(triangles(patch))
     remaining=remaining.difference(patch)
 assert remaining.area<.01
 result['surfacePolicy']=traces['surfacePolicy']
@@ -320,8 +336,10 @@ assert span_line.difference(lane_line.buffer(.01)).is_empty
 assert all(not water.buffer(.6).covers(Point(p)) for p in mill_span['route'])
 assert not span_line.buffer(mill_span['width']/2,cap_style=2).intersects(rectangle(data['neighbourhood']['mill']))
 assert roads.intersection(deck_exclusion).area<.01
-road_mesh_area=sum(Polygon(t).area for t in result['roadTriangles'])
-assert abs(road_mesh_area-drawn_roads.area)/drawn_roads.area<.002,(road_mesh_area,drawn_roads.area)
+road_mesh_area=sum(Polygon(t).area for t in result['roadTriangles']);drawn_area=drawn_roads.difference(local_deck_cut).area
+assert abs(road_mesh_area-drawn_area)/drawn_area<.002,(road_mesh_area,drawn_area)
+# Within the 1 mm vertex rounding along the cut edges.
+assert all(Polygon(t).intersection(local_deck_cut).area<.01 for k in ['roadTriangles','shoulderTriangles','pathTriangles'] for t in result[k])
 result['deckEndFootways']=deck_end_footways
 result['districtSources']=district['sources']
 result['districtNotes']=district['notes']

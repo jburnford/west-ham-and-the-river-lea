@@ -32,6 +32,10 @@ for r in data['connections']:
  if r['id']=='three-mills':
   assert channels[1].distance(channels[2])<.02  # one shared mill group, not two parallel capacities
   assert sum(q['id']=='three-mills' for q in data['connections'])==1
+  # The House Mill race runs open under the Three Mills Lane deck (task D): one passage from the
+  # back rivers to the Lea, all of it in the moving tide, not culverted under the street.
+  assert 'culvertedUnder' not in r and patch.geom_type=='Polygon'
+  assert patch.difference(tide).area<.5
  assert r['tidalDisplay']==(r['category']!='lock-passage' and r['id']!='abbey-mill')
  if not r['tidalDisplay']:
   # Locks, and the Abbey Mill race at the tidal limit (os-tide-levels.json): no tide through them.

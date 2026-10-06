@@ -49,7 +49,7 @@ CORE_WALL_SEARCH_M = 15
 # face there. Core walls are therefore only proposed, not moved, until the core
 # mesh or the landscape builder can carry them.
 APPLY_CORE_WALL_RELOCATION = False
-SHORE_OFFSET_M = .35  # mean (raster - exact) shoreline distance over land nodes within 5 m
+SHORE_OFFSET_M = tl.SHORE_OFFSET_M  # mean (raster - exact) shoreline distance over land nodes within 5 m
 BUILT_OFFSET_M = .45  # the same for distance to sites and roads, within 3 m
 
 
@@ -286,8 +286,12 @@ def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, eas
     shelf = tl.tidal_shelf(shore, crest)
     height = np.where(~water, height*(1-sediment)+shelf*sediment, height)
     # OS mud flats between the low-water outline and the high-water mark.
-    flat = contains_xy(tl.flats, X, Z) & ~water
+    # Boundary included: a mesh vertex on a traced high-water line takes the flat's rim.
+    flat = shapely.intersects_xy(tl.flats, X, Z) & ~water
     height = np.where(flat, tl.mud_flat(shore), height)
+    # Up to just above high water at a traced high-water line (tide_levels.flat_rim).
+    height[flat] = tl.flat_rim(height[flat], shapely.points(X[flat], Z[flat]))
+    flat_height = height.copy()
     sediment = np.where(flat, 1., sediment)
     # Local photograph study: a worn path on a raised grassy east bank, with
     # timber details rendered separately. Metric section remains an estimate.
@@ -323,6 +327,9 @@ def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, eas
     # seam does not dam them; land and still water meet it at -0.1 as before.
     inside_tidal = context['insideTidal'] if context.get('insideTidal') is not None else inside*tidal_bank
     edge = tl.seam(inside_tidal)
+    # On an OS mud flat both meshes meet on the flat (tide_levels.flat_seam and flat_rim; land()
+    # passes shore as the exact distance plus SHORE_OFFSET_M).
+    edge = np.where(flat, flat_height, edge)
     height = edge+(height-edge)*smooth(0, 3, core_distance)
     # A tiny offset prevents coplanar flicker where the outer apron meets the
     # surrounding ground; the detailed core itself remains untouched.
@@ -577,6 +584,10 @@ def build():
     triangles, owner, weights, found = insert_vertices(before, xz, inner)
     for values in (y, silt, distance):
         values[inner[found]] = (weights[found]*values[before[owner[found]]]).sum(axis=1)
+    # On an OS mud flat they take their own section instead (task D): a band triangle can reach
+    # across the traced high-water line to marsh beyond it, which left a hole in the flat's rim.
+    on_flat = inner[found][shapely.intersects_xy(tl.flats, *xz[inner[found]].T) & ~contains_xy(mesh_water, *xz[inner[found]].T)]
+    y[on_flat], silt[on_flat], distance[on_flat] = land(xz[on_flat, 0], xz[on_flat, 1])
     positions = np.column_stack([xz[:, 0], y, xz[:, 1]]).astype('<f4')
     # Slivers that float32 rounding makes flat are dropped (zero area); none may reverse.
     stored = positions[triangles][:, :, [0, 2]].astype(float)
@@ -590,7 +601,7 @@ def build():
     silt_colour = np.array([.70, .65, .54])
     green = smooth(.2, 2.8, distance)[:, None]
     # The OS mud flats are silt out to the high-water mark, however far from the channel.
-    green[contains_xy(tl.flats, positions[:, 0], positions[:, 2])] = 0
+    green[shapely.intersects_xy(tl.flats, positions[:, 0], positions[:, 2])] = 0
     colors = np.clip((silt_colour*(1-green)+grass*green)*255, 0, 255).astype('uint8')
     positions.tofile(OUT/'river-network.f32')
     indices.tofile(OUT/'river-network.u32')

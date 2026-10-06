@@ -210,7 +210,22 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
   for (const bridge of infra.roadBridges)
     for (let i = 1; i < bridge.route.length; i++) {
       const { g, length } = segment(bridge.route[i - 1], bridge.route[i]);
-      if (bridge.surface) box(g, 0, bridge.height, 0, length, 0.02, bridge.width, roads[bridge.surface]);
+      // A flush deck (carriagewayWidth recorded) carries the street as it is: setts between the street
+      // footways, which stand 0.03 m above the road as they do off the deck.
+      const carriageway = bridge.carriagewayWidth ?? bridge.width;
+      if (bridge.surface) box(g, 0, bridge.height, 0, length, 0.02, carriageway, roads[bridge.surface]);
+      if (carriageway < bridge.width)
+        for (const sign of [-1, 1])
+          box(
+            g,
+            0,
+            bridge.height,
+            (sign * (bridge.width + carriageway)) / 4,
+            length,
+            0.03,
+            (bridge.width - carriageway) / 2,
+            pavement
+          );
       if (bridge.style && bridge.width - 2 * deckFootway.inset - deckFootway.width >= deckFootway.minCarriageway)
         for (const sign of [-1, 1])
           box(

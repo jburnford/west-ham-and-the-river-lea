@@ -86,7 +86,8 @@ passage=next(q for q in roads if q['name']=='Three Mills distillery passage')
 prior_lane = lane.get('threeMillsLandmarkAlignment', {}).get('points', lane['points'])
 assert prior_lane==lane['threeMillsNorthAlignment']['priorPoints'][:10] and lane['width']==7
 assert passage['points'][0]==lane['points'][-1] and passage['points'][-1]==entrance['points'][0]
-assert passage['width']==entrance['width']==5.2 and len(lane['bridgeSpans'])==1
+# One Lea bridge span; task D added the House Mill race deck further east on the lane.
+assert passage['width']==entrance['width']==5.2 and len([b for b in lane['bridgeSpans'] if b['id']!='house-mill-race-crossing'])==1
 streets,frontage_streets=street_clearances(roads)
 plan=load('docs/data/ground-plan.json')
 water=unary_union([Polygon(p[0],p[1:]) for q in plan['rivers']+s['westContext']['rivers'] for p in q['polygons']])

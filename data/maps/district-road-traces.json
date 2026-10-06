@@ -3581,6 +3581,29 @@
           "evidence": "Mapped crossing; structural family from Victoria County History Essex VI pp57\u201361. Span proportions and levels are estimates. Only the western endpoint of the existing Lea bridge moves onto the re-read approach; eastern endpoint, identity, deck style, single arch and 2.2 m estimated height retained.",
           "priorHeight": 2.2,
           "heightEvidence": "T22 (October 2026): deck height 4.23 m is the OS five-foot spot height on Three Mills Bridge, 21.2 ft (sh_538259_182802, setting bridge, data/maps/os-ground-levels.json), converted with the project datum. The prior 2.2 m was an estimate; with the terrace drawn at its OS levels the west approach (Three Mills Lane, OS 23.8 ft = 5.02 m 40 m west of the deck) would otherwise fall 2.8 m into a cutting to reach it. The bench mark at the west abutment (19.5 ft = 3.70 m) is cut on the abutment below the deck. Deck length, route and form unchanged."
+        },
+        {
+          "id": "house-mill-race-crossing",
+          "points": [
+            [
+              -602.246,
+              396.125
+            ],
+            [
+              -601,
+              396
+            ],
+            [
+              -595.316,
+              395.147
+            ]
+          ],
+          "height": 2.706,
+          "width": 9.2,
+          "carriagewayWidth": 7,
+          "gradedApproach": true,
+          "evidence": "Task D (October 2026). Mapped: on the OS five-foot plan (1893-96) the House Mill race runs under the mill and under Three Mills Lane to the River Lea, and the lane runs on unbroken between the mill and the river wall, with no parapet or railing drawn. The reviewed passage (core_river_connections.py, 'three-mills') crosses the lane centreline at (-598.8, 395.7). Interpreted: a flat slab over the race, carrying the 7 m carriageway and both 1.1 m footways flush with the street (no parapets), 7 m along the lane so it bears about 2 m beyond each side of the 3 m display passage. Construction, slab depth and abutments are estimates.",
+          "heightEvidence": "Deck height 2.706 m is the OS five-foot spot height on the lane at the race, 16.2 ft (sh_538304_182814, 'Three Mills Lane east of the bridge', data/maps/os-ground-levels.json), converted with the project datum. Task C culverted the race under the lane instead (no deck); that cut the back rivers off from the Lea and left the lane sagging to about 0.9 m over the race."
         }
       ],
       "threeMillsNorthAlignment": {
