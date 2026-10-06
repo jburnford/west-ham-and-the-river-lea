@@ -329,5 +329,7 @@ Renders at each preset, with five cameras:
   - It then rises at about 1 in 72 to the quay at 4.9 m, the OS bank and wall tops there.
   - East of x -90 the 2003 ground is a later 9 m earthwork, so the lead's level is interpolated.
 - **Drawing:** a cinder yard of its own (`build_factory_yards.py`, site 9101), drawn by `factory-yards.js` like the sawmill track. The rails stop a metre short of the path ramp, which reads as the track passing under it.
-- **Not added: the basin.** The east-west water south of the station is closed at both ends on the 1893 plan. It is square at the west by the south building; at the east it stops short of the Long Wall bank, with no lock, sluice or culvert lettered. The barges came to the quay on the Channelsea. Whether the cut was a coal basin, a cooling pond or a drain is for the author.
+- **The unloading place** (the author's "basin") is the Channelsea quay where the lead turns south. The author, from the photographs: barges could unload only near high water; at low water they lay on the mud below the tidal limit.
+  - The OS draws a river wall (a continuous double line) along that bank. It goes into `os-river-walls.json` with F3, which uses the same mechanism and the same rebuild.
+- The east-west water south of the station is closed at both ends on the 1893 plan: probably a drain or pond, not a barge basin. Not added.
 - **Checks:** `npm test` 22/22. `check_factory_yards.py`, `check_landscape_flood.py`, `check_east_depot_tracks.py` and `check_core_river_connections.py` pass. The cascade was rerun.

@@ -239,7 +239,12 @@
   ],
   "notTraced": [
     "The single heavy line north-east of the fan, along the foot of the sewer bank, is read as a fence or wall, not a siding.",
-    "The east-west water south of the station is not added: on the 1893 plan both its ends are closed (square at the west by the south building; at the east it stops short of the Long Wall bank, with no lock, sluice or culvert lettered). Its role (coal basin, cooling pond or drain) awaits the author."
+    "The east-west water south of the station: closed at both ends on the 1893 plan (square at the west by the south building; short of the Long Wall bank at the east, with no lock, sluice or culvert lettered). Not a barge basin; probably a drain or pond. Not added."
   ],
-  "yardHalfWidthMetres": 2.5
+  "yardHalfWidthMetres": 2.5,
+  "unloading": {
+    "place": "The Channelsea quay below the sewer bridge, where the lead turns south along the west bank (the author's 'basin' for the coal, 6 October 2026).",
+    "tide": "Unloading only near high water (author, from the photographs): the quay is below the tidal limit at Abbey Mill, so at low water the barges lay on the mud. The model's tide shows both states.",
+    "wallFace": "The OS draws a continuous double line along the west bank from the sewer bridge south past the quay, read elsewhere in the model as a masonry river wall (os-river-walls.json). Not yet added: it is to go into os-river-walls.json with F3 (FLOOD_MODEL_PLAN.md section 5), which uses the same mechanism and the same cascade."
+  }
 }
