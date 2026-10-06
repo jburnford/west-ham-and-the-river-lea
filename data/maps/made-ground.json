@@ -45,6 +45,45 @@
           "relation": "far above the yard"
         }
       ]
+    },
+    {
+      "id": "abbey-mills-coal-sidings",
+      "name": "Abbey Mills coal sidings and lead (track bed)",
+      "outline": {
+        "sourceFile": "data/maps/abbey-mills-coal.json",
+        "sourceKey": "tracks",
+        "bufferMetres": 2.5,
+        "method": "Every traced track, 2.5 m either side of its centre line (a single-track bed about 5 m wide); the fan's beds overlap into one yard."
+      },
+      "profile": {
+        "trackId": "abbey-coal-lead",
+        "stationsODN": [
+          [
+            0,
+            3.95
+          ],
+          [
+            103.6,
+            3.95
+          ],
+          [
+            172.4,
+            4.9
+          ],
+          [
+            197.7,
+            4.9
+          ]
+        ],
+        "method": "Level with the station yard (3.95 m) through the fan, to x -100; rising evenly (about 1 in 72) to the quay at 4.9 m, the OS bank and wall tops along the Channelsea there (4.91 m); level along the quay. Points off the lead take the level at their nearest point on it."
+      },
+      "status": "estimate",
+      "sideGradient": 12,
+      "method": "2003 EA LiDAR along the traced sidings: 3.86-4.29 m ODN through the fan (yard level, as round the engine house). East of x -90 the 2003 ground is a later earthwork (8.7-9.6 m), and the quay is 4.8-5.7 m; the model's quay fill already stands at about 5.0 m.",
+      "evidence": [
+        "data/maps/abbey-mills-coal.json (traced from the OS 1893 plan)",
+        "The 1893 plan draws no bank hatching along the sidings or the lead: made ground at yard level, not an embankment."
+      ]
     }
   ]
 }

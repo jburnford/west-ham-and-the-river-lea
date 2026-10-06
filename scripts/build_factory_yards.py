@@ -38,6 +38,9 @@ def sawmill_stock(free,water,circulation):
               'shade':rng.randrange(3),'footprint':[list(p) for p in footprint.exterior.coords]})
     return objects
 
+COAL_YARD_ID=9101   # data/maps/abbey-mills-coal.json; not a ground-plan site id
+
+
 def build():
     plan=load('docs/data/ground-plan.json');factories=load('docs/data/factory-buildings.json')
     frontages=load('docs/data/high-street-frontages.json');infra=load('docs/data/infrastructure.json')
@@ -71,11 +74,23 @@ def build():
             if line.geom_type=='LineString' and line.length>2:tracks.append({'id':row['id'],'points':[list(p) for p in line.coords]})
     from east_depot_tracks import build_east_depot_tracks
     tracks.extend(build_east_depot_tracks(east,infra,blocked))
+    # The Abbey Mills Pumping Station coal sidings and lead to the Channelsea quay (data/maps/abbey-mills-coal.json),
+    # on their made-ground bed; a metre clear of buildings, water and roads (the gap under the Long Wall path ramp).
+    # The bed is a cinder yard of its own (COAL_YARD_ID), so the tracks lie on a yard surface like the sawmill's.
+    coal=load('data/maps/abbey-mills-coal.json')
+    coal_bed=unary_union([LineString(row['points']).buffer(coal['yardHalfWidthMetres']) for row in coal['tracks']])
+    for row in coal['tracks']:
+        clipped=LineString(row['points']).difference(blocked.buffer(1.0))
+        for line in getattr(clipped,'geoms',[clipped]):
+            if line.geom_type=='LineString' and line.length>2:
+                tracks.append({'id':row['id'],'siteId':COAL_YARD_ID,'points':[list(p) for p in line.coords]})
+    coal_yard={'id':COAL_YARD_ID,'name':'Abbey Mills Pumping Station coal sidings','surface':'cinder','allowStock':False,
+               'polygons':[[list(p.exterior.coords),*[list(h.coords) for h in p.interiors]] for p in parts(coal_bed)]}
     tracks_union=unary_union([LineString(t['points']) for t in tracks])
     # Give the restored full sawmill parcel precedence over anonymous context.
     western=factories['westContext'].get('sites',[])
-    priority_ids={797,1017,9001,*[s['id'] for s in western],*[s['id'] for s in east['additionalYards']],*[s['id'] for s in wharfs]}
-    source=[*east['additionalYards'],oil['yard'],sugar['yard'],west_sugar['yard'],*crystal_barber['yards'],{'id':797,'name':names[797],'polygons':[sawmill['parcel']]},
+    priority_ids={797,1017,9001,COAL_YARD_ID,*[s['id'] for s in western],*[s['id'] for s in east['additionalYards']],*[s['id'] for s in wharfs]}
+    source=[coal_yard,*east['additionalYards'],oil['yard'],sugar['yard'],west_sugar['yard'],*crystal_barber['yards'],{'id':797,'name':names[797],'polygons':[sawmill['parcel']]},
       {'id':1017,'name':names[1017],'polygons':[jute['parcel']]}]+western+[s for s in plan['sites'] if s['id'] not in priority_ids]+[{'id':-i-1,'name':'Western wharf context','polygons':[p]} for i,p in enumerate(factories['westContext']['yards'])]+wharfs
     used=Polygon();sites=[]
     for site in source:

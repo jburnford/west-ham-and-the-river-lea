@@ -308,3 +308,26 @@ Renders at each preset, with five cameras:
 1. The pumping station: does the book or another source put its yard on made ground above the marsh? If so, I need a level, and the OS sheet may show one I have not found.
 2. The preset totals (1888: 50 mm over three days; winter storm: 40 mm in a day with high water 0.4 m above ordinary) are placeholders. Are there figures you prefer?
 3. Next, per the plan: F2 (back-river beds), then F3, then Phase 2.
+
+## Phase V follow-up: the Abbey Mills station yard and its coal railway (6 October 2026)
+
+**The station yard.** On the drawn ground the station stood at 1.88 m ODN in the Mill Meads hollow and flooded at 50 mm of rain. The author doubted it: the Metropolitan Board's engineers knew the marsh flooded, and no account of the station flooding has been found.
+- **Evidence:** the Environment Agency 1 m LiDAR, flown 22 February 2003 (before the Olympic works), from `reference/topography-research-2026-09-28/tiles-2003`.
+  - Against the 1890s OS readings within 550 m, its streets agree within 0.25 m and the sewer bank top within 0.03 m. The Mill Meads marsh readings are 1.8-4.4 m higher in 2003: later fill (the author: Prescott Channel spoil).
+  - Round the 1868 engine house the 2003 ground is 3.98 m ODN within 4 m of the walls, 3.91 m at 4-10 m, 3.80 m at 10-20 m and 3.34 m at 20-35 m. On every side it is 3.78-4.03 m within 10 m.
+- **Change:** a new register, `data/maps/made-ground.json`. The yard, 15 m round the building, is raised to 3.95 m ODN (estimate), falling at 1 in 12 to the marsh. `build_main_landscape.py` `raise_to_made_ground`: raise only, never in river, tidal or ditch water, nor on exposed tidal mud.
+- **Effect:** the yard is its own hollow. No rain up to 150 mm over any duration reaches it, because Mill Meads spills to the tide at 3.78 m first. A surge of 1.05 m over ordinary high water is the first to reach it. `check_flood_volume.mjs` now asserts this.
+- The 1888 "pumping station" flooding was probably West Ham's own station beside Bow Creek (author).
+
+**The coal railway** (author: "add the tracks and basin for the coal").
+- **Traced from the 1893 plan:** `data/maps/abbey-mills-coal.json`, by a line follower on the plan's rail lines (smoothed, good to about a metre).
+  - A fan of four sidings along the engine house's north-east side joins one lead.
+  - The lead runs south-east along the foot of the sewer bank, passes under the Long Wall path ramp, and turns south onto the Channelsea quay below the sewer bridge, where barges were unloaded.
+  - The track does not join the G.E.R.: it ends at the river.
+- **Bed:** the tracks lie on made ground (`made-ground.json` `abbey-mills-coal-sidings`).
+  - It is level with the yard (3.95 m) through the fan, where the 2003 LiDAR is 3.86-4.29 m.
+  - It then rises at about 1 in 72 to the quay at 4.9 m, the OS bank and wall tops there.
+  - East of x -90 the 2003 ground is a later 9 m earthwork, so the lead's level is interpolated.
+- **Drawing:** a cinder yard of its own (`build_factory_yards.py`, site 9101), drawn by `factory-yards.js` like the sawmill track. The rails stop a metre short of the path ramp, which reads as the track passing under it.
+- **Not added: the basin.** The east-west water south of the station is closed at both ends on the 1893 plan. It is square at the west by the south building; at the east it stops short of the Long Wall bank, with no lock, sluice or culvert lettered. The barges came to the quay on the Channelsea. Whether the cut was a coal basin, a cooling pond or a drain is for the author.
+- **Checks:** `npm test` 22/22. `check_factory_yards.py`, `check_landscape_flood.py`, `check_east_depot_tracks.py` and `check_core_river_connections.py` pass. The cascade was rerun.
