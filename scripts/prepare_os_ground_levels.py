@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Write data/maps/os-ground-levels.json: every OS five-foot spot height and bench
-mark inside the core box, classified and assigned to the ground it measures.
+mark inside the core box and the Stratford zone north of it (task E, F1),
+classified and assigned to the ground it measures.
 
 Each reading (reference/spot-heights/heights.geojson, feet above OD Liverpool)
 is converted to scene y with the project datum and given
@@ -13,7 +14,9 @@ is converted to scene y with the project datum and given
   main landscape draws), 'street' (the level of a drawn street corridor), 'marsh'
   (open ground between works: the marsh correction), 'terrace' (open ground,
   undrawn streets and towing paths on the Bromley/Bow terrace west of the Lea and
-  Bow Creek: the same correction of the regional ground), or 'none' with a reason.
+  Bow Creek: the same correction of the regional ground), 'stratford' (any other
+  ground reading in the Stratford zone north of the core: the same correction,
+  task E F1), or 'none' with a reason.
 
 The rules are below; DECISIONS lists every reading whose use differs from the
 rule, with the reason. scripts/build_main_landscape.py reads the register;
@@ -42,6 +45,13 @@ SUPPORT_MIN = .9          # T21: High Street readings below this regional early-
 # unchanged).
 TERRACE_ZONE = [-1280, -240, -628, 1160]
 TERRACE_FEATHER_M = 60    # outside the core box the main landscape fades from the terrace over this band (west, north, south)
+# Task E, F1 (author, 6 October 2026): the Stratford zone north of the core box, from the High Street to the Waterworks
+# River flood gate and Temple Mills, where the rain-up-river flood plays out. The main landscape draws the regional
+# ground there corrected to every OS ground reading on the drawn marsh (as T22 did on the terrace); readings where the
+# regional early-marsh support is 0 (Stratford town and Hackney Wick on the terrace, which the model does not draw)
+# are not applied. North of the zone the correction fades out over STRATFORD_FEATHER_M.
+STRATFORD_ZONE = [-1800, -2450, -150, -240]
+STRATFORD_FEATHER_M = 60
 STREET_REACH_M = 6        # a street reading belongs to a drawn street within half its width + this
 PREMISES_REACH_M = 1.5      # a yard reading belongs to a site pad within this distance of its outline
 
@@ -85,6 +95,8 @@ DECISIONS = {
     'sh_539164_183422': {'category': 'structure', 'use': 'none', 'reason': 'on the walled band (a raised band between retaining walls) beside the Woolwich branch north of Abbey Road'},
     'sh_539156_183134': {'use': 'none', 'reason': 'Manor Road dips to 3.4 ft where it passes under the Northern Outfall Sewer aqueduct, beside the bank; a local road cutting under the aqueduct (Manor Road is 8.4 ft 73 m south), and Manor Road is not drawn here'},
     'sh_538851_183160': {'use': 'none', 'reason': 'on the strip between the Channelsea and the toe of the sewer bank, at the level of the river-bank crest beside it (18.9 ft, as the embankment-top reading sh_538858_183162 two metres away): a bank-top level, not marsh; as a marsh control it raised a 3.5 m mound over the mud flats'},
+    'sh_538088_183603': {'use': 'none', 'reason': 'no survey dot found (position = the figures, medium confidence) and the figures fall inside the drawn City Mill River, 2.4 m from its edge; "by Laboratory Yard", whose ground the reading cannot place (task E, F1)'},
+    'sh_538584_183464': {'use': 'none', 'reason': 'low confidence: the second digit is ambiguous (8 or 6) and the dot was not located; it would set the West Ham Gas Works pad (site 873) at 0.45 m on a single uncertain figure (task E, F1)'},
     'sh_538776_182863': {'use': 'none', 'reason': 'low confidence, dot not located; 1.6-1.8 m above the Abbey Creek Wharf readings (10.9-11.6 ft) 40-70 m south; probably on the end of the Long Wall bank at the wharf head'},
 }
 
@@ -110,6 +122,22 @@ EXCEPTIONS = {
     'sh_538128_182907': 'towing path dot 1.9 m from the drawn Lea water edge, on the 3 m earth bank face; the crest stands at the OS level behind it',
     'sh_537628_183260': 'Old Ford towing path inside the bank band (within 14 m of the regional shoreline), where the model draws the regional bank crest (2.98 m, interpolated along the bank from bank-top readings elsewhere); the OS towing path below the Old Ford Road slope is 0.7 m lower',
     'sh_537671_183228': 'Old Ford towing path inside the bank band, where the model draws the regional bank crest (2.98 m); the OS towing path is 0.9 m lower',
+    # Task E, F1: the Stratford zone north of the core (measured on the F1 build).
+    'sh_538638_184032': 'road by Channel Sea Court, but 0.2 m inside the drawn Channelsea outline (the drawn water is wider than the OS channel here), so the reading falls on the channel bed',
+    'sh_537676_184472': 'enclosure corner 0.6 m from the drawn Waterworks River edge, on the 3 m earth bank face the bank band draws from the water edge',
+    'sh_537688_185311': 'path at a field edge 0.2 m from the drawn water edge at Temple Mills, on the bank face',
+    'sh_537617_185329': 'ground at the B.M. 18.08 pheon, 1.9 m from the drawn Waterworks River edge, on the bank face (medium confidence: no dot of its own)',
+    'sh_537578_183470': 'Lea towing path at the north face of the G.E.R. bridge west of the core box: on the river-network bank face of the Lea, which keeps its native section there',
+    'sh_537932_183520': 'lane beside the Pudding Mill River west of the Rope Works, inside the river-network tidal outline (3 m from the drawn channel), where the native shelf heights are kept (as the Short Wall lane in the core)',
+    'sh_537982_183457': 'lane opposite the Brush & Fibre Works, inside the river-network tidal outline 4 m from the drawn channel, where the native shelf heights are kept',
+    'sh_537888_183583': 'lane south from the G.E.R. bridge, 5 m from the drawn Pudding Mill River, on the bank face beside the river-network tidal outline',
+    'sh_538145_183543': 'lane east of Marshgate Lane Works, 5 m from the drawn City Mill River, on the bank face beside the river-network tidal outline',
+    'sh_538530_183620': 'Union Street junction 4.4 m outside the West Ham Gas Works premises pad (site 873, a T21 marsh-supported estimate at 0.15 m with no OS yard reading): the pad\'s 1:1.5 edge batter draws the junction down to it',
+    'sh_537369_183796': 'Lea towing path at the Old Ford, 2.5 m from the drawn water, inside the bank band where the model draws the regional bank crest; the OS towing path is lower',
+    'sh_537632_183892': 'track by the Bone Works on the bank edge, 7 m from the drawn water, inside the bank band where the model draws the regional bank crest',
+    'sh_538516_183577': 'Stanley Road (medium confidence), 9.5 m from the Stanley Road gasworks junction corridor: on the 1:1.5 batter from that corridor\'s own street level',
+    'sh_538666_183895': 'Channel Sea Road at its north end, 7 m from the North Street corridor and below the High Street causeway: on the 1:1.5 batters from those streets\' own levels',
+    'sh_537161_185652': 'open Hackney Marsh inside the Lea meander, 6.6 m from the drawn Lea, inside the bank band where the model draws the regional bank crest of the Temple Mills Road approach',
 }
 
 
@@ -146,9 +174,14 @@ def main():
 
     ltsr = LineString(next(r['route'] for r in infra['railways'] if r['name'].startswith('London, Tilbury')))
     high = LineString(next(r['route'] for r in infra['roads'] if r['name'] == 'Stratford High Street'))
+    high_north = shapely.union_all([LineString(r['route']) for r in infra['roads'] if r['name'].startswith('Stratford High Street')])
 
     def zone(x, z):
         q = Point(x, z)
+        if in_stratford(x, z):
+            if high_north.distance(q) <= 45:
+                return 'stratford-high-street'
+            return 'temple-mills' if z < -1800 else 'stratford-marsh'
         if ltsr.distance(q) <= 35 and x > -640:
             return 'ltsr-corridor'
         if high.distance(q) <= 45:
@@ -169,6 +202,10 @@ def main():
     def in_terrace(x, z):
         return TERRACE_ZONE[0] <= x <= TERRACE_ZONE[2] and TERRACE_ZONE[1] <= z <= TERRACE_ZONE[3]
 
+    def in_stratford(x, z):
+        # The zone lies north of the core box (it shares the core's north edge, which stays with the core).
+        return STRATFORD_ZONE[0] <= x <= STRATFORD_ZONE[2] and STRATFORD_ZONE[1] <= z < STRATFORD_ZONE[3]
+
     def centre(g):
         return list(g.representative_point().coords)[0]
 
@@ -187,7 +224,7 @@ def main():
     readings = []
     for f in sorted(heights['features'], key=lambda f: f['properties']['id']):
         p = f['properties']; x, z = p['bng_e']-538900, 183209-p['bng_n']
-        if not (CORE[0] <= x <= CORE[2] and CORE[1] <= z <= CORE[3]):
+        if not (CORE[0] <= x <= CORE[2] and CORE[1] <= z <= CORE[3]) and not in_stratford(x, z):
             continue
         q = Point(x, z); w = weight(x, z); cat = category(p)
         item = {'id': p['id'], 'type': p['type'], 'setting': p.get('setting'), 'confidence': p['confidence'],
@@ -199,6 +236,9 @@ def main():
             why = 'bench mark: cut on a wall, post, building or bridge above the ground it stands on; a check, not a ground level'
         elif cat == 'structure':
             why = f"spot height on a structure ({p.get('setting')}); not the ground"
+        elif in_stratford(x, z) and w <= 0:
+            why = ('outside the drawn marsh: the regional early-marsh support is 0 here (Stratford town or Hackney Wick on the '
+                   'terrace, or the Lea Navigation banks beyond the modelled ground), which the model does not draw (task E, F1)')
         else:
             road = None
             if p.get('setting') == 'street':
@@ -220,6 +260,8 @@ def main():
                 use = 'premises'; item['siteId'] = site; item['siteName'] = sites[site][0]
             elif in_terrace(x, z) and (zone(x, z) == 'west-strip' or (zone(x, z) == 'high-street' and w < SUPPORT_MIN)):
                 use = 'terrace'
+            elif in_stratford(x, z):
+                use = 'stratford'
             else:
                 use = 'marsh'
         if p['id'] in DECISIONS:
@@ -251,7 +293,7 @@ def main():
         if r['use'] == 'street':
             road_controls.setdefault(r['road'], []).append(r['id'])
     register = {
-        'description': 'Every OS London five-foot (1891-96) spot height and bench mark inside the core box, converted to scene y and assigned to the ground it measures. scripts/build_main_landscape.py draws premises pads from the premises readings, street corridors from the street readings and corrects the marsh between works to the marsh readings; scripts/check_os_ground_levels.mjs compares the drawn ground with every reading. Generated by scripts/prepare_os_ground_levels.py (rules and per-reading decisions there).',
+        'description': 'Every OS London five-foot (1891-96) spot height and bench mark inside the core box and the Stratford zone north of it (task E, F1), converted to scene y and assigned to the ground it measures. scripts/build_main_landscape.py draws premises pads from the premises readings, street corridors from the street readings and corrects the marsh between works to the marsh readings; scripts/check_os_ground_levels.mjs compares the drawn ground with every reading. Generated by scripts/prepare_os_ground_levels.py (rules and per-reading decisions there).',
         'coreBox': CORE, 'datum': DATUM,
         'source': 'reference/spot-heights/heights.geojson (layer os-london-five-foot-1893; readers\' setting, notes and confidence kept)',
         'rules': {
@@ -263,9 +305,11 @@ def main():
             'premises': f'any other non-marsh ground reading within {PREMISES_REACH_M} m of a ground-plan site the main landscape pads (centre in the marsh support, outside the terrace zone) sets that pad; inside the terrace zone a yard-setting reading within {PREMISES_REACH_M} m of a site sets (and creates) its pad',
             'marsh': 'remaining ground readings (marsh, open ground, bank feet, footpaths, undrawn tracks) correct the marsh between works',
             'terrace': 'remaining ground readings in the west strip, and High Street readings below the T21 support threshold, inside the terrace zone (open ground, streets the model does not draw, towing paths, yards of sites without a pad) correct the regional terrace ground in the same way',
+            'stratford': f'task E, F1: inside the Stratford zone {STRATFORD_ZONE} (north of the core box, the High Street to Temple Mills) every ground reading on the drawn marsh that is not a street or premises reading (marsh, open ground, made ground, yards, undrawn tracks and streets, bank feet) corrects the regional ground, as on the terrace; street and premises readings there are controls of the same correction too; readings where the regional early-marsh support is 0 are not applied',
         },
         'exceptionMetres': EXCEPTION_M,
         'terraceZone': TERRACE_ZONE, 'terraceFeatherMetres': TERRACE_FEATHER_M,
+        'stratfordZone': STRATFORD_ZONE, 'stratfordFeatherMetres': STRATFORD_FEATHER_M,
         'zones': {'west-strip': 'x < -628 (the Bromley/Bow terrace west of the Lea and Bow Creek), outside the High Street band',
                   'high-street': 'within 45 m of the Stratford High Street centreline',
                   'three-mills': 'x -628..-300 north of z 620 (Three Mills, Mill Meads, Abbey Lane west)',
@@ -273,7 +317,10 @@ def main():
                   'channelsea-east': 'x >= 120 (Abbey Road east, Manor Road, the Woolwich branch)',
                   'ltsr-corridor': 'within 35 m of the LT&SR centreline east of x -640',
                   'bromley-gasworks': 'x -628..-150, z > 620 (the Bromley gas works and the marsh east of it)',
-                  'abbey-marsh-south': 'x -150..120, z > 340 (the marsh south of the LT&SR)'},
+                  'abbey-marsh-south': 'x -150..120, z > 340 (the marsh south of the LT&SR)',
+                  'stratford-high-street': 'Stratford zone (north of the core box): within 45 m of the Stratford High Street centrelines',
+                  'stratford-marsh': 'Stratford zone, z -1800..-240: Stratford Marsh, the Carpenters Road district, the back rivers north of the High Street',
+                  'temple-mills': 'Stratford zone, z < -1800: Temple Mills and the head of the Waterworks River and the Channelsea'},
         'premises': premises, 'streets': road_controls,
         'readings': readings,
     }

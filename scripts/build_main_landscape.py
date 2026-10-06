@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np
 import shapely
 from scipy.spatial import cKDTree
-from scipy.ndimage import distance_transform_edt, map_coordinates
+from scipy.ndimage import distance_transform_edt, grey_dilation, map_coordinates
 from shapely.geometry import Polygon, LineString, box
 from shapely.ops import transform
 from regional_continuous_structures import Banks, polygon_bng
@@ -42,7 +42,7 @@ tidal=geometry(network['tide']['polygons'])  # blend_water (below) once building
 def sample(grid,points):
     rc=np.array([(n1-(183209-points[:,1]))/step-.5,((538900+points[:,0])-e0)/step-.5])
     return map_coordinates(grid,rc,order=1,mode='constant',cval=0)
-def weight(points):return sample(support,points)
+def weight(points):return sample(support_blend,points)
 # OS five-foot ground levels (data/maps/os-ground-levels.json, scripts/os_ground_levels.py):
 # premises pads, street corridors and the marsh between works take the OS readings
 # assigned to them. Where an applied reading lies outside the regional early-marsh
@@ -68,6 +68,32 @@ def terrace_weight(q):
 support_os=support.copy();support=np.maximum(support,terrace_weight(_field).reshape(shape).astype(support.dtype))
 terrace_support={'zone':TERRACE_ZONE,'featherMetres':TERRACE_FEATHER_M,'cellsRaised':int((support>support_os+1e-6).sum()),'cellsRaisedToFull':int(((support>=.999)&(support_os<.999)).sum())}
 os_support={'radiusMetres':osg.SUPPORT_RADIUS_M,'featherMetres':osg.SUPPORT_FEATHER_M,'cellsRaised':int((support_os>support_prior+1e-6).sum()),'cellsRaisedToFull':int(((support_os>=.999)&(support_prior<.999)).sum())}
+# The Stratford zone north of the core box (task E, F1; os-ground-levels.json stratfordZone): the regional ground of
+# the drawn marsh from the High Street to Temple Mills is corrected to the OS (below). Its support: (1) around each
+# applied reading, as T21 extended it in the core (osg.stratford_support); (2) for the blend here only (support_blend,
+# weight()), a cell whose centre lies in mapped water takes the highest weight of its eight neighbours. The support is
+# 0 in water, so the 10 m field gave the river banks 0.3-0.9 of the regional bank crest, which already runs through the
+# OS bank-top readings: the Waterworks River and City Mill River banks were drawn up to 2 m under them. The exported
+# weight keeps water at 0, so where no mesh draws a channel bed the page and the flood grid fall back as before
+# (with the dilated weight they took the landscape level there and drew a 0.8 m sill across the Waterworks River at the
+# river-network edge). North of the core edge only (z < the core's north edge).
+STRATFORD_ZONE=os_register['stratfordZone'];STRATFORD_FEATHER_M=float(os_register['stratfordFeatherMetres']);STRATFORD_BLEND_M=20.
+def in_stratford(q,margin=0.):
+    zx0,zz0,zx1,zz1=STRATFORD_ZONE
+    return (q[:,0]>=zx0-margin)&(q[:,0]<=zx1+margin)&(q[:,1]>=zz0-margin)&(q[:,1]<zz1)
+# The extension stops STRATFORD_WATER_CLEAR_M from mapped water: where no mesh draws a channel bed (the gap at the
+# river-network edge), the page and the flood grid read the landscape level wherever the weight there is above 0, and
+# a raised weight beside the 8 m Channelsea drew a 1.7 m sill across it there.
+STRATFORD_WATER_CLEAR_M=15.
+_mapped_water=local(banks.water).union(geometry([p for r in plan['rivers'] for p in r['polygons']]));shapely.prepare(_mapped_water)
+support_pre_stratford=support.copy();_sz=in_stratford(_field)
+_ext=np.zeros(len(_field));_ext[_sz]=osg.stratford_support(os_register,_field[_sz])
+_ext[_sz]*=~shapely.dwithin(_mapped_water,shapely.points(_field[_sz]),STRATFORD_WATER_CLEAR_M)
+support=np.maximum(support,_ext.reshape(shape).astype(support.dtype))
+_wet_cells=(shapely.contains_xy(_mapped_water,_field[:,0],_field[:,1])&_sz).reshape(shape)
+support_blend=np.where(_wet_cells,np.maximum(support,grey_dilation(support,size=(3,3))),support).astype(support.dtype)
+stratford_support={'zone':STRATFORD_ZONE,'radiusMetres':osg.SUPPORT_RADIUS_M,'waterClearMetres':STRATFORD_WATER_CLEAR_M,'featherMetres':osg.SUPPORT_FEATHER_M,'waterCellsRaisedForTheBlend':int((_wet_cells&(support_blend>support+1e-6)).sum()),
+                   'cellsRaised':int((support>support_pre_stratford+1e-6).sum()),'cellsRaisedToFull':int(((support>=.999)&(support_pre_stratford<.999)).sum())}
 # The marsh correction: the regional early-marsh ground corrected to the OS marsh readings
 # within each dry compartment (rivers, not field ditches, divide them).
 _compartment_water=local(banks.water).union(geometry([p for r in plan['rivers'] for p in r['polygons']]));shapely.prepare(_compartment_water)
@@ -85,11 +111,22 @@ _marsh_ids={r['id'] for r in os_register['readings'] if r['use']=='marsh'}
 os_marsh_prior=[c for c in os_marsh if c['kind']=='rail-side' or (c['kind']=='reading' and c['id'] in _marsh_ids)]
 os_corr_prior,os_corr_prior_meta,_=osg.correction_grid(os_marsh_prior,lambda q:sample(filled,q),_compartment_water,os_register['coreBox'],OS_WEST_LIMIT_PRIOR)
 os_corr,os_corr_meta,os_marsh_residuals=osg.correction_grid(os_marsh,lambda q:sample(filled,q),_compartment_water,os_register['coreBox'],OS_WEST_LIMIT)
-def marsh_at(points):
+def marsh_core(points):
     """The marsh between works: the regional early-marsh ground plus the OS marsh correction (T21's east of the
     terrace zone, T22's inside it, blended over TERRACE_BLEND_M inside the zone edge)."""
     prior=osg.sample(os_corr_prior,os_corr_prior_meta,points);s_=np.clip((TERRACE_ZONE[2]-points[:,0])/TERRACE_BLEND_M,0,1)
     return sample(filled,points)+prior+s_*(osg.sample(os_corr,os_corr_meta,points)-prior)
+# The Stratford zone correction (task E, F1): the residuals of every applied reading in the zone against the corrected
+# ground above, with the core's own controls within GRID_MARGIN_M of its north edge (their residuals are near 0, so
+# the two corrections meet), interpolated as in the core. It is 0 at the core's north edge and full STRATFORD_BLEND_M
+# north of it, so nothing in the core box changes, and it fades out over STRATFORD_FEATHER_M beyond the zone's other
+# sides (the grid's margin).
+os_stratford=osg.stratford_controls(os_register)
+_edge=[c for c in os_marsh if c['position'][1]<STRATFORD_ZONE[3]+osg.GRID_MARGIN_M]
+os_strat_corr,os_strat_meta,os_strat_residuals=osg.correction_grid(os_stratford+_edge,marsh_core,_compartment_water,STRATFORD_ZONE,STRATFORD_ZONE[0],length=osg.STRATFORD_LENGTH_M)
+def marsh_at(points):
+    """marsh_core, plus the Stratford zone correction north of the core box."""
+    return marsh_core(points)+np.clip((STRATFORD_ZONE[3]-points[:,1])/STRATFORD_BLEND_M,0,1)*osg.sample(os_strat_corr,os_strat_meta,points)
 os_premises=osg.premises(os_register);os_streets=osg.streets(os_register)
 records={r['id']:r for r in audit['records']};yard_features=[f for f in meta['laterSurfaceLayers']['features'] if f['kind']==11]
 pads=[];pad_geoms=[];RAIL_SIDE_PAD_M=6;terrace_unpadded=set()
@@ -733,12 +770,24 @@ original_base=geometry(system['baseGround']);original_regional=geometry(system['
 # coarse surface (below), so no crack opens along the join.
 zx0,zz0,zx1,zz1=TERRACE_ZONE;terrace_mesh=box(zx0-TERRACE_FEATHER_M,zz0-TERRACE_FEATHER_M,zx1,zz1+TERRACE_FEATHER_M)
 area=original_base.union(original_regional).intersection(outline.union(terrace_mesh)).difference(water)
+# The join with the river-network mesh (task E, F1). The network mesh is a rectangle and the river-system mesh stops
+# short of it, irregularly, by up to about 4 m; only the 20 m mesh covered the gap, so a bank crossing the network's
+# edge was drawn there by a 20 m triangle falling from the crest to its water-edge vertex: the Waterworks River bank at
+# the network's north edge dipped to 0.5 m between a 2.4 m crest either side, and the tide entered Stratford Marsh
+# through it. A ring NET_JOIN_M either side of the network edge is now meshed at NET_JOIN_STEP (aligned with the 20 m
+# grid), joined to the 20 m mesh as the terrace mesh is (below).
+NET_JOIN_M=6.;NET_JOIN_STEP=2.
+_np=read('docs/data/'+network['positionFile'],True).reshape(-1,3);nx0,nz0,nx1,nz1=float(_np[:,0].min()),float(_np[:,2].min()),float(_np[:,0].max()),float(_np[:,2].max())
+join_sides=[box(nx0-NET_JOIN_M,nz0-NET_JOIN_M,nx1+NET_JOIN_M,nz0+NET_JOIN_M),box(nx0-NET_JOIN_M,nz1-NET_JOIN_M,nx1+NET_JOIN_M,nz1+NET_JOIN_M),
+            box(nx0-NET_JOIN_M,nz0+NET_JOIN_M,nx0+NET_JOIN_M,nz1-NET_JOIN_M),box(nx1-NET_JOIN_M,nz0+NET_JOIN_M,nx1+NET_JOIN_M,nz1-NET_JOIN_M)]
+join_mesh=shapely.union_all(join_sides).difference(terrace_mesh);fine_mesh=terrace_mesh.union(join_mesh)
 def mesh_cells(region,mesh_step):
     x0,z0,x1,z1=region.bounds
     x,z=np.meshgrid(np.arange(np.floor(x0/mesh_step)*mesh_step,x1,mesh_step),np.arange(np.floor(z0/mesh_step)*mesh_step,z1,mesh_step))
     cells=shapely.box(x.ravel(),z.ravel(),x.ravel()+mesh_step,z.ravel()+mesh_step)
     p=shapely.get_parts(shapely.intersection(cells,region));return p[shapely.area(p)>1e-5]
-parts=np.concatenate([mesh_cells(area.difference(terrace_mesh),20),mesh_cells(area.intersection(terrace_mesh),TERRACE_MESH_STEP)])
+parts=np.concatenate([mesh_cells(area.difference(fine_mesh),20),mesh_cells(area.intersection(terrace_mesh),TERRACE_MESH_STEP),
+                      *[mesh_cells(area.intersection(side.difference(terrace_mesh)),NET_JOIN_STEP) for side in join_sides]])
 # Road surface triangles as docs/infrastructure.js draws them: carriageway,
 # footway and path, each drawn its offset above the ground under its vertices,
 # and the bridge decks (boxes at the deck height). The 20 m regional mesh is
@@ -1078,10 +1127,10 @@ for key in clamp:
 print('ROAD PASS:',json.dumps(road_pass),flush=True)
 for key in ['core','network','system','extension']:write_heights(key)
 heights=surfaces['groundMesh']['new']
-# The join between the 20 m and the terrace mesh: fine vertices on it (and not on a coarse vertex) take the coarse
-# triangle's surface there, so the two meshes share one edge line.
-_tri=np.arange(len(points)).reshape(-1,3);_cen=points[_tri].mean(axis=1);_fine=shapely.contains_xy(terrace_mesh,_cen[:,0],_cen[:,1])
-_on=np.flatnonzero(shapely.distance(terrace_mesh.boundary,shapely.points(points))<1e-4)
+# The join between the 20 m and the terrace and network-join meshes: fine vertices on it (and not on a coarse vertex)
+# take the coarse triangle's surface there, so the meshes share one edge line.
+_tri=np.arange(len(points)).reshape(-1,3);_cen=points[_tri].mean(axis=1);_fine=shapely.contains_xy(fine_mesh,_cen[:,0],_cen[:,1])
+_on=np.flatnonzero(shapely.distance(fine_mesh.boundary,shapely.points(points))<1e-4)
 _on=_on[np.isin(_on,_tri[_fine].ravel())]
 seam={'joinVertices':int(len(_on)),'changedVertices':0,'maxChangeMetres':0.}
 if len(_on):
@@ -1441,7 +1490,12 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
                          'residualBeforeCorrection':{'median':round(float(np.median(os_marsh_residuals)),3),'min':round(float(os_marsh_residuals.min()),3),'max':round(float(os_marsh_residuals.max()),3)}},
         'correctionGrid':{**os_corr_meta,'range':[round(float(os_corr.min()),3),round(float(os_corr.max()),3)],'westLimit':OS_WEST_LIMIT,'appliesWestOf':TERRACE_ZONE[2],'blendMetres':TERRACE_BLEND_M},
         'correctionGridPrior':{**os_corr_prior_meta,'range':[round(float(os_corr_prior.min()),3),round(float(os_corr_prior.max()),3)],'westLimit':OS_WEST_LIMIT_PRIOR,'controls':len(os_marsh_prior),'evidence':'T21 marsh correction (marsh readings and rail-side ground only), kept east of the terrace zone'},
-        'support':os_support,'terraceSupport':terrace_support,'terraceMeshStepMetres':TERRACE_MESH_STEP,'terraceSeam':seam,
+        'stratford':{'zone':STRATFORD_ZONE,'featherMetres':STRATFORD_FEATHER_M,'blendMetres':STRATFORD_BLEND_M,'controls':len(os_stratford),'coreEdgeControls':len(_edge),'kernelLengthMetres':osg.STRATFORD_LENGTH_M,
+                     'residualBeforeCorrection':{'median':round(float(np.median(os_strat_residuals[:len(os_stratford)])),3),'min':round(float(os_strat_residuals[:len(os_stratford)].min()),3),'max':round(float(os_strat_residuals[:len(os_stratford)].max()),3)},
+                     'correctionGrid':{**os_strat_meta,'range':[round(float(os_strat_corr.min()),3),round(float(os_strat_corr.max()),3)]},'support':stratford_support,
+                     'method':f'task E, F1: north of the core box, inside the Stratford zone {STRATFORD_ZONE}, the regional ground is corrected to every applied OS ground reading there (marsh, open and made ground, yards, streets at the ground under the road surface) by the same Gaussian-process interpolation (kernel length {osg.STRATFORD_LENGTH_M:g} m: the readings are sparser than in the core), relative to the core-corrected ground, with the core controls within {osg.GRID_MARGIN_M:g} m of the edge; the correction is 0 on the core\'s north edge, full {STRATFORD_BLEND_M:g} m north of it and fades out over {STRATFORD_FEATHER_M:g} m beyond the zone; the support extends round its applied readings (as in the core) and water cells take the highest weight of their neighbours, so the bank band draws the regional bank crest in full',
+                     'evidence':'Observed: the OS five-foot spot heights north of the core (Stratford Marsh, the High Street, the Carpenters Road district, Temple Mills). Interpreted: as in the core (the register rules), and that the regional early-marsh ground (the 1848-51 marsh) under the 1890s made ground is the surface to correct.'},
+        'support':os_support,'terraceSupport':terrace_support,'terraceMeshStepMetres':TERRACE_MESH_STEP,'terraceSeam':seam,'networkJoinMesh':{'bandMetres':NET_JOIN_M,'stepMetres':NET_JOIN_STEP,'networkBounds':[nx0,nz0,nx1,nz1],'evidence':'task E, F1: the 20 m mesh spanned the gap between the river-network and river-system meshes with banks falling to the water edge; the seam above covers the join of both fine meshes'},
         'terraceWalls':{'method':f'retaining walls whose ground {WALL_INLAND_M} m behind lies in the terrace zone carry their coping at the higher of the bank crest and that ground (premises pad, street or OS-corrected terrace), blended by the terrace weight','evidence':'Mapped: the interpretive wall routes (river-network retainingEdges) and the premises outlines. Observed: the OS yard, street and wall-top readings behind them. Interpreted: that a wall at a terrace frontage is a wharf or quay wall holding the made ground behind it at yard level; no surveyed section.'},
         'evidence':'Observed: the OS London five-foot plan 1891-96 spot heights in reference/spot-heights/heights.geojson as classified in data/maps/os-ground-levels.json (setting, notes and confidence from the readers). Interpreted: which ground each reading measures (the register rules and decisions), the pad surfaces between readings, the marsh interpolation between readings and its fading away from them, and the ground beside at-grade railways (from data/maps/railway-levels.json). T21 left the terrace west of the Lea and Bow Creek and the High Street west of it unapplied (T21_REPORT.md decision 1); T22 applies them over the terrace zone (T22_REPORT.md).'},
     'retainingEdgeFill':{'crestMethod':f'1.65 m interpretive crest blended to the observed along-bank crest by the marsh weight {WALL_INLAND_M} m behind the wall; {WALL_MEAN_M} m running mean along the wall; grade-limited upper envelope at {WALL_GRADE} m per metre',

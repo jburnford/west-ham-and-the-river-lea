@@ -133,7 +133,7 @@
    "outsideFineHa": 0.38,
    "outsideFineVolumeM3": 3540,
    "legacyBoxHa": 0.0,
-   "modelEdgeCells": 1265
+   "modelEdgeCells": 1262
   },
   {
    "stageODN": 1.85,
@@ -142,7 +142,7 @@
    "outsideFineHa": 0.39,
    "outsideFineVolumeM3": 3736,
    "legacyBoxHa": 0.0,
-   "modelEdgeCells": 2787
+   "modelEdgeCells": 2648
   },
   {
    "stageODN": 1.9,
@@ -151,745 +151,745 @@
    "outsideFineHa": 0.4,
    "outsideFineVolumeM3": 3941,
    "legacyBoxHa": 0.0,
-   "modelEdgeCells": 2880
+   "modelEdgeCells": 2773
   },
   {
    "stageODN": 1.95,
    "landHa": 0.98,
-   "fineHa": 0.56,
+   "fineHa": 0.57,
    "outsideFineHa": 0.41,
    "outsideFineVolumeM3": 4150,
    "legacyBoxHa": 0.0,
-   "modelEdgeCells": 2923
+   "modelEdgeCells": 2893
   },
   {
    "stageODN": 2.0,
-   "landHa": 1.0,
-   "fineHa": 0.58,
+   "landHa": 1.01,
+   "fineHa": 0.59,
    "outsideFineHa": 0.42,
-   "outsideFineVolumeM3": 4363,
+   "outsideFineVolumeM3": 4362,
    "legacyBoxHa": 0.0,
-   "modelEdgeCells": 3248
+   "modelEdgeCells": 3198
   },
   {
    "stageODN": 2.05,
-   "landHa": 1.02,
-   "fineHa": 0.59,
+   "landHa": 1.04,
+   "fineHa": 0.6,
    "outsideFineHa": 0.43,
    "outsideFineVolumeM3": 4581,
    "legacyBoxHa": 0.0,
-   "modelEdgeCells": 3710
+   "modelEdgeCells": 3612
   },
   {
    "stageODN": 2.1,
-   "landHa": 1.04,
-   "fineHa": 0.6,
+   "landHa": 1.07,
+   "fineHa": 0.62,
    "outsideFineHa": 0.44,
    "outsideFineVolumeM3": 4807,
    "legacyBoxHa": 0.0,
-   "modelEdgeCells": 4143
+   "modelEdgeCells": 4012
   },
   {
    "stageODN": 2.15,
-   "landHa": 1.08,
-   "fineHa": 0.62,
+   "landHa": 1.11,
+   "fineHa": 0.65,
    "outsideFineHa": 0.46,
    "outsideFineVolumeM3": 5037,
    "legacyBoxHa": 0.02,
-   "modelEdgeCells": 4475
+   "modelEdgeCells": 4316
   },
   {
    "stageODN": 2.2,
-   "landHa": 2.14,
-   "fineHa": 1.64,
-   "outsideFineHa": 0.5,
-   "outsideFineVolumeM3": 5356,
+   "landHa": 1.16,
+   "fineHa": 0.69,
+   "outsideFineHa": 0.47,
+   "outsideFineVolumeM3": 5277,
    "legacyBoxHa": 0.03,
-   "modelEdgeCells": 4842
+   "modelEdgeCells": 4554
   },
   {
    "stageODN": 2.25,
-   "landHa": 33.77,
-   "fineHa": 33.23,
-   "outsideFineHa": 0.54,
-   "outsideFineVolumeM3": 5634,
-   "legacyBoxHa": 21.81,
-   "modelEdgeCells": 5331
+   "landHa": 1.2,
+   "fineHa": 0.71,
+   "outsideFineHa": 0.49,
+   "outsideFineVolumeM3": 5528,
+   "legacyBoxHa": 0.03,
+   "modelEdgeCells": 4775
   },
   {
    "stageODN": 2.3,
-   "landHa": 36.26,
-   "fineHa": 35.67,
-   "outsideFineHa": 0.59,
-   "outsideFineVolumeM3": 5941,
-   "legacyBoxHa": 22.53,
-   "modelEdgeCells": 5553
+   "landHa": 1.25,
+   "fineHa": 0.74,
+   "outsideFineHa": 0.52,
+   "outsideFineVolumeM3": 5794,
+   "legacyBoxHa": 0.03,
+   "modelEdgeCells": 4955
   },
   {
    "stageODN": 2.35,
-   "landHa": 38.27,
-   "fineHa": 37.63,
-   "outsideFineHa": 0.64,
-   "outsideFineVolumeM3": 6274,
-   "legacyBoxHa": 23.18,
-   "modelEdgeCells": 5758
+   "landHa": 1.31,
+   "fineHa": 0.77,
+   "outsideFineHa": 0.55,
+   "outsideFineVolumeM3": 6074,
+   "legacyBoxHa": 0.04,
+   "modelEdgeCells": 5131
   },
   {
    "stageODN": 2.4,
-   "landHa": 39.91,
-   "fineHa": 39.23,
-   "outsideFineHa": 0.69,
-   "outsideFineVolumeM3": 6631,
-   "legacyBoxHa": 23.77,
-   "modelEdgeCells": 5927
+   "landHa": 1.38,
+   "fineHa": 0.81,
+   "outsideFineHa": 0.57,
+   "outsideFineVolumeM3": 6364,
+   "legacyBoxHa": 0.04,
+   "modelEdgeCells": 5269
   },
   {
    "stageODN": 2.45,
-   "landHa": 41.39,
-   "fineHa": 40.64,
-   "outsideFineHa": 0.76,
-   "outsideFineVolumeM3": 7027,
-   "legacyBoxHa": 24.34,
-   "modelEdgeCells": 6079
+   "landHa": 1.46,
+   "fineHa": 0.86,
+   "outsideFineHa": 0.61,
+   "outsideFineVolumeM3": 6676,
+   "legacyBoxHa": 0.04,
+   "modelEdgeCells": 5386
   },
   {
    "stageODN": 2.5,
-   "landHa": 42.87,
-   "fineHa": 42.04,
-   "outsideFineHa": 0.83,
-   "outsideFineVolumeM3": 7462,
-   "legacyBoxHa": 24.94,
-   "modelEdgeCells": 6234
+   "landHa": 1.6,
+   "fineHa": 0.95,
+   "outsideFineHa": 0.65,
+   "outsideFineVolumeM3": 7010,
+   "legacyBoxHa": 0.04,
+   "modelEdgeCells": 5520
   },
   {
    "stageODN": 2.55,
-   "landHa": 44.21,
-   "fineHa": 43.3,
-   "outsideFineHa": 0.91,
-   "outsideFineVolumeM3": 7939,
-   "legacyBoxHa": 25.37,
-   "modelEdgeCells": 6369
+   "landHa": 8.82,
+   "fineHa": 8.12,
+   "outsideFineHa": 0.7,
+   "outsideFineVolumeM3": 7373,
+   "legacyBoxHa": 4.33,
+   "modelEdgeCells": 5657
   },
   {
    "stageODN": 2.6,
-   "landHa": 45.62,
-   "fineHa": 44.62,
-   "outsideFineHa": 1.0,
-   "outsideFineVolumeM3": 8462,
-   "legacyBoxHa": 25.85,
-   "modelEdgeCells": 6481
+   "landHa": 9.13,
+   "fineHa": 8.36,
+   "outsideFineHa": 0.77,
+   "outsideFineVolumeM3": 7775,
+   "legacyBoxHa": 4.36,
+   "modelEdgeCells": 5780
   },
   {
    "stageODN": 2.65,
-   "landHa": 46.9,
-   "fineHa": 45.79,
-   "outsideFineHa": 1.11,
-   "outsideFineVolumeM3": 9044,
-   "legacyBoxHa": 26.16,
-   "modelEdgeCells": 6577
+   "landHa": 9.42,
+   "fineHa": 8.58,
+   "outsideFineHa": 0.84,
+   "outsideFineVolumeM3": 8210,
+   "legacyBoxHa": 4.44,
+   "modelEdgeCells": 5882
   },
   {
    "stageODN": 2.7,
-   "landHa": 48.05,
-   "fineHa": 46.82,
-   "outsideFineHa": 1.22,
-   "outsideFineVolumeM3": 9683,
-   "legacyBoxHa": 26.24,
-   "modelEdgeCells": 6652
+   "landHa": 9.65,
+   "fineHa": 8.75,
+   "outsideFineHa": 0.9,
+   "outsideFineVolumeM3": 8680,
+   "legacyBoxHa": 4.47,
+   "modelEdgeCells": 6015
   },
   {
    "stageODN": 2.75,
-   "landHa": 49.5,
-   "fineHa": 48.13,
-   "outsideFineHa": 1.37,
-   "outsideFineVolumeM3": 10403,
-   "legacyBoxHa": 26.38,
-   "modelEdgeCells": 6729
+   "landHa": 9.89,
+   "fineHa": 8.92,
+   "outsideFineHa": 0.96,
+   "outsideFineVolumeM3": 9179,
+   "legacyBoxHa": 4.5,
+   "modelEdgeCells": 6134
   },
   {
    "stageODN": 2.8,
-   "landHa": 51.51,
-   "fineHa": 50.0,
-   "outsideFineHa": 1.51,
-   "outsideFineVolumeM3": 11196,
-   "legacyBoxHa": 26.42,
-   "modelEdgeCells": 6785
+   "landHa": 10.66,
+   "fineHa": 9.62,
+   "outsideFineHa": 1.03,
+   "outsideFineVolumeM3": 9711,
+   "legacyBoxHa": 4.53,
+   "modelEdgeCells": 6222
   },
   {
    "stageODN": 2.85,
-   "landHa": 54.77,
-   "fineHa": 52.93,
-   "outsideFineHa": 1.84,
-   "outsideFineVolumeM3": 12177,
-   "legacyBoxHa": 26.46,
-   "modelEdgeCells": 6831
+   "landHa": 11.0,
+   "fineHa": 9.89,
+   "outsideFineHa": 1.11,
+   "outsideFineVolumeM3": 10284,
+   "legacyBoxHa": 4.55,
+   "modelEdgeCells": 6307
   },
   {
    "stageODN": 2.9,
-   "landHa": 58.5,
-   "fineHa": 55.98,
-   "outsideFineHa": 2.52,
-   "outsideFineVolumeM3": 13696,
-   "legacyBoxHa": 26.55,
-   "modelEdgeCells": 6876
+   "landHa": 11.36,
+   "fineHa": 10.17,
+   "outsideFineHa": 1.18,
+   "outsideFineVolumeM3": 10895,
+   "legacyBoxHa": 4.58,
+   "modelEdgeCells": 6358
   },
   {
    "stageODN": 2.95,
-   "landHa": 70.59,
-   "fineHa": 60.0,
-   "outsideFineHa": 10.59,
-   "outsideFineVolumeM3": 22604,
-   "legacyBoxHa": 26.59,
-   "modelEdgeCells": 6910
+   "landHa": 11.78,
+   "fineHa": 10.53,
+   "outsideFineHa": 1.25,
+   "outsideFineVolumeM3": 11534,
+   "legacyBoxHa": 4.61,
+   "modelEdgeCells": 6424
   },
   {
    "stageODN": 3.0,
-   "landHa": 72.17,
-   "fineHa": 60.12,
-   "outsideFineHa": 12.05,
-   "outsideFineVolumeM3": 29035,
-   "legacyBoxHa": 26.62,
-   "modelEdgeCells": 6953
+   "landHa": 12.06,
+   "fineHa": 10.73,
+   "outsideFineHa": 1.32,
+   "outsideFineVolumeM3": 12216,
+   "legacyBoxHa": 4.63,
+   "modelEdgeCells": 6481
   },
   {
    "stageODN": 3.05,
-   "landHa": 73.24,
-   "fineHa": 60.23,
-   "outsideFineHa": 13.02,
-   "outsideFineVolumeM3": 35785,
-   "legacyBoxHa": 26.65,
-   "modelEdgeCells": 6991
+   "landHa": 12.32,
+   "fineHa": 10.92,
+   "outsideFineHa": 1.4,
+   "outsideFineVolumeM3": 12934,
+   "legacyBoxHa": 4.66,
+   "modelEdgeCells": 6537
   },
   {
    "stageODN": 3.1,
-   "landHa": 75.07,
-   "fineHa": 60.34,
-   "outsideFineHa": 14.73,
-   "outsideFineVolumeM3": 43469,
-   "legacyBoxHa": 26.69,
-   "modelEdgeCells": 7009
+   "landHa": 12.53,
+   "fineHa": 11.06,
+   "outsideFineHa": 1.47,
+   "outsideFineVolumeM3": 13687,
+   "legacyBoxHa": 4.68,
+   "modelEdgeCells": 6571
   },
   {
    "stageODN": 3.15,
-   "landHa": 75.53,
-   "fineHa": 60.44,
-   "outsideFineHa": 15.09,
-   "outsideFineVolumeM3": 51159,
-   "legacyBoxHa": 26.72,
-   "modelEdgeCells": 7029
+   "landHa": 12.74,
+   "fineHa": 11.2,
+   "outsideFineHa": 1.54,
+   "outsideFineVolumeM3": 14478,
+   "legacyBoxHa": 4.71,
+   "modelEdgeCells": 6621
   },
   {
    "stageODN": 3.2,
-   "landHa": 75.76,
-   "fineHa": 60.56,
-   "outsideFineHa": 15.21,
-   "outsideFineVolumeM3": 58791,
-   "legacyBoxHa": 26.75,
-   "modelEdgeCells": 7042
+   "landHa": 13.04,
+   "fineHa": 11.42,
+   "outsideFineHa": 1.61,
+   "outsideFineVolumeM3": 15300,
+   "legacyBoxHa": 4.73,
+   "modelEdgeCells": 6648
   },
   {
    "stageODN": 3.25,
-   "landHa": 75.99,
-   "fineHa": 60.66,
-   "outsideFineHa": 15.33,
-   "outsideFineVolumeM3": 66486,
-   "legacyBoxHa": 26.78,
-   "modelEdgeCells": 7066
+   "landHa": 13.39,
+   "fineHa": 11.7,
+   "outsideFineHa": 1.69,
+   "outsideFineVolumeM3": 16162,
+   "legacyBoxHa": 4.75,
+   "modelEdgeCells": 6706
   },
   {
    "stageODN": 3.3,
-   "landHa": 76.21,
-   "fineHa": 60.77,
-   "outsideFineHa": 15.43,
-   "outsideFineVolumeM3": 74229,
-   "legacyBoxHa": 26.81,
-   "modelEdgeCells": 7099
+   "landHa": 13.6,
+   "fineHa": 11.84,
+   "outsideFineHa": 1.76,
+   "outsideFineVolumeM3": 17061,
+   "legacyBoxHa": 4.78,
+   "modelEdgeCells": 6749
   },
   {
    "stageODN": 3.35,
-   "landHa": 80.12,
-   "fineHa": 60.9,
-   "outsideFineHa": 19.23,
-   "outsideFineVolumeM3": 110613,
-   "legacyBoxHa": 26.84,
-   "modelEdgeCells": 7701
+   "landHa": 15.42,
+   "fineHa": 11.98,
+   "outsideFineHa": 3.44,
+   "outsideFineVolumeM3": 29692,
+   "legacyBoxHa": 4.8,
+   "modelEdgeCells": 7115
   },
   {
    "stageODN": 3.4,
-   "landHa": 180.68,
-   "fineHa": 68.73,
-   "outsideFineHa": 111.95,
-   "outsideFineVolumeM3": 1982332,
-   "legacyBoxHa": 30.39,
-   "modelEdgeCells": 12739
+   "landHa": 118.28,
+   "fineHa": 22.03,
+   "outsideFineHa": 96.25,
+   "outsideFineVolumeM3": 1895781,
+   "legacyBoxHa": 8.34,
+   "modelEdgeCells": 12229
   },
   {
    "stageODN": 3.45,
-   "landHa": 303.21,
-   "fineHa": 77.35,
-   "outsideFineHa": 225.86,
-   "outsideFineVolumeM3": 2713928,
-   "legacyBoxHa": 30.44,
-   "modelEdgeCells": 18522
+   "landHa": 175.88,
+   "fineHa": 23.39,
+   "outsideFineHa": 152.49,
+   "outsideFineVolumeM3": 2344642,
+   "legacyBoxHa": 8.38,
+   "modelEdgeCells": 16670
   },
   {
    "stageODN": 3.5,
-   "landHa": 306.77,
-   "fineHa": 77.52,
-   "outsideFineHa": 229.26,
-   "outsideFineVolumeM3": 2829549,
-   "legacyBoxHa": 30.49,
-   "modelEdgeCells": 18609
+   "landHa": 179.3,
+   "fineHa": 24.16,
+   "outsideFineHa": 155.14,
+   "outsideFineVolumeM3": 2422900,
+   "legacyBoxHa": 8.43,
+   "modelEdgeCells": 16779
   },
   {
    "stageODN": 3.55,
-   "landHa": 310.21,
-   "fineHa": 77.7,
-   "outsideFineHa": 232.51,
-   "outsideFineVolumeM3": 2946703,
-   "legacyBoxHa": 30.53,
-   "modelEdgeCells": 18722
+   "landHa": 224.13,
+   "fineHa": 24.72,
+   "outsideFineHa": 199.41,
+   "outsideFineVolumeM3": 2731612,
+   "legacyBoxHa": 8.47,
+   "modelEdgeCells": 17596
   },
   {
    "stageODN": 3.6,
-   "landHa": 321.7,
-   "fineHa": 82.42,
-   "outsideFineHa": 239.28,
-   "outsideFineVolumeM3": 3079660,
-   "legacyBoxHa": 30.58,
-   "modelEdgeCells": 18814
+   "landHa": 227.84,
+   "fineHa": 25.37,
+   "outsideFineHa": 202.47,
+   "outsideFineVolumeM3": 2833623,
+   "legacyBoxHa": 8.51,
+   "modelEdgeCells": 17640
   },
   {
    "stageODN": 3.65,
-   "landHa": 325.23,
-   "fineHa": 82.62,
-   "outsideFineHa": 242.61,
-   "outsideFineVolumeM3": 3204448,
-   "legacyBoxHa": 30.63,
-   "modelEdgeCells": 19004
+   "landHa": 231.37,
+   "fineHa": 25.96,
+   "outsideFineHa": 205.41,
+   "outsideFineVolumeM3": 2937192,
+   "legacyBoxHa": 8.57,
+   "modelEdgeCells": 17684
   },
   {
    "stageODN": 3.7,
-   "landHa": 334.74,
-   "fineHa": 88.88,
-   "outsideFineHa": 245.87,
-   "outsideFineVolumeM3": 3328753,
-   "legacyBoxHa": 36.48,
-   "modelEdgeCells": 19521
+   "landHa": 241.14,
+   "fineHa": 32.88,
+   "outsideFineHa": 208.26,
+   "outsideFineVolumeM3": 3042717,
+   "legacyBoxHa": 14.43,
+   "modelEdgeCells": 18086
   },
   {
    "stageODN": 3.75,
-   "landHa": 338.02,
-   "fineHa": 89.17,
-   "outsideFineHa": 248.84,
-   "outsideFineVolumeM3": 3454163,
-   "legacyBoxHa": 36.59,
-   "modelEdgeCells": 19694
+   "landHa": 257.0,
+   "fineHa": 42.57,
+   "outsideFineHa": 214.43,
+   "outsideFineVolumeM3": 3174070,
+   "legacyBoxHa": 14.53,
+   "modelEdgeCells": 18631
   },
   {
    "stageODN": 3.8,
-   "landHa": 345.78,
-   "fineHa": 93.83,
-   "outsideFineHa": 251.95,
-   "outsideFineVolumeM3": 3581986,
-   "legacyBoxHa": 36.79,
-   "modelEdgeCells": 20038
+   "landHa": 297.93,
+   "fineHa": 78.6,
+   "outsideFineHa": 219.32,
+   "outsideFineVolumeM3": 3292366,
+   "legacyBoxHa": 36.71,
+   "modelEdgeCells": 19009
   },
   {
    "stageODN": 3.85,
-   "landHa": 356.33,
-   "fineHa": 94.47,
-   "outsideFineHa": 261.86,
-   "outsideFineVolumeM3": 3757412,
-   "legacyBoxHa": 36.89,
-   "modelEdgeCells": 21043
+   "landHa": 302.55,
+   "fineHa": 80.15,
+   "outsideFineHa": 222.41,
+   "outsideFineVolumeM3": 3405368,
+   "legacyBoxHa": 36.83,
+   "modelEdgeCells": 19206
   },
   {
    "stageODN": 3.9,
-   "landHa": 360.53,
-   "fineHa": 94.9,
-   "outsideFineHa": 265.63,
-   "outsideFineVolumeM3": 3892726,
-   "legacyBoxHa": 36.98,
-   "modelEdgeCells": 21494
+   "landHa": 306.9,
+   "fineHa": 81.31,
+   "outsideFineHa": 225.6,
+   "outsideFineVolumeM3": 3519069,
+   "legacyBoxHa": 36.92,
+   "modelEdgeCells": 19326
   },
   {
    "stageODN": 3.95,
-   "landHa": 368.78,
-   "fineHa": 99.42,
-   "outsideFineHa": 269.35,
-   "outsideFineVolumeM3": 4029082,
-   "legacyBoxHa": 37.06,
-   "modelEdgeCells": 22155
+   "landHa": 315.49,
+   "fineHa": 86.52,
+   "outsideFineHa": 228.97,
+   "outsideFineVolumeM3": 3634583,
+   "legacyBoxHa": 37.0,
+   "modelEdgeCells": 19764
   },
   {
    "stageODN": 4.0,
-   "landHa": 377.51,
-   "fineHa": 100.26,
-   "outsideFineHa": 277.25,
-   "outsideFineVolumeM3": 4184974,
-   "legacyBoxHa": 37.37,
-   "modelEdgeCells": 22672
+   "landHa": 323.34,
+   "fineHa": 87.87,
+   "outsideFineHa": 235.47,
+   "outsideFineVolumeM3": 3766350,
+   "legacyBoxHa": 37.32,
+   "modelEdgeCells": 20464
   },
   {
    "stageODN": 4.05,
-   "landHa": 382.95,
-   "fineHa": 101.46,
-   "outsideFineHa": 281.5,
-   "outsideFineVolumeM3": 4327668,
-   "legacyBoxHa": 37.51,
-   "modelEdgeCells": 23117
+   "landHa": 343.85,
+   "fineHa": 93.56,
+   "outsideFineHa": 250.29,
+   "outsideFineVolumeM3": 3977483,
+   "legacyBoxHa": 37.46,
+   "modelEdgeCells": 20896
   },
   {
    "stageODN": 4.1,
-   "landHa": 1076.9,
-   "fineHa": 195.15,
-   "outsideFineHa": 881.75,
-   "outsideFineVolumeM3": 21801862,
-   "legacyBoxHa": 89.6,
-   "modelEdgeCells": 31086
+   "landHa": 1038.21,
+   "fineHa": 183.31,
+   "outsideFineHa": 854.9,
+   "outsideFineVolumeM3": 21473450,
+   "legacyBoxHa": 89.56,
+   "modelEdgeCells": 28862
   },
   {
    "stageODN": 4.15,
-   "landHa": 1093.9,
-   "fineHa": 197.93,
-   "outsideFineHa": 895.97,
-   "outsideFineVolumeM3": 22278078,
-   "legacyBoxHa": 90.35,
-   "modelEdgeCells": 31366
+   "landHa": 1049.4,
+   "fineHa": 185.76,
+   "outsideFineHa": 863.64,
+   "outsideFineVolumeM3": 21928849,
+   "legacyBoxHa": 90.31,
+   "modelEdgeCells": 29415
   },
   {
    "stageODN": 4.2,
-   "landHa": 1183.99,
-   "fineHa": 205.95,
-   "outsideFineHa": 978.04,
-   "outsideFineVolumeM3": 23145885,
-   "legacyBoxHa": 92.5,
-   "modelEdgeCells": 32072
+   "landHa": 1126.12,
+   "fineHa": 190.68,
+   "outsideFineHa": 935.44,
+   "outsideFineVolumeM3": 22764028,
+   "legacyBoxHa": 92.47,
+   "modelEdgeCells": 30044
   },
   {
    "stageODN": 4.25,
-   "landHa": 1219.04,
-   "fineHa": 208.07,
-   "outsideFineHa": 1010.97,
-   "outsideFineVolumeM3": 23661548,
-   "legacyBoxHa": 93.05,
-   "modelEdgeCells": 32394
+   "landHa": 1161.94,
+   "fineHa": 192.75,
+   "outsideFineHa": 969.19,
+   "outsideFineVolumeM3": 23260580,
+   "legacyBoxHa": 93.02,
+   "modelEdgeCells": 30388
   },
   {
    "stageODN": 4.3,
-   "landHa": 1255.86,
-   "fineHa": 218.48,
-   "outsideFineHa": 1037.38,
-   "outsideFineVolumeM3": 24219443,
-   "legacyBoxHa": 93.45,
-   "modelEdgeCells": 32769
+   "landHa": 1202.84,
+   "fineHa": 206.94,
+   "outsideFineHa": 995.9,
+   "outsideFineVolumeM3": 23793770,
+   "legacyBoxHa": 93.43,
+   "modelEdgeCells": 30756
   },
   {
    "stageODN": 4.35,
-   "landHa": 1282.64,
-   "fineHa": 220.32,
-   "outsideFineHa": 1062.32,
-   "outsideFineVolumeM3": 24759568,
-   "legacyBoxHa": 93.9,
-   "modelEdgeCells": 33111
+   "landHa": 1246.4,
+   "fineHa": 209.11,
+   "outsideFineHa": 1037.29,
+   "outsideFineVolumeM3": 24347347,
+   "legacyBoxHa": 93.88,
+   "modelEdgeCells": 31110
   },
   {
    "stageODN": 4.4,
-   "landHa": 1298.12,
-   "fineHa": 222.89,
-   "outsideFineHa": 1075.23,
-   "outsideFineVolumeM3": 25300553,
-   "legacyBoxHa": 94.42,
-   "modelEdgeCells": 33460
+   "landHa": 1264.84,
+   "fineHa": 212.11,
+   "outsideFineHa": 1052.74,
+   "outsideFineVolumeM3": 24877750,
+   "legacyBoxHa": 94.41,
+   "modelEdgeCells": 31416
   },
   {
    "stageODN": 4.45,
-   "landHa": 1305.92,
-   "fineHa": 225.42,
-   "outsideFineHa": 1080.51,
-   "outsideFineVolumeM3": 25842510,
+   "landHa": 1281.65,
+   "fineHa": 218.21,
+   "outsideFineHa": 1063.45,
+   "outsideFineVolumeM3": 25439351,
    "legacyBoxHa": 95.31,
-   "modelEdgeCells": 34035
+   "modelEdgeCells": 31884
   },
   {
    "stageODN": 4.5,
-   "landHa": 1309.93,
-   "fineHa": 227.37,
-   "outsideFineHa": 1082.56,
-   "outsideFineVolumeM3": 26386035,
-   "legacyBoxHa": 95.91,
-   "modelEdgeCells": 34446
+   "landHa": 1287.31,
+   "fineHa": 220.58,
+   "outsideFineHa": 1066.73,
+   "outsideFineVolumeM3": 25973544,
+   "legacyBoxHa": 95.9,
+   "modelEdgeCells": 32158
   },
   {
    "stageODN": 4.55,
-   "landHa": 1314.66,
-   "fineHa": 229.05,
-   "outsideFineHa": 1085.61,
-   "outsideFineVolumeM3": 26935810,
+   "landHa": 1293.67,
+   "fineHa": 222.79,
+   "outsideFineHa": 1070.88,
+   "outsideFineVolumeM3": 26512787,
    "legacyBoxHa": 96.43,
-   "modelEdgeCells": 34809
+   "modelEdgeCells": 32390
   },
   {
    "stageODN": 4.6,
-   "landHa": 1320.48,
-   "fineHa": 231.87,
-   "outsideFineHa": 1088.61,
-   "outsideFineVolumeM3": 27480919,
+   "landHa": 1301.78,
+   "fineHa": 226.58,
+   "outsideFineHa": 1075.2,
+   "outsideFineVolumeM3": 27051541,
    "legacyBoxHa": 97.16,
-   "modelEdgeCells": 35135
+   "modelEdgeCells": 32656
   },
   {
    "stageODN": 4.65,
-   "landHa": 1326.15,
-   "fineHa": 235.67,
-   "outsideFineHa": 1090.48,
-   "outsideFineVolumeM3": 28026678,
+   "landHa": 1308.45,
+   "fineHa": 230.31,
+   "outsideFineHa": 1078.14,
+   "outsideFineVolumeM3": 27591409,
    "legacyBoxHa": 98.9,
-   "modelEdgeCells": 35447
+   "modelEdgeCells": 32901
   },
   {
    "stageODN": 4.7,
-   "landHa": 1329.97,
-   "fineHa": 238.11,
-   "outsideFineHa": 1091.86,
-   "outsideFineVolumeM3": 28572977,
+   "landHa": 1313.74,
+   "fineHa": 233.17,
+   "outsideFineHa": 1080.57,
+   "outsideFineVolumeM3": 28132374,
    "legacyBoxHa": 100.17,
-   "modelEdgeCells": 35710
+   "modelEdgeCells": 33112
   },
   {
    "stageODN": 4.75,
-   "landHa": 1333.89,
-   "fineHa": 240.78,
-   "outsideFineHa": 1093.12,
-   "outsideFineVolumeM3": 29119849,
+   "landHa": 1319.1,
+   "fineHa": 236.32,
+   "outsideFineHa": 1082.78,
+   "outsideFineVolumeM3": 28674493,
    "legacyBoxHa": 101.08,
-   "modelEdgeCells": 35976
+   "modelEdgeCells": 33344
   },
   {
    "stageODN": 4.8,
-   "landHa": 1338.32,
-   "fineHa": 243.7,
-   "outsideFineHa": 1094.62,
-   "outsideFineVolumeM3": 29667546,
+   "landHa": 1325.7,
+   "fineHa": 239.53,
+   "outsideFineHa": 1086.17,
+   "outsideFineVolumeM3": 29228844,
    "legacyBoxHa": 101.76,
-   "modelEdgeCells": 36173
+   "modelEdgeCells": 33832
   },
   {
    "stageODN": 4.85,
-   "landHa": 1356.27,
-   "fineHa": 249.39,
-   "outsideFineHa": 1106.88,
-   "outsideFineVolumeM3": 30369814,
+   "landHa": 1344.52,
+   "fineHa": 245.57,
+   "outsideFineHa": 1098.95,
+   "outsideFineVolumeM3": 29902277,
    "legacyBoxHa": 102.22,
-   "modelEdgeCells": 36300
+   "modelEdgeCells": 34298
   },
   {
    "stageODN": 4.9,
-   "landHa": 1361.83,
-   "fineHa": 252.59,
-   "outsideFineHa": 1109.23,
-   "outsideFineVolumeM3": 30927432,
+   "landHa": 1351.74,
+   "fineHa": 249.11,
+   "outsideFineHa": 1102.63,
+   "outsideFineVolumeM3": 30458733,
    "legacyBoxHa": 102.64,
-   "modelEdgeCells": 36465
+   "modelEdgeCells": 34827
   },
   {
    "stageODN": 4.95,
-   "landHa": 1363.89,
-   "fineHa": 253.92,
-   "outsideFineHa": 1109.98,
-   "outsideFineVolumeM3": 31482608,
+   "landHa": 1354.79,
+   "fineHa": 250.73,
+   "outsideFineHa": 1104.06,
+   "outsideFineVolumeM3": 31011123,
    "legacyBoxHa": 103.07,
-   "modelEdgeCells": 36542
+   "modelEdgeCells": 35087
   },
   {
    "stageODN": 5.0,
-   "landHa": 1365.73,
-   "fineHa": 254.96,
-   "outsideFineHa": 1110.77,
-   "outsideFineVolumeM3": 32038184,
+   "landHa": 1357.38,
+   "fineHa": 251.97,
+   "outsideFineHa": 1105.41,
+   "outsideFineVolumeM3": 31564185,
    "legacyBoxHa": 103.44,
-   "modelEdgeCells": 36627
+   "modelEdgeCells": 35247
   },
   {
    "stageODN": 5.05,
-   "landHa": 1367.2,
-   "fineHa": 255.83,
-   "outsideFineHa": 1111.37,
-   "outsideFineVolumeM3": 32594004,
+   "landHa": 1360.4,
+   "fineHa": 253.06,
+   "outsideFineHa": 1107.35,
+   "outsideFineVolumeM3": 32122328,
    "legacyBoxHa": 103.64,
-   "modelEdgeCells": 36716
+   "modelEdgeCells": 35318
   },
   {
    "stageODN": 5.1,
-   "landHa": 1368.44,
-   "fineHa": 256.6,
-   "outsideFineHa": 1111.84,
-   "outsideFineVolumeM3": 33150044,
+   "landHa": 1362.48,
+   "fineHa": 254.02,
+   "outsideFineHa": 1108.46,
+   "outsideFineVolumeM3": 32676832,
    "legacyBoxHa": 103.79,
-   "modelEdgeCells": 36821
+   "modelEdgeCells": 35491
   },
   {
    "stageODN": 5.15,
-   "landHa": 1369.52,
-   "fineHa": 257.33,
-   "outsideFineHa": 1112.19,
-   "outsideFineVolumeM3": 33706237,
+   "landHa": 1364.11,
+   "fineHa": 254.9,
+   "outsideFineHa": 1109.21,
+   "outsideFineVolumeM3": 33231650,
    "legacyBoxHa": 103.9,
-   "modelEdgeCells": 36907
+   "modelEdgeCells": 35567
   },
   {
    "stageODN": 5.2,
-   "landHa": 1370.46,
-   "fineHa": 257.97,
-   "outsideFineHa": 1112.49,
-   "outsideFineVolumeM3": 34262589,
+   "landHa": 1365.64,
+   "fineHa": 255.84,
+   "outsideFineHa": 1109.81,
+   "outsideFineVolumeM3": 33786706,
    "legacyBoxHa": 103.95,
-   "modelEdgeCells": 37018
+   "modelEdgeCells": 35622
   },
   {
    "stageODN": 5.25,
-   "landHa": 1371.3,
-   "fineHa": 258.51,
-   "outsideFineHa": 1112.8,
-   "outsideFineVolumeM3": 34819062,
+   "landHa": 1366.87,
+   "fineHa": 256.52,
+   "outsideFineHa": 1110.35,
+   "outsideFineVolumeM3": 34342020,
    "legacyBoxHa": 103.99,
-   "modelEdgeCells": 37141
+   "modelEdgeCells": 35675
   },
   {
    "stageODN": 5.3,
-   "landHa": 1372.57,
-   "fineHa": 259.06,
-   "outsideFineHa": 1113.51,
-   "outsideFineVolumeM3": 35380066,
+   "landHa": 1368.07,
+   "fineHa": 257.19,
+   "outsideFineHa": 1110.89,
+   "outsideFineVolumeM3": 34897619,
    "legacyBoxHa": 104.03,
-   "modelEdgeCells": 37350
+   "modelEdgeCells": 35801
   },
   {
    "stageODN": 5.35,
-   "landHa": 1373.58,
-   "fineHa": 259.71,
-   "outsideFineHa": 1113.86,
-   "outsideFineVolumeM3": 35937084,
+   "landHa": 1369.53,
+   "fineHa": 258.07,
+   "outsideFineHa": 1111.46,
+   "outsideFineVolumeM3": 35453498,
    "legacyBoxHa": 104.07,
-   "modelEdgeCells": 37520
+   "modelEdgeCells": 36064
   },
   {
    "stageODN": 5.4,
-   "landHa": 1374.41,
-   "fineHa": 260.21,
-   "outsideFineHa": 1114.2,
-   "outsideFineVolumeM3": 36494272,
+   "landHa": 1370.6,
+   "fineHa": 258.63,
+   "outsideFineHa": 1111.97,
+   "outsideFineVolumeM3": 36009631,
    "legacyBoxHa": 104.11,
-   "modelEdgeCells": 37679
+   "modelEdgeCells": 36181
   },
   {
    "stageODN": 5.45,
-   "landHa": 1375.25,
-   "fineHa": 260.71,
-   "outsideFineHa": 1114.55,
-   "outsideFineVolumeM3": 37051632,
+   "landHa": 1371.72,
+   "fineHa": 259.25,
+   "outsideFineHa": 1112.47,
+   "outsideFineVolumeM3": 36566314,
    "legacyBoxHa": 104.18,
-   "modelEdgeCells": 37823
+   "modelEdgeCells": 36327
   },
   {
    "stageODN": 5.5,
-   "landHa": 1375.98,
-   "fineHa": 261.12,
-   "outsideFineHa": 1114.86,
-   "outsideFineVolumeM3": 37609140,
+   "landHa": 1372.68,
+   "fineHa": 259.74,
+   "outsideFineHa": 1112.93,
+   "outsideFineVolumeM3": 37122903,
    "legacyBoxHa": 104.21,
-   "modelEdgeCells": 37964
+   "modelEdgeCells": 36419
   },
   {
    "stageODN": 5.55,
-   "landHa": 1376.62,
-   "fineHa": 261.46,
-   "outsideFineHa": 1115.16,
-   "outsideFineVolumeM3": 38166798,
+   "landHa": 1373.53,
+   "fineHa": 260.16,
+   "outsideFineHa": 1113.36,
+   "outsideFineVolumeM3": 37679693,
    "legacyBoxHa": 104.24,
-   "modelEdgeCells": 38050
+   "modelEdgeCells": 36478
   },
   {
    "stageODN": 5.6,
-   "landHa": 1377.27,
-   "fineHa": 261.77,
-   "outsideFineHa": 1115.5,
-   "outsideFineVolumeM3": 38724632,
+   "landHa": 1374.38,
+   "fineHa": 260.56,
+   "outsideFineHa": 1113.82,
+   "outsideFineVolumeM3": 38236714,
    "legacyBoxHa": 104.27,
-   "modelEdgeCells": 38156
+   "modelEdgeCells": 36552
   },
   {
    "stageODN": 5.65,
-   "landHa": 1377.88,
-   "fineHa": 262.07,
-   "outsideFineHa": 1115.81,
-   "outsideFineVolumeM3": 39282617,
+   "landHa": 1375.18,
+   "fineHa": 260.94,
+   "outsideFineHa": 1114.24,
+   "outsideFineVolumeM3": 38793941,
    "legacyBoxHa": 104.3,
-   "modelEdgeCells": 38241
+   "modelEdgeCells": 36611
   },
   {
    "stageODN": 5.7,
-   "landHa": 1378.49,
-   "fineHa": 262.37,
-   "outsideFineHa": 1116.12,
-   "outsideFineVolumeM3": 39840753,
+   "landHa": 1376.0,
+   "fineHa": 261.34,
+   "outsideFineHa": 1114.65,
+   "outsideFineVolumeM3": 39351373,
    "legacyBoxHa": 104.33,
-   "modelEdgeCells": 38327
+   "modelEdgeCells": 36679
   },
   {
    "stageODN": 5.75,
-   "landHa": 1379.04,
-   "fineHa": 262.62,
-   "outsideFineHa": 1116.42,
-   "outsideFineVolumeM3": 40399051,
+   "landHa": 1376.87,
+   "fineHa": 261.79,
+   "outsideFineHa": 1115.09,
+   "outsideFineVolumeM3": 39909037,
    "legacyBoxHa": 104.36,
-   "modelEdgeCells": 38394
+   "modelEdgeCells": 36740
   },
   {
    "stageODN": 5.8,
-   "landHa": 1379.62,
-   "fineHa": 262.88,
-   "outsideFineHa": 1116.74,
-   "outsideFineVolumeM3": 40957495,
+   "landHa": 1377.67,
+   "fineHa": 262.12,
+   "outsideFineHa": 1115.55,
+   "outsideFineVolumeM3": 40466957,
    "legacyBoxHa": 104.4,
-   "modelEdgeCells": 38459
+   "modelEdgeCells": 36812
   },
   {
    "stageODN": 5.85,
-   "landHa": 1380.18,
-   "fineHa": 263.12,
-   "outsideFineHa": 1117.06,
-   "outsideFineVolumeM3": 41516107,
+   "landHa": 1378.44,
+   "fineHa": 262.45,
+   "outsideFineHa": 1116.0,
+   "outsideFineVolumeM3": 41025068,
    "legacyBoxHa": 104.43,
-   "modelEdgeCells": 38501
+   "modelEdgeCells": 36860
   },
   {
    "stageODN": 5.9,
-   "landHa": 1380.77,
-   "fineHa": 263.41,
-   "outsideFineHa": 1117.36,
-   "outsideFineVolumeM3": 42074864,
+   "landHa": 1379.22,
+   "fineHa": 262.81,
+   "outsideFineHa": 1116.41,
+   "outsideFineVolumeM3": 41583376,
    "legacyBoxHa": 104.45,
-   "modelEdgeCells": 38526
+   "modelEdgeCells": 36894
   },
   {
    "stageODN": 5.95,
-   "landHa": 1381.37,
-   "fineHa": 263.73,
-   "outsideFineHa": 1117.64,
-   "outsideFineVolumeM3": 42633755,
+   "landHa": 1380.01,
+   "fineHa": 263.21,
+   "outsideFineHa": 1116.81,
+   "outsideFineVolumeM3": 42141882,
    "legacyBoxHa": 104.47,
-   "modelEdgeCells": 38534
+   "modelEdgeCells": 36908
   },
   {
    "stageODN": 6.0,
-   "landHa": 1381.89,
-   "fineHa": 263.98,
-   "outsideFineHa": 1117.91,
-   "outsideFineVolumeM3": 43192779,
+   "landHa": 1380.72,
+   "fineHa": 263.52,
+   "outsideFineHa": 1117.2,
+   "outsideFineVolumeM3": 42700579,
    "legacyBoxHa": 104.5,
-   "modelEdgeCells": 38535
+   "modelEdgeCells": 36918
   }
  ],
  "groundSource": "the drawn ground (scripts/sample_drawn_ground.mjs, as the page draws it), sampled every metre, with railway and sewer embankments and retaining walls at their drawn copings composed on top (road paving inside the old box only); 2 m cells keep their highest sample",
@@ -3100,7 +3100,7 @@
   ],
   "sourceReview": "data/maps/lower-lea-region/connection-review.json"
  },
- "areaM2": 15136208,
+ "areaM2": 15163008,
  "limitations": [
   "Geometric connected inundation, not a flow or event simulation: no speed, timing, rainfall, mill operation or ponding on recession (FLOOD_MODEL_PLAN.md phases 2-4).",
   "The Thames and a 30 m band along its shore are the closed edge of the model: the regional marsh has no Thames river wall east of Bow Creek (its ground runs at about 1.8-1.9 m ODN to the water), so the tide enters only up Bow Creek. This assumes the Thames wall held.",
@@ -3117,14 +3117,14 @@
   "docs/data/river-system-1900.json": "85249e605c19f1eca8092589e74cb473688d8171da1cefdfcfac7e5bd72f67ea",
   "docs/data/infrastructure.json": "895e050bd4a930f5bcd99cc3f25b91906f2e3d83622580c3c7dcc2a2eab3db0b",
   "docs/data/ground-plan.json": "6434c94c9a9d3997f95a7035a31d3afc3124da7f8453bcac839b157d8b34f3cc",
-  "docs/data/main-landscape-1900.json": "a7b035ca6e7ecac3a7ee02c5fdf56e1f075eecdf2937da49cceb9ba5dd339f7c",
-  "docs/data/main-landscape-1900.core.f32": "85907eefcf02549880b1008b4d8b333e344bd83f2726629095d1287ccd362d9e",
-  "docs/data/main-landscape-1900.network.f32": "db37e20d5ad8600b95a58e2629e30d2ab8aa9bd33ef0d7f59c4a7cfc024cc254",
-  "docs/data/main-landscape-1900.system.f32": "91d903dac3ecf7d722de077d0bfa26b0ae355696b925b19ed105bb5c6a8d5888",
-  "docs/data/main-landscape-1900.extension.f32": "45a76965f288eea9bc7b9d1e9be0c1903c4df009722b0b405caa798301597112",
-  "docs/data/main-landscape-1900.background.f32": "4d414c0ab07cb21a75a1e1ba18ecc455df1e9e479df90606609b4c09ae3be53c",
-  "docs/data/main-landscape-1900.level.f32": "26683962df43589299b1fba6f2f6d32329351f0419179bca4ffb8a42026e03bf",
-  "docs/data/main-landscape-1900.weight.f32": "185efba204ec6ccb855ea921faf11be2ff6a911b64837757f22dab5eb87b4524",
+  "docs/data/main-landscape-1900.json": "c9369c41423ac445e6ca40a905cb4ba6336a868f3d25659b6337ea0cccf69b84",
+  "docs/data/main-landscape-1900.core.f32": "7a13b49964ce6f57f4ded986a2f8a675aeff70f874c5781a203e0f53675304ce",
+  "docs/data/main-landscape-1900.network.f32": "8e73dd6b09f6f5918a9d6caabfdb4110d18f6a86eed79a7ee8514ef4642df08c",
+  "docs/data/main-landscape-1900.system.f32": "11370a81df041950c9ed02a1603303a368b390ee1db1c70a5bd4dd38a6dc7381",
+  "docs/data/main-landscape-1900.extension.f32": "d5de8954ca56a17c256cec9cb1e5245f4849d29674d7ef767b0994884c2f616c",
+  "docs/data/main-landscape-1900.background.f32": "0c4d120e2ca9026e1ef01585d296cafee8f67a2b8c71ace10aa6bbf8aa0e8bca",
+  "docs/data/main-landscape-1900.level.f32": "8a88a6cda7d63cc89617c18fbcab328c78568857211dd8a081b977acc2654565",
+  "docs/data/main-landscape-1900.weight.f32": "1ef197dc1797f2f4389b9906eb7f6ac68787097268e6ffd97e7b476eee9fa91d",
   "docs/data/river-terrain.json": "81450cc38e1ddba7d756a3dc8fdcdc9a0ebf7283dd1e9bf079be7583a9cd95d2",
   "docs/data/terrain-1900.road-mask.u8": "c9292ceafeba7c0df19b8fdf3407201a3e2ece9e8fed068efbd56593cd68007e",
   "docs/data/terrain-1900.weight.f32": "446a51fc993eb6acc753fe9d1f49b8f643ad4c302273c1be39d8dd5c099cea30",

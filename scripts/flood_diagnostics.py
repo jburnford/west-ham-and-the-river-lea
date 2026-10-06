@@ -5,6 +5,7 @@ Run the flood builder with FLOOD_DUMP set first; it saves the full 2 m arrays:
     FLOOD_DUMP=/tmp/flood.npz python3 scripts/build_landscape_flood.py
     python3 scripts/flood_diagnostics.py /tmp/flood.npz pour 1500 2000      # basin at a point and where it fills from
     python3 scripts/flood_diagnostics.py /tmp/flood.npz spills 3.414        # land spill crests below a level (core box)
+    python3 scripts/flood_diagnostics.py /tmp/flood.npz spills 3.414 -1800 -2450 -150 -240   # ... in another box (x0 z0 x1 z1)
     python3 scripts/flood_diagnostics.py /tmp/flood.npz banks               # os-flood-banks.json crests against their readings
     python3 scripts/flood_diagnostics.py /tmp/flood.npz readings            # OS bank-top/wall-top readings drawn > 0.5 m low
 
@@ -63,7 +64,7 @@ def spills(level, box=CORE):
     sp = (np.abs(bed - conn) < 1e-3) & (conn < level) & lower & behind & inside
     mask = np.zeros_like(sp)
     (ja, ia), (jb, ib) = cell(box[0], box[1]), cell(box[2], box[3])
-    mask[ja:jb, ia:ib] = True
+    mask[max(0, ja):jb, max(0, ia):ib] = True
     lab, n = label(sp & mask, structure=np.ones((3, 3)))
     out = []
     for k in range(1, n + 1):
@@ -98,7 +99,7 @@ command = sys.argv[2]
 if command == 'pour':
     pour(float(sys.argv[3]), float(sys.argv[4]))
 elif command == 'spills':
-    spills(float(sys.argv[3]) if len(sys.argv) > 3 else 3.414)
+    spills(float(sys.argv[3]) if len(sys.argv) > 3 else 3.414, tuple(map(float, sys.argv[4:8])) if len(sys.argv) > 7 else CORE)
 elif command == 'banks':
     banks()
 elif command == 'readings':

@@ -25,6 +25,11 @@ scripts/build_main_landscape.py draws:
   readings (at the ground under the road surface) and the yard readings, and the
   regional bank crest along the shorelines where no reading is near
   (bank_controls), so the regional terrace ground meets the OS everywhere there.
+- the Stratford zone (task E, F1): north of the core box, every applied ground
+  reading on the drawn marsh (the stratford readings and the street and premises
+  readings there) corrects the regional ground the same way, in a correction grid
+  of its own (stratford_controls), so the made ground of the Carpenters Road
+  district, the High Street causeway and the marsh between meet the OS.
 """
 import hashlib
 import json
@@ -40,13 +45,17 @@ REGISTER = 'data/maps/os-ground-levels.json'
 PAD_SOFTEN_M = 3.0
 MARSH_LENGTH_M = 40.0
 MARSH_NOISE_M = 0.1
+# The Stratford zone's readings are sparser (median nearest-neighbour spacing 68 m, against 51 m in the core box), so its
+# correction uses a longer kernel, scaled by that ratio and rounded up; with 40 m it faded out between the streets of the
+# Carpenters Road works and left their yards on the 1848 marsh, 0.6 m under the street readings round them (task E, F1).
+STRATFORD_LENGTH_M = 60.0
 GRID_STEP_M = 2.0
 GRID_MARGIN_M = 60.0
 SUPPORT_RADIUS_M = 30.0
 SUPPORT_FEATHER_M = 20.0
 RAIL_SIDE_OFFSET_M = 9.0
 RAIL_SIDE_SPACING_M = 20.0
-APPLIED = ('premises', 'street', 'marsh', 'terrace')
+APPLIED = ('premises', 'street', 'marsh', 'terrace', 'stratford')
 ROAD_SURFACE_OFFSET = 0.065   # street readings are road-surface levels; the ground under the road is this much lower
 BANK_CONTROL_SPACING_M = 15.0  # terrace zone: regional bank-crest controls along the shorelines (build_main_landscape.py)
 BANK_CONTROL_INLAND_M = 4.0
@@ -119,12 +128,32 @@ def in_terrace_zone(register, p):
     return bool(z) and z[0] <= p[0] <= z[2] and z[1] <= p[1] <= z[3]
 
 
+def in_core(register, p):
+    b = register['coreBox']
+    return b[0] <= p[0] <= b[2] and b[1] <= p[1] <= b[3]
+
+
+def in_stratford_zone(register, p):
+    z = register.get('stratfordZone')
+    return bool(z) and z[0] <= p[0] <= z[2] and z[1] <= p[1] < z[3]
+
+
+def stratford_controls(register):
+    """Controls of the Stratford zone correction (task E, F1): every applied reading in the zone, street readings at
+    the ground under the road surface."""
+    return [{'id': r['id'], 'position': r['position'], 'kind': 'reading',
+             'sceneY': r['sceneY']-(ROAD_SURFACE_OFFSET if r['use'] == 'street' else 0)}
+            for r in register['readings'] if r['use'] in APPLIED and in_stratford_zone(register, r['position'])]
+
+
 def marsh_controls(register, infra):
     """Controls of the correction: marsh and terrace readings, and (T22) inside the terrace zone also the street readings
     (at the ground under the road surface) and the yard readings, so the terrace surface passes through every OS ground
     level there and the streets and pads meet it without steps."""
     rs = []
     for r in register['readings']:
+        if not in_core(register, r['position']):
+            continue   # the Stratford zone has its own correction (stratford_controls)
         if r['use'] in ('marsh', 'terrace') or (r['use'] in ('street', 'premises') and in_terrace_zone(register, r['position'])):
             rs.append({'id': r['id'], 'position': r['position'], 'kind': 'reading',
                        'sceneY': r['sceneY']-(ROAD_SURFACE_OFFSET if r['use'] == 'street' else 0)})
@@ -166,10 +195,10 @@ def bank_controls(register, banks, crest, water, offset_local, infra):
     return out
 
 
-def correction_grid(controls, prior, water, core_box, west_limit):
+def correction_grid(controls, prior, water, core_box, west_limit, length=MARSH_LENGTH_M):
     """Residual correction (control - prior) on a GRID_STEP_M grid over the core box east of
     west_limit, plus GRID_MARGIN_M. Gaussian-process mean (squared-exponential kernel, length
-    MARSH_LENGTH_M, noise MARSH_NOISE_M) per dry compartment of the river mask; tapered to zero
+    `length`, noise MARSH_NOISE_M) per dry compartment of the river mask; tapered to zero
     over the margin outside the box. Returns (grid, meta, residuals)."""
     x0, z0 = west_limit-GRID_MARGIN_M, core_box[1]-GRID_MARGIN_M
     x1, z1 = core_box[2]+GRID_MARGIN_M, core_box[3]+GRID_MARGIN_M
@@ -189,12 +218,12 @@ def correction_grid(controls, prior, water, core_box, west_limit):
     for k in np.unique(ccomp):
         sel = np.flatnonzero(ccomp == k); p = pos[sel]; r = res[sel]
         d2 = ((p[:, None, :]-p[None, :, :])**2).sum(-1)
-        K = np.exp(-d2/(2*MARSH_LENGTH_M**2))+MARSH_NOISE_M**2*np.eye(len(sel))
+        K = np.exp(-d2/(2*length**2))+MARSH_NOISE_M**2*np.eye(len(sel))
         alpha = np.linalg.solve(K, r)
         cells = np.flatnonzero((comp_any == k).ravel())
         for chunk in np.array_split(cells, max(1, len(cells)//20000)):
             q = np.column_stack([X.ravel()[chunk], Z.ravel()[chunk]])
-            kq = np.exp(-((q[:, None, :]-p[None, :, :])**2).sum(-1)/(2*MARSH_LENGTH_M**2))
+            kq = np.exp(-((q[:, None, :]-p[None, :, :])**2).sum(-1)/(2*length**2))
             # No overshoot beyond the compartment's own residual range.
             grid.ravel()[chunk] = np.clip(kq@alpha, min(0, r.min()), max(0, r.max()))
     outside = np.maximum.reduce([west_limit-X, core_box[1]-Z, X-core_box[2], Z-core_box[3], np.zeros_like(X)])
@@ -202,6 +231,16 @@ def correction_grid(controls, prior, water, core_box, west_limit):
     grid[X < west_limit-GRID_MARGIN_M] = 0
     meta = {'bounds': [float(x0), float(z0), float(xs[-1]), float(zs[-1])], 'step': GRID_STEP_M, 'width': len(xs), 'height': len(zs)}
     return grid, meta, res
+
+
+def stratford_support(register, field_points):
+    """Support weight at field points (N,2) around the Stratford zone's applied readings (task E, F1), as
+    support_extension does for the core."""
+    pos = np.array([r['position'] for r in register['readings'] if r['use'] in APPLIED and in_stratford_zone(register, r['position'])], float)
+    from scipy.spatial import cKDTree
+    d, _ = cKDTree(pos).query(field_points, k=1)
+    t = np.clip((d-SUPPORT_RADIUS_M)/SUPPORT_FEATHER_M, 0, 1)
+    return 1-t*t*(3-2*t)
 
 
 def sample(grid, meta, q):
@@ -212,7 +251,8 @@ def sample(grid, meta, q):
 def support_extension(register, field_points):
     """Support weight at the regional field points (N,2) from the applied readings."""
     # The terrace zone has its own full support (T22); its readings do not extend the support beyond it.
-    pos = np.array([r['position'] for r in register['readings'] if r['use'] in APPLIED and not in_terrace_zone(register, r['position'])], float)
+    pos = np.array([r['position'] for r in register['readings'] if r['use'] in APPLIED and in_core(register, r['position'])
+                    and not in_terrace_zone(register, r['position'])], float)
     from scipy.spatial import cKDTree
     d, _ = cKDTree(pos).query(field_points, k=1)
     t = np.clip((d-SUPPORT_RADIUS_M)/SUPPORT_FEATHER_M, 0, 1)

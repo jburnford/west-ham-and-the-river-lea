@@ -22,26 +22,28 @@ const load = async (url, type = 'json') => {
 globalThis.location = { search: '' };
 const register = json('data/maps/os-ground-levels.json');
 
-// 1. Register copies of the OS readings: every spot height and bench mark in the core box, value, position and
-// scene level as in the collection and the project datum.
+// 1. Register copies of the OS readings: every spot height and bench mark in the core box and the Stratford zone north
+// of it (task E, F1), value, position and scene level as in the collection and the project datum.
 const [bx0, bz0, bx1, bz1] = register.coreBox,
+  [sx0, sz0, sx1, sz1] = register.stratfordZone,
   d = register.datum;
+const inStratford = ([x, z]) => x >= sx0 && x <= sx1 && z >= sz0 && z < sz1;
 const sceneY = (feet) => (feet + d.liverpoolToNewlynFeet) * d.footMetres - d.odnMinusSceneYMetres;
 const source = new Map();
 for (const f of json('reference/spot-heights/heights.geojson').features) {
   const p = f.properties,
     x = p.bng_e - 538900,
     z = 183209 - p.bng_n;
-  if (x >= bx0 && x <= bx1 && z >= bz0 && z <= bz1) source.set(p.id, { ...p, x, z });
+  if ((x >= bx0 && x <= bx1 && z >= bz0 && z <= bz1) || inStratford([x, z])) source.set(p.id, { ...p, x, z });
 }
-assert.equal(register.readings.length, source.size, 'Register and spot-height collection differ in the core box');
+assert.equal(register.readings.length, source.size, 'Register and spot-height collection differ in the core box and Stratford zone');
 for (const r of register.readings) {
   const s = source.get(r.id);
   assert(s, `${r.id} is not in the spot-height collection`);
   assert.equal(r.valueFeet, s.value_ft, r.id);
   assert(Math.hypot(r.position[0] - s.x, r.position[1] - s.z) < 0.01, `${r.id} position`);
   assert(Math.abs(r.sceneY - sceneY(s.value_ft)) < 0.001, `${r.id} scene level`);
-  assert(['premises', 'street', 'marsh', 'terrace', 'none'].includes(r.use), `${r.id} use`);
+  assert(['premises', 'street', 'marsh', 'terrace', 'stratford', 'none'].includes(r.use), `${r.id} use`);
   if (r.use === 'none') assert(r.reason, `${r.id}: a reading not applied must say why`);
   if (r.use !== 'none') assert.equal(r.category, 'ground', `${r.id}: only ground readings are applied`);
   if (r.exception) assert.notEqual(r.use, 'none', `${r.id}: exceptions are applied readings`);
@@ -169,13 +171,23 @@ for (const b of [...data.factoryBuildings.buildings, ...data.factoryBuildings.st
   }
 assert(seatedObjects > 400, 'Too few objects on recorded seats');
 
+// 6. The Stratford zone (task E, F1): the applied readings there, exceptions included, have a median drawn - OS within
+// 0.1 m and a median |drawn - OS| within 0.3 m.
+const stratford = new Set(register.readings.filter((r) => r.use !== 'none' && inStratford(r.position)).map((r) => r.id));
+const sRes = rows.filter((r) => stratford.has(r.id)).map((r) => r.residual).sort((a, b) => a - b),
+  sAbs = sRes.map(Math.abs).sort((a, b) => a - b),
+  mid = (a) => a[Math.floor(a.length / 2)];
+assert(sRes.length >= 120, 'Too few applied readings in the Stratford zone');
+assert(Math.abs(mid(sRes)) <= 0.1, `Stratford zone median drawn - OS ${mid(sRes).toFixed(2)} m`);
+assert(mid(sAbs) <= 0.3, `Stratford zone median |drawn - OS| ${mid(sAbs).toFixed(2)} m`);
+
 console.log(
   JSON.stringify({
     status: 'PASS',
     readings: register.readings.length,
     applied: rows.length,
     byUse: Object.fromEntries(
-      ['premises', 'street', 'marsh', 'terrace'].map((u) => [u, rows.filter((r) => r.use === u).length])
+      ['premises', 'street', 'marsh', 'terrace', 'stratford'].map((u) => [u, rows.filter((r) => r.use === u).length])
     ),
     medianAbsMetres: +pct(0.5).toFixed(3),
     p90AbsMetres: +pct(0.9).toFixed(3),
@@ -186,6 +198,12 @@ console.log(
       medianAbsMetres: +tpct(0.5).toFixed(3),
       p90AbsMetres: +tpct(0.9).toFixed(3),
       seatedObjects,
+    },
+    stratford: {
+      applied: sRes.length,
+      medianMetres: +mid(sRes).toFixed(3),
+      medianAbsMetres: +mid(sAbs).toFixed(3),
+      p90AbsMetres: +sAbs[Math.floor(0.9 * sAbs.length)].toFixed(3),
     },
   })
 );
