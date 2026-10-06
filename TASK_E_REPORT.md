@@ -190,3 +190,24 @@ Done directly in the parent session, on `task-e-flood-model` after `2621cb2` (wo
 1. The Channelsea head closures are inferred from the OS lettering and the unbroken bank, not from a lettered sluice. Is that right, or did the head pass water at some states of the tide?
 2. Trim the 2 m join ring to the network's north edge (smaller download), or keep it whole?
 3. Next: F2 (back-river beds), then F3 (the works wall face), then Phase 2.
+
+## F1 follow-up: holes in the flood grid, and the bank band (6 October 2026)
+
+The author saw, in the `?flood` view at about 4.2 m ODN: a line of 10 m squares in the Mill Meads allotments that never flooded; marsh north of the railway left dry in patches; and seams in the water.
+
+- **Cause: holes in the modelled ground.**
+  - `build_landscape_flood.py` read the main-landscape weight by nearest 10 m cell. Every cell centred in water (weight 0) cut a strip up to 10 m wide out of the bank beside it, and isolated zero cells cut 10 m squares out of the marsh.
+  - The grid treats cells outside the modelled ground as never wet, so these 18.1 ha of holes stood as walls along nearly every river and drain, and as the dry squares at Mill Meads.
+  - The builder now reads the weight as `docs/main-landscape.js` `weight()` does (bilinear between cell centres). Holes are down to 7.3 ha, all at the Thames end beyond the core. The Mill Meads squares are gone.
+- **What the walls hid.** The Waterworks River west bank above Carpenters Road is drawn as an embankment on the OS, with a regional crest of 3.07 m. It was drawn at 1.45 m, because the regional support is 0 on the bank land there as well as in the water. With the walls gone, Stratford Marsh behind it took the tide at 3.10 m ODN.
+  - In the Stratford zone, every cell within 25 m of mapped water now takes the highest weight within 20 m for the bank blend (blend only; the exported weight is unchanged). The field now fills at 3.74 m ODN.
+- **Land wet at high water:** Stratford zone 11.9 → 11.6 ha; core box 1.3 → 1.4 ha; whole model 108.7 → 160.1 ha.
+  - The whole-model rise is land the walls had hidden: Old Ford and Hackney Wick west of the Navigation, and the Lea above Temple Mills.
+  - In the Phase 1 grid the Navigation is joined to the tide; Phase 2 holds it at its pound level.
+  - A patch by Bow Goods Station is the Lea channel itself, drawn by the river network but outside the mapped water polygons, so the grid counts it as land.
+- **What still stays dry at 4.2 m ODN, and why.**
+  - The marsh between the Old River Lea and the Waterworks River north of the High Street takes the tide only at 4.7-4.9 m ODN. That is over its embanked banks, which the OS bank-top readings put at 4.0-5.0 m ODN.
+  - In the tide-only, volume-free grid, a basin is all dry below its rim and all wet above it (the author's "switch"). These marshes flooded from rain and from river flow standing above the tide, which Phases 2-3 add.
+- **Round dry islands about 60 m across.** These are humps the correction raises round single high readings, for example two "open ground south of the Victoria Park Branch" readings at 5.2 and 5.9 m ODN (probably railway made ground). They follow the OS, but the shape is the kernel's, not the ground's.
+- **Seams.** Some straight edges in the water are railway embankments (the High Meads loop, the Victoria Park branch). I have not traced every one.
+- **Checks.** `npm test` 21/21; `check_landscape_flood.py` passes; the downstream rebuild was rerun.

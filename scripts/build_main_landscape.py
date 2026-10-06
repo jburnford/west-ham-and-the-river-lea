@@ -71,8 +71,8 @@ os_support={'radiusMetres':osg.SUPPORT_RADIUS_M,'featherMetres':osg.SUPPORT_FEAT
 # The Stratford zone north of the core box (task E, F1; os-ground-levels.json stratfordZone): the regional ground of
 # the drawn marsh from the High Street to Temple Mills is corrected to the OS (below). Its support: (1) around each
 # applied reading, as T21 extended it in the core (osg.stratford_support); (2) for the blend here only (support_blend,
-# weight()), a cell whose centre lies in mapped water takes the highest weight of its eight neighbours. The support is
-# 0 in water, so the 10 m field gave the river banks 0.3-0.9 of the regional bank crest, which already runs through the
+# weight()), cells beside mapped water take the highest weight near them (below). The support is 0 in water and on
+# some banks, so the 10 m field gave the river banks 0-0.9 of the regional bank crest, which already runs through the
 # OS bank-top readings: the Waterworks River and City Mill River banks were drawn up to 2 m under them. The exported
 # weight keeps water at 0, so where no mesh draws a channel bed the page and the flood grid fall back as before
 # (with the dilated weight they took the landscape level there and drew a 0.8 m sill across the Waterworks River at the
@@ -95,9 +95,14 @@ _ext[_sz]*=~shapely.dwithin(_mapped_water,shapely.points(_field[_sz]),STRATFORD_
 _marsh_outline=local(Polygon(meta['regionalMarshBaseline']['config']['outlineBNG']))
 _ext[_sz]*=shapely.contains_xy(_marsh_outline,_field[_sz,0],_field[_sz,1])
 support=np.maximum(support,_ext.reshape(shape).astype(support.dtype))
-_wet_cells=(shapely.contains_xy(_mapped_water,_field[:,0],_field[:,1])&_sz).reshape(shape)
-support_blend=np.where(_wet_cells,np.maximum(support,grey_dilation(support,size=(3,3))),support).astype(support.dtype)
-stratford_support={'zone':STRATFORD_ZONE,'radiusMetres':osg.SUPPORT_RADIUS_M,'waterClearMetres':STRATFORD_WATER_CLEAR_M,'featherMetres':osg.SUPPORT_FEATHER_M,'waterCellsRaisedForTheBlend':int((_wet_cells&(support_blend>support+1e-6)).sum()),
+# The zero band is wider than the water along several rivers (the regional support leaves the bank land out too: the
+# Waterworks River west bank above Carpenters Road drew 1.45 m under its 3.07 m crest, and Stratford Marsh behind it
+# took the tide at 3.10 m ODN), so every cell within STRATFORD_BANK_M of mapped water takes the highest weight within
+# two cells (20 m) for the blend.
+STRATFORD_BANK_M=25.
+_bank_cells=(shapely.dwithin(_mapped_water,shapely.points(_field),STRATFORD_BANK_M)&_sz).reshape(shape)
+support_blend=np.where(_bank_cells,np.maximum(support,grey_dilation(support,size=(5,5))),support).astype(support.dtype)
+stratford_support={'zone':STRATFORD_ZONE,'radiusMetres':osg.SUPPORT_RADIUS_M,'waterClearMetres':STRATFORD_WATER_CLEAR_M,'featherMetres':osg.SUPPORT_FEATHER_M,'bankBandMetres':STRATFORD_BANK_M,'cellsRaisedForTheBlend':int((support_blend>support+1e-6).sum()),
                    'cellsRaised':int((support>support_pre_stratford+1e-6).sum()),'cellsRaisedToFull':int(((support>=.999)&(support_pre_stratford<.999)).sum())}
 # The marsh correction: the regional early-marsh ground corrected to the OS marsh readings
 # within each dry compartment (rivers, not field ditches, divide them).

@@ -178,9 +178,17 @@ def build():
             assert np.isfinite(ground).all()
             k = np.zeros(ground.shape, np.uint8)
             tidal = shapely.contains_xy(tide, X, Z)
-            wi = np.clip(((X - fx0) / fstep).astype(int), 0, field['width'] - 1)
-            wj = np.clip(((Z - fz0) / fstep).astype(int), 0, field['height'] - 1)
-            modelled = (weight[wj, wi] > 0) | shapely.contains_xy(water, X, Z)
+            # The weight as docs/main-landscape.js weight() reads it: bilinear between the 10 m cell centres, 0 outside
+            # the field (task E, F1). Read by nearest cell, every cell centred in water (weight 0) cut a strip up to 10 m
+            # wide out of the bank beside it, and isolated zero cells cut 10 m squares out of the marsh; the grid treated
+            # them as never wet, so they stood as walls along the rivers (18 ha of holes inside the modelled ground).
+            fx = np.clip((X - fx0 - fstep / 2) / fstep, 0, field['width'] - 1)
+            fz = np.clip((Z - fz0 - fstep / 2) / fstep, 0, field['height'] - 1)
+            wi = np.minimum(fx.astype(int), field['width'] - 2); wj = np.minimum(fz.astype(int), field['height'] - 2)
+            u, v = fx - wi, fz - wj
+            w = (weight[wj, wi] * (1 - u) + weight[wj, wi + 1] * u) * (1 - v) + (weight[wj + 1, wi] * (1 - u) + weight[wj + 1, wi + 1] * u) * v
+            w[(X < fx0) | (X > fx1) | (Z < fz0) | (Z > fz1)] = 0
+            modelled = (w > 0) | shapely.contains_xy(water, X, Z)
             modelled |= (X >= core[0]) & (X <= core[2]) & (Z >= core[1]) & (Z <= core[3])
             modelled &= ~shapely.contains_xy(thames, X, Z)
             mapped_water = shapely.contains_xy(water, X, Z)
