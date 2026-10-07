@@ -11,30 +11,49 @@ Read first:
 - the memory notes `flood-model-direction`, `tide-evidence`, `follow-the-maps` and `agent-delegation-lessons`
 - `FLOOD_PHASE0_NOTE.md` and `TASK_E_REPORT.md` (task E so far)
 
-## 0. Status, 6 October 2026: start here
+## 0. Status, 7 October 2026: start here
 
 **Branch and worktree.**
 
-- Work is on branch `task-e-flood-model`, in worktree `/home/jic823/book_website-taske` (server on 4211). Continue on this branch, from its head.
-- Main is at `e59ad25` (task D, fast-forwarded locally on 5 October, not pushed). Task E is not merged; merging and pushing wait for the author.
+- Work is on branch `task-e-flood-model`, in worktree `/home/jic823/book_website-taske`. Continue on this branch, from its head.
+  - Serve it with `python3 -m http.server 4211 --bind 127.0.0.1 --directory docs`, run from the worktree.
+- Nothing from tasks D or E is live:
+  - `origin/main` (GitHub Pages) is at `841fbbd`.
+  - Local `main` is at `e59ad25` (task D, 3 commits ahead, unpushed).
+  - Task E is unmerged.
+  - Merging and pushing wait for the author.
 
 **Done.**
 
 - **Phase 0:** `data/maps/lea-control-structures.json`, revised after the author's review (see section 6).
 - **Phase 1:** the whole-model flood grid (`scripts/build_landscape_flood.py`, `docs/landscape-flood.js`).
 - **OS flood banks** (the author: "fix the rivers"): `data/maps/os-flood-banks.json`, raised in `scripts/build_main_landscape.py` (`raise_to_flood_banks`).
-- **F1** (the ground north of the core, to the OS): done 6 October 2026, commits `2621cb2`, `42d842e` and `b2426a4`.
-  - Reported in `TASK_E_REPORT.md` under "F1" and "F1 follow-up".
-  - The follow-up removed 18 ha of never-wet holes from the flood grid; they had stood as walls along the banks.
-  - Open questions for the author: the Channelsea head closures (inferred, not lettered); trimming the 2 m network-join ring (+1.8 MB).
+- **F1** (the ground north of the core, to the OS): done 6 October 2026, commits `2621cb2`, `42d842e` and `b2426a4`. Reported in `TASK_E_REPORT.md` under "F1" and "F1 follow-up".
+- **Phase V** (volume, not a switch): done 6 October 2026, commits `a65be7f` and `ef0479e`.
+  - Builder `scripts/flood_basins.py`, the depression hierarchy, wired into `build_landscape_flood.py` (schema 3).
+  - Router `docs/lib/flood-volume.js`.
+  - Presets in `data/maps/flood-scenarios.json`.
+  - The `?flood` page: a volume view, with the old view kept as "Connected extent".
+  - Check `scripts/check_flood_volume.mjs`.
+  - `TASK_E_REPORT.md` "Phase V".
+- **Abbey Mills station yard and coal railway:** 6 October 2026, commits `4187e69`, `05ddc83` and `5c78dbf`.
+  - New register `data/maps/made-ground.json`: the yard at 3.95 m ODN from the 2003 EA LiDAR, and the coal track bed. `raise_to_made_ground` in `build_main_landscape.py`.
+  - Coal sidings and lead to the Channelsea quay traced from the 1893 plan: `data/maps/abbey-mills-coal.json`, drawn as cinder yard site 9101 by `build_factory_yards.py`.
+  - The yard is dry under any rain and first wet by a 1.05 m surge.
+  - The 2003 LiDAR is in `reference/topography-research-2026-09-28/tiles-2003`; read the tiles with Pillow (no GDAL or imagecodecs here). It matches the 1890s OS on streets within 0.25 m, but Mill Meads was filled later.
 
-- **Phase V** (volume, not a switch): done 6 October 2026. `scripts/flood_basins.py`, `docs/lib/flood-volume.js`, `data/maps/flood-scenarios.json`, the `?flood` page's volume view; `TASK_E_REPORT.md` "Phase V".
-  - Open questions for the author: the pumping-station ground (it floods at 50 mm in one tide on the drawn ground; no OS reading within 109 m); the preset rain totals.
+**Open questions for the author.**
 
-**Next, in this order (author, 6 October 2026):**
+- F1: the Channelsea head closures (inferred, not lettered); trimming the 2 m network-join ring (+1.8 MB).
+- Phase V: the preset rain totals (placeholders); the "without the mills and locks" comparison for Phase 2.
+- Going live: merging and pushing tasks D and E.
 
-1. **F2** (back-river beds), then **F3** (the works wall face) (section 5).
-2. **Phase 2** (pounds). It replaces Phase V's single held river level, which acts only on water outside the tide polygons. Then Phases 3-5.
+**Next, in this order (proposed 7 October 2026; the author has not yet chosen):**
+
+1. **F2** (back-river beds, section 5). The longest cascade: it starts at the river terrain. Review renders at low water.
+2. **F3 with the coal-quay wall.** The works wall face and the Abbey Mills coal quay wall both go into `data/maps/os-river-walls.json`, in one cascade.
+   - The quay wall: the OS double line on the Channelsea west bank from the sewer bridge south past the quay; see `abbey-mills-coal.json` `unloading`.
+3. **Phase 2** (pounds). It replaces Phase V's single held river level, which acts only on water outside the tide polygons. Then Phases 3-5.
 
 **Tools.** `scripts/flood_diagnostics.py`, on a dump made with `FLOOD_DUMP=… python3 scripts/build_landscape_flood.py`:
 
@@ -313,6 +332,14 @@ Decision 1 (the structure list) was answered on 5 October (above).
 - Follow the maps: OS and Goad evidence beat earlier defaults.
 - Fundamentals before features.
 - Stage explicit paths; never commit the book PDF or the G2G CSV.
+
+**Lessons from Phase V and Abbey Mills (6 October 2026)**
+
+- Water cells at a polygon edge can carry a bank crest (a 2 m cell keeps its highest sample). Catchments must be grown by a minimax priority flood from outlets at their own ground, not by a plain watershed with outlets forced low.
+- A regional 10 m cell drawn wet by its lowest 2 m cell speckles shallow sheets. Use the mean ground of its cells in that basin, and a depth bias on the water material.
+- The landscape check protects exposed tidal mud: only recorded flood-bank vertices may change it. New raises must take `preserve`.
+- Yard tracks must lie inside a yard surface and stay 0.95 m clear of buildings, water and roads (`check_factory_yards.py`).
+- Do not `pkill -f` a pattern that appears in your own command (it kills the shell); WSL crashed once mid-task (6 October). Commit WIP on the branch at milestones.
 
 **Lessons from F1 (6 October 2026)**
 
