@@ -67,9 +67,19 @@ for (let i = 0; i < oldXYZ.length; i += 3) {
 }
 assert(oldCore.some((y, i) => Math.abs(y - data.terrain.levels[i]) > 0.1));
 let mud = 0,
-  bankMud = 0;
+  bankMud = 0,
+  wallMud = 0;
+// Task E, F3: the mud on the land side of an OS river wall is made ground behind the wall (the wall fill, and the
+// slot held low behind the wall body); those core vertices are recorded and excluded here.
+const wallLand = landscape.meta.osGroundLevels.osRiverWallLand,
+  behindWalls = new Set(wallLand.coreVertexIndices);
+assert.equal(behindWalls.size, wallLand.coreVerticesReleased);
 for (let i = 0; i < oldCore.length; i++)
   if (properties[i * 4 + 3] > 200 && properties[i * 4 + 2] < 80) {
+    if (behindWalls.has(i)) {
+      wallMud++;
+      continue;
+    }
     // Task E: an OS river wall standing on mud outside the drawn tidal outline (data/maps/os-flood-banks.json)
     // raises that mud; every other mud vertex keeps its channel section exactly.
     if (Math.abs(oldCore[i] - data.terrain.levels[i]) >= 1e-5) {
@@ -84,6 +94,7 @@ assert.equal(
   'Changed tidal mud must be exactly the recorded flood-bank vertices'
 );
 assert(mud > 10000, 'Exposed tidal mud must retain its existing channel section');
+assert.equal(wallMud, wallLand.coreVerticesReleased, 'Released wall-side mud must be exactly the recorded vertices');
 assert.equal(landscape.grids.groundMesh.length, landscape.meta.groundMeshVertices * 3);
 assert.equal(landscape.grids.extension.length, data.elevation.grids.extension.length / 3);
 for (const p of landscape.meta.probes) {
