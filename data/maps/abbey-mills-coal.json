@@ -245,6 +245,6 @@
   "unloading": {
     "place": "The Channelsea quay below the sewer bridge, where the lead turns south along the west bank (the author's 'basin' for the coal, 6 October 2026).",
     "tide": "Unloading only near high water (author, from the photographs): the quay is below the tidal limit at Abbey Mill, so at low water the barges lay on the mud. The model's tide shows both states.",
-    "wallFace": "The OS draws a continuous double line along the west bank from the sewer bridge south past the quay, read elsewhere in the model as a masonry river wall (os-river-walls.json). Not yet added: it is to go into os-river-walls.json with F3 (FLOOD_MODEL_PLAN.md section 5), which uses the same mechanism and the same cascade."
+    "wallFace": "The OS draws a continuous double line along the west bank from the sewer bridge south past the quay to about z 43. Added in task E, F3 as abbey-mills-coal-quay-wall in data/maps/os-river-walls.json, so it draws as a masonry quay wall."
   }
 }

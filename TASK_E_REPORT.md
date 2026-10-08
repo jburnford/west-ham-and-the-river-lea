@@ -459,3 +459,26 @@ Before and after, at low and high water: an overview in plan; the Three Mills po
 
 - The regional bank faces past the old core edge are steeper and higher than the network's (they stand at their OS crests): accept, or lower the network side?
 - The North London line ends at x -1700 in a 3 m earth end, about 45 m past the cut; the GIS route runs on to x -2212.
+
+# F3: the West Ham Chemical Works river wall and the Abbey Mills coal quay (8 October 2026)
+
+## What changed
+
+- **Two OS river walls** in `data/maps/os-river-walls.json`, traced on the five-foot plan at 8 px per metre (the task A mechanism: the drawn shoreline within 4.5 m of each line becomes a retaining-wall route in `build_river_network.py`):
+  - `west-ham-chemical-works-river-wall`: the straight double line along the works frontage, z 211.5 to 268 at x about -23.3 (57 m drawn). North of z 211 the OS draws a hatched earth bank, not a wall, so that stretch keeps the os-flood-banks.json bank. The 17.9 ft wall-top reading (sh_538885_182963, 3.22 m scene) stands on the strip behind it; the coping is 2.91-3.15 m.
+  - `abbey-mills-coal-quay-wall`: the double line on the Channelsea west bank from the Northern Outfall Sewer bridge to about z 43, where the coal lead ends (40 m drawn). No reading on the wall; the coping (3.32-3.5 m) is the model's, the higher of the bank crest and the ground behind.
+  - Each records `quayWidthMetres` (7 and 6 m, the OS strip behind the wall): the wall fill stands level with the coping over that width, then falls at 1:1.5. Other walls keep the 3 m berm.
+- **`build_main_landscape.py`, the core behind OS walls** (`osGroundLevels.osRiverWallLand`):
+  - the core's tidal-mud study had mud up to the works buildings and on the quay, and preserved mud blocks the wall fill, so the first build left the works wall standing on the foreshore with the river behind it at high water. 3,681 core vertices within 10 m on the land side of the OS wall routes are no longer kept as mud, and the 1:1.5 cap above the mud in front does not reach across the wall;
+  - the core's 0.4 m grid has no edges on the wall line, so cells across it stood up through the wall's water face as dark teeth. The core within 0.6 m behind each OS wall is held at -2.0 (the wall body reaches -2.5), so the rise to the fill lies behind the brick.
+- `data/maps/abbey-mills-coal.json` `unloading.wallFace` records the quay wall.
+- **Cascade:** river network, historic elevation, river system, main landscape, landscape flood, factory yards, drainage, flood demo, wharf cranes, manifest.
+
+## Renders
+
+Before (the F2 commit) and after, at low and high water: the works frontage from the Channelsea and from above; the coal quay from the water and from above. Main checkout `reference/flood-model-f2/f3-river-walls-before-after.png`. The works wall now holds a level quay strip to the buildings at high water; the coal quay wall stands behind the moored barge, the ground behind it level with the coping.
+
+## Not done, and why
+
+- The quay strips draw in the dark ground colour of the mud they replace (the core's land cover); a yard surface was not asked for.
+- From above, a thin dark fringe runs along the top of each wall: the 0.6 m slot behind it.

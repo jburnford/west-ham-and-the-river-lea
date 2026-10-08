@@ -13,6 +13,8 @@ Read first:
 
 ## 0. Status, 8 October 2026 (F2 committed): start here
 
+**8 October, later: F3 COMMITTED (the West Ham Chemical Works river wall and the Abbey Mills coal-quay wall; `TASK_E_REPORT.md` "F3"). Next: Phase 2, the pounds.**
+
 **8 October: F2, its fixes and the Lee Navigation bridge are COMMITTED on `task-e-flood-model` (author approved); report `TASK_E_REPORT.md` "F2 follow-up". Next: F3 with the coal-quay wall, then Phase 2. Still open for the author: the regional bank faces past the old core edge (below), and the North London line's end at x -1700.** The notes below are the record of the 7-8 October session.
 
 **Session of 7-8 October (F2 fixes).**

@@ -315,6 +315,12 @@ for route_index,route in enumerate(retaining['routes']):
         wall_rows.append((p[j],p[j+1],crest[j],crest[j+1],side*left[j],route_index))
 wall_a=np.array([r[0] for r in wall_rows]);wall_b=np.array([r[1] for r in wall_rows]);wall_crest=np.array([[r[2],r[3]] for r in wall_rows])
 wall_normal=np.array([r[4] for r in wall_rows]);wall_route=np.array([r[5] for r in wall_rows])
+# Quay width behind an OS river wall (data/maps/os-river-walls.json quayWidthMetres): the fill stands level with the
+# coping over the wall and that width; other walls keep the 3 m berm (WALL_TOP_M).
+os_wall_register={w['id']:w for w in read('data/maps/os-river-walls.json')['walls']}
+quay_tops={i:retaining['width']+os_wall_register[w['id']]['quayWidthMetres'] for w in retaining['osRiverWalls']['walls']
+           if 'quayWidthMetres' in os_wall_register.get(w['id'],{}) for i in w['routeIndices']}
+wall_top=np.array([quay_tops.get(r[5],WALL_TOP_M) for r in wall_rows])
 wall_tree=shapely.STRtree(shapely.linestrings(np.stack([wall_a,wall_b],axis=1)))
 # Street corridors keep their own observed levels and building footprints keep
 # their premises ground; the fill never overrides either.
@@ -472,7 +478,7 @@ def wall_fill(points):
     first=np.r_[True,(pi[1:]!=pi[:-1])|(wall_route[si][1:]!=wall_route[si][:-1])]
     land=first&((ap*wall_normal[si]).sum(axis=1)>0)
     crest=wall_crest[si,0]+t*(wall_crest[si,1]-wall_crest[si,0])
-    np.maximum.at(level,pi[land],(crest-np.maximum(0,d-WALL_TOP_M)/WALL_BATTER)[land])
+    np.maximum.at(level,pi[land],(crest-np.maximum(0,d-wall_top[si])/WALL_BATTER)[land])
     level[shapely.contains_xy(wall_exclusion,points[:,0],points[:,1])]=-np.inf
     some=np.flatnonzero(np.isfinite(level))
     if len(some) and not open_shore.is_empty:
@@ -765,11 +771,17 @@ def export_heights(key,points,old,preserve=None,triangles=None):
         # Wall fill stands no steeper than 1:1.5 above preserved tidal mud.
         grid=(core['height'],core['width']);dist,nearest=distance_transform_edt(~preserve.reshape(grid),return_indices=True)
         cap=old[np.ravel_multi_index(tuple(nearest),grid)].ravel()+dist.ravel()*core['step']/WALL_BATTER
+        # Behind an OS river wall the wall itself holds the fill; the mud in front of it does not limit it.
+        if key=='core':cap[behind_os_walls&~os_wall_slot]=np.inf
         new=np.maximum(blended,np.minimum(new,cap));new[preserve]=old[preserve]
     # After the preserved tidal mud: where the core's mud runs outside the drawn tidal outline up to a river wall,
     # the wall's crest stands on it (raise_to_flood_banks never touches the drawn water itself).
     new=raise_to_flood_banks(key,points,new,preserve)
     new=raise_to_made_ground(key,points,new,preserve)
+    if key=='core':
+        # The slot behind an OS river wall stands below any mud in front of it (the wall body reaches
+        # retainingEdges.baseHeight), so no grid cell across the wall line rises in front of its face.
+        new[os_wall_slot]=np.minimum(new[os_wall_slot],OS_WALL_SLOT_LEVEL)
     # Written after the road-bridge and road-corridor pass below.
     surfaces[key]={'points':points,'old':old,'new':new,'triangles':triangles,'preserve':preserve}
 surfaces={}
@@ -788,6 +800,26 @@ xx,zz=np.meshgrid(np.arange(core['width'])*core['step']+core['bounds'][0],np.ara
 properties_path=ROOT/'docs/data'/core['propertyFile'];inputs.append(properties_path);properties=np.fromfile(properties_path,'u1').reshape(-1,4)
 # Exposed tidal mud is a channel-bed study, not a marsh or flood-bank control.
 intertidal=(properties[:,3]>200)&(properties[:,2]<80)
+# The OS river walls (data/maps/os-river-walls.json) stand on the high-water line with made ground behind them
+# (task E, F3: the West Ham Chemical Works frontage and the Abbey Mills coal quay), so the core's tidal-mud study
+# is not preserved on their land side and the wall fill stands behind them as behind the other walls.
+OS_WALL_LAND_M=10
+os_wall_land=[]
+for w in retaining['osRiverWalls']['walls']:
+    for i in w['routeIndices']:
+        line=LineString(retaining['routes'][i])
+        sides=[line.buffer(OS_WALL_LAND_M,single_sided=True),line.buffer(-OS_WALL_LAND_M,single_sided=True)]
+        os_wall_land.append(min(sides,key=lambda g:g.intersection(water).area))
+os_wall_land=shapely.union_all(os_wall_land)
+behind_os_walls=shapely.contains_xy(os_wall_land,points[:,0],points[:,1])
+os_wall_released=int((intertidal&behind_os_walls).sum());intertidal&=~behind_os_walls
+# The core grid (0.4 m) has no edges on the wall line: a cell with one corner on the fill and the others on the mud in
+# front would stand up through the wall's water face. Within OS_WALL_SLOT_M behind the line the ground keeps the
+# mud cap below, so the rise to the fill lies behind the wall body.
+OS_WALL_SLOT_M=.6;OS_WALL_SLOT_LEVEL=-2.
+os_wall_lines=shapely.union_all([LineString(retaining['routes'][i]) for w in retaining['osRiverWalls']['walls'] for i in w['routeIndices']])
+os_wall_slot=behind_os_walls.copy()
+os_wall_slot[behind_os_walls]=shapely.dwithin(os_wall_lines,shapely.points(points[behind_os_walls]),OS_WALL_SLOT_M)
 export_heights('core',points,old_historic(points,old),preserve=intertidal)
 for key,description in [('network',network),('system',system)]:
     p=read('docs/data/'+description['positionFile'],True).reshape(-1,3);old=p[:,1].copy()
@@ -1625,6 +1657,8 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
                      'method':f'task E, F1: north of the core box, inside the Stratford zone {STRATFORD_ZONE}, the regional ground is corrected to every applied OS ground reading there (marsh, open and made ground, yards, streets at the ground under the road surface) by the same Gaussian-process interpolation (kernel length {osg.STRATFORD_LENGTH_M:g} m: the readings are sparser than in the core), relative to the core-corrected ground, with the core controls within {osg.GRID_MARGIN_M:g} m of the edge; the correction is 0 on the core\'s north edge, full {STRATFORD_BLEND_M:g} m north of it and fades out over {STRATFORD_FEATHER_M:g} m beyond the zone; the support extends round its applied readings (as in the core) and water cells take the highest weight of their neighbours, so the bank band draws the regional bank crest in full',
                      'evidence':'Observed: the OS five-foot spot heights north of the core (Stratford Marsh, the High Street, the Carpenters Road district, Temple Mills). Interpreted: as in the core (the register rules), and that the regional early-marsh ground (the 1848-51 marsh) under the 1890s made ground is the surface to correct.'},
         'support':os_support,'terraceSupport':terrace_support,'terraceMeshStepMetres':TERRACE_MESH_STEP,'terraceSeam':seam,'networkJoinMesh':{'bandMetres':NET_JOIN_M,'stepMetres':NET_JOIN_STEP,'networkBounds':[nx0,nz0,nx1,nz1],'evidence':'task E, F1: the 20 m mesh spanned the gap between the river-network and river-system meshes with banks falling to the water edge; the seam above covers the join of both fine meshes'},
+        'osRiverWallLand':{'method':f'core vertices within {OS_WALL_LAND_M} m on the land side of the OS river-wall routes (river-network retainingEdges.osRiverWalls) are not kept as exposed tidal mud, so the wall fill stands behind those walls','coreVerticesReleased':os_wall_released,'slotMetres':OS_WALL_SLOT_M,'slotLevel':OS_WALL_SLOT_LEVEL,
+            'evidence':'Mapped: the OS double lines on the high-water line (data/maps/os-river-walls.json); the core terrain study drew tidal mud up to the works buildings behind the West Ham Chemical Works wall and on the coal quay. Interpreted: made ground behind a river wall at its coping (the wall fill); no surveyed section.'},
         'terraceWalls':{'method':f'retaining walls whose ground {WALL_INLAND_M} m behind lies in the terrace zone carry their coping at the higher of the bank crest and that ground (premises pad, street or OS-corrected terrace), blended by the terrace weight','evidence':'Mapped: the interpretive wall routes (river-network retainingEdges) and the premises outlines. Observed: the OS yard, street and wall-top readings behind them. Interpreted: that a wall at a terrace frontage is a wharf or quay wall holding the made ground behind it at yard level; no surveyed section.'},
         'evidence':'Observed: the OS London five-foot plan 1891-96 spot heights in reference/spot-heights/heights.geojson as classified in data/maps/os-ground-levels.json (setting, notes and confidence from the readers). Interpreted: which ground each reading measures (the register rules and decisions), the pad surfaces between readings, the marsh interpolation between readings and its fading away from them, and the ground beside at-grade railways (from data/maps/railway-levels.json). T21 left the terrace west of the Lea and Bow Creek and the High Street west of it unapplied (T21_REPORT.md decision 1); T22 applies them over the terrace zone (T22_REPORT.md).'},
     'retainingEdgeFill':{'crestMethod':f'1.65 m interpretive crest blended to the observed along-bank crest by the marsh weight {WALL_INLAND_M} m behind the wall; {WALL_MEAN_M} m running mean along the wall; grade-limited upper envelope at {WALL_GRADE} m per metre',

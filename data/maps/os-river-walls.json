@@ -1,5 +1,5 @@
 {
-  "description": "River walls the OS five-foot plan (1893-96) draws along the Lea west bank in the core box, traced as lines in the scene frame. scripts/build_river_network.py makes the mapped shoreline (the drawn water outline) within toleranceMetres of each line a retaining-wall route, so the walls stand on the shoreline the model draws and on the river-network mesh edges, like the other retaining edges. Their coping height is set by the main landscape (terraceWalls: the higher of the bank crest and the ground 6 m behind).",
+  "description": "River walls the OS five-foot plan (1893-96) draws along the Lea west bank in the core box and on the Channelsea below Abbey Mill (task E, F3), traced as lines in the scene frame. scripts/build_river_network.py makes the mapped shoreline (the drawn water outline) within toleranceMetres of each line a retaining-wall route, so the walls stand on the shoreline the model draws and on the river-network mesh edges, like the other retaining edges. Their coping height is set by the main landscape (terraceWalls: the higher of the bank crest and the ground 6 m behind). quayWidthMetres, where given, is the level made ground behind the wall (otherwise the standard 3 m berm).",
   "frame": "scene x = easting - 538900, z = 183209 - northing (docs/data/ground-plan.json origin)",
   "source": "OS London five-foot plan, 1893-96 (reference/nls-tiles/os-london-five-foot-1893, read through scripts/factory_map_sources.py mosaic at zoom 18)",
   "toleranceMetres": 4.5,
@@ -21,6 +21,22 @@
       "line": [[-841.3, -115.0], [-844.2, -131.9], [-850.5, -142.0], [-868.4, -164.8], [-875.3, -178.3]],
       "wallTopReadings": ["sh_538054_183338"],
       "evidence": "Mapped: Marshgate Lane runs on the west bank of the Pudding Mill River from the lock crossing to St Thomas's Mills, its east kerb drawn as a continuous double line on the water's edge, with the lane's spot height 17.8 ft (3.19 m) at (-846, -129) beside it and no bank slope between lane and water. Interpreted: a river wall carrying the lane edge (task B, October 2026); material and section are not shown. Without it the model drew an earth bank face under the lane's east half, and the road surface, which takes its height from the ground under its own vertices, sank to 1.2-1.4 m along the whole lane (TASK_A_REPORT.md open item)."
+    },
+    {
+      "id": "west-ham-chemical-works-river-wall",
+      "quayWidthMetres": 7,
+      "quayWidthEvidence": "Mapped (OS five-foot, about 7 m): the strip between the double line and the works buildings. The fill behind the wall stands level with its coping over this width (build_main_landscape.py wall fill), then falls at 1:1.5.",
+      "line": [[-23.5, 211.5], [-23.4, 230.0], [-23.3, 250.0], [-23.2, 268.0]],
+      "wallTopReadings": ["sh_538885_182963"],
+      "evidence": "Mapped: a straight double line on the Channelsea east bank along the West Ham Chemical Works frontage, from the end of the hatched earth bank at about z 211 south to the corner by the drain outfall at about z 268 (OS five-foot, read at 8 px per metre); a strip about 7 m wide behind it to the works buildings, with the 17.9 ft spot height on it (wall_top, 3.22 m scene) at (-15.2, 245.9). The drawn water edge runs 1-4 m west of the line. Interpreted: a masonry river wall with a quay strip behind it at the wall-top level; its section is not shown on the plan. Before task E, F3 the frontage drew as the earth face of the os-flood-banks.json Channelsea east bank (same crest)."
+    },
+    {
+      "id": "abbey-mills-coal-quay-wall",
+      "quayWidthMetres": 6,
+      "quayWidthEvidence": "Mapped (OS five-foot, about 6 m): the strip between the double line and the foot of the hatched sewer-bank slope, where the coal lead runs. The fill behind the wall stands level with its coping over this width (build_main_landscape.py wall fill), then falls at 1:1.5.",
+      "line": [[-26.9, 4.0], [-29.8, 13.0], [-32.9, 23.0], [-35.4, 31.8], [-37.0, 43.4]],
+      "wallTopReadings": [],
+      "evidence": "Mapped: a continuous double line on the Channelsea west bank from the Northern Outfall Sewer bridge south to about z 43, where the bank becomes the hatched sewer-bank slope and towing path (OS five-foot, read at 8 px per metre); the Abbey Mills coal lead (data/maps/abbey-mills-coal.json) ends against it, the place the author identified as the coal quay. The drawn water edge runs 0-3 m east of the line. No spot height on the wall itself (B.M. 28.25 ft on the sewer bridge abutment at (-46.2, 19.3); 18.9 ft on the embankment path at (-41.5, 46.8)). Interpreted: a masonry quay wall; its coping is the model's (the higher of the bank crest and the ground behind), not a reading."
     }
   ],
   "notModelled": [
