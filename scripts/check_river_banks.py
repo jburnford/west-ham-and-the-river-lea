@@ -5,6 +5,7 @@ import numpy as np
 import shapely
 from shapely.geometry import Polygon,LineString
 from river_bank_sections import Distance
+import back_river_profile
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'docs/data'
@@ -24,10 +25,17 @@ banks=geom(s['bankPolygons']);shapely.prepare(banks)
 assert banks.intersection(water).area<.001,'Bank footprint intrudes into mapped water'
 bank_coverage=sum(c['areaM2'] for c in s['coverage'] if c['kind']=='bank')
 assert abs(bank_coverage-banks.area)<.01,'Bank envelope has unmeshed strips'
+# Silted back rivers (task E, F2) lie on their registered bed (data/maps/back-river-beds.json), which rises to and
+# above the water at the heads; every other bed vertex stays 0.35 m under the water.
+back=back_river_profile.profile()
 for section in s['coverage']:
     if section['kind']=='bed':
-        y=p[section['vertexStart']:section['vertexStart']+section['vertexCount'],1]
-        assert y.max()<=m['waterLevel']-.349,'Submerged shoreline vertex spiked to bank-top level'
+        v=p[section['vertexStart']:section['vertexStart']+section['vertexCount']].astype(float)
+        iz,ix=back.cells(v[:,0],v[:,2]);silted=back.bed[iz,ix]
+        on=np.isfinite(silted)&(shapely.dwithin(back.geometry,shapely.points(v[:,[0,2]]),.01))
+        under=v[:,1]<=m['waterLevel']-.349
+        # On the silted outline a vertex may take either bed (the heads meet the Old Lea and the Navigation there).
+        assert (under|(on&(np.abs(v[:,1]-np.nan_to_num(silted))<.001))).all(),'Submerged shoreline vertex spiked to bank-top level'
 tri=p[i].astype(float)
 cross=np.cross(tri[:,1]-tri[:,0],tri[:,2]-tri[:,0])[:,1]
 assert cross.min()>-.01,'Downward-facing ground triangles'

@@ -52,6 +52,17 @@ TERRACE_FEATHER_M = 60    # outside the core box the main landscape fades from t
 # are not applied. North of the zone the correction fades out over STRATFORD_FEATHER_M.
 STRATFORD_ZONE = [-1800, -2450, -150, -240]
 STRATFORD_FEATHER_M = 60
+# Railways the OS draws at grade in the Stratford zone (no embankment or cutting hatching): the ground beside them is
+# held at their formation less the 0.1 m at-grade lift (railway-levels.json atGrade), as rail_side_controls does in the
+# core box. Chainages are along the railway as built in docs/data/infrastructure.json (its stations).
+STRATFORD_AT_GRADE_RAILWAYS = [
+    {'railwayId': 'north-london-connection', 'from': 495, 'to': 770,
+     'evidence': 'OS five-foot plan: the Victoria Park Branch has no hatching from the east abutment of the Waterworks '
+                 'River bridge (bridge ends at chainage 487) past Lea Junction to Channel Sea Junction; the hatched low bank '
+                 'resumes on the High Meads curve at about 780. F1 fitted the ground here to the open-ground readings 30-100 m '
+                 'south of the line (20.7 ft, 18.5 ft) and buried the tracks. The OS rail reading at Lea Junction (16.6 ft, '
+                 'rail top 2.83 scene) puts the formation about 0.6 m under the kept 3.0; the formation is not changed here.'},
+]
 STREET_REACH_M = 6        # a street reading belongs to a drawn street within half its width + this
 PREMISES_REACH_M = 1.5      # a yard reading belongs to a site pad within this distance of its outline
 
@@ -317,6 +328,7 @@ def main():
         'exceptionMetres': EXCEPTION_M,
         'terraceZone': TERRACE_ZONE, 'terraceFeatherMetres': TERRACE_FEATHER_M,
         'stratfordZone': STRATFORD_ZONE, 'stratfordFeatherMetres': STRATFORD_FEATHER_M,
+        'stratfordAtGradeRailways': STRATFORD_AT_GRADE_RAILWAYS,
         'zones': {'west-strip': 'x < -628 (the Bromley/Bow terrace west of the Lea and Bow Creek), outside the High Street band',
                   'high-street': 'within 45 m of the Stratford High Street centreline',
                   'three-mills': 'x -628..-300 north of z 620 (Three Mills, Mill Meads, Abbey Lane west)',

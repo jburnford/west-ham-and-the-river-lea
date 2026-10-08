@@ -1,0 +1,138 @@
+{
+  "description": "Bed levels of the Stratford back rivers, c.1895 (task E, F2). They replace the generic tidal bed (1.7 m below low water) on these channels with a silted bed that rises from Three Mills, where the mill's tail and the tide kept a low-water channel open, to the heads where the rivers leave the Old Lea and the Navigation, where the silt lay thickest. scripts/tide_levels.py reads this register; scripts/build_river_network.py draws it. Every level is an estimate: no survey of the back-river beds has been found.",
+  "frame": "scene x = easting - 538900, z = 183209 - northing; levels are scene y metres (ODN = scene y + 1.835)",
+  "status": "estimate",
+  "groups": [
+    {
+      "id": "back-rivers",
+      "name": "Three Mills Wall River, Three Mills Back River, Waterworks River, City Mill River, Bow Back River",
+      "channelIds": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        17
+      ],
+      "aboveProfileMetres": 0.0,
+      "status": "estimate",
+      "method": "The profile. Silting is documented on all of them in 1908 ('excessive silting', with 'significant delay in traffic in the Bow Back River', book p. 68).",
+      "streamDepthMetres": 0.3
+    },
+    {
+      "id": "pudding-mill",
+      "name": "Pudding Mill River and the link to the Bow Back River",
+      "channelIds": [
+        8,
+        9,
+        21
+      ],
+      "aboveProfileMetres": 0.6,
+      "rangeMetres": [
+        0.3,
+        1.0
+      ],
+      "status": "estimate",
+      "method": "The profile plus 0.6 m: the worst of the back rivers. In 1908 'an almost complete reduction in flow down the Pudding Mill River, even during floods' (p. 68); it 'was so congested that little water flowed down it, even during floods' (p. 204); a cleanup of 'the stagnant Pudding Mill River' was all that survived of the canal scheme (p. 203). At its head (0.6) it is below St Thomas's Mill's drawn-down floor estimate (lea-control-structures.json, range -0.5 to 1.0) only at that range's top: a choked river.",
+      "streamDepthMetres": 0.0
+    }
+  ],
+  "section": {
+    "edgeAboveFloorMetres": 0.9,
+    "rampMetres": 15,
+    "blendSigmaMetres": 10,
+    "evidence": "Estimated display section, not a survey. Inside the mapped outline the bed falls evenly from 0.9 m above the thalweg at the shoreline to the thalweg on the centreline (over the local half-width, at most 15 m), a V in the silt: the low-water stream, a foot deep, covers only about the middle third of the channel, a narrow stream in wide mud. Outside the outline the bank face rises from that edge to the bank crest over the same 5 m shelf as the other tidal banks. Where the Pudding Mill River meets the others (the City Mill River, the link to the Bow Back River) its extra 0.6 m is blended out over about 10 m (gaussian sigma)."
+  },
+  "unchanged": {
+    "channelIds": [
+      0,
+      14,
+      12,
+      13,
+      18,
+      22
+    ],
+    "note": "Bow Creek (0) and the Channelsea below Abbey Mill with Abbey Creek (14) stay at the generic tidal bed: they are the scoured tidal reaches below the mills, where the OS draws low-water channels and mud flats. The Channelsea above Abbey Mill (12, 13) and the Navigation (18, 22) are still water, not tidal back rivers."
+  },
+  "passages": {
+    "raised": [
+      "pudding-mill",
+      "seam-Lower_River_Lea-3-part-0-Lower_River_Lea-4-part-0",
+      "seam-Lower_River_Lea-17-part-0-Lower_River_Lea-22-part-0"
+    ],
+    "unchanged": [
+      "three-mills"
+    ],
+    "note": "Reviewed passages between back-river channels (core_river_connections) take the blended thalweg instead of the tidal seam bed (-2.6). The Three Mills race keeps the tidal seam bed: it is the mill's tail race, open to Bow Creek, and the step from the pond's bed to the tail is the mill's fall."
+  },
+  "notDone": "The Old Lea at the heads (Lower_River_Lea-15, -22) keeps the regional still water at 0.06: at high water the tide in a back river stands above it at the junction until Phase 2 gives the Old Lea its level. No shoals are placed along the rivers: the profile is smooth between the outlet and the heads.",
+  "sources": [
+    "Book (git-ignored PDF in the main checkout root): p. 68, the 1908 silting; pp. 200-201, the 1892/1908 canal standard, spring-tide navigation and the clogged beds; pp. 203-204, the Pudding Mill River",
+    "data/maps/lea-control-structures.json: bow-locks normalHeadSceneY, three-mills pondDrawdownFloorSceneY, st-thomas-mills drawdownFloorSceneY",
+    "data/maps/os-tide-levels.json: low and high water"
+  ],
+  "profile": {
+    "method": "Each bed point's thalweg is interpolated between the outlet level and the head level by t = a / (a + b), where a is its distance along the water from the outlet and b its distance along the water to the nearest head (geodesic distances on a 1 m raster of all the back-river water: the network's corrected channels, the regional reaches beyond them up to the Old Lea, and the passages between them; scripts/back_river_profile.py). So the bed rises gradually along every river, from Three Mills to the place where it leaves the Old Lea or the Navigation, with no step where two rivers meet or where the network's detailed channels give way to the regional reaches. The Waterworks River's reaches above its junction with the Old Lea (Lower_River_Lea-5 and -6, towards Temple Mills) are a channel of the Lea itself and are not raised.",
+    "outlet": {
+      "what": "Three Mills: the House Mill race, where the pond's channels pass the mill to Bow Creek",
+      "point": [
+        -601,
+        375
+      ],
+      "sceneY": -2.2,
+      "odnMetres": -0.37,
+      "rangeSceneY": [
+        -2.6,
+        -1.6
+      ],
+      "status": "estimate",
+      "method": "Just below low water (-2.0), so a narrow low-water stream survives at the foot of the pond, as on the Channelsea below Abbey Mill (the author's 1920s-30s aerial: 'a narrow stream in wide mud'). Kept open by the mill's tail and the tide; 0.4 m above the tidal seam bed of the race passage (-2.6), so the bed meets the race without a step."
+    },
+    "heads": [
+      {
+        "what": "Waterworks River, where it leaves the Old Lea (regional reach Lower_River_Lea-4 meets Lower_River_Lea-15)",
+        "point": [
+          -1226,
+          -1270
+        ]
+      },
+      {
+        "what": "City Mill River, where it leaves the Old Lea (Lower_River_Lea-7 meets Lower_River_Lea-15)",
+        "point": [
+          -1251,
+          -1142
+        ]
+      },
+      {
+        "what": "Pudding Mill River, where it leaves the Old Lea (Lower_River_Lea-8 meets Lower_River_Lea-15)",
+        "point": [
+          -1401,
+          -914
+        ]
+      },
+      {
+        "what": "Bow Back River, its mouth at the Navigation (the 17/22 seam)",
+        "point": [
+          -1050,
+          72
+        ]
+      }
+    ],
+    "headSceneY": 0.0,
+    "headOdnMetres": 1.84,
+    "headRangeSceneY": [
+      -0.88,
+      0.3
+    ],
+    "headStatus": "estimate",
+    "headMethod": "The silt lay thickest where the back rivers drew off the main river with little flow. The heads are the shoals that limited navigation: the back rivers were 'navigable only during bimonthly spring tides' (book p. 200). With the shoals at 0.0, ordinary high water (1.578) gives 1.6 m over them and springs about 1.9 m, so loaded lighters drawing 1.5-1.8 m passed only at spring tides. Above the 1892/1908 canal standard, 'six feet below the overshot level at Bow Lock' (p. 200; normal head 0.95 less 1.83 m = -0.88), which the engineers proposed as a deepening of beds 'clogged' with sewage and refuse (p. 201)."
+  },
+  "history": "7 October 2026, first version: one thalweg per group (-0.4, Pudding Mill +0.1), which left the beds bare until half tide everywhere. The author: too high, abrupt; Pudding Mill should be worst; the silting should start at the heads where the rivers leave the Old Lea, or be gradual. Replaced by the profile. Second revision (author, 7 October 2026): the seam at the network's edge should be where the back rivers start; the profile, the tidal water and the stream now run through the regional reaches to the Old Lea, and the network's west-context pieces of the Pudding Mill and Bow Back rivers (10008, 10017) are silted with them.",
+  "lowWaterStream": {
+    "what": "The Lea's own water running down the silted back rivers from their heads when the tide is out. The drawn water is the higher of the tide and this stream: at low water the stream shows alone, sloping down from the heads to Three Mills; the rising tide comes up from Three Mills and covers it (the author, 7 October 2026: 'there should be some water up to the old lea, but maybe a foot or so which isn't enough to float a large barge'; 'the water is coming from both directions').",
+    "depthMetres": 0.3,
+    "status": "estimate",
+    "method": "A foot of water over the thalweg (the author). Order of size: a share of the Lea's median 4.6 m3/s (G2G, Feildes Weir 1891-1910) through a silted channel a few metres wide at about half a metre a second gives a few tenths of a metre. Not enough to float a loaded barge, so the rivers were navigable only near high water. The stream surface is level across the channel, at the thalweg plus the depth, so it fills only the lowest part of the bed. Never below low water.",
+    "pudding": "The Pudding Mill River has no stream (depth 0): it 'was so congested that little water flowed down it, even during floods' (book p. 204); dry at low tide (the author). Its share is blended out over the same 10 m as its extra silt."
+  }
+}

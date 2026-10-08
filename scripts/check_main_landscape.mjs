@@ -166,8 +166,9 @@ for (const [id, polygons] of Object.entries(clearance.footprints)) {
   assert(vertices + mudVertices > 0, `${id}: no landscape vertex in its span footprint`);
   // 1 cm tolerance: since T14 the river-network mesh carries vertices exactly on the drawn waterline, which the
   // builder's span clamp leaves at their native height (about 0.086 m against the 0.08 m water edge).
+  // A span over a silted back river is cleared to its bed edge (spanLevels, F2).
   assert(
-    highest <= clearance.waterEdge + 0.01,
+    highest <= (clearance.spanLevels?.[id] ?? clearance.waterEdge) + 0.01,
     `${id}: ground ${highest.toFixed(2)} m in the span, above the water edge`
   );
 }

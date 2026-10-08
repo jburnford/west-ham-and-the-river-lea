@@ -17,7 +17,7 @@ import { wharfCranes } from './wharf-cranes.js';
 import { buildingPlinths } from './building-plinths.js';
 import { mappedTrees } from './mapped-trees.js';
 import { loadTerrain, terrainDetails } from './terrain-details.js';
-import { loadRiverNetwork, riverNetwork } from './river-network.js';
+import { loadRiverNetwork, riverNetwork, lowWaterStream } from './river-network.js';
 import { loadRiverSystem, applyRiverSystem, riverSystem, installRiverExplorer } from './river-system.js';
 import { loadMainLandscape, applyMainLandscape, mainLandscapeGround } from './main-landscape.js';
 import { loadHistoricElevation, applyHistoricElevation, historicGround } from './historic-elevation.js';
@@ -779,6 +779,7 @@ function buildScene() {
     surface([[ring]], materials.water, level);
   }
   surface(data.riverNetwork.tide.polygons, materials.tidalWater, data.riverNetwork.tide.low);
+  lowWaterStream({ THREE, scene, material: materials.tidalWater, stream: data.riverNetwork.lowWaterStream });
   // Module-facing helpers keep their (parent, ...) signature; the shared versions take THREE first.
   const box = (parent, ...args) => libBox(THREE, parent, ...args);
   const cylinder = (parent, ...args) => libCylinder(THREE, parent, ...args);
@@ -1113,7 +1114,7 @@ function buildScene() {
     floatingMeshes = [];
   scene.traverse((o) => {
     if (!o.isMesh) return;
-    if (o.material === materials.tidalWater) tidalMeshes.push(o);
+    if (o.material === materials.tidalWater && !o.userData.fixedLevel) tidalMeshes.push(o);
     if (o.material.userData.tidalFloat) floatingMeshes.push(o);
   });
   const applyTideState = (state) => {

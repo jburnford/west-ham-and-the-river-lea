@@ -16,6 +16,7 @@ from build_lower_lea_region import polygons, rings
 from river_bank_sections import build_banks
 from regional_marsh_surface import MarshSurface, TerrainSurfaces
 import tide_levels as tl
+from back_river_profile import profile as back_river_profile, INPUTS as back_inputs
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT/'docs/data'
@@ -97,9 +98,26 @@ def build():
                 {'layer':'Water_1895','sourceIndex':key,'review':'six-inch blue water'})
 
     crossings = []
-    def passage(identifier, a, b, width, category, evidence, note=''):
+    def end_centre(g, p, q):
+        # The middle of g's cross-section 1 m inside its end at p, across the direction p->q.
+        u = np.subtract(q, p)/max(np.linalg.norm(np.subtract(q, p)), 1e-9); n = np.array([-u[1], u[0]])
+        c = np.subtract(p, u)
+        chord = g.intersection(LineString([c-200*n, c+200*n]))
+        parts = [x for x in getattr(chord, 'geoms', [chord]) if x.geom_type == 'LineString' and not x.is_empty]
+        if not parts: return np.asarray(p, float)
+        best = min(parts, key=lambda x: x.distance(Point(c)))
+        return np.asarray(best.interpolate(.5, normalized=True).coords[0])
+    def passage(identifier, a, b, width, category, evidence, note='', centreline=False):
         pa,pb = nearest_points(geoms[a],geoms[b])
         route = [list(pa.coords[0]),list(pb.coords[0])]
+        if centreline:
+            # A channel cut in two by the source (the Hackney Cut under the Victoria Park branch): the passage runs
+            # between the middles of the two facing ends, not between their nearest corners (which set it 12 m east).
+            ca, cb = np.asarray(route[0]), np.asarray(route[1])
+            for _ in range(3):
+                ca, cb = end_centre(geoms[a], ca, cb), end_centre(geoms[b], cb, ca)
+            # Each end reaches 1 m into its piece so the passage overlaps both.
+            route = [ca.tolist(), cb.tolist()]
         g = LineString(route).buffer(width/2)
         add(identifier,identifier,g,'passage',{'evidence':evidence})
         crossings.append({'id':identifier,'a':a,'b':b,'widthMetres':width,
@@ -107,7 +125,7 @@ def build():
                           'gateState':None,'note':note,'evidence':evidence})
     for row in config['mappedCrossings']:
         passage(f"crossing-{row['a']}-{row['b']}",f"Water_1895-{row['a']}",
-                f"Water_1895-{row['b']}",row['width'],row['category'],row['evidence'],row.get('note',''))
+                f"Water_1895-{row['b']}",row['width'],row['category'],row['evidence'],row.get('note',''),row.get('centreline',False))
     for pair in region['topology']['nearConnections']:
         # Only previously reviewed mapping seams / mill / weir openings.
         category = pair['reviewCategory']
@@ -150,6 +168,12 @@ def build():
     # Thames mouth and the seams between its parts take the tide (data/maps/os-tide-levels.json).
     tidal_ids=[r['id'] for r in reaches if r['id'] in ('Lower_River_Lea-0','thames-mouth-context')
                or r['id'].startswith('regional-Lower_River_Lea-0-') or r['id']=='core-seam-Lower_River_Lea-0-part-1-Lower_River_Lea-0-part-2']
+    # The silted back rivers are tidal up to where they leave the Old Lea and the Navigation
+    # (data/maps/back-river-beds.json, scripts/back_river_profile.py): their regional reaches and the
+    # passages between them, every reach lying mostly in the back-river water.
+    back=back_river_profile();paths.extend(ROOT/p for p in back_inputs)
+    back_water=back.geometry.buffer(.5)
+    tidal_ids+=[r['id'] for r in reaches if r['id'] not in tidal_ids and geoms[r['id']].intersection(back_water).area>.5*geoms[r['id']].area]
     tidal_water=shapely.union_all([geoms[k] for k in tidal_ids])
     # The locally corrected banks take precedence over the raw regional GIS.
     current = shapely.union_all([geometry(r['polygons']) for r in plan['rivers']+west['rivers']]+
@@ -204,8 +228,21 @@ def build():
     network_positions=np.fromfile(network_path,dtype='<f4').reshape(-1,3)
     caps=shapely.contains_xy(display_water,network_positions[:,0],network_positions[:,2])
     under_tide=shapely.contains_xy(tidal_water,network_positions[:,0],network_positions[:,2])
-    core_bed_corrections=np.flatnonzero(caps & ~under_tide & (network_positions[:,1]>-.7)).tolist()
-    tidal_core_bed_corrections=np.flatnonzero(caps & under_tide & (network_positions[:,1]>tl.SEAM_BED)).tolist()
+    # The silted back-river banks (river-network.json backRiverBeds, F2) stand above -0.7 at the
+    # shoreline by design; where a regional outline runs just past the mapped one they are not caps.
+    # They and the network vertices inside the back rivers' regional reaches (which carry the silted bed)
+    # are not caps either, under the tide or not.
+    near_silted=shapely.dwithin(back.geometry,shapely.points(network_positions[:,[0,2]]),1.5)
+    core_bed_corrections=np.flatnonzero(caps & ~under_tide & (network_positions[:,1]>-.7) & ~near_silted).tolist()
+    tidal_core_bed_corrections=np.flatnonzero(caps & under_tide & (network_positions[:,1]>tl.SEAM_BED) & ~near_silted).tolist()
+    # But network vertices inside the silted water itself (back_river_profile, outside the network's own channels)
+    # standing over its bed are the bank the network built round its channels' clipped ends at the old core edge:
+    # they go down to the shared silted bed (the bed of the nearest silted cell where theirs lies just outside).
+    iz,ix=back.cells(network_positions[:,0],network_positions[:,2])
+    silted_bed=back.bed[back.nearest[0][iz,ix],back.nearest[1][iz,ix]]
+    in_silted=caps&shapely.contains_xy(back.geometry,network_positions[:,0],network_positions[:,2])
+    silted_caps=np.flatnonzero(in_silted&(network_positions[:,1]>silted_bed+.05))
+    silted_core_bed_corrections=[[int(i),round(float(silted_bed[i]),3)] for i in silted_caps]
     # Source-window boundaries are openings, not physical banks. They are
     # registered in the same native map coordinates as the Thames trace.
     thames_points=worlds[t['panel']](np.asarray(t['pixels'])+t['cropOrigin'])
@@ -238,7 +275,7 @@ def build():
     marsh=TerrainSurfaces([MarshSurface(c,height_review,datum,full_water,geoms,protected,flat_ground,infrastructure['railways'])
         for c in [marsh_config,bank_config,knobshill_config,waterworks_config,upper_waterworks_config,temple_config,potters_config,city_mill_config]])
     p,ix,silt,cover,faces,face_uv,bank_envelope,bank_sections=build_banks(
-        full_water,protected,reaches,geoms,sections,open_cuts,flat_ground,marsh=marsh,tidal=tidal_water)
+        full_water,protected,reaches,geoms,sections,open_cuts,flat_ground,marsh=marsh,tidal=tidal_water,back=back)
     # Drawn tidal water moves with the network's tide; the rest stays still.
     tidal_drawn=drawn_water.intersection(tidal_water)
     still_drawn=drawn_water.difference(tidal_water)
@@ -266,7 +303,7 @@ def build():
           'faceFile':'river-system-1900.faces.f32','faceUVFile':'river-system-1900.face-uv.f32',
           'faceVertices':len(faces),'bankSections':bank_sections,
           'vertices':len(p),'triangles':len(ix)//3,'waterLevel':core['waterLevel'],
-          'coreBedCorrections':core_bed_corrections,'tidalCoreBedCorrections':tidal_core_bed_corrections,'tidalCoreBedLevel':tl.SEAM_BED,
+          'coreBedCorrections':core_bed_corrections,'siltedCoreBedCorrections':silted_core_bed_corrections,'tidalCoreBedCorrections':tidal_core_bed_corrections,'tidalCoreBedLevel':tl.SEAM_BED,
           'railwayGroundAdjustments':[row for surface in marsh.surfaces for row in surface.railway_adjustments()],
           'bounds':list(full_water.bounds),'corePreserved':True,'floodDomainChanged':False,
           'sectionAssumption':config['sectionAssumption'],'dateNote':config['dateNote'],

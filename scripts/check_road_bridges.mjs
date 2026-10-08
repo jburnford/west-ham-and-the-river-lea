@@ -134,6 +134,9 @@ if (process.argv.includes('--write-sample')) {
 // Refreshed by task E, F1 (6 October 2026): the Stratford zone drawn at its OS levels; St Michael's Bridge approaches
 // rise 0.03-0.38 m onto the deck on the OS High Street causeway instead of sagging to the bridge cone; no deck
 // station changed (FLOOD_MODEL_PLAN.md section 0).
+// Refreshed by task E, F2 (7 October 2026): the back-river beds raised (data/maps/back-river-beds.json); only the Hunts
+// Lane connection's approach moved, by up to 0.025 m (the bank face under it now rises from the silted bed edge).
+// Refreshed by task E (8 October 2026), after the F2 fixes: the Hunts Lane connection's approach by up to 0.003 m.
 // Refresh with --write-sample whenever a road, bridge span or the landscape under an approach is deliberately changed.
 // prettier-ignore
 const BEFORE = {
@@ -173,9 +176,9 @@ const BEFORE = {
     [2.645,  2.645,  2.666,  2.786,  2.925,  2.95,  2.95,  2.95,  2.95,  2.95,  2.95,  2.95,  2.95,  2.95,  2.95,  null,  null,  null,  null,  null,  null,  2.95,  2.95,  2.95,  2.95,  2.95,  2.95,  2.95,  2.95,  2.93,  2.95,  2.98,  3.004,  3.033],
   ],
   'hunts-lane-connection-0': [
-    [null,  null,  null,  2.761,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.768,  2.629,  2.556,  2.585],
-    [null,  2.704,  2.686,  2.741,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.755,  2.615,  2.55,  2.576],
-    [2.732,  2.667,  2.661,  2.721,  2.797,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  null,  null,  null,  null,  null,  null,  null,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.739,  2.578,  2.553,  2.565],
+    [null,  null,  null,  2.762,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.768,  2.629,  2.556,  2.585],
+    [null,  2.73,  2.706,  2.743,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.755,  2.615,  2.55,  2.576],
+    [2.757,  2.689,  2.673,  2.726,  2.797,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  null,  null,  null,  null,  null,  null,  null,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.82,  2.739,  2.578,  2.553,  2.565],
   ],
   'three-mills-lea-bridge': [
     [3.75,  3.87,  3.993,  4.143,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.25,  4.189,  4.027,  3.894,  3.774],

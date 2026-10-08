@@ -19,6 +19,15 @@ export async function loadRiverNetwork(load) {
     data.landcover.length !== data.vertices * 2
   )
     throw new Error('River network dimensions do not match');
+  // The low-water stream down the silted back rivers (data/maps/back-river-beds.json).
+  if (data.lowWaterStream) {
+    const stream = data.lowWaterStream;
+    const [p, i] = await Promise.all([stream.positionFile, stream.indexFile].map((f) => load(`./data/${f}`, 'buffer')));
+    stream.positions = new Float32Array(p);
+    stream.indices = new Uint32Array(i);
+    if (stream.positions.length !== stream.vertices * 3 || stream.indices.length !== stream.triangles * 3)
+      throw new Error('Low-water stream dimensions do not match');
+  }
   // Garden beds and sheds also extend west of the detailed Channelsea grid.
   // Sample the new marsh there instead of placing those objects at zero height.
   const points = data.marshDitches.marshPolygons.flat(2),
@@ -123,4 +132,28 @@ export function riverNetwork({ THREE, scene, materials, data, surfaces }) {
     })),
     deferredConnections: data.reviewedConnections.deferred,
   };
+}
+
+// The Lea's water in the silted back rivers when the tide is out, level across each channel and sloping
+// from the heads to Three Mills. It stays still (not batched, not moved with the tide): the tidal
+// surface rises over it from Three Mills, so the higher of the two shows.
+export function lowWaterStream({ THREE, scene, material, stream }) {
+  if (!stream) return null;
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.BufferAttribute(stream.positions, 3));
+  const normals = new Float32Array(stream.positions.length);
+  for (let i = 1; i < normals.length; i += 3) normals[i] = 1;
+  geometry.setAttribute('normal', new THREE.BufferAttribute(normals, 3));
+  const uv = new Float32Array(stream.vertices * 2);
+  for (let i = 0; i < stream.vertices; i++) uv.set([stream.positions[i * 3], stream.positions[i * 3 + 2]], i * 2);
+  geometry.setAttribute('uv', new THREE.BufferAttribute(uv, 2));
+  geometry.setIndex(new THREE.BufferAttribute(stream.indices, 1));
+  geometry.computeBoundingSphere();
+  const mesh = new THREE.Mesh(geometry, material);
+  mesh.name = 'Low-water stream in the back rivers';
+  mesh.userData.keepIndexed = true;
+  mesh.userData.fixedLevel = true;
+  mesh.receiveShadow = true;
+  scene.add(mesh);
+  return mesh;
 }

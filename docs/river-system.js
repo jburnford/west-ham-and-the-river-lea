@@ -33,6 +33,9 @@ export function applyRiverSystem(data) {
   // Under tidal regional water the network bed goes below low water, not to -0.7.
   for (const i of system.tidalCoreBedCorrections ?? [])
     data.riverNetwork.positions[i * 3 + 1] = Math.min(system.tidalCoreBedLevel, data.riverNetwork.positions[i * 3 + 1]);
+  // Network banks round its channels' clipped ends that stand in the silted back-river water go down to its bed.
+  for (const [i, level] of system.siltedCoreBedCorrections ?? [])
+    data.riverNetwork.positions[i * 3 + 1] = Math.min(level, data.riverNetwork.positions[i * 3 + 1]);
   for (const adjustment of system.railwayGroundAdjustments || []) {
     const railway = data.infrastructure.railways.find((r) => r.id === adjustment.railwayId);
     const vertex = railway?.embankment[adjustment.triangle]?.[adjustment.vertex];

@@ -46,7 +46,10 @@ for r in data['connections']:
  # Test interiors (away from polygon/raster rounding) in each terrain mesh.
  interior=patch.buffer(-.2)
  mask=contains_xy(interior,positions[:,0],positions[:,2])
- if mask.any():assert positions[mask,1].max()<network['waterLevel']
+ # A passage between silted back rivers (back-river-beds.json, F2) lies at their thalweg, not under the still datum.
+ silted=network['backRiverBeds']
+ limit=silted['maxFloorSceneY']+1e-3 if r['id'] in silted['siltedPassages'] else network['waterLevel']
+ if mask.any():assert positions[mask,1].max()<limit,(r['id'],float(positions[mask,1].max()))
  mask=contains_xy(interior,xx,zz)
  if mask.any():assert levels[mask].max()<network['waterLevel']
 assert sum(r['category']=='lock-passage' for r in data['connections'])==1

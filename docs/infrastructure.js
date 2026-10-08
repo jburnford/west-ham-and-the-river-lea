@@ -6,7 +6,7 @@ import { createRandom } from './lib/prng.js';
 import { bridgeClearance, bridgeForms, deckEndLevel, roadBridges } from './road-bridges.js';
 import {
   railwayWorks,
-  addedBridgeIntervals,
+  bridgeIntervals,
   replacedCrossings,
   railwayBridges,
   railwayWalls,
@@ -264,7 +264,7 @@ export function infrastructure({ THREE, scene, materials: m, data, box, level })
         railway: {
           ...railway,
           embankment: works.embankment,
-          bridges: [...railway.bridges, ...addedBridgeIntervals(railway)],
+          bridges: bridgeIntervals(railway),
         },
         box,
         surface: (triangles, ...rest) =>

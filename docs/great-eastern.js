@@ -126,20 +126,9 @@ export function greatEastern({ THREE, scene, m, railway: r, box, surface, ballas
       girder.rotation.y = Math.atan2(s[3], s[4]);
     }
   }
-  // Restore only the small northern channel context required at the approach.
-  function water(polygons, material, height) {
-    for (const rings of polygons) {
-      const shape = new THREE.Shape(rings[0].map(([x, z]) => new THREE.Vector2(x, -z)));
-      for (const hole of rings.slice(1))
-        shape.holes.push(new THREE.Path(hole.map(([x, z]) => new THREE.Vector2(x, -z))));
-      const mesh = new THREE.Mesh(new THREE.ShapeGeometry(shape), material);
-      mesh.rotation.x = -Math.PI / 2;
-      mesh.position.y = height;
-      scene.add(mesh);
-    }
-  }
-  water(r.northernWater, m.water, 0.06);
-  water(r.northernWater, m.tidalWater, 0.06);
+  // The northern channel context at the approach (r.northernWater) is not drawn here: the river system draws that
+  // water, still or with the tide (river-system.js). A tidal-water copy here at 0.06 rose with the tide over the
+  // bridge decks, and the still copy stood over the tidal back rivers at low water (task E, F2).
   surface(
     r.northernBanks.flatMap(([a, b, c, d]) => [
       [a, b, c],

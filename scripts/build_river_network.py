@@ -16,9 +16,9 @@ from pathlib import Path
 
 import numpy as np
 import shapely
-from scipy.ndimage import distance_transform_edt, gaussian_filter, median_filter, uniform_filter1d
+from scipy.ndimage import distance_transform_edt, gaussian_filter, maximum_filter, median_filter, uniform_filter1d
 from scipy.sparse import coo_matrix
-from scipy.sparse.csgraph import connected_components
+from scipy.sparse.csgraph import connected_components, dijkstra
 from scipy.spatial import cKDTree
 from shapely import contains_xy, segmentize
 from shapely.geometry import Polygon, LineString, box
@@ -27,6 +27,7 @@ from marsh_ditches import geometry as ditch_geometry, apply_sections
 from core_river_connections import build as reviewed_connections, combined as connection_geometry
 from river_bank_sections import Distance
 import tide_levels as tl
+from back_river_profile import profile as back_river_profile
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'docs/data'
@@ -261,9 +262,12 @@ def insert_vertices(triangles, xz, todo):
     return np.vstack([triangles[keep], np.array(added, dtype=triangles.dtype).reshape(-1, 3)]), owner, weights, owner >= 0
 
 
-def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, east, context):
+def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, east, context, floor, bed=None):
     """Interpreted bank and bed heights. Works on the 1 m grid (raster distances)
-    or on any points (exact distances to the mapped geometry)."""
+    or on any points (exact distances to the mapped geometry). floor: the silted
+    back-river thalweg of the nearest water (data/maps/back-river-beds.json), NaN
+    where the nearest water keeps the generic bed. bed: the silted bed at points inside the
+    back rivers' regional reaches beyond the network's channels (NaN elsewhere), which they take."""
     # Generic low bank sections elsewhere; the broader grassy east bank on Wall
     # River is informed by the author's c1900 photograph, not the 1948 aerial.
     # The author dates the later engineered embankments to the 1930s.
@@ -275,7 +279,12 @@ def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, eas
     crest = (np.where(tidal_bank, tl.CREST, 1.65) + .10*wall_east)*variation
     width = 7 + 7*wall_east
     height = -.1 + (crest+.1)*smooth(0, 3, shore)*(1-smooth(4, width, shore))
-    height = np.where(water, np.where(tidal_bank, tl.tidal_bed(inside), .06-.25-.17*np.minimum(inside, 9)), height)
+    # Back rivers: a silted bed above low water (F2); its bank face starts from the bed edge.
+    silted = tidal_bank & ~np.isnan(floor)
+    floor = np.where(silted, floor, tl.BED_FLOOR)
+    bed_edge = np.where(silted, floor+tl.BACK_RIVER_EDGE, tl.BED_EDGE)
+    tidal_bed = np.where(silted, tl.silted_bed(inside, floor, context.get('siltedRamp')), tl.tidal_bed(inside))
+    height = np.where(water, np.where(tidal_bank, tidal_bed, .06-.25-.17*np.minimum(inside, 9)), height)
     # Existing site envelopes and road corridors keep their ground datum. These
     # are industrial plots, not evidence for continuous walls along every plot.
     clearance = smooth(0, 3, built_distance)
@@ -283,7 +292,7 @@ def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, eas
     # Match Channelsea's exposed shelves at its existing water datum. The GIS
     # remains the low-water route anchor, not a claimed high-water survey.
     sediment = tidal_bank * (1-smooth(4.5,7.5,outside)) * clearance
-    shelf = tl.tidal_shelf(shore, crest)
+    shelf = tl.tidal_shelf(shore, crest, bed_edge)
     height = np.where(~water, height*(1-sediment)+shelf*sediment, height)
     # OS mud flats between the low-water outline and the high-water mark.
     # Boundary included: a mesh vertex on a traced high-water line takes the flat's rim.
@@ -301,7 +310,9 @@ def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, eas
         bank=vista['bank']
         offset=X-east
         profile=np.interp(np.nan_to_num(offset,nan=-100),
-                          [0,1,4.8,8.5,15,20],[tl.BED_EDGE,.65,bank['crestHeight'],bank['crestHeight'],bank['crestHeight'],-.1])
+                          [0,1,4.8,8.5,15,20],[0,.65,bank['crestHeight'],bank['crestHeight'],bank['crestHeight'],-.1])
+        # The face starts at the bed edge (the silted Wall River edge since F2).
+        profile += bed_edge*(1-np.clip(np.nan_to_num(offset, nan=-100), 0, 1))
         blend=smooth(bank['zStart']-10,bank['zStart'],Z)*(1-smooth(bank['zEnd'],bank['zEnd']+10,Z))
         active_bank=(offset>=0)&(offset<=20)&(~water)
         height=np.where(active_bank,height*(1-blend)+profile*blend,height)
@@ -341,6 +352,12 @@ def section(X, Z, water, outside, inside, shore, tidal_bank, built_distance, eas
     height[passage_mask]=np.minimum(height[passage_mask],-.7)
     tidal_passage=contains_xy(context['tidalPassages'],X,Z)
     height[tidal_passage]=np.minimum(height[tidal_passage],tl.SEAM_BED)
+    # Passages between back rivers take their thalweg (back-river-beds.json passages).
+    silted_passage=contains_xy(context['siltedPassages'],X,Z)
+    height[silted_passage]=floor[silted_passage]
+    if bed is not None:
+        regional=np.isfinite(bed)
+        height[regional]=bed[regional];sediment[regional]=1
     sediment=np.maximum(sediment*(1-smooth(tl.HIGH,tl.CREST,height)),ditch_mud)
     return height, sediment, support, marsh_active, core_distance
 
@@ -384,6 +401,18 @@ def build():
     _, nearest = distance_transform_edt(~water, return_indices=True)
     tidal_cells = contains_xy(tidal, X, Z)
     tidal_bank = tidal_cells[nearest[0],nearest[1]]
+    # Silted back-river thalweg (data/maps/back-river-beds.json, scripts/back_river_profile.py): rising
+    # along the water from the outlet at Three Mills to the heads at the Old Lea and the Navigation,
+    # over the network's channels and the regional reaches beyond them alike; each point takes its
+    # nearest water's.
+    silted_ids = set(tl.back_rivers['passages']['raised'])
+    silted_connections = [r for r in connections['connections'] if r['id'] in silted_ids]
+    back = back_river_profile()
+    biz, bix = back.cells(X, Z)
+    on_grid = (X == back.X[biz, bix]) & (Z == back.Z[biz, bix])
+    silted_cell = on_grid & back.silted[biz, bix]
+    floor_cells = np.where(silted_cell, back.floor[biz, bix], np.nan)
+    floor_bank = floor_cells[nearest[0], nearest[1]]
     inside = distance_transform_edt(water)
     shore = gaussian_filter(outside-inside, .65)
     # East edge of Wall River (channel 1) along each quarter-metre row; whole
@@ -413,7 +442,8 @@ def build():
                'vistaConnections': json.loads((OUT/'high-street-frontages.json').read_text())['vista']['connections']
                if vista_path.exists() else [],
                'coreBounds': core['bounds'], 'passages': passages,
-               'tidalPassages': connection_geometry(connections, tidal_only=True)}
+               'tidalPassages': connection_geometry({'connections': [r for r in connections['connections'] if r['id'] not in silted_ids]}, tidal_only=True),
+               'siltedPassages': connection_geometry({'connections': silted_connections})}
     # Exact distance into tidal water for grid nodes at the core boundary, where
     # this mesh and the core (0.4 m grid) must meet at the same seam level.
     cx0, cz0, cx1, cz1 = core['bounds']
@@ -423,11 +453,16 @@ def build():
     pts = shapely.points(X[near], Z[near])
     inside_tidal[near] = np.where(shapely.covers(tidal, pts), shapely.distance(pts, tidal.boundary), 0)
     context['insideTidal'] = inside_tidal
+    # A silted bed reaches its thalweg on the centreline of a channel narrower than twice its ramp:
+    # the ramp is the deepest point within the ramp distance (the local half-width), at least 1 m.
+    ramp = tl.BACK_RIVER_SECTION['rampMetres']
+    context['siltedRamp'] = np.clip(maximum_filter(inside, size=2*ramp+1), 1, ramp)
     # Raster section: channel beds and the extent of the mesh. Land heights are
     # recomputed below from exact distances to the mapped shoreline.
     height, sediment, support, marsh_active, core_distance = section(
-        X, Z, water, outside, inside, shore, tidal_bank, distance_transform_edt(~built), east, context)
-    context['insideTidal'] = None
+        X, Z, water, outside, inside, shore, tidal_bank, distance_transform_edt(~built), east, context, floor_bank,
+        np.where(silted_cell & ~water, back.bed[biz, bix], np.nan))
+    context['insideTidal'] = context['siltedRamp'] = None
     # Grid points in a closed join gap are channel bed: give them the mean bed
     # of their mapped-water neighbours. Every other bed point is unchanged.
     gap = contains_xy(mesh_water, X, Z) & ~water
@@ -439,6 +474,23 @@ def build():
         height[gap] = (sum(shifted(h*m, *d) for d in moves)/np.maximum(count, 1))[gap]
         sediment[gap] = (sum(shifted(w*m, *d) for d in moves)/np.maximum(count, 1))[gap]
     water = contains_xy(mesh_water, X, Z)
+    # The low-water stream (back-river-beds.json lowWaterStream): the Lea's water running down the
+    # silted beds from their heads when the tide is out, level across the channel at the thalweg plus
+    # its depth (none on the Pudding Mill River), never below low water; through the regional reaches
+    # to the Old Lea as well. The scene draws the higher of it and the tide. Its mesh covers the 1 m
+    # bed cells it wets: the network's drawn bed on its channels, the shared section beyond them.
+    stream_bed = back.bed.copy()
+    mine = silted_cell & water
+    stream_bed[biz[mine], bix[mine]] = height[mine]
+    stream_wet = back.silted & (stream_bed < back.stream-.005)
+    corner = lambda a: (a[:-1, :-1], a[:-1, 1:], a[1:, :-1], a[1:, 1:])
+    stream_cells = np.logical_and.reduce(corner(back.silted)) & np.logical_or.reduce(corner(stream_wet))
+    bw = back.X.shape[1]
+    a = (np.arange(back.X.size).reshape(back.X.shape)[:-1, :-1])[stream_cells]
+    stream_triangles = np.stack([a, a+bw, a+1, a+1, a+bw, a+bw+1], axis=1).reshape(-1, 3)
+    stream_nodes, stream_indices = np.unique(stream_triangles, return_inverse=True)
+    stream_positions = np.column_stack([back.X.ravel()[stream_nodes], back.stream.ravel()[stream_nodes], back.Z.ravel()[stream_nodes]]).astype('<f4')
+    assert np.isfinite(stream_positions).all() and (stream_positions[:, 1] >= tl.LOW).all()
     ditch_raw,marsh,ditches,ditch_parts,_=ditch_geometry()
     # At working plots the bank cannot occupy a wide grass slope. A narrow
     # retaining edge holds the same interpreted crest; material/design unresolved.
@@ -483,8 +535,10 @@ def build():
         # distances ran on average SHORE_OFFSET_M (shoreline) and BUILT_OFFSET_M
         # (sites, roads) beyond the exact distance. Keep that placement.
         b = built_distance(pts)
+        ix = np.clip(np.round(px-minx).astype(int), 0, len(x)-1);iz = np.clip(np.round(pz-minz).astype(int), 0, len(z)-1)
         h, s, _, _, _ = section(px, pz, np.zeros(len(px), bool), d+SHORE_OFFSET_M, np.zeros(len(px)), d+SHORE_OFFSET_M,
-                                near_tidal, np.where(b > 0, b+BUILT_OFFSET_M, 0), east_at(pz), context)
+                                near_tidal, np.where(b > 0, b+BUILT_OFFSET_M, 0), east_at(pz), context, floor_bank[iz, ix],
+                                back.bed_at(px, pz))
         return h, s, d+SHORE_OFFSET_M
 
     # Keep complete 1 m cells, excluding the core at its integer boundaries.
@@ -604,6 +658,8 @@ def build():
     green[shapely.intersects_xy(tl.flats, positions[:, 0], positions[:, 2])] = 0
     colors = np.clip((silt_colour*(1-green)+grass*green)*255, 0, 255).astype('uint8')
     positions.tofile(OUT/'river-network.f32')
+    stream_positions.tofile(OUT/'river-network.stream.f32')
+    stream_indices.astype('<u4').tofile(OUT/'river-network.stream.u32')
     indices.tofile(OUT/'river-network.u32')
     colors.tofile(OUT/'river-network.rgb')
     (np.clip(silt,0,1)*255).astype('uint8').tofile(OUT/'river-network.silt')
@@ -633,6 +689,19 @@ def build():
                 'cycleSeconds':90, 'polygons':rings(tide_envelope),
                 'register':'data/maps/os-tide-levels.json',
                 'evidence':'High and low water of ordinary tides from the OS five-foot plan and Trinity High Water (data/maps/os-tide-levels.json): high 3.41 m ODN, low about OD, rising and falling in step over the river-side shelves and the OS mud flats. Not a tide prediction or hydraulic simulation; excludes the retained Old Lea, the Channelsea above the tidal limit at Abbey Mill and the marsh drains.'},
+        'lowWaterStream':{'positionFile':'river-network.stream.f32','indexFile':'river-network.stream.u32',
+                          'vertices':len(stream_positions),'triangles':len(stream_triangles),
+                          'depthMetres':{str(k):v for k,v in sorted(tl.BACK_RIVER_STREAM.items())},
+                          'levelRange':[float(stream_positions[:,1].min()),float(stream_positions[:,1].max())],
+                          'register':'data/maps/back-river-beds.json',
+                          'evidence':'The Lea running down the silted back rivers when the tide is out: a foot over the thalweg (the author), sloping from the heads to Three Mills; none on the Pudding Mill River. Drawn still; the tide covers it as it rises. An estimate, not a hydraulic calculation.'},
+        'backRiverBeds':{'register':'data/maps/back-river-beds.json',
+                         'registerSha256':hashlib.sha256(tl.BACK_RIVER_REGISTER.read_bytes()).hexdigest(),
+                         'channelIds':sorted(tl.BACK_RIVER_ABOVE),'aboveProfileMetres':{str(k):v for k,v in sorted(tl.BACK_RIVER_ABOVE.items())},
+                         'outletSceneY':tl.BACK_RIVER_PROFILE['outlet']['sceneY'],'headSceneY':tl.BACK_RIVER_PROFILE['headSceneY'],'maxFloorSceneY':tl.BACK_RIVER_MAX_FLOOR,
+                         'edgeAboveFloorMetres':tl.BACK_RIVER_EDGE,'siltedPassages':sorted(silted_ids),
+                         'waterPolygons':rings(back.geometry),'unreachedCells':back.unreached,
+                         'evidence':'Estimated silted beds of the Stratford back rivers, rising from just below low water at Three Mills to shoals at the heads where they leave the Old Lea and the Navigation; the Pudding Mill River worst (data/maps/back-river-beds.json). Not a survey.'},
         'retainingEdges':{'routes':wall_routes,'crestHeight':tl.CREST,'baseHeight':tl.WALL_BASE,'width':WALL_WIDTH,
                           'evidence':'Interpretive flood-retaining edges where tidal river banks (and the Channelsea head above Abbey Mill) meet GIS industrial plots. Presence, material and individual sections require photograph/engineering-plan verification. Not the 1930s concrete embankments.',
                           'osRiverWalls':{'register':'data/maps/os-river-walls.json','walls':os_wall_records,
@@ -681,7 +750,10 @@ def build():
                       (positions[:, 2] > z0) & (positions[:, 2] < z1))
     assert np.max(indices) < len(positions)
     assert ground.intersection(river).area < .001
-    assert np.all(height[water & (core_distance > 3)] < .06)
+    # Beds lie below the still-water datum, except the silted back rivers (back-river-beds.json),
+    # which lie between low and high water.
+    assert np.all(height[water & (core_distance > 3) & np.isnan(floor_bank)] < .06)
+    assert np.all(height[water & ~np.isnan(floor_bank)] < tl.HIGH)
     (OUT/'river-network.json').write_text(json.dumps(meta, separators=(',', ':'))+'\n')
     print(f'River network: {len(channels)} source features, {len(positions):,} vertices '
           f'({int(referenced.sum()):,} in triangles), {len(triangles):,} triangles; core and waterways clear.')

@@ -39,9 +39,11 @@ class Distance:
         return d
 
 
-def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground, marsh=None, tidal=None):
+def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground, marsh=None, tidal=None, back=None):
     """tidal: regional water that takes the tide (data/maps/os-tide-levels.json); its beds
-    sit below low water and its banks rise from the low-water edge to the tidal crest."""
+    sit below low water and its banks rise from the low-water edge to the tidal crest.
+    back: the silted back rivers (scripts/back_river_profile.py); their beds and the foot of
+    their banks follow its profile instead."""
     level=config['referenceLevelSceneY']
     canal=shapely.union_all([geoms[r['id']] for r in reaches if r['role']=='navigation'
         and r['id'] not in config['naturalOverrideReachIds']])
@@ -66,6 +68,12 @@ def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground
         if tidal_distance is None:return np.zeros(len(pts))
         return 1-smooth(0,5,np.maximum(0,tidal_distance(pts)-d))
 
+    def bed_edge(xz, d):
+        # The foot of a bank beside a silted back river is its bed edge, not the generic low-water edge.
+        if back is None:return np.full(len(xz),tl.BED_EDGE)
+        floor,gap=back.nearest_floor(xz[:,0],xz[:,1])
+        return np.where(np.isfinite(floor)&(gap<=d+1.5),floor+tl.BACK_RIVER_EDGE,tl.BED_EDGE)
+
     def fields(xz, force_bed=False):
         pts=shapely.points(xz)
         # Polygon-boundary roundoff must never classify a bed vertex as dry
@@ -85,8 +93,11 @@ def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground
         # Tidal reaches: the bank face rises from the low-water edge to the tidal crest over
         # 5 m (as the river network's), holds to 8 m, then falls to the earth profile's foot.
         tw=tidal_weight(pts,d)
-        y_tidal=np.where(d<=5,tl.tidal_shelf(d),np.interp(d,[5,8,14],[tl.CREST,tl.CREST,level-.16]))
-        y=y*(1-tw)+y_tidal*tw;mud=mud*(1-tw)+(1-smooth(tl.HIGH-.1,tl.HIGH+.4,y_tidal))*tw
+        edge=bed_edge(xz,d)
+        y_tidal=np.where(d<=5,tl.tidal_shelf(d,edge=edge),np.interp(d,[5,8,14],[tl.CREST,tl.CREST,level-.16]))
+        # Mud only on the tidal shelf: beyond the crest the land stands behind the bank, however
+        # far away its nearest water (a tidal back river) lies (F2: whole marsh fields drew as mud).
+        y=y*(1-tw)+y_tidal*tw;mud=mud*(1-tw)+np.where(d<=5,1-smooth(tl.HIGH-.1,tl.HIGH+.4,y_tidal),0)*tw
         # Subtle longitudinal variation keeps earthen banks from looking like
         # a uniform concrete bund; masonry coping stays level.
         variation=.045*np.sin(xz[:,0]*.071+np.sin(xz[:,1]*.037))
@@ -95,7 +106,10 @@ def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground
         # are moved to make room for a bank and no riverbed is filled by this.
         seam=smooth(0,5,protected_distance(pts))*smooth(14,22,open_distance(pts))
         clearance=smooth(0,2,flat_distance(pts))
-        y=-.1+(y+.1)*seam*clearance
+        # A silted back river's tidal shelf runs on into the network at the same section (the network's shelf is
+        # tidal_shelf from the same bed edge), so it does not fade at the network's edge (F2: a trench there).
+        shelf=tw*(d<=5)*(edge!=tl.BED_EDGE)
+        y=-.1+(y+.1)*(seam+(1-seam)*shelf)*clearance
         if marsh is not None and not force_bed:y=marsh.apply(xz,y)
         mud*=seam
         shore_depth=config['bed']['shoreDepthMetres']
@@ -103,6 +117,8 @@ def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground
         depth=config['bed']['riverDepthMetres']*(1-canal_weight)+config['bed']['canalDepthMetres']*canal_weight
         bed=level-shore_depth-(depth-shore_depth)*smooth(0,5,inside)
         bed=bed*(1-tw)+tl.tidal_bed(inside)*tw
+        if back is not None:
+            silted=back.bed_at(xz[:,0],xz[:,1]);bed=np.where(np.isfinite(silted),silted,bed)
         y[wet]=bed[wet];mud[wet]=1
         cover=hard_weight*(1-smooth(3.5,6,d))
         return y,mud,cover
@@ -137,7 +153,7 @@ def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground
                 clearance=smooth(0,2,flat_distance(pts))
                 y[onshore]=-.1+((level+.02)*(1-h)+(level+1.25)*h+.1)*seam*clearance
                 tw=tidal_weight(pts,np.zeros(len(pts)))
-                y[onshore]=y[onshore]*(1-tw)+tl.BED_EDGE*tw
+                y[onshore]=y[onshore]*(1-tw)+bed_edge(xz[onshore],np.zeros(onshore.sum()))*tw
                 mud[onshore]=1-h
         positions.append(np.column_stack([xz[:,0],y,xz[:,1]]));sediment.append(mud);covers.append(cover)
         indices.append(inverse+offset)
@@ -153,12 +169,16 @@ def build_banks(water, protected, reaches, geoms, config, open_cuts, flat_ground
         outer=water.buffer(distance,quad_segs=3)
         mesh_area(outer.difference(inner).intersection(bank_area),'bank')
         inner=outer
-    previous=water
-    for depth in [1.5,4]:
-        inset=water.buffer(-depth,quad_segs=3)
-        mesh_area(previous.difference(inset).intersection(bed_area),'bed')
-        previous=inset
-    mesh_area(previous.intersection(bed_area),'bed')
+    # Beds in rings inward from the shore; the silted back rivers' V-shaped beds need rings out to
+    # their centrelines (rampMetres), the other reaches two.
+    back_zone=back.geometry.buffer(1) if back is not None else shapely.Polygon()
+    for zone,depths in ((bed_area.difference(back_zone),[1.5,4]),(bed_area.intersection(back_zone),[1.5,3,4.5,6,8,10,12,15])):
+        previous=water
+        for depth in depths:
+            inset=water.buffer(-depth,quad_segs=3)
+            mesh_area(previous.difference(inset).intersection(zone),'bed')
+            previous=inset
+        mesh_area(previous.intersection(zone),'bed')
     if marsh is not None:mesh_area(marsh.area.difference(bank_area),'marsh')
 
     p=np.concatenate(positions).astype('<f4'); ix=np.concatenate(indices).ravel().astype('<u4')

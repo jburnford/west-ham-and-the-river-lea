@@ -436,6 +436,30 @@
   "crestHalfWidth": 4.5,
   "baseHalfWidth": 17,
   "formationHeight": 3.0,
+  "canalPassage": {
+    "route": [
+      [
+        -1638.4209905993987,
+        -1388.5213731413155
+      ],
+      [
+        -1609.3885911802768,
+        -1294.7425321482492
+      ]
+    ],
+    "width": 16.0,
+    "waterPieces": [
+      "Water_1895-517",
+      "Water_1895-518"
+    ],
+    "evidence": "The OS shows the Hackney Cut running straight on under the Victoria Park branch; the 1895 water pieces stop either side of the line. Same passage as crossing-517-518 in the river system; the embankment opens over it like other water."
+  },
+  "canalLift": {
+    "formation": 5.5,
+    "holdTo": 100.0,
+    "rampTo": 400.0,
+    "evidence": "Interpreted (task E, author): the line crosses the Lee Navigation (Hackney Cut) on a bridge above the towing paths (OS 21-22 ft, about 4.3-4.5 m scene; White Post Lane bridge parapet B.M. 23.68 ft), and the OS hatches the embankment west of the cut. The traced 3.0 m formation stood more than a metre under the towing paths, so the rails ran into the canal banks either side of the bridge. Lifted to 5.5 m over the cut (girder soffit about 4.85 m), held to chainage 100 and eased back to the traced 3.0 m by chainage 400, before the Old Lea and Waterworks River bridges. Levels are estimates; no rail level is read here."
+  },
   "join": {
     "railwayId": "woolwich-northern-connection",
     "referenceControlIndex": 11,

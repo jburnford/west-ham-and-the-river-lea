@@ -333,3 +333,129 @@ Renders at each preset, with five cameras:
   - The OS draws a river wall (a continuous double line) along that bank. It goes into `os-river-walls.json` with F3, which uses the same mechanism and the same rebuild.
 - The east-west water south of the station is closed at both ends on the 1893 plan: probably a drain or pond, not a barge basin. Not added.
 - **Checks:** `npm test` 22/22. `check_factory_yards.py`, `check_landscape_flood.py`, `check_east_depot_tracks.py` and `check_core_river_connections.py` pass. The cascade was rerun.
+
+# F2: the back-river beds (7 October 2026)
+
+The back rivers' beds were drawn 1.7 m below low water, like Bow Creek. The evidence puts them higher: all the back rivers were silted in 1908, the Pudding Mill River almost choked, and they were "navigable only during bimonthly spring tides". They are now silted beds that rise from a low-water stream at Three Mills to shoals at the heads, where the rivers leave the Old Lea and the Navigation. Scratch work (measuring and render scripts, before and after renders) is in the session scratchpad `…/1d5564dc-…/scratchpad/f2/`.
+
+**Two revisions the same day.** First: It set one level per group (-0.4 scene, Pudding Mill +0.1), which left every bed bare until half tide. The author: too high and abrupt; the Pudding Mill River should be the worst, and could be dry at low tide; the silting should start at the top, where the rivers join the Old Lea, or be gradual. The book does not say the beds were dry until half tide: it gives the spring-tide navigation, the 1908 silting and the canal standard, which bound the shoals, not the whole bed. Second, on the profile below, the author said there should be some water all the way up to the Old Lea at low tide, "maybe a foot or so which isn't enough to float a large barge", and "the water is coming from both directions". So a low-water stream now runs down from the heads, and the tide rises over it from Three Mills. Third, the author: the seam should be where the back rivers start, not where the detailed network ends. So the profile, the tide and the stream now run on through the regional reaches to the Old Lea.
+
+## Summary
+
+- **New register `data/maps/back-river-beds.json`.** Every level is an estimate, recorded with its method.
+  - **Outlet, Three Mills** (the House Mill race): **-2.2 scene (-0.37 m ODN)**, just below low water. A narrow low-water stream survives at the foot of the pond, as on the Channelsea below Abbey Mill (the author's 1920s-30s aerial). It meets the race passage (-2.6) without a step.
+  - **Heads**: **0.0 (1.84 m ODN)**, where each river leaves the Old Lea or the Navigation:
+    - the Waterworks River at (-1226, -1270), the City Mill River at (-1251, -1142) and the Pudding Mill River at (-1401, -914), all where they leave the Old Lea (regional reach Lower_River_Lea-15);
+    - the Bow Back River at its mouth on the Navigation.
+    - The Waterworks River's reaches above its junction (towards Temple Mills) are a channel of the Lea itself and are not raised. These are the shoals that limited navigation: ordinary high water gives 1.6 m over them and springs about 1.9 m, so loaded lighters passed only at spring tides. They lie above the 1892/1908 canal standard, "six feet below the overshot level at Bow Lock" (book p. 200; -0.88), which was proposed as a deepening of "clogged" beds (p. 201).
+  - **Between them** the bed rises gradually along the water: t = a / (a + b), with a and b the distances along the channels to the outlet and to the nearest head. The distances run over all the back-river water, the network's channels and the regional reaches alike (`scripts/back_river_profile.py`), so there is no step where the detailed network ends.
+  - **The Pudding Mill River** (8, 9, 21) stands **0.6 m above the profile** throughout, blended out over about 10 m where it meets the others. It is dry at low tide everywhere (lowest point 0.00 on 8, -0.57 at its junction), following the 1908 accounts (pp. 68, 203-204) and the author.
+- **The low-water stream** (`lowWaterStream` in the register): the Lea's water running down the silted beds from the heads when the tide is out, a foot (0.3 m) over the thalweg, level across the channel and sloping from 0.3 at the heads to -1.9 at Three Mills; never below low water.
+  - The scene draws the higher of the stream and the tide: at low water the stream shows alone; the rising tide comes up from Three Mills and covers it reach by reach.
+  - It is drawn as its own still mesh (`river-network.stream.*`, about 31,000 triangles) with the tidal water's material.
+  - The Pudding Mill River has none: dry at low tide.
+- **The section** is a V in the silt. Inside the mapped outline the bed falls evenly from 0.9 m above the thalweg at the shoreline to the thalweg on the centreline (over the local half-width, at most 15 m). So the foot of water covers only 19-27 % of each river's bed at low water, a narrow stream in wide mud. The bank face outside rises from that edge to the bank crest over the same 5 m shelf as before.
+- **Unchanged:** Bow Creek (0) and the Channelsea below Abbey Mill with Abbey Creek (14), the scoured tidal reaches below the mills; the Channelsea above Abbey Mill and the Navigation, which are still water.
+
+**Beds, before → after** (bed vertices more than 1 m inside the outline; scene y; low water -2.0, mid-tide -0.21, high water 1.58):
+
+| Channel | Before: lowest / median | After: lowest / median / highest | Bed wet at low water | Bed bare at mid-tide |
+|---|---|---|---|---|
+| Three Mills Wall River (1) | -3.70 / -3.63 | -2.19 / -1.53 / -0.27 | 19 % | 0 % |
+| Three Mills Back River (2) | -3.70 / -3.16 | -2.14 / -1.43 / 0.00 | 9 % | 0 % |
+| Waterworks River (3), High Street | -3.70 / -3.53 | -1.05 / -0.84 / -0.04 | 0 | 4 % |
+| Waterworks River (4), to the north edge | -3.70 / -3.10 | -0.79 / -0.13 / 0.77 | 0 | 57 % |
+| City Mill River (7) | -3.70 / -2.89 | -0.92 / -0.28 / 0.75 | 0 | 44 % |
+| Bow Back River (17) | -3.70 / -3.10 | -0.58 / -0.05 / 0.78 | 0 | 72 % |
+| Pudding Mill River (8) | -3.63 / -2.45 | 0.00 / 0.61 / 1.32 | 0 | 100 % |
+| Pudding Mill River (9) and link (21) | -3.70 / -2.64 | -0.57 / 0.12 / 0.67 | 0 | 95 % |
+
+## What changed
+
+- **New `scripts/back_river_profile.py`:** the profile over all the back-river water.
+  - It works on a 1 m grid of the network's corrected channels, the regional reaches as the river system draws them, and the passages; joins under 0.5 m are closed, as at x -1050. Two cells stay unconnected.
+  - It gives the thalweg, the stream level and the bed by the shared section. `build_river_network.py` and `build_river_system.py` both read it.
+  - It covers the network's west-context pieces of the Pudding Mill and Bow Back rivers (10008, 10017), which had kept the old deep bed.
+- `scripts/tide_levels.py` reads the register (`BACK_RIVER_PROFILE`, `BACK_RIVER_ABOVE`, `BACK_RIVER_STREAM`, `back_river_thalweg`, `silted_bed`); `tidal_shelf` takes the bed edge it starts from.
+- `docs/river-network.js` loads the stream (`lowWaterStream`) and draws it; `docs/app.js` adds it after the tidal surface and leaves it out of the meshes the tide moves (`userData.fixedLevel`; `keepIndexed` keeps it out of the per-material batch).
+- `scripts/build_river_network.py`:
+  - the thalweg field: distances along the silted water (8-connected 1 m raster, Dijkstra) from the outlet and from the heads. A 195 m² piece of the City Mill River's north arm joins the rest only beyond the network's edge; it takes the head level;
+  - silted beds and their bank faces in `section()`, including the Wall River photograph bank;
+  - the reviewed passages between back rivers (Pudding Mill, the Waterworks 3/4 seam, the Bow Back River mouth) take the thalweg instead of the tidal seam bed (-2.6). The Three Mills race keeps -2.6;
+  - the low-water stream mesh over all the back-river water: the 1 m cells it wets, at the thalweg plus its depth (`river-network.stream.f32/.u32`, about 41,000 triangles);
+  - `river-network.json` gains `backRiverBeds` and `lowWaterStream`;
+  - the final assertion allows silted beds above the 0.06 still-water datum, but below high water.
+- `scripts/build_river_system.py`:
+  - the regional back-river reaches and the passages between them are tidal (`tidalReachIds`), so their water moves with the tide;
+  - `river_bank_sections.py` gives them the silted bed and starts their bank faces at its edge. Their beds have rings out to 15 m inside the shore so the V reaches its centreline; other reaches keep two rings;
+  - network vertices within 1.5 m of the back-river water are no longer lowered as "caps", either to -0.7 or to -2.6 under the tide. The network's ground inside the regional reaches takes the silted bed instead.
+- `scripts/build_main_landscape.py`:
+  - **span clearance:** a road-bridge span whose water is all silted back river is cleared to the highest silted bed under it, not to the 0.08 still-water edge (`roadBridgeClearance.spanLevels`: Pegs Hole 0.14, Hunts Lane 0.67, Marshgate Lane 0.71). Otherwise the banks under those bridges would be cut into a trench beside the bed;
+  - `cap_junction_ends` leaves silted beds alone: channel beds keep their heights, as the builder's rule says.
+- **Checks:**
+  - `check_river_tides.py`: the "tidal bed below low water" rule excludes the back rivers. They must instead have a stream at Three Mills, silted heads and a Pudding Mill River dry at low water, all below high water. The stream must lie in the back rivers and their passages, between low water and the heads' level plus 0.31 m, reach Three Mills and every head except Pudding Mill's, and be absent from the Pudding Mill River;
+  - `check_core_river_connections.py`: the silted passages lie at or below the highest thalweg;
+  - `check_main_landscape.mjs` reads `spanLevels`;
+  - `check_landscape_flood.py`: its component test now allows the same 1 cm quantisation as the check above it. One Wall River cell has bed 2.50 and connection 2.49 m ODN, and is wet at the 2.5 m stage;
+  - `check_road_bridges.mjs` sample refreshed (see Checks).
+- **Cascade:** river network, historic elevation, river system, main landscape, landscape flood, factory yards, drainage, flood demo, wharf cranes, manifest. Drainage, flood demo, wharf cranes and terrain change only in their input hashes. The river terrain is unchanged.
+- **Flood model:** 121 hollows (120 before). The author's cases in `check_flood_volume.mjs` are unchanged: Mill Meads 1.76 m ODN at 20 mm; the pumping-station yard dry under any rain.
+
+## Checks
+
+- `npm test` 22/22. `check_road_bridges.mjs`: the stored sample was refreshed for the first version (only the Hunts Lane connection's approach moved, by up to 0.025 m); the revised profile matches it.
+- Python `check_*.py`: 41 pass. Against the same commands on the branch head before F2 (a scratch worktree), there are no new failures. Two now pass:
+  - `check_main_landscape.py`, which failed at the head on a stale `abbey-mills-coal.json` hash;
+  - `check_core_river_connections.py`, which failed in the scratch tree only because a review folder was missing.
+  - `check_remaining_trades_context.py` fails on both. It reports a different road each run (set order), and its inputs are untouched.
+- The river network, river system and main landscape builders are deterministic (reruns byte-identical; the network rechecked on the revised profile).
+
+## Renders
+
+Before and after, at low and high water: an overview in plan; the Three Mills pond from House Mill; the High Street junction; the Pudding Mill and Bow Back rivers; the Waterworks River north of the railway; along the Wall River, the City Mill River, the Pudding Mill River and the Back River; the seams at the network's north edge. Sheets are in the main checkout's `reference/flood-model-f2/`.
+
+- **Low water:**
+  - before: every back river was a deep slot of water between tall dark mud faces;
+  - now: a narrow stream runs down the middle of every back river from the heads to Three Mills, between wide mud banks; the Pudding Mill River is dry;
+  - Bow Creek, the Navigation and the Channelsea keep their water.
+- **Rising tide:** the tide comes up from Three Mills and widens the water over the mud reach by reach; it overtops the stream at the heads only after half tide, and covers the Pudding Mill River last. Renders at low water, 25 % and 50 % of the tide.
+- **High water:** the same as before, bank to bank.
+- **At the network's north and west edges** the mud ends against the regional still water, drawn at 0.06 as before.
+
+## Not done, and why
+
+- **The Old Lea at the heads** (Lower_River_Lea-15 and -22) keeps the regional still water at 0.06. At high water the tide in a back river stands above it at the junction until Phase 2 gives the Old Lea its level.
+- **No individual shoals.** The profile is smooth between the outlet and the heads; the evidence gives no bar positions.
+- **The Three Mills race** keeps its deep tail-race bed under the deck; its sill is unknown (the House Mill Trust may hold a record).
+- **The ponds.** Above Three Mills the back rivers were the mill pond, held near the last high water while the tide fell. The model still drains them with the tide; Phase 2 holds them.
+
+## Decisions for the author
+
+1. Are the levels acceptable: the bed at -0.37 m ODN at Three Mills rising to 1.84 m ODN at the heads, a foot of stream in it at low tide, the Pudding Mill River 0.6 m higher and dry?
+2. May F2 be committed? Next, per the plan: F3 with the Abbey Mills coal-quay river wall (one cascade through `os-river-walls.json`), then Phase 2.
+
+# F2 follow-up: fixes after review, and the Lee Navigation bridge (7-8 October 2026)
+
+## What changed
+
+- **Dark mud on dry land east of the Waterworks River:** `river_bank_sections.fields()` draws tidal mud only on the shelf (`d<=5`).
+- **Tracks sinking east of the Waterworks crossing** (an F1 effect): `os-ground-levels.json` `stratfordAtGradeRailways` (from `prepare_os_ground_levels.py`) and the "RAIL CUTS" clamp in `build_main_landscape.py`. The formation stays at 3.0 (the author: the OS is guidance, not a target).
+- **Seam at the old core edge:** the back-river shelf no longer fades at the network edge; `siltedCoreBedCorrections` in `build_river_system.py` (network bank caps in silted water go to the shared bed), applied in `docs/river-system.js` and the landscape.
+- **High water over the North London bridge decks:** `docs/great-eastern.js` no longer draws `northernWater` (a tidal copy at 0.06 rose 3.58 m with the tide).
+- **The Lee Navigation at the North London crossing:** `crossing-517-518` runs between the middles of the two pieces' facing ends (`centreline: true`), not their nearest corners, 12 m east of the canal. The `nl-hackney-cut` bridge form moved -8.8 m in chainage with it.
+- **The North London line over the Hackney Cut** (the author chose): `canalLift` {5.5, holdTo 100, rampTo 400} in `north-london-connection.json`, so the rails clear the towing paths.
+- **The Lee Navigation was blocked under that bridge** (the author's screenshot: a brick wall filled the span). The embankment footprint opened only over the 1895 GIS water, and the cut's two pieces stop either side of the line, so the fill and its 5.5 m retaining walls crossed the canal. `canal_passage()` in `north_london_connection.py` now computes the same passage from Water_1895 pieces 517/518 (recorded as `canalPassage` in the register) and the builder opens the embankment over it. The line's own `bridges` gained chainage 53.2-74.6; `bridgeIntervals()` in `docs/railway-bridges.js` (was `addedBridgeIntervals`) merges it with the register's `nl-hackney-cut` (54.0-73.5), so one deck is drawn.
+- **Regional landscape rebuilt** (`build_regional_landscape.py`, last built 5 October): its canal banks overlapped the moved Hackney Cut passage by 685 m². The rebuild also brings the regional grid up to the railway formations added since (2,146 of 452,018 10 m cells change by more than 0.1 m, nearly all kind 13, railway formation). In the main landscape only a few vertex counts change, and the Abbey Road spot height now falls on the 3.2 m path stub north of the sewer (not applied in either case). Flood grid: 28 fine and 3 coarse cells change; closed-hollow volume 31,292 → 31,313 m³; `check_flood_volume.mjs` cases unchanged.
+- **Tried and reverted:** a regional 5 m shelf ring with a tidal-face limit (held OS bank crests up to 1.4 m low; `check_os_ground_levels` failed); the network using the shared bed everywhere / a nearest-cell `bed_at` fallback (moved about 700 core vertices up to 4.5 m).
+
+## Checks
+
+- `npm test` 22/22; the `check_road_bridges.mjs` sample refreshed (Hunts Lane approach, up to 0.003 m).
+- `check_river_banks.py` now requires silted back-river bed vertices to lie on the registered bed (`back_river_profile`); the vertices that broke the old "0.35 m under the water" rule (9,832) all lie exactly on it. Every other bed vertex keeps that rule.
+- Python `check_*.py`: 42 pass (41 after F2). The 33 failures are hash pins, frozen snapshots and the `site256-range-1` alignment checks; none is new.
+- Renders: the Hackney Cut under the North London bridge from the water and from above, at low and high tide (main checkout `reference/flood-model-f2/lee-navigation-bridge-before-after.png`).
+
+## Still open for the author
+
+- The regional bank faces past the old core edge are steeper and higher than the network's (they stand at their OS crests): accept, or lower the network side?
+- The North London line ends at x -1700 in a 3 m earth end, about 45 m past the cut; the GIS route runs on to x -2212.

@@ -81,26 +81,26 @@ export const railwayBridgeForms = /* REGISTER */ {
     'nl-hackney-cut': {
       railway: 'North London / Victoria Park branch connection',
       frame: 'chainage',
-      start: 62.8,
-      end: 82.3,
+      start: 54.0,
+      end: 73.5,
       waterEdges: {
-        centre: [64.54, 80.76],
-        left: [65.29, 81.51],
-        right: [63.82, 80.01],
+        centre: [55.74, 72.07],
+        left: [56.66, 72.98],
+        right: [54.81, 71.15],
       },
       abutments: {
         west: {
-          centre: 64.14,
-          left: 64.89,
+          centre: 55.34,
+          left: 56.26,
         },
         east: {
-          centre: 81.17,
-          left: 81.92,
-          right: 80.42,
+          centre: 72.48,
+          left: 73.39,
+          right: 71.56,
         },
       },
       evidence:
-        "Mapped (OS five-foot): the Victoria Park branch crossing the Lee Navigation (Hackney Cut) on a bridge beside Hackney Wick Works, the canal running on under the line, and the line continuing west on embankment. The traced embankment ran unbroken over the drawn canal (77 triangles over its water). Measured in the model: the drawn canal spans chainage 63.8 to 81.5 across the crest (64.5 to 80.8 on the centreline); the abutment faces stand at 64.1 and 81.2 on the centreline. On the right-hand crest edge the traced fill already stopped at chainage 51.3, where it had been cut back from the branch's northern water; that notch now has the same brick face. Interpreted: brick abutments with in-line wings at the canal edges and the same iron girder deck the model draws at this railway's other bridges, at the traced 3.0 m formation, which leaves only about 2.3 m under the girders; the formation height is the traced, unmeasured value and is not changed here.",
+        "Mapped (OS five-foot): the Victoria Park branch crossing the Lee Navigation (Hackney Cut) on a bridge beside Hackney Wick Works, the canal running on under the line, and the line continuing west on embankment. The traced embankment ran unbroken over the drawn canal (77 triangles over its water). Measured in the model: the drawn canal spans chainage 54.8 to 73.0 across the crest (55.7 to 72.1 on the centreline); the abutment faces stand at 55.3 and 72.5 on the centreline (re-measured in task E after the Hackney Cut passage was moved onto the canal's line: it had run 9 m east of it, and the bridge with it). On the right-hand crest edge the traced fill already stopped at chainage 51.3, where it had been cut back from the branch's northern water; that notch now has the same brick face. Interpreted: brick abutments with in-line wings at the canal edges and the same iron girder deck the model draws at this railway's other bridges, at the traced 3.0 m formation, which leaves only about 2.3 m under the girders; the formation height is the traced, unmeasured value and is not changed here.",
     },
   },
   lineEnds: {
@@ -164,12 +164,18 @@ export function railwayWorks(railway, mainLandscape) {
   };
 }
 
-// Bridge intervals the register adds to a detailed railway's own bridges list (great-eastern.js
-// draws its standard girder deck over them).
-export function addedBridgeIntervals(railway) {
-  return Object.entries(railwayBridgeForms.bridges)
-    .filter(([, b]) => b.railway === railway.name && b.frame === 'chainage')
-    .map(([id, b]) => ({ start: b.start, end: b.end, sewer: false, register: id }));
+// A detailed railway's own bridges list with the register's chainage bridges added (great-eastern.js
+// draws its standard girder deck over each). Where the builder already opens the line over the same
+// water (the Hackney Cut since task E), the two intervals are merged so only one deck is drawn.
+export function bridgeIntervals(railway) {
+  const out = railway.bridges.map((b) => ({ ...b }));
+  for (const [id, b] of Object.entries(railwayBridgeForms.bridges)) {
+    if (b.railway !== railway.name || b.frame !== 'chainage') continue;
+    const own = out.find((o) => o.start < b.end && b.start < o.end);
+    if (own) Object.assign(own, { start: Math.min(own.start, b.start), end: Math.max(own.end, b.end), register: id });
+    else out.push({ start: b.start, end: b.end, sewer: false, register: id });
+  }
+  return out;
 }
 
 export function replacedCrossings(railway) {

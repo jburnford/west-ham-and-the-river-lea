@@ -75,8 +75,9 @@ seeds=(river>=.5)&np.isfinite(fc)&(fc<=fb+.011)
 areas=[]
 for stage in [1.9,2.5,3.5,4.5,5.5]:
     actual=fc<stage
-    components,_=label(fb<stage)
-    reached=np.unique(components[seeds&(fb<stage)]);reached=reached[reached!=0]
+    # The same 1 cm storage quantisation as above: a cell whose bed rounds to the stage can be wet at it.
+    components,_=label(fb<stage+.011)
+    reached=np.unique(components[seeds&(fb<stage+.011)]);reached=reached[reached!=0]
     # Every fine cell wet at this stage lies in a component that either holds a tidal seed or reaches the fine
     # box edge (water from the regional grid enters there).
     edge=np.zeros_like(actual);edge[0,:]=edge[-1,:]=edge[:,0]=edge[:,-1]=True

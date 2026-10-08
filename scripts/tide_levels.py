@@ -30,6 +30,16 @@ shapely.prepare(flats)
 # Traced high-water lines on the landward side of a flat, where it meets its bank (task D).
 high_water_lines = unary_union([LineString(line) for f in raw['mudFlats'] for line in f.get('highWaterLines', [])])
 RIM_TOP = HIGH-.06  # just under the water, as the core caps its mud (build_river_terrain.py)
+# Silted back-river beds above low water (data/maps/back-river-beds.json, task E F2).
+BACK_RIVER_REGISTER = ROOT/'data/maps/back-river-beds.json'
+back_rivers = json.loads(BACK_RIVER_REGISTER.read_text())
+BACK_RIVER_PROFILE = back_rivers['profile']
+# Channel id -> metres its thalweg stands above the outlet-to-head profile (the Pudding Mill River's extra silt).
+BACK_RIVER_ABOVE = {i: g['aboveProfileMetres'] for g in back_rivers['groups'] for i in g['channelIds']}
+BACK_RIVER_STREAM = {i: g['streamDepthMetres'] for g in back_rivers['groups'] for i in g['channelIds']}
+BACK_RIVER_MAX_FLOOR = BACK_RIVER_PROFILE['headSceneY']+max(BACK_RIVER_ABOVE.values())
+BACK_RIVER_SECTION = back_rivers['section']
+BACK_RIVER_EDGE = BACK_RIVER_SECTION['edgeAboveFloorMetres']
 
 
 def smooth(a, b, v):
@@ -42,9 +52,27 @@ def tidal_bed(inside):
     return BED_EDGE+(BED_FLOOR-BED_EDGE)*smooth(0, S['bedRampMetres'], inside)
 
 
-def tidal_shelf(shore, top=CREST):
-    """Generic tidal bank face outside the outline, by distance out from the shore."""
-    return BED_EDGE+(top-BED_EDGE)*smooth(0, S['shelfMetres'], shore)
+def silted_bed(inside, floor, ramp=None):
+    """Back-river bed inside the mapped outline: falling evenly from edgeAboveFloorMetres above the
+    thalweg (floor) at the shoreline to it on the centreline, over ramp (the local half-width, at most
+    rampMetres), so the low-water stream runs in a narrow channel cut into the silt."""
+    edge = floor+BACK_RIVER_EDGE
+    ramp = BACK_RIVER_SECTION['rampMetres'] if ramp is None else ramp
+    return edge+(floor-edge)*np.clip(inside/ramp, 0, 1)
+
+
+def back_river_thalweg(to_outlet, to_head, above):
+    """Thalweg on the outlet-to-head profile (back-river-beds.json profile): t = a/(a+b) of the
+    distances along the water to the outlet (a) and the nearest head (b), plus the channel's extra."""
+    t = to_outlet/np.maximum(to_outlet+to_head, 1e-9)
+    p = BACK_RIVER_PROFILE
+    return p['outlet']['sceneY']+(p['headSceneY']-p['outlet']['sceneY'])*t+above
+
+
+def tidal_shelf(shore, top=CREST, edge=BED_EDGE):
+    """Generic tidal bank face outside the outline, by distance out from the shore; a back river's
+    face starts from its silted bed edge (edge)."""
+    return edge+(top-edge)*smooth(0, S['shelfMetres'], shore)
 
 
 def mud_flat(shore):

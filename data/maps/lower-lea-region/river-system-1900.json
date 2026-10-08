@@ -16,7 +16,7 @@
     {"a": 513, "b": 515, "width": 14, "category": "bridge-passage", "evidence": "hackney-crossings"},
     {"a": 515, "b": 516, "width": 14, "category": "bridge-passage", "evidence": "hackney-crossings"},
     {"a": 516, "b": 517, "width": 14, "category": "bridge-passage", "evidence": "hackney-crossings"},
-    {"a": 517, "b": 518, "width": 16, "category": "bridge-passage", "evidence": "old-ford-network", "note": "Continuous Hackney Cut under the railway and road. Old Ford lock and lateral flood gate farther south are separate controls."}
+    {"a": 517, "b": 518, "width": 16, "category": "bridge-passage", "evidence": "old-ford-network", "note": "Continuous Hackney Cut under the railway and road. Old Ford lock and lateral flood gate farther south are separate controls.", "centreline": true, "centrelineEvidence": "The two 1895 water pieces of the Hackney Cut stop either side of the Victoria Park branch; the OS shows the cut running straight on under the line. The passage joins the middles of their ends (it ran between their nearest corners, 12 m east of the canal)."}
   ],
   "traces": [
     {"id": "lea-bridge-river", "name": "Lea Bridge to the Old Lea", "panel": "lea-bridge-head", "width": 20, "role": "river", "category": "mapped-channel", "joins": ["Water_1895-521", "Lower_River_Lea-20"], "pixels": [[413,593],[435,619],[455,637],[480,638],[510,645],[550,660],[580,666],[612,657],[652,641],[679,641],[702,652],[724,671],[745,678]], "note": "River route through the waterworks; no filtering-bed polygons included. Width approximate; structures at Lea Bridge remain controls, not unrestricted flow."},

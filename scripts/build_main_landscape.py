@@ -526,6 +526,8 @@ def blend_surface(points,old,bank=True,key='groundMesh'):
     w=weight(points);out=np.asarray(old,dtype=float).copy();selected=w>0
     if not selected.any():return out
     p=points[selected];g=base(p);wet=shapely.contains_xy(blend_water,p[:,0],p[:,1]);old_y=out[selected]
+    # Network vertices in the silted back-river water past its own channels (siltedCoreBedCorrections) stay at the bed.
+    if key=='network':wet|=shapely.contains_xy(silted_water,p[:,0],p[:,1])
     street=own_street(p);wet[street]=shapely.contains_xy(water,p[street,0],p[street,1]);street_mask=street
     if bank:
         bng=np.column_stack([538900+p[:,0],183209-p[:,1]]);pts=shapely.points(bng)
@@ -628,10 +630,15 @@ def clear_wall_faces(points,new,blended,triangles):
 # shore edges keep their height; no vertex is lowered more than 2.4 m below
 # a mesh neighbour, so the cap never forms a new step.
 END_FACE_M=3;system_water=geometry(system['waterPolygons']);shapely.prepare(system_water);end_caps={}
+# The silted back-river beds (river-network.json backRiverBeds, F2: the network's channels and the
+# regional reaches up to the Old Lea) stand above the still-water edge by design; like every channel
+# bed they keep their heights.
+silted_beds=network['backRiverBeds']
+silted_water=geometry(silted_beds['waterPolygons']);shapely.prepare(silted_water)
 def cap_junction_ends(points,new,triangles):
     edge=network['waterLevel']+.02;pts=shapely.points(points)
     near=np.flatnonzero(shapely.dwithin(system_water,pts,END_FACE_M))
-    near=near[(new[near]>edge)&~shapely.contains_xy(raised_shore,points[near,0],points[near,1])]
+    near=near[(new[near]>edge)&~shapely.contains_xy(raised_shore,points[near,0],points[near,1])&~shapely.contains_xy(silted_water,points[near,0],points[near,1])]
     d=shapely.distance(system_water.boundary,pts[near]);d[shapely.contains_xy(system_water,points[near,0],points[near,1])]=0
     s=np.clip(d/END_FACE_M,0,1);s=s*s*(3-2*s)
     cap=edge+s*(new[near]-edge);lower=cap<new[near]-1e-6;near=near[lower]
@@ -787,6 +794,7 @@ for key,description in [('network',network),('system',system)]:
     if key=='network':
         old=old_historic(p[:,[0,2]],old)
         indices=np.array(system['coreBedCorrections'],dtype=int);old[indices]=np.minimum(-.7,old[indices])
+        for i,level in system.get('siltedCoreBedCorrections',[]):old[i]=min(old[i],level)
     index_path=ROOT/'docs/data'/description['indexFile'];inputs.append(index_path)
     export_heights(key,p[:,[0,2]],old,triangles=np.fromfile(index_path,'<u4').reshape(-1,3).astype(np.int64))
 p=read('docs/data/'+historic['files']['extension'],True).reshape(-1,3);export_heights('extension',p[:,[0,2]],p[:,1])
@@ -953,6 +961,16 @@ for bridge in infra['roadBridges']:
         if f1-f0>.05:strips.append(Polygon(at(np.array([f0,f1,f1,f0]),np.array([v-.125,v-.125,v+.125,v+.125]))).buffer(0))
     if strips:span_footprints[bridge['id']]=shapely.union_all([span_footprints.get(bridge['id'],Polygon()),*strips]).buffer(.01,join_style='mitre').buffer(-.01,join_style='mitre')
 span_zone=shapely.union_all(list(span_footprints.values()));shapely.prepare(span_zone)
+# A span whose drawn water is all silted back river (data/maps/back-river-beds.json, river-network.json
+# backRiverBeds) is cleared to the silted bed edge, the bed's level at the shoreline, not to the
+# still-water edge: the bed under it stays as drawn and the banks meet it without a trench.
+# The level is the highest drawn silted bed under the span (its edge, blended where two levels meet).
+span_levels={};bed_q=surfaces['network']['points'];bed_y=surfaces['network']['new']
+on_silted_bed=shapely.contains_xy(silted_water,bed_q[:,0],bed_q[:,1])
+for key,g in span_footprints.items():
+    wet=g.intersection(low_water);silted_wet=silted_water.intersection(wet).area
+    bed=on_silted_bed&shapely.contains_xy(g,bed_q[:,0],bed_q[:,1])
+    span_levels[key]=round(max(WATER_EDGE,float(bed_y[bed].max())),3) if bed.any() and silted_wet>=.95*wet.area else WATER_EDGE
 bridge_lines=[(LineString(b['route']),b['height']) for b in infra['roadBridges']]
 def bridge_cone(q):
     out=np.full(len(q),-np.inf);pts=shapely.points(q)
@@ -1096,10 +1114,17 @@ for key in ['core',*mesh_keys]:
 # 3. Span clearance.
 for key in ['core',*mesh_keys]:
     q=mesh_points(key);new=surfaces[key]['new']
-    idx=np.flatnonzero(~protected(key)&shapely.contains_xy(span_zone,q[:,0],q[:,1]));idx=idx[new[idx]>WATER_EDGE]
+    level=np.full(len(q),np.inf)
+    for span,g in span_footprints.items():
+        inside=shapely.contains_xy(g,q[:,0],q[:,1]);level[inside]=np.minimum(level[inside],span_levels[span])
+    free=~protected(key)
+    # Silted-bank vertices just outside the mapped channel where a regional outline overlaps it
+    # are bank, not bed (river_system no longer lowers them as caps, F2): they clear like bank.
+    if key=='network':free|=shapely.dwithin(silted_water,shapely.points(q),1.5)&~shapely.contains_xy(silted_water,q[:,0],q[:,1])
+    idx=np.flatnonzero(free&np.isfinite(level));idx=idx[new[idx]>level[idx]]
     if not len(idx):continue
-    road_pass['spanClearance'][key]={'loweredVertices':int(len(idx)),'maxLoweringMetres':round(float((new[idx]-WATER_EDGE).max()),3)}
-    new[idx]=WATER_EDGE
+    road_pass['spanClearance'][key]={'loweredVertices':int(len(idx)),'maxLoweringMetres':round(float((new[idx]-level[idx]).max()),3)}
+    new[idx]=level[idx]
 # 4. No ground above a road. Margins: one mesh edge (core cell diagonal, the
 # 1 m network grid diagonal, the 2 m extension grid diagonal, the longest
 # incident system edge up to 3 m; the regional mesh is cut along the roads).
@@ -1170,6 +1195,55 @@ for key in clamp:
     loss=before[key]-surfaces[key]['new']
     road_pass['roadClamp'][key]={'candidateVertices':int(len(clamp[key][0])),'loweredVertices':int((loss>1e-6).sum()),'maxLoweringMetres':round(float(loss.max()),3)}
 print('ROAD PASS:',json.dumps(road_pass),flush=True)
+# Railways the OS draws at grade in the Stratford zone (os-ground-levels.json stratfordAtGradeRailways; the North
+# London branch past Lea Junction): F1 fitted the ground there to open-ground readings 30-100 m off the line, which
+# stood up to 0.9 m over the kept formation and buried the tracks. The ground within RAIL_CUT_FLAT_M of the line is
+# held at the formation less the 0.1 m at-grade lift, rising 1 in RAIL_CUT_BATTER beyond: a shallow cutting where the
+# ground stands higher; nothing is raised.
+RAIL_CUT_FLAT_M=6.;RAIL_CUT_BATTER=8.;RAIL_CUT_REACH_M=RAIL_CUT_FLAT_M+3*RAIL_CUT_BATTER
+rail_cuts=[]
+for row in os_register.get('stratfordAtGradeRailways',[]):
+    rail=next(r for r in infra['railways'] if r.get('id')==row['railwayId'])
+    st=np.array(rail['stations'],float);line=LineString(rail['route']);cut={'railwayId':row['railwayId'],'from':row['from'],'to':row['to'],'surfaces':{}}
+    for key,surf in surfaces.items():
+        q=surf['points'];new=surf['new']
+        near=np.flatnonzero(shapely.dwithin(line,shapely.points(q),RAIL_CUT_REACH_M))
+        if not len(near):continue
+        pts=shapely.points(q[near]);s_=shapely.line_locate_point(line,pts);d=shapely.distance(line,pts)
+        cap=np.interp(s_,st[:,5],st[:,2])-.1+np.maximum(0,d-RAIL_CUT_FLAT_M)/RAIL_CUT_BATTER
+        low=(s_>=row['from'])&(s_<=row['to'])&(new[near]>cap+1e-6)
+        if low.any():
+            cut['surfaces'][key]={'loweredVertices':int(low.sum()),'maxLoweringMetres':round(float((new[near][low]-cap[low]).max()),3)}
+            new[near[low]]=cap[low]
+    # The 20 m background triangles that cross the formation (crest half-width either side) still tilt over it from
+    # higher ground beyond the cutting: lower their high corners until the plane stays under the formation there.
+    # The mesh repeats each vertex per triangle, so every copy of a position takes the same (lowest) height.
+    surf=surfaces['groundMesh'];q=surf['points'];new=surf['new'];tri=surf['triangles']
+    corridor=line.buffer(rail.get('crestHalfWidth',4.5),cap_style=2)
+    polys=shapely.polygons(q[tri]);hit=np.flatnonzero(shapely.intersects(polys,corridor))
+    _,pos=np.unique(np.round(q,3),axis=0,return_inverse=True);pos=pos.ravel();lowered=0;excess=0.
+    for _ in range(4):
+        target=np.full(pos.max()+1,np.inf)
+        for k in hit:
+            c=shapely.get_coordinates(shapely.intersection(polys[k],corridor))
+            if not len(c):continue
+            sc=shapely.line_locate_point(line,shapely.points(c))
+            if sc.max()<row['from'] or sc.min()>row['to']:continue
+            P=q[tri[k]];h=new[tri[k]];C=float(np.interp(sc,st[:,5],st[:,2]).min())
+            try:w=np.linalg.solve(np.c_[P,np.ones(3)].T,np.c_[c,np.ones(len(c))].T).T
+            except np.linalg.LinAlgError:continue
+            H=w@h
+            if H.max()<=C+1e-3:continue
+            excess=max(excess,float(H.max()-C));hi=h>C
+            lo_part=w[:,~hi]@(h[~hi]-C);hi_part=w[:,hi]@(h[hi]-C)
+            alpha=float(np.clip(np.min(np.where(hi_part>1e-9,-lo_part/np.maximum(hi_part,1e-9),1)),0,1))
+            for v in tri[k][hi]:target[pos[v]]=min(target[pos[v]],C+alpha*(new[v]-C))
+        move=np.isfinite(target[pos])&(target[pos]<new-1e-6)
+        if not move.any():break
+        new[move]=target[pos][move];lowered+=int(move.sum())
+    cut['surfaces']['groundMeshCorridor']={'triangles':int(len(hit)),'loweredVertexCopies':lowered,'maxExcessMetres':round(excess,3)}
+    rail_cuts.append(cut)
+print('RAIL CUTS:',json.dumps(rail_cuts),flush=True)
 for key in ['core','network','system','extension']:write_heights(key)
 heights=surfaces['groundMesh']['new']
 # The join between the 20 m and the terrace and network-join meshes: fine vertices on it (and not on a coarse vertex)
@@ -1578,11 +1652,12 @@ result={'epoch':'1900','status':'regional early-marsh ground applied to main ind
     'abbeyMillCrossingApproach':{'method':f'Abbey Lane corridor ground level with the abbey-mill-crossing deck (deck height minus the {DECK_ROAD_OFFSET} m road-surface offset) for {DECK_LANDING_M} m beyond each deck end, then within 1 in {round(1/DECK_GRADE)} of the deck, clipped to the corridor readings; within {DECK_APPROACH_M} m of the deck the regional bank band does not lift the street, the bank beside it is cut back at 1:{EDGE_BATTER}, and under the deck the bank stays 0.1 m below the 0.4 m deck slab',
         'deckHeight':[b[1]+DECK_ROAD_OFFSET for v in graded_decks.values() for b in v][0] if graded_decks else None,
         'evidence':'Mapped: the crossing and approach alignment (OS VIII.32, road-traces.json). Observed: Abbey Lane street spot heights sh_538874_183253 (2.19 m scene, 8.1 m west of the deck) and sh_538944_183274 (2.40 m, 34 m east). Interpreted: the 1.8 m deck height (road-traces.json); the approach grade and landing are estimates made to meet it. Both readings stand above the deck, so the graded approach dips to the bridge; raising the deck in road-traces.json is the alternative.'},
-    'roadBridgeClearance':{'method':f'fitted to the road surfaces docs/infrastructure.js draws (street, footway and path triangles at ground() under their vertices plus 0.065, 0.095 and 0.05 m; ground() raised within reach of a road bridge to the cone deck - {DECK_ROAD_OFFSET} - {BRIDGE_CONE} m per metre from the deck route; decks as boxes at the deck height), in order: (1) approach embankments: under road triangles the ground is made up to the bridge cone and falls beyond the road edge at 1:{EDGE_BATTER} to the surrounding ground, never over water nor steeper than 1:{EDGE_BATTER} above low water from the water edge or a span footprint, above a building from its footprint, or above the outer edge of the mesh it is in; (2) approach cuttings on the bridge\'s own road (corridor plus {ROAD_SHOULDER_M} m footway, within {CUT_REACH_M} m of the deck route, crossing streets excluded): ground no higher than the deck road level for {DECK_LANDING_M} m from the deck route, then rising at no more than 1 in {round(1/DECK_GRADE)}, sides cut at 1:{EDGE_BATTER}; (3) span clearance: inside each footprint (between the first and last drawn low water on lines parallel to the deck route across the deck width, the outermost lines\' spans carried on {CLEAR_MARGIN_M} m beyond each deck edge, together with the clear zone between the abutment faces of data/maps/road-bridge-forms.json as docs/road-bridges.js places them, out to the register\'s clear-zone margin) no ground above the water edge ({WATER_EDGE:.2f} m); (4) every other landscape vertex inside a road or deck triangle, or within one mesh edge of one, held at or below that road\'s drawn surface (its ground() values interpolated over the triangle plus the triangle\'s offset, less up to {ROAD_CAP_BELOW_M} m while keeping {ROAD_CAP_KEEP_M} m of the offset; the deck top likewise under a deck), with the vertices each road vertex takes its ground from (the mesh triangles or core cell containing it) held so in {ROAD_SUPPORT_PASSES} passes only, the road re-read after each (it follows them down: roadSupport.roadVertexChangeMetres), and every other vertex then in one pass that leaves the road where it stands; beyond one mesh edge, ground above a road is cut back at 1:{EDGE_BATTER} from it (outside building footprints); the 20 m regional mesh is cut along the road triangles so its triangles inside a street are planar with it; streets passing under the Northern Outfall Sewer keep the marsh level at the middle of the opening for {DECK_LANDING_M} m beyond the opening axis and rise from it at no more than 1 in {round(1/DECK_GRADE)}. Channel beds in drawn water and preserved tidal mud are never changed; level.f32 is not changed by this pass',
-        'waterEdge':WATER_EDGE,'footprints':{k:rings(g) for k,g in span_footprints.items()},'pass':road_pass,
+    'roadBridgeClearance':{'method':f'fitted to the road surfaces docs/infrastructure.js draws (street, footway and path triangles at ground() under their vertices plus 0.065, 0.095 and 0.05 m; ground() raised within reach of a road bridge to the cone deck - {DECK_ROAD_OFFSET} - {BRIDGE_CONE} m per metre from the deck route; decks as boxes at the deck height), in order: (1) approach embankments: under road triangles the ground is made up to the bridge cone and falls beyond the road edge at 1:{EDGE_BATTER} to the surrounding ground, never over water nor steeper than 1:{EDGE_BATTER} above low water from the water edge or a span footprint, above a building from its footprint, or above the outer edge of the mesh it is in; (2) approach cuttings on the bridge\'s own road (corridor plus {ROAD_SHOULDER_M} m footway, within {CUT_REACH_M} m of the deck route, crossing streets excluded): ground no higher than the deck road level for {DECK_LANDING_M} m from the deck route, then rising at no more than 1 in {round(1/DECK_GRADE)}, sides cut at 1:{EDGE_BATTER}; (3) span clearance: inside each footprint (between the first and last drawn low water on lines parallel to the deck route across the deck width, the outermost lines\' spans carried on {CLEAR_MARGIN_M} m beyond each deck edge, together with the clear zone between the abutment faces of data/maps/road-bridge-forms.json as docs/road-bridges.js places them, out to the register\'s clear-zone margin) no ground above the water edge ({WATER_EDGE:.2f} m), or above the silted bed edge where all the water under the span is a silted back river (spanLevels); (4) every other landscape vertex inside a road or deck triangle, or within one mesh edge of one, held at or below that road\'s drawn surface (its ground() values interpolated over the triangle plus the triangle\'s offset, less up to {ROAD_CAP_BELOW_M} m while keeping {ROAD_CAP_KEEP_M} m of the offset; the deck top likewise under a deck), with the vertices each road vertex takes its ground from (the mesh triangles or core cell containing it) held so in {ROAD_SUPPORT_PASSES} passes only, the road re-read after each (it follows them down: roadSupport.roadVertexChangeMetres), and every other vertex then in one pass that leaves the road where it stands; beyond one mesh edge, ground above a road is cut back at 1:{EDGE_BATTER} from it (outside building footprints); the 20 m regional mesh is cut along the road triangles so its triangles inside a street are planar with it; streets passing under the Northern Outfall Sewer keep the marsh level at the middle of the opening for {DECK_LANDING_M} m beyond the opening axis and rise from it at no more than 1 in {round(1/DECK_GRADE)}. Channel beds in drawn water and preserved tidal mud are never changed; level.f32 is not changed by this pass',
+        'waterEdge':WATER_EDGE,'spanLevels':span_levels,'footprints':{k:rings(g) for k,g in span_footprints.items()},'pass':road_pass,
         'underpasses':[{'road':name,'axis':np.round(np.array(axis.coords),2).tolist(),'streetSceneY':round(street,3)} for v in underpasses.values() for axis,street,name in v],
         'evidence':'Mapped: the street, footway, path and deck geometry (infrastructure.json), the drawn low water, the building footprints and the sewer openings (ground-plan.json). Observed: none at the bridges; the deck heights are interpretations (road-traces.json) and so are the embankments, cuttings and clearances fitted to them. The Bow Bridge east approach parapet bench mark (OS 25-inch, "hatched south parapet / retaining wall") suggests a walled rather than battered approach on that side; the batter is held off the frontage buildings there in any case. The Mill Meads works road readings (2.83 m at Abbey Road, 2.10 m to the north) lie 115 m and more from the sewer: its dip under the sewer to marsh level is an interpretation, as T1b drew it.'},
     'railwaySlopes':railways,
+    'atGradeRailwayCuts':{'cuts':rail_cuts,'flatMetres':RAIL_CUT_FLAT_M,'batter':f'1:{RAIL_CUT_BATTER:g}','method':'task E: the ground beside a railway the OS draws at grade in the Stratford zone (os-ground-levels.json stratfordAtGradeRailways) is held at its formation less 0.1 m within the flat width of the line, rising at the batter beyond; only lowered','evidence':'Observed: no embankment or cutting hatching on the OS five-foot plan along the stretch. Interpreted: the shallow cutting where the F1 ground stands above the kept formation.'},
     'railwayWorks':{'method':f'formation stations, routes and the refitted embankment heights are unchanged; per railway, works.removedTriangles lists embankment triangles not drawn and works.addedTriangles the earth drawn instead (remainders re-triangulated in their own planes, hipped ends, the LT&SR west approach); works.walls are brick faces (top edge on the earthwork, foot {RAIL_FOOTING} m below the ground or at {RAIL_BED} m beside water). No embankment stands over drawn water: at recorded bridges the fill stops {RAIL_WATER_CLEAR} m short of the water behind an abutment face with in-line wings; where a raised embankment would come within {RAIL_GAP} m of a mapped building footprint it stops {RAIL_GAP} m off behind a retaining wall, except where the footprint lies in the formation (recorded as a conflict); raised line ends with nothing beyond close with an earth end at the side slope',
         'railways':rail_works,
         'evidence':'Mapped: the railway routes and the formation they carry (infrastructure.json), the drawn water, the street corridors and the building footprints; the OS five-foot plan for the Bow Creek and Hackney Cut crossings and the line ends (data/maps/railway-bridge-forms.json). Interpreted: every abutment, wing and retaining wall, the hipped ends and the LT&SR west approach; none is a surveyed structure.'},

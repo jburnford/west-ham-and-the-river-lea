@@ -14,7 +14,7 @@ from pyproj import Transformer
 from scipy.interpolate import CubicSpline, CubicHermiteSpline
 from shapely import constrained_delaunay_triangles, make_valid, segmentize
 from shapely.geometry import LineString, Point, Polygon, box, shape
-from shapely.ops import substring, transform, unary_union
+from shapely.ops import nearest_points, substring, transform, unary_union
 from shapely.strtree import STRtree
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,6 +41,31 @@ def project_gis(g):
         e, n = PROJECTION.transform(x, y)
         return e-538900, 183209-n
     return make_valid(transform(local, g))
+
+
+def end_centre(g, p, q):
+    # The middle of g's cross-section 1 m inside its end at p, across the direction p->q
+    # (as build_river_system.py does for a centreline passage).
+    u = np.subtract(q, p)/max(np.linalg.norm(np.subtract(q, p)), 1e-9); n = np.array([-u[1], u[0]])
+    c = np.subtract(p, u)
+    chord = g.intersection(LineString([c-200*n, c+200*n]))
+    pp = [x for x in getattr(chord, 'geoms', [chord]) if x.geom_type == 'LineString' and not x.is_empty]
+    if not pp:
+        return np.asarray(p, float)
+    return np.asarray(min(pp, key=lambda x: x.distance(Point(c))).interpolate(.5, normalized=True).coords[0])
+
+
+def canal_passage():
+    # The Hackney Cut runs on under the line, but its two 1895 water pieces stop either side of it.
+    # Same route as the river system's crossing-517-518: between the middles of the facing ends.
+    features = read('docs/maps/data/Water_1895.geojson')['features']
+    a, b = (project_gis(shape(features[i]['geometry'])) for i in (517, 518))
+    pa, pb = nearest_points(a, b)
+    ca, cb = np.asarray(pa.coords[0]), np.asarray(pb.coords[0])
+    for _ in range(3):
+        ca, cb = end_centre(a, ca, cb), end_centre(b, cb, ca)
+    return dict(route=[ca.tolist(), cb.tolist()], width=16.0, waterPieces=['Water_1895-517', 'Water_1895-518'],
+        evidence='The OS shows the Hackney Cut running straight on under the Victoria Park branch; the 1895 water pieces stop either side of the line. Same passage as crossing-517-518 in the river system; the embankment opens over it like other water.')
 
 
 def prepare():
@@ -98,6 +123,8 @@ def prepare():
         sourcePolylines=[list(g.coords) for g in source], referenceRoute=list(reference.coords), route=controls,
         westClipX=-1700, tracks=2, trackSpacing=3.6, gauge=1.435,
         crestHalfWidth=4.5, baseHalfWidth=17, formationHeight=3.0,
+        canalPassage=canal_passage(),
+        canalLift=dict(formation=5.5, holdTo=100.0, rampTo=400.0, evidence='Interpreted (task E, author): the line crosses the Lee Navigation (Hackney Cut) on a bridge above the towing paths (OS 21-22 ft, about 4.3-4.5 m scene; White Post Lane bridge parapet B.M. 23.68 ft), and the OS hatches the embankment west of the cut. The traced 3.0 m formation stood more than a metre under the towing paths, so the rails ran into the canal banks either side of the bridge. Lifted to 5.5 m over the cut (girder soffit about 4.85 m), held to chainage 100 and eased back to the traced 3.0 m by chainage 400, before the Old Lea and Waterworks River bridges. Levels are estimates; no rail level is read here.'),
         join=dict(railwayId=old['id'], referenceControlIndex=11, stationIndex=j,
             point=station[:2], height=station[2], normal=station[3:5], chainage=station[5]),
         junction=dict(point=list(cross.coords[0]), sourceChainage=cross_d,
@@ -136,14 +163,24 @@ def build_north_london_connection(water, roads, buildings, existing_connector):
     spline = CubicSpline(dist, points, bc_type=((1, head), (1, tail)), axis=0)
     line = LineString(spline(np.linspace(0, dist[-1], math.ceil(dist[-1]/2)+1)))
     junction_d = line.project(Point(raw['junction']['point']))
+    lift = raw.get('canalLift')
     def height(d):
         t = max(0, min(1, (d-junction_d)/(line.length-junction_d)))
-        return raw['junction']['formationHeight']+(join[2]-raw['junction']['formationHeight'])*(.5-.5*math.cos(math.pi*t))
+        h = raw['junction']['formationHeight']+(join[2]-raw['junction']['formationHeight'])*(.5-.5*math.cos(math.pi*t))
+        if lift and d < lift['rampTo']:
+            # Over the Hackney Cut (canalLift): held at its formation, then eased back to the traced level.
+            u = max(0, min(1, (d-lift['holdTo'])/(lift['rampTo']-lift['holdTo'])))
+            h = max(h, lift['formation']+(h-lift['formation'])*(.5-.5*math.cos(math.pi*u)))
+        return h
     source_water = unary_union([Polygon(p[0], p[1:]) for p in raw['northernWaterContext']])
     existing_water = water.union(unary_union([Polygon(p[0],p[1:])
         for p in raw['mainlineExtension']['priorNorthernWater']]))
     extra = source_water.difference(existing_water)
     all_water = existing_water.union(source_water)
+    if 'canalPassage' in raw:
+        # The Hackney Cut under the bridge (no GIS water there): open the embankment over it.
+        canal = raw['canalPassage']
+        all_water = all_water.union(LineString(canal['route']).buffer(canal['width']/2))
     openings = all_water.buffer(2.5).union(roads.buffer(2))
     crest, base = raw['crestHalfWidth'], raw['baseHalfWidth']
     corridor = line.buffer(crest, cap_style=2)
