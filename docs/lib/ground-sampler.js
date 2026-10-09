@@ -81,9 +81,11 @@ export function createGroundSampler(meshes, { cellSize = 6 } = {}) {
         refs[counts[cell] + fill[cell]++] = i;
       }
   }
-  // Highest drawn surface under (x, z), or null when no triangle covers the point.
-  function sample(x, z) {
-    if (x < minX || x > maxX || z < minZ || z > maxZ) return null;
+  // Highest drawn surface under (x, z), or null when no triangle covers the point. A point on an edge two triangles
+  // share can fall a few 1e-5 outside both after single-precision rounding (task F: a road-edge sample on Bridge Court
+  // fell through to the coarse fallback level), so a point no triangle covers is tried again with a 1e-4 edge margin;
+  // the strict test still decides wherever a triangle covers the point, so no height that was found changes.
+  function sampleWith(x, z, eps) {
     const cell = cellOf(x, z);
     let best = null;
     for (let k = counts[cell]; k < counts[cell + 1]; k++) {
@@ -99,11 +101,16 @@ export function createGroundSampler(meshes, { cellSize = 6 } = {}) {
       if (Math.abs(det) < 1e-9) continue;
       const u = ((x - ax) * (cz - az) - (cx - ax) * (z - az)) / det,
         v = ((bx - ax) * (z - az) - (x - ax) * (bz - az)) / det;
-      if (u < -1e-6 || v < -1e-6 || u + v > 1 + 1e-6) continue;
+      if (u < -eps || v < -eps || u + v > 1 + eps) continue;
       const y = p[triA[i] * 3 + 1] * (1 - u - v) + p[triB[i] * 3 + 1] * u + p[triC[i] * 3 + 1] * v;
       if (best === null || y > best) best = y;
     }
     return best;
+  }
+  function sample(x, z) {
+    if (x < minX || x > maxX || z < minZ || z > maxZ) return null;
+    const strict = sampleWith(x, z, 1e-6);
+    return strict === null ? sampleWith(x, z, 1e-4) : strict;
   }
   return { sample, triangles: triangleCount, cells: cols * rows, bounds: [minX, minZ, maxX, maxZ] };
 }

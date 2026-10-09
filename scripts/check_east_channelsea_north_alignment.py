@@ -170,7 +170,7 @@ def check(preflight=False):
             assert actual['footprint'] == old['footprint'], old['id']
             for field in ['height', 'roofRise', 'roofAxis', 'roofBays', 'rotation']:
                 assert actual[field] == old[field], (old['id'], field)
-        assert sum(b['siteId'] in SITE_NAMES for b in models.values()) == 38
+        assert sum(b['siteId'] in SITE_NAMES for b in models.values() if '-infill-' not in b['id']) == 38  # task F infill ranges are core-infill-footprint-alignment.json's
     print(f'{NAME}: roads, water, neighbouring ranges and existing housing clear'+(' (authoring preflight).' if preflight else '; published profiles/rendering and existing exteriors retained.'))
 
 

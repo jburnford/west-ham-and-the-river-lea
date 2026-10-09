@@ -16,7 +16,7 @@ cs = {b['modelId']:b for b in r['buildings']}
 traces = {b['modelId']:b for b in r['mapTracedBuildings']}
 ids = set(cs)|set(traces)
 assert len(cs)==17 and len(traces)==2 and len(r['groups'])==14
-assert ids=={b['id'] for b in s['buildings'] if b['siteId']==568}|{'site568-range-17'}
+assert ids=={b['id'] for b in s['buildings'] if b['siteId']==568 and '-infill-' not in b['id']}|{'site568-range-17'}  # task F infill ranges are core-infill-footprint-alignment.json's
 assert models['site568-range-17']['siteId']==566 and models['site568-range-17']['priorSiteId']==568
 assert models['site568-704']['floorMark']=='2' and models['site568-704']['height']==6.9
 registers = [load('data/maps/factory-footprint-alignment.json')]+[load(p) for p in s['footprintAlignment']['groupRegisters']]

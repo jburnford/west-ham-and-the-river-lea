@@ -22,7 +22,7 @@ assert set(r['supersedesDeferred'])-removed <= set(corrections)
 registers=[load('data/maps/factory-footprint-alignment.json')]+[load(p) for p in scene['footprintAlignment']['groupRegisters']]
 assert sum(len(q['buildings']) for q in registers)==scene['footprintAlignment']['matchedRanges']
 aligned={b['modelId'] for q in registers for b in q['buildings']}
-site_ids={b['id'] for b in scene['buildings'] if b['siteId']==964}
+site_ids={b['id'] for b in scene['buildings'] if b['siteId']==964 and '-infill-' not in b['id']}  # task F infill ranges are core-infill-footprint-alignment.json's
 assert len(site_ids)==40 and site_ids<=aligned
 used=set()
 for register in registers:

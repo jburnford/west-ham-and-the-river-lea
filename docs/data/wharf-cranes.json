@@ -187,18 +187,18 @@
   },
   {
    "id": "crane-howards-three-mill-wall",
-   "x": -638.9,
-   "z": -210.9,
+   "x": -638.918,
+   "z": -210.876,
    "mapped": [
     -638.9,
     -210.9
    ],
-   "movedMetres": 0.0,
+   "movedMetres": 0.03,
    "headingDegrees": 22.1,
    "setting": "wharf",
    "place": "Three Mill Wall River bank by Howards' works",
-   "distanceToTargetMetres": 2.48,
-   "positionEvidence": "OS five-foot crane symbol: dot right of 'c.'.",
+   "distanceToTargetMetres": 2.49,
+   "positionEvidence": "OS five-foot crane symbol: dot right of 'c.'. Moved 0.03 m onto open ground clear of the drawn water or a modelled wall.",
    "headingEvidence": "Jib turned toward the nearest drawn water edge (interpretation: the OS gives no direction)."
   }
  ],
@@ -223,7 +223,7 @@
  "registerSha256": "cd6638d10bc5dcc6dc7c9778c503a35f65baf1a6ae8cb697822492102e084bf8",
  "inputHashes": {
   "docs/data/ground-plan.json": "6434c94c9a9d3997f95a7035a31d3afc3124da7f8453bcac839b157d8b34f3cc",
-  "docs/data/river-system-1900.json": "d5a01114337c91594353472eb23ead7fe6e2b24156736235038c5317639c3398",
-  "docs/data/factory-buildings.json": "55e43668e7e2a7cd3bbae6d205d607af29f97189e16fb8918da9c07a53ced4d8"
+  "docs/data/river-system-1900.json": "ea33a7cf4868b6a4e70f0f12ad7f9f40d34e6ed371773e8f64b8b181932132a3",
+  "docs/data/factory-buildings.json": "23d15f4e76b08f469cb6766caded18180070613a5fe8552f893b3fe488d42319"
  }
 }

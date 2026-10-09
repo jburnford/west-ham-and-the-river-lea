@@ -13,7 +13,7 @@ models={b['id']:b for b in scene['buildings']};corrections={b['modelId']:b for b
 assert len(corrections)==83 and len(r['groups'])==53
 accounted=[b['modelId'] for key in ['buildings','mapTracedBuildings','locallyTransferredBuildings','deferred'] for b in r[key]]
 assert len(accounted)==len(set(accounted))==86
-assert set(accounted)=={b['id'] for b in scene['buildings'] if b['siteId']==260}
+assert set(accounted)=={b['id'] for b in scene['buildings'] if b['siteId']==260 and '-infill-' not in b['id']}  # task F infill ranges are core-infill-footprint-alignment.json's
 assert scene['footprintAlignment']['matchedRanges']>=145
 used=set();results=[]
 for path in ['data/maps/factory-footprint-alignment.json',*scene['footprintAlignment']['groupRegisters']]:

@@ -168,10 +168,12 @@ def check_register(register_name, expected_ids, expected_groups, expected_tanks,
         removed=[b for r in later for b in r.get('removedBuildings',[])]
         if scene_counts:
             total,sites = scene_counts
-            assert len(scene['buildings'])==total+len(added)-len(removed)
+            # Task F core-infill ranges (core-infill-footprint-alignment.json) are counted by their own register.
+            reviewed=[b for b in scene['buildings'] if '-infill-' not in b['id']]
+            assert len(reviewed)==total+len(added)-len(removed)
             for site,count in sites.items():
                 delta=sum(b.get('siteId')==site for b in added)-sum(b.get('siteId')==site for b in removed)
-                assert sum(b['siteId']==site for b in models.values())==count+delta
+                assert sum(b['siteId']==site for b in models.values() if '-infill-' not in b['id'])==count+delta
         path = ROOT/f'reference/footprint-model-alignment/{before_name}.json'
         later_ids=reviewed_ids(later)
         later_structures={s['id'] for r in later for key in ['structures','tanks','mappedPlants','removedStructures'] for s in r.get(key,[])}

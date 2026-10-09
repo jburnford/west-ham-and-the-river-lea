@@ -15,6 +15,8 @@ Read first:
 
 **8 October, later: F3 COMMITTED (the West Ham Chemical Works river wall and the Abbey Mills coal-quay wall; `TASK_E_REPORT.md` "F3"). Branch `task-e-flood-model` is pushed to origin (a branch only: `main` and the live site are untouched; tasks D and E are not merged). Next: Phase 2, the pounds.**
 
+**9 October: task F (core infill, `TASK_F_REPORT.md`) is on branch `task-f-core-buildings`, built on the task E head and checked out in this same worktree. Do Phase 2 on top of it (the buildings change the landscape and flood inputs), or merge it into `task-e-flood-model` first.**
+
 **Phase 2 handoff (start here in a new session).**
 
 - **Where:** worktree `/home/jic823/book_website-taske`, branch `task-e-flood-model`, served with `python3 -m http.server 4211 --bind 127.0.0.1 --directory docs` from the worktree. Show the author renders before committing; commit with explicit paths (never the book PDF, the G2G CSV or `node_modules`), then push the branch when asked.

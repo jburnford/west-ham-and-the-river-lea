@@ -19,7 +19,7 @@ assert len(accounted) == len(set(accounted)) == 31
 continuation = load('data/maps/crystal-barber-footprint-alignment.json')
 assert set(continuation['supersedesDeferred']) == {b['modelId'] for b in r['deferred']}
 current_ids = (set(accounted) - {b['id'] for b in continuation['removedBuildings']}) | {b['id'] for b in continuation['additionalBuildings']}
-assert current_ids == {b['id'] for b in scene['buildings'] if b['siteId']==964}
+assert current_ids == {b['id'] for b in scene['buildings'] if b['siteId']==964 and '-infill-' not in b['id']}  # task F infill ranges are core-infill-footprint-alignment.json's
 registers = [load('data/maps/factory-footprint-alignment.json')] + [load(path) for path in scene['footprintAlignment']['groupRegisters']]
 assert sum(len(q['buildings']) for q in registers) == scene['footprintAlignment']['matchedRanges']
 used = set()
