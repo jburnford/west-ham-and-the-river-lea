@@ -732,11 +732,96 @@ function buildScene() {
   const surface = (polygons, material, y) => flatSurface(THREE, scene, polygons, material, y);
   // Layer tags on everything added to the scene. They serve the glTF export and the diagnostic;
   // rendering ignores them. Each mark names what follows until the next mark.
+  // Static scene: combine surfaces by material so detail does not cost a draw call per window.
+  // Run at the end of each build section (mark) as well as at the end, so one section's separate meshes are freed
+  // before the next is built: the build's peak memory is then one section's meshes, not the whole scene's.
+  function batchStatic() {
+    // Two passes with preallocated typed arrays: the previous push-into-JS-array build held
+    // several times the final buffer size in memory, which is what mobile browsers ran out of.
+    scene.updateMatrixWorld(true);
+    const batches = new Map(),
+      originals = [];
+    // Export keeps layers separable at the cost of more draw calls; the live page batches per material only.
+    const batchKey = (object) =>
+      exportMode ? `${object.material.uuid}|${object.userData.layer || 'untagged'}` : object.material;
+    const materialName = (material) =>
+      Object.keys(materials).find((key) => materials[key] === material) || material.userData.surface || 'material';
+    scene.traverse((object) => {
+      if (!object.isMesh || object.userData.keepIndexed || object.userData.batched) return;
+      originals.push(object);
+      const count = object.geometry.index ? object.geometry.index.count : object.geometry.getAttribute('position').count;
+      const batch = batches.get(batchKey(object)) || {
+        count: 0,
+        offset: 0,
+        material: object.material,
+        layer: object.userData.layer || 'untagged',
+      };
+      batch.count += count;
+      batches.set(batchKey(object), batch);
+    });
+    for (const batch of batches.values()) {
+      batch.position = new Float32Array(batch.count * 3);
+      batch.normal = new Float32Array(batch.count * 3);
+      batch.uv = new Float32Array(batch.count * 2);
+    }
+    for (const object of originals) {
+      const geometry = object.geometry.index ? object.geometry.toNonIndexed() : object.geometry.clone();
+      if (!object.material.userData.preserveUV) surfaces.metricUV(geometry, object.geometry);
+      geometry.applyMatrix4(object.matrixWorld);
+      const batch = batches.get(batchKey(object)),
+        count = geometry.getAttribute('position').count;
+      for (const [name, size] of [
+        ['position', 3],
+        ['normal', 3],
+        ['uv', 2],
+      ]) {
+        const attribute = geometry.getAttribute(name);
+        if (attribute) batch[name].set(attribute.array.subarray(0, count * size), batch.offset * size);
+      }
+      batch.offset += count;
+      geometry.dispose();
+      object.removeFromParent();
+      object.geometry.dispose();
+    }
+    // buildScene's scope outlives the build (closures defined in it keep it alive), so drop the originals here:
+    // they held every pre-batch mesh and its geometry, most of the page's memory on a phone.
+    originals.length = 0;
+    for (const batch of batches.values()) {
+      const material = batch.material;
+      const geometry = new THREE.BufferGeometry();
+      for (const [name, size] of [
+        ['position', 3],
+        ['normal', 3],
+        ['uv', 2],
+      ])
+        geometry.setAttribute(name, new THREE.BufferAttribute(batch[name], size));
+      geometry.computeBoundingSphere();
+      surfaces.weather(material);
+      const mesh = new THREE.Mesh(geometry, material);
+      mesh.name = `batch:${materialName(material)}`;
+      mesh.userData.batched = true;
+      mesh.userData.layer = batch.layer;
+      mesh.castShadow = ![
+        materials.ground,
+        materials.land,
+        materials.water,
+        materials.tidalWater,
+        materials.bed,
+        materials.plot,
+      ].includes(material);
+      mesh.receiveShadow = true;
+      scene.add(mesh);
+    }
+    // Likewise the batch records: they still point at each batch's arrays, which would outlive the upload release.
+    batches.clear();
+  }
   let layerStart = scene.children.length,
     layerName = null;
   const mark = (name) => {
-    if (layerName)
+    if (layerName) {
       for (const child of scene.children.slice(layerStart)) child.traverse((o) => (o.userData.layer ??= layerName));
+      batchStatic();
+    }
     layerStart = scene.children.length;
     layerName = name;
   };
@@ -1037,84 +1122,7 @@ function buildScene() {
     }
   }
   mark(null);
-  // Static scene: combine surfaces by material so detail does not cost a draw call per window.
-  // Two passes with preallocated typed arrays: the previous push-into-JS-array build held
-  // several times the final buffer size in memory, which is what mobile browsers ran out of.
-  scene.updateMatrixWorld(true);
-  const batches = new Map(),
-    originals = [];
-  // Export keeps layers separable at the cost of more draw calls; the live page batches per material only.
-  const batchKey = (object) =>
-    exportMode ? `${object.material.uuid}|${object.userData.layer || 'untagged'}` : object.material;
-  const materialName = (material) =>
-    Object.keys(materials).find((key) => materials[key] === material) || material.userData.surface || 'material';
-  scene.traverse((object) => {
-    if (!object.isMesh || object.userData.keepIndexed) return;
-    originals.push(object);
-    const count = object.geometry.index ? object.geometry.index.count : object.geometry.getAttribute('position').count;
-    const batch = batches.get(batchKey(object)) || {
-      count: 0,
-      offset: 0,
-      material: object.material,
-      layer: object.userData.layer || 'untagged',
-    };
-    batch.count += count;
-    batches.set(batchKey(object), batch);
-  });
-  for (const batch of batches.values()) {
-    batch.position = new Float32Array(batch.count * 3);
-    batch.normal = new Float32Array(batch.count * 3);
-    batch.uv = new Float32Array(batch.count * 2);
-  }
-  for (const object of originals) {
-    const geometry = object.geometry.index ? object.geometry.toNonIndexed() : object.geometry.clone();
-    if (!object.material.userData.preserveUV) surfaces.metricUV(geometry, object.geometry);
-    geometry.applyMatrix4(object.matrixWorld);
-    const batch = batches.get(batchKey(object)),
-      count = geometry.getAttribute('position').count;
-    for (const [name, size] of [
-      ['position', 3],
-      ['normal', 3],
-      ['uv', 2],
-    ]) {
-      const attribute = geometry.getAttribute(name);
-      if (attribute) batch[name].set(attribute.array.subarray(0, count * size), batch.offset * size);
-    }
-    batch.offset += count;
-    geometry.dispose();
-    object.removeFromParent();
-    object.geometry.dispose();
-  }
-  // buildScene's scope outlives the build (closures defined in it keep it alive), so drop the originals here:
-  // they held every pre-batch mesh and its geometry, most of the page's memory on a phone.
-  originals.length = 0;
-  for (const batch of batches.values()) {
-    const material = batch.material;
-    const geometry = new THREE.BufferGeometry();
-    for (const [name, size] of [
-      ['position', 3],
-      ['normal', 3],
-      ['uv', 2],
-    ])
-      geometry.setAttribute(name, new THREE.BufferAttribute(batch[name], size));
-    geometry.computeBoundingSphere();
-    surfaces.weather(material);
-    const mesh = new THREE.Mesh(geometry, material);
-    mesh.name = `batch:${materialName(material)}`;
-    mesh.userData.layer = batch.layer;
-    mesh.castShadow = ![
-      materials.ground,
-      materials.land,
-      materials.water,
-      materials.tidalWater,
-      materials.bed,
-      materials.plot,
-    ].includes(material);
-    mesh.receiveShadow = true;
-    scene.add(mesh);
-  }
-  // Likewise the batch records: they still point at each batch's arrays, which would outlive the upload release.
-  batches.clear();
+  batchStatic();
   const tidalMeshes = [],
     floatingMeshes = [];
   scene.traverse((o) => {
