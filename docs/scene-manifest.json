@@ -1,7 +1,7 @@
 {
-  "revision": "aab74111fc6c",
+  "revision": "ca541df08798",
   "modules": {
-    "./app.js": "./app.js?v=c27e874b08bcf928",
+    "./app.js": "./app.js?v=d9c3c52bfe4b7f65",
     "./bootstrap.js": "./bootstrap.js?v=d3ae7289d54bbe58",
     "./bridge-movement.js": "./bridge-movement.js?v=0703b847169d70f4",
     "./building-plinths.js": "./building-plinths.js?v=0f49ba09386919fd",

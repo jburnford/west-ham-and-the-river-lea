@@ -99,35 +99,38 @@
             </div>
           </div>
 
-          <div class="travel" aria-label="Explore the district">
-            <button id="travel-toggle" disabled>Fly over the district</button>
-            <label for="destination">Fly to</label>
-            <select id="destination" disabled>
-              <option value="">Choose an area or factory…</option>
-            </select>
-            <label class="footprint-switch"
-              ><input id="regional-footprints" type="checkbox" checked /> Building plans · 1891–96</label
-            >
-            <details class="tide-controls">
-              <summary>Tide · <output id="tide-state">Low water</output></summary>
-              <label for="tide-level">Water level</label>
-              <input
-                id="tide-level"
-                type="range"
-                min="0"
-                max="100"
-                step="1"
-                value="0"
-                disabled
-                aria-describedby="tide-note"
-              />
-              <div class="tide-extremes" aria-hidden="true"><span>Low</span><span>High</span></div>
-              <button id="tide-play" type="button" aria-pressed="false" disabled>Play tide</button>
-              <p id="tide-note">
-                90-second cycle · illustrative levels. Old Lea above the lock and marsh ditches stay steady.
-              </p>
-            </details>
-          </div>
+          <details class="travel" id="travel-panel" open>
+            <summary class="travel-summary">Explore the district</summary>
+            <div class="travel-body">
+              <button id="travel-toggle" disabled>Fly over the district</button>
+              <label for="destination">Fly to</label>
+              <select id="destination" disabled>
+                <option value="">Choose an area or factory…</option>
+              </select>
+              <label class="footprint-switch"
+                ><input id="regional-footprints" type="checkbox" checked /> Building plans · 1891–96</label
+              >
+              <details class="tide-controls">
+                <summary>Tide · <output id="tide-state">Low water</output></summary>
+                <label for="tide-level">Water level</label>
+                <input
+                  id="tide-level"
+                  type="range"
+                  min="0"
+                  max="100"
+                  step="1"
+                  value="0"
+                  disabled
+                  aria-describedby="tide-note"
+                />
+                <div class="tide-extremes" aria-hidden="true"><span>Low</span><span>High</span></div>
+                <button id="tide-play" type="button" aria-pressed="false" disabled>Play tide</button>
+                <p id="tide-note">
+                  90-second cycle · illustrative levels. Old Lea above the lock and marsh ditches stay steady.
+                </p>
+              </details>
+            </div>
+          </details>
           <div class="hud hud-bottom">
             <p id="controls-help" class="hint">
               Drag or arrow keys to look · <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> to move · <kbd>Q</kbd>/<kbd

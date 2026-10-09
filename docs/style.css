@@ -1332,8 +1332,6 @@ dialog::backdrop {
   top: 140px;
   left: var(--gutter);
   z-index: 5;
-  display: grid;
-  gap: 8px;
   width: min(300px, calc(100vw - 2 * var(--gutter)));
   padding: 12px;
   background: var(--glass);
@@ -1341,6 +1339,14 @@ dialog::backdrop {
   border-radius: 6px;
   backdrop-filter: blur(12px);
   font: 500 12px/1.4 var(--sans);
+}
+/* The panel is a disclosure: always open on larger screens (its summary hidden), closed by default on phones. */
+.travel-body {
+  display: grid;
+  gap: 8px;
+}
+.travel-summary {
+  display: none;
 }
 .travel button {
   padding: 10px;
@@ -1435,8 +1441,43 @@ body.is-roaming .controls {
     top: 285px;
   }
   .travel {
-    top: 120px;
+    top: 118px;
     width: min(280px, calc(100vw - 2 * var(--gutter)));
+  }
+  /* Phones: the controls fold into one small button so the scene is not covered. */
+  .travel:not([open]) {
+    width: auto;
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+  .travel-summary {
+    display: block;
+    width: max-content;
+    padding: 9px 12px;
+    border: 1px solid var(--line-strong);
+    border-radius: 4px;
+    color: var(--parchment);
+    background: rgba(15, 23, 22, 0.85);
+    font: 600 12px var(--sans);
+    cursor: pointer;
+    list-style: none;
+  }
+  .travel-summary::-webkit-details-marker {
+    display: none;
+  }
+  .travel-summary::before {
+    content: '▸ ';
+  }
+  .travel[open] .travel-summary {
+    margin-bottom: 8px;
+  }
+  .travel[open] .travel-summary::before {
+    content: '▾ ';
+  }
+  /* One-line title; the chapter numbers give way on narrow phones (the cards carry them). */
+  .brand-title {
+    white-space: nowrap;
   }
   body.is-roaming .controls {
     width: 100%;
@@ -1486,4 +1527,24 @@ body.is-roaming .controls {
   border-radius: 4px;
   background: #f2ede1;
   color: #233d3b;
+}
+@media (max-width: 560px) {
+  .chapters {
+    display: none;
+  }
+  .site {
+    grid-template-columns: 1fr auto;
+  }
+  .brand-title {
+    font-size: 16px;
+  }
+  .site-links a,
+  .site-links button {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+  .compass {
+    width: 36px;
+    height: 36px;
+  }
 }

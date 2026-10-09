@@ -229,6 +229,8 @@ $('#regional-footprints').addEventListener('change', (e) => {
   regionalPlans?.setVisible(e.target.checked);
   $$('.regional-building-plan').forEach((image) => (image.style.display = e.target.checked ? '' : 'none'));
 });
+// Phones: the explore panel starts folded so it does not cover the scene (style.css shows its summary there).
+if (matchMedia('(max-width: 760px)').matches) $('#travel-panel').open = false;
 $('#travel-toggle').addEventListener('click', () => {
   if (walker?.mode === 'district') resetView();
   else travelTo({ position: [walker.world()[0], 100, walker.world()[2]] });
