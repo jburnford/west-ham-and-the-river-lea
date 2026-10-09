@@ -1085,6 +1085,9 @@ function buildScene() {
     object.removeFromParent();
     object.geometry.dispose();
   }
+  // buildScene's scope outlives the build (closures defined in it keep it alive), so drop the originals here:
+  // they held every pre-batch mesh and its geometry, most of the page's memory on a phone.
+  originals.length = 0;
   for (const batch of batches.values()) {
     const material = batch.material;
     const geometry = new THREE.BufferGeometry();
@@ -1110,6 +1113,8 @@ function buildScene() {
     mesh.receiveShadow = true;
     scene.add(mesh);
   }
+  // Likewise the batch records: they still point at each batch's arrays, which would outlive the upload release.
+  batches.clear();
   const tidalMeshes = [],
     floatingMeshes = [];
   scene.traverse((o) => {
