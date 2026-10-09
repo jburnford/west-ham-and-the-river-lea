@@ -42,6 +42,9 @@ const lite = requestedQuality
     (navigator.deviceMemory !== undefined && navigator.deviceMemory <= 4);
 // ?export=1 keeps vertex buffers on the CPU and tags scene layers so scripts/export_gltf.py can write glTF.
 const exportMode = new URLSearchParams(location.search).has('export');
+// Lite tier: boxes whose middle dimension is under this are dropped in the static batch (see batchStatic).
+const LITE_THIN_M = 0.2;
+let liteDropped = 0;
 
 // Camera poses. `hero` is the arrival view; the poster frame was rendered at `arrival`.
 const poses = {
@@ -492,6 +495,7 @@ function update() {
     wallRiverVista: scene?.userData.wallRiverVista,
     stationStudy: scene?.userData.stationStudy,
     stationSupport: scene?.userData.stationSupport,
+    liteDroppedBoxes: liteDropped,
     triangles: renderer?.info.render.triangles,
     drawCalls: renderer?.info.render.calls,
   };
@@ -746,8 +750,19 @@ function buildScene() {
       exportMode ? `${object.material.uuid}|${object.userData.layer || 'untagged'}` : object.material;
     const materialName = (material) =>
       Object.keys(materials).find((key) => materials[key] === material) || material.userData.surface || 'material';
+    // Lite tier: boxes thin in two dimensions (glazing bars, trims, rails, railings, rods) are not resolved on a
+    // phone screen; they are dropped rather than batched.
+    const liteThin = (object) => {
+      if (!lite || object.geometry.type !== 'BoxGeometry') return false;
+      const { width, height, depth } = object.geometry.parameters,
+        s = object.getWorldScale(new THREE.Vector3()),
+        dims = [width * s.x, height * s.y, depth * s.z].sort((a, b) => a - b);
+      return dims[1] < LITE_THIN_M;
+    };
+    const dropped = [];
     scene.traverse((object) => {
       if (!object.isMesh || object.userData.keepIndexed || object.userData.batched) return;
+      if (liteThin(object)) return dropped.push(object);
       originals.push(object);
       const count = object.geometry.index ? object.geometry.index.count : object.geometry.getAttribute('position').count;
       const batch = batches.get(batchKey(object)) || {
@@ -759,6 +774,11 @@ function buildScene() {
       batch.count += count;
       batches.set(batchKey(object), batch);
     });
+    for (const object of dropped) {
+      object.removeFromParent();
+      object.geometry.dispose();
+    }
+    liteDropped += dropped.length;
     for (const batch of batches.values()) {
       batch.position = new Float32Array(batch.count * 3);
       batch.normal = new Float32Array(batch.count * 3);
@@ -867,7 +887,9 @@ function buildScene() {
   lowWaterStream({ THREE, scene, material: materials.tidalWater, stream: data.riverNetwork.lowWaterStream });
   // Module-facing helpers keep their (parent, ...) signature; the shared versions take THREE first.
   const box = (parent, ...args) => libBox(THREE, parent, ...args);
-  const cylinder = (parent, ...args) => libCylinder(THREE, parent, ...args);
+  // Lite tier: round parts with 8 sides rather than 16.
+  const cylinder = (parent, x, y, z, rt, rb, h, material, segments = 16) =>
+    libCylinder(THREE, parent, x, y, z, rt, rb, h, material, lite ? Math.min(segments, 8) : segments);
   const beam = (parent, ...args) => libBeam(THREE, parent, ...args);
   mark('terrain');
   const terrain = terrainDetails({
