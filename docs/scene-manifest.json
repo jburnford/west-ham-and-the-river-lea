@@ -1,10 +1,11 @@
 {
-  "revision": "3493d27cc26e",
+  "revision": "48fc65dbc193",
   "modules": {
-    "./app.js": "./app.js?v=e296b5fb2869e6ed",
+    "./app.js": "./app.js?v=b2847c3979eaa50c",
     "./bootstrap.js": "./bootstrap.js?v=79a928eb0d2bc1fc",
     "./bridge-movement.js": "./bridge-movement.js?v=0703b847169d70f4",
     "./building-plinths.js": "./building-plinths.js?v=0f49ba09386919fd",
+    "./coal-vessels.js": "./coal-vessels.js?v=ed923d0bffcb70d5",
     "./culvert-section.js": "./culvert-section.js?v=2c3f3ad361d04c89",
     "./district-navigation.js": "./district-navigation.js?v=20b225273b1c7af3",
     "./drainage-connections.js": "./drainage-connections.js?v=799ae00023eac8a0",
@@ -33,7 +34,7 @@
     "./panel-fit.js": "./panel-fit.js?v=d611168171206ac4",
     "./photo-details.js": "./photo-details.js?v=fc05f132f06362f0",
     "./railway-bridges.js": "./railway-bridges.js?v=a14015fa47c5c95d",
-    "./realism.js": "./realism.js?v=3ec076e75dd3a620",
+    "./realism.js": "./realism.js?v=efa5c00624d19649",
     "./regional-footprints.js": "./regional-footprints.js?v=d18640ca81c36e05",
     "./river-network.js": "./river-network.js?v=5477dfb572712154",
     "./river-system.js": "./river-system.js?v=e455d7bcf7e3d7a9",
@@ -55,6 +56,7 @@
   },
   "assets": {
     "./data/abbey-station-plan.json": "./data/abbey-station-plan.json?v=9b27d7cfc4eb9d39",
+    "./data/coal-traffic.json": "./data/coal-traffic.json?v=77d9de302ba69a2f",
     "./data/drainage-1900.json": "./data/drainage-1900.json?v=7db76c0afd4e3ab1",
     "./data/drainage-connections-1900.json": "./data/drainage-connections-1900.json?v=2874c98d649ea329",
     "./data/factory-buildings.json": "./data/factory-buildings.json?v=23d15f4e76b08f46",
