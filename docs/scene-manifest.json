@@ -1,8 +1,8 @@
 {
-  "revision": "19b1fa80173c",
+  "revision": "3493d27cc26e",
   "modules": {
     "./app.js": "./app.js?v=e296b5fb2869e6ed",
-    "./bootstrap.js": "./bootstrap.js?v=d3ae7289d54bbe58",
+    "./bootstrap.js": "./bootstrap.js?v=79a928eb0d2bc1fc",
     "./bridge-movement.js": "./bridge-movement.js?v=0703b847169d70f4",
     "./building-plinths.js": "./building-plinths.js?v=0f49ba09386919fd",
     "./culvert-section.js": "./culvert-section.js?v=2c3f3ad361d04c89",
@@ -30,6 +30,7 @@
     "./main-landscape.js": "./main-landscape.js?v=e930ac0ad5ba8173",
     "./mapped-trees.js": "./mapped-trees.js?v=c7c3d7096e47ec0f",
     "./maps/maps.js": "./maps/maps.js?v=6714c3f2092b6cae",
+    "./panel-fit.js": "./panel-fit.js?v=d611168171206ac4",
     "./photo-details.js": "./photo-details.js?v=fc05f132f06362f0",
     "./railway-bridges.js": "./railway-bridges.js?v=a14015fa47c5c95d",
     "./realism.js": "./realism.js?v=3ec076e75dd3a620",

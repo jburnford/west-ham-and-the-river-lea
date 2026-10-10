@@ -31,6 +31,7 @@ async function startScene() {
   document.head.append(map);
   window.sceneRevision = manifest.revision;
   window.sceneAssetUrl = (url) => new URL(manifest.assets[url] || url, base).href;
+  import('./panel-fit.js').then((m) => m.keepTravelPanelClear());
   await import('./app.js');
 }
 startScene()

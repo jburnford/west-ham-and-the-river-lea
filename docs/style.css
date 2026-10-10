@@ -1339,6 +1339,10 @@ dialog::backdrop {
   border-radius: 6px;
   backdrop-filter: blur(12px);
   font: 500 12px/1.4 var(--sans);
+  /* panel-fit.js caps the height above the controls and title below; the rest scrolls inside the panel. */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
 }
 /* The panel is a disclosure: always open on larger screens (its summary hidden), closed by default on phones. */
 .travel-body {
