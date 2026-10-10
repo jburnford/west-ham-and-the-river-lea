@@ -1,0 +1,23 @@
+{
+ "description": "Lite (phone) tier copy of the drawn river network: final positions composed by the page code (scripts/bake_network_heights.mjs), simplified by quadric edge collapse with the open borders kept (fast-simplification), surface attributes from the nearest original vertex. Drawn only; height lookups use the full network.",
+ "positionFile": "river-network.lite.f32",
+ "indexFile": "river-network.lite.u32",
+ "sedimentFile": "river-network.lite.silt",
+ "landcoverFile": "river-network.lite.cover",
+ "vertices": 240564,
+ "triangles": 460899,
+ "sourceVertices": 931915,
+ "sourceTriangles": 1843601,
+ "targetReduction": 0.75,
+ "aggression": 7.0,
+ "preserveBorder": true,
+ "inputHashes": {
+  "river-network.json": "0cfaa420654b67ece1621d5359f4e62dca106f728206470c11f3776f761b1cf1",
+  "river-network.f32": "cc3920b1c59629ef3dfdffa25098b7e7c71abbd698c139aa17712f61002bf271",
+  "river-network.u32": "4590d21688f423a622e8df44c99e243b20f5570bb5121311556b37b3280cff7e",
+  "main-landscape-1900.json": "aa2bca2c5f7b101305dfbde075cd369da367acd87f714d10a8b663a08df9a325",
+  "main-landscape-1900.network.f32": "8534b412af78393fef4ec70e3f593c6f75c79d1eaf699e838a2a711cd7b555d8",
+  "river-system-1900.json": "ea33a7cf4868b6a4e70f0f12ad7f9f40d34e6ed371773e8f64b8b181932132a3",
+  "terrain-1900.json": "001dafaf20d9347cc9d66e3cbd1bae42a13b5f44091597c24124d9da9065290b"
+ }
+}

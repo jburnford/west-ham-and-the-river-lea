@@ -1320,7 +1320,7 @@ try {
     load('./data/southwest-context.json'),
     load('./data/infrastructure.json'),
     load('./data/mapped-trees.json'),
-    loadRiverNetwork(load),
+    loadRiverNetwork(load, { lite }),
     load('./data/factory-buildings.json'),
     load('./data/high-street-frontages.json'),
     load('./data/factory-yards.json'),

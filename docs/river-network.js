@@ -1,6 +1,31 @@
 // Bank sections are interpretations; channel outlines retain their GIS provenance.
-export async function loadRiverNetwork(load) {
+export async function loadRiverNetwork(load, { lite = false } = {}) {
   const data = await load('./data/river-network.json');
+  // Lite (phone) tier: a simplified copy of the drawn mesh (scripts/build_lite_meshes.py). Height lookups, here and in
+  // the modules that sample the network, keep the full positions below; only the drawn surface uses the copy.
+  if (lite) {
+    const meta = await load('./data/river-network-lite.json');
+    const [p, i, s, c] = await Promise.all(
+      [meta.positionFile, meta.indexFile, meta.sedimentFile, meta.landcoverFile].map((f) =>
+        load(`./data/${f}`, 'buffer')
+      )
+    );
+    data.liteMesh = {
+      vertices: meta.vertices,
+      positions: new Float32Array(p),
+      indices: new Uint32Array(i),
+      sediment: new Uint8Array(s),
+      landcover: new Uint8Array(c),
+    };
+    const m = data.liteMesh;
+    if (
+      m.positions.length !== m.vertices * 3 ||
+      m.indices.length !== meta.triangles * 3 ||
+      m.sediment.length !== m.vertices ||
+      m.landcover.length !== m.vertices * 2
+    )
+      throw new Error('Lite river network dimensions do not match');
+  }
   const files = await Promise.all(
     [data.positionFile, data.indexFile, data.colorFile]
       .concat(data.sedimentFile, data.landcoverFile)
@@ -59,14 +84,16 @@ export async function loadRiverNetwork(load) {
 }
 
 export function riverNetwork({ THREE, scene, materials, data, surfaces }) {
+  // The lite tier draws its simplified copy, already at the final composed heights.
+  const drawn = data.liteMesh || data;
   const geometry = new THREE.BufferGeometry();
-  geometry.setAttribute('position', new THREE.BufferAttribute(data.positions, 3));
-  geometry.setAttribute('sediment', new THREE.BufferAttribute(data.sediment, 1, true));
-  geometry.setAttribute('landCover', new THREE.BufferAttribute(data.landcover, 2, true));
-  const uv = new Float32Array(data.vertices * 2);
-  for (let i = 0; i < data.vertices; i++) uv.set([data.positions[i * 3], data.positions[i * 3 + 2]], i * 2);
+  geometry.setAttribute('position', new THREE.BufferAttribute(drawn.positions, 3));
+  geometry.setAttribute('sediment', new THREE.BufferAttribute(drawn.sediment, 1, true));
+  geometry.setAttribute('landCover', new THREE.BufferAttribute(drawn.landcover, 2, true));
+  const uv = new Float32Array(drawn.vertices * 2);
+  for (let i = 0; i < drawn.vertices; i++) uv.set([drawn.positions[i * 3], drawn.positions[i * 3 + 2]], i * 2);
   geometry.setAttribute('uv', new THREE.BufferAttribute(uv, 2));
-  geometry.setIndex(new THREE.BufferAttribute(data.indices, 1));
+  geometry.setIndex(new THREE.BufferAttribute(drawn.indices, 1));
   geometry.computeVertexNormals();
   const material = materials.land;
   surfaces.weather(material);
