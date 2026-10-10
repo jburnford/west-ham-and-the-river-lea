@@ -271,6 +271,8 @@ export function factoryYards({ THREE, scene, materials: m, data, level, box, cyl
         m.wood
       );
       sleeper.rotation.y = -Math.atan2(dz, dx);
+      // Rails and sleepers are thin, but together they read as track at a distance: keep them on the lite tier.
+      sleeper.userData.liteKeep = true;
       if (connected) {
         connectedTrackMetres += length;
         const edge = (p, side) => [p[0] - (dz / length) * side * 1.4, p[2] + 0.18, p[1] + (dx / length) * side * 1.4];
@@ -291,6 +293,7 @@ export function factoryYards({ THREE, scene, materials: m, data, level, box, cyl
           m.iron
         );
         rail.quaternion.setFromUnitVectors(new THREE.Vector3(1, 0, 0), new THREE.Vector3(dx, rise, dz).normalize());
+        rail.userData.liteKeep = true;
       }
     }
   const trackBallast = m.stone.clone();

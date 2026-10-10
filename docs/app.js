@@ -753,9 +753,9 @@ function buildScene() {
     const materialName = (material) =>
       Object.keys(materials).find((key) => materials[key] === material) || material.userData.surface || 'material';
     // Lite tier: boxes thin in two dimensions (glazing bars, trims, rails, railings, rods) are not resolved on a
-    // phone screen; they are dropped rather than batched.
+    // phone screen; they are dropped rather than batched. Modules mark thin parts that must stay with userData.liteKeep.
     const liteThin = (object) => {
-      if (!lite || object.geometry.type !== 'BoxGeometry') return false;
+      if (!lite || object.userData.liteKeep || object.geometry.type !== 'BoxGeometry') return false;
       const { width, height, depth } = object.geometry.parameters,
         s = object.getWorldScale(new THREE.Vector3()),
         dims = [width * s.x, height * s.y, depth * s.z].sort((a, b) => a - b);

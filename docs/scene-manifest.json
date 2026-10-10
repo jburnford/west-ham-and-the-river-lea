@@ -1,7 +1,7 @@
 {
-  "revision": "e3508dff400d",
+  "revision": "19b1fa80173c",
   "modules": {
-    "./app.js": "./app.js?v=2335acad0468fe02",
+    "./app.js": "./app.js?v=e296b5fb2869e6ed",
     "./bootstrap.js": "./bootstrap.js?v=d3ae7289d54bbe58",
     "./bridge-movement.js": "./bridge-movement.js?v=0703b847169d70f4",
     "./building-plinths.js": "./building-plinths.js?v=0f49ba09386919fd",
@@ -9,7 +9,7 @@
     "./district-navigation.js": "./district-navigation.js?v=20b225273b1c7af3",
     "./drainage-connections.js": "./drainage-connections.js?v=799ae00023eac8a0",
     "./factory-buildings.js": "./factory-buildings.js?v=bcac73ed141c41aa",
-    "./factory-yards.js": "./factory-yards.js?v=1789f939b203c100",
+    "./factory-yards.js": "./factory-yards.js?v=15c51be3e7bd26c0",
     "./flood-demo.js": "./flood-demo.js?v=0470a103638e7a9d",
     "./flood-solver.js": "./flood-solver.js?v=ae432751d789839f",
     "./flood-worker.js": "./flood-worker.js?v=3f4543007fa19327",
