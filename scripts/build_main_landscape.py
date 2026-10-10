@@ -139,6 +139,10 @@ def marsh_at(points):
     return marsh_core(points)+np.clip((STRATFORD_ZONE[3]-points[:,1])/STRATFORD_BLEND_M,0,1)*osg.sample(os_strat_corr,os_strat_meta,points)
 os_premises=osg.premises(os_register);os_streets=osg.streets(os_register)
 records={r['id']:r for r in audit['records']};yard_features=[f for f in meta['laterSurfaceLayers']['features'] if f['kind']==11]
+# Task H north-infill sites (data/maps/north-infill-footprint-alignment.json) that front the tidal water without an OS yard
+# reading: yard floor at high water + margin. Sites elsewhere with the same condition (566, 875, 876, 940) are not changed here.
+HIGH_WATER_FLOOR_MARGIN=.15;HIGH_WATER_FLOOR=network['tide']['high']+HIGH_WATER_FLOOR_MARGIN
+HIGH_WATER_FLOOR_SITES={a['id'] for a in read('data/maps/north-infill-footprint-alignment.json')['additionalSites']}
 pads=[];pad_geoms=[];RAIL_SIDE_PAD_M=6;terrace_unpadded=set()
 for site in plan['sites']:
     polygon=geometry(site['polygons']);p=polygon.representative_point();centre=np.array([[p.x,p.y]])
@@ -156,6 +160,12 @@ for site in plan['sites']:
         points=np.array([list(polygon.representative_point().coords)[0],*list(shapely.get_coordinates(polygon))[::max(1,len(shapely.get_coordinates(polygon))//16)]])
         height=max(-.1,float(np.median(marsh_at(points))))
         method='marsh-supported premises estimate (the OS-corrected marsh around the outline); retain at least the existing interpreted -0.1 m site floor';ids=[]
+        # Task H: a north-infill site that fronts the tidal water and has no yard reading keeps its yard above high water.
+        # Its buildings stand within TIDAL_BUILDING_M of the tidal outline, so the frontage takes the pad level (see
+        # tidal_frontage below); a marsh estimate below high water would flood the wharf at every high tide.
+        if site['id'] in HIGH_WATER_FLOOR_SITES and polygon.distance(tidal)<=5 and height<HIGH_WATER_FLOOR:
+            height=HIGH_WATER_FLOOR
+            method+=f'; raised to {HIGH_WATER_FLOOR:.2f} m (high water + {HIGH_WATER_FLOOR_MARGIN} m): a task H site fronting the tidal water with no OS yard reading'
     pad={'siteId':site['id'],'name':site['name'],'groundSceneY':height,'method':method,'sourceIds':ids}
     # Premises beside a railway the OS draws at grade (no cutting or bank hatching) meet it at the
     # ground level the railway level register takes there (os_ground_levels.rail_side_controls,

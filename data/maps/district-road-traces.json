@@ -4510,6 +4510,513 @@
       "eastChannelseaContextAlignment": {
         "register": "data/maps/east-channelsea-context-alignment.json"
       }
+    },
+    {
+      "name": "Carpenters Road \u2014 Stratford Marsh section",
+      "sheet": "scene",
+      "pixelWidth": 1,
+      "points": [
+        [
+          -589.808,
+          -841.508
+        ],
+        [
+          -602.916,
+          -860.056
+        ],
+        [
+          -623.852,
+          -891.769
+        ],
+        [
+          -626.454,
+          -894.801
+        ],
+        [
+          -627.491,
+          -896.511
+        ],
+        [
+          -627.576,
+          -899.259
+        ],
+        [
+          -628.566,
+          -902.615
+        ],
+        [
+          -635.871,
+          -912.027
+        ],
+        [
+          -636.663,
+          -914.637
+        ],
+        [
+          -640.115,
+          -918.911
+        ],
+        [
+          -642.948,
+          -924.461
+        ],
+        [
+          -644.072,
+          -925.801
+        ],
+        [
+          -648.257,
+          -927.962
+        ],
+        [
+          -650.133,
+          -929.94
+        ],
+        [
+          -663.527,
+          -947.379
+        ],
+        [
+          -665.415,
+          -950.896
+        ],
+        [
+          -667.822,
+          -954.057
+        ],
+        [
+          -670.2,
+          -955.847
+        ],
+        [
+          -680.775,
+          -969.156
+        ],
+        [
+          -682.179,
+          -973.08
+        ],
+        [
+          -685.041,
+          -976.547
+        ],
+        [
+          -687.289,
+          -977.605
+        ],
+        [
+          -689.193,
+          -979.916
+        ],
+        [
+          -691.063,
+          -982.572
+        ],
+        [
+          -695.301,
+          -991.589
+        ],
+        [
+          -715.407,
+          -1008.01
+        ],
+        [
+          -716.699,
+          -1010.969
+        ],
+        [
+          -718.744,
+          -1013.158
+        ],
+        [
+          -719.767,
+          -1015.421
+        ],
+        [
+          -727.581,
+          -1023.155
+        ],
+        [
+          -732.554,
+          -1030.353
+        ],
+        [
+          -738.8,
+          -1036.431
+        ],
+        [
+          -745.337,
+          -1039.563
+        ],
+        [
+          -773.9,
+          -1048.709
+        ],
+        [
+          -792.283,
+          -1056.588
+        ],
+        [
+          -815.985,
+          -1067.863
+        ],
+        [
+          -826.348,
+          -1073.402
+        ],
+        [
+          -835.502,
+          -1078.539
+        ],
+        [
+          -846.819,
+          -1085.898
+        ],
+        [
+          -859.09,
+          -1094.516
+        ],
+        [
+          -862.631,
+          -1098.04
+        ],
+        [
+          -873.485,
+          -1106.874
+        ],
+        [
+          -876.852,
+          -1108.499
+        ],
+        [
+          -880.986,
+          -1113.137
+        ],
+        [
+          -884.802,
+          -1115.462
+        ],
+        [
+          -886.543,
+          -1117.885
+        ],
+        [
+          -888.867,
+          -1118.718
+        ],
+        [
+          -893.914,
+          -1125.83
+        ],
+        [
+          -900.209,
+          -1131.161
+        ],
+        [
+          -902.297,
+          -1133.652
+        ],
+        [
+          -913.647,
+          -1144.207
+        ],
+        [
+          -914.834,
+          -1145.124
+        ],
+        [
+          -915.047,
+          -1145.255
+        ],
+        [
+          -915.493,
+          -1145.314
+        ],
+        [
+          -917.128,
+          -1143.167
+        ],
+        [
+          -914.825,
+          -1145.032
+        ],
+        [
+          -914.945,
+          -1145.248
+        ],
+        [
+          -916.986,
+          -1147.447
+        ],
+        [
+          -949.577,
+          -1177.378
+        ],
+        [
+          -975.333,
+          -1199.565
+        ],
+        [
+          -1011.502,
+          -1226.728
+        ],
+        [
+          -1022.347,
+          -1234.333
+        ],
+        [
+          -1069.269,
+          -1262.509
+        ],
+        [
+          -1079.273,
+          -1266.725
+        ]
+      ],
+      "bridgeSpans": [],
+      "width": 7.5,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "Task H trace (10 October 2026) on the OS London five-foot plan revised 1893-96 (NLS tiles reference/nls-tiles/os-london-five-foot-1893, zoom 18, read with scripts/factory_map_sources.py mosaic()). A rough centreline read from the plan was refined to the midpoint of the printed carriageway edges (the dotted kerbs where printed, otherwise the bounding building, wall or fence face) in cross-profiles every 2 m along a straightened strip, after removing lettering, spot heights and other marks shorter than 3 m along the road; three passes; simplified at 0.3 m. Tools: main checkout reference/task-e-tools/infill/trace.py. From the end of the Carpenters Road northern section, under the G.E.R. main line, past Star Works, the Lea Valley Distillery, the Tallow and Engineering Works and the Carpenter's Road Goods Depot (lettered CARPENTERS ROAD), to the Channel Sea Junction signal box, then as a narrower lane to its end at the railway fence by B.M. 18.92 (Channel Sea Tallow and Virgemount Chemical Works). The route on to White Post Lane lies north of the core and is not traced. The first 22 m join the northern section across the junction (estimated).",
+      "surfaceEvidence": "Macadam as the northern section; surface and the 7.5 m modelled width interpreted (printed kerbs 7.2 m apart, median).",
+      "taskHTrace": {
+        "stations": 326,
+        "goodStations": 243,
+        "medianKerbWidth": 7.2,
+        "kerbWidthP10P90": [
+          6.5,
+          7.7
+        ],
+        "fitMedian": 0.05,
+        "fitMax": 2.05,
+        "note": "Kerb midpoints; good stations are those whose kerb width is within 30% of the median."
+      }
+    },
+    {
+      "name": "Warton Road \u2014 Stratford Marsh section",
+      "sheet": "scene",
+      "pixelWidth": 1,
+      "points": [
+        [
+          -704.467,
+          -992.089
+        ],
+        [
+          -703.939,
+          -988.125
+        ],
+        [
+          -704.778,
+          -985.879
+        ],
+        [
+          -704.353,
+          -983.813
+        ],
+        [
+          -704.959,
+          -982.181
+        ],
+        [
+          -725.312,
+          -945.482
+        ],
+        [
+          -725.788,
+          -943.29
+        ],
+        [
+          -731.353,
+          -935.012
+        ],
+        [
+          -746.313,
+          -908.169
+        ],
+        [
+          -749.597,
+          -900.068
+        ],
+        [
+          -755.502,
+          -875.016
+        ],
+        [
+          -757.986,
+          -855.464
+        ],
+        [
+          -760.809,
+          -842.022
+        ],
+        [
+          -761.977,
+          -826.593
+        ],
+        [
+          -760.878,
+          -818.433
+        ],
+        [
+          -758.86,
+          -810.698
+        ],
+        [
+          -742.997,
+          -768.097
+        ],
+        [
+          -734.921,
+          -737.146
+        ],
+        [
+          -735.001,
+          -732.94
+        ],
+        [
+          -733.144,
+          -724.405
+        ],
+        [
+          -727.644,
+          -711.549
+        ],
+        [
+          -726.866,
+          -710.587
+        ],
+        [
+          -713.847,
+          -702.185
+        ],
+        [
+          -707.89,
+          -701.114
+        ],
+        [
+          -700.608,
+          -699.618
+        ]
+      ],
+      "bridgeSpans": [],
+      "width": 9,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "Task H trace (10 October 2026) on the OS London five-foot plan revised 1893-96 (NLS tiles reference/nls-tiles/os-london-five-foot-1893, zoom 18, read with scripts/factory_map_sources.py mosaic()). A rough centreline read from the plan was refined to the midpoint of the printed carriageway edges (the dotted kerbs where printed, otherwise the bounding building, wall or fence face) in cross-profiles every 2 m along a straightened strip, after removing lettering, spot heights and other marks shorter than 3 m along the road; three passes; simplified at 0.3 m. Tools: main checkout reference/task-e-tools/infill/trace.py. From Carpenters Road at B.M. 13.76 south past the Chemical, Oil and Chemical, Hudson Bay and Varnish works (lettered WARTON ROAD), turning south-east under the G.E.R. main line to the start of the Warton Road northern section (last metres estimated).",
+      "surfaceEvidence": "Macadam as the northern section; surface and the 9 m modelled width interpreted (printed kerbs 8.7 m apart, median).",
+      "taskHTrace": {
+        "stations": 166,
+        "goodStations": 155,
+        "medianKerbWidth": 8.7,
+        "kerbWidthP10P90": [
+          6.74,
+          9.4
+        ],
+        "fitMedian": 0.05,
+        "fitMax": 1.05,
+        "note": "A first pass locked onto the western footway; restarted inside the carriageway with a 6 m minimum kerb width."
+      }
+    },
+    {
+      "name": "Marshgate Lane \u2014 north of the sewer",
+      "sheet": "scene",
+      "pixelWidth": 1,
+      "points": [
+        [
+          -1152.125,
+          -553.849
+        ],
+        [
+          -1154.201,
+          -555.9
+        ],
+        [
+          -1157.101,
+          -556.538
+        ],
+        [
+          -1165.62,
+          -569.782
+        ],
+        [
+          -1166.136,
+          -572.45
+        ],
+        [
+          -1176.094,
+          -586.54
+        ],
+        [
+          -1178.814,
+          -587.579
+        ],
+        [
+          -1179.621,
+          -589.133
+        ],
+        [
+          -1182.065,
+          -590.28
+        ],
+        [
+          -1187.887,
+          -598.383
+        ],
+        [
+          -1191.575,
+          -601.746
+        ],
+        [
+          -1194.261,
+          -605.014
+        ],
+        [
+          -1195.492,
+          -607.992
+        ],
+        [
+          -1203.758,
+          -621.108
+        ],
+        [
+          -1207.288,
+          -628.835
+        ],
+        [
+          -1213.33,
+          -636.764
+        ],
+        [
+          -1216.11,
+          -639.64
+        ],
+        [
+          -1228.663,
+          -658.603
+        ],
+        [
+          -1234.076,
+          -665.213
+        ]
+      ],
+      "bridgeSpans": [],
+      "width": 6,
+      "kind": "street",
+      "surface": "macadam",
+      "alignmentEvidence": "Task H trace (10 October 2026) on the OS London five-foot plan revised 1893-96 (NLS tiles reference/nls-tiles/os-london-five-foot-1893, zoom 18, read with scripts/factory_map_sources.py mosaic()). A rough centreline read from the plan was refined to the midpoint of the printed carriageway edges (the dotted kerbs where printed, otherwise the bounding building, wall or fence face) in cross-profiles every 2 m along a straightened strip, after removing lettering, spot heights and other marks shorter than 3 m along the road; three passes; simplified at 0.3 m. Tools: main checkout reference/task-e-tools/infill/trace.py. From 30 m north of the Northern Outfall Sewer north-west beside the Pudding Mill River (lettered MARSHGATE LANE) past the Oil, Black and Colour Works to the Bone Works yard. Not modelled: the lane between the sewer viaduct and the G.E.R. main-line bridge (the end of the Marshgate Lane northern arm). The plan there shows the river between hatched banks, a hatched tongue (spot height 11.7) east of it, a crossing at the tongue\u2019s south end and a junction at spot height 22.5 beyond the river, and the lane\u2019s course among them is not legible; a line guessed along the river\u2019s east side cut the river bank by up to 1.8 m and fell below high water, so the gap is left for an OS reading.",
+      "surfaceEvidence": "Macadam as the Marshgate Lane arms; surface and the 6 m modelled width interpreted (printed kerbs 6.4 m apart, median; 5.2-8.2 m).",
+      "taskHTrace": {
+        "stations": 209,
+        "goodStations": 140,
+        "medianKerbWidth": 6.4,
+        "kerbWidthP10P90": [
+          5.2,
+          8.2
+        ],
+        "fitMedian": 0.1,
+        "fitMax": 1.6,
+        "note": "Kerb midpoints; narrow stretches read the bank or fence lines."
+      }
     }
   ],
   "notes": [

@@ -126,6 +126,10 @@
   }
  },
  "streets": {
+  "Marshgate Lane — north of the sewer": [
+   "sh_537732_183783",
+   "sh_537742_183785"
+  ],
   "Stratford High Street": [
    "sh_537784_183026",
    "sh_537805_183041",
@@ -148,6 +152,14 @@
    "sh_537957_182763",
    "sh_537983_182720"
   ],
+  "Carpenters Road — Stratford Marsh section": [
+   "sh_537941_184394",
+   "sh_538003_184337",
+   "sh_538062_184289",
+   "sh_538137_184254",
+   "sh_538205_184196",
+   "sh_538302_184060"
+  ],
   "Priory Street": [
    "sh_537961_182879",
    "sh_538017_182906"
@@ -169,6 +181,11 @@
   "Marshgate Lane": [
    "sh_538054_183338",
    "sh_538078_183283"
+  ],
+  "Warton Road — Stratford Marsh section": [
+   "sh_538143_184013",
+   "sh_538145_184082",
+   "sh_538171_184147"
   ],
   "Warton Road northern section": [
    "sh_538222_183879"
@@ -3067,7 +3084,8 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "Marshgate Lane by the Black Works; dot 26 px left of figure; last digit read as 8 at 8x, 8 vs 9 not certain",
-   "use": "stratford"
+   "road": "Marshgate Lane — north of the sewer",
+   "use": "street"
   },
   {
    "id": "sh_537733_182359",
@@ -3205,7 +3223,8 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "Marshgate Lane by the Black Works; digits clear at 14x (8, two loops); no dot, position = centre of figures (lettering interpunct T·E nearby)",
-   "use": "stratford"
+   "road": "Marshgate Lane — north of the sewer",
+   "use": "street"
   },
   {
    "id": "sh_537745_184514",
@@ -4659,7 +4678,8 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "north end of Carpenter's Road by the signal box; dot left of figures; confirmed at 6x",
-   "use": "stratford"
+   "road": "Carpenters Road — Stratford Marsh section",
+   "use": "street"
   },
   {
    "id": "sh_537943_185585",
@@ -5155,7 +5175,8 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "Carpenter's Road (same figure as m18_131063_87128 174,556); figures NE of the road edge, position = the dot in the carriageway below the R of CARPENTER'S ~25 px SW",
-   "use": "stratford"
+   "road": "Carpenters Road — Stratford Marsh section",
+   "use": "street"
   },
   {
    "id": "sh_538010_182909",
@@ -5764,7 +5785,8 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "Carpenter's Road; dot in the carriageway just left of the E of CARPENTER'S, SW of the figures",
-   "use": "stratford"
+   "road": "Carpenters Road — Stratford Marsh section",
+   "use": "street"
   },
   {
    "id": "sh_538065_182425",
@@ -6408,7 +6430,8 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "Carpenter's Road opposite the Goods Depot; dot between the R and O of ROAD, above the figures",
-   "use": "stratford"
+   "road": "Carpenters Road — Stratford Marsh section",
+   "use": "street"
   },
   {
    "id": "sh_538138_183324",
@@ -6460,7 +6483,8 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "Warton Road by the Varnish Works; dot above-left of figures at 6x",
-   "use": "stratford"
+   "road": "Warton Road — Stratford Marsh section",
+   "use": "street"
   },
   {
    "id": "sh_538145_183543",
@@ -6495,7 +6519,8 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "Warton Road by the Oil & Chemical Works; dot above-right of figures at 6x (F.P dot at 519,520 not used)",
-   "use": "stratford"
+   "road": "Warton Road — Stratford Marsh section",
+   "use": "street"
   },
   {
    "id": "sh_538147_182265",
@@ -6707,7 +6732,8 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "road between Chemical Works and Hudson Bay Works; dot above-right of figures at 6x",
-   "use": "stratford"
+   "road": "Warton Road — Stratford Marsh section",
+   "use": "street"
   },
   {
    "id": "sh_538172_185326",
@@ -6925,7 +6951,8 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "road junction beside the L.B./F.A./F.P. marks; digits clear at 8x; the nearby dots belong to L.B., F.A. and F.P., no separate survey dot found, position = centre of figures",
-   "use": "stratford"
+   "road": "Carpenters Road — Stratford Marsh section",
+   "use": "street"
   },
   {
    "id": "sh_538206_185009",
@@ -7611,7 +7638,10 @@
    "category": "ground",
    "supportWeight": 1.0,
    "notes": "yard/road east of the railway by the London Spinning Mills; dot left of figures at 6x",
-   "use": "stratford"
+   "road": "Carpenters Road — Stratford Marsh section",
+   "decision": true,
+   "use": "street",
+   "reason": "yard/road reading 1.1 m from the traced Carpenters Road centreline, inside its corridor: the street level there (task H)"
   },
   {
    "id": "sh_538304_182442",

@@ -79,6 +79,9 @@ TOWING_PATH = ('towing path along the river bank: the reader set embankment_top 
 RAILS_IN_YARD = ('rails at grade in the East London Soap Works yard (the reader set railway: "taken as rails at grade in the works '
                  'yard"); a works siding laid in the yard surface, so the reading is the yard level; applied as terrace ground (T22)')
 DECISIONS = {
+    # Task H (10 October 2026): a yard-coded reading that the OS prints in the carriageway of a street traced for task H.
+    'sh_538302_184060': {'category': 'ground', 'use': 'street', 'road': 'Carpenters Road — Stratford Marsh section',
+                         'reason': 'yard/road reading 1.1 m from the traced Carpenters Road centreline, inside its corridor: the street level there (task H)'},
     'sh_537671_183381': {'category': 'ground', 'use': 'terrace', 'reason': RAILS_IN_YARD},
     'sh_537723_183428': {'category': 'ground', 'use': 'terrace', 'reason': RAILS_IN_YARD+'; at the foot of the G.E.R. bank by a works building'},
     'sh_538149_182179': {'category': 'structure', 'use': 'none', 'reason': 'St Leonard\'s Street on Four Mills Bridge over the Limehouse Cut (OS: the street crosses the Cut here; Bromley Lock beside it): a bridge-deck level; the model draws neither the street nor the bridge here, only the Cut water (T22)'},
