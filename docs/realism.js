@@ -1,5 +1,6 @@
 // Original procedural surfaces in metres; archive photographs are references only.
 import { createRandom } from './lib/prng.js';
+import { vesselHolds } from './coal-vessels.js';
 export function realism(THREE, renderer, scene, data, options = {}) {
   function texture(kind, relief = false) {
     const random = createRandom({ brick: 194, roof: 729, mud: 305, wood: 918, stone: 611, grass: 817 }[kind]);
@@ -338,7 +339,17 @@ export function realism(THREE, renderer, scene, data, options = {}) {
   let tideHeight = data.riverNetwork.tide.low;
   // Masks use the same placements as the rendered lighters. Only their open
   // hold interiors are excluded; river water still meets the outside hulls.
-  const bargeHolds = Array.from({ length: 4 }, () => new THREE.Vector4(-10000, -10000, 1, 0));
+  const extraHolds = vesselHolds(data.coalTraffic);
+  const holdCount = 4 + extraHolds.length;
+  const bargeHolds = Array.from({ length: holdCount }, () => new THREE.Vector4(-10000, -10000, 1, 0));
+  // Width and longitudinal bounds are per hatch. Existing photo lighters retain
+  // their curved inner end; the new vessel studies have rectangular hatches.
+  const holdDimensions = Array.from({ length: holdCount }, () => new THREE.Vector4(2.05, -7.2, 6.8, 0.8));
+  extraHolds.forEach((h, i) => {
+    const a = (h.heading * Math.PI) / 180;
+    bargeHolds[i + 4].set(...h.centre, Math.cos(a), Math.sin(a));
+    holdDimensions[i + 4].set(h.halfWidth, h.minZ, h.maxZ, h.endCurve);
+  });
   const riverBed = new THREE.DataTexture(
     data.terrain.properties,
     data.terrain.width,
@@ -360,6 +371,7 @@ export function realism(THREE, renderer, scene, data, options = {}) {
       shader.uniforms.riverMatrix = { value: matrix };
       shader.uniforms.riverBed = { value: riverBed };
       shader.uniforms.bargeHolds = { value: bargeHolds };
+      shader.uniforms.holdDimensions = { value: holdDimensions };
       shader.uniforms.bedBounds = { value: new THREE.Vector4(bx0, bz0, bx1 - bx0, bz1 - bz0) };
       shader.vertexShader =
         'uniform mat4 riverMatrix; varying vec4 riverCoord; varying vec3 riverPosition;\n' + shader.vertexShader;
@@ -370,19 +382,20 @@ export function realism(THREE, renderer, scene, data, options = {}) {
       riverCoord=riverMatrix*vec4(riverPosition,1.0);`
       );
       shader.fragmentShader =
-        'uniform sampler2D riverReflection; uniform sampler2D riverBed; uniform vec4 bedBounds; uniform vec4 bargeHolds[4]; varying vec4 riverCoord; varying vec3 riverPosition;\n' +
+        `uniform sampler2D riverReflection; uniform sampler2D riverBed; uniform vec4 bedBounds; uniform vec4 bargeHolds[${holdCount}]; uniform vec4 holdDimensions[${holdCount}]; varying vec4 riverCoord; varying vec3 riverPosition;\n` +
         noise +
         shader.fragmentShader;
       shader.fragmentShader = shader.fragmentShader.replace(
         '#include <opaque_fragment>',
         `
-      for (int i=0;i<4;i++) {
+      for (int i=0;i<${holdCount};i++) {
         vec2 delta=riverPosition.xz-bargeHolds[i].xy;
         float c=bargeHolds[i].z,s=bargeHolds[i].w;
         vec2 local=vec2(c*delta.x-s*delta.y,s*delta.x+c*delta.y);
         // Exact inner-hold outline: straight sides and the quadratic end.
-        if(abs(local.x)<2.05 && local.y<6.8 &&
-           local.y>-7.2+.8*pow(local.x/2.05,2.0)) discard;
+        vec4 h=holdDimensions[i];
+        if(abs(local.x)<h.x && local.y<h.z &&
+           local.y>h.y+h.w*pow(local.x/h.x,2.0)) discard;
       }
       vec2 riverUv=riverCoord.xy/riverCoord.w;
       vec2 ripple=vec2(sin(riverPosition.x*2.8+riverPosition.z*.6),cos(riverPosition.z*3.4-riverPosition.x*.4));
@@ -460,6 +473,7 @@ export function realism(THREE, renderer, scene, data, options = {}) {
         bargeHolds[i].set(x, z, Math.cos((angle * Math.PI) / 180), Math.sin((angle * Math.PI) / 180))
       );
       reflectionStats.excludedBargeHolds = barges.length;
+      reflectionStats.excludedVesselHolds = holdCount;
     },
     setTideLevel: (value) => {
       tideHeight = value;

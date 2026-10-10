@@ -98,6 +98,12 @@ The [marsh and ditch pass](MARSH_DITCHES.md) adds the mapped Mill Meads drains,
 lower marsh ground and interpreted defensive riverbank sections:
 **http://localhost:4175/?view=marsh-ditches**.
 
+The [coal traffic study](COAL_TRAFFIC.md) adds steam colliers unloading into Thames
+lighters, a steam tug and tow, and loaded and empty Lea barges. Its source register
+distinguishes period handling images from later hull comparisons; vessel sizes
+and moorings remain representative. Six **Coal traffic** destinations are available
+in the **Fly to** menu: **http://localhost:4173/?view=coal-transfer**.
+
 ## Animated tides
 
 The [garden and terrain-join refinement](GARDENS.md) removes the abrupt field

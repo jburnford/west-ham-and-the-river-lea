@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "epoch": "1900",
+  "status": "Source-informed representative vessel studies; dimensions, heights, loads and operating positions interpreted.",
+  "coordinateSystem": "Local scene metres: x east, z south; heading is Three.js rotation about +y, bow along local -z.",
+  "appearance": {
+    "coalPieceRadiusMin": 0.018,
+    "coalPieceRadiusMax": 0.072,
+    "coalGrainTileMetres": 2,
+    "status": "Authored visual correction to oversized coal pieces; not a measured cargo grade. Worker height variation, posture and clothing are also interpretations."
+  },
+  "interpretation": {
+    "colliers": "Two generic late-Victorian iron screw colliers, aft machinery/single funnel, two cargo masts, three open hatches. 62 m x 9.4 m is an authored study dimension, not a named-ship measurement. Steamships remain in the Thames context polygon.",
+    "lighterage": "Unpowered open lighters receive cargo alongside the colliers; a small generic steam tug and tow illustrate onward lighterage. Narrower barges illustrate inland craft without claiming a universal size distinction. Lea form has a single long cargo well with three separate heaps, guided by the 1907 Bonner Bridge and Yorkshire photographs. The broader Thames study has two hatch sections; this is a form variant, not a universal lighter classification.",
+    "unloading": "First group has a raised hand-whipping gang stage, overhead falls, basket and chute; two other groups show a derrick-supported basket and an early grab. Cooke 1874 and Ridley 1871 images supply the manual-handling vocabulary. These are deliberately representative operating tableaux, not evidence that this exact gear survived at these c1900 positions. The grab reflects the GIHS account of introduction around 1900. Its specific appearance and use at this berth are not documented.",
+    "water": "Tidal craft track the existing Thames/Bow Creek tide. Limehouse Cut craft retain its existing fixed water level. No horizontal movement, bathymetry, cargo capacity, collision or navigability simulation is claimed."
+  },
+  "sources": [
+    {
+      "id": "wyllie",
+      "url": "https://www.ncm.org.uk/app/uploads/2024/06/CFS259a-600x330.jpg.webp",
+      "localFile": "reference/coal-traffic-2026-10-09/wyllie-coal-lighters.webp",
+      "use": "Visually inspected: low open lighters, dense uneven loads, working end decks, sweeps and grouped craft. Image matches Wyllie\u2019s Toil, Glitter, Grime and Wealth on a Flowing Tide (1883); attribution cross-checked with RMG print record. Not a Lea location survey.",
+      "sha256": "6e97f698b6a66665f12f07678051507ddce50017f22de1d52ba1684bf1a8ba19"
+    },
+    {
+      "id": "rmg-wyllie",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-126322",
+      "use": "RMG print catalogue: 1884 print after Wyllie\u2019s painting exhibited in 1883; lightermen and working Thames."
+    },
+    {
+      "id": "coal-whippers",
+      "url": "https://pasttense.co.uk/wp-content/uploads/2017/04/coalheavers-pic.jpg",
+      "localFile": "reference/coal-traffic-2026-10-09/coal-whippers.jpg",
+      "use": "Visually inspected: platform, hauling lanyards, suspended basket, ship-side trough, receiving lighter and shovelling. Lloyd\u2019s Register article identifies the corresponding scene as E. A. Cooke in W. S. Lindsay, History of Merchant Shipping and Ancient Commerce, vol. II (1874). Earlier handling evidence, not a measured c1900 rig.",
+      "sha256": "625002efa70e1ee14da7d1951e1894641b4fb8c70fcbbbdf16c525f61fbed3ad"
+    },
+    {
+      "id": "coal-whipping-pool",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAkQdog8GXGtLgNiLzmTNlp4v1saNraoaisax8hBAQyw&s=10",
+      "localFile": "reference/coal-traffic-2026-10-09/coal-whipping-pool.jpg",
+      "use": "Visually inspected: caption Coal and Peter\u2014Coal whipping in the Pool; hauling gang, dense sailing rig and ship-side ladder. Lloyd\u2019s Register article identifies this scene as Matthew White Ridley, The Graphic, 25 February 1871, p.173. Used for hand-whipping details; the sail hull is not copied into the c1900 steam collier.",
+      "sha256": "6139f4c04fa21bb7377d2d975acfbed108d265d3e7258118e99c2ce5f6f1d57c"
+    },
+    {
+      "id": "lloyds-coal",
+      "url": "https://heritage.lrfoundation.org.uk/stories/coal-at-sea-the-hazards-of-cargoes-bunkers-loading-unloading-trimming-and-shifting",
+      "retrievedVia": "https://hec.lrfoundation.org.uk/whats-on/stories/coal-at-sea-the-hazards-of-cargoes-bunkers-loading-unloading-trimming-and-shifting",
+      "use": "Roy and Lesley Adkins, 30 October 2024, Lloyd\u2019s Register Foundation: manual shovelling/trimming; baskets/tubs lifted with whips; elevated gang stage and jumping lanyard pull; gradual use of winches/donkey engines. Captions identify the Cooke 1874 and Ridley 1871 illustrations. Type-based reconstruction; exact practice at the chosen c1900 berth is unconfirmed.",
+      "retrieval": "Direct user URL returned 403 in browser tool. Full HTML successfully downloaded through the older hec.lrfoundation.org.uk URL, redirecting to the current site; article and captions read in full on 9 October 2026."
+    },
+    {
+      "id": "lady-lea-comparison",
+      "url": "https://www.nationalhistoricships.org.uk/register/212/lady-lea",
+      "use": "Later comparative vessel, built 1931: 21.94 m x 3.96 m, reported to follow canal-barge plans of a century earlier. Supports modest inland scale only; model does not reproduce this vessel, its later engine or armaments trade."
+    },
+    {
+      "id": "alice-comparison",
+      "url": "https://www.nationalhistoricships.org.uk/register/3887/sb-alice",
+      "use": "Later comparative lighter, built 1954: 23.55 m x 5.50 m; rowed/towed River Lea to Lower Pool. Shows that lighter/Lea barge is not a rigid historical size taxonomy. Model widths remain explicit interpretations, not measured c1900 lock limits."
+    },
+    {
+      "id": "greenwich-colliers",
+      "url": "https://greenwichindustrialhistory.blogspot.com/2019/11/steam-colliers-on-thames.html",
+      "use": "Alan Pearsall talk, article originally in GIHS November 2000 newsletter, reposted 2019: iron screw colliers; discharge at tiers/riverside berths; hand shovelling into baskets; grab cranes introduced around 1900. Describes Great Atlas crane-hulk transfer into lighters. Supports river transfer setting and a representative early grab, not specific vessels, sizes or this mooring."
+    },
+    {
+      "id": "lighter-photo",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxfMPbGANRSoKugq3UxwVH65tZkFovCPYqqEOtGSSD2SKTXVP7QvUHRck&s=10",
+      "localFile": "reference/coal-traffic-2026-10-09/coal-lighters-photograph.jpg",
+      "use": "Visually inspected watermarked photograph: low broad coal lighters, separate cargo sections, rubbing bands, bluff end working decks, small crew and uneven coal loads. Visible Alamy ID W377X5; original caption, location and date not established. Comparative hull/cargo reference only; image remains unmodified and is not a public texture.",
+      "sha256": "e69416c70b5cce09655685fa70aa5175e2ad65d78b0f19203df79df19f587f43"
+    },
+    {
+      "id": "bonner-1907",
+      "url": "https://towerhamletsslice.co.uk/wp-content/uploads/2020/05/Coal-barge-under-Bonner-Bridge-1907-photo-London-Canal-Museum.jpg",
+      "localFile": "reference/coal-traffic-2026-10-09/bonner-bridge-coal-barge-1907.jpg",
+      "sha256": "f4bf0a91fc6e994e775ad8a3199a96c7252cde0d0ae6e0e5eeae512bd8de5ac2",
+      "use": "Supplied filename identifies Bonner Bridge, 1907, London Canal Museum. Visually inspected: long open inland hold, several tall irregular heaps, narrow side walkways, low end deck and boatman steering with long sweep. Near-period comparative form; Regent\u2019s Canal scene, not a mapped Lea mooring."
+    },
+    {
+      "id": "rbkc-coal-barges",
+      "url": "https://rbkclocalstudies.wordpress.com/wp-content/uploads/2011/12/h11coal-barges.jpg",
+      "localFile": "reference/coal-traffic-2026-10-09/rbkc-coal-barges.jpg",
+      "sha256": "0c3a1e34060967ed46c54c511872cc3f711523522d59341da15f36f70aecefca",
+      "use": "Visually inspected: bluff coal lighter ends, dense cargo, working men, rubbing timbers, mooring ropes and a nearby empty rowing boat. A furled sailing rig is visible on an adjacent craft. Exact photograph date and location not established from the supplied URL."
+    },
+    {
+      "id": "yorkshire-coal-barge",
+      "url": "https://www.yorkshirepost.co.uk/webimg/QVNIMTE3MjU3NDcw.jpg?crop=3:2,smart&trim=&width=640&quality=65",
+      "localFile": "reference/coal-traffic-2026-10-09/yorkshire-coal-barge.jpg",
+      "sha256": "f6577de5c61ab56aa7bf107b8be7a7aac99ac6764648000bc921204547f87cb2",
+      "use": "Visually inspected: low broad inland barge, single long open well, multiple coal heaps, curved end working deck and long tiller/sweep handled by a boatman. Caption/date/location not established; published lettering is not copied into the model."
+    },
+    {
+      "id": "hackney-later-comparison",
+      "url": "https://nbtalondon.wordpress.com/wp-content/uploads/2023/01/hackney_power_station_1950-69_005-1.jpg?w=600",
+      "localFile": "reference/coal-traffic-2026-10-09/hackney-power-station-lighters-later.jpg",
+      "sha256": "4de0ef388299e8bd8b0f1ad2843da9681265e89b7cb67d8f2c7877e802d17b40",
+      "use": "Supplied filename labels Hackney Power Station, 1950\u201369. Visually inspected: long lighter wells, piled coal, curved working decks, fenders, cleats and stern tillers. Later comparison for visible hull/cargo details only; power station, grab crane and vessel names are not introduced into the c1900 reconstruction from this photo."
+    },
+    {
+      "id": "steam-launch-photo",
+      "localFile": "reference/coal-traffic-2026-10-09/steam-launch-and-unloading-cranes.png",
+      "sha256": "46f597e5dd365ea344463f88e526cb865e2f3b4eeffba41c68ed4554e6136889",
+      "use": "User-supplied screenshot, visually inspected: foreground steam launch/tug, light hull with portholes, low cabins, central tall funnel, curved ventilators, side rails and open lighters; larger unloading cranes behind. Vessel identity, exact location and date unestablished. Tug fittings interpreted from visible form; background cranes are not identified as Great Atlas."
+    },
+    {
+      "id": "mv-mitcham-1946-comparison",
+      "url": "https://mitchamhistorynotes.com/wp-content/uploads/2017/01/19461102-mv-mitcham.png",
+      "localFile": "reference/coal-traffic-2026-10-09/mv-mitcham-1946.png",
+      "sha256": "54b42f1a2fb84208a593692c6fa1d8b24f1428667ea4dc2128a972cea562fb46",
+      "date": "1946, confirmed by the author; filename includes 19461102",
+      "use": "Visually inspected: low long hull, small crew silhouettes, stepped deck line and covered cargo hatches. Later proportion comparison only; this motor-vessel configuration, lettering and specific fittings are not copied into the c1900 steam colliers."
+    },
+    {
+      "id": "sailing-collier-whipping-stage",
+      "localFile": "reference/coal-traffic-2026-10-09/sailing-collier-whipping-stage.png",
+      "sha256": "32cc619450df139cc306ed13505a0c8c2688f0a228e3d746cb57f39a2e451280",
+      "use": "Author-supplied watermarked engraving, visually inspected: wooden sailing collier, two masts, raised coal-whipping gang stage, overhead hauling falls and small worker silhouettes. Date, title and exact vessel not established. Supports working posture and gang-stage form; sailing hull and rig are not introduced into the steamship study."
+    },
+    {
+      "id": "steam-tug-tow-photo",
+      "url": "https://scontent.fyqr2-1.fna.fbcdn.net/v/t39.30808-6/498920213_10231987706610318_1276299516320462231_n.jpg",
+      "retrieval": "Downloaded from the author's supplied signed Facebook CDN URL; local image retained because the query signature is temporary.",
+      "localFile": "reference/coal-traffic-2026-10-09/facebook-coal-reference.jpg",
+      "sha256": "7d61839fabcf3fd0cf5852245051982c63aa4675bcfd76f3101d2d6ef57e3b4f",
+      "use": "Visually inspected: small steam tug towing loaded open lighters, low working decks, fine granular coal mounds, varied cargo silhouettes, grouped moored craft and background wharf/bridge. Date, location and vessel identities unestablished. Used for tow and cargo appearance, not a measured mooring or an attributed c1900 event."
+    }
+  ],
+  "forms": {
+    "steam-collier": {
+      "kind": "collier",
+      "length": 62,
+      "beam": 9.4,
+      "draft": 2.8,
+      "freeboard": 1.8,
+      "sheer": 0.75,
+      "masts": [
+        -23,
+        5
+      ],
+      "holds": [
+        {
+          "z": -16,
+          "width": 6.2,
+          "length": 11
+        },
+        {
+          "z": -2,
+          "width": 6.2,
+          "length": 11
+        },
+        {
+          "z": 10,
+          "width": 6.2,
+          "length": 8
+        }
+      ]
+    },
+    "thames-lighter": {
+      "kind": "lighter",
+      "length": 22,
+      "beam": 6,
+      "draft": 1.15,
+      "freeboard": 0.5,
+      "sheer": 0.25,
+      "holds": [
+        {
+          "z": -4,
+          "width": 4.8,
+          "length": 7.2
+        },
+        {
+          "z": 4,
+          "width": 4.8,
+          "length": 7.2
+        }
+      ],
+      "coalPeaks": 1
+    },
+    "lea-barge": {
+      "kind": "lea-barge",
+      "length": 22,
+      "beam": 4.2,
+      "draft": 1.05,
+      "freeboard": 0.48,
+      "sheer": 0.2,
+      "holds": [
+        {
+          "z": 0,
+          "width": 3.3,
+          "length": 15.4
+        }
+      ],
+      "coalPeaks": 3,
+      "coalHeapHeight": 1.7
+    },
+    "steam-tug": {
+      "kind": "tug",
+      "length": 18,
+      "beam": 4.8,
+      "draft": 1.4,
+      "freeboard": 0.75,
+      "sheer": 0.5,
+      "holds": [],
+      "hullColour": "#93958a"
+    }
+  },
+  "vessels": [
+    {
+      "id": "thames-collier-a",
+      "form": "steam-collier",
+      "label": "Thames collier a \u2014 representative study",
+      "x": 300,
+      "z": 2640,
+      "heading": 90,
+      "water": "tidal",
+      "laden": true,
+      "seed": 910,
+      "positionEvidence": "Illustrative operating position within mapped water, checked against the rendered water polygons; not a surveyed mooring."
+    },
+    {
+      "id": "thames-collier-b",
+      "form": "steam-collier",
+      "label": "Thames collier b \u2014 representative study",
+      "x": 650,
+      "z": 2800,
+      "heading": 105,
+      "water": "tidal",
+      "laden": true,
+      "seed": 911,
+      "positionEvidence": "Illustrative operating position within mapped water, checked against the rendered water polygons; not a surveyed mooring.",
+      "loadFraction": 0.65
+    },
+    {
+      "id": "receiving-lighter-a",
+      "form": "thames-lighter",
+      "label": "Receiving lighter a \u2014 representative study",
+      "x": 286.0,
+      "z": 2631.1,
+      "heading": 90,
+      "water": "tidal",
+      "laden": true,
+      "seed": 920,
+      "positionEvidence": "Illustrative operating position within mapped water, checked against the rendered water polygons; not a surveyed mooring.",
+      "loadFraction": 0.75
+    },
+    {
+      "id": "receiving-lighter-b",
+      "form": "thames-lighter",
+      "label": "Receiving lighter b \u2014 representative study",
+      "x": 311.0,
+      "z": 2631.1,
+      "heading": 90,
+      "water": "tidal",
+      "laden": true,
+      "seed": 921,
+      "positionEvidence": "Illustrative operating position within mapped water, checked against the rendered water polygons; not a surveyed mooring.",
+      "loadFraction": 0.75
+    },
+    {
+      "id": "receiving-lighter-c",
+      "form": "thames-lighter",
+      "label": "Receiving lighter c \u2014 representative study",
+      "x": 634.174,
+      "z": 2795.027,
+      "heading": 105,
+      "water": "tidal",
+      "laden": true,
+      "seed": 922,
+      "positionEvidence": "Illustrative operating position within mapped water, checked against the rendered water polygons; not a surveyed mooring.",
+      "loadFraction": 0.75
+    },
+    {
+      "id": "coal-steam-tug",
+      "form": "steam-tug",
+      "label": "Coal steam tug \u2014 representative study",
+      "x": 480,
+      "z": 2690,
+      "heading": 90,
+      "water": "tidal",
+      "laden": false,
+      "seed": 930,
+      "positionEvidence": "Illustrative operating position within mapped water, checked against the rendered water polygons; not a surveyed mooring."
+    },
+    {
+      "id": "tow-lighter-a",
+      "form": "thames-lighter",
+      "label": "Tow lighter a \u2014 representative study",
+      "x": 510,
+      "z": 2690,
+      "heading": 90,
+      "water": "tidal",
+      "laden": true,
+      "seed": 931,
+      "positionEvidence": "Illustrative operating position within mapped water, checked against the rendered water polygons; not a surveyed mooring."
+    },
+    {
+      "id": "tow-lighter-b",
+      "form": "thames-lighter",
+      "label": "Tow lighter b \u2014 representative study",
+      "x": 538,
+      "z": 2690,
+      "heading": 90,
+      "water": "tidal",
+      "laden": true,
+      "seed": 932,
+      "positionEvidence": "Illustrative operating position within mapped water, checked against the rendered water polygons; not a surveyed mooring."
+    },
+    {
+      "id": "bow-creek-coal-barge",
+      "form": "lea-barge",
+      "label": "Bow creek coal barge \u2014 representative study",
+      "x": 660,
+      "z": 2434,
+      "heading": 20,
+      "water": "tidal",
+      "laden": true,
+      "seed": 940,
+      "positionEvidence": "Illustrative operating position within mapped water, checked against the rendered water polygons; not a surveyed mooring."
+    },
+    {
+      "id": "bow-locks-coal-barge",
+      "form": "lea-barge",
+      "label": "Bow locks coal barge \u2014 representative study",
+      "x": -590,
+      "z": 876,
+      "heading": 135,
+      "water": "tidal",
+      "laden": true,
+      "seed": 941,
+      "positionEvidence": "Illustrative operating position within mapped water, checked against the rendered water polygons; not a surveyed mooring."
+    },
+    {
+      "id": "limehouse-coal-barge",
+      "form": "lea-barge",
+      "label": "Limehouse coal barge \u2014 representative study",
+      "x": -1306,
+      "z": 1458,
+      "heading": 125,
+      "water": "retained",
+      "laden": true,
+      "seed": 942,
+      "positionEvidence": "Illustrative operating position within mapped water, checked against the rendered water polygons; not a surveyed mooring."
+    },
+    {
+      "id": "limehouse-empty-barge",
+      "form": "lea-barge",
+      "label": "Limehouse empty barge \u2014 representative study",
+      "x": -1152,
+      "z": 1354,
+      "heading": 125,
+      "water": "retained",
+      "laden": false,
+      "seed": 943,
+      "positionEvidence": "Illustrative operating position within mapped water, checked against the rendered water polygons; not a surveyed mooring."
+    }
+  ],
+  "transfers": [
+    {
+      "collier": "thames-collier-a",
+      "lighter": "receiving-lighter-a",
+      "holdZ": -16,
+      "mastZ": -23,
+      "method": "manual-whip"
+    },
+    {
+      "collier": "thames-collier-a",
+      "lighter": "receiving-lighter-b",
+      "holdZ": 10,
+      "mastZ": 5,
+      "method": "derrick-basket"
+    },
+    {
+      "collier": "thames-collier-b",
+      "lighter": "receiving-lighter-c",
+      "holdZ": -16,
+      "mastZ": -23,
+      "method": "early-grab"
+    }
+  ],
+  "tows": [
+    {
+      "from": "coal-steam-tug",
+      "to": "tow-lighter-a"
+    },
+    {
+      "from": "tow-lighter-a",
+      "to": "tow-lighter-b"
+    }
+  ],
+  "views": [
+    {
+      "id": "coal-transfer",
+      "name": "Coal traffic \u2014 collier unloading into lighters",
+      "position": [
+        278,
+        15,
+        2587
+      ],
+      "target": [
+        294,
+        3,
+        2637
+      ],
+      "fov": 58
+    },
+    {
+      "id": "coal-whipping",
+      "name": "Coal traffic \u2014 coal whippers, basket and chute",
+      "position": [
+        265,
+        8,
+        2613
+      ],
+      "target": [
+        285,
+        4,
+        2638
+      ],
+      "fov": 50
+    },
+    {
+      "id": "coal-colliers",
+      "name": "Coal traffic \u2014 steam colliers on the Thames",
+      "position": [
+        385,
+        42,
+        2500
+      ],
+      "target": [
+        450,
+        3,
+        2700
+      ],
+      "fov": 68
+    },
+    {
+      "id": "coal-lighter-tow",
+      "name": "Coal traffic \u2014 steam tug and laden lighters",
+      "position": [
+        510,
+        12,
+        2648
+      ],
+      "target": [
+        510,
+        1,
+        2690
+      ],
+      "fov": 66
+    },
+    {
+      "id": "coal-lea-barges",
+      "name": "Coal traffic \u2014 laden Lea barge and coal heaps",
+      "position": [
+        -1289,
+        9,
+        1438
+      ],
+      "target": [
+        -1306,
+        0.5,
+        1458
+      ],
+      "fov": 58
+    },
+    {
+      "id": "coal-empty-barge",
+      "name": "Coal traffic \u2014 empty Lea barge and open hold",
+      "position": [
+        -1132,
+        10,
+        1376
+      ],
+      "target": [
+        -1152,
+        0.5,
+        1354
+      ],
+      "fov": 56
+    }
+  ]
+}

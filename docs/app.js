@@ -14,6 +14,7 @@ import { lighting } from './lighting.js';
 import { infrastructure } from './infrastructure.js';
 import { tramRails } from './tram-rails.js';
 import { wharfCranes } from './wharf-cranes.js';
+import { coalVessels } from './coal-vessels.js';
 import { buildingPlinths } from './building-plinths.js';
 import { mappedTrees } from './mapped-trees.js';
 import { loadTerrain, terrainDetails } from './terrain-details.js';
@@ -207,6 +208,7 @@ function populateDestinations() {
   for (const [label, views] of [
     ['Areas', districtViews],
     ['Factories', factoryViews(data.factoryBuildings)],
+    ['Coal traffic', data.coalTraffic.views],
     ['Bridges', bridgeViews],
   ]) {
     const group = document.createElement('optgroup');
@@ -481,6 +483,7 @@ function update() {
     infrastructure: scene?.userData.infrastructure,
     tramRails: scene?.userData.tramRails,
     wharfCranes: scene?.userData.wharfCranes,
+    coalTraffic: scene?.userData.coalTraffic,
     mappedTrees: scene?.userData.mappedTrees,
     riverNetwork: scene?.userData.riverNetwork,
     riverSystem: scene?.userData.riverSystem,
@@ -766,7 +769,9 @@ function buildScene() {
       if (!object.isMesh || object.userData.keepIndexed || object.userData.batched) return;
       if (liteThin(object)) return dropped.push(object);
       originals.push(object);
-      const count = object.geometry.index ? object.geometry.index.count : object.geometry.getAttribute('position').count;
+      const count = object.geometry.index
+        ? object.geometry.index.count
+        : object.geometry.getAttribute('position').count;
       const batch = batches.get(batchKey(object)) || {
         count: 0,
         offset: 0,
@@ -999,6 +1004,17 @@ function buildScene() {
   // Lighters ride on the tidal water: placed at low water, lifted with the tide.
   for (const spec of barges) detail.barge(...spec, data.riverNetwork.tide.low + 0.08);
   surfaces.excludeBargeHolds(barges);
+  mark('coal-traffic');
+  scene.userData.coalTraffic = coalVessels({
+    THREE,
+    scene,
+    spec: data.coalTraffic,
+    materials,
+    tideLow: data.riverNetwork.tide.low,
+    waterLevel: data.riverSystem.waterLevel,
+    lite,
+  });
+  mark('waterfront');
   detail.waterfront();
   detail.station(data.stationPlan);
   scene.userData.stationSupport = factoryBuildings({
@@ -1150,7 +1166,7 @@ function buildScene() {
   const tidalMeshes = [],
     floatingMeshes = [];
   scene.traverse((o) => {
-    if (!o.isMesh) return;
+    if (!o.isMesh && !o.isPoints) return;
     if (o.material === materials.tidalWater && !o.userData.fixedLevel) tidalMeshes.push(o);
     if (o.material.userData.tidalFloat) floatingMeshes.push(o);
   });
@@ -1314,6 +1330,7 @@ try {
     mainLandscape,
     tramRailsData,
     cranesData,
+    coalTrafficData,
   ] = await Promise.all([
     load('./data/ground-plan.json'),
     loadTerrain(load),
@@ -1332,6 +1349,7 @@ try {
     loadMainLandscape(load),
     load('./data/tram-rails.json'),
     load('./data/wharf-cranes.json'),
+    load('./data/coal-traffic.json'),
   ]);
   data = groundPlan;
   data.terrain = terrain;
@@ -1347,6 +1365,7 @@ try {
   data.stationPlan = stationPlan;
   data.tramRails = tramRailsData;
   data.wharfCranes = cranesData;
+  data.coalTraffic = coalTrafficData;
   data.elevation = elevation;
   applyHistoricElevation(data);
   data.riverSystem = system;
