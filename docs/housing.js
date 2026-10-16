@@ -1,5 +1,6 @@
 // Household divisions and yard fittings are interpretations within mapped blocks.
-export function housingDetails({ THREE, scene, materials: m, data, level, box }) {
+// flush (optional): called between phases so the page can batch what is built so far and keep peak memory down.
+export function housingDetails({ THREE, scene, materials: m, data, level, box, flush = () => {} }) {
   const detail = data.housingDetail,
     rows = new Map(detail.rows.map((r) => [r.id, r]));
   const brick = m.brick.clone();
@@ -71,6 +72,7 @@ export function housingDetails({ THREE, scene, materials: m, data, level, box })
   }
   detail.plots.forEach((p, i) => surface(p.polygons, paving[i % 3]));
   detail.forecourts.forEach((p) => surface(p.polygons, paving[1]));
+  flush();
   for (const [a, b] of detail.walls) {
     const dx = b[0] - a[0],
       dz = b[1] - a[1],
@@ -98,7 +100,9 @@ export function housingDetails({ THREE, scene, materials: m, data, level, box })
     box(g, 0, 0.08, rear * (s.depth / 2 + 0.018), privy ? 0.57 : 0.7, privy ? 1.55 : 1.95, 0.05, m.wood);
     if (!privy) box(g, s.width / 2 + 0.02, 1.2, 0, 0.04, 0.72, 0.65, m.window);
   }
+  flush();
   detail.extensions.forEach((s) => outbuilding(s));
+  flush();
   detail.privies.forEach((s) => outbuilding(s, true));
   return { ...detail.counts, sharedWallSegments: detail.walls.length };
 }

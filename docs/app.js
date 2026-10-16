@@ -1053,11 +1053,24 @@ function buildScene() {
   ].forEach((h) => detail.holder(h));
   mark('housing');
   data.neighbourhood.houses.forEach((h) => detail.houses(h));
-  data.neighbourhood.terraces.forEach((h) => detail.terrace(h));
   // Author-supplied southwest context: distant terraces and works around
   // Three Mills/Bromley. Row axes and industrial ranges remain approximate.
-  data.southwest.rows.forEach((h) => detail.terrace(h));
-  scene.userData.housingDetails = housingDetails({ THREE, scene, materials, data, level: terrain.level, box });
+  // Batch every few dozen rows: built whole, the housing's separate meshes took about 500 MB at once,
+  // which pushed iPhone Safari past its memory limit and reloaded the page.
+  [...data.neighbourhood.terraces, ...data.southwest.rows].forEach((h, i) => {
+    detail.terrace(h);
+    if (i % 24 === 23) mark('housing');
+  });
+  mark('housing');
+  scene.userData.housingDetails = housingDetails({
+    THREE,
+    scene,
+    materials,
+    data,
+    level: terrain.level,
+    box,
+    flush: () => mark('housing'),
+  });
   mark('study-buildings');
   for (const b of data.southwest.industrialRanges) {
     if (surveyedFactories.has(b.siteId)) continue;
