@@ -311,7 +311,7 @@ def build():
                             np.column_stack([corners+2, corners+2*shape[1], corners+2*shape[1]+2])])
     faces = faces[domain.ravel()[faces].all(axis=1)]
     faces = faces[~shapely.intersects(shapely.polygons(xy[faces]), exclusions)]
-    faces.astype('<u4').tofile(OUT/'landscape-1900.faces.u32')
+    faces.astype('<u4').tofile(OUT/'landscape-1900.faces.u32.bin')
     counts = {str(k):{'cells':int((kind == k).sum()), 'areaKm2':round(float((kind == k).sum()*step**2/1e6), 4)} for k in range(15)}
     meta = {'schemaVersion':1, 'targetEpoch':'1900', 'status':'working landscape; estimated areas retain modern-relief uncertainty; not applied to detailed scene or flood solver',
             'boundsBNG':trial['boundsBNG'], 'cellSizeMetres':step, 'width':shape[1], 'height':shape[0],
@@ -322,7 +322,7 @@ def build():
             'groundFile':'landscape-1900.ground.f32', 'groundKindFile':'landscape-1900.ground-kind.u8', 'earlyMarshFile':'landscape-1900.early-marsh.f32',
             'earlyMarshWeightFile':'landscape-1900.early-weight.f32', 'earlyMarshDistanceFile':'landscape-1900.early-distance.f32',
             'preview':'landscape-1900.png', 'evidencePreview':'landscape-1900.evidence.png',
-            'displayMesh':{'faceFile':'landscape-1900.faces.u32', 'triangleCount':len(faces), 'spacingMetres':20,
+            'displayMesh':{'faceFile':'landscape-1900.faces.u32.bin', 'triangleCount':len(faces), 'spacingMetres':20,
                            'vertexOrder':'Full 10 m raster row-major; faces select every second sample. No face intersects a mapped exclusion.'},
             'kindLegend':{'0':'missing source coverage', '1':'historical ground/street interpolation', '2':'historical control at nearest grid cell',
                           '3':'estimated relief within 350 m dry-grid travel of a historical anchor', '4':'distant or disconnected modern-relief estimate', '5':'water or reviewed structure exclusion; no ground/bed estimate',

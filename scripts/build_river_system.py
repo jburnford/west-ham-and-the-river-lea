@@ -279,7 +279,7 @@ def build():
     # Drawn tidal water moves with the network's tide; the rest stays still.
     tidal_drawn=drawn_water.intersection(tidal_water)
     still_drawn=drawn_water.difference(tidal_water)
-    p.tofile(OUT/'river-system-1900.f32');ix.tofile(OUT/'river-system-1900.u32')
+    p.tofile(OUT/'river-system-1900.f32');ix.tofile(OUT/'river-system-1900.u32.bin')
     silt.tofile(OUT/'river-system-1900.silt');cover.tofile(OUT/'river-system-1900.cover')
     faces.tofile(OUT/'river-system-1900.faces.f32');face_uv.tofile(OUT/'river-system-1900.face-uv.f32')
     # Cut the same added river corridors out of the flat placeholder floors.
@@ -298,7 +298,7 @@ def build():
           'waterPolygons':rings(still_drawn),'tidalWaterPolygons':rings(tidal_drawn),'tidalReachIds':tidal_ids,
           'tideLow':tl.LOW,'tideRegister':'data/maps/os-tide-levels.json','extensionPolygons':rings(extension),
           'baseGround':rings(core_ground),'regionalGround':rings(regional_ground),
-          'positionFile':'river-system-1900.f32','indexFile':'river-system-1900.u32',
+          'positionFile':'river-system-1900.f32','indexFile':'river-system-1900.u32.bin',
           'sedimentFile':'river-system-1900.silt','landcoverFile':'river-system-1900.cover',
           'faceFile':'river-system-1900.faces.f32','faceUVFile':'river-system-1900.face-uv.f32',
           'faceVertices':len(faces),'bankSections':bank_sections,

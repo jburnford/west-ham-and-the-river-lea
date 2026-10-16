@@ -38,7 +38,7 @@
   "preview": "landscape-1900.png",
   "evidencePreview": "landscape-1900.evidence.png",
   "displayMesh": {
-    "faceFile": "landscape-1900.faces.u32",
+    "faceFile": "landscape-1900.faces.u32.bin",
     "triangleCount": 219362,
     "spacingMetres": 20,
     "vertexOrder": "Full 10 m raster row-major; faces select every second sample. No face intersects a mapped exclusion."
@@ -36730,7 +36730,7 @@
     "No missing ground is silently converted to zero elevation or a hydraulic wall."
   ],
   "inputHashes": {
-    "scripts/build_regional_landscape.py": "51b5b86a73ec2bc305d9edba538c050a26a1ca75007e2d2383fd3f3ad5506236",
+    "scripts/build_regional_landscape.py": "2efccf4a9ce1c85fcf735bf87aee4b1783051da1652bfde1223fddd1ff346a84",
     "scripts/regional_marsh_baseline.py": "23a24635bf7da323d858a157fd3f602195b92828d7ca4465e1e929cc5b121fb4",
     "scripts/regional_surface_layers.py": "55d856debe9ccc1c5bd4d5c485a1bb44d7cb92ee48d5bdbaa5dd92ba10ebd4da",
     "scripts/regional_continuous_structures.py": "054e74b1e5dc2690f19710da24fbcc7a502630db58b605e4a4a293afbbb1626d",
@@ -36804,7 +36804,7 @@
     "docs/data/lower-lea-region/index.json": "b2efcf57d1ac6ac54526461c01f1b33d9de974a4f95fc2a5d534bf546e3f551f",
     "docs/data/lower-lea-region/elevation-trial.json": "2e958139752c69c6ea298a9fbf3c8343dd0833a186c2276e78eaff65ce845598",
     "docs/data/lower-lea-region/elevation-audit.json": "577311d7210cd0c286e8f5db5489dc43ae6a5829f2833e2b29e08df200b92150",
-    "docs/data/river-system-1900.json": "06a9fe6f9379d45f67aa35357fd4a1720c141152ed01a8c98e1e09ab5b4dee1d",
+    "docs/data/river-system-1900.json": "ac5c2896081e0584ee418f2a8a1ba72a2c9809adb0695bbf3502c8de47ef047d",
     "data/maps/marsh-ditches.json": "fcb407920ad548ff6bc5cf1a08a897288d49eacb26f5f4af6b6f9a986bd6d517",
     "docs/data/lower-lea-region/terrain-2003.f32": "14394f2376703a8914a221bf7e9883562616e493845842ce5177678a1d8f4e3f",
     "docs/data/lower-lea-region/elevation-trial.odn.f32": "96c53042bea88194fb28e8979dc62f1a1d761ae9f8e3bc5e6149dcfdb3e39d71",

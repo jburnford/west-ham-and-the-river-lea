@@ -659,9 +659,9 @@ def build():
     colors = np.clip((silt_colour*(1-green)+grass*green)*255, 0, 255).astype('uint8')
     positions.tofile(OUT/'river-network.f32')
     stream_positions.tofile(OUT/'river-network.stream.f32')
-    stream_indices.astype('<u4').tofile(OUT/'river-network.stream.u32')
-    indices.tofile(OUT/'river-network.u32')
-    colors.tofile(OUT/'river-network.rgb')
+    stream_indices.astype('<u4').tofile(OUT/'river-network.stream.u32.bin')
+    indices.tofile(OUT/'river-network.u32.bin')
+    colors.tofile(OUT/'river-network.rgb.bin')
     (np.clip(silt,0,1)*255).astype('uint8').tofile(OUT/'river-network.silt')
     landcover=np.column_stack([contains_xy(sites,positions[:,0],positions[:,2]),
         contains_xy(Polygon(plan['neighbourhood']['garden']['footprint']),positions[:,0],positions[:,2])])
@@ -681,7 +681,7 @@ def build():
         if not r['tidalDisplay'] for p in r['polygons']]).difference(unary_union(list(channels.values())))
     tide_envelope=tide_envelope.difference(lock_gaps)
     meta = {
-        'positionFile': 'river-network.f32', 'indexFile': 'river-network.u32', 'colorFile': 'river-network.rgb',
+        'positionFile': 'river-network.f32', 'indexFile': 'river-network.u32.bin', 'colorFile': 'river-network.rgb.bin',
         'sedimentFile': 'river-network.silt',
         'landcoverFile': 'river-network.cover',
         'waterLevel':core['waterLevel'],
@@ -689,7 +689,7 @@ def build():
                 'cycleSeconds':90, 'polygons':rings(tide_envelope),
                 'register':'data/maps/os-tide-levels.json',
                 'evidence':'High and low water of ordinary tides from the OS five-foot plan and Trinity High Water (data/maps/os-tide-levels.json): high 3.41 m ODN, low about OD, rising and falling in step over the river-side shelves and the OS mud flats. Not a tide prediction or hydraulic simulation; excludes the retained Old Lea, the Channelsea above the tidal limit at Abbey Mill and the marsh drains.'},
-        'lowWaterStream':{'positionFile':'river-network.stream.f32','indexFile':'river-network.stream.u32',
+        'lowWaterStream':{'positionFile':'river-network.stream.f32','indexFile':'river-network.stream.u32.bin',
                           'vertices':len(stream_positions),'triangles':len(stream_triangles),
                           'depthMetres':{str(k):v for k,v in sorted(tl.BACK_RIVER_STREAM.items())},
                           'levelRange':[float(stream_positions[:,1].min()),float(stream_positions[:,1].max())],

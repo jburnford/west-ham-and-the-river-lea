@@ -1,12 +1,25 @@
 // Mapped open spaces; surfacing, wear and stock placement are interpretations.
 import { createRandom } from './lib/prng.js';
-export function factoryYards({ THREE, scene, materials: m, data, level, box, cylinder, lite = false }) {
-  const yards = data.factoryYards,
-    [x0, z0, x1, z1] = yards.bounds,
+export const yardAtlasSize = (lite) => (lite ? 2048 : 4096);
+export const yardAtlasUrl = (size) => `./data/factory-yards-atlas-${size}.webp`;
+// The surface atlas is painted once by scripts/bake_yard_atlas.py: painting it here took most of the page's load time.
+// Without the image (not yet baked, or a browser that cannot decode WebP) the page paints it itself.
+export async function loadYardAtlas(load, { lite = false } = {}) {
+  try {
+    const bytes = await load(yardAtlasUrl(yardAtlasSize(lite)), 'binary');
+    const image = new Image();
+    image.src = URL.createObjectURL(new Blob([bytes], { type: 'image/webp' }));
+    await image.decode();
+    return image;
+  } catch (error) {
+    console.warn('Yard atlas image unavailable; painting it in the page.', error);
+    return null;
+  }
+}
+export function paintYardAtlas(canvas, yards) {
+  const [x0, z0, x1, z1] = yards.bounds,
     w = x1 - x0,
     d = z1 - z0;
-  const canvas = document.createElement('canvas');
-  canvas.width = canvas.height = lite ? 2048 : 4096;
   const ctx = canvas.getContext('2d'); // Transparent outside mapped open yard space.
   ctx.scale(canvas.width / w, canvas.height / d);
   ctx.translate(-x0, -z0);
@@ -100,9 +113,6 @@ export function factoryYards({ THREE, scene, materials: m, data, level, box, cyl
   // OS-mapped open working grids stay on the existing ground surface. Their
   // boundary appearance is interpreted; no roof or apparatus elevation is
   // inferred from the empty cells.
-  let workingGrids = 0,
-    openWorkingCells = 0,
-    workingGridBoundaries = 0;
   for (const grid of yards.workingGrids ?? []) {
     ctx.save();
     shape([[grid.worldOutline]]);
@@ -114,10 +124,7 @@ export function factoryYards({ THREE, scene, materials: m, data, level, box, cyl
     for (const divider of grid.dividers) {
       path(divider.points);
       ctx.stroke();
-      workingGridBoundaries++;
     }
-    workingGrids++;
-    openWorkingCells += grid.cells.filter((cell) => cell.open).length;
     ctx.restore();
   }
   ctx.save();
@@ -160,7 +167,20 @@ export function factoryYards({ THREE, scene, materials: m, data, level, box, cyl
     pixels.data[i + 2] += delta;
   }
   ctx.putImageData(pixels, 0, 0);
-  const map = new THREE.CanvasTexture(canvas);
+}
+export function factoryYards({ THREE, scene, materials: m, data, level, box, cylinder, lite = false, atlas = null }) {
+  const yards = data.factoryYards,
+    [x0, z0, x1, z1] = yards.bounds,
+    w = x1 - x0,
+    d = z1 - z0;
+  let image = atlas;
+  if (!image) {
+    image = document.createElement('canvas');
+    image.width = image.height = yardAtlasSize(lite);
+    paintYardAtlas(image, yards);
+  }
+  const map = new THREE.Texture(image);
+  map.needsUpdate = true;
   map.colorSpace = THREE.SRGBColorSpace;
   map.anisotropy = 4;
   // Paint the existing land meshes. A second, almost coincident ground mesh
@@ -411,9 +431,12 @@ export function factoryYards({ THREE, scene, materials: m, data, level, box, cyl
     trackMetres: Math.round(trackMetres),
     connectedTrackMetres: Math.round(connectedTrackMetres),
     formationTriangles: earthTriangles.length,
-    atlasSize: canvas.width,
-    workingGrids,
-    openWorkingCells,
-    workingGridBoundaries,
+    atlasSize: image.width,
+    workingGrids: (yards.workingGrids ?? []).length,
+    openWorkingCells: (yards.workingGrids ?? []).reduce(
+      (n, grid) => n + grid.cells.filter((cell) => cell.open).length,
+      0
+    ),
+    workingGridBoundaries: (yards.workingGrids ?? []).reduce((n, grid) => n + grid.dividers.length, 0),
   };
 }

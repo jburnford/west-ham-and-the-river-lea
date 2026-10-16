@@ -7,7 +7,7 @@ each new vertex takes the sediment and land cover of the nearest original vertex
 vertex colours). The full tier, and every height lookup on both tiers, keep the full network; only the drawn lite mesh
 changes.
 
-Writes docs/data/river-network-lite.json and docs/data/river-network.lite.{f32,u32,silt,cover}.
+Writes docs/data/river-network-lite.json and docs/data/river-network.lite.{f32,u32.bin,silt,cover}.
 Run after the main landscape (it bakes that build's heights); then rebuild the scene manifest.
 scripts/check_river_network_lite.mjs fails when the recorded input hashes no longer match.
 """
@@ -50,7 +50,7 @@ def main():
     remap = np.full(len(lite_points), -1, np.int64); remap[used] = np.arange(len(used))
     lite_points, lite_faces = lite_points[used], remap[lite_faces]
     nearest = cKDTree(points).query(lite_points)[1]
-    files = {'positionFile': 'river-network.lite.f32', 'indexFile': 'river-network.lite.u32',
+    files = {'positionFile': 'river-network.lite.f32', 'indexFile': 'river-network.lite.u32.bin',
              'sedimentFile': 'river-network.lite.silt',
              'landcoverFile': 'river-network.lite.cover'}
     lite_points.astype('<f4').tofile(DATA/files['positionFile'])

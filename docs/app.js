@@ -3,7 +3,7 @@
 import * as THREE from './vendor/three/three.module.js';
 import { photoDetails } from './photo-details.js';
 import { factoryBuildings } from './factory-buildings.js';
-import { factoryYards } from './factory-yards.js';
+import { factoryYards, loadYardAtlas } from './factory-yards.js';
 import { housingDetails } from './housing.js';
 import { regionalFootprints } from './regional-footprints.js';
 import { wallRiverVista } from './wall-river-vista.js';
@@ -281,7 +281,8 @@ function walkTick(time) {
   walkFrame = 0;
   if (!held.size || !renderer) return;
   moveStep(
-    Math.min((time - lastWalkTime) / 1000, 0.05) * (walker.mode === 'district' ? Number($('#travel-speed').value) : 3)
+    // Keep pace when frames are slow (down to about 7 a second); the cap only stops a leap after a long stall.
+    Math.min((time - lastWalkTime) / 1000, 0.15) * (walker.mode === 'district' ? Number($('#travel-speed').value) : 3)
   );
   lastWalkTime = time;
   walkFrame = requestAnimationFrame(walkTick);
@@ -406,7 +407,12 @@ function update() {
   document.body.classList.toggle('is-roaming', Boolean(flying));
   $('#flight-controls').hidden = !flying;
   $('#bridge-sides').hidden = Boolean(flying);
-  $('#travel-toggle').textContent = flying ? 'Return to the bridge' : 'Fly over the district';
+  // The controls stay disabled until the scene is built; say so rather than leave a button that does nothing.
+  $('#travel-toggle').textContent = flying
+    ? 'Return to the bridge'
+    : $('#travel-toggle').disabled && renderer !== null
+      ? 'Fly over the district (loading…)'
+      : 'Fly over the district';
   state.fov = Math.max(30, Math.min(90, state.fov));
   const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
   bearing.textContent = `${directions[Math.round(state.yaw / 45) % 8]} · ${Math.round(state.yaw)}°`;
@@ -728,7 +734,12 @@ function buildPlan(container, { viewBox, labels = true, markerRadius = 8, stroke
 /* ---------- Scene (unchanged construction from docs/app.js) ---------- */
 function buildScene() {
   if (lite) data.terrain = downsampleTerrain(data.terrain, 2);
-  renderer = new THREE.WebGLRenderer({ antialias: !lite, alpha: false, powerPreference: 'low-power' });
+  // Laptops with two GPUs: the full scene needs the stronger one (phones and the lite tier keep the saving).
+  renderer = new THREE.WebGLRenderer({
+    antialias: !lite,
+    alpha: false,
+    powerPreference: lite ? 'low-power' : 'high-performance',
+  });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, lite ? 1 : 1.75));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   scene = new THREE.Scene();
@@ -921,6 +932,7 @@ function buildScene() {
     box,
     cylinder,
     lite,
+    atlas: data.yardAtlas,
   });
   mark('infrastructure');
   scene.userData.infrastructure = infrastructure({ THREE, scene, materials, data, box, level: terrain.level });
@@ -1282,8 +1294,11 @@ function stall(message) {
   loadingText.textContent = message;
   loadingBox.classList.add('is-stalled');
 }
+// Published data URLs carry a content hash from scene-manifest.json, so a returning reader's browser can keep them
+// rather than downloading every file again. Local review always refetches: data may be newer than the manifest.
+const assetCache = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname) ? 'no-store' : 'default';
 async function load(url, type = 'json') {
-  const response = await fetch(window.sceneAssetUrl?.(url) || url, { cache: 'no-store' });
+  const response = await fetch(window.sceneAssetUrl?.(url) || url, { cache: assetCache });
   if (!response.ok) throw new Error(`${url} unavailable`);
   const declared = Number(response.headers.get('content-length')) || 0;
   progress.total += declared;
@@ -1331,6 +1346,7 @@ try {
     tramRailsData,
     cranesData,
     coalTrafficData,
+    yardAtlas,
   ] = await Promise.all([
     load('./data/ground-plan.json'),
     loadTerrain(load),
@@ -1350,6 +1366,7 @@ try {
     load('./data/tram-rails.json'),
     load('./data/wharf-cranes.json'),
     load('./data/coal-traffic.json'),
+    loadYardAtlas(load, { lite }),
   ]);
   data = groundPlan;
   data.terrain = terrain;
@@ -1366,6 +1383,7 @@ try {
   data.tramRails = tramRailsData;
   data.wharfCranes = cranesData;
   data.coalTraffic = coalTrafficData;
+  data.yardAtlas = yardAtlas;
   data.elevation = elevation;
   applyHistoricElevation(data);
   data.riverSystem = system;

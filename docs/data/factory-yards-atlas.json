@@ -1,0 +1,18 @@
+{
+ "sources": {
+  "data/factory-yards.json": "d67fd1db7600c6c6",
+  "factory-yards.js": "c664cdd873e4db3a",
+  "lib/prng.js": "d8a846f207af77cc"
+ },
+ "quality": 0.9,
+ "images": {
+  "4096": {
+   "bytes": 990470,
+   "sha256": "2c583a80652d4914"
+  },
+  "2048": {
+   "bytes": 331940,
+   "sha256": "ff99888f728cb8b7"
+  }
+ }
+}
